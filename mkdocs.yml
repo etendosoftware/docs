@@ -1,0 +1,52 @@
+site_name: Etendo Documentation
+repo_url: https://github.com/etendosoftware
+repo_name: etendosoftware
+theme:
+  name: material
+  logo: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Poppins
+  favicon: images/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.share
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    primary: custom
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+plugins:
+  - search:
+      lang:
+        - en
+        - es
+  - tags
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/etendosoftware
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/etendo-software/
+      name: Linkedin
+
+copyright: Copyright &copy; 2021 - 2023 Etendo Software
