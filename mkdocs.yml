@@ -1,6 +1,8 @@
 site_name: Etendo Documentation
+
 repo_url: https://github.com/etendosoftware
 repo_name: etendosoftware
+site_url: https://etendosoftware.github.io/docs.etendo.software/
 theme:
   name: material
   logo: assets/logo.png
