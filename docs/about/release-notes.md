@@ -1,3 +1,13 @@
+---
+title: Release Notes
+tags:
+    - Release Notes
+    - Etendo
+    - Version
+
+
+---
+
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub|
 | ---                                | ---        | ---    | --- | ---| :---: |

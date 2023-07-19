@@ -7,16 +7,14 @@ theme:
   icon:
     repo: fontawesome/brands/github
   font:
-    text: Poppins
+    text: Inter
   favicon: images/favicon.png
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.path
-    - navigation.footer
-    - toc.integrate
     - navigation.top
+    - toc.follow
     - search.suggest
     - search.share
     - search.highlight
@@ -25,18 +23,36 @@ theme:
     - content.code.copy
   language: en
   palette:
-    primary: custom
+    # Palette toggle for light mode
+    - scheme: custom
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
 plugins:
   - search:
       lang:
         - en
-        - es
   - tags
 extra:
   version:
@@ -50,3 +66,5 @@ extra:
       name: Linkedin
 
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
+
+ 
