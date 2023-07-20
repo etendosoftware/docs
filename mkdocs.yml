@@ -13,7 +13,7 @@ theme:
   favicon: images/favicon.png
   features:
     - navigation.tabs
-    - navigation.sections
+    - navigation.instant
     - navigation.path
     - navigation.top
     - toc.follow
@@ -60,8 +60,6 @@ plugins:
   - tags
   - glightbox
 extra:
-  version:
-    provider: mike
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/etendosoftware
