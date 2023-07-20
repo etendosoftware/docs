@@ -2,27 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/about/etendo-release-cycle/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/about/live-builds/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/about/release-notes/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/about/roadmap/</loc>
-         <lastmod>2023-07-19</lastmod>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/bastian/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/etendo-environment/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/etendo-marketplace/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/etendo-mobile-application/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/etendo-ui-library/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/extensions/bundles/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/extensions/supported-modules/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/help%20-and-support/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/install/</loc>
+         <lastmod>2023-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/technical-documentation/</loc>
+         <lastmod>2023-07-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

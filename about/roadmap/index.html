@@ -11,8 +11,10 @@
         <link rel="canonical" href="https://etendosoftware.github.io/docs.etendo.software/about/roadmap/">
       
       
-        <link rel="prev" href="../release-notes/">
+        <link rel="prev" href="../etendo-release-cycle/">
       
+      
+        <link rel="next" href="../live-builds/">
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -51,7 +53,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -233,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../etendo-release-cycle/" class="md-tabs__link md-tabs__link--active">
+      <a href="../release-notes/" class="md-tabs__link md-tabs__link--active">
         About
       </a>
     </li>
@@ -335,36 +348,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../etendo-release-cycle/" class="md-nav__link">
-        Etendo Release Cycle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../live-builds/" class="md-nav__link">
-        Live Builds
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../release-notes/" class="md-nav__link">
         Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
       </a>
     </li>
   
@@ -493,6 +492,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../live-builds/" class="md-nav__link">
+        Live Builds
+      </a>
     </li>
   
 
@@ -651,11 +664,11 @@
 <h2 id="overview">Overview</h2>
 <p>This page includes a summary of the new features to be implemented in Etendo.</p>
 <h2 id="etendo-functional-roadmap">Etendo Functional Roadmap</h2>
-<p><img alt="etendo-roadmap.png" src="/assets/about/roadmap/etendo-roadmap.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/roadmap/etendo-roadmap.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="etendo-roadmap.png" src="/docs.etendo.software/assets/about/roadmap/etendo-roadmap.png" /></a></p>
 <h3 id="bulk-posting">Bulk Posting</h3>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <h3 id="business-partner-settlement-advanced">Business Partner Settlement Advanced</h3>
-<p>This module includes enhancements to the "Business Partner Settlements" module, 
+<p>This module includes enhancements to the "Business Partner Settlements" module,
 Managing credit settlements or pending business partner payments from the payments and collections window, as well as from the reconciliations, creating the settlement of payments/receivables automatically.</p>
 <h3 id="advanced-business-partner">Advanced Business Partner</h3>
 <p>This module improves business partner information management by creating a new window that displays business partner information grouped by client, vendor, employee sections, and all tabs from business partner windows. It also adds the capability to create a number sequence for each business partner based on the business partner category, with options for automatic number sequencing or deletion and modification of generated document numbers.</p>
@@ -745,5 +758,5 @@ Managing credit settlements or pending business partner payments from the paymen
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

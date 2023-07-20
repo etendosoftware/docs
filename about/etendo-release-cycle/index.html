@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://etendosoftware.github.io/docs.etendo.software/about/etendo-release-cycle/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../release-notes/">
       
       
-        <link rel="next" href="../live-builds/">
+        <link rel="next" href="../roadmap/">
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -53,7 +53,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -235,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../release-notes/" class="md-tabs__link md-tabs__link--active">
         About
       </a>
     </li>
@@ -330,6 +341,20 @@
           About
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -466,36 +491,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../live-builds/" class="md-nav__link">
-        Live Builds
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
-        Release Notes
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../roadmap/" class="md-nav__link">
         Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../live-builds/" class="md-nav__link">
+        Live Builds
       </a>
     </li>
   
@@ -684,10 +695,9 @@
 </ul>
 <p>Etendo solutions are released on a quarterly basis.</p>
 <ul>
-<li>YX is the year and QZ the quarter of the year.<br />
-</li>
+<li>YX is the year and QZ the quarter of the year.</li>
 </ul>
-<p><img alt="new-etendo-lifecycle" src="/assets/about/etendo-release-cycle/new-etendo-lifecycle.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/new-etendo-lifecycle.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-etendo-lifecycle" src="/docs.etendo.software/assets/about/etendo-release-cycle/new-etendo-lifecycle.png" /></a></p>
 <p>As shown in the image above, the duration of a release cycle is seven months. For instance, and in the case of Etendo Y1Q4 design and development activities started dated on 1st June  and will finish at release dated on December 31st.</p>
 <h2 id="release-phases">Release Phases</h2>
 <p>The release process consists of the following phases</p>
@@ -697,7 +707,7 @@
 <li>1 month for the <strong>QA team to test and validate the release</strong> according to what defined in the corresponding Test Plan. At the end of this phase, the release is published as QA Approved (QAA), in a snapshot repository only for participants in the Etendo Early Adopters Program.</li>
 <li>2 months <strong>maturation cycle to evolve from QAA to Confirmed Stable</strong> (CS), published in the releases Nexus repository.</li>
 </ul>
-<p><img alt="etendo-release-cycle-phase.png" src="/assets/about/etendo-release-cycle/etendo-release-cycle-phase.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/etendo-release-cycle-phase.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="etendo-release-cycle-phase.png" src="/docs.etendo.software/assets/about/etendo-release-cycle/etendo-release-cycle-phase.png" /></a></p>
 <p>Etendo strongly recommends that only releases that have reached CS are used in production environments</p>
 <p>In summary, Etendo will release Confirmed Stable (CS) releases in March (i.e ET18Q1), June (i.e. ET18Q2), September (i.e. ET18Q3), and December (i.e. ET18Q4) on a yearly basis.</p>
 <div class="admonition info">
@@ -726,7 +736,7 @@
 <ul>
 <li><strong>Sonar:</strong> Our development repositories employ Sonar rules to analyze code in pull requests created or updated. Sonar identifies potential problems and makes suggestions to improve code quality.</li>
 </ul>
-<p><img alt="sonar-review.png" src="/assets/about/etendo-release-cycle/sonar-review.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/sonar-review.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sonar-review.png" src="/docs.etendo.software/assets/about/etendo-release-cycle/sonar-review.png" /></a></p>
 <ul>
 <li><strong>Auto Code Reviewer:</strong> We have developed a tool called Auto Code Reviewer, which uses ChatGPT to analyze the changes made in the Pull Request and make suggestions. This tool complements the Sonar analysis and helps us to maintain high quality standards in our code and architecture.</li>
 </ul>
@@ -736,17 +746,17 @@
 <li><strong>Compilation Tests:</strong> At this stage, we test that the code is compiled correctly, identifying possible errors at compile time.</li>
 <li><strong>Unit Test:</strong> We run automated tests designed to verify the behavior and functionality of individual units of code. These tests help us to identify bugs and ensure the correct functioning of the different parts of the system.</li>
 </ul>
-<p><img alt="jenkins-develop-branch.png" src="/assets/about/etendo-release-cycle/jenkins-develop-branch.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/jenkins-develop-branch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="jenkins-develop-branch.png" src="/docs.etendo.software/assets/about/etendo-release-cycle/jenkins-develop-branch.png" /></a></p>
 <p>If bugs are detected in any of these automated tests, the development team is immediately notified so that they can address and correct them.</p>
 <p>Once a pull request has passed the code review and quality assurance processes specific to each development, the merge to the "develop" branch is performed. At this point, automated tests are re-run to ensure that the code integration has not introduced new problems.</p>
-<p>Along the lines of the automatic tests that are performed, we have the stress and interface tests that are performed monthly: </p>
+<p>Along the lines of the automatic tests that are performed, we have the stress and interface tests that are performed monthly:</p>
 <ul>
 <li><strong>Stress Testing:</strong> In addition to the regular automated tests, we conduct stress tests on our applications on a monthly basis. These tests help us identify potential bottlenecks, resource limitations, and areas that may cause degradation or failures under high user loads. By simulating concurrent user interactions and generating high traffic, we evaluate the system's responsiveness, scalability, and overall robustness. Performing these tests monthly ensures that our applications can handle increasing user demands and maintain optimal performance.</li>
 <li><strong>Selenium Interface Testing:</strong> To ensure the functionality and user experience of our applications, we conduct monthly Selenium interface testing. Selenium allows us to automate browser interactions and perform tests on different web browsers, such as Firefox and Google Chrome. Using Selenium, we create test scripts that simulate user actions, navigate through the application's interface, and verify that all elements and features work as expected. This ensures consistency across different browsers and helps us identify any compatibility issues that may arise. Conducting these tests monthly allows us to catch any potential interface issues and ensure a seamless user experience across various platforms.</li>
 </ul>
 <h3 id="vulnerability-analysis-and-deprecation">Vulnerability Analysis and Deprecation</h3>
 <p>On a quarterly basis, we run a Static Application Security Testing (SAST) and Software Composition Analysis (SCA) tools to detect possible vulnerabilities or deprecations in the libraries and stack we use. This analysis allows us to keep our application updated and secure. Based on the results of this tool, we start the corresponding update process, considering the priority level assigned to each identified change.</p>
-<p><img alt="vulnerability-and-deprecation" src="/assets/about/etendo-release-cycle/vulnerability-and-deprecation-2.png" /></p>
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/vulnerability-and-deprecation-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="vulnerability-and-deprecation" src="/docs.etendo.software/assets/about/etendo-release-cycle/vulnerability-and-deprecation-2.png" /></a></p>
 <ul>
 <li><strong>Update with API Changes (major):</strong> This type of upgrade involves significant changes to the application programming interface (API). A major upgrade generally involves substantial modifications to the way system components or modules interact with each other, which may require extensive changes to existing code to make it compatible with the new version. These changes may include the introduction of new functionality, removal of obsolete features, changes to the data structure or communication protocols. Due to the nature of these changes, a major upgrade is scheduled once a year to allow sufficient time to plan, test and make the necessary modifications to the code and systems using the updated API.</li>
 <li><strong>Soft Update:</strong> In a soft update, the changes made are minor, not significant to the API and generally focused on performance improvements, bug fixes, optimizing existing code or updating external dependencies. These changes are less disruptive and can be implemented more frequently, so a soft upgrade is performed quarterly to keep the system up to date and take advantage of continuous improvements. Although the changes are not drastic, extensive testing is still recommended to ensure stability and compatibility with dependencies and related components.</li>
@@ -754,7 +764,7 @@
 </ul>
 <hr />
 <h4 id="integration-of-snyk-in-vulnerability-analysis">Integration of Snyk in Vulnerability Analysis</h4>
-<p><img alt="snyk-banner.png" src="/assets/about/etendo-release-cycle/snyk-banner.png" />
+<p><a class="glightbox" href="/docs.etendo.software/assets/about/etendo-release-cycle/snyk-banner.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="snyk-banner.png" src="/docs.etendo.software/assets/about/etendo-release-cycle/snyk-banner.png" /></a>
 At Etendo, we are committed to ensuring the security of our applications at all times. That's why one of the prominent tools we use is <em><a href="https://snyk.io/">Snyk</a></em>, a powerful Software Composition Analysis (SCA) solution.</p>
 <p><em>Snyk</em> enables us to conduct a comprehensive analysis of the libraries and dependencies used in our application stack. By integrating our repositories with <em>Snyk</em>, we gain detailed visibility into potential vulnerabilities and deprecations that may exist in our code.</p>
 <p><em>Snyk</em> is widely recognized for its ability to accurately and promptly identify vulnerabilities in software dependencies. Through <em>Snyk</em>, we can perform continuous and real-time analysis of our dependencies, enabling us to detect any security issues early on and take proactive measures to address them.</p>
@@ -843,5 +853,5 @@ New versions of Etendo can include:</p>
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
