@@ -5,6 +5,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install mkdocs-material
 pip install pillow cairosvg
+pip install mkdocs-glightbox
 pip install mike
 ```
 
@@ -18,6 +19,7 @@ mkdocs serve
 # Publish new version
 
 ```bash
-mike deploy --push --update-aliases 23.x latest
-mike set-default --push latest
+mkdocs gh-deploy --force
+# mike deploy --push --update-aliases 23.x latest
+# mike set-default --push latest
 ```

@@ -44,6 +44,8 @@ extra_css:
   - stylesheets/extra.css
 markdown_extensions:
   - admonition
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
@@ -56,6 +58,7 @@ plugins:
       lang:
         - en
   - tags
+  - glightbox
 extra:
   version:
     provider: mike
@@ -68,5 +71,3 @@ extra:
       name: Linkedin
 
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
-
- 
