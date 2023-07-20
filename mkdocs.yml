@@ -69,3 +69,11 @@ extra:
       name: Linkedin
 
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
+
+nav:
+  - index.md
+  - About:
+    - Release Notes: about/release-notes.md
+    - Etendo Release Cycle: about/etendo-release-cycle.md
+    - Roadmap: about/roadmap.md
+    - Live Builds: about/live-builds.md
