@@ -1,0 +1,5215 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://etendosoftware.github.io/docs.etendo.software/legacy/technical-documentation/etendo-environment/platform/how-to-create-and-update-translation-modules/">
+      
+      
+        <link rel="prev" href="../etendorx-plugin/">
+      
+      
+        <link rel="next" href="../how-to-declare-JAR-dependencies-in-an-Etendo-project/">
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>How to Create and Update Translation Modules - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-create-and-update-translation-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to Create and Update Translation Modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../about/etendo-release-cycle/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../financial-management-setup-accounting/" class="md-tabs__link md-tabs__link--active">
+        Legacy
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/live-builds/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Legacy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Legacy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../financial-management-setup-accounting/" class="md-nav__link">
+        Set Up - Accounting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Release notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Release notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-1/" class="md-nav__link">
+        21Q4.1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-2/" class="md-nav__link">
+        21Q4.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-3/" class="md-nav__link">
+        Release Notes 21Q4.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-4/" class="md-nav__link">
+        Release Notes 21Q4.4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-5/" class="md-nav__link">
+        Release Notes 21Q4.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-6/" class="md-nav__link">
+        Release Notes 21Q4.6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-7/" class="md-nav__link">
+        Release Notes 21Q4.7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-8/" class="md-nav__link">
+        Release Notes 21Q4.8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4-9/" class="md-nav__link">
+        Release Notes 21Q4.8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/21Q4/" class="md-nav__link">
+        21Q4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q1-1/" class="md-nav__link">
+        Release Notes 22.1.1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q1-2/" class="md-nav__link">
+        Release Notes 22.1.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q1-3/" class="md-nav__link">
+        Release Notes 22Q1.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q1/" class="md-nav__link">
+        22Q1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q2-1/" class="md-nav__link">
+        Release Notes 22Q2.1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q2-2/" class="md-nav__link">
+        Release Notes 22Q2.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q2/" class="md-nav__link">
+        Release Notes 22Q2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q3/" class="md-nav__link">
+        Release Notes 22Q3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q4-1/" class="md-nav__link">
+        Release Notes 22Q4.1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q4-2/" class="md-nav__link">
+        Release Notes 22Q4.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q4-3/" class="md-nav__link">
+        Release Notes 22Q4.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q4-4/" class="md-nav__link">
+        Release Notes 22Q4.4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22Q4/" class="md-nav__link">
+        Release Notes 22Q4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22q1details/" class="md-nav__link">
+        Details 22Q1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/22q2details/" class="md-nav__link">
+        Details 22Q2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q1-2/" class="md-nav__link">
+        Release Notes 23Q1.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q1-3/" class="md-nav__link">
+        Release Notes 23Q1.3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q1-4/" class="md-nav__link">
+        Release Notes 23Q1.4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q1-5/" class="md-nav__link">
+        Release Notes 23Q1.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q2-0/" class="md-nav__link">
+        Release Notes 23Q2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23Q2-1/" class="md-nav__link">
+        Release Notes 23Q2.1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23q1details/" class="md-nav__link">
+        Details 23Q1.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/23q2details/" class="md-nav__link">
+        Details 23Q2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Release-notes/release-notes-template/" class="md-nav__link">
+        Release Notes - Template
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          End user documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          End user documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/bastian/" class="md-nav__link">
+        Bastian Functional Description
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-marketplace/" class="md-nav__link">
+        Etendo Marketplace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-mobile-application/" class="md-nav__link">
+        Etendo Mobile Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/help-and-support/" class="md-nav__link">
+        Help & Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/livebuilds/" class="md-nav__link">
+        Etendo Live Builds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_7" id="__nav_3_3_7_label" tabindex="0">
+          22q1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          22q1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/22q1/getting-started/" class="md-nav__link">
+        What is Etendo?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8" id="__nav_3_3_8_label" tabindex="0">
+          Etendo environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/" class="md-nav__link">
+        Functional Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_2" id="__nav_3_3_8_2_label" tabindex="0">
+          Functional documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_8_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Functional documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/" class="md-nav__link">
+        Business Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_2_2" id="__nav_3_3_8_2_2_label" tabindex="0">
+          Business configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_3_8_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Business configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/financial-management-setup/" class="md-nav__link">
+        Financial Management Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup/" class="md-nav__link">
+        General Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/material-requirement-planning-setup/" class="md-nav__link">
+        Material Requirement Planning Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/production-management-setup/" class="md-nav__link">
+        Production Management Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/sales-management-setup/" class="md-nav__link">
+        Sales Management Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup/" class="md-nav__link">
+        Warehouse Management Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_2_3" id="__nav_3_3_8_2_3_label" tabindex="0">
+          Business management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_3_8_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Business management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting/" class="md-nav__link">
+        Accounting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets/" class="md-nav__link">
+        Financial Management - Assets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting/" class="md-nav__link">
+        Reports - Accounting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management/" class="md-nav__link">
+        Financial Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/financial-reports/" class="md-nav__link">
+        Financial Management - Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/home/" class="md-nav__link">
+        Business Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management/" class="md-nav__link">
+        Master Data Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/material-requirement-planning/" class="md-nav__link">
+        Material Requirement Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management/" class="md-nav__link">
+        Procurement Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-reports/" class="md-nav__link">
+        Procurement Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/production-management/" class="md-nav__link">
+        Production Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management/" class="md-nav__link">
+        Sales Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/sales-reports/" class="md-nav__link">
+        Sales Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management/" class="md-nav__link">
+        Warehouse Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-reports/" class="md-nav__link">
+        Warehouse Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_2_3_17" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_2_3_17" id="__nav_3_3_8_2_3_17_label" tabindex="0">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_3_8_2_3_17_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_2_3_17">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/modules/sales-quotation/" class="md-nav__link">
+        Sales Quotation Module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_2_3_18" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_2_3_18" id="__nav_3_3_8_2_3_18_label" tabindex="0">
+          Procurement management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_3_8_2_3_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_2_3_18">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_8_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_8_3" id="__nav_3_3_8_3_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/user-interface/application-areas/" class="md-nav__link">
+        Application Areas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/user-interface/use-of-elements/" class="md-nav__link">
+        Grid and Form View
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-environment/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_9" id="__nav_3_3_9_label" tabindex="0">
+          Etendo marketplace
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo marketplace
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-marketplace/download-and-install-modules/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-marketplace/search-for-modules/" class="md-nav__link">
+        Search for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_10" id="__nav_3_3_10_label" tabindex="0">
+          Etendo mobile application
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo mobile application
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-mobile-application/application-areas/" class="md-nav__link">
+        Application Areas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-mobile-application/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-mobile-application/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_10_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_10_4" id="__nav_3_3_10_4_label" tabindex="0">
+          Application areas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_10_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_10_4">
+          <span class="md-nav__icon md-icon"></span>
+          Application areas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/etendo-mobile-application/application-areas/manage-records/" class="md-nav__link">
+        Manage Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_11" id="__nav_3_3_11_label" tabindex="0">
+          Help and support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          Help and support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to Report Bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_12" id="__nav_3_3_12_label" tabindex="0">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/integrations/zapier/" class="md-nav__link">
+        Create a Zap using Etendo Integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_12_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_12_2" id="__nav_3_3_12_2_label" tabindex="0">
+          Zapier
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_12_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_12_2">
+          <span class="md-nav__icon md-icon"></span>
+          Zapier
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../end-user-documentation/integrations/zapier/setup-etendorx-autentication-keys/" class="md-nav__link">
+        Setup Etendo Rx Autentication keys
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo bi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo bi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-bi/etendo-bi-connector/" class="md-nav__link">
+        Etendo BI Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-bi/inclusion-exclusion-configuration/" class="md-nav__link">
+        Etendo BI Inclusion/Exclusion Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Etendo ml
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo ml
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+          Routeoptimization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Routeoptimization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-ml/routeoptimization/api-status-code-errors/" class="md-nav__link">
+        Route Optimization - Status Codes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Internal docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Internal docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../internal-docs/etendo-docs-versioning/" class="md-nav__link">
+        Etendo Docs - Versioning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../internal-docs/etendo-redis-documentation/" class="md-nav__link">
+        Etendo Redis documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../internal-docs/jmh-benchmarks/" class="md-nav__link">
+        JMH Benchmarks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../internal-docs/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github/" class="md-nav__link">
+        Migrating and Resolving Dependencies of Bundles and Modules on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../internal-docs/template-issues/" class="md-nav__link">
+        Template Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/Etendo-BI-Bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/essentials-extensions-bundle/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/production-extensions-bundle/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/" class="md-nav__link">
+        Localización Española
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_6" id="__nav_3_7_6_label" tabindex="0">
+          Essentials extensions bundle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_6">
+          <span class="md-nav__icon md-icon"></span>
+          Essentials extensions bundle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/essentials-extensions-bundle/advanced-business-partner/" class="md-nav__link">
+        Advanced Business Partner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/essentials-extensions-bundle/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_7" id="__nav_3_7_7_label" tabindex="0">
+          Etendobi extensions bundle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_7">
+          <span class="md-nav__icon md-icon"></span>
+          Etendobi extensions bundle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/etendobi-extensions-bundle/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_8" id="__nav_3_7_8_label" tabindex="0">
+          Financial extensions bundle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_8">
+          <span class="md-nav__icon md-icon"></span>
+          Financial extensions bundle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/financial-extensions-bundle/bulk-posting/" class="md-nav__link">
+        Bulk Posting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/financial-extensions-bundle/intercompany/" class="md-nav__link">
+        Advanced Intercompany Module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_9" id="__nav_3_7_9_label" tabindex="0">
+          Platform extensions bundle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_9">
+          <span class="md-nav__icon md-icon"></span>
+          Platform extensions bundle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/platform-extensions-bundle/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_10" id="__nav_3_7_10_label" tabindex="0">
+          Production extensions bundle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_10">
+          <span class="md-nav__icon md-icon"></span>
+          Production extensions bundle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/production-extensions-bundle/release-notes/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_11" id="__nav_3_7_11_label" tabindex="0">
+          Spain localization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_11">
+          <span class="md-nav__icon md-icon"></span>
+          Spain localization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/release-notes/" class="md-nav__link">
+        Versiones Disponibles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_11_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_11_2" id="__nav_3_7_11_2_label" tabindex="0">
+          Manual de usuario
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_7_11_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          Manual de usuario
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas/" class="md-nav__link">
+        Configuración de impuestos para libro de facturas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/facturacion-electronica/" class="md-nav__link">
+        Facturación Electrónica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a/" class="md-nav__link">
+        Impuestos para España
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/intrastat/" class="md-nav__link">
+        Intrastat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/libro-de-facturas/" class="md-nav__link">
+        Libro de facturas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/modelo-190/" class="md-nav__link">
+        Modelo 190
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/modelo-303/" class="md-nav__link">
+        Modelo 303
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/modelo-347/" class="md-nav__link">
+        Modelo 347
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/modelo-349/" class="md-nav__link">
+        Modelo 349
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/modelo-390/" class="md-nav__link">
+        Modelo 390
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/spain-localization/manual-de-usuario/sii-para-iva/" class="md-nav__link">
+        SII para IVA
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_12" id="__nav_3_7_12_label" tabindex="0">
+          Supported modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7_12">
+          <span class="md-nav__icon md-icon"></span>
+          Supported modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../modules/supported-modules/tax-report-launcher/" class="md-nav__link">
+        Tax Report Launcher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          Technical documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Technical documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_1" id="__nav_3_8_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle | Technical Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle | Technical Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle | Technical Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehose Extensions Bundle | Technical Documentation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2" id="__nav_3_8_2_label" tabindex="0">
+          Etendo environment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo environment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Platform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/" class="md-nav__link">
+        Requirements & tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/" class="md-nav__link">
+        Setup & upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_5" id="__nav_3_8_2_5_label" tabindex="0">
+          Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_2_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_8_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EtendoRx/" class="md-nav__link">
+        EtendoRx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HowToListenNewTablesInEtendoRX/" class="md-nav__link">
+        How to listen new tables in Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async-processes/" class="md-nav__link">
+        Async processes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloning-processes-and-hooks/" class="md-nav__link">
+        Cloning Processes and Hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../copy-and-paste-images-in-etendo/" class="md-nav__link">
+        Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-jobs-and-actions/" class="md-nav__link">
+        Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debezium-configuration/" class="md-nav__link">
+        Debezium configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendo-plugin/" class="md-nav__link">
+        Etendo plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendo-ui-library/" class="md-nav__link">
+        Etendo UI Library
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendorx-advanced-options/" class="md-nav__link">
+        EtendoRX Advanced options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendorx-config-server/" class="md-nav__link">
+        EtendoRX config server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendorx-database-connection/" class="md-nav__link">
+        EtendoRX database connection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../etendorx-plugin/" class="md-nav__link">
+        Etendo RX plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          How to Create and Update Translation Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How to Create and Update Translation Modules
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-and-update-translation-modules" class="md-nav__link">
+    How to Create and Update Translation Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-translation-module-from-scratch" class="md-nav__link">
+    Creating a new translation module from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a new translation module from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-module-definition" class="md-nav__link">
+    Create module definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Create module definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-strings-to-be-translated" class="md-nav__link">
+    Prepare strings to be translated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-languages" class="md-nav__link">
+    Verify Languages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-the-translation" class="md-nav__link">
+    Export the translation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translate-the-module" class="md-nav__link">
+    Translate the module
+  </a>
+  
+    <nav class="md-nav" aria-label="Translate the module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate-directly-into-the-xml-files" class="md-nav__link">
+    Translate directly into the XML files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-and-export-the-translation" class="md-nav__link">
+    Import and Export the translation
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and Export the translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specific-information-if-you-are-translating-core" class="md-nav__link">
+    Specific information if you are translating Core
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific information if you are translating Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buildstructurexml-file" class="md-nav__link">
+    buildstructure.xml file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masterdata-dataset" class="md-nav__link">
+    Masterdata dataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation-bundle" class="md-nav__link">
+    Translation bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-translation-module" class="md-nav__link">
+    Publishing the translation module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-translation-modules" class="md-nav__link">
+    Updating Translation Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating Translation Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-context" class="md-nav__link">
+    Finding the context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-declare-JAR-dependencies-in-an-Etendo-project/" class="md-nav__link">
+        How to Declare JAR Dependencies in an Etendo Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobilesync/" class="md-nav__link">
+        Mobilesync
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-modules-to-a-nexus-repository/" class="md-nav__link">
+        Publish Modules to a Nexus Repository (deprecated)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publish-modules-to-github-repository/" class="md-nav__link">
+        Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scan-process-creation/" class="md-nav__link">
+        Scan Process Creation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../secure-webservices/" class="md-nav__link">
+        Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequences/" class="md-nav__link">
+        Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_5_22" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_5_22" id="__nav_3_8_2_5_22_label" tabindex="0">
+          22q1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_8_2_5_22_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_5_22">
+          <span class="md-nav__icon md-icon"></span>
+          22q1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22q1/etendo-jars/" class="md-nav__link">
+        Etendo JARS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22q1/how-to-declare-JAR-dependencies-in-an-Etendo-project/" class="md-nav__link">
+        How to Declare JAR Dependencies in an Etendo Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22q1/publish-modules-to-a-nexus-repository/" class="md-nav__link">
+        Publish Modules to a Nexus Repository
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_5_23" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_5_23" id="__nav_3_8_2_5_23_label" tabindex="0">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_8_2_5_23_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_5_23">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_5_23_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_5_23_1" id="__nav_3_8_2_5_23_1_label" tabindex="0">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_8_2_5_23_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_5_23_1">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/integrations/zapier-integrations/" class="md-nav__link">
+        Zapier Integration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_6" id="__nav_3_8_2_6_label" tabindex="0">
+          Release publishing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Release publishing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-publishing/publish-ota-updates-to-etendo-mobile-app/" class="md-nav__link">
+        Publish OTA Updates to Etendo Mobile App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-publishing/using-git-flow-to-handle-releases/" class="md-nav__link">
+        Using Git Flow to Handle Releases
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_7" id="__nav_3_8_2_7_label" tabindex="0">
+          Requirements and tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_2_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Requirements and tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_7_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_7_2" id="__nav_3_8_2_7_2_label" tabindex="0">
+          Developer tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_8_2_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developer tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/developer-tools/use-of-gradle-in-etendo/" class="md-nav__link">
+        Use of gradle in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/developer-tools/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_7_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_7_2_3" id="__nav_3_8_2_7_2_3_label" tabindex="0">
+          22q1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_8_2_7_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_7_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          22q1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/developer-tools/22q1/search-jars-tool/" class="md-nav__link">
+        Search Jars Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements-and-tools/developer-tools/22q1/use-of-gradle-in-etendo/" class="md-nav__link">
+        Use of Gradle in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_8" id="__nav_3_8_2_8_label" tabindex="0">
+          Security and bugs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_2_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Security and bugs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-and-bugs/hotfixes/" class="md-nav__link">
+        Hotfixes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9" id="__nav_3_8_2_9_label" tabindex="0">
+          Setup and upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_8_2_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Setup and upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/code-formatting-style-in-intellij/" class="md-nav__link">
+        Code Formatting Style in IntelliJ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/upgrade/" class="md-nav__link">
+        Upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9_6" id="__nav_3_8_2_9_6_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_8_2_9_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9_6">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9_6_4" id="__nav_3_8_2_9_6_4_label" tabindex="0">
+          22q1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_8_2_9_6_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          22q1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/22q1/core-format-migration/" class="md-nav__link">
+        Core format migration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/22q1/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9_6_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9_6_5" id="__nav_3_8_2_9_6_5_label" tabindex="0">
+          Migrating to etendo from openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_8_2_9_6_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Migrating to etendo from openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/installation/migrating-to-etendo-from-openbravo/migration-tool/" class="md-nav__link">
+        Migration Tool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9_7" id="__nav_3_8_2_9_7_label" tabindex="0">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_8_2_9_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9_7">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/modules/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_2_9_7_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_2_9_7_2" id="__nav_3_8_2_9_7_2_label" tabindex="0">
+          22q1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_3_8_2_9_7_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_2_9_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          22q1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/modules/22q1/consistency-verification/" class="md-nav__link">
+        Consistency verification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-upgrade/modules/22q1/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_3" id="__nav_3_8_3_label" tabindex="0">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/additional-po-columns/" class="md-nav__link">
+        Additional PO Columns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/conversion-rate-downloader/" class="md-nav__link">
+        Conversion Rate Downloader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/multi-business-partner-selector/" class="md-nav__link">
+        Multi Business Partner Selector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/number-to-word/" class="md-nav__link">
+        Number To Word
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/print-document-web-service/" class="md-nav__link">
+        Print Document Web Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../modules/uninstall/" class="md-nav__link">
+        Uninstall modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-and-update-translation-modules" class="md-nav__link">
+    How to Create and Update Translation Modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-translation-module-from-scratch" class="md-nav__link">
+    Creating a new translation module from scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a new translation module from scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-module-definition" class="md-nav__link">
+    Create module definition
+  </a>
+  
+    <nav class="md-nav" aria-label="Create module definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-strings-to-be-translated" class="md-nav__link">
+    Prepare strings to be translated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-languages" class="md-nav__link">
+    Verify Languages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-the-translation" class="md-nav__link">
+    Export the translation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translate-the-module" class="md-nav__link">
+    Translate the module
+  </a>
+  
+    <nav class="md-nav" aria-label="Translate the module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translate-directly-into-the-xml-files" class="md-nav__link">
+    Translate directly into the XML files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-and-export-the-translation" class="md-nav__link">
+    Import and Export the translation
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and Export the translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specific-information-if-you-are-translating-core" class="md-nav__link">
+    Specific information if you are translating Core
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific information if you are translating Core">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buildstructurexml-file" class="md-nav__link">
+    buildstructure.xml file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masterdata-dataset" class="md-nav__link">
+    Masterdata dataset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation-bundle" class="md-nav__link">
+    Translation bundle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-the-translation-module" class="md-nav__link">
+    Publishing the translation module
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-translation-modules" class="md-nav__link">
+    Updating Translation Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating Translation Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks" class="md-nav__link">
+    Tips and Tricks
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips and Tricks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-the-context" class="md-nav__link">
+    Finding the context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+  <h1>How to Create and Update Translation Modules</h1>
+
+<h2 id="how-to-create-and-update-translation-modules">How to Create and Update Translation Modules</h2>
+<p>This section describes the process of creating and updating translation modules in Etendo, including the Core's module. </p>
+<h2 id="creating-a-new-translation-module-from-scratch">Creating a new translation module from scratch</h2>
+<h3 id="create-module-definition">Create module definition</h3>
+<p>The first thing to do is to create the translation module definition into the Application Dictionary.</p>
+<p>Logged as System Administrator role, the user selects the <strong>Application Dictionary || Module</strong> window from the Application menu and creates a new record.</p>
+<p>Translation modules are a special kind of modules. They have to be marked as <strong>Is translation module</strong> in the Module window, and they must define the translation language in the <strong>Module Language</strong> field.</p>
+<p>No other contents than translations are allowed in translation modules. A translation module can only contain the translation for one module. For example, in the screenshot below, we are creating a Spanish (Spain) translation module for the User Interface Application module whose declared language is English (USA).</p>
+<p><a class="glightbox" href="https://lh5.googleusercontent.com/CtkzvhgZ6P-3CfvWJOpFEFQmavTCdDgvHb-dgpff8eiS6ab2Q-xYCfu7dEEup23zzJoDBO9AOuRkaKAclIivm5hLm7tFQcFBzrlTZ9uCmh2S5pwNNfWaPmRZ0K1XZbBxPc2u4kRAuWUbJ-rVQqu7d4ZFha1zjfctWomyJJYFVIWUhLPJduoUkXSAJezRvg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh5.googleusercontent.com/CtkzvhgZ6P-3CfvWJOpFEFQmavTCdDgvHb-dgpff8eiS6ab2Q-xYCfu7dEEup23zzJoDBO9AOuRkaKAclIivm5hLm7tFQcFBzrlTZ9uCmh2S5pwNNfWaPmRZ0K1XZbBxPc2u4kRAuWUbJ-rVQqu7d4ZFha1zjfctWomyJJYFVIWUhLPJduoUkXSAJezRvg" /></a></p>
+<p>Apart from checking the <strong>Is translation module</strong> and setting the <strong>Module Language</strong>, we need to add a dependency to the module and version we are translating. In the example, our User Interface Application Translation Spanish (Spain) module in version 1.0.0 depends on the User Interface Application module version 2.1.0.</p>
+<h4 id="prepare-strings-to-be-translated">Prepare strings to be translated</h4>
+<p>Logged with the <strong>System Administrator</strong> role, select the <strong>General Setup || Application || Language</strong> window from the Application menu. Find the language in which the user wants to create the translation module and check the <strong>System Language</strong> checkbox field. This checkbox allows this language to be selected in the user interface (<strong>Change role</strong> popup) in the next login.</p>
+<p><a class="glightbox" href="https://lh4.googleusercontent.com/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh4.googleusercontent.com/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw" /></a></p>
+<p><a class="glightbox" href="https://lh4.googleusercontent.com/b_z9FlTUbCN9229SKAFfDPzs_hB4GRuihgGt1ZED4MNW8uigSTXkrL-GN0el5b26miw1BkMhN2uP1LkrYy7WE3WbPzv7y6cTz2LvIo3wZvB-0QjI4CrQYKJGmnKXi86Oign_ZU57xuG25WOlTqxffODO9ifIwWZUMk5F8xw23HhtNIitj2SSLqpjIYUyZg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh4.googleusercontent.com/b_z9FlTUbCN9229SKAFfDPzs_hB4GRuihgGt1ZED4MNW8uigSTXkrL-GN0el5b26miw1BkMhN2uP1LkrYy7WE3WbPzv7y6cTz2LvIo3wZvB-0QjI4CrQYKJGmnKXi86Oign_ZU57xuG25WOlTqxffODO9ifIwWZUMk5F8xw23HhtNIitj2SSLqpjIYUyZg" /></a></p>
+<h4 id="verify-languages">Verify Languages</h4>
+<p>Each time it is necessary to create a translation for a new language, it is necessary to prepare the strings to be translated. There is an automatic process, called <strong>Verify Languages</strong> (available as well in the Language window), in which the ERP creates the necessary copies of the original strings of all the modules available in the system from their base languages to the corresponding translation language.</p>
+<p>For example, in the case of creating a Spanish (Spain) translation for the core's module, whose base language is English (USA), the system will copy all the original English strings to the Spanish translation. The same is extended to the rest of the modules installed in the system with their respective base languages.</p>
+<p>Using the <strong>Verify Languages</strong> button, the application will display the number of records created. If this number is equal to 0, it means that something was wrong, and the probable cause is that we have forgotten to check the System Language field.</p>
+<p><a class="glightbox" href="https://lh3.googleusercontent.com/pfFxzG5EictaUwrbWNoTN8fk8Q1ZbAgNIQUaDkQeMDmsz70PHHz4aoRTpNmKi4I5lpBNvMMefPcy4RlK8v0NwL86TMT5PNGUVdfPUUM6A0JHtEdsfb-7paUPw9U6V8kUHRh52KPj3OTkNsUr5maGOaf1GbIBAJPKW-n0mmjVS9rhZyKez5SOUJwc5kMJPA" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh3.googleusercontent.com/pfFxzG5EictaUwrbWNoTN8fk8Q1ZbAgNIQUaDkQeMDmsz70PHHz4aoRTpNmKi4I5lpBNvMMefPcy4RlK8v0NwL86TMT5PNGUVdfPUUM6A0JHtEdsfb-7paUPw9U6V8kUHRh52KPj3OTkNsUr5maGOaf1GbIBAJPKW-n0mmjVS9rhZyKez5SOUJwc5kMJPA" /></a></p>
+<h3 id="export-the-translation">Export the translation</h3>
+<p>Exporting the translation is an automatic process available in the <strong>General Setup || Application || Import/Export Translations</strong> window.</p>
+<p>With the System Administrator role, select the language in which the user wants to export translation files. Export Reduced Version flag can be set to Yes to have a reduced translation version. This would exclude all translation candidates that are linked directly or indirectly to the Menu having translation strategy as "Exclude From Reduced Translation". The user could set this flag as No to have a full translation version by pressing the <strong>Export</strong> button. The process takes several seconds to export all the XML files.</p>
+<p><a class="glightbox" href="https://lh3.googleusercontent.com/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh3.googleusercontent.com/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w" /></a></p>
+<p>Inside the attachments folder of Etendo, a new directory called <strong>lang</strong> is found, and inside it, a new one with the lowercase two-letter ISO-639 <strong>language code</strong> and the uppercase two-letter ISO-3166 <strong>country code</strong> separated by an underscore character ('_'). Example: <em>/home/EtendoERP/attachments/lang/es_ES</em></p>
+<p><a class="glightbox" href="https://lh6.googleusercontent.com/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh6.googleusercontent.com/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw" /></a></p>
+<p>Inside this directory, the user can find the translation files for all the available modules into the instance. The core's translation files are stored directly into the root directory, the rest of the modules have their own folder named as their java packages. So, the user only needs to find the folder of the <em>original module</em> to be translated (<em>not the translation module</em>) and get its XML files.</p>
+<h2 id="translate-the-module">Translate the module</h2>
+<p>The translation of the module can be directly done inside the exported XML files, which is a convenient method for modules with few strings to be translated, or using the openbravo2po tool which is the recommended way for modules with a lot of strings, like Core.</p>
+<h3 id="translate-directly-into-the-xml-files">Translate directly into the XML files</h3>
+<p>If this method is chosen, it is only necessary to open each XML file that is inside the module's directory to be translated and edit it. It is very important to open these files with a text editor (like Vim, Emacs, gEdit, notepad...), never using a word processor (like LibreOffice Writer or Microsoft Word) because they can break the XML structure.</p>
+<p>The text to be changed for making a translation is the content of each value tag. It is not necessary to edit any attribute because they will be automatically updated when importing and exporting the files into the ERP in a next step.</p>
+<p><a class="glightbox" href="https://lh4.googleusercontent.com/Wukx4MrqiK__V6x76g8BWjV-jwCE7vo6cCfVQJxjpayM55k2Os3jLDRD73BTSGayf-lm9z7L1t91z2-ArGWAIaAPUymF9LMZXpd4NZGM-tx4WwhJxm5zwCq5lcJQZhSj_cId6j8risovTfDVq7H3EXAgMCEyV0vdCTtfQiBTBUVq8gQ_R4cPLF5w5dSCuw" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LocGuide HowTo Translate 60.jpg" src="https://lh4.googleusercontent.com/Wukx4MrqiK__V6x76g8BWjV-jwCE7vo6cCfVQJxjpayM55k2Os3jLDRD73BTSGayf-lm9z7L1t91z2-ArGWAIaAPUymF9LMZXpd4NZGM-tx4WwhJxm5zwCq5lcJQZhSj_cId6j8risovTfDVq7H3EXAgMCEyV0vdCTtfQiBTBUVq8gQ_R4cPLF5w5dSCuw" /></a></p>
+<h3 id="import-and-export-the-translation">Import and Export the translation</h3>
+<p>After the translation is completed, or even in the middle of a translation process, it is a good practice to import the XML files into the ERP to review the translation in context.</p>
+<p>Finally, once the translation is OK, it is necessary export it again. Doing so, it is ensured the XML files have the final structure, with all the attributes properly set.</p>
+<p>Moreover, if we are working with a Source Code Management (highly recommended), the process of importing/exporting the XML files will help us a lot when updating translations. The diff will show us only the translation differences between the old version and the new one, but not changes in the structure of the XML file.</p>
+<p>For importing/exporting the translation, the user can go to the <strong>General Setup || Application || Import/Export Translations</strong> window, as we previously saw in the Export the Translation section above.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All the XML files to be imported must be inside their correspondent module's folder of your <em>attachments</em> directory, overwriting the original XML files exported at the beginning of this process.</p>
+</div>
+<p>Now, at the <strong>Import/Export Translations</strong> window, we can select the language used for the translations and press the <strong>Import</strong> button. Then, the process is completed and the <strong>Export</strong> button is pressed, that will export the XML files again.</p>
+<p><a class="glightbox" href="https://lh3.googleusercontent.com/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh3.googleusercontent.com/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><em>Note: During this process, it is highly recommended to keep a backup of your translated XML files.</em></p>
+</div>
+<h4 id="specific-information-if-you-are-translating-core">Specific information if you are translating Core</h4>
+<h5 id="buildstructurexml-file"><strong>buildstructure.xml file</strong></h5>
+<p>Etendo's Core provides an additional file called buildStructure.xml. This file contains the information related to the names of the different stages through which the Etendo build process passes, and the error and warning messages that can be shown during a rebuild. It is also necessary to translate this file, however it is not compatible with the openbravo2po software, so it will be necessary to manually edit it using a text editor (not a word processor).</p>
+<p>The structure of this file is a bit different compared to the standard Etendo XML translation files, but it is also very easy to understand. You just need to translate the content of all the attributes that start with “translated”, like <em>translatedName</em>, <em>translatedErrorMessage</em>, etc. This is an example of the buildstructure.xml file translated into Spanish.</p>
+<div class="highlight"><pre><span></span><code>&lt;?xml version=&#39;1.0&#39; ?&gt;
+&lt;BuildTranslation&gt;
+  &lt;language&gt;es_ES&lt;/language&gt;
+  &lt;mainStepTranslations&gt;
+    &lt;mainStepTranslation code=&quot;RB11&quot; originalName=&quot;Initial Build Validation&quot; translatedName=&quot;Validación de la construcción del sistema&quot; translatedErrorMessage=&quot;La validación ha fallado. El sistema no se ha modificado y continua estable, pero los problemas descritos en la parte inferior de la ventana deberían resolverse (ya sea desinstalando los módulos afectados, o resolviendo los problemas de la forma descrita), y una nueva construcción del sistema debería iniciarse.&quot;&gt;
+      &lt;stepTranslations/&gt;
+    &lt;/mainStepTranslation&gt;
+    &lt;mainStepTranslation code=&quot;RB20&quot; originalName=&quot;Build&quot; translatedName=&quot;Construcción del sistema&quot; translatedSuccessMessage=&quot;La construcción del sistema se ha completado con éxito.&quot; translatedWarningMessage=&quot;Se produjeron alertas durante la compilación. La aplicación se ejecutará, pero debería comprobarlas para ver si son importantes. Ir a &amp;lt;a href=&amp;quot;http://wiki.openbravo.com/wiki/ERP/2.50/Update_Tips&amp;quot; target=&amp;quot;_blank&amp;quot; class=&amp;quot;MessageBox_TextLink&amp;quot;&amp;gt; este enlace &amp;lt;/a&amp;gt; para más información. &amp;lt;b&amp;gt;Ahora debe reiniciar el contenedor de servlets&amp;lt;/b&amp;gt; para que los cambios tengan efecto.&quot; translatedErrorMessage=&quot;Ha ocurrido un error durante la construcción del sistema. Para saber qué pasos realizar a continuación, vaya a &amp;lt;a href=&amp;quot;http://wiki.openbravo.com/wiki/ERP/2.50/Update_Tips&amp;quot; target=&amp;quot;_blank&amp;quot; class=&amp;quot;MessageBox_TextLink&amp;quot;&amp;gt;este enlace&amp;lt;/a&amp;gt;&quot;&gt;
+      &lt;stepTranslations&gt;
+        &lt;stepTranslation code=&quot;RB12&quot; originalName=&quot;Database update&quot; translatedName=&quot;Actualización de la base de datos&quot;/&gt;
+        &lt;stepTranslation code=&quot;RB31&quot; originalName=&quot;Reference data&quot; translatedName=&quot;Datos de referencia&quot;/&gt;
+        &lt;stepTranslation code=&quot;RB43&quot; originalName=&quot;Compilation&quot; translatedName=&quot;Compilación&quot;/&gt;
+      &lt;/stepTranslations&gt;
+    &lt;/mainStepTranslation&gt;
+  &lt;/mainStepTranslations&gt;
+&lt;/BuildTranslation&gt;
+</code></pre></div>
+<h5 id="masterdata-dataset"><strong>Masterdata dataset</strong></h5>
+<p>All the XML files exported through the Import/Export window and the buildstructure.xml represents all the available user interface strings in the ERP. If we translate all these files, we will have a fully translated application. However, the ERP includes some other strings not related to the UI that can be also translated. Inside this group, called Masterdata, we include: country names, currencies, units of measure and month names. All this data is not exported into the XML files, however this does not mean we cannot translate it.</p>
+<p>The way for translating masterdata is creating a system level dataset that only contains the translated strings for countries, currencies, units of measure and months.</p>
+<p>As System Administrator, we create a new record inside the <strong>Dataset</strong> window for our core's translation module. It is important to define this dataset at <strong>System only</strong> level to ensure it will be automatically applied when we install the module.</p>
+<p>As you can see in the screenshot, the tables to be included are: <strong>AD_Month_Trl</strong>, <strong>C_Country_Trl</strong>, <strong>C_Currency_Trl</strong> and <strong>C_UOM_Trl</strong>. All of them have a filter clause that uses the <strong>language</strong> column, in the example <em>es_ES</em>.</p>
+<p><a class="glightbox" href="https://lh6.googleusercontent.com/dpVQBy2nbhtVzgjPkJHYMp9RqvqPUHmanSDKiUQqs8E6s9I_0jSSVqJuxrV0AouN4apDtKfCXAgJHrKZw0du8SOdwVuz8vDhLR6JMPTM3aLZ-GaRMuALWoFzwgNzcr5VvFjC_uBTAEpXbnU4dBdn4UJuSbcrwDn0dOjleEeWRSZ3WzaQbDbdnrOa6rElNQ" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh6.googleusercontent.com/dpVQBy2nbhtVzgjPkJHYMp9RqvqPUHmanSDKiUQqs8E6s9I_0jSSVqJuxrV0AouN4apDtKfCXAgJHrKZw0du8SOdwVuz8vDhLR6JMPTM3aLZ-GaRMuALWoFzwgNzcr5VvFjC_uBTAEpXbnU4dBdn4UJuSbcrwDn0dOjleEeWRSZ3WzaQbDbdnrOa6rElNQ" /></a></p>
+<p>Now, our Core's translation module has a dataset, so we must remember to check the Has reference data flag into the module's definition.</p>
+<p><a class="glightbox" href="https://lh6.googleusercontent.com/K9BHCsQMKGLJzldVabm22RyRHSEBxmwnwfjiHgZgnvAdRTfFJ-lKjcfTgzWJR7v3OJzeDd471vIF36MDEZOEm3GorJ2eA9AYu9Pkp1wYvhGn4znmMpOSH5rhYy7RBpfYpAysuVcwA32cE2EtSMSSHa4Zy-eZ8A6bua82BpGLX5HPfbRL1Scf5X9tcYpLdg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh6.googleusercontent.com/K9BHCsQMKGLJzldVabm22RyRHSEBxmwnwfjiHgZgnvAdRTfFJ-lKjcfTgzWJR7v3OJzeDd471vIF36MDEZOEm3GorJ2eA9AYu9Pkp1wYvhGn4znmMpOSH5rhYy7RBpfYpAysuVcwA32cE2EtSMSSHa4Zy-eZ8A6bua82BpGLX5HPfbRL1Scf5X9tcYpLdg" /></a></p>
+<p>The dataset definition is ready, but it is pending the translation itself. To translate this dataset, we have two possibilities:</p>
+<ul>
+<li>In the ERP, as System Administrator, we can go to the Country Region and City, Currency, Unit of Measure and Month windows and translate the corresponding record inside the Translation tab (recommended method).<br />
+    When finished, export the dataset using the Export Reference Data button at the Dataset window.<br />
+</li>
+</ul>
+<p><a class="glightbox" href="https://lh4.googleusercontent.com/HLdK6MJvPef1PUIKKflkO9lzH6J-784wcxFKviH6LfXpVqU53EwcH6_FYjuxvsmxhkSkjaeCcvb0sEdspbU4ifUoR4eWpIOsgulGUkWfgaK3OE5Wvwp7wMxEIsBkLNIgzov73EqdOKp4hUB3py8LgVnVg05mfOAyqfYVPo4ZZHfhNEH7-d9yxukFGjtT5A" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh4.googleusercontent.com/HLdK6MJvPef1PUIKKflkO9lzH6J-784wcxFKviH6LfXpVqU53EwcH6_FYjuxvsmxhkSkjaeCcvb0sEdspbU4ifUoR4eWpIOsgulGUkWfgaK3OE5Wvwp7wMxEIsBkLNIgzov73EqdOKp4hUB3py8LgVnVg05mfOAyqfYVPo4ZZHfhNEH7-d9yxukFGjtT5A" /></a></p>
+<ul>
+<li>Export the dataset with the untranslated strings and edit the XML file using a text editor. The dataset XML file will be stored inside the referencedata/standard directory of your translation module.</li>
+</ul>
+<h4 id="translation-bundle"><strong>Translation bundle</strong></h4>
+<p>As you probably know, Etendo is a distribution of modules, including Core. That means that to have a fully translated application, you must translate all the modules that are part of the distribution. </p>
+<p>It is a good idea to create a translation bundle that covers all the modules. Later on, it is a possible to include this bundle into our Localization Bundle.</p>
+<h4 id="publishing-the-translation-module"><strong>Publishing the translation module</strong></h4>
+<p>The process of publishing a translation module is similar to the standard publishing process with just one important consideration: we need to copy the translated XML files to the corresponding module's referencedata/translation folder within your module folder.</p>
+<p>The summarized process is:</p>
+<ul>
+<li><em>Core only:</em> If we have translated the masterdata dataset directly in the ERP, we need to export it through the Export Reference Data button at the Dataset window.</li>
+<li>Export the database running</li>
+</ul>
+<div class="highlight"><pre><span></span><code>./gradlew export.database 
+</code></pre></div>
+<p>Copy the translated XML files to the translation module's referencedata/translation folder</p>
+<p>The structure of the translation module's directory should be:</p>
+<div class="highlight"><pre><span></span><code>&lt;translation module java package name&gt;
+├── referencedata
+│ ├── standard
+│ │ └── Masterdata.xml (only for core)
+│ └── translation
+│     └── es_ES
+│         ├── AD_ELEMENT_TRL_es_ES.xml
+│         ├── AD_FIELDGROUP_TRL_es_ES.xml
+│         ├── AD_FIELD_TRL_es_ES.xml
+│         ├── AD_FORM_TRL_es_ES.xml
+│         ├── AD_MENU_TRL_es_ES.xml
+│         ├── AD_MESSAGE_TRL_es_ES.xml
+│         ├── AD_MODULE_TRL_es_ES.xml
+│         ├── AD_PROCESS_PARA_TRL_es_ES.xml
+│         ├── AD_PROCESS_TRL_es_ES.xml
+│         ├── AD_REFERENCE_TRL_es_ES.xml
+│         ├── AD_REF_LIST_TRL_es_ES.xml
+│         ├── AD_TAB_TRL_es_ES.xml
+│         ├── AD_TEXTINTERFACES_TRL_es_ES.xml
+│         ├── AD_WF_NODE_TRL_es_ES.xml
+│         ├── AD_WINDOW_TRL_es_ES.xml
+│         ├── AD_WORKFLOW_TRL_es_ES.xml
+│         ├── buildStructureTrl.xml
+│         ├── C_DOCTYPE_TRL_es_ES.xml
+│         ├── CONTRIBUTORS_es_ES.xml
+│         ├── OBKMO_WIDGET_CLASS_TRL_es_ES.xml
+│         ├── OBUIAPP_PARAMETER_TRL_es_ES.xml
+│         ├── OBUISEL_SELECTOR_FIELD_TRL_es_ES.xml
+│         └── OBUISEL_SELECTOR_TRL_es_ES.xml
+└── src-db
+    └── database
+        ├── model
+        │ ├── functions
+        │ ├── sequences
+        │ ├── tables
+        │ ├── triggers
+        │ └── views
+        └── sourcedata
+            ├── AD_DATASET_TABLE.xml (only for core)
+            ├── AD_DATASET.xml (only for core)
+            ├── AD_MODULE_DEPENDENCY.xml
+            └── AD_MODULE.xml
+</code></pre></div>
+<ul>
+<li>Finally, remember to publish the module in the Nexus Repository. For more information, see <a href="https://docs.etendo.software/en/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository"><em>Publish Modules to a Nexus Repository</em></a>.</li>
+</ul>
+<h2 id="updating-translation-modules">Updating Translation Modules</h2>
+<p>These are the first considerations for updating a translation module:</p>
+<ul>
+<li>We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in <a href="https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/install-modules-in-etendo"><em>Install Modules in Etendo</em></a>. </li>
+<li>The already translated strings for this module are kept. Only the new or modified ones will be untranslated, so all the previous work done is not lost.</li>
+<li>Before publishing the translation module, remember to update the First Version dependency to the new version of the translated module, as we saw in the “Create module definition” chapter. Also, it is necessary to update the original module version in the build.gradle file. Apart from that, it is also a good practice to include a description of the changes of this new version inside the Update Information field of the Module window.</li>
+<li>To apply the updates, it is necessary to execute the command </li>
+</ul>
+<div class="highlight"><pre><span></span><code>./gradlew install.translation -Dmodule=javapackage
+./gradlew smartbuild -Dlocal=no
+</code></pre></div>
+<p>The main steps for updating a translation module are almost the same as when creating a new translation module from scratch. The only difference is that it is not necessary to declare the System Language and to run the Verify Languages process. The rest of the process is exactly the same, starting by the “Export the translation” section.</p>
+<h3 id="tips-and-tricks">Tips and Tricks</h3>
+<p>This section tries to provide a set of useful translation tips and tricks. Take into account that some of these tricks may require development knowledge.</p>
+<p>If you are translating directly into the XML files, you can also have a <em>manual</em> translation memory using the Grep tool. grep command can search for matching strings (or regular expressions) into a set of files.</p>
+<p>The following example finds all the occurrences of the string “<em>Exempt Amount</em>” in all .xml files in the directory</p>
+<div class="highlight"><pre><span></span><code>openbravo@por0828:~/XML_files$ fgrep -i &quot;Exempt Amount&quot; *.xml 
+AD_ELEMENT_TRL_es_ES.xml:    &lt;value column=&quot;Name&quot; isTrl=&quot;Y&quot; original=&quot;Exempt Amount&quot;&gt;Importe exento&lt;/value&gt; 
+AD_TEXTINTERFACES_TRL_es_ES.xml:    &lt;value column=&quot;Text&quot; isTrl=&quot;Y&quot; original=&quot;Exempt Amount&quot;&gt;Importe exento&lt;/value&gt;
+</code></pre></div>
+<h4 id="finding-the-context">Finding the context</h4>
+<p>Making a good translation requires knowing the exact context where the string we are translating appears. Unfortunately, the context in the XML file is not clear at all, and sometimes it is necessary to dive into the application to get the exact context. Here you have a list of tips for finding it:</p>
+<ul>
+<li>The first obvious thing you must take into account is the file you are translating. <em>AD_MENU_TRL</em> represents the Application menu entries, <em>AD_MESSAGE_TRL</em> has all the messages, <em>AD_PROCESS_TRL</em> is in charge of the process and reports, <em>AD_PROCESS_PARA_TRL</em> is the process parameters, etc.</li>
+<li>If you are translating using PO files you can find information related to the string you are translating at the comments section. As you can see in the previous screenshot, the PoEdit comment window displays the name, description and help for the string we are currently translating.</li>
+<li>The Etendo <strong>Linked Items</strong> feature can give you all the places where a record is used. In the screenshot below, you can get the places where the element with the name “General Ledger Currency Credit” is used. In this case, linked items show that the element is only used in one column, so the user can navigate to this column and later on navigate to the related field, that will show the window where it is used.<br />
+</li>
+</ul>
+<p><a class="glightbox" href="https://lh6.googleusercontent.com/1DK-ejWJiBE-zImQ63c16VjUdAdhx-ZIBVBGxXm5JKB22NAbD-nm7jSzkoCCF4TzP4fHk5VPocE5FQWTN7zD1aImaEdSeTRQRzdVDqdrtYDVtALenqfZ2bK7pb4yix5eiXb3OEcF-l9cOBDKPOu-b62NvbY6fsI5CnDACzo6-rPbjkjtMVkhIaUWYs7IgA" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="https://lh6.googleusercontent.com/1DK-ejWJiBE-zImQ63c16VjUdAdhx-ZIBVBGxXm5JKB22NAbD-nm7jSzkoCCF4TzP4fHk5VPocE5FQWTN7zD1aImaEdSeTRQRzdVDqdrtYDVtALenqfZ2bK7pb4yix5eiXb3OEcF-l9cOBDKPOu-b62NvbY6fsI5CnDACzo6-rPbjkjtMVkhIaUWYs7IgA" /></a></p>
+<ul>
+<li>All the records have an ID. In the XML file, this ID is shown as an attribute of the row element. In the PO files, it is stored as a comment that can be easily displayed in your PO editor comments window. If we search this ID in the database, it can provide us with important information.<br />
+    For example, it is necessary to get more information about the message "<em>Business Partner has no location defined</em>." with the ID "<em>04EEC6B52A7B4C2CACA1F767217FAFB7</em>". If the following SQL query is run in the database, it will provide the search key of this message:</li>
+</ul>
+<p><a class="glightbox" href="https://lh3.googleusercontent.com/p3Z0NoO7_TKH85eYyv34Pss34S7_6S0AqlQyVNhIR2aoZAa_xX6sV-YpAuMlNktH1HPX2tGmPxbHLGMxRS2tOmPqQ7zWTmjdxsUBoOkR9h3PR108pZHKNX6t5_YC9O4csifF9qgtmMIPU52dBWIWyP_IlR9c_zkgm2wXf078eiPFgMPgJSLJNXzdPKoUOQ" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LocGuide HowTo Translate 160.png" src="https://lh3.googleusercontent.com/p3Z0NoO7_TKH85eYyv34Pss34S7_6S0AqlQyVNhIR2aoZAa_xX6sV-YpAuMlNktH1HPX2tGmPxbHLGMxRS2tOmPqQ7zWTmjdxsUBoOkR9h3PR108pZHKNX6t5_YC9O4csifF9qgtmMIPU52dBWIWyP_IlR9c_zkgm2wXf078eiPFgMPgJSLJNXzdPKoUOQ" /></a></p>
+<p>With this information, the grep command can be used to find the places in the module's source code where the message is used:</p>
+<div class="highlight"><pre><span></span><code>$ fgrep -r NoBPLocation src* 
+src/org/openbravo/erpCommon/ad_callouts/SE_Order_BPartner.java:      message.append(Utility.messageBD(this, &quot;NoBPLocation&quot;, vars.getLanguage())); 
+</code></pre></div>
+<p>Now, we know it is used in a callout, so it is just necessary to find in the Application Dictionary the places where this callout is used, using the Linked Items feature mentioned before.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
