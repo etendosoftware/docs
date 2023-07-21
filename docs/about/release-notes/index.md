@@ -38,5 +38,5 @@ tags:
 | [21Q4.4](/docs.etendo.software/about/release-notes/21Q4-4) | 25/05/2022 | 21.4.4 | C   | | |
 | [21Q4.3](/docs.etendo.software/about/release-notes/21Q4-3) | 11/05/2022 | 21.4.3 | C   | | |
 | [21Q4.2](/docs.etendo.software/about/release-notes/21Q4-2) | 10/03/2022 | 21.4.2 | C   | | |
-| [21Q4.1](/docs.etendo.software/about/release-notes/21Q4-1) | 17/12/2021 | 21.4.1 | C   | | |
+| 21Q4.1                                                     | 17/12/2021 | 21.4.1 | C   | | |
 | [21Q4.0](/docs.etendo.software/about/release-notes/21Q4-0) | 13/12/2021 | 21.4.0 | C   | | |
