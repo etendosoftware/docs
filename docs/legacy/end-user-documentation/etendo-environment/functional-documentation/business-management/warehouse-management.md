@@ -6,7 +6,7 @@ title: Warehouse Management
 
 In Etendo, most of the warehouse movements are made automatically based on the transactions of **Sales** and **Procurement** processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the **Warehouse Management** application area and are gathered in the Inventory Accuracy business flow which is described below.
 
-![](https://drive.google.com/uc?export=view&id=12r6iycSYJzLIVpgBrp3xG8CSxd13L-eZ)
+![](/docs.etendo.software/assets/drive/12r6iycSYJzLIVpgBrp3xG8CSxd13L-eZ.png)
 
 Main sub-processes of the **Inventory Accuracy** business flow are:
 
@@ -100,7 +100,7 @@ These are the steps that must be followed in order to create an inventory count:
 
 **1.** The **Header** section identifies the "Physical Inventory" process and lists its main parameters.
 
-![Header](https://drive.google.com/uc?export=view&id=1mrD0K5quoU7vF0d3WNeOwW0u_n4vGLWf)
+![Header](/docs.etendo.software/assets/drive/1mrD0K5quoU7vF0d3WNeOwW0u_n4vGLWf.png)
 
 All fields are pre-filled automatically when a new record is created.
 
@@ -117,7 +117,7 @@ Some of the fields to note are:
 
 **Create Inventory Count List** process can be executed more than once for the same physical inventory. Although lines are created automatically by using the **Create Inventory Count List** process, these lines can later on be updated manually. **Create Inventory Count List** filter dialog has the following parameters:
 
-![Header 2](https://drive.google.com/uc?export=view&id=1CWBqL3eiqKbFJ8RTqSJaf1iB2_ltvJp3)
+![Header 2](/docs.etendo.software/assets/drive/1CWBqL3eiqKbFJ8RTqSJaf1iB2_ltvJp3.png)
 
 The fields to note are:
 
@@ -184,7 +184,7 @@ From the Physical Inventory window, it is possible to reactivate a previously ge
 
 Once the Inventory is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.
 
-![](https://drive.google.com/uc?export=view&id=1WBA34PF6dwDGKc8HW0tC8iuzD_CR-9I2)
+![](/docs.etendo.software/assets/drive/1WBA34PF6dwDGKc8HW0tC8iuzD_CR-9I2.png)
 
 !!! warning
     Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup#storage-bin).
@@ -211,7 +211,7 @@ Goods Movement window allows the user to make internal inventory movements among
 
 Internal inventory movements can be made by adding products to the lines tab or by moving all items at once.
 
-![Header](https://drive.google.com/uc?export=view&id=1kfjIQpgySwJygR6UxhnTHrLbFkseEEDf)
+![Header](/docs.etendo.software/assets/drive/1kfjIQpgySwJygR6UxhnTHrLbFkseEEDf.png)
 
 All fields are automatically pre-filled in when a **new** record is created. Some of them to note:
 
@@ -227,7 +227,7 @@ As already mentioned, there are 2 ways of entering lines (or products to be move
 2.  By moving all items from one bin (**Storage Bin From**) to another (**Storage Bin To**) by using the **Move Storage Bin** button.  
     The system automatically inserts one line per every storage bin and product.
 
-![Header](https://drive.google.com/uc?export=view&id=170LDHuomqrUcv0OHXssJuBjXJlyzg8H0)
+![Header](/docs.etendo.software/assets/drive/170LDHuomqrUcv0OHXssJuBjXJlyzg8H0.png)
 
 ### Lines
 
@@ -235,7 +235,7 @@ Lines tab is a list of the products moved between warehouses and storage bins.
 
 This tab also includes information about the source, destination and the respective quantity.
 
-![Lines](https://drive.google.com/uc?export=view&id=18SSKl05H6kTiVvZfZteK0MeJnb787F6p)
+![Lines](/docs.etendo.software/assets/drive/18SSKl05H6kTiVvZfZteK0MeJnb787F6p.png)
 
 Some fields to note:
 
@@ -278,7 +278,7 @@ From the Goods Movement window, the user is able to reactivate a previously gene
 
 Once the movement is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.
 
-![](https://drive.google.com/uc?export=view&id=1tHX7U3NNVTlZ83m_Ql4RFEL52gsgy81B)
+![](/docs.etendo.software/assets/drive/1tHX7U3NNVTlZ83m_Ql4RFEL52gsgy81B.png)
 
 !!! warning
     Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup#storage-bin).
@@ -359,7 +359,7 @@ Goods Transaction window provides a read only view with extensive filtering capa
 
 All real warehouse movements can be seen in this window: incoming, outgoing, movements between warehouses, physical inventories, etc.
 
-![Goods Transaction](https://drive.google.com/uc?export=view&id=1rGnZndz2vH5AEMTbBc1xVao-TLFT1N_r)
+![Goods Transaction](/docs.etendo.software/assets/drive/1rGnZndz2vH5AEMTbBc1xVao-TLFT1N_r.png)
 
 ## Stock Reservation
 
@@ -432,7 +432,7 @@ When the Goods Shipment is processed the reservation is updated to reflect the s
 
 The desired product to be reserved is defined in the main tab.
 
-![Stock](https://drive.google.com/uc?export=view&id=1Z_fxaBhzcUR2exlgB69BDletxVUl_fiL)
+![Stock](/docs.etendo.software/assets/drive/1Z_fxaBhzcUR2exlgB69BDletxVUl_fiL.png)
 
 The reservation header defines each reservation. First, the _Organization_ where the reservation is done and the _Product_ and _Quantity_ desired to be reserved are defined. When the reservation is for a Sales Order line, these fields are inherited from the line. Later, the owner of the reservation is defined, currently it is only possible to define Sales Order lines. If this is left blank, the reservation is considered a _System_ reservation where the owner is the _Organization_. Finally, it is possible to define certain dimensions to restrict the stock that can be used to fulfill the reservation:
 
@@ -468,7 +468,7 @@ It is the quantity that has been delivered and released from the reservation. Wh
 
 The Stock tab identifies each existing Stock or Purchase Order selected to fulfill the reservation.
 
-![Stock](https://drive.google.com/uc?export=view&id=1588n_FidAyqyw0WwUJ8-E3w_bMRv2MLF)
+![Stock](/docs.etendo.software/assets/drive/1588n_FidAyqyw0WwUJ8-E3w_bMRv2MLF.png)
 
 In the _Stock_ tab  the actual reserved stock is shown. The stock should meet the dimensions defined in the header. When the stock is physically in the warehouse the reserved stock is identified by the Storage Bin and the Attribute Set Value when applied. In case of pre-reservations the stock is still not in the warehouse, so the _Storage Bin_ property is blank and the _Purchase Order line_ is set. When a pre-reservation is receipt and converted to reservation the storage bin where the stock has been stored is set keeping the purchase order line.
 
@@ -486,7 +486,7 @@ The quantity that has been released or delivered.
 
 When the reservation is in _Draft_ or _Completed_ status, it is possible to modify the reserved stock using a _pick and execute_ process.
 
-![Stock](https://drive.google.com/uc?export=view&id=1U6xkkgtOgdwovTAP70Fo6JLSbfIf-UOZ)
+![Stock](/docs.etendo.software/assets/drive/1U6xkkgtOgdwovTAP70Fo6JLSbfIf-UOZ.png)
 
 This window shows all the already reserved stock plus other available stock and not receipt Purchase Order Lines that can be used to fulfill the reservation. The available stock is filtered by the on hand warehouses of the reservation's organization and the dimensions that might be set. The Purchase Order lines are also filtered by these dimensions. For each selected line the quantity to reserve has to be set and if the stock is allocated or not. The quantity must be lower than the available quantity considering as well the quantity that might be reserved in other reservations and the sum of all the selected lines must be lower than the quantity desired to be reserved. If the reservation already has some released quantity, the quantity of the released stock must be higher or equal than the released stock
 
@@ -494,7 +494,7 @@ This window shows all the already reserved stock plus other available stock and 
 
 It is allowed to move an item that is reserved from its current storage bin to another one. The button _Goods movement_ shows all the bins where the product is reserved, that is, the stock lines and it  is also possible to edit the quantity to be moved and the new storage bin.
 
-![Stock](https://drive.google.com/uc?export=view&id=1F6npvraIMx78-uaccl5Ibmqj8yY46wMX)
+![Stock](/docs.etendo.software/assets/drive/1F6npvraIMx78-uaccl5Ibmqj8yY46wMX.png)
 
 ## Inventory Amount Update
 
@@ -519,7 +519,7 @@ An inventory Amount Update can be created and processed in the header section of
 
 An inventory amount update can be created, managed and processed in the header section of the Inventory Amount Update window.
 
-![Header](https://drive.google.com/uc?export=view&id=159RjgB2ff5cOtrsCcE0TxlbT6WyEtVWz)
+![Header](/docs.etendo.software/assets/drive/159RjgB2ff5cOtrsCcE0TxlbT6WyEtVWz.png)
 
 Some fields to note are:
 
@@ -557,7 +557,7 @@ Some fields to note are:
 - **Inventory Amount**: this field allows to enter a "new" inventory amount for the product. Once entered "Unit Cost" field is populated accordingly by taking into account On hand quantity field.
 - **Unit Cost**: this field allows to enter a "new" unit cost for the product. Once entered, the "Inventory Amount" field is populated accordingly by taking into account On hand quantity field.
 
-![Lines](https://drive.google.com/uc?export=view&id=1Y-fYqIyNmSDOIwtEW9bqoKgALlRbyv7M)
+![Lines](/docs.etendo.software/assets/drive/1Y-fYqIyNmSDOIwtEW9bqoKgALlRbyv7M.png)
 
 Once created, an inventory amount update can be processed by using the process button "Process".
 
@@ -573,7 +573,7 @@ This "read-only" tab contains links to detail information such as:
 - **Close Inventory**: that is the closing inventory transaction that removes current product inventory at current unit cost.
 - **Init Inventory**: that is the opening inventory transaction that adds new product inventory at new unit cost.
 
-![Inventories](https://drive.google.com/uc?export=view&id=1Hk2DRSMCFD4FQ5HPkVnIOhbsRioCKeFS)
+![Inventories](/docs.etendo.software/assets/drive/1Hk2DRSMCFD4FQ5HPkVnIOhbsRioCKeFS.png)
 
 Opening and closing inventory can be reviewed and posted to the ledger in the Physical Inventory  window.
 
@@ -679,7 +679,7 @@ Cost adjustment documents are automatically created by either the "Costing Backg
 
 Once automatically created, it can be reviewed in this window.
 
-![Cost adjustment](https://drive.google.com/uc?export=view&id=1nLK6s6vSfV3C3rDRIjFq2dVRGCi1S-t4)
+![Cost adjustment](/docs.etendo.software/assets/drive/1nLK6s6vSfV3C3rDRIjFq2dVRGCi1S-t4.png)
 
 Some relevant fields to note are:
 
@@ -902,7 +902,7 @@ This adjustment type changes the "Unit Cost" and the "Total Cost" of the transac
 
 As shown in the image below, this process allows to select the Organization for which this process needs to be run, enter a given movement date and select a product or set of products for which price difference correction cost adjustments would need to be created.
 
-![Cost adjustment](https://drive.google.com/uc?export=view&id=18dMx0odX-PVVwMCGGtEnkfYNfctDa7o5)
+![Cost adjustment](/docs.etendo.software/assets/drive/18dMx0odX-PVVwMCGGtEnkfYNfctDa7o5.png)
 
 Additionally, the Costing Background Process can also create price difference correction cost adjustments, only if:
 
@@ -942,7 +942,7 @@ There are two types of cost adjustments transactions:
 - "**source**", for instance a vendor receipt (V+) whose purchase price has changed
 - "**not source**", for instance a customer shipment (C-) whose cost needs to be adjusted because of vendor receipt cost being adjusted.
 
-![Cost adjustment](https://drive.google.com/uc?export=view&id=1vta9aBh20mSzCWRvr4jHKjwNMa5QtEyk)
+![Cost adjustment](/docs.etendo.software/assets/drive/1vta9aBh20mSzCWRvr4jHKjwNMa5QtEyk.png)
 
 Some relevant files to note are:
 
@@ -978,7 +978,7 @@ Some relevant files to note are:
 
 This tab provides Cost Adjustment accounting information.
 
-![Cost adjustment](https://drive.google.com/uc?export=view&id=1VeXLRgA1XTypzkIYGOloEycvI7i138Pi)
+![Cost adjustment](/docs.etendo.software/assets/drive/1VeXLRgA1XTypzkIYGOloEycvI7i138Pi.png)
 
 Ledger entries shown in this tab are different depending on the source of the adjustment but landed cost posting that it is managed in the Landed Cost window.
 
@@ -1080,7 +1080,7 @@ From this window it is possible to link/unlink stock to/from a Referenced Invent
 
 Shows a P&E with the stock not yet linked to any referenced inventory (it is not possible to box a stock already boxed).
 
-![Box](https://drive.google.com/uc?export=view&id=1JQfT41NnGHscmbx1FygnOuvFwxi3co5v)
+![Box](/docs.etendo.software/assets/drive/1JQfT41NnGHscmbx1FygnOuvFwxi3co5v.png)
 
 The user can select one or several records and specify the quantity to be boxed. It is also mandatory to declare the New Storage Bin where the boxed stock will be stored.
 
@@ -1101,7 +1101,7 @@ This way, the information about the referenced inventory is clearly visible at a
 
 Shows a P&E with the stock currently linked to the selected referenced inventory.
 
-![UnBox](https://drive.google.com/uc?export=view&id=1sKmYK_BGCx8XXDXtuXJLcJ4dQ1pTa1-x)
+![UnBox](/docs.etendo.software/assets/drive/1sKmYK_BGCx8XXDXtuXJLcJ4dQ1pTa1-x.png)
 
 The user can select one or several records and specify the quantity to be unboxed (so it is possible to run partial unboxing) and the new storage bin where the stock will be stored after unboxing (**by default it will be unboxed to the current location**).
 

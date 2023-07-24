@@ -36,7 +36,7 @@ The user can create warehouses for their organizations.
 
 It is important to have a previous overview before creating warehouses. **Warehouse** tab contains essential details of the warehouse, meaningful ones are **Name** and **Location / Address.**
 
-![Warehouse](https://drive.google.com/uc?export=view&id=1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE)
+![Warehouse](/docs.etendo.software/assets/drive/1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE.png)
 
 Fields to note:
 
@@ -50,7 +50,7 @@ The user can create storage bins for a selected warehouse.
 
 It defines **Storage Bin** position in the warehouse: **Row (X)**, **Stack (Y)** and **Level (Z)** fields and other parameters.
 
-![Storage Bin](https://drive.google.com/uc?export=view&id=1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT)
+![Storage Bin](/docs.etendo.software/assets/drive/1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT.png)
 
 Other fields to note:
 
@@ -72,7 +72,7 @@ The user can view the stored products of a selected storage bin.
 
 **Bin Contents** read-only tab lists products stored in a particular storage bin.
 
-![Bin Contents](https://drive.google.com/uc?export=view&id=1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x)
+![Bin Contents](/docs.etendo.software/assets/drive/1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x.png)
 
 Fields to note:
 
@@ -143,7 +143,7 @@ In order to create and validate a "Costing Rule", the user has to take into acco
 
 The costing rule window allows the user to define and validate costing rules.
 
-![Costing Rule](https://drive.google.com/uc?export=view&id=1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5)
+![Costing Rule](/docs.etendo.software/assets/drive/1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5.png)
 
 As shown in the image above, a "Costing Rule" can be defined and assigned to an organization for which the cost of the transactions need to be calculated.
 
@@ -202,7 +202,7 @@ To make this work, one of the following two actions can be taken:
     This way fix backdated transactions feature gets activated by using the process button "**Fix Backdated Transactions**".  
     This option allows entering a "Fix Backdated From" date as starting date, before running the process.
 
-![Fix Backdated Transactions](https://drive.google.com/uc?export=view&id=1dSn2VWGuwWybweNlYEgdtUImlXA8UihG)  
+![Fix Backdated Transactions](/docs.etendo.software/assets/drive/1dSn2VWGuwWybweNlYEgdtUImlXA8UihG.png  .png)
  
 
 2\. create and validate a **new Costing Rule**.  
@@ -280,7 +280,7 @@ A landed cost type can either be created as an "**Account**" or as a "**Product*
 -   "**Product**" landed cost types requires a Product to be created, for instance "Freight", therefore this type of landed costs can be booked through a purchase invoice.
     -   "Expense" type ledger account used while posting purchase invoice including a landed cost of this type are the ones setup in the Accounting tab of the Product.
 
-![Landed Cost Type](https://drive.google.com/uc?export=view&id=1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6)
+![Landed Cost Type](/docs.etendo.software/assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png)
 
 ## Warehouse Rules
 

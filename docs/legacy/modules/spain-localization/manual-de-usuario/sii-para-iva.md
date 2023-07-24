@@ -679,7 +679,7 @@ Una vez introducida esta información, podemos completar y contabilizar la factu
 
 Tras la contabilización del documento, el botón "**Alta en SII**" se muestra habilitado.
 
-![](https://drive.google.com/uc?export=view&id=1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv)
+![](/docs.etendo.software/assets/drive/1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv.png)
 
 Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
 
@@ -691,7 +691,7 @@ Siempre es posible contabilizar/descontabilizar la factura después de darla de 
 
 El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento de introducir el precio del producto en la línea de la factura, por lo que es necesario realizar una modificación por error registral (Tipo de comunicación A1). El proceso a seguir es "Descontabilizar", activar el check "Modificar por error registral" y "Reactivar" el documento. Tras hacer la modificación correspondiente, de nuevo se completa y contabiliza el documento antes de pulsar el botón "Modificación en SII", manteniéndose la fecha registro contable que inicialmente se informó en SII.
 
-![](https://drive.google.com/uc?export=view&id=1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA)
+![](/docs.etendo.software/assets/drive/1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA.png)
 
 En el caso de las facturas de compra, tampoco será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
 
@@ -1088,11 +1088,11 @@ La modificación de un cobro en RECC ya dado de alta en SII se efectuará envian
 
 Lo anterior implica que en Etendo, no podremos reactivar un cobro en RECC ya dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago" que se muestra en la siguiente imagen:
 
-![](https://drive.google.com/uc?export=view&id=1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW)
+![](/docs.etendo.software/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
 Al revertir el cobro, Etendo genera un nuevo cobro por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
 
-![](https://drive.google.com/uc?export=view&id=10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD)
+![](/docs.etendo.software/assets/drive/10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD.png)
 
 El XML generado contendrá la siguiente información:
 
@@ -1264,7 +1264,7 @@ Una vez introducida dicha información, el botón "**Actualizar Cobros Metálico
 - respecto de operaciones/transacciones bancarias relacionadas con **Facturas y Conceptos Contables**, asociadas a un “Tercero” identificado con un **Tax ID** (por ejemplo NIF)
 - y que, **agrupadas por dicho tercero**, superen el importe de 6.000,00 €
 
-![](https://drive.google.com/uc?export=view&id=1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt)
+![](/docs.etendo.software/assets/drive/1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt.png)
 
 Una vez generado el cobro/cobros, se puede realizar su "**Alta en SII**". Una vez dado de alta en SII, los campos "Alta en SII", "Estado registro SII", "Importe", "Importe enviado" e "Importe enviado" se actualizarán.
 
@@ -1283,7 +1283,7 @@ Para ello, se diferencian los siguientes campos:
 
 Por ejemplo para un tercero determinado se realizaron varias facturas durante el año 2021 que se cobran en metálico. El importe total de dichas facturas y, por tanto, el importe recibido en metálico de este tercero asciende a 151,000.00. Tanto las facturas como el cobro en metálico se han dado de alta en SII.
 
-![](https://drive.google.com/uc?export=view&id=1u1oUThSf80IxxOdRGouxAHwQraXG2w1o)
+![](/docs.etendo.software/assets/drive/1u1oUThSf80IxxOdRGouxAHwQraXG2w1o.png)
 
 Con posterioridad se realiza una nueva factura por importe de 1,800.00 €, que también se cobra en efectivo, y que por tanto debe darse de alta en SII.
 
@@ -1291,13 +1291,13 @@ En la ventana "SII Cobros en Metálico", tendremos que:
 
 - actualizar la información para que se refleje el nuevo cobro creado como "Importe pendiente" de alta en SII, tal y como se muestra en la imagen siguiente:
 
-![](https://drive.google.com/uc?export=view&id=1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF)
+![](/docs.etendo.software/assets/drive/1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF.png)
 
 - y activar el check "**Modificada error registral**" en el cobro.
 
 Una vez hecho esto se podrá proceder a la modificación en SII de dicho cobro para el tercero, a través del botón "**Modificación en SII**".
 
-![](https://drive.google.com/uc?export=view&id=1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF)
+![](/docs.etendo.software/assets/drive/1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF.png)
 
 Es importante recalcar que si de un tercero se recibiera un cobro en metálico con fecha del ejercicio a declarar (por ejemplo 2017), respecto de una factura de fecha anterior (por ejemplo 2016), dicho cobro también se incluirá en la selección, para su alta en SII, siempre que el importe total recibido/cobrado de ese tercero supere los 6000.00 €.
 
@@ -1711,7 +1711,7 @@ Lo anterior implica que en Etendo, al igual que se ha explicado para los cobros 
 
 Al revertir el pago, Etendo genera un nuevo pago por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
 
-![](https://drive.google.com/uc?export=view&id=1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW)
+![](/docs.etendo.software/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
 El XML generado contendrá la siguiente información:
 

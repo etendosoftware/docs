@@ -123,7 +123,7 @@ Let us take as an example a business partner having a price list in EUR.
 !!! info
     Customer related data can be entered and configured once the "Customer" checkbox is enabled.
 
-![](https://drive.google.com/uc?export=view&id=1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr)
+![](/docs.etendo.software/assets/drive/1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr.png)
 
 As shown in the image above, there is a list of relevant data to be entered for customers together with current _customer balance_ information:
 
@@ -238,7 +238,7 @@ Besides, it is important to remark that it is possible to configure the creation
 
 A business partner can be set up as employee once the checkbox "Employee" is enabled.
 
-![](https://drive.google.com/uc?export=view&id=1cmnf61sr6kJcPLISrzVR8kzSbcw5Pugv)
+![](/docs.etendo.software/assets/drive/1cmnf61sr6kJcPLISrzVR8kzSbcw5Pugv.png)
 
 Employee tab allows the user to set which of your business partners are "Employees".
 
@@ -489,7 +489,7 @@ In the Currency Converters window, the necessary Apilayer data has to be configu
 - User
 - Password
 
-![](https://drive.google.com/uc?export=view&id=1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a)
+![](/docs.etendo.software/assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Product
 
@@ -2369,9 +2369,9 @@ You use a main price list (with a price list version) containing a price per bre
 
 The Create All Price Lists generates all price lists pending from the selected price list. The process checks for all child price lists, and applying the defined price list schema, it generates a new version for each price list.
 
-![](https://drive.google.com/uc?export=view&id=1gcdIPde692fCVAn9cq0PEXTyJBTBR9vT)
+![](/docs.etendo.software/assets/drive/1gcdIPde692fCVAn9cq0PEXTyJBTBR9vT.png)
 
-![](https://drive.google.com/uc?export=view&id=1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd)
+![](/docs.etendo.software/assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
 
 ### **Discounts and Promotions**
 

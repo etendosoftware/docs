@@ -32,7 +32,7 @@ In other words, the "Tax Payment" process helps to calculate the amount of taxes
 
 The tax register type window allows the user to create tax register types.
 
-![Tax Register Type Header](https://drive.google.com/uc?export=view&id=1wwI271qWNtJQmMZxupMktzWI6S3ByU6w)
+![Tax Register Type Header](/docs.etendo.software/assets/drive/1wwI271qWNtJQmMZxupMktzWI6S3ByU6w.png)
 
 As shown in the image above, it is possible to create:
 
@@ -47,7 +47,7 @@ The ledger accounts defined for that G/L Item will be the ones to use while post
 
 The lines tab allows the user to associate tax rates to the tax register type.
 
-![Tax Register Type Lines](https://drive.google.com/uc?export=view&id=1O_4QacWfrELWWRoG5Ye2E73Fa8AIi8i1)
+![Tax Register Type Lines](/docs.etendo.software/assets/drive/1O_4QacWfrELWWRoG5Ye2E73Fa8AIi8i1.png)
 
 As shown in the image above, each tax rate selected needs also to be linked to a document type.
 
@@ -104,7 +104,7 @@ To better understand the configuration of a **Payment Method**, it is necessary 
 
 In the image below, a Simple Payment Workflow is shown:
 
-![](https://drive.google.com/uc?export=view&id=1MwU8f0EaeyCjJveISM3RGAnFAfSHfq4N)
+![](/docs.etendo.software/assets/drive/1MwU8f0EaeyCjJveISM3RGAnFAfSHfq4N.png)
 
 
 The way to create each payment stage in Etendo is described below:
@@ -168,7 +168,7 @@ In the following explanation and diagram below, the different Payment Statuses a
 -   **Deposited/Withdrawn not Cleared:** This status appears when the Receipt/Payment has been added to the Financial Account screen, therefore the corresponding Deposit/Withdrawal transaction has been created in the Financial Account.
 -   **Payment Cleared:** This status appears when the Deposit/Withdrawal reconciliation has been executed.
 
-![](https://drive.google.com/uc?export=view&id=1Ol1gtQAffG_S_bYKW6zAKbUK-Ez2qNRX)
+![](/docs.etendo.software/assets/drive/1Ol1gtQAffG_S_bYKW6zAKbUK-Ez2qNRX.png)
 
 
 In more detail, the way those payment status change within the payables and receivables payment cycle is:
@@ -193,7 +193,7 @@ The image below shows the Payment Method window. That is the window where paymen
 
 However, payment methods are assigned to financial accounts, therefore, a different configuration of a given payment method can also be defined in the payment method tab of the financial account window.
 
-![](https://drive.google.com/uc?export=view&id=10h0Lmw3yZ6rITkSq7q4nijmHlH_6jg5-)
+![](/docs.etendo.software/assets/drive/10h0Lmw3yZ6rITkSq7q4nijmHlH_6jg5-.png)
 
 As a consequence, the same method of payment can have different configuration "versions" depending on the financial account it has been assigned to.
 
@@ -295,7 +295,7 @@ Payment Methods can be configured as explained below in detail:
 One of the key features allowed by the payment method configuration is to get that two of the three payment cycle stages can be automated:
 
 
-![](https://drive.google.com/uc?export=view&id=1V8vW4qdKyJxH9BGNX5xWZaRmXNJvbSkr)
+![](/docs.etendo.software/assets/drive/1V8vW4qdKyJxH9BGNX5xWZaRmXNJvbSkr.png)
 
 
 As shown in the image above, if the **Automatic Receipt/Payment and Automatic Deposit/Withdrawn are selected**, the manual actions to execute are:
@@ -327,7 +327,7 @@ Analogue situation happens while making a payment to a vendor:
 -   Step 2 - the "Withdrawal" of the payment from the Financial Account
 -   Step 3 - and finally the "Reconciliation" of the Withdrawal once the bank statement has been received.
 
-![](https://drive.google.com/uc?export=view&id=1dugshR9aHhF3ahlQd03ILe6xTAPKVg0a)
+![](/docs.etendo.software/assets/drive/1dugshR9aHhF3ahlQd03ILe6xTAPKVg0a.png)
 
 For each step, it is possible to specify the default account for the receivables and payables cycles independently.
 
@@ -406,7 +406,7 @@ Once a bank statement file is imported to an organization's financial account:
 
 The bank file format window lists the bank file format modules installed for an organization.
 
-![Bank File Format](https://drive.google.com/uc?export=view&id=1m1UirW3EvMahtJQK5imtme5TZTf-Iy9w)
+![Bank File Format](/docs.etendo.software/assets/drive/1m1UirW3EvMahtJQK5imtme5TZTf-Iy9w.png)
 
 As shown in the image above, a bank file format can be applied to the organization in the Enterprise Module Management window after being installed, therefore it is available for any organization of the client.
 
@@ -444,7 +444,7 @@ The payments that require a separate activity to be executed need to be configur
 
 The parameter tab allows the user to configure the additional activity to execute upon completion of a payment. For instance, to record a check number.
 
-![Parameter tab](https://drive.google.com/uc?export=view&id=17seAr4S-i9aqgCgpcrr01lDo4hXD22Rn)
+![Parameter tab](/docs.etendo.software/assets/drive/17seAr4S-i9aqgCgpcrr01lDo4hXD22Rn.png)
 
 As shown in the image above, the "**Print Check Simple Process**" has one parameter named "**Check Number**". That parameter is an "**In**" "**Parameter Type**" which "**Input Type**" is "**Text**".
 
@@ -464,7 +464,7 @@ To configure the remittance payment method it is necessary to previously execute
 !!! info
     The "Deferred" field should always be checked for payment methods that apply to remittances.
 
-![](https://drive.google.com/uc?export=view&id=1Qe3mdTduM3wJctZkC3N8z-yLRL_Gq6Y_)
+![](/docs.etendo.software/assets/drive/1Qe3mdTduM3wJctZkC3N8z-yLRL_Gq6Y_.png)
 
 !!! info
     No accounting will be defined for any of the transactions associated with the remittance payment method, so that no double accounting is generated. Remittance accounting is configured from the remittance types window.
@@ -477,23 +477,23 @@ The following accounts are defined:
 **Sent account:** the account to be used in the remittance posting.
 **Settlement account:** account to be used for the remittance settlement posting, which refers to the amount having been collected or paid.
 
-![](https://drive.google.com/uc?export=view&id=1fUwM5P-aNQOSlIm1u_mYfDAdQzbPO6ur)
+![](/docs.etendo.software/assets/drive/1fUwM5P-aNQOSlIm1u_mYfDAdQzbPO6ur.png)
 
 To finish the process, the payment methods applicable to each financial account should be associated. 
 
 !!! info
     It is important that those banks from which remittance transactions are to be made, have a third party partner.
 
-![](https://drive.google.com/uc?export=view&id=1lNuqadYEmnZeOl8RcS3hXS_2-N7GrVfg)
+![](/docs.etendo.software/assets/drive/1lNuqadYEmnZeOl8RcS3hXS_2-N7GrVfg.png)
 
 
 ### Non-Discount Remittances
 To configure Non-Discount Remittances, define this payment method from the Payment Method window.  
 
-![](https://drive.google.com/uc?export=view&id=11mLuoH5qVVh_8tjnepUL12O6oaOkIoY2)
+![](/docs.etendo.software/assets/drive/11mLuoH5qVVh_8tjnepUL12O6oaOkIoY2.png)
 
 
-![](https://drive.google.com/uc?export=view&id=1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO)
+![](/docs.etendo.software/assets/drive/1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO.png)
 
 !!! info
     To create a Non-Discount remittance go to the [Remittance window](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance) 
@@ -502,11 +502,11 @@ To configure Non-Discount Remittances, define this payment method from the Payme
 
 To configure Remittances for Discount, define the type from the Remit for Discount check box as shown in the image below: 
 
-![](https://drive.google.com/uc?export=view&id=1xW3siKWbirKqZAazQzIoLoPcGMknNwjk)
+![](/docs.etendo.software/assets/drive/1xW3siKWbirKqZAazQzIoLoPcGMknNwjk.png)
 
 
 
-![](https://drive.google.com/uc?export=view&id=12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI)
+![](/docs.etendo.software/assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
     To create a Remitt for Discount remittance go to the [Remittance window](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance)
@@ -520,7 +520,7 @@ Through this window, it is possible to define a Doubtful Debt Method, which will
 
 #### **Doubtful Debt Method**
 
-![Doubtful Debt Method](https://drive.google.com/uc?export=view&id=1aJifeptvA2B8lIiaFEBtvNIbXUcJpRxO)
+![Doubtful Debt Method](/docs.etendo.software/assets/drive/1aJifeptvA2B8lIiaFEBtvNIbXUcJpRxO.png)
 
 Fields to note:
 

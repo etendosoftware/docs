@@ -90,7 +90,7 @@ The way to manage the Opening/Closing of a particular Document Type for a specif
 
 Once done, Etendo informs that the process has been completed successfully.
 
-![](https://drive.google.com/uc?export=view&id=1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt)
+![](/docs.etendo.software/assets/drive/1wWBwXFdqFKBcXY9i19M7U8nE0jiUYMJt.png)
 
 As shown in the image above the main fields in this window are:
 
@@ -126,7 +126,7 @@ Then it is possible to select all records shown and Open or Close all of them at
 
 The organization in this example has created three consecutive years and has open all the periods including the "13th Period" as shown in the image below:
 
-![](https://drive.google.com/uc?export=view&id=1dOWq4RquxSziuUbqVYpORdf9eA4Ts7g5)
+![](/docs.etendo.software/assets/drive/1dOWq4RquxSziuUbqVYpORdf9eA4Ts7g5.png)
 
 The configuration above means that the organization in this example can post any document to the ledger at any period within those 4 years. If the organization tried to post a sales invoice in Dec 2018, Etendo will show an error as that year/period does not exist.
 
@@ -139,7 +139,7 @@ Before running the "Close Year" process for 2019, the organization in this examp
 -   As the Year has all its Periods Open, including the Adjustment Period, the Window should show thirteen records.
 -   Select all the periods except the 13th Period and click on the Close Period button and select the action "Close Period" (as this one allows the user to reopen the year/period if needed)
 
-![](https://drive.google.com/uc?export=view&id=1AxEefqisj3SW_FqBBXGfF6Th0rWpaJrn)
+![](/docs.etendo.software/assets/drive/1AxEefqisj3SW_FqBBXGfF6Th0rWpaJrn.png)
 
 Above action closes all the 2021 standard periods until Dec-2021, therefore it is not possible to post any transaction to the ledger in any 2021 standard period anymore but:
 
@@ -169,7 +169,7 @@ The way to manage the Opening/Closing of a particular Document Type for a specif
 
 Once done, Etendo informs that the process has been completed successfully.
 
-![](https://drive.google.com/uc?export=view&id=18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD)
+![](/docs.etendo.software/assets/drive/18LHnWB8IGtMlKvBlGEkFcvMl4MtUzfWD.png)
 
 -   As in the Periods tab, the *Status* is split in two columns. One that represents the Status with a color code, and one that represents it by its name. The possible Status values are:
     -   Never Opened, colored in gray. It belongs to a recently created Period.
@@ -201,11 +201,11 @@ In this window, the user can configure the different options to use in the Finan
  
 Go to the Enterprise Module Management window and select the organization needed to import the date by default. Then, check the dataset called "Banking Pool" and click the OK button. 
 
-![](https://drive.google.com/uc?export=view&id=1_nLnAqZWd8FEKdbpyTOeYnn9XwECgU6z)
+![](/docs.etendo.software/assets/drive/1_nLnAqZWd8FEKdbpyTOeYnn9XwECgU6z.png)
 
 The information imported from the Financial Type window is shown. 
 
-![](https://drive.google.com/uc?export=view&id=1Xyc0F9xpyGMqp2Aq_MArXwdIGjdtgpw0)
+![](/docs.etendo.software/assets/drive/1Xyc0F9xpyGMqp2Aq_MArXwdIGjdtgpw0.png)
 
 
 ## **Period Control Log**
@@ -220,7 +220,7 @@ When a Period is Open or Closed through the Open/Close Period Control Window, or
 
 For example, this screenshot shows the Period Control Log for an Organization that has opened all of its Periods for the Year 2019:
 
-![](https://drive.google.com/uc?export=view&id=1ZQv4ciDH8NuE6aOQLnWmztUUVg2PxZuN)
+![](/docs.etendo.software/assets/drive/1ZQv4ciDH8NuE6aOQLnWmztUUVg2PxZuN.png)
 
 As shown in the image above, the main fields in this Window are:
 
@@ -297,7 +297,7 @@ Besides, it is well-known that every account, subaccount in Etendo terms, needs 
 -   "Asset", "Liability" and "Owner's Equity" account types need to be included in the Balance Sheet
 -   while "Expense" and "Revenue" account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](https://drive.google.com/uc?export=view&id=12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY) which can be found in the "Toolbar".
+The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](/docs.etendo.software/assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png which can be found in the "Toolbar"..png)
 
 Tree icon opens a new window which shows one tree branch per financial statement:
 
@@ -305,7 +305,7 @@ Tree icon opens a new window which shows one tree branch per financial statement
 -   Profit & Loss
 -   and Temporary default accounts. This branch of the account tree gathers temporary defaults accounts which are not ledger accounts.
 
-![](https://drive.google.com/uc?export=view&id=12A_jeX7hjVBb97LZZW_nK85hx6Esp59a)
+![](/docs.etendo.software/assets/drive/12A_jeX7hjVBb97LZZW_nK85hx6Esp59a.png)
 
 Besides, each tree branch contains several elements inside structured in a hierarchical way, for instance:
 
@@ -313,7 +313,7 @@ Besides, each tree branch contains several elements inside structured in a hiera
     -   Assets
     -   Liabilities and Owner's Equity
 
-![](https://drive.google.com/uc?export=view&id=1HiiXjkkZf5e0VsVbgldchqqwS8WrspJG)
+![](/docs.etendo.software/assets/drive/1HiiXjkkZf5e0VsVbgldchqqwS8WrspJG.png)
 
 As shown in the image above "Assets" is also split into:
 
@@ -325,7 +325,7 @@ Same way "Equity" is also split into several accounts, in Etendo terms "subaccou
 
 Back to the "Element Value" tab, there are several **basic fields** which help to define each chart of account element:
 
-![](https://drive.google.com/uc?export=view&id=1pTNoLOD4-8sKE5F5VMC-loqlMklPTmv6)
+![](/docs.etendo.software/assets/drive/1pTNoLOD4-8sKE5F5VMC-loqlMklPTmv6.png)
 
 -   the **"Search Key"** and the **"Name"** identifies the chart of account element.
     -   The search key can either be a single letter, a word or a number, however it is important to be aware that the "Search key" field is the field that Etendo uses while helping the user to create an account tree element.
@@ -379,7 +379,7 @@ For instance, the element "1900-Total Assets" is the sum up of three customized 
 
 as shown in the image below.
 
-![](https://drive.google.com/uc?export=view&id=1fwBuS2sV-ufKxTap5X_O02nkVrMJOD_i)
+![](/docs.etendo.software/assets/drive/1fwBuS2sV-ufKxTap5X_O02nkVrMJOD_i.png)
 
 #### **Translation**
 
@@ -727,14 +727,14 @@ However, temporary default accounts need to be created in the account tree under
 
 Therefore, a new "Heading" and "Summary" element needs to be created in the "Element Level" tab, that element can be named "Temporary Accounts".
 
-![](https://drive.google.com/uc?export=view&id=16EDV3UALuhdBZvS9RlBN0-4jF1WdCJbG)
+![](/docs.etendo.software/assets/drive/16EDV3UALuhdBZvS9RlBN0-4jF1WdCJbG.png)
 
 Once created, the accounts below (subaccounts) can be created and move underneath it:
 
 -   Suspense Balancing account
 -   Suspense Error account
 
-![](https://drive.google.com/uc?export=view&id=1a2sIjZMYnytbKtZw8g42pCYzy9EfSb2M)
+![](/docs.etendo.software/assets/drive/1a2sIjZMYnytbKtZw8g42pCYzy9EfSb2M.png)
 
 ## **General Ledger Configuration** {#glconfig}
 
@@ -768,7 +768,7 @@ Finally, it is important to remark that the organization's general ledger config
 
 The General Ledger Configuration window allows the user to review and maintain defaulted general ledger configurations and to create new ones if needed.
 
-![](https://drive.google.com/uc?export=view&id=1CzhjGyPX0yBre7l8Icc2Oh1BZY8rJASo)
+![](/docs.etendo.software/assets/drive/1CzhjGyPX0yBre7l8Icc2Oh1BZY8rJASo.png)
 
 A general ledger configuration created by default can be changed to meet the organization's needs by changing the features below:
 
@@ -922,7 +922,7 @@ The mandatory "Income Summary" account is populated by default as part of the ge
 
 If an accounting CSV or reference data is not selected while running the Initial Client Setup process or the Initial Organization Setup process, this mandatory account needs to be manually entered here once the account tree and therefore the corresponding income summary (or net income) subaccount has been created.
 
-![](https://drive.google.com/uc?export=view&id=1cpksFbMtBay1-6GdLI2NxEIDLUQk7ap0)
+![](/docs.etendo.software/assets/drive/1cpksFbMtBay1-6GdLI2NxEIDLUQk7ap0.png)
 
 The Income Summary account is used by the Close Year process as the P&L closing entry resets all revenue and expense account type and posts the difference in this account.
 
@@ -958,7 +958,7 @@ Finally, it is possible to override these defaults at business partner category 
 
 This last configuration change needs to be done in the vendor and/or customer windows.
 
-![](https://drive.google.com/uc?export=view&id=1q05Evh6w4UuSzH_ZIsB6OiymUn2Mh76U)
+![](/docs.etendo.software/assets/drive/1q05Evh6w4UuSzH_ZIsB6OiymUn2Mh76U.png)
 
 As shown in the image above, "default" accounts are:
 
@@ -1085,7 +1085,7 @@ A calendar contains years and the periods of each year required to get an accura
 
 The fiscal calendar window allows the user to create and maintain the organization's fiscal calendar.
 
-![](https://drive.google.com/uc?export=view&id=14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri)
+![](/docs.etendo.software/assets/drive/14LKmlXTMNBiFaMeCMoQbvMtX2_jk8gri.png)
 
 A fiscal calendar is a collection of years to be created on demand as time goes by.
 
@@ -1111,7 +1111,7 @@ This process also allows the user to create the "**13th Period**" which is a per
 
 The "**13th Period**" is an "**Adjustment Period**" that is the last date of the last standard calendar period (i.e 31-12-2012).
 
-![](https://drive.google.com/uc?export=view&id=1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj)
+![](/docs.etendo.software/assets/drive/1IGnqS8kOPXzV58VxzGjD3sBTUBWmgOtj.png)
 
 Once created, all the periods need to be **opened** in the Open/Close Period Control window.
 
@@ -1143,7 +1143,7 @@ Both actions are performed in the End Year Close window.
 
 The period tab lists all the periods of a year.
 
-![](https://drive.google.com/uc?export=view&id=1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5)
+![](/docs.etendo.software/assets/drive/1He-55aAYDSVEVm8vWy9_ER_h0k2qSIK5.png)
 
 ## **Account Combination**
 
@@ -1155,7 +1155,7 @@ An account combination is an Organization's General Ledger account.
 
 The Account Combination window allows the user to review the Organization's General Ledger accounts.
 
-![](https://drive.google.com/uc?export=view&id=1-YOqTdD_2q6W30y3iC19xoD6NJRoMpnj)
+![](/docs.etendo.software/assets/drive/1-YOqTdD_2q6W30y3iC19xoD6NJRoMpnj.png)
 
 The accounts can not be created manually in this window, but in the Account Tree window.
 
@@ -1194,7 +1194,7 @@ These are the special considerations for the module:
 - Include a DB Prefix for the module in case it is necessary. For example, the module will probably define new messages that will require a DB Prefix.
 - If the module has UI elements that can be translated (like messages), set the Translation Required checkbox and specify the necessary Module Language.
 
-![](https://drive.google.com/uc?export=view&id=1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6)
+![](/docs.etendo.software/assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
 
 - Remember to [register the module ](https://docs.etendo.software/en/technical-documentation/etendo-environment/platform/publish-modules-to-a-nexus-repository) in case it needs to be published in the [Nexus](https://repo.futit.cloud/).
 
@@ -1204,13 +1204,13 @@ These are the special considerations for the module:
  
 Finally, inside the modules/<accounting post-process java package> directory create the src folder, where the Java class that implements the accounting post-process code is stored.
 
-  ![](https://drive.google.com/uc?export=view&id=18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC)
+  ![](/docs.etendo.software/assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
 
 ### Creating the Accounting Post-Process Configuration
   
 The Java class that implements the Accounting Post-Process logic is defined at the Accounting Process window. The definition is quite simple and only requires a name and the Java class name, which must be inside the java package of the module.
 
-![](https://drive.google.com/uc?export=view&id=1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N)
+![](/docs.etendo.software/assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png)
 
 This Accounting Post-Process will be later on associated with an Accounting Schema. So in this step it is important to define as many Java classes as Accounting Post-Processes we want to include in our module, although it is usually recommended to include just one process per module to keep the general rule of isolating features in separate modules.
  
@@ -1225,7 +1225,7 @@ Dataset definition is a key step in this process. A wrong dataset definition can
 - Inside the Table tab we must include the AD_AcctProcess table, which is the one that stores the Accounting Process configuration.
 - The HQL/SQL Where clause is an important field, because it allows filtering the records necessary  to include into the dataset. In the example all the records that are inside our module java package name are filtered.
 
-![](https://drive.google.com/uc?export=view&id=1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J)
+![](/docs.etendo.software/assets/drive/1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J.png)
 
 The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
   
@@ -1250,7 +1250,7 @@ Direct account posting refers to:
 
 G/L Item window allows the user to create as many account items as required for an organization and general ledger.
 
-![](https://drive.google.com/uc?export=view&id=1hHiMTePnKxuaHcACgsqhmT3AxiD0MxKQ)
+![](/docs.etendo.software/assets/drive/1hHiMTePnKxuaHcACgsqhmT3AxiD0MxKQ.png)
 
 As shown in the image above, a G/L item or accounting item can be created by entering below listed basic information:
 
@@ -1263,7 +1263,7 @@ As shown in the image above, a G/L item or accounting item can be created by ent
 
 Account items are directly related to the debit and credit accounts to be used while posting them.
 
-![](https://drive.google.com/uc?export=view&id=1Z4sfyfiCMHTj0jE2vxq9xtUb8zZyPzzk)
+![](/docs.etendo.software/assets/drive/1Z4sfyfiCMHTj0jE2vxq9xtUb8zZyPzzk.png)
 
 As shown in the image above, the accounting tab allows the user to enter debit and credit accounts for the G/L item. It is possible to enter a debit and a credit account for each organization's general ledger configuration.
 
@@ -1284,11 +1284,11 @@ The fields to note are:
 - Document Category: A classification of document types that are shown and processed in the same window.
 - Default: A value that is shown whenever a record is created.
 
-![](https://drive.google.com/uc?export=view&id=1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb)
+![](/docs.etendo.software/assets/drive/1MGSdC1HCW2OFxS7Z0NL7qnM-94c55xOb.png)
 
 Once the needed information is complete, the categories are defined as in the following example: 
 
-![](https://drive.google.com/uc?export=view&id=1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty)
+![](/docs.etendo.software/assets/drive/1Im9vUdoxlQDR3jvfk8F9Qsbd8brcpWty.png)
 
 
 
@@ -1347,7 +1347,7 @@ It is also important to remark that *new document types could be added to the li
 
 Document type window allows the user to configure how each document type is going to behave in terms of accounting and sequencing among others.
 
-![](https://drive.google.com/uc?export=view&id=1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi)
+![](/docs.etendo.software/assets/drive/1qwdOVXe0r2NZ05j_Oslp9WmmOKPlogwi.png)
 
 "Standard" Document Types can be customized as required by having into account that:
 
@@ -1409,7 +1409,7 @@ In Etendo, every document suitable to be printed is linked to a "standard" repor
 
 If necessary, report templates can be customized and even new ones can be created and therefore linked to a given document type.
 
-![](https://drive.google.com/uc?export=view&id=1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-)
+![](/docs.etendo.software/assets/drive/1dJ2abXwQM0NXUH3Ht_ryJhDt_BiSEHe-.png)
 
 #### **Email Definitions**
 
@@ -1417,7 +1417,7 @@ Emails definition tab supports the creation of as many email templates as requir
 
 Documents can be sent by e-mail by using the action button **Email** which can be found in the *Toolbar*.
 
-![](https://drive.google.com/uc?export=view&id=1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh)
+![](/docs.etendo.software/assets/drive/1X9EV4yRuVGFu1ooGo6_cC8AIru8Px7nh.png)
 
 As shown in the image above, it is possible to define:
 
@@ -1466,7 +1466,7 @@ It is important to remark that:
 
 Document sequence window allows the user to define how document sequences are going to behave.
 
-![](https://drive.google.com/uc?export=view&id=1cqBJ-LRNEyws3SX80mIMk8SbXVlAmEKI)
+![](/docs.etendo.software/assets/drive/1cqBJ-LRNEyws3SX80mIMk8SbXVlAmEKI.png)
 
 As shown in the image above, a document number sequence can be set as *"Auto Numbering"* which means that the document linked to that sequence will get a document number automatically generated by the sequence.
 
@@ -1486,7 +1486,7 @@ In this new sequences, the masks can be added with dynamic dates or strings.
 
 The user can filter the new sequence according to the organization, document type and mask, the mask is  `#######` by default. This sequences could be created with the `Create sequences` process in `General Setup > Aplication > Create Sequences` window.
 
-![Sequences creation](https://drive.google.com/uc?export=view&id=1PP0CkomMyGlx20kQe3l7D0hW5Jn__2q-)
+![Sequences creation](/docs.etendo.software/assets/drive/1PP0CkomMyGlx20kQe3l7D0hW5Jn__2q-.png)
 
 - Mask: It is a string to define a parse format, with the possibility of creating a dynamic date or literal substring in addition to the formatted incremental number.
 
@@ -1571,7 +1571,7 @@ Tax categories allow the user to group similar tax rates by having into account 
 
 It is possible to create as many tax categories as required to be later on linked to the corresponding tax rates and products.
 
-![](https://drive.google.com/uc?export=view&id=1_UP-RLlLSipSAv4t40gnPbBj05ds58p0)
+![](/docs.etendo.software/assets/drive/1_UP-RLlLSipSAv4t40gnPbBj05ds58p0.png)
 
 As shown in the image above, a tax category can be created by just entering:
 
@@ -1666,7 +1666,7 @@ For taxes defined as summary, a new line is inserted for each of its children an
 
 Tax rate window allows the user to create as many tax rates as required.
 
-![](https://drive.google.com/uc?export=view&id=1CNDReMFRW2DoxDedviRdGoWwXmcDGTAp)
+![](/docs.etendo.software/assets/drive/1CNDReMFRW2DoxDedviRdGoWwXmcDGTAp.png)
 
 The fields to fill in to properly set up a tax rate are:
 
@@ -1791,7 +1791,7 @@ Accounting tab allows the user to configure the account to be used while posting
 -   *"Tax Due Transitory"* account is the transitory account used while posting sales tax amounts under the Cash VAT regime.
 -   *"Tax Credit Transitory"* account is the transitory account used while posting purchase tax amounts under the Cash VAT regime.
 
-![](https://drive.google.com/uc?export=view&id=15wOKJ7_50pNLBMCTWm7Rd_vJyGOZqcB0)
+![](/docs.etendo.software/assets/drive/15wOKJ7_50pNLBMCTWm7Rd_vJyGOZqcB0.png)
 
 A purchase invoice posting looks like:
 
@@ -1831,7 +1831,7 @@ In other words, a negative withholding posting means a negative debit posting wh
 
 Cost Center is an accounting dimension which can be used while posting documents to the ledger.
 
-![](https://drive.google.com/uc?export=view&id=1vk6c1L49EaXAtzd0A121Tq55wJZfq1Fu)
+![](/docs.etendo.software/assets/drive/1vk6c1L49EaXAtzd0A121Tq55wJZfq1Fu.png)
 
 #### **Cost Center**
 
@@ -1851,7 +1851,7 @@ Activity based costing (ABC) is a special costing model that identifies activiti
 
 ABC Activity window allows the user to create as many activities as required per each organization.
 
-![](https://drive.google.com/uc?export=view&id=1ekUpsYTliIZF7K_3I_HrqIgD5DGf7vrw)
+![](/docs.etendo.software/assets/drive/1ekUpsYTliIZF7K_3I_HrqIgD5DGf7vrw.png)
 
 As shown in the screen above, it is possible to define summary activities which support a hierarchical structure or activities within an organization.
 
@@ -1870,7 +1870,7 @@ The accounting entries generated by Etendo usually need to be generated in a dif
 
 The Java class that implements the generation of the new accounting entries is defined into the Accounting Templates window. The definition is quite simple and only requires a name, the Java class name, which must be inside the java package of the module, and the table for which the user wants to override its accounting entries (for example, C_Invoice for Invoices, M_InOut for goods shipments/receipts, etc.).
 
-![](https://drive.google.com/uc?export=view&id=1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr)
+![](/docs.etendo.software/assets/drive/1QFEgaMk9QRkcpsjLLGOZJNKRJo75LvKr.png)
 
 This Accounting Template will be later on associated with the Active Tables or a Document. So in this step it is important to define as many Java classes as Active Tables or Document to override their accounting behavior.
 For example, we can define an unique java class for overriding the accounting behavior of all the invoices (sales invoices, purchase invoices, purchase/sales credit memo, etc.), or alternatively define a class for overriding only the accounting entries for Purchase Invoices (AP Invoice) and keep the default behavior to the rest of the invoices.
@@ -1886,7 +1886,7 @@ Dataset definition is a key step in this process. A wrong dataset definition can
 - Inside the Table tab, include the AD_CreateFact_template table, which is the one that stores the Accounting Template configuration.
 - The HQL/SQL Where clause is an important field, because it allows filtering the records the user wants to include into the dataset. In the example all the records that are inside the module java package name have been filtered. 
 
-![](https://drive.google.com/uc?export=view&id=1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U)
+![](/docs.etendo.software/assets/drive/1stuKmJOwNnsth6RG3HX9tj5_6v3OY83U.png)
 
 The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
 In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table.
@@ -1895,7 +1895,7 @@ In case the file is empty, the user should double check the dataset definition, 
 
 The real test to ensure the taxes dataset is OK can be done inside the development instance. The test consists on creating a new client running the Initial Client Setup and selecting the new dummy accounting template dataset.
 
-![](https://drive.google.com/uc?export=view&id=14yYG4b3onJefyFiz6sV8KlImkfi5ijCf)
+![](/docs.etendo.software/assets/drive/14yYG4b3onJefyFiz6sV8KlImkfi5ijCf.png)
 
 !!! info
     If the data inside the dataset are consistent, the Initial Client Setup Process should be completed successfully, otherwise it will fail giving a description about the error.
@@ -1949,7 +1949,7 @@ It is really important the level up to which either a Balance Sheet or P&L repor
 -   The same applies in the case of organizations which are *Organization* type which have other organizations underneath sharing the same general ledger configuration and, therefore, account tree.
 -   If the organization selected is a *Generic* organization which belongs to a *Legal with Accounting* one, the financial information provided by the reports will be just the financial information of that organization.
 
-![](https://drive.google.com/uc?export=view&id=1xwB1sbOrMC6OtQejlrNDjg5Zss_vMddz)
+![](/docs.etendo.software/assets/drive/1xwB1sbOrMC6OtQejlrNDjg5Zss_vMddz.png)
 
 The fields to fill in this window are:
 
@@ -1965,13 +1965,13 @@ The fields to fill in this window are:
 
 Grouping category tab allows the user to define categories which groups report node/s. Each grouping category implies a page break in the report showing the defined report node/s.
 
-![](https://drive.google.com/uc?export=view&id=1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF)
+![](/docs.etendo.software/assets/drive/1SWF7a1R4E3wI7Qx_nxPBzfoHqn9aneBF.png)
 
 #### **Node**
 
 A node defines the information shown in the report.
 
-![](https://drive.google.com/uc?export=view&id=1jA6R5_RRLe7qWdGcNE_pWbiRmzfT61FF)
+![](/docs.etendo.software/assets/drive/1jA6R5_RRLe7qWdGcNE_pWbiRmzfT61FF.png)
 
 A report node is defined by:
 

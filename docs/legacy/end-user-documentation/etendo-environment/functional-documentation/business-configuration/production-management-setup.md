@@ -56,7 +56,7 @@ In this tab, the user can add machines to be used in a selected work center.
 
 Here, all machines that are related to the work center are entered.
 
-![](https://drive.google.com/uc?export=view&id=1bH2Nkpkjs2grvEa02A9sh0f9URwCciXD)
+![](/docs.etendo.software/assets/drive/1bH2Nkpkjs2grvEa02A9sh0f9URwCciXD.png)
 
 #### **Activity**
 

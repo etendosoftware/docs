@@ -48,6 +48,6 @@ To configure the preference, go to the “Preference” window and create a new 
 
 It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
 
-![](https://drive.google.com/uc?export=view&id=17KafE0qvtuAe21aVvs7mDN58V_BCDScO)
+![](/docs.etendo.software/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 
 

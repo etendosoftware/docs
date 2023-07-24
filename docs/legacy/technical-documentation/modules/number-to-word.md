@@ -7,7 +7,7 @@ This module allows to convert numbers into words. It is specially useful while p
 
 Once installed this module creates a new window which can be found in *General Setup > Application*:
 
-![Number To Word Converter](https://drive.google.com/uc?export=view&id=1LYIhLCeLGa3ARKn1O92vg39RdYnjtWao)
+![Number To Word Converter](/docs.etendo.software/assets/drive/1LYIhLCeLGa3ARKn1O92vg39RdYnjtWao.png)
 
 Some fields to note are:
 

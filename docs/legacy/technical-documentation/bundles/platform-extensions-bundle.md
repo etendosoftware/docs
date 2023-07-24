@@ -172,7 +172,7 @@ The reports have to be uploaded in the correct folder, for example: `/var/lib/to
 
 Then, in the "Clear report cache" window, click ’Done’:
 
-![Clear Report Cache](https://drive.google.com/uc?export=view&id=10BWG7z1bmplzWz--wUqI6maavHs4dC1c)
+![Clear Report Cache](/docs.etendo.software/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
 When you try to get the Jasper report, this repository should have been updated:
 

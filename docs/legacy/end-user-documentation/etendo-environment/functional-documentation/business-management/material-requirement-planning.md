@@ -12,7 +12,7 @@ The Master Requirement Planning consists of two plans:
 
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
-![](https://drive.google.com/uc?export=view&id=1XDSnzN_2Jhj3RYWAJF3AHlHgLK81xqJA)
+![](/docs.etendo.software/assets/drive/1XDSnzN_2Jhj3RYWAJF3AHlHgLK81xqJA.png)
 
 
 

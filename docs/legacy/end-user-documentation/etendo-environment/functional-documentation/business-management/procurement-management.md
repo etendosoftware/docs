@@ -16,7 +16,7 @@ A Requisition is a document that specifies a request to order products.
 
 The user can create requisitions and monitor them in this window:
 
-![Requisition window](https://drive.google.com/uc?export=view&id=1ihaEseE5RnNH7INNbaRLyvZC0P2q-hTl)
+![Requisition window](/docs.etendo.software/assets/drive/1ihaEseE5RnNH7INNbaRLyvZC0P2q-hTl.png)
 
 ### Header
 
@@ -33,7 +33,7 @@ Besides, the system populates the following data:
 - The **document No.**, which is the Requisition number.
 - The **requester**, which is the user entering the requisition.
 
-![Requisition](https://drive.google.com/uc?export=view&id=1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7)
+![Requisition](/docs.etendo.software/assets/drive/1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7.png)
 
 The requester can then move to the "**Lines**" tab to enter **additional data**.
 
@@ -57,7 +57,7 @@ Requisition "Lines" tab collects the following demand data:
 - The **net unit price:** This one can be either equal to the net list price or not, based on the formula: \[net unit price = net list price - discount\]. It is an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.
 - The **discount**, if any, is based on a used price list.
 
-![Requisition Lines](https://drive.google.com/uc?export=view&id=1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC)
+![Requisition Lines](/docs.etendo.software/assets/drive/1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC.png)
 
 It is possible to enter as many requisition lines as products demand.
 
@@ -79,7 +79,7 @@ Manage Requisitions window is intended to be used to provide an overall picture 
 
 This window allows the user to manage requisitions regardless of their current status, therefore they can change or close a requisition and create purchase orders for those demands.
 
-![Requisition window Header](https://drive.google.com/uc?export=view&id=1yuE4xa0usvVzSdmthjDWdi12OAqTuJTe)
+![Requisition window Header](/docs.etendo.software/assets/drive/1yuE4xa0usvVzSdmthjDWdi12OAqTuJTe.png)
 
 A **requisition** with status "Completed" **can always be changed**, if required. The user needs to reactivate it and then change it and book it.
 
@@ -98,7 +98,7 @@ In this case, a new window is shown for the user to fill in some data by taking 
 - If **all the requisition lines have the same supplier and price list**:
   - **there will not be any need for selected defaulted ones** in the window "Create Purchase Order", besides only one purchase order will be created.
 
-![Purchase order](https://drive.google.com/uc?export=view&id=17OuNS8YpM0VC3MUkLO25DPPHCMwWjq8u)
+![Purchase order](/docs.etendo.software/assets/drive/17OuNS8YpM0VC3MUkLO25DPPHCMwWjq8u.png)
 
 Etendo provides information about the purchase order/s number/s created after pressing the OK button in the "Create Purchase Order" window.
 
@@ -133,7 +133,7 @@ This tab allows the user to either review the purchase order line automatically 
 
 Requisition to Order window shows all the "Completed" requisitions which match the criteria used in the "filter" section and it also shows the requisition lines selected as locked, therefore the same product demand can not be included more than once in a purchase order.
 
-![Requisition to order](https://drive.google.com/uc?export=view&id=1Xl_R8oaUrOaO0SK4wB5BYNw3wJDEjHBX)
+![Requisition to order](/docs.etendo.software/assets/drive/1Xl_R8oaUrOaO0SK4wB5BYNw3wJDEjHBX.png)
 
 In other words, the upper section of this window shows the requisition lines found that are not linked to an order yet.  
 Those are the lines which can be added by the user to the "Lock" area in the bottom section of the window.
@@ -183,7 +183,7 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
 
-![Purchase order window](https://drive.google.com/uc?export=view&id=1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2)
+![Purchase order window](/docs.etendo.software/assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
 
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
@@ -255,7 +255,7 @@ Line tax tab informs about each purchase order line:
 
 Lists information about discounts automatically applied based on the supplier configuration and / or manually entered for the purchase order.
 
-![Basic discounts](https://drive.google.com/uc?export=view&id=1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-)
+![Basic discounts](/docs.etendo.software/assets/drive/1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-.png)
 
 #### **Payment Plan**
 
@@ -283,7 +283,7 @@ Displays the details of the payments (pre-payments or regular payments) made for
 
 Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.
 
-![](https://drive.google.com/uc?export=view&id=1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq)
+![](/docs.etendo.software/assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png)
 
 Once the process is finished, the purchase order status turns to booked.
 
@@ -306,7 +306,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](https://drive.google.com/uc?export=view&id=1vTIb8zM4yW3ZXKULoxF96N8nbZdWB0dr)
+![](/docs.etendo.software/assets/drive/1vTIb8zM4yW3ZXKULoxF96N8nbZdWB0dr.png)
 
 ### Intercompany
 
@@ -326,7 +326,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](https://drive.google.com/uc?export=view&id=1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9)
+![Good receipts header](/docs.etendo.software/assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -400,7 +400,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](https://drive.google.com/uc?export=view&id=1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg)
+![Good receipts posting](/docs.etendo.software/assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
@@ -452,7 +452,7 @@ Void action implies that:
 
 Landed Cost window allows to allocate additional costs to the goods receipt.
 
-![Landed cost window](https://drive.google.com/uc?export=view&id=1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o)
+![Landed cost window](/docs.etendo.software/assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
 
 It is possible to enter as many landed cost types/lines as required.
 
@@ -475,7 +475,7 @@ From the Goods Receipt window, it is possible to reactivate a previously generat
 
 Once the receipt is successfully reactivated, the state of the document changes to Draft as it can be observed in the status bar.
 
-![](https://drive.google.com/uc?export=view&id=1-Z-wUYZfcGDizQ_Kkp8TUYXTs-KnM67H)
+![](/docs.etendo.software/assets/drive/1-Z-wUYZfcGDizQ_Kkp8TUYXTs-KnM67H.png)
 
 !!! warning
     Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup#storage-bin).
@@ -506,7 +506,7 @@ This window allows the user to:
 - **Enter** the "**Goods receipt location**" or storage bin within a warehouse.
 - **Process it** in order to create the corresponding goods receipts.
 
-![Pending goods receipts window](https://drive.google.com/uc?export=view&id=1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8)
+![Pending goods receipts window](/docs.etendo.software/assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png)
 
 ## Purchase Invoice
 
@@ -557,7 +557,7 @@ Once completed, a purchase invoice can be:
 - **voided** by using the button _Reactivate_
 - and **paid** by using the button _Add Payment_.
 
-![Purchase invoice window](https://drive.google.com/uc?export=view&id=1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3)
+![Purchase invoice window](/docs.etendo.software/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
 #### Advanced Remittance
 
@@ -621,7 +621,7 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 
 Etendo allows the user to reactivate voided purchase invoices by selecting the needed one/s and clicking the Unvoid button.
 
-![](https://drive.google.com/uc?export=view&id=1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW)
+![](/docs.etendo.software/assets/drive/1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW.png)
 
 Once the process is finished, the sales invoice status turns to Complete.
 
@@ -649,7 +649,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](https://drive.google.com/uc?export=view&id=1k1K_gD4JMVrUriXiCYzG_9RkYMwG8BZz)
+![](/docs.etendo.software/assets/drive/1k1K_gD4JMVrUriXiCYzG_9RkYMwG8BZz.png)
 
 ### Intercompany
 
@@ -684,7 +684,7 @@ Above mentioned discrepancies are mainly caused by differences between:
 
 In the window, there is a listing of all invoices that are matched to goods receipts. The matching of the documents is done when documents are created by using the information of the other document: for example by clicking the Generate Invoice from receipt on the goods receipt or by clicking the Create Lines from button when creating a goods receipt to select the invoice.
 
-![Matched invoices window](https://drive.google.com/uc?export=view&id=1AUhlJDfTAknIjUueLpm4QCCmZSwz1vBg)
+![Matched invoices window](/docs.etendo.software/assets/drive/1AUhlJDfTAknIjUueLpm4QCCmZSwz1vBg.png)
 
 #### **Matched Invoice**
 
@@ -727,7 +727,7 @@ The user can create a purchase order and process it.
 
 Once the Return Material document is accepted by the Vendor, the user can process it by clicking the button **Book**. The document changes from _Draft_ to _Booked._
 
-![Return to vendor window](https://drive.google.com/uc?export=view&id=1PKb2NIyq5HtvO_4abDPQjajObdcGFiPH)
+![Return to vendor window](/docs.etendo.software/assets/drive/1PKb2NIyq5HtvO_4abDPQjajObdcGFiPH.png)
 
 Only _Booked_ documents can be shipped to the vendor.
 
@@ -790,7 +790,7 @@ Once the document is ready, you can process it by clicking the button **Complete
 !!! warning
     Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status _Completed._
 
-![Return to vendor shipment](https://drive.google.com/uc?export=view&id=1wuiYHH8xsIwjLRgp0VzWUqAtev43BzD8)
+![Return to vendor shipment](/docs.etendo.software/assets/drive/1wuiYHH8xsIwjLRgp0VzWUqAtev43BzD8.png)
 
 To invoice these documents you must use the **Purchase invoice** window. All scenarios are covered:
 
@@ -921,7 +921,7 @@ In Summary, landed cost feature follows below detailed steps:
 
 A Landed Cost document can be created, processed and posted in this window.
 
-![Landed cost header](https://drive.google.com/uc?export=view&id=1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o)
+![Landed cost header](/docs.etendo.software/assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
 
 Some fields to note are:
 
@@ -932,7 +932,7 @@ Some fields to note are:
 
 A Landed Cost Document can have as many cost (lines) as landed cost types to allocate to the Goods Receipt(s) selected.
 
-![Landed cost tabs](https://drive.google.com/uc?export=view&id=1jbfoYTDqyRZiF3bTwPQkG8OmjpLr0zau)
+![Landed cost tabs](/docs.etendo.software/assets/drive/1jbfoYTDqyRZiF3bTwPQkG8OmjpLr0zau.png)
 
 Some fields to note are:
 

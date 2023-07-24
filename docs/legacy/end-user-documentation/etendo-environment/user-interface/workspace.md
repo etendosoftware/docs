@@ -5,7 +5,7 @@ title: Workspace
 
 The first tab contains **Etendo workspace**, a customized portal-style home page. Here you will find: 
 
-![Workspace screen](https://drive.google.com/uc?export=view&id=11lRke25pNzkHposOIdSH-DO9nTSBmi-o)
+![Workspace screen](/docs.etendo.software/assets/drive/11lRke25pNzkHposOIdSH-DO9nTSBmi-o.png)
 
 1\. **Left bar**: In this section, the user’s recent view content and documents are shown. In the Manage Workspace subsection at the bottom of this bar, the user can also add and administrate widgets.
 
@@ -19,7 +19,7 @@ The first tab contains **Etendo workspace**, a customized portal-style home page
 
 The top navigation bar offers the following menus or functionalities:
 
-![Top navigation bar](https://drive.google.com/uc?export=view&id=1q5pk7GKDtdUVr6maSiRlTMd-LM0Csaut)
+![Top navigation bar](/docs.etendo.software/assets/drive/1q5pk7GKDtdUVr6maSiRlTMd-LM0Csaut.png)
 
 |     |     |
 | --- | --- |
@@ -37,11 +37,11 @@ From the top navigation bar, the user can launch new documents via the Quick Men
 
 **Create New:**  Through faster navigation, the user can access the creation of a new document, saving time and increasing the user experience. By using this functionality, a new document of a specific type is created on a new tab in form view.
 
-![Quick menu](https://drive.google.com/uc?export=view&id=14_Y05jKQ3FrnvWGO0AqVmuPJNWnXDjFh)
+![Quick menu](/docs.etendo.software/assets/drive/14_Y05jKQ3FrnvWGO0AqVmuPJNWnXDjFh.png)
 
 **Quick Launch:** It is a browser.  By entering the first couple of letters of the name of the document type, suggestions are offered for the type of document you are looking for. The browser shows the user’s last three searches.
 
-![Quick launch](https://drive.google.com/uc?export=view&id=11Rhg6Rbyz8Ri9rRRO_304t3c88N2OiYp)
+![Quick launch](/docs.etendo.software/assets/drive/11Rhg6Rbyz8Ri9rRRO_304t3c88N2OiYp.png)
 
 ### Application
 
@@ -73,7 +73,7 @@ The name of this section varies according to the name set up by the client.
 
 The User section is split in two tabs: Profile and Change Password.
 
-![User section](https://drive.google.com/uc?export=view&id=14odPRGme02UvFhR_feYwFh_sJYcE_3ku)
+![User section](/docs.etendo.software/assets/drive/14odPRGme02UvFhR_feYwFh_sJYcE_3ku.png)
 
 #### Profile
 
@@ -103,7 +103,7 @@ In this section, the user is able to change the password through this tab by wri
 
 |     |     |
 | --- | --- |
-| ![End session](https://drive.google.com/uc?export=view&id=1WWtlvWh47YYIJot9rCXOV3za-4NzggxP) | This button logs you out of the application. A confirmation dialog lets you confirm. |
+| ![End session](/docs.etendo.software/assets/drive/1WWtlvWh47YYIJot9rCXOV3za-4NzggxP.png | This button logs you out of the application. A confirmation dialog lets you confirm. |.png)
 
 
 ---

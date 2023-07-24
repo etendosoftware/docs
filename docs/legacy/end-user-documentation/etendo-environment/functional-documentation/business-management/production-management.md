@@ -14,7 +14,7 @@ The main documents to manage the production process are:
 - the Work Requirement
 - the Work Effort
 
-![](https://drive.google.com/uc?export=view&id=1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7)
+![](/docs.etendo.software/assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png)
 
 #### **Configuration**
 

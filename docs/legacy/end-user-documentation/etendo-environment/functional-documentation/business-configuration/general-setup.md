@@ -104,7 +104,7 @@ User Access Level allows limiting the records which will be accessible in entiti
 
 The diagram below shows the Etendo "basic" General Setup flow for a legal entity with accounting. This flow is one part of the overall Business setup flow.
 
-![](https://drive.google.com/uc?export=view&id=18h9kcOERmyWWpbyF7PsZJoOuFDHXtJ_q)
+![](/docs.etendo.software/assets/drive/18h9kcOERmyWWpbyF7PsZJoOuFDHXtJ_q.png)
 
 In the example above, the "**Accounting**" data can not be shared across all the organization/s of the client because it was not applied at client level but to the Organization being created.
 
@@ -129,7 +129,7 @@ A defaulted **General Ledger configuration** and the **Chart of Accounts** can b
 !!! info
     To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614).
 
-![](https://drive.google.com/uc?export=view&id=1QOK6qRnoFyXzZwsY4Cgwo22iBZ2CITgV)
+![](/docs.etendo.software/assets/drive/1QOK6qRnoFyXzZwsY4Cgwo22iBZ2CITgV.png)
 
 In this window, the user, in general a developer, can delete the report cache data by clicking the “Done” button. This has technical purposes.  
 After clicking it, a success message will be shown indicating the completion of the process.
@@ -157,7 +157,7 @@ When selecting the organization and executing the process, Etendo creates the se
 
 The main advantage of these new sequences is dynamic masking, which makes it possible to add dates or dynamic strings.
 
-![](https://drive.google.com/uc?export=view&id=12h763OVeuLSs-GkZq5-zTPZMMV0UzuV9)
+![](/docs.etendo.software/assets/drive/12h763OVeuLSs-GkZq5-zTPZMMV0UzuV9.png)
 
 !!! warning
     The user can run this process only after a developer configures the sequence fields using transactional or non-transactional sequences.
@@ -180,7 +180,7 @@ This module automatically generates conversion ranks with a background process u
 
 Conversion rate, also called currency exchange rate, is the rate at which one currency may be converted into another one within a given period of time. Currency is an accepted medium of monetary exchange that may vary across countries.
 
-![](https://drive.google.com/uc?export=view&id=1zFe45U_EkZAD3OWHF2CY89LpaZ2NDcj1)
+![](/docs.etendo.software/assets/drive/1zFe45U_EkZAD3OWHF2CY89LpaZ2NDcj1.png)
 
 Fields to note:
 
@@ -550,7 +550,7 @@ Some fields to note are:
 
 The "javaclass" field is required but empty by default unless another module such as the Number to Word (Spanish) or the Number to Word (English) is installed and properly applied to the legal entity for which it is required to print checks. Additionally, the Javaclass can be filled in manually.
 
-![](https://drive.google.com/uc?export=view&id=1YjGbvShn-Mwb6iNpbajKgNo77ukscR3n)
+![](/docs.etendo.software/assets/drive/1YjGbvShn-Mwb6iNpbajKgNo77ukscR3n.png)
 
 ### **Window Personalization**
 
@@ -1744,7 +1744,7 @@ When the configuration of the feature **Password Security** is active and the us
 
 The following example shows the same error message when changing the password from the **Change Password** process.
 
-![](https://drive.google.com/uc?export=view&id=1VTtHPNlLr0N3fvL1vVQ7FO2lzWcQti5I)
+![](/docs.etendo.software/assets/drive/1VTtHPNlLr0N3fvL1vVQ7FO2lzWcQti5I.png)
 
 !!! info
     Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
@@ -1963,7 +1963,7 @@ Process monitor is a read-only tab that allows reviewing the status of processes
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. More information in Process Group.
 
-![](https://drive.google.com/uc?export=view&id=1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE)
+![](/docs.etendo.software/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ### **Process Monitor**
 
@@ -1984,7 +1984,7 @@ Besides, and as already explained, _"Security based on role"_ definition at proc
 
 Process Monitor window shows read-only information about individual process execution.
 
-![](https://drive.google.com/uc?export=view&id=1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb)
+![](/docs.etendo.software/assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png)
 
 As shown in the image above, process monitor window provides the information below per each process executed:
 
@@ -2001,7 +2001,7 @@ As shown in the image above, process monitor window provides the information bel
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. More information in Process Group
 
-![](https://drive.google.com/uc?export=view&id=1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE)
+![](/docs.etendo.software/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ### **Process Group**
 

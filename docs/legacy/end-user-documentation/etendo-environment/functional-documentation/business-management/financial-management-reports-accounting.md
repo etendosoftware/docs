@@ -36,7 +36,7 @@ Etendo allows the user to post transactions to the ledger only if the financial 
 
 This report lists every transaction posted to the ledger by showing every accounting dimension specified.
 
-![](https://drive.google.com/uc?export=view&id=15B7fD-yrlWdAqXA0BmxcG_IA66xSpAoD) 
+![](/docs.etendo.software/assets/drive/15B7fD-yrlWdAqXA0BmxcG_IA66xSpAoD.png)
 
 Column Filters allow the user to filter the information to be shown by any of the accounting dimensions.
 
@@ -52,7 +52,7 @@ Profit and Loss report shows earnings, expenses and the net profit of an organiz
 
 These reports need to be configured prior to be launched in the Balance Sheet and P&L Structure setup window.
 
-![](https://drive.google.com/uc?export=view&id=1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv) 
+![](/docs.etendo.software/assets/drive/1RuYrg1NFpQZz9FOuNnPR47hpQCTwgzjv.png)
 
 As shown in the image above, data to fill in is:
 
@@ -86,11 +86,11 @@ Under the *"Primary Filters"* section, it is possible to specify:
 !!! info
     Please note that the word "Provisional" (en\_US) \[or "Provisional" (es\_ES)\] is shown whenever at least one of the periods for which the report has been launched for it is not closed yet.
 
-![](https://drive.google.com/uc?export=view&id=1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK) 
+![](/docs.etendo.software/assets/drive/1JYmJT5MghrfjqL3Y_qbNopzLK1GeXrFK.png)
 
 #### **P&L Report Example**
  
-![](https://drive.google.com/uc?export=view&id=1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6) 
+![](/docs.etendo.software/assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
 
 ### **Advanced**
 
@@ -99,7 +99,7 @@ Under the *"Primary Filters"* section, it is possible to specify:
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://drive.google.com/uc?export=view&id=1yP5IthEhrtJWbj_xZg9dpUAMpCwTB_oJ)
+![](/docs.etendo.software/assets/drive/1yP5IthEhrtJWbj_xZg9dpUAMpCwTB_oJ.png)
 
 In addition to the previous basic filters: General Ledger, Accounting Report, Organization, Account level, Year, As of Date, Compare to (check), Reference Year, As of Reference Date, the following were added:
 - Business Partner
@@ -117,12 +117,12 @@ In the comparative year section, the fields From Reference Date, To Reference Da
  
 In each filter, more than one option can be selected:
  
-![](https://drive.google.com/uc?export=view&id=1t-N2QU-2fbhu2ElbxNvlhGrcIyMuW3tO)
+![](/docs.etendo.software/assets/drive/1t-N2QU-2fbhu2ElbxNvlhGrcIyMuW3tO.png)
 
 
 Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
 
-![](https://drive.google.com/uc?export=view&id=1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4)
+![](/docs.etendo.software/assets/drive/1kJEGtKDwiG8owTtPhXJmER1_ZOj3NEK4.png)
 
 ## **Trial Balance**
 
@@ -141,7 +141,7 @@ In Etendo terms, the "Trial Balance" shows for a given Organization and General 
 
 At the end of the report, the total sum of debits must be equal to the total sum of credits.
 
-![](https://drive.google.com/uc?export=view&id=1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX) 
+![](/docs.etendo.software/assets/drive/1Khc4yKHg-WQAjZBTFfNegete-k0l0qhX.png)
 
 
 As shown in the screen above, it is possible to enter below data before launching the Trial Balance.
@@ -193,7 +193,7 @@ Once all the data above has been properly filled in, the "Search" process button
 
 An example of the output of the report is:
 
-![](https://drive.google.com/uc?export=view&id=1h503JiqJg9EGZ_3IhlNJ6XHTOsgHPesf) 
+![](/docs.etendo.software/assets/drive/1h503JiqJg9EGZ_3IhlNJ6XHTOsgHPesf.png)
 
 This report can also be shown in:
 
@@ -209,7 +209,7 @@ This report can also be shown in:
 
 The General Ledger report lists every ledger "subaccount" and its debit and credit ledger entries within a given period of time.
    
-![](https://drive.google.com/uc?export=view&id=1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS) 
+![](/docs.etendo.software/assets/drive/1pAPw9gmjnNbZUJ4bbL6oTXNBUrvdUkhS.png)
 
 As shown in the image above, the fields to fill in for launching this report are:
 
@@ -245,7 +245,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 -   PDF format by pressing on the *"Print Record"* action button of the Toolbar:
     -   This format includes an "Initial" balance of each subaccount, the "Subtotal" balance of each subaccount for the given period and calculates the "Total" balance of each subaccount.
 
-![](https://drive.google.com/uc?export=view&id=1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI) 
+![](/docs.etendo.software/assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
 
 ### **Advanced**
 
@@ -254,7 +254,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 
 This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://drive.google.com/uc?export=view&id=1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy)
+![](/docs.etendo.software/assets/drive/1jJoiQn3MPwICVsZ1fVdrAnTVqNzD7Dzy.png)
 
 
 In addition to the previous basic filters: Date from, Date to, From amount, To amount, Organization, General Ledger, From Account, To account, and the previous dimension filters: Business partner, Product and Project, the following were added:
@@ -269,12 +269,12 @@ Moreover, the “Organization filter” was added, a filter that combines the or
 
 In each filter, more than one option can be selected.
 
-![](https://drive.google.com/uc?export=view&id=1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y)
+![](/docs.etendo.software/assets/drive/1dUg2Mluy4XOBd8UdPnwT20vCNpkTOi8Y.png)
 
 
 Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
 
-![](https://drive.google.com/uc?export=view&id=1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W)
+![](/docs.etendo.software/assets/drive/1acr95_DrwZFiNtzQDWquk-mDfTnn0a3W.png)
 
 ## **Journal Entries Report**
 
@@ -284,7 +284,7 @@ The Journal Entries Report is a list of all the journal vouchers of an organizat
 
 A journal entry is the recording of financial data in a journal voucher such that the debit equals credit and the debits are entered before the credits.
 
-![](https://drive.google.com/uc?export=view&id=1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk) 
+![](/docs.etendo.software/assets/drive/1R5ckg6bUk6VCZecVNI0KYiEgig4y4ZDk.png)
 
 As shown in the image above, the "Primary Filters" section allows the user to specify:
 
@@ -315,7 +315,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 -   *HTML* format. An example of the HTML output:
 
-![](https://drive.google.com/uc?export=view&id=1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb) 
+![](/docs.etendo.software/assets/drive/1a9mebyPB8r9ZqAmlrQzmieeBsgolbsYb.png)
 
 -   *PDF* format by using the "Print Record" action button of the Toolbar
 -   or *XML* format by using the "Export to Excel" action button of the Toolbar.
@@ -327,7 +327,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 
 This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
-![](https://drive.google.com/uc?export=view&id=1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc)
+![](/docs.etendo.software/assets/drive/1bZUV65uj-1R6hXX6dE9AQeEMBffjmKbc.png)
 
 
 In addition to the previous basic filters: Date from, Date to, Organization, General Ledger and the previous advanced filters: From account, To account, Document, Document N°, the following were added:
@@ -344,11 +344,11 @@ The report filters the transactions included in the selected dimensions, for the
 
 In each filter, more than one option can be selected:
 
-![](https://drive.google.com/uc?export=view&id=11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm)
+![](/docs.etendo.software/assets/drive/11J-cgWCMLSQg5h-TVuoeWa09pcwXrCYm.png)
 
 Another difference to take into account is that, in this case, the buttons View, Export to PDF and Export to Excel are located in the same section of the upper bar.
 
-![](https://drive.google.com/uc?export=view&id=1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF)
+![](/docs.etendo.software/assets/drive/1tcD3dKQCRkQ_EjE3KMUFyCpDUXyGmyLF.png)
 
 ## **Create Tax Report**
 
@@ -362,7 +362,7 @@ In order to explain the use of this process, it is necessary to understand the w
 
 This window allows the user to create or modify different Tax Report for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:
 
-![](https://drive.google.com/uc?export=view&id=1I29H6eckLq6K7WR7wzgmYPgjZ4PRcUiV) 
+![](/docs.etendo.software/assets/drive/1I29H6eckLq6K7WR7wzgmYPgjZ4PRcUiV.png)
 
 The window has some parameters to indicate the Tax Report created:
 
@@ -381,7 +381,7 @@ Once, the Tax Report has been set up, it will appear in the Create Tax Report fo
 
 This window allows printing Reports previously defined by the user. In order to print the Report, it is necessary to fill a few fields:
 
-![](https://drive.google.com/uc?export=view&id=174ocSJCYYPhTy_2AmynTHIQv93BlA4rB) 
+![](/docs.etendo.software/assets/drive/174ocSJCYYPhTy_2AmynTHIQv93BlA4rB.png)
 
 -   **From Date:** Starting Date of the Report.
 -   **To Date:** Last Date of the Report.
@@ -390,7 +390,7 @@ This window allows printing Reports previously defined by the user. In order to 
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
-![](https://drive.google.com/uc?export=view&id=1hDOABUzDouOzwfy4lBICVjVpUzKlnsB0) 
+![](/docs.etendo.software/assets/drive/1hDOABUzDouOzwfy4lBICVjVpUzKlnsB0.png)
 
 ## **Customer Statement**
 
@@ -425,7 +425,7 @@ The Customer Statement provides the following details:
 
 An example of the customer statement filter is shown in the image below:
 
-![](https://drive.google.com/uc?export=view&id=1rYsGNhlgTxXIUQR4NxlDh2_4uLDvm_WA) 
+![](/docs.etendo.software/assets/drive/1rYsGNhlgTxXIUQR4NxlDh2_4uLDvm_WA.png)
 
 Note about some filters:
 
@@ -434,7 +434,7 @@ Note about some filters:
 
 An example of the Customer Statement output:
 
-![](https://drive.google.com/uc?export=view&id=1knnrLJDapnNKaokRPFgInW3mIQcJBHIo) 
+![](/docs.etendo.software/assets/drive/1knnrLJDapnNKaokRPFgInW3mIQcJBHIo.png)
 
 ## **Tax Report Setup**
 
@@ -448,7 +448,7 @@ In order to explain the use of this process, it is necessary to understand the w
 
 This window allows the user to create or modify different Tax Reports for the different existing taxes. In the following lines, it will be explained how to create a new Tax Report:
 
-![](https://drive.google.com/uc?export=view&id=1j91z0YQV6PrYedzt7qrf5NsIhMHgxAP6)
+![](/docs.etendo.software/assets/drive/1j91z0YQV6PrYedzt7qrf5NsIhMHgxAP6.png)
 
 The window has some parameters to indicate the Tax Report created:
 
@@ -467,7 +467,7 @@ Once, the Tax Report has been set up, it will appear in the Create Tax Report fo
 
 This window allows to print Reports previously defined by the user. In order to print the Report, it is necessary to fill a few fields:
 
-![](https://drive.google.com/uc?export=view&id=17xPpINQrk2rcbebH6-hCCsIjwDP0X7qH)
+![](/docs.etendo.software/assets/drive/17xPpINQrk2rcbebH6-hCCsIjwDP0X7qH.png)
 
 -   **From Date:** Starting Date of the Report
 -   **To Date:** Last Date of the Report
@@ -476,4 +476,4 @@ This window allows to print Reports previously defined by the user. In order to 
 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
-![](https://drive.google.com/uc?export=view&id=1eqmh8_yS9iZrrp0PpT70hpDlT5MhrACN)
+![](/docs.etendo.software/assets/drive/1eqmh8_yS9iZrrp0PpT70hpDlT5MhrACN.png)

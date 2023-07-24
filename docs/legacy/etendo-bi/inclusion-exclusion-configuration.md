@@ -96,7 +96,7 @@ Main categories for account configuration:
 
 #### Configuration of cash accounts:
 
-![cashpng.png](/docs.etendo.software/assets/legacy/cashpng.png)
+![cas.png](/docs.etendo.software/assets/legacy/cas.png)
 
 #### Configuration of bank accounts:
 

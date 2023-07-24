@@ -45,7 +45,7 @@ In the **Params tab**, four records must be created under the names:
 **• rule**
 
 
-![](https://drive.google.com/uc?export=view&id=1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC)
+![](/docs.etendo.software/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png)
 
 
 !!! info
@@ -75,7 +75,7 @@ In the **BI Connection window**, It is necessary to create a record to specify t
 
 
 
-![](https://drive.google.com/uc?export=view&id=1ayeGDCTnguR7Bio_pBs2KBxYfcwn1rwv)
+![](/docs.etendo.software/assets/drive/1ayeGDCTnguR7Bio_pBs2KBxYfcwn1rwv.png)
 
 
 In the **Data Destination** tab, the file name of the script needs to be specified. 
@@ -156,7 +156,7 @@ There are several points to consider when handling queries in this module.
 
 Let’s see an example of a correct base query and customization.
 
-![](https://drive.google.com/uc?export=view&id=1UIyNY8fo3FhcRDzjs_OPjcJYvFIc5oHZ)
+![](/docs.etendo.software/assets/drive/1UIyNY8fo3FhcRDzjs_OPjcJYvFIc5oHZ.png)
 
 
 
