@@ -315,12 +315,12 @@ porcentaje de deducción varía año a año al no ser un porcentaje fijo.
 
 En la ventana “Rango impuesto” se ha creado un nuevo check denominado “Is prorate”:
 
-![screenhunter_01_sep._01_11.08.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
+![screenhunter_01_sep._01_11.08.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
 
 Al tener activo este check, se mostrará un segundo check nuevo, dentro de la cabecera en
 el detalle de “More Information” que se llamará “Prorrata SII - XML” que estará marcado por
 defecto como “Si”:
-![screenhunter_02_sep._01_11.09.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
+![screenhunter_02_sep._01_11.09.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
 
 Estos check permitirán, con la configuración correcta que realicemos, enviar al SII
 información sobre facturas de compra afectadas por la prorrata del IVA.
@@ -328,7 +328,7 @@ información sobre facturas de compra afectadas por la prorrata del IVA.
 A continuación, utilizaremos como ejemplo el iva del 10%, para mostrar la configuración que
 debe realizarse para que la información se envíe de forma correcta al SII:
 
-![unnamed.gif](/docs.etendo.software/legacy/enduserdocumentation/unnamed.gif)
+![unnamed.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/unnamed.gif)
 
 1 – Crear un rango padre “Prorrata Gener.22 (77%) IVA 10%”:
 Lo haremos con la misma configuración que puede tener cualquier rango nacional de la
@@ -338,9 +338,9 @@ valor total del impuesto (en los rangos “padres” estándar es un campo en el
 y activar el check “Is Prorate”. En nuestro ejemplo indicaremos en el campo “Indice” el valor
 10 y posteriormente marcaremos el check de “Nivel de agrupación”.
 
-![screenhunter_04_sep._01_11.16.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
+![screenhunter_04_sep._01_11.16.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
 
-![screenhunter_05_sep._01_11.16.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
+![screenhunter_05_sep._01_11.16.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
 
 2 – Crear un rango hijo deducible “Prorrata Gener.22 (77%) IVA 10% (+77%)”:
 Al igual que en el punto anterior, crearemos un rango “hijo” con la misma configuración que
@@ -350,7 +350,7 @@ Las únicas particularidades que debemos tener en cuenta serán las de indicar e
 “Indice” el valor del porcentaje de impuesto deducible (según nuestro ejemplo indicaremos
 7,7) y activar el check “Is Prorate”:
 
-![screenhunter_06_sep._01_11.17.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
+![screenhunter_06_sep._01_11.17.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
 
 3 – Crear un rango hijo no deducible “Prorrata Gener.22 (77%) IVA 10% (-23%)”:
 Crearemos el segundo rango “hijo” de la misma manera que el anterior. Además de indicar
@@ -358,8 +358,8 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 
 ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marcar el check de
 “Impuesto no deducible” que se encuentra dentro del detalle “More Information”:
-![screenhunter_07_sep._01_11.18.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
-![screenhunter_08_sep._01_11.19.gif](/docs.etendo.software/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
+![screenhunter_07_sep._01_11.18.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
+![screenhunter_08_sep._01_11.19.gif](/docs.etendo.software/assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
 
 ## **Envío de registros de facturas a SII**
 

@@ -13,12 +13,12 @@ This section explains how to install a new Etendo environment. It includes:
 ## Requirements
 
 !!! info
-    You can read the [requirements page](/docs.etendo.software/legacy/technical-documentation/etendo-environment/requirements-and-tools/requirements).
+    You can read the [requirements page](/docs.etendo.software/requirements).
 
 ## Install Etendo on PC
 
-> From Etendo 22Q1, the credentials should not be required interactively. You must set them in the `gradle.properties` file, since Gradle resolves and checks dependencies periodically. Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
 !!! warning
+    From Etendo 22Q1, the credentials should not be required interactively. You must set them in the `gradle.properties` file, since Gradle resolves and checks dependencies periodically. Create the credentials by following this [guide](/docs.etendo.software/developers/setup/use-of-repositories-in-etendo). <br>
     `githubUser=USER` > `githubToken=TOKEN`
 
 ##### Working with JARs
@@ -76,7 +76,7 @@ Finally, to download the sources, you need to run the expand task.
 2.  Modify the `gradle.properties` file with your environment variables:
 
 !!! warning
-    Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
+    Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this [guide](/docs.etendo.software/developers/setup/use-of-repositories-in-etendo).
 
 ```groovy
 
@@ -160,7 +160,7 @@ $CATALINA_HOME/bin/catalina.sh start
 2.  Download Apache-Tomcat and unzip it.
 3.  Go to `Add Configuration` >> `+` >> `Smart Tomcat`. In Tomcat Sever, select the Apache-Tomcat folder. In the same window, set “Tomcat” as the name and change the Context path to the context project name.
 
-![intellij7.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png) ![intellij8.jpeg](/docs.etendo.software/legacy/enduserdocumentation/gettingstarted/intellij8.jpeg)
+![intellij7.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png) ![intellij8.jpeg](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij8.png)
 
 ## Enable Etendo Logs (optional)
 

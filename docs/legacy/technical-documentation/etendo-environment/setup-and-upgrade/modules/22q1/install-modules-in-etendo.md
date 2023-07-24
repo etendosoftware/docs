@@ -17,11 +17,11 @@ title: Install Modules in Etendo
 
 2.  Go to “Browse” and you can see all the repositories:
 
-![installmodules1.jpeg](/docs.etendo.software/legacy/technicaldocumentation/setupandupgrade/installmodules1.jpeg)
+![installmodules1.jpeg](/docs.etendo.software/assets/legacy/technicaldocumentation/setupandupgrade/installmodules1.jpeg)
 
 3.  Inside a repository, you can see all the modules and information (Group, Name and versions):
 
-![installmodules2.jpeg](/docs.etendo.software/legacy/technicaldocumentation/setupandupgrade/installmodules2.jpeg)
+![installmodules2.jpeg](/docs.etendo.software/assets/legacy/technicaldocumentation/setupandupgrade/installmodules2.jpeg)
 
 ## Set dependencies
 

@@ -7,7 +7,7 @@ title: Use of Repositories in Etendo
 While Etendo supports any Maven package repository, we will focus on explaining how to configure Etendo's standard repositories credentials.
 
 By default, Etendo Core packages will be downloaded from the GitHub repositories.
-You can find each of the [Etendo Releases](https://github.com/etendosoftware/etendo_core/releases)
+You can find each of the [Etendo Releases](https://github.com/etendosoftware/etendo_core/releases){target="_blank"} 
 
 ## Using a Personal Access Token in Etendo Projects
 
@@ -25,12 +25,12 @@ To generate a Personal Access Token, follow these steps:
 3. Select "Developer settings" from the left menu and click on "Personal access tokens."
 4. In the developer settings page, click on "Personal access tokens".
 
-![captura_de_pantalla_2023-04-27_a_la(s)_17.03.22.png](</docs.etendo.software/legacy/technicaldocumentation/captura_de_pantalla_2023-04-27_a_la(s)_17.03.22.png>) 5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
+![personal-access-tokens.png](/docs.etendo.software/assets/developers/setup/use-of-repositories-in-etendo/personal-access-tokens.png) 5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
 
 !!! warning
     Is strongly recomended set an expiration date, but it is also posible set an undefined expiration
 
-![captura_de_pantalla_2023-04-27_a_la(s)_17.10.09.png](</docs.etendo.software/legacy/technicaldocumentation/captura_de_pantalla_2023-04-27_a_la(s)_17.10.09.png>) 7. Click on "Generate token" and make note of the token value.
+![new-personal-access-token.png](/docs.etendo.software/assets/developers/setup/use-of-repositories-in-etendo/new-personal-access-token.png) 7. Click on "Generate token" and make note of the token value.
 
 !!! info
     **Note:** You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
@@ -68,16 +68,3 @@ If you no longer need a personal access token or believe it has been compromised
 5. Confirm that you want to revoke the token.
 
 Your token will be immediately invalidated and will no longer work.
-
-## Etendo Nexus Repository (deprecated)
-
-Nexus is a repository manager. It allows us to proxy, collect, and manage dependencies. It makes it easy to distribute software. (For additional info read: [Nexus Repository Manager 3](https://help.sonatype.com/repomanager3)).
-
-Internally, Etendo publishes artifacts to Nexus, and then they become available to other developers.
-
-URL: [https://repo.futit.cloud/](https://repo.futit.cloud/)
-
-To log in, use your Nexus access distributed alongside your license. Then, you can access public repositories and your own ones.
-
-!!! info
-    When you execute Gradle tasks and it asks for your Nexus credentials, you should always use those distributed alongside your license.
