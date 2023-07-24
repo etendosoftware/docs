@@ -15,7 +15,7 @@ This section explains how to install a new Etendo environment. It includes:
 ## Etendo Installation
 
 ### Requirements 
-In this section, you can read the [System Requirements](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/requirements).
+In this section, you can read the [System Requirements](/docs.etendo.software/requirements).
 
 
 ### Install Etendo in Source format
@@ -33,7 +33,7 @@ git clone https://github.com/etendosoftware/etendo_base.git EtendoERP
 mv EtendoERP/* /opt/EtendoERP/
 cd /opt/EtendoERP
 ```
-3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
+3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs.etendo.software/developers/setup/use-of-repositories-in-etendo).
 
 ```groovy
 githubUser=username
@@ -104,7 +104,7 @@ git clone https://github.com/etendosoftware/etendo_base.git EtendoERP
 mv EtendoERP/* /opt/EtendoERP/
 cd /opt/EtendoERP
 ```
-3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
+3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs.etendo.software/developers/setup/use-of-repositories-in-etendo).
 
 ```groovy
 githubUser=username

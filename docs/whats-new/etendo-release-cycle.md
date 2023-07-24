@@ -23,7 +23,7 @@ Etendo solutions are released on a quarterly basis.
 
 - YX is the year and QZ the quarter of the year.
 
-![new-etendo-lifecycle](/docs.etendo.software/assets/about/etendo-release-cycle/new-etendo-lifecycle.png)
+![new-etendo-lifecycle](/docs.etendo.software/assets/whats-new/etendo-release-cycle/new-etendo-lifecycle.png)
 
 As shown in the image above, the duration of a release cycle is seven months. For instance, and in the case of Etendo Y1Q4 design and development activities started dated on 1st June  and will finish at release dated on December 31st.
 
@@ -36,7 +36,7 @@ The release process consists of the following phases
 - 1 month for the **QA team to test and validate the release** according to what defined in the corresponding Test Plan. At the end of this phase, the release is published as QA Approved (QAA), in a snapshot repository only for participants in the Etendo Early Adopters Program.
 - 2 months **maturation cycle to evolve from QAA to Confirmed Stable** (CS), published in the releases Nexus repository.
 
-![etendo-release-cycle-phase.png](/docs.etendo.software/assets/about/etendo-release-cycle/etendo-release-cycle-phase.png)
+![etendo-release-cycle-phase.png](/docs.etendo.software/assets/whats-new/etendo-release-cycle/etendo-release-cycle-phase.png)
 
 Etendo strongly recommends that only releases that have reached CS are used in production environments
 
@@ -80,7 +80,7 @@ When code changes or additions are made, the code is subjected to a thorough ana
 
 - **Sonar:** Our development repositories employ Sonar rules to analyze code in pull requests created or updated. Sonar identifies potential problems and makes suggestions to improve code quality.
 
-![sonar-review.png](/docs.etendo.software/assets/about/etendo-release-cycle/sonar-review.png)
+![sonar-review.png](/docs.etendo.software/assets/whats-new/etendo-release-cycle/sonar-review.png)
 
 - **Auto Code Reviewer:** We have developed a tool called Auto Code Reviewer, which uses ChatGPT to analyze the changes made in the Pull Request and make suggestions. This tool complements the Sonar analysis and helps us to maintain high quality standards in our code and architecture.
 
@@ -91,7 +91,7 @@ Once a pull request has been created or updated, automated tests are run using J
 - **Compilation Tests:** At this stage, we test that the code is compiled correctly, identifying possible errors at compile time.
 - **Unit Test:** We run automated tests designed to verify the behavior and functionality of individual units of code. These tests help us to identify bugs and ensure the correct functioning of the different parts of the system.
 
-![jenkins-develop-branch.png](/docs.etendo.software/assets/about/etendo-release-cycle/jenkins-develop-branch.png)
+![jenkins-develop-branch.png](/docs.etendo.software/assets/whats-new/etendo-release-cycle/jenkins-develop-branch.png)
 
 If bugs are detected in any of these automated tests, the development team is immediately notified so that they can address and correct them.
 
@@ -106,7 +106,7 @@ Along the lines of the automatic tests that are performed, we have the stress an
 
 On a quarterly basis, we run a Static Application Security Testing (SAST) and Software Composition Analysis (SCA) tools to detect possible vulnerabilities or deprecations in the libraries and stack we use. This analysis allows us to keep our application updated and secure. Based on the results of this tool, we start the corresponding update process, considering the priority level assigned to each identified change.
 
-![vulnerability-and-deprecation](/docs.etendo.software/assets/about/etendo-release-cycle/vulnerability-and-deprecation-2.png)
+![vulnerability-and-deprecation](/docs.etendo.software/assets/whats-new/etendo-release-cycle/vulnerability-and-deprecation-2.png)
 
 - **Update with API Changes (major):** This type of upgrade involves significant changes to the application programming interface (API). A major upgrade generally involves substantial modifications to the way system components or modules interact with each other, which may require extensive changes to existing code to make it compatible with the new version. These changes may include the introduction of new functionality, removal of obsolete features, changes to the data structure or communication protocols. Due to the nature of these changes, a major upgrade is scheduled once a year to allow sufficient time to plan, test and make the necessary modifications to the code and systems using the updated API.
 - **Soft Update:** In a soft update, the changes made are minor, not significant to the API and generally focused on performance improvements, bug fixes, optimizing existing code or updating external dependencies. These changes are less disruptive and can be implemented more frequently, so a soft upgrade is performed quarterly to keep the system up to date and take advantage of continuous improvements. Although the changes are not drastic, extensive testing is still recommended to ensure stability and compatibility with dependencies and related components.
@@ -116,7 +116,7 @@ On a quarterly basis, we run a Static Application Security Testing (SAST) and So
 
 #### Integration of Snyk in Vulnerability Analysis
 
-![snyk-banner.png](/docs.etendo.software/assets/about/etendo-release-cycle/snyk-banner.png)
+![snyk-banner.png](/docs.etendo.software/assets/whats-new/etendo-release-cycle/snyk-banner.png)
 At Etendo, we are committed to ensuring the security of our applications at all times. That's why one of the prominent tools we use is _[Snyk](https://snyk.io/)_, a powerful Software Composition Analysis (SCA) solution.
 
 _Snyk_ enables us to conduct a comprehensive analysis of the libraries and dependencies used in our application stack. By integrating our repositories with _Snyk_, we gain detailed visibility into potential vulnerabilities and deprecations that may exist in our code.

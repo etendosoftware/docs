@@ -11,8 +11,8 @@ This section explains how to install a new Etendo environment. It includes:
 
 ## Install Etendo on PC
 
-- [Requirements](/docs.etendo.software/legacy/technical-documentation/etendo-environment/requirements-and-tools/requirements)
-- Follow the [Installation Guiede](/docs.etendo.software/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation)
+- [Requirements](/docs.etendo.software/requirements)
+- Follow the [Installation Guide](/docs.etendo.software/installation)
 
 ## How to run Etendo Project in IntelliJ IDEA Ultimate
 
@@ -47,7 +47,7 @@ This section explains how to install a new Etendo environment. It includes:
 
 ![intellij7.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png)
 
-![intellij8.jpeg](/docs.etendo.software/legacy/enduserdocumentation/gettingstarted/intellij8.jpeg)
+![intellij8.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij8.jpeg)
 
 ### Enable Etendo Logs (optional)
 

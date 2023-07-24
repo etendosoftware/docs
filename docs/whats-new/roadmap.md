@@ -11,7 +11,7 @@ This page includes a summary of the new features to be implemented in Etendo.
 
 ## Etendo Functional Roadmap
 
-![etendo-roadmap.png](/docs.etendo.software/assets/about/roadmap/etendo-roadmap.png)
+![etendo-roadmap.png](/docs.etendo.software/assets/whats-new/roadmap/etendo-roadmap.png)
 
 ### Bulk Posting
 

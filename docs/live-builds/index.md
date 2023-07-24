@@ -6,12 +6,15 @@ tags:
   - Oracle
 ---
 
-![live-builds.png](/docs.etendo.software/assets/about/live-builds/live-builds.png)
+![live-builds.png](/docs.etendo.software/assets/live-builds/live-builds.png)
 
 ## Etendo Live Builds
 
 - [Etendo 23.2.0 - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 - [Etendo 23.2.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+
+!!! warning
+    If Oracle 19 is chosen and it does not work, [contact us](/docs.etendo.software/help-and-support).
 
 !!! tip
 

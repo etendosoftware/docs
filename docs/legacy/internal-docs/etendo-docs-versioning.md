@@ -65,21 +65,21 @@ Example: [_https://docusaurus.io/docs/versioning_](https://docusaurus.io/docs/ve
 |     |     |
 | --- | --- |
 | 21Q4 (Current) |     |
-| 22Q1 | [https://docs.etendo.software/e/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/upgrade-etendo-to-any-version](https://docs.etendo.software/e/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/upgrade-etendo-to-any-version) |
+| 22Q1 | [https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/upgrade-etendo-to-any-version](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/upgrade-etendo-to-any-version) |
 
 **Etendo Consistency verification**
 
 |     |     |
 | --- | --- |
 | 21Q4 (Current) |     |
-| 22Q1 | [https://docs.etendo.software/e/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/consistency-verification](https://docs.etendo.software/e/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/consistency-verification) |
+| 22Q1 | [https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/consistency-verification](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/consistency-verification) |
 
 **Environment migration**
 
 |     |     |
 | --- | --- |
 | 21Q4 (Current) |     |
-| 22Q1 | [https://docs.etendo.software/e/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration) |
+| 22Q1 | [https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration) |
 **Etendo JARS**
 
 |     |     |
