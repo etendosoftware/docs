@@ -33,7 +33,7 @@ The user should select a category which the business partner is going to belong 
 
 To learn more about "Business Partner Category", visit the Business Partner Category section.
 
-![](https://lh3.googleusercontent.com/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw)
+![](/docs.etendo.software/assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
 
 The rest of fields at header level are common fields which require to enter basic business partner information such as:
 
@@ -81,7 +81,7 @@ Set New Currency process allows defining:
 - a new currency for the business partner
 - as well as the currency conversion rate to be used to exchange customer balance to the new currency.
 
-![](https://lh3.googleusercontent.com/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ)
+![](/docs.etendo.software/assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
 At first, the currency shown in the "Set New Currency" window is business partner price list currency, in our example "USD".
 
@@ -95,7 +95,7 @@ Additionally, a business partner might have available credit in a given currency
 
 If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
-![](https://lh3.googleusercontent.com/sYcrvJb1PKlU9FPBStEkFIPdTCVTXSXCUte3iY1-kwfVGSiu8Xwux1DvZRxu9tseG0neDLmagLfVpiec4qQaNTLiheq908gynQ9p8Dh7eUOU8MyZ_pGFHICKaAiZwl_5jE0aIHyOfbDb38EVSw)
+![](/docs.etendo.software/assets/drive/sYcrvJb1PKlU9FPBStEkFIPdTCVTXSXCUte3iY1-kwfVGSiu8Xwux1DvZRxu9tseG0neDLmagLfVpiec4qQaNTLiheq908gynQ9p8Dh7eUOU8MyZ_pGFHICKaAiZwl_5jE0aIHyOfbDb38EVSw.png)
 
 This process automatically creates three new payments, in case business partner has available credit:
 
@@ -116,7 +116,7 @@ Let us take as an example a business partner having a price list in EUR.
 - This new sales invoice, once booked, will change business partner balance to 279.68 USD, that is (sales invoice amount 41.50 EUR \* 1.13 EUR to USD) + 232.78 USD.
 - After that, a new sales invoice for an amount of 100.00 USD is booked for the business partner. While completing this new sales invoice, a new window appears showing business partner USD credit available, in our case 100 EUR \* 1.13 EUR to USD = 113.00 USD.
 
-![](https://lh4.googleusercontent.com/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg)
+![](/docs.etendo.software/assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
 
 ### **Customer**
 
@@ -167,7 +167,7 @@ Above defaulted configuration means that it is not possible to complete either a
 
 Customer accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
 
-![](https://lh4.googleusercontent.com/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ)
+![](/docs.etendo.software/assets/drive/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ.png)
 
 As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
 
@@ -184,7 +184,7 @@ Besides, it is important to remark that it is possible to configure the creation
 
 Vendor or Creditor related data can be entered and configured once the "Vendor" checkbox is enabled.
 
-![](https://lh4.googleusercontent.com/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g)
+![](/docs.etendo.software/assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
 
 As shown in the image above, there is a list of relevant data to be entered for suppliers or creditors, also known as vendors:
 
@@ -221,7 +221,7 @@ You will realize that Etendo shows an error message stating that it is not possi
 
 Vendor accounting tab allows the user  to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
 
-![](https://lh3.googleusercontent.com/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw)
+![](/docs.etendo.software/assets/drive/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw.png)
 
 The user can configure for each supplier or creditor and available accounting schema, the ledger accounts to be used in:
 
@@ -256,7 +256,7 @@ An employee can be:
 
 The ledger accounts to be used while posting employee related transactions such as paryroll accounting could be added in this tab.
 
-![](https://lh3.googleusercontent.com/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw)
+![](/docs.etendo.software/assets/drive/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw.png)
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
@@ -270,7 +270,7 @@ It is possible to configure and properly set up business partner bank accounts t
 
 Therefore, we strongly recommend the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
 
-![](https://lh4.googleusercontent.com/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA)
+![](/docs.etendo.software/assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
 
 The "bank account" related data you can enter is:
 
@@ -305,7 +305,7 @@ Business partner locations and full address details can be set up in this tab.
 
 Business partners might have different address details depending on location/address used for either "Goods Receipts/Shipments" purposes or location/address used for "Invoices" purposes.
 
-![](https://lh4.googleusercontent.com/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA)
+![](/docs.etendo.software/assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
 
 Etendo allows the user to define any type of business partner address, by filling in the information below:
 
@@ -328,7 +328,7 @@ Etendo allows the user to define any type of business partner address, by fillin
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
 
-![](https://lh6.googleusercontent.com/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg)
+![](/docs.etendo.software/assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
 
 As you can see in the image above, basic "Contact" data such as:
 
@@ -341,7 +341,7 @@ can be configured in this tab.
 
 Basic Discount tab allows the user to add and configure business partner Basic Discounts.
 
-![](https://lh5.googleusercontent.com/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ)
+![](/docs.etendo.software/assets/drive/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ.png)
 
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
@@ -459,25 +459,25 @@ In this section, the user can view information related to business partner order
 
 The user can select a business partner to begin viewing related transactions.
 
-![](https://lh3.googleusercontent.com/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ)
+![](/docs.etendo.software/assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
 
 #### **Partner Orders**
 
 The user can view orders related to a specific business partner.
 
-![](https://lh6.googleusercontent.com/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw)
+![](/docs.etendo.software/assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
 
 ### **Partner Shipments**
 
 The user can view shipments related to a specific business partner.
 
-![](https://lh5.googleusercontent.com/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw)
+![](/docs.etendo.software/assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
 
 ### **Partner Invoices**
 
 The user can view invoices related to a specific business partner.
 
-![](https://lh6.googleusercontent.com/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw)
+![](/docs.etendo.software/assets/drive/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw.png)
 
 ## Currency Converters
 
@@ -526,7 +526,7 @@ Product types do not confer different accounting treatments. In other words, all
 
 All of them use the ledger accounts defined in the Accounting tab of the Product window.
 
-![](https://lh5.googleusercontent.com/BP3_HION2Ye59yb2o2KNzsNK4o72pdd_v6DVNj5SsrL_3bZCZbH-OG4Snsia_DB_BItoQaJxuJf4vOe1jlrwPhZTswRuf1I8aUTCLlHP1s-NU-625ScthOFj8fgeIrknNz2MdE6kbDgecxTFSw)
+![](/docs.etendo.software/assets/drive/BP3_HION2Ye59yb2o2KNzsNK4o72pdd_v6DVNj5SsrL_3bZCZbH-OG4Snsia_DB_BItoQaJxuJf4vOe1jlrwPhZTswRuf1I8aUTCLlHP1s-NU-625ScthOFj8fgeIrknNz2MdE6kbDgecxTFSw.png)
 
 Additional key data to fill in are:
 
@@ -590,11 +590,11 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 
 - **Returnable**:This flag is used to indicate if a product can be returned and, in the case that it is, a new field called. When trying to return a non-returnable product from the Return from Customer window, an error will be shown.
 
-![](https://lh5.googleusercontent.com/8P_B_7zs64s6GpnSTeK9UQ6lBzvVnqGD9qOV3QR0WnAk_vPEZtjWJclvPzCvLx2HhU2oJuV4AjbxdhmspKkr3cWr20QacqX-VnigfqEjCIv9_blgPk1mEIloiZOBk5oCT6y41jQh9JI7HKA5vQ)
+![](/docs.etendo.software/assets/drive/8P_B_7zs64s6GpnSTeK9UQ6lBzvVnqGD9qOV3QR0WnAk_vPEZtjWJclvPzCvLx2HhU2oJuV4AjbxdhmspKkr3cWr20QacqX-VnigfqEjCIv9_blgPk1mEIloiZOBk5oCT6y41jQh9JI7HKA5vQ.png)
 
 - **Overdue Return Days**:In this field, it is possible to configure the maximum amount of days before a product can not be returned. If the field is left blank, the product can be returned without time limitations. When trying to return a product whose period has expired, a warning message will appear.
 
-![](https://lh5.googleusercontent.com/QyvN8QXk9YDUur102n0wpiAY2QPyWux7iOpGMyvUkSVWGsoatyBdBBoMx5sxfWxo7dLX--2yo9cchrXV5yDH9nwpLqtOKLW9bsm4j0XFN9rCTCuusTntdbtxsRzu9Pu5pUinLOQ17lH_GAOymA)
+![](/docs.etendo.software/assets/drive/QyvN8QXk9YDUur102n0wpiAY2QPyWux7iOpGMyvUkSVWGsoatyBdBBoMx5sxfWxo7dLX--2yo9cchrXV5yDH9nwpLqtOKLW9bsm4j0XFN9rCTCuusTntdbtxsRzu9Pu5pUinLOQ17lH_GAOymA.png)
 
 !!! info
     **Note**: If stocked is not checked and BOM is checked, the product price should be 0. Because in that special case, the product price is the sum of the prices of the bill of materials components it consists of. If promotion wanted to create, 'Discounts and Promotions' should be used.
@@ -608,7 +608,7 @@ Product can be marked as **Is Generic**. This means that variants of this produc
 
 When this flag is marked, two buttons are shown:
 
-![](https://lh5.googleusercontent.com/XpdGDkmZecBZmb-qxyiA42-f6IdA9oTfYqig24hQZtSRsKLgItWO3U5jf-8kuTgHlMfKrUU9BQBSPfay8YoWSPKaYr74W9TXIgzumMG6T2sjq1g1w7zA9N2e2xZHPlGCykvLXWfU-wyAyH_5cw)
+![](/docs.etendo.software/assets/drive/XpdGDkmZecBZmb-qxyiA42-f6IdA9oTfYqig24hQZtSRsKLgItWO3U5jf-8kuTgHlMfKrUU9BQBSPfay8YoWSPKaYr74W9TXIgzumMG6T2sjq1g1w7zA9N2e2xZHPlGCykvLXWfU-wyAyH_5cw.png)
 
 - It shows all variants that have been created or not for that specific generic product. It is very useful when:
   - The user does not want to generate all variants but just some of them. The button allows the user to select the possible combinations
@@ -621,15 +621,15 @@ For example, imagine generic product T-Shirt Model A has the characteristics:
 
 But still variants have not been created. If you press the button, you can see all possible combinations:
 
-![](https://lh4.googleusercontent.com/YysrJ-lndKNj6qUEzE5IIaNziDxMduILgMa9XP3Vde2NskD-oIug-d3Ce12C4gZSJCDuqDqyXcTXL0IPRSEkRP3ezOIsF321Zy1pizzXHcUKuWlzNUPivH7sfIyDZhFxOcZUzCprjCYdNRs3Ag)
+![](/docs.etendo.software/assets/drive/YysrJ-lndKNj6qUEzE5IIaNziDxMduILgMa9XP3Vde2NskD-oIug-d3Ce12C4gZSJCDuqDqyXcTXL0IPRSEkRP3ezOIsF321Zy1pizzXHcUKuWlzNUPivH7sfIyDZhFxOcZUzCprjCYdNRs3Ag.png)
 
 Then all combinations can be selected or just pick some of them. Once the selection takes place pressing Done, combinations will be created as Products. These new products will have the Generic Product field filled with the product that was marked as generic. We can say it is their parent product
 
-![](https://lh4.googleusercontent.com/1aZDzwrJXxLjUZhwgGhhHarCA-AsNLDbdSpLvVj2LzAvReay3gMmfC33auIHYoELn1pSKNSYrBWIckgesfl75Lza6jjZVMfXeNw1236dsTpVUMp0Aqmm19kJjAzp0ZRElYQc4F9iujwJ1X-P0A)
+![](/docs.etendo.software/assets/drive/1aZDzwrJXxLjUZhwgGhhHarCA-AsNLDbdSpLvVj2LzAvReay3gMmfC33auIHYoELn1pSKNSYrBWIckgesfl75Lza6jjZVMfXeNw1236dsTpVUMp0Aqmm19kJjAzp0ZRElYQc4F9iujwJ1X-P0A.png)
 
 - It creates/explode all product variants, that is, all combinations based on the characteristics defined
 
-Another button that might appear is ![](https://lh6.googleusercontent.com/ZBo4NfiZAG6XK2iCAGS7jK--_4wffCzZHmp5z-8S0KrHU0Qs1U2_HkeL6MWD6KRZAFaYzjui8tmsOW9NKMbp3OkOLM27pUoQXBMC0YcHdCSLzQojA3Twi5IWuQwHEAcwlmjD4bnRYlMJ915Gpg). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
+Another button that might appear is ![](/docs.etendo.software/assets/drive/ZBo4NfiZAG6XK2iCAGS7jK--_4wffCzZHmp5z-8S0KrHU0Qs1U2_HkeL6MWD6KRZAFaYzjui8tmsOW9NKMbp3OkOLM27pUoQXBMC0YcHdCSLzQojA3Twi5IWuQwHEAcwlmjD4bnRYlMJ915Gpg.png). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
 
 1.  **Generic product**: This button allows entering the value of that characteristic.  
     Imagine the characteristic is Fashion Line that has three values: Sport, Vintage, Classic.  
@@ -640,11 +640,11 @@ Once a variant has been created, its characteristics and values can be viewed ei
 
 - Grid view: There is a new column **Characteristic Description**. This column is calculated and is not editable. It shows the characteristics with their values as a text. This column has a new search-selector in order to find product variants based on its characteristics
 
-![](https://lh3.googleusercontent.com/uxKcLraqzQTO5YQDc1QPoXzbekSyMuKoCGy0FpkRmreW9hbxKJOcZm-4R2kHVRAf7h-VaVYDoMlqncOk-iCWOZv5d7Nyo6OJIjsJXdlA1e276uJ2iD7YbUTpyY3R8BMUphQJGPqHG9z8Q3oCRw)
+![](/docs.etendo.software/assets/drive/uxKcLraqzQTO5YQDc1QPoXzbekSyMuKoCGy0FpkRmreW9hbxKJOcZm-4R2kHVRAf7h-VaVYDoMlqncOk-iCWOZv5d7Nyo6OJIjsJXdlA1e276uJ2iD7YbUTpyY3R8BMUphQJGPqHG9z8Q3oCRw.png)
 
-Press the button ![](https://lh4.googleusercontent.com/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfgcF2VLemqd37yK-hJshznCtz8tSACOFULk0CQo4f4CVrbR2W8-8CaBBUOtxsLXq2rnyATymb5aOTZaihm1mdEJEopKzbefJYQnNLrA) and it opens a pop-up to select values:
+Press the button ![](/docs.etendo.software/assets/drive/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfgcF2VLemqd37yK-hJshznCtz8tSACOFULk0CQo4f4CVrbR2W8-8CaBBUOtxsLXq2rnyATymb5aOTZaihm1mdEJEopKzbefJYQnNLrA.png) and it opens a pop-up to select values:
 
-![](https://lh6.googleusercontent.com/Wtk1v4OXf3cYQZQRJVMZZu6bvKWAF94yM7GMeugxV3zLYTJez8HaVSdzgIFurmZ4Y_-kCpYQnv58HewpHMGgyqom8Xtn30PLliwlV8zGlfmMmqPg0yqLfFhLLvB7Mij9Ro9gs7SY4lz-zqhJXg)
+![](/docs.etendo.software/assets/drive/Wtk1v4OXf3cYQZQRJVMZZu6bvKWAF94yM7GMeugxV3zLYTJez8HaVSdzgIFurmZ4Y_-kCpYQnv58HewpHMGgyqom8Xtn30PLliwlV8zGlfmMmqPg0yqLfFhLLvB7Mij9Ro9gs7SY4lz-zqhJXg.png)
 
 - Form view: Product variants have a new section named _Characteristic Description_. This section contains as many fields as different characteristics the product has.
 
@@ -660,23 +660,23 @@ This tax modification is implemented through a service linked to the product. Th
 
 To configure it, go to the Product window and create a new service. A service is just a product with the field Product Type set to Service. It has to be activated also the field Linked To Product and the field Modify Tax. When this field is activated, a new tab named Modify taxes categories is visible. In this tab, it is defined the configuration of the tax categories of products this service will modify when linked and the new tax category to apply.
 
-![](https://lh3.googleusercontent.com/260ftQHLj7KxqXuouydWqLebx8YSli0i-k7OQh7rvpv1tfbcFB7zqhatrWcMd2F8tFMwLJEA-7xbc9LAtOdi1MNYioVlWheErN2eiFnhvq77HU-oyLHyiUTvrE_T1ruWbkDwOAPwpytv6_sM5w)
+![](/docs.etendo.software/assets/drive/260ftQHLj7KxqXuouydWqLebx8YSli0i-k7OQh7rvpv1tfbcFB7zqhatrWcMd2F8tFMwLJEA-7xbc9LAtOdi1MNYioVlWheErN2eiFnhvq77HU-oyLHyiUTvrE_T1ruWbkDwOAPwpytv6_sM5w.png)
 
 To ease the configuration process, two components have been added:
 
 1.- Modify Tax for Product Category (Button): Pick and Execute window to assign the product categories and tax categories in the same action.
 
-![](https://lh3.googleusercontent.com/8ToxP9o606fpE3T0LM-yFPrDkN_UcfbtRPVfoZvh6Oa_riBLBhSKHPfMvurIv4ijKgDJWyVFo4Bqjxe9tP0uzGw_GUbOBHq5j_s26JnOYPHDpzmwnQnxrdWC4yeQJfjs9glD0TVmOro6OA1wDg)
+![](/docs.etendo.software/assets/drive/8ToxP9o606fpE3T0LM-yFPrDkN_UcfbtRPVfoZvh6Oa_riBLBhSKHPfMvurIv4ijKgDJWyVFo4Bqjxe9tP0uzGw_GUbOBHq5j_s26JnOYPHDpzmwnQnxrdWC4yeQJfjs9glD0TVmOro6OA1wDg.png)
 
 2.- Copy Service Modify Tax Configuration (Button): Pick and Execute window where services which modify taxes are displayed. The user can select one or many services, and current configuration will be assigned to selected services. Once the process has been executed, the old configuration (if it exists) will be deleted and a new one will be added. This process helps in deploying the same configuration to multiple services.
 
-![](https://lh6.googleusercontent.com/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w)
+![](/docs.etendo.software/assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
 
 ### **Price**
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
-![](https://lh5.googleusercontent.com/djRxxYVfhjv8e71EzysdOeoAUbQHqZSVuQbECB5EJ88BVtBo7FJ5weuwe6rrpxjxcXMKUX8pZKFgAE_lj5WdhmABdxh0Q09e9wdLPK8VBKNf6jBK8E56qbc6oQRtDcmHgxnxclqBQGsbm2B_rg)
+![](/docs.etendo.software/assets/drive/djRxxYVfhjv8e71EzysdOeoAUbQHqZSVuQbECB5EJ88BVtBo7FJ5weuwe6rrpxjxcXMKUX8pZKFgAE_lj5WdhmABdxh0Q09e9wdLPK8VBKNf6jBK8E56qbc6oQRtDcmHgxnxclqBQGsbm2B_rg.png)
 
 There are two ways in which the user can get a product to be part of a Price List:
 
@@ -690,7 +690,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
 
 This tab will only be available when field Is Price Rule Based is selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
-![](https://lh6.googleusercontent.com/oKeZYS9ty3rxPOvfQd1nAc-VteGicSiOkI71kDF0mKBqomlsHjkbrtbMU3I36bDAbhM22cr0vlpMQ9FohG59E2YDtYddX5mFScwzgxcCvihP_y3C7SNdYqdnyIKewEei_gERVk0Nq-e4Gp_7Bg)
+![](/docs.etendo.software/assets/drive/oKeZYS9ty3rxPOvfQd1nAc-VteGicSiOkI71kDF0mKBqomlsHjkbrtbMU3I36bDAbhM22cr0vlpMQ9FohG59E2YDtYddX5mFScwzgxcCvihP_y3C7SNdYqdnyIKewEei_gERVk0Nq-e4Gp_7Bg.png)
 
 In this window it is also possible to define a maximum and minimum amounts that will be taken into account when showing services.
 
@@ -706,7 +706,7 @@ Also, if once a service (not yet delivered) has been added to the receipt, the p
 
 Accounting tab allows the user to configure the ledger accounts to be used while posting product related transactions such as product purchase or sales to the general ledger.
 
-![](https://lh5.googleusercontent.com/bLlVeOrdKF3rI3NdVa69a-CAwtO63JpdbyF0fzkMEG1pdmZU8u7bOlhffyM-HCwVnYA_y0kd51iPvCELamYYdp5RA9a7wVithXN1EWh_T73K304xQYB-gApjFi0-6vcof5HZBzUyIUrkpT82JQ)
+![](/docs.etendo.software/assets/drive/bLlVeOrdKF3rI3NdVa69a-CAwtO63JpdbyF0fzkMEG1pdmZU8u7bOlhffyM-HCwVnYA_y0kd51iPvCELamYYdp5RA9a7wVithXN1EWh_T73K304xQYB-gApjFi0-6vcof5HZBzUyIUrkpT82JQ.png)
 
 As shown in the screen above, you can configure for each product and general ledger some accounts to be used in the below listed transactions:
 
@@ -757,7 +757,7 @@ This tab provides information of the list of products contained and its quantity
 
 If the product Tax_Category is flagged as **As per BOM**, this tab also provides information for the price of each product in the Bill of Materials list. The price and quantity in this list is used to perform the division of the base amount to calculate the taxes based on the taxes configured for each product of the list.
 
-![](https://lh5.googleusercontent.com/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw)
+![](/docs.etendo.software/assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
 
 ### **Costing Rule**
 
@@ -771,7 +771,7 @@ Costing rules can be created and validated in the Costing Rules window related t
 
 Currency used by the costing rule is the currency set for the organization.
 
-![](https://lh4.googleusercontent.com/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw)
+![](/docs.etendo.software/assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
 
 ### **Costing**
 
@@ -812,7 +812,7 @@ It is possible to recognize them by their cost type:
 - **Legacy Average**
 - and **Legacy Standard**.
 
-![](https://lh6.googleusercontent.com/N1fWn0tV0yzS8dZULfJfiKeIOSvJzfYe-IBCo_TJSVqUavfD-zU4UlJlAhkg7CGNOV5uT__6-46NOHmWzyI3DBaYGwH_2TNdoblDMnC6VwDRzWILLf1k6YWZ8PRAPNWEjcMpSzqz81vqpObEBw)
+![](/docs.etendo.software/assets/drive/N1fWn0tV0yzS8dZULfJfiKeIOSvJzfYe-IBCo_TJSVqUavfD-zU4UlJlAhkg7CGNOV5uT__6-46NOHmWzyI3DBaYGwH_2TNdoblDMnC6VwDRzWILLf1k6YWZ8PRAPNWEjcMpSzqz81vqpObEBw.png)
 
 The way to define the **Cost** of a product implies to enter below detailed information:
 
@@ -842,7 +842,7 @@ There is not a way for the user to directly create new product transactions in t
 
 Product transactions of any type are automatically saved and listed in this tab as they are booked in Etendo.
 
-![](https://lh4.googleusercontent.com/20u-EUxoETZhWKS6geaudh3OZbjEc0CvxOFx_0njFvaHCzsro7CxBXExfQSPgKnKNX4eRyw4uvcYUIXZSBINAPMX-3nGhUoqA1K08zWlRefUU00gCNAQEvXbU-7RboBfWCxzGUK4OrStxUZ3kQ)
+![](/docs.etendo.software/assets/drive/20u-EUxoETZhWKS6geaudh3OZbjEc0CvxOFx_0njFvaHCzsro7CxBXExfQSPgKnKNX4eRyw4uvcYUIXZSBINAPMX-3nGhUoqA1K08zWlRefUU00gCNAQEvXbU-7RboBfWCxzGUK4OrStxUZ3kQ.png)
 
 As shown in the image above, Etendo saves and informs us about below relevant data for each product transaction type:
 
@@ -917,7 +917,7 @@ For instance the average cost of a product which transactions are listed below i
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
-![](https://lh4.googleusercontent.com/qDJuH3rx2ZvsvrA9Tjl0WZZjwJors5Xu2P2UgEjiBK_jhHX9vbYN3ZKcvH1mLIMWqUTNtrP4iKcFtp3VTDiwTHyLRpzsk4TUvxWl4QXo-ErSsQ4LbqtWnkCi2TWf1ftOhyL97RTpP5BbSEjL-Q)
+![](/docs.etendo.software/assets/drive/qDJuH3rx2ZvsvrA9Tjl0WZZjwJors5Xu2P2UgEjiBK_jhHX9vbYN3ZKcvH1mLIMWqUTNtrP4iKcFtp3VTDiwTHyLRpzsk4TUvxWl4QXo-ErSsQ4LbqtWnkCi2TWf1ftOhyL97RTpP5BbSEjL-Q.png)
 
 This pop-up allows entering below detailed data:
 
@@ -946,7 +946,7 @@ As soon as a product transaction gets its cost calculated, a new record is creat
 
 As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a "Cost Adjustment Line".
 
-![](https://lh4.googleusercontent.com/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2Pp1HhXd6jUX03CePAe2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew)
+![](/docs.etendo.software/assets/drive/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2Pp1HhXd6jUX03CePAe2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew.png)
 
 Some relevant fields to note are:
 
@@ -967,7 +967,7 @@ In this tab, the information that is required for the creation of the Purchasing
 
 Also, the Requisition process uses the Business Partner information for the automatic creation of Purchase Orders.
 
-![](https://lh3.googleusercontent.com/jUizYPPOFt4WfdpL71z7Pxe8z7aMWc7Qnzz0rYE488WWt0fvBY9jKgswYbddRYo1rOzmYGsAmV0zOCGvwuo2BfwWDr4gG94qfwrNTjpfcA3XYq1sNH2wNg495KlwPCY52uGyT_FhGRQWxDzbMw)
+![](/docs.etendo.software/assets/drive/jUizYPPOFt4WfdpL71z7Pxe8z7aMWc7Qnzz0rYE488WWt0fvBY9jKgswYbddRYo1rOzmYGsAmV0zOCGvwuo2BfwWDr4gG94qfwrNTjpfcA3XYq1sNH2wNg495KlwPCY52uGyT_FhGRQWxDzbMw.png)
 
 - **Business Partner**, the vendor that will appear on the Purchase Order when created automatically from the Requisition or from the Purchasing Plan.
 - **Quality Rating**: quality rating of the vendor. Information only field that is not used by the MRP process.
@@ -1092,7 +1092,7 @@ In this Tab, there is going to be a record for:
 - each Organization that is a Legal Entity that has a Costing Rule defined
 - or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the "Legal Entity".
 
-![](https://lh5.googleusercontent.com/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A)
+![](/docs.etendo.software/assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
 #### **Product Categories**
 
@@ -1100,7 +1100,7 @@ The user can define if a product of a certain product category can be related to
 
 This tab will only be available when the field ‘Included Product Categories’ of the Service has a value. It contains all the product categories related to the service.
 
-![](https://lh6.googleusercontent.com/PYJo6PQVwfGTLbk5f39Z5opQ3qM4D81lk9qWKX7k1Z-E9RzZC5ZnB9EK4fcWtb37L_ZP_fcJbcnAQdXMF1vLAzXuhseG993zL5eDG2xL-nt-jexrA3D-d4VupddMJEeKGixjbQZFXUBoayzGQQ)
+![](/docs.etendo.software/assets/drive/PYJo6PQVwfGTLbk5f39Z5opQ3qM4D81lk9qWKX7k1Z-E9RzZC5ZnB9EK4fcWtb37L_ZP_fcJbcnAQdXMF1vLAzXuhseG993zL5eDG2xL-nt-jexrA3D-d4VupddMJEeKGixjbQZFXUBoayzGQQ.png)
 
 The following information about related products is available in the tab:
 
@@ -1110,7 +1110,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the ‘Relate Prod Categories’ button (Visible only when the field ‘Included Product Categories’ has a value). This button will open a Pick & Edit displaying all product categories not related to the service.
 
-![](https://lh6.googleusercontent.com/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ)
+![](/docs.etendo.software/assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
 
 #### **Category Price Rule Version**
 
@@ -1120,7 +1120,7 @@ The user can define if a product can be related to a product of 'Service' type b
 
 This tab will only be available when the field ‘Included Products’ of the Service has a value. It contains all the products related to the service.
 
-![](https://lh4.googleusercontent.com/QhyN8Mqa2ybLbU9ny5se3_Z-JsGEIYGIAma4LQhBS4U4TUdZWUQTe3-Y3NP7bwlaQSxr6Fea2aB0K2g-slUF8XLmuN6aDN-3LCgqCjfSl0cl4uyn1c8YgL-w_AuZi8t4jXcDyF-cr2CpqKm-xg)
+![](/docs.etendo.software/assets/drive/QhyN8Mqa2ybLbU9ny5se3_Z-JsGEIYGIAma4LQhBS4U4TUdZWUQTe3-Y3NP7bwlaQSxr6Fea2aB0K2g-slUF8XLmuN6aDN-3LCgqCjfSl0cl4uyn1c8YgL-w_AuZi8t4jXcDyF-cr2CpqKm-xg.png)
 
 The following information about related products is available in the tab:
 
@@ -1133,7 +1133,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the  ‘Relate Products’ button (Visible only when the field ‘Included Products’ has a value). This button will open a Pick & Edit displaying all products not related to the service.
 
-![](https://lh5.googleusercontent.com/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw)
+![](/docs.etendo.software/assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
 
 #### **Product Price Rule Version**
 
@@ -1142,7 +1142,7 @@ This tab is not editable, it is not possible to add records manually or edit the
 !!! info
     The user must enable this preference by entering the Preference window, checking the Property list checkbox, choosing “Enable UOM Management” in the Property field with value Y.
 
-![](https://lh5.googleusercontent.com/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g)
+![](/docs.etendo.software/assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
 
 Fields to note:
 
@@ -1195,13 +1195,13 @@ In the Business Partner Set header the fields to complete are the organization a
 
 The lines tab allows the user to add the required business partners to the corresponding business partner set.
 
-![](https://lh4.googleusercontent.com/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78)
+![](/docs.etendo.software/assets/drive/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78.png)
 
 ### **Business Partner Category**
 
 Business partner category window allows the user to create and configure every business partner category your organization may need.
 
-![](https://lh6.googleusercontent.com/yiAWq21ZqaNFnysyzjUGdcU9RY9FIVQqQct184kzcnC2D6uQMWfucDd08L5YaVtSd1HtwvLRG2Vdqv9VJ1UrACm7AgCKwAXsZ6n4jWINbhoOqPVy5RpM4jnL_WheUZwDBroliExjc4cd8Z4NjQ)
+![](/docs.etendo.software/assets/drive/yiAWq21ZqaNFnysyzjUGdcU9RY9FIVQqQct184kzcnC2D6uQMWfucDd08L5YaVtSd1HtwvLRG2Vdqv9VJ1UrACm7AgCKwAXsZ6n4jWINbhoOqPVy5RpM4jnL_WheUZwDBroliExjc4cd8Z4NjQ.png)
 
 As shown in the image above, the creation of a business partner category requires entering below listed information for each category:
 
@@ -1213,7 +1213,7 @@ As shown in the image above, the creation of a business partner category require
 
 Each business partner category allows the user to configure a different set of ledger accounts.
 
-![](https://lh6.googleusercontent.com/sEas2U1BqTJtpng8QicgZUyvuochrM-jHjiTbEioeEE48ThFV3xNzGAjuMyqxy1SPVwtEqeG5z6lgwu9qZQ2pt162aFt9kfCvkp6rNE1NK_ecgSgqNIa12wrcfNKeuPwetZKmA8s3xiNPOjBEQ)
+![](/docs.etendo.software/assets/drive/sEas2U1BqTJtpng8QicgZUyvuochrM-jHjiTbEioeEE48ThFV3xNzGAjuMyqxy1SPVwtEqeG5z6lgwu9qZQ2pt162aFt9kfCvkp6rNE1NK_ecgSgqNIa12wrcfNKeuPwetZKmA8s3xiNPOjBEQ.png)
 
 There are several business partner related accounts which need to be properly set up for the organization's general ledger configuration.
 
@@ -1261,7 +1261,7 @@ Invoice schedule window allows the user to define and configure how often and by
 
 An organization can agree and therefore define specific schedules for issuing invoices, schedules which will then need to be linked to the corresponding customers.
 
-![](https://lh6.googleusercontent.com/0W4ihla_EA-tyKPr-LD48QtQ8tA-NXalUc6vNw45JFtUQQSqURKxkirYyxbrbtM9533FjdnfxdOMsOdjdBfLx7M20MSpnNzG3YW5qfZ_zyxxEI8_4X01V2G7Mu6yAJtgwGqXzGMtDO1J46IKgg)
+![](/docs.etendo.software/assets/drive/0W4ihla_EA-tyKPr-LD48QtQ8tA-NXalUc6vNw45JFtUQQSqURKxkirYyxbrbtM9533FjdnfxdOMsOdjdBfLx7M20MSpnNzG3YW5qfZ_zyxxEI8_4X01V2G7Mu6yAJtgwGqXzGMtDO1J46IKgg.png)
 
 As shown in the screen above, an invoice schedule can be easily created by entering below data:
 
@@ -1300,7 +1300,7 @@ This is an "Advanced Feature". To be reviewed, as I do not see where Titles can 
 
 There are many titles to use while contacting business partners of any type as well as contacts.
 
-![](https://lh6.googleusercontent.com/gZHYP7ZHyy6V6WbHltJU8h76GrjkhZX8GTD5xnejWTe8gkLjvlcS9hWiNn8l1NdakL9w5BX7btruUJB4krE5jnDGuSzJd4HTEChxeL7JKXNfUqttcv8_KlpV0sUs27nyb0BW2SjTMbBu4Dd7JQ)
+![](/docs.etendo.software/assets/drive/gZHYP7ZHyy6V6WbHltJU8h76GrjkhZX8GTD5xnejWTe8gkLjvlcS9hWiNn8l1NdakL9w5BX7btruUJB4krE5jnDGuSzJd4HTEChxeL7JKXNfUqttcv8_KlpV0sUs27nyb0BW2SjTMbBu4Dd7JQ.png)
 
 Once the required titles have been properly entered and configured, you can link them to the corresponding business Partner "Contact/s" in the Business Partner window.
 
@@ -1336,7 +1336,7 @@ The way it works is:
 
 Payment Term window allows the user to create and configure the payment terms to be linked to the business partners.
 
-![](https://lh3.googleusercontent.com/Hbh0E3N6Stf3wHCPcTc9GOj6Er8So-o0y49I-7c-G8MuPjkbnJphTN9worhzR1U9oMFyxPfXLMu7uwo4_EFRuJKOlNtM_199vb43qX9IasL8IqkalNo8C42CQddbjwQ8bZ3EqQAxGLFOiiLq2w)
+![](/docs.etendo.software/assets/drive/Hbh0E3N6Stf3wHCPcTc9GOj6Er8So-o0y49I-7c-G8MuPjkbnJphTN9worhzR1U9oMFyxPfXLMu7uwo4_EFRuJKOlNtM_199vb43qX9IasL8IqkalNo8C42CQddbjwQ8bZ3EqQAxGLFOiiLq2w.png)
 
 As shown in the screen above a payment term which only has a deferred period such as "100% in 120 days", can be created by entering below data in the payment term header window:
 
@@ -1348,7 +1348,7 @@ As shown in the screen above a payment term which only has a deferred period suc
 
 It is important to remark that in the case of defining a payment term split into more than one deferred period such as "50% in 30 days and 50% in 60 days", the second one (or the latest one in case of more than 2 deferred periods) must be setup in the header not in the lines as shown in the image below:
 
-![](https://lh5.googleusercontent.com/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw)
+![](/docs.etendo.software/assets/drive/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw.png)
 
 #### **Translation**
 
@@ -1391,7 +1391,7 @@ In this window you can configure different reasons because either you return goo
 
 This window is in Application||Master Data Management||Business Partner Setup||Return Reasons
 
-![](https://lh6.googleusercontent.com/EzeqfjlMA4oiTgUiCE4PQ55leA117l1-VAHRWpjrdBf9Xu78XqC37OMUN3o-VwsC3hzzOmm1zE-xHSJYs5z_7cplRZfNhWZs_zszBRwRfyLgaeaguly1pXDSeej1LpjJ8UIJbgmtpyqyldKCXw)
+![](/docs.etendo.software/assets/drive/EzeqfjlMA4oiTgUiCE4PQ55leA117l1-VAHRWpjrdBf9Xu78XqC37OMUN3o-VwsC3hzzOmm1zE-xHSJYs5z_7cplRZfNhWZs_zszBRwRfyLgaeaguly1pXDSeej1LpjJ8UIJbgmtpyqyldKCXw.png)
 
 Fields:
 
@@ -1410,7 +1410,7 @@ Volume discounts are incentives intended to encourage the purchase of goods in g
 
 Volume Discount window allows the user to create and properly configure volume discounts related to specific products and/or product groups, which are later on assigned to selected business partners.
 
-![](https://lh6.googleusercontent.com/g1bbTT-LAss3Ji167-5259AeMmavJ1HccPLrLUC5l5wjx-iHjnU027a0on1_mjXa4h9lQfVwD9iTKjgQpexYx80NLIrTsNYpbtFO5bzduuJAGE80BoVL2OO5LWRKPweoqPvDlAdg0uFcGnriPA)
+![](/docs.etendo.software/assets/drive/g1bbTT-LAss3Ji167-5259AeMmavJ1HccPLrLUC5l5wjx-iHjnU027a0on1_mjXa4h9lQfVwD9iTKjgQpexYx80NLIrTsNYpbtFO5bzduuJAGE80BoVL2OO5LWRKPweoqPvDlAdg0uFcGnriPA.png)
 
 As shown in the image above, a volume discount can be created by just entering below data in the "Volume Discount" header window:
 
@@ -1469,7 +1469,7 @@ Discounts of this type means a sum of the total order / invoice discount amounts
 
 Discounts tab can be found in the Purchase & Sales Order / Invoice windows and allows the user to add discounts manually or to review the ones automatically applied by Etendo based on the Business Partner Discount tab configuration.
 
-![](https://lh6.googleusercontent.com/G7GmkLbSq2r0kuQXVluq9Gle5khzHQbG0d1QvHtMBGM5WamIJWzmRqqUaFuQ5Or4N6IEPltXrTgJsaI4DhDEG6it6WKTfkin8tRip2JqNW2TKa2e7fip7OK9gwUNLlbfTCXPAv1UOfSu2wVX-A)
+![](/docs.etendo.software/assets/drive/G7GmkLbSq2r0kuQXVluq9Gle5khzHQbG0d1QvHtMBGM5WamIJWzmRqqUaFuQ5Or4N6IEPltXrTgJsaI4DhDEG6it6WKTfkin8tRip2JqNW2TKa2e7fip7OK9gwUNLlbfTCXPAv1UOfSu2wVX-A.png)
 
 Discounts
 
@@ -1507,7 +1507,7 @@ Discounts
 
 A total discount can be created and configured by entering a discount name, a discount product and a discount %.
 
-![](https://lh5.googleusercontent.com/DY-WYecWhUy0pS3Vt255iFAJmuQspg8xhaQ-_l6mt7aoBrp-igyJbmacjFzPbH6BSh7OEw6uLZgJPBDxOtcvd96_QLfGJmSTt1pSkUUxXcvxuvdDbb6hGps_1G6qR1JLiYVSTCrAtuw-tug3fA)
+![](/docs.etendo.software/assets/drive/DY-WYecWhUy0pS3Vt255iFAJmuQspg8xhaQ-_l6mt7aoBrp-igyJbmacjFzPbH6BSh7OEw6uLZgJPBDxOtcvd96_QLfGJmSTt1pSkUUxXcvxuvdDbb6hGps_1G6qR1JLiYVSTCrAtuw-tug3fA.png)
 
 Fields to note:
 
@@ -1680,13 +1680,13 @@ These three characteristics are assigned to the product in this way:
 
 It will create four variants/products and for all of them with the characteristic Sport. We can say that a characteristic that is not a variant is like a tag that is added to each new product.
 
-![](https://lh6.googleusercontent.com/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg)
+![](/docs.etendo.software/assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png)
 
 #### **Value**
 
 Each of the values of a characteristic.
 
-![](https://lh6.googleusercontent.com/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg)
+![](/docs.etendo.software/assets/drive/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg.png)
 
 Fields to be into account:
 
@@ -1694,13 +1694,13 @@ Fields to be into account:
 - Code: To be used later when creating the variant. It will put in the _Search Key_ field
 - Summary level: It is allowed to create a tree structure. For example, if the characteristic is color and for the same value(i.e Green) there are different references depending on the supplier:
 
-![](https://lh5.googleusercontent.com/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA)
+![](/docs.etendo.software/assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png)
 
 ##### **Button Add Products**
 
 The " Add Products" button is shown when a product characteristic value is NOT a "Variant", therefore it can be assigned to any product.
 
-![](https://lh4.googleusercontent.com/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q)
+![](/docs.etendo.software/assets/drive/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q.png)
 
 It does not update current values. That is why the button only shows products where the characteristic is not assigned to.
 
@@ -1747,7 +1747,7 @@ The aim of this feature is to avoid having duplicate values (blue, blue, green, 
 
 Each of the values of the product characteristic assigned to the subset.
 
-![](https://lh6.googleusercontent.com/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA)
+![](/docs.etendo.software/assets/drive/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA.png)
 
 - Sequence number: To order the way of seeing the values
 - Name: Value. Notice that only values from the characteristic can be selected.
@@ -1757,7 +1757,7 @@ Each of the values of the product characteristic assigned to the subset.
 
 Fields based on columns whose reference is Product Characteristics can be filtered in grid assisted with a popup where the tree of available characteristics is displayed.
 
-![](https://lh6.googleusercontent.com/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ)
+![](/docs.etendo.software/assets/drive/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ.png)
 
 !!! info
     The characteristics available in this popup are limited to the ones applicable to data filtered in the grid where it is displayed with the current filtering criteria for the rest of the fields.
@@ -1772,15 +1772,15 @@ Anyway, some new features can be displayed as well with some simple configuratio
 
 You can select between the different product characteristics using the product selector. There you have a column showing product characteristics description (See image).
 
-![](https://lh4.googleusercontent.com/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ)
+![](/docs.etendo.software/assets/drive/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ.png)
 
 That is not the case when selecting from the suggestion box. There, just product names are used. Taking into account that the product with the characteristics share the name, it becomes impossible to distinguish one from another (See image).
 
-![](https://lh3.googleusercontent.com/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw)
+![](/docs.etendo.software/assets/drive/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw.png)
 
 User experience in this case would be completely different if products could be identified from the suggestion box (See image).
 
-![](https://lh3.googleusercontent.com/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q)
+![](/docs.etendo.software/assets/drive/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q.png)
 
 This can be easily improved by enabling some options of the selector.
 
@@ -1791,12 +1791,12 @@ Follow these simple steps to enable this configuration, and please do not forget
 - Go to lines tab and select product (M_Product_ID)
 - Navigate to selector (see image)
 
-![](https://lh6.googleusercontent.com/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ)
+![](/docs.etendo.software/assets/drive/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ.png)
 
 - Go to Defined Selector tab and then to Defined Selector field tab and select Characteristics Description field.
 - Edit and flag "Search in suggestion box" and "Show in Picklist" check boxes (See image)
 
-![](https://lh4.googleusercontent.com/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug)
+![](/docs.etendo.software/assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png)
 
 - Last point would be to export these changes to the template. This is really important to avoid problems in future update processes and to keep these changes after the update.
 
@@ -1846,7 +1846,7 @@ Below, you can find a list of the unit of measure you could setup in Etendo:
 
 Products of any type are managed in non-monetary units of measure.
 
-![](https://lh5.googleusercontent.com/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw)
+![](/docs.etendo.software/assets/drive/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw.png)
 
 As shown in the image above, a non-monetary unit of measure can be created in Etendo by filling in below relevant data:
 
@@ -1885,7 +1885,7 @@ Besides, each product category allows the user to set up a different set of ledg
 
 Product category window allows the user to create and configure every product group your company may need.
 
-![](https://lh5.googleusercontent.com/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg)
+![](/docs.etendo.software/assets/drive/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg.png)
 
 As shown in the image above, the creation of a product category requires entering below listed information for each category:
 
@@ -1900,7 +1900,7 @@ Product categories can be arranged into a hierarchical structure, which can be l
 
 Each product category allows the user to configure a different set of ledger accounts.
 
-![](https://lh5.googleusercontent.com/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g)
+![](/docs.etendo.software/assets/drive/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g.png)
 
 There is a set of product related accounts which needs to be properly set up for the organization's general ledger configuration.
 
@@ -1972,7 +1972,7 @@ Etendo allows managing product attributes by following below steps:
 
 Attribute window allows the user to create and edit attributes such as color or size to be assigned to attribute sets.
 
-![](https://lh5.googleusercontent.com/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw)
+![](/docs.etendo.software/assets/drive/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw.png)
 
 As shown in the image above, an attribute can be easily defined by entering the relevant data below:
 
@@ -2010,7 +2010,7 @@ The steps to follow are:
 
 Attribute Set window allows creating as many combinations of attributes as required to define products with few or multiple characteristics.
 
-![](https://lh5.googleusercontent.com/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg)
+![](/docs.etendo.software/assets/drive/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg.png)
 
 As shown in the image above, an attribute set to be assigned to a specific product/s can contain:
 
@@ -2028,7 +2028,7 @@ As shown in the image above, an attribute set to be assigned to a specific produ
 
 An attribute set can have a single or a set of attributes assigned.
 
-![](https://lh4.googleusercontent.com/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA)
+![](/docs.etendo.software/assets/drive/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA.png)
 
 As shown in the image above, an attribute set can have only one attribute, for example Color or as many attributes as required, for example Size, Lot Number and Serial Number.
 
@@ -2050,7 +2050,7 @@ Some products require lot numbering to assure compliance with the tracking requi
 
 A Lot Number is a unique number given to a particular quantity of a product, which can be defined to have a prefix or a suffix among other characteristics.
 
-![](https://lh3.googleusercontent.com/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ)
+![](/docs.etendo.software/assets/drive/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ.png)
 
 A Lot Number Sequence can be setup:
 
@@ -2074,7 +2074,7 @@ Some products require serial numbering to assure compliance with the tracking re
 
 A Serial Number is a unique number given to each unit of a product/item which can be defined to have a prefix or a suffix among other characteristics.
 
-![](https://lh6.googleusercontent.com/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w)
+![](/docs.etendo.software/assets/drive/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w.png)
 
 A Serial Number Sequence can be setup:
 
@@ -2096,7 +2096,7 @@ The brands are manufacturers or commercial names used by manufacturers to identi
 
 To use this functionality, select an organization and add a new brand in the corresponding fields. It is also possible to enter a description when necessary.
 
-![](https://lh4.googleusercontent.com/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY)
+![](/docs.etendo.software/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png)
 
 ## Pricing
 
@@ -2144,7 +2144,7 @@ The way these concepts work in Etendo is described below:
 
 Price list schema window supports the creation of as many price list schemas as required with the aim of obtaining an easy management of price lists and price list versions.
 
-![](https://lh4.googleusercontent.com/8dm__0RGCoicJS7A0HIQ2wiXDhVxmgxLG0KI3K3QcCW8LIHOvh-QaKXy12rE-WHLQkVlr476bjI-t7tX7Q877O_4-ek18q8CU8MGnz_tTNhFahwOAvn9co79yD-EKha4_NQvAfHwLOmGt0J49g)
+![](/docs.etendo.software/assets/drive/8dm__0RGCoicJS7A0HIQ2wiXDhVxmgxLG0KI3K3QcCW8LIHOvh-QaKXy12rE-WHLQkVlr476bjI-t7tX7Q877O_4-ek18q8CU8MGnz_tTNhFahwOAvn9co79yD-EKha4_NQvAfHwLOmGt0J49g.png)
 
 As shown in the image below, the creation of a price list schema is as easy as to create it and give it a Name.
 
@@ -2154,7 +2154,7 @@ The set of price and discount rules which might apply to a set of product catego
 
 Price list schema lines tab allows defining a set of price rules such as to apply a discount % to the net unit price of a given product category or specific product.
 
-![](https://lh5.googleusercontent.com/1xuN1UnuUBcuYhWnHvIFMpKJ-OufSVW9rM0t-Otml29IRjyIQ5gjF3gIHNu1BdwLNikv9n3_5XmZ3rxWMDvg6Ig80WHdzCkEQI2q4cLeQ4Cbl_W3KVnYszYbQHJffZumj85Y1Q1RJjd_bFOp7w)
+![](/docs.etendo.software/assets/drive/1xuN1UnuUBcuYhWnHvIFMpKJ-OufSVW9rM0t-Otml29IRjyIQ5gjF3gIHNu1BdwLNikv9n3_5XmZ3rxWMDvg6Ig80WHdzCkEQI2q4cLeQ4Cbl_W3KVnYszYbQHJffZumj85Y1Q1RJjd_bFOp7w.png)
 
 First thing to notice is that, as shown in the image above, "Lines" tab is split into two sections:
 
@@ -2270,7 +2270,7 @@ Price List version creation:
 
 Price List window allows creating purchase and sales price lists to be assigned to the business partners for its use in purchase and sales transactions such as orders and invoices.
 
-![](https://lh5.googleusercontent.com/bHmRBT-3YqtSLK2PErojCQx8-FE-6UJK0_A3mkisnphxh5R2A7qev8UsVYgo9x7o8xbHuvmIhYY9ijGcJ9tymlAeIUqaNHJCOVNlXTv58MpI1iBTJ3ppDjXB0s_3ZXMro8cp8tS3d4oqD4_hHw)
+![](/docs.etendo.software/assets/drive/bHmRBT-3YqtSLK2PErojCQx8-FE-6UJK0_A3mkisnphxh5R2A7qev8UsVYgo9x7o8xbHuvmIhYY9ijGcJ9tymlAeIUqaNHJCOVNlXTv58MpI1iBTJ3ppDjXB0s_3ZXMro8cp8tS3d4oqD4_hHw.png)
 
 As shown in the image above, a price list or a price list version can be created by just entering below relevant information:
 
@@ -2309,7 +2309,7 @@ Due to this (Net amount vs Gross amount), when using prices that include taxes, 
 
 There could be as many versions of an existing price list as required, versions which can be valid for a given time period and which can be defined according to certain commercial rules.
 
-![](https://lh3.googleusercontent.com/ix0WIF0unAQdEluAH0VKvAHPQFFb5f6V5DlOMcJlQVi54MtuV41UG8GUHy1aHghfH4CH5Iz100WDv3Q8-fF_rPaNDGuFvqWwnTmVKxdNDFCSXnQFM3TAhlcxHapRGH4a7K2nXQVkk0lkuPJ1NQ)
+![](/docs.etendo.software/assets/drive/ix0WIF0unAQdEluAH0VKvAHPQFFb5f6V5DlOMcJlQVi54MtuV41UG8GUHy1aHghfH4CH5Iz100WDv3Q8-fF_rPaNDGuFvqWwnTmVKxdNDFCSXnQFM3TAhlcxHapRGH4a7K2nXQVkk0lkuPJ1NQ.png)
 
 As shown in the image above, there are two types of "Price List Versions":
 
@@ -2328,7 +2328,7 @@ The process button named "Create Price List" must be used only in the case of cr
 
 Product Price tab allows the user to either add or edit products and their prices for a selected price list.
 
-![](https://lh3.googleusercontent.com/rapFdQYs8ZYQ3c9wO_nEZ-tTniv5PDDLmdlXZ03ByVKh6Im-Jwt2KIB1Rj1Hm1agjXK55WcmCR6Xok4iO4s3zlRoP1TK-C6rh6oJSIBNVEdEcBRJB4OHbEtWV-7ZE8slY7CahOj4x7wU9GBuow)
+![](/docs.etendo.software/assets/drive/rapFdQYs8ZYQ3c9wO_nEZ-tTniv5PDDLmdlXZ03ByVKh6Im-Jwt2KIB1Rj1Hm1agjXK55WcmCR6Xok4iO4s3zlRoP1TK-C6rh6oJSIBNVEdEcBRJB4OHbEtWV-7ZE8slY7CahOj4x7wU9GBuow.png)
 
 In other words:
 
@@ -2381,7 +2381,7 @@ Discounts and Promotions is a mechanism that allows the user to adjust prices ba
 
 Discounts and Promotions, formerly Price Adjustments, defines rules to be applied to invoice and order lines to adjust prices.
 
-![](https://lh6.googleusercontent.com/ls88i8jyKuvAYSUkKg3hrJyY9FkEKi8kj9CkQI0hn-YdEggr1Qd25cPG13CO5Y-jVh5L6w6X-Nlnc7l_7ht0zRV8_4TYSYs-_V7JrZxIkIxmK5XS_KS60noJsXVwMK5FWbeKtEctt6kpiZsEqw)
+![](/docs.etendo.software/assets/drive/ls88i8jyKuvAYSUkKg3hrJyY9FkEKi8kj9CkQI0hn-YdEggr1Qd25cPG13CO5Y-jVh5L6w6X-Nlnc7l_7ht0zRV8_4TYSYs-_V7JrZxIkIxmK5XS_KS60noJsXVwMK5FWbeKtEctt6kpiZsEqw.png)
 
 This feature requires to set as "Active":
 
@@ -2487,7 +2487,7 @@ In this window Price Rules assigned to Price Rule Based services will be configu
 
 #### **Service Price Rule**
 
-![](https://lh6.googleusercontent.com/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw)
+![](/docs.etendo.software/assets/drive/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw.png)
 
 Configuration fields:
 
@@ -2501,7 +2501,7 @@ Configuration fields:
 
 #### **Ranges**
 
-![](https://lh4.googleusercontent.com/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw)
+![](/docs.etendo.software/assets/drive/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw.png)
 
 In this tab, different Ranges can be created based on the amount of the related order lines. Configuration fields:
 

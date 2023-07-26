@@ -203,7 +203,7 @@ Currencies used worldwide are automatically created and listed in the currency w
 
 Currency window allows the user to visualize or to create and configure the currencies to use in monetary transactions.
 
-![](https://lh6.googleusercontent.com/Id_-XkKhJGKz4E4IgrcdchCEUtwHOz2EE8QQ_GiPaqSU470JxMUXCRZAIVHbLnAjQATCkVBbBy-1AbEPbzOR-EItV6nxocGv5sBtAkabdwigmNQiaO7qcrF0yUAdIxkmozBdAn-t)
+![](/docs.etendo.software/assets/drive/Id_-XkKhJGKz4E4IgrcdchCEUtwHOz2EE8QQ_GiPaqSU470JxMUXCRZAIVHbLnAjQATCkVBbBy-1AbEPbzOR-EItV6nxocGv5sBtAkabdwigmNQiaO7qcrF0yUAdIxkmozBdAn-t.png)
 
 As shown in the image above, currency relevant data is:
 
@@ -225,7 +225,7 @@ Etendo allows the user to setup three types of currency precision:
 
 Conversion rates tab lists the available conversion rates for a given currency.
 
-![](https://lh5.googleusercontent.com/WLfdO4txHazfD7hrPCx81A_8FTa07TqNpNlv_ZIyEEBcbJt907KdDTIkZ71Y9Qa4d2opmcOfqNopEEYG-bvxrJT4V_y8ELvirA4MLN7JpMH8rdtBHgnAsHtMNZfkMJEM_c68jzIx)
+![](/docs.etendo.software/assets/drive/WLfdO4txHazfD7hrPCx81A_8FTa07TqNpNlv_ZIyEEBcbJt907KdDTIkZ71Y9Qa4d2opmcOfqNopEEYG-bvxrJT4V_y8ELvirA4MLN7JpMH8rdtBHgnAsHtMNZfkMJEM_c68jzIx.png)
 
 A conversion rate is the valid rate at which one currency may be converted into another one within a given period of time.
 
@@ -243,7 +243,7 @@ Etendo recommends conversion rates to be configured in the Conversion Rates wind
 
 Currencies can be translated to any language if required.
 
-![](https://lh4.googleusercontent.com/h1lRXjQBmJVNgWlx_tv7RGfyF56NqhAfh872qimAXBSDYMLLQouPXNbHMF9dcByVgIoOc261XbWARBiXrTLsvtRQ8e8-rg-5wncWfV6QQxf6l1kRrHoe7u_xGC38Hq5GIdKojK94)
+![](/docs.etendo.software/assets/drive/h1lRXjQBmJVNgWlx_tv7RGfyF56NqhAfh872qimAXBSDYMLLQouPXNbHMF9dcByVgIoOc261XbWARBiXrTLsvtRQ8e8-rg-5wncWfV6QQxf6l1kRrHoe7u_xGC38Hq5GIdKojK94.png)
 
 ### **Conversion Rates**
 
@@ -265,7 +265,7 @@ Etendo requires the user to enter and maintain currency exchange rate in both se
 
 For instance, USD exchange rate to EUR should have a _Multiple rate by_ = 0.68 setting and a _Divide rate by_ = 1.47 setting, as shown in the image below:
 
-![](https://lh6.googleusercontent.com/0jd4xH1XIAHAk9o1yEa-ApHM2BcsMBuMK8YX9QPMH6u-A_h5M7O3lOaNA8xrMycgog-vAV-WgQhfCHf9UjwM6ftv1zZT_Fld28RaOTuwRU0Xw8V0Ql_A7KNgO20zKgYlvzlWcXs7)
+![](/docs.etendo.software/assets/drive/0jd4xH1XIAHAk9o1yEa-ApHM2BcsMBuMK8YX9QPMH6u-A_h5M7O3lOaNA8xrMycgog-vAV-WgQhfCHf9UjwM6ftv1zZT_Fld28RaOTuwRU0Xw8V0Ql_A7KNgO20zKgYlvzlWcXs7.png)
 
 ### **Country and Region**
 
@@ -282,7 +282,7 @@ Countries and their corresponding regions are automatically created and listed i
 
 This window allows the user to visualize and/or to create and maintain the countries and the regions to be used in daily business activities.
 
-![](https://lh3.googleusercontent.com/7wlTKkSY89CblxbUfLmnLafkVTgPVlmk7_I-SS8d0mFe3lrRH3_5VN_PvJeClUPP1ZC9uhTTcLDdH3GhKAH2nuqpJgJgAEBwdJnVkTX1GtYu7OmXavxslpmGx84aoeNbNS2m8sCu)
+![](/docs.etendo.software/assets/drive/7wlTKkSY89CblxbUfLmnLafkVTgPVlmk7_I-SS8d0mFe3lrRH3_5VN_PvJeClUPP1ZC9uhTTcLDdH3GhKAH2nuqpJgJgAEBwdJnVkTX1GtYu7OmXavxslpmGx84aoeNbNS2m8sCu.png)
 
 As shown in the image above, country relevant data is:
 
@@ -302,7 +302,7 @@ As shown in the image above, country relevant data is:
 
 Countries and regions can be translated to any language.
 
-![](https://lh3.googleusercontent.com/J2nmC6HSXqsQMZ1gnwrSmgZ0GuXGZBR-l91sYP3vxBIZw_VxBHsjFzNhZg3aoxzWrIVgWjYl5oRXcb8pc9dh61OFDA4-B4XKaQEGctSmKA63gsKy0t7CqTHgF10Qq1XvPtWn4U1x)
+![](/docs.etendo.software/assets/drive/J2nmC6HSXqsQMZ1gnwrSmgZ0GuXGZBR-l91sYP3vxBIZw_VxBHsjFzNhZg3aoxzWrIVgWjYl5oRXcb8pc9dh61OFDA4-B4XKaQEGctSmKA63gsKy0t7CqTHgF10Qq1XvPtWn4U1x.png)
 
 #### **Region**
 
@@ -343,7 +343,7 @@ Preference window allows the user to define and maintain session values which ca
 
 ##### **Preference Definition**
 
-![](https://lh5.googleusercontent.com/ORFZT6LvzmxT-rOY-l1Xw07GvftHNxLMJU6RxtHo8LmMioTFNJMYUcITNJlA5xrvFyW8PMzRi2grIoMM-tFBiotCV4s3YNbUzC5G7UyavRacVSjEpYLuQQtdo9v_aTHWIgVHoM1w)
+![](/docs.etendo.software/assets/drive/ORFZT6LvzmxT-rOY-l1Xw07GvftHNxLMJU6RxtHo8LmMioTFNJMYUcITNJlA5xrvFyW8PMzRi2grIoMM-tFBiotCV4s3YNbUzC5G7UyavRacVSjEpYLuQQtdo9v_aTHWIgVHoM1w.png)
 
 As shown in the image above there is one field named "_Property List_" which is key in defining a preference as a property or as an attribute:
 
@@ -410,11 +410,11 @@ As shown in the image above there is one field named "_Property List_" which is 
   - **Excel Export Format**, this preference allows setting the export format to be used when generating Excel reports. Two values are supported: _XLS_ or _XLSX_. When this preference is not defined, _XLSX_ is the default Excel export format.
   - **"Filter by documents processed since N days ago"** is related to Create Lines From in Sales/Purchase Invoice. It limits transactions starting from the current date to the defined days ago. If the preference is not defined then queries retrieve all records created since one year ago (365 days), else it will be filtered by the count of days defined as the preference value.
 
-![](https://lh4.googleusercontent.com/U-6eYqg2DbvQutUsYua4ZGYyN6m1Eg0Kf0kmS2ONtUO0l12g9IUSmE9NWCAHuLBjiy9IQt_dS1PG71TEorFR55Jg3z2S_UUBUq8NwYaCp-BUa1b5d6q9ZIquttmiYsoQzFKV4rR6)
+![](/docs.etendo.software/assets/drive/U-6eYqg2DbvQutUsYua4ZGYyN6m1Eg0Kf0kmS2ONtUO0l12g9IUSmE9NWCAHuLBjiy9IQt_dS1PG71TEorFR55Jg3z2S_UUBUq8NwYaCp-BUa1b5d6q9ZIquttmiYsoQzFKV4rR6.png)
 
 - if the _Property List_ checkbox is _not checked_, the preference is configured as an **attribute**. An attribute is a free text attribute which can get whatever value.
 
-![](https://lh3.googleusercontent.com/t1vw7KGogAD0Tqp1UIoVESm6KBOrDcv9f2BuzzDGdaNP9yXkId4n_YODwWpbnzvGiSKEktpKJqAUtwwlUpKH3DR1Z6t51QShE5mUAWtuaksNDKhgeu-_YxYsnlwXySWaLwsyOfaU)
+![](/docs.etendo.software/assets/drive/t1vw7KGogAD0Tqp1UIoVESm6KBOrDcv9f2BuzzDGdaNP9yXkId4n_YODwWpbnzvGiSKEktpKJqAUtwwlUpKH3DR1Z6t51QShE5mUAWtuaksNDKhgeu-_YxYsnlwXySWaLwsyOfaU.png)
 
 - **"ShowAuditDefault"** attribute allows enabling the Audit Trail feature. Audit Trail feature allows tracking every change done to any Etendo table or entity.
 - **"ShowAcct"** attribute allows showing Post buttons and Accounting tab whenever its value is set to "Y".
@@ -489,7 +489,7 @@ Conflicts can be manually resolved by checking and modifying the preference.
 
 Session preferences allow showing or hiding accounting tabs or translation tabs for a given user, role, client and organization.
 
-![](https://lh6.googleusercontent.com/VAr7jhdNC8mm1JlSp-Jq-dBswsbSAMKpcuq_Tg6_Z3yKcxRbc3N8IgLn-gimlxHoPzGvtOl0i3k7wPCdqKKG8zO1xgcS5xvh-sC1T0yO2qeanxvBMqt-P8TUPDo9n-ASz4p2LjaL)
+![](/docs.etendo.software/assets/drive/VAr7jhdNC8mm1JlSp-Jq-dBswsbSAMKpcuq_Tg6_Z3yKcxRbc3N8IgLn-gimlxHoPzGvtOl0i3k7wPCdqKKG8zO1xgcS5xvh-sC1T0yO2qeanxvBMqt-P8TUPDo9n-ASz4p2LjaL.png)
 
 As shown in the image above, session preferences window allow the user to setup a list of session preferences for the user, the role, the client and the organization entered while login in Etendo.
 
@@ -562,7 +562,7 @@ Etendo allows the customization of grid and form views. Customize windows and fo
 
 Window Personalization lists and maintains the customized form views.
 
-![](https://lh5.googleusercontent.com/xS4tDlk0VJ49snDskpuJfugXl-ziE6vT8HMe7op-QkP_NzRwF-Rr7rgisAd3RnIXQLgaJ0h6hK07xGi2hbhGd37GcHr8q8zyW0zzZ4bOYdxQzByOqDjw202Qn0WoHMxu7WoIXCHU)
+![](/docs.etendo.software/assets/drive/xS4tDlk0VJ49snDskpuJfugXl-ziE6vT8HMe7op-QkP_NzRwF-Rr7rgisAd3RnIXQLgaJ0h6hK07xGi2hbhGd37GcHr8q8zyW0zzZ4bOYdxQzByOqDjw202Qn0WoHMxu7WoIXCHU.png)
 
 Once a form has been customized, saved and listed in the _"Window Personalization"_ window, it is possible to configure the levels of visibility where that form personalization will apply.
 
@@ -582,11 +582,11 @@ The way "_Alerts_" work in Etendo is described below:
 
 The _number of alerts instances_ informing about events being monitored happening is shown in the "Top Navigation" menu:
 
-![](https://lh4.googleusercontent.com/z341Sqx0_VIs2wSRDSm-6Jlq_2MmxWxxFa406LPjtgffjFTdFIds94ov5CwjlKGP7vDSEyxAdiYnVGN3m0AaIZjGIz2WkrZSmPlCagaI-KmACHhix0-qaazsTFjJ3D9sG0sTkbHv)
+![](/docs.etendo.software/assets/drive/z341Sqx0_VIs2wSRDSm-6Jlq_2MmxWxxFa406LPjtgffjFTdFIds94ov5CwjlKGP7vDSEyxAdiYnVGN3m0AaIZjGIz2WkrZSmPlCagaI-KmACHhix0-qaazsTFjJ3D9sG0sTkbHv.png)
 
 Alerts instances can be visualized and managed in the _Alert Management_ window which is opened by clicking the "Alert" option of the Top Navigation menu.
 
-![](https://lh3.googleusercontent.com/-wFUIZt2K33Chbp-czLqJmO7f1hP5fcD2jkcZaI7CtnhlHHbdh7lk1_ayiFKbrcfx8slOlIXVjeiIe15gmt_CkcTwhWQGhAbfXXGCMaF6-ba5l_OGBnMsKpP8CkL23o7AwzywwMX)
+![](/docs.etendo.software/assets/drive/-wFUIZt2K33Chbp-czLqJmO7f1hP5fcD2jkcZaI7CtnhlHHbdh7lk1_ayiFKbrcfx8slOlIXVjeiIe15gmt_CkcTwhWQGhAbfXXGCMaF6-ba5l_OGBnMsKpP8CkL23o7AwzywwMX.png)
 
 Alerts can have 4 different status:
 
@@ -607,7 +607,7 @@ Alerts are defined by entering below data:
 - The _"SQL"_ query.
 - and the _"Tab"_ where the alert instance can be fixed or solved.
 
-![](https://lh3.googleusercontent.com/7FDlwrebuc8IysmRIryYm81mF7QPheC-khbM3NdpZUdAIlXzkhZMDvasxwUPYPDMEyJcP_oM5t16sfAW3ZOCyVNUmR8nE4WWZkLYexMWFuKDHaCb0j8Axa1AetNm9j5rEVq36Kri)
+![](/docs.etendo.software/assets/drive/7FDlwrebuc8IysmRIryYm81mF7QPheC-khbM3NdpZUdAIlXzkhZMDvasxwUPYPDMEyJcP_oM5t16sfAW3ZOCyVNUmR8nE4WWZkLYexMWFuKDHaCb0j8Axa1AetNm9j5rEVq36Kri.png)
 
 #### **Translation**
 
@@ -628,7 +628,7 @@ Etendo supports alerts notification to user or roles by email:
 
 Alert tab list the events happening which generate the corresponding alert.
 
-![](https://lh4.googleusercontent.com/qRqaP9bx7a04XzXIrzdpZZ3eS3OaglF9SMM3xvRYaL3Vrkhcxz_EI5BxPbtrnQoW_DXad8d-_oQBJntpSgZdchM9RtWisxif2I3GWPM2Yda4XlbPG_kkWIqlvgDl5cvOObV43F4W)
+![](/docs.etendo.software/assets/drive/qRqaP9bx7a04XzXIrzdpZZ3eS3OaglF9SMM3xvRYaL3Vrkhcxz_EI5BxPbtrnQoW_DXad8d-_oQBJntpSgZdchM9RtWisxif2I3GWPM2Yda4XlbPG_kkWIqlvgDl5cvOObV43F4W.png)
 
 ## **Client**
 
@@ -654,7 +654,7 @@ Organizations are created by running the Initial Organization setup process avai
 
 The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.
 
-![](https://lh3.googleusercontent.com/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB)
+![](/docs.etendo.software/assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
 
 !!! info
     The field "Days To Password expiration" allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
@@ -714,7 +714,7 @@ It is always possible to customize the defaulted configuration, for instance:
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
-![](https://lh5.googleusercontent.com/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q)
+![](/docs.etendo.software/assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
 
 Additional information allowed to be specified:
 
@@ -739,7 +739,7 @@ Additional information allowed to be specified:
 
 Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
 
-![](https://lh3.googleusercontent.com/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma)
+![](/docs.etendo.software/assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
 
 "Email Configuration" tab gathers the email configuration required for sending out documents such as orders or invoices.
 
@@ -777,7 +777,7 @@ This tab can be used to configure accounting dimensions availability at document
 
 For example, if a client needs to display project dimension in the header and lines in all documents less in amortization document, the client window should have the following configuration:
 
-![](https://lh3.googleusercontent.com/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety)
+![](/docs.etendo.software/assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.
 
@@ -817,7 +817,7 @@ Datasets allow the user to define reference data such as master data or configur
 
 Reference data can be imported or applied to organizations in the "Enterprise Module Management" window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
 
-![](https://lh5.googleusercontent.com/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7)
+![](/docs.etendo.software/assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
 
 - If a reference data is applied at (\*) organization, every organization in the system will have access to that data.
 - If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
@@ -865,7 +865,7 @@ All of the above is possible due to the fact that there are different types of O
 
 As already mentioned, Organizations are created by running the Initial Organization Setup process and not only that, once an organization has been created it must be set as "Ready" in the Organization window.
 
-![](https://lh5.googleusercontent.com/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB)
+![](/docs.etendo.software/assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png)
 
 As shown in the image above, an organization can be created by providing the relevant data below:
 
@@ -946,7 +946,7 @@ Finally, it is important to remark that:
 
 Etendo includes demo data for demonstration purposes, which includes an "Enterprise Model" composed by a set of organizations.
 
-![](https://lh6.googleusercontent.com/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn)
+![](/docs.etendo.software/assets/drive/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn.png)
 
 - An organization type "Organization" named F&B International Group.
   - This organization is not a legal entity and it does not allow transactions
@@ -987,11 +987,11 @@ The basic variables to take into account while creating an organization of the t
 
 **3.** Enterprise Models examples:
 
-![](https://lh6.googleusercontent.com/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA)
+![](/docs.etendo.software/assets/drive/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA.png)
 
-![](https://lh6.googleusercontent.com/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA)
+![](/docs.etendo.software/assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png)
 
-![](https://lh5.googleusercontent.com/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A)
+![](/docs.etendo.software/assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png)
 
 ### Organization type
 
@@ -1060,7 +1060,7 @@ There are different types of data left to be entered or changed for an organizat
   This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.
 - The Allow Period Control checkbox is only shown for "legal with accounting" organizations.
 
-![](https://lh6.googleusercontent.com/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ)
+![](/docs.etendo.software/assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png)
 
 If enabled, it allows selecting a Fiscal Calendar for which the corresponding fiscal periods can be opened or closed in the Open/Close Period Control window.
 
@@ -1106,7 +1106,7 @@ Food & Beverage (F&B) sample client shipped with Etendo illustrates scenario 1 a
 - The "F&B International Group" is an "Organization" Organization Type.  
   An Accounting CSV file was selected while it was created, in the same way as the "USD" currency, therefore this organization has the "F&B International Group US/A/Dollar" general ledger configuration assigned.
 
-![](https://lh3.googleusercontent.com/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT)
+![](/docs.etendo.software/assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png)
 
 This general ledger configuration can also be shared by the organizations underneath, for instance "F&B US, Inc" and "F&B España S.A."
 
@@ -1118,7 +1118,7 @@ This general ledger configuration can also be shared by the organizations undern
 
 The tree action button
 
-![](https://lh4.googleusercontent.com/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX)
+![](/docs.etendo.software/assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png)
 
 allows dragging and dropping an organization within an enterprise model, whenever it is not "Set as Ready".
 
@@ -1144,7 +1144,7 @@ Once an organization is set as ready:
 
 Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.
 
-![](https://lh4.googleusercontent.com/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi)
+![](/docs.etendo.software/assets/drive/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi.png)
 
 Fields to fill in are:
 
@@ -1171,7 +1171,7 @@ The field Sales Tax Exempt Rate allows entering a by default exempt sales tax ra
 
 Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.
 
-![](https://lh4.googleusercontent.com/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo)
+![](/docs.etendo.software/assets/drive/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo.png)
 
 **The Status**
 
@@ -1187,7 +1187,7 @@ This tab can be used for searching for a period (i.e. Jan-19) and get its curren
 
 As shown in the image below, the period Feb-19 has a mixed status, meaning that not all the Document Types have the same Status value within the Organization "F&B España S.A." which has the "Calendario España" assigned.
 
-![](https://lh5.googleusercontent.com/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz)
+![](/docs.etendo.software/assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png)
 
 For more information, see Open/Close Period Control.
 
@@ -1195,7 +1195,7 @@ For more information, see Open/Close Period Control.
 
 Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.
 
-![](https://lh5.googleusercontent.com/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss)
+![](/docs.etendo.software/assets/drive/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss.png)
 
 For more information, see Documents in the Open/Close Period Control window.
 
@@ -1203,13 +1203,13 @@ For more information, see Documents in the Open/Close Period Control window.
 
 Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.
 
-![](https://lh6.googleusercontent.com/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO)
+![](/docs.etendo.software/assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
 #### **Warehouse**
 
 Relation of prioritized on-hand warehouses of the Organization.
 
-![](https://lh3.googleusercontent.com/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC)
+![](/docs.etendo.software/assets/drive/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC.png)
 
 In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.
 
@@ -1225,7 +1225,7 @@ Security folder allows creating and configuring basic security entities such as 
 
 A user is an entity which can log into Etendo whenever it has a password and at least one role assigned to it.
 
-![](https://lh3.googleusercontent.com/uYk0-n-xUoagkerOKb87gcQ11qfxJ4C2C_uPR-SR_HlmbDw89FyUm7UY86xbdoD3TjOPpEBVFu0aITdVibP7fnpylt_fn8SttMp0fH3HkNOAle71cVvxAmMtvbMPkBN4rHrhr21j)
+![](/docs.etendo.software/assets/drive/uYk0-n-xUoagkerOKb87gcQ11qfxJ4C2C_uPR-SR_HlmbDw89FyUm7UY86xbdoD3TjOPpEBVFu0aITdVibP7fnpylt_fn8SttMp0fH3HkNOAle71cVvxAmMtvbMPkBN4rHrhr21j.png)
 
 As shown in the image above, Etendo allows the user to sign in by entering a username and a password previously created in Etendo. The user assigned to that username will be able to sign in only in case it has at least one user role assigned to it.
 
@@ -1233,7 +1233,7 @@ As shown in the image above, Etendo allows the user to sign in by entering a use
 
 User window allows the user to create as many Etendo users as required. Each person accessing Etendo can have a different user assigned.
 
-![](https://lh3.googleusercontent.com/Xu1oqRnWMgbWI8-qp1RP-stpJ2YwNnKLJr04-gRcVOrIEkJm_er9fWwpe4F2Ncy_u3pATEEGw7t59JJrUW2y9QSsmNWTT9XXlC0cZuqlakWhF2KIfYfw6IaJhrseTY1tKjE0Uavl)
+![](/docs.etendo.software/assets/drive/Xu1oqRnWMgbWI8-qp1RP-stpJ2YwNnKLJr04-gRcVOrIEkJm_er9fWwpe4F2Ncy_u3pATEEGw7t59JJrUW2y9QSsmNWTT9XXlC0cZuqlakWhF2KIfYfw6IaJhrseTY1tKjE0Uavl.png)
 
 As shown in the image above, a user can be created by entering the basic information below:
 
@@ -1246,7 +1246,7 @@ As shown in the image above, a user can be created by entering the basic informa
 
 Roles are the connection between users and access rights. Each user can have more than one role assigned, however, a user can only log into Etendo by using just one role.
 
-![](https://lh3.googleusercontent.com/IdpYeASr5qFi9zCa5EgsKRJfg54EoyBsxbVbj3d7DIbN-8XztHzj2QI35lguEXIKt6FxAmkozQnh7sGeMaKYD4m7-x5QSemv2M48ShmpCxhVWCLFwGa4e94oA1yl4K7-JprsrIcf)
+![](/docs.etendo.software/assets/drive/IdpYeASr5qFi9zCa5EgsKRJfg54EoyBsxbVbj3d7DIbN-8XztHzj2QI35lguEXIKt6FxAmkozQnh7sGeMaKYD4m7-x5QSemv2M48ShmpCxhVWCLFwGa4e94oA1yl4K7-JprsrIcf.png)
 
 For instance, it is possible to create and configure a role for Sales, a role for Finance, a role for Warehouse, and another role for Procurement.
 
@@ -1256,7 +1256,7 @@ Whenever there is a new member in the organization, a new user could be created 
 
 There can be a user having a given role set up as "Role Administrator", that user will be able to add new users to that role.
 
-![](https://lh6.googleusercontent.com/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS)
+![](/docs.etendo.software/assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
 
 ### **Role**
 
@@ -1300,7 +1300,7 @@ When inheriting from multiple roles, the permission application order is determi
 
 This process eases the role management, specially when the number of roles defined for a Client is high. Thus, it is possible to define template roles to give access for a particular set of elements, and then create multiple combinations of functional roles in order to give personalized access for the different users. This is illustrated in the picture below.
 
-![](https://lh5.googleusercontent.com/vyHTH7_aVNAVElZ2_BGWT5QcVh9MD3w_DCfz20k4Bu6mxa_QCvrKo2ufgIMmvqericF1SZnMm4ONeysEKiw2kON-47niJ5HlcjaVqGiiqPkcNyg9k0FOmnZHHfbqpioJ9At6rbTI)
+![](/docs.etendo.software/assets/drive/vyHTH7_aVNAVElZ2_BGWT5QcVh9MD3w_DCfz20k4Bu6mxa_QCvrKo2ufgIMmvqericF1SZnMm4ONeysEKiw2kON-47niJ5HlcjaVqGiiqPkcNyg9k0FOmnZHHfbqpioJ9At6rbTI.png)
 
 The current list of inheritable elements include the following: organizations, windows, tabs, fields, processes, forms, widgets, views, process definitions, preferences and alert recipients.
 
@@ -1320,13 +1320,13 @@ As mentioned before, the changes (create, edit or remove) done in a permission w
 
 This warning message is similar to the one shown below. It appears when creating or editing a record that belongs to a template role, in a tab of an inheritable entity.
 
-![](https://lh6.googleusercontent.com/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb)
+![](/docs.etendo.software/assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
 
 #### **Role**
 
 The Role window allows the user to review, create, configure and maintain the roles to use in a given client.
 
-![](https://lh5.googleusercontent.com/8MOJrcJaif8MbvpR7NwOIA6JjqOIlmOf3df8nsTRJa7Zq02aanCB7SGImtBiEGqou4crWjRy_nGJNhUVj3rHpcNyYOVw8H-F_X4veFkEtGw_6KCGoJxom1R_MkOlm0pJhIbEYzMB)
+![](/docs.etendo.software/assets/drive/8MOJrcJaif8MbvpR7NwOIA6JjqOIlmOf3df8nsTRJa7Zq02aanCB7SGImtBiEGqou4crWjRy_nGJNhUVj3rHpcNyYOVw8H-F_X4veFkEtGw_6KCGoJxom1R_MkOlm0pJhIbEYzMB.png)
 
 As already described, there are roles automatically created by Etendo which can be reviewed in this window.
 
@@ -1376,7 +1376,7 @@ Org Access tab allows the user to define the organization/s to which a given rol
 
 As already mentioned, every record in Etendo belongs to an organization, therefore the only way for a user role to edit a record which belongs to an organization is to provide that user role with access to that organization.
 
-![](https://lh3.googleusercontent.com/vE-K35fSEj9-BIvgbMGezZvFFgFx4-bfY-LNbMosiyjun4B_-bSKiWnHr-K7bpJSnYwrSypNacZYFmcO9x46g3yGgrHxrywB-z2Agfywx-qVesqxPN9ruiBg45aTxqkyn15BsOkb)
+![](/docs.etendo.software/assets/drive/vE-K35fSEj9-BIvgbMGezZvFFgFx4-bfY-LNbMosiyjun4B_-bSKiWnHr-K7bpJSnYwrSypNacZYFmcO9x46g3yGgrHxrywB-z2Agfywx-qVesqxPN9ruiBg45aTxqkyn15BsOkb.png)
 
 - _Organization Administrator_ checkbox allows a role to admin other users' _Workspace_ as well as _Customized Forms"_:
   - In other words, an organization administrator can assign widgets to the workspace of any user of the organization as well as customized forms.
@@ -1385,7 +1385,7 @@ As already mentioned, every record in Etendo belongs to an organization, therefo
 
 The User Assignment tab allows the user to add users to a given role.
 
-![](https://lh6.googleusercontent.com/iBeXu8RdIKr-srDU5Q-1Y5e5wYtbvNbXqD8KtMx8MK2gHEXc9BJUcYsA19OgHzCNv7chh30Ws8bVjbtjFkllwl5w8kZZ2ZoAbiXLOeFJDzwEisQu04z8dGAj3CmIy0OOxneMJtz6)
+![](/docs.etendo.software/assets/drive/iBeXu8RdIKr-srDU5Q-1Y5e5wYtbvNbXqD8KtMx8MK2gHEXc9BJUcYsA19OgHzCNv7chh30Ws8bVjbtjFkllwl5w8kZZ2ZoAbiXLOeFJDzwEisQu04z8dGAj3CmIy0OOxneMJtz6.png)
 
 "_Role Administrator_" checkbox allows the user to administer the given role for:
 
@@ -1403,7 +1403,7 @@ As already mentioned, every time a new role is created and saved without selecti
 
 The information above means that the newly created role will have access to every Etendo window.
 
-![](https://lh3.googleusercontent.com/vt5fH1QoVLs_KcIpoESYAQqhSe01e6oHVVFbF-UQy6fwJnDu8B4qOgQDCI34dQheclrgChwDy-IuurthKMqxAljaRU-jVczgUCGnXrXDTv2vERvhxlgGjRy7SA6ivWpqpYMBhcmQ)
+![](/docs.etendo.software/assets/drive/vt5fH1QoVLs_KcIpoESYAQqhSe01e6oHVVFbF-UQy6fwJnDu8B4qOgQDCI34dQheclrgChwDy-IuurthKMqxAljaRU-jVczgUCGnXrXDTv2vERvhxlgGjRy7SA6ivWpqpYMBhcmQ.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to _manually_ add a subset of windows which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow window access for a given Etendo module or area such as Projects, Finance or Sales.
 
@@ -1437,7 +1437,7 @@ As already mentioned, every time a new role is created and saved without selecti
 
 Above means that the newly created role will have access to every Etendo report and process.
 
-![](https://lh4.googleusercontent.com/jeSO8cKGRMnO5jlOseLchbPh4OE2fDeLeAAS0VSOIngREivxtfTmTPmNLaDwnn7ujstw7z6Pgqp0oZLZAHxwT1XwtyGmlZdj-vuNEBXnBq1dFNo5UvBFIC_CIAJc6Tn2gweJJPKq)
+![](/docs.etendo.software/assets/drive/jeSO8cKGRMnO5jlOseLchbPh4OE2fDeLeAAS0VSOIngREivxtfTmTPmNLaDwnn7ujstw7z6Pgqp0oZLZAHxwT1XwtyGmlZdj-vuNEBXnBq1dFNo5UvBFIC_CIAJc6Tn2gweJJPKq.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to manually add a subset of report and process which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow report or process access for a given Etendo module or area such as Projects, Finance or Sales.
 
@@ -1456,7 +1456,7 @@ As already mentioned, every time a new role is created and saved without selecti
 
 The information above means that the newly created role will have access to every Etendo form.
 
-![](https://lh5.googleusercontent.com/h71SGbrOND-3ZRiDfheu69SJe6ZUIfQdyVOKmL_RaRtqSCRmQ84JoLrhPok37CDsfNRt0BbqoKwNzchby0i1ffWbKxN1JZZy2wBjC_akKrtaYwtR9FNCgEJaYGEFtse9xsx2kG4_)
+![](/docs.etendo.software/assets/drive/h71SGbrOND-3ZRiDfheu69SJe6ZUIfQdyVOKmL_RaRtqSCRmQ84JoLrhPok37CDsfNRt0BbqoKwNzchby0i1ffWbKxN1JZZy2wBjC_akKrtaYwtR9FNCgEJaYGEFtse9xsx2kG4_.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to manually add a subset of forms which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow form access for a given Etendo module or area such as Projects, Finance or Sales.
 
@@ -1466,7 +1466,7 @@ Editable Field checkbox defines if the accessible data in a form can be edited b
 
 This tab lists and/or allows adding the widget classes to which a role will have access to.
 
-![](https://lh3.googleusercontent.com/UJdYTlYdE7iCbPZXvMLbM-FtRsvCjm1H0ogLpoAgaHlt18r4-hS0gB0jXOCtea26kAn3l9phNMuoqFO5uvrKDqHnd_99mcY6FqmqGhHKwcwIiozXLsji0LHlgp6KWLzKuvVYq6S_)
+![](/docs.etendo.software/assets/drive/UJdYTlYdE7iCbPZXvMLbM-FtRsvCjm1H0ogLpoAgaHlt18r4-hS0gB0jXOCtea26kAn3l9phNMuoqFO5uvrKDqHnd_99mcY6FqmqGhHKwcwIiozXLsji0LHlgp6KWLzKuvVYq6S_.png)
 
 Widgets are _User Interface_ elements which can either be placed in the Users' Workspace tab or be part of a generated window.
 
@@ -1478,7 +1478,7 @@ A view implementation is a completely custom implementation of a main view.
 
 The access to a _custom view_ can be controlled through this role access tab.
 
-![](https://lh5.googleusercontent.com/5OCz4Fl8K2i8uYaKdMnh3lg-DT_9IQBDjimbD37HCtwzOs74M-OTqbTorDwTzxEQaWJBKZRxkhNJc_jF-4kjLOllZSlfZe_9kcngt9KUQB0X3KVYFyeOblGXuzo0LCGDI-C_QlvI)
+![](/docs.etendo.software/assets/drive/5OCz4Fl8K2i8uYaKdMnh3lg-DT_9IQBDjimbD37HCtwzOs74M-OTqbTorDwTzxEQaWJBKZRxkhNJc_jF-4kjLOllZSlfZe_9kcngt9KUQB0X3KVYFyeOblGXuzo0LCGDI-C_QlvI.png)
 
 For additional information about views, visit How to implement a new main view.
 
@@ -1486,7 +1486,7 @@ For additional information about views, visit How to implement a new main view.
 
 Grants access to Process Definition. By default, access to process definitions in a window (given from a button), is inherited from the permission to the window. To cancel this inherited access and manually decide case by case which are the accessible processes, it is necessary to define a "Secured Process" Preference (at system level or for that specific window) with "Y" as value.
 
-![](https://lh3.googleusercontent.com/IFXcBPxniL5TViWp3QIr2LiircvQoutdDPZ4K-zMHibWBRtwsI2fNh8dTXWG5H8_GROHo17oFdKjb-Kuj696jezS3flqH9VJL8yAlFYFV0__mtN4aDKFHrIuosLt28EfSLpfT5iR)
+![](/docs.etendo.software/assets/drive/IFXcBPxniL5TViWp3QIr2LiircvQoutdDPZ4K-zMHibWBRtwsI2fNh8dTXWG5H8_GROHo17oFdKjb-Kuj696jezS3flqH9VJL8yAlFYFV0__mtN4aDKFHrIuosLt28EfSLpfT5iR.png)
 
 Access when the process is invoked from a standard window button is inherited in the same way that for Processes.
 
@@ -1496,7 +1496,7 @@ It allows defining an inheritance for a role. An inheritance is a relationship b
 
 Within this tab is where the Role Inheritance configuration of a particular role is set.
 
-![](https://lh5.googleusercontent.com/KI9-ImqA0ErnTQS_fepHzt63s_3ExEUeRwCXREoaE2NKc1e13FAmtPhHnCQC4CPLwWzbUvWZbertcWG81CDPmYaZzLhN8IrliDLcJ9V48S3VxosZwI2vzSlPc0suV5WKwYcPi8JF)
+![](/docs.etendo.software/assets/drive/KI9-ImqA0ErnTQS_fepHzt63s_3ExEUeRwCXREoaE2NKc1e13FAmtPhHnCQC4CPLwWzbUvWZbertcWG81CDPmYaZzLhN8IrliDLcJ9V48S3VxosZwI2vzSlPc0suV5WKwYcPi8JF.png)
 
 The fields to fill in are:
 
@@ -1512,7 +1512,7 @@ Edit a role to give or withhold the necessary access to tables and columns table
 
 Create or edit access to DB tables for a selected role. The user can give access to the needed information by selecting the options displayed in the table tab.
 
-![](https://lh3.googleusercontent.com/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg)
+![](/docs.etendo.software/assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png)
 
 ### **Audit Trail**
 
@@ -1530,13 +1530,13 @@ Audit trail feature must be enabled by the "System Administrator Role" in the Ap
 
 Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button "Audit Trail".
 
-![](https://lh5.googleusercontent.com/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm)
+![](/docs.etendo.software/assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
 
 #### **Audit Trail**
 
 Audit Trail view displays read-only information about all the recorded data changes done in the tables for which the audit trail feature has been enabled.
 
-![](https://lh3.googleusercontent.com/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4)
+![](/docs.etendo.software/assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png)
 
 The changes done in a given table, column and record are viewed by showing the corresponding record ID or UI of the records in the database.
 
@@ -1563,7 +1563,7 @@ Enabling/disabling the audit trail feature for a table is done in the Table defi
 
 When a table is flagged as Fully Audited, the users can decide if they want to audit the insertions done in that table.
 
-![](https://lh4.googleusercontent.com/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und)
+![](/docs.etendo.software/assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png)
 
 If the Audit Inserts field is checked in a table, when a new row is inserted in that table several records will be inserted in the Audit Trail table, one for each column in the audited table. These records will contain the original value of the columns of the new row.
 
@@ -1573,7 +1573,7 @@ Usually, it is not necessary to store this information, because the original val
 
 By default, when a table is audited, modifications in any of its columns are audited. In some cases, it makes sense not to audit changes for some of them. This can be configured by setting the _Exclude Audit_ flag in _Tables and Columns > Table > Column_ tab.
 
-![](https://lh4.googleusercontent.com/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b)
+![](/docs.etendo.software/assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
 
 #### **Running the System Compilation**
 
@@ -1588,7 +1588,7 @@ These triggers need to be regenerated, when executing a system compilation, once
 
 For the set of tables for which the audit trail feature has been enabled, a new button
 
-![](https://lh3.googleusercontent.com/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo)
+![](/docs.etendo.software/assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png)
 
 is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
 
@@ -1612,7 +1612,7 @@ The grid in the lower area shows all changes done to this record while the audit
 
 A row in this grid corresponds to a single changed field. For changes to an existing record, the number of grid entries shown correspond to the number of fields changed. For new record creations or record deletion, one row in the grid is shown per field of the inserted/deleted record.
 
-![](https://lh4.googleusercontent.com/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL)
+![](/docs.etendo.software/assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png)
 
 Finally, a link just on top of the grid allows switching to the 'Deleted Records' view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.
 
@@ -1630,7 +1630,7 @@ An info on the top shows a reference to the entity for which the deleted records
 
 Then a grid displays all deleted records belonging to this tab/entity. Here one row shown corresponds to a single deleted record and the columns shown are the same as the ones shown in the normal grid view of the same tab.
 
-![](https://lh5.googleusercontent.com/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV)
+![](/docs.etendo.software/assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png)
 
 This view offers a number of navigation choices to view related or more detailed information.
 
@@ -1646,7 +1646,7 @@ This detailed history is displayed in the same 'Record History' view, however it
 
 The following screenshot shows an example of the history view of the same deleted 'Sales Order' entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.
 
-![](https://lh4.googleusercontent.com/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz)
+![](/docs.etendo.software/assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
 
 ##### **Navigation: Child Tabs**
 
@@ -1662,7 +1662,7 @@ If the parent record (i.e. a Sales Order) does still exist, then the following s
 
 As the lines tab is not a top level tab (it has a parent tab Sales Order) the deleted records view is automatically filtered to only show lines belonging to the current Sales Order. As visual information that the information shown is filtered, the top info area shows:
 
-![](https://lh4.googleusercontent.com/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk)
+![](/docs.etendo.software/assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png)
 
 If the parent record (i.e. a Sales Order) does not exist anymore, then the same can be accomplished by using the following steps:
 
@@ -1680,7 +1680,7 @@ It offers a raw view of the audit data, meaning that no translation of raw value
 
 Simultaneously, this window allows a much more flexible filtering/searching.
 
-![](https://lh6.googleusercontent.com/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr)
+![](/docs.etendo.software/assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
 
 #### **Limitations**
 
@@ -1713,22 +1713,22 @@ This functionality is executed when the password is changed, either because the 
 
 From the **Change Password** process, Etendo will ask for the current password and the new one to make the change. After clicking on **Apply,** a series of checks will be verified to finally execute the corresponding changes.
 
-![](https://lh5.googleusercontent.com/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s)
+![](/docs.etendo.software/assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png)
 
 !!! info
     The password must be no less than 8 characters long and its structure must contain at least three of the following characters: letters, uppercase letters, lowercase letters, numbers and symbols.
 
 If the new password does not comply with the above mentioned conditions, a popup appears with an error message indicating the conditions to be fulfilled.
 
-![](https://lh4.googleusercontent.com/shTQdtbDJq_FrCieCra0q6YLlv5akL6vFAS2Xr9sogzi6IMddd-qi9HJDwKKhxY0fCqpUfcFa-l0agc03ypnwtH_eFpDR6SLWNPVi4edc--fKnZsuzeFwnNC_ITWGd5q07zMCr1ImePmG5cOLmSH_rQ)
+![](/docs.etendo.software/assets/drive/shTQdtbDJq_FrCieCra0q6YLlv5akL6vFAS2Xr9sogzi6IMddd-qi9HJDwKKhxY0fCqpUfcFa-l0agc03ypnwtH_eFpDR6SLWNPVi4edc--fKnZsuzeFwnNC_ITWGd5q07zMCr1ImePmG5cOLmSH_rQ.png)
 
 This process can also be executed from the **User** window by applying the same password requirements mentioned above.
 
-![](https://lh6.googleusercontent.com/JNG3VeVWDWewBfz_iijE7kUBTZBV-8DUBQAWaiEa1uyxhOxYZxmbC_bavwTW85z0LJ_S9ibzN1XVz8pGIZQZz675KBO8H8vaO1LJ8BXxO3Sl5AOqOvOV2hgDKjMObk6CWCpmB8ChETBvqkEICBJ0SI4)
+![](/docs.etendo.software/assets/drive/JNG3VeVWDWewBfz_iijE7kUBTZBV-8DUBQAWaiEa1uyxhOxYZxmbC_bavwTW85z0LJ_S9ibzN1XVz8pGIZQZz675KBO8H8vaO1LJ8BXxO3Sl5AOqOvOV2hgDKjMObk6CWCpmB8ChETBvqkEICBJ0SI4.png)
 
 **Etendo Advanced Security** verifies the changes, and if the new password does not fulfill the required conditions, Etendo shows an error message at the moment of registering the changes.
 
-![](https://lh3.googleusercontent.com/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ)
+![](/docs.etendo.software/assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
 
 ### **Password History**
 
@@ -1736,11 +1736,11 @@ When changing the password, one of the conditions to be fulfilled is that the ne
 
 This security feature can be configured only with **System Administrator permissions**. To do this, go to the **System Info** window, within the group field **Password Security**, and check the field called **Enable Password History**, according to your preference.
 
-![](https://lh5.googleusercontent.com/s0Xj63FWSlAuip3ZzJB0OWyHiF-cM8zs8EruyfZEM7qA3Pt1hvcNZkRDHWzSb9t3GkzqrqbRwIuP5hghTfyal4441tIbtMQrNyu1CPQmhLOwJkM1EcQ85tEz5TDRbOQazN15k5hzX-b6NyleAak3u1s)
+![](/docs.etendo.software/assets/drive/s0Xj63FWSlAuip3ZzJB0OWyHiF-cM8zs8EruyfZEM7qA3Pt1hvcNZkRDHWzSb9t3GkzqrqbRwIuP5hghTfyal4441tIbtMQrNyu1CPQmhLOwJkM1EcQ85tEz5TDRbOQazN15k5hzX-b6NyleAak3u1s.png)
 
 When the configuration of the feature **Password Security** is active and the user **changes the password** to a previously used one, Etendo will show an **error message** explaining the failure in saving the password.
 
-![](https://lh4.googleusercontent.com/x4qql4v3biKPnkWDrD86UUS4mJkw0HuajIK5AmXZKT0OKjP5LdGjzhtd6L8BkkPsR-a9duOtg9uK6OHWjJbig-vSHrltxOd2TfjU5-_lwfH74sKnuekNk4A-heIRIniDxvEb5F45Ms0SxKbRQdy-ztg)
+![](/docs.etendo.software/assets/drive/x4qql4v3biKPnkWDrD86UUS4mJkw0HuajIK5AmXZKT0OKjP5LdGjzhtd6L8BkkPsR-a9duOtg9uK6OHWjJbig-vSHrltxOd2TfjU5-_lwfH74sKnuekNk4A-heIRIniDxvEb5F45Ms0SxKbRQdy-ztg.png)
 
 The following example shows the same error message when changing the password from the **Change Password** process.
 
@@ -1755,18 +1755,18 @@ Another feature of this module is the **blocking** of the user after N number of
 
 In this example, the system shows that there is one attempt left.
 
-![](https://lh4.googleusercontent.com/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE)
+![](/docs.etendo.software/assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png)
 
 Even if in the next attempt the user is not able to log in correctly, Etendo leaves another message indicating that the user has been blocked.
 
-![](https://lh4.googleusercontent.com/e_vXv3RF7iceBBddpDNUMwewnLYcr5W7LzjhyzrUMPnGe6oT9v9TeXiGc-8MLQpF_Xv1POEZdvMmIRL5bwfai6-hfaEirW4IKlsrBVzcLndzbtRTYeO0_fwou-fTO00rxDtw2lJJi7LY5LoW7vWPEb8)
+![](/docs.etendo.software/assets/drive/e_vXv3RF7iceBBddpDNUMwewnLYcr5W7LzjhyzrUMPnGe6oT9v9TeXiGc-8MLQpF_Xv1POEZdvMmIRL5bwfai6-hfaEirW4IKlsrBVzcLndzbtRTYeO0_fwou-fTO00rxDtw2lJJi7LY5LoW7vWPEb8.png)
 
 !!! info
     By default, Etendo configures five attempts to enter the right password. 
 
 To configure the number of unsuccessful login attempts, it is necessary to create a preference from the **Preference** window. In the **Value** field, add the desired number of login attempts, and also select the preference **Maximum number of password attempts** from the **Property** field.
 
-![](https://lh4.googleusercontent.com/5nXDi_OVP9kEESFxQsu1DJywuIEhpJfGl7UvWYPV4UO1CkEhcs2aXMQQIt51lJrww8TfMAUWMfjky2zRtpqhzzdsYygdDt8VhJAe0HNHAWpFbbTbX7c0khUaD9Dn9so89idLPpfmVAqR9bVfS4h4IAU)
+![](/docs.etendo.software/assets/drive/5nXDi_OVP9kEESFxQsu1DJywuIEhpJfGl7UvWYPV4UO1CkEhcs2aXMQQIt51lJrww8TfMAUWMfjky2zRtpqhzzdsYygdDt8VhJAe0HNHAWpFbbTbX7c0khUaD9Dn9so89idLPpfmVAqR9bVfS4h4IAU.png)
 
 !!! warning
     It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
@@ -1777,15 +1777,15 @@ Another functional innovation that facilitates this module is the ability to all
 
 From the **User** window, within the **More Information** field, it is possible to configure the check that allows having several sessions active at the same time. The check is called **Allow multiple sessions**.
 
-![](https://lh5.googleusercontent.com/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA)
+![](/docs.etendo.software/assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png)
 
 In case the user just wants one session allowed to be activated, uncheck the **Allow multiple sessions** checkbox from the **User** window and, **only with System Administrator permissions**, check the **Enable single session verification** field in the **Session Security** field from the **System Info** window.
 
-![](https://lh6.googleusercontent.com/Prfolo_qyMafrXpr9dUe_ASCkalv-LjArCWEcMCPSWWi2IzyypsQytDTUlSeMgq_mSbgCYKtebK9aawUzMNotE2V25Lg-RrJ2f21l6m75dS4Z11d76gidgZfFrxy1BQgjVl7EvJg2xQISvt1efahvCc)
+![](/docs.etendo.software/assets/drive/Prfolo_qyMafrXpr9dUe_ASCkalv-LjArCWEcMCPSWWi2IzyypsQytDTUlSeMgq_mSbgCYKtebK9aawUzMNotE2V25Lg-RrJ2f21l6m75dS4Z11d76gidgZfFrxy1BQgjVl7EvJg2xQISvt1efahvCc.png)
 
 This way, when trying to log in, the system verifies that an active session already exists informing the user.
 
-![](https://lh4.googleusercontent.com/IkC8pMQVLKRCkr3SI1oYDJsaSirmOHxS31Z5ZmwhCzOnMnwXW88ZFHcyTCnp0Vpm9BxY_RJbpWIdrQG0g5DhURD1RSzW2nexd9hGTeCxTNWhaAWaopvCG-r7JieCNHkLjpCb7HW3v3JXDjofFCHEyAU)
+![](/docs.etendo.software/assets/drive/IkC8pMQVLKRCkr3SI1oYDJsaSirmOHxS31Z5ZmwhCzOnMnwXW88ZFHcyTCnp0Vpm9BxY_RJbpWIdrQG0g5DhURD1RSzW2nexd9hGTeCxTNWhaAWaopvCG-r7JieCNHkLjpCb7HW3v3JXDjofFCHEyAU.png)
 
 !!! info
     By default, Etendo with this module installed, only allows to have one session active. 
@@ -1794,7 +1794,7 @@ This way, when trying to log in, the system verifies that an active session alre
 
 After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
 
-![](https://lh4.googleusercontent.com/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo)
+![](/docs.etendo.software/assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png)
 
 Once the change has been made, the user is redirected to the main interface of the application.
 
@@ -1804,7 +1804,7 @@ As part of the security management, Etendo also allows the management of the day
 
 From the **Preferences** window, it is possible to adjust the period of time required for the user to be obliged to change the password. Do it by adding the desired amount of days for the password expiration in the **Value** field.
 
-![](https://lh4.googleusercontent.com/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0)
+![](/docs.etendo.software/assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png)
 
 !!! info
     Consider that by default, Etendo configures 30 days for the password expiration time. 
@@ -1813,7 +1813,7 @@ After the number of days established for the password expiration, when trying to
 
 Besides, Etendo notifies the user with a message announcing the amount of **remaining days** for the password expiration. In this example, the user has two days left.
 
-![](https://lh4.googleusercontent.com/0g12hmyWCTy2ecyVLmptMQSLE6ocCBLGSJLJlYa3EqwCNE-NyYSxy-aO9jg88OWefWDsRso8RDce3Zas0q5Q29fUdcrtSeZ-nA13uwNokmr2vnlKM4HabnGCzy5r3stbAmsCoEgMhzno5T6LLr4tyYM)
+![](/docs.etendo.software/assets/drive/0g12hmyWCTy2ecyVLmptMQSLE6ocCBLGSJLJlYa3EqwCNE-NyYSxy-aO9jg88OWefWDsRso8RDce3Zas0q5Q29fUdcrtSeZ-nA13uwNokmr2vnlKM4HabnGCzy5r3stbAmsCoEgMhzno5T6LLr4tyYM.png)
 
 !!! info
     By default, the system activates this message when there are **seven days** left to change the password.
@@ -1851,7 +1851,7 @@ Besides, there are other background processes which can also be scheduled and th
 
 Process Request window allows the user to review and add background processes, which can be scheduled or unscheduled as required.
 
-![](https://lh3.googleusercontent.com/Tjhctxd0gIiAgpntricdUhTGgTKf0FvXQjbYcsgOtJ-9XmH8AYJW2pYsyelS-1LnQv91vGZ2Vf_M_gxJjeQJ5lAZNx9iKTqzdi7QTlb-WbHXAEIcouqQ3Qo5BafXEmMPgIRbdS-J)
+![](/docs.etendo.software/assets/drive/Tjhctxd0gIiAgpntricdUhTGgTKf0FvXQjbYcsgOtJ-9XmH8AYJW2pYsyelS-1LnQv91vGZ2Vf_M_gxJjeQJ5lAZNx9iKTqzdi7QTlb-WbHXAEIcouqQ3Qo5BafXEmMPgIRbdS-J.png)
 
 The information to fill in to schedule a background process is:
 
@@ -1951,13 +1951,13 @@ The schedule of a process group will work exactly as the schedule of a single pr
 
 More information in Process Group.
 
-![](https://lh4.googleusercontent.com/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv)
+![](/docs.etendo.software/assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
 #### **Process Monitor**
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. More information in Process Monitor.
 
-![](https://lh5.googleusercontent.com/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9)
+![](/docs.etendo.software/assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
 #### **Processes in Group**
 
@@ -2028,7 +2028,7 @@ Process Group (Header): Contains information about the process group.
 
 There are two options that can be selected defining a Process Group
 
-![](https://lh5.googleusercontent.com/E2KNZetYy11WqMd1jRFYVQsjkQodMAYF63N2y2wYFfkZu8ooMYqJUfvnTdOh0iQu1Gp2NJtbEWCqQFBQGrqnHUTbyLTrdxCY-OUrnYhC997G7hOFYRvo-5ZOsjMWbhwg-PLQLJk5)
+![](/docs.etendo.software/assets/drive/E2KNZetYy11WqMd1jRFYVQsjkQodMAYF63N2y2wYFfkZu8ooMYqJUfvnTdOh0iQu1Gp2NJtbEWCqQFBQGrqnHUTbyLTrdxCY-OUrnYhC997G7hOFYRvo-5ZOsjMWbhwg-PLQLJk5.png)
 
 ##### **Prevent Concurrent Execution of a Process Group**
 
@@ -2048,7 +2048,7 @@ It creates a Process inside a Process Group with a sequence number.
 
 Process Group List contains the list of processes that are part of the group, sorted in a certain order.
 
-![](https://lh5.googleusercontent.com/APyS4fin8Sb72dYf0TP1ZvLLpkZbsyrQ1Tv8_ABv1Byjurr0B1v8PanDaEytiR0NIhAS_TIbnsTe0aR5xQVNDybH_CicNv-TiGPgHq3deGKEyT8NuL3sPvf0J88asLgU9WWOtrMd)
+![](/docs.etendo.software/assets/drive/APyS4fin8Sb72dYf0TP1ZvLLpkZbsyrQ1Tv8_ABv1Byjurr0B1v8PanDaEytiR0NIhAS_TIbnsTe0aR5xQVNDybH_CicNv-TiGPgHq3deGKEyT8NuL3sPvf0J88asLgU9WWOtrMd.png)
 
 #### **Other Considerations**
 
@@ -2075,4 +2075,4 @@ Prevent executions of single processes and group processes will co-exist. Which 
 
 Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
 
-![](https://lh4.googleusercontent.com/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ)
+![](/docs.etendo.software/assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)

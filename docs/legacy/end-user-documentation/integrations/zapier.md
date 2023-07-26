@@ -14,7 +14,7 @@ This page explains how to set up a zap between Etendo and a third party applicat
 1. Create a Zapier account in [zapier.com](https://zapier.com/)
 
 2. Create new Zap, selecting Etendo as origin app and Google contacts as destination. Select New Business Partner trigger and create a new contact. Then press Try It.
-   ![](https://lh6.googleusercontent.com/9uVuQ5Irprg2Db9QrZWGSbOjPVy2gYENBjTyaTNMBaFHwlwMS_Algpiwxj-5COzJl1QosJH1yJffVdpINjRg_bX38uKp72z7Vejhaj-lth5CV77Dm3EGmFxNKhnSccbQ7Hnyjbgqm5nI1B31Xw)
+   ![](/docs.etendo.software/assets/drive/9uVuQ5Irprg2Db9QrZWGSbOjPVy2gYENBjTyaTNMBaFHwlwMS_Algpiwxj-5COzJl1QosJH1yJffVdpINjRg_bX38uKp72z7Vejhaj-lth5CV77Dm3EGmFxNKhnSccbQ7Hnyjbgqm5nI1B31Xw.png)
 
 ### Configure Etendo application trigger.
 

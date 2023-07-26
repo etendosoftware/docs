@@ -1737,17 +1737,17 @@ The same behavior can be applied for the non-deductible tax. 
 
 By default, the accounting amount that is generated in the supplier invoices when a non-deductible tax range is used, is assigned to the accounting expense account configured in the "Accounting" tab of the product. With this improvement, the amount of that non-deductible tax can be assigned to a specific account, the one configured in the accounting of the tax range itself. To do this, check the "Use the configured account" checkbox located inside the "Accounting" tab in the "Tax rate" window. 
 
-![](https://lh4.googleusercontent.com/vgIVffeOmiu30VHVRRMlIlN41BbaPKe2vydojUxBx1boZS64zEcr5NgKw6fh0iMflSP60qpC-gb2f36uFWzzast-6LFJ2mV1IAkboxENkBoWlmzrxsBMSu-sudz9F7X6n-mzSD7Q)
+![](/docs.etendo.software/assets/drive/vgIVffeOmiu30VHVRRMlIlN41BbaPKe2vydojUxBx1boZS64zEcr5NgKw6fh0iMflSP60qpC-gb2f36uFWzzast-6LFJ2mV1IAkboxENkBoWlmzrxsBMSu-sudz9F7X6n-mzSD7Q.png)
 
 As system administrator user, activate the accounting template field in the Active Table tab of the General Ledger Configuration window and then, set the template called Purchase Invoice Not Deductible. 
 
-![](https://lh5.googleusercontent.com/jd75sTt-TOwSTJGK4Zc0Z89aBGk9emQ2OxMIsQ-90Ku8KewJpoRffN8bIdUft-R37ud1xdrkWuzLEyUUZxY6Lk8Wdz-dfK5HfJsUfP2NPmxKSE274RPJRgLwAXE7I6YbO5GpV6eH)
+![](/docs.etendo.software/assets/drive/jd75sTt-TOwSTJGK4Zc0Z89aBGk9emQ2OxMIsQ-90Ku8KewJpoRffN8bIdUft-R37ud1xdrkWuzLEyUUZxY6Lk8Wdz-dfK5HfJsUfP2NPmxKSE274RPJRgLwAXE7I6YbO5GpV6eH.png)
 
 This checkbox, "Use the configured account", will only be visible if the checkbox under the heading "Non-deductible tax" was previously checked. The default value of this checkbox will be NO.
 
-![](https://lh4.googleusercontent.com/Nn8EaIsRTZnkCxDRlhahXZsX_A1UGjiokZHVkHfTxQCyhd9mOvS8f_IrcGX6YwX_vHu3NQsqvJ-M5JLYAzxUE-NDdb5K1HwTPruHSxRaoj8pNuHgFHhhNSqh86-xmctvh1rcoiYF)
+![](/docs.etendo.software/assets/drive/Nn8EaIsRTZnkCxDRlhahXZsX_A1UGjiokZHVkHfTxQCyhd9mOvS8f_IrcGX6YwX_vHu3NQsqvJ-M5JLYAzxUE-NDdb5K1HwTPruHSxRaoj8pNuHgFHhhNSqh86-xmctvh1rcoiYF.png)
 
-![](https://lh4.googleusercontent.com/idDd6mEz0pXGB5MWi7L2wgYeas5dOXuCJCVhH_Zb2a4TWYGbHc1fgGwHEy5Yyv4ss9G-zP736NwP95l5IgFScpal65Z8G-ueARkHn6ije6drfpJAcR7XlxrXqeVLLMGgA5DJzvGV)
+![](/docs.etendo.software/assets/drive/idDd6mEz0pXGB5MWi7L2wgYeas5dOXuCJCVhH_Zb2a4TWYGbHc1fgGwHEy5Yyv4ss9G-zP736NwP95l5IgFScpal65Z8G-ueARkHn6ije6drfpJAcR7XlxrXqeVLLMGgA5DJzvGV.png)
 
 The VAT amount needs to be posted to the ledger in a Tax Credit account, therefore purchase invoice posting looks like:
 

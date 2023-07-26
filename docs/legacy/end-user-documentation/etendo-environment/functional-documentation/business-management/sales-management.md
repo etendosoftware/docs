@@ -223,15 +223,15 @@ The Sales Order window allows the user to register sales related documents with 
 
 **Standard Order:** When the transaction document is standard upon booking of the document, there are no additional documents created. Goods shipment and sales invoice still have to be created.
 
-![Sales Order transaction document.png](https://lh3.googleusercontent.com/RHAkJe21vaTiszWDj0uctmA_1Dfqz8RhP73fiF8zNWSpw4ad-gbDn1kjQGfXi2GO51Dqr0GRBmzB3NkdF8NjjEJ1eciYiNdYauufXwjF-tYrWYYTnyzSPkkzzm98sjg_O7FsGxz0)
+![Sales Order transaction document.png](/docs.etendo.software/assets/drive/RHAkJe21vaTiszWDj0uctmA_1Dfqz8RhP73fiF8zNWSpw4ad-gbDn1kjQGfXi2GO51Dqr0GRBmzB3NkdF8NjjEJ1eciYiNdYauufXwjF-tYrWYYTnyzSPkkzzm98sjg_O7FsGxz0.png)
 
 **POS Order:** The Point of Sale order is for the situation when a customer walks into a shop, orders a product, pays for it and takes the product home. Upon booking of the sales order with this document type, the shipment and the sales invoice are created automatically.
 
-![POS transaction document.png](https://lh3.googleusercontent.com/hnY0GwS-BtTe7ONXz0VloeDLqMi-GZPDfYz59DqfAXaKK7bLgtuzSYSVa-QMCCvyaoQwJ6PBWzhrROhzOOPPO2uoYlWN0_7OU-9kfT7HfE5gutLtE1dMuSi2Ft76P_AXb4KsgqW3)
+![POS transaction document.png](/docs.etendo.software/assets/drive/hnY0GwS-BtTe7ONXz0VloeDLqMi-GZPDfYz59DqfAXaKK7bLgtuzSYSVa-QMCCvyaoQwJ6PBWzhrROhzOOPPO2uoYlWN0_7OU-9kfT7HfE5gutLtE1dMuSi2Ft76P_AXb4KsgqW3.png)
 
 **Warehouse Order:** A warehouse order is used for the situation where the good shipment takes place at the time that the sales order is booked (for example, the customer is taking goods right away directly from the warehouse). This also means that both Documents have the same Order/Delivery dates.
 
-![Warehouse transaction document.png](https://lh5.googleusercontent.com/UcQ1waIVTsmDYzegiwRTkknZe7ipSTJc1QnRW7Ldukg95hX7Nbc-ZUKGy9SXwjrRBedCnIGSRF0LEOhFyDSlc8o4I6Jkv79oUT3thbfYf6hcsH2tUBZDQ1sgqDvDJzu5tgzqv7-9)
+![Warehouse transaction document.png](/docs.etendo.software/assets/drive/UcQ1waIVTsmDYzegiwRTkknZe7ipSTJc1QnRW7Ldukg95hX7Nbc-ZUKGy9SXwjrRBedCnIGSRF0LEOhFyDSlc8o4I6Jkv79oUT3thbfYf6hcsH2tUBZDQ1sgqDvDJzu5tgzqv7-9.png)
 
 ### Header
 

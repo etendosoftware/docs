@@ -113,13 +113,13 @@ Además este módulo cuenta con dos ventanas para la configuración de los libro
 
 Ruta: Gestión Financiera / Contabilidad / Configuración / Configuración de Libro de Facturas
 
-![](https://lh6.googleusercontent.com/GrG6D0PyhdbT_TLRpP-ucIUxQWXB195QfgnnOoCooFMRK3_UdE3CVkl5e-u4JKIm9XaZa5jlgs3MKgRXNtxUWKv5ZUSPy8jn96u3UzeFgFAM9xK1K3iQaadEg4m-4tJzEekLb2QEmIUReL3FFSu2T3GhAwhqXYbEUj2bWFTahFcOb_5QbJBoJUODVWN_CA)
+![](/docs.etendo.software/assets/drive/GrG6D0PyhdbT_TLRpP-ucIUxQWXB195QfgnnOoCooFMRK3_UdE3CVkl5e-u4JKIm9XaZa5jlgs3MKgRXNtxUWKv5ZUSPy8jn96u3UzeFgFAM9xK1K3iQaadEg4m-4tJzEekLb2QEmIUReL3FFSu2T3GhAwhqXYbEUj2bWFTahFcOb_5QbJBoJUODVWN_CA.png)
 
 **Generación de los libros de IVA**
 
 Ruta: Gestión Financiera / Contabilidad / Herramientas de análisis/ Libro de facturas
 
-![](https://lh6.googleusercontent.com/loPMP2zWkOWGQYfmN6LTMPKteM1c0FpDnobtXCpuevnoP_ymLRTTP17h6YhVPEbK0Jxvi_Er9fhCfcGHAmifvo__4Oa0B4iLGjknSLMFgaC8T1GUkaqyKv_b7axuA6vYViAQYr5AAnnCRI9cQes9jvV-QT48duPSsMzBwN9QADTKJZsyqGc7LmNQOZiFyw)
+![](/docs.etendo.software/assets/drive/loPMP2zWkOWGQYfmN6LTMPKteM1c0FpDnobtXCpuevnoP_ymLRTTP17h6YhVPEbK0Jxvi_Er9fhCfcGHAmifvo__4Oa0B4iLGjknSLMFgaC8T1GUkaqyKv_b7axuA6vYViAQYr5AAnnCRI9cQes9jvV-QT48duPSsMzBwN9QADTKJZsyqGc7LmNQOZiFyw.png)
 
 ## **Casos de usuario**
 
@@ -153,7 +153,7 @@ Campos a tener en cuenta:
 -   **Tipo**: R – Recibidas
 -   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignarles un número de registro correlativo. El primer número asignado por defecto será el 1.
 
-![](https://lh3.googleusercontent.com/IXk_LbHGPAuvnqJO0OgUVrfZ-SOpTuzA9Wdl-wKAtmqZyaLqjv5om5qoPtpYl-508VUqsTJWgPPhnbLlYh1P9-drRWRiE3ZgN58uiycr6MdIYXayaz1hfLWPS0lJYV4ktVApRw9gKP7nbn5ezHlyCPRoO9D1tqo5W1e2DednQyS0Krh4qpRfakqWFyT8PA)
+![](/docs.etendo.software/assets/drive/IXk_LbHGPAuvnqJO0OgUVrfZ-SOpTuzA9Wdl-wKAtmqZyaLqjv5om5qoPtpYl-508VUqsTJWgPPhnbLlYh1P9-drRWRiE3ZgN58uiycr6MdIYXayaz1hfLWPS0lJYV4ktVApRw9gKP7nbn5ezHlyCPRoO9D1tqo5W1e2DednQyS0Krh4qpRfakqWFyT8PA.png)
 
 *Nota:* El usuario puede definir el **Número de Documento** que aparecerá en cada una de las líneas del libro, pudiendo ser: 
 -   El Nº Factura (campo "Nº documento" de la factura de compra)
@@ -175,11 +175,11 @@ La **creación del libro de facturas recibidas** se debe llevar a cabo desde la 
 
 Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Líneas”.
 
-![](https://lh6.googleusercontent.com/GvTXD6nqhWoDk09XBU4LNxXPn81wG8PznqfHtMS3lI4NuiNwNZc1ogkyhqki6kcJnPsjkefAdwu2hyX7kqcvtxqwwLZ5m7q_U_93v-tu-TYnHSsn3-yP0Umnd-GvwqcUgJ280R80kJtIO9aCko3KN7HnJlw8ePE7avYq3kvhTfXn8ZFZsO4YzsvruBWF)
+![](/docs.etendo.software/assets/drive/GvTXD6nqhWoDk09XBU4LNxXPn81wG8PznqfHtMS3lI4NuiNwNZc1ogkyhqki6kcJnPsjkefAdwu2hyX7kqcvtxqwwLZ5m7q_U_93v-tu-TYnHSsn3-yP0Umnd-GvwqcUgJ280R80kJtIO9aCko3KN7HnJlw8ePE7avYq3kvhTfXn8ZFZsO4YzsvruBWF.png)
 
 La información contenida en las líneas del libro es la que se muestra a continuación:
 
-![](https://lh5.googleusercontent.com/qk68QXzdYHjO1yKVcIG-WHMqCFoX0pJN8oCzkZP5CSVgReXjk0C43dB4ucckSUhXzLwG09yagjJvl14pAbhdBM1G_c6Y_enkOgCxfnSEPdrRGK6zUVxoIaTaoP6TOw3ejSKC4OrdJ740nB8ev0mERhCCHkhoIuT8dkk6g6tqayPEbcAgnsDde48ZxtUv)
+![](/docs.etendo.software/assets/drive/qk68QXzdYHjO1yKVcIG-WHMqCFoX0pJN8oCzkZP5CSVgReXjk0C43dB4ucckSUhXzLwG09yagjJvl14pAbhdBM1G_c6Y_enkOgCxfnSEPdrRGK6zUVxoIaTaoP6TOw3ejSKC4OrdJ740nB8ev0mERhCCHkhoIuT8dkk6g6tqayPEbcAgnsDde48ZxtUv.png)
 
 #### **Libro de Facturas Emitidas**
 
@@ -197,7 +197,7 @@ Campos a tener en cuenta:
 -   **Tipo**: E – Emitidas
 -   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignares un número de registro correlativo.
 
-![](https://lh3.googleusercontent.com/U7zyB9bCxJ53qXJTCwT0NxvIDJ4gMZ3c5G9QLmsMWGRYYV1mKdK90kPhbtf9l8Ee7hhsNZApVcmY-2fnalHXgl8xf3BcPEDM3VNbqspYjkVZyysWBhR_QXGJA0-vnGn_20c8luy3ZIeqVbnyJ8pghgvC7dfkSuO9AmajeRFq-uqqHy8o9IoMQFu0azbj)
+![](/docs.etendo.software/assets/drive/U7zyB9bCxJ53qXJTCwT0NxvIDJ4gMZ3c5G9QLmsMWGRYYV1mKdK90kPhbtf9l8Ee7hhsNZApVcmY-2fnalHXgl8xf3BcPEDM3VNbqspYjkVZyysWBhR_QXGJA0-vnGn_20c8luy3ZIeqVbnyJ8pghgvC7dfkSuO9AmajeRFq-uqqHy8o9IoMQFu0azbj.png)
 
 En la pestaña "Impuestos" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas emitidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
 
@@ -215,11 +215,11 @@ La creación del libro de facturas emitidas se debe llevar a cabo desde la ruta 
 
 Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Lineas”.
 
-![](https://lh6.googleusercontent.com/4PIfpdoRUi3Yr61UjSdmHK4-wjU2TnkBEFbFqev8C0CbUrrIxM5c_gpKnY8zz2RyzNa2TvRTXEmgQzB_-tXJKUc11kRLCv-pHzX00pJhI_NAIzDlmTRxWw3R4xXZI2A4Ns87C9tAa9P6icxTDkN8yyHo4SXbOXGJbx620JaN4BUNPYFsRzr_ZTwgIksZtg)
+![](/docs.etendo.software/assets/drive/4PIfpdoRUi3Yr61UjSdmHK4-wjU2TnkBEFbFqev8C0CbUrrIxM5c_gpKnY8zz2RyzNa2TvRTXEmgQzB_-tXJKUc11kRLCv-pHzX00pJhI_NAIzDlmTRxWw3R4xXZI2A4Ns87C9tAa9P6icxTDkN8yyHo4SXbOXGJbx620JaN4BUNPYFsRzr_ZTwgIksZtg.png)
 
 La información contenida en las líneas del libro es la que se muestra a continuación:
 
-![](https://lh6.googleusercontent.com/7fv5JlzALOzMrSXXDvFubccNZBrZwSJm1VSNpczqK4u03ULPED0uOMR_TbM-q3uEwc0W_J9fqUZAdHFvaWt8K9G3zTL0vXz-N7nXENJdFG7-PuBSMVa0PiF1uTWabKTHJToOaoiJX8y9A7KUN7bUEvUKPXZz0BkBg6daCzUA7tze8XfVeFtaVw_cisfZEw)
+![](/docs.etendo.software/assets/drive/7fv5JlzALOzMrSXXDvFubccNZBrZwSJm1VSNpczqK4u03ULPED0uOMR_TbM-q3uEwc0W_J9fqUZAdHFvaWt8K9G3zTL0vXz-N7nXENJdFG7-PuBSMVa0PiF1uTWabKTHJToOaoiJX8y9A7KUN7bUEvUKPXZz0BkBg6daCzUA7tze8XfVeFtaVw_cisfZEw.png)
 
 ### **Inclusión manual de transacciones**
 

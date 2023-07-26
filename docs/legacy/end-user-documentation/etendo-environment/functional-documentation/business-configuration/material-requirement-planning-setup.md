@@ -46,7 +46,7 @@ Use the header to create a planning method.
 
 In this tab, the organization and the **name of the planning method** is entered. A general planning method can be entered to include all components of the optional demand and supply, because any components that are not applicable for a certain product will just not appear in the plan, while any components that are left out by mistake result in incorrect and incomplete calculations of the plan.
 
-![](https://lh3.googleusercontent.com/r-sIhmWnmoYNZsemrEKq3Il7LQsg1iDrcrq5K3H2HprddfyVZa7wiE5nmb6uaDHTpzSWHiHnvCetwhHQ_RBq1NJP3cIv17F96ZxBnqmyeWowc_zmB432U68KEEtdZbheLdRHdx9w00xaewhcEybYe4E)
+![](/docs.etendo.software/assets/drive/r-sIhmWnmoYNZsemrEKq3Il7LQsg1iDrcrq5K3H2HprddfyVZa7wiE5nmb6uaDHTpzSWHiHnvCetwhHQ_RBq1NJP3cIv17F96ZxBnqmyeWowc_zmB432U68KEEtdZbheLdRHdx9w00xaewhcEybYe4E.png)
 
 ### **Lines**
 
@@ -59,7 +59,7 @@ In this tab, the applicable transactions are entered on separate lines. For each
 
 Also, a percentage of the quantity to be considered by MRP is configured with the **Weighting**. If a sales forecast for 100 units is entered with a weighing of 0.9, only 90 units are reflected in the Manufacturing plan or Purchasing plan. Likewise, a value above 1 can be entered to include a higher number in the plans.
 
-![](https://lh4.googleusercontent.com/r3xp-vXHNSPnrw9FA7ashqCDRgL0s5LE9i_8sNTRssgBQiOX5bDavCyyxMCmCXIUKzvbPdxvrp6wkfXKLFftUwcqNn3u57H56hpHgKp4z0YkfjBobN-fV1M_gGf09M7MyrjutIBaZzR40_IdhQn8fb0)
+![](/docs.etendo.software/assets/drive/r3xp-vXHNSPnrw9FA7ashqCDRgL0s5LE9i_8sNTRssgBQiOX5bDavCyyxMCmCXIUKzvbPdxvrp6wkfXKLFftUwcqNn3u57H56hpHgKp4z0YkfjBobN-fV1M_gGf09M7MyrjutIBaZzR40_IdhQn8fb0.png)
 
 ## **Planner**
 
@@ -73,4 +73,4 @@ An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is
 
 Define the planner in charge of managing the purchase or production of specific products.
 
-![](https://lh6.googleusercontent.com/2IK-YKaAHZYtnh4V1r_P9QgY4oU3-wDlu73TD8YZffxiibZ-JWkhjD_fCnJLzntBSgBhJSLbMx3IOsYOPFoDahYodIPGEq1P8LytGAg9aCEylB2iknxNfhnwCH8MgxgF1F6CYXVQxBPfF7KuArrucc4)
+![](/docs.etendo.software/assets/drive/2IK-YKaAHZYtnh4V1r_P9QgY4oU3-wDlu73TD8YZffxiibZ-JWkhjD_fCnJLzntBSgBhJSLbMx3IOsYOPFoDahYodIPGEq1P8LytGAg9aCEylB2iknxNfhnwCH8MgxgF1F6CYXVQxBPfF7KuArrucc4.png)

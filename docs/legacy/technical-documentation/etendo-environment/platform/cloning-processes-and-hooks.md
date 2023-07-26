@@ -5,7 +5,7 @@ title: Cloning Processes and Hooks
 
 Etendo allows for any window or tab to have a Clone button. By default, it will use the Dal.copy() method, but this can be overridden using hooks, to implement custom Cloning logic for specific entities.
 
-![](https://lh6.googleusercontent.com/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr)
+![](/docs.etendo.software/assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png)
 
 ## How to create a Clone Hook?
 

@@ -26,7 +26,7 @@ The master data for inventory status is maintained on system-level and the most 
     To have access to this window, it is necessary to log in as system administrator.
 
 
-![](https://lh3.googleusercontent.com/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg)
+![](/docs.etendo.software/assets/drive/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg.png)
 
 In the image above, the various Inventory Status values that are supplied with the installation of the software are shown.
 
@@ -47,7 +47,7 @@ In the Warehouse and Storage Bins window, It is possible to check the Inventory 
 
 By selecting a Storage Bin in this window, it is possible to check its current Inventory Status.
 
-![](https://lh4.googleusercontent.com/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ)
+![](/docs.etendo.software/assets/drive/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ.png)
 
 Also, by selecting a Storage Bin, a button named Change Status appears. By clicking it, it is possible to select a different Inventory Status for the selected Storage Bin.
 
@@ -56,7 +56,7 @@ There are some restrictions:
 -   If there are existing Reservations against the Stock of the Storage Bin, this Storage Bin can not be changed to an Inventory Status that does not have the Available flag checked
 -   If there is negative stock in the Storage Bin, it is not possible to change the Inventory Status to one that does not have the Over Issue flag checked
 
-![](https://lh5.googleusercontent.com/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ)
+![](/docs.etendo.software/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png)
 
 ### **Examples**
 
