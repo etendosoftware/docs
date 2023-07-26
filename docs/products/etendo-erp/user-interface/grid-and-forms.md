@@ -5,11 +5,11 @@ title: Grid and Forms
 
 Etendo allows the customization of grid and form views. Customized windows and form views are stored once saved in the Window Personalization window.
 
-### Grid view:
+### Grid view
 
 ![Grid view example](/docs.etendo.software/assets/drive/1Fc2LfvRYeixaOCFt6qKl-GG4ycr0tyhR.png)
 
-### Form view:
+### Form view
 
 ![Form view example](/docs.etendo.software/assets/drive/1BFjhtuYG6q5bsfwuSCVt_c4qmaj46vdY.png)
 
@@ -123,8 +123,8 @@ In this view, each field title can be followed by two different icons:
 
 |     |     |
 | --- | --- |
-| ![Arrow icon](/docs.etendo.software/assets/drive/1sK4lTD4FNi3-WZDkGzPpE3Px7brhZZWd.png | By clicking here, the user can open a new tab with more specific information. |.png)
-| ![Asterisk icon](/docs.etendo.software/assets/drive/15aZZ-UGcGfakPeYAImHnx4gRwRp2fmP6.png | This shows the field is required to be complete. The field has a yellow background. |.png)
+| ![Arrow icon](/docs.etendo.software/assets/drive/1sK4lTD4FNi3-WZDkGzPpE3Px7brhZZWd.png) | By clicking here, the user can open a new tab with more specific information. 
+| ![Asterisk icon](/docs.etendo.software/assets/drive/15aZZ-UGcGfakPeYAImHnx4gRwRp2fmP6.png) | This shows the field is required to be complete. The field has a yellow background. 
 
 ### User Messages
 
@@ -161,11 +161,11 @@ On the right side of the status bar, the following buttons are available:
 
 |     |     |
 | --- | --- |
-| ![Browse to previous record](/docs.etendo.software/assets/drive/1jP4R73D1bYKd-qSAiRwK2HH0NKmODj-4.png | Browse to next record |.png)
-| ![Browse to previous record](/docs.etendo.software/assets/drive/1YeC8yk9CzwM5hTScn4JNIcvA44ut80vq.png | Browse to previous record |.png)
-| ![Maximize form](/docs.etendo.software/assets/drive/1xRCMAPS6c3GyMd4ygc5TbULgR7TUkX1Q.png | Maximize form |.png)
-| ![Restore size](/docs.etendo.software/assets/drive/1fiogmu4e5r1nP5g0Aa7L8dFfZG2xcvzF.png | Restore form to previous size |.png)
-| ![Close form](/docs.etendo.software/assets/drive/1KU3xBqPUVQKl43Je-S9ij3Vr031G2LCf.png | Close form (save and return to grid.png)) |
+| ![Browse to previous record](/docs.etendo.software/assets/drive/1jP4R73D1bYKd-qSAiRwK2HH0NKmODj-4.png) | Browse to next record 
+| ![Browse to previous record](/docs.etendo.software/assets/drive/1YeC8yk9CzwM5hTScn4JNIcvA44ut80vq.png) | Browse to previous record 
+| ![Maximize form](/docs.etendo.software/assets/drive/1xRCMAPS6c3GyMd4ygc5TbULgR7TUkX1Q.png) | Maximize form 
+| ![Restore size](/docs.etendo.software/assets/drive/1fiogmu4e5r1nP5g0Aa7L8dFfZG2xcvzF.png) | Restore form to previous size 
+| ![Close form](/docs.etendo.software/assets/drive/1KU3xBqPUVQKl43Je-S9ij3Vr031G2LCf.png) | Close form (save and return to grid.png) |
 
 ### Keyboard shortcuts
 
@@ -185,7 +185,7 @@ On the right side of the status bar, the following buttons are available:
 | Ctrl + s | Save |
 | Ctrl + d | New record in form view |
 
-  ### Grid summary function update on selection 
+### Grid summary function update on selection 
 Via the set summary function through the right click button, it is possible to keep on updating the number of selected records in the grid. This function allows the user to dynamically get summary functions of a subset of records in the filtered window. 
   
 ## Tabs
@@ -202,5 +202,5 @@ In case of tab overflow, when the total width of the tabs exceeds the available 
 
 ![Tabs](/docs.etendo.software/assets/drive/1_K-cBXnCPoABJJmRfAowo3u58fyol43O.png)
   
-  ---
-This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+---
+This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

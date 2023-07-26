@@ -1,6 +1,29 @@
 ---
 title: Workspace
 ---
+
+## Login 
+
+Access **Etendo** through a Web browser by entering Etendo URL into the address bar of the browser.
+
+The login window opens up:
+
+![Log in screen](/docs.etendo.software/assets/products/etendo-erp/user-interface/log-in-screen.png)
+
+
+!!! info
+    In case the login page is not being displayed, please verify the correctness of the URL, or contact your system administrator.
+    
+
+Enter your user name and password. The user name and password are assigned by the system administrator.
+
+!!! tip
+    If you do not know your user name and password contact your system administrator.
+
+
+Click **Let’s Continue** and the **Etendo** Home Page shows up.
+
+
 ## Welcome Page
 
 The first tab contains **Etendo workspace**, a customized portal-style home page. Here you will find: 
@@ -45,7 +68,7 @@ From the top navigation bar, the user can launch new documents via the Quick Men
 
 ### Application
 
-Read more in the [Application areas](https://docs.etendo.software/en/end-user-documentation/etendo-environment/user-interface/application-areas) section.
+Read more in the [Application areas](/docs.etendo.software/products/etendo-erp/user-interface/navigation/#application-areas) section.
 
 !!! info
     *The contents of the Application Menu depend on the user's role. For example, one user can have various roles and see different things with each one.*
@@ -83,15 +106,11 @@ In this section, you can:
 -   Change the session options such as role, client, organization, warehouse and language you want to work with.
 -   Set your default session options. Tick the “set as default” option to keep the same role every log in.
 
-> **Role:** The profile of security for the user, defining what windows and tabs they can see.
-> 
-> **Client:** Client for this installation.
-> 
-> **Organization:** The client’s organizational entity.
-> 
-> **Warehouse:** A logistical unit with the purpose of storage and manipulation of goods.
-> 
 !!! info
+    **Role:** The profile of security for the user, defining what windows and tabs they can see.<br>
+    **Client:** Client for this installation.<br>
+    **Organization:** The client’s organizational entity.<br>
+    **Warehouse:** A logistical unit with the purpose of storage and manipulation of goods.<br>
     **Language:** The language in which the system information is shown.
 
 
@@ -103,8 +122,8 @@ In this section, the user is able to change the password through this tab by wri
 
 |     |     |
 | --- | --- |
-| ![End session](/docs.etendo.software/assets/drive/1WWtlvWh47YYIJot9rCXOV3za-4NzggxP.png | This button logs you out of the application. A confirmation dialog lets you confirm. |.png)
+| ![End session](/docs.etendo.software/assets/drive/1WWtlvWh47YYIJot9rCXOV3za-4NzggxP.png) | This button logs you out of the application. A confirmation dialog lets you confirm. 
 
 
 ---
-This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

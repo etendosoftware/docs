@@ -71,15 +71,22 @@ extra:
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
 
 nav:
-  - Home: 
+  - Home : 
     - Welcome: index.md
     - Requirements: requirements.md
     - Installation: installation.md
+  - Product:
+    - Etendo-ERP:
+      - User interface:
+        - Workspace: products/etendo-erp/user-interface/workspace.md
+        - Navigation: products/etendo-erp/user-interface/navigation.md
+        - Grid and Forms: products/etendo-erp/user-interface/grid-and-forms.md
   - What's New:
     - Release Notes: whats-new/release-notes/index.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: whats-new/roadmap.md
   - Live Builds: live-builds/index.md
+  
   - Help and Support: help-and-support/index.md
   
 
