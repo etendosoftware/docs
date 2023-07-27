@@ -156,11 +156,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management/</loc>
-         <lastmod>2023-07-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-reports/</loc>
          <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
@@ -697,6 +692,11 @@
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs.etendo.software/live-builds/</loc>
+         <lastmod>2023-07-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs.etendo.software/products/etendo-erp/user-guide/business-management/procurement-management/</loc>
          <lastmod>2023-07-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
