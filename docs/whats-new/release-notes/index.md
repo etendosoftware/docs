@@ -8,7 +8,8 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub|
 | ---           | ---              | ---     | ---    | ---       | :---: |
-| [23Q2.1](/docs.etendo.software/whats-new/release-notes/23Q2-1) | 17/07/2023 | 23.2.1 | QAA	| | :white_check_mark:|
+| [23Q2.2](/docs.etendo.software/whats-new/release-notes/23Q2-2) | 26/07/2023 | 23.2.2 | QAA	| | :white_check_mark:|
+| [23Q2.1](/docs.etendo.software/whats-new/release-notes/23Q2-1) | 17/07/2023 | 23.2.1 | C  	| | :white_check_mark:|
 | [23Q2.0](/docs.etendo.software/whats-new/release-notes/23Q2-0) | 27/06/2023 | 23.2.0 | C	| [23Q2-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso)| :white_check_mark:|
 | [23Q1.5](/docs.etendo.software/whats-new/release-notes/23Q1-5) | 29/05/2023 | 23.1.5 | CS 	| | :white_check_mark:|
 | [23Q1.4](/docs.etendo.software/whats-new/release-notes/23Q1-4) | 19/05/2023 | 23.1.4 | C 	| | :white_check_mark:|

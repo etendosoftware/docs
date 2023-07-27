@@ -8,7 +8,7 @@ Access **Etendo** through a Web browser by entering Etendo URL into the address 
 
 The login window opens up:
 
-![Log in screen](/docs.etendo.software/assets/products/etendo-erp/user-interface/log-in-screen.png)
+![Log in screen](/docs.etendo.software/assets/drive/1pnoVz0-AFDoHwb_FQUiKETTrMXxLPxDJ.png)
 
 
 !!! info
