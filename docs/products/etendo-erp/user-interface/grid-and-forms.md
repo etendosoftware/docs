@@ -83,11 +83,6 @@ Massive cloned records are shown in grid view and can then be identified accordi
 The entities which can be cloned are Orders and Invoices.
 The document actions displayed when selecting more than one document will be all the ones available based on the statuses of the selected records, depending on the type of document being selected.
 
-### Massive Post / Unpost 
-
-Documents can be posted or unposted manually using the post/unpost button. Depending on the original post status of the document, the process will change such status.
-The column Accounting Status can be used to check the status of the document and filter the ones needed to be posted or unposted.
-
 
 ### **Save View**
 

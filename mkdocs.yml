@@ -75,8 +75,8 @@ nav:
     - Welcome: index.md
     - Requirements: requirements.md
     - Installation: installation.md
-  - Product:
-    - Etendo-ERP:
+  - Products:
+    - Etendo ERP:
       - User interface:
         - Workspace: products/etendo-erp/user-interface/workspace.md
         - Navigation: products/etendo-erp/user-interface/navigation.md
