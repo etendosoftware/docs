@@ -279,7 +279,7 @@ Displays the details of the payments (pre-payments or regular payments) made for
 ### How to Reactivate a Closed Purchase Order
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
 Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.
 
@@ -295,7 +295,7 @@ Once the process is finished, the purchase order status turns to booked.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 From this window, it is possible to remove payments associated with a purchase order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Purchase Invoice window > Payment Plan tab).
 
@@ -316,7 +316,7 @@ In case the user has to create orders or invoices among two or more organization
     For more information, visit [Functional Documentation about the Intercompany module](https://docs.etendo.software/en/modules/financial-extensions-bundle/intercompany)
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 ## Goods Receipts
 
@@ -361,7 +361,7 @@ Supplier can send a "Purchase Invoice" together with the "Delivery Note" of the 
 This action implies a **link between the goods receipt and the purchase invoice**, the user can be aware of when inquiring about the corresponding purchase invoice.
 
 !!! info
-    To Learn more, visit _Purchase Invoice._
+    To learn more, visit _Purchase Invoice._
 
 ### **Lines**
 
@@ -469,7 +469,7 @@ Once all items above are filled in, including corresponding landed cost purchase
 ### How to Reactivate Goods Receipts
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95)
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}
 
 From the Goods Receipt window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.
 
@@ -483,7 +483,7 @@ Once the receipt is successfully reactivated, the state of the document changes 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
@@ -570,8 +570,8 @@ The Advanced Remittance module provides the header of the Purchase Invoice with 
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
-> **Important**:
-!!! warning
+
+???+ note
     When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
 
 ### **Lines**
@@ -617,7 +617,7 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 ### How to Reactivate a Voided Purchase Invoice
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
 Etendo allows the user to reactivate voided purchase invoices by selecting the needed one/s and clicking the Unvoid button.
 
@@ -625,10 +625,11 @@ Etendo allows the user to reactivate voided purchase invoices by selecting the n
 
 Once the process is finished, the sales invoice status turns to Complete.
 
-> **Important:**
-> -In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
+
+???+ note 
+    In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
 !!! warning
-    -Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
+    Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
 
 !!! info
     Check the Technical documentation about Advanced Financial Docs Processing to extend the process.
@@ -638,7 +639,7 @@ Once the process is finished, the sales invoice status turns to Complete.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 From this window, it is possible to delete payments associated with a purchase invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Purchase Order window > Payment Plan tab).
 
@@ -659,12 +660,12 @@ In case the user has to create orders or invoices among two or more organization
     For more information, visit [Functional Documentation about the Intercompany module](https://docs.etendo.software/en/modules/financial-extensions-bundle/intercompany)
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
@@ -708,7 +709,7 @@ Accounting information related to the matched invoices
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
@@ -847,7 +848,7 @@ The RTV shipment can be posted **if the table "MaterialMgmtShipmentInOut" is** a
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
@@ -1169,7 +1170,7 @@ This tab provides Landed Cost Matching accounting information.
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In this case, this functionality can be used in the "Landed Cost" window and in the "Cost" tab.
 

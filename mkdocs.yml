@@ -81,6 +81,10 @@ nav:
         - Workspace: products/etendo-erp/user-interface/workspace.md
         - Navigation: products/etendo-erp/user-interface/navigation.md
         - Grid and Forms: products/etendo-erp/user-interface/grid-and-forms.md
+      - User Guide:
+        - Business Management:
+          - Procurement Management: products/etendo-erp/user-guide/business-management/procurement-management.md
+
   - What's New:
     - Release Notes: whats-new/release-notes/index.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
