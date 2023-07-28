@@ -18,7 +18,7 @@ Etendo can be localized for any country thanks to a key Etendo feature which is 
 A Localization Pack can include at least:
 
 -the complete **translation** for the official language(s) in the country.
-The language is automatically available once the localization Pack has been successfully installed, therefore it can be selected as described at [profile](/docs.etendo.software/products/etendo-erp/user-interface/workspace#profile).
+The language is automatically available once the localization Pack has been successfully installed, therefore it can be selected as described at [profile](/docs.etendo.software/getting-started/user-interface/workspace#profile).
 
 -the **chart of accounts** that defines the accounting structure if any to comply with the approved local practice and laws.
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.

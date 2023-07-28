@@ -1,7 +1,10 @@
-![cover-welcome-to-etendo](/docs.etendo.software/assets/home/cover-welcome-to-etendo.png)
+---
+Title: Home
+hide:
+    - navigation
+    - toc
+---
 
-# Welcome to Etendo documentation!
+![cover-welcome-to-etendo](/docs.etendo.software/assets/home/cover-welcome-to-etendo.png){ width="700" align=right }
 
-**Etendo** is a composable and scalable ERP software. **Etendo** is focused on non-retail and it is adapted for different companies. To present a flexible and modern product, **Etendo** combines a web platform with a user-friendly skin and a mobile application. We are always keeping our product dynamic and we look for surpassing technologies.
-
-![Etendo desktop](/docs.etendo.software/assets/drive/1JKekHpGBzHi9kVLw4rBxHnUbtAiqSfCa.png)
+ Etendo is a highly adaptable and scalable ERP software designed for non-retail businesses. Our product is tailored to suit the needs of different companies, providing a flexible and modern solution. Etendo combines a web platform with a user-friendly interface and a mobile application, allowing you to manage your business efficiently from anywhere. We are committed to using cutting-edge technologies and continuously improving our product to meet your evolving business needs.
