@@ -5,9 +5,7 @@ title: Requirements
 
 This section explains the stack of tools and requirements to install Etendo.
 
-## Requirements
-
-### **Client: web browsers**
+## Client: web browsers
 
 |     |     |     |     |
 | --- | --- | --- | --- |
@@ -17,17 +15,7 @@ This section explains the stack of tools and requirements to install Etendo.
 | ![Firefox logo 2017.png](/docs.etendo.software/assets/drive/p3EzTz7im_NXkvyXHa5aIk29Va-vEN-96NUPsPr1BLqnWL7AA6CuewRnASM9EfEyMxRmaGmq3pNHPbAqNy2ZJL6xAuEUtM5q10QXfcadnvVJwW7-ISmAZ9xNgbOSs3XwSDsppY1P.png) | **Mozilla Firefox ESR** | 78  | **90 or higher** |
 | ![Microsoft Edge logo.png](/docs.etendo.software/assets/drive/acUA_bLGo6j1tRenMx_zSRQddDaf2N86N0iL2cT5o5Om5Gc96_YzQ0HOZ_CdZAitgs1m6M24Nbk5cbs1Et2I0MrUPB1a5sapBINQg_4Jzg8C_aoCmS3-CaKmn8BItB4O25SvFpy6.png) | **Microsoft Edge (Chromium based)** | 95  | **97 or higher** |
 
-###   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-**Client: network connectivity**
+## Client: network connectivity
 
 Here, there are example configurations, depending on the number of concurrent users to be supported. These assume the server is hosted with a fast connection, so it's network is not a limiting factor.
 
@@ -37,20 +25,25 @@ Here, there are example configurations, depending on the number of concurrent us
 | 10MBit/s | <=20 |
 | 100MBit/s | <=100 |
 
-### Server: Java based = multiplatform
+## Server: Java based = multiplatform
 
 Etendo runs wherever the Java JDK works. This currently means:
 
-Operating systems: Windows, any Linux distribution, FreeBSD, Mac OSX, Solaris and more.  
-Architectures: x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
+### Operating systems:
+:material-microsoft-windows:  Windows <br>
+:simple-linux:  Linux distribution <br>
+:simple-freebsd:  FreeBSD <br>
+:simple-macos:  Mac OSX <br>
+Solaris and more.  <br>
+
+### Architectures: x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
 Either PostgreSQL should also be supported by your target system
 
-### Server: software stack
+## Server: software stack
 
-|     |     |     |
-| --- | --- | --- |
 | Stack component | Supported versions | Recommended version |
-| Java SE | 11  | Latest 11.x |
-| PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x |
-| Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x |
-| Oracle | 19c (LTS) | 19c (LTS) |
+| :--- | :--- | :--- |
+| :fontawesome-brands-java:  Java SE | 11  | Latest 11.x |
+| :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x |
+| :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x |
+| :simple-oracle:  Oracle | 19c (LTS) | 19c (LTS) |
