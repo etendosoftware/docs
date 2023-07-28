@@ -8,7 +8,7 @@ Procurement management deals with all the activities related to the purchase of 
 
 The process starts by the creation and management of purchase requisitions and corresponding purchase orders to the moment the merchandise is received in the warehouse.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tMCSh8W1YnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tMCSh8W1YnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Requisition
 

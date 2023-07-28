@@ -36,7 +36,8 @@ Etendo runs wherever the Java JDK works. This currently means:
 :simple-macos:  Mac OSX <br>
 Solaris and more.  <br>
 
-### Architectures: x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
+### Architectures:
+x86, x86\_64, IA64, Sparc, PowerPC, AIX.  
 Either PostgreSQL should also be supported by your target system
 
 ## Server: software stack
