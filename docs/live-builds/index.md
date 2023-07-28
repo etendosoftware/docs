@@ -14,7 +14,7 @@ tags:
 - [Etendo 23.2.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 !!! warning
-    Oracle 19 is an environment that is used in specific cases, it may not be working, if you need to test it, please [contact us](/docs.etendo.software/help-and-support).
+    Oracle 19 is an environment that is used in specific cases, it may not be running, if you need to test it, please [contact us](/docs.etendo.software/help-and-support).
 
 !!! tip
 

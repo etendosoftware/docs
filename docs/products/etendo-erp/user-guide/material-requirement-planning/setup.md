@@ -1,7 +1,7 @@
 ---
 title: Material Requirement Planning Setup
 ---
-## **Overview**
+## Overview
 
 In order to initiate the Material Requirement Planning (MRP) process, the Planning Method and the Planner sections must be configured. 
 
@@ -9,9 +9,9 @@ In order to initiate the Material Requirement Planning (MRP) process, the Planni
     Also, aditional setups are required, information about which can be found in the [Overview section of MRP module](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/material-requirement-planning). 
 
 
-## **Planning Method**
+## Planning Method
 
-### **Overview**
+### Overview
 
 Define how transaction types will be dealt with in the application.
 

@@ -4,7 +4,7 @@ title: How to Report Bugs
 ### Template to report bugs
 
 !!! warning
-    *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132).*
+    *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*
 
 !!! sucess
     Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](https://docs.etendo.software/en/Release-notes)
