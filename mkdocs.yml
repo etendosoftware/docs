@@ -43,14 +43,19 @@ theme:
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - toc:
       title: In This Page
   - admonition
   - attr_list
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.emoji:
@@ -86,7 +91,7 @@ nav:
       - Navigation: getting-started/user-interface/navigation.md
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - Products:
-    - Etendo-ERP:
+    - Etendo ERP:
       - User Guide:
         - General Setup: products/etendo-erp/user-guide/general-setup/index.md
         - Jobs: products/etendo-erp/user-guide/jobs/index.md

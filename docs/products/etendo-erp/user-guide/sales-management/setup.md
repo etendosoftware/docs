@@ -16,13 +16,13 @@ This section describes the different windows that are necessary to set up the sa
 
 In this window, the user defines in which status the goods come from the customer. These values are used in the **Return Material Receipt** window.
 
-![Condition of the goods](/docs.etendo.software/assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae .png)
+![Condition of the goods](/docs.etendo.software/assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae.png)
 
 ## **Sales Region**
 
 In this section, the user can create sales regions to be used in sales operations and define a sales region to be used in the sales process.
 
-![Sales region](/docs.etendo.software/assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F .png)
+![Sales region](/docs.etendo.software/assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png)
 
 ## **Commission**
 
