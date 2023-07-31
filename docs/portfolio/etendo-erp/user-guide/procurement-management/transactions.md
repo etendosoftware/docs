@@ -313,10 +313,10 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [Functional Documentation about the Intercompany module](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#intercompany)
+    For more information, visit [the Intercompany module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
 ## Goods Receipts
 
@@ -490,7 +490,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Pending Goods Receipts
 
@@ -657,7 +657,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [Functional Documentation about the Intercompany module](https://docs.etendo.software/en/modules/financial-extensions-bundle/intercompany)
+    For more information, visit [the Intercompany module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/intercompany).
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}
@@ -672,7 +672,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Matched Invoices
 
@@ -716,7 +716,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Return to Vendor (RTV)
 
@@ -855,7 +855,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Landed Cost
 
@@ -1177,7 +1177,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ---
 

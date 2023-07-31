@@ -1,19 +1,22 @@
 ---
 title: Bulk Posting
 ---
-## Bulk Posting 
+## **Introduction**
+
+This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Financial Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
 
-> **Important:**
 !!! warning
     Before using this functionality, remember that this module's background process can affect the performance of the system.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 This functionality is available in the following windows:
-- [Amortization](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets#bulk-posting) 
+- [Amortization](/docs.etendo.software/portfolio/etendo-erp/user-guide/financial-management/assets/index) 
 - [Goods Movements](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management#bulk-posting-1)
 - [Financial Account](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#bulk-posting-2)
 - [Matched Invoices](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#bulk-posting-2)
@@ -49,5 +52,3 @@ To configure the preference, go to the “Preference” window and create a new 
 It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
 
 ![](/docs.etendo.software/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
-
-
