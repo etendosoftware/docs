@@ -175,7 +175,7 @@ The **Purchase order header** allows you to enter the following information:
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
-    To learn how to enter purchase order lines, visit the next section "Lines".
+    To learn how to enter purchase order lines, visit the next section [Lines](/docs.etendo.software/portfolio/etendo-erp/user-guide/procurement-management/transactions/#lines_2).
 
 It is possible to take up to **three possible actions regarding a purchase order**, by using the **header button "Book"**:
 
@@ -341,7 +341,7 @@ The fields to fill in the **Goods Receipt header** are:
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
 !!! info
-    To learn how to enter goods receipt lines, visit the next section "Lines".
+    To learn how to enter goods receipt lines, visit the next section [Lines](/docs.etendo.software/portfolio/etendo-erp/user-guide/procurement-management/transactions/#lines_3)
 
 If a **Goods Receipt** is completed and therefore **booked**:
 
