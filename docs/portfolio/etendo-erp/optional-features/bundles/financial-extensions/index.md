@@ -129,7 +129,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting module User Guide](https://docs.etendo.software/en/modules/financial-extensions-bundle/bulk-posting).
+    For more information, visit [the Bulk Posting module User Guide](/docs.etendo.software/portfolio/etendo-erp/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Advanced Business Partner Settlement
 
