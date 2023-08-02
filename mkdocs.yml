@@ -90,8 +90,8 @@ nav:
       - Workspace: getting-started/user-interface/workspace.md
       - Navigation: getting-started/user-interface/navigation.md
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
-  - Portfolio:
-    - Etendo ERP:
+  - Products:
+    - Etendo Classic::
       - User Guide:
         - General Setup: portfolio/etendo-erp/user-guide/general-setup/index.md
         - Jobs: portfolio/etendo-erp/user-guide/jobs/index.md
@@ -138,9 +138,20 @@ nav:
         - Supported Modules:
           - Tax Report Launcher: portfolio/etendo-erp/optional-features/supported-modules/tax-report-launcher.md
   - What's New:
-    - Release Notes: whats-new/release-notes/index.md
-    - Etendo Release Cycle: whats-new/etendo-release-cycle.md
-    - Roadmap: whats-new/roadmap.md
+    - Etendo Release Cycle: whats-new/etendo-erp/etendo-release-cycle.md
+    - Roadmap: "https://www.etendo.software"
+    - Etendo Classic:
+      - Release Notes: whats-new/etendo-erp/release-notes/index.md
+      - Optional Features: 
+        - Overview: whats-new/etendo-erp/extensions/overview.md
+        - Essentials Extensions Bundle: whats-new/etendo-erp/extensions/essentials-extensions/release-notes.md
+        - Platform Extensions Bundle: whats-new/etendo-erp/extensions/platform-extensions/release-notes.md
+        - Warehouse Extensions Bundle: whats-new/etendo-erp/extensions/warehouse-extensions/release-notes.md
+        - Production Extensions Bundle: whats-new/etendo-erp/extensions/production-extensions/release-notes.md
+        - Sales Extensions Bundle: whats-new/etendo-erp/extensions/sales-extensions/release-notes.md
+        - Financial Extensions Bundle: whats-new/etendo-erp/extensions/financial-extensions/release-notes.md
+        - Spanish Localization Bundle: whats-new/etendo-erp/extensions/spain-localization/release-notes.md
+        - Etendo BI Bundle: whats-new/etendo-erp/extensions/etendobi-extensions/release-notes.md
   - Live Builds: live-builds/index.md
   - Help and Support: 
     - Support Service: help-and-support/index.md
