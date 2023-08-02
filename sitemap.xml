@@ -636,7 +636,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/</loc>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/</loc>
          <lastmod>2023-08-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -677,11 +677,6 @@
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/sales-management/analysis-tools/</loc>
-         <lastmod>2023-08-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/sales-management/sales-quotation/</loc>
          <lastmod>2023-08-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

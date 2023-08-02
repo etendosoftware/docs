@@ -17,7 +17,7 @@
         <link rel="next" href="../analysis-tools/">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../masterdata-management/" class="md-nav__link">
+      <a href="../../masterdata-management/masterdata/" class="md-nav__link">
         Master Data Management
       </a>
     </li>
@@ -1067,17 +1067,12 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#sales-extensions-bundle-sales-quotation" class="md-nav__link">
-    Sales Extensions Bundle - (Sales Quotation)
+    Sales Extensions Bundle (Sales Quotation)
   </a>
   
-    <nav class="md-nav" aria-label="Sales Extensions Bundle - (Sales Quotation)">
+    <nav class="md-nav" aria-label="Sales Extensions Bundle (Sales Quotation)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1098,6 +1093,11 @@
   <a href="#lines-tab" class="md-nav__link">
     Lines tab
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2650,17 +2650,12 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#sales-extensions-bundle-sales-quotation" class="md-nav__link">
-    Sales Extensions Bundle - (Sales Quotation)
+    Sales Extensions Bundle (Sales Quotation)
   </a>
   
-    <nav class="md-nav" aria-label="Sales Extensions Bundle - (Sales Quotation)">
+    <nav class="md-nav" aria-label="Sales Extensions Bundle (Sales Quotation)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2681,6 +2676,11 @@
   <a href="#lines-tab" class="md-nav__link">
     Lines tab
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3346,18 +3346,20 @@
 <p><a class="glightbox" href="/docs/assets/drive/1Ebptd-ihEnTZ0PicQvT4HmTHI0bAu52y.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Actions and statuses in quotations" src="/docs/assets/drive/1Ebptd-ihEnTZ0PicQvT4HmTHI0bAu52y.png" /></a></p>
 <p>1. Actions in quotations:</p>
 <ul>
-<li>Book: This action allows the user to process the quotation.</li>
-<li>Reactivate: This action allows the user to add, remove or modify a quotation line/s.</li>
-<li>Create a sales order: This action converts the quotation into a sales order.</li>
-<li>Reject: This action cancels/rejects the quotation</li>
+<li><strong>Book</strong>: This action allows the user to process the quotation.</li>
+<li><strong>Reactivate</strong>: This action allows the user to add, remove or modify a quotation line/s.</li>
+<li><strong>Create a sales order</strong>: This action converts the quotation into a sales order.</li>
+<li><strong>Reject</strong>: This action cancels/rejects the quotation</li>
 </ul>
 <p>2. Statuses of the quotation:</p>
 <ul>
 <li><strong>Draft</strong>: Enter, remove and modify lines is allowed in this status. This status is reached after clicking New or reactivating the document.</li>
-<li><strong>Under evaluation</strong>: After booking the quotation. In this status the document cannot be changed. Further actions are:<br />
-<strong>Reactivate</strong><br />
-<strong>Create a sale order</strong><br />
-<strong>Reject the quotation</strong></li>
+<li><strong>Under evaluation</strong>: After booking the quotation. In this status the document cannot be changed. Further actions are:  <ul>
+<li><strong>Reactivate</strong>  </li>
+<li><strong>Create a sales order</strong>  </li>
+<li><strong>Reject the quotation</strong></li>
+</ul>
+</li>
 <li><strong>Closed</strong> - Order created: After creating the sales order the document turns into this status. No further actions are allowed.</li>
 </ul>
 <div class="admonition info">
@@ -3368,11 +3370,11 @@
 <li><strong>Closed - Rejected</strong>: When the quotation is finally not accepted by the customer. It is mandatory to enter a reject reason. No further actions are allowed.</li>
 </ul>
 <h3 id="header">Header</h3>
-<p>The user can create a sales quotation and processes it when ready.</p>
+<p>The user can create a sales quotation and process it when ready.</p>
 <p><a class="glightbox" href="/docs/assets/drive/1mGI2PwGXX8NokA5eSauNdO3hpyCM1lH9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sales quotations header" src="/docs/assets/drive/1mGI2PwGXX8NokA5eSauNdO3hpyCM1lH9.png" /></a></p>
 <p>The header lists the main terms and conditions related to the customer quotation that are used in the heading of its printed copy and further in its order, shipment and invoicing process.<br />
 In the majority of cases, the main and the only field needed to create a new quotation is the Business Partner field. All other fields are automatically populated based on the selected Business Partner, logged in User preferences and other system default parameters.</p>
-<p><strong>Some other fields to note are:</strong></p>
+<p>Some other fields to note are:</p>
 <p><strong>Valid Until:</strong> This field provides information about the deadline of the validity of the quotation.<br />
 <strong>Reject Reason:</strong> This field informs about the reason why a quotation has been rejected by a customer. It is mandatory when rejecting a quotation.</p>
 <p><strong>Things to consider:</strong></p>
@@ -3382,7 +3384,7 @@ In the majority of cases, the main and the only field needed to create a new quo
 <p>Taxes are always recalculated based on the transaction date (Date you execute the button).</p>
 </div>
 <p>The status of the newly created sales order is Booked. It is possible to change the "Invoice Terms" of the sales order as well as to "Reactivate" it if the sales order needs to be modified.</p>
-<p>Prior to create a sales order, the system shows a flag named Firm quote which is marked as default:</p>
+<p>Prior to create a sales order, the system shows a flag named Firm Quote which is marked as default:</p>
 <p><a class="glightbox" href="/docs/assets/drive/1zRP6rz_UJ-8Y9tdp9l6XCHP_QU7DrN9B.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Firmquote" src="/docs/assets/drive/1zRP6rz_UJ-8Y9tdp9l6XCHP_QU7DrN9B.png" /></a></p>
 <ul>
 <li>If selected, it establishes a commitment with the customer for the supply of a given quantity of goods at a quoted price, therefore the sales order will be identical as the quote.</li>
@@ -3399,14 +3401,14 @@ Line Tax read-only tab details tax information for each line of a sales order ba
 <p>This sales quotation tab lists information about the discounts automatically applied and/or manually entered for the document.</p>
 <h4 id="tax">Tax</h4>
 <p>The user can edit the taxes applied to the quotation.<br />
-Summarizes tax related information for the whole sales quotation. Contains as many records as tax rates used in the quotation.</p>
-<h2 id="sales-extensions-bundle-sales-quotation">Sales Extensions Bundle - (Sales Quotation)</h2>
+It summarizes tax related information for the whole sales quotation. Contains as many records as tax rates used in the quotation.</p>
+<h3 id="sales-extensions-bundle-sales-quotation"><strong>Sales Extensions Bundle (Sales Quotation)</strong></h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36" target="_blank">Sales Extensions Bundle</a></p>
 </div>
 <p>Through this window, the user can generate sales quotations and create the corresponding orders from those quotations.</p>
-<h3 id="header_1">Header</h3>
+<h4 id="header_1">Header</h4>
 <p>The main header numerates the terms and conditions related with the sales quotation which are used in the printed copy header and, later on, in its order, goods receipt and invoice process.</p>
 <p><a class="glightbox" href="/docs/assets/drive/1S8cwq-7SwxMd-0JDD6uzDfTDtSOGn_8b.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1S8cwq-7SwxMd-0JDD6uzDfTDtSOGn_8b.png" /></a></p>
 <p>The main tab lists the main terms and conditions related to the sales quotation that are used in the header of the hard copy and later in the order, packing slip and invoicing process.
@@ -3430,33 +3432,36 @@ In this section, the fields to fill in are the following:</p>
 <li>Origin order: when the "Change customer, rate and currency" button is executed and the "Link order" check is checked, the new quotation created is set in this field, modifying the previous one, with the number of the original quotation, that is, the one being modified; which will be in "Closed-rejected" status.</li>
 <li>Description: This is a space to write additional related information.</li>
 </ul>
-<h3 id="status-bar">Status bar</h3>
+<h4 id="status-bar">Status bar</h4>
 <p>This bar shows the following information:</p>
 <ul>
 <li>The possible document statuses for a quotation will be:</li>
 </ul>
-<p><strong>Draft</strong>: allows entering, delete and modify lines in this status. This status is reached after clicking on the new button or when reactivating the document.
-<strong>Under evaluation</strong>: this status is reached after registering the quotation. At this stage, the document cannot be modified.
-<strong>Closed - Order created</strong>: after creating the sales order, the document reaches this status. Once reached, no further actions are allowed.
-<strong>Closed - Rejected</strong>: this status appears in case the quotation is rejected by the customer. It is mandatory to enter a reason for rejection. Once this status is reached, no further actions are allowed.</p>
+<p><strong>Draft</strong>: allows entering, delete and modify lines in this status. This status is reached after clicking on the new button or when reactivating the document.<br>
+<strong>Under evaluation</strong>: this status is reached after registering the quotation. At this stage, the document cannot be modified.<br>
+<strong>Closed - Order created</strong>: after creating the sales order, the document reaches this status. Once reached, no further actions are allowed.<br>
+<strong>Closed - Rejected</strong>: this status appears in case the quotation is rejected by the customer. It is mandatory to enter a reason for rejection.
+Once this status is reached, no further actions are allowed. <br></p>
 <ul>
 <li>Total gross amount: indicates the final monetary amount of the quotation, including taxes.</li>
 <li>Total net amount: indicates the final monetary amount of the quotation, excluding taxes.</li>
 <li>Currency: shall indicate in which currency the quotation is defined. This field is filled in according to the selected tariff.</li>
 </ul>
-<h3 id="lines-tab">Lines tab</h3>
+<h4 id="lines-tab">Lines tab</h4>
 <p>Once the header is completed, the lines must be added.</p>
-<p><strong>Basic discounts</strong>
--Basic discount: this is the percentage reduction applied to the list price.
+<p><strong>Basic discounts</strong> <br>
+-Basic discount: this is the percentage reduction applied to the list price.<br>
 -Cascade: this is any additional discount based on the total remaining after applying previous discounts.
-Active: this is a check that indicates whether this record is available for use or disabled.</p>
-<p><strong>Tax</strong>
+Active: this is a check that indicates whether this record is available for use or disabled.<br></p>
+<p><strong>Tax</strong> <br>
 This tab summarizes the information related to the taxes involved in the quotation.
 It contains as many records as there are tax categories involved in the quotation.</p>
-<p>Line number: indicates the position of the line in the document.
-Tax: indicates the tax rate that is applicable to a given product.
-Taxable amount: indicates the amount on which the tax will be calculated.
-Tax amount: indicates the amount of tax resulting from the Tax and Taxable amount fields.</p>
+<ul>
+<li>Line number: indicates the position of the line in the document.<br></li>
+<li>Tax: indicates the tax rate that is applicable to a given product.<br></li>
+<li>Taxable amount: indicates the amount on which the tax will be calculated.<br></li>
+<li>Tax amount: indicates the amount of tax resulting from the Tax and Taxable amount fields.<br></li>
+</ul>
 <p><strong>History tab</strong>
 When the "Change customer, rate and currency" button is clicked on a quotation and the "Link order" check is checked, a record is created in this tab with the data of the new quotation created and, in turn, one for each of the successive modifications to the original quotation.</p>
 <p>The information shown in each record is as follows:</p>
@@ -3466,16 +3471,20 @@ When the "Change customer, rate and currency" button is clicked on a quotation a
 <li>Original amount of the quotation.</li>
 </ul>
 <p><a class="glightbox" href="/docs/assets/drive/1XoFvD98AeaJDehEjw0rJtqNyzo8GaeeW.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1XoFvD98AeaJDehEjw0rJtqNyzo8GaeeW.png" /></a></p>
-<p><strong>Actions</strong>
-Register: this action allows the user to generate the budget.
-Reactivate: this action allows the user to add, remove or modify one or more lines of the quotation.
-Create a sales order: this action converts the quotation into a sales order. To do so, the document type of the quotation must be configured correctly. This means that it requires a document type (i.e. standard order) to be defined in the "Order document type" field. This button appears when the status of the quotation is "In evaluation".</p>
+<p><strong>Actions</strong><br></p>
+<ul>
+<li>Register: this action allows the user to generate the budget.<br></li>
+<li>Reactivate: this action allows the user to add, remove or modify one or more lines of the quotation.<br></li>
+<li>Create a sales order: this action converts the quotation into a sales order. To do so, the document type of the quotation must be configured correctly. This means that it requires a document type (i.e. standard order) to be defined in the "Order document type" field. This button appears when the status of the quotation is "In evaluation".<br></li>
+</ul>
 <p>The status of the newly created sales order will be "Registered". In this instance, it is possible to change the "Billing Terms" as well as "Reactivate" it if it needs to be modified.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Only one sales order can be created for the same quotation.</p>
 </div>
-<p>Reject: this action allows to cancel or reject the quotation. A reason for rejection is mandatory for this action.</p>
+<ul>
+<li>Reject: this action allows to cancel or reject the quotation. A reason for rejection is mandatory for this action.</li>
+</ul>
 <p>Etendo also allows generating partial sales orders either for the lines the user needs to convert, or for the amount of the product needed to convert. Apply this functionality by selecting the necessary line/s and by editing the product amount in the Amount to generate tab.</p>
 <p><a class="glightbox" href="/docs/assets/drive/1epl5s-9vyWosFF7SwSlkvIccNRQtUOA3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1epl5s-9vyWosFF7SwSlkvIccNRQtUOA3.png" /></a></p>
 <p><a class="glightbox" href="/docs/assets/drive/1xnqd0rhg4x4qkkafts9k15cIH2Ta2QxP.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1xnqd0rhg4x4qkkafts9k15cIH2Ta2QxP.png" /></a></p>
@@ -3492,16 +3501,16 @@ If the business partner is changed, the tax will be updated in the lines (If nec
 <p>Once executed, the quotation will be closed and a new one will be created with the changes made in the state “under evaluation”. In the quotation closed, a default rejection reason is set and if there is none, the first one found is set.</p>
 </div>
 <p><a class="glightbox" href="/docs/assets/drive/1iid--FWuwlYd-vW3S6kQ6zlIftnNgXlP.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1iid--FWuwlYd-vW3S6kQ6zlIftnNgXlP.png" /></a></p>
-<p><strong>Adjust button</strong>
-This process allows the user to adjust the price of one or more budget lines, either by applying discount or surcharge through an adjustment factor.</p>
+<p><strong>Adjust button</strong><br></p>
+<p>This process allows the user to adjust the price of one or more budget lines, either by applying discount or surcharge through an adjustment factor.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>It can only be executed while the document is in draft.</p>
+<p>This can only be executed while the document is in draft status.</p>
 </div>
 <p><a class="glightbox" href="/docs/assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png" /></a></p>
 <h2 id="sales-order">Sales Order</h2>
-<p>A sales order is a document that specifies products and/or services ordered by a specific business partner (customer), as well as the price and terms and conditions.<br />
-The Sales Order window allows the user to register sales related documents with different purposes which is regulated by the Transaction Document field. Depending on the chosen value, the consequences when booking the sales order are different. These are the types of sales order documents that are available:</p>
+<p>A sales order is a document that specifies products and/or services ordered by a specific business partner (customer), as well as the price and terms and conditions.  </p>
+<p>The Sales Order window allows the user to register sales related documents with different purposes which is regulated by the Transaction Document field. Depending on the chosen value, the consequences when booking the sales order are different. These are the types of sales order documents that are available:</p>
 <p><strong>Standard Order:</strong> When the transaction document is standard upon booking of the document, there are no additional documents created. Goods shipment and sales invoice still have to be created.</p>
 <p><a class="glightbox" href="/docs/assets/drive/RHAkJe21vaTiszWDj0uctmA_1Dfqz8RhP73fiF8zNWSpw4ad-gbDn1kjQGfXi2GO51Dqr0GRBmzB3NkdF8NjjEJ1eciYiNdYauufXwjF-tYrWYYTnyzSPkkzzm98sjg_O7FsGxz0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Sales Order transaction document.png" src="/docs/assets/drive/RHAkJe21vaTiszWDj0uctmA_1Dfqz8RhP73fiF8zNWSpw4ad-gbDn1kjQGfXi2GO51Dqr0GRBmzB3NkdF8NjjEJ1eciYiNdYauufXwjF-tYrWYYTnyzSPkkzzm98sjg_O7FsGxz0.png" /></a></p>
 <p><strong>POS Order:</strong> The Point of Sale order is for the situation when a customer walks into a shop, orders a product, pays for it and takes the product home. Upon booking of the sales order with this document type, the shipment and the sales invoice are created automatically.</p>
@@ -3526,22 +3535,22 @@ This header lists the main terms and conditions related to the customer order th
 <strong>Reservation Status:</strong> defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the Stock Reservations section.</p>
+<p>Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the <a href="/docs/products/etendo-classic/user-guide/sales-management/transactions#stock-reservations">Stock Reservations</a> section.</p>
 </div>
 <p><strong>Payment Status:</strong> indicates in % how much of the total of the order has been paid.</p>
 <p>Below fields are defaulted according to the Customer and Location tabs of the Business Partner window.</p>
-<p>Payment Method: indicates how an order (and invoice) should be paid.</p>
-<p>Payment Terms: defines when a sales invoice generated from this order needs to be paid.</p>
-<p>Invoice Terms: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.</p>
+<p><strong>Payment Method</strong>: indicates how an order (and invoice) should be paid.</p>
+<p><strong>Payment Terms</strong>: defines when a sales invoice generated from this order needs to be paid.</p>
+<p><strong>Invoice Terms</strong>: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.</p>
 <p><strong>Different Invoice Terms are:</strong></p>
 <p><strong>After Delivery:</strong> Products of the sales order are invoiced as soon as they are shipped, for example, if there is partial shipment of the order it is invoiced. In this case several sales invoices might be created for one sales order corresponding to all goods shipped before each invoicing run.<br />
 <strong>After order Delivered:</strong> The invoice will be generated after all products on the sales order have been shipped, so one order - one invoice.<br />
 <strong>Customer Schedule After Delivery:</strong> Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).<br />
 <strong>Do Not Invoice:</strong> No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).<br />
-<strong>Immediate:</strong> The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.</p>
-<p>Sales Representative: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.</p>
-<p>Invoice Address: Address that is used upon generating an invoice.</p>
-<p>Delivery Location: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.</p>
+<strong>Immediate:</strong> The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
+<strong>Sales Representative</strong>: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
+<strong>Invoice Address</strong>: Address that is used upon generating an invoice.
+<strong>Delivery Location</strong>: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.</p>
 <p><strong>There are 3 ways of entering lines into a sales order:</strong></p>
 <ul>
 <li>Copying selected products from a history of products ordered by this customer using the Copy Lines button.</li>
@@ -3628,9 +3637,11 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>Sales Order lines can be reserved when the sales order is booked and is pending to deliver.</p>
 <p>Fields to be noted:</p>
 <ul>
-<li><strong>Stock Reservation</strong>: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:</li>
+<li><strong>Stock Reservation</strong>: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:<ul>
 <li><em>Manual</em>: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation</li>
 <li><em>Automatic</em>: The reservation is automatically created and processed, reserving the available stock.</li>
+</ul>
+</li>
 <li><strong>Reservation Status</strong>: Defines whether the line is <em>Fully Reserved</em> or <em>Partially Reserved</em> or <em>Not Reserved</em>.</li>
 </ul>
 <p><strong>Manage Reservation: Pick and Execute</strong></p>
@@ -3683,7 +3694,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>If the service is configured to modify tax, new taxes are applied automatically during the operation so, after linking the configured service to a product, the new taxes configuration will be applied.</p>
 <p>It is not recommended to modify the tax manually afterwards, as the system can create inconsistencies. However, it is possible to remove the service product and then the Tax reverts back to its original value.</p>
 <h4 id="related-services"><strong>Related Services</strong></h4>
-<p>In this table the 'Service' type product Order Lines related to an Order Line are displayed.</p>
+<p>In this table, the 'Service' type product Order Lines related to an Order Line are displayed.</p>
 <p>This tab is only displayed for those lines with products related to services. It displays the related services. The grid has the same fields that the Pick &amp; Edit uses to add the lines. This tab is not editable.</p>
 <h4 id="basic-discounts_1"><strong>Basic Discounts</strong></h4>
 <p>This section lists information about discounts automatically applied based on the customer configuration and / or manually entered for the sales order.</p>
@@ -3699,11 +3710,11 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h3 id="how-to-reactivate-a-closed-sales-order">How to Reactivate a Closed Sales Order</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">marketplace</a>.</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
 <p>Etendo allows the user to reactivate closed sales orders by selecting the needed one/s and clicking the Undo Close button.</p>
 <p><a class="glightbox" href="/docs/assets/drive/14S-_sqqQcDlJqhtFt_L9GVSZ6U-jH4Yo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/14S-_sqqQcDlJqhtFt_L9GVSZ6U-jH4Yo.png" /></a></p>
-<p>Once the process is finished, the sales order status turns to booked.</p>
+<p>Once the process is finished, the sales order status turns to <em>booked</em>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Check the Technical documentation about Advanced Financial Docs Processing to extend the process.</p>
@@ -3712,7 +3723,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
 <p>From this window, it is possible to remove payments associated with a sales order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Sales Invoice window &gt; Payment Plan tab).</p>
 <p>If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window &gt; Transaction tab).</p>
@@ -3726,11 +3737,11 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/modules/financial-extensions-bundle/intercompany">Functional Documentation about the Intercompany module</a></p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/optional-features/bundles/financial-extensions/intercompany">the Intercompany module user guide</a>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
 <h2 id="goods-shipment">Goods Shipment</h2>
 <p>In this section, you can create and manage goods shipments to your customers. A Goods Shipment is a document registering the specifics of items sent to a customer.</p>
@@ -3749,8 +3760,8 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <li><strong>Delivery Location:</strong> Address that will be used when generating a shipment. If it is not specified, a Partner Address field will be used. Defaulted according to the Customer and Location tabs of the Business Partner window.</li>
 <li><strong>Accounting Date:</strong> Date to be used in the posting record of the Goods Shipment to the general ledger.</li>
 <li><strong>Sales Order:</strong> Reference to an order that is being shipped. If Goods Shipment includes products from several Sales Orders fields are left empty (still trace-ability is present at Lines level).</li>
-<li><strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.</li>
-<li>As a consequence of 23916 feature request and after 26629 issue changes were applied, if we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.</li>
+<li><strong>Invoice Status:</strong> indicates in % how much quantity has been invoiced.
+  If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.</li>
 </ul>
 <p>There are 2 ways of entering lines into the sales order:</p>
 <ol>
@@ -3819,7 +3830,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h3 id="how-to-reactivate-goods-shipments">How to Reactivate Goods Shipments</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95">Warehouse Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95" target="_blank">Warehouse Extensions Bundle</a></p>
 </div>
 <p>From the Goods Shipment window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.</p>
 <p>Once the shipment is successfully reactivated, the state of the document changes to Draft as it can be observed in the status bar.</p>
@@ -3827,13 +3838,13 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h3 id="bulk-posting">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a></p>
 </div>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
 <p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/modules/financial-extensions-bundle#bulk-posting">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting">the Bulk Posting module user guide</a>.</p>
 </div>
 <h2 id="return-from-customer">Return from Customer</h2>
 <h3 id="header_4"><strong>Header</strong></h3>
@@ -3872,12 +3883,14 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>To enter lines that come from a goods shipment, you need to click the button “Pick/Edit Lines”</p>
 <p><strong>Things to consider:</strong></p>
 <ul>
-<li>The only editable fields are:</li>
+<li>The only editable fields are:<ul>
 <li><strong>Returned</strong>: Quantity you wish to return. When selecting the row, the quantity is not set by default since the system cannot know how many items are being returned.</li>
 <li><strong>Net Unit Price</strong>: Price of the original sales order.</li>
 <li><strong>Return reason:</strong> The reason why you return the item.</li>
 <li><strong>Returned UOM</strong>, only in case alternative unit of measure (AUM) preference is enabled.<br />
-    In that case, the product's "primary" AUM for the sales flow is shown if any, otherwise the product's UOM is shown. The user can always change it to product's UOM.</li>
+  In that case, the product's "primary" AUM for the sales flow is shown if any, otherwise the product's UOM is shown. The user can always change it to product's UOM.</li>
+</ul>
+</li>
 <li>You can define the Return Reason at header level. In this case when picking a line it inherits what selected in the header but you can modify it as you wish.</li>
 <li>Only Goods shipment documents that have not been still returned can be picked. In case a goods shipment line has been fully returned, it won't be shown.</li>
 <li>When a goods shipment line has been partially returned, the rest can still be returned. What you have already returned for that line is shown in the field Return Qty other RM.</li>
@@ -3889,8 +3902,8 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 </ul>
 <p>A restriction has been added in Pick/Edit Lines in order to prevent adding non “Returnable” service lines to Return From Customer documents.</p>
 <p>To enter lines that do not come from any document present in the system,  you need click the “Insert Orphan Line” button.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>Since this flow is not common, the button is hidden by default. In order to display it, it is necessary to configure a preference named <strong>RM Allow Orphan Line</strong>. To do so, go to the preference window and select it from the list. The value must be <em>Y</em>. Then log out and log in.</p>
 </div>
 <p><strong>Things to consider:</strong></p>
@@ -3913,7 +3926,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h4 id="line-tax_2"><strong>Line Tax</strong></h4>
 <p>Taxes related to the order line.</p>
 <h4 id="related-products_1"><strong>Related Products</strong></h4>
-<p>In this table the Order Lines related to an Order Line of 'Service' type are added.</p>
+<p>In this table, the Order Lines related to an Order Line of 'Service' type are added.</p>
 <p>It has been added the possibility to select the service related to which original product lines is desired to be returned. In order to do it, the new button “Select Order Line” has been added in Return From Customer Line tab. This button is  displayed when a line with a Service ‘Linked to Product’ is selected.</p>
 <p>The tab is similar to the one implemented in the Sales Order Line window. The only difference is that the relations are created with negative values (amount, quantity), but the window has been adapted to see those values in positive (in the database, they are negative).</p>
 <p>The grid implemented in this Pick&amp;Edit is the same as used in the Sales Order Line window, with a few differences:</p>
@@ -3925,7 +3938,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h4 id="basic-discounts_2"><strong>Basic Discounts</strong></h4>
 <p>It shows the discount applied to the original invoice of the returned product.</p>
 <h4 id="tax_2"><strong>Tax</strong></h4>
-<p>Edit taxes applied to your order.</p>
+<p>The user can edit taxes applied to the order.</p>
 <h2 id="return-material-receipt">Return Material Receipt</h2>
 <p>In this window, the user receives the material that has been returned from the customer.</p>
 <h3 id="header_5"><strong>Header</strong></h3>
@@ -3958,15 +3971,15 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 </ul>
 <p><strong>Validations</strong></p>
 <ul>
-<li>You are not allowed to receive more quantity than the <strong>Pending</strong> quantity. In case you do it, a message is shown.</li>
+<li>The user is not allowed to receive more quantity than the <strong>Pending</strong> quantity. In case they do it, a message is shown.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To edit a line, you need to click again the <strong>Pick/Edit Lines</strong> button and the line appears selected. Then you can modify any of the editable fields.</p>
+<p>To edit a line, it is necessary to click again the <strong>Pick/Edit Lines</strong> button and the line appears selected. Then, the user can modify any of the editable fields.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To delete a line, you need to unmark the line and then click Done.</p>
+<p>To delete a line, the user needs to unmark the line and then click Done.</p>
 </div>
 <p><strong>Accounting</strong></p>
 <p><strong>Return Material Receipt</strong> posting creates following accounting entries.</p>
@@ -4010,13 +4023,13 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <h3 id="bulk-posting_1">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a></p>
 </div>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
 <p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/modules/financial-extensions-bundle#bulk-posting">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting">the Bulk Posting module user guide</a>.</p>
 </div>
 <h2 id="create-shipments-from-orders">Create Shipments from Orders</h2>
 <p>Create Shipments from Orders allows the user to see Sales Orders pending to be shipped and automatically generate Goods Shipments based on them.</p>
@@ -4038,7 +4051,7 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>Select the order(s) you want to ship and click the Process button to generate the underlying Goods Shipment document(s). Process execution message displays sales order number(s) and corresponding shipment number(s) that was just created.</p>
 <h2 id="sales-invoice">Sales Invoice</h2>
 <p>Sales Invoice is an itemized statement of goods or services provided to a business partner. It indicates the quantity and price of each product delivered.</p>
-<p>Sales invoice window allows the user to issue and manage customer's invoices. It also allows the user to browse information about all sales invoices registered in the system and manually create new invoice documents. It is useful if execution of some specific scenario is required that is not managed by automatic invoice generation processes like Generate Invoices or Create Invoices from Orders.</p>
+<p>The Sales invoice window allows the user to issue and manage customer's invoices. It also allows the user to browse information about all sales invoices registered in the system and manually create new invoice documents. It is useful if execution of some specific scenario is required that is not managed by automatic invoice generation processes like Generate Invoices or Create Invoices from Orders.</p>
 <p>The sales revenues can be recognized as soon as the sales invoice is accounted for, however if a revenue deferred plan is configured it is possible to defer the revenue recognition as required.</p>
 <h3 id="header_6"><strong>Header</strong></h3>
 <p>Customer invoices can be registered, booked and managed in the header section of the sales invoice window.</p>
@@ -4082,8 +4095,8 @@ Once a sales order is booked, it is possible to prepay an order by using the pro
 <p>The Advanced Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.</p>
 <p><a class="glightbox" href="/docs/assets/legacy/bank_account_2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="bank_account_2.png" src="/docs/assets/legacy/bank_account_2.png" /></a></p>
 <p>This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Important</strong>:
 When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.</p>
 </div>
@@ -4134,7 +4147,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 <p>Etendo allows the user to manage different currencies within an organization or business unit.</p>
 <p>Nowadays, it is very common for the organizations located in a country to make business with third parties located abroad, and even more, it could also happen that an organization needs to post the transactions to general ledgers configured in different currencies.</p>
 <p>Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.</p>
-<p>This tab allows you to enter:</p>
+<p>This tab allows the user to enter:</p>
 <ul>
 <li>either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency</li>
 <li>or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.</li>
@@ -4214,6 +4227,8 @@ When using the option “Create lines from orders”, if all orders have the sam
 <h5 id="payments-in-multiple-currencies"><strong>Payments in multiple currencies</strong></h5>
 <p>Etendo allows the user to receive payments in a different currency than the financial account currency.</p>
 <p>To do this, the payment method assigned to the financial account used to receive the payment needs to be configured to allow it, that implies to select the check-box "Receive Payments in Multiple Currencies".</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
 <p>Let's take for instance an organization such as "F&amp;B US Inc".</p>
 <p>This organization is located in USA, therefore it is likely that the organization's general ledger currency as well as the financial account currency is set as USD.</p>
 <p>F&amp;B US Inc makes business with a customer located abroad. This customer requires to pay the invoice/s issued to it in EUR currency. This means that:</p>
@@ -4221,10 +4236,11 @@ When using the option “Create lines from orders”, if all orders have the sam
 <li>F&amp;B US Inc organization needs to issue the customer's invoice in EUR same as the payment received from the customer.</li>
 </ul>
 <p>If the customer's payment is registered in the "Add Payment" window shown from this "Sales Invoice" window, Etendo allows the user to enter an exchange rate, therefore the "Actual Converted" amount to be paid in EUR can be changed if required.</p>
+</div>
 <h4 id="accounting_2"><strong>Accounting</strong></h4>
-<p>Accounting information related to the sales invoice</p>
+<p>Accounting information related to the sales invoice.</p>
 <p>A sales invoice can be posted to the ledger when required at a given "Accounting Date" by using the button "Post".</p>
-<p>Sales Invoice posting creates the following accounting entries</p>
+<p>Sales Invoice posting creates the following accounting entries:</p>
 <p>Posting record date: Accounting Date.</p>
 <table>
 <thead>
@@ -4237,39 +4253,39 @@ When using the option “Create lines from orders”, if all orders have the sam
 </thead>
 <tbody>
 <tr>
-<td><strong>Account</strong></td>
-<td><strong>Debit</strong></td>
-<td><strong>Credit</strong></td>
-<td><strong>Comment</strong></td>
+<td>Account</td>
+<td>Debit</td>
+<td>Credit</td>
+<td>Comment</td>
 </tr>
 <tr>
-<td><strong>Customer Receivable</strong></td>
-<td><strong>Total Gross Amount</strong></td>
+<td>Customer Receivable</td>
+<td>Total Gross Amount</td>
 <td></td>
-<td><strong>One per Payment Plan Line (TB verified)</strong></td>
+<td>One per Payment Plan Line (TB verified)</td>
 </tr>
 <tr>
-<td><strong>Discount Product Revenue</strong></td>
-<td><strong>Discount Amount</strong></td>
+<td>Discount Product Revenue</td>
+<td>Discount Amount</td>
 <td></td>
-<td><strong>One per Invoice Line (if discount exists)</strong></td>
+<td>One per Invoice Line (if discount exists)</td>
 </tr>
 <tr>
-<td><strong>Product Revenue</strong></td>
+<td>Product Revenue</td>
 <td></td>
-<td><strong>Line Net Amount</strong></td>
-<td><strong>One per Invoice Line</strong></td>
+<td>Line Net Amount</td>
+<td>One per Invoice Line</td>
 </tr>
 <tr>
-<td><strong>Tax Due</strong></td>
+<td>Tax Due</td>
 <td></td>
-<td><strong>Tax Amount</strong></td>
-<td><strong>One per Tax Line.</strong></td>
+<td>Tax Amount</td>
+<td>One per Tax Line</td>
 </tr>
 </tbody>
 </table>
 <p>Same way, a Sales Invoice including a sales invoice line with a revenue plan configured creates the following accounting entries.</p>
-<p>For instance a food and beverage distributor selling and invoicing a product that will only be able to deliver to their customers in 3 months would want to defer the revenue recognition till the delivery.</p>
+<p>For instance, a food and beverage distributor selling and invoicing a product that will only be able to deliver to their customers in 3 months would want to defer the revenue recognition till the delivery.</p>
 <p>Posting record date: Accounting Date:</p>
 <table>
 <thead>
@@ -4282,27 +4298,27 @@ When using the option “Create lines from orders”, if all orders have the sam
 </thead>
 <tbody>
 <tr>
-<td><strong>Account</strong></td>
-<td><strong>Debit</strong></td>
-<td><strong>Credit</strong></td>
-<td><strong>Comment</strong></td>
+<td>Account</td>
+<td>Debit</td>
+<td>Credit</td>
+<td>Comment</td>
 </tr>
 <tr>
-<td><strong>Customer Receivables</strong></td>
-<td><strong>Total Gross Amount</strong></td>
+<td>Customer Receivables</td>
+<td>Total Gross Amount</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Product Deferred Revenue</strong></td>
-<td></td>
-<td><strong>Line Net Amount</strong></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Tax Due</strong></td>
+<td>Product Deferred Revenue</td>
 <td></td>
-<td><strong>Tax Amount</strong></td>
+<td>Line Net Amount</td>
+<td></td>
+</tr>
+<tr>
+<td>Tax Due</td>
+<td></td>
+<td>Tax Amount</td>
 <td></td>
 </tr>
 </tbody>
@@ -4318,24 +4334,27 @@ When using the option “Create lines from orders”, if all orders have the sam
 </thead>
 <tbody>
 <tr>
-<td><strong>Account</strong></td>
-<td><strong>Debit</strong></td>
-<td><strong>Credit</strong></td>
+<td>Account</td>
+<td>Debit</td>
+<td>Credit</td>
 </tr>
 <tr>
-<td><strong>Product Deferred Revenue</strong></td>
-<td><strong>Line Net Amount</strong></td>
+<td>Product Deferred Revenue</td>
+<td>Line Net Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><strong>Product Revenue</strong></td>
+<td>Product Revenue</td>
 <td></td>
-<td><strong>Line Net Amount</strong></td>
+<td>Line Net Amount</td>
 </tr>
 </tbody>
 </table>
 <p>Return Material Sales Invoice posting creates the following accounting entries.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Notice that this Invoice should be created with negative amounts.</p>
+</div>
 <p>Posting record date: Accounting Date.</p>
 <table>
 <thead>
@@ -4348,28 +4367,28 @@ When using the option “Create lines from orders”, if all orders have the sam
 </thead>
 <tbody>
 <tr>
-<td><strong>Account</strong></td>
-<td><strong>Debit</strong></td>
-<td><strong>Credit</strong></td>
-<td><strong>Comment</strong></td>
+<td>Account</td>
+<td>Debit</td>
+<td>Credit</td>
+<td>Comment</td>
 </tr>
 <tr>
-<td><strong>Customer Receivable</strong></td>
+<td>Customer Receivable</td>
 <td></td>
-<td><strong>Total Gross Amount</strong></td>
-<td><strong>One per Payment Plan Line (TB verified)</strong></td>
+<td>Total Gross Amount</td>
+<td>One per Payment Plan Line (TB verified)</td>
 </tr>
 <tr>
-<td><strong>Product Revenue Return or if not defined Product Revenue</strong></td>
-<td><strong>Line Net Amount</strong></td>
+<td>Product Revenue Return or if not defined Product Revenue</td>
+<td>Line Net Amount</td>
 <td></td>
-<td><strong>One per Invoice Line</strong></td>
+<td>One per Invoice Line</td>
 </tr>
 <tr>
-<td><strong>Tax Due</strong></td>
-<td><strong>Tax Amount</strong></td>
+<td>Tax Due</td>
+<td>Tax Amount</td>
 <td></td>
-<td><strong>One per Tax Line.</strong></td>
+<td>One per Tax Line.</td>
 </tr>
 </tbody>
 </table>
@@ -4442,9 +4461,9 @@ When using the option “Create lines from orders”, if all orders have the sam
 <h3 id="how-to-reactivate-a-voided-sales-invoice">How to Reactivate a Voided Sales Invoice</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">marketplace</a>.</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
-<p>Etendo allows the user to reactivate voided sales invoices by selecting the needed one/s and clicking the Unvoid button.</p>
+<p>Etendo allows the user to reactivate voided sales invoices by selecting the needed one/s and clicking the <strong>Unvoid</strong> button.</p>
 <p><a class="glightbox" href="/docs/assets/drive/1ylCS2UH_L4XkR02QV8XLqI1rduhcpfIe.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1ylCS2UH_L4XkR02QV8XLqI1rduhcpfIe.png" /></a></p>
 <p>Once the process is finished, the sales invoice status turns to Complete.</p>
 <div class="admonition warning">
@@ -4463,7 +4482,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a></p>
 </div>
 <p>From this window, it is possible to delete payments associated with a sales invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Sales Order window &gt; Payment Plan tab).</p>
 <p>If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window &gt; Transaction tab).</p>
@@ -4477,34 +4496,34 @@ When using the option “Create lines from orders”, if all orders have the sam
 <p>In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/modules/financial-extensions-bundle/intercompany">Functional Documentation about the Intercompany module</a></p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/optional-features/bundles/financial-extensions/intercompany">the Intercompany module user guide</a>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
 </div>
 <h3 id="bulk-posting_2">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558">Financial Extensions Bundle</a></p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a></p>
 </div>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
 <p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/modules/financial-extensions-bundle#bulk-posting">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting">the Bulk Posting module user guide</a>.</p>
 </div>
 <h3 id="advanced-rappels">Advanced Rappels</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36">Sales Extensions Bundle</a>.</p>
+<p>To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36" target="_blank">Sales Extensions Bundle</a>.</p>
 </div>
 <p>When using this functionality, in the Sales Invoice window, the user can find the sales invoices corresponding to the created rappels.</p>
 <p><a class="glightbox" href="/docs/assets/legacy/sales_invoice.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sales_invoice.png" src="/docs/assets/legacy/sales_invoice.png" /></a></p>
 <p>These sales invoices have a negative amount that represents the discount of the rappel, can include a prefix in its code to distinguish them from the rest and their status is “draft”.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#advanced-rappels">Advanced Rappels</a>.</p>
+<p>For more information, visit <a href="/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#advanced-rappels">Advanced Rappels</a>.</p>
 </div>
 <h2 id="create-invoices-from-orders">Create Invoices from Orders</h2>
 <p>Create Invoices from Orders allows the user to see the Sales Orders pending to be invoiced and it automatically generates the corresponding Sales Invoices based on them.</p>
@@ -4539,7 +4558,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 <p>All the Documents created are going to be Invoiced against the Organization set in the Invoice Organization Parameter.</p>
 <p><a class="glightbox" href="/docs/assets/drive/1wZBTbAZKVzWQjSWmFk-9YPcPlbUvcDMv.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Generate invoices" src="/docs/assets/drive/1wZBTbAZKVzWQjSWmFk-9YPcPlbUvcDMv.png" /></a></p>
 <p>Filters are available to narrow down the inputs for the generation process:</p>
-<p>**Invoice Organization:**The Organization against which the Invoices are going to be created.</p>
+<p><strong>Invoice Organization:</strong>The Organization against which the Invoices are going to be created.</p>
 <p><strong>Sales Order:</strong> leave blank to consider all sales orders or select a specific one to generate an invoice for. Note that only pending orders are included inside this drop-down.</p>
 <p><strong>Date Invoice To:</strong> only sales orders with <strong>Order Date</strong> field up to this date are included in generation process.</p>
 <p><strong>Business Partner:</strong> If none is selected, all business partners with pending invoicing are considered. If a specific customer is selected here, only sales orders to that business partner are considered for automatic invoicing. The business partners that are available to select must have orders with invoice rule 'After delivery' or 'Customer Schedule After Delivery'.</p>
@@ -4551,7 +4570,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 <p>For all Invoice Terms but <em>Customer Schedule After Delivery</em> one Sales Invoice is created for all Goods Shipment sent to the customer at the same date which are related to one Sales Order that meets Generate Invoices process criteria. If there are several Goods Shipments that take place on different dates - several Sales Invoices are generated for each Goods Shipment date. If Goods Shipment does not exist one Sales Invoice is created for one full Sales Order that meets Generate Invoices process criteria. If the Invoice Term is <em>Customer Schedule After Delivery</em> then only one sales invoice is created grouping deliveries from different orders for the same customer.</p>
 <p>Finally, it is important to remark that the Generate invoices process also uses the values specified at product level for deferring the sales revenue of corresponding sales invoice lines.</p>
 <h3 id="form_2"><strong>Form</strong></h3>
-<p>An important field to note is Invoice Date. If specified, this date is transferred as the Invoice Date to the generated Sales Invoices (and so to Accounting Date field that is used in the posting record of the invoice to the general ledger). If not defined then Movement Date field from the Goods Shipment related to the original Sales Order is set as Invoice Date. If Goods Shipment does not exist then the Order Date field from the original Sales Order is used as Invoice Date.</p>
+<p>An important field to note is <strong>Invoice Date</strong>. If specified, this date is transferred as the Invoice Date to the generated Sales Invoices (and so to Accounting Date field that is used in the posting record of the invoice to the general ledger). If not defined then Movement Date field from the Goods Shipment related to the original Sales Order is set as Invoice Date. If Goods Shipment does not exist then the Order Date field from the original Sales Order is used as Invoice Date.</p>
 <p><strong>OK</strong> button launches the process and all orders pending to be invoiced that match the filters are automatically invoiced.</p>
 <p>When the process is finished, a message is shown with the total number of created invoices and their document numbers.</p>
 <h2 id="commission-payment">Commission Payment</h2>
@@ -4611,7 +4630,7 @@ When using the option “Create lines from orders”, if all orders have the sam
 <li><strong>Is Cost Calculated</strong>: This field's default value is 'YES'. It is only taken into account when the commission is calculated based on the margin. When this flag is not marked the cost of the transaction is not calculated. That means it hasn't been possible to calculate its margin. This flag must be marked in all the details in order to be able to generate the invoice of the commission.</li>
 </ul>
 <hr />
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Sales_Management">"Sales Management"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a> by <a href="https://etendo.software">Etendo</a>.</p>
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Sales_Management" target="_blank">"Sales Management"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
