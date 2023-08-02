@@ -1,5 +1,7 @@
 ---
 title: Bulk Posting
+hide:
+    - navigation
 ---
 ## **Introduction**
 

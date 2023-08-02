@@ -1,5 +1,7 @@
 ---
 title: Advanced Intercompany Module
+hide:
+    - navigation
 ---
 ## **Introduction**
 
