@@ -15,6 +15,7 @@ theme:
     - navigation.tabs
     - navigation.instant
     - navigation.path
+    - navigation.sections
     - navigation.top
     - toc.follow
     - search.suggest
@@ -91,70 +92,69 @@ nav:
       - Navigation: getting-started/user-interface/navigation.md
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - Products:
-    - Etendo Classic::
+    - Etendo Classic:
       - User Guide:
-        - General Setup: portfolio/etendo-erp/user-guide/general-setup/index.md
-        - Jobs: portfolio/etendo-erp/user-guide/jobs/index.md
-        - Master Data Management: portfolio/etendo-erp/user-guide/masterdata-management/index.md
+        - General Setup: products/etendo-classic/user-guide/general-setup/index.md
+        - Jobs: products/etendo-classic/user-guide/jobs/index.md
+        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/index.md
         - Procurement Management: 
-          - Transactions: portfolio/etendo-erp/user-guide/procurement-management/transactions.md
-          - Analysis Tools: portfolio/etendo-erp/user-guide/procurement-management/analysis-tools.md
+          - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
+          - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
         - Warehouse Management: 
-          - Transactions: portfolio/etendo-erp/user-guide/warehouse-management/transactions.md
-          - Analysis Tools: portfolio/etendo-erp/user-guide/warehouse-management/analysis-tools.md
-          - Setup: portfolio/etendo-erp/user-guide/warehouse-management/setup.md
+          - Transactions: products/etendo-classic/user-guide/warehouse-management/transactions.md
+          - Analysis Tools: products/etendo-classic/user-guide/warehouse-management/analysis-tools.md
+          - Setup: products/etendo-classic/user-guide/warehouse-management/setup.md
         - Production Management: 
-          - Transactions:   portfolio/etendo-erp/user-guide/production-management/transactions.md
-          - Setup: portfolio/etendo-erp/user-guide/production-management/setup.md
-        - Etendo RX: portfolio/etendo-erp/user-guide/etendo-rx/index.md
+          - Transactions:   products/etendo-classic/user-guide/production-management/transactions.md
+          - Setup: products/etendo-classic/user-guide/production-management/setup.md
+        - Etendo RX: products/etendo-classic/user-guide/etendo-rx/index.md
         - Material Requirement Planning: 
-          - Transactions: portfolio/etendo-erp/user-guide/material-requirement-planning/transactions.md
-          - Setup: portfolio/etendo-erp/user-guide/material-requirement-planning/setup.md
+          - Transactions: products/etendo-classic/user-guide/material-requirement-planning/transactions.md
+          - Setup: products/etendo-classic/user-guide/material-requirement-planning/setup.md
         - Sales Management: 
-          - Transactions: portfolio/etendo-erp/user-guide/sales-management/transactions.md
-          - Analysis Tools: portfolio/etendo-erp/user-guide/sales-management/analysis-tools.md
-          - Setup: portfolio/etendo-erp/user-guide/sales-management/setup.md 
-        - Project & Service Management: portfolio/etendo-erp/user-guide/project-and-services-management/index.md
+          - Transactions: products/etendo-classic/user-guide/sales-management/transactions.md
+          - Analysis Tools: products/etendo-classic/user-guide/sales-management/analysis-tools.md
+          - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
+        - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
         - Financial Management: 
           - Receivables and Payables:
-            - Transactions: portfolio/etendo-erp/user-guide/financial-management/receivables-and-payables/transactions.md
-            - Analysis Tools: portfolio/etendo-erp/user-guide/financial-management/receivables-and-payables/analysis-tools.md
-            - Setup: portfolio/etendo-erp/user-guide/financial-management/receivables-and-payables/setup.md
+            - Transactions: products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions.md
+            - Analysis Tools: products/etendo-classic/user-guide/financial-management/receivables-and-payables/analysis-tools.md
+            - Setup: products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup.md
           - Accounting:
-            - Transactions: portfolio/etendo-erp/user-guide/financial-management/accounting/transactions.md
-            - Analysis Tools: portfolio/etendo-erp/user-guide/financial-management/accounting/analysis-tools.md
-            - Setup: portfolio/etendo-erp/user-guide/financial-management/accounting/setup.md
-          - Assets: portfolio/etendo-erp/user-guide/financial-management/assets/index.md
+            - Transactions: products/etendo-classic/user-guide/financial-management/accounting/transactions.md
+            - Analysis Tools: products/etendo-classic/user-guide/financial-management/accounting/analysis-tools.md
+            - Setup: products/etendo-classic/user-guide/financial-management/accounting/setup.md
+          - Assets: products/etendo-classic/user-guide/financial-management/assets/index.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/essentials-extensions/index.md
-          - Platform Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/platform-extensions/index.md
-          - Warehouse Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/warehouse-extensions/index.md
-          - Production Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/production-extensions/index.md
-          - Sales Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/sales-extensions/index.md
-          - Financial Extensions Bundle: portfolio/etendo-erp/optional-features/bundles/financial-extensions/index.md
-          - Spanish Localization Bundle: portfolio/etendo-erp/optional-features/bundles/spain-localization/index.md
-          - Etendo BI Bundle: portfolio/etendo-erp/optional-features/bundles/etendobi-extensions/index.md
+          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/index.md
+          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/index.md
+          - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/index.md
+          - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/index.md
+          - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/index.md
+          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/index.md
+          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/index.md
+          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/index.md
         - Supported Modules:
-          - Tax Report Launcher: portfolio/etendo-erp/optional-features/supported-modules/tax-report-launcher.md
+          - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
   - What's New:
-    - Etendo Release Cycle: whats-new/etendo-erp/etendo-release-cycle.md
+    - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://www.etendo.software"
-    - Etendo Classic:
-      - Release Notes: whats-new/etendo-erp/release-notes/index.md
-      - Optional Features: 
-        - Overview: whats-new/etendo-erp/extensions/overview.md
-        - Essentials Extensions Bundle: whats-new/etendo-erp/extensions/essentials-extensions/release-notes.md
-        - Platform Extensions Bundle: whats-new/etendo-erp/extensions/platform-extensions/release-notes.md
-        - Warehouse Extensions Bundle: whats-new/etendo-erp/extensions/warehouse-extensions/release-notes.md
-        - Production Extensions Bundle: whats-new/etendo-erp/extensions/production-extensions/release-notes.md
-        - Sales Extensions Bundle: whats-new/etendo-erp/extensions/sales-extensions/release-notes.md
-        - Financial Extensions Bundle: whats-new/etendo-erp/extensions/financial-extensions/release-notes.md
-        - Spanish Localization Bundle: whats-new/etendo-erp/extensions/spain-localization/release-notes.md
-        - Etendo BI Bundle: whats-new/etendo-erp/extensions/etendobi-extensions/release-notes.md
+    - Release Notes :
+      - Etendo Classic: whats-new/release-notes/etendo-classic/index.md
+      - Bundles:
+        - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
+        - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
+        - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
+        - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
+        - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
+        - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
+        - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
+        - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
   - Live Builds: live-builds/index.md
   - Help and Support: 
     - Support Service: help-and-support/index.md
-    - Bug Report: help-and-support/how-to-report-bugs.md
+    - How to report bugs: help-and-support/how-to-report-bugs.md
   
 
