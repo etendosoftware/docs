@@ -40,7 +40,7 @@ The overall flow is the following:
 !!! info
     One quotation, one sales order. Several sales orders cannot be created from the same quotation.
 
-- Closed - Rejected: When the quotation is finally not accepted by the customer. It is mandatory to enter a reject reason. No further actions are allowed.
+- **Closed - Rejected**: When the quotation is finally not accepted by the customer. It is mandatory to enter a reject reason. No further actions are allowed.
 
 ### Header
 
@@ -95,7 +95,7 @@ Summarizes tax related information for the whole sales quotation. Contains as ma
 ## Sales Extensions Bundle - (Sales Quotation)
 
 !!! info
-    To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36)
+    To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
 Through this window, the user can generate sales quotations and create the corresponding orders from those quotations.
 

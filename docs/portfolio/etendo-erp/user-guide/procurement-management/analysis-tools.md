@@ -56,7 +56,8 @@ There is no specific field to note but just the dimensional primary and secondar
 
 ![](/docs.etendo.software/assets/drive/1ihcncYc8rQoONnKy5KzGqN2IaYw5r18f.png)
 
-The outcome of this report can be viewed in HTML format and PDF format.
+!!! tip
+    The outcome of this report can be viewed in HTML format and PDF format.
 
 ### Sample Report Output
 
@@ -80,7 +81,7 @@ There is no specific field to note, but just the dimensional primary and seconda
 
 ![](/docs.etendo.software/assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
 
-There is also possibility to export this report to a PDF or a XLS file:
+There is also the possibility to export this report to a PDF or a XLS file:
 
 
 ![](/docs.etendo.software/assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
