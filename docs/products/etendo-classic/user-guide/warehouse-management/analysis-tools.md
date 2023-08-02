@@ -36,7 +36,7 @@ Following distribution is used: A products represent 80% value of the warehouse,
 
 ### **Sample Report Output**
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
+![Material Transaction Report](/docs/assets/drive/1DpBnQAG8Xyk9rM5xKhQvdKNt8p-bm4tj.png)
 
 
 Columns to note:
@@ -62,11 +62,11 @@ Material Transaction Report lists all documents (outgoing shipments and incoming
 
 Information on this report can be filtered using movement date, business partner, warehouse and project. Reports can be generated on HTML and PDF format.
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
+![Material Transaction Report](/docs/assets/drive/1B8aETuwl82fGlqe_SQLX3VAFz_2x6Tv2.png)
 
 ### Sample Report Output
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
+![Material Transaction Report](/docs/assets/drive/1DxL6-LHWr4QxeYT1F1y0SbAT3-szlkGW.png)
 
 
 
@@ -79,7 +79,7 @@ Stock Report shows a stock level of all products (that have quantity on hand dif
 
 The outcome of this report can be filtered by using movement date, product category, product and warehouse locators.
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
+![Material Transaction Report](/docs/assets/drive/1OgkmMsGjuADw-Sbqn1tfJ5WkCbq_AGx5.png)
 
 
 
@@ -89,7 +89,7 @@ The outcome of this report can be viewed in HTML and PDF format.
 
 **Sample Report output**
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
+![Material Transaction Report](/docs/assets/drive/1jjN-TjQjeY-38odbT6xBRYCpACEmMUxz.png)
 
 
 ## Stock History
@@ -103,12 +103,12 @@ This is a read only window in which the user is able to consult the daily stock.
 The Stock History window is filled only by the background process "Create Stock History". It can be programmed from the 'Request Processing' window, where it can be assigned for which role and organization it is executed, and the periodicity with which it is executed.
 
 !!! info
-    Check the [Technical documentation](https://docs.etendo.software/en/technical-documentation/bundles/warehouse-extensions-bundle) about Stock History to extend the process to calculate the registers for the daily stock history. 
+    Check the [Technical documentation](https://docs/en/technical-documentation/bundles/warehouse-extensions-bundle) about Stock History to extend the process to calculate the registers for the daily stock history. 
 
 
 No data will be displayed in the window until search filters are applied to the window. Once the filters are applied, click the button on the right to complete the process. 
 
-![](/docs.etendo.software/assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
+![](/docs/assets/drive/10C8VIJpu2FJkojmrZ8aKCZMZo0D0OpMJ.png)
 
 The window shows the following fields from which the user is able to filter and get the needed data: 
 - Stock date 
@@ -121,7 +121,7 @@ The window shows the following fields from which the user is able to filter and 
 - Allocated Quantity
 - Quantity in draft transaction
  
-![](/docs.etendo.software/assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
+![](/docs/assets/drive/1MhFI0Ii9bhm8EBBK-UalKWK90_-Gkm_G.png)
 
 This functionality includes a process to close the stock and save the historical information.
 
@@ -135,7 +135,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Parameters Window**
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
+![Material Transaction Report](/docs/assets/drive/1HGDsUBdSrfe3_Nzk_ojKq3Ck-aGvIAdx.png)
 
 
 
@@ -151,7 +151,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 ### **Output Window** 
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
+![Material Transaction Report](/docs/assets/drive/1btCDeLvHaczMWt9lE05E0J8RFjePTZFM.png)
 
 
 -   **Product**: Name of the Product.
@@ -173,7 +173,7 @@ The information will persist until the first not closed Period. By doing so, it 
 !!! info
     In order to use this functionality it is necessary to schedule the Background Process named *Generate Aggregated Data Background*. This can be done through the *Process Request* Window.
 
-![Material Transaction Report](/docs.etendo.software/assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
+![Material Transaction Report](/docs/assets/drive/1_mjP-Y6k-QGbCLm8FeIQI08YLJghMAfM.png)
 
 
 
@@ -200,8 +200,8 @@ Additionally, the user can include or exclude these documents:
 -   Inventory Movements
 -   and Production.
 
-![Product Movements Report](/docs.etendo.software/assets/drive/1KCTc1ueZ2Z-w-saDYnPVYx-BUDlYq4Gl.png)
+![Product Movements Report](/docs/assets/drive/1KCTc1ueZ2Z-w-saDYnPVYx-BUDlYq4Gl.png)
 
 ### Sample Report Output
 
-![Product Movements Report](/docs.etendo.software/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+![Product Movements Report](/docs/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)

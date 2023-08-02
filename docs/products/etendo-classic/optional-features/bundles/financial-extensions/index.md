@@ -11,14 +11,14 @@ The Financial Extensions bundle includes the following modules:
 This module allows setting a non deductible tax's amount to a specified financial account
 
 !!! info
-    For more information, visit [the User Guide](/docs.etendo.software/legacy/financial-management-setup-accounting#purchase-invoice-which-includes-not-deductible-tax-amount).
+    For more information, visit [the User Guide](/docs/legacy/financial-management-setup-accounting#purchase-invoice-which-includes-not-deductible-tax-amount).
 
 ## Conversion Rate Downloader
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit [the User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#conversion-rate-download-rule) and the [Technical Documentation](/docs.etendo.software/legacy/technical-documentation/bundles/financial-extensions-bundle).
+    For more information, visit [the User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#conversion-rate-download-rule) and the [Technical Documentation](/docs/legacy/technical-documentation/bundles/financial-extensions-bundle).
 
 ## Banking Pool
 
@@ -27,7 +27,7 @@ This process allows keeping currency conversions up to date by generating conver
 This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
 
 !!! info
-    For more information, visit [the User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#financial-type-configuration) and the [Technical Documentation](/docs.etendo.software/legacy/technical-documentation/bundles/financial-extensions-bundle#banking-pool).
+    For more information, visit [the User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#financial-type-configuration) and the [Technical Documentation](/docs/legacy/technical-documentation/bundles/financial-extensions-bundle#banking-pool).
 
 ## Business Partner Settlement
 
@@ -36,7 +36,7 @@ This feature allows entering in the system all the financings the company has. I
 This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
 
 !!! info
-    For more information, visit [the User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#business-partner-settlement) and the [Technical Documentation](/docs.etendo.software/legacy/technical-documentation/bundles/financial-extensions-bundle#business-partner-settlement).
+    For more information, visit [the User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#business-partner-settlement) and the [Technical Documentation](/docs/legacy/technical-documentation/bundles/financial-extensions-bundle#business-partner-settlement).
 
 ## Deferred GL Journal
 
@@ -45,7 +45,7 @@ This module provides a new document where it is possible to settle debts or cred
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Follow the process to create a journal entry from the beginning and duplicate it later.
 
 !!! info
-    For more information, visit [the Deferred GL Journal User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#deferred-gl-journal).
+    For more information, visit [the Deferred GL Journal User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#deferred-gl-journal).
 
 ## Financial Advanced Reports
 
@@ -54,13 +54,13 @@ This functionality allows the user to duplicate a journal entry as many times as
 The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced).
+    For more information, visit [the Balance Sheet and P&L Structure User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced).
 
 !!! info
-    For more information, visit [the General Ledger Report User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced-1).
+    For more information, visit [the General Ledger Report User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced-1).
 
 !!! info
-    For more information, visit the [the Journal Entries Report User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced-2).
+    For more information, visit the [the Journal Entries Report User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-reports-accounting#advanced-2).
 
 ## Payment Removal
 
@@ -76,7 +76,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 !!! info
     For more information, visit:
 
-    \- [Sales Order](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#sales-order) > \- [Purchase Order](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) > \- [Sales Invoice](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#sales-invoice) > \- [Purchase Invoice](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-invoice) > \- [Payment In](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-in) > \- [Payment Out](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-out) > \- [Financial Account](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#financial-account)  
+    \- [Sales Order](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#sales-order) > \- [Purchase Order](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) > \- [Sales Invoice](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#sales-invoice) > \- [Purchase Invoice](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-invoice) > \- [Payment In](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-in) > \- [Payment Out](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-out) > \- [Financial Account](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#financial-account)  
 
 ## Remittances
 
@@ -85,7 +85,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 This functionality allows creating a remittance which is a group of "payments" (in/out) or "orders/invoices" that can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.
 
 !!! info
-    For more information, visit [the Remittances Module User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance).
+    For more information, visit [the Remittances Module User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance).
 
 ## Intercompany
 
@@ -103,14 +103,14 @@ In case the user has to create orders or invoices among two or more organization
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
 !!! info
-    For more information, visit Functional Documentation about [GL Journal](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#gl-journal) and [Simple GL Journal](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#simple-gl-journal)
+    For more information, visit Functional Documentation about [GL Journal](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#gl-journal) and [Simple GL Journal](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#simple-gl-journal)
 
 ## Asset Amortization Report
 
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
 !!! info
-    For more information, visit [the User Guide](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets#amortization-report).
+    For more information, visit [the User Guide](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets#amortization-report).
 
 ## Advanced Financial Docs. Processing
 
@@ -120,7 +120,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 
 !!! info
     For more information, visit:
-    \- [Sales Order](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-a-closed-sales-order) > \- [Sales Invoice](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-a-voided-sales-invoice) > \- [Purchase Order](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-a-closed-purchase-order) > \- [Purchase Invoice](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-a-voided-purchase-invoice) > \- [Amortization](/docs.etendo.software/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets#how-to-reactivate-amortizations) > \- and the [Technical Documentation](/docs.etendo.software/legacy/technical-documentation/bundles/financial-extensions-bundle#advanced-financial-docs-processing)
+    \- [Sales Order](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-a-closed-sales-order) > \- [Sales Invoice](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-a-voided-sales-invoice) > \- [Purchase Order](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-a-closed-purchase-order) > \- [Purchase Invoice](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-a-voided-purchase-invoice) > \- [Amortization](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-assets#how-to-reactivate-amortizations) > \- and the [Technical Documentation](/docs/legacy/technical-documentation/bundles/financial-extensions-bundle#advanced-financial-docs-processing)
 
 ## Bulk Posting
 
@@ -129,7 +129,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting module User Guide](/docs.etendo.software/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module User Guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Advanced Business Partner Settlement
 
@@ -139,11 +139,11 @@ This functionality allows the user to create settlements for invoices, both sale
 
 !!! info
     For more information, visit:
-    [Payment In](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-in) > [Payment Out](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-out) > [Financial Account](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#financial-account)
+    [Payment In](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-in) > [Payment Out](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#payment-out) > [Financial Account](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#financial-account)
 
 ## Advanced Remittance
 
 This functionality allows the user to set a bank account as the default for business partners. This information is used for the creation of orders and invoices, and, therefore, in the remittances process. It is also possible to filter invoices with a new pop-up window in the Remittance window.
 
 !!! info
-    For more information, visit [the User Guide](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#advanced-remittance).
+    For more information, visit [the User Guide](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#advanced-remittance).

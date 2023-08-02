@@ -9,4 +9,4 @@ This document covers how IntelliJ IDEA 13 is capable of importing code formatter
 1.  Open IntelliJ IDEA Settings → Code Style → Java, click Manage, and import that XML file by clicking “Import”.
 
 !!! info
-    [Attached file for importing preferences in IntelliJ](/docs.etendo.software/legacy/internaldocs/etendo.xml "etendo.xml")
+    [Attached file for importing preferences in IntelliJ](/docs/legacy/internaldocs/etendo.xml "etendo.xml")

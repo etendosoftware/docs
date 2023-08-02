@@ -118,7 +118,7 @@ El módulo del Modelo 303 incluye unos datos de referencia que relaciona los tip
 
 -   Una vez insalado el módulo, los datos de referencia deben aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación: Configuración General || Organización || Gestión del módulo de Empresa.
 
-![](/docs.etendo.software/assets/drive/EhxTBUvs6RBHj5qryz08lOpzAmCekUOmboNjz-E3OUuIK92wRMMzhOul3GuQ1hHMAutQbKIBKSi4NRQ0lPVDxWALgH4Fzsmc47MYlVJZZAOHS5giW468E6SMHsBjt2vqa8pn93TEZUBvHqiUId8oegI.png)
+![](/docs/assets/drive/EhxTBUvs6RBHj5qryz08lOpzAmCekUOmboNjz-E3OUuIK92wRMMzhOul3GuQ1hHMAutQbKIBKSi4NRQ0lPVDxWALgH4Fzsmc47MYlVJZZAOHS5giW468E6SMHsBjt2vqa8pn93TEZUBvHqiUId8oegI.png)
 
 ## **Contenido del módulo**
 
@@ -127,7 +127,7 @@ Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
 -   Se han creado dos nuevos informes, el modelo 303 mensual y el trimestral para la organización/es en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
      
 
-![](/docs.etendo.software/assets/drive/MAZZa2VuPorWEk1BAyrZHON1lh2tNqdkQna7BJhsI0E5g4R9ML0BrK9Xvpicq7ZG4xqlzAMn_0JEJBOskqgZvemex1fqHA8u9dvn6XT1190PDLTHuuzsunhwnbZ9PeooUmrqd6oiKCt-fI-J7ONuNsU.png)
+![](/docs/assets/drive/MAZZa2VuPorWEk1BAyrZHON1lh2tNqdkQna7BJhsI0E5g4R9ML0BrK9Xvpicq7ZG4xqlzAMn_0JEJBOskqgZvemex1fqHA8u9dvn6XT1190PDLTHuuzsunhwnbZ9PeooUmrqd6oiKCt-fI-J7ONuNsU.png)
 
 -   La pestaña "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
     Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la pestaña "Parámetro de declaración":
@@ -137,17 +137,17 @@ Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
 
 Estos parámetros se ligan a los tipos de impuestos en función de que las operaciones ligadas a ellos deban declararse, por ejemplo, como parte del IVA Devengado en Régimen Ordinario o bien como parte del IVA Devengado por Recargo de Equivalencia.
 
-![](/docs.etendo.software/assets/drive/zC4megIrlvdoyIVRkdw2ET8DrB6IV8rIcxQMRlZH4qJAHIO8TFlmif7eUuqb6NRoM6vvzm1mP5BLwsBOKFLQhDOLPbloFfYy6AVDe9p820rJKJem-Jy9UIlCzCafEWf15srFfJUOfrBR9fm5GSiUVsg.png)
+![](/docs/assets/drive/zC4megIrlvdoyIVRkdw2ET8DrB6IV8rIcxQMRlZH4qJAHIO8TFlmif7eUuqb6NRoM6vvzm1mP5BLwsBOKFLQhDOLPbloFfYy6AVDe9p820rJKJem-Jy9UIlCzCafEWf15srFfJUOfrBR9fm5GSiUVsg.png)
 
 -   Por tanto, los rangos de impuestos se han asociado al correspondiente parámetro del 303, con el fin de que las transacciones completadas y contabilizadas ligadas a dichos impuestos, se tenga en cuenta en una u otra casilla/posición del fichero.  
      
 
-![](/docs.etendo.software/assets/drive/Vxz9LkuESteDKaeIzQmhO9gu10wFqL8QU579ZxLacwnA5WlhWtA-wkXgQvBfe7ZJCX6ksbd4XfoRk4U7sKTbnAQAWBbTgFBYJau2aJstONlCeoFElqPArRuDIf_dGIaD50o6yGJkxowqixFQAJ18Beo.png)
+![](/docs/assets/drive/Vxz9LkuESteDKaeIzQmhO9gu10wFqL8QU579ZxLacwnA5WlhWtA-wkXgQvBfe7ZJCX6ksbd4XfoRk4U7sKTbnAQAWBbTgFBYJau2aJstONlCeoFElqPArRuDIf_dGIaD50o6yGJkxowqixFQAJ18Beo.png)
 
 -   Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 303, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
      
 
-![](/docs.etendo.software/assets/drive/612TP0yYxrPiuET6z7IkyF40fr5KGP6XC5cxCTbrK5eg6K1Im1xh_XYc3PzLVeMApJERGkm_9QHTuvuTl4slrb_t8TktOSrtNeisdNQcSpzodyq9c8wptIpFshledbtdup6U7-Kmw5FiEvBYOvfqsDI.png)
+![](/docs/assets/drive/612TP0yYxrPiuET6z7IkyF40fr5KGP6XC5cxCTbrK5eg6K1Im1xh_XYc3PzLVeMApJERGkm_9QHTuvuTl4slrb_t8TktOSrtNeisdNQcSpzodyq9c8wptIpFshledbtdup6U7-Kmw5FiEvBYOvfqsDI.png)
 
 ## **Configuración**
 
@@ -164,7 +164,7 @@ La configuración del modelo 303 se instala por defecto y se puede comprobar en 
 
 Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
 
-![](/docs.etendo.software/assets/drive/5e_DW0KWWXZ8E1fET-mk_Y2oq6YGls8fZL-zmAGlO8wzUqgFH0zKq0ir2QP6CK-SOWttp263yE5VKCjPLKuz5ubn63i8nzztWYzLioqT1Ar_RTn9zlNOCtG9T5CRG2wD0fzJpACMuAA7-vycnuQo390.png)
+![](/docs/assets/drive/5e_DW0KWWXZ8E1fET-mk_Y2oq6YGls8fZL-zmAGlO8wzUqgFH0zKq0ir2QP6CK-SOWttp263yE5VKCjPLKuz5ubn63i8nzztWYzLioqT1Ar_RTn9zlNOCtG9T5CRG2wD0fzJpACMuAA7-vycnuQo390.png)
 
 -   **Fichero**
     -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
@@ -455,7 +455,7 @@ La información que el usuario puede obtener desde el sistema es las bases impon
 
 El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:
 
-![](/docs.etendo.software/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
+![](/docs/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
 
 ### **Generación del modelo 303**
 
@@ -463,7 +463,7 @@ Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se gene
 
 Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":
 
-![](/docs.etendo.software/assets/drive/dNa0Xp7cP15EVu-NquNiO27FfKbbDTYXfLQ5Wm4I8LxL3ah4xw4_v3_PB6zShaBBNuFB1dwW9O15LSxabPohtRNc3xjWGMrgxQzdvqRagqs2C0A6Pwq3DJ5-FVhdBE-RMxe09uIGBEXM5YE7NQ3KRWg.png)
+![](/docs/assets/drive/dNa0Xp7cP15EVu-NquNiO27FfKbbDTYXfLQ5Wm4I8LxL3ah4xw4_v3_PB6zShaBBNuFB1dwW9O15LSxabPohtRNc3xjWGMrgxQzdvqRagqs2C0A6Pwq3DJ5-FVhdBE-RMxe09uIGBEXM5YE7NQ3KRWg.png)
 
 se pueden introducir los parámetros de entrada, o datos que no pueden obtenerse de Etendo a través de botón de proceso "Parámetros de entrada".
 
@@ -482,19 +482,19 @@ Las secciones de la nueva ventana que se muestra se corresponden con las seccion
 
 Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
 
-![](/docs.etendo.software/assets/drive/bpFz8cRTsc3W3ZVVCTGLokr_d4v1SUHN7G6vqO06Hi6-QW8coINqtV9RpvmU-N4q0XCcsVgU631CxMVMvEJo-XQtAdLTSyeHuGCST7tS0PvC_X5DTwV8Swq5dXsH_ihVUjsXamo9RQmP2b4F1eAdI3Q.png)
+![](/docs/assets/drive/bpFz8cRTsc3W3ZVVCTGLokr_d4v1SUHN7G6vqO06Hi6-QW8coINqtV9RpvmU-N4q0XCcsVgU631CxMVMvEJo-XQtAdLTSyeHuGCST7tS0PvC_X5DTwV8Swq5dXsH_ihVUjsXamo9RQmP2b4F1eAdI3Q.png)
 
 Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
 
-![](/docs.etendo.software/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png)
+![](/docs/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png)
 
 Secciones:  **"Complementaria", “Tributación por razón de territorio” y “Additional Information”**
 
-![](/docs.etendo.software/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
+![](/docs/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
 
 Una vez que el fichero se ha generado, tendrá este aspecto:
 
-![Fichero.png](/docs.etendo.software/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
+![Fichero.png](/docs/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
 
 ### **Pre-validación del modelo 303**
 

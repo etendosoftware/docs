@@ -64,4 +64,4 @@ ant update.database compile.complete.deploy
 
 > Your environment is ready to be migrated to Etendo.  
 !!! success
-    Check the [migration tool’s guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo).
+    Check the [migration tool’s guide](https://docs/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo).

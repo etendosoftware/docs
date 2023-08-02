@@ -57,7 +57,7 @@ debezium:
 
 ### Debezium configuration
 
-Follow the guide to [configure debezium](https://docs.etendo.software/en/technical-documentation/etendo-environment/platform/HowToListenNewTablesInEtendoRX)
+Follow the guide to [configure debezium](https://docs/en/technical-documentation/etendo-environment/platform/HowToListenNewTablesInEtendoRX)
 
 * Replace the **‘Hostname’** from **postgres** to **host.docker.internal**.
 

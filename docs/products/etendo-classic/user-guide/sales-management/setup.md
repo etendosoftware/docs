@@ -16,13 +16,13 @@ This section describes the different windows that are necessary to set up the sa
 
 In this window, the user defines in which status the goods come from the customer. These values are used in the **Return Material Receipt** window.
 
-![Condition of the goods](/docs.etendo.software/assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae.png)
+![Condition of the goods](/docs/assets/drive/12vgLwH05GA2eHFM0hO6gh-oMJB8wQnae.png)
 
 ## **Sales Region**
 
 In this section, the user can create sales regions to be used in sales operations and define a sales region to be used in the sales process.
 
-![Sales region](/docs.etendo.software/assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png)
+![Sales region](/docs/assets/drive/1vcGKHAFpkqZTXMU1upjaphEvhkU3Gw2F.png)
 
 ## **Commission**
 
@@ -63,7 +63,7 @@ Header lists main terms that will be used to calculate the commission:
 -   List details: See the result of the commission grouped or line by line. When the commission is calculated based on margin the list details is always checked
 -   Cascade: Able to manage complex commissions (exclude some invoice/order lines, apply different multiplier quantity/amount for some invoice/order lines...). When this field is checked the result of the commission is grouped on line by line.
 
-![Commission's header](/docs.etendo.software/assets/drive/11LiWjvIEjdQ143R2q6TUmJyJ2HRbtqpD.png)
+![Commission's header](/docs/assets/drive/11LiWjvIEjdQ143R2q6TUmJyJ2HRbtqpD.png)
 
 There are two buttons:
 
@@ -87,26 +87,26 @@ Lines tab allows the user to define in deep the conditions of the commission:
 
 Finally, the result of the commission will be the combination of these three lines.
 
-![Commission's pop up](/docs.etendo.software/assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png)
+![Commission's pop up](/docs/assets/drive/1GZ90ujr5lfIIci69XYa8q-tMA7nb76_f.png)
 
 ## **Channel**
 
 In this section, the user can create specific sales channels to be used in sales operations and define a sales channel to be used in the sales process.
 
-![Channel window](/docs.etendo.software/assets/drive/1BFtERRlthvXGBH9eadge2BdYwXJTqm4Z.png)
+![Channel window](/docs/assets/drive/1BFtERRlthvXGBH9eadge2BdYwXJTqm4Z.png)
 
 ## **Sales Campaign**
 
 In this section, the user can create specific sales campaigns to be used in sales operations and define a sales campaign to be used in the sales process.
 
-![Sales campaign window](/docs.etendo.software/assets/drive/1SwdM8FP349N8HNZhQF546HuE6rIzvoak.png)
+![Sales campaign window](/docs/assets/drive/1SwdM8FP349N8HNZhQF546HuE6rIzvoak.png)
 
 
 ## **Reject Reason**
 
 In this window, the user defines the reasons to reject quotations. These values are used in the **Sales Quotation** window.
 
-![Reject reason window](/docs.etendo.software/assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
+![Reject reason window](/docs/assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
 
 ---
 This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).

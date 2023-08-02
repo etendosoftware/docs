@@ -40,16 +40,16 @@ Optional command line parameters
 
 To debug the generate-entities JAR copy the path location of the file obtained
 from the console output after the '-cp'
-![rx1.png](/docs.etendo.software/assets/legacy/etendorx/etendorx-advanced-options/rx1.png)
+![rx1.png](/docs/assets/legacy/etendorx/etendorx-advanced-options/rx1.png)
 
 Using intellij go to File -> Project Structure -> Libraries
 Press '+' -> New project library -> Java -> Paste the path location of the JAR file
-![rx2.png](/docs.etendo.software/assets/legacy/etendorx/etendorx-advanced-options/rx2.png)
+![rx2.png](/docs/assets/legacy/etendorx/etendorx-advanced-options/rx2.png)
 
 In the Intellij External Libraries you would see the 'generate-entities" JAR file.
 Go to 'generate.entities.jar' -> com -> etendorx.gen -> GenerateEntitiesApplication and set a breakpoint.
-![rx3.png](/docs.etendo.software/assets/legacy/etendorx/etendorx-advanced-options/rx3.png)
+![rx3.png](/docs/assets/legacy/etendorx/etendorx-advanced-options/rx3.png)
 
 In the 'Intellij configurations' create a new 'Remote JVM Debug' configuration
 using the specified port and press 'debug'.
-![rx4.png](/docs.etendo.software/assets/legacy/etendorx/etendorx-advanced-options/rx4.png)
+![rx4.png](/docs/assets/legacy/etendorx/etendorx-advanced-options/rx4.png)

@@ -143,6 +143,6 @@ Welcome to Etendo team !
 
   
 !!! info
-    Go back to the main migration page to continue with the [Post Migration Configuration](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo#post-migration-configuration) process.
+    Go back to the main migration page to continue with the [Post Migration Configuration](https://docs/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo#post-migration-configuration) process.
 
 

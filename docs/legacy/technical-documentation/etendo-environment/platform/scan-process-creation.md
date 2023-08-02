@@ -22,7 +22,7 @@ Optional:
 
 1. First of all, you have to create a process. Log in as "System administrator. Open the `Application` > `Application Dictionary` > `Process Definition` window and create a new record.
 
-![scanprocessdefinition.png](/docs.etendo.software/assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png)
+![scanprocessdefinition.png](/docs/assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png)
 
 - **Module**: It refers to the module where the process will be added.
 - **Identifier**: It is the identifier used to save the process in the database.
@@ -52,12 +52,12 @@ Optional:
 
 4. Change the **reference** to Button and in **Process Definition** select the process created recently.
 
-![captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png](</docs.etendo.software/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png>)
+![captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png](</docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png>)
 
 5. In `Application` > `Application Dictionary` > `Windows,Tabs and Fields`, search for the windows where you want the process.
    E.g. Search **asset windows** and then **assets scan field** in the main tab search. Uncheck "Displayed" (because the scan should only be shown in the mobile app).
 
-![captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png](</docs.etendo.software/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png>)
+![captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png](</docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png>)
 
 > When the process is executed from the mobile application, a Json will be sent to the backend with all the scanned information. This data must be processed from the Java class defined in the handler and the expected functionality must be performed.
 !!! success

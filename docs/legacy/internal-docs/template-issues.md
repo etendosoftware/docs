@@ -4,7 +4,7 @@ title: Template Issues
 The objective of using this template is to facilitate the understanding of the task to be solved and its solution.
 
 !!! info
-    In case you want to report **bugs**, read and follow guide of [Reporting bugs](https://docs.etendo.software/en/end-user-documentation/help-and-support/how-to-report-bugs)
+    In case you want to report **bugs**, read and follow guide of [Reporting bugs](https://docs/en/end-user-documentation/help-and-support/how-to-report-bugs)
 
 
 ### Template Structure

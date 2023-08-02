@@ -5,7 +5,7 @@ title: Install Modules
 
 This section provides a step by step explanation on how to Install modules from Etendo Marketplace.
 
-![](/docs.etendo.software/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png)
+![](/docs/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png)
 
 1.  First, go to [_Etendo Marketplace_](http://marketplace.etendo.cloud).
 2.  Browse or search for the module that you want to install.

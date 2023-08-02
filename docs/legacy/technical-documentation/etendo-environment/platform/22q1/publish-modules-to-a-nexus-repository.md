@@ -5,7 +5,7 @@ title: Publish Modules to a Nexus Repository
 
 ## Overview
 !!! warning
-   The publication of modules changed from Etendo 22Q1, to review the previous documentation see the following  link [Publish modules to a Nexus repository | 21Q4](https://docs.etendo.software/en/technical-documentation/etendo-environment/platform/publish-modules-to-a-nexus-repository)  
+   The publication of modules changed from Etendo 22Q1, to review the previous documentation see the following  link [Publish modules to a Nexus repository | 21Q4](https://docs/en/technical-documentation/etendo-environment/platform/publish-modules-to-a-nexus-repository)  
 
 This article explains how to publish a module to Etendo’s Nexus Repositories.
 

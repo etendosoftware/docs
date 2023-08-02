@@ -11,43 +11,43 @@ This section explains how to install a new Etendo environment. It includes:
 
 ## Install Etendo on PC
 
-- [Requirements](/docs.etendo.software/requirements)
-- Follow the [Installation Guide](/docs.etendo.software/installation)
+- [Requirements](/docs/requirements)
+- Follow the [Installation Guide](/docs/installation)
 
 ## How to run Etendo Project in IntelliJ IDEA Ultimate
 
 1.  Open source directory with IntelliJ:
 
-![intellij1.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png)
+![intellij1.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png)
 
 2.  Open the project. This can be done from the welcome view, from `Open & Import` or from `File` >> `Open`
 
-![intellij2.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png)
+![intellij2.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png)
 
 3.  The project includes Tomcat configuration. Click on “Add configuration...”
 
-![intellij3.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png)
+![intellij3.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png)
 
 4.  Select the Tomcat configuration that appears first in the list, check the Tomcat server configuration on your machine, and then click the OK button.
 
-![intellij4.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png)
+![intellij4.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png)
 
 5.  Run Tomcat or run in development mode.
 
-![intellij5.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png)
+![intellij5.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png)
 
 ## How to run Etendo Project in IntelliJ Community
 
 1.  You can use the Smart Tomcat plugin. To install, go to `File` >> `Settings` >> `Plugins` and search for `“Smart Tomcat”`.
 
-![intellij6.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png)
+![intellij6.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png)
 
 2.  Download Apache-Tomcat and unzip it.
 3.  Go to `Add Configuration` >> `+` >> `Smart Tomcat`. In Tomcat Sever, select the Apache-Tomcat folder. In the same window, set “Tomcat” as the name and change the Context path to the context project name.
 
-![intellij7.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png)
+![intellij7.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png)
 
-![intellij8.png](/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij8.jpeg)
+![intellij8.png](/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij8.jpeg)
 
 ### Enable Etendo Logs (optional)
 

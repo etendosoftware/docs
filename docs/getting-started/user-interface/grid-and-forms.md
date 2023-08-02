@@ -7,11 +7,11 @@ Etendo allows the customization of grid and form views. Customized windows and f
 
 ### Grid view
 
-![Grid view example](/docs.etendo.software/assets/drive/1Fc2LfvRYeixaOCFt6qKl-GG4ycr0tyhR.png)
+![Grid view example](/docs/assets/drive/1Fc2LfvRYeixaOCFt6qKl-GG4ycr0tyhR.png)
 
 ### Form view
 
-![Form view example](/docs.etendo.software/assets/drive/1BFjhtuYG6q5bsfwuSCVt_c4qmaj46vdY.png)
+![Form view example](/docs/assets/drive/1BFjhtuYG6q5bsfwuSCVt_c4qmaj46vdY.png)
 
 ## Grid View
 
@@ -32,7 +32,7 @@ On top of the columns in a grid, the user will find column filters. These filter
 -   Dropdown reference column filters: filters on references to other data, for example, from a sales order to a business partner. You can filter on multiple values, if there are many values to filter on then you can scroll in the dropdown box.
 -   Dropdown column filters: Filters that contain a limited set of values. Just open the dropdown and select a value. 
 
-![Filtering](/docs.etendo.software/assets/drive/1kul74WVN4g1YXarFm12iaPTJNpC0YfCw.png)
+![Filtering](/docs/assets/drive/1kul74WVN4g1YXarFm12iaPTJNpC0YfCw.png)
 
 The following symbols can be used in regular column filter fields to create more complex filter expressions. Note that once you start typing a filter expression in a numerical value column, the real-time filtering is switched off and you will need to hit Enter to apply the filter.
 
@@ -61,14 +61,14 @@ Filters can be cleared by clicking the funnel icon in the top right of the grid.
 
 The right click can be used to find more options about any section of the grid view. In this drop-down menu, keyboard shortcuts are displayed, columns can be added to the view and summary options can be found.
 
-![Right click options](/docs.etendo.software/assets/drive/1QNBKfBUaLNkhLHC6Y7G8GYcOReRcHMzZ.png)
+![Right click options](/docs/assets/drive/1QNBKfBUaLNkhLHC6Y7G8GYcOReRcHMzZ.png)
 
 ### Massive record cloning 
 
 Etendo allows the user to massively clone records. This process engine facilitates the user to select an input entity, create criteria to get results, run actions for the input or define output which can be later used as input for other actions. 
 These actions can be done via the Copy Record button from grid view, allowing the execution of cloning processes of all the entities for different workflows. 
 
-![Massive record clonning](/docs.etendo.software/assets/drive/1cxymAJf1J5vVwn2_Xv4iLubePoOUKlw-.png)
+![Massive record clonning](/docs/assets/drive/1cxymAJf1J5vVwn2_Xv4iLubePoOUKlw-.png)
 
 Massive cloned records are shown in grid view and can then be identified according to the creation date.
 
@@ -88,7 +88,7 @@ The document actions displayed when selecting more than one document will be all
 
 Save View stores grid and form settings, column filters and even the entire layout of the screen, for example, the position of the splitter bar between the header and lines. With this option, the user can rearrange the grid, adapt it to their task and save this view to open it at another time. The user can access saved views through a pull down menu that sits underneath the Save View button in the toolbar.
 
-![Save view option](/docs.etendo.software/assets/drive/1pimqAzN4KUwC_QxVD_rrIbS1VQwtL4WH.png)
+![Save view option](/docs/assets/drive/1pimqAzN4KUwC_QxVD_rrIbS1VQwtL4WH.png)
 
 A saved view can be set as default and can be deleted. The active view is indicated by a little arrow in front of the view name.
 
@@ -118,8 +118,8 @@ In this view, each field title can be followed by two different icons:
 
 |     |     |
 | --- | --- |
-| ![Arrow icon](/docs.etendo.software/assets/drive/1sK4lTD4FNi3-WZDkGzPpE3Px7brhZZWd.png) | By clicking here, the user can open a new tab with more specific information. 
-| ![Asterisk icon](/docs.etendo.software/assets/drive/15aZZ-UGcGfakPeYAImHnx4gRwRp2fmP6.png) | This shows the field is required to be complete. The field has a yellow background. 
+| ![Arrow icon](/docs/assets/drive/1sK4lTD4FNi3-WZDkGzPpE3Px7brhZZWd.png) | By clicking here, the user can open a new tab with more specific information. 
+| ![Asterisk icon](/docs/assets/drive/15aZZ-UGcGfakPeYAImHnx4gRwRp2fmP6.png) | This shows the field is required to be complete. The field has a yellow background. 
 
 ### User Messages
 
@@ -127,25 +127,25 @@ User Messages are displayed at the top of the view and their function is to info
 
 **Info:** This type of message is used to communicate interesting but not essential information.
 
-![Info message](/docs.etendo.software/assets/drive/1atlScOy_dksTaOEundWmIu203B7jO02D.png)
+![Info message](/docs/assets/drive/1atlScOy_dksTaOEundWmIu203B7jO02D.png)
 
 **Success:** This type of message is displayed after successful process execution.
 
-![Success message](/docs.etendo.software/assets/drive/1wus0cnCi2Ou9eQ1eIADpTQ0SVOAuSMGS.png)
+![Success message](/docs/assets/drive/1wus0cnCi2Ou9eQ1eIADpTQ0SVOAuSMGS.png)
 
 **Error:** This type of message is used for exceptions and errors. A typical case is a process that was not executed successfully.
 
-![Error message](/docs.etendo.software/assets/drive/1yKisLYaiB95bt1wRMLXNhprmONuf7NQR.png)
+![Error message](/docs/assets/drive/1yKisLYaiB95bt1wRMLXNhprmONuf7NQR.png)
 
 **Warning:** This type of message is used to inform the user about a system status or event that might cause a problem.
 
-![Warning message](/docs.etendo.software/assets/drive/19f47PVut5FN5_iXv_RszQsO28MvmWyqT.png)
+![Warning message](/docs/assets/drive/19f47PVut5FN5_iXv_RszQsO28MvmWyqT.png)
 
 ### Status Bar
 
 The status bar conveys the editing status of the document (New, Editing or Saved) together with a user-defined set of read-only attributes. These allow the user to get an overview of the document without having to scan the remainder of the form. The status bar is only visible in form view.
 
-![Status bar](/docs.etendo.software/assets/drive/1d5GpX_oOyNMvqvy94JBtOeg4FJnWSZZI.png)
+![Status bar](/docs/assets/drive/1d5GpX_oOyNMvqvy94JBtOeg4FJnWSZZI.png)
 
 |     |     |
 | --- | --- |
@@ -156,11 +156,11 @@ On the right side of the status bar, the following buttons are available:
 
 |     |     |
 | --- | --- |
-| ![Browse to previous record](/docs.etendo.software/assets/drive/1jP4R73D1bYKd-qSAiRwK2HH0NKmODj-4.png) | Browse to next record 
-| ![Browse to previous record](/docs.etendo.software/assets/drive/1YeC8yk9CzwM5hTScn4JNIcvA44ut80vq.png) | Browse to previous record 
-| ![Maximize form](/docs.etendo.software/assets/drive/1xRCMAPS6c3GyMd4ygc5TbULgR7TUkX1Q.png) | Maximize form 
-| ![Restore size](/docs.etendo.software/assets/drive/1fiogmu4e5r1nP5g0Aa7L8dFfZG2xcvzF.png) | Restore form to previous size 
-| ![Close form](/docs.etendo.software/assets/drive/1KU3xBqPUVQKl43Je-S9ij3Vr031G2LCf.png) | Close form (save and return to grid.png) |
+| ![Browse to previous record](/docs/assets/drive/1jP4R73D1bYKd-qSAiRwK2HH0NKmODj-4.png) | Browse to next record 
+| ![Browse to previous record](/docs/assets/drive/1YeC8yk9CzwM5hTScn4JNIcvA44ut80vq.png) | Browse to previous record 
+| ![Maximize form](/docs/assets/drive/1xRCMAPS6c3GyMd4ygc5TbULgR7TUkX1Q.png) | Maximize form 
+| ![Restore size](/docs/assets/drive/1fiogmu4e5r1nP5g0Aa7L8dFfZG2xcvzF.png) | Restore form to previous size 
+| ![Close form](/docs/assets/drive/1KU3xBqPUVQKl43Je-S9ij3Vr031G2LCf.png) | Close form (save and return to grid.png) |
 
 ### Keyboard shortcuts
 
@@ -187,7 +187,7 @@ Via the set summary function through the right click button, it is possible to k
 
 Etendo allows the user to have multiple transactions opened at the same time on different tabs. You can switch between active tabs. The active tab is highlighted in blue color with a thin yellow line on top of it. The inactive tabs remain greyed out.
 
-![Tabs](/docs.etendo.software/assets/drive/1L_S4knqCWJRPXPKIAn6_W-ompY7O4zZT.png)
+![Tabs](/docs/assets/drive/1L_S4knqCWJRPXPKIAn6_W-ompY7O4zZT.png)
 
 Tabs can be closed by pressing the X button:
 
@@ -195,7 +195,7 @@ It is possible to reorder tab position. To do it, drag the tab and drop it in th
 
 In case of tab overflow, when the total width of the tabs exceeds the available horizontal space, three yellow arrows appear to the right of the last tab that allow you to scroll through the tabs and easily navigate to one:
 
-![Tabs](/docs.etendo.software/assets/drive/1_K-cBXnCPoABJJmRfAowo3u58fyol43O.png)
+![Tabs](/docs/assets/drive/1_K-cBXnCPoABJJmRfAowo3u58fyol43O.png)
   
 ---
 This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

@@ -18,7 +18,7 @@ Etendo introduces the concept of Jobs which is about one or more Actions execute
 
 1.  Create a new record in the Process Definition window:
 
-![createjobs1.png](/docs.etendo.software/assets/legacy/technicaldocumentation/platform/createjobs1.png)
+![createjobs1.png](/docs/assets/legacy/technicaldocumentation/platform/createjobs1.png)
 
 2.  Define UI Pattern as **Action**. The process has to be marked as **multi record**. All actions must support multi record input. The rest of the definitions are analogous to any Standard Process. Parameters, onLoad functions, etc. are supported.
 3.  Create a column and a field to run the Action from a button in the current UI, or a menu entry to run the process from the menu.

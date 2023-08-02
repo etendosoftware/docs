@@ -44,24 +44,24 @@ El módulo del Modelo AEAT 190 incluye el correspondiente "conjunto de datos" o 
 -   Una vez instalado el módulo, la "configuración del Modelo 190" debe aplicarse a la **Entidad legal con Contabilidad** que corresponda, en la ruta de aplicación: Configuración General || Organización || **Gestión del módulo de Empresa.**
 -   Importante, antes de aplicar esta configuración es importante haber aplicado previamente la configuración del módulo de impuestos, puesto que el Modelo 190 depende de éste.
 
-![](/docs.etendo.software/assets/drive/NPmuokqQMPVWHGO_5axvvqS3kqWJ7TUYhtrgII9Adx2R4lsxQxCOECCclQxInjaTso4hIHruR7f8UNtrSAMuTvupjpsmZW-osW83k_TFV3UE_QFFP8igDGJf6ctmSmSFP5WLMyHfV8lI19X_wgXEO24.png)
+![](/docs/assets/drive/NPmuokqQMPVWHGO_5axvvqS3kqWJ7TUYhtrgII9Adx2R4lsxQxCOECCclQxInjaTso4hIHruR7f8UNtrSAMuTvupjpsmZW-osW83k_TFV3UE_QFFP8igDGJf6ctmSmSFP5WLMyHfV8lI19X_wgXEO24.png)
 
 Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
 
 -   se han creado un nuevo informe, el modelo 190 anual que se encuentra en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
      
 
-![](/docs.etendo.software/assets/drive/0DGnsbvGSRglnOfedtcm1BRq0hExCnVLCnWNfG9twk0cA9ktqHih10dD1ufrzq3uGu1oafipUnxtCc7W08aw753gYX3AzuoAMZ6ZAyknSHIwLa9eAw-kajDMk6DOjGpTM5IOKb0pxrmcm5Dj31wI2ZM.png)
+![](/docs/assets/drive/0DGnsbvGSRglnOfedtcm1BRq0hExCnVLCnWNfG9twk0cA9ktqHih10dD1ufrzq3uGu1oafipUnxtCc7W08aw753gYX3AzuoAMZ6ZAyknSHIwLa9eAw-kajDMk6DOjGpTM5IOKb0pxrmcm5Dj31wI2ZM.png)
 
 -   los rangos de impuestos se han asociado al correspondiente Parámetro del informe 190, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/posición del fichero, tal y como se muestra en la siguiente imagen:  
      
 
-![](/docs.etendo.software/assets/drive/jH29-HkAFNLN3w0RKpitrmjGJ918EMfwdfbMQmfE7qEeFhSAB-tRR9z-pNWDz34lm9xlhMN1ADfKDKwicm4h6282rQATMsMggwZUCfu4ZX6aBmki3PF1g8O_dzJVRa7i55QIMWkesDoXacrd4Rb9_RQ.png)
+![](/docs/assets/drive/jH29-HkAFNLN3w0RKpitrmjGJ918EMfwdfbMQmfE7qEeFhSAB-tRR9z-pNWDz34lm9xlhMN1ADfKDKwicm4h6282rQATMsMggwZUCfu4ZX6aBmki3PF1g8O_dzJVRa7i55QIMWkesDoXacrd4Rb9_RQ.png)
 
 -   y, por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 190, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
      
 
-![](/docs.etendo.software/assets/drive/duCdxzeDZl6Ym8W_h-APG_n78tbJ09PZ9MLqx11_Q2x96V2K1-TrVAh5I-apRPNWffmsIybEKB06xmRie5bzRHyi9Ljf70g6ekwyusOk8ZR5lg9_7cllbMklo9vRjRB73JbKdW4q8XxdL9CwrMW3eZE.png)
+![](/docs/assets/drive/duCdxzeDZl6Ym8W_h-APG_n78tbJ09PZ9MLqx11_Q2x96V2K1-TrVAh5I-apRPNWffmsIybEKB06xmRie5bzRHyi9Ljf70g6ekwyusOk8ZR5lg9_7cllbMklo9vRjRB73JbKdW4q8XxdL9CwrMW3eZE.png)
 
 ## **¿Qué se incluye en el Modelo 190 generado por Etendo?**
 
@@ -125,7 +125,7 @@ Tal y como ya se ha explicado, el modelo 190, se genera como un fichero de texto
 
 Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo" y otros, puede introducir los parámetros de entrada propios del 190:
 
-![](/docs.etendo.software/assets/drive/Jbjc9g-xJ_iZ2B6_xDHfLV9umzxu0_R-HS5ss8jpczAYl654wdnKknjU_i6b8wqIRhiWQbeArp2hMAGaZTsj5_zoOHLAIEq-s8BhhTEbnFmoHYcfRaLoVcxI1TlCjyjuUQeXbM7ZN7AZAuBE9Z4YjXg.png)
+![](/docs/assets/drive/Jbjc9g-xJ_iZ2B6_xDHfLV9umzxu0_R-HS5ss8jpczAYl654wdnKknjU_i6b8wqIRhiWQbeArp2hMAGaZTsj5_zoOHLAIEq-s8BhhTEbnFmoHYcfRaLoVcxI1TlCjyjuUQeXbM7ZN7AZAuBE9Z4YjXg.png)
 
 En este caso, se puede especificar el nombre del fichero (si no queremos el que el sistema da por defecto), y la información necesaria en caso de generar una declaración sustitutiva.
 

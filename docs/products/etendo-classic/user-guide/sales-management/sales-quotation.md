@@ -9,7 +9,7 @@ Through this window, the user can generate sales quotations and create the corre
 
 The main header numerates the terms and conditions related with the sales quotation which will be used in the printed copy header and, later on, in its order, goods receipt and invoice process
 
-![Header](/docs.etendo.software/assets/drive/1ZSKWjl6QaIGgvBRpKkq4g9_--VFCgEIF.png)
+![Header](/docs/assets/drive/1ZSKWjl6QaIGgvBRpKkq4g9_--VFCgEIF.png)
 
 The main tab lists the main terms and conditions related to the sales quotation that will be used in the header of your hard copy and later in your order, packing slip and invoicing process.
 
@@ -87,7 +87,7 @@ The information shown in each record is as follows: 
 -   Date of quotation.
 -   Original amount of the quotation.
 
-![History tab](/docs.etendo.software/assets/drive/1FyAdM85tTmm98wW02SpP3XAMmnN8kQ8x.png)
+![History tab](/docs/assets/drive/1FyAdM85tTmm98wW02SpP3XAMmnN8kQ8x.png)
 
 #### Actions
 
@@ -103,7 +103,7 @@ The status of the newly created sales order will be "Registered". In this instan
 
 Before creating the order, the system will display a check called "Firm Quote", which is marked as default:
 
-![Firm quote](/docs.etendo.software/assets/drive/1_XJmrKhdgK1rN4Pajy6p7asOMt0TSP0h.png)
+![Firm quote](/docs/assets/drive/1_XJmrKhdgK1rN4Pajy6p7asOMt0TSP0h.png)
 
 If selected, it establishes a commitment to the customer for the supply of a certain quantity of goods at a quoted price, so the sales order will be identical to the quotation.
 
@@ -122,11 +122,11 @@ If the business partner is changed, the tax will be updated in the lines (If nec
 In the pop-up window opened when this process is executed, the user will see the “do not apply conversion rate” check. If changing the quotation currency is intended, with the conversion to the official exchange rate included, the box must be unchecked when selecting the Currency option. Otherwise, the box must be checked in order for the system to show the quotation amount in the intended currency, defining prices in accordance with the price list configured by default in such currency.
 Once executed, the quotation will be closed and a new one will be created with the changes made in the state “under evaluation”.
 
-![Change window](/docs.etendo.software/assets/drive/1QEI9Z0QEHjghPagrkg3GC_JeEVZaOeVV.png)
+![Change window](/docs/assets/drive/1QEI9Z0QEHjghPagrkg3GC_JeEVZaOeVV.png)
 
 
 ##### Adjust button
 
 This process allows the user to adjust the price of one or more budget lines, either by applying discount or surcharge through an adjustment factor. It can only be executed while the document is in draft.
 
-![Adjust window](/docs.etendo.software/assets/drive/139RbgjIEjRsdrCO1DsOZD6ve5M3KlnsH.png)
+![Adjust window](/docs/assets/drive/139RbgjIEjRsdrCO1DsOZD6ve5M3KlnsH.png)

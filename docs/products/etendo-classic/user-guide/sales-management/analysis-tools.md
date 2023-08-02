@@ -31,7 +31,7 @@ This report can display best-selling products and top customers and answer many 
 
 ### Parameters Window
 
-![Sales Dimensional Report](/docs.etendo.software/assets/drive/1hUSiwTVhtzym77PrGRYXNcTx4jRqX3Ur.png)
+![Sales Dimensional Report](/docs/assets/drive/1hUSiwTVhtzym77PrGRYXNcTx4jRqX3Ur.png)
 
 Fields to note:
 
@@ -46,7 +46,7 @@ Fields to note:
 
 ### Sample Report Output
 
-![Sample Report Output](/docs.etendo.software/assets/drive/1ZYCoYa83A96xOFcOfd6-qIFTr81ymJ2S.png)
+![Sample Report Output](/docs/assets/drive/1ZYCoYa83A96xOFcOfd6-qIFTr81ymJ2S.png)
 
 Information to note:
 
@@ -63,7 +63,7 @@ This report shows information about goods shipped to the customers (Goods Shipme
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
-![Shipments Dimensional Report](/docs.etendo.software/assets/drive/1A3OFI-84W20Lz_6zBXcFraHkHMOhWZKN.png)
+![Shipments Dimensional Report](/docs/assets/drive/1A3OFI-84W20Lz_6zBXcFraHkHMOhWZKN.png)
 
 The outcome of this report can be viewed in HTML format, XLS format, and PDF format.
 
@@ -74,7 +74,7 @@ Some information to note:
 -   **Amount:** is the **net** amount (cost of the goods for customers) shipped to them converted to the report **Currency**. This amount is retrieved from the Sales Order that corresponds to the Goods Shipment. If a Goods Shipment is not linked to any Sales Order, this field will be empty.
 -   **Weight:** of the shipped product, if specified in the Product window.
 
-![Sample Report Output](/docs.etendo.software/assets/drive/1TD2GMryWaNAeWDcX10o7t7qmMdkpZ6Jx.png)
+![Sample Report Output](/docs/assets/drive/1TD2GMryWaNAeWDcX10o7t7qmMdkpZ6Jx.png)
 
 ## Discount Invoice Report
 
@@ -86,7 +86,7 @@ The report displays information about the average price by product, the net pric
 
 ### Parameters Window
 
-![Discount Invoice Report](/docs.etendo.software/assets/drive/1ghqLTYaD2stIcN7FmRjo8EIxsP7CP1Jy.png)
+![Discount Invoice Report](/docs/assets/drive/1ghqLTYaD2stIcN7FmRjo8EIxsP7CP1Jy.png)
 
 Fields to note:
 
@@ -98,7 +98,7 @@ Fields to note:
 
 ### Sample Report Output
 
-![](/docs.etendo.software/assets/drive/1ycGDW3jPjlFaRlhOW4CxRZ4cxFfdW0iP.png)
+![](/docs/assets/drive/1ycGDW3jPjlFaRlhOW4CxRZ4cxFfdW0iP.png)
 
 For the example in the above image, according to the filters, the result will show information about sales invoices for the business partner “Alimentos y Supermercados, S.A.” from the date “01-06-2021” to the date “01-01-2022”. The amounts will be in USD.
 
@@ -114,7 +114,7 @@ Columns to note:
 
 In the image below, the same report is shown, but having checked the filter “Show only Discounted”. In comparison to the previous report, this report shows only those lines in which the discount is not equal to zero.
 
-![](/docs.etendo.software/assets/drive/1Z36B4O0Ih4xnuLhT_HYRHJfP0QlZDeiG.png)
+![](/docs/assets/drive/1Z36B4O0Ih4xnuLhT_HYRHJfP0QlZDeiG.png)
 
 
 ## Sales Order Report
@@ -143,11 +143,11 @@ This section shows the lines of the pending orders with the actual stock of each
 
 Only Sales Orders with *Do Not Invoice* Invoice Term are not displayed in the report, but all other orders are present in the output, independently if the Invoice Term condition is met or not. For example, if **Invoice Term** is "After Delivery" and products are not shipped yet, Sales Order is displayed.
 
-![Graphic](/docs.etendo.software/assets/drive/1f7xMOYxlO6q1ilvvHF0aOk3bHC6HEQbp.png)
+![Graphic](/docs/assets/drive/1f7xMOYxlO6q1ilvvHF0aOk3bHC6HEQbp.png)
 
 ### Parameters Window
 
-![Orders Awaiting Invoice](/docs.etendo.software/assets/drive/1m5K-52iabxWTBcYXnuBxhisNKIiOPhlP.png)
+![Orders Awaiting Invoice](/docs/assets/drive/1m5K-52iabxWTBcYXnuBxhisNKIiOPhlP.png)
 
 All filters refer to corresponding fields of the **Sales Order**.
 
@@ -159,7 +159,7 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
 
 ### Sample Report Output
 
-![Sample Report Output](/docs.etendo.software/assets/drive/1OTwoN7NttxZipv10smwuOv6ET_2OtddS.png)
+![Sample Report Output](/docs/assets/drive/1OTwoN7NttxZipv10smwuOv6ET_2OtddS.png)
 
 !!! info
     Please note that the report gives information about sales orders and products included in it without reflecting the information of already delivered and invoiced quantities.
@@ -183,18 +183,18 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
 
 **Orders Awaiting Delivery Report** shows the information about the Sales Orders that are awaiting (pending) to be delivered (shipped).
 
-![](/docs.etendo.software/assets/drive/1_yQ5WTBoehSRe5xzIUQwNzWAgk9Jkpzd.png)
+![](/docs/assets/drive/1_yQ5WTBoehSRe5xzIUQwNzWAgk9Jkpzd.png)
 
 
 ### Parameters Window
 
-![Orders Awaiting Delivery](/docs.etendo.software/assets/drive/1hbLnfh3onAAqN6yKjgUh2VCPlgDrG8XK.png)
+![Orders Awaiting Delivery](/docs/assets/drive/1hbLnfh3onAAqN6yKjgUh2VCPlgDrG8XK.png)
 
 All filters refer to corresponding fields of the Sales Order.
 
 ### Sample Report Output
 
-![Sample Report Output](/docs.etendo.software/assets/drive/1Liay4G2dIvO513rwpadunx-v0ud0rs87.png)
+![Sample Report Output](/docs/assets/drive/1Liay4G2dIvO513rwpadunx-v0ud0rs87.png)
 
 ## Invoice Detail
 
@@ -218,7 +218,7 @@ This report can display ratings of products and top customers based on the sales
 
 ### Parameters Window
 
-![Sales Invoice Dimensional](/docs.etendo.software/assets/drive/1u4QnUnLSo4PvVzeduFYZDQgs3FKZwJMG.png)
+![Sales Invoice Dimensional](/docs/assets/drive/1u4QnUnLSo4PvVzeduFYZDQgs3FKZwJMG.png)
 
 Fields to note:
 
@@ -233,7 +233,7 @@ Fields to note:
 
 ### Sample Report Output
 
-![Sample Report Output](/docs.etendo.software/assets/drive/19rJehYODpxaL4CHLStphythhzfSAswSq.png)
+![Sample Report Output](/docs/assets/drive/19rJehYODpxaL4CHLStphythhzfSAswSq.png)
 
 Columns to note:
 
@@ -262,7 +262,7 @@ This means that the estimation is dependent on the retrieved records. The more r
 
 There is also possibility to export this report to a PDF or a XLS file:
 
-![Buttons](/docs.etendo.software/assets/drive/1SM0X-gfBBOlwyaKionNpxbUc_IVgK2L9.png)
+![Buttons](/docs/assets/drive/1SM0X-gfBBOlwyaKionNpxbUc_IVgK2L9.png)
 
 PDF format shows the same fields explained before, but in XLS format new fields are added related to selected invoice:
 

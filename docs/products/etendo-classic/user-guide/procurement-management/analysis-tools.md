@@ -29,14 +29,14 @@ This report can display information about the most frequently used suppliers as 
 
 ### Parameters window
 
-![](/docs.etendo.software/assets/drive/1tfjdJFeCwoMFq7Osb7iA4oCx8AQtsO5M.png)
+![](/docs/assets/drive/1tfjdJFeCwoMFq7Osb7iA4oCx8AQtsO5M.png)
 
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
 ### Sample Report Output
 
-![](/docs.etendo.software/assets/drive/1HteUH5sPx3PmrHdRqlR8S6l0EzDizuUu.png)
+![](/docs/assets/drive/1HteUH5sPx3PmrHdRqlR8S6l0EzDizuUu.png)
 
 -   **Amount:** is the **net** amount from the Purchase Order converted to the report **Currency**.
 
@@ -54,14 +54,14 @@ This report can display information about the most frequently used suppliers as 
 
 There is no specific field to note but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
-![](/docs.etendo.software/assets/drive/1ihcncYc8rQoONnKy5KzGqN2IaYw5r18f.png)
+![](/docs/assets/drive/1ihcncYc8rQoONnKy5KzGqN2IaYw5r18f.png)
 
 !!! tip
     The outcome of this report can be viewed in HTML format and PDF format.
 
 ### Sample Report Output
 
-![](/docs.etendo.software/assets/drive/1lvq1Mtz7ed_qJW40ezxrQvqa5ssh5NgM.png)
+![](/docs/assets/drive/1lvq1Mtz7ed_qJW40ezxrQvqa5ssh5NgM.png)
 
 ## Purchase Invoice Dimensional Report
 
@@ -73,18 +73,18 @@ This report can display the total purchase amount of a given supplier, split by 
 
 ### Parameters Window
 
-![](/docs.etendo.software/assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
+![](/docs/assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
 ### Sample Report Output
 
-![](/docs.etendo.software/assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
+![](/docs/assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
 
 There is also the possibility to export this report to a PDF or a XLS file:
 
 
-![](/docs.etendo.software/assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
+![](/docs/assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
 
 PDF format shows the same fields explained before, but in XLS format, it shows information related to selected invoices columns:
 
@@ -110,7 +110,7 @@ This window informs about the matching between each purchase order, goods receip
 
 Matched purchase order view informs about which purchase order line is linked to which receipt line and invoice line, if any.
 
-![](/docs.etendo.software/assets/drive/1HSNC0staVcayYFKAOz3rc8KZDYUxl8Ym.png)
+![](/docs/assets/drive/1HSNC0staVcayYFKAOz3rc8KZDYUxl8Ym.png)
 
 In other words, this window provides valuable information which helps to get a quick understanding of what order lines of a product have already been receipt and invoiced.
 
@@ -124,7 +124,7 @@ It displays supplier invoices information, which can be narrowed down in order t
 
 ### Parameters Window
 
-![](/docs.etendo.software/assets/drive/1V8A7QEZI3fa7ecV6W-VK-ki_VXx_8Ii8.png)
+![](/docs/assets/drive/1V8A7QEZI3fa7ecV6W-VK-ki_VXx_8Ii8.png)
 
 Field to note:
 
@@ -132,4 +132,4 @@ Field to note:
 
 ### Sample Report Output
 
-![](/docs.etendo.software/assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)
+![](/docs/assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)

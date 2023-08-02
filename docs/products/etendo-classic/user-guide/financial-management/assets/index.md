@@ -21,7 +21,7 @@ The user can define amortization characteristics for assets owned by the company
 
 The user can define assets owned by the company and create an amortization for them.
 
-![](/docs.etendo.software/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
+![](/docs/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
 Fields to note:
 
@@ -59,7 +59,7 @@ Fields to note:
 
 The user can add asset amortizations for a selected asset.
 
-![](/docs.etendo.software/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
+![](/docs/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
 -   **Line No.** : A line stating the position of this request in the document.
 -   **Amortization** : The depreciation or reduction of a product value over time.
@@ -87,7 +87,7 @@ The process assumes that if the March depreciation line exists, then the Februar
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](/docs.etendo.software/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![](/docs/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
 
 ## **Asset Group**
 
@@ -99,7 +99,7 @@ Assets can be grouped into different categories with the aim of helping their de
 
 Asset category window allows the user to create and configure every asset category your organization may need.
 
-![](/docs.etendo.software/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
+![](/docs/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
@@ -119,7 +119,7 @@ Depreciation configuration will be inherited from the asset category when creati
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
-![](/docs.etendo.software/assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
+![](/docs/assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
 
 ## **Amortization**
 
@@ -131,19 +131,19 @@ The user can create and edit amortization for a selected year.
 
 In the header, the user creates amortizations for particular periods.
 
-![](/docs.etendo.software/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![](/docs/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
 
 ### **Lines**
 
 In each line, the user adds amortized assets and details of amortization.
 
-![](/docs.etendo.software/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+![](/docs/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
 
 #### **Accounting**
 
 Accounting information related to the amortization
 
-![](/docs.etendo.software/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![](/docs/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
 
 ### How to Reactivate Amortizations
 
@@ -152,7 +152,7 @@ Accounting information related to the amortization
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](/docs.etendo.software/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+![](/docs/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
 
 ### Bulk Posting
 
@@ -164,7 +164,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [Bulk Posting](https://docs.etendo.software/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
 
 
 ## Amortization Report
@@ -176,15 +176,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
-![](/docs.etendo.software/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
+![](/docs/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
 This report allows filtering by organization, date, asset or any particular description, category and general ledger configuration.  
 
-![](/docs.etendo.software/assets/drive/v044uU7hYLEk9gHyJ_rQT4PafeiO44KV81IWajtztUpPd9hLqZiPs9ivfPP69HxfwwK-35rPk_nzpLHsSXeXpUUfVDnFw7k4jsQ4AvDJIwDMCPWrsiRDyLPKgLCb0WDOB4GPZVU2urwKJ3sq1BhSXnA.png)
+![](/docs/assets/drive/v044uU7hYLEk9gHyJ_rQT4PafeiO44KV81IWajtztUpPd9hLqZiPs9ivfPP69HxfwwK-35rPk_nzpLHsSXeXpUUfVDnFw7k4jsQ4AvDJIwDMCPWrsiRDyLPKgLCb0WDOB4GPZVU2urwKJ3sq1BhSXnA.png)
 
 Once the information is filtered, an excel sheet is downloaded as shown in the following image:
 
-![](/docs.etendo.software/assets/drive/X4RYGKFzkl-VVrKXiztozXKKOQIFqIwXJMgUUeLzdGESddbVChKWbf6L2XnMO1aQg2wCfXit-Tw-w3TXDP_FLWBluY08K6JG6kHf_w2Mz5fRWBfzbbfV6edBbPzULPPPWxAALvtVBmxhKLtC_DwAzgg.png)
+![](/docs/assets/drive/X4RYGKFzkl-VVrKXiztozXKKOQIFqIwXJMgUUeLzdGESddbVChKWbf6L2XnMO1aQg2wCfXit-Tw-w3TXDP_FLWBluY08K6JG6kHf_w2Mz5fRWBfzbbfV6edBbPzULPPPWxAALvtVBmxhKLtC_DwAzgg.png)
 
 This report takes into account the amortization lines of each Asset. That is to say, the report will still be generated even if the amortization lines are not processed or posted. 
 

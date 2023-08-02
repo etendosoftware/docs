@@ -79,7 +79,7 @@ plugins {
 }
 ```
 
-3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following this [guide](/docs.etendo.software/developers/setup/use-of-repositories-in-etendo).
+3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following this [guide](/docs/developers/setup/use-of-repositories-in-etendo).
 
 `gradle.properties`
 ```

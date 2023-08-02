@@ -73,9 +73,9 @@ apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/eten
 ### JAR Core
 
 !!! warning
-    If you upgrade from a source Etendo instance, read [Core Format Migration](/docs.etendo.software/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration), because some directories must be deleted.
+    If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration), because some directories must be deleted.
 
-1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs.etendo.software/legacy/technical-documentation/etendo-environment/setup-and-upgrade/etendo-backup-restore-tool).
+1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/etendo-backup-restore-tool).
 2. Verify the target version inside `build.gradle`
 
 ```groovy

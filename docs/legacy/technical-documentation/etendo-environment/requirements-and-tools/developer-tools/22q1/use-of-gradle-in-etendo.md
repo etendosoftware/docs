@@ -9,7 +9,7 @@ This article explains how to use Gradle, an open-source build automation tool th
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
 
 !!! warning
-    The gradle tasks changed from Etendo 22Q1, to review the previous documentation see the following link [Use of Gradle in Etendo | 21Q4](/docs.etendo.software/legacy/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-gradle-in-etendo)
+    The gradle tasks changed from Etendo 22Q1, to review the previous documentation see the following link [Use of Gradle in Etendo | 21Q4](/docs/legacy/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-gradle-in-etendo)
 
 ## How to use Gradle
 
@@ -206,7 +206,7 @@ etendo {
     - `-Ppkg=<package name>` The name of the module. **REQUIRED**
     - `-Precursive=true` This trigger the republication of all the modules which depends on the module being published. **OPTIONAL** - default false.
     - `-PupdateLeaf=true` This updates automatically the version of the project beign published. **OPTIONAL** - default false.
-- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://docs.etendo.software/en/technical-documentation/modules/uninstall)
+- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://docs/en/technical-documentation/modules/uninstall)
   - Command line parameters
     - `-Ppkg=<modulename>` The javapackage of the source module to uninstall.
 

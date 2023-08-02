@@ -12,7 +12,7 @@ The Warehouse Extensions bundle includes the following modules:
 It provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information visit [Functional documentation](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-reports#stock-history) and [Technical documentation](https://docs.etendo.software/en/technical-documentation/bundles/warehouse-extensions-bundle)
+    For more information visit [Functional documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-reports#stock-history) and [Technical documentation](https://docs/en/technical-documentation/bundles/warehouse-extensions-bundle)
 
 ## Reactivate Warehouse Documents
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -21,10 +21,10 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 
 !!! info
         For more information, visit Functional Documentation about:
-        - [Goods Movements](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management#how-to-reactivate-goods-movements)
-        - [Goods Receipts](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-goods-receipts)
-        - [Goods Shipments](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-goods-shipments)
-        - [Physical Inventory](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management#how-to-reactivate-physical-inventories)
+        - [Goods Movements](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management#how-to-reactivate-goods-movements)
+        - [Goods Receipts](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#how-to-reactivate-goods-receipts)
+        - [Goods Shipments](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#how-to-reactivate-goods-shipments)
+        - [Physical Inventory](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management#how-to-reactivate-physical-inventories)
 
 ## Uninstall bundle
 

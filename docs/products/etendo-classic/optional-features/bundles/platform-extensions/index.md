@@ -10,7 +10,7 @@ The Platform Extensions bundle includes the following modules:
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-        For more information, visit [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/platform-extensions-bundle#print-document-web-service)
+        For more information, visit [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#print-document-web-service)
 
 
 
@@ -19,7 +19,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-        For more information, visit [Functional Documentation](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#number-to-word-converter) and [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/platform-extensions-bundle#number-to-word-english)
+        For more information, visit [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#number-to-word-converter) and [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#number-to-word-english)
 
 
 ## Javax XML SOAP API
@@ -27,7 +27,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-        For more information, visit [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/platform-extensions-bundle#javax-xml-soap-api)
+        For more information, visit [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#javax-xml-soap-api)
 
 
 ## Report Cache Management
@@ -35,14 +35,14 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-        For more information, visit [Functional Documentation](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#clear-report-cache) and [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/platform-extensions-bundle#report-cache-management)  
+        For more information, visit [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#clear-report-cache) and [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#report-cache-management)  
 
 ## Etendo Advanced Security
 
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-        For more information, visit the [Functional Documentation](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#etendo-advanced-security) and the [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/platform-extensions-bundle#etendo-advanced-security)
+        For more information, visit the [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#etendo-advanced-security) and the [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#etendo-advanced-security)
 
 
 

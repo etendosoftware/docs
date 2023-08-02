@@ -6,16 +6,16 @@ title: Localización Española
 
 Este bundle incluye los siguientes módulos:
 
-- [SII para IVA](/docs.etendo.software/legacy/modules/spain-localization/manual-de-usuario/sii-para-iva)
-- [Tax Report: Modelo 303 (Spain)](/docs.etendo.software/legacy/modules/spain-localization/manual-de-usuario/modelo-303)
-- [Withholding Report: Modelo 190 (Spain)](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/modelo-190)
-- [Spain AEAT Modelo 347 for APR](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/modelo-347)
-- [Modelo 349](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/modelo-349)
-- [Impuestos para España](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a)
-- [Intrastat](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/intrastat)
-- [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/modelo-390)
-- [Libro de Facturas](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/libro-de-facturas)
-- [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/en/modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas)
+- [SII para IVA](/docs/legacy/modules/spain-localization/manual-de-usuario/sii-para-iva)
+- [Tax Report: Modelo 303 (Spain)](/docs/legacy/modules/spain-localization/manual-de-usuario/modelo-303)
+- [Withholding Report: Modelo 190 (Spain)](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-190)
+- [Spain AEAT Modelo 347 for APR](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-347)
+- [Modelo 349](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-349)
+- [Impuestos para España](https://docs/en/modules/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a)
+- [Intrastat](https://docs/en/modules/spain-localization/manual-de-usuario/intrastat)
+- [Tax Report: Modelo 390 (Spain)](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-390)
+- [Libro de Facturas](https://docs/en/modules/spain-localization/manual-de-usuario/libro-de-facturas)
+- [Configuración de Impuestos para Libro de Facturas](https://docs/en/modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas)
 - Incoterms
 - European Union Countries
 - Provincias de España

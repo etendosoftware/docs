@@ -17,7 +17,7 @@ Translation modules are a special kind of modules. They have to be marked as **I
 
 No other contents than translations are allowed in translation modules. A translation module can only contain the translation for one module. For example, in the screenshot below, we are creating a Spanish (Spain) translation module for the User Interface Application module whose declared language is English (USA).
 
-![](/docs.etendo.software/assets/drive/CtkzvhgZ6P-3CfvWJOpFEFQmavTCdDgvHb-dgpff8eiS6ab2Q-xYCfu7dEEup23zzJoDBO9AOuRkaKAclIivm5hLm7tFQcFBzrlTZ9uCmh2S5pwNNfWaPmRZ0K1XZbBxPc2u4kRAuWUbJ-rVQqu7d4ZFha1zjfctWomyJJYFVIWUhLPJduoUkXSAJezRvg.png)
+![](/docs/assets/drive/CtkzvhgZ6P-3CfvWJOpFEFQmavTCdDgvHb-dgpff8eiS6ab2Q-xYCfu7dEEup23zzJoDBO9AOuRkaKAclIivm5hLm7tFQcFBzrlTZ9uCmh2S5pwNNfWaPmRZ0K1XZbBxPc2u4kRAuWUbJ-rVQqu7d4ZFha1zjfctWomyJJYFVIWUhLPJduoUkXSAJezRvg.png)
 
 Apart from checking the **Is translation module** and setting the **Module Language**, we need to add a dependency to the module and version we are translating. In the example, our User Interface Application Translation Spanish (Spain) module in version 1.0.0 depends on the User Interface Application module version 2.1.0.
 
@@ -25,9 +25,9 @@ Apart from checking the **Is translation module** and setting the **Module Langu
 
 Logged with the **System Administrator** role, select the **General Setup || Application || Language** window from the Application menu. Find the language in which the user wants to create the translation module and check the **System Language** checkbox field. This checkbox allows this language to be selected in the user interface (**Change role** popup) in the next login.
 
-![](/docs.etendo.software/assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
+![](/docs/assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
 
-![](/docs.etendo.software/assets/drive/b_z9FlTUbCN9229SKAFfDPzs_hB4GRuihgGt1ZED4MNW8uigSTXkrL-GN0el5b26miw1BkMhN2uP1LkrYy7WE3WbPzv7y6cTz2LvIo3wZvB-0QjI4CrQYKJGmnKXi86Oign_ZU57xuG25WOlTqxffODO9ifIwWZUMk5F8xw23HhtNIitj2SSLqpjIYUyZg.png)
+![](/docs/assets/drive/b_z9FlTUbCN9229SKAFfDPzs_hB4GRuihgGt1ZED4MNW8uigSTXkrL-GN0el5b26miw1BkMhN2uP1LkrYy7WE3WbPzv7y6cTz2LvIo3wZvB-0QjI4CrQYKJGmnKXi86Oign_ZU57xuG25WOlTqxffODO9ifIwWZUMk5F8xw23HhtNIitj2SSLqpjIYUyZg.png)
 
 #### Verify Languages
 
@@ -37,7 +37,7 @@ For example, in the case of creating a Spanish (Spain) translation for the core'
 
 Using the **Verify Languages** button, the application will display the number of records created. If this number is equal to 0, it means that something was wrong, and the probable cause is that we have forgotten to check the System Language field.
 
-![](/docs.etendo.software/assets/drive/pfFxzG5EictaUwrbWNoTN8fk8Q1ZbAgNIQUaDkQeMDmsz70PHHz4aoRTpNmKi4I5lpBNvMMefPcy4RlK8v0NwL86TMT5PNGUVdfPUUM6A0JHtEdsfb-7paUPw9U6V8kUHRh52KPj3OTkNsUr5maGOaf1GbIBAJPKW-n0mmjVS9rhZyKez5SOUJwc5kMJPA.png)
+![](/docs/assets/drive/pfFxzG5EictaUwrbWNoTN8fk8Q1ZbAgNIQUaDkQeMDmsz70PHHz4aoRTpNmKi4I5lpBNvMMefPcy4RlK8v0NwL86TMT5PNGUVdfPUUM6A0JHtEdsfb-7paUPw9U6V8kUHRh52KPj3OTkNsUr5maGOaf1GbIBAJPKW-n0mmjVS9rhZyKez5SOUJwc5kMJPA.png)
 
 ### Export the translation
 
@@ -45,11 +45,11 @@ Exporting the translation is an automatic process available in the **General Set
 
 With the System Administrator role, select the language in which the user wants to export translation files. Export Reduced Version flag can be set to Yes to have a reduced translation version. This would exclude all translation candidates that are linked directly or indirectly to the Menu having translation strategy as "Exclude From Reduced Translation". The user could set this flag as No to have a full translation version by pressing the **Export** button. The process takes several seconds to export all the XML files.
 
-![](/docs.etendo.software/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+![](/docs/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
 
 Inside the attachments folder of Etendo, a new directory called **lang** is found, and inside it, a new one with the lowercase two-letter ISO-639 **language code** and the uppercase two-letter ISO-3166 **country code** separated by an underscore character ('\_'). Example: */home/EtendoERP/attachments/lang/es\_ES*
 
-![](/docs.etendo.software/assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
+![](/docs/assets/drive/ZfvOyXa64_eeQCCVz-c5tcjgrfgoQVsfqkUhnYxW6ORFoyXfXqb3fLk3yqageghTnCGzdD5EbbOaftppa2X3isDBNPXYF0PtpbW0p4ve9cmRO-FxzCWWi7vE4p5VYD2ZJ8Ojfm_wq6CiXRUkiajLxB82MviBtLrPEaWcVvbz-JaTIkIQ5750LctJGZ43Iw.png)
 
 Inside this directory, the user can find the translation files for all the available modules into the instance. The core's translation files are stored directly into the root directory, the rest of the modules have their own folder named as their java packages. So, the user only needs to find the folder of the *original module* to be translated (*not the translation module*) and get its XML files.
 
@@ -63,7 +63,7 @@ If this method is chosen, it is only necessary to open each XML file that is ins
 
 The text to be changed for making a translation is the content of each value tag. It is not necessary to edit any attribute because they will be automatically updated when importing and exporting the files into the ERP in a next step.
 
-![LocGuide HowTo Translate 60.jpg](/docs.etendo.software/assets/drive/Wukx4MrqiK__V6x76g8BWjV-jwCE7vo6cCfVQJxjpayM55k2Os3jLDRD73BTSGayf-lm9z7L1t91z2-ArGWAIaAPUymF9LMZXpd4NZGM-tx4WwhJxm5zwCq5lcJQZhSj_cId6j8risovTfDVq7H3EXAgMCEyV0vdCTtfQiBTBUVq8gQ_R4cPLF5w5dSCuw.png)
+![LocGuide HowTo Translate 60.jpg](/docs/assets/drive/Wukx4MrqiK__V6x76g8BWjV-jwCE7vo6cCfVQJxjpayM55k2Os3jLDRD73BTSGayf-lm9z7L1t91z2-ArGWAIaAPUymF9LMZXpd4NZGM-tx4WwhJxm5zwCq5lcJQZhSj_cId6j8risovTfDVq7H3EXAgMCEyV0vdCTtfQiBTBUVq8gQ_R4cPLF5w5dSCuw.png)
 
 ### Import and Export the translation
 
@@ -81,7 +81,7 @@ For importing/exporting the translation, the user can go to the **General Setup 
 
 Now, at the **Import/Export Translations** window, we can select the language used for the translations and press the **Import** button. Then, the process is completed and the **Export** button is pressed, that will export the XML files again.
 
-![](/docs.etendo.software/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
+![](/docs/assets/drive/fSONWx4HIzELPexas8U20mjvn5nJk774cD_YAickqJG7dmvdLXlBOTGbOIKYMGpMB8EKzU3kjl6FrvLdls6SChKoj97VYKL9sHE9UKF1hX7M1T3b8XIGZ9cbR36-fDYADIMa2XvOX8UM0uFyXyCNukb_j1AHWoHTcFmXIzfSJA2-WMfDrqtZeNhXTL5L6w.png)
 
 !!! info
     *Note: During this process, it is highly recommended to keep a backup of your translated XML files.*
@@ -124,11 +124,11 @@ As System Administrator, we create a new record inside the **Dataset** window fo
 
 As you can see in the screenshot, the tables to be included are: **AD\_Month\_Trl**, **C\_Country\_Trl**, **C\_Currency\_Trl** and **C\_UOM\_Trl**. All of them have a filter clause that uses the **language** column, in the example *es\_ES*.
 
-![](/docs.etendo.software/assets/drive/dpVQBy2nbhtVzgjPkJHYMp9RqvqPUHmanSDKiUQqs8E6s9I_0jSSVqJuxrV0AouN4apDtKfCXAgJHrKZw0du8SOdwVuz8vDhLR6JMPTM3aLZ-GaRMuALWoFzwgNzcr5VvFjC_uBTAEpXbnU4dBdn4UJuSbcrwDn0dOjleEeWRSZ3WzaQbDbdnrOa6rElNQ.png)
+![](/docs/assets/drive/dpVQBy2nbhtVzgjPkJHYMp9RqvqPUHmanSDKiUQqs8E6s9I_0jSSVqJuxrV0AouN4apDtKfCXAgJHrKZw0du8SOdwVuz8vDhLR6JMPTM3aLZ-GaRMuALWoFzwgNzcr5VvFjC_uBTAEpXbnU4dBdn4UJuSbcrwDn0dOjleEeWRSZ3WzaQbDbdnrOa6rElNQ.png)
 
 Now, our Core's translation module has a dataset, so we must remember to check the Has reference data flag into the module's definition.
 
-![](/docs.etendo.software/assets/drive/K9BHCsQMKGLJzldVabm22RyRHSEBxmwnwfjiHgZgnvAdRTfFJ-lKjcfTgzWJR7v3OJzeDd471vIF36MDEZOEm3GorJ2eA9AYu9Pkp1wYvhGn4znmMpOSH5rhYy7RBpfYpAysuVcwA32cE2EtSMSSHa4Zy-eZ8A6bua82BpGLX5HPfbRL1Scf5X9tcYpLdg.png)
+![](/docs/assets/drive/K9BHCsQMKGLJzldVabm22RyRHSEBxmwnwfjiHgZgnvAdRTfFJ-lKjcfTgzWJR7v3OJzeDd471vIF36MDEZOEm3GorJ2eA9AYu9Pkp1wYvhGn4znmMpOSH5rhYy7RBpfYpAysuVcwA32cE2EtSMSSHa4Zy-eZ8A6bua82BpGLX5HPfbRL1Scf5X9tcYpLdg.png)
 
 The dataset definition is ready, but it is pending the translation itself. To translate this dataset, we have two possibilities:
 
@@ -136,7 +136,7 @@ The dataset definition is ready, but it is pending the translation itself. To tr
     When finished, export the dataset using the Export Reference Data button at the Dataset window.  
      
 
-![](/docs.etendo.software/assets/drive/HLdK6MJvPef1PUIKKflkO9lzH6J-784wcxFKviH6LfXpVqU53EwcH6_FYjuxvsmxhkSkjaeCcvb0sEdspbU4ifUoR4eWpIOsgulGUkWfgaK3OE5Wvwp7wMxEIsBkLNIgzov73EqdOKp4hUB3py8LgVnVg05mfOAyqfYVPo4ZZHfhNEH7-d9yxukFGjtT5A.png)
+![](/docs/assets/drive/HLdK6MJvPef1PUIKKflkO9lzH6J-784wcxFKviH6LfXpVqU53EwcH6_FYjuxvsmxhkSkjaeCcvb0sEdspbU4ifUoR4eWpIOsgulGUkWfgaK3OE5Wvwp7wMxEIsBkLNIgzov73EqdOKp4hUB3py8LgVnVg05mfOAyqfYVPo4ZZHfhNEH7-d9yxukFGjtT5A.png)
 
 -   Export the dataset with the untranslated strings and edit the XML file using a text editor. The dataset XML file will be stored inside the referencedata/standard directory of your translation module.
 
@@ -208,13 +208,13 @@ The structure of the translation module's directory should be:
             └── AD_MODULE.xml
 ```
 
--   Finally, remember to publish the module in the Nexus Repository. For more information, see [_Publish Modules to a Nexus Repository_](https://docs.etendo.software/en/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository).
+-   Finally, remember to publish the module in the Nexus Repository. For more information, see [_Publish Modules to a Nexus Repository_](https://docs/en/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository).
 
 ## Updating Translation Modules
 
 These are the first considerations for updating a translation module:
 
--   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [_Install Modules in Etendo_](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/install-modules-in-etendo). 
+-   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [_Install Modules in Etendo_](https://docs/en/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/install-modules-in-etendo). 
 -   The already translated strings for this module are kept. Only the new or modified ones will be untranslated, so all the previous work done is not lost.
 -   Before publishing the translation module, remember to update the First Version dependency to the new version of the translated module, as we saw in the “Create module definition” chapter. Also, it is necessary to update the original module version in the build.gradle file. Apart from that, it is also a good practice to include a description of the changes of this new version inside the Update Information field of the Module window.
 -   To apply the updates, it is necessary to execute the command 
@@ -249,12 +249,12 @@ Making a good translation requires knowing the exact context where the string we
 -   The Etendo **Linked Items** feature can give you all the places where a record is used. In the screenshot below, you can get the places where the element with the name “General Ledger Currency Credit” is used. In this case, linked items show that the element is only used in one column, so the user can navigate to this column and later on navigate to the related field, that will show the window where it is used.  
      
 
-![](/docs.etendo.software/assets/drive/1DK-ejWJiBE-zImQ63c16VjUdAdhx-ZIBVBGxXm5JKB22NAbD-nm7jSzkoCCF4TzP4fHk5VPocE5FQWTN7zD1aImaEdSeTRQRzdVDqdrtYDVtALenqfZ2bK7pb4yix5eiXb3OEcF-l9cOBDKPOu-b62NvbY6fsI5CnDACzo6-rPbjkjtMVkhIaUWYs7IgA.png)
+![](/docs/assets/drive/1DK-ejWJiBE-zImQ63c16VjUdAdhx-ZIBVBGxXm5JKB22NAbD-nm7jSzkoCCF4TzP4fHk5VPocE5FQWTN7zD1aImaEdSeTRQRzdVDqdrtYDVtALenqfZ2bK7pb4yix5eiXb3OEcF-l9cOBDKPOu-b62NvbY6fsI5CnDACzo6-rPbjkjtMVkhIaUWYs7IgA.png)
 
 -   All the records have an ID. In the XML file, this ID is shown as an attribute of the row element. In the PO files, it is stored as a comment that can be easily displayed in your PO editor comments window. If we search this ID in the database, it can provide us with important information.  
     For example, it is necessary to get more information about the message "*Business Partner has no location defined*." with the ID "*04EEC6B52A7B4C2CACA1F767217FAFB7*". If the following SQL query is run in the database, it will provide the search key of this message:
 
-![LocGuide HowTo Translate 160.png](/docs.etendo.software/assets/drive/p3Z0NoO7_TKH85eYyv34Pss34S7_6S0AqlQyVNhIR2aoZAa_xX6sV-YpAuMlNktH1HPX2tGmPxbHLGMxRS2tOmPqQ7zWTmjdxsUBoOkR9h3PR108pZHKNX6t5_YC9O4csifF9qgtmMIPU52dBWIWyP_IlR9c_zkgm2wXf078eiPFgMPgJSLJNXzdPKoUOQ.png)
+![LocGuide HowTo Translate 160.png](/docs/assets/drive/p3Z0NoO7_TKH85eYyv34Pss34S7_6S0AqlQyVNhIR2aoZAa_xX6sV-YpAuMlNktH1HPX2tGmPxbHLGMxRS2tOmPqQ7zWTmjdxsUBoOkR9h3PR108pZHKNX6t5_YC9O4csifF9qgtmMIPU52dBWIWyP_IlR9c_zkgm2wXf078eiPFgMPgJSLJNXzdPKoUOQ.png)
 
 With this information, the grep command can be used to find the places in the module's source code where the message is used:
 

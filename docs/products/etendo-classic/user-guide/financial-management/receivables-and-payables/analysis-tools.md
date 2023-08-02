@@ -53,7 +53,7 @@ This report supports multi-currency.
 -   **Voided invoices need to be included** (Only available if Preference "Enable void documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude voided documents from the report.
 -   **Reversed payments need to be included** (Only available if Preference "Enable reversed payment documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude reversed payment documents from the report.
 
-![](/docs.etendo.software/assets/drive/1abmyBz-r9kRr3l7gNXmPgxwZrx-ca-AH.png)
+![](/docs/assets/drive/1abmyBz-r9kRr3l7gNXmPgxwZrx-ca-AH.png)
 
 ### **HTML/PDF/Excel output**
 
@@ -83,7 +83,7 @@ If the **Show Doubtful Debt** check is selected, two more fields are shown.
 
 Also, when Show Doubtful Debt is selected, the Total amount is the sum of all the debts that are not doubtful. Therefore, the Net is Total + Doubtful - Credits
 
-![](/docs.etendo.software/assets/drive/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
+![](/docs/assets/drive/18axihCKiqxA8w_i5HX_UsGM6ZtE4G0U7.png)
 ### **Receivables Aging Schedule Details**
 
 It should display a table showing the following data: By clicking on the PDF or the XLS link, either a PDF or a spreadsheet file are generated.
@@ -108,7 +108,7 @@ If the **Show Doubtful Debt** check is selected, two more fields are shown.
 
 Also, when Show Doubtful Debt is selected, the Total amount is the sum of all the debts that are not doubtful. Therefore, the Net Due is Total + Doubtful - Credits
 
-![](/docs.etendo.software/assets/drive/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
+![](/docs/assets/drive/1-9xrAmRtJQym6Hh1Enp8-6BpMW5Tu72Y.png)
 
 ## **Payables Aging Schedule**
 
@@ -142,7 +142,7 @@ This report supports multi-currency.
 -   **Voided invoices need to be included** (Only available if Preference "Enable void documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude voided documents from the report
 -   **Reversed payments need to be included** (Only available if Preference "Enable reversed payment documents filter in Aging Reports" is set to Y). This checkbox offers the user the option to include/exclude reversed payment documents from the report
 
-![](/docs.etendo.software/assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](/docs/assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
 
 ### **HTML/PDF/Excel output**
 
@@ -165,7 +165,7 @@ It should Display a table showing the following data:
 
 If the credits are posted in the same account as the Payables, then the Net would match the balance of the Business Partner. If the credits are posted in a different account, such as prepayments, then the balance of the Business Partner would match with the Total.
 
-![](/docs.etendo.software/assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
+![](/docs/assets/drive/1Yl2Zd0sXPSwkfD9IN_P-tP2pxy_CSCTR.png)
 
 ### **Payables Aging Schedule Details**
 
@@ -184,7 +184,7 @@ If the credits are posted in the same account as the Payables, then the total Ne
 
 Plus, there is a summary line for all the Business Partners.
 
-![](/docs.etendo.software/assets/drive/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
+![](/docs/assets/drive/1E-2_-hP5TV-Ylx8JE-KPHdZ6sZQkdHHG.png)
 
 ## **Payment Report**
 ### **Introduction**
@@ -195,7 +195,7 @@ Receivables and/or Payables information is shown grouped by the payment status, 
 
 The Payment Report is an Etendo dimensional report which contains below specific filtering options:
 
-![](/docs.etendo.software/assets/drive/1PX-rtKZBix9j8-LmDamIE90SjBybrPpM.png)
+![](/docs/assets/drive/1PX-rtKZBix9j8-LmDamIE90SjBybrPpM.png)
 
 -   **Dates**: enter a **Date From** and a **Date To** to be used while retrieving the payment's data, in relation to:
     -   the payment due date
@@ -249,7 +249,7 @@ The Payment Report is an Etendo dimensional report which contains below specific
 
 The Payment Report is launched by pressing the process button "**Search**". An example of the output of the report is shown in the image below:
 
-![](/docs.etendo.software/assets/drive/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
+![](/docs/assets/drive/1c5purjJlxqlGJ5jZjeFLEW0IfBPMWBXX.png)
 
 Some relevant fields to note are:
 
@@ -279,7 +279,7 @@ It is possible to check the status and result of the payment run as well as the 
 
 The execution date and the execution status of each payment run is shown in this window among other relevant data such as the source of the execution.
 
-![](/docs.etendo.software/assets/drive/1-_lia6e8AfC9M7ON-PzhrWoRitQW9sSs.png)
+![](/docs/assets/drive/1-_lia6e8AfC9M7ON-PzhrWoRitQW9sSs.png)
 
 The Payment Run window only shows the payments received or made which required an additional execution step, therefore an Automatic Execution Type is configured for the payment method used while making/receiving those payments.
 
@@ -308,7 +308,7 @@ There are three "Status" available:
 
 The payment tab lists the payments executed in a payment run.
 
-![](/docs.etendo.software/assets/drive/1porA4UfbmvSes9QKVmxrwr6b8zRav5vK.png)
+![](/docs/assets/drive/1porA4UfbmvSes9QKVmxrwr6b8zRav5vK.png)
 
 #### **Parameters**
 
@@ -318,4 +318,4 @@ An Execution Process can have a set of parameters defined.
 
 For instance, the "Print Check simple process" execution process delivered by Etendo only requires the check number upon execution of the payment.
 
-![](/docs.etendo.software/assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
+![](/docs/assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)

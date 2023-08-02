@@ -96,24 +96,24 @@ Main categories for account configuration:
 
 #### Configuration of cash accounts:
 
-![cas.png](/docs.etendo.software/assets/legacy/cas.png)
+![cas.png](/docs/assets/legacy/cas.png)
 
 #### Configuration of bank accounts:
 
-![bank.png](/docs.etendo.software/assets/legacy/bank.png)
+![bank.png](/docs/assets/legacy/bank.png)
 
 #### Configuration of customer accounts:
 
-![customers.png](/docs.etendo.software/assets/legacy/customers.png)
+![customers.png](/docs/assets/legacy/customers.png)
 
 #### Configuration of supplier accounts:
 
-![suppliers.png](/docs.etendo.software/assets/legacy/suppliers.png)
+![suppliers.png](/docs/assets/legacy/suppliers.png)
 
 #### Configuration of sales accounts:
 
-![sales.png](/docs.etendo.software/assets/legacy/sales.png)
+![sales.png](/docs/assets/legacy/sales.png)
 
 #### Configuration of sales costs accounts:
 
-![sales_cost.png](/docs.etendo.software/assets/legacy/sales_cost.png)
+![sales_cost.png](/docs/assets/legacy/sales_cost.png)

@@ -80,11 +80,11 @@ Este módulo de generación del modelo 349 como un fichero de texto (“\*.txt�
 
 El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos, que el modelo 349 está creado como informe anual, trimestral o mensual de impuestos, todos con la misma configuración:
 
-![](/docs.etendo.software/assets/drive/H0HWfOy7IdB5yLwjirTyqV4jjt9pCbVBTk0lZlXCnufLFyy1zAos1vJiKc0Wgsydgfs3H5RtRsFpPg7UcQXvX924p8_3Taq958X892bGQbJCsMqKjxmenrRR7j3NPFZTcbTE9oQgv9zdWwU9-ngWWh1cIdzW-78QmhNv6SBuuTAUSn_h_N9dotFwXQ.png)
+![](/docs/assets/drive/H0HWfOy7IdB5yLwjirTyqV4jjt9pCbVBTk0lZlXCnufLFyy1zAos1vJiKc0Wgsydgfs3H5RtRsFpPg7UcQXvX924p8_3Taq958X892bGQbJCsMqKjxmenrRR7j3NPFZTcbTE9oQgv9zdWwU9-ngWWh1cIdzW-78QmhNv6SBuuTAUSn_h_N9dotFwXQ.png)
 
 En la pestaña “Secciones de la declaración” se han creado 4 secciones:
 
-![](/docs.etendo.software/assets/drive/vgoWI1diiY_P5qHvQxVKR-bl45Z8XjklTv3NmDsdvGUs47FO_5rOG-1iHbXUXJvJgbMrIVFi4o6K2uExaU-quP9Dhj8z5E4T5bLhOaC-UfkPdriINML5ZQldERE6KkGqjl3A1-eqqIrcqJmCxujcgbe6loYARcfVDZWZVLggYf9-f7LUz3gdGa5IxQ.png)
+![](/docs/assets/drive/vgoWI1diiY_P5qHvQxVKR-bl45Z8XjklTv3NmDsdvGUs47FO_5rOG-1iHbXUXJvJgbMrIVFi4o6K2uExaU-quP9Dhj8z5E4T5bLhOaC-UfkPdriINML5ZQldERE6KkGqjl3A1-eqqIrcqJmCxujcgbe6loYARcfVDZWZVLggYf9-f7LUz3gdGa5IxQ.png)
 
 -   **Fichero** esta primera sección contiene un parámetro de tipo entrada para que el usuario pueda introducir el nombre del fichero del 349 como parámetro de entrada a la hora de generar el fichero.
 -   **Identificación y Totales** esta segunda sección tiene:
@@ -121,21 +121,21 @@ El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Cont
 
 -   Los tipos de IVA de adquisiciones intracomunitarias se han asociado con el parámetro “Adquisiciones intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “A”
 
-![](/docs.etendo.software/assets/drive/KfmRrt9yoEP7_JdY9pGj74eYjDSqeyfBKSdPOhVonW4dkyhp_ooo6fq_VvIR-JcZsvSLAqbAMCowQduY6t-bMNJ_XJCHhqpkFCqo9Fkddj0GPykc5YhEp8TZKoOmZTXyWLYNY2PgG-JTVAdV2I6h_gZLLB-n48YQGkJdC5M8_iKRF7lv0W6I93sY6w.png)
+![](/docs/assets/drive/KfmRrt9yoEP7_JdY9pGj74eYjDSqeyfBKSdPOhVonW4dkyhp_ooo6fq_VvIR-JcZsvSLAqbAMCowQduY6t-bMNJ_XJCHhqpkFCqo9Fkddj0GPykc5YhEp8TZKoOmZTXyWLYNY2PgG-JTVAdV2I6h_gZLLB-n48YQGkJdC5M8_iKRF7lv0W6I93sY6w.png)
 
 -   Los tipos de IVA de entregas intracomunitarias se han asociado con el parámetro “Entregas intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “E”
 
-![](/docs.etendo.software/assets/drive/M9IdlZd-5bo-JKwXpqzeEiWsaa3ONYSfKXANXvyS8TFgbYrOUVg4LjLNidbkGB9lpDkSyNFJQeaV3JpBU_U6IFw2deN8Hi7v5zQhzvAuZNHfE4C2cXoxZu6orkao7wqoXLbdfN40AkRo2obRJexQcI_PQAlOY85AwyUL_-pfUnFrUBHBkhkiMN8Odg.png)
+![](/docs/assets/drive/M9IdlZd-5bo-JKwXpqzeEiWsaa3ONYSfKXANXvyS8TFgbYrOUVg4LjLNidbkGB9lpDkSyNFJQeaV3JpBU_U6IFw2deN8Hi7v5zQhzvAuZNHfE4C2cXoxZu6orkao7wqoXLbdfN40AkRo2obRJexQcI_PQAlOY85AwyUL_-pfUnFrUBHBkhkiMN8Odg.png)
 
 ## **Generación del modelo 349**
 
 El modelo 349 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos. El usuario puede generar el modelo 349 para cualquier mes natural, trimestre natural o bien para el año que desea, tal y como se muestra en las pantallas siguientes:
 
-![](/docs.etendo.software/assets/drive/ajXlOv6TaSCfuNPH4ti4kb0oWm2V4BommSomzro0ZtwUi9P_MqK2QydL8RjnbP9dZ0jdU_iXnYr958xhg5mmGYK1msnKIQqnGKVrNVT6EqQYsqK4hGfKR7VV21YB2EvluSKzXnC4AWnPo2ZLENR5mSWIlsKMKbGdPJ2kZn8VilJkc7KVL20L9bW8pg.png)
+![](/docs/assets/drive/ajXlOv6TaSCfuNPH4ti4kb0oWm2V4BommSomzro0ZtwUi9P_MqK2QydL8RjnbP9dZ0jdU_iXnYr958xhg5mmGYK1msnKIQqnGKVrNVT6EqQYsqK4hGfKR7VV21YB2EvluSKzXnC4AWnPo2ZLENR5mSWIlsKMKbGdPJ2kZn8VilJkc7KVL20L9bW8pg.png)
 
-![](/docs.etendo.software/assets/drive/bexJeVp33GqVPTWs2j-Z5_3gP2ywX0ej3VPCpQBrbBBkogNFQZ02p_hkUr2y9GipS0Z8uZ8zIj_zFIli04pNqqzK4FGSbPFiFgPlYShPVMCcvSuBIGxAZhBT2gbMtxm2nV_omJ3BguAthe6i320j95im5TmxSCsnmech5ZFWUyUhhks4MFsTvxIVqw.png)
+![](/docs/assets/drive/bexJeVp33GqVPTWs2j-Z5_3gP2ywX0ej3VPCpQBrbBBkogNFQZ02p_hkUr2y9GipS0Z8uZ8zIj_zFIli04pNqqzK4FGSbPFiFgPlYShPVMCcvSuBIGxAZhBT2gbMtxm2nV_omJ3BguAthe6i320j95im5TmxSCsnmech5ZFWUyUhhks4MFsTvxIVqw.png)
 
-![](/docs.etendo.software/assets/drive/lj6JxfJvSCO3n4p3kIK_SIXgIbUVY0Oqt4iJJMZPJGYy-JhM3rp6C96LMeAGmK5p33pacEBtCOb0Llmm1G4IoWG6KiEpvPY_IQjyDXZ2lf5uqZBt2_geN7M-aG-97lFUFC16BLcCK6XAB5hC-e18eBunH1RQfRX2_tOwNBJEFVgVwOkf5POwOFWRuw.png)
+![](/docs/assets/drive/lj6JxfJvSCO3n4p3kIK_SIXgIbUVY0Oqt4iJJMZPJGYy-JhM3rp6C96LMeAGmK5p33pacEBtCOb0Llmm1G4IoWG6KiEpvPY_IQjyDXZ2lf5uqZBt2_geN7M-aG-97lFUFC16BLcCK6XAB5hC-e18eBunH1RQfRX2_tOwNBJEFVgVwOkf5POwOFWRuw.png)
 
 En la ventana de generación de informes, el usuario deberá introducir los siguientes datos para generar el modelo 349:
 
@@ -151,7 +151,7 @@ En la ventana de generación de informes, el usuario deberá introducir los sigu
 
 Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 349 en el botón de proceso “Parámetros de entrada”
 
-![](/docs.etendo.software/assets/drive/5i9PO0yuY0M54bcqQ5wMi6y9VjSP18KJBqhgyUFL5pfn5NST30ZaM-zOyqWJZ4KfkX_0m7B_jNUUfhUKNDOI5iNYxD6xlx0b54ajbT0_26cnQGYRKIBLdzoDcCEiYz-08U-TOsJ9Q8vKm_XeSi7AChRNm-sSwhL8zmq99ULTHXlMTXTTXGuM1kZP.png)
+![](/docs/assets/drive/5i9PO0yuY0M54bcqQ5wMi6y9VjSP18KJBqhgyUFL5pfn5NST30ZaM-zOyqWJZ4KfkX_0m7B_jNUUfhUKNDOI5iNYxD6xlx0b54ajbT0_26cnQGYRKIBLdzoDcCEiYz-08U-TOsJ9Q8vKm_XeSi7AChRNm-sSwhL8zmq99ULTHXlMTXTTXGuM1kZP.png)
 
 y una vez introducidos los parámetros de entrada, el usuario puede generar el 349 a través del botón de proceso “Generar fichero”.
 
@@ -159,7 +159,7 @@ y una vez introducidos los parámetros de entrada, el usuario puede generar el 3
 
 Se incluyen 2 nuevos check que permiten generar el fichero con la parametrización correcta para poder realizar su presentación en Hacienda Navarra y Hacienda Guipúzcoa:
 
-![](/docs.etendo.software/assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png)
+![](/docs/assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png)
 
 Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).
 
@@ -179,7 +179,7 @@ Además, deberá asegurarse de que todos los productos tienen la parametrizació
 
 Una vez que todas las operaciones se han registrado en el sistema, el usuario podrá generar el fichero del modelo 349 tal y como se explicó en la sección de este documento “Generación del Modelo 349”. El fichero txt del 349 tiene la siguiente estructura:
 
-![349 4T.png](/docs.etendo.software/assets/drive/4_Ps-YvMKdQKgeHJ_8HkhOwYAerhc8oX6OB58UG1NX5nSoSPBvgsR6vpY2MjmJk1pOhsFk4SmLv_ETEI4Fm4ZBDkWuxdFH4ZcDSJ83NIb3m9QNrqqWssPrfkpRjovNPC2MpEfj9CTun2h_BQgo0TNyAt5gyqhJFR6Qr5dt5T91F5tH-HCYkaJABLfw.png)
+![349 4T.png](/docs/assets/drive/4_Ps-YvMKdQKgeHJ_8HkhOwYAerhc8oX6OB58UG1NX5nSoSPBvgsR6vpY2MjmJk1pOhsFk4SmLv_ETEI4Fm4ZBDkWuxdFH4ZcDSJ83NIb3m9QNrqqWssPrfkpRjovNPC2MpEfj9CTun2h_BQgo0TNyAt5gyqhJFR6Qr5dt5T91F5tH-HCYkaJABLfw.png)
 
 ### **Tipo registro 1 – Registro de declarante:**
 
@@ -275,7 +275,7 @@ e introducir los datos relativos al abono y devolución de mercancía y, en la p
     -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
     -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios Clave I en compras, Clave S en ventas)
 
-![](/docs.etendo.software/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
+![](/docs/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
 
 Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostrar en Etendo las columnas que se detallan a continuación:
 
@@ -309,4 +309,4 @@ Es necesario presentar una declaración sustitutiva cuando dicha declaración te
 
 Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
 
-![](/docs.etendo.software/assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
+![](/docs/assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)

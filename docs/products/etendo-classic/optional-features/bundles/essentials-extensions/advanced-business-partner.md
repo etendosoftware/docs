@@ -40,7 +40,7 @@ This property allows the automatic generation of sequence numbers for business p
 
 #### Allow Jumps in Business Partner Document No
 
-![](/docs.etendo.software/legacy/image_1.png)
+![](/docs/legacy/image_1.png)
 
 This property allows jumping among the different document numbers. The default value is N, so, it is not allowed to remove business partners or change business partner categories. However, it is possible to create a new preference with value Y to enable this option. When the business partner category is changed, the document number is also changed according to the corresponding document sequence.
 
@@ -48,6 +48,6 @@ This property allows jumping among the different document numbers. The default v
 
 To configure the Sequence Number, go to the “Document Sequence” window, create a new record for each organization and category, set the corresponding table, column and business partner category, and save the record. The table and column fields must be filled with the options seen below.
 
-![](/docs.etendo.software/legacy/image_2.png)
+![](/docs/legacy/image_2.png)
 
-For more information, visit [_Sequences_](/docs.etendo.software/legacy/technical-documentation/etendo-environment/platform/sequences).
+For more information, visit [_Sequences_](/docs/legacy/technical-documentation/etendo-environment/platform/sequences).

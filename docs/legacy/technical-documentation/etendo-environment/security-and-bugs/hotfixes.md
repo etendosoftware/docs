@@ -79,7 +79,7 @@ git push --tags
 
 When you create a new Hotfix, there is also a patch that has to be applied to each supported release:
 
-![hotfixes.jpeg](/docs.etendo.software/assets/legacy/technicaldocumentation/securityandbugs/hotfixes.jpeg)
+![hotfixes.jpeg](/docs/assets/legacy/technicaldocumentation/securityandbugs/hotfixes.jpeg)
 
 1.  Move to each release tag and create a new branch with timestamp as a minor. For example:
 

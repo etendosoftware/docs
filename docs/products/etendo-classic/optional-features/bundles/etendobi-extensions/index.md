@@ -12,7 +12,7 @@ This bundle includes the following modules: 
 This module allows users to customize and configure the information and filters in PowerBI reports. It allows the creation of different configurations that facilitate the selection and exclusion of specific entities within reports.
 > 
 !!! info
-    For more information, visit [Etendo BI Inclusion/Exclusion Configuration](https://docs.etendo.software/en/etendo-bi/inclusion-exclusion-configuration).
+    For more information, visit [Etendo BI Inclusion/Exclusion Configuration](https://docs/en/etendo-bi/inclusion-exclusion-configuration).
 
 ## Etendo BI Connector Module
 
@@ -23,6 +23,6 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Functional Documentation](https://docs.etendo.software/en/etendo-bi/etendo-bi-connector) and the [Technical Documentation](https://docs.etendo.software/en/technical-documentation/bundles/etendo-bi-bundle)
+    For more information, visit the [Functional Documentation](https://docs/en/etendo-bi/etendo-bi-connector) and the [Technical Documentation](https://docs/en/technical-documentation/bundles/etendo-bi-bundle)
 
 

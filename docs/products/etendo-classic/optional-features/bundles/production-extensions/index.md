@@ -12,5 +12,5 @@ The Production Extensions bundle includes the following modules:
 This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
-    For more information, visit [Functional Documentation](https://docs.etendo.software/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#advanced-work-effort)
+    For more information, visit [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#advanced-work-effort)
 
