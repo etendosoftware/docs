@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://etendosoftware.github.io/docs.etendo.software/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/install-etendo-development-environment/">
+        <link rel="canonical" href="https://etendosoftware.github.io/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/install-etendo-development-environment/">
       
       
       
@@ -1929,12 +1929,12 @@
 <h2 id="requirements">Requirements</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>You can read the <a href="/docs.etendo.software/requirements">requirements page</a>.</p>
+<p>You can read the <a href="/docs/requirements">requirements page</a>.</p>
 </div>
 <h2 id="install-etendo-on-pc">Install Etendo on PC</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>From Etendo 22Q1, the credentials should not be required interactively. You must set them in the <code>gradle.properties</code> file, since Gradle resolves and checks dependencies periodically. Create the credentials by following this <a href="/docs.etendo.software/developers/setup/use-of-repositories-in-etendo">guide</a>. <br>
+<p>From Etendo 22Q1, the credentials should not be required interactively. You must set them in the <code>gradle.properties</code> file, since Gradle resolves and checks dependencies periodically. Create the credentials by following this <a href="/docs/developers/setup/use-of-repositories-in-etendo">guide</a>. <br>
 <code>githubUser=USER</code> &gt; <code>githubToken=TOKEN</code></p>
 </div>
 <h5 id="working-with-jars">Working with JARs</h5>
@@ -1947,7 +1947,7 @@
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you want to migrate from an environment with sources, refer to the <a href="https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration"> Environment migration</a> guide</p>
+<p>If you want to migrate from an environment with sources, refer to the <a href="https://docs/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration"> Environment migration</a> guide</p>
 </div>
 <p>To resolve the Etendo dependency, run:</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">./</span><span class="n">gradlew</span><span class="w"> </span><span class="n">dependencies</span>
@@ -1980,7 +1980,7 @@ For example <code>com.smf.classic.core:ob:21.4.1</code></p>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this <a href="/docs.etendo.software/developers/setup/use-of-repositories-in-etendo">guide</a>.</p>
+<p>Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this <a href="/docs/developers/setup/use-of-repositories-in-etendo">guide</a>.</p>
 </div>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">githubUser</span><span class="o">=</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">githubToken</span><span class="o">=</span>
@@ -2036,33 +2036,33 @@ User: admin  </p>
 <ol>
 <li>Open source directory with IntelliJ:</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij1.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij1.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij1.png" /></a></p>
 <ol>
 <li>Open the project. This can be done from the welcome view, from <code>Open &amp; Import</code> or from <code>File</code> &gt;&gt; <code>Open</code></li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij2.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij2.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij2.png" /></a></p>
 <ol>
 <li>The project includes Tomcat configuration. Click on “Add configuration...”</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij3.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij3.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij3.png" /></a></p>
 <ol>
 <li>Select the Tomcat configuration that appears first in the list, check the Tomcat server configuration on your machine, and then click the OK button.</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij4.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij4.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij4.png" /></a></p>
 <ol>
 <li>Run Tomcat or run in development mode.</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij5.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij5.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij5.png" /></a></p>
 <h2 id="how-to-run-etendo-project-in-intellij-community">How to run Etendo Project in IntelliJ Community</h2>
 <ol>
 <li>You can use the Smart Tomcat plugin. To install, go to <code>File</code> &gt;&gt; <code>Settings</code> &gt;&gt; <code>Plugins</code> and search for <code>“Smart Tomcat”</code>.</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij6.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij6.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij6.png" /></a></p>
 <ol>
 <li>Download Apache-Tomcat and unzip it.</li>
 <li>Go to <code>Add Configuration</code> &gt;&gt; <code>+</code> &gt;&gt; <code>Smart Tomcat</code>. In Tomcat Sever, select the Apache-Tomcat folder. In the same window, set “Tomcat” as the name and change the Context path to the context project name.</li>
 </ol>
-<p><a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij7.png" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png" /></a> <a class="glightbox" href="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij8.jpeg" src="/docs.etendo.software/assets/legacy/enduserdocumentation/gettingstarted/intellij8.png" /></a></p>
+<p><a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij7.png" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij7.png" /></a> <a class="glightbox" href="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="intellij8.jpeg" src="/docs/assets/legacy/enduserdocumentation/gettingstarted/intellij8.png" /></a></p>
 <h2 id="enable-etendo-logs-optional">Enable Etendo Logs (optional)</h2>
 <p>1 - Open the file <code>config/ log4j2-web.xml</code>, find the line <code>&lt;AppenderRef ref = "Console" /&gt;</code> and uncomment it:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&lt;Loggers&gt;
