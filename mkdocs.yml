@@ -96,7 +96,7 @@ nav:
       - User Guide:
         - General Setup: products/etendo-classic/user-guide/general-setup/index.md
         - Jobs: products/etendo-classic/user-guide/jobs/index.md
-        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/index.md
+        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/masterdata.md
         - Procurement Management: 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md

@@ -23,18 +23,18 @@ The overall flow is the following:
 
 1\. Actions in quotations:
 
-- Book: This action allows the user to process the quotation.
-- Reactivate: This action allows the user to add, remove or modify a quotation line/s.
-- Create a sales order: This action converts the quotation into a sales order.
-- Reject: This action cancels/rejects the quotation
+- **Book**: This action allows the user to process the quotation.
+- **Reactivate**: This action allows the user to add, remove or modify a quotation line/s.
+- **Create a sales order**: This action converts the quotation into a sales order.
+- **Reject**: This action cancels/rejects the quotation
 
 2\. Statuses of the quotation:
 
 - **Draft**: Enter, remove and modify lines is allowed in this status. This status is reached after clicking New or reactivating the document.
 - **Under evaluation**: After booking the quotation. In this status the document cannot be changed. Further actions are:  
-  **Reactivate**  
-  **Create a sale order**  
-  **Reject the quotation**
+    - **Reactivate**  
+    - **Create a sales order**  
+    - **Reject the quotation**
 - **Closed** - Order created: After creating the sales order the document turns into this status. No further actions are allowed.
 
 !!! info
@@ -44,14 +44,14 @@ The overall flow is the following:
 
 ### Header
 
-The user can create a sales quotation and processes it when ready.
+The user can create a sales quotation and process it when ready.
 
 ![Sales quotations header](/docs/assets/drive/1mGI2PwGXX8NokA5eSauNdO3hpyCM1lH9.png)
 
 The header lists the main terms and conditions related to the customer quotation that are used in the heading of its printed copy and further in its order, shipment and invoicing process.  
 In the majority of cases, the main and the only field needed to create a new quotation is the Business Partner field. All other fields are automatically populated based on the selected Business Partner, logged in User preferences and other system default parameters.
 
-**Some other fields to note are:**
+Some other fields to note are:
 
 **Valid Until:** This field provides information about the deadline of the validity of the quotation.  
 **Reject Reason:** This field informs about the reason why a quotation has been rejected by a customer. It is mandatory when rejecting a quotation.
@@ -65,7 +65,7 @@ A new button Create Order appears when the status is Under Evaluation. When pres
 
 The status of the newly created sales order is Booked. It is possible to change the "Invoice Terms" of the sales order as well as to "Reactivate" it if the sales order needs to be modified.
 
-Prior to create a sales order, the system shows a flag named Firm quote which is marked as default:
+Prior to create a sales order, the system shows a flag named Firm Quote which is marked as default:
 
 ![Firmquote](/docs/assets/drive/1zRP6rz_UJ-8Y9tdp9l6XCHP_QU7DrN9B.png)
 
@@ -90,16 +90,16 @@ This sales quotation tab lists information about the discounts automatically app
 #### Tax
 
 The user can edit the taxes applied to the quotation.  
-Summarizes tax related information for the whole sales quotation. Contains as many records as tax rates used in the quotation.
+It summarizes tax related information for the whole sales quotation. Contains as many records as tax rates used in the quotation.
 
-## Sales Extensions Bundle - (Sales Quotation)
+### **Sales Extensions Bundle (Sales Quotation)**
 
 !!! info
     To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
 Through this window, the user can generate sales quotations and create the corresponding orders from those quotations.
 
-### Header
+#### Header
 
 The main header numerates the terms and conditions related with the sales quotation which are used in the printed copy header and, later on, in its order, goods receipt and invoice process.
 
@@ -126,38 +126,39 @@ In this section, the fields to fill in are the following:
 - Origin order: when the "Change customer, rate and currency" button is executed and the "Link order" check is checked, the new quotation created is set in this field, modifying the previous one, with the number of the original quotation, that is, the one being modified; which will be in "Closed-rejected" status.
 - Description: This is a space to write additional related information.
 
-### Status bar
+#### Status bar
 
 This bar shows the following information:
 
 - The possible document statuses for a quotation will be:
 
-**Draft**: allows entering, delete and modify lines in this status. This status is reached after clicking on the new button or when reactivating the document.
-**Under evaluation**: this status is reached after registering the quotation. At this stage, the document cannot be modified.
-**Closed - Order created**: after creating the sales order, the document reaches this status. Once reached, no further actions are allowed.
-**Closed - Rejected**: this status appears in case the quotation is rejected by the customer. It is mandatory to enter a reason for rejection. Once this status is reached, no further actions are allowed.
+**Draft**: allows entering, delete and modify lines in this status. This status is reached after clicking on the new button or when reactivating the document.<br>
+**Under evaluation**: this status is reached after registering the quotation. At this stage, the document cannot be modified.<br>
+**Closed - Order created**: after creating the sales order, the document reaches this status. Once reached, no further actions are allowed.<br>
+**Closed - Rejected**: this status appears in case the quotation is rejected by the customer. It is mandatory to enter a reason for rejection.
+Once this status is reached, no further actions are allowed. <br>
 
 - Total gross amount: indicates the final monetary amount of the quotation, including taxes.
 - Total net amount: indicates the final monetary amount of the quotation, excluding taxes.
 - Currency: shall indicate in which currency the quotation is defined. This field is filled in according to the selected tariff.
 
-### Lines tab
+#### Lines tab
 
 Once the header is completed, the lines must be added.
 
-**Basic discounts**
--Basic discount: this is the percentage reduction applied to the list price.
+**Basic discounts** <br>
+-Basic discount: this is the percentage reduction applied to the list price.<br>
 -Cascade: this is any additional discount based on the total remaining after applying previous discounts.
-Active: this is a check that indicates whether this record is available for use or disabled.
+Active: this is a check that indicates whether this record is available for use or disabled.<br>
 
-**Tax**
+**Tax** <br>
 This tab summarizes the information related to the taxes involved in the quotation.
 It contains as many records as there are tax categories involved in the quotation.
 
-Line number: indicates the position of the line in the document.
-Tax: indicates the tax rate that is applicable to a given product.
-Taxable amount: indicates the amount on which the tax will be calculated.
-Tax amount: indicates the amount of tax resulting from the Tax and Taxable amount fields.
+- Line number: indicates the position of the line in the document.<br>
+- Tax: indicates the tax rate that is applicable to a given product.<br>
+- Taxable amount: indicates the amount on which the tax will be calculated.<br>
+- Tax amount: indicates the amount of tax resulting from the Tax and Taxable amount fields.<br>
 
 **History tab**
 When the "Change customer, rate and currency" button is clicked on a quotation and the "Link order" check is checked, a record is created in this tab with the data of the new quotation created and, in turn, one for each of the successive modifications to the original quotation.
@@ -170,17 +171,18 @@ The information shown in each record is as follows:
 
 ![](/docs/assets/drive/1XoFvD98AeaJDehEjw0rJtqNyzo8GaeeW.png)
 
-**Actions**
-Register: this action allows the user to generate the budget.
-Reactivate: this action allows the user to add, remove or modify one or more lines of the quotation.
-Create a sales order: this action converts the quotation into a sales order. To do so, the document type of the quotation must be configured correctly. This means that it requires a document type (i.e. standard order) to be defined in the "Order document type" field. This button appears when the status of the quotation is "In evaluation".
+**Actions**<br>
+
+- Register: this action allows the user to generate the budget.<br>
+- Reactivate: this action allows the user to add, remove or modify one or more lines of the quotation.<br>
+- Create a sales order: this action converts the quotation into a sales order. To do so, the document type of the quotation must be configured correctly. This means that it requires a document type (i.e. standard order) to be defined in the "Order document type" field. This button appears when the status of the quotation is "In evaluation".<br>
 
 The status of the newly created sales order will be "Registered". In this instance, it is possible to change the "Billing Terms" as well as "Reactivate" it if it needs to be modified.
 
 !!! info
     Only one sales order can be created for the same quotation.
 
-Reject: this action allows to cancel or reject the quotation. A reason for rejection is mandatory for this action.
+- Reject: this action allows to cancel or reject the quotation. A reason for rejection is mandatory for this action.
 
 Etendo also allows generating partial sales orders either for the lines the user needs to convert, or for the amount of the product needed to convert. Apply this functionality by selecting the necessary line/s and by editing the product amount in the Amount to generate tab.
 
@@ -208,17 +210,19 @@ In the pop-up window opened when this process is executed, the user will see the
 
 ![](/docs/assets/drive/1iid--FWuwlYd-vW3S6kQ6zlIftnNgXlP.png)
 
-**Adjust button**
+**Adjust button**<br>
+
 This process allows the user to adjust the price of one or more budget lines, either by applying discount or surcharge through an adjustment factor.
 
 !!! info
-    It can only be executed while the document is in draft.
+    This can only be executed while the document is in draft status.
 
 ![](/docs/assets/drive/1AI28ZDh33qlFigapI41CdMpg6Eeb3bGN.png)
 
 ## Sales Order
 
 A sales order is a document that specifies products and/or services ordered by a specific business partner (customer), as well as the price and terms and conditions.  
+
 The Sales Order window allows the user to register sales related documents with different purposes which is regulated by the Transaction Document field. Depending on the chosen value, the consequences when booking the sales order are different. These are the types of sales order documents that are available:
 
 **Standard Order:** When the transaction document is standard upon booking of the document, there are no additional documents created. Goods shipment and sales invoice still have to be created.
@@ -256,17 +260,17 @@ Some other fields to note are:
 **Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
 
 !!! info
-    Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the Stock Reservations section.
+    Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the [Stock Reservations](/docs/products/etendo-classic/user-guide/sales-management/transactions#stock-reservations) section.
 
 **Payment Status:** indicates in % how much of the total of the order has been paid.
 
 Below fields are defaulted according to the Customer and Location tabs of the Business Partner window.
 
-Payment Method: indicates how an order (and invoice) should be paid.
+**Payment Method**: indicates how an order (and invoice) should be paid.
 
-Payment Terms: defines when a sales invoice generated from this order needs to be paid.
+**Payment Terms**: defines when a sales invoice generated from this order needs to be paid.
 
-Invoice Terms: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
+**Invoice Terms**: defines how a Business Partner is invoiced and the frequency of invoicing. It is used by automated processes: Generate Invoices and Create Invoices from Orders and by Create Lines From button in the Sales Invoice.
 
 **Different Invoice Terms are:**
 
@@ -275,12 +279,9 @@ Invoice Terms: defines how a Business Partner is invoiced and the frequency of i
 **Customer Schedule After Delivery:** Instead of sending out invoices each time any sales order product gets delivered, one invoice is created that is combining the different deliveries for a certain customer according to the defined schedule (weekly or monthly on a particular day).  
 **Do Not Invoice:** No invoice is generated automatically. Normally used when there is some external event that triggers creation of the invoice (for example, the VIP customer tells that it is okay to do so).  
 **Immediate:** The invoice is generated with the next run of the automated generation of invoices regardless of whether any shipment of ordered products took place or not.
-
-Sales Representative: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
-
-Invoice Address: Address that is used upon generating an invoice.
-
-Delivery Location: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
+**Sales Representative**: Sales person responsible for the customer in the order. It is normally used to reflect the person who booked the order.
+**Invoice Address**: Address that is used upon generating an invoice.
+**Delivery Location**: Address that is used when generating a shipment. If it is not specified, the Partner Address field is used.
 
 **There are 3 ways of entering lines into a sales order:**
 
@@ -398,8 +399,8 @@ Sales Order lines can be reserved when the sales order is booked and is pending 
 Fields to be noted:
 
 - **Stock Reservation**: Defines if it is desired to automatically reserve the sales order line when it is booked. Available values are:
-  - _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
-  - _Automatic_: The reservation is automatically created and processed, reserving the available stock.
+    -  _Manual_: No reservation needs to be generated automatically. So when the order is booked you manually create the reservation
+    -  _Automatic_: The reservation is automatically created and processed, reserving the available stock.
 - **Reservation Status**: Defines whether the line is _Fully Reserved_ or _Partially Reserved_ or _Not Reserved_.
 
 **Manage Reservation: Pick and Execute**
@@ -470,7 +471,7 @@ It is not recommended to modify the tax manually afterwards, as the system can c
 
 #### **Related Services**
 
-In this table the 'Service' type product Order Lines related to an Order Line are displayed.
+In this table, the 'Service' type product Order Lines related to an Order Line are displayed.
 
 This tab is only displayed for those lines with products related to services. It displays the related services. The grid has the same fields that the Pick & Edit uses to add the lines. This tab is not editable.
 
@@ -499,13 +500,13 @@ Set of orders replacing a canceled order.
 ### How to Reactivate a Closed Sales Order
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 Etendo allows the user to reactivate closed sales orders by selecting the needed one/s and clicking the Undo Close button.
 
 ![](/docs/assets/drive/14S-_sqqQcDlJqhtFt_L9GVSZ6U-jH4Yo.png)
 
-Once the process is finished, the sales order status turns to booked.
+Once the process is finished, the sales order status turns to _booked_.
 
 !!! info
     Check the Technical documentation about Advanced Financial Docs Processing to extend the process.
@@ -515,7 +516,7 @@ Once the process is finished, the sales order status turns to booked.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 From this window, it is possible to remove payments associated with a sales order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Sales Invoice window > Payment Plan tab).
 
@@ -533,10 +534,10 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [Functional Documentation about the Intercompany module](https://docs/en/modules/financial-extensions-bundle/intercompany)
+    For more information, visit [the Intercompany module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 ## Goods Shipment
 
@@ -566,7 +567,7 @@ Some other fields to note:
 - **Accounting Date:** Date to be used in the posting record of the Goods Shipment to the general ledger.
 - **Sales Order:** Reference to an order that is being shipped. If Goods Shipment includes products from several Sales Orders fields are left empty (still trace-ability is present at Lines level).
 - **Invoice Status:** indicates in % how much quantity has been invoiced.
-  - As a consequence of 23916 feature request and after 26629 issue changes were applied, if we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.
+  If we create two or more lines in goods shipment related to a sales invoice line, only one of those goods shipment lines will show "Invoice Status" 100% and the rest will show "Invoice Status" 0%.
 
 There are 2 ways of entering lines into the sales order:
 
@@ -629,7 +630,7 @@ Besides, the window shows a new button **Generate Invoice from Shipment** which 
 ### How to Reactivate Goods Shipments
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95)
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
 
 From the Goods Shipment window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.
 
@@ -640,14 +641,14 @@ Once the shipment is successfully reactivated, the state of the document changes
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Return from Customer
 
@@ -695,12 +696,12 @@ To enter lines that come from a goods shipment, you need to click the button “
 
 **Things to consider:**
 
-- The only editable fields are:
-  - **Returned**: Quantity you wish to return. When selecting the row, the quantity is not set by default since the system cannot know how many items are being returned.
-  - **Net Unit Price**: Price of the original sales order.
-  - **Return reason:** The reason why you return the item.
-  - **Returned UOM**, only in case alternative unit of measure (AUM) preference is enabled.  
-    In that case, the product's "primary" AUM for the sales flow is shown if any, otherwise the product's UOM is shown. The user can always change it to product's UOM.
+  - The only editable fields are:
+    - **Returned**: Quantity you wish to return. When selecting the row, the quantity is not set by default since the system cannot know how many items are being returned.
+    - **Net Unit Price**: Price of the original sales order.
+    - **Return reason:** The reason why you return the item.
+    - **Returned UOM**, only in case alternative unit of measure (AUM) preference is enabled.  
+      In that case, the product's "primary" AUM for the sales flow is shown if any, otherwise the product's UOM is shown. The user can always change it to product's UOM.
 - You can define the Return Reason at header level. In this case when picking a line it inherits what selected in the header but you can modify it as you wish.
 - Only Goods shipment documents that have not been still returned can be picked. In case a goods shipment line has been fully returned, it won't be shown.
 - When a goods shipment line has been partially returned, the rest can still be returned. What you have already returned for that line is shown in the field Return Qty other RM.
@@ -714,7 +715,7 @@ A restriction has been added in Pick/Edit Lines in order to prevent adding non �
 
 To enter lines that do not come from any document present in the system,  you need click the “Insert Orphan Line” button.
 
-!!! info
+!!! tip
     Since this flow is not common, the button is hidden by default. In order to display it, it is necessary to configure a preference named **RM Allow Orphan Line**. To do so, go to the preference window and select it from the list. The value must be _Y_. Then log out and log in.
 
 **Things to consider:**
@@ -739,7 +740,7 @@ Taxes related to the order line.
 
 #### **Related Products**
 
-In this table the Order Lines related to an Order Line of 'Service' type are added.
+In this table, the Order Lines related to an Order Line of 'Service' type are added.
 
 It has been added the possibility to select the service related to which original product lines is desired to be returned. In order to do it, the new button “Select Order Line” has been added in Return From Customer Line tab. This button is  displayed when a line with a Service ‘Linked to Product’ is selected.
 
@@ -757,7 +758,7 @@ It shows the discount applied to the original invoice of the returned product.
 
 #### **Tax**
 
-Edit taxes applied to your order.
+The user can edit taxes applied to the order.
 
 ## Return Material Receipt
 
@@ -801,13 +802,13 @@ To enter new lines, the user needs to click the button “Pick/Edit Lines”
 
 **Validations**
 
-- You are not allowed to receive more quantity than the **Pending** quantity. In case you do it, a message is shown.
+- The user is not allowed to receive more quantity than the **Pending** quantity. In case they do it, a message is shown.
 
 !!! info
-    To edit a line, you need to click again the **Pick/Edit Lines** button and the line appears selected. Then you can modify any of the editable fields.
+    To edit a line, it is necessary to click again the **Pick/Edit Lines** button and the line appears selected. Then, the user can modify any of the editable fields.
 
 !!! info
-    To delete a line, you need to unmark the line and then click Done.
+    To delete a line, the user needs to unmark the line and then click Done.
 
 **Accounting**
 
@@ -832,14 +833,14 @@ Accounting information related to the return material receipt.
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Create Shipments from Orders
 
@@ -870,7 +871,7 @@ Select the order(s) you want to ship and click the Process button to generate th
 
 Sales Invoice is an itemized statement of goods or services provided to a business partner. It indicates the quantity and price of each product delivered.
 
-Sales invoice window allows the user to issue and manage customer's invoices. It also allows the user to browse information about all sales invoices registered in the system and manually create new invoice documents. It is useful if execution of some specific scenario is required that is not managed by automatic invoice generation processes like Generate Invoices or Create Invoices from Orders.
+The Sales invoice window allows the user to issue and manage customer's invoices. It also allows the user to browse information about all sales invoices registered in the system and manually create new invoice documents. It is useful if execution of some specific scenario is required that is not managed by automatic invoice generation processes like Generate Invoices or Create Invoices from Orders.
 
 The sales revenues can be recognized as soon as the sales invoice is accounted for, however if a revenue deferred plan is configured it is possible to defer the revenue recognition as required.
 
@@ -923,7 +924,7 @@ The Advanced Remittance module provides the header of the Sales Invoice with a n
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
-!!! warning
+!!! note
     **Important**:
     When using the option “Create lines from orders”, if all orders have the same bank account, the invoice uses that bank account. If not, it uses the default one.
 
@@ -1000,7 +1001,7 @@ Nowadays, it is very common for the organizations located in a country to make b
 
 Above described business scenario, implies the need of managing exchange rates between the organization's general ledger/s currency and the customer's invoice currency to be used while posting the customer's invoice to the ledger/s.
 
-This tab allows you to enter:
+This tab allows the user to enter:
 
 - either an exchange rate between the organization's general ledger/s currency and the customer's invoice currency
 - or the total foreign invoice amount/s, therefore Etendo can calculate the corresponding exchange rates.
@@ -1100,67 +1101,71 @@ Etendo allows the user to receive payments in a different currency than the fina
 
 To do this, the payment method assigned to the financial account used to receive the payment needs to be configured to allow it, that implies to select the check-box "Receive Payments in Multiple Currencies".
 
-Let's take for instance an organization such as "F&B US Inc".
+!!! example
 
-This organization is located in USA, therefore it is likely that the organization's general ledger currency as well as the financial account currency is set as USD.
+    Let's take for instance an organization such as "F&B US Inc".
 
-F&B US Inc makes business with a customer located abroad. This customer requires to pay the invoice/s issued to it in EUR currency. This means that:
+    This organization is located in USA, therefore it is likely that the organization's general ledger currency as well as the financial account currency is set as USD.
 
-- F&B US Inc organization needs to issue the customer's invoice in EUR same as the payment received from the customer.
+    F&B US Inc makes business with a customer located abroad. This customer requires to pay the invoice/s issued to it in EUR currency. This means that:
 
-If the customer's payment is registered in the "Add Payment" window shown from this "Sales Invoice" window, Etendo allows the user to enter an exchange rate, therefore the "Actual Converted" amount to be paid in EUR can be changed if required.
+    - F&B US Inc organization needs to issue the customer's invoice in EUR same as the payment received from the customer.
+
+    If the customer's payment is registered in the "Add Payment" window shown from this "Sales Invoice" window, Etendo allows the user to enter an exchange rate, therefore the "Actual Converted" amount to be paid in EUR can be changed if required.
 
 #### **Accounting**
 
-Accounting information related to the sales invoice
+Accounting information related to the sales invoice.
 
 A sales invoice can be posted to the ledger when required at a given "Accounting Date" by using the button "Post".
 
-Sales Invoice posting creates the following accounting entries
+Sales Invoice posting creates the following accounting entries:
 
 Posting record date: Accounting Date.
 
 |                              |                        |                     |                                               |
 | ---------------------------- | ---------------------- | ------------------- | --------------------------------------------- |
-| **Account**                  | **Debit**              | **Credit**          | **Comment**                                   |
-| **Customer Receivable**      | **Total Gross Amount** |                     | **One per Payment Plan Line (TB verified)**   |
-| **Discount Product Revenue** | **Discount Amount**    |                     | **One per Invoice Line (if discount exists)** |
-| **Product Revenue**          |                        | **Line Net Amount** | **One per Invoice Line**                      |
-| **Tax Due**                  |                        | **Tax Amount**      | **One per Tax Line.**                         |
+| Account                  | Debit              | Credit          | Comment                                   |
+| Customer Receivable      | Total Gross Amount |                     | One per Payment Plan Line (TB verified)   |
+| Discount Product Revenue | Discount Amount    |                     | One per Invoice Line (if discount exists) |
+| Product Revenue          |                        | Line Net Amount | One per Invoice Line                      |
+| Tax Due                  |                        | Tax Amount      | One per Tax Line                         |
 
 Same way, a Sales Invoice including a sales invoice line with a revenue plan configured creates the following accounting entries.
 
-For instance a food and beverage distributor selling and invoicing a product that will only be able to deliver to their customers in 3 months would want to defer the revenue recognition till the delivery.
+For instance, a food and beverage distributor selling and invoicing a product that will only be able to deliver to their customers in 3 months would want to defer the revenue recognition till the delivery.
 
 Posting record date: Accounting Date:
 
 |                              |                        |                     |             |
 | ---------------------------- | ---------------------- | ------------------- | ----------- |
-| **Account**                  | **Debit**              | **Credit**          | **Comment** |
-| **Customer Receivables**     | **Total Gross Amount** |                     |             |
-| **Product Deferred Revenue** |                        | **Line Net Amount** |             |
-| **Tax Due**                  |                        | **Tax Amount**      |             |
+| Account                  | Debit              | Credit          | Comment |
+| Customer Receivables     | Total Gross Amount |                     |             |
+| Product Deferred Revenue |                        | Line Net Amount |             |
+| Tax Due                  |                        | Tax Amount      |             |
 
 Posting record date: Accounting Date + 3 months:
 
 |                              |                     |                     |
 | ---------------------------- | ------------------- | ------------------- |
-| **Account**                  | **Debit**           | **Credit**          |
-| **Product Deferred Revenue** | **Line Net Amount** |                     |
-| **Product Revenue**          |                     | **Line Net Amount** |
+| Account                  | Debit           | Credit          |
+| Product Deferred Revenue | Line Net Amount |                     |
+| Product Revenue          |                     | Line Net Amount |
 
 Return Material Sales Invoice posting creates the following accounting entries.
 
-Notice that this Invoice should be created with negative amounts.
+!!! note
+
+     Notice that this Invoice should be created with negative amounts.
 
 Posting record date: Accounting Date.
 
 |                                                              |                     |                        |                                             |
 | ------------------------------------------------------------ | ------------------- | ---------------------- | ------------------------------------------- |
-| **Account**                                                  | **Debit**           | **Credit**             | **Comment**                                 |
-| **Customer Receivable**                                      |                     | **Total Gross Amount** | **One per Payment Plan Line (TB verified)** |
-| **Product Revenue Return or if not defined Product Revenue** | **Line Net Amount** |                        | **One per Invoice Line**                    |
-| **Tax Due**                                                  | **Tax Amount**      |                        | **One per Tax Line.**                       |
+| Account                                                  | Debit           | Credit             | Comment                                 |
+| Customer Receivable                                      |                     | Total Gross Amount | One per Payment Plan Line (TB verified) |
+| Product Revenue Return or if not defined Product Revenue | Line Net Amount |                        | One per Invoice Line                    |
+| Tax Due                                                  | Tax Amount      |                        | One per Tax Line.                       |
 
 #### **Voiding**
 
@@ -1201,9 +1206,9 @@ We strongly recommend the user to use the "Reversed Sales Invoice" document type
 ### How to Reactivate a Voided Sales Invoice
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
-Etendo allows the user to reactivate voided sales invoices by selecting the needed one/s and clicking the Unvoid button.
+Etendo allows the user to reactivate voided sales invoices by selecting the needed one/s and clicking the **Unvoid** button.
 
 ![](/docs/assets/drive/1ylCS2UH_L4XkR02QV8XLqI1rduhcpfIe.png)
 
@@ -1225,7 +1230,7 @@ The aim of this functionality is to delete and reactivate payments in an agile a
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e38GszuIF4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 From this window, it is possible to delete payments associated with a sales invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Sales Order window > Payment Plan tab).
 
@@ -1243,27 +1248,27 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [Functional Documentation about the Intercompany module](https://docs/en/modules/financial-extensions-bundle/intercompany)
+    For more information, visit [the Intercompany module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ### Advanced Rappels
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}.
 
 When using this functionality, in the Sales Invoice window, the user can find the sales invoices corresponding to the created rappels.
 
@@ -1272,7 +1277,7 @@ When using this functionality, in the Sales Invoice window, the user can find th
 These sales invoices have a negative amount that represents the discount of the rappel, can include a prefix in its code to distinguish them from the rest and their status is “draft”.
 
 !!! info
-    For more information, visit [Advanced Rappels](/docs/products/etendo-classic/user-guide/masterdata-management/index#advanced-rappels).
+    For more information, visit [Advanced Rappels](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#advanced-rappels).
 
 ## Create Invoices from Orders
 
@@ -1326,7 +1331,7 @@ All the Documents created are going to be Invoiced against the Organization set 
 
 Filters are available to narrow down the inputs for the generation process:
 
-\*\*Invoice Organization:\*\*The Organization against which the Invoices are going to be created.
+**Invoice Organization:**The Organization against which the Invoices are going to be created.
 
 **Sales Order:** leave blank to consider all sales orders or select a specific one to generate an invoice for. Note that only pending orders are included inside this drop-down.
 
@@ -1345,7 +1350,7 @@ Finally, it is important to remark that the Generate invoices process also uses 
 
 ### **Form**
 
-An important field to note is Invoice Date. If specified, this date is transferred as the Invoice Date to the generated Sales Invoices (and so to Accounting Date field that is used in the posting record of the invoice to the general ledger). If not defined then Movement Date field from the Goods Shipment related to the original Sales Order is set as Invoice Date. If Goods Shipment does not exist then the Order Date field from the original Sales Order is used as Invoice Date.
+An important field to note is **Invoice Date**. If specified, this date is transferred as the Invoice Date to the generated Sales Invoices (and so to Accounting Date field that is used in the posting record of the invoice to the general ledger). If not defined then Movement Date field from the Goods Shipment related to the original Sales Order is set as Invoice Date. If Goods Shipment does not exist then the Order Date field from the original Sales Order is used as Invoice Date.
 
 **OK** button launches the process and all orders pending to be invoiced that match the filters are automatically invoiced.
 
@@ -1423,4 +1428,4 @@ Fields to note:
 
 ---
 
-This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
