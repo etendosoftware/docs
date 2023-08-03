@@ -9,15 +9,9 @@ This section describes the windows related to sales reports in Etendo. These are
 - Sales Dimensional Report
 - Shipments Dimensional Report
 - Discount Invoice Report
-- Sales Order Report
 - Stock for Open Orders
-- Invoiced Sales Order Report
 - Orders Awaiting Invoice Report
-- Delivered Sales Order Report
-- Shipment Report
 - Orders Awaiting Delivery Report
-- Invoice Detail
-- Customer Invoice Report
 - Sales Invoice Dimensional Report
 
 
@@ -117,11 +111,6 @@ In the image below, the same report is shown, but having checked the filter “S
 ![](/docs/assets/drive/1Z36B4O0Ih4xnuLhT_HYRHJfP0QlZDeiG.png)
 
 
-## Sales Order Report
-
-!!! warning
-    This website is under construction.
-
 
 ## Stock for Open Orders
 
@@ -129,10 +118,6 @@ In the image below, the same report is shown, but having checked the filter “S
 
 This section shows the lines of the pending orders with the actual stock of each product.
 
-## Invoiced Sales Order Report
-
-!!! warning
-    This website is under construction.
 
 
 ## Orders Awaiting Invoice Report
@@ -165,17 +150,6 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
     Please note that the report gives information about sales orders and products included in it without reflecting the information of already delivered and invoiced quantities.
 
 
-## Delivered Sales Order Report
-
-!!! warning
-    This website is under construction.
-
-
-## Shipment Report
-
-!!! warning
-    This website is under construction.
-
 
 ## Orders Awaiting Delivery Report
 
@@ -196,16 +170,6 @@ All filters refer to corresponding fields of the Sales Order.
 
 ![Sample Report Output](/docs/assets/drive/1Liay4G2dIvO513rwpadunx-v0ud0rs87.png)
 
-## Invoice Detail
-
-!!! warning
-    This website is under construction.
-
-
-## Customer Invoice Report
-
-!!! warning
-    This website is under construction.
 
 
 ## Sales Invoice Dimensional Report
