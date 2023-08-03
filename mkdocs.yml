@@ -152,9 +152,26 @@ nav:
         - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
         - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
         - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+  - Developer Guide:
+    - Etendo Classic:
+      - Setup and Upgrade:
+        - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/setup-and-upgrade/upgrading-to-openbravo-21q3-2.md
+        - Install Etendo Development Environment: developer-guide/etendo-classic/setup-and-upgrade/install-etendo-development-environment.md
+        - Install Modules in Etendo: developer-guide/etendo-classic/setup-and-upgrade/install-modules-in-etendo.md
+        - IntelliJ Code Formatting: developer-guide/etendo-classic/setup-and-upgrade/code-formatting-style-in-intellij.md
+        - Core format migration (JAR- Sources): developer-guide/etendo-classic/setup-and-upgrade/core-format-migration.md
+        - Upgrade Etendo to Any Version: developer-guide/etendo-classic/setup-and-upgrade/upgrade-etendo-to-any-version.md
+        - Resolving Dependencies on GitHub: developer-guide/etendo-classic/setup-and-upgrade/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github.md
+      - How to guides: 
+        - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
+      - Developer Tools:
+        - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
+        - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
+    - Etendo RX:
+      - Developer Tools:
+        - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
   - Live Builds: live-builds/index.md
   - Help and Support: 
     - Support Service: help-and-support/index.md
     - How to report bugs: help-and-support/how-to-report-bugs.md
-  
-
+    

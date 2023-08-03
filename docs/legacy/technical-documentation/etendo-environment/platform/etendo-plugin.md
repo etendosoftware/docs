@@ -1,4 +1,0 @@
----
-title: Etendo plugin
----
--

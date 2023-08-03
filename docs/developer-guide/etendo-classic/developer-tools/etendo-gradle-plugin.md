@@ -1,5 +1,5 @@
 ---
-title: Use of Gradle in Etendo
+title: Etendo  Gradle  Plugin
 ---
 
 ## Overview
@@ -8,8 +8,6 @@ This article explains how to use Gradle, an open-source build automation tool th
 
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
 
-!!! warning
-    The gradle tasks changed from Etendo 22Q1, to review the previous documentation see the following link [Use of Gradle in Etendo | 21Q4](/docs/legacy/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-gradle-in-etendo)
 
 ## How to use Gradle
 
