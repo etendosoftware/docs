@@ -1,8 +1,8 @@
 ---
-title: Create Jobs and Actions
+title: How to Create Jobs and Actions
 ---
 
-How to create Jobs and Actions.
+
 
 ## Overview
 

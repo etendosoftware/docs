@@ -1,6 +1,9 @@
 ---
-title: Multi Business Partner Selector
+title: Spanish Localization Bundle | Technical Documentation
 ---
+
+## Multi Business Partner Selector
+
 This module allows the user to select multiple business partners in the user interface.
 
 The multiple business partner selector can be integrated into other pages. The selector consists of two main parts:
@@ -8,7 +11,7 @@ The multiple business partner selector can be integrated into other pages. The s
 -   A widget which should be included in each page using this business partner selector
 -   A popup window which is delivered as part of this module
 
-## Example page
+### Example page
 
 After installing this module there will be a menu-entry 'Multi Business Partner Selector'. This menu item starts an example page for the business partner selector. The example page can be found in the module inside the directory: `modules/org.openbravo.module.multibpselector/src/org/openbravo/module/multibpselector`
 
@@ -20,7 +23,7 @@ The example page consists of the following parts:
 
 The example code contains markers where the multiple business partner selector code has been added. Look for this mark in the code: `+++++++++ MULTIBPSelector +++++++`. That is where the specific selector handling has been added.
 
-## Integrating the widget in your page
+### Integrating the widget in your page
 
 To integrate this widget and make use of it, the following steps are needed:
 

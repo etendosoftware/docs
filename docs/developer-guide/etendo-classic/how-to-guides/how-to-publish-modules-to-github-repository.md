@@ -1,5 +1,5 @@
 ---
-title: Publish Modules to a GitHub Repository
+title: How to Publish Modules to a GitHub Repository
 ---
 ## Overview
 

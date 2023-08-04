@@ -1,5 +1,5 @@
 ---
-title: Scan Process Creation
+title: How to Create Scan Process
 ---
 
 ## Overview

@@ -1,5 +1,5 @@
 ---
-title: Cloning Processes and Hooks
+title: How to Create a Clone Hook
 ---
 ## Introduction
 

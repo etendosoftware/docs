@@ -167,10 +167,23 @@ nav:
           - Core format migration (JAR- Sources): developer-guide/etendo-classic/getting-started/upgrade/core-format-migration.md
           - Resolving Dependencies on GitHub: /developer-guide/etendo-classic/getting-started/upgrade/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github.md
       - How to guides: 
+        - How to Publish Modules to a GitHub Repository: developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
+        - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
+        - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
+        - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
+        - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
+        - How to Use Secure Webservices: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
+        - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
       - Developer Tools:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
+      - Bundles:
+        - Platform Extensions Bundle: developer-guide/etendo-classic/bundles/platform-extensions-bundle.md
+        - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
+        - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
+        - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
+        - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
       - Developer Tools:
         - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md

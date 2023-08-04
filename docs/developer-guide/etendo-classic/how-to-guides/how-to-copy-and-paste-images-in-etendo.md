@@ -1,5 +1,5 @@
 ---
-title: Copy and Paste Images in Etendo
+title: How to Copy and Paste Images in Etendo
 ---
 ## Copy and Paste Images in Etendo
 

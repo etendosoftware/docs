@@ -1,5 +1,5 @@
 ---
-title: Sequences
+title: How to Use Advanced Sequences
 ---
 
 ## Sequences
