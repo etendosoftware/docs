@@ -14,7 +14,7 @@ By default, all the Bins will be in an undefined Inventory Status. There are two
 -   **Undefined**. Available and Nettable, but not possible to go to Over Issue.
 -   **Undefined OverIssue**. Available and Nettable and possible to go to Over Issue.
 
-The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. More information about the Allow Negative Stock can be found [_here_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#client)_._
+The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. More information about the Allow Negative Stock can be found [here](/docs/products/etendo-classic/user-guide/general-setup/overview#client).
 
 ## **Functionality**
 

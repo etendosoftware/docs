@@ -11,14 +11,14 @@ In Etendo, most of the warehouse movements are made automatically based on the t
 Main sub-processes of the **Inventory Accuracy** business flow are:
 
 - _Physical Inventory._ This is a process where a business physically counts individual items in stock at a particular point in time and updates their inventory count within the system (if needed). It represents an opportunity to correct any inaccuracies in the records. Here are several reasons to conduct a physical inventory:
-  - To initiate the stock.
-  - To verify the physical amount, condition, and location of inventory items.
-  - To identify, document, and add items to its inventory list that are on-hand and meet qualifying criteria, but are not currently shown as part of the inventory.
-  - To ensure that legitimately transferred or disposed items are no longer carried on the inventory listing.
-  - To identify any missing or damaged items that need to be located, repaired, or replaced.
+    - To initiate the stock.
+    - To verify the physical amount, condition, and location of inventory items.
+    - To identify, document, and add items to its inventory list that are on-hand and meet qualifying criteria, but are not currently shown as part of the inventory.
+    - To ensure that legitimately transferred or disposed items are no longer carried on the inventory listing.
+    - To identify any missing or damaged items that need to be located, repaired, or replaced.
 - _Goods Movement._ Transfers inventory between storage bins or warehouses. Possible reasons for goods movement are:
-  - Goods received at a warehouse from another party or warehouse.
-  - Inventory movement due to conversion of goods.
+    - Goods received at a warehouse from another party or warehouse.
+    - Inventory movement due to conversion of goods.
 - _Goods Tracking._ Displays all the different movement types that happen in a warehouse to verify the history, location, or application of an item by means of documented recorded identification.
 - _Inventory Valuation._ Allows a company to provide a monetary value for items that make up their inventory.
 - _Inventory Update_. Allows a company to change either current inventory amount or current unit cost of products in stock.
@@ -34,8 +34,8 @@ Besides that, Landed Cost Types need to be configured here therefore can be sele
 
 Finally, Warehouse Rules can be configured to be applied while retrieving stock from the inventory automatically.
 
-!!! info
-    **Note:** It is not required to do any additional setup for the **Warehouse Management** application area if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, and products pre-configured.
+!!! note
+    It is not required to do any additional setup for the **Warehouse Management** application area if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, and products pre-configured.
 
 Above configuration is part of the overall Business setup flow within "Warehouse" setup.
 
@@ -55,7 +55,7 @@ To get the _Physical Inventory_, the user:
 - After this procedure, the user creates the physical inventory document in the  Physical Inventory  window by selecting the **Warehouse** where to execute this activity and pressing  **Create Inventory Count List** button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the List of products  with their current quantities that is brought to the warehouse and verified against physical inventory.
 - In order to update Etendo stock if differences are found, first the user can select the Physical Inventory that was previously created. Then, in the lines tab, the user can find the required products and update the **Quantity Count** field with a new value. After that, the inventory count can be finished by clicking the **Process Inventory Count** button, which updates inventory and triggers document posting (if configured).
 
-To execute _Goods Movement_, the user:
+To execute _Goods Movement_,:
 
 - The Goods movement window lists products to be moved with source and destination information and the respective quantity and then **Processes** the document which updates all product quantities listed under **Lines** tab in the warehouse and triggers document posting (if configured).
 
@@ -82,9 +82,9 @@ This window allows the user to review different types of cost adjustment sources
 
 **Warehouse Management** has a connection with other application areas:
 
-- [Procurement Management](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management) as goods received change stock quantity and its value.
-- [Sales Management](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management) as shipment changes stock quantity and its value.
-- [Production Management](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management) because raw materials are taken out of the warehouse and produced goods are sent back to the stock during the production process.
+- [Procurement Management](/docs/products/etendo-classic/user-guide/procurement-management/transactions) as goods received change stock quantity and its value.
+- [Sales Management](/docs/products/etendo-classic/user-guide/sales-management/transactions) as shipment changes stock quantity and its value.
+- [Production Management](/docs/products/etendo-classic/user-guide/production-management/transactions) because raw materials are taken out of the warehouse and produced goods are sent back to the stock during the production process.
 
 ## Physical Inventory
 
@@ -124,14 +124,14 @@ The fields to note are:
 - **Storage Bin:** Only products on this storage bin will be filtered.
 - **Product Category:** Only products belonging to a given product category will be filtered, otherwise all products will be shown.
 - **Inventory quantity:** Includes or excludes products on physical inventory depending on actual quantities. The options available are:
-  - empty - all product on physical inventory will be shown regardless its quantity
-  - 0 - only products on physical inventory having 0 quantity in stock will be shown.
-  - <0 - only products on physical inventory having a positive quantity in stock will be shown.
-  - \>0 - only products on physical inventory having a negative quantity in stock will be shown.
-  - not 0 - only products on physical inventory having a quantity in stock different to 0 will be shown.
+    - empty - all product on physical inventory will be shown regardless its quantity
+    - 0 - only products on physical inventory having 0 quantity in stock will be shown.
+    - <0 - only products on physical inventory having a positive quantity in stock will be shown.
+    - \>0 - only products on physical inventory having a negative quantity in stock will be shown.
+    - not 0 - only products on physical inventory having a quantity in stock different to 0 will be shown.
 - **Set Book Quantity to Zero:** this checkbox sets the **Quantity Count** field on the count list to zero. When the checkbox is not selected, the **Quantity Count** is defaulted to the same value as the **Book Quantity** (On Hand Quantity) of the product.
-  - First option is used for blind physical inventories where people who are counting items in the warehouse do not need to know the expected quantities.
-  - First option is used to allow the user to enter the "real" quantity count on the warehouse and storage bin. Once the inventory count is processed, the book quantity shown by the system will be updated to the quantity count entered by the user.
+    - First option is used for blind physical inventories where people who are counting items in the warehouse do not need to know the expected quantities.
+    - First option is used to allow the user to enter the "real" quantity count on the warehouse and storage bin. Once the inventory count is processed, the book quantity shown by the system will be updated to the quantity count entered by the user.
 - **ABC:** Pareto Product Report
 
 ### Lines
@@ -155,7 +155,7 @@ The process buttons are:
 
 A physical inventory can only be posted to the ledger in case there is a difference between "Quantity count" and "Book Quantity" for a product. Otherwise there will not be anything to post to the ledger.
 
-For instance a product whose "Quantity count" is 6700 units at a given date, while "Book Quantity" in Etendo is 6000 units.
+For instance, a product whose "Quantity count" is 6700 units at a given date, while "Book Quantity" in Etendo is 6000 units.
 
 That physical inventory can be posted once processed, if the cost of the product has been calculated.
 
@@ -163,22 +163,22 @@ That physical inventory can be posted once processed, if the cost of the product
 
 |                           |                                                             |                                                             |
 | ------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| **Account**               | **Debit**                                                   | **Credit**                                                  |
-| **Product Asset**         | **(Quantity Count - Book Quantity) \* Cost of the Product** |                                                             |
-| **Warehouse Differences** |                                                             | **(Quantity Count - Book Quantity) \* Cost of the Product** |
+| Account               | Debit                                                   | Credit**                                                  |
+| Product Asset         | (Quantity Count - Book Quantity) \* Cost of the Product |                                                             |
+| Warehouse Differences |                                                             | (Quantity Count - Book Quantity) \* Cost of the Product |
 
 **Physical Inventory posting creates the following accounting entries if inventory decreases:**
 
 |                           |                                                             |                                                             |
 | ------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| **Account**               | **Debit**                                                   | **Credit**                                                  |
-| **Warehouse Differences** | **(Quantity Count - Book Quantity) \* Cost of the Product** |                                                             |
-| **Product Asset**         |                                                             | **(Quantity Count - Book Quantity) \* Cost of the Product** |
+| Account               | Debit                                                   | Credit                                                  |
+| Warehouse Differences | (Quantity Count - Book Quantity) \* Cost of the Product |                                                             |
+| Product Asset         |                                                             | (Quantity Count - Book Quantity) \* Cost of the Product |
 
 ### How to Reactivate Physical Inventories
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95)
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 From the Physical Inventory window, it is possible to reactivate a previously generated inventory just by selecting the corresponding document and clicking the Reactivate button.
 
@@ -187,19 +187,19 @@ Once the Inventory is successfully reactivated, the state of the document change
 ![](/docs/assets/drive/1WBA34PF6dwDGKc8HW0tC8iuzD_CR-9I2.png)
 
 !!! warning
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](/docs/products/etendo-classic/user-guide/warehouse-management/setup#storage-bin).
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Goods Movement
 
@@ -272,7 +272,7 @@ Posting a _Goods Movement_ implies to have its cost calculated:
 ### How to Reactivate Goods Movements
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95)
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
 
 From the Goods Movement window, the user is able to reactivate a previously generated movement just by selecting the needed movement and clicking the Reactivate button.
 
@@ -281,19 +281,19 @@ Once the movement is successfully reactivated, the state of the document changes
 ![](/docs/assets/drive/1tHX7U3NNVTlZ83m_Ql4RFEL52gsgy81B.png)
 
 !!! warning
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/warehouse-management-setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](/docs/products/etendo-classic/user-guide/warehouse-management/setup#storage-bin).
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Bill of Materials Production
 
@@ -316,7 +316,7 @@ In this section the organization is selected, a name of the bundling that will b
 
 Add bills of materials to be produced in a specified production plan.
 
-In this section the product is selected and the number that is executed. Also, the storage bin in which the result of the Production will be stored must be selected.
+In this section, the product is selected and the number that is executed. Also, the storage bin in which the result of the Production will be stored must be selected.
 
 As indicated in the introduction, the product that is selected needs to be set up correctly first:
 
@@ -332,7 +332,7 @@ After the Production Plan tab is filled out, the **Create/Process Production** b
 
 After clicking the **Create/Process Production** button for the second time, the changes are executed.
 
-In the popup the checkbox 'Product quantity must be on stock' can be selected, so the process is only executed if the components are in stock. After successfully processing, the stock of the components decreases and the stock of the bundled product increases.
+In the popup, the checkbox 'Product quantity must be on stock' can be selected, so the process is only executed if the components are in stock. After successfully processing, the stock of the components decreases and the stock of the bundled product increases.
 
 !!! warning
     Currently, processes involved in the Bill Of Materials Production do not support negative stock. For this reason, if the checkbox 'Product quantity must be on stock' is not selected and there is not enough stock of the consumed products, the available quantity in stock will be used to fill the quantities in the \[I/O Products\] tab lines.
@@ -342,20 +342,20 @@ There is a check named **Force Use Of Warehouse Of Selected Storage Bin.** When 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Goods Transaction
 
 ### Introduction
 
-Goods Transaction window provides a read only view with extensive filtering capabilities that shows all inventory transactions.
+Goods Transaction window provides a read-only view with extensive filtering capabilities that shows all inventory transactions.
 
 All real warehouse movements can be seen in this window: incoming, outgoing, movements between warehouses, physical inventories, etc.
 
@@ -369,16 +369,16 @@ In this window, it is possible to review and manage existing Reservations.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Be_9LXecJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Stock reservations are mainly used to ensure the stock availability when delivering a Sales Order. Coming with this feature, it is also possible to lock stock not related to any Sales Order to avoid its consumption.
+Stock reservations are mainly used to ensure the stock availability when delivering a Sales Order. With this feature, it is also possible to lock stock not related to any Sales Order to avoid its consumption.
 
 A reservation identifies certain stock in the warehouse that is reserved and cannot be consumed by anyone except the owner of the reservation. Currently, there are two possible owners, a _Saler Order line_ or the _System_. A reservation for a Sales Order line identifies stock that can only be consumed in shipments related to the Sales Order. A _System_ reservation is a special reservation type that cannot be consumed by anyone. _System_ reservations are used for _Hold_ reservations when some stock needs to be blocked in the warehouse.
 
-!!! info
+!!! note
     Reservations are disabled by default. To be able to use them, please insert a new _Preference_ using property _Enable Stock Reservations_ with value _Y_. Then, end session and log in again to continue with the process.
 
-The functionality developed comes with two types of reservations:
+This functionality comes with two types of reservations:
 
-- Pre-Reservation: These are reservations that are not physically in the warehouse but ordered to a supplier and when there is a relationship between the line of the purchase order and a sales order line. Once the purchase order line is received this pre-reservation is automatically converted to a reservation.
+- Pre-Reservation: These are reservations that are not physically in the warehouse but ordered to a supplier and when there is a relationship between the line of the purchase order and a sales order line. Once the purchase order line is received, this pre-reservation is automatically converted to a reservation.
 - Reservation: Refers to stock stored in the warehouse that is already reserved by a sales order line.
 
 A reservation is always defined by the product that is desired to be reserved but other dimensions can be defined such as the warehouse, storage bin and attribute (i.e Colour, lots, serial number).
@@ -398,17 +398,17 @@ This functionality tries to cover several flows:
 
 A sales order can be reserved when the document is booked and pending to be delivered. The way to make the reservation is:
 
-Manual: No reservation is generated automatically. So when the order is booked the reservations needs to be done manually selecting the storage bin, attribute, etc.
+- Manual: No reservation is generated automatically. So when the order is booked the reservations needs to be done manually selecting the storage bin, attribute, etc.
 
-Automatic: The reservation is automatically created and processed, reserving the available stock
+- Automatic: The reservation is automatically created and processed, reserving the available stock
 
-For more information, visit Sales Order.
+For more information, visit [Sales Order](/docs/products/etendo-classic/user-guide/sales-management/transactions#sales-order).
 
 ### Procurement Flow
 
 Pre-reservations can also be made from the Purchase Order. Being in the purchase order line, there is the possibility of selecting any sales order line pending to be delivered that is waiting to receive the goods in the warehouse. Once the items are received the pre-reservation is converted to reservation and the goods are reserved for that sales order line.
 
-For more information, visit Purchase Order
+For more information, visit [Purchase Order](/docs/products/etendo-classic/user-guide/procurement-management/transactions#purchase-order).
 
 ### Purchasing Plan (MRP)
 
@@ -440,8 +440,8 @@ The reservation header defines each reservation. First, the _Organization_ where
 - _Storage Bin_
 - _Attribute Set Value_
 
-!!! info
-    Notice that it is only possible to select warehouses that are defined as _on hand_ warehouses of the organization and storage bins that belong to them.
+!!! note
+    It is only possible to select warehouses that are defined as _on hand_ warehouses of the organization and storage bins that belong to them.
 
 The reservation might have different statuses:
 
@@ -470,7 +470,7 @@ The Stock tab identifies each existing Stock or Purchase Order selected to fulfi
 
 ![Stock](/docs/assets/drive/1588n_FidAyqyw0WwUJ8-E3w_bMRv2MLF.png)
 
-In the _Stock_ tab  the actual reserved stock is shown. The stock should meet the dimensions defined in the header. When the stock is physically in the warehouse the reserved stock is identified by the Storage Bin and the Attribute Set Value when applied. In case of pre-reservations the stock is still not in the warehouse, so the _Storage Bin_ property is blank and the _Purchase Order line_ is set. When a pre-reservation is receipt and converted to reservation the storage bin where the stock has been stored is set keeping the purchase order line.
+In the _Stock_ tab, the actual reserved stock is shown. The stock should meet the dimensions defined in the header. When the stock is physically in the warehouse the reserved stock is identified by the Storage Bin and the Attribute Set Value when applied. In case of pre-reservations the stock is still not in the warehouse, so the _Storage Bin_ property is blank and the _Purchase Order line_ is set. When a pre-reservation is receipt and converted to reservation the storage bin where the stock has been stored is set keeping the purchase order line.
 
 The reserved stock has 2 quantities:
 
@@ -538,14 +538,14 @@ When selecting a product and entering a given reference date current inventory a
 To complete the line it is necessary to fill in either the "Inventory Amount" or the "Unit Cost".
 
 !!! info
-    It is important to remark that **product quantity on hand shown** in an "Inventory Amount Update" **can vary** if the "**Fix Backdated Transaction**" flag is active/not active in the corresponding Costing Rule.
+    It is important to remark that product quantity on hand shown in an "Inventory Amount Update" can vary if the "Fix Backdated Transaction" flag is active/not active in the corresponding Costing Rule.
 
 For instance, a receipt of 100 units is booked for a product at the current date, and after that another receipt of 50 units is booked for a product with a movement date in the past. This last one receipt is a "backdated" transaction.
 
 An Inventory Amount Update is launched for the product dated on between, before current date:
 
-- if the **"Fix Backdated Transaction" is active**, the "Inventory Amount Update" launched for the product, **will then consider the "backdated" transactions booked for that product**, therefore the stock shown will be 50 units. Backdated transaction "movement date" is considered in this case.
-- if the **"Fix Backdated Transaction" is not active**, the "Inventory Amount Update" launched for the product, will then **not consider the "backdated" transactions booked for that product**, therefore the stock shown will be 0 units. Backdated transaction "movement date" is not considered in this case but transaction "process date" (current date).
+- if the "Fix Backdated Transaction" is active, the "Inventory Amount Update" launched for the product, will then consider the "backdated" transactions booked for that product, therefore the stock shown will be 50 units. Backdated transaction "movement date" is considered in this case.
+- if the "Fix Backdated Transaction" is not active, the "Inventory Amount Update" launched for the product, will then not consider the "backdated" transactions booked for that product, therefore the stock shown will be 0 units. Backdated transaction "movement date" is not considered in this case but transaction "process date" (current date).
 
 Some fields to note are:
 
@@ -609,12 +609,12 @@ Cost Adjustments feature is in charge of managing adjustments created on an alre
 
 It is important to remark that this feature takes into account the "costing algorithm" used to calculate costs, therefore it behaves differently depending on:
 
-- **If the costing algorithm used is "Average"**, the cost of a transaction changes and as a consequence of that the cost of the product involved changes.  
-  In that case, **a cost adjustment transaction is created in this window** to reflect that change, cost adjustment transaction that can be posted to the ledger so the inventory value of the product is the same as its accounting value.
-- However, **if the costing algorithm used is "Standard"**, the cost of a transaction cannot change and be adjusted, same way the "Standard" cost of the product involved remains the same.  
-  In that case, **no cost adjustment transaction will be created in this window**.
+- If the costing algorithm used is "Average", the cost of a transaction changes and as a consequence of that the cost of the product involved changes.  
+  In that case, a cost adjustment transaction is created in this window to reflect that change, cost adjustment transaction that can be posted to the ledger so the inventory value of the product is the same as its accounting value.
+- However, if the costing algorithm used is "Standard", the cost of a transaction cannot change and be adjusted, same way the "Standard" cost of the product involved remains the same.  
+  In that case, no cost adjustment transaction will be created in this window.
 
-As a consequence of the above **"Cost Adjustment" window manage cost adjustments created for products and therefore products transactions valued at "Average" cost algorithm.**
+As a consequence of the above "Cost Adjustment" window manage cost adjustments created for products and therefore products transactions valued at "Average" cost algorithm.
 
 There are different types of "cost adjustments sources" which lead to the correct "average" cost of a product.
 
@@ -686,11 +686,11 @@ Some relevant fields to note are:
 - **Document Type**: this is the "Cost Adjustment" document type.
 - **Reference Date**: this is the date when the cost adjustment is created
 - **Source Process**: the options available are:
-  - Backdated Transaction
-  - Landed Cost
-  - Manual Cost Correction
-  - Negative Stock Correction
-  - Price Difference Correction
+    - Backdated Transaction
+    - Landed Cost
+    - Manual Cost Correction
+    - Negative Stock Correction
+    - Price Difference Correction
 
 All of them are going to be explained in detail in the following sections.
 
@@ -821,16 +821,16 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 |                                                                                                 |                                                  |                                                |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Account                                                                                         | Debit                                            | Credit                                         |
-| [_Warehouse Differences_](http://wiki.openbravo.com/wiki/General_Ledger_Configuration#Defaults) | Adjustment amount of "Movement From" transaction |                                                |
-| [_Product Asset_](http://wiki.openbravo.com/wiki/Product#Accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
+| [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) | Adjustment amount of "Movement From" transaction |                                                |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
 
 **"Movement To"** transaction adjustment:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Account                                                                                         | Debit                                          | Credit                                         |
-| [_Product Asset_](http://wiki.openbravo.com/wiki/Product#Accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
-| [_Warehouse Differences_](http://wiki.openbravo.com/wiki/General_Ledger_Configuration#Defaults) |                                                | Adjustment amount of "Movement To" transaction |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
+| [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) |                                                | Adjustment amount of "Movement To" transaction |
 
 ### **Negative Stock Correction**
 
@@ -868,12 +868,12 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 |                                                                                                 |                   |                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Account                                                                                         | Debit             | Credit            |
-| [_Warehouse Differences_](http://wiki.openbravo.com/wiki/General_Ledger_Configuration#Defaults) | Adjustment amount |                   |
-| [_Product Asset_](http://wiki.openbravo.com/wiki/Product#Accounting)                            |                   | Adjustment amount |
+| [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) | Adjustment amount |                   |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            |                   | Adjustment amount |
 
 ### **Price Difference Correction**
 
-The source of this cost adjustment is **a change in either the purchase price of an order or the purchase price of an invoice after receiving the goods**.
+The source of this cost adjustment is a change in either the purchase price of an order or the purchase price of an invoice after receiving the goods.
 
 Price Difference Correction is launched only for Transactions of Type _Receipt_. Other Transactions, such as Return Material our Outgoing Transactions are not taken into account, since they should not modify the Average Cost due to a Price Correction.
 
@@ -895,10 +895,10 @@ A header and line(s) in the **Cost Adjustment** window of this cost adjustment t
 
 This adjustment type changes the "Unit Cost" and the "Total Cost" of the transactions, same as the "Average" cost of products.
 
-"Price Difference" correction adjustments can be performed "**automatically**" or "**manually**":
+"Price Difference" correction adjustments can be performed automatically or manually:
 
-- to get that **Etendo automatically performs price difference correction cost adjustments**, it is necessary to activate and schedule the Price Correction Background Process
-- to get that the user can **manually perform price difference correction cost adjustments**, it is necessary to manually run the "Process Price Difference Adjustment"
+- to get that Etendo automatically performs price difference correction cost adjustments, it is necessary to activate and schedule the Price Correction Background Process
+- to get that the user can manually perform price difference correction cost adjustments, it is necessary to manually run the "Process Price Difference Adjustment"
 
 As shown in the image below, this process allows to select the Organization for which this process needs to be run, enter a given movement date and select a product or set of products for which price difference correction cost adjustments would need to be created.
 
@@ -922,16 +922,16 @@ That adjustment can be posted to the ledger. Posting will look as shown below :
 |                                                                                 |                                 |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- | ------------------------------- |
 | Account                                                                         | Debit                           | Credit                          |
-| [_Product Asset_](http://wiki.openbravo.com/wiki/Product#Accounting)            | Goods Receipt Adjustment amount |                                 |
-| [_Invoice Price Difference_](http://wiki.openbravo.com/wiki/Product#Accounting) |                                 | Goods Receipt Adjustment amount |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)            | Goods Receipt Adjustment amount |                                 |
+| [_Invoice Price Difference_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting) |                                 | Goods Receipt Adjustment amount |
 
 **Goods Shipment adjustment**
 
 |                                                                           |                                  |                                  |
 | ------------------------------------------------------------------------- | -------------------------------- | -------------------------------- |
 | Account                                                                   | Debit                            | Credit                           |
-| [_Cost of Goods Sold_](http://wiki.openbravo.com/wiki/Product#Accounting) | Goods Shipment Adjustment amount |                                  |
-| [_Product Asset_](http://wiki.openbravo.com/wiki/Product#Accounting)      |                                  | Goods Shipment Adjustment amount |
+| [_Cost of Goods Sold_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting) | Goods Shipment Adjustment amount |                                  |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)      |                                  | Goods Shipment Adjustment amount |
 
 #### **Line**
 
@@ -947,16 +947,16 @@ There are two types of cost adjustments transactions:
 Some relevant files to note are:
 
 - **Inventory Transaction**: Transactions available are:
-  - Vendor receipt (V+)
-  - Customer shipment (C-)
-  - Inventor in (I+)
-  - Inventory out (I-)
-  - Movement from (M-)
-  - Movement to (M+)
-  - Production (P+)
-  - Production (P-)
-  - Internal consumption (D-)
-  - Internal consumption (D+)
+    - Vendor receipt (V+)
+    - Customer shipment (C-)
+    - Inventor in (I+)
+    - Inventory out (I-)
+    - Movement from (M-)
+    - Movement to (M+)
+    - Production (P+)
+    - Production (P-)
+    - Internal consumption (D-)
+    - Internal consumption (D+)
 - **Adjustment Amount**: that is the cost adjustment amount.  
   An adjustment amount can also be reviewed in the Product window, "Transaction" tab, "Transaction Cost" tab always related to a "Cost Adjustment Line".
 - **Is source**: options available are "Yes" or "No" as a product transaction can be the source of an adjustment or not.
@@ -1041,14 +1041,14 @@ Product's cost gets decreased.
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 ## Referenced Inventory
 
@@ -1103,14 +1103,14 @@ Shows a P&E with the stock currently linked to the selected referenced inventory
 
 ![UnBox](/docs/assets/drive/1sKmYK_BGCx8XXDXtuXJLcJ4dQ1pTa1-x.png)
 
-The user can select one or several records and specify the quantity to be unboxed (so it is possible to run partial unboxing) and the new storage bin where the stock will be stored after unboxing (**by default it will be unboxed to the current location**).
+The user can select one or several records and specify the quantity to be unboxed (so it is possible to run partial unboxing) and the new storage bin where the stock will be stored after unboxing (by default it will be unboxed to the current location).
 
-!!! info
+!!! note
     In contrast to the boxing process explained before, unboxing different storage bins can be selected for each record.
 
 ### Reservation Management Behavior
 
-When running a boxing/unboxing process the system will always try to work with not reserved quantities first. Example: if we have 10 units on hand of a product where 2 of them are reserved and we try to box/unbox 1 unit, the system will try to box/unbox first any of the 8 units not reserved.
+When running a boxing/unboxing process, the system will always try to work with not reserved quantities first. Example: if we have 10 units on hand of a product where 2 of them are reserved and we try to box/unbox 1 unit, the system will try to box/unbox first any of the 8 units not reserved.
 
 If the box/unbox process needs to work with already reserved quantities (in the example above because we are boxing/unboxing 9 or 10 units), the system will try to reallocate on the fly any reservation or it will show an error when the reallocation is not possible. The latter might happen, for example, because the reservation is forced to a concrete bin and the box/unbox process tries to move the stock to another bin.
 
