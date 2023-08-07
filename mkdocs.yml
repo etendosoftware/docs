@@ -43,6 +43,10 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - custom.js
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -138,6 +142,9 @@ nav:
           - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/index.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
+    - Etendo Mobile: 
+      - Getting Started: products/etendo-mobile/getting-started.md
+      - User interface: products/etendo-mobile/user-interface/user-interface.md
   - What's New:
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://www.etendo.software"
