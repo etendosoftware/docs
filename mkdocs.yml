@@ -175,6 +175,9 @@ nav:
           - Upgrade Etendo to Any Version: developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version.md
           - Core format migration (JAR- Sources): developer-guide/etendo-classic/getting-started/upgrade/core-format-migration.md
           - Resolving Dependencies on GitHub: /developer-guide/etendo-classic/getting-started/upgrade/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github.md
+      - Concepts:
+        - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
+        - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
       - How to guides: 
         - How to Publish Modules to a GitHub Repository: developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
