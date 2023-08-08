@@ -72,7 +72,7 @@ The creation of the withdrawal transaction in the financial account can be done:
 
 ### Header
 
-The payment out window allows the user to make and manage supplier's payments done to settle different types of documents such as orders and invoices. This window also allows the user to manage the supplier's payments already made in the purchase invoice window, the same way as the G/L item payments made in a G/L Journal.
+The Payment Out window allows the user to make and manage supplier's payments done to settle different types of documents such as orders and invoices. This window also allows the user to manage the supplier's payments already made in the purchase invoice window, the same way as the G/L item payments made in a G/L Journal.
 
 ![](/docs/assets/drive/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
 
@@ -229,7 +229,7 @@ This read-only tab shows the credit payment used to pay a vendor document (order
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
 
@@ -237,8 +237,8 @@ On the other hand, it is possible to reactivate payments from the same window. I
 
 In both cases:
 
-- If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window > Transaction tab).
--
+- If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial Account window > Transaction tab).
+
 - If the payment is reconciled through an automatic method, then in addition to the transaction in the financial account, the line of the bank statement to which it was linked (Financial Account window > Imported Bank Statements) and the corresponding line of the bank reconciliation (Financial Account > Reconciliations) will be deleted.
 
 !!! info
@@ -249,14 +249,14 @@ In both cases:
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -283,7 +283,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](/docs/assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
 
 !!! info
-    For more information about Business Partner Settlement, visit the [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Payment Proposal**
 
@@ -408,7 +408,7 @@ Customer's payments can be received against:
   Later on, when an invoice is created from the order that already has a payment received against it, the invoice automatically inherits the payment received against the order.
 - Sales Invoices, in effect this is an invoice payment received from a customer.  
   Payments prior to the accounting date of the invoice are also considered a _prepayment_.
-- and a G/L Items, in effect this is a payment of any other revenue received from a customer, for instance a fine.  
+- And a G/L Items, in effect this is a payment of any other revenue received from a customer, for instance a fine.  
   This type of payments can be created in this window when selecting the G/L Item "Transaction Type" or can be automatically populated as a payment in this window if created in a G/L Journal.  
   Regardless the way they are created, both cases are managed in the same way depending on the Payment Method used.
 
@@ -451,7 +451,7 @@ The **Add Details** button opens the **Add Payment** window, where the documents
 ![](/docs/assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
 
 !!! info
-    The "Add Payment" window is already explained in the [Sales Invoice Payment article](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#payment).
+    The "Add Payment" window is already explained in the [Sales Invoice Payment article](/docs/products/etendo-classic/user-guide/sales-management/transactions/#payment).
 
 #### Payment of several document types from different customers
 
@@ -625,7 +625,7 @@ This read-only tab shows the credit payment used to pay a customer's document (o
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
 On the other hand, it is possible to reactivate payments from the same window. In this case, select the corresponding record and then click the Reactivate button. This will return the payment to “Awaiting Payment” status and new payment details can be added.
@@ -633,7 +633,7 @@ On the other hand, it is possible to reactivate payments from the same window. I
 In both cases:
 
 - If the payment is included in the financial account, i.e., if it is in Deposited/Withdrawn not cleared status, the transaction in it will also be deleted (Financial account window > Transaction tab).
--
+
 - If the payment is reconciled through an automatic method, then in addition to the transaction in the financial account, the line of the bank statement to which it was linked (Financial Account window > Imported Bank Statements) and the corresponding line of the bank reconciliation (Financial Account > Reconciliations) will be deleted.
 
 !!! info
@@ -644,14 +644,14 @@ In both cases:
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -677,7 +677,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](/docs/assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
 
 !!! info
-    For more information about Business Partner Settlement, visit the [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Financial Account**
 
@@ -691,7 +691,7 @@ Payment obligations and amounts due from customers are created in the Purchase a
 
 !!! warning
     It is very important to properly define every parameter of each Financial Account. During your Financial Account setup process, you will need information like: the bank account information, the payment methods allowed, the bank account currency/ies, the accounting information, etc.
-!!! warning
+
    
 
 #### **Account**
@@ -922,7 +922,7 @@ Once a bank statement file has been imported, the button "Match Statement" opens
 
 ![Match Statement](/docs/assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
 
-Before opening the Window, a pop up is shown, asking whether the algorithm should run against unmatched bank statement lines or not. If so, the algorithm will try to find a match for all the unmatched bank statement lines. If not, the matching window will open and the user should do the matches manually.
+Before opening the window, a pop up is shown, asking whether the algorithm should run against unmatched bank statement lines or not. If so, the algorithm will try to find a match for all the unmatched bank statement lines. If not, the matching window will open and the user should do the matches manually.
 
 ![Example 2](/docs/assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
 
@@ -1019,7 +1019,7 @@ _Input fields:_
 
 ![Funds transfer](/docs/assets/drive/12Q4Emkj5LA4t5Y7f16uy0IJWRKlJvkIo.png)
 
-_Process_
+_Process:_
 
 Being in the account tab and selecting the corresponding financial account:
 
@@ -1193,7 +1193,7 @@ In this tab, there is the advanced feature (hidden by default) called **invoice 
 This combo can be set at payment method level (payment in and payment out) in each financial account. By default this combo is set as **payment received** or **payment made**, therefore we get the usual behavior of Etendo.
 
 !!! info
-    For additional information about payment method configuration, visit the [_Payment Method_](/docs/legacy/end-user-documentation/etendo-environment/functional-documentation/business-configuration/financial-management-setup#payment-method) article.
+    For additional information about payment method configuration, visit the [_Payment Method_](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#payment-method) article.
 
 #### **Imported Bank Statements**
 
@@ -1285,7 +1285,7 @@ c. if the Payment Received was posted in the **"Payment In"** window or not and 
 | Upon Deposit Use the "Deposit Account" (i.e)                |                | Payment amount |
 
 !!! info
-    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the Doubtful Debt Run Window.
+    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the [_Doubtful Debt Run Window_](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#doubtful-debt-run)
 
 A "**Withdrawal Reconciliation**" posting looks like:
 
@@ -1344,7 +1344,7 @@ The accounting tab is a read-only tab which shows every financial account transa
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 #### Transactions
 
@@ -1383,14 +1383,14 @@ The following situations can be possible:
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In the case of the "Financial Account" window, this option can be used in three tabs: Transaction, Imported Bank Statements and Reconciliations.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -1419,7 +1419,7 @@ The settlement record (payment in and payment out) is also registered in the **B
 ![](/docs/assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
 
 !!! info
-    For more information about Business Partner Settlement, visit the [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#business-partner-settlement).
+    For more information, visit the [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Payment Execution**
 
@@ -1647,7 +1647,7 @@ Some relevant fields to note are:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 ### Introduction
 
@@ -1665,10 +1665,7 @@ There are two types of remittances:
 - The remittance generates as many payments (in/out) as those incorporated in the remittance plus one for the global amount, which is the one that is taken to the financial account due to the advance of such amount.
 - The bank informs of the payments (in/out) that have been settled (normally, if in one month the bank does not respond, these payments are considered settled) and of those that have been protested.
 
-> To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/financial-management-setup#remittance-type) window.
-!!! info
-   
-!!! info
+> To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type).
    
 
 ### Non-Discount Remittance
@@ -1810,14 +1807,14 @@ Also, when using the "process" button and grouping lines, it is necessary for th
 ![error.png](/docs/assets/legacy/error.png)
 
 !!! info
-    Bank accounts can be defined in the header of [purchase](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#advanced-remittance-1) and [sales](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#advanced-remittance-1) invoices as well as in [purchase](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#advanced-remittance) and [sales](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#advanced-remittance) orders.
+    Bank accounts can be defined in the header of [purchase](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance_1) and [sales](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance_1) invoices as well as in [purchase](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance) and [sales](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance) orders.
 
 **Default Bank Account**
 
 For each business partner, it is also possible to define a bank account that is selected by default.
 
 !!! info
-    To read more, visit [Bank Account](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#advanced-remittance) in the Business Partner section.
+    To read more, visit [Bank Account](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#advanced-remittance) in the Business Partner section.
 
 **Select Invoices and Orders button**
 
@@ -1934,14 +1931,14 @@ Accounting information related to the doubtful debt.
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ## **Doubtful Debt Run**
 
