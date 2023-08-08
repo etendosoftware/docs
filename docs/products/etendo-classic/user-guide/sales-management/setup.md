@@ -5,12 +5,18 @@ title: Sales Management Setup
 
 This section describes the different windows that are necessary to set up the sales process in Etendo. These are:
 
-- Condition of the Goods
-- Sales Region
-- Commission
-- Channel
-- Sales Campaign
-- Reject Reason
+[:material-file-document-outline:Condition of the Goods](/docs/products/etendo-classic/user-guide/sales-management/setup/#condition-of-the-goods){ .md-button } <br>
+
+[:material-file-document-outline:Sales Region](/docs/products/etendo-classic/user-guide/sales-management/setup/#sales-region){ .md-button } <br>
+
+[:material-file-document-outline:Commission](/docs/products/etendo-classic/user-guide/sales-management/setup/#commission){ .md-button } <br>
+
+[:material-file-document-outline:Channel](/docs/products/etendo-classic/user-guide/sales-management/setup/#channel){ .md-button } <br>
+
+[:material-file-document-outline:Sales Campaign](/docs/products/etendo-classic/user-guide/sales-management/setup/#sales-campaign){ .md-button } <br>
+
+[:material-file-document-outline:Reject Reason](/docs/products/etendo-classic/user-guide/sales-management/setup/#reject-reason){ .md-button } <br>
+
 
 ## **Condition of the goods**
 
