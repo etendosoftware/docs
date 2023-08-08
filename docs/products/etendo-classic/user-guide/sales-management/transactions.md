@@ -92,7 +92,7 @@ This sales quotation tab lists information about the discounts automatically app
 The user can edit the taxes applied to the quotation.  
 It summarizes tax related information for the whole sales quotation. Contains as many records as tax rates used in the quotation.
 
-### **Sales Extensions Bundle (Sales Quotation)**
+### **Advanced Sales Quotation**
 
 !!! info
     To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
@@ -1214,10 +1214,10 @@ Etendo allows the user to reactivate voided sales invoices by selecting the need
 
 Once the process is finished, the sales invoice status turns to Complete.
 
-!!! warning
-    **Important:**
-    -In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
-    -Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
+!!! warning "Important"
+    
+        - In the case of the standard version of the module, it is necessary for the user to also unvoid the corresponding reversed invoice.
+        - Remember that this reactivation process affects the accounting, since, if the original information is not manually removed from the reactivated document, the accounting information will be doubled.
 
 
 !!! info

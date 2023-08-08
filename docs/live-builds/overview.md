@@ -4,6 +4,9 @@ tags:
   - Live Builds
   - Postgres
   - Oracle
+hide:
+    - navigation
+    - toc
 ---
 
 ![live-builds.png](/docs/assets/live-builds/live-builds.png)

@@ -5,12 +5,17 @@ title: Warehouse Reports
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
-- Pareto Product Report
-- Material Transaction Report
-- Stock Report
-- Stock History
-- Valued Stock Report
-- Product Movements Report
+[:material-file-document-outline: Pareto Product Report](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#pareto-product-report){ .md-button } <br>
+
+[:material-file-document-outline: Material Transaction Report](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#material-transaction-report){ .md-button } <br>
+
+[:material-file-document-outline: Stock Report](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#stock-report){ .md-button } <br>
+
+[:material-file-document-outline: Stock History](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools/#stock-history){ .md-button } <br>
+
+[:material-file-document-outline: Valued Stock Report](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#valued-stock-report){ .md-button } <br>
+
+[:material-file-document-outline: Product Movements Report](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#product-movements-report){ .md-button } <br>
 
 
 ## Pareto Product Report
@@ -50,8 +55,8 @@ Columns to note:
 
 Aggregated information calculated for the Valued Stock can be used. Please refer to the  Valued Stock Report documentation for more details about how to generate the aggregated information.
 
-!!! info
-    Note that, exactly the same as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However this feature is specially useful in high volume environments when you experience performance issues launching the report.
+!!! note
+    Exactly as for the Valued Stock Report, the Pareto Product Report can also be launched without aggregated data. However, this feature is specially useful in high volume environments when you experience performance issues launching the report.
 
 
 ## Material Transaction Report
@@ -95,15 +100,15 @@ The outcome of this report can be viewed in HTML and PDF format.
 ## Stock History
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95). 
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}.
 
 
-This is a read only window in which the user is able to consult the daily stock. This functionality updates the daily information collected by the process in Background which was previously created for this purpose. 
+This is a read-only window in which the user is able to consult the daily stock. This functionality updates the daily information collected by the process in Background which was previously created for this purpose. 
 
 The Stock History window is filled only by the background process "Create Stock History". It can be programmed from the 'Request Processing' window, where it can be assigned for which role and organization it is executed, and the periodicity with which it is executed.
 
 !!! info
-    Check the [Technical documentation](https://docs/en/technical-documentation/bundles/warehouse-extensions-bundle) about Stock History to extend the process to calculate the registers for the daily stock history. 
+    Check the Technical documentation about Stock History to extend the process to calculate the registers for the daily stock history. 
 
 
 No data will be displayed in the window until search filters are applied to the window. Once the filters are applied, click the button on the right to complete the process. 
@@ -166,7 +171,7 @@ The cost is calculated as a sum of the cost of each material transaction of the 
 
 This step is not necessary in order to launch the Report. However, if there are performance problems, this can help to greatly improve the performance of the Report.
 
-It is possible to aggregate information that allows for faster queries. **This information is aggregated for each Closed Accounting Period**, that means that accounting periods must be defined and, at least some of them, must be in a *Closed* or *Permanently Closed* Status. More information can be found in the Open Close Period Section.
+It is possible to aggregate information that allows for faster queries. This information is aggregated for each Closed Accounting Period, that means that accounting periods must be defined and, at least some of them, must be in a *Closed* or *Permanently Closed* Status. 
 
 The information will persist until the first not closed Period. By doing so, it is possible to avoid looping through many records. However, no information will be aggregated after the first closed period and this can result in a non optimal performance of the report if it needs to retrieve plenty of information.
 
@@ -183,11 +188,11 @@ The information will persist until the first not closed Period. By doing so, it 
 
 ### **Limitations**
 
-By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information **will be converted at the Period's Closing Date**. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.
+By aggregating the information per each Closed Period, it is not possible to keep the date of each Transaction. So, when the Report is launched for a different Currency, all that information will be converted at the Period's Closing Date. This can result in minor discrepancies with the previous version due to conversions between currencies at different dates.
 
 ## Product Movements Report
 
-**Product Movements Report** shows all receipts, shipments, moves and physical inventories **grouped by Transaction Type** and **Business Partner**. For each row, document number, date, description, locators and quantity are shown.
+Product Movements Report shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner. For each row, document number, date, description, locators and quantity are shown.
 
 ### Parameters Window
 
