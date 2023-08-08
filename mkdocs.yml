@@ -44,8 +44,6 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - custom.js
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -87,8 +85,8 @@ copyright: Copyright &copy; 2021 - 2023 Etendo Software
 
 nav:
   - Home : index.md
-  - Getting Started: 
-    - Quickstart: getting-started/index.md
+  - Getting Started:
+    - Quickstart: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Installation: getting-started/installation.md
     - User interface:
@@ -96,6 +94,7 @@ nav:
       - Navigation: getting-started/user-interface/navigation.md
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - Products:
+    - Overview: products/overview.md
     - Etendo Classic:
       - User Guide:
         - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
@@ -149,6 +148,7 @@ nav:
       - Getting Started:
         - Bastian: products/etendo-copilot/getting-started/bastian.md
   - What's New:
+    - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://www.etendo.software"
     - Release Notes :
@@ -165,6 +165,7 @@ nav:
           - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
           - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
   - Developer Guide:
+    - Overview: developer-guide/overview.md
     - Etendo Classic: 
       - Getting Started:
         - Installation :
@@ -203,7 +204,7 @@ nav:
     - Etendo RX:
       - Developer Tools:
         - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
-  - Live Builds: live-builds/index.md
+  - Live Builds: live-builds/overview.md
   - Help and Support: 
-    - Support Service: help-and-support/index.md
+    - Support Service: help-and-support/overview.md
     - How to report bugs: help-and-support/how-to-report-bugs.md
