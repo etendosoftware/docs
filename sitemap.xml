@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://etendosoftware.github.io/docs/developer-guide/overview/</loc>
+         <lastmod>2023-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/bundles/etendo-bi-bundle/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
@@ -196,12 +201,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/getting-started/</loc>
+         <loc>https://etendosoftware.github.io/docs/getting-started/installation/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/getting-started/installation/</loc>
+         <loc>https://etendosoftware.github.io/docs/getting-started/overview/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -226,32 +231,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/help-and-support/</loc>
-         <lastmod>2023-08-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://etendosoftware.github.io/docs/help-and-support/how-to-report-bugs/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/legacy/end-user-documentation/etendo-marketplace/search-for-modules/</loc>
+         <loc>https://etendosoftware.github.io/docs/help-and-support/overview/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/legacy/internal-docs/etendo-redis-documentation/</loc>
+         <loc>https://etendosoftware.github.io/docs/live-builds/overview/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/legacy/internal-docs/jmh-benchmarks/</loc>
-         <lastmod>2023-08-08</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/live-builds/</loc>
+         <loc>https://etendosoftware.github.io/docs/products/overview/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -552,6 +547,11 @@
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs/whats-new/etendo-release-cycle/</loc>
+         <lastmod>2023-08-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/whats-new/overview/</loc>
          <lastmod>2023-08-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
