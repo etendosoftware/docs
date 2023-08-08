@@ -43,6 +43,6 @@ replace default empty token value with log content
 
 You can view the generated page:
 
-(http://localhost:8101/api/)[http://localhost:8101/api/]
+[**http://localhost:8101/api/**](http://localhost:8101/api/)
 
-Great job! You've successfully created a fully working rx service. To proceed with the next steps, please navigate to the [next step]().
+Great job! You've successfully created a fully working rx service.

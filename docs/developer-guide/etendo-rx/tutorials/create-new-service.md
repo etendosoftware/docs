@@ -58,4 +58,4 @@ public class RxtutorialService {
 }
 ```
 
-Well done! You've successfully created a new service for consuming data from Etendo RX. To continue with the tutorial, please navigate to the [next step]().
+Well done! You've successfully created a new service for consuming data from Etendo RX. To continue with the tutorial, please navigate to the [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section.

@@ -97,4 +97,4 @@ sourceSets {
 
 Etendo compile task will generate java files in the `src-gen` directory.
 
-Great job! You've successfully created a new Spring Boot project. To proceed with the next steps, please navigate to the [next step]().
+Great job! You've successfully created a new Spring Boot project. To proceed with the next steps, please navigate to the [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section.

@@ -1,6 +1,6 @@
 # Creating a New Projection
 
-Ensure you've successfully completed the [Building a New Module for RX Capabilities](/docs/developer-guide/etendo-rx/tutorials/create-new-module.md) before moving forward.
+Ensure you've successfully completed the [Building a New Module for RX Capabilities](/docs/developer-guide/etendo-rx/tutorials/create-new-module) before moving forward.
 
 Start by creating a new projection with the following properties:
 
@@ -34,4 +34,4 @@ Finally, navigate to the "Entity Field" tab and add the following fields:
 | documentTypeName    |  documentType.name    |
 | grandTotalAmount    |  grandTotalAmount     |
 
-Great job! You've successfully created a new projection. Proceed to the [next step]() to continue with the tutorial.
+Great job! You've successfully created a new projection. Proceed to the [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section to continue with the tutorial.

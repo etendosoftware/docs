@@ -48,4 +48,4 @@ public class RxtutorialApplication {
 }
 ```
 
-Congratulations! You have successfully configured a Spring Boot project with RX capabilities. To continue learning and building, proceed to the [next step]().
+Congratulations! You have successfully configured a Spring Boot project with RX capabilities. To continue learning and building, proceed to the [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section.

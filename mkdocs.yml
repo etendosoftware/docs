@@ -44,6 +44,7 @@ theme:
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
+  - tables
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -188,9 +189,9 @@ nav:
           - Reference:
               - File gradle.properties: developer-guide/etendo-classic/reference/file-gradle-properties.md
       - Etendo RX:
+          - Getting Started: developer-guide/etendo-rx/tutorials/getting-started.md
           - Tutorials:
               - Tutorials Index: developer-guide/etendo-rx/tutorials/index.md
-              - Getting Started: developer-guide/etendo-rx/tutorials/getting-started.md
               - Making Projections: developer-guide/etendo-rx/tutorials/making-projections.md
               - Making new searches: developer-guide/etendo-rx/tutorials/making-new-searches.md
               - Configure Spring boot project: developer-guide/etendo-rx/tutorials/create-spring-boot-project.md

@@ -24,4 +24,4 @@ After creating a new search, you'll need to set up a corresponding search parame
 | Line  |  `10`           |
 | Name  |  `documentType` |
 
-Excellent work! You've successfully created and implemented new searches. If you're ready to move onto the next stage, please refer to the [next step]().
+Excellent work! You've successfully created and implemented new searches. If you're ready to move onto the next stage, please refer to the [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section.
