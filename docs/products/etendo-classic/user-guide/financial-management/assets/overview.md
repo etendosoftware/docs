@@ -5,10 +5,13 @@ title: Financial Management - Assets
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
 
-- Assets
-- Asset Group
-- Amortization
-- Amortization Report
+[:material-file-document-outline: Assets](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#assets){ .md-button } <br>
+
+[:material-file-document-outline: Asset Group](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#asset-group){ .md-button } <br>
+
+[:material-file-document-outline: Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization){ .md-button } <br>
+
+[:material-file-document-outline: Amortization Report](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization-report){ .md-button } <br>
 
 
 ## **Assets**
