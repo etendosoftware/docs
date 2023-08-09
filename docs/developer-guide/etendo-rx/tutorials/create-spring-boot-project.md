@@ -1,34 +1,34 @@
 # Creating a New Spring Boot Project
 
-Before you begin, please ensure that you've completed the [Making new searches](/docs/developer-guide/etendo-rx/tutorials/making-new-searches.md) step.
+Before you begin, please ensure that you've completed the [Making new searches](/docs/developer-guide/etendo-rx/tutorials/making-new-searches) step.
 
 ## Project Creation
 
 1. Visit [Spring Initializr](https://start.spring.io/) to start your project setup.
 2. Fill in the following details:
 
-   | Field        | Value                            |
-   | ------------ | -------------------------------- |
-   | Project      | Gradle Project                   |
-   | Language     | Java                             |
-   | Spring Boot  | 2.7.14 (or latest 2.7.x version) |
-   | Packaging    | Jar                              |
-   | Java Version | 11                               |
+    | Field        | Value                            |
+    | ------------ | -------------------------------- |
+    | Project      | Gradle Project                   |
+    | Language     | Java                             |
+    | Spring Boot  | 2.7.14 (or latest 2.7.x version) |
 
-   ### Project Metadata
 
-   | Field        | Value                      |
-   | ------------ | -------------------------- |
-   | Group        | com.tutorial               |
-   | Artifact     | rxtutorial                 |
-   | Name         | rxtutorial                 |
-   | Description  | Etendo RX tutorial project |
-   | Package Name | com.tutorial.rxtutorial    |
+    Project Metadata
+
+    | Field        | Value                      |
+    | ------------ | -------------------------- |
+    | Group        | com.tutorial               |
+    | Artifact     | rxtutorial                 |
+    | Name         | rxtutorial                 |
+    | Description  | Etendo RX tutorial project |
+    | Package Name | com.tutorial.rxtutorial    |
+    | Packaging    | Jar                        |
+    | Java Version | 11                         |
 
 3. Add the following dependencies: Spring Web, Lombok, Config Client
 4. Click on the 'Generate' button to download your project. The page will generate a file named `rxtutorial.zip`.
-
-Uncompress the zip file to the platform project created in the first step, as: `modules_rx/com.tutorial.rxtutorial`.
+5. Uncompress the zip file to the platform project created in the first step, as: `modules_rx/com.tutorial.rxtutorial`.
 
 ## Project Configuration
 

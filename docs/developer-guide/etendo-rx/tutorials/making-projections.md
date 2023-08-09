@@ -2,13 +2,13 @@
 
 Ensure you've successfully completed the [Building a New Module for RX Capabilities](/docs/developer-guide/etendo-rx/tutorials/create-new-module) before moving forward.
 
-Start by creating a new projection with the following properties:
+Start by opening 'Projections' windows and creating a new projection with the following properties:
 
 | Field       | Value                                |
 | ----------- | ------------------------------------ |
 | Module      | tutorial - 1.0.0 - English (USA)     |
 | Name        | rxtutorial                           |
-| Description |  Projections needed for the tutorial |
+| Description | Projections needed for the tutorial  |
 
 ## Adding Table and Columns
 

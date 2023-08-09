@@ -241,8 +241,8 @@ nav:
           - Tutorials Index: developer-guide/etendo-rx/tutorials/index.md
           - Making Projections: developer-guide/etendo-rx/tutorials/making-projections.md
           - Making new searches: developer-guide/etendo-rx/tutorials/making-new-searches.md
-          - Configure Spring boot project: developer-guide/etendo-rx/tutorials/create-spring-boot-project.md
-          - Create new Spring Boot Project: developer-guide/etendo-rx/tutorials/configure-spring-boot-project.md
+          - Create new Spring Boot Project: developer-guide/etendo-rx/tutorials/create-spring-boot-project.md
+          - Configure Spring Boot Project: developer-guide/etendo-rx/tutorials/configure-spring-boot-project.md
           - Create new Spring Boot service: developer-guide/etendo-rx/tutorials/create-new-service.md
           - Run RX Services: developer-guide/etendo-rx/tutorials/run-tutorial-project.md
       - Developer Tools:

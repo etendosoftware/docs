@@ -1,6 +1,6 @@
 # Creating a New Spring Boot Service
 
-Before proceeding, make sure you've successfully completed the [Configure Spring boot project](/docs/developer-guide/etendo-rx/tutorials/create-spring-boot-project.md) step.
+Before proceeding, make sure you've successfully completed the [Configure Spring boot project](/docs/developer-guide/etendo-rx/tutorials/create-spring-boot-project) step.
 
 Follow the instructions below to create a new service:
 

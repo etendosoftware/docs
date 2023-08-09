@@ -1,6 +1,6 @@
 # Run RX Services
 
-Before you begin, please ensure that you've completed the [Create new Spring Boot service](/docs/developer-guide/etendo-rx/tutorials/create-new-service.md)
+Before you begin, please ensure that you've completed the [Create new Spring Boot service](/docs/developer-guide/etendo-rx/tutorials/create-new-service)
 
 To simplify RX executions you have a simplified run task:
 
