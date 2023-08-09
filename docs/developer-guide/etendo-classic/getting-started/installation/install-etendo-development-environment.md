@@ -67,9 +67,15 @@ To install Etendo in a development environment, follow the same steps as describ
             
             ![edit-configurations.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/edit-configurations.png)
         
-        - Select the Tomcat configuration that appears first in the list, check the Tomcat server configuration on your machine, and then click the OK button.
+        - Select the Tomcat configuration that appears first in the list, check the Tomcat server configuration on your machine.
             
             ![add-new-configuration-ultimate.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-new-configuration-ultimate.png)
+        - In the Deployment section, add external sources 
+
+            ![add-new-configuration-ultimate.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-external-source.png)
+        - Select `${env.CATALINA_HOME}/webapps/etendo` folder and then click the OK button.
+
+            ![config-deployment-folder.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/config-deployment-folder.png)
 
     4.  5. Start the Tomcat 
 
@@ -86,13 +92,20 @@ To install Etendo in a development environment, follow the same steps as describ
 
 ## Enable Etendo Logs (Optional)
 
-1 - Open the file `config/ log4j2-web.xml`, find the line `<AppenderRef ref = "Console" />` and uncomment it:
+1.  Open the file `config/log4j2-web.xml`, find the line `<!-- <AppenderRef ref="Console"/> -->` and uncomment it:
 
-``` "config/log4j2-web.xml"
-<Loggers>
-    <Root level="info">
-      <AppenderRef ref="RollingFile"/>
-      <!-- Add this appender to show log messages in console i.e Eclipse: -->
-      <AppenderRef ref="Console"/>  << UNCOMMENT THIS LINE
-    </Root>
-```
+    ``` XML title="config/log4j2-web.xml"
+    ...
+    <Loggers>
+        <Root level="info">
+        <AppenderRef ref="RollingFile"/>
+        <!-- Add this appender to show log messages in console i.e Eclipse: -->
+        <AppenderRef ref="Console"/>  << UNCOMMENT THIS LINE
+        </Root>
+    ...
+    ```
+2. Run smartbuild task
+
+    ``` bash
+    ./gradlew smartbuild --info 
+    ```
