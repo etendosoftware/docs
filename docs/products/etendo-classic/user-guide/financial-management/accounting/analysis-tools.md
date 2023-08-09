@@ -5,14 +5,21 @@ title: Reports - Accounting
 
 This section describes the windows related to accounting financial reports in Etendo. These are:
 
-- Accounting Transaction Details
-- Balance Sheet and P/L Structure
-- Trial Balance
-- General Ledger Report
-- Journal Entries Report
-- Create Tax Report
-- Customer Statement
-- Tax Report Setup
+[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button } <br>
+
+[:material-file-document-outline: Balance Sheet and P/L Structure](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button } <br>
+
+[:material-file-document-outline: Trial Balance](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#trial-balance){ .md-button } <br>
+
+[:material-file-document-outline: General Ledger Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button } <br>
+
+[:material-file-document-outline: Journal Entries Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button } <br>
+
+[:material-file-document-outline: Create Tax Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button } <br>
+
+[:material-file-document-outline: Customer Statement](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#customer-statement){ .md-button } <br>
+
+[:material-file-document-outline: Tax Report Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button } <br>
 
 
 
@@ -95,21 +102,34 @@ Under the *"Primary Filters"* section, it is possible to specify:
 ### **Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
 ![](/docs/assets/drive/1yP5IthEhrtJWbj_xZg9dpUAMpCwTB_oJ.png)
 
-In addition to the previous basic filters: General Ledger, Accounting Report, Organization, Account level, Year, As of Date, Compare to (check), Reference Year, As of Reference Date, the following were added:
-- Business Partner
-- Product
-- User 1
-- User 2
-- Project
-- Activity
-- Sales Region
-- Sales Campaign
+In addition to the previous basic filters: 
+
+- General Ledger
+- Accounting Report
+- Organization
+- Account level
+- Year
+- As of Date
+- Compare to (check)
+- Reference Year
+- As of Reference Date
+
+the following were added:    
+
+-   Business Partner  
+-   Product   
+-   User 1    
+-   User 2  
+-   Project 
+-   Activity    
+-   Sales Region    
+-   Sales Campaign  
 
 In basic filters, in the section of the current year, the fields Date From and Date to were added to select a specific period from the selected year.
 
@@ -250,7 +270,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 ### **Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -323,7 +343,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 ### **Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -406,7 +426,7 @@ Transactions aggregated from various sources like:
 -   **Reconciliations**
 
 !!! warning
-    Note that *Completed* but not posted transactions will not be taken into consideration.
+    Note that *Completed* but not *posted* transactions are not taken into consideration.
 
 
 In case that a business partner is a customer as well as a vendor, the Customer Statement shows only customer related transactions and does not take into account vendor related transactions.

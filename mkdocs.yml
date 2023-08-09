@@ -128,7 +128,7 @@ nav:
             - Transactions: products/etendo-classic/user-guide/financial-management/accounting/transactions.md
             - Analysis Tools: products/etendo-classic/user-guide/financial-management/accounting/analysis-tools.md
             - Setup: products/etendo-classic/user-guide/financial-management/accounting/setup.md
-          - Assets: products/etendo-classic/user-guide/financial-management/assets/index.md
+          - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
           - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/index.md

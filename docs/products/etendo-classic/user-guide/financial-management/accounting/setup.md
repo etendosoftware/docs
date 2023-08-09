@@ -5,25 +5,45 @@ title: Set Up - Accounting
 
 This section describes the windows that are necessary to configure the accounting functionalities of Etendo. The corresponding windows are:
 
-- Open/Close Period Control
-- Financial Type
-- Period Control Log
-- Account Tree
-- General Ledger Configuration
-- Fiscal Calendar
-- Account Combination
-- Accounting Process
-- G/L Item
-- G/L Category
-- Document Type
-- Document Sequence
-- Tax Category
-- Business Partner Tax Category
-- Tax Rate
-- Cost Center
-- ABC Activity
-- Accounting Templates
-- Balance Sheet and P/L Structure Setup
+[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button } <br>
+
+[:material-file-document-outline: Open/Close Period Control](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control){ .md-button } <br>
+
+[:material-file-document-outline: Financial Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#financial-type){ .md-button } <br>
+
+[:material-file-document-outline: Period Control Log](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#period-control-log){ .md-button } <br>
+
+[:material-file-document-outline: Account Tree](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-tree){ .md-button } <br>
+
+[:material-file-document-outline: General Ledger Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#glconfig){ .md-button } <br>
+
+[:material-file-document-outline: Fiscal Calendar](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#fiscal-calendar){ .md-button } <br>
+
+[:material-file-document-outline: Account Combination](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-combination){ .md-button } <br>
+
+[:material-file-document-outline: Accounting Process](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-process){ .md-button } <br>
+
+[:material-file-document-outline: G/L Item](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-item){ .md-button } <br>
+
+[:material-file-document-outline: G/L Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-category){ .md-button } <br>
+
+[:material-file-document-outline: Document Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type){ .md-button } <br>
+
+[:material-file-document-outline: Document Sequence](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-sequence){ .md-button } <br>
+
+[:material-file-document-outline: Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category){ .md-button } <br>
+
+[:material-file-document-outline: Business Partner Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category){ .md-button } <br>
+
+[:material-file-document-outline: Tax Rate](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-rate){ .md-button } <br>
+
+[:material-file-document-outline: Cost Center](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#cost-center){ .md-button } <br>
+
+[:material-file-document-outline: ABC Activity](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#abc-activity){ .md-button } <br>
+
+[:material-file-document-outline: Accounting Templates](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-templates){ .md-button } <br>
+
+[:material-file-document-outline: Balance Sheet and P/L Structure Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup){ .md-button } <br>
 
 
 ## **Open/Close Period Control**
@@ -143,9 +163,9 @@ Before running the "Close Year" process for 2019, the organization in this examp
 
 Above action closes all the 2021 standard periods until Dec-2021, therefore it is not possible to post any transaction to the ledger in any 2021 standard period anymore but:
 
-to post "G/L Journals" to the ledger in the "13th Period"
+- to post "G/L Journals" to the ledger in the "13th Period"
 
-and to post the "Closing" entries automatically created by the Close Year process to the ledger
+- and to post the "Closing" entries automatically created by the Close Year process to the ledger
 
 unless:
 
@@ -159,7 +179,7 @@ For example, opening a Period results in opening all the Document Types for that
 
 But it is also possible to Open or Close each Document Type in the same Period.
 
-Once a Period is selected in the Periods Tab of this Window, all the available Document Types will be shown in the Documents Tab, making it possible to select any of them and Open or Close it.
+Once a Period is selected in the Periods Tab of this Window, all the available Document Types are shown in the Documents Tab, making it possible to select any of them and Open or Close it.
 
 The way to manage the Opening/Closing of a particular Document Type for a specific Period is:
 
@@ -186,7 +206,7 @@ Notice that:
 ## Financial Type
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 
 ### Introduction
@@ -194,7 +214,7 @@ Notice that:
 In this window, the user can configure the different options to use in the Financial Type Configuration window.
 
 !!! info
-    For more information, visit [Financial Type Configuration](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management-accounting#financial-type-configuration).
+    For more information, visit [Financial Type Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#financial-type-configuration).
 
 
 #### How to install the Financial Type dataset
@@ -445,10 +465,8 @@ therefore the next step to take is to create one chart of account element per ea
 To create a new record, enter a value in the field "Search Key", this value could be a number for instance ("1000") or a name ("Assets").
 
 !!! info
-    It is recommended to use a number as that helps while creating a new chart of accounts elements. The following rule is considered while creating new chart of accounts elements:
-
-
-Etendo first considers the elements in an alphanumerical order as a sorted list, finds the position in that sorted list where the new element needs to be positioned, looks at the element that precedes it and if that element is a summary element and the current element is not a summary one, adds the element as a children of that node otherwise add the element as a sibling of that node.
+    It is recommended to use a number as that helps while creating a new chart of accounts elements. The following rule is considered while creating new chart of accounts elements:    
+        Etendo first considers the elements in an alphanumerical order as a sorted list, finds the position in that sorted list where the new element needs to be positioned, looks at the element that precedes it and if that element is a summary element and the current element is not a summary one, adds the element as a children of that node otherwise add the element as a sibling of that node.
 
 -   enter "**Assets**" value in the field "Name"
 -   select "**Heading**" in the Element Level field
@@ -663,7 +681,7 @@ Let's take the creation of total assets node, for instance:
 
 ##### **Income Statement Elements**
 
-Now let us briefly explain the creation of the nodes/elements of an **Income Statement**.
+Now, let us briefly explain the creation of the nodes/elements of an **Income Statement**.
 
 An organization's income statement shows the company's financial performance over a period of time (usually one year), therefore it has two main sections:
 
@@ -1070,7 +1088,7 @@ Finally, navigate to the Defaults tab to configure the default accounts which ne
 -   etc.
 
 !!! info
-    As every time that a transaction of any type is posted to the ledger, it will be posted to the two general ledgers configured for the Organization.
+    As every time that a transaction of any type is posted to the ledger, it is posted to the two general ledgers configured for the Organization.
 
 
 ## **Fiscal Calendar**
@@ -1173,14 +1191,14 @@ The account combination window shows the data below:
  
 This module is not to change the accounting entries generated by Etendo, but to run any additional process to be executed at posting time.
  
-From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas ](#glconfig) in the general accounting configuration for Etendo. The process that will be automatically launched when posting documents must be implemented using Java, so a good knowledge about this programming language is mandatory.
+From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas](#glconfig) in the general accounting configuration for Etendo. The process that will be automatically launched when posting documents must be implemented using Java, so a good knowledge about this programming language is mandatory.
  
 Etendo allows running processes just after the posting logic for any document which has been successfully completed. These kinds of processes are called Accounting Post-Processes because they are executed after the normal accounting process.
 
 From a development point of view, this feature gives us the possibility to fulfill any possible requirement specific for our country, like for example to keep an up-to-date log of the documents that have been posted, create some kind of official reports each time a document is posted, send data to a webservice, etc.
  
-!!! info
-    Notice that, depending on the country's requirements, these Accounting Post-Processes may not be necessary. These kinds of modules are not part of the core for a localization, like translations, chart of accounts or taxes, and must be included into a localization extension just in case they are really needed.
+!!! note
+    Depending on the country's requirements, these Accounting Post-Processes may not be necessary. These kinds of modules are not part of the core for a localization, like translations, chart of accounts or taxes, and must be included into a localization extension just in case they are really needed.
 
 ###  Creating the module definition
 
@@ -1195,8 +1213,6 @@ These are the special considerations for the module:
 - If the module has UI elements that can be translated (like messages), set the Translation Required checkbox and specify the necessary Module Language.
 
 ![](/docs/assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
-
-- Remember to [register the module ](https://docs/en/technical-documentation/etendo-environment/platform/publish-modules-to-a-nexus-repository) in case it needs to be published in the [Nexus](https://repo.futit.cloud/).
 
 !!! info
     Now export the database to generate the file structure inside the module folder     ant export.database
@@ -1477,7 +1493,7 @@ It is also possible to define how the "Auto Numbering" type document sequence ar
 -   if it requires a given *prefix* or *suffix*
 
 !!! info
-    The number logic is applied when **saving** the document.
+    The number logic is applied when saving the document.
 
 ### Masked Sequences
 
@@ -1611,7 +1627,8 @@ There are other variables which can reduce up to just "one" the tax rate automat
 
 Those variables are related to the tax category as well as the way each tax rate is configured.
 
-It is important to remark that **all available tax rates are available for** ***manual*** **selection in an order/invoice line** regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
+!!! info
+    It is important to remark that all available tax rates are available for *manual* selection in an order/invoice line regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
 
 The end-user could need to select a particular tax rate under a given business scenario that is not the common one.
 
@@ -1640,15 +1657,15 @@ Taxes are applied to orders and invoices. In this process, there are two steps: 
 
 When in a document line (order or invoice) a product is selected, a default tax is associated to this line. Keep in mind that we can select the tax we want for this line. The selection of the default tax is achieved by the C\_GetTax DB stored procedure. The rules followed by this procedure are as follows:
 
-For sale transactions with an associated project, if a project has a tax rate, this tax rate will be taken. This works when an order is generated by a Project (Order). In this case, the tax is taken directly from the project line tax. For sale transactions, if a partner is marked as tax-exempt, the selected tax will be the one checked as exempt with the most recent date relative to the ordered or invoiced date.
+For sale transactions with an associated project, if a project has a tax rate, this tax rate is taken. This works when an order is generated by a Project (Order). In this case, the tax is taken directly from the project line tax. For sale transactions, if a partner is marked as tax-exempt, the selected tax will be the one checked as exempt with the most recent date relative to the ordered or invoiced date.
 
 Otherwise, the tax is selected from the ones defined in the same tax category as the product on the line. Taxes with defined business partner tax category can only be applied to those business partners with the same tax category (for vendor or customer). If the tax does not have a business partner tax category, it can be applied to any partner (with or without an associated tax category). If a tax with business partner tax category and another one without it can both be applied, the one with business partner tax category will be selected. In addition to this, the “to” and “from” locations are taken into account. At first, those taxes defined for closer regions are selected (if a tax is for region and another one for country, the region one will be selected). This information is associated to the tax rate, through the “Tax Zone” tab. Taxes are applied taking into account if they are defined as Sales, Purchases or Both.
 
-Apart from these rules, and only in the case of Purchase/Sales Orders and Invoices, the system will filter the tax rates taking into account the Cash VAT flag defined at the document's header too, which is automatically set based on the organization's and the business partner's configuration for sales and purchase documents respectively (although it can be manually overridden afterwards). Thus, in case the document is enabled for the Cash VAT regime, the system will get a Cash VAT tax rate and the other way around.
+Apart from these rules, and only in the case of Purchase/Sales Orders and Invoices, the system filters the tax rates taking into account the Cash VAT flag defined at the document's header too, which is automatically set based on the organization's and the business partner's configuration for sales and purchase documents respectively (although it can be manually overridden afterwards). Thus, in case the document is enabled for the Cash VAT regime, the system will get a Cash VAT tax rate and the other way around.
 
 Once the tax is selected (the default one, or another one selected by the user), an approximated amount is calculated by the SL\_Order\_Tax or SL\_Invoice\_Tax callouts. If the tax is checked as summary, the calculation will be done using the rate defined in the parent, not exploding it and taking the real values from its children. In addition, information c\_order\_tax and c\_invoice\_tax tables are populated with taxes at this point. The actual amount is calculated when the document is processed.
 
-When creating a new invoice, it is possible to write down taxes manually and check them as “no recalculate”. In this case, the tax will be applied with the amount written down in the tax tab of the invoice, so no recalculation will be done while processing the invoice. When a tax in an invoice is marked as recalculated, if the tax is edited manually all changes will be lost when processing the invoice. This is because the tax amount of the invoice is recalculated. “No recalculate” taxes are not associated to any invoice line, whereas the recalculated ones are. So when a tax comes from a line, it will be checked as recalculate. If it is manually created, it will not be checked, and this value will be not updatable.
+When creating a new invoice, it is possible to write down taxes manually and check them as “no recalculate”. In this case, the tax is applied with the amount written down in the tax tab of the invoice, so no recalculation will be done while processing the invoice. When a tax in an invoice is marked as recalculated, if the tax is edited manually all changes will be lost when processing the invoice. This is because the tax amount of the invoice is recalculated. “No recalculate” taxes are not associated to any invoice line, whereas the recalculated ones are. So when a tax comes from a line, it will be checked as recalculate. If it is manually created, it will not be checked, and this value will be not updatable.
 
 Not recalculating taxes is useful for invoices that include tax lines without a product. For example, it can be used for imported products: these products usually have an invoice that is tax-exempt and another invoice that is created by the custom broker without any product, but a tax amount for the imported products.
 
@@ -1731,7 +1748,7 @@ The VAT amount can not be posted to the ledger in a Tax Credit account as it mea
 | Vendor Liability |     | Total Gross Amount | One per invoice |
 
 !!! info
-    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [_Financial Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)  
+    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.  
 
 The same behavior can be applied for the non-deductible tax. 
 

@@ -227,7 +227,7 @@ Payment Method configuration includes the features below:
 -   and finally, how the payment is going to be **accounted**.
 
 !!! info
-    To learn more, visit the section Accounting Payment Workflow.
+    To learn more, visit the section [Accounting Payment Workflow](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup#accounting-payment-workflow).
 
 
 Payment Methods can be configured as explained below in detail:
@@ -353,8 +353,8 @@ For instance:
     -   that means that the reconciliation of the deposit can be posted in the Reconciliation tab of the financial account window by using the process button "Post".
     -   the deposit of the payment is going to be cancelled by the "**Cleared Payment Account**" defined in the accounting configuration tab of the financial account window.
 
-!!! info
-    It is important to remark that if any account is left empty, it would imply that the process button "Post" is shown as "Post: Disable for accounting" in the corresponding window.
+!!! note
+    If any account is left empty, it implies that the process button "Post" is shown as "Post: Disable for accounting" in the corresponding window.
 
 
 ## **Matching Algorithm**
@@ -482,7 +482,7 @@ The following accounts are defined:
 To finish the process, the payment methods applicable to each financial account should be associated. 
 
 !!! info
-    It is important that those banks from which remittance transactions are to be made, have a third party partner.
+    It is important that those banks from which remittance transactions are to be made have a third party partner.
 
 ![](/docs/assets/drive/1lNuqadYEmnZeOl8RcS3hXS_2-N7GrVfg.png)
 
@@ -496,7 +496,7 @@ To configure Non-Discount Remittances, define this payment method from the Payme
 ![](/docs/assets/drive/1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO.png)
 
 !!! info
-    To create a Non-Discount remittance go to the [Remittance window](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance) 
+    To create a Non-Discount remittance go to the [Remittance window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#remittance). 
 
 ### Remit for Discount
 
@@ -509,7 +509,7 @@ To configure Remittances for Discount, define the type from the Remit for Discou
 ![](/docs/assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
-    To create a Remitt for Discount remittance go to the [Remittance window](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#remittance)
+    To create a Remitt for Discount remittance go to the [Remittance window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#remittance).
 
 
 ## **Doubtful Debt Method**
@@ -528,4 +528,4 @@ Fields to note:
 -   **Percentage:** This field is used when selecting the existing debts as the default percentage of the debt that is going to be considered as doubtful. It can be changed afterwards.
 
 ---
-This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
