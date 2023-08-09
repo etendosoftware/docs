@@ -154,7 +154,7 @@ nav:
     - Release Notes :
       - Etendo Classic:
           - User Guide:
-              - General Setup: products/etendo-classic/user-guide/general-setup/index.md
+              - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
               - Jobs: products/etendo-classic/user-guide/jobs/index.md
               - Master Data Management: products/etendo-classic/user-guide/masterdata-management/masterdata.md
               - Procurement Management:
@@ -185,7 +185,7 @@ nav:
                       - Transactions: products/etendo-classic/user-guide/financial-management/accounting/transactions.md
                       - Analysis Tools: products/etendo-classic/user-guide/financial-management/accounting/analysis-tools.md
                       - Setup: products/etendo-classic/user-guide/financial-management/accounting/setup.md
-                  - Assets: products/etendo-classic/user-guide/financial-management/assets/index.md
+                  - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
           - Optional Features:
               - Bundles:
                   - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/index.md
