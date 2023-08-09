@@ -1,5 +1,7 @@
 ---
 tittle: Quickstart
+hide:
+    - toc
 ---
 
 With this Quickstart Guide, you'll be up and running with Etendo in no time! 

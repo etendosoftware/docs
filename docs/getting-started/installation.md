@@ -3,6 +3,7 @@ title: Installation
 ---
 ## Overview
 This section explains how to install a new Etendo environment. It includes:
+
 - Tutorial about the Etendo installation.
 - The steps to install Etendo.
 
@@ -114,6 +115,10 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         ```
         sudo /etc/init.d/tomcat start
         ```
+        
+        !!! note
+                If you want to run Etendo locally, go to [Run Etendo Development Environment](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+
     10. Open your browser in `https://<Public server IP>/<Context Name>`
 
 === ":octicons-file-zip-24: Source Format"
@@ -178,6 +183,10 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         ```
         sudo /etc/init.d/tomcat start
         ```
+
+        !!! note
+                If you want to run Etendo locally, go to [Run Etendo Development Environment](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+                
     9. Open your browser in `https://<Public server IP>/<Context Name>`
 
 
