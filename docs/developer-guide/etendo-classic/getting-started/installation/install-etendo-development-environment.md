@@ -4,7 +4,7 @@ title: Install Etendo Development Environment
 
 ## Overview
 
-This section explains how to install and run a new local Etendo environment
+This section explains how to install and run a new local Etendo environment.
 
 
 ## Install Etendo in local Environment
