@@ -73,11 +73,11 @@ To install Etendo in a development environment, follow the same steps as describ
         - In the Deployment section, add external sources 
 
             ![add-new-configuration-ultimate.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-external-source.png)
-        - Select `${env.CATALINA_HOME}/webapps/etendo` folder and then click the OK button.
+        - Selec the C `${env.CATALINA_HOME}/webapps/etendo` folder  or  the and then click the OK button.
 
             ![config-deployment-folder.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/config-deployment-folder.png)
 
-    4.  5. Start the Tomcat 
+    4. Start the Tomcat
 
         ![edit-configurations.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
         

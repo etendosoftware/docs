@@ -205,6 +205,7 @@ nav:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/code-formatting-style-in-intellij.md
+          - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
           - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Modules from Marketplace: developer-guide/etendo-classic/getting-started/installation/download-and-install-modules.md
         - Migration from Openbravo:
@@ -213,7 +214,7 @@ nav:
         - Upgrade:
           - Upgrade Etendo to Any Version: developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version.md
           - Core format migration (JAR- Sources): developer-guide/etendo-classic/getting-started/upgrade/core-format-migration.md
-          - Resolving Dependencies on GitHub: /developer-guide/etendo-classic/getting-started/upgrade/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github.md
+          - Resolving Dependencies on GitHub: developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github.md
       - Concepts:
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
