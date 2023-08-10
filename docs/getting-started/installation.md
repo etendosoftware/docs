@@ -137,7 +137,7 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs/developers/setup/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         ```groovy
         githubUser=username
         githubToken=*******
