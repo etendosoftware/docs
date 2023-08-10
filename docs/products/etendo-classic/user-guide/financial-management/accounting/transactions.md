@@ -5,15 +5,24 @@ title: Accounting
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-- Financial Type Configuration
-- Simple G/L Journal
-- G/L Journal
-- End Year Close
-- GL Posting by DB Tables
-- Budget
-- Create Budget Reports in Excel
-- Not Posted Transaction Report
-- Reset Accounting
+[:material-file-document-outline: Financial Type Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#financial-type-configuration){ .md-button } <br>
+
+[:material-file-document-outline: Simple G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#simple-gl-journal){ .md-button } <br>
+
+[:material-file-document-outline: G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal){ .md-button } <br>
+
+[:material-file-document-outline: End Year Close](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close){ .md-button } <br>
+
+[:material-file-document-outline: GL Posting by DB Tables ](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button } <br>
+
+[:material-file-document-outline: Budget](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#budget){ .md-button } <br>
+
+[:material-file-document-outline: Create Budget Reports in Excel](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button } <br>
+
+[:material-file-document-outline: Not Posted Transaction Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button } <br>
+
+[:material-file-document-outline: Reset Accounting](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#reset-accounting){ .md-button } <br>
+
 
 ## Financial Type Configuration
 
