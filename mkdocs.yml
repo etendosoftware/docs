@@ -86,7 +86,7 @@ copyright: Copyright &copy; 2021 - 2023 Etendo Software
 nav:
   - Home : index.md
   - Getting Started:
-    - Quickstart: getting-started/overview.md
+    - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Installation: getting-started/installation.md
     - User interface:
@@ -220,7 +220,7 @@ nav:
     #   - Concepts:
     #     - What is Etendo Platform?: developer-guide/etendo-platform/concepts/what-is-etendo-platform.md
   - Live Builds: live-builds/overview.md
-  - FAQ: faq/overview.md
-  - Help and Support: 
-    - Support Service: help-and-support/overview.md
+  - Help and Support:
+    - Overview: help-and-support/overview.md
+    - Support Service: help-and-support/support-service.md
     - How to report bugs: help-and-support/how-to-report-bugs.md
