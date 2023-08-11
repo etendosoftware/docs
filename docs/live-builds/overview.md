@@ -1,5 +1,4 @@
 ---
-title: Live Builds
 tags:
   - Live Builds
   - Postgres
@@ -8,19 +7,26 @@ hide:
     - navigation
     - toc
 ---
+![cover-live-builds.png](../assets/live-builds/overview/cover-live-builds.png)
+#
+## Explore and Experiment with Live Builds in Etendo Classic
 
-![live-builds.png](/docs/assets/live-builds/live-builds.png)
+Are you eager to test in the Etendo Classic environment? 
 
-## Etendo Live Builds
+The Live Builds section offers you a versatile platform to test new concepts, innovative solutions and analyze the behavior of Etendo projects in real time. Whether you are fine-tuning the efficiency of your application or exploring new features, Live Builds is your ally for meaningful testing.
 
-- [Etendo 23.2.0 - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
-- [Etendo 23.2.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+Step into a world of exploration using either Postgres or Oracle as database managers.
 
-!!! warning
-    Oracle 19 is an environment that is used in specific cases, so it may not be running. If you need to test it, please [contact us](/docs/help-and-support).
+This page holds live testing instances. These live builds are updated and reset once per day at 03:30 UTC.
 
-!!! tip
+[ :simple-esbuild: Etendo 23.2.0 - Supported Bundles Installed - Postgres 14](https://demo.etendo.cloud/etendo/security/Login){target="\_blank"}
 
+[:simple-esbuild: Etendo 23.2.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
+
+??? warning "Oracle"
+    If you need to test on Oracle, please feel free to [contact us](/docs/help-and-support).
+
+??? tip "Credentials"
     The default access credentials are: <br> 
       **Username:** admin <br>
       **Password:** admin <br>

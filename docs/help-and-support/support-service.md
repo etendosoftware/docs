@@ -1,0 +1,24 @@
+---
+    Title: Support Service
+---
+
+## Help Center
+
+Etendo provides support to the users through our [Help Center](http://support.etendo.software){target="_blank"} 
+
+Here, the user can ask questions or send information in these sections:
+
+-   :material-lifebuoy: **Trainning**
+-   :material-tools:  **Technical Support** 
+-   :fontawesome-regular-money-bill-1:  **Licensing and Billing Questions** 
+-   :material-headphones-settings:  **Product Trial Questions**
+-   :material-message-text:  **Other Questions**
+-   :fontawesome-solid-bug:  **Report a Bug**
+-   :material-lightbulb:  **Suggest a New Feature**
+-   :material-lightbulb-on:  **Suggest Improvement**
+
+## Get In Touch
+
+!!! info
+        For commercial information, visit the [Get in Touch section](https://etendo.software/get-in-touch/){target="_blank"} in the Etendo website.
+

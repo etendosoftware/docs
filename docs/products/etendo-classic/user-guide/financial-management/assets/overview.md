@@ -5,10 +5,13 @@ title: Financial Management - Assets
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
 
-- Assets
-- Asset Group
-- Amortization
-- Amortization Report
+[:material-file-document-outline: Assets](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#assets){ .md-button } <br>
+
+[:material-file-document-outline: Asset Group](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#asset-group){ .md-button } <br>
+
+[:material-file-document-outline: Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization){ .md-button } <br>
+
+[:material-file-document-outline: Amortization Report](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization-report){ .md-button } <br>
 
 
 ## **Assets**
@@ -71,7 +74,8 @@ The *Create Amortization* process populates the Asset Amortization tab.
 
 The Asset Amortization tab shows the depreciation plan of the asset based on its usable life-time and its value that is the amount to be depreciated. The asset value is split within its usable life (months or years), therefore each depreciation plan line represents a percentage of the total depreciation amount of the asset.
 
-It is important to remark that the proposed depreciation plan lines can be manually removed whenever they are not processed and posted. In that case, the create amortization process can be executed once again, therefore the depreciation plan is recalculated. This is very useful in those cases where the value of an asset changes or the usable life-time of an asset changes once its depreciation has started.
+!!! note
+    It is important to remark that the proposed depreciation plan lines can be manually removed whenever they are not processed and posted. In that case, the create amortization process can be executed once again, therefore the depreciation plan is recalculated. This is very useful in those cases where the value of an asset changes or the usable life-time of an asset changes once its depreciation has started.
 
 There is a restriction though, when removing lines, if the user plans to click the Recalculate Amortization button afterwards. The lines must be removed always starting from the latest one and without leaving undeleted lines in between. For example, having amortization lines such as:
 
@@ -148,7 +152,7 @@ Accounting information related to the amortization
 ### How to Reactivate Amortizations
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
@@ -157,20 +161,20 @@ Etendo allows multiple amortizations to be processed and unprocessed. This proce
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 
 ## Amortization Report
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614)
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}.
 
 
 
@@ -192,10 +196,10 @@ It is necessary to filter by date since the information comes out over this filt
 
 For example: Period date filtered 01-01-2022 and 31-12-2022
 
-**Period:** The total of the amortization lines between 01/01/2022 and 12/31/2022 will be shown.
-**Accumulated:** The sum of the amortization lines between 01/01/2022 and 12/31/2022 and the total amortization lines prior to 01/01/2022 will be shown. 
-**Net Value:** The Asset value minus the Accumulated field will be shown. 
-**After:** The amortization lines after 31-12-2022 will be shown. 
+**Period:** The total of the amortization lines between 01/01/2022 and 12/31/2022 will be shown. <br>
+**Accumulated:** The sum of the amortization lines between 01/01/2022 and 12/31/2022 and the total amortization lines prior to 01/01/2022 will be shown. <br>
+**Net Value:** The Asset value minus the Accumulated field will be shown.  <br>
+**After:** The amortization lines after 31-12-2022 will be shown.  <br>
 
 !!! info
     When the end date within the Assets window is filled in, that Asset will not appear in the report if the filtered date is after the end date of the Asset.
