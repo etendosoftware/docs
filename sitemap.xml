@@ -531,7 +531,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/</loc>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/</loc>
+         <lastmod>2023-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/master-data/</loc>
+         <lastmod>2023-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/pricing/</loc>
+         <lastmod>2023-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/user-guide/masterdata-management/product-setup/</loc>
          <lastmod>2023-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
