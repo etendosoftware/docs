@@ -115,4 +115,4 @@ If you encounter the error `A problem occurred starting process 'command 'sass''
 
 ## Conclusion
 
-The `cssCompile` task simplifies the process of working with SCSS in the Etendo project, ensuring that the latest styles are always available in a browser-compatible format. By facilitating the seamless transition from SCSS to CSS, it allows that developers can focus on creativity without being bogged down by manual compilation. The result? A beautiful Etendo user interface with its own styles.
+The `cssCompile` task simplifies the process of working with SCSS in the Etendo project, ensuring that the latest styles are always available in a browser-compatible format. By facilitating the seamless transition from SCSS to CSS, it allows that developers can focus on creativity without being bogged down by manual compilation.
