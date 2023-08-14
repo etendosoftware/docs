@@ -6,19 +6,32 @@ title: Production Management Setup
 
 This section describes the screens that are necessary to set up the components used in the production process in Etendo. The corresponding windows are:
 
-- Section
-- Work Center
-- Process Plan
-- Activity
-- Toolset
-- Machine Category
-- Machine
-- Manufacturing Cost Center
-- Indirect Cost
-- Periodic Quality Control
-- Quality Control Point
-- Work Incidence
-- Maintenance Task
+[:material-file-document-outline: Section](/docs/products/etendo-classic/user-guide/production-management/setup/#section){ .md-button } <br>
+
+[:material-file-document-outline: Work Center](/docs/products/etendo-classic/user-guide/production-management/setup/#work-center){ .md-button } <br>
+
+[:material-file-document-outline: Process Plan](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan){ .md-button } <br>
+
+[:material-file-document-outline: Activity](/docs/products/etendo-classic/user-guide/production-management/setup/#activity_1){ .md-button } <br>
+
+[:material-file-document-outline: Toolset](/docs/products/etendo-classic/user-guide/production-management/setup/#toolset_2){ .md-button } <br>
+
+[:material-file-document-outline: Machine Category](/docs/products/etendo-classic/user-guide/production-management/setup/#machine-category){ .md-button } <br>
+
+[:material-file-document-outline: Machine](/docs/products/etendo-classic/user-guide/production-management/setup/#machine_1){ .md-button } <br>
+
+[:material-file-document-outline: Manufacturing Cost Center](/docs/products/etendo-classic/user-guide/production-management/setup/#manufacturing-cost-center){ .md-button } <br>
+
+[:material-file-document-outline: Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2){ .md-button } <br>
+
+[:material-file-document-outline: Periodic Quality Control](/docs/products/etendo-classic/user-guide/production-management/setup/#periodic-quality-control){ .md-button } <br>
+
+[:material-file-document-outline: Quality Control Point](/docs/products/etendo-classic/user-guide/production-management/setup/#quality-control-point){ .md-button } <br>
+
+[:material-file-document-outline: Work Incidence](/docs/products/etendo-classic/user-guide/production-management/setup/#work-incidence){ .md-button } <br>
+
+[:material-file-document-outline: Maintenance Task](/docs/products/etendo-classic/user-guide/production-management/setup/#maintenance-task){ .md-button } <br>
+
 
 ## Section
 
@@ -557,7 +570,7 @@ In this window, it is possible to define types of work incidences that may occur
 Standard work incidences are set up for later reference in the work effort. A possible work incidence is that a machine component breaks and needs to be replaced or some other unplanned machine outage.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](/docs/products/etendo-classic/user-guide/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
  
 ### **Work Incidence**
@@ -577,11 +590,10 @@ In this window, it is possible to define a scheduled maintenance task to be comp
 Maintenance tasks can be created to be executed to the machines in Production.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](/docs/products/etendo-classic/user-guide/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
 The maintenance process is as following:
 
--   Maintenance Task: all tasks that are executed for machine maintenance are set up in this screen.
 -   The created maintenance tasks are added either to the machine category, with the possibility to apply that tasks to all machines belonging to that machine category, or directly to the machine.
 -   Run the insert maintenance process.
 -   Review the Maintenance Plan and select the confirmation checkbox for all maintenance tasks that need to be executed.
