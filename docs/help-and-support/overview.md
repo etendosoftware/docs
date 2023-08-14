@@ -2,7 +2,7 @@
 hide:
     - toc
 ---
-![help-and-support.png](/docs/assets/help-and-support/overview/help-and-support.png){ width="900"}
+![help-and-support.png](/docs/assets/help-and-support/overview/help-and-support.png)
 
 # 
 ## Welcome to our Help and Support Portal!
