@@ -99,7 +99,11 @@ nav:
       - User Guide:
         - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
         - Jobs: products/etendo-classic/user-guide/jobs/index.md
-        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/masterdata.md
+        - Master Data Management: 
+          - Master Data: products/etendo-classic/user-guide/masterdata-management/master-data.md
+          - Business Partner Setup: products/etendo-classic/user-guide/masterdata-management/business-partner-setup.md
+          - Product Setup: products/etendo-classic/user-guide/masterdata-management/product-setup.md
+          - Pricing: products/etendo-classic/user-guide/masterdata-management/pricing.md
         - Procurement Management: 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
