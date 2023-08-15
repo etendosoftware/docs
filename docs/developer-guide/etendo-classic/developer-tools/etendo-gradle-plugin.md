@@ -459,10 +459,82 @@ The `cssCompile` task in the **Etendo** Gradle configuration is specifically des
 
 With modern web development, **SCSS** offers more power and flexibility compared to traditional **CSS**. As Etendo aims to deliver an impeccable user interface, using `.scss` files allows for better organization, variable definitions, and nested rules. However, browsers understand only CSS. Hence, there's a need to **compile SCSS into CSS**, and that's where our `cssCompile` task steps in.
 
-> **Requirements**
-> - npm (Node Package Manager) and Sass compiler installed on your system.
+!!! warning "Requirements"
+    - **Node.js**: Version 16 or higher.
+    - **npm**: Node Package Manager.
+    - **Sass**: Must have a Sass compiler installed.
 
-!!! info "How to install npm and Sass"
+??? info "How to install Node.js, npm and Sass"
+
+    === ":simple-linux: Linux"
+        
+        **Node.js & npm:**
+        
+        1. Update the package repository:
+        ```bash
+        sudo apt update
+        ```
+        
+        2. Install Node.js and npm:
+        ```bash
+        sudo apt install nodejs npm
+        ```
+
+        3. Verify the installation:
+        ```bash
+        node -v
+        npm -v
+        ```
+
+    === ":simple-macos: Mac OS"
+
+        **Homebrew Installation:**
+
+        - Install Homebrew by running the following command in the terminal:
+
+        ```bash
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+
+        - Once Homebrew is installed, verify it by checking its version:
+
+        ```bash
+        brew --version
+        ```
+
+        **Node.js & npm Installation using Homebrew:**
+            
+        1. Update Homebrew (ensuring you have the latest package definitions):
+        ```bash
+        brew update
+        ```
+
+        2. Install Node.js and npm:
+        ```bash
+        brew install node
+        ```
+
+        3. Verify the installation of Node.js and npm:
+        ```bash
+        node -v
+        npm -v
+        ```
+
+
+    === ":material-microsoft-windows: Windows"
+        
+        **Node.js & npm:**
+        
+        1. Download the Node.js Windows Installer from the [official website](https://nodejs.org/).
+        
+        2. Run the installer and follow the instructions.
+        
+        3. After installation, open a command prompt or PowerShell and verify the installation:
+        ```powershell
+        node -v
+        npm -v
+        ```
+
     **Installing npm (Node Package Manager)**
 
     If you don't have npm installed on your system, follow these steps:
@@ -498,6 +570,7 @@ With modern web development, **SCSS** offers more power and flexibility compared
 
     Seeing the Sass version number means that Sass has been installed correctly.
 
+
 ### How to Use
 
 To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task has been provided.
@@ -524,10 +597,4 @@ To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task 
 
 !!! warning "Troubleshooting"
 
-    If you encounter the error `A problem occurred starting process 'command 'sass''`, it suggests that the `sass` compiler either isn't installed or isn't accessible. Follow these checks:
-
-    1. Ensure you've installed the **Sass** compiler.
-    2. Verify that the `sass` command is available in your system's **PATH**. You can do this by running the `sass --version` command.
-    3. If the problem persists, **restart your terminal** or ensure you have the necessary permissions to execute commands.
-
-Therefore, the `cssCompile` task simplifies the process of working with SCSS in the Etendo project, ensuring that the latest styles are always available in a browser-compatible format. By facilitating the seamless transition from SCSS to CSS, it allows that developers can focus on creativity without being bogged down by manual compilation.
+    If you see the error `A problem occurred starting process 'command 'sass''`, ensure the **Sass** compiler is installed and accessible.
