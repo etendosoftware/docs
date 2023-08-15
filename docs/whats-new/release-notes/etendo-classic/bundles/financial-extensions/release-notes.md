@@ -5,7 +5,8 @@ title: Release Notes
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| 1.9.0     | 12/07/2023 | 23.1.4 | 23.2.x | CS | :white_check_mark:    |
+| 1.9.1     | 15/08/2023 | 23.1.4 | 23.2.x | CS | :white_check_mark:    |
+| 1.9.0     | 12/07/2023 | 23.1.4 | 23.2.x | C  | :white_check_mark:    |
 | 1.8.0     | 27/06/2023 | 23.1.4 | 23.2.x | C  | :white_check_mark:    |
 | 1.7.1     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
 | 1.7.0     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
@@ -28,7 +29,8 @@ title: Release Notes
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
 ## Release Notes
-
+### 1.9.1 
+- Fix bug related to completing invoices generated from Financial Type configuration.
 ### 1.9.0 
 - Add org.openbravo.module.remittance module
 ### 1.8.0
