@@ -203,7 +203,9 @@ nav:
     - Etendo RX:
       - Developer Tools:
         - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
+    - Etendo Copilot:
+      - Etendo copilot overview: developer-guide/etendo-copilot/overview.md
+      - Getting Started: developer-guide/etendo-copilot/getting-started.md
   - Live Builds: live-builds/index.md
   - Help and Support: 
-    - Support Service: help-and-support/index.md
-    - How to report bugs: help-and-support/how-to-report-bugs.md
+    - Support Service: help- and-support/how-to-report-bugs.md
