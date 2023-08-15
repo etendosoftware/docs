@@ -99,7 +99,11 @@ nav:
       - User Guide:
         - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
         - Jobs: products/etendo-classic/user-guide/jobs/index.md
-        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/masterdata.md
+        - Master Data Management: 
+          - Master Data: products/etendo-classic/user-guide/masterdata-management/master-data.md
+          - Business Partner Setup: products/etendo-classic/user-guide/masterdata-management/business-partner-setup.md
+          - Product Setup: products/etendo-classic/user-guide/masterdata-management/product-setup.md
+          - Pricing: products/etendo-classic/user-guide/masterdata-management/pricing.md
         - Procurement Management: 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
@@ -131,14 +135,14 @@ nav:
           - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/index.md
-          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/index.md
-          - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/index.md
-          - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/index.md
-          - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/index.md
-          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/index.md
-          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/index.md
-          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/index.md
+          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
+          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+          - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
+          - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/overview.md
+          - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/overview.md
+          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
+          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
     - Etendo Mobile: 
@@ -189,7 +193,7 @@ nav:
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
-        - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
+        - How to Use Advanced Sequences: developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md
         - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
         - How to Use Secure Webservices: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md

@@ -147,3 +147,5 @@ This functionality allows the user to set a bank account as the default for busi
 
 !!! info
     For more information, visit [the User Guide](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/financial-management#advanced-remittance).
+
+
