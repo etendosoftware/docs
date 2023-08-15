@@ -13,6 +13,28 @@ Having a single repository of data avoids data duplication, provides a unique wa
 !!! info
     Master data creation is one part of the overall Business Setup flow in Etendo and, as any other setup, it is required prior to entering transactions.
 
+## Business Partner General View
+
+!!! info
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}.
+
+The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
+
+!!! info
+    For more information, visit [Advanced Business Partner](/docs/products/etendo-classic/optional-features/bundles/essentials-extensions/overview/) in the Essentials Extensions Bundle Documentation .
+
+## Currency Converters
+
+In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
+
+- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
+- URL: http://apilayer.net/api/
+- Token
+- User
+- Password
+
+![](/docs/assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
+
 ## Business Partner
 
 ### **Introduction**
@@ -175,7 +197,8 @@ Customer accounting tab allows the user to configure the ledger accounts to be u
 As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
 
 - the **Customer Receivables** transactions such as sales invoices posting.  
-  To learn more, visit [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice).
+To learn more, visit [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice).
+
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
 At first, these accounts are inherited from the Defaults accounts of the organization's general ledger for which the business partner is being created. The end-user can always change them.
@@ -369,60 +392,11 @@ Three Discounts, each one of 10%, the first two ones are defined as not Cascade 
 
 In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
-### Advanced Business Partner
-
-!!! info
-    To be able to include this functionality, the Essentials Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}.
-
-The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
-
-#### Business Partner General View
-
-In this window, it is possible to see all the business partner information of each record, grouped in the customer, vendor/creditor and employee sections of the header. In the original window “Business Partner”, this information is found in different tabs.
-
-![image_3.png](/docs/assets/legacy/image_3.png)
-
-This change implies, in grid view, the user is able to create, modify and filter business partner information according to their needs.
-
-![image_4.png](/docs/assets/legacy/image_4.png)
-
-#### Sequence Number by Business Partner Category
-
-In this window, it is also possible to create a sequence number for each business partner based on its category. This sequence number can be found in the Document No. field.
-
-![image_5.png](/docs/assets/legacy/image_5.png)
-
-For this, you have to set some preferences and configure the sequence number first, as explained below.
-
-#### Preferences
-
-To be able to configure a business partner sequence number, two preferences are set by default. These can be found in the “Preference” window.
-
-##### Auto Business Partner Document No
-
-![image_6.png](/docs/assets/legacy/image_6.png)
-
-This property allows the automatic generation of sequence numbers for business partners. The default value is Y and, in case it is necessary to disable this automatic generation, a new preference must be created, but with the value N and the option “Selected” checked. In this case, the Document No field will be left blank.
-
-##### Allow Jumps in Business Partner Document No
-
-![image_1.png](/docs/assets/legacy/image_1.png)
-
-This property allows jumping among the different document numbers. The default value is N, so, it is not allowed to remove business partners or change business partner categories. However, it is possible to create a new preference with value Y to enable this option. When the business partner category is changed, the document number is also changed according to the corresponding document sequence.
-
-#### How to Configure Sequences Number
-
-To configure the Sequence Number, go to the “Document Sequence” window, create a new record for each organization and category, set the corresponding table, column and business partner category, and save the record. The table and column fields must be filled with the options seen below.
-
-![image_2.png](/docs/assets/legacy/image_2.png)
-
-!!! info
-    For more information, visit [Sequences](https://docs/en/technical-documentation/etendo-environment/platform/sequences).
 
 ### Advanced Rappels
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="\_blank"}.
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
 
@@ -431,7 +405,7 @@ With this functionality, the user can find the tab “Rappel Configurations” i
 To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
 
 !!! info
-    For more information, visit [Rappel Configurations](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#rappel-configurations).
+    For more information, visit [Rappel Configurations](/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/#rappel-configurations).
 
 #### Rappel Configuration Tab
 
@@ -441,7 +415,7 @@ To create a new rappel, the user must select one of the available configurations
 
 ![bp_pop_up_new.png](/docs/assets/legacy/bp_pop_up_new.png)
 
-When the rappel is created, a [sales invoice](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#sales-invoice) is created automatically, as seen below.
+When the rappel is created, a [sales invoice](/docs/products/etendo-classic/user-guide/masterdata-management/master-data/#sales-invoice) is created automatically, as seen below.
 
 ![created_rappel.png](/docs/assets/legacy/created_rappel.png)
 
@@ -450,7 +424,7 @@ When the rappel is created, a [sales invoice](https://docs/en/end-user-documenta
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
 
 !!! info
-    For more information, visit [Sales Invoice](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#advanced-rappels).
+    For more information, visit [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-rappels).
 
 ## Business Partner Info
 
@@ -482,17 +456,6 @@ The user can view invoices related to a specific business partner.
 
 ![](/docs/assets/drive/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw.png)
 
-## Currency Converters
-
-In the Currency Converters window, the necessary Apilayer data has to be configured with the following information:
-
-- Classname: com.smf.currency.apiconfig.CurrencyLayerConverter
-- URL: http://apilayer.net/api/
-- Token
-- User
-- Password
-
-![](/docs/assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Product
 
@@ -545,7 +508,7 @@ Additional key data to fill in are:
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a "Process Plan".  
-  To learn more, visit [Process Plan](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/production-management-setup#process-plan)
+  To learn more, visit [Process Plan](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan)
 - **Attribute Set**, a product can have a group of features or an attribute set, such as "**Color and Size**", to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named "Attribute Set Value".  
     To learn more, visit Attribute Set
@@ -795,7 +758,7 @@ In the same way, either a "Standard" or an "Average" Costing Rule needs also to 
 
 - **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an "Average" Costing Algorithm.
 
-> Note that when using a "Standard" costing algorithm the cost of every product transaction is the "default standard cost" entered in this tab.  
+Note that when using a "Standard" costing algorithm the cost of every product transaction is the "default standard cost" entered in this tab.  
 !!! info
     The "default standard cost" can be used by the Default Cost method whenever it is not possible to get the price of a transaction for which its cost needs to be calculated.
 

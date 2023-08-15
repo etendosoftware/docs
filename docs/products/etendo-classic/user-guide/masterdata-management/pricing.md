@@ -243,7 +243,7 @@ Overall, this tab includes two main fields:
 - 'the _List Price'_ field, as the price used as a reference in a given price list or price list version. This price can be the result of a discount or any other commercial rule applied by a Price List Schema.
 - and the **Unit Price** field, as the final price used in documents such as orders and invoices. This price can be the result of a discount or any other commercial rule applied by a Price List Schema.
 
-## Create all price lists
+## **Create all price lists**
 
 ### Introduction
 

@@ -216,7 +216,7 @@ The information you can enter for each payment term line is:
 - **Fixed Week Day** - a fixed day of the week can be selected to get that calculated due dates matches exactly that day of the week.
 - **Next Business Day** - allows you to set as payment date not exactly the due date but the next business day.
 
-## **Reject Reasons**
+## **Return Reasons**
 
 ### **Introduction**
 
@@ -377,7 +377,7 @@ It creates a salary category.
 ## Rappel Configurations
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}.
 
 Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
@@ -403,7 +403,7 @@ Save the record and the document sequence for rappels is available.
 ![document_sequence_new.png](/docs/assets/legacy/document_sequence_new.png)
 
 !!! info
-    For more information, visit [Document Sequence](https://docs/en/financial-management-setup-accounting#document-sequence)
+    For more information, visit [Document Sequence](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-sequence)
 
 #### Document type
 
@@ -426,12 +426,12 @@ After saving it, it is necessary to select “rappel” in the field “Document
 
 ![document_type_new.png](/docs/assets/legacy/document_type_new.png)
 
-> **Important**:
+
 !!! warning
     For each organization, it is possible to configure only one "rappel" document type.
 
 !!! info
-    For more information, visit [Document Type](https://docs/en/financial-management-setup-accounting#document-type)
+    For more information, visit [Document Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type)
 
 ### Rappel Configurations
 
@@ -472,11 +472,9 @@ At the top of this window, four different buttons can be found.
 - **Business Partners**: In this tab, the business partner to which the Rappel applies is shown. Here, it is possible to select the “from date” and “to date”. This tab also contains a sub tab called “B. Partners Location”, where the location of the business partner is indicated.
 - **Brand**: In this tab, the brands of the products to which the Rappel applies or not can be selected.
 
-> **Important:**
-> Remember that the options selected in the tabs “Product Category”,“Product”, and “Brand” must follow a certain logic: the priority is the option selected in the tab “Product Category”. This means that more specific filters apply to the included or excluded product categories.
->
-> **Examples:**
-> -When selecting the option “only those defined” in the fields “include product categories” and “include products” of the header, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “white wine”, the rappel will only include the products belonging to the category “water” and not “white wine”.
+Remember that the options selected in the tabs “Product Category”,“Product”, and “Brand” must follow a certain logic: the priority is the option selected in the tab “Product Category”. This means that more specific filters apply to the included or excluded product categories.
+
+When selecting the option “only those defined” in the fields “include product categories” and “include products” of the header, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “white wine”, the rappel will only include the products belonging to the category “water” and not “white wine”.
 >
 !!! warning
     -When selecting the option “All excluding defined” in the “Include product categories” field and the option “Only those defined” in the “include products” field, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “sparkling water”, the rappel will not include the product “sparkling water” despite what is defined in the “product” tab, since the priority is in the defined “product category”.
