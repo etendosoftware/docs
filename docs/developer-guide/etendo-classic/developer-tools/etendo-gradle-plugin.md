@@ -451,7 +451,83 @@ When you declare a dependency you can also exclude custom modules. See [Gradle d
 Finally you need to rebuild the system .
 `./gradlew update.database compile.complete`
 
+## Customize Etendo Skin
 
+The `cssCompile` task in the **Etendo** Gradle configuration is specifically designed to convert `.scss` files into `.css` files. This documentation aims to provide **Etendo partners** with a comprehensive understanding of its function, usage, and benefits.
 
+### Purpose
 
+With modern web development, **SCSS** offers more power and flexibility compared to traditional **CSS**. As Etendo aims to deliver an impeccable user interface, using `.scss` files allows for better organization, variable definitions, and nested rules. However, browsers understand only CSS. Hence, there's a need to **compile SCSS into CSS**, and that's where our `cssCompile` task steps in.
 
+> **Requirements**
+> - npm (Node Package Manager) and Sass compiler installed on your system.
+
+!!! info "How to install npm and Sass"
+    **Installing npm (Node Package Manager)**
+
+    If you don't have npm installed on your system, follow these steps:
+
+    - Install npm globally using the following command:
+
+    ```bash
+    npm install -g npm
+    ```
+
+    - Confirm the installation by checking the versions of node and npm:
+
+    ```bash
+    node -v
+    npm -v
+    ```
+
+    **Installing Sass (Syntactically Awesome Style Sheets)**
+    
+    If you have npm installed and need the Sass compiler, follow these instructions:
+
+    - Use npm to install Sass globally on your system:
+
+    ```bash
+    npm install -g sass
+    ```
+
+    - Confirm the Sass installation by running:
+
+    ```bash
+    sass --version
+    ```
+
+    Seeing the Sass version number means that Sass has been installed correctly.
+
+### How to Use
+
+To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task has been provided.
+
+### Execution
+
+1. Ensure your terminal or **command-line** tool is open.
+2. Navigate to the root directory of the **Etendo project**.
+3. Run the following **command**:
+
+```bash
+./gradlew cssCompile smartbuild --info
+```
+
+!!! success "Successful Execution"
+    After executing the task, the following output indicates a successful build:
+
+    ```
+    > Task :cssCompile
+    > BUILD SUCCESSFUL
+    ```
+
+    This confirms the successful processing of the files.
+
+!!! warning "Troubleshooting"
+
+    If you encounter the error `A problem occurred starting process 'command 'sass''`, it suggests that the `sass` compiler either isn't installed or isn't accessible. Follow these checks:
+
+    1. Ensure you've installed the **Sass** compiler.
+    2. Verify that the `sass` command is available in your system's **PATH**. You can do this by running the `sass --version` command.
+    3. If the problem persists, **restart your terminal** or ensure you have the necessary permissions to execute commands.
+
+Therefore, the `cssCompile` task simplifies the process of working with SCSS in the Etendo project, ensuring that the latest styles are always available in a browser-compatible format. By facilitating the seamless transition from SCSS to CSS, it allows that developers can focus on creativity without being bogged down by manual compilation.
