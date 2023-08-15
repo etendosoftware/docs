@@ -44,10 +44,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-extra_javascript:
-  - custom.js
 
 markdown_extensions:
+  - tables
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -62,11 +61,10 @@ markdown_extensions:
   - md_in_html
   - pymdownx.details
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
 
 plugins:
   - search:
@@ -87,8 +85,8 @@ copyright: Copyright &copy; 2021 - 2023 Etendo Software
 
 nav:
   - Home : index.md
-  - Getting Started: 
-    - Quickstart: getting-started/index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
     - Requirements: getting-started/requirements.md
     - Installation: getting-started/installation.md
     - User interface:
@@ -96,11 +94,16 @@ nav:
       - Navigation: getting-started/user-interface/navigation.md
       - Grid and Forms: getting-started/user-interface/grid-and-forms.md
   - Products:
+    - Overview: products/overview.md
     - Etendo Classic:
       - User Guide:
         - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
         - Jobs: products/etendo-classic/user-guide/jobs/index.md
-        - Master Data Management: products/etendo-classic/user-guide/masterdata-management/masterdata.md
+        - Master Data Management: 
+          - Master Data: products/etendo-classic/user-guide/masterdata-management/master-data.md
+          - Business Partner Setup: products/etendo-classic/user-guide/masterdata-management/business-partner-setup.md
+          - Product Setup: products/etendo-classic/user-guide/masterdata-management/product-setup.md
+          - Pricing: products/etendo-classic/user-guide/masterdata-management/pricing.md
         - Procurement Management: 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
@@ -129,7 +132,7 @@ nav:
             - Transactions: products/etendo-classic/user-guide/financial-management/accounting/transactions.md
             - Analysis Tools: products/etendo-classic/user-guide/financial-management/accounting/analysis-tools.md
             - Setup: products/etendo-classic/user-guide/financial-management/accounting/setup.md
-          - Assets: products/etendo-classic/user-guide/financial-management/assets/index.md
+          - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
           - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/index.md
@@ -149,27 +152,30 @@ nav:
       - Getting Started:
         - Bastian: products/etendo-copilot/getting-started/bastian.md
   - What's New:
+    - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
     - Roadmap: "https://www.etendo.software"
-    - Release Notes :
-      - Etendo Classic:
-        - Releases: whats-new/release-notes/etendo-classic/index.md
-        - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
-        - Bundles:
-          - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
-          - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
-          - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
-          - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
-          - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
-          - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
-          - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
-          - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+    - Release Notes:
+        - Etendo Classic:
+            - Releases: whats-new/release-notes/etendo-classic/index.md
+            - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
+            - Bundles:
+                - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
+                - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
+                - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
+                - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
+                - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
+                - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
+                - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
+                - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
   - Developer Guide:
+    - Overview: developer-guide/overview.md
     - Etendo Classic: 
       - Getting Started:
         - Installation :
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/code-formatting-style-in-intellij.md
+          - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
           - Install Modules in Etendo: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
           - Install Modules from Marketplace: developer-guide/etendo-classic/getting-started/installation/download-and-install-modules.md
         - Migration from Openbravo:
@@ -178,7 +184,7 @@ nav:
         - Upgrade:
           - Upgrade Etendo to Any Version: developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version.md
           - Core format migration (JAR- Sources): developer-guide/etendo-classic/getting-started/upgrade/core-format-migration.md
-          - Resolving Dependencies on GitHub: /developer-guide/etendo-classic/getting-started/upgrade/migrating-and-resolving-dependencies-of-bundles-and-modules-on-github.md
+          - Resolving Dependencies on GitHub: developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github.md
       - Concepts:
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
@@ -201,11 +207,27 @@ nav:
         - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
-      - Developer Tools:
-        - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
+      - Getting Started: developer-guide/etendo-rx/getting-started.md  
+    #   - Tutorials:
+    #       - Tutorials Index: developer-guide/etendo-rx/tutorials/index.md
+    #       - Making Projections: developer-guide/etendo-rx/tutorials/making-projections.md
+    #       - Making new searches: developer-guide/etendo-rx/tutorials/making-new-searches.md
+    #       - Configure Spring boot project: developer-guide/etendo-rx/tutorials/create-spring-boot-project.md
+    #       - Create new Spring Boot Project: developer-guide/etendo-rx/tutorials/configure-spring-boot-project.md
+    #       - Create new Spring Boot service: developer-guide/etendo-rx/tutorials/create-new-service.md
+    #       - Run RX Services: developer-guide/etendo-rx/tutorials/run-tutorial-project.md
+    #   - Developer Tools:
+    #       - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
+    #   - Reference:
+    #       - File gradle.properties: developer-guide/etendo-classic/reference/file-gradle-properties.md
+    # - Etendo Platform:
+    #   - Concepts:
+    #     - What is Etendo Platform?: developer-guide/etendo-platform/concepts/what-is-etendo-platform.md
     - Etendo Copilot:
       - Etendo copilot overview: developer-guide/etendo-copilot/overview.md
-      - Getting Started: developer-guide/etendo-copilot/getting-started.md
-  - Live Builds: live-builds/index.md
-  - Help and Support: 
-    - Support Service: help- and-support/how-to-report-bugs.md
+      - Getting Started: developer-guide/etendo-copilot/getting-started.md 
+  - Live Builds: live-builds/overview.md
+  - Help and Support:
+    - Overview: help-and-support/overview.md
+    - Support Service: help-and-support/support-service.md
+    - How to report bugs: help-and-support/how-to-report-bugs.md

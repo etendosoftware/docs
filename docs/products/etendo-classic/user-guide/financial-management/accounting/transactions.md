@@ -5,15 +5,24 @@ title: Accounting
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-- Financial Type Configuration
-- Simple G/L Journal
-- G/L Journal
-- End Year Close
-- GL Posting by DB Tables
-- Budget
-- Create Budget Reports in Excel
-- Not Posted Transaction Report
-- Reset Accounting
+[:material-file-document-outline: Financial Type Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#financial-type-configuration){ .md-button } <br>
+
+[:material-file-document-outline: Simple G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#simple-gl-journal){ .md-button } <br>
+
+[:material-file-document-outline: G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal){ .md-button } <br>
+
+[:material-file-document-outline: End Year Close](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close){ .md-button } <br>
+
+[:material-file-document-outline: GL Posting by DB Tables ](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button } <br>
+
+[:material-file-document-outline: Budget](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#budget){ .md-button } <br>
+
+[:material-file-document-outline: Create Budget Reports in Excel](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button } <br>
+
+[:material-file-document-outline: Not Posted Transaction Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button } <br>
+
+[:material-file-document-outline: Reset Accounting](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#reset-accounting){ .md-button } <br>
+
 
 ## Financial Type Configuration
 
@@ -38,40 +47,41 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](https://docs/en/financial-management-setup-accounting#financial-type).
+    For more information, visit [Financial Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#financial-type).
 
 
 ### Header
-The main header has the following fields: 
-- **Organization**: drop-down list of organizations. 
-- **Financial Type**: drop-down list of methods  Invoice Advance, Bank Guarantee, Confirming, Foreign Trade, Credit Account, Factoring, Leasing, Loans, Renting and Credit Cards.
-- **Financial Bank/Entity**: drop-down list of the business partner window. 
-- **Financial Account**: drop-down list of the Financial Account window. 
-- **Payment Method**: drop-down list of the payment methods indicated in the selected financial account.
-- **Name**: free field to add information. 
-- **Date**: date field (contract signature date).
+The main header has the following fields:
+
+- **Organization**: drop-down list of organizations.    
+- **Financial Type**: drop-down list of methods  Invoice Advance, Bank Guarantee, Confirming, Foreign Trade, Credit Account, Factoring, Leasing, Loans, Renting and Credit Cards.   
+- **Financial Bank/Entity**: drop-down list of the business partner window.  
+- **Financial Account**: drop-down list of the Financial Account window.    
+- **Payment Method**: drop-down list of the payment methods indicated in the selected financial account.    
+- **Name**: free field to add information.  
+- **Date**: date field (contract signature date).   
 - **Due Date**: date field. 
-- **Lack (Month)**: numeric field (Integers)
-- **Currency**: drop-down list of the currency window. 
-- **Amount Granted**: numeric field with 2 decimals.
-- **Amount Drawn**: numeric field with 2 decimals.
-- **Amount Available**: numeric field with 2 decimals.
-- **Residual Value**: numeric field with 2 decimals.
-- **Installment No**: integer numeric field.
-- % **Annual Interest**: % numeric field with 2 decimals.
-- **Periodic commission**: numeric field with 2 decimals.
-- **Opening Financial Expenses**: numeric field with 2 decimals.
-- **Frequency**: drop-down list (Monthly, Bimonthly, Quarterly, Quarterly, Semiannual, Annual)
-- **Payment Date**: numeric field. Integer (limit of 31) 
-- **Purpose**: free field to add information.
-- **Warranty**: free field to add information.
-- **% Early Cancellation Fee**: % numeric field with 2 decimals.
-- **% Early Amortization Commission**: % numeric field with 2 decimals.
-- **Ledger account at long term**: informative field to indicate the accounting account of the  account tree.
-- **Ledger account at short term**: informative field to indicate the accounting account of the account tree.
-- **Ledger account at purchase option**: informative field to indicate the accounting account of the account tree.
-- **Project**: drop-down list of the “Multiphase Project“ window.
-- **Cost Center**: drop-down list of the “Cost Center” window. 
+- **Lack (Month)**: numeric field (Integers)    
+- **Currency**: drop-down list of the currency window.   
+- **Amount Granted**: numeric field with 2 decimals.    
+- **Amount Drawn**: numeric field with 2 decimals.  
+- **Amount Available**: numeric field with 2 decimals.  
+- **Residual Value**: numeric field with 2 decimals.    
+- **Installment No**: integer numeric field.    
+- **% Annual Interest**: % numeric field with 2 decimals.   
+- **Periodic commission**: numeric field with 2 decimals.   
+- **Opening Financial Expenses**: numeric field with 2 decimals.    
+- **Frequency**: drop-down list (Monthly, Bimonthly, Quarterly, Quarterly, Semiannual, Annual)  
+- **Payment Date**: numeric field. Integer (limit of 31)    
+- **Purpose**: free field to add information.   
+- **Warranty**: free field to add information.  
+- **% Early Cancellation Fee**: % numeric field with 2 decimals.    
+- **% Early Amortization Commission**: % numeric field with 2 decimals. 
+- **Ledger account at long term**: informative field to indicate the accounting account of the  account tree.   
+- **Ledger account at short term**: informative field to indicate the accounting account of the account tree.   
+- **Ledger account at purchase option**: informative field to indicate the accounting account of the account tree.  
+- **Project**: drop-down list of the “Multiphase Project“ window.   
+- **Cost Center**: drop-down list of the “Cost Center” window.
 
 ![](/docs/assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png)
 
@@ -256,7 +266,7 @@ The exchange rate tab allows the user to enter an exchange rate between the orga
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -294,14 +304,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 
 ## **G/L Journal**
@@ -361,7 +371,7 @@ A new window is shown containing all the templates available:
 ![](/docs/assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png)
 
 !!! info
-    Note that it is possible to search for a template by using the G/L journal document number set as template and the description fields.> 
+    Note that it is possible to search for a template by using the G/L journal document number set as template and the description fields. 
 
 **4.** **Select a template and click OK**. After that, Etendo populates the most recently created G/L Journal with the same journal entries, only the dates are different.
 
@@ -397,7 +407,7 @@ There is a **list of actions** which can be executed from the G/L Journal header
 
 
 !!! info
-    The Journal will be completed even if any of the Payment/s creation failed. In this case, an error message will be shown indicating the Lines that tried to create a Payment but failed.
+    The Journal will be completed even if any of the Payment/s creation failed. In this case, an error message is shown indicating the Lines that tried to create a Payment but failed.
 
 
 ### **Lines**
@@ -412,7 +422,7 @@ Accounting information related to the GL Journal
 #### Duplicate Journal Entries
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -456,7 +466,7 @@ Once this preference is configured, the button will be enabled in “Simple GL J
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -466,8 +476,8 @@ In order to use this functionality, in both “GL journal” and “Simple GL jo
 
 In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. 
 > 
-!!! info
-    It is important to note that, by default, the reverse document will be created as a draft. That is why Etendo shows the check “process document” when clicking the “Reverse Journal” button. In this way, the user can complete the document.
+!!! note
+    By default, the reverse document is created as a draft. That is why Etendo shows the check “process document” when clicking the “Reverse Journal” button. In this way, the user can complete the document.
 
 As seen below, Etendo shows a success notification in green with the new GL Journal number.
 
@@ -489,14 +499,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558)
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [Bulk Posting](https://docs/en/modules/financial-extensions-bundle#bulk-posting) in the Financial Extensions Bundle Documentation.
+    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 
 ## **End Year Close**
@@ -581,27 +591,17 @@ Etendo creates "closing entries" detailed below if the "**Reverse Permanent Acco
 !!! info
     Note that below accounting entries can also be reviewed in the "**End Year Close**" window in the Accounting Tab.
 
-
-
 -   Dated on the latest day of the year below **P&L Closing Entry**.  
     This entry resets all "Revenue" and "Expense" account which is posted in the account defined as Income Summary.  
-    
-    
-   ![](/docs/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
-     
--   Dated on the latest day of the year below **Closing Entry**.  
-    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.  
-    Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
-
- ![](/docs/assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
-     
--   Dated on the day of the following year (01-01-2022) below **Opening Entry**.  
-    This entry is the reversal entry of the above closing entry:
-    
-
-    ![](/docs/assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png .png)
-
-The organization in this example can launch the 2020 Balance Sheet and the 2021 Profit and Loss reports from the Balance Sheet and P&L structure window:
+    ![](/docs/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
+ 
+-   Dated on the latest day of the year below **Closing Entry**.
+    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
+    ![](/docs/assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
+ 
+-   Dated on the day of the following year (01-01-2022) below **Opening Entry**. This entry is the reversal entry of the above closing entry:
+    ![](/docs/assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png)
+    The organization in this example can launch the 2020 Balance Sheet and the 2021 Profit and Loss reports from the Balance Sheet and P&L structure window:
 
 2020 Balance Sheet:
 
