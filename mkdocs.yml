@@ -224,7 +224,7 @@ nav:
     #   - Concepts:
     #     - What is Etendo Platform?: developer-guide/etendo-platform/concepts/what-is-etendo-platform.md
     - Etendo Copilot:
-      - Etendo copilot overview: developer-guide/etendo-copilot/overview.md
+      - Overview: developer-guide/etendo-copilot/overview.md
       - Getting Started: developer-guide/etendo-copilot/getting-started.md 
   - Live Builds: live-builds/overview.md
   - Help and Support:
