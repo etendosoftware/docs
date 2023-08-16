@@ -210,6 +210,9 @@ nav:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Tutorial:  
         - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
+    - Etendo Copilot:
+      - Overview: developer-guide/etendo-copilot/overview.md
+      - Getting Started: developer-guide/etendo-copilot/getting-started.md 
   - Live Builds: live-builds/overview.md
   - Help and Support:
     - Overview: help-and-support/overview.md
