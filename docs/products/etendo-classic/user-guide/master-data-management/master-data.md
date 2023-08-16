@@ -155,14 +155,14 @@ As shown in the image above, there is a list of relevant data to be entered for 
 You could either select any data such as "Price List" from a previously created list of values, or create it "ad hoc" by navigating to the corresponding window, and then select it.
 
 - **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
-  To learn more, visit [Price List](/docs/products/etendo-classic/user-guide/masterdata-management/pricing/#price-list).  
+  To learn more, visit [Price List](/docs/products/etendo-classic/user-guide/master-data-management/pricing/#price-list).  
   Price lists are defined in a given currency, which could be the same as customer currency or not.  
   In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process "**Set New Currency**" which can be run to change the currency of a business partner.
 - **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
   If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
   To learn more, visit [Payment Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
-  To learn more, visit [Payment Term](/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](/docs/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#payment-term).
 - **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
   To learn more about "Financial Account", visit [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account).
 - **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
@@ -173,7 +173,7 @@ You could either select any data such as "Price List" from a previously created 
   - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
   - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
     If this is the option selected, a new field named "Invoice Schedule" is automatically displayed for you to select the corresponding "Invoice Schedule" or calendar.  
-    To learn more, visit [Invoice Schedule](/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/#invoice-schedule)
+    To learn more, visit [Invoice Schedule](/docs/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#invoice-schedule)
 - **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 - A customer can be defined as "Tax Exempt" whenever applicable, therefore only those Tax rates also defined as exempt apply.
 - **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
@@ -215,12 +215,12 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 - **Purchase Price List** - the one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
   If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
-  To learn more, visit [Price List](/docs/products/etendo-classic/user-guide/masterdata-management/pricing/#price-list).
+  To learn more, visit [Price List](/docs/products/etendo-classic/user-guide/master-data-management/pricing/#price-list).
 - **Payment method** - the one selected will be the one applied while creating and managing the payments made to that vendor.  
   If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
   To learn more, visit [Payment Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing supplier invoices payment plans.  
-  To learn more, visit [Payment Term](/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](/docs/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#payment-term).
 - **PO Maturity Date 1** - as indicated in the Payment Term the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
   - For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
 - **PO Maturity Date 2** - a second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
@@ -405,7 +405,7 @@ With this functionality, the user can find the tab “Rappel Configurations” i
 To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
 
 !!! info
-    For more information, visit [Rappel Configurations](/docs/products/etendo-classic/user-guide/masterdata-management/business-partner-setup/#rappel-configurations).
+    For more information, visit [Rappel Configurations](/docs/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#rappel-configurations).
 
 #### Rappel Configuration Tab
 
@@ -415,7 +415,7 @@ To create a new rappel, the user must select one of the available configurations
 
 ![bp_pop_up_new.png](/docs/assets/legacy/bp_pop_up_new.png)
 
-When the rappel is created, a [sales invoice](/docs/products/etendo-classic/user-guide/masterdata-management/master-data/#sales-invoice) is created automatically, as seen below.
+When the rappel is created, a [sales invoice](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#sales-invoice) is created automatically, as seen below.
 
 ![created_rappel.png](/docs/assets/legacy/created_rappel.png)
 

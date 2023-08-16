@@ -1814,7 +1814,7 @@ Also, when using the "process" button and grouping lines, it is necessary for th
 For each business partner, it is also possible to define a bank account that is selected by default.
 
 !!! info
-    To read more, visit [Bank Account](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#advanced-remittance) in the Business Partner section.
+    To read more, visit [Bank Account](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#advanced-remittance) in the Business Partner section.
 
 **Select Invoices and Orders button**
 

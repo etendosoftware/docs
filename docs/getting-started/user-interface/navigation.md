@@ -1,6 +1,5 @@
 ## Navigation 
 
-
 To get to a window, type a part of its name in the **Create New button** or the **Quick Launch button**. Etendo also offers a tree menu for easy discovery.
 
 ### Quick Launch

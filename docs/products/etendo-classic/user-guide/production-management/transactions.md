@@ -25,27 +25,27 @@ For Production, there are different products that are set up:
 - Raw material used in production
   - the Production checkbox is selected to indicate that the product is used for production
   - the process plan is selected
-  - the default storage bin that is used for P- raw materials is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#product) tab.
+  - the default storage bin that is used for P- raw materials is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab.
 - Finished products manufactured in production
   - the Production checkbox is selected to indicate the product is manufactured in production
   - the process plan is selected
-  - the default storage bin that is used for the product is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#product) tab
+  - the default storage bin that is used for the product is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab
 - based on [cost calculations](/docs/products/etendo-classic/user-guide/production-management/transactions/#calculate-standard-costs), a "theoretical" standard cost can be determined for the finished product
 - a safety stock level is determined and entered for the product
 
-Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#product) tab.
+Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the [_Manufacturing_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab.
 
 !!! info
-    For more information about the configuration of products, please refer to the [_Product_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#product) section.
+    For more information about the configuration of products, please refer to the [_Product_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) section.
 
 Also, Business Partners are configured for production:
 
 In the Employee tab, any employees that are involved in the production process have the operator checkbox selected.
 
-Likewise, the [_Salary category_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#salary-category) configured for employees is very important since they are included in the final cost calculations.
+Likewise, the [_Salary category_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#salary-category) configured for employees is very important since they are included in the final cost calculations.
 
 !!! info
-    For more information about the configuration of business partners, please refer to the [_Business Partner_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#business-partner) section.
+    For more information about the configuration of business partners, please refer to the [_Business Partner_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner) section.
 
 Work Efforts can be posted to the [_General Ledger Journal_](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [_Active Tables_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#glconfig) tab of the General Ledger configuration.
 
@@ -146,9 +146,7 @@ Here, it is possible to create production orders by choosing dates and the previ
 
 **Create Work Effort button**: to create work related to the work requirement once the work requirement is processed. Work efforts related to all operations are created at once, so depending on the amount of operations, one or more work efforts are created. If the create standards checkbox is selected in the operation, the create standards process is executed also, to insert the product information in the work effort. In all cases, the processing of the work effort is executed manually.
 
-> **Note**:
->
-!!! info
+!!! note
     The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the \[Production Run\] tab is set to the full quantity on the operation.
 
 ### **Operation**
@@ -309,7 +307,7 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 ### Advanced Work Effort
 
 !!! info
-    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/modules?page=1&category=DDE922B5DBF8440DA92EFF7C91CAB494){target="_blank"}
+    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}.
 
 This functionality is useful when the user needs to reactivate a work effort.
 
@@ -633,7 +631,7 @@ Cost information is set up in several screens:
 
 - in the [Process Plan](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan), the use of the [Cost center](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#cost-center) is defined
 - in the cost center, the following cost is defined:
-  - **Employee information**: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the [Salary Category](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata/#salary-category) screen.
+  - **Employee information**: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the [Salary Category](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#salary-category) screen.
   - **Machine information**: the machine and usage information is entered in the cost center screen. The machine cost is entered in the [Machine](/docs/products/etendo-classic/user-guide/production-management/setup/#machine_1) screen.
   - **Indirect cost information**: all indirect cost items related to a cost center are list. The indirect cost is entered in the [Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2) screen.
 - in the process plan, the quantities and cost of the materials used in the production process are defined.
@@ -654,14 +652,11 @@ When the costs of the cost center, machines, employees and indirect costs are ca
 
 For Indirect costs, the additional unit of measure percentage is available. This adds the defined percentage to the total cost calculated (cost center, employee, machine, indirect costs and P- products). For example, if defined as 1.15, an additional 15% is added to the cost.
 
-> Note:
->
-> For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2) screen:
-> -select Cost Type = Production,
-> -a date range that includes the date of the standard cost calculation in the Value tab
->
 !!! info
-    This way, the standard cost for each operation is calculated.
+        For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2) screen:<br>
+            -select Cost Type = Production,<br>
+            -a date range that includes the date of the standard cost calculation in the Value tab.<br>
+        This way, the standard cost for each operation is calculated.
 
 ![](/docs/assets/drive/tbl7rEZD5KfBpyiysFXuwOq3v7iaGF2IvjdC7si9PCqrkPxA2GUfVF0vy0uNFVcwY_XMaJ6lTMCENUfE_S51YX3bqX2YT7-J-yENd8-wq0McDEPeiQJRyLM4LeBCplhwbNEVMCzY31jvIwY3MHrvFuU.png)
 

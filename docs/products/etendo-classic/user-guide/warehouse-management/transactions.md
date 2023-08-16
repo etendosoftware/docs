@@ -822,14 +822,14 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Account                                                                                         | Debit                                            | Credit                                         |
 | [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) | Adjustment amount of "Movement From" transaction |                                                |
-| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
 
 **"Movement To"** transaction adjustment:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Account                                                                                         | Debit                                          | Credit                                         |
-| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
 | [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) |                                                | Adjustment amount of "Movement To" transaction |
 
 ### **Negative Stock Correction**
@@ -869,7 +869,7 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Account                                                                                         | Debit             | Credit            |
 | [_Warehouse Differences_](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#defaults) | Adjustment amount |                   |
-| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)                            |                   | Adjustment amount |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting)                            |                   | Adjustment amount |
 
 ### **Price Difference Correction**
 
@@ -922,16 +922,16 @@ That adjustment can be posted to the ledger. Posting will look as shown below :
 |                                                                                 |                                 |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- | ------------------------------- |
 | Account                                                                         | Debit                           | Credit                          |
-| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)            | Goods Receipt Adjustment amount |                                 |
-| [_Invoice Price Difference_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting) |                                 | Goods Receipt Adjustment amount |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting)            | Goods Receipt Adjustment amount |                                 |
+| [_Invoice Price Difference_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting) |                                 | Goods Receipt Adjustment amount |
 
 **Goods Shipment adjustment**
 
 |                                                                           |                                  |                                  |
 | ------------------------------------------------------------------------- | -------------------------------- | -------------------------------- |
 | Account                                                                   | Debit                            | Credit                           |
-| [_Cost of Goods Sold_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting) | Goods Shipment Adjustment amount |                                  |
-| [_Product Asset_](/docs/products/etendo-classic/user-guide/masterdata-management/masterdata#accounting)      |                                  | Goods Shipment Adjustment amount |
+| [_Cost of Goods Sold_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting) | Goods Shipment Adjustment amount |                                  |
+| [_Product Asset_](/docs/products/etendo-classic/user-guide/master-data-management/master-data#accounting)      |                                  | Goods Shipment Adjustment amount |
 
 #### **Line**
 

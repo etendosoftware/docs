@@ -42,12 +42,13 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-        For more information, visit the [Functional Documentation](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/general-setup#etendo-advanced-security) and the [Technical Documentation](https://docs/en/technical-documentation/bundles/platform-extensions-bundle#etendo-advanced-security)
+        For more information, visit the [Functional Documentation](/docs/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and the [Technical Documentation](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security)
 
 
 
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide), ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide) {target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
+ by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 
 

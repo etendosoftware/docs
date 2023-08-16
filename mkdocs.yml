@@ -97,13 +97,22 @@ nav:
     - Overview: products/overview.md
     - Etendo Classic:
       - User Guide:
-        - General Setup: products/etendo-classic/user-guide/general-setup/overview.md
+        - General Setup: 
+          - Overview: products/etendo-classic/user-guide/general-setup/overview.md
+          - Clear Report Cache: products/etendo-classic/user-guide/general-setup/clear-report-cache.md
+          - Attachments Configuration: products/etendo-classic/user-guide/general-setup/attachments-configuration.md
+          - Application: products/etendo-classic/user-guide/general-setup/application.md
+          - Client: products/etendo-classic/user-guide/general-setup/client.md
+          - CRM Connector: products/etendo-classic/user-guide/general-setup/crm-connector.md
+          - Enterprise Model: products/etendo-classic/user-guide/general-setup/enterprise-model.md
+          - Security: products/etendo-classic/user-guide/general-setup/security.md
+          - Process Scheduling: products/etendo-classic/user-guide/general-setup/process-scheduling.md
         - Jobs: products/etendo-classic/user-guide/jobs/index.md
         - Master Data Management: 
-          - Master Data: products/etendo-classic/user-guide/masterdata-management/master-data.md
-          - Business Partner Setup: products/etendo-classic/user-guide/masterdata-management/business-partner-setup.md
-          - Product Setup: products/etendo-classic/user-guide/masterdata-management/product-setup.md
-          - Pricing: products/etendo-classic/user-guide/masterdata-management/pricing.md
+          - Master Data: products/etendo-classic/user-guide/master-data-management/master-data.md
+          - Business Partner Setup: products/etendo-classic/user-guide/master-data-management/business-partner-setup.md
+          - Product Setup: products/etendo-classic/user-guide/master-data-management/product-setup.md
+          - Pricing: products/etendo-classic/user-guide/master-data-management/pricing.md
         - Procurement Management: 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
