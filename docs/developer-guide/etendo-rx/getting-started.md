@@ -2,8 +2,6 @@
 
 Welcome! This guide will help you set up the Etendo Platform, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.
 
-For more details, visit the Etendo Platform repository.
-
 Follow these steps for a smooth installation:
 
 ## Prerequisites
@@ -31,16 +29,16 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
     The GitHub credentials are required.
     To configure GitHub credentials read 'Use of Repositories in Etendo' by clicking [**here**](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
 
-| Variable      | Description                          | Default Value      |
-| ------------- | ------------------------------------ | ------------------ |
-| `githubUser githubToken`| GitHub repository credentials, for access to commercial modules  | 
-| `context.name`       | Environment name | etendo |
-| `bbdd.sid`    |  Database name | etendo |
-| `bbdd.port`    |  Database port | 5432 |
-| `bbdd.systemUser`    |  Database system user | postgres |
-| `bbdd.systemPassword`    |  Database system password | syspass |
-| `bbdd.user`    |  Database user | tad |
-| `bbdd.password`    |  Database password | tad |
+| Variable                | Description                                                      | Default Value      |
+| ----------------------- | ---------------------------------------------------------------- | ------------------ |
+| `githubUser githubToken`| GitHub repository credentials, for access to commercial modules  |                    |
+| `context.name`          | Environment name                                                 | etendo             |
+| `bbdd.sid`              | Database name                                                    | etendo             |
+| `bbdd.port`             | Database port                                                    | 5432               |
+| `bbdd.systemUser`       | Database system user                                             | postgres           |
+| `bbdd.systemPassword`   | Database system password                                         | syspass            |
+| `bbdd.user`             | Database user                                                    | tad                |
+| `bbdd.password`         | Database password                                                | tad                |
 
 
 - src-rx/gradle.properties
