@@ -216,22 +216,12 @@ nav:
         - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
-      - Getting Started: developer-guide/etendo-rx/getting-started.md  
-    #   - Tutorials:
-    #       - Tutorials Index: developer-guide/etendo-rx/tutorials/index.md
-    #       - Making Projections: developer-guide/etendo-rx/tutorials/making-projections.md
-    #       - Making new searches: developer-guide/etendo-rx/tutorials/making-new-searches.md
-    #       - Configure Spring boot project: developer-guide/etendo-rx/tutorials/create-spring-boot-project.md
-    #       - Create new Spring Boot Project: developer-guide/etendo-rx/tutorials/configure-spring-boot-project.md
-    #       - Create new Spring Boot service: developer-guide/etendo-rx/tutorials/create-new-service.md
-    #       - Run RX Services: developer-guide/etendo-rx/tutorials/run-tutorial-project.md
-    #   - Developer Tools:
-    #       - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
-    #   - Reference:
-    #       - File gradle.properties: developer-guide/etendo-classic/reference/file-gradle-properties.md
-    # - Etendo Platform:
-    #   - Concepts:
-    #     - What is Etendo Platform?: developer-guide/etendo-platform/concepts/what-is-etendo-platform.md
+      - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - Tutorial:  
+        - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
+    - Etendo Copilot:
+      - Overview: developer-guide/etendo-copilot/overview.md
+      - Getting Started: developer-guide/etendo-copilot/getting-started.md 
   - Live Builds: live-builds/overview.md
   - Help and Support:
     - Overview: help-and-support/overview.md
