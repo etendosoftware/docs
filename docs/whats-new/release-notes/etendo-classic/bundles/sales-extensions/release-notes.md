@@ -9,7 +9,8 @@ This page documents the Release Notes for each version of the com.etendoerp.sale
 
 | Version   | Publication Date 	| From Core | To Core| Status | GitHub|
 | --- 		| ---           | ---    | ---    | --- | :---:             |
-| 1.5.1 	| 04/07/2023 	| 22.1.0 | 23.2.x | CS	| :white_check_mark:|
+| 1.5.2 	| 16/07/2023 	| 22.1.0 | 23.2.x | CS	| :white_check_mark:|
+| 1.5.1 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
 | 1.5.0 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
 | 1.4.0 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
 | 1.3.0 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
@@ -24,11 +25,12 @@ This page documents the Release Notes for each version of the com.etendoerp.sale
 | 1.0.000   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
 
 ## Version
+### 1.5.2
+- Modifications to messages in "Advanced Rappels" module
 ### 1.5.1
 - Hotfix: Rappels Advanced Oracle compatibility
 ### 1.5.0
 - Add Rappels Advanced module
-
 ### 1.4.0
 - Update Core compatibility until 23.2.x
 ### 1.3.0
