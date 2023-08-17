@@ -525,7 +525,7 @@ With modern web development, **SCSS** offers more power and flexibility compared
         
         **Node.js & npm:**
         
-        1. Download the Node.js Windows Installer from the [official website](https://nodejs.org/).
+        1. Download the Node.js Windows Installer from the [official website](https://nodejs.org/){target="_blank"}.
         
         2. Run the installer and follow the instructions.
         
