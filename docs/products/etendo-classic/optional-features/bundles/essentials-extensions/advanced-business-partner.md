@@ -5,7 +5,10 @@ hide:
 ---
 ## **Introduction**
 
-### Advanced Business Partner
+
+This section describes the Advanced Business Partner module included in the Etendo Essentials Extensions bundle.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
     To be able to include this functionality, the Essentials Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}.

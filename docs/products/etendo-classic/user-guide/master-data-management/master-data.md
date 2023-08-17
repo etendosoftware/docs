@@ -21,7 +21,7 @@ Having a single repository of data avoids data duplication, provides a unique wa
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [Advanced Business Partner](/docs/products/etendo-classic/optional-features/bundles/essentials-extensions/overview/) in the Essentials Extensions Bundle Documentation .
+    For more information, visit [Advanced Business Partner](/docs/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/) in the Essentials Extensions Bundle Documentation.
 
 ## Currency Converters
 
