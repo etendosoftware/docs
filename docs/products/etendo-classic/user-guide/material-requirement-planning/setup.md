@@ -3,10 +3,10 @@ title: Material Requirement Planning Setup
 ---
 ## Overview
 
-In order to initiate the Material Requirement Planning (MRP) process, the Planning Method and the Planner sections must be configured. 
+In order to initiate the Material Requirement Planning (MRP) process, the Planning Method and the Planner sections must be configured: 
 
 !!! info
-    Also, aditional setups are required, information about which can be found in the [Overview section of MRP module](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/material-requirement-planning). 
+    For this, Aaditional setups are required. Check the information in the [Overview section of MRP module](/docs/products/etendo-classic/user-guide/material-requirement-planning/transactions/). 
 
 
 ## Planning Method
@@ -21,23 +21,23 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Material Requirement**: demand for the product on requisitions in completed status. 
 !!! info
-    For more details, see the [_Requisition_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#requisition) section.
+    For more details, see the [_Requisition_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) section.
 
 - **Sales Forecast**: prevision of future demand for the product. 
 !!! info
-    For more details, see the [_Sales Forecast_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/material-requirement-planning#mrp-forecast) section.
+    For more details, see the [_Sales Forecast_](/docs/products/etendo-classic/user-guide/material-requirement-planning/transactions/#mrp-forecast) section.
 
 -   **Pending Sales Order**: demand for the product on sales orders in booked status that are not shipped yet. 
 !!! info
-    For more details, see the [_Sales Order_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management#sales-order) section.
+    For more details, see the [_Sales Order_](/docs/products/etendo-classic/user-guide/sales-management/transactions/#sales-order) section.
 
 -   **Pending Work Requirement**: supply for the product on a processed work requirement. 
 !!! info
-    For more details, see the [_Work Requirement_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#work-requirement) section.
+    For more details, see the [_Work Requirement_](/docs/products/etendo-classic/user-guide/production-management/transactions/#work-requirement) section.
 
 -   **Pending Purchase Order**: supply for the product on a booked purchase order that is not received yet. 
 !!! info
-    For more details, see the [_Purchase Order_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) section.
+    For more details, see the [_Purchase Order_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-order) section.
 
 
 ### **Header**
@@ -67,7 +67,7 @@ Also, a percentage of the quantity to be considered by MRP is configured with th
 
 Define the entity in charge of managing the purchase or production of specific products.
 
-An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#product) tab in the Master Data Management section.
+An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab in the Master Data Management section.
 
 ### **Planner**
 

@@ -7,8 +7,8 @@ In Material Requirement Planning (MRP) the application is used to **automaticall
 
 The Master Requirement Planning consists of two plans:
 
--   Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#work-requirement) and the [_Requisition_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#requisition).
--   Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [_Purchase Order_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order).
+-   Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](/docs/products/etendo-classic/user-guide/production-management/transactions/#work-requirement) and the [_Requisition_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#requisition).
+-   Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [_Purchase Order_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-order).
 
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
@@ -21,18 +21,18 @@ The Master Requirement Planning consists of two plans:
 ##### **Setup**
 
 !!! info
-    Apart from the set up screens in the [Material Requirement Planning module](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/material-requirement-planning-setup)  that are configured, additional setups are required:
+    Apart from the setup screens in the [Material Requirement Planning module](/docs/products/etendo-classic/user-guide/material-requirement-planning/setup/)  that are configured, additional setups are required:
 
 
 For the products that are planned in the **Manufacturing Plan**, the following configurations are required:
 
--   the [_Process plan_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/production-management-setup#process-plan) is set up for the product.
--   the **production checkbox** is selected in the [_Product_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#product) screen.
+-   the [_Process plan_](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan) is set up for the product.
+-   the **production checkbox** is selected in the [_Product_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) screen.
 -   the **Purchasing tab** in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
 
 For the products that are planned in the **Purchasing Plan**, the following configurations are required:
 
--   the purchase checkbox is selected in the [_Product_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#product) screen.
+-   the purchase checkbox is selected in the [_Product_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) screen.
 -   the price of the product is defined for the price list of the vendor that is entered in the Purchasing tab.
 -   the Purchasing tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.
 -   the vendor that is reflected as the Business Partner in the above mentioned Purchasing tab is filled out in the Business Partner screen:
@@ -68,14 +68,14 @@ In the created overview the **material planner reviews and analyzes** the lines.
 
 The **MRP** interacts with the following modules:
 
--   [_Procurement Management_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management):
-    -   [_Requisitions_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#requisition) are created from the Manufacturing Plan
-    -   [_Purchase Orders_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) are created from the Purchasing Plan
--   [_Sales Management_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/sales-management): sales orders are optionally taken into account in the calculations of both plans
--   [_Warehouse Management_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-management): [_Stock levels_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/warehouse-reports#stock-report) are automatically taken into account in the calculations of both plans
--   [_Production Management_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management):
-    -   the [_Process Plan_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-configuration/production-management-setup#process-plan) is used for the calculation of the Manufacturing Plan
-    -   [_Work Requirements_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#work-requirement) are created from the Manufacturing Plan
+-   [_Procurement Management_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/):
+    -   [_Requisitions_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#requisition) are created from the Manufacturing Plan
+    -   [_Purchase Orders_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-order) are created from the Purchasing Plan
+-   [_Sales Management_](/docs/products/etendo-classic/user-guide/sales-management/transactions/): sales orders are optionally taken into account in the calculations of both plans
+-   [_Warehouse Management_](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/): [_Stock levels_](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools/#stock-report) are automatically taken into account in the calculations of both plans
+-   [_Production Management_](/docs/products/etendo-classic/user-guide/production-management/transactions/):
+    -   the [_Process Plan_](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan) is used for the calculation of the Manufacturing Plan
+    -   [_Work Requirements_](/docs/products/etendo-classic/user-guide/production-management/transactions/#work-requirement) are created from the Manufacturing Plan
 
 ## **Manufacturing Plan**
 
@@ -111,7 +111,7 @@ Create and edit a manufacturing plan.
 -   **Name**: name of the manufacturing plan
 -   **Time Horizon**: the number of days that are being taken into account for the calculation of the manufacturing plan
 -   **Safety Lead Time**: number of days that are added to the offset for the calculation of the **planned order date** of the suggested work requirements and requisitions. For example, the manufacturing lead time is used to indicate how long it will take for a product between being produced and arriving in the warehouse, and the **safety lead time** is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   **Planner**: filter to select only products managed by a certain planner, as configured in the [Product](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#product) tab in the Master Data Management section.
+-   **Planner**: filter to select only products managed by a certain planner, as configured in the [Product](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab in the Master Data Management section.
 -   **Business Partner**: filter to only select products ordered by a certain customer
 -   **Business Partner Category**: filter to only select business partners of a certain business partner category.
 -   **Product**: filter to select only a certain product
@@ -152,11 +152,11 @@ Depending on the product, different transaction types may appear in the lines. A
 ![](/docs/assets/drive/CybK3PMQnVZL8ddGSu6_bdNgiobsrqsoAozZxR5FPMmOdjckNdwlealsSm6vcAuBS3IaeDbIcClhX5-Ij3iD9PWJXOrdj7od_ZCbX3E7TusOUjlwnE063XfjJyu4rtb3czv-XBFhu1uRLomlQFYxNlo.png)
 
 !!! info
-    By clicking the **Generate Work Requirements** button, the work requirements are created automatically. The documents need to be **processed**, please see the [Work Requirement](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/production-management#work-requirement) section in the Production Management section for details.
+    By clicking the **Generate Work Requirements** button, the work requirements are created automatically. The documents need to be **processed**, please see the [Work Requirement](/docs/products/etendo-classic/user-guide/production-management/transactions/#work-requirement) section in the Production Management section for details.
 
 
 !!! info
-    By clicking the **Generate Material Requisitions** button, the requisitions are created in draft automatically. The documents need to be **completed**, please see the [Requisition](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#requisition) section in the Procurement Management section for details.
+    By clicking the **Generate Material Requisitions** button, the requisitions are created in draft automatically. The documents need to be **completed**, please see the [Requisition](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#requisition) section in the Procurement Management section for details.
 
 
 **The requisitions can be selected as input in the planning method of the Purchasing Plan to be included in the calculations of that plan, in order to calculate if Purchase Orders need to be created**.
@@ -164,7 +164,7 @@ Depending on the product, different transaction types may appear in the lines. A
 Once the documents are created automatically, the **numbers** of the documents appear in the **Work Requirement** and the **Requisition Line** columns of the lines. The created purchase order is in **draft** status and needs to be booked. 
 
 !!! info
-    For more information please check the [_Purchase Order_](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) section.
+    For more information please check the [_Purchase Order_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-order) section.
 
 
 ## **Purchasing Plan**
@@ -201,7 +201,7 @@ Create and edit a purchase plan.
 -   **Name**: name of the purchasing plan
 -   **Time Horizon**: the number of days that are taking into account for the calculation of the purchasing plan
 -   **Safety Lead Time**: number of days that are added to the offset for the calculation of the **planned order date** of the suggested purchase order. For example, the purchasing lead time is used to indicate how long it will take for a product between being ordered and arriving in the warehouse, and the **safety lead time** is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   **Planner**: filter to select only products managed by a certain planner, as configured in the [Product](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/masterdata-management#product) tab in the Master Data Management section.
+-   **Planner**: filter to select only products managed by a certain planner, as configured in the [Product](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) tab in the Master Data Management section.
 -   **Vendor**: filter to select only products for a certain vendor as configured in the Purchasing tab of the product.
 -   **Product**: filter to select only a certain product
 -   **Product Category**: filter to select only products related to a certain product category
@@ -251,7 +251,7 @@ By clicking the Create Purchase Orders button, the purchase order is created, pr
 Once the purchase order is created automatically, the **number** of the document appears in the **Order Line** column of the line. The created purchase order is in **draft** status and needs to be booked. 
 
 !!! info
-    For more information, please check the [Purchase Order](https://docs/en/end-user-documentation/etendo-environment/functional-documentation/business-management/procurement-management#purchase-order) section.
+    For more information, please check the [Purchase Order](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-order) section.
 
 
 ## **MRP Forecast**
