@@ -470,3 +470,17 @@ The audit trail feature will record all data changes (for the table for which it
 - text fields of types (char,varchar) with a length >= 4k will not be audited
 - text fields of types (nchar,nvarchar) with a length >= 2k will not be audited
 - BLOB fields (binary stored inside the database) will not be audited
+
+### **Etendo Advanced Security**
+
+The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
+
+- Password Security
+- Password History
+- User Lockout
+- Multiple Session Verification
+- Changing Password after Login
+- Expiration Time (Autolock Password)
+
+!!! info
+    For more information, visit the [Etendo Advanced Security module User Guide](/docs/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).

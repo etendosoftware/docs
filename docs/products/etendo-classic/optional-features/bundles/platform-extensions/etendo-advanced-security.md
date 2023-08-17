@@ -4,6 +4,10 @@ hide:
     - navigation
 ---
 
+### **Introduction**
+
+This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
+
 !!! info
     To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}.
 
