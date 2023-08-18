@@ -451,13 +451,11 @@ When you declare a dependency you can also exclude custom modules. See [Gradle d
 Finally you need to rebuild the system .
 `./gradlew update.database compile.complete`
 
-## Customize Etendo Skin
+## Recompile CSS files
 
-The `cssCompile` task in the **Etendo** Gradle configuration is specifically designed to convert `.scss` files into `.css` files. This documentation aims to provide **Etendo partners** with a comprehensive understanding of its function, usage, and benefits.
+The `cssCompile` task in the **Etendo** Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you'll need to work with .scss files. When making changes to the .scss files, in order to modify the ERP skin, it is necessary to run the `cssCompile` task and restart Tomcat to generate the new .css files.
 
-### Purpose
-
-With modern web development, **SCSS** offers more power and flexibility compared to traditional **CSS**. As Etendo aims to deliver an impeccable user interface, using `.scss` files allows for better organization, variable definitions, and nested rules. However, browsers understand only CSS. Hence, there's a need to **compile SCSS into CSS**, and that's where our `cssCompile` task steps in.
+### Set-Up
 
 !!! warning "Requirements"
     - **Node.js**: Version 16 or higher.
@@ -570,11 +568,6 @@ With modern web development, **SCSS** offers more power and flexibility compared
 
     Seeing the Sass version number means that Sass has been installed correctly.
 
-
-### How to Use
-
-To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task has been provided.
-
 ### Execution
 
 1. Ensure your terminal or **command-line** tool is open.
@@ -585,6 +578,7 @@ To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task 
 ./gradlew cssCompile smartbuild --info
 ```
 
+After executing the task, look for the following output to indicate a **successful build**:
 !!! success "Successful Execution"
     After executing the task, the following output indicates a successful build:
 
@@ -595,6 +589,4 @@ To customize the skin of Etendo by compiling SCSS to CSS, the `cssCompile` task 
 
     This confirms the successful processing of the files.
 
-!!! warning "Troubleshooting"
-
-    If you see the error `A problem occurred starting process 'command 'sass''`, ensure the **Sass** compiler is installed and accessible.
+Finally, **Restart Tomcat** to apply the changes and ensure the updated .css files are properly served.
