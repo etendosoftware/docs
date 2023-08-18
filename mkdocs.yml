@@ -217,7 +217,9 @@ nav:
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
-      - Tutorial:  
+      - How to guides:
+        - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
+      - Tutorial:   
         - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
