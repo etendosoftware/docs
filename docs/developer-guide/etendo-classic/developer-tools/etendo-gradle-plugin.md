@@ -451,7 +451,142 @@ When you declare a dependency you can also exclude custom modules. See [Gradle d
 Finally you need to rebuild the system .
 `./gradlew update.database compile.complete`
 
+## Recompile CSS files
+
+The `cssCompile` task in the **Etendo** Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you'll need to work with .scss files. When making changes to the .scss files, in order to modify the ERP skin, it is necessary to run the `cssCompile` task and restart Tomcat to generate the new .css files.
+
+### Set-Up
+
+!!! warning "Requirements"
+    - **Node.js**: Version 16 or higher.
+    - **npm**: Node Package Manager.
+    - **Sass**: Must have a Sass compiler installed.
+
+??? info "How to install Node.js, npm and Sass"
+
+    === ":simple-linux: Linux"
+        
+        **Node.js & npm:**
+        
+        1. Update the package repository:
+        ```bash
+        sudo apt update
+        ```
+        
+        2. Install Node.js and npm:
+        ```bash
+        sudo apt install nodejs npm
+        ```
+
+        3. Verify the installation:
+        ```bash
+        node -v
+        npm -v
+        ```
+
+    === ":simple-macos: Mac OS"
+
+        **Homebrew Installation:**
+
+        - Install Homebrew by running the following command in the terminal:
+
+        ```bash
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+
+        - Once Homebrew is installed, verify it by checking its version:
+
+        ```bash
+        brew --version
+        ```
+
+        **Node.js & npm Installation using Homebrew:**
+            
+        1. Update Homebrew (ensuring you have the latest package definitions):
+        ```bash
+        brew update
+        ```
+
+        2. Install Node.js and npm:
+        ```bash
+        brew install node
+        ```
+
+        3. Verify the installation of Node.js and npm:
+        ```bash
+        node -v
+        npm -v
+        ```
 
 
+    === ":material-microsoft-windows: Windows"
+        
+        **Node.js & npm:**
+        
+        1. Download the Node.js Windows Installer from the [official website](https://nodejs.org/){target="_blank"}.
+        
+        2. Run the installer and follow the instructions.
+        
+        3. After installation, open a command prompt or PowerShell and verify the installation:
+        ```powershell
+        node -v
+        npm -v
+        ```
 
+    **Installing npm (Node Package Manager)**
 
+    If you don't have npm installed on your system, follow these steps:
+
+    - Install npm globally using the following command:
+
+    ```bash
+    npm install -g npm
+    ```
+
+    - Confirm the installation by checking the versions of node and npm:
+
+    ```bash
+    node -v
+    npm -v
+    ```
+
+    **Installing Sass (Syntactically Awesome Style Sheets)**
+    
+    If you have npm installed and need the Sass compiler, follow these instructions:
+
+    - Use npm to install Sass globally on your system:
+
+    ```bash
+    npm install -g sass
+    ```
+
+    - Confirm the Sass installation by running:
+
+    ```bash
+    sass --version
+    ```
+
+    Seeing the Sass version number means that Sass has been installed correctly.
+
+### Execution
+
+1. Ensure your terminal or **command-line** tool is open.
+2. Navigate to the root directory of the **Etendo project**.
+3. Run the following **command**:
+
+```bash
+./gradlew cssCompile smartbuild --info
+```
+
+After executing the task, look for the following output to indicate a **successful build**:
+!!! success "Successful Execution"
+    After executing the task, the following output indicates a successful build:
+
+    ```
+    > Task :cssCompile
+    > BUILD SUCCESSFUL
+    ```
+
+    This confirms the successful processing of the files.
+
+Finally, **Restart Tomcat** to apply the changes and ensure the updated .css files are properly served.
