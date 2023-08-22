@@ -21,7 +21,7 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Material Requirement**: demand for the product on requisitions in completed status. 
 !!! info
-    For more details, see the [_Requisition_](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#product) section.
+    For more details, see the [_Requisition_](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#requisition) section.
 
 - **Sales Forecast**: prevision of future demand for the product. 
 !!! info
