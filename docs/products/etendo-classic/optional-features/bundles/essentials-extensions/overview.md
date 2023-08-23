@@ -16,5 +16,3 @@ The “Advanced Business Partner” module allows the user to have a general vie
     For more information, visit [the Advanced Business Partner module User Guide](/docs/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
 
 ## Translations
-
-### Spanish [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}

@@ -1,10 +1,12 @@
 ---
 title: Etendo BI Connector 
+hide:
+    - navigation
 ---
 ## Overview
 
 !!! info
-    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the Marketplace.
+    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
 
 In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
 
@@ -31,7 +33,7 @@ From the webhooks window, it is necessary to create a new record and complete t
 • **Java\_Class**: com.etendoerp.integration.powerbi.processes.FillLogWindow
 
 !!! info
-    It is highly recommended to have just **one** **Webhook** for this module to work properly, as its functionality will not vary. That’s why, it is better to use the **organization \*** in order to cover all child organizations.
+    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
 
 
 In the **Params tab**, four records must be created under the names:
@@ -49,7 +51,7 @@ In the **Params tab**, four records must be created under the names:
 
 
 !!! info
-    For more information about Webhooks, visit: Webhooks Events.
+    For more information about Webhooks, visit Webhooks Events.
 
 ### User API Token window 
 
@@ -234,5 +236,4 @@ In this example image, the information about the script execution can be seen.
 If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
 
 !!! info
-    To do that, visit the [Technical Documentation](https://docs/en/technical-documentation/bundles/etendo-bi-bundle) 
-
+    To do that, visit the [Etendo BI Bundle developer guide](/docs/developer-guide/etendo-classic/bundles/etendo-bi-bundle). 

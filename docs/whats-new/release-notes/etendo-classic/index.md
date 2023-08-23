@@ -20,7 +20,7 @@ tags:
 | [23Q1.2](/docs/whats-new/release-notes/etendo-classic/versions/23Q1-2) | 19/04/2023 | 23.1.2 | C	| | :white_check_mark:|
 | [23Q1.1](/docs/whats-new/release-notes/etendo-classic/versions/23Q1-1) | 11/04/2023 | 23.1.1 | C  	| | :white_check_mark:|
 | [23Q1.0](/docs/whats-new/release-notes/etendo-classic/versions/23Q1-0) | 31/03/2023 | 23.1.0 | C  	| [23Q1-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) | :white_check_mark:| 
-| [22Q4.6](/docs/whats-new/release-notes/etendo-classic/versions/22Q4-6) | 17/03/2023 | 22.4.6 | CS  | | |
+| [22Q4.6](/docs/whats-new/release-notes/etendo-classic/versions/22Q4-6) | 17/08/2023 | 22.4.6 | CS  | | |
 | [22Q4.5](/docs/whats-new/release-notes/etendo-classic/versions/22Q4-5) | 16/03/2023 | 22.4.5 | C  | [22Q4-5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso)| |
 | [22Q4.4](/docs/whats-new/release-notes/etendo-classic/versions/22Q4-4) | 16/02/2023 | 22.4.4 | C   | | |
 | [22Q4.3](/docs/whats-new/release-notes/etendo-classic/versions/22Q4-3) | 03/02/2023 | 22.4.3 | C   | | |
