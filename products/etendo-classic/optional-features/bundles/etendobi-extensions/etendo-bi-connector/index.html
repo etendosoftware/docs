@@ -330,7 +330,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -3223,6 +3225,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3324,6 +3328,8 @@
                 
                   
   
+  
+
 
 
 
@@ -3336,7 +3342,7 @@
 <h2 id="overview">Overview</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the Marketplace.</p>
+<p>To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the <a href="https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83" target="_blank">Marketplace</a>.</p>
 </div>
 <p>In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.</p>
 <p>For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. </p>
@@ -3352,7 +3358,7 @@
 <p>• <strong>Java_Class</strong>: com.etendoerp.integration.powerbi.processes.FillLogWindow</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>It is highly recommended to have just <strong>one</strong> <strong>Webhook</strong> for this module to work properly, as its functionality will not vary. That’s why, it is better to use the <strong>organization *</strong> in order to cover all child organizations.</p>
+<p>It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization * in order to cover all child organizations.</p>
 </div>
 <p>In the <strong>Params tab</strong>, four records must be created under the names:</p>
 <p>• <strong>description</strong></p>
@@ -3362,7 +3368,7 @@
 <p><a class="glightbox" href="/docs/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about Webhooks, visit: Webhooks Events.</p>
+<p>For more information about Webhooks, visit Webhooks Events.</p>
 </div>
 <h3 id="user-api-token-window">User API Token window</h3>
 <p>Then, make the proper configurations from the <strong>User API Token window</strong>. Here, it is necessary to grant access to a <strong>user role</strong>, so a token in this window needs to be created.</p>
@@ -3502,10 +3508,12 @@ In the <strong>“bbdd_user” and “bbdd_password” variables</strong>, enter
 <p>If no records in the <strong>Logs window</strong> were created after the execution of the script, it is possible that the error occurred on the <strong>synchronization</strong> of the files with the server. The user is able to check this by looking at the <strong>rsync log files</strong> created in the <strong>filesystem</strong>. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To do that, visit the <a href="https://docs/en/technical-documentation/bundles/etendo-bi-bundle">Technical Documentation</a> </p>
+<p>To do that, visit the <a href="/docs/developer-guide/etendo-classic/bundles/etendo-bi-bundle">Etendo BI Bundle developer guide</a>. </p>
 </div>
 
 
+
+  
 
 
 
