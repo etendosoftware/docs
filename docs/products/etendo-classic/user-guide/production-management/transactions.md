@@ -304,14 +304,13 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 
 ![](/docs/assets/drive/t18fChED8nHdZ7FgYDp8bSVGdDEdEnuq-VazT0WhJB5kkkanRMM5GUl9HPpxbnDM9wcEPcYmExxIvye2yw-5nZbHxQHkM39lEe9CIiYyDl3zBl6Vxm-DlQ0KoF11bZjvEhY_RpwxbHatzjZpftkhBUU.png)
 
-### Advanced Work Effort
+
+### How to Reactivate Work Efforts
 
 !!! info
     To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}.
 
 This functionality is useful when the user needs to reactivate a work effort.
-
-#### How to Reactivate Work Efforts
 
 From the Work Effort window, the user is able to reactivate a previously generated effort just by selecting the corresponding record and clicking the Reactivate button.
 

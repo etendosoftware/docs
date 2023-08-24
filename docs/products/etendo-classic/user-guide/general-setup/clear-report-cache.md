@@ -11,4 +11,4 @@ In this window, the user, in general a developer, can delete the report cache da
 After clicking it, a success message will be shown indicating the completion of the process.
 
 !!! info
-    For more information, visit [Platform Extensions Bundle Developer Guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle).
+    For more information, visit [Platform Extensions Bundle developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).

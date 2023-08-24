@@ -47,9 +47,9 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 
 ## Translations
 
-### Spanish [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
+- ### Spanish: [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide) {target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
  by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.

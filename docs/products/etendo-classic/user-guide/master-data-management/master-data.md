@@ -393,7 +393,9 @@ Three Discounts, each one of 10%, the first two ones are defined as not Cascade 
 In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 28.1%)
 
 
-### Advanced Rappels
+
+
+### Rappel Configuration
 
 !!! info
     To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="\_blank"}.
@@ -407,24 +409,21 @@ To be able to do this, it is necessary to configure certain aspects in the “Ra
 !!! info
     For more information, visit [Rappel Configurations](/docs/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#rappel-configurations).
 
-#### Rappel Configuration Tab
-
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
 To create a new rappel, the user must select one of the available configurations in this tab and click the **"Create Rebate"** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the "date from" and the "date to" information.
 
 ![bp_pop_up_new.png](/docs/assets/legacy/bp_pop_up_new.png)
 
-When the rappel is created, a [sales invoice](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#sales-invoice) is created automatically, as seen below.
+When the rappel is created, a sales invoice is created automatically, as seen below.
 
 ![created_rappel.png](/docs/assets/legacy/created_rappel.png)
 
-#### Sales Invoice
 
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
 
 !!! info
-    For more information, visit [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-rappels).
+    For more information, visit [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice).
 
 ## Business Partner Info
 

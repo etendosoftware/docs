@@ -24,8 +24,8 @@ Different functionalities are added to this window which allows the user to make
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-        For more information, visit the [Advanced Rappels user guide](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#advanced-rappels).
+        For more information, visit the [Advanced Rappels user guide](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#rappel-configuration).
 
 ## Translations
 
-### Spanish [Sales Extensions ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
+- ### Spanish: [Sales Extensions ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
