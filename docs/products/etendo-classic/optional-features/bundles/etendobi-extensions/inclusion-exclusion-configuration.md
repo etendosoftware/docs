@@ -1,7 +1,6 @@
 ---
 title: Etendo BI Inclusion/Exclusion Configuration
-hide:
-    - navigation
+
 ---
 
 ## Overview

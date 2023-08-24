@@ -69,7 +69,7 @@ Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operacio
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347, este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347 tal y como se explica en el siguiente apartado.
@@ -330,7 +330,7 @@ Además del importe anual de las operaciones y el importe anual devengado en cri
 
 La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
 
-La presentación telemática puede realizarse a través de la [_página web_](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml) de la Hacienda Pública española.
+La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
 
 #### **Datos en los ficheros csv**
 

@@ -1,7 +1,5 @@
 ---
 title: Etendo Advanced Security
-hide:
-    - navigation
 ---
 
 ### **Introduction**

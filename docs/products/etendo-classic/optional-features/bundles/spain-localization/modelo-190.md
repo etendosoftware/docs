@@ -34,7 +34,7 @@ Para su instalación del Modelo 190 de Etendo, el usuario debe seguir los pasos 
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 ### **Aplicación del módulo**
@@ -69,7 +69,7 @@ El informe generado por Etendo incluye únicamente las retenciones referentes a 
 
 El resto de información que se incluye en el Modelo 190, como retenciones e ingresos a cuenta por rendimientos del trabajo, determinadas ganancias patrimoniales o premios, no está registrada en el ERP y, por lo tanto, no se puede incluir en el informe.
 
-Sin embargo, si usted desea incluir esta información en su declaración, tan sólo debe importar el fichero generado por Etendo como se indica en [_Modelo 190_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/declaraciones-informativas-ayuda-tecnica/modelos-190-198/modelo-190-formulario.html).
+Sin embargo, si usted desea incluir esta información en su declaración, tan sólo debe importar el fichero generado por Etendo como se indica en [_Modelo 190_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/declaraciones-informativas-ayuda-tecnica/modelos-190-198/modelo-190-formulario.html){target="_blank"}.
 
 ### **Tipos de documentos y retenciones que se incluyen en el informe**
 
@@ -131,4 +131,4 @@ En este caso, se puede especificar el nombre del fichero (si no queremos el que 
 
 ## **Importación del modelo 190 en AEAT**
 
-Una vez generado el fichero, el mismo tendrá que cargarse en la AEAT en la [_página_](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI10.shtml) correspondiente.
+Una vez generado el fichero, el mismo tendrá que cargarse en la AEAT en la página correspondiente de [Agencia Tributaria](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI10.shtml){target="_blank"}.

@@ -44,7 +44,7 @@ Para la instalación del módulo de Impuestos para España, el usuario debe segu
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 ## **Aplicación del Módulo**

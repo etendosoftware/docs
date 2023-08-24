@@ -49,7 +49,7 @@ Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativ
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 Es importante recalcar que:
 

@@ -1,7 +1,6 @@
 ---
 title: Advanced Business Partner
-hide:
-    - navigation
+
 ---
 ## **Introduction**
 

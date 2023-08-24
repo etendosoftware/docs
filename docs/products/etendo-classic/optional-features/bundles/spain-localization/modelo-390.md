@@ -81,7 +81,7 @@ Para su instalación el usuario debe seguir los pasos que se describen a continu
 -   o la instalación del módulo(s) de forma separada.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 Adicionalmente, el Modelo 390 se distribuye en otro módulo compatible con el "Régimen Especial de Criterio de Caja" (RECC). Este módulo sólo contiene el juego de datos que relaciona los impuestos de IVA de Caja con los parámetros de declaración del Modelo 390 correspondientes. Si su organización está sujeta a este régimen o es destinataria de operaciones sujetas a este régimen, deberá instalar además este módulo.
@@ -97,7 +97,7 @@ Configuración General | Organización | Gestión del módulo de Empresa.
 ![](/docs/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
 
 !!! info
-    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](https://docs/en/modules/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
 
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
@@ -280,7 +280,7 @@ El tener todos los datos en la hoja de cálculo nos permite examinar la informac
 
 ## **Presentación telemática del Modelo 390**
 
-Una vez que ha comprobado que las cifras incluidas en el Modelo 390 generado por Etendo son correctas, puede presentar el fichero XML en el siguiente enlace [_Presentación Modelo 390_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-390/modelo-390-presentacion-mediante-fichero.html) para lo cual se requiere un certificado válido.
+Una vez que ha comprobado que las cifras incluidas en el Modelo 390 generado por Etendo son correctas, puede presentar el fichero XML en el siguiente enlace [_Presentación Modelo 390_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-390/modelo-390-presentacion-mediante-fichero.html){target="_blank"} para lo cual se requiere un certificado válido.
 
 
 Se mostrarán los siguientes datos:

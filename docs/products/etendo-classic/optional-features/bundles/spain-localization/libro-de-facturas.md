@@ -84,7 +84,7 @@ Para la instalación del módulo “Libro de facturas”, el usuario debe seguir
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 Este módulo de funcionalidad requiere el módulo de Impuestos para España de Etendo. Es importante tener en cuenta que a la hora de instalar el módulo del libro de facturas, los módulos dependientes se instalarán automáticamente.
@@ -142,7 +142,7 @@ Es importante recalcar que el usuario puede crear los libros de facturas para un
 
 Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs/en/modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
+Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
 
 
 Campos a tener en cuenta:
@@ -187,7 +187,7 @@ La información contenida en las líneas del libro es la que se muestra a contin
 
 Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs/en/modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
+Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
 
 Campos a tener en cuenta:
 

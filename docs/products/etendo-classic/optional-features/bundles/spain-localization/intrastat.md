@@ -38,7 +38,7 @@ Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativ
 -   o la instalación del módulo de Localización Española.
 
 !!! info
-    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 !!! info
@@ -277,7 +277,7 @@ IT;12;FOB;11;3;;02012030;;1;800;;987,00;890,45
     Si las líneas de la declaración sobre la que vamos a generar el fichero son superiores a 1000, generará un fichero zip con tantos txt como sean necesarios, ya que cada archivo podrá contener un máximo de 1000 líneas.
 
 !!! info
-    Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este [*enlace*](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html).
+    Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este [*enlace*](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html){target="_blank"}.
 
 
 !!! info

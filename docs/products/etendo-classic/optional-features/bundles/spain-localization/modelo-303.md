@@ -9,7 +9,7 @@ El presente manual de usuario explica el contenido y funcionamiento del nuevo m�
 
 El módulo Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación, permite a las empresas cumplir con sus obligaciones fiscales de "Autoliquidación de IVA" como diferencia entre el IVA Devengado y el IVA Deducible, a través de la presentación del Modelo 303 como un fichero de texto válido conforme a los requerimientos establecidos por la Agencia Tributaria española (Orden EHA/3786/2008).
 
-La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [](http://www.aeat.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/Trimestrales_Mensuales/303_2009.pdf)[_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html).
+La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [](http://www.aeat.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/Trimestrales_Mensuales/303_2009.pdf)[_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
 
 El fichero del modelo 303 contiene la siguiente información:
 
@@ -40,8 +40,8 @@ Dicho fichero se genera en Etendo desde el Generador de declaraciones de impuest
 
 El fichero se puede:
 
-1.  **pre-validar** en la pagina wed de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html)
-2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html)
+1.  **pre-validar** en la pagina wed de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
+2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
 
 La autoliquidación de IVA puede ser:
 
@@ -108,7 +108,7 @@ En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2012 o a los
 ### **Instalación**
 
 !!! info
-    Para la instalación del módulo **“AEAT - Modelo 303”** visite [Marketpace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5). 
+    Para la instalación del módulo **“AEAT - Modelo 303”** visite [Marketpace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
 
 
 
@@ -500,11 +500,11 @@ Una vez que el fichero se ha generado, tendrá este aspecto:
 
 El fichero generado en Etendo se puede pre-validar en el siguiente link de la AEAT:
 
-[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html)
+[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
 
 Una vez en dicho link el usuario podrá importar el fichero en la opción "Optativo: Importar datos de fichero", los datos obtenidos del fichero se mostrarán para su validación.
 
-Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml), para lo que se necesita certificado electrónico de identificación o DNI electrónico.
+Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}, para lo que se necesita certificado electrónico de identificación o DNI electrónico.
 
 ## **Anexo**
 

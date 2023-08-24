@@ -1,7 +1,6 @@
 ---
 title: Etendo BI Connector 
-hide:
-    - navigation
+
 ---
 ## Overview
 

@@ -134,7 +134,7 @@ Es muy importante recalcar que la AEAT comprueba en los envíos a SII que el NIF
 
 Si damos de alta un tercero (persona física) con su nombre y un solo apellido, por ejemplo, o con un apellido correcto y el otro no, al enviar la factura de dicho tercero a SII obtendremos un error del tipo: "NIF no identificado".
 
-Puede comprobar los NIF de sus terceros en la siguiente URL de la AEAT: [Comprobación NIF terceros a efectos censales](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-030/comprobacion-nif-terceros-efectos-censales.html)
+Puede comprobar los NIF de sus terceros en la siguiente URL de la AEAT: [Comprobación NIF terceros a efectos censales](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-030/comprobacion-nif-terceros-efectos-censales.html){target="_blank"}.
 
 Respecto de las personas jurídicas o empresas, parece no se está realizando dicha comprobación (correspondencia Empresa-NIF), pero aun así recomendamos que se revise que los terceros estén configurados correctamente.
 
@@ -1596,7 +1596,7 @@ La forma de registrar en Etendo la factura de transitario que incluye varios doc
 
 El diferimiento del IVA de importación permite que las empresas importadoras puedan incluir las cuotas de IVA devengadas en las importaciones en el Modelo 303 mensual de autoliquidación del IVA, como un parámetro de entrada, sin necesidad de anticipar el ingreso de dicho IVA en la aduana. La cuota de IVA se liquida en la aduana pero su pago se pospone al momento de liquidar el impuesto.
 
-Hacienda pone a disposición de las empresas importadoras un servicio de [_Agencia Tributaria: Cómo consultar el IVA importación con diferimiento de pago_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/consulta-iva-importacion.html) para su liquidación en el Modelo 303 mensual correspondiente.
+Hacienda pone a disposición de las empresas importadoras un servicio de [_Agencia Tributaria: Cómo consultar el IVA importación con diferimiento de pago_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/consulta-iva-importacion.html){target="_blank"} para su liquidación en el Modelo 303 mensual correspondiente.
 
 En estos casos, no se registra factura de transitario, pero si DUA y, por tanto, el DUA, esto es la deducibilidad del IVA de importación soportado, debe registrarse en Etendo junto a la factura del proveedor extranjero de la siguiente forma:
 

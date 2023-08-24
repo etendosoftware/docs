@@ -6,16 +6,16 @@ title: Localización Española
 
 Este bundle incluye los siguientes módulos:
 
-- [SII para IVA](/docs/legacy/modules/spain-localization/manual-de-usuario/sii-para-iva)
-- [Tax Report: Modelo 303 (Spain)](/docs/legacy/modules/spain-localization/manual-de-usuario/modelo-303)
-- [Withholding Report: Modelo 190 (Spain)](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-190)
-- [Spain AEAT Modelo 347 for APR](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-347)
-- [Modelo 349](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-349)
-- [Impuestos para España](https://docs/en/modules/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a)
-- [Intrastat](https://docs/en/modules/spain-localization/manual-de-usuario/intrastat)
-- [Tax Report: Modelo 390 (Spain)](https://docs/en/modules/spain-localization/manual-de-usuario/modelo-390)
-- [Libro de Facturas](https://docs/en/modules/spain-localization/manual-de-usuario/libro-de-facturas)
-- [Configuración de Impuestos para Libro de Facturas](https://docs/en/modules/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas)
+- [SII para IVA](/docs/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
+- [Tax Report: Modelo 303 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
+- [Withholding Report: Modelo 190 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
+- [Spain AEAT Modelo 347 for APR](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
+- [Modelo 349](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
+- [Impuestos para España](/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
+- [Intrastat](/docs/products/etendo-classic/optional-features/bundles/spain-localization/intrastat)
+- [Tax Report: Modelo 390 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
+- [Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
+- [Configuración de Impuestos para Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -98,7 +98,7 @@ La ventana aplica un primer filtro para mostrar solamente los cheques que están
 Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
 
 !!! info
-    Para más información, visite [Check Printing](http://wiki.openbravo.com/wiki/Projects/Checkprinting).
+    Para más información, visite la [guia de usuario de Check Printing](http://wiki.openbravo.com/wiki/Projects/Checkprinting){target="_blank"}.
 
 ## Tipo de Número de Identificación de Tercero
 
@@ -178,7 +178,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
 
 !!! info
-    Para más información, visite [Tax Report Launcher](http://wiki.openbravo.com/wiki/Tax_Report_Launcher/Functional_Documentation).
+    Para más información, visite la [guia de usuario de Tax Report Launcher](http://wiki.openbravo.com/wiki/Tax_Report_Launcher/Functional_Documentation){target="_blank"}.
 
 ## Spanish Tax Module Improvements
 
@@ -244,7 +244,7 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 **Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.**
 
 !!! info
-    Para más información, visite [Spain Professional Localization Pack](http://wiki.openbravo.com/wiki/Projects/Spainproflocalizatpack30CashVAT).
+    Para más información, visite la [guia de usuario de Spain Professional Localization Pack](http://wiki.openbravo.com/wiki/Projects/Spainproflocalizatpack30CashVAT){target="_blank"}.
 
 ## Localization pack Spain (España)
 
