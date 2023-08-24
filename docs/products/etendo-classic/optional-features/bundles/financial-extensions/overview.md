@@ -166,3 +166,4 @@ This functionality allows the user to set a bank account as the default for busi
     For more information, visit the [Advanced Remittance user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#advanced-remittance).
 
 ## Translations
+### Spanish [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
