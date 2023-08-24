@@ -331,11 +331,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/etendobi-extensions/release-notes/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/</loc>
          <lastmod>2023-08-24</lastmod>
          <changefreq>daily</changefreq>
@@ -361,17 +356,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/platform-extensions/release-notes/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/production-extensions/overview/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/production-extensions/release-notes/</loc>
          <lastmod>2023-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -381,7 +366,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/sales-extensions/release-notes/</loc>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/facturacion-electronica/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/intrastat/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349/</loc>
+         <lastmod>2023-08-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390/</loc>
          <lastmod>2023-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -396,67 +426,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/configuracion-de-impuestos-para-libro-de-facturas/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/facturacion-electronica/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/impuestos-para-espa%C3%B1a/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/intrastat/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/libro-de-facturas/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/modelo-190/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/modelo-303/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/modelo-347/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/modelo-349/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/modelo-390/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/manual-de-usuario/sii-para-iva/</loc>
+         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva/</loc>
          <lastmod>2023-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/warehouse-extensions/overview/</loc>
-         <lastmod>2023-08-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/products/etendo-classic/optional-features/bundles/warehouse-extensions/release-notes/</loc>
          <lastmod>2023-08-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
