@@ -11,7 +11,7 @@ This section describes the windows related to assets, part of the Financial Mana
 
 [:material-file-document-outline: Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization){ .md-button } <br>
 
-[:material-file-document-outline: Amortization Report](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization-report){ .md-button } <br>
+[:material-file-document-outline: Asset Amortization Report (Excel)](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#amortization-report){ .md-button } <br>
 
 
 ## **Assets**
@@ -171,7 +171,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
     For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
 
 
-## Amortization Report
+## Asset Amortization Report (Excel)
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.

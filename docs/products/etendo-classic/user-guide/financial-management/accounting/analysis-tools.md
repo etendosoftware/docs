@@ -9,11 +9,17 @@ This section describes the windows related to accounting financial reports in Et
 
 [:material-file-document-outline: Balance Sheet and P/L Structure](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button } <br>
 
+[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button } <br>
+
 [:material-file-document-outline: Trial Balance](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#trial-balance){ .md-button } <br>
 
 [:material-file-document-outline: General Ledger Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button } <br>
 
+[:material-file-document-outline: General Ledger Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button } <br>
+
 [:material-file-document-outline: Journal Entries Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button } <br>
+
+[:material-file-document-outline: Journal Entries Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button } <br>
 
 [:material-file-document-outline: Create Tax Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button } <br>
 
@@ -99,7 +105,7 @@ Under the *"Primary Filters"* section, it is possible to specify:
  
 ![](/docs/assets/drive/1K5dS8FvF5Ol26dSDpo-UzjtE9VBt8T-6.png)
 
-### **Advanced**
+## **Balance Sheet and P&L Structure Advanced**
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -267,7 +273,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 
 ![](/docs/assets/drive/1x52NlvusNpOPj6hku1N5jRDQ39i7XjWI.png)
 
-### **Advanced**
+## **General Ledger Report Advanced**
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
@@ -340,7 +346,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 -   *PDF* format by using the "Print Record" action button of the Toolbar
 -   or *XML* format by using the "Export to Excel" action button of the Toolbar.
 
-### **Advanced**
+## **Journal Entries Report Advanced**
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.

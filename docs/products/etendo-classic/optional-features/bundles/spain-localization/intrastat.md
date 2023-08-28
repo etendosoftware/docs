@@ -94,7 +94,7 @@ Sin embargo, es posible que en alguna transacción en particular, la modalidad d
 El campo Incoterms permite definir el Incoterm (Condición de Entrega) por defecto para el tercero. Es importante tener en cuenta que se pueden configurar dos Incoterms para el tercero, uno cuando el tercero es cliente y otro cuando es proveedor.
 
 !!! info
-    **Nota**: El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.
+    El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.
 
 
 ###### **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento**

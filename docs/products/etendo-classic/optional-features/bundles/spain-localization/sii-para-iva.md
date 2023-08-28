@@ -305,7 +305,7 @@ Para organizaciones que desean dar de alta una factura de compra sólo tras su c
 ![](/docs/assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png)
 
 !!! info
-    **Nota:** Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
+    Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
 
 ### Configuración de rangos de impuestos - Prorrata SII
 
@@ -383,8 +383,9 @@ Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en 
 - la **Clave Tipo Factura**, que por defecto se informará con el valor "**Factura**", clave tipo factura "F1".  
    Otros valores posibles son: - "**Factura simplificada**", clave tipo de factura "F2", respecto de las facturas simplificadas creadas desde cada ticket/pedido registrado. - "**Factura rectificativa**", clave tipo de factura "R1 a R5", según el "Motivo de la rectificación" seleccionada. - "**Asiento resumen facturas simplificadas**", clave tipo de factura "F4", respecto de facturas simplificadas que agrupan tickets/pedidos registrados.
 
-  !!! info
-      No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).
+
+!!! info
+    No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).
  
 
 Se validará que al crear una factura de tipo "Factura Rectificativa" "Por Diferencias", el documento de la transacción sea del tipo "Reverse".
@@ -696,7 +697,7 @@ El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento
 En el caso de las facturas de compra, tampoco será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
 
 !!! info
-    **Nota:** Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
+    Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
 
 #### **Modificación en SII**
 

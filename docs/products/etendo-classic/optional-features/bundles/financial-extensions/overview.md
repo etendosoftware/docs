@@ -56,13 +56,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#advanced).
-
-!!! info
-    For more information, visit [the General Ledger Report user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#advanced_1).
-
-!!! info
-    For more information, visit the [the Journal Entries Report user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#advanced_2).
+    For more information, visit [the Balance Sheet and P&L Structure user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#advanced), [the General Ledger Report user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#advanced_1) and [the Journal Entries Report user guide](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#advanced_2).
 
 ### Payment Removal
 
@@ -78,13 +72,13 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 !!! info
     For more information, visit:
 
-    - [Sales Order](/docs/products/etendo-classic/user-guide/sales-management/transactions#sales-order)
-    - [Purchase Order](/docs/products/etendo-classic/user-guide/procurement-management/transactions#purchase-order)
-    - [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions#sales-invoice)
-    - [Purchase Invoice](/docs/products/etendo-classic/user-guide/procurement-management/transactions#purchase-invoice)
-    - [Payment In](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#payment-in)
-    - [Payment Out](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#payment-out)
-    - [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#financial-account)  
+    - [Sales Order](/docs/products/etendo-classic/user-guide/sales-management/transactions/#payment-removal)
+    - [Purchase Order](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#payment-removal)
+    - [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#payment-removal_1)
+    - [Purchase Invoice](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#payment-removal_1)
+    - [Payment In](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-removal_1)
+    - [Payment Out](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-removal)
+    - [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-removal_2)  
 
 ### Remittances
 
@@ -154,9 +148,9 @@ This functionality allows the user to create settlements for invoices, both sale
 !!! info
     For more information, visit:
 
-    - [Payment In](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#payment-in)
-    - [Payment Out](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#payment-out)
-    - [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#financial-account)
+    - [Payment In](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
+    - [Payment Out](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
+    - [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
 
 ### Advanced Remittance
 
@@ -166,4 +160,4 @@ This functionality allows the user to set a bank account as the default for busi
     For more information, visit the [Advanced Remittance user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#advanced-remittance).
 
 ## Translations
-- ### Spanish: [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
+- ### Spanish: [Financial Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}

@@ -1665,7 +1665,8 @@ There are two types of remittances:
 - The remittance generates as many payments (in/out) as those incorporated in the remittance plus one for the global amount, which is the one that is taken to the financial account due to the advance of such amount.
 - The bank informs of the payments (in/out) that have been settled (normally, if in one month the bank does not respond, these payments are considered settled) and of those that have been protested.
 
-> To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type).
+!!! info
+    To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type).
    
 
 ### Non-Discount Remittance

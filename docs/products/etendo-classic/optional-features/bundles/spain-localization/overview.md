@@ -97,9 +97,6 @@ La ventana aplica un primer filtro para mostrar solamente los cheques que están
 
 Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
 
-!!! info
-    Para más información, visite la [guia de usuario de Check Printing](http://wiki.openbravo.com/wiki/Projects/Checkprinting){target="_blank"}.
-
 ## Tipo de Número de Identificación de Tercero
 
 **Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.**
@@ -177,8 +174,6 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Click en “Generar archivo electrónico”.
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
 
-!!! info
-    Para más información, visite la [guia de usuario de Tax Report Launcher](http://wiki.openbravo.com/wiki/Tax_Report_Launcher/Functional_Documentation){target="_blank"}.
 
 ## Spanish Tax Module Improvements
 
@@ -242,9 +237,6 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 ## Professional Localization pack Spain (España)
 
 **Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.**
-
-!!! info
-    Para más información, visite la [guia de usuario de Spain Professional Localization Pack](http://wiki.openbravo.com/wiki/Projects/Spainproflocalizatpack30CashVAT){target="_blank"}.
 
 ## Localization pack Spain (España)
 
