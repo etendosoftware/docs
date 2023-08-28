@@ -44,15 +44,14 @@ Fields to note:
 ## Dynamic App
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}.
 
 ### **Overview**
 
-In this page we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
+In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
 In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
-In the Dynamic App window that is located in 
-General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window you will find the configuration of paths and versions of each sub-application.
-When logging into Etendo Mobile, the sub-applications will be displayed according to these settings.
+In the Dynamic App window, located in General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window, you find the configuration of paths and versions of each sub-application.
+When logging into Etendo Mobile, the sub-applications are displayed according to these settings.
 
 !!! info
     For more information visit the [Etendo Mobile](/docs/products/etendo-mobile/getting-started/) documentation.
@@ -82,7 +81,7 @@ Fields to note:
 - **Active**: To select if this application version is active or not.
 - **Is Development**: This check defines that this version is in development that can be deployed locally.
 
-Finally you have to configure this application in the [Role Configuration](/docs/products/etendo-classic/user-guide/general-setup/security/#dynamic-app)
+Finally, configure this application in the [Role Configuration](/docs/products/etendo-classic/user-guide/general-setup/security/#dynamic-app).
 
 ## Currency
 

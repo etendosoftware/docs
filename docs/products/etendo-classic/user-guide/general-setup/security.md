@@ -292,15 +292,15 @@ The fields to fill in are:
 
 !!! info
 
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
 
-In this tab you can configure the dynamic applications that the selected role has access to.
+In this tab, you can configure the dynamic applications that the selected role has access to.
 
 ![](/docs/assets/products/etendo-classic/user-guide/general-setup/security/DynamicAppRoleTab.png)
 
 Fields to note:
 
-- **App:** In this drop-down menu you select the application that you want to assign to the role.
+- **App:** In this drop-down menu, you select the application that you want to assign to the role.
 - **Version:** Here we assign the version of the application we want to use in this role.
 - **Active:** To select if this application is active or not.
 
