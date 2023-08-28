@@ -4936,7 +4936,7 @@
 <p><a class="glightbox" href="/docs/assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Nota:</strong> Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.</p>
+<p>Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.</p>
 </div>
 <h3 id="configuracion-de-rangos-de-impuestos-prorrata-sii">Configuración de rangos de impuestos - Prorrata SII</h3>
 <p>Los rangos de impuestos para la prorrata se tendrán que crear siempre de manera manual
@@ -4991,8 +4991,10 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <li>la <strong>Clave Tipo Factura</strong>, que por defecto se informará con el valor "<strong>Factura</strong>", clave tipo factura "F1".<br />
    Otros valores posibles son: - "<strong>Factura simplificada</strong>", clave tipo de factura "F2", respecto de las facturas simplificadas creadas desde cada ticket/pedido registrado. - "<strong>Factura rectificativa</strong>", clave tipo de factura "R1 a R5", según el "Motivo de la rectificación" seleccionada. - "<strong>Asiento resumen facturas simplificadas</strong>", clave tipo de factura "F4", respecto de facturas simplificadas que agrupan tickets/pedidos registrados.</li>
 </ul>
-<p>!!! info
-      No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).</p>
+</div>
 <p>Se validará que al crear una factura de tipo "Factura Rectificativa" "Por Diferencias", el documento de la transacción sea del tipo "Reverse".</p>
 <ul>
 <li>La <strong>Descripción maestro SII</strong> de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.</li>
@@ -5230,7 +5232,7 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 <p>En el caso de las facturas de compra, tampoco será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Nota:</strong> Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.</p>
+<p>Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.</p>
 </div>
 <h4 id="modificacion-en-sii"><strong>Modificación en SII</strong></h4>
 <p>Este tipo de comunicación implica la modificación de los registros de factura ya dados de alta en SII por errores registrales que no afecten a:</p>
