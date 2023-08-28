@@ -45,6 +45,13 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 !!! info
         For more information, visit the [Etendo Advanced Security user guide](/docs/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
+### Dynamic App 
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+        For more information, visit the [Dynamic App user guide](/docs/products/etendo-classic/user-guide/general-setup/application/#dynamic-app)
+        
 ## Translations
 
 - ### Spanish: [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
