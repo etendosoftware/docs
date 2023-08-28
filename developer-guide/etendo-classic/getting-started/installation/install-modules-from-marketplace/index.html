@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/download-and-install-modules/">
+        <link rel="canonical" href="https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/install-modules-from-marketplace/">
       
       
-        <link rel="prev" href="../install-modules-in-etendo/">
+        <link rel="prev" href="../use-of-repositories-in-etendo/">
       
       
         <link rel="next" href="../../migration-from-openbravo/migrating-to-etendo-from-openbravo/">
@@ -2732,7 +2732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-formatting-style-in-intellij/" class="md-nav__link">
+      <a href="../intellij-code-formatting/" class="md-nav__link">
         IntelliJ Code Formatting
       </a>
     </li>
@@ -2748,20 +2748,6 @@
     <li class="md-nav__item">
       <a href="../use-of-repositories-in-etendo/" class="md-nav__link">
         Use of Repositories in Etendo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install-modules-in-etendo/" class="md-nav__link">
-        Install Modules in Etendo
       </a>
     </li>
   
@@ -3722,29 +3708,35 @@
 <p>This section provides a step by step explanation on how to Install modules from Etendo Marketplace.</p>
 <p><a class="glightbox" href="/docs/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png" /></a></p>
 <ol>
-<li>First, go to <a href="http://marketplace.etendo.cloud"><em>Etendo Marketplace</em></a>.</li>
+<li>First, go to <a href="http://marketplace.etendo.cloud" target="_blank">Etendo Marketplace</a>.</li>
 <li>Browse or search for the module that you want to install.</li>
 <li>Click on the module to see its details, such as the version, description, and compatibility with different platforms and applications.</li>
 <li>Check the requirements for the module, such as any dependencies or system configurations needed to run the module.</li>
 <li>Select the format for the installation of the module, Source or JAR, and copy the corresponding dependency.</li>
 <li>Go to the <code>build.gradle</code> file and paste the dependency in the dependencies section.</li>
 <li>
-<p><strong>Source Format</strong><br />
-    To work with sources, you have to expand modules tasks available.<br />
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><strong>Source Format</strong></label><label for="__tabbed_1_2"><strong>JAR Format</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>To work with sources, you have to expand modules tasks available.<br />
 <code>./gradlew expandModules</code><br />
-    This task will try to download and install the added module. <br />
-    A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.  </p>
-<p><strong>JAR Format</strong><br />
-To work with JAR modules, you need to resolve the dependencies running<br />
-<code>./gradlew dependencies</code></p>
-</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">Info<p>Remember to configure the credentials in <code>gradle.properties</code> file</p>
-</p>
+This task will try to download and install the added module. <br />
+A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.  </p>
 </div>
-<ol>
-<li>Finally, install or update the database with the new modules <code>./gradlew smartbuild -Dlocal=no</code></li>
+<div class="tabbed-block">
+<p>To work with JAR modules, you need to resolve the dependencies running<br />
+<code>./gradlew dependencies</code></p>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Remember to configure the credentials in <code>gradle.properties</code> file</p>
+</div>
+</li>
+<li>
+<p>Finally, install or update the database with the new modules <code>./gradlew smartbuild -Dlocal=no</code></p>
+</li>
 <li>Verify that the module is installed correctly by checking that its functions or features are available in the application or platform where you want to use it.</li>
 </ol>
 

@@ -56,22 +56,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/code-formatting-style-in-intellij/</loc>
-         <lastmod>2023-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/download-and-install-modules/</loc>
-         <lastmod>2023-08-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/</loc>
          <lastmod>2023-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/install-modules-from-marketplace/</loc>
+         <lastmod>2023-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/</loc>
+         <lastmod>2023-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://etendosoftware.github.io/docs/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/</loc>
          <lastmod>2023-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>

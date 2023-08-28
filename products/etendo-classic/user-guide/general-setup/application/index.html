@@ -766,6 +766,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dynamic-app" class="md-nav__link">
+    Dynamic App
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-app-version-tab" class="md-nav__link">
+    Dynamic App Version Tab
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#currency" class="md-nav__link">
     Currency
   </a>
@@ -3037,7 +3071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/code-formatting-style-in-intellij/" class="md-nav__link">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
         IntelliJ Code Formatting
       </a>
     </li>
@@ -3065,21 +3099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
-        Install Modules in Etendo
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/download-and-install-modules/" class="md-nav__link">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-from-marketplace/" class="md-nav__link">
         Install Modules from Marketplace
       </a>
     </li>
@@ -3969,6 +3989,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dynamic-app" class="md-nav__link">
+    Dynamic App
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-app-version-tab" class="md-nav__link">
+    Dynamic App Version Tab
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#currency" class="md-nav__link">
     Currency
   </a>
@@ -4280,6 +4334,41 @@
 <li><strong>To Currency</strong>: Target currency</li>
 <li><strong>Tolerance</strong>: The maximum difference allowed between the new conversion rate and the previous one. This is used to insert or not the new downloaded rate.</li>
 </ul>
+<h2 id="dynamic-app">Dynamic App</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614" target="_isblank">Platform Extensions Bundle</a>.</p>
+</div>
+<h3 id="overview"><strong>Overview</strong></h3>
+<p>In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
+In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
+In the Dynamic App window, located in General Setup/Application/Dynamic App, you can add the information that will make reference to it. In this window, you find the configuration of paths and versions of each sub-application.
+When logging into Etendo Mobile, the sub-applications are displayed according to these settings.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information visit the <a href="/docs/products/etendo-mobile/getting-started/">Etendo Mobile</a> documentation.</p>
+</div>
+<h3 id="header"><strong>Header</strong></h3>
+<p><a class="glightbox" href="/docs/assets/products/etendo-classic/user-guide/general-setup/application/HeaderDynamicApp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/products/etendo-classic/user-guide/general-setup/application/HeaderDynamicApp.png" /></a></p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Module</strong>: The module that can export the window configuration.</li>
+<li><strong>Name</strong>: Name with the application will be shown.</li>
+<li><strong>Directory Location</strong>: The path where the bundle of the compiled application is located.</li>
+<li><strong>Active</strong>: To select if this application is active or not.</li>
+</ul>
+<h3 id="dynamic-app-version-tab"><strong>Dynamic App Version Tab</strong></h3>
+<p><a class="glightbox" href="/docs/assets/products/etendo-classic/user-guide/general-setup/application/DynamicAppVersion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/products/etendo-classic/user-guide/general-setup/application/DynamicAppVersion.png" /></a></p>
+<p>This window is in charge of being able to version your application and so you also have development versions as well as productive ones.</p>
+<p>Fields to note:</p>
+<ul>
+<li><strong>Name</strong>: Name of the application version.</li>
+<li><strong>File Name</strong>: The bundle name of the compiled application.</li>
+<li><strong>Default</strong>: This check defines that this version is productive.</li>
+<li><strong>Active</strong>: To select if this application version is active or not.</li>
+<li><strong>Is Development</strong>: This check defines that this version is in development that can be deployed locally.</li>
+</ul>
+<p>Finally, configure this application in the <a href="/docs/products/etendo-classic/user-guide/general-setup/security/#dynamic-app">Role Configuration</a>.</p>
 <h2 id="currency">Currency</h2>
 <h3 id="introduction"><strong>Introduction</strong></h3>
 <p>Currencies and conversion rates are basic settings in Etendo.</p>
