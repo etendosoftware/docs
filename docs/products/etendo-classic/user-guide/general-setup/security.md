@@ -288,6 +288,22 @@ The fields to fill in are:
 - **Inherit From**: In this field, it should be selected the role whose permissions will be inherited. It defines the role that will be used to retrieve access to its permissions automatically.
 - **Sequence Number**: It defines the order in the application of the role inheritance, when having multiple records in the tab. The lower this value is, the earlier will be retrieved the permissions of the related template role. This means that if the same permission is accessed by two template roles selected to inherit from them, the permission related to the inheritance with higher sequence number will override the other one.
 
+### **Dynamic App**
+
+!!! info
+
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}.
+
+In this tab, you can configure the dynamic applications that the selected role has access to.
+
+![](/docs/assets/products/etendo-classic/user-guide/general-setup/security/DynamicAppRoleTab.png)
+
+Fields to note:
+
+- **App:** In this drop-down menu, you select the application that you want to assign to the role.
+- **Version:** Here we assign the version of the application we want to use in this role.
+- **Active:** To select if this application is active or not.
+
 ## Role Access
 
 This window defines access to DB /database tables and columns for selected roles.  
