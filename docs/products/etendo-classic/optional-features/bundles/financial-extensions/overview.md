@@ -112,7 +112,7 @@ This functionality is specifically useful for companies that have a month close,
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
 !!! info
-    For more information, visit [the Asset Amortization Report user guide](/docs/products/etendo-classic/user-guide/financial-management/assets/overview#amortization-report).
+    For more information, visit [the Asset Amortization Report user guide](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#asset-amortization-report-excel).
 
 ### Advanced Financial Docs. Processing
 

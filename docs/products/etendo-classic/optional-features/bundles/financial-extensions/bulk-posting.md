@@ -17,7 +17,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/#bulk-posting)
+- [Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#bulk-posting)
 - [Goods Movements](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_1)
 - [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
 - [Matched Invoices](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_2)

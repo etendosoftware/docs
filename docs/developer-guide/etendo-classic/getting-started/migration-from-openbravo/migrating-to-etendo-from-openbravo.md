@@ -9,19 +9,18 @@ This guide provides the necessary information to migrate an existing Openbravo i
 
 Before the migration process begins, either if it is done on Linux or on Windows, make sure to have the following items:
 
+!!! info
+    - Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](/docs/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2))
+    - If previous installation had custom patches applied, they must be ready to be applied in an 21Q3.2 updated environment.
+    - Database should not have local changes.
+    - Enough disk space for new installation.
+    - Environment license and GitHub name and token (Create the credentials by following this [guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo)).
 
->    Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/upgrading-to-openbravo-21q3-2)).
->    If previous installation had custom patches applied, they must be ready to be applied in an 21Q3.2 updated environment.
->    Database should not have local changes.
->    Enough disk space for new installation.
->    Environment license and GitHub name and token (Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo)).
-{.is-info}
+!!! warning
+    - The server where the database is hosted needs to have enough free space to hold a copy of the current database.  
+    - The server where the sources are hosted also needs to be able to hold a copy of the current sources.  
+    - Attachments are kept in the same place as they were before.
 
-
-> The server where the database is hosted needs to have enough free space to hold a copy of the current database.  
-> The server where the sources are hosted also needs to be able to hold a copy of the current sources.  
-> Attachments are kept in the same place as they were before.
-{.is-warning}
 
 
 ## Instructions for the Migration Process
@@ -36,10 +35,9 @@ It is necessary to ensure following the next steps:
 sudo /etc/init.d/tomcat stop
 ```
 
+!!! info
+    Depending on your server, this command may need to be changed.
 
-
-> Depending on your server, this command may need to be changed.
-{.is-info}
 
 2. Create a backup of your instance.
 

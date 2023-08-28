@@ -7,7 +7,7 @@ title: Use of Repositories in Etendo
 While Etendo supports any Maven package repository, we will focus on explaining how to configure Etendo's standard repositories credentials.
 
 By default, Etendo Core packages will be downloaded from the GitHub repositories.
-You can find each of the [Etendo Releases](https://github.com/etendosoftware/etendo_core/releases){target="_blank"} 
+You can find each of the [Etendo Releases](https://github.com/etendosoftware/etendo_core/releases){target="_blank"}. 
 
 ## Using a Personal Access Token in Etendo Projects
 
@@ -25,15 +25,19 @@ To generate a Personal Access Token, follow these steps:
 3. Select "Developer settings" from the left menu and click on "Personal access tokens."
 4. In the developer settings page, click on "Personal access tokens".
 
-![personal-access-tokens.png](docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
+![personal-access-tokens.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
+
+5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
 
 !!! warning
-    Is strongly recomended set an expiration date, but it is also posible set an undefined expiration
+    It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
 
-![new-personal-access-token.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 7. Click on "Generate token" and make note of the token value.
+![new-personal-access-token.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
 
-!!! info
-    **Note:** You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
+7. Click "Generate token" and take note of the token value.
+
+!!! warning
+        You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
 
 ### Setting Up the Personal Access Token in Etendo Projects
 
@@ -62,8 +66,8 @@ With the Personal Access Token set up in your Etendo project, you can now use it
 If you no longer need a personal access token or believe it has been compromised, you should revoke it immediately. To do so, follow these steps:
 
 1. Go to your "Settings" page in GitHub.
-2. Click on "Developer settings" in the left-hand sidebar.
-3. Click on "Personal access tokens".
+2. Click "Developer settings" in the left-hand sidebar.
+3. Click "Personal access tokens".
 4. Find the token you want to revoke and click the "Revoke" button.
 5. Confirm that you want to revoke the token.
 

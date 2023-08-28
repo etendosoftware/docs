@@ -2,7 +2,7 @@
 title: Localización Española
 ---
 
-**El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar el ERP a los requerimientos legales y/o fiscales españoles.**
+El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar el ERP a los requerimientos legales y/o fiscales españoles.
 
 Este bundle incluye los siguientes módulos:
 
@@ -40,27 +40,27 @@ Este bundle incluye los siguientes módulos:
 
 ## Incoterms
 
-**Este módulo añade el listado de Incoterms al ERP.**
+Este módulo añade el listado de Incoterms al ERP.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
 ## European Union Countries
 
-**Este módulo identifica qué países pertenecen a la Unión Europea.**
+Este módulo identifica qué países pertenecen a la Unión Europea.
 
 ## Provincias de España
 
-**Este módulo añade el listado de provincias españolas al ERP.**
+Este módulo añade el listado de provincias españolas al ERP.
 
 ## Legal Representative of the Organization
 
-**Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.**
+Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
 
 La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
 
 ## I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
-**Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.**
+Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
 
 El tipo de información agregada por este módulo se requiere en determinados modelos tributarios oficiales, por ejemplo en el Modelo 390.
 
@@ -68,17 +68,17 @@ En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea
 
 ## CIF and NIF validator
 
-**Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.**
+Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
 ## Validador de número de cuenta financiera
 
-**Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.**
+Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
 ## Impresión de cheques
 
-**Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.**
+Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.
 
 Este módulo incluye el dataset "Check Printing Infraestructure" que crea un formato de impresión llamado "Standard Format", un método de pago denominado “Check" y un proceso de ejecución llamado "Check Printing".
 
@@ -99,15 +99,15 @@ Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón �
 
 ## Tipo de Número de Identificación de Tercero
 
-**Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.**
+Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
 ## Professional Localization pack Spain (España) Datasets
 
-**Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.**
+Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
 ## Multidimensional Tax Report
 
-**Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.**
+Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
 
 El módulo permite obtener los datos necesarios para cumplimentar modelos de la AEAT que no se generan como un fichero válido desde Etendo. Por ejemplo, el Modelo 115 (Trimestral) de Retenciones e ingresos a cuenta sobre rentas procedentes del arrendamiento de inmuebles urbanos.
 
@@ -115,21 +115,21 @@ La información obtenida mediante este módulo es útil para que las empresas pu
 
 ## Cuaderno 43
 
-**Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.**
+Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
 ## 3 digits ISO country codes
 
-**Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.**
+Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
 ## Métodos de Pago
 
-**Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.**
+Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
 
 El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
 
 ## Tax Report Launcher
 
-**Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.**
+Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
 
 Este módulo permite crear y enviar formularios de informe de impuestos desde Etendo. Es posible ingresar los datos requeridos en un formulario en particular y generar un fichero que luego puede ser enviado a las autoridades.
 Los impuestos para una localización determinada se instalan con módulos que extienden de este.
@@ -177,7 +177,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 
 ## Spanish Tax Module Improvements
 
-**Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.**
+Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
 
 - Tipo de Libro (“Tax Book Type”): El usuario puede configurar si un rango de impuesto debe ser reportado en la compra (recibido) o en la venta (enviado) del Libro de Facturas.
 - Inversión de Sujeto Pasivo ("Reverse Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es una tasa de impuesto de cargo inverso
@@ -186,15 +186,15 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 
 ## Nueva versión del módulo de Impuestos de España
 
-**Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.**
+Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
 ## Condiciones de pago
 
-**Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".**
+Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
 ## Chart of accounts: PGC 2007 General
 
-**Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.**
+Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
 
 Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
 
@@ -220,7 +220,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 
 ## Chart of accounts: PGC 2007 PYMEs
 
-**Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.**
+Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
 
 Etendo puede configurarse para realizar la contabilidad en base a distintos esquemas contables.
 
@@ -236,8 +236,8 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 
 ## Professional Localization pack Spain (España)
 
-**Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.**
+Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
 
 ## Localization pack Spain (España)
 
-**Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.**
+Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
