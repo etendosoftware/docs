@@ -1,11 +1,11 @@
 ---
 title: Inventory Status
 ---
-## **Introduction**
+## Overview
 
 This section explains the Inventory Status concept that is part of Etendo.
 
-## **Configuration**
+## Configuration
 
 The Inventory Status will be available and configured as part of Etendo.
 
@@ -14,9 +14,12 @@ By default, all the Bins will be in an undefined Inventory Status. There are two
 -   **Undefined**. Available and Nettable, but not possible to go to Over Issue.
 -   **Undefined OverIssue**. Available and Nettable and possible to go to Over Issue.
 
-The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. More information about the Allow Negative Stock can be found [here](/docs/products/etendo-classic/user-guide/general-setup/overview#client).
+The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
 
-## **Functionality**
+!!! info
+        For more information, visit the [Allow Negative Stock user guide](/docs/products/etendo-classic/user-guide/general-setup/client/).
+
+## Functionality
 
 The Inventory Status concept is part of the inventory management of Etendo and includes the dimensions for Available, Nettable, and OverIssue to the storage bin and all stock in this bin has the same Inventory Status. The semantics of the Inventory Status refers to the condition of a specific inventory and can be configured. See examples at the end of this section.
 
@@ -41,7 +44,7 @@ The inventory status allows or disallows certain business processes.
 -   Add the possibility to manually update the Inventory Status of a Storage Detail by moving it to a virtual, AdHoc created, bin.
 -   A new process that identifies affected reservations when a change of the inventory status reduces/increases the quantity available. (Once identified, the relevant users could receive an alert about the consequence of the change in availability).
 
-### **Inventory Status Change**
+### Inventory Status Change
 
 In the Warehouse and Storage Bins window, It is possible to check the Inventory Status of a Storage Bin and also to modify it.
 
@@ -58,7 +61,7 @@ There are some restrictions:
 
 ![](/docs/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png)
 
-### **Examples**
+### Examples
 
 Examples of inventory status values:
 
@@ -70,4 +73,4 @@ Examples of inventory status values:
 -   **Public** (YYY) will allow going negative due to unexpected stock in public picking areas.
 > 
 !!! info
-    **Note**: The inventory status does not have an effect on the inventory value.
+    The inventory status does not have an effect on the inventory value.

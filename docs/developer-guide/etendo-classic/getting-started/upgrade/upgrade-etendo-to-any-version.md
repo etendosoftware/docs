@@ -14,8 +14,8 @@ This guide explains how to upgrade your Etendo environment to the latest version
 !!! warning
     In case of upgrading the Core from Etendo 21Q4.X, you must remove the modules `com.smf.securewebservices`, `com.smf.smartclient.boostedui`, `com.smf.smartclient.debugtools`, as they are distributed in the Core.
 
-> From Etendo 22Q1, the Nexus credentials should not be required interactively. You must set them in the `gradle.properties` file, since Gradle resolves and checks dependencies periodically.
 !!! warning
+    From Etendo 22Q1, the Nexus credentials should not be required interactively. You must set them in the `gradle.properties` file, since Gradle resolves and checks dependencies periodically.
     `githubUser=USER` > `githubToken=TOKEN`
 
 ### Resolving the Etendo Gradle Plugin
@@ -73,9 +73,9 @@ apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/eten
 ### JAR Core
 
 !!! warning
-    If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration), because some directories must be deleted.
+    If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/), because some directories must be deleted.
 
-1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/etendo-backup-restore-tool).
+1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/).
 2. Verify the target version inside `build.gradle`
 
 ```groovy
@@ -109,12 +109,12 @@ etendo {
 }
 ```
 
-> You can declare a specific version (e.g. '1.0.0') or an interval of versions:
-> \[begin, end\] - Both versions are included
-> (begin, end) - Both versions are not included
-> \[begin, ) - From a base version to the latest one
 !!! info
-    And the other possible combinations
+    You can declare a specific version (e.g. '1.0.0') or an interval of versions:
+    \[begin, end\] - Both versions are included
+    (begin, end) - Both versions are not included
+    \[begin, ) - From a base version to the latest one
+    And the other possible combinations.
 
 By default, the plugin will try to resolve the artifact `com.etendoerp.platform:etendo-core`
 

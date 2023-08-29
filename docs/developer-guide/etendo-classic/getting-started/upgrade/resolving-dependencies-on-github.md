@@ -79,7 +79,7 @@ plugins {
 }
 ```
 
-3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following this [guide](/docs/developers/setup/use-of-repositories-in-etendo).
+3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
 
 `gradle.properties`
 ```
@@ -107,7 +107,7 @@ bbdd.password=tad
 One restriction that GitHub has is that published packages must have a lowercase javapackage, so we had to refactor the translation modules, which previously ended with the suffix "_ES", now all packages including bundle translations have their artifact in lowercase.  
 
 !!! warning
-   A special consideration are the modules `org.openbravo.module.invoiceTaxReportEnhanced30` and `org.openbravo.module.invoiceTaxReportEnhanced30.en_ES` which belong to the Spain Localisation bundle and were refactored as well.
+    A special consideration are the modules `org.openbravo.module.invoiceTaxReportEnhanced30` and `org.openbravo.module.invoiceTaxReportEnhanced30.en_ES` which belong to the Spain Localisation bundle and were refactored as well.
 
 
 This affects the current environments, to fix this we have to: 
@@ -265,8 +265,10 @@ done
 echo "Modules deletion has been completed."
 
 ```
- !!! warning
-        Make sure the modules have no customizations, otherwise local changes will be deleted..
+
+
+!!! warning
+        Make sure the modules have no customizations, otherwise local changes will be deleted.
  
  
 Copy this code and create a file `deleteNexusDependencies.sh` in the Etendo root project, run `chmod +x deleteNexusDependencies.sh` to give execution permissions and then run `./deleteNexusDependencies.sh` to delete the dependencies. 
@@ -310,5 +312,5 @@ Then run `./gradlew update.database smartbuild`, this will dynamically download 
 
 
 
-If you encounter any issues or need additional help, don't hesitate to reach out to our support service through our portal: [http://support.etendo.software](http://support.etendo.software) 🚑
+If you encounter any issues or need additional help, do not hesitate to reach out to our support service through our portal: [http://support.etendo.software](http://support.etendo.software){target="_blank"} 🚑
 

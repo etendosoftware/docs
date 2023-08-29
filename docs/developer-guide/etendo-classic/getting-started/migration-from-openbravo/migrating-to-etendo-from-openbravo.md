@@ -48,12 +48,13 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 
 1. Create and enter the folder Etendo ERP.
 
-2. Insert the **etendo_base** sources in the Etendo ERP folder. They can be extracted after downloading Etendo from [Resources](https://etendo.software/es/recursos). To do this, use your gitHub user and token.
+2. Insert the **etendo_base** sources in the Etendo ERP folder. They can be extracted after downloading Etendo from [Resources](https://etendo.software/es/recursos){target="_blank"}. To do this, use your gitHub user and token.
 
 3. The `gradle.properties` file has default params but if needed this can be changed.  
 
-> Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this [guide](https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo).
-{.is-warning}
+???+Note
+    Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+    
 
 ``` groovy
 githubUser=
@@ -69,51 +70,49 @@ bbdd.user=tad
 bbdd.password=tad
 ```
 
-> Check if it is necessary to keep the Openbravo database or create a new one for Etendo. In case of creating a new one, use the previous Openbravo one as a base.
-{.is-info}
+!!! info
+    Check if it is necessary to keep the Openbravo database or create a new one for Etendo. In case of creating a new one, use the previous Openbravo one as a base.
+
 
 
 4. In a new terminal opened in `EtendoERP` folder, run in the `./gradlew expandCore`
 5. Run in the terminal `./gradlew setup` 
 6. Move the existing modules from `Openbravo/modules` folder to the `EtendoERP/modules` folder, except for the following ones:
 
-> org.openbravo.advpaymentmngt
-org.openbravo.apachejdbcconnectionpool 
-org.openbravo.base.weld
-org.openbravo.client.application 
-org.openbravo.client.htmlwidget
-org.openbravo.client.kernel
-org.openbravo.client.myob
-org.openbravo.client.querylist
-org.openbravo.client.widgets
-org.openbravo.financial.paymentreport
-org.openbravo.reports.ordersawaitingdelivery
-org.openbravo.service.datasource
-org.openbravo.service.integration.google
-org.openbravo.service.integration.openid
-org.openbravo.service.json
-org.openbravo.userinterface.selector
-org.openbravo.userinterface.skin.250to300Comp
-org.openbravo.userinterface.smartclient
-org.openbravo.utility.cleanup.log
-org.openbravo.v3
-org.openbravo.v3.datasets
-org.openbravo.v3.framework
-> 
-> These modules will already be in the `EtendoERP/modules_core` folder since in Etendo, they are core modules. 
-{.is-warning}
+!!! warning
+    org.openbravo.advpaymentmngt
+    org.openbravo.apachejdbcconnectionpool 
+    org.openbravo.base.weld
+    org.openbravo.client.application 
+    org.openbravo.client.htmlwidget
+    org.openbravo.client.kernel
+    org.openbravo.client.myob
+    org.openbravo.client.querylist
+    org.openbravo.client.widgets
+    org.openbravo.financial.paymentreport
+    org.openbravo.reports.ordersawaitingdelivery
+    org.openbravo.service.datasource
+    org.openbravo.service.integration.google
+    org.openbravo.service.integration.openid
+    org.openbravo.service.json
+    org.openbravo.userinterface.selector
+    org.openbravo.userinterface.skin.250to300Comp
+    org.openbravo.userinterface.smartclient
+    org.openbravo.utility.cleanup.log
+    org.openbravo.v3
+    org.openbravo.v3.datasets
+    org.openbravo.v3.framework
+
+    
+    These modules will already be in the `EtendoERP/modules_core` folder since they are core modules in Etendo. 
+
 
 
 
 7. Run `./gradlew update.database compile.complete.deploy --info`.
 
-> Compilation errors associated with API changes may occur due to the version change in custom modules. If this happens, make sure to fix them by using the [documented GitHub issues](https://github.com/etendosoftware/etendo_core/issues?q=is%3Aissue+). 
-{.is-info}
-
-
-
-> Go back to the main migration page to continue with the [Post Migration Configuration](https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo#post-migration-configuration) process. 
-{.is-success}
+!!! info
+    Compilation errors associated with API changes may occur due to the version change in custom modules. If this happens, make sure to fix them by using the [documented GitHub issues](https://github.com/etendosoftware/etendo_core/issues?q=is%3Aissue+){target="_blank"}. 
 
 
 
@@ -124,13 +123,15 @@ org.openbravo.v3.framework
 ```plaintext
 rm -r /var/lib/tomcat/webapps/openbravo
 ```
-> **Make sure this step is done before starting Tomcat**, otherwise you risk having two environments running at the same time, which can cause problems (especially when background processes are involved).
-{.is-warning}
+!!! warning
+    **Make sure this step is done before starting Tomcat**, otherwise you will risk having two environments running at the same time, which can cause problems (especially when background processes are involved).
+
 
 ### Start Tomcat
 
-  > Depending on your server, this command may need to be changed.
-{.is-info}
+!!! info
+    Depending on your server, this command may need to be changed.
+
   
 ```plaintext
 
@@ -141,8 +142,9 @@ sudo /etc/init.d/tomcat start
 
 ### Attachments Configuration
 
-> Before removing your previous instance, make sure you migrate your attachment files.
-{.is-warning}
+!!! warning
+    Before removing your previous instance, make sure you migrate your attachment files.
+
 
 In the migration process, the attachments directory configuration is not changed. To move them to a new folder (for example `/opt/EtendoERP/attachments`), you must edit the `Openbravo.properties` file and move the attachments manually.  
 For example:
@@ -155,17 +157,18 @@ mv /opt/OpenbravoERP/attachments /opt/EtendoERP/attachments
 ## Deploy changes to tomcat
 ./gradlew smartbuild
 ```
+!!! info
+    Special consideration may have to be taken into account if your attachment folder is in a network drive, or a different partition (with or without a symbolic link in place).  
+    **Be careful** when changing the attachment configuration, and make sure you have a recent backup available.
 
-> Special consideration may have to be taken into account if your attachment folder is in a network drive, or a different partition (with or without a symbolic link in place).  
-> **Be careful** when changing the attachment configuration, and make sure you have a recent backup available.
-{.is-info}
 
 ### Customizations to Core
 
 Re apply patches to core if necessary, and compile.
 
-> Compilation tasks now can be made with the Gradle Wrapper.
-{.is-info}
+!!! info
+    Compilation tasks now can be made with the Gradle Wrapper.
+
 
 ```plaintext
 
@@ -185,9 +188,9 @@ sudo /etc/init.d/tomcat restart
     Configuration file should be in `/var/www/html/index.html`.  
     Replace `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=openbravo">` by `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=etendo"> `  
     
+!!! warning
+    Make sure to replace `etendo` by the context you chose when executing the migration tool.
 
-> Make sure to replace `etendo` by the context you chose when executing the migration tool.
-{.is-warning}
 
 3.  Restart apache:
     
@@ -203,8 +206,9 @@ sudo service apache2 restart
 2.  Use Refresh Online
 3.  Enter your instance purpose and your activation key.
 
-> Your instance is activated!
-{.is-success}
+!!! success
+    Your instance is activated!
+
 
 ### Change backup and restore script
 
@@ -226,11 +230,13 @@ db_login=$(awk -F = '/^bbdd.user/ {print $2}' /opt/EtendoERP/config/Openbravo.pr
 
 This will vary depending on the path that has been selected for the migration.
 
-> Remember that in the current state `Openbravo.properties` doesn’t change its name. This shouldn’t be changed until further notice from the development team. Also, you must not change the Openbravo name anywhere else. Do it only in the paths for the properties file.
-{.is-warning}
+!!! warning
+    Remember that in the current state `Openbravo.properties` does not change its name. This should not be changed until further notice from the development team. Also, you must not change the Openbravo name anywhere else. Do it only in the paths for the properties file.
 
-> A dedicated backup tool is in development.
-{.is-info}
+
+!!! info
+    A dedicated backup tool is in development.
+
 
 2.  The same should be done for `/usr/bin/openbravo-restore`. Given that the scripts are highly hardcoded, you have to change some lines manually.
 
@@ -312,9 +318,9 @@ for
   sudo chown openbravo:openbravo /opt/EtendoERP/
   
 ```
+!!! warning
+    The same warning for the backups applies here. Be careful on what you rename. If you see an error, please ask for support.
 
-> The same warning for the backups applies here. Be careful on what you rename. If you see an error, please ask for support.
-{.is-warning}
 
 ### Change initial directory on login
 
@@ -354,12 +360,12 @@ rm -r /opt/OpenbravoERP
 
 psql -h localhost -U postgres -d etendo -c "DROP DATABASE openbravo;"
 ```
+!!! warning
+    Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.
 
-> Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.
-{.is-warning}
 
 ## Conclusion
 
-> With these steps, you should have successfully migrated your Openbravo data to Etendo either on a Linux system or on a Windows system. If you encounter any problems during the process, please reach out to the [Etendo support team](https://etendoproject.atlassian.net/servicedesk/customer/portals) for assistance.
-{.is-info}
+!!! info
+    With these steps, you should have successfully migrated your Openbravo data to Etendo either on a Linux system or on a Windows system. If you encounter any problems during the process, please reach out to the [Etendo support team](https://etendoproject.atlassian.net/servicedesk/customer/portals){target="_blank"} for assistance.
 

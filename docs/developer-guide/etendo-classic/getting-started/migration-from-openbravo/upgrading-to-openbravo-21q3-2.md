@@ -13,10 +13,11 @@ This guide explains how to upgrade your current Openbravo environment to version
 
 ## How to upgrade to Openbravo 21Q3.2
 
-> **Requirements**
-> -Git
 !!! info
-    -A diffing/merging tool if patches need to be generated
+    - **Requirements**  
+    - Git  
+    - A diffing/merging tool if patches need to be generated
+    
 
 ### Identify and extract custom patches made to your current version of Openbravo
 
@@ -57,11 +58,13 @@ ant update.database compile.complete.deploy
 6.  Fix problems with custom modules.
 
 !!! warning
-    Check [Openbravo’s Release Notes](http://wiki.openbravo.com/wiki/Release_Notes/3.0PR21Q3.2) for API changes and other considerations when upgrading.
+    Check [Openbravo’s Release Notes](http://wiki.openbravo.com/wiki/Release_Notes/3.0PR21Q3.2){target="_blank"} for API changes and other considerations when upgrading.
 
 7.  Start server.
 8.  Test for functional or runtime errors and fix them.
 
-> Your environment is ready to be migrated to Etendo.  
+
 !!! success
-    Check the [migration tool’s guide](https://docs/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo).
+    Your environment is ready to be migrated to Etendo.
+
+    Check the [Migration Tool’s guide](/docs/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/).

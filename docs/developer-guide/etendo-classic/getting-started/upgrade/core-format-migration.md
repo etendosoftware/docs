@@ -6,7 +6,8 @@ title: Core format migration
 #### From Sources to JAR
 
 !!! warning
-   In JAR format patchs can not be applied beacause the Core is resolved dinamicaly as a dependency.
+    In JAR format patchs can not be applied beacause the Core is resolved dinamicaly as a dependency.
+
 
 1. To migrate from a environment with sources, you need to add to the build.gradle, the Etendo core dependency
 
