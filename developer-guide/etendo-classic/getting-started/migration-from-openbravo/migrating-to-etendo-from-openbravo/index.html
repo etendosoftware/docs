@@ -4006,15 +4006,16 @@
 <p>Create and enter the folder Etendo ERP.</p>
 </li>
 <li>
-<p>Insert the <strong>etendo_base</strong> sources in the Etendo ERP folder. They can be extracted after downloading Etendo from <a href="https://etendo.software/es/recursos">Resources</a>. To do this, use your gitHub user and token.</p>
+<p>Insert the <strong>etendo_base</strong> sources in the Etendo ERP folder. They can be extracted after downloading Etendo from <a href="https://etendo.software/es/recursos" target="_blank">Resources</a>. To do this, use your gitHub user and token.</p>
 </li>
 <li>
 <p>The <code>gradle.properties</code> file has default params but if needed this can be changed.  </p>
 </li>
 </ol>
-<blockquote>
-<p class="is-warning">Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following this <a href="https://docs.etendo.software/en/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/use-of-repositories-in-etendo">guide</a>.</p>
-</blockquote>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the <a href="/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a>.</p>
+</details>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">githubUser</span><span class="o">=</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">githubToken</span><span class="o">=</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -4027,15 +4028,17 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
 </span></code></pre></div>
-<blockquote>
-<p class="is-info">Check if it is necessary to keep the Openbravo database or create a new one for Etendo. In case of creating a new one, use the previous Openbravo one as a base.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Check if it is necessary to keep the Openbravo database or create a new one for Etendo. In case of creating a new one, use the previous Openbravo one as a base.</p>
+</div>
 <ol>
 <li>In a new terminal opened in <code>EtendoERP</code> folder, run in the <code>./gradlew expandCore</code></li>
 <li>Run in the terminal <code>./gradlew setup</code> </li>
 <li>Move the existing modules from <code>Openbravo/modules</code> folder to the <code>EtendoERP/modules</code> folder, except for the following ones:</li>
 </ol>
-<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>org.openbravo.advpaymentmngt
 org.openbravo.apachejdbcconnectionpool 
 org.openbravo.base.weld
@@ -4058,32 +4061,35 @@ org.openbravo.utility.cleanup.log
 org.openbravo.v3
 org.openbravo.v3.datasets
 org.openbravo.v3.framework</p>
-<p class="is-warning">These modules will already be in the <code>EtendoERP/modules_core</code> folder since in Etendo, they are core modules. </p>
-</blockquote>
+<p>These modules will already be in the <code>EtendoERP/modules_core</code> folder since they are core modules in Etendo. </p>
+</div>
 <ol>
 <li>Run <code>./gradlew update.database compile.complete.deploy --info</code>.</li>
 </ol>
-<blockquote>
-<p class="is-info">Compilation errors associated with API changes may occur due to the version change in custom modules. If this happens, make sure to fix them by using the <a href="https://github.com/etendosoftware/etendo_core/issues?q=is%3Aissue+">documented GitHub issues</a>. </p>
-<p class="is-success">Go back to the main migration page to continue with the <a href="https://docs.etendo.software/en/technical-documentation/etendo-environment/setup-and-upgrade/installation/migrating-to-etendo-from-openbravo#post-migration-configuration">Post Migration Configuration</a> process. </p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Compilation errors associated with API changes may occur due to the version change in custom modules. If this happens, make sure to fix them by using the <a href="https://github.com/etendosoftware/etendo_core/issues?q=is%3Aissue+" target="_blank">documented GitHub issues</a>. </p>
+</div>
 <h2 id="post-migration-configuration">Post Migration Configuration</h2>
 <h3 id="remove-previous-instance-deployed-context">Remove previous instance deployed context</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm -r /var/lib/tomcat/webapps/openbravo
 </span></code></pre></div>
-<blockquote>
-<p class="is-warning"><strong>Make sure this step is done before starting Tomcat</strong>, otherwise you risk having two environments running at the same time, which can cause problems (especially when background processes are involved).</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Make sure this step is done before starting Tomcat</strong>, otherwise you will risk having two environments running at the same time, which can cause problems (especially when background processes are involved).</p>
+</div>
 <h3 id="start-tomcat">Start Tomcat</h3>
-<blockquote>
-<p class="is-info">Depending on your server, this command may need to be changed.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Depending on your server, this command may need to be changed.</p>
+</div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo /etc/init.d/tomcat start
 </span></code></pre></div>
 <h3 id="attachments-configuration">Attachments Configuration</h3>
-<blockquote>
-<p class="is-warning">Before removing your previous instance, make sure you migrate your attachment files.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before removing your previous instance, make sure you migrate your attachment files.</p>
+</div>
 <p>In the migration process, the attachments directory configuration is not changed. To move them to a new folder (for example <code>/opt/EtendoERP/attachments</code>), you must edit the <code>Openbravo.properties</code> file and move the attachments manually.<br />
 For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>vi /opt/EtendoERP/config/Openbravo.properties
@@ -4093,15 +4099,17 @@ For example:</p>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>## Deploy changes to tomcat
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>./gradlew smartbuild
 </span></code></pre></div>
-<blockquote>
-<p class="is-info">Special consideration may have to be taken into account if your attachment folder is in a network drive, or a different partition (with or without a symbolic link in place).<br />
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Special consideration may have to be taken into account if your attachment folder is in a network drive, or a different partition (with or without a symbolic link in place).<br />
 <strong>Be careful</strong> when changing the attachment configuration, and make sure you have a recent backup available.</p>
-</blockquote>
+</div>
 <h3 id="customizations-to-core">Customizations to Core</h3>
 <p>Re apply patches to core if necessary, and compile.</p>
-<blockquote>
-<p class="is-info">Compilation tasks now can be made with the Gradle Wrapper.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Compilation tasks now can be made with the Gradle Wrapper.</p>
+</div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>patch -p1 &lt; customPatchToCore.patch
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>## Apply other patches as needed
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>./gradlew smartbuild
@@ -4120,9 +4128,10 @@ For example:</p>
     Replace <code>&lt;META HTTP-EQUIV="Refresh" CONTENT="0; URL=openbravo"&gt;</code> by <code>&lt;META HTTP-EQUIV="Refresh" CONTENT="0; URL=etendo"&gt;</code>  </p>
 </li>
 </ol>
-<blockquote>
-<p class="is-warning">Make sure to replace <code>etendo</code> by the context you chose when executing the migration tool.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to replace <code>etendo</code> by the context you chose when executing the migration tool.</p>
+</div>
 <ol>
 <li>Restart apache:</li>
 </ol>
@@ -4134,9 +4143,10 @@ For example:</p>
 <li>Use Refresh Online</li>
 <li>Enter your instance purpose and your activation key.</li>
 </ol>
-<blockquote>
-<p class="is-success">Your instance is activated!</p>
-</blockquote>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Your instance is activated!</p>
+</div>
 <h3 id="change-backup-and-restore-script">Change backup and restore script</h3>
 <ol>
 <li>Make sure that the backup script now obtains its data from the correct <code>Openbravo.properties</code>, for example in folder <code>/opt/EtendoERP/</code><br />
@@ -4148,10 +4158,14 @@ For example:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>db_login=$(awk -F = &#39;/^bbdd.user/ {print $2}&#39; /opt/EtendoERP/config/Openbravo.properties)
 </span></code></pre></div>
 <p>This will vary depending on the path that has been selected for the migration.</p>
-<blockquote>
-<p class="is-warning">Remember that in the current state <code>Openbravo.properties</code> doesn’t change its name. This shouldn’t be changed until further notice from the development team. Also, you must not change the Openbravo name anywhere else. Do it only in the paths for the properties file.</p>
-<p class="is-info">A dedicated backup tool is in development.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember that in the current state <code>Openbravo.properties</code> does not change its name. This should not be changed until further notice from the development team. Also, you must not change the Openbravo name anywhere else. Do it only in the paths for the properties file.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A dedicated backup tool is in development.</p>
+</div>
 <ol>
 <li>The same should be done for <code>/usr/bin/openbravo-restore</code>. Given that the scripts are highly hardcoded, you have to change some lines manually.</li>
 </ol>
@@ -4185,9 +4199,10 @@ For example:</p>
 <p>for</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>  sudo chown openbravo:openbravo /opt/EtendoERP/
 </span></code></pre></div>
-<blockquote>
-<p class="is-warning">The same warning for the backups applies here. Be careful on what you rename. If you see an error, please ask for support.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The same warning for the backups applies here. Be careful on what you rename. If you see an error, please ask for support.</p>
+</div>
 <h3 id="change-initial-directory-on-login">Change initial directory on login</h3>
 <p>Inside <code>~/.bashrc</code> you may have a command that lets you log in directly to the <code>/opt/OpenbravoERP</code> folder. Change it so it points to your new instance folder:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>## Change
@@ -4213,13 +4228,15 @@ For example:</p>
 </ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>psql -h localhost -U postgres -d etendo -c &quot;DROP DATABASE openbravo;&quot;
 </span></code></pre></div>
-<blockquote>
-<p class="is-warning">Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.</p>
+</div>
 <h2 id="conclusion">Conclusion</h2>
-<blockquote>
-<p class="is-info">With these steps, you should have successfully migrated your Openbravo data to Etendo either on a Linux system or on a Windows system. If you encounter any problems during the process, please reach out to the <a href="https://etendoproject.atlassian.net/servicedesk/customer/portals">Etendo support team</a> for assistance.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>With these steps, you should have successfully migrated your Openbravo data to Etendo either on a Linux system or on a Windows system. If you encounter any problems during the process, please reach out to the <a href="https://etendoproject.atlassian.net/servicedesk/customer/portals" target="_blank">Etendo support team</a> for assistance.</p>
+</div>
 
 
 

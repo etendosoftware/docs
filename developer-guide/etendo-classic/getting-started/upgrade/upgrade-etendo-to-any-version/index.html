@@ -3783,12 +3783,10 @@
 <p class="admonition-title">Warning</p>
 <p>In case of upgrading the Core from Etendo 21Q4.X, you must remove the modules <code>com.smf.securewebservices</code>, <code>com.smf.smartclient.boostedui</code>, <code>com.smf.smartclient.debugtools</code>, as they are distributed in the Core.</p>
 </div>
-<blockquote>
-<p>From Etendo 22Q1, the Nexus credentials should not be required interactively. You must set them in the <code>gradle.properties</code> file, since Gradle resolves and checks dependencies periodically.</p>
-</blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><code>githubUser=USER</code> &gt; <code>githubToken=TOKEN</code></p>
+<p>From Etendo 22Q1, the Nexus credentials should not be required interactively. You must set them in the <code>gradle.properties</code> file, since Gradle resolves and checks dependencies periodically.
+<code>githubUser=USER</code> &gt; <code>githubToken=TOKEN</code></p>
 </div>
 <h3 id="resolving-the-etendo-gradle-plugin">Resolving the Etendo Gradle Plugin</h3>
 <p>From Etendo 22Q1, Etendo uses a standard gradle plugin to execute all the gradle tasks.
@@ -3838,10 +3836,10 @@ To work with the plugin you need to specify in the root project from where the p
 <h3 id="jar-core">JAR Core</h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you upgrade from a source Etendo instance, read <a href="/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration">Core Format Migration</a>, because some directories must be deleted.</p>
+<p>If you upgrade from a source Etendo instance, read <a href="/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/">Core Format Migration</a>, because some directories must be deleted.</p>
 </div>
 <ol>
-<li>Create a backup of your environment, following the <a href="/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/etendo-backup-restore-tool">Etendo Backup and Restore Tool</a>.</li>
+<li>Create a backup of your environment, following the <a href="/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/">Etendo Backup and Restore Tool</a>.</li>
 <li>Verify the target version inside <code>build.gradle</code></li>
 </ol>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
@@ -3870,15 +3868,13 @@ To work with the plugin you need to specify in the root project from where the p
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">   </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;latest.release&quot;</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="o">}</span>
 </span></code></pre></div>
-<blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>You can declare a specific version (e.g. '1.0.0') or an interval of versions:
 [begin, end] - Both versions are included
 (begin, end) - Both versions are not included
-[begin, ) - From a base version to the latest one</p>
-</blockquote>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>And the other possible combinations</p>
+[begin, ) - From a base version to the latest one
+And the other possible combinations.</p>
 </div>
 <p>By default, the plugin will try to resolve the artifact <code>com.etendoerp.platform:etendo-core</code></p>
 <p>If you want to use a different artifact name, you can specify it in the plugin block.

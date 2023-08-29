@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etendo-jars" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -2983,19 +2983,12 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etendo-jars" class="md-nav__link">
-    Etendo JARs
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Etendo JARs">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-new-version-of-etendo-comes-with-a-new-plugin-which-is-focused-on-jars" class="md-nav__link">
-    The new version of Etendo comes with a new plugin which is focused on JARs.
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#etendo-jar-modules" class="md-nav__link">
@@ -3734,19 +3727,12 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etendo-jars" class="md-nav__link">
-    Etendo JARs
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-    <nav class="md-nav" aria-label="Etendo JARs">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-new-version-of-etendo-comes-with-a-new-plugin-which-is-focused-on-jars" class="md-nav__link">
-    The new version of Etendo comes with a new plugin which is focused on JARs.
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#etendo-jar-modules" class="md-nav__link">
@@ -3824,21 +3810,22 @@
 
   <h1>Etendo Jars</h1>
 
-<h2 id="etendo-jars">Etendo JARs</h2>
-<p><br></p>
-<h5 id="the-new-version-of-etendo-comes-with-a-new-plugin-which-is-focused-on-jars">The new version of Etendo comes with a new plugin which is focused on JARs.</h5>
-<p>A <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jarGuide.html">JAR</a> (Java ARchive) is a packaged file format containing compiled classes, metadata information and resources for a Java application in a single file. </p>
-<p>A JAR file provides multiple benefits:
-* Security
-* Portability
-* Compression
-* Packaging
-* Distribution</p>
+<h2 id="overview">Overview</h2>
+<p>The new version of Etendo comes with a new plugin which is focused on JARs.</p>
+<p>A <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jarGuide.html" target="_blank">JAR</a> (Java ARchive) is a packaged file format containing compiled classes, metadata information and resources for a Java application in a single file. </p>
+<p>A JAR file provides multiple benefits:</p>
+<ul>
+<li>Security</li>
+<li>Portability</li>
+<li>Compression</li>
+<li>Packaging</li>
+<li>Distribution</li>
+</ul>
 <p>One common case of JAR uses are libraries.</p>
-<p>With <a href="https://gradle.org/">Gradle</a> you can make use of libraries to incorporate new functionality to your application.</p>
+<p>With <a href="https://gradle.org/" target="_blank">Gradle</a> you can make use of libraries to incorporate new functionality to your application.</p>
 <p>Using the 'implementation' configuration provided by gradle you can define multiple dependencies:</p>
 <p><code>implementation 'groupId:artifactId:version'</code></p>
-<p>For example, to make use of the <a href="https://mvnrepository.com/artifact/javax.mail/mail/1.4.7">Javax email library</a> you need to define the next block of code in the gradle build file.
+<p>For example, to make use of the <a href="https://mvnrepository.com/artifact/javax.mail/mail/1.4.7" target="_blank">Javax email library</a> you need to define the next block of code in the gradle build file.
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// https://mvnrepository.com/artifact/javax.mail/mail</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;javax.mail&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;mail&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;1.4.7&#39;</span>
@@ -3855,17 +3842,15 @@
 <p>This task gives you privileges to publish in the specified repository. It also executes internally the <strong>createModuleBuild</strong> task to generate the <strong>build.gradle</strong> file.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you already have permissions to publish and the <strong>build.gradle</strong> file already exists you dont have to run this task.</p>
+<p>If you already have permissions to publish and the <strong>build.gradle</strong> file already exists you do not have to run this task.</p>
 </div>
 <p>The <strong>build.gradle</strong> is a file that holds all the configuration and information used when the module is published.</p>
-<p>Modules containing a <strong>build.gradle</strong> file are now recognized as Gradle subprojects, creating a <a href="https://docs.gradle.org/current/userguide/multi_project_builds.html">multi-project build</a>.</p>
-<blockquote>
-<p>If you only want to generate the <strong>build.gradle</strong> file you can run
-<code>./gradlew createModuleBuild -Ppkg=&lt;package name&gt; -Prepo=&lt;repository rame&gt;</code></p>
-</blockquote>
+<p>Modules containing a <strong>build.gradle</strong> file are now recognized as Gradle subprojects, creating a <a href="https://docs.gradle.org/current/userguide/multi_project_builds.html" target="_blank">multi-project build</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This command will <strong>overwrite</strong> the build.gradle file if is already present.</p>
+<p>If you only want to generate the <strong>build.gradle</strong> file you can run
+<code>./gradlew createModuleBuild -Ppkg=&lt;package name&gt; -Prepo=&lt;repository rame&gt;</code>
+This command will <strong>overwrite</strong> the build.gradle file if is already present.</p>
 </div>
 <h4 id="publishing">Publishing</h4>
 <p>To publish a new version of a module you need to run</p>
@@ -3877,7 +3862,7 @@
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information refer to the <a href="https://docs/en/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository">publishing guide</a></p>
+<p>For more information refer to the <a href="/docs/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/">How to Publish Modules to a GitHub Repository guide</a></p>
 </div>
 <p><br></p>
 <h4 id="jar-file-structure">JAR File Structure</h4>
@@ -3906,8 +3891,8 @@ Others directories like <strong><em>src-db</em></strong>, <strong><em>src-util</
 <p>All the Etendo development tasks used with the core in sources should still be working with JARs.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>Etendo Core, (<strong>Sources</strong> and <strong>Jar</strong>), allows the user to work with  modules in both formats.</p>
+</div>
 
 
 

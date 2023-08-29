@@ -3969,7 +3969,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>}
 </span></code></pre></div></p>
 <ol>
-<li><strong>GitHub Setup</strong>: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following this <a href="/docs/developers/setup/use-of-repositories-in-etendo">guide</a>.</li>
+<li><strong>GitHub Setup</strong>: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the <a href="/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a>.</li>
 </ol>
 <p><code>gradle.properties</code>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nexusUser=
@@ -3998,15 +3998,15 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 <p>One restriction that GitHub has is that published packages must have a lowercase javapackage, so we had to refactor the translation modules, which previously ended with the suffix "_ES", now all packages including bundle translations have their artifact in lowercase.  </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
 <p>A special consideration are the modules <code>org.openbravo.module.invoiceTaxReportEnhanced30</code> and <code>org.openbravo.module.invoiceTaxReportEnhanced30.en_ES</code> which belong to the Spain Localisation bundle and were refactored as well.</p>
+</div>
 <p>This affects the current environments, to fix this we have to: </p>
 <h4 id="dependencies-in-sources">Dependencies in Sources</h4>
 <ol>
 <li>If the environment has the dependencies as "moduleDeps", in sources, we will have to remove from the <code>/modules</code> folder all the ones ending in "_ES". </li>
 </ol>
 <p>We provide a script to delete all modules that could be resolved from Nexus and then re-download them from GitHub. </p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">## Define the list of modules to be deleted</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nv">modules</span><span class="o">=(</span><span class="s2">&quot;com.etendoerp.accounting.templates&quot;</span>
@@ -4151,8 +4151,10 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </span><span id="__span-3-143"><a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a>
 </span><span id="__span-3-144"><a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Modules deletion has been completed.&quot;</span>
 </span></code></pre></div>
- !!! warning
-        Make sure the modules have no customizations, otherwise local changes will be deleted..</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning<p>Make sure the modules have no customizations, otherwise local changes will be deleted.</p>
+</p>
+</div>
 <p>Copy this code and create a file <code>deleteNexusDependencies.sh</code> in the Etendo root project, run <code>chmod +x deleteNexusDependencies.sh</code> to give execution permissions and then run <code>./deleteNexusDependencies.sh</code> to delete the dependencies. </p>
 <ol>
 <li>Modify the build.gradle of our project and change the dependencies to lowercase. 
@@ -4185,7 +4187,7 @@ This is a good opportunity to migrate. </p>
 <p class="admonition-title">Failure</p>
 <p>Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful and the migration is easy for you.</p>
 </div>
-<p>If you encounter any issues or need additional help, don't hesitate to reach out to our support service through our portal: <a href="http://support.etendo.software">http://support.etendo.software</a> 🚑</p>
+<p>If you encounter any issues or need additional help, do not hesitate to reach out to our support service through our portal: <a href="http://support.etendo.software" target="_blank">http://support.etendo.software</a> 🚑</p>
 
 
 
