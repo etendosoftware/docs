@@ -106,6 +106,6 @@ To install Etendo in a development environment, follow the same steps as describ
     ```
 2. Run smartbuild task
 
-    ``` bash
-    ./gradlew smartbuild --info 
+    ``` bash title="Terminal"
+        ./gradlew smartbuild --info 
     ```

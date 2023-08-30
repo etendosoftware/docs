@@ -54,7 +54,7 @@ The NumberToWord module deploys an infrastructure to define Number to Word conve
 
 To introduce a different language (other than English and Spanish), follow this example to extend this Number to Word extend: 
 
-```plaintext
+```java
 public class NumberToWord_es extends NumberToWord {
   private static String[] _grupos = { "", "millon", "billon", "trillon" };
 

@@ -13,8 +13,7 @@ This guide explains how to upgrade your current Openbravo environment to version
 
 ## How to upgrade to Openbravo 21Q3.2
 
-!!! info
-    - **Requirements**  
+!!! info "Requirements"
     - Git  
     - A diffing/merging tool if patches need to be generated
     
@@ -23,13 +22,13 @@ This guide explains how to upgrade your current Openbravo environment to version
 
 1.  Clone core repository in the new version
 
-```plaintext
+    ``` bash title="Terminal" 
 
-git clone --depth 1 --branch YOURVERSIONTAG git@gitlab.com:openbravo/product/openbravo.git
-```
+    git clone --depth 1 --branch YOURVERSIONTAG git@gitlab.com:openbravo/product/openbravo.git
+    ```
 
-!!! info
-    Replace *YOURVERSIONTAG* tag with your current Openbravo version, e.g.: 3.0PR19Q4
+    !!! info
+        Replace *YOURVERSIONTAG* tag with your current Openbravo version, e.g.: 3.0PR19Q4
 
 2.  Identify patches applied to core in current installation, to be re-applied later:
 
@@ -40,25 +39,25 @@ git clone --depth 1 --branch YOURVERSIONTAG git@gitlab.com:openbravo/product/ope
 
 1.  Clone core repository in the new version:
 
-```plaintext
+    ``` bash title="Terminal" 
 
-git clone --depth 1 --branch 3.0PR21Q3.2 git@gitlab.com:openbravo/product/openbravo.git
-```
+    git clone --depth 1 --branch 3.0PR21Q3.2 git@gitlab.com:openbravo/product/openbravo.git
+    ```
 
 2.  Configure Openbravo.properties and other files to match your current installation.
 3.  Copy all modules from your previous installation to the new environment.
 4.  Apply patches extracted on previous steps (they may need to be adapted to the new version).
 5.  Do a full compilation:
 
-```plaintext
+    ``` bash title="Terminal" 
 
-ant update.database compile.complete.deploy
-```
+    ant update.database compile.complete.deploy
+    ```
 
 6.  Fix problems with custom modules.
 
-!!! warning
-    Check [Openbravo’s Release Notes](http://wiki.openbravo.com/wiki/Release_Notes/3.0PR21Q3.2){target="_blank"} for API changes and other considerations when upgrading.
+    !!! warning
+        Check [Openbravo’s Release Notes](http://wiki.openbravo.com/wiki/Release_Notes/3.0PR21Q3.2){target="_blank"} for API changes and other considerations when upgrading.
 
 7.  Start server.
 8.  Test for functional or runtime errors and fix them.

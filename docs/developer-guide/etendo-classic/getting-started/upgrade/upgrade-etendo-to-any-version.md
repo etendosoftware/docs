@@ -25,127 +25,125 @@ To work with the plugin you need to specify in the root project from where the p
 
 1. Update the `settings.gradle` file with the next content.
 
-`settings.gradle`
-
-```groovy
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-        maven {
-            url 'https://maven.pkg.github.com/etendosoftware/com.etendoerp.gradleplugin'
-            credentials {
-                username "${githubUser}"
-                password "${githubToken}"
+    ```groovy title="settings.gradle"
+    pluginManagement {
+        repositories {
+            mavenCentral()
+            gradlePluginPortal()
+            maven {
+                url 'https://maven.pkg.github.com/etendosoftware/com.etendoerp.gradleplugin'
+                credentials {
+                    username "${githubUser}"
+                    password "${githubToken}"
+                }
+            }
+            maven {
+                url 'https://repo.futit.cloud/repository/maven-public-snapshots'
             }
         }
-        maven {
-            url 'https://repo.futit.cloud/repository/maven-public-snapshots'
+    }
+
+    // Add modules subprojects
+    new File("${this.rootDir}/modules").listFiles().each {
+        if (it.directory && new File(it, 'build.gradle').exists()) {
+            include(":modules:${it.name}")
         }
     }
-}
 
-// Add modules subprojects
-new File("${this.rootDir}/modules").listFiles().each {
-    if (it.directory && new File(it, 'build.gradle').exists()) {
-        include(":modules:${it.name}")
-    }
-}
-
-rootProject.name = "etendo"
-```
+    rootProject.name = "etendo"
+    ```
 
 2. Add in the `build.gradle` file the Etendo Gradle Plugin
 
-```groovy
-plugins {
-    id 'com.etendoerp.gradleplugin' version 'latest.release'
-}
-```
+    ```groovy title="build.gradle"
+    plugins {
+        id 'com.etendoerp.gradleplugin' version 'latest.release'
+    }
+    ```
 
-3.  **Delete** if exist the old plugin removing the "apply from" line:
+3.  Delete if the old plugin exists removing the "apply from" line:
 
-```
+``` bash title="Terminal"
 apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle'
 
 ```
 
-### JAR Core
+=== "JAR Core"
 
-!!! warning
-    If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/), because some directories must be deleted.
+    !!! warning
+        If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/), because some directories must be deleted.
 
-1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/).
-2. Verify the target version inside `build.gradle`
+    1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/).
+    2. Verify the target version inside `build.gradle`
 
-```groovy
-dependencies {
-  implementation('com.etendoerp.platform:etendo-core:<version>')
-}
-```
+        ```groovy title="build.gradle"
+        dependencies {
+        implementation('com.etendoerp.platform:etendo-core:<version>')
+        }
+        ```
 
-3. Compile your environment:
+    3. Compile your environment:
 
-```plaintext
+        ``` bash title="Terminal"
+        ./gradlew update.database compile.complete smartbuild
+        ```
 
-./gradlew update.database compile.complete smartbuild
-```
+    4.  Verify any compilation errors that may arise due to incompatible customization or modifications.
 
-5.  Verify any compilation errors that may arise due to incompatible customization or modifications.
+        !!! success
+            Your Etendo environment is now updated!
 
-!!! success
-    Your Etendo environment is now updated!
+=== "Source Core"
 
-### Source Core
+    1.  Verify the target version inside `build.gradle`
 
-1.  Verify the target version inside `build.gradle`
+        ```groovy title="build.gradle"
 
-```groovy
+        // latest.release will download the most recent stable version
+        // Any other Gradle/Maven version sintax works, for example : [22.1.0,)
+        etendo {
+        coreVersion = "latest.release"
+        }
+        ```
 
-// latest.release will download the most recent stable version
-// Any other Gradle/Maven version sintax works, for example : [22.1.0,)
-etendo {
-   coreVersion = "latest.release"
-}
-```
+        !!! info
+            You can declare a specific version (e.g. '1.0.0') or an interval of versions:<br>
+                    - [begin, end] - Both versions are included<br>
+                    - (begin, end) - Both versions are not included<br>
+                    - [begin, ) - From a base version to the latest one<br>
+            And the other possible combinations.
 
-!!! info
-    You can declare a specific version (e.g. '1.0.0') or an interval of versions:
-    \[begin, end\] - Both versions are included
-    (begin, end) - Both versions are not included
-    \[begin, ) - From a base version to the latest one
-    And the other possible combinations.
 
-By default, the plugin will try to resolve the artifact `com.etendoerp.platform:etendo-core`
+        By default, the plugin will try to resolve the artifact `com.etendoerp.platform:etendo-core`
 
-If you want to use a different artifact name, you can specify it in the plugin block.
-For example `com.smf.classic.core:ob:21.4.1`
+        If you want to use a different artifact name, you can specify it in the plugin block.
+        For example `com.smf.classic.core:ob:21.4.1`
 
-```groovy
-etendo {
-  coreGroup = "com.smf.classic.core"
-	coreName = "ob"
-  coreVersion = "21.4.1"
-	supportJars = false
-}
-```
+        ```groovy title="com.smf.classic.core:ob:21.4.1"
+        etendo {
+        coreGroup = "com.smf.classic.core"
+            coreName = "ob"
+        coreVersion = "21.4.1"
+            supportJars = false
+        }
+        ```
 
-2.  Create a backup of your environment.
-3.  Run the following command to update the core:
+    2.  Create a backup of your environment.
+    3.  Run the following command to update the core:
 
-```plaintext
+        ``` bash title="Terminal"
 
-./gradlew expandCore
-```
+        ./gradlew expandCore
+        ```
 
-4.  Compile your environment:
+    4.  Compile your environment:
 
-```plaintext
+        ``` bash title="Terminal"
 
-./gradlew update.database compile.complete smartbuild
-```
+        ./gradlew update.database compile.complete smartbuild
+        ```
 
-5.  Verify any compilation errors that may arise due to incompatible customization or modifications.
+    5.  Verify any compilation errors that may arise due to incompatible customization or modifications.
 
-!!! success
-    Your Etendo environment is now updated!
+    !!! success
+        Your Etendo environment is now updated!

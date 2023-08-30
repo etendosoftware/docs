@@ -77,6 +77,4 @@ On the other hand, this is the content of FULL\_Example.csv:
 ![](/docs/assets/drive/BAPACrYCcoprIrjoMndmxL7d7u1GFOS32ZZMCBXS3S6DsRdZpDRPgRblzPKMTlM2b1QTFLf2mgy7w4LaI_bFnNc9-AwGsl78PIlqpD4o0YkTsXO-qp6h9fFR392DYJRqvZfvefs-hLLbGE04vvU8OoU.png)
 
 !!! warning
-    Make sure to have the corresponding permissions to connect to Filews, since an incorrect configuration can lead to an error.
-
-
+    Make sure to have the corresponding permissions to connect to Files, since an incorrect configuration can lead to an error.

@@ -21,11 +21,17 @@ This section provides a step by step explanation on how to Install modules from 
         A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.  
         
     === "**JAR Format**"  
-        To work with JAR modules, you need to resolve the dependencies running  
+        To work with JAR modules, you need to resolve the dependencies running
+
+        ``` bash title="Terminal"  
         `./gradlew dependencies`
+        ```
 
     !!! info
         Remember to configure the credentials in `gradle.properties` file
 
-8. Finally, install or update the database with the new modules `./gradlew smartbuild -Dlocal=no`
+8. Finally, install or update the database with the new modules 
+    ``` bash title="Terminal" 
+    `./gradlew smartbuild -Dlocal=no`
+    ```
 9. Verify that the module is installed correctly by checking that its functions or features are available in the application or platform where you want to use it.

@@ -194,7 +194,7 @@ But if you want to update a translation module version you can execute:
 
 Another option to force the installation of all the translation modules is to add the `forceRefData=true` property in the `Openbravo.properties` file and then run:
 
-```plaintext
+```bash title="Terminal"
 
 ./gradlew smartbuild -Dlocal=no
 ```
