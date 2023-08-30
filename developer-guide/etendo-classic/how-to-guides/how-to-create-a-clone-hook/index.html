@@ -3144,6 +3144,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#baseobobject-copybaseobobject-bob-boolean-copychildren" class="md-nav__link">
+    BaseOBObject copy(BaseOBObject bob, boolean copyChildren)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#boolean-shouldresetid" class="md-nav__link">
     boolean shouldResetId()
   </a>
@@ -3785,6 +3792,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#baseobobject-copybaseobobject-bob-boolean-copychildren" class="md-nav__link">
+    BaseOBObject copy(BaseOBObject bob, boolean copyChildren)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#boolean-shouldresetid" class="md-nav__link">
     boolean shouldResetId()
   </a>
@@ -3831,49 +3845,67 @@
 <p><a class="glightbox" href="/docs/assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png" /></a></p>
 <h2 id="how-to-create-a-clone-hook">How to create a Clone Hook?</h2>
 <p>To create a Clone Hook, you only have to follow a few steps:</p>
-<ul>
+<ol>
 <li>Create a Java Class of type CloneRecordHook</li>
 <li>Use the @Qualifier annotation to define which entity this class will clone</li>
 <li>Override the required methods and implement their logic according to your needs</li>
-<li>Enable the clone button inside the tab associated with the Entity used in the hook</li>
-</ul>
-<p>ExampleCloningHook.java</p>
-<p>```@ApplicationScoped</p>
-<p>@Qualifier(Invoice.ENTITY_NAME)</p>
-<p>public class ExampleCloningHook extends CloneRecordHook {</p>
-<p>@Override
-  public boolean shouldCopyChildren(boolean uiCopyChildren) {
-    //Implementation
-  }</p>
-<p>@Override
-  public BaseOBObject preCopy(BaseOBObject originalRecord) {
-    //Implementation
-  }</p>
-<p>@Override
-  public BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord) {
-    //Implementation
-  }
-}</p>
-<p>```</p>
+<li>Enable the clone button inside the tab associated with the Entity used in the hook ExampleCloningHook.java</li>
+</ol>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@ApplicationScoped</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nd">@Qualifier</span><span class="p">(</span><span class="n">Invoice</span><span class="p">.</span><span class="na">ENTITY_NAME</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleCloningHook</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">CloneRecordHook</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">shouldCopyChildren</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">uiCopyChildren</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">//Implementation</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">BaseOBObject</span><span class="w"> </span><span class="nf">preCopy</span><span class="p">(</span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">originalRecord</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">//Implementation</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">BaseOBObject</span><span class="w"> </span><span class="nf">postCopy</span><span class="p">(</span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">originalRecord</span><span class="p">,</span><span class="w"> </span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">newRecord</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="c1">//Implementation</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="clone-hook-api">Clone Hook API</h2>
 <p>To create a Clone Hook, you only have to follow a few steps:</p>
+<ol>
+<li>
 <h3 id="boolean-shouldcopychildrenboolean-uicopychildren"><code>boolean shouldCopyChildren(boolean uiCopyChildren)</code></h3>
 <p>This method will return a boolean indicating if the Hook will use the DalUtil.copy() to copy the children entities.
 For example, cloning an Invoice and its children will mean that Lines, Taxes, etc. are also cloned into the new document.</p>
+</li>
+<li>
 <h3 id="baseobobject-precopybaseobobject-originalrecord"><code>BaseOBObject preCopy(BaseOBObject originalRecord)</code></h3>
 <p>This method must return the original object, which is the parameter received.
 Here you can make special validations or extra logic involving the original record, before it is cloned.</p>
+</li>
+<li>
 <h3 id="baseobobject-postcopybaseobobject-originalrecord-baseobobject-newrecord"><code>BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord)</code></h3>
 <p>Here you have access to the newly created record, a result of the DalUtil.copy().
 This method is where you should implement special logic after the record is cloned.
 For example, if the method shouldCopyChildren returns false, then here you would copy the children with all special considerations needed.</p>
-<p>### <code>BaseOBObject copy(BaseOBObject bob, boolean copyChildren)</code></p>
+</li>
+<li>
+<h3 id="baseobobject-copybaseobobject-bob-boolean-copychildren"><code>BaseOBObject copy(BaseOBObject bob, boolean copyChildren)</code></h3>
 <p>Optional: Only override this method when the existing functionality is not enough, here you must implement the cloning functionality manually and call postCopy()on your own.</p>
+</li>
+<li>
 <h3 id="boolean-shouldresetid"><code>boolean shouldResetId()</code></h3>
 <p>Override this method when you don’t want the DalUtil.copy()to reset the copied objects IDs. Refer to the DalUtil.copy() documentation for more information. This method returns true by default.</p>
+</li>
+<li>
 <h3 id="int-getpriority"><code>int getPriority()</code></h3>
 <p>Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
-The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default</p>
+The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.</p>
+</li>
+</ol>
 
 
 

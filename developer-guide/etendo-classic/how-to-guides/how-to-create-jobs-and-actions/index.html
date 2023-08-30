@@ -3757,10 +3757,10 @@
   <h1>How to Create Jobs and Actions</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Etendo introduces the concept of Jobs which is about one or more Actions executed in sequence. These Actions are standard processes which will enable the user to create and store Jobs for later usage. Jira Automations and iOS Shortcuts are similar concepts.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Note: The GUI to create and execute jobs is coming soon to a newer version of Etendo. At present, it is only possible to define Actions which will act as standard processes available in the existing UI nevertheless, they will also support the newer UI when released.</p>
+<p>Etendo introduces the concept of Jobs which is about one or more Actions executed in sequence. These Actions are standard processes which enable the user to create and store Jobs for later usage. Jira Automations and iOS Shortcuts are similar concepts.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The GUI to create and execute jobs is coming soon to a newer version of Etendo. At present, it is only possible to define Actions which act as standard processes available in the existing UI nevertheless, they will also support the newer UI when released.</p>
 </div>
 <h2 id="create-an-action">Create an Action</h2>
 <div class="admonition info">
@@ -3768,13 +3768,15 @@
 <p>Actions are based on the existing Standard Process architecture.</p>
 </div>
 <ol>
-<li>Create a new record in the Process Definition window:</li>
-</ol>
+<li>
+<p>Create a new record in the Process Definition window:</p>
 <p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/createjobs1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="createjobs1.png" src="/docs/assets/legacy/technicaldocumentation/platform/createjobs1.png" /></a></p>
-<ol>
-<li>Define UI Pattern as <strong>Action</strong>. The process has to be marked as <strong>multi record</strong>. All actions must support multi record input. The rest of the definitions are analogous to any Standard Process. Parameters, onLoad functions, etc. are supported.</li>
+</li>
+<li>
+<p>Define UI Pattern as Action. The process has to be marked as multi record. All actions must support multi record input. The rest of the definitions are analogous to any Standard Process. Parameters, onLoad functions, etc. are supported.</p>
+</li>
 <li>Create a column and a field to run the Action from a button in the current UI, or a menu entry to run the process from the menu.</li>
-<li>The Java class associated with the new Action must extend the <strong>Action</strong> type (<code>com.smf.jobs.Action</code>).</li>
+<li>The Java class associated with the new Action must extend the Action type (<code>com.smf.jobs.Action</code>).</li>
 </ol>
 <p>Your IDE of choice should prompt you to fill the required methods:</p>
 <ul>

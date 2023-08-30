@@ -3804,17 +3804,16 @@
 <p>A published module can be declared as a Gradle dependency, which makes installing or updating modules easier.</p>
 <p>Using dependencies alongside with Gradle in an Etendo environment can remove the need to transfer the modules from a local machine to the server using FTP, SSH etc. The module is hosted as a package in the repository and  Gradle is in charge of downloading the correct version, and its dependencies.</p>
 <p>Partners will have access to Etendo’s public and commercial repositories to download standard modules, in addition to this, it is possible to use their own repositories where they can privately store their modules for internal or commercial usage.</p>
-<blockquote>
-<p><strong>Requirements</strong>
--GitHub user and token, with access to read and write packages.</p>
-</blockquote>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>-A module to be distributed.</p>
+<p class="admonition-title">Requirements</p>
+<ul>
+<li>GitHub user and token, with access to read and write packages.</li>
+<li>A module to be distributed.</li>
+</ul>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>It is recommended to use <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a> to manage work flow, versions and tags.</p>
+<p>It is recommended to use <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">GitFlow</a> to manage work flow, versions and tags.</p>
 </div>
 <h2 id="deployment">Deployment</h2>
 <div class="admonition info">
@@ -3823,29 +3822,28 @@
 </div>
 <h4 id="1-create-buildgradle-file">1.  Create build.gradle file:</h4>
 <p>To generate the <code>build.gradle</code> with all the necessary information to publish, execute the following task:</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span><span class="sb">`</span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>-Prepo<span class="o">=</span>&lt;repositoryURL&gt;<span class="w"> </span>--info
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span><span class="sb">`</span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>-Prepo<span class="o">=</span>&lt;repositoryURL&gt;<span class="w"> </span>--info
 </span></code></pre></div>
-E.g.:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span>-Ppkg<span class="o">=</span>com.myrepo.test<span class="w"> </span>-Prepo<span class="o">=</span>https://maven.pkg.github.com/myrepo/com.myrepo.test<span class="w"> </span>--info
+Example:
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span>-Ppkg<span class="o">=</span>com.myrepo.test<span class="w"> </span>-Prepo<span class="o">=</span>https://maven.pkg.github.com/myrepo/com.myrepo.test<span class="w"> </span>--info
 </span></code></pre></div></p>
-<blockquote>
-<p><strong>Important:</strong></p>
-<p>-If the module depends on others modules or libraries, they need to be specified in the <strong>build.gradle</strong> file using the <strong>implementation</strong> configuration.
-Before adding an Etendo module dependency, they have to be published in Nexus.
--You need to make sure those dependencies are also published.
--Add the dependencies manually in build.gradle file.</p>
-</blockquote>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>-Add Core dependency to define the range of versions the module is compatible with.</p>
+<p class="admonition-title">Important<ul>
+<li>If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
+Before adding an Etendo module dependency, they have to be published in Nexus.</li>
+<li>You need to make sure those dependencies are also published.</li>
+<li>Add the dependencies manually in build.gradle file.</li>
+<li>Add Core dependency to define the range of versions the module is compatible with.</li>
+</ul>
+</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To make use of the dependencies <strong>resolution</strong> approach, you should declare in the modules dependencies which version of the core your module depends on.
+<p>To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
 If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.</p>
 </div>
-<p>Modules Dependencies example: <code>build.gradle</code></p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
+<p>Modules Dependencies example:</p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm">*   This file was generated automatically by the &#39;createModuleBuild&#39; task.</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm">*   Created at: 2022-12-16T15:41:21.426339Z.</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm">*</span>
@@ -3897,7 +3895,7 @@ If the Etendo Core dependency is omitted, the module can be installed on any ver
 </span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="o">}</span>
 </span></code></pre></div>
 <h4 id="2-in-case-of-adding-dependencies-of-a-new-repository-declare-it-in-buildgradle">2.  In case of adding dependencies of a new repository, declare it in <code>build.gradle</code></h4>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo/com.myrepo.test&quot;</span>
@@ -3934,13 +3932,13 @@ If the Etendo Core dependency is omitted, the module can be installed on any ver
 <p class="admonition-title">Info</p>
 <p>Before publishing a module, it will be compiled and packaged to a JAR format.</p>
 </div>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew update.database smartbuild
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew publishVersion -Ppkg=&lt;javapackage&gt;
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>publishVersion<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;
 </span></code></pre></div></p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>Once Gradle finishes the deployment, your module will be ready to be used as a dependency.</p>
+<p>Once Gradle finishes the deployment, your module is ready to be used as a dependency.</p>
 </div>
 
 
