@@ -5,19 +5,19 @@ title: Financial Management Setup
 
 This section describes the windows that are necessary to configure the financial management transactions as regards receivables and payables in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Tax Register Type](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#tax-register-type){ .md-button } <br>
+[:material-file-document-outline: Tax Register Type](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#tax-register-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#payment-method){ .md-button } <br>
+[:material-file-document-outline: Payment Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#payment-method){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matching Algorithm](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#matching-algorithm){ .md-button } <br>
+[:material-file-document-outline: Matching Algorithm](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#matching-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Bank File Format](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#bank-file-format){ .md-button } <br>
+[:material-file-document-outline: Bank File Format](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#bank-file-format){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Execution Process](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#execution-process){ .md-button } <br>
+[:material-file-document-outline: Execution Process](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#execution-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Remittance Type](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type){ .md-button } <br>
+[:material-file-document-outline: Remittance Type](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Doubtful Debt Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#doubtful-debt-method){ .md-button } <br>
+[:material-file-document-outline: Doubtful Debt Method](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#doubtful-debt-method){ .md-button .md-button--primary } <br>
 
 
 ## **Tax Register Type**

@@ -5,45 +5,45 @@ title: Set Up - Accounting
 
 This section describes the windows that are necessary to configure the accounting functionalities of Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button } <br>
+[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Open/Close Period Control](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control){ .md-button } <br>
+[:material-file-document-outline: Open/Close Period Control](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Financial Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#financial-type){ .md-button } <br>
+[:material-file-document-outline: Financial Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#financial-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Period Control Log](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#period-control-log){ .md-button } <br>
+[:material-file-document-outline: Period Control Log](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#period-control-log){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Tree](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-tree){ .md-button } <br>
+[:material-file-document-outline: Account Tree](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-tree){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#glconfig){ .md-button } <br>
+[:material-file-document-outline: General Ledger Configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#glconfig){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Fiscal Calendar](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#fiscal-calendar){ .md-button } <br>
+[:material-file-document-outline: Fiscal Calendar](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#fiscal-calendar){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Combination](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-combination){ .md-button } <br>
+[:material-file-document-outline: Account Combination](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-combination){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Process](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-process){ .md-button } <br>
+[:material-file-document-outline: Accounting Process](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Item](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-item){ .md-button } <br>
+[:material-file-document-outline: G/L Item](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-item){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-category){ .md-button } <br>
+[:material-file-document-outline: G/L Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#gl-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type){ .md-button } <br>
+[:material-file-document-outline: Document Type](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Sequence](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-sequence){ .md-button } <br>
+[:material-file-document-outline: Document Sequence](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-sequence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category){ .md-button } <br>
+[:material-file-document-outline: Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Business Partner Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category){ .md-button } <br>
+[:material-file-document-outline: Business Partner Tax Category](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Rate](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-rate){ .md-button } <br>
+[:material-file-document-outline: Tax Rate](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-rate){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Cost Center](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#cost-center){ .md-button } <br>
+[:material-file-document-outline: Cost Center](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: ABC Activity](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#abc-activity){ .md-button } <br>
+[:material-file-document-outline: ABC Activity](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#abc-activity){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Templates](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-templates){ .md-button } <br>
+[:material-file-document-outline: Accounting Templates](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#accounting-templates){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup){ .md-button } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
 
 
 ## **Open/Close Period Control**

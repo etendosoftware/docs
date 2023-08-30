@@ -6,19 +6,19 @@ title: Sales Reports
 
 This section describes the windows related to sales reports in Etendo. These are:
 
-[:material-file-document-outline: Sales Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#sales-dimensional-report){ .md-button } <br>
+[:material-file-document-outline: Sales Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#sales-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipments Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#shipments-dimensional-report){ .md-button } <br>
+[:material-file-document-outline: Shipments Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#shipments-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Discount Invoice Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#discount-invoice-report){ .md-button } <br>
+[:material-file-document-outline: Discount Invoice Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#discount-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock for Open Orders](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#stock-for-open-orders){ .md-button } <br>
+[:material-file-document-outline: Stock for Open Orders](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#stock-for-open-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Invoice Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#orders-awaiting-invoice-report){ .md-button } <br>
+[:material-file-document-outline: Orders Awaiting Invoice Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#orders-awaiting-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Delivery Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#orders-awaiting-delivery-report){ .md-button } <br>
+[:material-file-document-outline: Orders Awaiting Delivery Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#orders-awaiting-delivery-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Sales Invoice Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#sales-invoice-dimensional-report){ .md-button } <br>
+[:material-file-document-outline: Sales Invoice Dimensional Report](/docs/products/etendo-classic/user-guide/sales-management/analysis-tools#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
 
 ## Sales Dimensional Report

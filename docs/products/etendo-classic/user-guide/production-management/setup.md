@@ -6,31 +6,31 @@ title: Production Management Setup
 
 This section describes the screens that are necessary to set up the components used in the production process in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Section](/docs/products/etendo-classic/user-guide/production-management/setup/#section){ .md-button } <br>
+[:material-file-document-outline: Section](/docs/products/etendo-classic/user-guide/production-management/setup/#section){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Center](/docs/products/etendo-classic/user-guide/production-management/setup/#work-center){ .md-button } <br>
+[:material-file-document-outline: Work Center](/docs/products/etendo-classic/user-guide/production-management/setup/#work-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Process Plan](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan){ .md-button } <br>
+[:material-file-document-outline: Process Plan](/docs/products/etendo-classic/user-guide/production-management/setup/#process-plan){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Activity](/docs/products/etendo-classic/user-guide/production-management/setup/#activity_1){ .md-button } <br>
+[:material-file-document-outline: Activity](/docs/products/etendo-classic/user-guide/production-management/setup/#activity_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Toolset](/docs/products/etendo-classic/user-guide/production-management/setup/#toolset_2){ .md-button } <br>
+[:material-file-document-outline: Toolset](/docs/products/etendo-classic/user-guide/production-management/setup/#toolset_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine Category](/docs/products/etendo-classic/user-guide/production-management/setup/#machine-category){ .md-button } <br>
+[:material-file-document-outline: Machine Category](/docs/products/etendo-classic/user-guide/production-management/setup/#machine-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine](/docs/products/etendo-classic/user-guide/production-management/setup/#machine_1){ .md-button } <br>
+[:material-file-document-outline: Machine](/docs/products/etendo-classic/user-guide/production-management/setup/#machine_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Manufacturing Cost Center](/docs/products/etendo-classic/user-guide/production-management/setup/#manufacturing-cost-center){ .md-button } <br>
+[:material-file-document-outline: Manufacturing Cost Center](/docs/products/etendo-classic/user-guide/production-management/setup/#manufacturing-cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2){ .md-button } <br>
+[:material-file-document-outline: Indirect Cost](/docs/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Periodic Quality Control](/docs/products/etendo-classic/user-guide/production-management/setup/#periodic-quality-control){ .md-button } <br>
+[:material-file-document-outline: Periodic Quality Control](/docs/products/etendo-classic/user-guide/production-management/setup/#periodic-quality-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Quality Control Point](/docs/products/etendo-classic/user-guide/production-management/setup/#quality-control-point){ .md-button } <br>
+[:material-file-document-outline: Quality Control Point](/docs/products/etendo-classic/user-guide/production-management/setup/#quality-control-point){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Incidence](/docs/products/etendo-classic/user-guide/production-management/setup/#work-incidence){ .md-button } <br>
+[:material-file-document-outline: Work Incidence](/docs/products/etendo-classic/user-guide/production-management/setup/#work-incidence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Maintenance Task](/docs/products/etendo-classic/user-guide/production-management/setup/#maintenance-task){ .md-button } <br>
+[:material-file-document-outline: Maintenance Task](/docs/products/etendo-classic/user-guide/production-management/setup/#maintenance-task){ .md-button .md-button--primary } <br>
 
 
 ## Section

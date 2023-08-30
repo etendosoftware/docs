@@ -5,23 +5,23 @@ title: Warehouse Management Setup
 
 This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:
 
-[:material-file-document-outline:Process Price Difference Adjustment](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#process-price-difference-adjustment){ .md-button } <br>
+[:material-file-document-outline:Process Price Difference Adjustment](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse and Storage Bins](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button } <br>
+[:material-file-document-outline: Warehouse and Storage Bins](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipping Company](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#shipping-company){ .md-button } <br>
+[:material-file-document-outline: Shipping Company](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#shipping-company){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Freight Category](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#freight-category){ .md-button } <br>
+[:material-file-document-outline: Freight Category](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#freight-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-rules){ .md-button } <br>
+[:material-file-document-outline: Costing Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Algorithm](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-algorithm){ .md-button } <br>
+[:material-file-document-outline: Costing Algorithm](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Landed Cost Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#landed-cost-type){ .md-button } <br>
+[:material-file-document-outline: Landed Cost Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#landed-cost-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-rules){ .md-button } <br>
+[:material-file-document-outline: Warehouse Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Referenced Inventory Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button } <br>
+[:material-file-document-outline:Referenced Inventory Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
 
 ## Process Price Difference Adjustment

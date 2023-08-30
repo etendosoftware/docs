@@ -5,27 +5,27 @@ title: Reports - Accounting
 
 This section describes the windows related to accounting financial reports in Etendo. These are:
 
-[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button } <br>
+[:material-file-document-outline: Accounting Transaction Details](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Trial Balance](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#trial-balance){ .md-button } <br>
+[:material-file-document-outline: Trial Balance](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#trial-balance){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button } <br>
+[:material-file-document-outline: General Ledger Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button } <br>
+[:material-file-document-outline: General Ledger Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button } <br>
+[:material-file-document-outline: Journal Entries Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button } <br>
+[:material-file-document-outline: Journal Entries Report Advanced](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Tax Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button } <br>
+[:material-file-document-outline: Create Tax Report](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Customer Statement](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#customer-statement){ .md-button } <br>
+[:material-file-document-outline: Customer Statement](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#customer-statement){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Report Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button } <br>
+[:material-file-document-outline: Tax Report Setup](/docs/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button .md-button--primary } <br>
 
 
 
