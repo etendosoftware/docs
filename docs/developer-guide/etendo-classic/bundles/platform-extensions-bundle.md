@@ -202,3 +202,76 @@ Then `./gradlew setup` must be executed.
 !!! warning
     It is mandatory to execute this step before installing the module. 
 
+
+## EAN 128
+
+### Overview
+
+It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
+
+Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. Below is an overview of what each file appears to do:
+
+### SelectorFieldPropertyDataSource.java
+
+**Purpose**: Implements a data source for a custom field selector.
+**Main Operations**:Verifies whether a user has the access right to fetch data from the datasource.
+Filters out Blob and OneToMany properties when getting entity properties.
+
+### EAN128Utils.java
+
+**Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
+
+**Main Operations**:Defines standard date formats and JSON keys.
+Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
+If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
+Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
+
+### EANType.java
+
+**Purpose**: Web Service to manage EAN-128 Types.
+
+**Main Operations**:Handles HTTP GET requests and retrieves EAN-128 type information.
+The information fetched depends on the warehouse specified in the request parameters.
+If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
+Converts EAN-128 type to a JSON object and returns it as a response.
+
+**Key Libraries used**:
+- Etendo DAL for database interaction.
+- Apache Commons Lang for String manipulations.
+- JSON and Jettison for JSON parsing.
+
+### SMFEANComponentProvider.java
+
+**Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
+
+## Mobile Scan
+
+### Overview
+
+This module is responsible for allowing the [Etendo Mobile](https://etendosoftware.github.io/docs/products/etendo-mobile/getting-started/) application to use the camera to scan codes, either barcodes or QR codes.
+This allows the Inventory Scan process to be used in the physical inventory window of Etendo mobile. This process is responsible for scanning a barcode and receiving the scanned product data.
+
+#### **Methods and key features:**
+
+ **doExecute(Map<String, Object> parameters, String content):** this is the main method called to execute the scanning process. It receives a set of parameters and content in JSON format.
+
+- Loads an instance of an InventoryCount based on an ID.
+- Processes a JSON containing groups of items in different storage locations.
+- For each group and each item, creates or updates a line in the InventoryCount using the createOrUpdateLine method.
+
+ **createOrUpdateLine(...):** Creates or updates a line in the InventoryCount.
+
+- It searches for a product according to the barcode and other data.
+- If the product is not found, it adds the barcode to a list of not found codes.
+- If the product is found, it creates or updates an inventory line with the specified quantity.
+- It also creates a scan history.
+
+ **getAttributeSetInstance(...):** Gets an instance of the attribute set for a product.
+
+ **getStorageBin(...):** Gets a Locator (location in the warehouse) based on a barcode.
+
+ **findProduct(...):** Finds a product based on its ID or barcode.
+
+ **findLine(...):** Finds an existing inventory line for a product in an InventoryCount.
+
+ **getMaxLineNumber(...)**: Gets the maximum line number for an InventoryCount.

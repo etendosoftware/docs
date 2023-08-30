@@ -23,6 +23,7 @@ This section describes the steps that need to be performed to configure the ware
 
 [:material-file-document-outline:Referenced Inventory Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button } <br>
 
+[:material-file-document-outline:EAN 128 Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#ean-128-type){ .md-button } <br>
 
 ## Process Price Difference Adjustment
 
@@ -324,3 +325,32 @@ This section defines different types of containers or boxes, which include any k
 -   **Active** : A flag indicating whether this record is available for use or deactivated.
 -   **Referenced Inventory Type**
 -   **Client** : Client for this installation.
+
+## EAN 128 Type
+
+In this window you can add different types of barcodes. 
+
+**EAN 128 Type** header fields
+
+-   **Module** : Module to export the data.
+-   **Organization** : Organizational entity within client.
+-   **Name** : A non-unique identifier for a record/document often used as a search tool.
+-   **Description** : A description describing the usefulness of this new type is placed here.
+-   **Default** : When selected, this EAN 128 Type will appears by default.
+-   **Active** : A flag indicating whether this record is available for use or deactivated.
+
+**EAN 128 Type** lines
+
+-   **Module** : Module to export the data.
+-   **Organization** : Organizational entity within client.
+-   **Active** : A flag indicating whether this record is available for use or deactivated.
+-   **Content** : Name of the line content.
+-   **Al** : Aplication identifier.
+-   **Content Length** : Longitude of the ean type content.
+-   **Data Type** : Type of the EAN 128 type data.
+-   **Fixed Length** : This check set if round the longitude or not.
+-   **Lot** : A group of identical or similar items organized and placed into inventory under one number.
+-   **Serial No.** : A unique number of a product.
+-   **Expiration Date** : The date than a product expires.
+-   **Sequence Number** : The order of records in a specified document. The Sequence indicates the order of records.
+-   **Entity Field** : Property of the entity that the value is obteined. Refears the HQL field name of the entity.

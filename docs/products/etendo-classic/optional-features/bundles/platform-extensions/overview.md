@@ -52,6 +52,22 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 !!! info
         For more information, visit the [Dynamic App user guide](/docs/products/etendo-classic/user-guide/general-setup/application/#dynamic-app)
         
+### EAN 128
+
+EAN 128 allows to use bar code in your application
+
+!!! info
+        For more information, visit the [EAN 128 user guide](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#ean-128-type) and read the [EAN 128 developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
+
+
+### Mobile Scan
+
+Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/products/etendo-mobile/getting-started/) App
+
+!!! info
+        For more information, visit the [Mobile Scan developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#mobile-scan).
+
+
 ## Translations
 
 - ### Spanish: [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
