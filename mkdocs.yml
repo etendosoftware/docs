@@ -238,11 +238,12 @@ nav:
         - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
-      - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - Tutorial:   
+        - Getting Started:
+          - Installation: developer-guide/etendo-rx/tutorials/installation.md 
+        - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-      - Tutorial:   
-        - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Getting Started: developer-guide/etendo-copilot/getting-started.md 

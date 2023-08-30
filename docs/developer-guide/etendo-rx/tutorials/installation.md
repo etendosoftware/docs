@@ -63,26 +63,49 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 
 For this tutorial, we'll create a new database named `etendo` on a PostgreSQL server accessible at port `5432`. If you prefer different settings, modify the values in the `gradle.properties` files accordingly.
 
+## Configuring build.gradle
+
+On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+```gradle
+etendo {
+    ignoreCoreJarDependency = true
+}
+```
+
+This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+Now we need to execute the command that will download the source code:
+
+```bash
+./gradlew expandCore 
+```
+
+!!!info
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it 
+
 ## Generating Configuration Files
 
-Run the setup tasks to generate the configuration files:
+Now we need to generate the configuration files, for this, run:
 
 ```bash
 ./gradlew setup
 ./gradlew rx:setup
 ```
 
-**Warning:** If you change the default `bbdd.url` and/or `bbdd.sid`, you must update the `src-rx/rxconfig/das.yaml` file with the new values.
+!!!warning
+    If you change the default `bbdd.url` and/or `bbdd.sid`, you must update the `src-rx/rxconfig/das.yaml` file with the new values.
 
 ## Installing Etendo Classic
 
-1. Execute the `install` task to create the initial database and compile the sources:
+At this point we have all the source code needed to create the arquitecture of Etendo.
+To do so, run the `install` task to create the initial database
 
 ```bash
 ./gradlew install
 ```
 
-2. Deploy Etendo ERP to Tomcat:
+After the database creation, we'll need to compile the project and deploy Etendo ERP to Tomcat with the followin command:
 
 ```bash
 ./gradlew smartbuild
@@ -90,27 +113,49 @@ Run the setup tasks to generate the configuration files:
 
 This task deploys the `webContent` folder into the `tomcat/webapps` directory. Make sure to set `$CATALINA_HOME` to the correct path.
 
-3. Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo ERP.
+Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo ERP.
+
+!!!note
+    If you want to set up Tomcat locally with IntelliJ, you can the following [**link**](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment) where it's explain how to do it.
 
 ## Compiling Etendo RX
 
-1. Execute the `rx:generate.entities` task:
+Execute the `rx:generate.entities` task to create the needed jars to start working with Etendo RX:
 
 ```bash
 ./gradlew rx:generate.entities
 ```
 
-2. To launch the RX services, run:
+To launch the RX services, run:
 
 ```bash
 ./gradlew rx:rx
 ```
-!!! info 
-    The first time you run the above command, you'll need to provide an access token, for auth service.
-    To accomplish it, open src-rx/logs/auth-*currentDate*.log
-    There, at the end on the log you will find the value for the token.
-    Fill the 'token' property with this value on src-rx/rxconfig/auth.yaml and re-run ./gradlew rx:rx
 
+The first time you run the above command, you'll need to provide an access token, for auth service, so noew, we'll proceed to configure the auth project.
+
+## Configure auth project
+
+After executing the rx:rx task it will start to setting up the services.
+It will start with the config service and when it start to try with the auth service, it will fail because of the missing token.
+To extract the token check Auth log file in `src-rx/logs/auth.log`
+
+You will find something like this:
+
+```
+Populate the auth.yaml file with the following property:
+token: eyJhbGciOiJSUzI1NiJ9... (truncated)
+```
+
+Copy the value of token line and replace the token value in the file `src-rx/rxconfig/auth.yaml`
+
+Replace default empty token value with log content
+
+```
+ token: eyJhbGciOiJSUzI1NiJ9... (truncated)
+```
+
+Now that you fill the token value, run rx:rx task again, all the microservices, now, will be up and running.
 
 By default, the following services should be up and running:
 
@@ -120,4 +165,4 @@ By default, the following services should be up and running:
 - Das
 - Async
 
-Congratulations! You've successfully set up the Etendo Platform. Continue your learning journey by visiting our [**Tutorials**](/docs/developer-guide/etendo-rx/tutorials) section.
+Congratulations! You've successfully set up the Etendo Platform. Continue your learning journey by visiting our [**First Steps**](/docs/developer-guide/etendo-rx/tutorials/first-steps) section.
