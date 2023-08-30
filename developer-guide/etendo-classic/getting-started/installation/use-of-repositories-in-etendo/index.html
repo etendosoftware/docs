@@ -2558,6 +2558,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3802,39 +3816,42 @@ You can find each of the <a href="https://github.com/etendosoftware/etendo_core/
 <li>Log in to your GitHub account.</li>
 <li>Click on your profile picture in the top right corner and select "Settings."</li>
 <li>Select "Developer settings" from the left menu and click on "Personal access tokens."</li>
-<li>In the developer settings page, click on "Personal access tokens".</li>
-</ol>
+<li>
+<p>In the developer settings page, click on "Personal access tokens".</p>
 <p><a class="glightbox" href="/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="personal-access-tokens.png" src="/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png" /></a> </p>
-<ol>
-<li>Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select <strong>read:packages</strong> check.</li>
-</ol>
+</li>
+<li>
+<p>Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select <strong>read:packages</strong> check.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.</p>
 </div>
 <p><a class="glightbox" href="/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-personal-access-token.png" src="/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png" /></a> </p>
-<ol>
-<li>Click "Generate token" and take note of the token value.</li>
-</ol>
+</li>
+<li>
+<p>Click "Generate token" and take note of the token value.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning<p>You will not be able to see this value again, so be sure to copy it and keep it in a secure location.</p>
 </p>
 </div>
+</li>
+</ol>
 <h3 id="setting-up-the-personal-access-token-in-etendo-projects">Setting Up the Personal Access Token in Etendo Projects</h3>
 <p>Once you have generated a Personal Access Token, you will need to set it up in your Etendo project. Follow these steps:</p>
 <ol>
 <li>Open the <code>gradle.properties</code> file in your project.</li>
-<li>Add the following lines to the file, replacing <code>YOUR_GITHUB_USERNAME</code> and <code>YOUR_PERSONAL_ACCESS_TOKEN</code> with your actual GitHub username and Personal Access Token:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>githubUser=YOUR_GITHUB_USERNAME
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>githubToken=YOUR_PERSONAL_ACCESS_TOKEN
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>context.name=etendo
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>bbdd.sid=etendo
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>bbdd.port=5432
-</span></code></pre></div>
-<ol>
-<li>Save the <code>gradle.properties</code> file.</li>
+<li>
+<p>Add the following lines to the file, replacing <code>YOUR_GITHUB_USERNAME</code> and <code>YOUR_PERSONAL_ACCESS_TOKEN</code> with your actual GitHub username and Personal Access Token:
+        <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">githubUser</span><span class="o">=</span>YOUR_GITHUB_USERNAME
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">githubToken</span><span class="o">=</span>YOUR_PERSONAL_ACCESS_TOKEN
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>context.name<span class="o">=</span>etendo
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>bbdd.sid<span class="o">=</span>etendo
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>bbdd.port<span class="o">=</span><span class="m">5432</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Save the <code>gradle.properties</code> file.</p>
+</li>
 </ol>
 <h3 id="using-the-personal-access-token-in-gradle-tasks">Using the Personal Access Token in Gradle Tasks</h3>
 <p>With the Personal Access Token set up in your Etendo project, you can now use it to access GitHub repositories in your Gradle tasks. For example, if you are using the <code>dependencies</code> to resolve dependencies, the task will use your Personal Access Token to authenticate with GitHub.</p>

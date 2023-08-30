@@ -2558,6 +2558,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3927,10 +3941,9 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </table>
 <h3 id="migration-process">🚀 Migration Process</h3>
 <ol>
-<li><strong>Update <code>settings.gradle</code> File</strong>: You'll need to update your <code>settings.gradle</code> file to add the new GitHub repository.</li>
-</ol>
-<p><code>settings.gradle</code>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
+<li>
+<p><strong>Update <code>settings.gradle</code> File</strong>: You'll need to update your <code>settings.gradle</code> file to add the new GitHub repository.</p>
+<div class="language-groovy highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="n">mavenCentral</span><span class="o">()</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">gradlePluginPortal</span><span class="o">()</span>
@@ -3955,38 +3968,36 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="o">}</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;etendo&quot;</span>
-</span></code></pre></div></p>
-<ol>
-<li><strong>Update Etendo Gradle Plugin</strong>: You need to update <code>com.etendoerp.gradleplugin</code> to version 1.1.0 or later. Alternatively, you can use <code>latest.release</code> to always get the latest version, in this case the gradle version should be 7.3.2, to check the gradle version execute './gradlew --version' and to upgrade execute ./gradlew wrapper --gradle-version 7.3.2 </li>
-</ol>
-<p><code>build.gradle</code>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>plugins {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    id &#39;java&#39;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    id &#39;war&#39;
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    id &#39;groovy&#39;
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    id &#39;maven-publish&#39;
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    id &#39;com.etendoerp.gradleplugin&#39; version &#39;latest.release&#39; 
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>}
-</span></code></pre></div></p>
-<ol>
-<li><strong>GitHub Setup</strong>: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the <a href="/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a>.</li>
-</ol>
-<p><code>gradle.properties</code>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nexusUser=
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>nexusPassword=
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>githubUser=&lt;User&gt;
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>githubToken=&lt;Token&gt;
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Update Etendo Gradle Plugin</strong>: You need to update <code>com.etendoerp.gradleplugin</code> to version 1.1.0 or later. Alternatively, you can use <code>latest.release</code> to always get the latest version, in this case the gradle version should be 7.3.2, to check the gradle version execute './gradlew --version' and to upgrade execute ./gradlew wrapper --gradle-version 7.3.2 </p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;java&#39;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;groovy&#39;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;maven-publish&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;latest.release&#39;</span><span class="w"> </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">}</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>GitHub Setup</strong>: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the <a href="/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a>.</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">nexusUser</span><span class="o">=</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">nexusPassword</span><span class="o">=</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">githubUser</span><span class="o">=&lt;</span><span class="n">User</span><span class="o">&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">githubToken</span><span class="o">=&lt;</span><span class="n">Token</span><span class="o">&gt;</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>context.name=etendo
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>bbdd.sid=etendo
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>bbdd.port=5432
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>bbdd.systemUser=postgres
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>bbdd.systemPassword=syspass
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>bbdd.user=tad
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>bbdd.password=tad
-</span></code></pre></div></p>
-<ol>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
+</span></code></pre></div>
+</li>
 <li>
 <p><strong>Dependency Check</strong>: Review the dependencies in your Etendo <code>build.gradle</code> file to make sure there are bundles that can be upgraded to versions published on GitHub. If you are not ready to migrate yet, that's OK, Nexus will be available until March 2024.</p>
 </li>
@@ -4003,8 +4014,8 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 <p>This affects the current environments, to fix this we have to: </p>
 <h4 id="dependencies-in-sources">Dependencies in Sources</h4>
 <ol>
-<li>If the environment has the dependencies as "moduleDeps", in sources, we will have to remove from the <code>/modules</code> folder all the ones ending in "_ES". </li>
-</ol>
+<li>
+<p>If the environment has the dependencies as "moduleDeps", in sources, we will have to remove from the <code>/modules</code> folder all the ones ending in "_ES". </p>
 <p>We provide a script to delete all modules that could be resolved from Nexus and then re-download them from GitHub. </p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
@@ -4141,12 +4152,12 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </span><span id="__span-3-133"><a id="__codelineno-3-133" name="__codelineno-3-133" href="#__codelineno-3-133"></a>
 </span><span id="__span-3-134"><a id="__codelineno-3-134" name="__codelineno-3-134" href="#__codelineno-3-134"></a><span class="c1">## Iterate over each module and delete it</span>
 </span><span id="__span-3-135"><a id="__codelineno-3-135" name="__codelineno-3-135" href="#__codelineno-3-135"></a><span class="k">for</span><span class="w"> </span>module<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">modules</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-</span><span id="__span-3-136"><a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">module_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">module</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+</span><span id="__span-3-136"><a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">module_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">module</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 </span><span id="__span-3-137"><a id="__codelineno-3-137" name="__codelineno-3-137" href="#__codelineno-3-137"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Deleting </span><span class="si">${</span><span class="nv">module_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">module</span><span class="si">}</span><span class="s2">...&quot;</span>
 </span><span id="__span-3-138"><a id="__codelineno-3-138" name="__codelineno-3-138" href="#__codelineno-3-138"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">module_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">module</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span id="__span-3-139"><a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a><span class="w">  </span><span class="k">else</span>
+</span><span id="__span-3-139"><a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a><span class="k">else</span>
 </span><span id="__span-3-140"><a id="__codelineno-3-140" name="__codelineno-3-140" href="#__codelineno-3-140"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Directory </span><span class="si">${</span><span class="nv">module_directory</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">module</span><span class="si">}</span><span class="s2"> does not exist&quot;</span>
-</span><span id="__span-3-141"><a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a><span class="w">  </span><span class="k">fi</span>
+</span><span id="__span-3-141"><a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a><span class="k">fi</span>
 </span><span id="__span-3-142"><a id="__codelineno-3-142" name="__codelineno-3-142" href="#__codelineno-3-142"></a><span class="k">done</span>
 </span><span id="__span-3-143"><a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a>
 </span><span id="__span-3-144"><a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Modules deletion has been completed.&quot;</span>
@@ -4156,19 +4167,20 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
 </p>
 </div>
 <p>Copy this code and create a file <code>deleteNexusDependencies.sh</code> in the Etendo root project, run <code>chmod +x deleteNexusDependencies.sh</code> to give execution permissions and then run <code>./deleteNexusDependencies.sh</code> to delete the dependencies. </p>
-<ol>
-<li>Modify the build.gradle of our project and change the dependencies to lowercase. 
-E.g.:
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">moduleDeps</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:financial.extensions.es_ES:latest.release@zip&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="o">}</span>
+</li>
+<li>
+<p>Modify the build.gradle of our project and change the dependencies to lowercase. For example:
+    <div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">moduleDeps</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:financial.extensions.es_ES:latest.release@zip&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="o">}</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">// Replace by</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">moduleDeps</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:financial.extensions.es_es:latest.release@zip&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="o">}</span>
-</span></code></pre></div></li>
+</span></code></pre></div></p>
+</li>
 <li>Execute <code>./gradlew expandModules</code> task to download the new dependencies. </li>
 <li>Run <code>./gradlew update.database smartbuild</code> to recompile the environment. </li>
 </ol>
 <h4 id="dependencies-in-jar">Dependencies in JAR</h4>
 <p>If the dependencies are declared as implementation, this means that they are in JAR format, just change the uppercase to lowercase. 
-E.g.:</p>
+For example:</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:financial.extensions.es_ES:latest.release&#39;</span><span class="o">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// Replace by</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:financial.extensions.es_es:latest.release&#39;</span><span class="o">)</span>
@@ -4185,9 +4197,9 @@ This is a good opportunity to migrate. </p>
 </div>
 <div class="admonition failure">
 <p class="admonition-title">Failure</p>
-<p>Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful and the migration is easy for you.</p>
+<p>Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful.</p>
 </div>
-<p>If you encounter any issues or need additional help, do not hesitate to reach out to our support service through our portal: <a href="http://support.etendo.software" target="_blank">http://support.etendo.software</a> 🚑</p>
+<p>If you encounter any issues or need additional help, do not hesitate to reach out to our <a href="http://support.etendo.software" target="_blank">support service</a>🚑.</p>
 
 
 

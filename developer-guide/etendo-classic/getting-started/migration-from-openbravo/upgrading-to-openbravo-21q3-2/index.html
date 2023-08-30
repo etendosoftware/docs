@@ -2558,6 +2558,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3770,24 +3784,23 @@
 </div>
 <h2 id="how-to-upgrade-to-openbravo-21q32">How to upgrade to Openbravo 21Q3.2</h2>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
+<p class="admonition-title">Requirements</p>
 <ul>
-<li><strong>Requirements</strong>  </li>
 <li>Git  </li>
 <li>A diffing/merging tool if patches need to be generated</li>
 </ul>
 </div>
 <h3 id="identify-and-extract-custom-patches-made-to-your-current-version-of-openbravo">Identify and extract custom patches made to your current version of Openbravo</h3>
 <ol>
-<li>Clone core repository in the new version</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone --depth 1 --branch YOURVERSIONTAG git@gitlab.com:openbravo/product/openbravo.git
+<li>
+<p>Clone core repository in the new version</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span>YOURVERSIONTAG<span class="w"> </span>git@gitlab.com:openbravo/product/openbravo.git
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Replace <em>YOURVERSIONTAG</em> tag with your current Openbravo version, e.g.: 3.0PR19Q4</p>
 </div>
-<ol>
+</li>
 <li>
 <p>Identify patches applied to core in current installation, to be re-applied later:</p>
 </li>
@@ -3798,27 +3811,31 @@
 </ol>
 <h3 id="upgrade-to-openbravo-21q32">Upgrade to Openbravo 21Q3.2</h3>
 <ol>
-<li>Clone core repository in the new version:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git clone --depth 1 --branch 3.0PR21Q3.2 git@gitlab.com:openbravo/product/openbravo.git
+<li>
+<p>Clone core repository in the new version:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--branch<span class="w"> </span><span class="m">3</span>.0PR21Q3.2<span class="w"> </span>git@gitlab.com:openbravo/product/openbravo.git
 </span></code></pre></div>
-<ol>
-<li>Configure Openbravo.properties and other files to match your current installation.</li>
+</li>
+<li>
+<p>Configure Openbravo.properties and other files to match your current installation.</p>
+</li>
 <li>Copy all modules from your previous installation to the new environment.</li>
 <li>Apply patches extracted on previous steps (they may need to be adapted to the new version).</li>
-<li>Do a full compilation:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ant update.database compile.complete.deploy
+<li>
+<p>Do a full compilation:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ant<span class="w"> </span>update.database<span class="w"> </span>compile.complete.deploy
 </span></code></pre></div>
-<ol>
-<li>Fix problems with custom modules.</li>
-</ol>
+</li>
+<li>
+<p>Fix problems with custom modules.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Check <a href="http://wiki.openbravo.com/wiki/Release_Notes/3.0PR21Q3.2" target="_blank">Openbravo’s Release Notes</a> for API changes and other considerations when upgrading.</p>
 </div>
-<ol>
-<li>Start server.</li>
+</li>
+<li>
+<p>Start server.</p>
+</li>
 <li>Test for functional or runtime errors and fix them.</li>
 </ol>
 <div class="admonition success">

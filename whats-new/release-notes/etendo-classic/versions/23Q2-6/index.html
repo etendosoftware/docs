@@ -2552,6 +2552,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3629,6 +3643,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    Known Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#installation-and-updates" class="md-nav__link">
     Installation and Updates
   </a>
@@ -3662,8 +3683,33 @@
 <p><strong>Pack version</strong>: 23.2.6
 - <a href="https://github.com/etendosoftware/etendo_core/releases/tag/23.2.6" target="_blank">GitHub Release</a></p>
 <h2 id="fixed-issues">Fixed issues</h2>
+<ul>
+<li>
 <p><a href="https://github.com/etendosoftware/etendo_core/issues/166" target="_blank">EPL-596</a>  Error when changing currency type for business partner with unused credits</p>
+</li>
+<li>
 <p><a href="https://github.com/etendosoftware/etendo_core/issues/219" target="_blank">EPL-615</a>  Sales invoice dimensional report in excel format does not work in Firefox</p>
+</li>
+</ul>
+<h2 id="known-issues">Known Issues</h2>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/issues/221">EPL-858</a> Etendo does not compile with latest version of gradle plugin </li>
+</ul>
+<details class="example">
+<summary>Workaraund</summary>
+<p>Before execute setup tasks in a etendo project in JAR format you must follow the next steps:</p>
+<p>On the source path, open <code>build.gradle</code> and locate the 'etendo' block in the file. Inside of it, add the following propertie:</p>
+<div class="language-groovy highlight"><span class="filename">build.gradlew</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">ignoreCoreJarDependency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
+</span></code></pre></div>
+<p>This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. </p>
+<p>Now we need to execute the command that will download the source code:</p>
+<p><div class="language-bash highlight"><span class="filename">terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>clean
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./gradlew<span class="w"> </span>expandCore<span class="w"> </span>
+</span></code></pre></div>
+If you don't want to change the <code>build.gradle</code>, you can execute the command <code>./gradlew expandCore</code> and add the flag <code>-PforceExpand=true</code> at the end of it</p>
+</details>
 <h2 id="installation-and-updates">Installation and Updates</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning<p>If you upgrade an existing Etendo environment to 23.2.0 version you must run:<code>./gradlew wrapper --gradle-version 7.3.2</code> and a new Gradle version will be instaled, then update the gradle plugin-in to <code>'latest.release'</code>. Please check it in the <code>build.gradle</code> file. <code>id 'com.etendoerp.gradleplugin' version 'latest.release'</code></p>

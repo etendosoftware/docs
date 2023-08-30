@@ -2558,6 +2558,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2919,20 +2933,6 @@
           <li class="md-nav__item">
   <a href="#resolving-the-etendo-gradle-plugin" class="md-nav__link">
     Resolving the Etendo Gradle Plugin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jar-core" class="md-nav__link">
-    JAR Core
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-core" class="md-nav__link">
-    Source Core
   </a>
   
 </li>
@@ -3730,20 +3730,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#jar-core" class="md-nav__link">
-    JAR Core
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-core" class="md-nav__link">
-    Source Core
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3792,10 +3778,9 @@
 <p>From Etendo 22Q1, Etendo uses a standard gradle plugin to execute all the gradle tasks.
 To work with the plugin you need to specify in the root project from where the plugin will be resolved.</p>
 <ol>
-<li>Update the <code>settings.gradle</code> file with the next content.</li>
-</ol>
-<p><code>settings.gradle</code></p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
+<li>
+<p>Update the <code>settings.gradle</code> file with the next content.</p>
+<div class="language-groovy highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="n">mavenCentral</span><span class="o">()</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="n">gradlePluginPortal</span><span class="o">()</span>
@@ -3821,88 +3806,102 @@ To work with the plugin you need to specify in the root project from where the p
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">rootProject</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;etendo&quot;</span>
 </span></code></pre></div>
-<ol>
-<li>Add in the <code>build.gradle</code> file the Etendo Gradle Plugin</li>
-</ol>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+</li>
+<li>
+<p>Add in the <code>build.gradle</code> file the Etendo Gradle Plugin</p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;latest.release&#39;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">}</span>
 </span></code></pre></div>
-<ol>
-<li><strong>Delete</strong> if exist the old plugin removing the "apply from" line:</li>
+</li>
+<li>
+<p>Delete if the old plugin exists removing the "apply from" line:</p>
+</li>
 </ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apply from: &#39;https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle&#39;
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apply<span class="w"> </span>from:<span class="w"> </span><span class="s1">&#39;https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle&#39;</span>
 </span></code></pre></div>
-<h3 id="jar-core">JAR Core</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JAR Core</label><label for="__tabbed_1_2">Source Core</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you upgrade from a source Etendo instance, read <a href="/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/">Core Format Migration</a>, because some directories must be deleted.</p>
 </div>
 <ol>
 <li>Create a backup of your environment, following the <a href="/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/">Etendo Backup and Restore Tool</a>.</li>
-<li>Verify the target version inside <code>build.gradle</code></li>
-</ol>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp.platform:etendo-core:&lt;version&gt;&#39;</span><span class="o">)</span>
+<li>
+<p>Verify the target version inside <code>build.gradle</code></p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp.platform:etendo-core:&lt;version&gt;&#39;</span><span class="o">)</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">}</span>
 </span></code></pre></div>
-<ol>
-<li>Compile your environment:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew update.database compile.complete smartbuild
+</li>
+<li>
+<p>Compile your environment:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
 </span></code></pre></div>
-<ol>
-<li>Verify any compilation errors that may arise due to incompatible customization or modifications.</li>
-</ol>
+</li>
+<li>
+<p>Verify any compilation errors that may arise due to incompatible customization or modifications.</p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>Your Etendo environment is now updated!</p>
 </div>
-<h3 id="source-core">Source Core</h3>
-<ol>
-<li>Verify the target version inside <code>build.gradle</code></li>
+</li>
 </ol>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// latest.release will download the most recent stable version</span>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Verify the target version inside <code>build.gradle</code></p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// latest.release will download the most recent stable version</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// Any other Gradle/Maven version sintax works, for example : [22.1.0,)</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">   </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;latest.release&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;latest.release&quot;</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="o">}</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>You can declare a specific version (e.g. '1.0.0') or an interval of versions:
-[begin, end] - Both versions are included
-(begin, end) - Both versions are not included
-[begin, ) - From a base version to the latest one
+<p>You can declare a specific version (e.g. '1.0.0') or an interval of versions:<br>
+        - [begin, end] - Both versions are included<br>
+        - (begin, end) - Both versions are not included<br>
+        - [begin, ) - From a base version to the latest one<br>
 And the other possible combinations.</p>
 </div>
 <p>By default, the plugin will try to resolve the artifact <code>com.etendoerp.platform:etendo-core</code></p>
 <p>If you want to use a different artifact name, you can specify it in the plugin block.
 For example <code>com.smf.classic.core:ob:21.4.1</code></p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="n">coreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;com.smf.classic.core&quot;</span>
+<div class="language-groovy highlight"><span class="filename">com.smf.classic.core:ob:21.4.1</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">coreGroup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;com.smf.classic.core&quot;</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">coreName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ob&quot;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;21.4.1&quot;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;21.4.1&quot;</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">supportJars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="o">}</span>
 </span></code></pre></div>
-<ol>
-<li>Create a backup of your environment.</li>
-<li>Run the following command to update the core:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew expandCore
+</li>
+<li>
+<p>Create a backup of your environment.</p>
+</li>
+<li>
+<p>Run the following command to update the core:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>expandCore
 </span></code></pre></div>
-<ol>
-<li>Compile your environment:</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew update.database compile.complete smartbuild
+</li>
+<li>
+<p>Compile your environment:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
 </span></code></pre></div>
-<ol>
-<li>Verify any compilation errors that may arise due to incompatible customization or modifications.</li>
+</li>
+<li>
+<p>Verify any compilation errors that may arise due to incompatible customization or modifications.</p>
+</li>
 </ol>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>Your Etendo environment is now updated!</p>
+</div>
+</div>
+</div>
 </div>
 
 
