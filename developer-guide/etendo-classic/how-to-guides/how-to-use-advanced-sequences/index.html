@@ -3888,30 +3888,26 @@
 </ul>
 <h3 id="quick-sequence-setup">Quick sequence setup</h3>
 <ol>
-<li>First, log-in as “System administrator”. Open the <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Tables and Columns</code> Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.</li>
-</ol>
-<blockquote>
-<p>_If you want to define a new sequence reference, you must add it in <strong>Reference Search Key</strong> field and the parent (Base Sequence) must be in the <strong>Reference</strong> field.</p>
-</blockquote>
+<li>
+<p>First, log-in as “System administrator”. Open the <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Tables and Columns</code> Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>See how to create a new reference <a href="/docs/legacy/technical-documentation/etendo-environment/platform/sequences#new-sequence-reference">here</a>_</p>
+<p>If you want to define a new sequence reference, you must add it in <strong>Reference Search Key</strong> field and the parent (Base Sequence) must be in the <strong>Reference</strong> field.
+See how to create a new reference in <a href="/docs/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference">new sequence reference</a>.</p>
 </div>
-<p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/quicksequence.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="quicksequence.png" src="/docs/assets/legacy/technicaldocumentation/platform/quicksequence.png" /></a></p>
-<p>| <em>Example: Adding transactional sequence in the invoice table</em> |</p>
-<ol>
-<li>Then, it is necessary to run a process in <code>Application</code> &gt; <code>General Setup</code>> <code>Application</code>> <code>Create Sequences</code> to generate the sequences, selecting the root Organization where they will be created.</li>
-</ol>
+<p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/quicksequence.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="quicksequence.png" src="/docs/assets/legacy/technicaldocumentation/platform/quicksequence.png" /></a>
+| <em>Example: Adding transactional sequence in the invoice table</em> |</p>
+</li>
+<li>
+<p>Then, it is necessary to run a process in <code>Application</code> &gt; <code>General Setup</code>> <code>Application</code>> <code>Create Sequences</code> to generate the sequences, selecting the root Organization where they will be created.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>To run this process, the user must be logged using the role which manages the sequence, not as system administrator.</p>
 </div>
-<blockquote>
-<p>This process will only generate the combinations for organization and document types, in case you want to generate sequences for the new dimensions described below, you must extend the <code>SequencesGenerator</code> action and overwrite the <code>generateSequenceCombination</code> and <code>setSequenceValues</code> methods in order to generate the relevant combinations and set the newly added dimensions.</p>
-</blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>You can also create the required sequences manually.</p>
+<p>This process will only generate the combinations for organization and document types, in case you want to generate sequences for the new dimensions described below, you must extend the <code>SequencesGenerator</code> action and overwrite the <code>generateSequenceCombination</code> and <code>setSequenceValues</code> methods in order to generate the relevant combinations and set the newly added dimensions.
+You can also create the required sequences manually.</p>
 </div>
 <p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/createsequencesprocess.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="createsequencesprocess.png" src="/docs/assets/legacy/technicaldocumentation/platform/createsequencesprocess.png" /></a></p>
 <p>| <em>Executing the process to create new sequences</em> |</p>
@@ -3932,27 +3928,35 @@
 <li><strong>Prefix:</strong> String at the beginning of the sequence  <strong>(</strong>Supports masking<strong>).</strong></li>
 <li><strong>Suffix:</strong> String at the end of the sequence  <strong>(</strong>Supports masking<strong>).</strong></li>
 <li><strong>Document Type :</strong> In case that the table has document types, a sequence for each document type will have been created.</li>
-<li><strong>Mask:</strong> It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. For more information about masking see <a href="/docs/legacy/financial-management-setup-accounting#sequence-masking">Sequences Masking</a></li>
+<li><strong>Mask:</strong> It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about masking see <a href="/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#sequence-masking">Sequences Masking user guide</a>.</p>
+</div>
+<ul>
 <li><strong>Table:</strong> Defines the table in which the sequence type column is located.</li>
-<li>
-<p><strong>Column:</strong> The column where the sequence is defined.</p>
+<li><strong>Column:</strong> The column where the sequence is defined.</li>
+</ul>
 </li>
 <li>
 <p>In case the sequence is applied in DocumentNo field, the user has to ensure that the Document Type associated has the property <code>sequenced document</code> unchequed to avoid throwing the legacy process. To do that, first log in as a user, then open <code>Aplication&gt;Finantial Management&gt;Accounting&gt;Setup&gt;Document Type</code>, select the Document Type associated and finally, edit it.</p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><em>If the step is not followed, the legacy process will be run.</em></p>
 </div>
-<p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/doctypesettings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="doctypesettings.png" src="/docs/assets/legacy/technicaldocumentation/platform/doctypesettings.png" /></a></p>
-<p>| <em>Document Type example</em> |</p>
-<ol>
-<li>
-<p>Finally, you must compile the application. Run <code>./gradlew compile.complete smartbuild</code>.</p>
+<p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/doctypesettings.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="doctypesettings.png" src="/docs/assets/legacy/technicaldocumentation/platform/doctypesettings.png" /></a>
+| <em>Document Type example</em> |</p>
 </li>
 <li>
-<p>To export the changes to your module, do not forget to do a <code>./gradlew export.database</code>.</p>
+<p>Finally, you must compile the application. To do this, run:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild
+</span></code></pre></div>
+</li>
+<li>
+<p>To export the changes to your module, do not forget to do a:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>export.database<span class="sb">`</span>
+</span></code></pre></div>
 </li>
 </ol>
 <h3 id="new-sequence-reference"><strong>New sequence reference</strong></h3>
@@ -3978,15 +3982,15 @@
 <li><strong>DB Sequence Increment Value:</strong> Numeric Value to define the sequence increment.</li>
 </ul>
 <p>You can use a defined Sequence or create a new one using SQL:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="n">sequence_name</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nb">SMALLINT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">INCREMENT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">increment</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">MINVALUE</span><span class="w"> </span><span class="k">minvalue</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="k">MINVALUE</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">MAXVALUE</span><span class="w"> </span><span class="k">maxvalue</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="k">MAXVALUE</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">START</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">CACHE</span><span class="w"> </span><span class="k">cache</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">CYCLE</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="n">OWNED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">table_name</span><span class="p">.</span><span class="k">column_name</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NONE</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">]</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="n">sequence_name</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nb">SMALLINT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">INCREMENT</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">increment</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">MINVALUE</span><span class="w"> </span><span class="k">minvalue</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="k">MINVALUE</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">MAXVALUE</span><span class="w"> </span><span class="k">maxvalue</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="k">MAXVALUE</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">START</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="k">CACHE</span><span class="w"> </span><span class="k">cache</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">NO</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="k">CYCLE</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="n">OWNED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="k">table_name</span><span class="p">.</span><span class="k">column_name</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">NONE</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">]</span>
 </span></code></pre></div>
 <p>| <em>Postgres syntax to create a new sequence</em> |</p>
 <div class="admonition info">
@@ -4001,7 +4005,7 @@
 <li>Organization</li>
 <li>Document Type</li>
 </ul>
-<p>This way you can have two different sequences depending on the Organization of the record, for example. The same applies to the other default dimensions.</p>
+<p>This way you can have two different sequences depending on, for example, the Organization of the record. The same applies to the other default dimensions.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Dimensions are currently supported only in <strong>Transactional Sequences</strong>.</p>
@@ -4010,103 +4014,97 @@
 <p>&nbsp;</p>
 <h5 id="adding-custom-dimensions">Adding custom dimensions</h5>
 <p>If you want to add a new dimension to filter sequences, this dimension should be a column in both tables <code>AD_Sequence</code> and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the <code>Dimension List</code> tab with this column (see how to create a new sequence reference above).</p>
-<p>&nbsp;</p>
-<ul>
-<li>
 <h5 id="when-a-dimension-is-a-foreign-key-column">When a dimension is a foreign key column</h5>
-</li>
+<ol>
 <li>
 <p>To define a new dimension, you have to start adding a column in the <code>AD_Sequence</code> table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (<code>M_Product</code> in this example) unless you decide to use an existing column as dimension.</p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The name of the columns must be the same in both tables.</p>
 </div>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AD_Sequence</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">ad_sequence_</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">M_Product</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">M_product_</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AD_Sequence</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">ad_sequence_</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">M_Product</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">M_product_</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">dimension</span><span class="o">&gt;</span><span class="n">_id</span><span class="p">)</span>
 </span></code></pre></div>
 <p>| <em>Remember to replace <code>&lt;dimension&gt;</code> with your desired name</em> |</p>
-<ol>
-<li>Then you have to create the corresponding <code>AD_Column</code> register in the Application Dictionary. <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> search the <code>AD_Sequence</code> Table and create the new column.
-   Then you must set the <code>Reference</code> field of the dimension pointing to the foreign key table.</li>
-</ol>
+</li>
+<li>
+<p>Then you have to create the corresponding <code>AD_Column</code> register in the Application Dictionary. <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> search the <code>AD_Sequence</code> Table and create the new column.
+   Then you must set the <code>Reference</code> field of the dimension pointing to the foreign key table.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If the table with the dimension records is a new table, it should be created in <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Reference</code>, setting the Base Reference as Table, and adding the table in the <code>Table Reference</code> tab.</p>
 </div>
-<ol>
+</li>
 <li>
-<p>Also, you have to create the field in the <code>Document Sequence</code> window. <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Windows, Tabs and Fields</code> search <code>Document Sequence</code> window and in <code>Sequence</code> Tab run the process to create the new field.</p>
+<p>Also, you have to create the field in the <code>Document Sequence</code> window. <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Windows, Tabs and Fields</code> search <code>Document Sequence</code> window and in <code>Sequence</code> tab run the process to create the new field.</p>
 </li>
 <li>
 <p>If the dimension is a new column, you must to repeat the previous step to create the field in the table where the sequence is used.</p>
 </li>
 <li>
-<p>Finally, go back to your Reference created previously and create a new register in the <code>Dimension List</code> tab, selecting the new column you just created, then execute a <code>./gradlew smartbuild</code></p>
+<p>Finally, go back to your Reference created previously and create a new register in the <code>Dimension List</code> tab, selecting the new column you just created, then execute a:</p>
 </li>
 </ol>
-<p>&nbsp;</p>
-<ul>
-<li>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="sb">`</span><span class="w"> </span>./gradlew<span class="w"> </span>smartbuild<span class="sb">`</span>
+</span></code></pre></div>
 <h5 id="when-a-dimension-is-a-list">When a dimension is a List</h5>
-</li>
+<ol>
 <li>
 <p>First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.</p>
-</li>
-</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The name of the columns must be the same in both tables.</p>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ALTER TABLE public.ad_sequence
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ADD COLUMN &lt;list_name&gt; character varying(60);
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ALTER TABLE public.m_product
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>ADD COLUMN &lt;list_name&gt; character varying(60);
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">ad_sequence</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">list_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">character</span><span class="w"> </span><span class="nb">varying</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">m_product</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="o">&lt;</span><span class="n">list_name</span><span class="o">&gt;</span><span class="w"> </span><span class="nb">character</span><span class="w"> </span><span class="nb">varying</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
 </span></code></pre></div>
-<p>| <em>An example with the table m_product. (Remember to replace <code>&lt;list_name&gt;</code> with your desired name)</em> |</p>
-<ol>
+<div class="language-text highlight"><pre><span></span><code>| _An example with the table m_product. (Remember to replace `&lt;list_name&gt;` with your desired name)_ |
+</code></pre></div>
+</li>
 <li>
 <p>Then, you have to create the column in the <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Tables and Columns</code> search <code>AD_Sequence</code> Table and create the new column.
    You must set the <code>Reference</code> field of the new Column to <code>List</code> and indicate the corresponding Reference Search Key (Or define a new one). In the Default field you can set the id of one of the list elements and when a new Sequence is created, the reference automatically will be set.
    You also have to do the same in the table that uses the sequence, or you can use an existing one.</p>
 </li>
 <li>
-<p>Finally, go back to your Refrence previously created and create a new register in the <code>Dimension List</code> tab by selecting the new column you have just created then, execute a <code>./gradlew smartbuild</code>.
-   &nbsp;</p>
+<p>Finally, go back to your Refrence previously created and create a new register in the <code>Dimension List</code> tab by selecting the new column you have just created then, execute a:</p>
 </li>
 </ol>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span><span class="sb">`</span><span class="w"> </span>./gradlew<span class="w"> </span>smartbuild<span class="sb">`</span>.
+</span></code></pre></div>
 <h5 id="change-sequence-when-change-dimension">Change sequence when change dimension</h5>
 <ul>
 <li>If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
   The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.</li>
 </ul>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ChangeSequenceAfterChangeProductCategory</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SimpleCallout</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nd">@Override</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">SimpleCallout</span><span class="p">.</span><span class="na">CalloutInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strcProductId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="na">vars</span><span class="p">.</span><span class="na">getStringParameter</span><span class="p">(</span><span class="s">&quot;inpmProductId&quot;</span><span class="p">);</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">strcProductId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setAdminMode</span><span class="p">();</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="n">Tab</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Tab</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="n">info</span><span class="p">.</span><span class="na">getTabId</span><span class="p">());</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">Field</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="p">.</span><span class="na">getADFieldList</span><span class="p">()</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inp&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Sqlc</span><span class="p">.</span><span class="na">TransformaNombreColumna</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getColumn</span><span class="p">().</span><span class="na">getDBColumnName</span><span class="p">())).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;inpvalue&quot;</span><span class="p">))</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="p">.</span><span class="na">findFirst</span><span class="p">()</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="p">.</span><span class="na">orElse</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sequenceNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilities</span><span class="p">.</span><span class="na">getDocumentNo</span><span class="p">(</span><span class="n">field</span><span class="p">);</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">info</span><span class="p">.</span><span class="na">addResult</span><span class="p">(</span><span class="s">&quot;inpvalue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sequenceNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">restorePreviousMode</span><span class="p">();</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="p">}</span>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ChangeSequenceAfterChangeProductCategory</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">SimpleCallout</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">SimpleCallout</span><span class="p">.</span><span class="na">CalloutInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strcProductId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="na">vars</span><span class="p">.</span><span class="na">getStringParameter</span><span class="p">(</span><span class="s">&quot;inpmProductId&quot;</span><span class="p">);</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">StringUtils</span><span class="p">.</span><span class="na">isBlank</span><span class="p">(</span><span class="n">strcProductId</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setAdminMode</span><span class="p">();</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="n">Tab</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Tab</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="n">info</span><span class="p">.</span><span class="na">getTabId</span><span class="p">());</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="n">Field</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="p">.</span><span class="na">getADFieldList</span><span class="p">()</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;inp&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Sqlc</span><span class="p">.</span><span class="na">TransformaNombreColumna</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="na">getColumn</span><span class="p">().</span><span class="na">getDBColumnName</span><span class="p">())).</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;inpvalue&quot;</span><span class="p">))</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="p">.</span><span class="na">findFirst</span><span class="p">()</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="p">.</span><span class="na">orElse</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sequenceNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Utilities</span><span class="p">.</span><span class="na">getDocumentNo</span><span class="p">(</span><span class="n">field</span><span class="p">);</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">        </span><span class="n">info</span><span class="p">.</span><span class="na">addResult</span><span class="p">(</span><span class="s">&quot;inpvalue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sequenceNumber</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">restorePreviousMode</span><span class="p">();</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="p">}</span>
 </span></code></pre></div>
 
 

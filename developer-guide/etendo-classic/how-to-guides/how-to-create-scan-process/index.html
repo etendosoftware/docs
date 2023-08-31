@@ -3747,8 +3747,8 @@
 <p>The environment must have at least one module under development, and the process identifier must include the prefix of that module.</p>
 </div>
 <ol>
-<li>First of all, you have to create a process. Log in as "System administrator. Open the <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Process Definition</code> window and create a new record.</li>
-</ol>
+<li>
+<p>First of all, you have to create a process. Log in as "System administrator. Open the <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Process Definition</code> window and create a new record.</p>
 <p><a class="glightbox" href="/docs/assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="scanprocessdefinition.png" src="/docs/assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png" /></a></p>
 <ul>
 <li><strong>Module</strong>: It refers to the module where the process will be added.</li>
@@ -3768,37 +3768,35 @@
 <li><strong>System element</strong>: This field refers to the type of data associated to the parameter.</li>
 <li><strong>Help/Comment</strong>: Must be completed in case you want to show help on how the process continues when the parameter is displayed.</li>
 </ul>
-<blockquote>
-<p>It is important to define all the parameters specified in the screenshot, and with the same types of references for the mobile process to behave properly.<br />
-The name of each parameter must be customized for each process.</p>
-</blockquote>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Optional: It is posible to add a selector (in case the element to scan has selectors defined) and quantity parameter (to define the amount of items scanned).</p>
+<p>It is important to define all the parameters specified in the screenshot, and with the same types of references for the mobile process to behave properly.<br />
+The name of each parameter must be customized for each process.
+Optional: It is posible to add a selector (in case the element to scan has selectors defined) and quantity parameter (to define the amount of items scanned).</p>
 </div>
-<ol>
+</li>
 <li>
-<p>Define a db column in the table in which you want to add a scan process, to add a button to execute the process. E.g.: <code>ALTER TABLE a_asset ADD COLUMN smfms_scan_process CHARACTER(1);</code></p>
+<p>Define a db column in the table in which you want to add a scan process, to add a button to execute the process. E.g.: </p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">`</span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">a_asset</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">smfms_scan_process</span><span class="w"> </span><span class="nb">CHARACTER</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="o">`</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>To associate the process with the button,open <code>Aplication</code> &gt; <code>Aplication Dictionary</code> &gt; <code>Tables and Colums</code>, search the table and press <strong>CREATE COLUMNS FROM DB</strong>. This process will create the column.</p>
 </li>
 <li>
 <p>Change the <strong>reference</strong> to Button and in <strong>Process Definition</strong> select the process created recently.</p>
+<p><a class="glightbox" href="/docs/assets/developer-guide/etendo-classic/how-to-guides/scanprocess2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="scanprocess2" src="/docs/assets/developer-guide/etendo-classic/how-to-guides/scanprocess2.png" /></a></p>
+</li>
+<li>
+<p>In <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Windows,Tabs and Fields</code>, search for the windows where you want the process.
+   E.g. Search <strong>asset windows</strong> and then <strong>assets scan field</strong> in the main tab search. Uncheck "Displayed" (because the scan should only be shown in the mobile app).</p>
+<p><a class="glightbox" href="/docs/assets/developer-guide/etendo-classic/how-to-guides/scanprocess1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sacnprocess1" src="/docs/assets/developer-guide/etendo-classic/how-to-guides/scanprocess1.png" /></a></p>
 </li>
 </ol>
-<p><a class="glightbox" href="/docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png" src="/docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.01.08.png" /></a></p>
-<ol>
-<li>In <code>Application</code> &gt; <code>Application Dictionary</code> &gt; <code>Windows,Tabs and Fields</code>, search for the windows where you want the process.
-   E.g. Search <strong>asset windows</strong> and then <strong>assets scan field</strong> in the main tab search. Uncheck "Displayed" (because the scan should only be shown in the mobile app).</li>
-</ol>
-<p><a class="glightbox" href="/docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png" src="/docs/legacy/technicaldocumentation/platform/captura_de_pantalla_2021-07-08_a_la(s)_10.51.32.png" /></a></p>
-<blockquote>
-<p>When the process is executed from the mobile application, a Json will be sent to the backend with all the scanned information. This data must be processed from the Java class defined in the handler and the expected functionality must be performed.</p>
-</blockquote>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>An Example of this Java class is <code>InventoryScan</code>, which can be found in the <code>com.smf.mobile.scan</code> module.</p>
+<p>When the process is executed from the mobile application, a Json will be sent to the backend with all the scanned information. This data must be processed from the Java class defined in the handler and the expected functionality must be performed.
+An Example of this Java class is <code>InventoryScan</code>, which can be found in the <code>com.smf.mobile.scan</code> module.</p>
 </div>
 
 
