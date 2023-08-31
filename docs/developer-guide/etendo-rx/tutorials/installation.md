@@ -40,7 +40,6 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 | `bbdd.user`             | Database user                                                    | tad                |
 | `bbdd.password`         | Database password                                                | tad                |
 
-
 - src-rx/gradle.properties
 
 | Variable      | Description                          | Default Value      |
@@ -62,27 +61,6 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 ## Database Setup
 
 For this tutorial, we'll create a new database named `etendo` on a PostgreSQL server accessible at port `5432`. If you prefer different settings, modify the values in the `gradle.properties` files accordingly.
-
-## Configuring build.gradle
-
-On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-```gradle
-etendo {
-    ignoreCoreJarDependency = true
-}
-```
-
-This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-Now we need to execute the command that will download the source code:
-
-```bash
-./gradlew expandCore 
-```
-
-!!!info
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it 
 
 ## Generating Configuration Files
 
