@@ -23,7 +23,12 @@ In the recently created column, the reference “rich text area” must be selec
 
 Also, a field for the corresponding image must be created. 
 
-Finally, it is necessary to compile executing ./gradlew smartbuild
+Finally, it is necessary to compile executing:
+
+```bash title="Terminal"
+./gradlew smartbuild
+```
+
 
 ![](/docs/assets/drive/zd0NYsbcmx0ehnHRsCxb21zazxL6sYuBxqjAOoH74QmK1CTccI-dDyqzmMrTiJDrusrcdifTRiiCPPomRAdduh1LipsA2FHTP84kstjAI8SwL3a7-DkSSmCqbVYsyXF_d1El8Z9QqPqphc4oqIB-wFYadh3OODSzp8QCHSyGBAGZSX8OczGKNApmreM8eg.png)
 

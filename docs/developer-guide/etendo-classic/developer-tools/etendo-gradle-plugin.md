@@ -4,67 +4,44 @@ title: Etendo  Gradle  Plugin
 
 ## Overview
 
-This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. (For additional info read: [What is gradle?](https://docs.gradle.org/current/userguide/what_is_gradle.html))
+This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. (For additional info read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}) .
 
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
 
 
 ## How to use Gradle
 
-Etendo project includes an embedded wrapper from Gradle called `gradlew`. Run the `./gradlew <task>` command in the Etendo project directory, and it will execute the mentioned task.
+Etendo project includes an embedded wrapper from Gradle called `gradlew`. Run the following  command in the Etendo project directory, and it will execute the mentioned task.
+
+```bash title="Terminal"
+ `./gradlew <task>`
+```
+ 
 
 You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 
-```plaintext
-
+```bash title="Terminal"
 ./gradlew publishVersion -Ppkg=test.package
 ```
 
 ## Etendo plugin
 
-To work with the plugin you need to specify in the root project from where the plugin will be resolved.
 
-- Create the `settings.gradle` file with the next content.
-
-```groovy
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-        maven {
-            url 'https://repo.futit.cloud/repository/maven-public-releases'
-        }
-        maven {
-            url 'https://repo.futit.cloud/repository/maven-public-snapshots'
-        }
-    }
-}
-
-// Add modules subprojects
-new File("${this.rootDir}/modules").listFiles().each {
-    if (it.directory && new File(it, 'build.gradle').exists()) {
-        include(":modules:${it.name}")
-    }
-}
-
-rootProject.name = "core"
-```
-
-- Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Nexus](https://repo.futit.cloud/#browse/browse:maven-public-releases:com%2Fetendoerp%2Fgradleplugin))
+Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Latest Releases](/docs/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/){target="_blank"})
 
 ```groovy
 plugins {
-    id 'com.etendoerp.gradleplugin' version <'version'>
+    id 'com.etendoerp.gradleplugin' version <'lastest.release'>
 }
 ```
 
 ### Plugin flags
 
-The plugin flags needs to be declared in the 'etendo plugin block'.
+The plugin flags need to be declared in the 'etendo plugin block'.
 
-The etendo plugin block can be specified in the build.gradle
+The etendo plugin block can be specified in:
 
-```groovy
+```groovy  title="build.gradle"
 etendo {
 
 }
@@ -72,7 +49,7 @@ etendo {
 
 For example, to ignore the conflicts between the core versions you can use the 'forceResolution' flag.
 
-```groovy
+```groovy  title="build.gradle"
 etendo {
 	forceResolution = true
 }
