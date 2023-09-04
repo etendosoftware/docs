@@ -11,7 +11,7 @@ Before you begin, please ensure that you've completed the [**installation proces
 
 ### Accessing as Admin User
 
-After setting the local environment up, as is described in the [**installation process**](/docs/developer-guide/etendo-rx/tutorials/installation), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
+After setting the local environment up, as is described in the [**install etendo development environment**](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
 
 Log in to your account as an administrator. The default login credentials for this administrative account are:
 
@@ -30,14 +30,14 @@ The "System Administrator" role allows us to access some windows and permission 
 Now we'll create a new module. It's a self-contained unit of code that performs a specific function and for our case, it will contain all the resources needed in this guide.
 To create a new module, go to 'Module' window, and add a new record providing the following information:
 
-| Parameter       | Value                                   |
-| --------------- | --------------------------------------- |
-| Java Package    |  `com.tutorial.classictutorial`         |
-| Name            |  `Tutorial`                             |
-| Description     |  `Module created for tutorial purposes` |
-| Version         |  `1.0.0`                                |
-| Is RX           |  `True`                                 |
-| Rx Java Package |  `com.tutorial.rxtutorial`              |
+| Parameter       | Value                                 |
+| --------------- | ------------------------------------- |
+| Java Package    |`com.tutorial.classictutorial`         |
+| Name            |`Tutorial`                             |
+| Description     |`Module created for tutorial purposes` |
+| Version         |`1.0.0`                                |
+| Is RX           |`True`                                 |
+| Rx Java Package |`com.tutorial.rxtutorial`              |
 
 
 It should look like this:
@@ -57,11 +57,11 @@ In such cases, we might want to retrieve data as objects of customized types. Th
 
 Start by opening 'Projections' windows and creating a new projection with the following properties:
 
-| Field       | Value                                |
-| ----------- | ------------------------------------ |
-| Module      | tutorial - 1.0.0 - English (USA)     |
-| Name        | rxtutorial                           |
-| Description | Projections needed for the tutorial  |
+| Field       | Value                                 |
+| ----------- | ------------------------------------- |
+| Module      |`tutorial - 1.0.0 - English (USA)`     |
+| Name        |`rxtutorial`                           |
+| Description |`Projections needed for the tutorial`  |
 
 
   ![new-projection.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-projection.png)
@@ -75,9 +75,9 @@ For this, open the "Tables and Columns" window and look for the "Order" table (a
 
 Next, navigate to the "Projections" tab and add a new projection with the following value:
 
-| Field      | Value                                         |
-| ---------- | --------------------------------------------- |
-| Projection | rxtutorial - tutorial - 1.0.0 - English (USA) |
+| Field      | Value                                          |
+| ---------- | ---------------------------------------------- |
+| Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
 
 
   ![assign-projection.png](/docs/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
@@ -90,14 +90,14 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 
 |  Field Name         |  Property             |
 | ------------------- | --------------------- |
-| id                  |  id                   |
-| businessPartnerName |  businessPartner.name |
-| documentNo          |  documentNo           |
-| documentTypeName    |  documentType.name    |
-| grandTotalAmount    |  grandTotalAmount     |
+| id                  |`id`                   |
+| businessPartnerName |`businessPartner.name` |
+| documentNo          |`documentNo`           |
+| documentTypeName    |`documentType.name`    |
+| grandTotalAmount    |`grandTotalAmount`     |
 
 !!!info
-    Note that the 'Property' field of this tab is handled like a Hiernate property.
+    Note that the 'Property' field of this tab is handled with an Entity Mapping, this is like a Hiernate property.
     So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, name in our case.
 
 
@@ -116,7 +116,7 @@ After selecting a table, in this case 'C_Order', we need to go to 'Repository' t
 
 | Field       | Value                                |
 | ----------- | ------------------------------------ |
-| Module      | tutorial - 1.0.0 - English (USA)     |
+| Module      |`tutorial - 1.0.0 - English (USA)`    |
 
 
  ![new-repository.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-repository.png)
@@ -132,8 +132,8 @@ To create this new filter/search method, under "Repository" tab of the C_Order t
 
 | Field       | Value                                                                                  |
 | ----------- | -------------------------------------------------------------------------------------- |
-| Method Name |  `findSalesOrder`                                                                      |
-|  Query      |  `select o from Order o where o.documentType.id = :documentType order by o.documentNo` |
+| Method Name |`findSalesOrder`                                                                        |
+|  Query      |`select o from Order o where o.documentType.id = :documentType order by o.documentNo`   |
 
 
   ![new-search.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-search.png)
@@ -144,11 +144,11 @@ As you can see on the above query, we use a parameter called `:documentType`.
 We can add this type of parameter to use it later by adding a corresponding value to it and filtering depending on the current needs.
 To define the parameter, we need to create a new row on the 'Search Parameter' tab of the 'Search' tab. Fill it with the following settings:
 
-| Field | Value           |
-| ----- | --------------- |
-| Line  |  `10`           |
-| Name  |  `documentType` |
-| Type  |  `String`       |
+| Field | Value         |
+| ----- | ------------- |
+| Line  |`10`           |
+| Name  |`documentType` |
+| Type  |`String`       |
 
 In our case, we'll filter depending on the Document Type of the orders
 
@@ -167,34 +167,34 @@ Ahead you'll find the steps to create the Spring Boot project and add it as a mo
 1. Visit [**Spring Initializr**](https://start.spring.io/) to start your project setup.
 2. Fill in the following details:
 
-    | Field        | Value                            |
-    | ------------ | -------------------------------- |
-    | Project      | Gradle Project                   |
-    | Language     | Java                             |
-    | Spring Boot  | 2.7.15 (or latest 2.7.x version) |
+    | Field        | Value                           |
+    | ------------ | ------------------------------- |
+    | Project      |Gradle Project                   |
+    | Language     |Java                             |
+    | Spring Boot  |2.7.15 (or latest 2.7.x version) |
 
 
     Project Metadata
 
-    | Field        | Value                      |
-    | ------------ | -------------------------- |
-    | Group        | com.tutorial               |
-    | Artifact     | rxtutorial                 |
-    | Name         | rxtutorial                 |
-    | Description  | Etendo RX tutorial project |
-    | Package Name | com.tutorial.rxtutorial    |
-    | Packaging    | Jar                        |
-    | Java Version | 11                         |
+    | Field        | Value                     |
+    | ------------ | ------------------------- |
+    | Group        |com.tutorial               |
+    | Artifact     |rxtutorial                 |
+    | Name         |rxtutorial                 |
+    | Description  |Etendo RX tutorial project |
+    | Package Name |com.tutorial.rxtutorial    |
+    | Packaging    |Jar                        |
+    | Java Version |11                         |
 
 3. Add the following dependencies: Spring Web, Lombok, Config Client
 4. Click on the 'Generate' button to download your project. The page will generate a file named `rxtutorial.zip`.
 
-    ![spring-initializr.png](/docs/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png )
+    ![spring-initializr.png](/docs/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png)
 
 5. Uncompress the zip file to the platform project created in the first step, as: `modules_rx/com.tutorial.rxtutorial`.
 
 !!!info
-    Remember to create the `com.tutorial.rxtutorial` folder, inside of `modules_rx` before extract it. //TODO
+    Remember to create the `com.tutorial.rxtutorial` folder, inside of `modules_rx` before extract it.
 
 
 ### Project Configuration
@@ -230,6 +230,7 @@ Add the following dependencies in the dependencies section:
 ```groovy
 implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+implementation 'com.etendorx:clientrest_core:latest.integration'
 ```
 
 Add the Etendo repository:
@@ -264,12 +265,12 @@ sourceSets {
     }
 }
 ```
-After configuring the project, we'll need to compile it.
-Etendo compile task will generate java files in the `src-gen` directory.
-Execute `smartbuild` task to do so.
+After configuring the project, we'll need to generate the proper files for RX.
+RX generate.entities task will generate java files in the `src-gen` directory.
+Execute `rx:generate.entities` task to do so.
 
 ```bash
-./gradlew smartbuild
+./gradlew rx:generate.entities
 ```
 
 ------------------------------------------------------------------
@@ -298,11 +299,11 @@ To generate the token value we need to follow these steps:
   1. As 'System Administrator' role on the ERP, go to 'RX Services' window.
   2. Create a new row with the following values:
 
-    |  Field Name         |  Property                        |
-    | ------------------- | -------------------------------- |
-    | Searchkey           |  Tutorial                        |
-    | Secret              |  123                             |
-    | Module              |  Tutorial - 1.0.0 - English (USA)|
+    |  Field Name         |  Property                      |
+    | ------------------- | ------------------------------ |
+    | Searchkey           |Tutorial                        |
+    | Secret              |123                             |
+    | Module              |Tutorial - 1.0.0 - English (USA)|
 
     ![new-rx-service.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png)
 
@@ -316,12 +317,12 @@ To generate the token value we need to follow these steps:
 
   6. On the tab 'RX Services Access' create a new row and fill it with the following values:
     
-    |  Field Name         |  Property                        |
-    | ------------------- | -------------------------------- |
-    | Organization        |  *                               |
-    | RX Services         |  Tutorial                        |
-    | Default Role        |  F&B España, S.A - Sales         |
-    | Default Org         |  F&B España, S.A                 |
+    | Field Name           |  Property                     |
+    | ------------------- | ------------------------------ |
+    | Organization        |*                               |
+    | RX Services         |Tutorial                        |
+    | Default Role        |F&B España, S.A - Sales         |
+    | Default Org         |F&B España, S.A                 |
 
     ![new-rx-service-access.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png)
 
@@ -331,9 +332,6 @@ To generate the token value we need to follow these steps:
     ./gradlew rx:rx
     ```
 
-    !!!info
-      You can run only the Auth service to make this request, for this run task: //TODO
-
   8. Open Postman and we'll make an authenticate request.
   
     Verbose: POST
@@ -342,17 +340,17 @@ To generate the token value we need to follow these steps:
 
     Body:
     ```json
-          {
-            "username":"F&B ES User",
-            "password":"EtendoAdmin1",
-            "service":"Tutorial",
-            "secret":"123"
-          }
+    {
+      "username":"F&BESUser",
+      "password":"EtendoAdmin1",
+      "service":"Tutorial",
+      "secret":"123"
+    }
     ```
     !!!warning
-      Remember the password changed before
+        Remember the password changed before
 
-    ![postman-request](/docs/assets/developer-guide/etendo-rx/tutorial/postman-request)
+    ![postman-request.png](/docs/assets/developer-guide/etendo-rx/tutorial/postman-request.png)
   
   9. Take the token under the response and fill in the 'token' property on the application.properties of the tutorial module.
 
@@ -361,7 +359,7 @@ To generate the token value we need to follow these steps:
 To scan your application for annotated components, add the `@ComponentScan` annotation to your Application class with the necessary base packages:
 
 !!!info
-  The path to the application class, in this case, is: `modules_rx/com.tutorial.rxtutorial/src/main/java/com/tutorial/rxtutorial/RxtutorialApplication.java`
+    The path to the application class, in this case, is: `modules_rx/com.tutorial.rxtutorial/src/main/java/com/tutorial/rxtutorial/RxtutorialApplication.java`
 
 ```java
 @ComponentScan({
@@ -373,7 +371,7 @@ To scan your application for annotated components, add the `@ComponentScan` anno
     Remember to add the import for ComponentScan annotation: 
     ```java
     ...
-    import org.springframework.context.annotation.ComponentScan
+    import org.springframework.context.annotation.ComponentScan;
     ...
     ```
 
@@ -471,7 +469,7 @@ But first, we'll take a look at the class that we just created.
 
   
   ```java
-   var orders = restUtils.getList(url, OrderRxtutorialModel.class);
+  var orders = restUtils.getList(url, OrderRxtutorialModel.class);
   ```
 
   The orders variable will store all the orders that will be filtered with our request, as you can see, the method `getList` receives two parameters, the first one is the URL that we'll use to make the request, and the second one is the model class of the retrieved object.
@@ -489,7 +487,7 @@ To simplify RX executions you have a simplified run task:
 ```
 
 !!!warning
-  Remember to configure the Auth service as described on the [**Installation**](/docs/developer-guide/etendo-rx/tutorials/installation) page
+    Remember to configure the Auth service as described on the [**Installation**](/docs/developer-guide/etendo-rx/tutorials/installation) page
 
 ## Run tutorial project
 
