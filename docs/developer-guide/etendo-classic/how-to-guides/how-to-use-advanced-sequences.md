@@ -85,7 +85,7 @@ There are two base reference implementations defined that you can use or extend:
 5. To export the changes to your module, do not forget to do a:
 
 	```bash title="Terminal"
- 	`./gradlew export.database`
+ 	./gradlew export.database
 	```
 
 ### **New sequence reference**
@@ -188,7 +188,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 5.  Finally, go back to your Reference created previously and create a new register in the `Dimension List` tab, selecting the new column you just created, then execute a:
 
 ```bash title="Terminal"
- ` ./gradlew smartbuild`
+  ./gradlew smartbuild
 ```
 
 
@@ -217,7 +217,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 3. Finally, go back to your Refrence previously created and create a new register in the `Dimension List` tab by selecting the new column you have just created then, execute a:
 
 ```bash title="Terminal"
- ` ./gradlew smartbuild`.
+  ./gradlew smartbuild.
 ```
 
 

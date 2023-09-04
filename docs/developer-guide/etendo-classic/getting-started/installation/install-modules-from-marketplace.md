@@ -16,7 +16,11 @@ This section provides a step by step explanation on how to Install modules from 
 7. 
     === "**Source Format**"
         To work with sources, you have to expand modules tasks available.  
-        `./gradlew expandModules`  
+        
+        ``` bash title="Terminal" 
+        ./gradlew expandModules
+        ```  
+        
         This task will try to download and install the added module.   
         A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.  
         
@@ -24,7 +28,7 @@ This section provides a step by step explanation on how to Install modules from 
         To work with JAR modules, you need to resolve the dependencies running
 
         ``` bash title="Terminal"  
-        `./gradlew dependencies`
+        ./gradlew dependencies
         ```
 
     !!! info
@@ -32,6 +36,6 @@ This section provides a step by step explanation on how to Install modules from 
 
 8. Finally, install or update the database with the new modules 
     ``` bash title="Terminal" 
-    `./gradlew smartbuild -Dlocal=no`
+    ./gradlew smartbuild -Dlocal=no
     ```
 9. Verify that the module is installed correctly by checking that its functions or features are available in the application or platform where you want to use it.

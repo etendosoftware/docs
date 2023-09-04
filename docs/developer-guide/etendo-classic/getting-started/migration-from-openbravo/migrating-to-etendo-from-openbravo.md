@@ -56,7 +56,7 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
         Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
         
 
-    ``` groovy
+    ``` groovy title="gradle.properties"
     githubUser=
     githubToken=
 
@@ -77,9 +77,12 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 
 4. In a new terminal opened in `EtendoERP` folder, run in the 
     ``` bash title="Terminal" 
-    `./gradlew expandCore`
+    ./gradlew expandCore
     ```
-5. Run in the terminal `./gradlew setup` 
+5. Run in the terminal 
+    ``` bash title="Terminal"
+    ./gradlew setup
+    ```
 6. Move the existing modules from `Openbravo/modules` folder to the `EtendoERP/modules` folder, except for the following ones:
 
     !!! warning
@@ -111,7 +114,7 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 
 7. Run
     ``` bash title="Terminal" 
-    `./gradlew update.database compile.complete.deploy --info`
+    ./gradlew update.database compile.complete.deploy --info
     ```
 !!! info
     Compilation errors associated with API changes may occur due to the version change in custom modules. If this happens, make sure to fix them by using the [documented GitHub issues](https://github.com/etendosoftware/etendo_core/issues?q=is%3Aissue+){target="_blank"}. 
@@ -122,7 +125,7 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 
 ### Remove previous instance deployed context
 
-```plaintext
+``` bash title="Terminal"
 rm -r /var/lib/tomcat/webapps/openbravo
 ```
 !!! warning
@@ -218,14 +221,14 @@ sudo service apache2 restart
         The backup script is usually located in `/usr/share/openbravo/backup/backup`. You should change the lines to point to the actual `Openbravo.properties` file. For example:
         
 
-    ```bash
+    ```bash title="Terminal"
 
     db_login=$(awk -F = '/^bbdd.user/ {print $2}' /opt/OpenbravoERP/config/Openbravo.properties)
     ```
 
     Should be changed for something like this:
 
-    ```bash
+    ```bash title="Terminal"
 
     db_login=$(awk -F = '/^bbdd.user/ {print $2}' /opt/EtendoERP/config/Openbravo.properties)
     ```
@@ -330,7 +333,7 @@ for
 
 Inside `~/.bashrc` you may have a command that lets you log in directly to the `/opt/OpenbravoERP` folder. Change it so it points to your new instance folder:
 
-``` bash title="Terminal" 
+``` bash title=".bashrc" 
 
 ## Change
 cd /opt/Openbravo

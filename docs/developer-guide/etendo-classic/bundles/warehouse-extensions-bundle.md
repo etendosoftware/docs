@@ -17,37 +17,37 @@ If the user would like to make changes on the table, and would like them to be t
 
 - Define the class for the hook, extending the abstract class StockHistoryHookPrioritizer and implementing the interface StockHistoryHook:
 
-```
-import com.etendoerp.stock.history.hooks.StockHistoryHookPrioritizer;
-import com.etendoerp.stock.history.hooks.StockHistoryHook;
+    ```java
+    import com.etendoerp.stock.history.hooks.StockHistoryHookPrioritizer;
+    import com.etendoerp.stock.history.hooks.StockHistoryHook;
 
-public class ExampleHook extends StockHistoryHookPrioritizer
-   implements StockHistoryHook {
-}
-```
+    public class ExampleHook extends StockHistoryHookPrioritizer
+      implements StockHistoryHook {
+    }
+    ```
 
 - Implement the abstract methods of the interface and abstract class: 
 
 
-```
-import com.etendoerp.stock.history.data.ETSTStorageDetailHistory;
-import com.etendoerp.stock.history.hooks.StockHistoryHookPrioritizer;
-import com.etendoerp.stock.history.hooks.StockHistoryHook;
+    ```java
+    import com.etendoerp.stock.history.data.ETSTStorageDetailHistory;
+    import com.etendoerp.stock.history.hooks.StockHistoryHookPrioritizer;
+    import com.etendoerp.stock.history.hooks.StockHistoryHook;
 
-public class ExampleHook extends StockHistoryHookPrioritizer
-   implements StockHistoryHook {
+    public class ExampleHook extends StockHistoryHookPrioritizer
+      implements StockHistoryHook {
 
- @Override
- public void exec(ETSTStorageDetailHistory hookObject) throws Exception {
-   System.out.println("This is the ExampleHook hook");
- }
+    @Override
+    public void exec(ETSTStorageDetailHistory hookObject) throws Exception {
+      System.out.println("This is the ExampleHook hook");
+    }
 
- @Override
- public int getPriority() {
-   return 0;
- }
-}
-``` 
+    @Override
+    public int getPriority() {
+      return 0;
+    }
+    }
+    ``` 
 
 ### Uninstall module
 
@@ -60,7 +60,3 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the module by the way corresponding to the installation method (Sources/JARs)
-
-
-
-

@@ -166,7 +166,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ### Technical Aspects
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in tomcat.
+This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in Tomcat.
 
 The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
@@ -191,7 +191,7 @@ This module allows customizing several security features related to
 - Changing Password after Login
 - Expiration Time (Autolock Password)
 
-To make this module work, **authentication Java class** must be configured in the `gradle.properties` file by adding the following line:
+To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
 
 ```
 authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
@@ -201,4 +201,3 @@ Then `./gradlew setup` must be executed.
 
 !!! warning
     It is mandatory to execute this step before installing the module. 
-
