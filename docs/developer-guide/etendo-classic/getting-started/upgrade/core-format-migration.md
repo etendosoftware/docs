@@ -9,13 +9,9 @@ title: Core format migration
         In JAR format, patchs can not be applied because the Core is resolved dinamically as a dependency.
 
 
-    1. To migrate from an environment with sources, you need to add to the build.gradle, the Etendo core dependency
+    1. To migrate from an environment with sources, you need to add to the build.gradle, the Etendo core dependency 
+    `implementation('com.etendoerp.platform:etendo-core:<version>')`
 
-        ``` groovy title="build.gradle"
-        dependencies {
-        implementation group: 'com.etendoerp.platform', name: 'etendo-core', version: '22.1.0'
-        }
-        ```
 
     2. You need to remove all the folders and files leaving the ones belonging to attachments,gradle, modules and config directories:
 
@@ -29,13 +25,20 @@ title: Core format migration
         - gradlew.bat
         - settings.gradle
 
-    3. To update the environment you have to execute the `./gradlew update.database --info` task, and run `./gradlew compile.complete smartbuild --info`
+    3. To update the environment you have to execute the task
+        ``` bash title="Terminal" 
+        ./gradlew update.database --info
+        ```
+        and run
+        ``` bash title="Terminal" 
+        ./gradlew compile.complete smartbuild --info
+        ```
 
 === "From JAR to Sources"
 
     1. To migrate from an environment with JARs to sources, you have to remove the Etendo core dependency from your build.gradle and run
         ``` bash title="Terminal" 
-        `./gradlew clean`
+        ./gradlew clean
         ```
 
     2. To work with sources, you need to specify the version to use in the Etendo plugin extension block inside the build.gradle
@@ -60,10 +63,10 @@ title: Core format migration
 
     4. Recompile
         ``` bash title="Terminal"
-        `./gradlew compile.complete smartbuild --info`
+        ./gradlew compile.complete smartbuild --info
         ```
 
     5. Update the database
         ``` bash title="Terminal"
-        `./gradlew update.database`
+        ./gradlew update.database
         ```

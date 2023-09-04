@@ -114,20 +114,6 @@ apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/eten
             And the other possible combinations.
 
 
-        By default, the plugin will try to resolve the artifact `com.etendoerp.platform:etendo-core`
-
-        If you want to use a different artifact name, you can specify it in the plugin block.
-        For example `com.smf.classic.core:ob:21.4.1`
-
-        ```groovy title="com.smf.classic.core:ob:21.4.1"
-        etendo {
-        coreGroup = "com.smf.classic.core"
-            coreName = "ob"
-        coreVersion = "21.4.1"
-            supportJars = false
-        }
-        ```
-
     2.  Create a backup of your environment.
     3.  Run the following command to update the core:
 

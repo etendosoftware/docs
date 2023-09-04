@@ -229,7 +229,7 @@ This action does an extra validation:
     -   If it is a credit settlement type, the same check with credit payments.
 -   Ensure that there are no invoices and credit payments in the same settlement.
 
-**Invoice type**
+###### **Invoice type**
 
 Create and process a Payment In with all the sales Payment Schedule Details included in the *OBFBPS\_Invoice* table for the settlement. Create a similar Payment Out with the purchase Payment Schedule Details.
 
@@ -251,7 +251,7 @@ To process the payment use the following public method (strAction: *P*):
 
 org.openbravo.advpaymentmngt.process.FIN\_AddPayment.processPayment(VariablesSecureApp vars, ConnectionProvider conn, String strAction, FIN\_Payment payment)
 
-**Credit type**
+###### **Credit type**
 
 Create and process a Payment In with all the sales credit payments included in the *OBFBPS\_Credit\_Payment* table. A similar Payment Out is created with the purchase credit payments.
 

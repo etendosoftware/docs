@@ -12,6 +12,6 @@ This document covers how IntelliJ IDEA  is capable of importing code formatter s
 3. Search Code Style → Java
 4. Click the gear icon → Import Schema → IntelliJ IDEA code style XML. 
 
-![code-style-java](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/code-formatting-style-in-intellij/code-style-java.png)
+    ![code-style-java](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/code-formatting-style-in-intellij/code-style-java.png)
 
 5. Select the file downloaded first and import the schema.

@@ -27,7 +27,9 @@ To generate a Personal Access Token, follow these steps:
 
     ![personal-access-tokens.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
 
-5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
+5. Click the "Generate new token" button. 
+
+6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
 
     !!! warning
         It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
@@ -45,7 +47,7 @@ Once you have generated a Personal Access Token, you will need to set it up in y
 
 1. Open the `gradle.properties` file in your project.
 2. Add the following lines to the file, replacing `YOUR_GITHUB_USERNAME` and `YOUR_PERSONAL_ACCESS_TOKEN` with your actual GitHub username and Personal Access Token:
-        ``` bash title="Terminal"
+        ``` bash title="gradle.properties"
         githubUser=YOUR_GITHUB_USERNAME
         githubToken=YOUR_PERSONAL_ACCESS_TOKEN
         context.name=etendo

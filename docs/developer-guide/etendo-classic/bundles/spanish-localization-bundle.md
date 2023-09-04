@@ -9,11 +9,11 @@ This module allows the user to select multiple business partners in the user int
 The multiple business partner selector can be integrated into other pages. The selector consists of two main parts:
 
 -   A widget which should be included in each page using this business partner selector
--   A popup window which is delivered as part of this module
+-   A pop-up window which is delivered as part of this module
 
 ### Example page
 
-After installing this module there will be a menu-entry 'Multi Business Partner Selector'. This menu item starts an example page for the business partner selector. The example page can be found in the module inside the directory: `modules/org.openbravo.module.multibpselector/src/org/openbravo/module/multibpselector`
+After installing this module, there will be a menu-entry 'Multi Business Partner Selector'. This menu item starts an example page for the business partner selector. The example page can be found in the module inside the directory: `modules/org.openbravo.module.multibpselector/src/org/openbravo/module/multibpselector`
 
 The example page consists of the following parts:
 
@@ -35,7 +35,7 @@ To integrate this widget and make use of it, the following steps are needed:
 
 The HTML for the widget itself is shown below. The content of the widget is controlled by a HTML select tag.
 
-```plaintext
+```html
 <table class="Main_Client_TableEdition">
     <tr>
         <td class="TableEdition_OneCell_width"></td>
@@ -138,7 +138,7 @@ The HTML for the widget itself is shown below. The content of the widget is cont
 </table>
 ```
 
-The name of the `select` in the HTML is `inpcBPartnerId_IN` and its id is `reportCBPartnerId_IN`. The name is used for server side handling of the selected business partners, the id is used for client side handling.
+The name of the `select` in the HTML is `inpcBPartnerId_IN` and its ID is `reportCBPartnerId_IN`. The name is used for server side handling of the selected business partners, the ID is used for client side handling.
 
 ```plaintext
 <select class="List_width List_height" name="inpcBPartnerId_IN" multiple="" id="reportCBPartnerId_IN">
@@ -148,14 +148,14 @@ The name of the `select` in the HTML is `inpcBPartnerId_IN` and its id is `repor
 
 Inside the `select` there is a `div`. The `div` is used by the xml engine to fill the select. Initially the select is empty.
 
-If you have multiple business partner widgets on one page then you have to give hem a unique id and name. Also the `div` inside the `select` needs to have a unique id.
+If you have multiple business partner widgets on one page, then you have to give them a unique ID and name. Also the `div` inside the `select` needs to have a unique ID.
 
 ### JavaScript
 
-The selector popup will return the selected business partners, which are displayed in the widget (converted to select options). None of the shown business partners (in the widget) is selected. So if the form is posted, no information is shown serverside. Therefore a piece of JavaScript is required. This code should be executed when the form is submitted.
+The selector pop-up will return the selected business partners, which are displayed in the widget (converted to select options). None of the shown business partners (in the widget) is selected. So if the form is posted, no information is shown serverside. Therefore a piece of JavaScript is required. This code should be executed when the form is submitted.
 
-In a standard Etendo page there should be a validate JavaScript method.  
-Just before the form submit, the method `markCheckedAllElements` should be called with the `select` element as the JS parameter. The `markCheckedAllElements` method is available in the JS library `web/js/utils.js`, which is part of the **Etendo** distribution.
+In a standard Etendo page, there should be a validate JavaScript method.  
+Just before the form submit, the method `markCheckedAllElements` should be called with the `select` element as the JS parameter. The `markCheckedAllElements` method is available in the JS library `web/js/utils.js`, which is part of the Etendo distribution.
 
 ```plaintext
 // this method is called just before form submit  
@@ -171,7 +171,7 @@ function validate() {
 
 ### Server Side Handling
 
-When the page with the business partner selector widget is posted to the server, the id's of the selected business partners is passed to the server in the `inpcBPartnerId_IN` request parameter (the name of the HTML select tag in the widget). The value is a multi-valued request parameter. So its value should be retrieved using the `getParameterValues` method of the HttpServletRequest object:
+When the page with the business partner selector widget is posted to the server, the ID's of the selected business partners is passed to the server in the `inpcBPartnerId_IN` request parameter (the name of the HTML select tag in the widget). The value is a multi-valued request parameter. So its value should be retrieved using the `getParameterValues` method of the HttpServletRequest object:
 
 `request.getParameterValues("inpcBPartnerId_IN")`
 
@@ -179,4 +179,4 @@ The example page shows how the selected business partners are displayed in the s
 
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
