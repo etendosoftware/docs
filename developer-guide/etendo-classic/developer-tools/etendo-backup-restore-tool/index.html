@@ -3433,10 +3433,92 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_1" id="__nav_5_3_1_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../etendo-rx/getting-started/" class="md-nav__link">
-        Getting Started
+      <a href="../../../etendo-rx/tutorials/installation/" class="md-nav__link">
+        Installation
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
+        First Steps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3477,54 +3559,6 @@
     <li class="md-nav__item">
       <a href="../../../etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         How to Filter any request for Active or all Records
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
-          Tutorial
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorial
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
-        First Steps
       </a>
     </li>
   
@@ -3811,13 +3845,13 @@
   <h1>Etendo Backup and Restore Plugin</h1>
 
 <h2 id="resolving-the-plugin">Resolving the plugin</h2>
-<p>To use the Etendo Backup and Restore tool, you should add the <strong>plugin id</strong> on the <code>build.gradle</code> file, with the selected version.</p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+<p>To use the Etendo Backup and Restore tool, you should add the plugin id on the <code>build.gradle</code> file, with the selected version.</p>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.etendobackup&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
 </span></code></pre></div>
 <p>To resolve the plugin dependiencies, you should add the following lines on top of the <code>settings.gradle</code> file</p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
+<div class="language-groovy highlight"><span class="filename">settings.gradle</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pluginManagement</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://repo.futit.cloud/repository/static-public-releases&quot;</span>
@@ -3835,41 +3869,42 @@
 <p>The User running the backup must have SUDO access and the <code>backup.properties</code> file properly configured.</p>
 </div>
 <p>To run the backup, execute</p>
-<p><code>./gradlew backup -PbkpMode=&lt;mode&gt;</code></p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>backup<span class="w"> </span>-PbkpMode<span class="o">=</span>&lt;mode&gt;
+</span></code></pre></div>
 <p>Where the mode could be <code>manual</code> or <code>auto</code></p>
 <h2 id="backup-properties-file">Backup properties file</h2>
 <p>The <code>backup.properties</code> file is found inside the <code>config</code> folder on the root project.
 If it does not exists, run <code>./gradlew setup</code> to generate the missing files.</p>
 <p>You can also provide a custom location of <code>backup.properties</code> adding the next block inside <code>build.gradle</code>.
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">backup</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">configPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/path/to/backup.properties&quot;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">}</span>
+<div class="language-groovy highlight"><span class="filename">backup.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">backup</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">configPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/path/to/backup.properties&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">}</span>
 </span></code></pre></div></p>
 <p><code>backup.properties</code> contains most of the properties that you should customize before running the backup.</p>
 <ul>
 <li>
 <p>USER 
-Sets the <strong>user</strong> who will be running the backup.</p>
+Sets the user who will be running the backup.</p>
 </li>
 <li>
 <p>GROUP
-Sets the <strong>group</strong> related to the user running the backup.</p>
+Sets the group related to the user running the backup.</p>
 </li>
 <li>
 <p>BACKUPS_DIR
-Sets the path where the <strong>backup</strong> will be stored.</p>
+Sets the path where the backup will be stored.</p>
 </li>
 <li>
 <p>BACKUPS_TMP_DIR
-Sets the path where the <strong>temp directory</strong> will be created to store the generated files.</p>
+Sets the path where the temp directory will be created to store the generated files.</p>
 </li>
 <li>
 <p>ATTACH_COPY
-Sets a flag (<strong>yes</strong> or <strong>no</strong>) if the <strong>external attachments</strong> (if cointained) should be included in the backup.</p>
+Sets a flag (yes or no) if the external attachments (if cointained) should be included in the backup.</p>
 </li>
 <li>
 <p>ATTACH_IN_BKP
-Sets a flag (<strong>yes</strong> or <strong>no</strong>) if the <strong>source attachments</strong> should be included in the backup.</p>
+Sets a flag (yes or no) if the source attachments should be included in the backup.</p>
 </li>
 </ul>
 <p><br></p>
@@ -3877,69 +3912,69 @@ Sets a flag (<strong>yes</strong> or <strong>no</strong>) if the <strong>source 
 <p>These properties are used when the backup is running in <code>auto</code> mode.</p>
 <ul>
 <li>EMAIL_FROM
-Sets the <strong>address</strong> sending emails.</li>
+Sets the address sending emails.</li>
 <li>EMAIL_USER
-Sets the <strong>user address</strong> who sends emails.</li>
+Sets the user address who sends emails.</li>
 <li>EMAIL_PASSWORD
-Sets the email user <strong>password</strong>.</li>
+Sets the email user password.</li>
 </ul>
-<p>A backup could finalize in 3 <strong>STATES</strong>: <code>ERROR - WARNING - SUCCESS</code></p>
-<p>Depending on the finish <strong>STATE</strong>, the next properties are used to specify the email address where to send emails.</p>
+<p>A backup could finalize in 3 STATES: <code>ERROR - WARNING - SUCCESS</code></p>
+<p>Depending on the finish STATE, the next properties are used to specify the email address where to send emails.</p>
 <ul>
 <li>
 <p>EMAIL_<em>STATE</em>_TO
-Sets the <strong>email address</strong> where to send emails.</p>
+Sets the email address where to send emails.</p>
 </li>
 <li>
 <p>EMAIL_<em>STATE</em>_CC
-Sets multiple <strong>email address</strong> (separated with <code>;</code>) which will receive the email
+Sets multiple email address (separated with <code>;</code>) which will receive the email
 <code>Ex:EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software</code></p>
 </li>
 <li>
 <p>EMAIL_<em>STATE</em>_SUBJECT
-Sets the <strong>subject</strong> of the email.</p>
+Sets the subject of the email.</p>
 </li>
 </ul>
 <h3 id="finalized-states">Finalized states</h3>
 <ul>
 <li>
 <p>ERROR
-Occurs when the creation of the backup fails. An email <strong>must</strong> be sent to the specified properties.</p>
+Occurs when the creation of the backup fails. An email must be sent to the specified properties.</p>
 </li>
 <li>
 <p>WARNING
-The backup finalizes with <strong>WARNING</strong> messages. If the <strong>SEND_EMAIL_ON_WARNING</strong> flag is set to <strong>yes</strong> an email should be send to the specified properties.</p>
+The backup finalizes with WARNING messages. If the SEND_EMAIL_ON_WARNING flag is set to yes, an email should be sent to the specified properties.</p>
 </li>
 <li>
 <p>SUCCESS
-The backup finalizes without warning or errors. If the <strong>SEND_EMAIL_ON_SUCCESS</strong> flag is set to <strong>yes</strong> an email should be sent to the specified properties.</p>
+The backup finalizes without warning or errors. If the SEND_EMAIL_ON_SUCCESS flag is set to yes, an email should be sent to the specified properties.</p>
 </li>
 </ul>
-<p><br></p>
 <h2 id="restore-task">Restore task</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The user running the <strong>restore</strong> should have SUDO access</p>
+<p>The user running the restore should have SUDO access.</p>
 </div>
 <p>To run the restore, execute</p>
-<p><code>./gradlew restore -PbackupPath=/path/to/backup</code></p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>restore<span class="w"> </span>-PbackupPath<span class="o">=</span>/path/to/backup
+</span></code></pre></div>
 <p>Replace <code>/path/to/backup/</code> with the location of the backup to be restored.</p>
 <p>A menu will be shown where you can choose multiple options to be performed.</p>
 <div class="admonition failure">
 <p class="admonition-title">Failure</p>
-<p>Make sure all the options selected are correct. The selected <strong>destination directories</strong> and <strong>database</strong> will be <strong>OVERWRITTEN</strong>.</p>
+<p>Make sure all the options selected are correct. The selected destination directories and database will be OVERWRITTEN.</p>
 </div>
 <ol>
-<li><strong>User verification</strong>
-You should run the restore with SUDO access <strong>(recommended)</strong>. In case of not having permissions, you will have the option of inserting the SUDO password.
+<li>User verification:<br>
+You should run the restore with SUDO access (recommended). In case of not having permissions, you will have the option of inserting the SUDO password.
 <br></li>
-<li><strong>Sources destination</strong>
-You can select the location in which the <strong>sources</strong> will be restored. The default path is set to the root dir from the project where the restore command is being executed.
+<li>Sources destination:<br>
+You can select the location in which the sources will be restored. The default path is set to the root dir from the project where the restore command is being executed.
 <br></li>
-<li><strong>Attachments verification</strong>
-You can select to keep or ignore the copy of <strong>attachments</strong> (externals or contained inside the sources)
+<li>Attachments verification:<br>
+You can select to keep or ignore the copy of attachments (externals or contained inside the sources).
 <br></li>
-<li><strong>Properties verification</strong>
+<li>Properties verification:<br>
 You can select which properties to use.</li>
 </ol>
 <div class="admonition info">
@@ -3948,15 +3983,15 @@ You can select which properties to use.</li>
 </div>
 <ul>
 <li>Project properties 
-Obtained from the <code>gradle.properties</code> file inside the <strong>current project</strong> running the restore. 
-You can <strong>change</strong> these properties to select, for example, the name of the database to be restored.
-Once the restore is done, the properties inside <code>config/Openbravo.properties</code> will be <strong>updated</strong> with the selected ones.
+Obtained from the <code>gradle.properties</code> file inside the current project running the restore. 
+You can change these properties to select, for example, the name of the database to be restored.
+Once the restore is done, the properties inside <code>config/Openbravo.properties</code> will be updated with the selected ones.
 <br></li>
 <li>
 <p>Original sources properties
-Obtained from the <code>gradle.properties</code> file inside the <strong>original sources</strong>.
-The database will be restored with the original options (this could <strong>overwrite</strong> an existing database)
-The properties inside <code>config/Openbravo.properties</code> will <strong>not change</strong>.</p>
+Obtained from the <code>gradle.properties</code> file inside the original sources.
+The database will be restored with the original options (this could overwrite an existing database)
+The properties inside <code>config/Openbravo.properties</code> will not change.</p>
 </li>
 <li>
 <p><strong>Database properties</strong>

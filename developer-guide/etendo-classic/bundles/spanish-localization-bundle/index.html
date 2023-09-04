@@ -3427,10 +3427,92 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_1" id="__nav_5_3_1_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../etendo-rx/getting-started/" class="md-nav__link">
-        Getting Started
+      <a href="../../../etendo-rx/tutorials/installation/" class="md-nav__link">
+        Installation
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
+        First Steps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3471,54 +3553,6 @@
     <li class="md-nav__item">
       <a href="../../../etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         How to Filter any request for Active or all Records
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
-          Tutorial
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorial
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
-        First Steps
       </a>
     </li>
   
@@ -3803,10 +3837,10 @@
 <p>The multiple business partner selector can be integrated into other pages. The selector consists of two main parts:</p>
 <ul>
 <li>A widget which should be included in each page using this business partner selector</li>
-<li>A popup window which is delivered as part of this module</li>
+<li>A pop-up window which is delivered as part of this module</li>
 </ul>
 <h3 id="example-page">Example page</h3>
-<p>After installing this module there will be a menu-entry 'Multi Business Partner Selector'. This menu item starts an example page for the business partner selector. The example page can be found in the module inside the directory: <code>modules/org.openbravo.module.multibpselector/src/org/openbravo/module/multibpselector</code></p>
+<p>After installing this module, there will be a menu-entry 'Multi Business Partner Selector'. This menu item starts an example page for the business partner selector. The example page can be found in the module inside the directory: <code>modules/org.openbravo.module.multibpselector/src/org/openbravo/module/multibpselector</code></p>
 <p>The example page consists of the following parts:</p>
 <ul>
 <li><strong>ExampleSelectorUsage.java</strong>: the servlet filling form data and capturing the selected business partners.</li>
@@ -3823,118 +3857,118 @@
 </ul>
 <h3 id="html-widget">HTML Widget</h3>
 <p>The HTML for the widget itself is shown below. The content of the widget is controlled by a HTML select tag.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;table class=&quot;Main_Client_TableEdition&quot;&gt;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &lt;tr&gt;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        &lt;td class=&quot;TableEdition_OneCell_width&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    &lt;/tr&gt;
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;Main_Client_TableEdition&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TableEdition_OneCell_width&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    &lt;tr&gt;
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        &lt;td class=&quot;TitleCell&quot;&gt;&lt;span class=&quot;LabelText&quot;&gt;Business Partner&lt;/span&gt;&lt;/td&gt;
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        &lt;td class=&quot;List_ContentCell&quot; colspan=&quot;2&quot;&gt;
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;TitleCell&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;LabelText&quot;</span><span class="p">&gt;</span>Business Partner<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_ContentCell&quot;</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        &lt;tr&gt;
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            &lt;td&gt;
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>               &lt;select class=&quot;List_width List_height&quot;
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                     name=&quot;inpcBPartnerId_IN&quot; multiple=&quot;&quot; id=&quot;reportCBPartnerId_IN&quot;&gt;
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                  &lt;div id=&quot;sectionBusinessPartners&quot; /&gt;
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>               &lt;/select&gt;&lt;/td&gt;
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            &lt;td class=&quot;List_Button_ContentCell&quot;&gt;
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>               &lt;table border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>               &lt;tr&gt;
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                  &lt;td&gt;&lt;a class=&quot;List_Button_TopLink&quot; href=&quot;#&quot;
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                      onclick=&quot;openMultiSearch(null, null, &#39;../multibpselector/BusinessPartnerSelectorMULTIBP.html&#39;, &#39;SELECTOR_BUSINESS&#39;, false, &#39;frmMain&#39;, &#39;inpcBPartnerId_IN&#39;);return false;&quot;
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>                      onfocus=&quot;setWindowElementFocus(this); window.status=&#39;Add&#39;; return true;&quot;
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                      onblur=&quot;window.status=&#39;&#39;; return true;&quot;
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>                      onkeypress=&quot;this.className=&#39;List_Button_TopLink_active&#39;; return true;&quot;
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>                      onkeyup=&quot;this.className=&#39;List_Button_TopLink_focus&#39;; return true;&quot;&gt;
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>               <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_width List_height&quot;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                     <span class="na">name</span><span class="o">=</span><span class="s">&quot;inpcBPartnerId_IN&quot;</span> <span class="na">multiple</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;reportCBPartnerId_IN&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;sectionBusinessPartners&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>               <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_ContentCell&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>               <span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>               <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_TopLink&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                      <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;openMultiSearch(null, null, &#39;../multibpselector/BusinessPartnerSelectorMULTIBP.html&#39;, &#39;SELECTOR_BUSINESS&#39;, false, &#39;frmMain&#39;, &#39;inpcBPartnerId_IN&#39;);return false;&quot;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>                      <span class="na">onfocus</span><span class="o">=</span><span class="s">&quot;setWindowElementFocus(this); window.status=&#39;Add&#39;; return true;&quot;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                      <span class="na">onblur</span><span class="o">=</span><span class="s">&quot;window.status=&#39;&#39;; return true;&quot;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>                      <span class="na">onkeypress</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_TopLink_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>                      <span class="na">onkeyup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_TopLink_focus&#39;; return true;&quot;</span><span class="p">&gt;</span>
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>                       &lt;table class=&quot;List_Button_Top&quot;
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>                             onmousedown=&quot;this.className=&#39;List_Button_Top_active&#39;; return true;&quot;
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>                             onmouseup=&quot;this.className=&#39;List_Button_Top&#39;; return true;&quot;
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                             onmouseover=&quot;this.className=&#39;List_Button_Top_hover&#39;; window.status=&#39;Add&#39;; return true;&quot;
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>                             onmouseout=&quot;this.className=&#39;List_Button_Top&#39;; window.status=&#39;&#39;; return true;&quot;&gt;
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                             &lt;tr&gt;
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                                &lt;td class=&quot;List_Button_Top_bg&quot;&gt;
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>                                   &lt;img class=&quot;List_Button_Icon List_Button_Icon_Add&quot;
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>                                        src=&quot;../../../../../web/images/blank.gif&quot; alt=&quot;Add&quot;
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>                                        title=&quot;Add&quot; /&gt;&lt;/td&gt;
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>                             &lt;/tr&gt;
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>                       &lt;/table&gt;
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>                       &lt;/a&gt;
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>                   &lt;/td&gt;
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>                &lt;/tr&gt;
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>                &lt;tr&gt;
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>                   &lt;td class=&quot;List_Button_Separator&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>                &lt;/tr&gt;
-</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>                &lt;tr&gt;
-</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>                   &lt;td&gt;&lt;a class=&quot;List_Button_MiddleLink&quot; href=&quot;#&quot;
-</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>                           onclick=&quot;clearSelectedElements(document.frmMain.inpcBPartnerId_IN);return false;&quot;
-</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>                           onfocus=&quot;setWindowElementFocus(this); window.status=&#39;Delete selected elements&#39;; return true;&quot;
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>                           onblur=&quot;window.status=&#39;&#39;; return true;&quot;
-</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>                           onkeypress=&quot;this.className=&#39;List_Button_MiddleLink_active&#39;; return true;&quot;
-</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>                           onkeyup=&quot;this.className=&#39;List_Button_MiddleLink_focus&#39;; return true;&quot;&gt;
-</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>                           &lt;table class=&quot;List_Button_Middle&quot;
-</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>                              onmousedown=&quot;this.className=&#39;List_Button_Middle_active&#39;; return true;&quot;
-</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>                              onmouseup=&quot;this.className=&#39;List_Button_Middle&#39;; return true;&quot;
-</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>                              onmouseover=&quot;this.className=&#39;List_Button_Middle_hover&#39;; window.status=&#39;Delete selected elements&#39;; return true;&quot;
-</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>                              onmouseout=&quot;this.className=&#39;List_Button_Middle&#39;; window.status=&#39;&#39;; return true;&quot;&gt;
-</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>                              &lt;tr&gt;
-</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>                                 &lt;td class=&quot;List_Button_Middle_bg&quot;&gt;
-</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>                                 &lt;img class=&quot;List_Button_Icon List_Button_Icon_Delete&quot;
-</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>                                      src=&quot;../../../../../web/images/blank.gif&quot;
-</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>                                      alt=&quot;Delete selected elements&quot;
-</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>                                      title=&quot;Delete selected elements&quot; /&gt;&lt;/td&gt;
-</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>                              &lt;/tr&gt;
-</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>                            &lt;/table&gt;
-</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>                           &lt;/a&gt;&lt;/td&gt;
-</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>                        &lt;/tr&gt;
-</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>                        &lt;tr&gt;
-</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>                           &lt;td class=&quot;List_Button_Separator&quot;&gt;&lt;/td&gt;
-</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>                        &lt;/tr&gt;
-</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>                        &lt;tr&gt;
-</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>                           &lt;td&gt;&lt;a class=&quot;List_Button_BottomLink&quot; href=&quot;#&quot;
-</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>                                  onclick=&quot;clearList(document.frmMain.inpcBPartnerId_IN);return false;&quot;
-</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>                                  onfocus=&quot;setWindowElementFocus(this); window.status=&#39;Delete all elements&#39;; return true;&quot;
-</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>                                  onblur=&quot;window.status=&#39;&#39;; return true;&quot;
-</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>                                  onkeypress=&quot;this.className=&#39;List_Button_BottomLink_active&#39;; return true;&quot;
-</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>                                  onkeyup=&quot;this.className=&#39;List_Button_BottomLink_focus&#39;; return true;&quot;&gt;
-</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>                                  &lt;table class=&quot;List_Button_Bottom&quot;
-</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>                                      onmousedown=&quot;this.className=&#39;List_Button_Bottom_active&#39;; return true;&quot;
-</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>                                      onmouseup=&quot;this.className=&#39;List_Button_Bottom&#39;; return true;&quot;
-</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>                                      onmouseover=&quot;this.className=&#39;List_Button_Bottom_hover&#39;; window.status=&#39;Delete all elements&#39;; return true;&quot;
-</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>                                      onmouseout=&quot;this.className=&#39;List_Button_Bottom&#39;; window.status=&#39;&#39;; return true;&quot;&gt;
-</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>                            &lt;tr&gt;
-</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>                               &lt;td class=&quot;List_Button_Bottom_bg&quot;&gt;
-</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>                                  &lt;img class=&quot;List_Button_Icon List_Button_Icon_DeleteAll&quot;
-</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>                                       src=&quot;../../../../../web/images/blank.gif&quot;
-</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>                                       alt=&quot;Delete all elements&quot; title=&quot;Delete all elements&quot; /&gt;
-</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>                                &lt;/td&gt;
-</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>                             &lt;/tr&gt;
-</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>                         &lt;/table&gt;
-</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>                     &lt;/a&gt;&lt;/td&gt;
-</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>                 &lt;/tr&gt;
-</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>            &lt;/table&gt;
-</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>        &lt;/td&gt;
-</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    &lt;/tr&gt;
-</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>&lt;/table&gt;
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>                       <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Top&quot;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>                             <span class="na">onmousedown</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Top_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>                             <span class="na">onmouseup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Top&#39;; return true;&quot;</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                             <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Top_hover&#39;; window.status=&#39;Add&#39;; return true;&quot;</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>                             <span class="na">onmouseout</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Top&#39;; window.status=&#39;&#39;; return true;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                             <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                                <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Top_bg&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>                                   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Icon List_Button_Icon_Add&quot;</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>                                        <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../../../../web/images/blank.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Add&quot;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>                                        <span class="na">title</span><span class="o">=</span><span class="s">&quot;Add&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>                             <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>                       <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>                       <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>                   <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>                   <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Separator&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>                   <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_MiddleLink&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>                           <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;clearSelectedElements(document.frmMain.inpcBPartnerId_IN);return false;&quot;</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>                           <span class="na">onfocus</span><span class="o">=</span><span class="s">&quot;setWindowElementFocus(this); window.status=&#39;Delete selected elements&#39;; return true;&quot;</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>                           <span class="na">onblur</span><span class="o">=</span><span class="s">&quot;window.status=&#39;&#39;; return true;&quot;</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>                           <span class="na">onkeypress</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_MiddleLink_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>                           <span class="na">onkeyup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_MiddleLink_focus&#39;; return true;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>                           <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Middle&quot;</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>                              <span class="na">onmousedown</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Middle_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>                              <span class="na">onmouseup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Middle&#39;; return true;&quot;</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>                              <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Middle_hover&#39;; window.status=&#39;Delete selected elements&#39;; return true;&quot;</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>                              <span class="na">onmouseout</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Middle&#39;; window.status=&#39;&#39;; return true;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>                              <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>                                 <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Middle_bg&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>                                 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Icon List_Button_Icon_Delete&quot;</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>                                      <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../../../../web/images/blank.gif&quot;</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>                                      <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Delete selected elements&quot;</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>                                      <span class="na">title</span><span class="o">=</span><span class="s">&quot;Delete selected elements&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>                              <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>                            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>                           <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>                        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>                        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>                           <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Separator&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>                        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>                        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>                           <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_BottomLink&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>                                  <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;clearList(document.frmMain.inpcBPartnerId_IN);return false;&quot;</span>
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>                                  <span class="na">onfocus</span><span class="o">=</span><span class="s">&quot;setWindowElementFocus(this); window.status=&#39;Delete all elements&#39;; return true;&quot;</span>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>                                  <span class="na">onblur</span><span class="o">=</span><span class="s">&quot;window.status=&#39;&#39;; return true;&quot;</span>
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>                                  <span class="na">onkeypress</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_BottomLink_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>                                  <span class="na">onkeyup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_BottomLink_focus&#39;; return true;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>                                  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Bottom&quot;</span>
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>                                      <span class="na">onmousedown</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Bottom_active&#39;; return true;&quot;</span>
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>                                      <span class="na">onmouseup</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Bottom&#39;; return true;&quot;</span>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>                                      <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Bottom_hover&#39;; window.status=&#39;Delete all elements&#39;; return true;&quot;</span>
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>                                      <span class="na">onmouseout</span><span class="o">=</span><span class="s">&quot;this.className=&#39;List_Button_Bottom&#39;; window.status=&#39;&#39;; return true;&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>                            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>                               <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Bottom_bg&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>                                  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;List_Button_Icon List_Button_Icon_DeleteAll&quot;</span>
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>                                       <span class="na">src</span><span class="o">=</span><span class="s">&quot;../../../../../web/images/blank.gif&quot;</span>
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>                                       <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Delete all elements&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Delete all elements&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>                                <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>                             <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>                         <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>                     <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>                 <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>        <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 </span></code></pre></div>
-<p>The name of the <code>select</code> in the HTML is <code>inpcBPartnerId_IN</code> and its id is <code>reportCBPartnerId_IN</code>. The name is used for server side handling of the selected business partners, the id is used for client side handling.</p>
+<p>The name of the <code>select</code> in the HTML is <code>inpcBPartnerId_IN</code> and its ID is <code>reportCBPartnerId_IN</code>. The name is used for server side handling of the selected business partners, the ID is used for client side handling.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;select class=&quot;List_width List_height&quot; name=&quot;inpcBPartnerId_IN&quot; multiple=&quot;&quot; id=&quot;reportCBPartnerId_IN&quot;&gt;
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> &lt;div id=&quot;sectionBusinessPartners&quot; /&gt;
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;/select&gt;
 </span></code></pre></div>
 <p>Inside the <code>select</code> there is a <code>div</code>. The <code>div</code> is used by the xml engine to fill the select. Initially the select is empty.</p>
-<p>If you have multiple business partner widgets on one page then you have to give hem a unique id and name. Also the <code>div</code> inside the <code>select</code> needs to have a unique id.</p>
+<p>If you have multiple business partner widgets on one page, then you have to give them a unique ID and name. Also the <code>div</code> inside the <code>select</code> needs to have a unique ID.</p>
 <h3 id="javascript">JavaScript</h3>
-<p>The selector popup will return the selected business partners, which are displayed in the widget (converted to select options). None of the shown business partners (in the widget) is selected. So if the form is posted, no information is shown serverside. Therefore a piece of JavaScript is required. This code should be executed when the form is submitted.</p>
-<p>In a standard Etendo page there should be a validate JavaScript method.<br />
-Just before the form submit, the method <code>markCheckedAllElements</code> should be called with the <code>select</code> element as the JS parameter. The <code>markCheckedAllElements</code> method is available in the JS library <code>web/js/utils.js</code>, which is part of the <strong>Etendo</strong> distribution.</p>
+<p>The selector pop-up will return the selected business partners, which are displayed in the widget (converted to select options). None of the shown business partners (in the widget) is selected. So if the form is posted, no information is shown serverside. Therefore a piece of JavaScript is required. This code should be executed when the form is submitted.</p>
+<p>In a standard Etendo page, there should be a validate JavaScript method.<br />
+Just before the form submit, the method <code>markCheckedAllElements</code> should be called with the <code>select</code> element as the JS parameter. The <code>markCheckedAllElements</code> method is available in the JS library <code>web/js/utils.js</code>, which is part of the Etendo distribution.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>// this method is called just before form submit  
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>function validate() {
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  // +++++++++ MULTIBPSelector +++++++++++++++++++
@@ -3946,11 +3980,11 @@ Just before the form submit, the method <code>markCheckedAllElements</code> shou
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}
 </span></code></pre></div>
 <h3 id="server-side-handling">Server Side Handling</h3>
-<p>When the page with the business partner selector widget is posted to the server, the id's of the selected business partners is passed to the server in the <code>inpcBPartnerId_IN</code> request parameter (the name of the HTML select tag in the widget). The value is a multi-valued request parameter. So its value should be retrieved using the <code>getParameterValues</code> method of the HttpServletRequest object:</p>
+<p>When the page with the business partner selector widget is posted to the server, the ID's of the selected business partners is passed to the server in the <code>inpcBPartnerId_IN</code> request parameter (the name of the HTML select tag in the widget). The value is a multi-valued request parameter. So its value should be retrieved using the <code>getParameterValues</code> method of the HttpServletRequest object:</p>
 <p><code>request.getParameterValues("inpcBPartnerId_IN")</code></p>
 <p>The example page shows how the selected business partners are displayed in the second page and also how to support moving back to the first page and re-displaying the selected business partners.</p>
 <hr />
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide">"Multibpselector/Programmers Guide"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a> by <a href="https://etendo.software">Etendo</a>.</p>
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide" target="_blank">"Multibpselector/Programmers Guide"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 

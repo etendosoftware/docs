@@ -3518,10 +3518,92 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_1" id="__nav_5_3_1_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../etendo-rx/getting-started/" class="md-nav__link">
-        Getting Started
+      <a href="../../../../etendo-rx/tutorials/installation/" class="md-nav__link">
+        Installation
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
+        First Steps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3562,54 +3644,6 @@
     <li class="md-nav__item">
       <a href="../../../../etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         How to Filter any request for Active or all Records
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
-          Tutorial
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorial
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
-        First Steps
       </a>
     </li>
   
@@ -4032,7 +4066,7 @@
 <summary>Note</summary>
 <p>Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the <a href="/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">Use of Repositories technical guide</a>.</p>
 </details>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">githubUser</span><span class="o">=</span>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">githubUser</span><span class="o">=</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">githubToken</span><span class="o">=</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
@@ -4051,10 +4085,12 @@
 </li>
 <li>
 <p>In a new terminal opened in <code>EtendoERP</code> folder, run in the 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>expandCore<span class="sb">`</span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>expandCore
 </span></code></pre></div></p>
 </li>
-<li>Run in the terminal <code>./gradlew setup</code> </li>
+<li>Run in the terminal 
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>setup
+</span></code></pre></div></li>
 <li>
 <p>Move the existing modules from <code>Openbravo/modules</code> folder to the <code>EtendoERP/modules</code> folder, except for the following ones:</p>
 <div class="admonition warning">
@@ -4086,7 +4122,7 @@ org.openbravo.v3.framework</p>
 </li>
 <li>
 <p>Run
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete.deploy<span class="w"> </span>--info<span class="sb">`</span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>compile.complete.deploy<span class="w"> </span>--info
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -4096,7 +4132,7 @@ org.openbravo.v3.framework</p>
 </div>
 <h2 id="post-migration-configuration">Post Migration Configuration</h2>
 <h3 id="remove-previous-instance-deployed-context">Remove previous instance deployed context</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>rm -r /var/lib/tomcat/webapps/openbravo
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>/var/lib/tomcat/webapps/openbravo
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4107,7 +4143,7 @@ org.openbravo.v3.framework</p>
 <p class="admonition-title">Info</p>
 <p>Depending on your server, this command may need to be changed.</p>
 </div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>/etc/init.d/tomcat<span class="w"> </span>start
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>/etc/init.d/tomcat<span class="w"> </span>start
 </span></code></pre></div>
 <h3 id="attachments-configuration">Attachments Configuration</h3>
 <div class="admonition warning">
@@ -4116,12 +4152,12 @@ org.openbravo.v3.framework</p>
 </div>
 <p>In the migration process, the attachments directory configuration is not changed. To move them to a new folder (for example <code>/opt/EtendoERP/attachments</code>), you must edit the <code>Openbravo.properties</code> file and move the attachments manually.<br />
 For example:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>vi<span class="w"> </span>/opt/EtendoERP/config/Openbravo.properties
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">## Change the attach.path property like this (do not include the #):</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">## attach.path=/opt/EtendoERP/attachments</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>mv<span class="w"> </span>/opt/OpenbravoERP/attachments<span class="w"> </span>/opt/EtendoERP/attachments
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">## Deploy changes to tomcat</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>./gradlew<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>vi<span class="w"> </span>/opt/EtendoERP/config/Openbravo.properties
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">## Change the attach.path property like this (do not include the #):</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">## attach.path=/opt/EtendoERP/attachments</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>mv<span class="w"> </span>/opt/OpenbravoERP/attachments<span class="w"> </span>/opt/EtendoERP/attachments
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">## Deploy changes to tomcat</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>./gradlew<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4134,10 +4170,10 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <p class="admonition-title">Info</p>
 <p>Compilation tasks now can be made with the Gradle Wrapper.</p>
 </div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>patch<span class="w"> </span>-p1<span class="w"> </span>&lt;<span class="w"> </span>customPatchToCore.patch
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">## Apply other patches as needed</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>./gradlew<span class="w"> </span>smartbuild
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>sudo<span class="w"> </span>/etc/init.d/tomcat<span class="w"> </span>restart
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>patch<span class="w"> </span>-p1<span class="w"> </span>&lt;<span class="w"> </span>customPatchToCore.patch
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">## Apply other patches as needed</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>./gradlew<span class="w"> </span>smartbuild
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>sudo<span class="w"> </span>/etc/init.d/tomcat<span class="w"> </span>restart
 </span></code></pre></div>
 <h3 id="apache-configuration">Apache Configuration</h3>
 <ol>
@@ -4159,7 +4195,7 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <p>Restart apache:</p>
 </li>
 </ol>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>apache2<span class="w"> </span>restart
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>apache2<span class="w"> </span>restart
 </span></code></pre></div>
 <h3 id="activate-your-instance">Activate your instance</h3>
 <ol>
@@ -4176,10 +4212,10 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <li>
 <p>Make sure that the backup script now obtains its data from the correct <code>Openbravo.properties</code>, for example in folder <code>/opt/EtendoERP/</code><br />
         The backup script is usually located in <code>/usr/share/openbravo/backup/backup</code>. You should change the lines to point to the actual <code>Openbravo.properties</code> file. For example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">db_login</span><span class="o">=</span><span class="k">$(</span>awk<span class="w"> </span>-F<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/^bbdd.user/ {print $2}&#39;</span><span class="w"> </span>/opt/OpenbravoERP/config/Openbravo.properties<span class="k">)</span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">db_login</span><span class="o">=</span><span class="k">$(</span>awk<span class="w"> </span>-F<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/^bbdd.user/ {print $2}&#39;</span><span class="w"> </span>/opt/OpenbravoERP/config/Openbravo.properties<span class="k">)</span>
 </span></code></pre></div>
 <p>Should be changed for something like this:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">db_login</span><span class="o">=</span><span class="k">$(</span>awk<span class="w"> </span>-F<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/^bbdd.user/ {print $2}&#39;</span><span class="w"> </span>/opt/EtendoERP/config/Openbravo.properties<span class="k">)</span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">db_login</span><span class="o">=</span><span class="k">$(</span>awk<span class="w"> </span>-F<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/^bbdd.user/ {print $2}&#39;</span><span class="w"> </span>/opt/EtendoERP/config/Openbravo.properties<span class="k">)</span>
 </span></code></pre></div>
 <p>This will vary depending on the path that has been selected for the migration.</p>
 <div class="admonition warning">
@@ -4199,42 +4235,42 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <ul>
 <li>Change:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>drop<span class="w"> </span>database<span class="w"> </span>openbravo<span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>drop<span class="w"> </span>database<span class="w"> </span>openbravo<span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <p>for</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>drop<span class="w"> </span>database<span class="w"> </span>etendo<span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>drop<span class="w"> </span>database<span class="w"> </span>etendo<span class="s2">&quot;&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <ul>
 <li>Change the line that creates the database:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>create<span class="w"> </span>database<span class="w"> </span>openbravo<span class="w"> </span>WITH<span class="w"> </span><span class="nv">ENCODING</span><span class="o">=</span><span class="s1">&#39;UTF8&#39;</span><span class="w"> </span><span class="nv">OWNER</span><span class="o">=</span>TAD<span class="p">;</span><span class="s2">&quot;&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>create<span class="w"> </span>database<span class="w"> </span>openbravo<span class="w"> </span>WITH<span class="w"> </span><span class="nv">ENCODING</span><span class="o">=</span><span class="s1">&#39;UTF8&#39;</span><span class="w"> </span><span class="nv">OWNER</span><span class="o">=</span>TAD<span class="p">;</span><span class="s2">&quot;&quot;</span>
 </span></code></pre></div>
 <p>for</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>create<span class="w"> </span>database<span class="w"> </span>etendo<span class="w"> </span>WITH<span class="w"> </span><span class="nv">ENCODING</span><span class="o">=</span><span class="s1">&#39;UTF8&#39;</span><span class="w"> </span><span class="nv">OWNER</span><span class="o">=</span>TAD<span class="p">;</span><span class="s2">&quot;&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span>su<span class="w"> </span>-<span class="w"> </span>postgres<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;psql -U postgres -c &quot;</span>create<span class="w"> </span>database<span class="w"> </span>etendo<span class="w"> </span>WITH<span class="w"> </span><span class="nv">ENCODING</span><span class="o">=</span><span class="s1">&#39;UTF8&#39;</span><span class="w"> </span><span class="nv">OWNER</span><span class="o">=</span>TAD<span class="p">;</span><span class="s2">&quot;&quot;</span>
 </span></code></pre></div>
 <ul>
 <li>Change the target database on the lines that the pg_restore is done, for example:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span><span class="nv">PGPASSWORD</span><span class="o">=</span>tad<span class="w"> </span>pg_restore<span class="w"> </span>-U<span class="w"> </span>tad<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-d<span class="w"> </span>openbravo<span class="w"> </span>-O<span class="w"> </span><span class="nv">$TEMP_FOLDER</span>/db_backup.dmp<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">  </span><span class="nv">PGPASSWORD</span><span class="o">=</span>tad<span class="w"> </span>pg_restore<span class="w"> </span>-U<span class="w"> </span>tad<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-d<span class="w"> </span>openbravo<span class="w"> </span>-O<span class="w"> </span><span class="nv">$TEMP_FOLDER</span>/db_backup.dmp<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <p>for</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">  </span><span class="nv">PGPASSWORD</span><span class="o">=</span>tad<span class="w"> </span>pg_restore<span class="w"> </span>-U<span class="w"> </span>tad<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-d<span class="w"> </span>etendo<span class="w"> </span>-O<span class="w"> </span><span class="nv">$TEMP_FOLDER</span>/db_backup.dmp<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">  </span><span class="nv">PGPASSWORD</span><span class="o">=</span>tad<span class="w"> </span>pg_restore<span class="w"> </span>-U<span class="w"> </span>tad<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-d<span class="w"> </span>etendo<span class="w"> </span>-O<span class="w"> </span><span class="nv">$TEMP_FOLDER</span>/db_backup.dmp<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <ul>
 <li>Change the line which erases the tomcat files:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">  </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/tomcat/webapps/openbravo<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">  </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/tomcat/webapps/openbravo<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <p>for</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">  </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/tomcat/webapps/etendo<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span>rm<span class="w"> </span>-rf<span class="w"> </span>/var/lib/tomcat/webapps/etendo<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
 </span></code></pre></div>
 <ul>
 <li>Change the path of the sources for the new path created for Etendo, for example:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span>sudo<span class="w"> </span>chown<span class="w"> </span>openbravo:openbravo<span class="w"> </span>/opt/EtendoERP/
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">  </span>sudo<span class="w"> </span>chown<span class="w"> </span>openbravo:openbravo<span class="w"> </span>/opt/EtendoERP/
 </span></code></pre></div>
 <p>for</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">  </span>sudo<span class="w"> </span>chown<span class="w"> </span>openbravo:openbravo<span class="w"> </span>/opt/EtendoERP/
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">  </span>sudo<span class="w"> </span>chown<span class="w"> </span>openbravo:openbravo<span class="w"> </span>/opt/EtendoERP/
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -4242,10 +4278,10 @@ Be careful when changing the attachment configuration, and make sure you have a 
 </div>
 <h3 id="change-initial-directory-on-login">Change initial directory on login</h3>
 <p>Inside <code>~/.bashrc</code> you may have a command that lets you log in directly to the <code>/opt/OpenbravoERP</code> folder. Change it so it points to your new instance folder:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">## Change</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/Openbravo
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">## To</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="nb">cd</span><span class="w"> </span>/opt/EtendoERP
+<div class="language-bash highlight"><span class="filename">.bashrc</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">## Change</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/Openbravo
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1">## To</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nb">cd</span><span class="w"> </span>/opt/EtendoERP
 </span></code></pre></div>
 <h3 id="change-server-user">Change server user</h3>
 <p>You may change the current user from Openbravo to Etendo, if you want. This guide does not cover how to do so.</p>
@@ -4253,17 +4289,17 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <ol>
 <li>
 <p>Remove Openbravo context from Tomcat folder:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>/var/lib/tomcat/webapps/openbravo
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>/var/lib/tomcat/webapps/openbravo
 </span></code></pre></div>
 </li>
 <li>
 <p>Remove Openbravo installation:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>/opt/OpenbravoERP
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>/opt/OpenbravoERP
 </span></code></pre></div>
 </li>
 <li>
 <p>Remove Openbravo database:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>psql<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-d<span class="w"> </span>etendo<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;DROP DATABASE openbravo;&quot;</span>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>psql<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-d<span class="w"> </span>etendo<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;DROP DATABASE openbravo;&quot;</span>
 </span></code></pre></div>
 </li>
 </ol>

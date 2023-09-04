@@ -3388,10 +3388,92 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_1_1" id="__nav_5_3_1_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_3_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../etendo-rx/getting-started/" class="md-nav__link">
-        Getting Started
+      <a href="../../../../etendo-rx/tutorials/installation/" class="md-nav__link">
+        Installation
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
+        First Steps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -3432,54 +3514,6 @@
     <li class="md-nav__item">
       <a href="../../../../etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
         How to Filter any request for Active or all Records
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
-          Tutorial
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          Tutorial
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
-        First Steps
       </a>
     </li>
   
@@ -3728,11 +3762,8 @@
 </div>
 <ol>
 <li>
-<p>To migrate from an environment with sources, you need to add to the build.gradle, the Etendo core dependency</p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.platform&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;etendo-core&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;22.1.0&#39;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">}</span>
-</span></code></pre></div>
+<p>To migrate from an environment with sources, you need to add to the build.gradle, the Etendo core dependency 
+<code>implementation('com.etendoerp.platform:etendo-core:&lt;version&gt;')</code></p>
 </li>
 <li>
 <p>You need to remove all the folders and files leaving the ones belonging to attachments,gradle, modules and config directories:</p>
@@ -3749,7 +3780,12 @@
 </ul>
 </li>
 <li>
-<p>To update the environment you have to execute the <code>./gradlew update.database --info</code> task, and run <code>./gradlew compile.complete smartbuild --info</code></p>
+<p>To update the environment you have to execute the task
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>--info
+</span></code></pre></div>
+    and run
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
+</span></code></pre></div></p>
 </li>
 </ol>
 </div>
@@ -3757,14 +3793,14 @@
 <ol>
 <li>
 <p>To migrate from an environment with JARs to sources, you have to remove the Etendo core dependency from your build.gradle and run
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>clean<span class="sb">`</span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>clean
 </span></code></pre></div></p>
 </li>
 <li>
 <p>To work with sources, you need to specify the version to use in the Etendo plugin extension block inside the build.gradle</p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;22.1.0&quot;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">}</span>
+<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;22.1.0&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">}</span>
 </span></code></pre></div>
 <p>By default, Etendo tries to resolve the artifact <code>com.etendoerp.platform:etendo-core</code></p>
 <div class="admonition info">
@@ -3774,17 +3810,17 @@
 </li>
 <li>
 <p>Finally, to download the sources you need to run the expand core task.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>expandCore<span class="w"> </span>--info
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>expandCore<span class="w"> </span>--info
 </span></code></pre></div>
 </li>
 <li>
 <p>Recompile
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info<span class="sb">`</span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>compile.complete<span class="w"> </span>smartbuild<span class="w"> </span>--info
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Update the database
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="sb">`</span>./gradlew<span class="w"> </span>update.database<span class="sb">`</span>
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>update.database
 </span></code></pre></div></p>
 </li>
 </ol>
