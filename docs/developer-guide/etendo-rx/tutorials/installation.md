@@ -1,4 +1,4 @@
-# Instalating Etendo
+# Installing Etendo
 
 Welcome! This guide will help you set up the Etendo Platform, including both the Etendo Classic functionalities and Etendo RX, our reactive platform capable of executing microservices with database interaction and asynchronous actions.
 
