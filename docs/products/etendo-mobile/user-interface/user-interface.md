@@ -1,29 +1,61 @@
 ---
 title: User interface
 ---
-### **Welcome Window**
+## Etendo Mobile
 
-![](/docs/assets/drive/rX-2SsyM3UY9uETTdY_dgN1YDHf_jAp2wAL1tzcEaVwNI14thQ0mZqDDl1nq4VTU6fxZVVe0ikSf4Avgp8zNDa23l7tF8ilP9pd-lG1yomtNMwNhVEuGtGTMq0GDQf61bemSauIm.png){ width="300" }
+### **Settings Screen**
+In this window, the following configurations are possible: modifying the language and/or, before log in, the server URL. 
 
-In the welcome window, the user can enter Profile, Settings and Navigation Menu.
+![](/docs/assets/products//etendo-mobile/user-interface/SettingsScreen.png){ width="300" }
 
-### **Profile**
+Once the app is downloaded, the first step will be setting up the Etendo server URL.
 
+For this, click the "Add new Link" button, enter the URL and click "Add new Link" again. Then, the URL will be shown in the “List of added URLs”.
+
+In here, required URLs can be added, edited or removed.
+
+![](/docs/assets/products//etendo-mobile/user-interface/AddNewUrl.png){ width="300" }
+
+### **Login Screen**
+
+Once the server URL is configured, the user must log in entering the user and the password assigned by the system administrator.
+
+The user will remain logged in, the system will require reentering the credentials only in case the session is ended (through the option Log out in the navigation menu) or the server URL is changed.
+
+![](/docs/assets/products//etendo-mobile/user-interface/LoginScreen.png){ width="300" }
+
+### **Home Screen**
+
+After you have logged in, you will be redirected to Home.
+
+![](/docs/assets/products//etendo-mobile/user-interface/HomeScreen.png){ width="300" }
+
+Here, by selecting the profile image, you can navigate to the Settings and Profile screens.
+
+![](/docs/assets/products//etendo-mobile/user-interface/HomeScreenOptionsProfile.png){ width="300" }
+
+If the drawer is displayed, you can navigate to Home and also to the sub applications you have loaded.
+
+![](/docs/assets/products//etendo-mobile/user-interface/Drawer.png){ width="300" }
+
+### **Profile Screen**
 In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.
 
 In case the user has a picture, it will be shown both in this window and in the top section of the navigation menu (See Navigation menu). For now, this will be modifiable from the back office only.
 
-![](/docs/assets/drive/dpbavjtflccDbOSIbunMpsbgtnQDKEZf74XCIxF1tEMUYEm2xTXkotI9oLGc_C4AXUMevYd6y1X9fpldd3CP0Gad7rhcnABYXVFJMdf5iJy_8lck2egdqHqJDuoFptfdQUeryGPs.png){ width="300" }
+![](/docs/assets/products//etendo-mobile/user-interface/ProfileScreen.png){ width="300" }
 
 As regards the role, it can only be modified from the app, so each user will enter with their default role (setup in the ERP).
 
-### **Settings**
 
-In this window, the following configurations are possible: modifying the language and/or, before log in, the server URL. 
+## Etendo Classic Sub App
+### **Welcome Window**
 
-The available languages so far are Spanish and English.
+![](/docs/assets/products//etendo-mobile/user-interface/HomeSubApp.png){ width="300" }
 
-![](/docs/assets/drive/TW076zqOKZSIdehLz21bSA3fp14-qh214CR5sOnmCqWmNMJZbnw7Qjk9B_RIB-Umdi_amp-wNNxfLqdkFj68USp5F2l9Lo6P2CXgZTl7cOKwrNOpqrVg7o03LRqTpOL6gYKnPU3V.png){ width="300" }
+In the welcome window, the user can enter Profile, Settings and Navigation Menu.
+
+
 
 ### **Navigation Menu**
 
@@ -33,7 +65,7 @@ In the Home option, the user can find an option menu from which they can access 
 -   Access the window Profile (clicking the profile picture)
 -   Log out (Option Log Out)
 
-![](/docs/assets/drive/3Caazn6CzgTUToK2fSr4a5qbPhyPgdG1LRyF9yG8cEvfJyIDxdmRG3DHQ5gkohPRBbHtErS1XMPhUhV3Gd4a15yzcfOqfxS8QYQokoEm-cZJXhAKonhgyBexi5s4vxLoNjIR0SjX.png){ width="300" }
+![](/docs/assets/products/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
 
 In the top section of the menu, the name and the user picture will be shown.
 
