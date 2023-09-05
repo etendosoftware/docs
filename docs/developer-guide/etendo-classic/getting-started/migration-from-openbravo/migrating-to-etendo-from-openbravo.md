@@ -198,7 +198,7 @@ sudo /etc/init.d/tomcat restart
         Replace `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=openbravo">` by `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=etendo"> `  
         
     !!! warning
-        Make sure to replace `etendo` by the context you chose when in the `gradle.properties`file.
+        Make sure to replace  by the context you chose when in the `gradle.properties`file.
 
 
 3.  Restart apache:

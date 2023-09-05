@@ -1,12 +1,13 @@
-## First steps with Etendo RX
+## Overview
 
-In this page we'll give a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo ERP.
+This section provides a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo ERP.
 
 ------------------------------------------------------------------
 
 ## Building a New Module for RX Capabilities
 
-Before you begin, please ensure that you've completed the [**installation process**](/docs/developer-guide/etendo-rx/tutorials/installation). This tutorial assumes that you've successfully set up the Etendo Platform.
+!!!note
+    Make sure to complete the [Installing Etendo developer guide](/docs/developer-guide/etendo-rx/tutorials/installation) to set up the Etendo Platform.
 
 
 ### Accessing as Admin User
