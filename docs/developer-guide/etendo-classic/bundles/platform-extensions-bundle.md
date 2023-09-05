@@ -27,9 +27,10 @@ The supported documents are:
 -   Proforma Order
 -   Proforma Quotation
 
-To call the Web Service, the following URL is needed:  
-[http://client-url/etendo/sws/com.etendoerp.printdocumentws.printDocument](http://client-url/etendo/sws/com.etendoerp.printdocumentws.printDocument)
-
+To call the Web Service, the following URL is needed:
+```
+http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
+```
 It is necessary to configure Token authentication to use the web service.
 
 Values that can be used to call the Web Service are:
@@ -174,9 +175,6 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 ![Clear Report Cache](/docs/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
-When you try to get the Jasper report, this repository should have been updated:
-
-[https://bitbucket.org/koodu\_software/com.exos.erp.reportcachemanagement/src/master/](https://bitbucket.org/koodu_software/com.exos.erp.reportcachemanagement/src/master/)
 
 ## Etendo Advanced Security
 
