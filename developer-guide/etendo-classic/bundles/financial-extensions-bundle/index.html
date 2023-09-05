@@ -3787,6 +3787,68 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../etendo-rx/how-to-guides/how-to-change-date-format/" class="md-nav__link">
+        How to Format dates in a request
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          Tutorial
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../etendo-rx/tutorials/first-steps/" class="md-nav__link">
+        First Steps
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4323,19 +4385,19 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 <p><strong>DB Prefix</strong></p>
 <p>OBFBPS</p>
 <p><strong>javapackage</strong></p>
-<p>org.openbravo.financial.bpsettlement</p>
+<p><code>org.openbravo.financial.bpsettlement</code></p>
 <p><strong>Translation Required</strong></p>
 <p>Yes</p>
 <p><strong>Dependant Modules</strong></p>
-<p><em>Openbravo 3.0 Framework</em> PR14Q3.1 (2.1.24019)</p>
+<p><code>*Openbravo 3.0 Framework* PR14Q3.1 (2.1.24019)</code></p>
 <p><strong>datapackage</strong></p>
-<p>org.openbravo.financial.bpsettlement</p>
+<p><code>org.openbravo.financial.bpsettlement</code></p>
 <h3 id="bp-settlement-window"><strong>BP Settlement window</strong></h3>
 <ul>
 <li><strong>Window Name</strong>:Business Partner Settlement</li>
 <li><strong>Help</strong>: Window to manage settlements that cancels available credit or pending Payments of a Business Partner.</li>
 <li><strong>Type</strong>: Maintain</li>
-<li><strong>Menu folder</strong>:Financial Management &gt;&gt; Receivables and Payables &gt;&gt; Transactions. Just above 'Financial Account' window</li>
+<li><strong>Menu folder</strong>: Financial Management &gt;&gt; Receivables and Payables &gt;&gt; Transactions. Just above 'Financial Account' window</li>
 </ul>
 <h4 id="header-tab"><strong>Header Tab</strong></h4>
 <ul>
@@ -4511,7 +4573,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 </table>
 <h5 id="obfbps_settlement_trg-trigger"><strong>OBFBPS_Settlement_trg trigger</strong></h5>
 <p>Trigger to avoid modifying any field when the Settlement is in status Processed or Canceled.</p>
-<p>When the status is changing from <em>CO</em> to any other it should allow setting <em>FIN_Payment_In_ID</em> and <em>FIN_Payment_Out_ID</em> to null.</p>
+<p>When the status is changing from <em>CO</em> to any other it should allow setting <code>FIN\_Payment\_In\_ID</code> and <code>FIN\_Payment\_Out\_ID</code>  to null.</p>
 <h4 id="credit-in-tab"><strong>Credit In Tab</strong></h4>
 <ul>
 <li><strong>Name</strong>: Credit In</li>
@@ -4578,7 +4640,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 </table>
 <h5 id="obfbps_credit_payment-trigger"><strong>OBFBPS_Credit_Payment trigger</strong></h5>
 <p>Trigger to avoid modifying any field when the Settlement is in status Processed or Canceled.</p>
-<p>When the status is changing from <em>CO</em> to any other, it should allow setting <em>FIN_Payment_In_ID</em> and <em>FIN_Payment_Out_ID</em> to null.</p>
+<p>When the status is changing from <em>CO</em> to any other, it should allow setting <code>FIN\_Payment\_In\_ID</code> and <code>FIN\_Payment\_Out\_ID</code> to null.</p>
 <h4 id="credit-out-tab"><strong>Credit Out Tab</strong></h4>
 <p>It is the same as Credit In with these differences:</p>
 <ul>
@@ -4678,14 +4740,14 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 <li>Status <em>Canceled (VO)</em>: None (the button should be hidden as well).</li>
 </ul>
 </li>
-<li>Default value: value of <em>Process_Settlement</em> column.</li>
+<li>Default value: value of <code>Process\_Settlement</code> column.</li>
 </ul>
 </li>
-<li>Process class: <em>org.openbravo.financial.bpsettlement.process.BPSettlementProcess</em></li>
+<li>Process class: <code>org.openbravo.financial.bpsettlement.process.BPSettlementProcess</code></li>
 <li>Similar example in <em>Payment Process</em> Report and Process.</li>
 </ul>
 <h4 id="bpsettlementprocess-java-class"><strong><em>BPSettlementProcess</em></strong> <strong>java class</strong></h4>
-<p>Extends <em>org.openbravo.service.db.DalBaseProcess</em>.</p>
+<p>Extends <code>org.openbravo.service.db.DalBaseProcess</code>.</p>
 <p>Validations:</p>
 <ul>
 <li>Status - action validation.<ul>
@@ -4705,69 +4767,75 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 <li>Ensure that there are no invoices and credit payments in the same settlement.</li>
 </ul>
 <h6 id="invoice-type"><strong>Invoice type</strong></h6>
-<p>Create and process a Payment In with all the sales Payment Schedule Details included in the <em>OBFBPS_Invoice</em> table for the settlement. Create a similar Payment Out with the purchase Payment Schedule Details.</p>
+<p>Create and process a Payment In with all the sales Payment Schedule Details included in the <code>OBFBPS\_Invoice</code> table for the settlement. Create a similar Payment Out with the purchase Payment Schedule Details.</p>
 <p>Add a Payment Detail on each payment using the <em>GL Item</em> defined in the settlement, so the total amount of each payment is Zero.</p>
-<p>Set the generated payment ids on <em>FIN_Payment_In_ID</em> and <em>FIN_Payment_Out_ID</em> columns.</p>
-<p>Set the <em>BP_Settlement_Status</em> to <em>CO</em> and the <em>Process_Settlement</em> to <em>VO</em></p>
+<p>Set the generated payment ids on <code>FIN\_Payment\_In\_ID</code> and <code>FIN\_Payment\_Out\_ID</code> columns.</p>
+<p>Set the <code>BP\_Settlement\_Status</code> to <em>CO</em> and the <code>Process\_Settlement</code> to <em>VO</em></p>
 <p>To build the Payments based on the selected Payment Schedule details, use the following public method:</p>
-<p>org.openbravo.advpaymentmngt.process.FIN_AddPayment.savePayment(FIN_Payment _payment, boolean isReceipt, DocumentType docType, String strPaymentDocumentNo, BusinessPartner businessPartner, FIN_PaymentMethod paymentMethod, FIN_FinancialAccount finAccount, String strPaymentAmount, Date paymentDate, Organization organization, String referenceNo, List<FIN\_PaymentScheduleDetail> selectedPaymentScheduleDetails, HashMap<String, BigDecimal> selectedPaymentScheduleDetailsAmounts, boolean isWriteoff, boolean isRefund, Currency paymentCurrency, BigDecimal finTxnConvertRate, BigDecimal finTxnAmount)</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">process</span><span class="p">.</span><span class="na">FIN</span><span class="err">\</span><span class="n">_AddPayment</span><span class="p">.</span><span class="na">savePayment</span><span class="p">(</span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="err">\</span><span class="n">_payment</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isReceipt</span><span class="p">,</span><span class="w"> </span><span class="n">DocumentType</span><span class="w"> </span><span class="n">docType</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strPaymentDocumentNo</span><span class="p">,</span><span class="w"> </span><span class="n">BusinessPartner</span><span class="w"> </span><span class="n">businessPartner</span><span class="p">,</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_PaymentMethod</span><span class="w"> </span><span class="n">paymentMethod</span><span class="p">,</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_FinancialAccount</span><span class="w"> </span><span class="n">finAccount</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strPaymentAmount</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">paymentDate</span><span class="p">,</span><span class="w"> </span><span class="n">Organization</span><span class="w"> </span><span class="n">organization</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">referenceNo</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">FIN</span><span class="err">\</span><span class="n">_PaymentScheduleDetail</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selectedPaymentScheduleDetails</span><span class="p">,</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selectedPaymentScheduleDetailsAmounts</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isWriteoff</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isRefund</span><span class="p">,</span><span class="w"> </span><span class="n">Currency</span><span class="w"> </span><span class="n">paymentCurrency</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">finTxnConvertRate</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">finTxnAmount</span><span class="p">)</span>
+</span></code></pre></div>
 <p>To add the GL Item payment details use the following public method:</p>
-<p>org.openbravo.advpaymentmngt.process.FIN_AddPayment.saveGLItem(FIN_Payment payment, BigDecimal glitemAmount, GLItem glitem)</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">process</span><span class="p">.</span><span class="na">FIN</span><span class="err">\</span><span class="n">_AddPayment</span><span class="p">.</span><span class="na">saveGLItem</span><span class="p">(</span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">payment</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">glitemAmount</span><span class="p">,</span><span class="w"> </span><span class="n">GLItem</span><span class="w"> </span><span class="n">glitem</span><span class="p">)</span>
+</span></code></pre></div>
 <p>To process the payment use the following public method (strAction: <em>P</em>):</p>
-<p>org.openbravo.advpaymentmngt.process.FIN_AddPayment.processPayment(VariablesSecureApp vars, ConnectionProvider conn, String strAction, FIN_Payment payment)</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">process</span><span class="p">.</span><span class="na">FIN</span><span class="err">\</span><span class="n">_AddPayment</span><span class="p">.</span><span class="na">processPayment</span><span class="p">(</span><span class="n">VariablesSecureApp</span><span class="w"> </span><span class="n">vars</span><span class="p">,</span><span class="w"> </span><span class="n">ConnectionProvider</span><span class="w"> </span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strAction</span><span class="p">,</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">payment</span><span class="p">)</span>
+</span></code></pre></div>
 <h6 id="credit-type"><strong>Credit type</strong></h6>
-<p>Create and process a Payment In with all the sales credit payments included in the <em>OBFBPS_Credit_Payment</em> table. A similar Payment Out is created with the purchase credit payments.</p>
+<p>Create and process a Payment In with all the sales credit payments included in the <code>OBFBPS\_Credit\_Payment</code> table. A similar Payment Out is created with the purchase credit payments.</p>
 <p>For each selected credit payment, update its description with the new payment document number and increment the Used Credit amount by the settled amount. Link the credit payment to the new payment.</p>
 <p>Add a Payment Detail on each payment using the <em>GL Item</em> defined in the settlement, so the total amount of each payment is Zero.</p>
 <p>See an example on how to add the selected credit payments to the new payments in the following method:</p>
-<p>org.openbravo.advpaymentmngt.actionHandler.AddPaymentActionHandler.addCredit(FIN_Payment payment, JSONObject jsonparams)</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">actionHandler</span><span class="p">.</span><span class="na">AddPaymentActionHandler</span><span class="p">.</span><span class="na">addCredit</span><span class="p">(</span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">payment</span><span class="p">,</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonparams</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Note that to link the credit payments with the new payment, it is used the public method:</p>
-<p>org.openbravo.advpaymentmngt.process.FIN_PaymentProcess.linkCreditPayment(FIN_Payment newPayment, BigDecimal usedAmount, FIN_Payment creditPayment)</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">process</span><span class="p">.</span><span class="na">FIN</span><span class="err">\</span><span class="n">_PaymentProcess</span><span class="p">.</span><span class="na">linkCreditPayment</span><span class="p">(</span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">newPayment</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">usedAmount</span><span class="p">,</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">creditPayment</span><span class="p">)</span>
+</span></code></pre></div>
 <h5 id="cancel-vo-action"><strong><em>Cancel VO</em></strong> <strong>action</strong></h5>
-<p>It cancels the Payments generated in this settlement and stored in <em>FIN_Payment_In_ID</em> and <em>FIN_Payment_Out_ID</em> columns.</p>
+<p>It cancels the Payments generated in this settlement and stored in <code>FIN\_Payment\_In\_ID</code> and <code>FIN\_Payment\_Out\_ID</code> columns.</p>
 <p>To cancel the payment, use the following public method (strAction: <em>V</em>):</p>
-<p>org.openbravo.advpaymentmngt.process.FIN_AddPayment.processPayment(VariablesSecureApp vars, ConnectionProvider conn, String strAction, FIN_Payment payment)</p>
-<p>Sets the <em>BP_Settlement_Status</em> to <em>VO</em> and the <em>Process_Settlement</em> to <em>VO</em></p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">org</span><span class="p">.</span><span class="na">openbravo</span><span class="p">.</span><span class="na">advpaymentmngt</span><span class="p">.</span><span class="na">process</span><span class="p">.</span><span class="na">FIN</span><span class="err">\</span><span class="n">_AddPayment</span><span class="p">.</span><span class="na">processPayment</span><span class="p">(</span><span class="n">VariablesSecureApp</span><span class="w"> </span><span class="n">vars</span><span class="p">,</span><span class="w"> </span><span class="n">ConnectionProvider</span><span class="w"> </span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">strAction</span><span class="p">,</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_Payment</span><span class="w"> </span><span class="n">payment</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets the <code>BP\_Settlement\_Status</code> to <em>VO</em> and the <code>Process\_Settlement</code> to <em>VO</em></p>
 <h5 id="reactivate-re-action"><strong><em>Reactivate RE</em></strong> <strong>action</strong></h5>
 <p>As in <em>Cancel</em> action cancels the payment generated on the settlement.</p>
-<p>Sets the <em>BP_Settlement_Status</em> to <em>DR</em> and the <em>Process_Settlement</em> to <em>CO</em></p>
-<p>Sets to null the <em>FIN_Payment_In_ID</em> and <em>FIN_Payment_Out_ID</em> columns.</p>
+<p>Sets the <code>BP\_Settlement\_Status</code> to <em>DR</em> and the <code>Process\_Settlement</code> to <em>CO</em></p>
+<p>Sets to null the <code>FIN\_Payment\_In\_ID</code> and <code>FIN\_Payment\_Out\_ID</code> columns.</p>
 <h2 id="banking-pool">Banking Pool</h2>
 <h3 id="overview_1">Overview</h3>
-<p>This document covers how to create a process that automatically generates a new Finance Plan or updates a Finance Plan from the Financial Management - Accounting - Transactions - Financial Type Configuration window.  It also provides a structure that should be considered when creating the Java class that is responsible for performing these new processes.</p>
+<p>This document covers how to create a process that automatically generates a new Finance Plan or updates a Finance Plan from the Financial Management &gt;&gt; Accounting &gt;&gt; Transactions &gt;&gt; Financial Type Configuration window.  It also provides a structure that should be considered when creating the Java class that is responsible for performing these new processes.</p>
 <h3 id="creating-the-new-java-class">Creating the new Java Class</h3>
-<p>The Java class in charge of creating the financing plan must extend the Java FinanceTypeTemplate class. It provides some abstract methods to be performed and other methods that are useful when creating the new process. The basic structure that the new Java class must follow is the following:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.etendoerp.bankingpool.types</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.etendoerp.bankingpool.FinancialTypeConfiguration</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Date</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NewFinancialType</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">FinanceTypeTemplate</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w"> </span><span class="nd">@Override</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">exec</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">date</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">     </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isNewFinancePlan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isNewFinancePlan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="na">getInstallmentNo</span><span class="p">();</span><span class="w"> </span><span class="n">paymentNo</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">       </span><span class="c1">//Implement the creation of the new Financing Plan</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">     </span><span class="p">}</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="na">getInstallmentNo</span><span class="p">();</span><span class="w"> </span><span class="n">paymentNo</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">       </span><span class="c1">//Implement the update of the Financing Plan</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">     </span><span class="p">}</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">   </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w"> </span><span class="nd">@Override</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="nf">getInstallment</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">     </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">totalAmortization</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalInstallment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">   </span><span class="c1">//Calculate the value of the Installment</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w"> </span><span class="nd">@Override</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="nf">getRecalculatedInstallment</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">     </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">totalAmortization</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">residualValue</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalInstallment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">   </span><span class="c1">//Calculate the value of the installment recalculation</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
+<p>The Java class in charge of creating the financing plan must extend the Java <code>FinanceTypeTemplate</code> class. It provides some abstract methods to be performed and other methods that are useful when creating the new process. The basic structure that the new Java class must follow is the following:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.etendoerp.bankingpool.types</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.etendoerp.bankingpool.FinancialTypeConfiguration</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Date</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NewFinancialType</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">FinanceTypeTemplate</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w"> </span><span class="nd">@Override</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">exec</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="n">date</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">     </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isNewFinancePlan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isNewFinancePlan</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="na">getInstallmentNo</span><span class="p">();</span><span class="w"> </span><span class="n">paymentNo</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">       </span><span class="c1">//Implement the creation of the new Financing Plan</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">     </span><span class="p">}</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">paymentNo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">configuration</span><span class="p">.</span><span class="na">getInstallmentNo</span><span class="p">();</span><span class="w"> </span><span class="n">paymentNo</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">       </span><span class="c1">//Implement the update of the Financing Plan</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">     </span><span class="p">}</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w"> </span><span class="nd">@Override</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="nf">getInstallment</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">     </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">totalAmortization</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalInstallment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">   </span><span class="c1">//Calculate the value of the Installment</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w"> </span><span class="nd">@Override</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="nf">getRecalculatedInstallment</span><span class="p">(</span><span class="n">FinancialTypeConfiguration</span><span class="w"> </span><span class="n">configuration</span><span class="p">,</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">     </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">totalAmortization</span><span class="p">,</span><span class="w"> </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">residualValue</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">totalInstallment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">   </span><span class="c1">//Calculate the value of the installment recalculation</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>The Exec method is the method executed when a new Finance Plan is created or the Finance Plan is to be modified.</p>
 <p>The Exec method receives 3 parameters:</p>
@@ -4776,7 +4844,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 <li>date: The date that is passed as a parameter when creating a finance Plan.</li>
 <li>isNewFinancePlan: Check that indicates whether a new finance plan is being created or updated. If called from the Create Finance Plan button this parameter will be True and if called from the Update Finance Plan button the parameter will be False.</li>
 </ul>
-<p>The abstract class FinanceTypeTemplate has implemented several methods that can be useful, among them can be found:</p>
+<p>The abstract class <code>FinanceTypeTemplate</code> has implemented several methods that can be useful, among them can be found:</p>
 <ul>
 <li>newFinancePlan: Creates a new installment of the finance plan</li>
 <li>setDate:  Assigns a date to the date field in a finance plan record</li>
@@ -4797,7 +4865,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 <li>setFirstPendingAmortization: Method of calculating the outstanding amortization for the first installment</li>
 <li>getFinancePlanToRecalculate: Method that obtains all the financing plan installments to be updated if you want to update a finance plan</li>
 </ul>
-<p>The abstract methods must be implemented in the new Java class and, if required, an override can be made on any of the methods of the FinanceTypeTemplate class.</p>
+<p>The abstract methods must be implemented in the new Java class and, if required, an override can be made on any of the methods of the <code>FinanceTypeTemplate</code> class.</p>
 <h3 id="creating-the-new-financial-type">Creating the new Financial Type</h3>
 <p>In the Financial Type window a new record is created with the new Financial Type and in the Class Name field the package of the Java class that was implemented is entered followed by the Java class name.</p>
 <p><a class="glightbox" href="/docs/assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/docs/assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png" /></a></p>
@@ -4811,40 +4879,40 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 These hooks allow the developer to add new validations before and/or after the action is executed, and thus create new automations more easily.</p>
 <h3 id="how-to-define-an-unvoidinvoicehook-instance">How to define an UnvoidInvoiceHook instance</h3>
 <ul>
-<li>Define the class for hook, implementing the UnvoidInvoiceHook interface. This hook is executed when a user tries to unvoid a voided invoice:</li>
+<li>Define the class for hook, implementing the <code>UnvoidInvoiceHook</code>  interface. This hook is executed when a user tries to unvoid a voided invoice:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>public class UnvoidInvoiceImpl implements UnvoidInvoiceHook {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  @Override
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  public OBError preProcess(Invoice invoice) {
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    System.out.println(&quot;This is an example of pre method hook&quot;);
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    return new OBError();
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  }
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  @Override
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  public OBError postProcess(Invoice invoice) {
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    System.out.println(&quot;This is an example of post method hook&quot;);
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    return new OBError();
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  }
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>public class UnvoidInvoiceImpl implements UnvoidInvoiceHook {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  @Override
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  public OBError preProcess(Invoice invoice) {
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    System.out.println(&quot;This is an example of pre method hook&quot;);
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    return new OBError();
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  }
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  @Override
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  public OBError postProcess(Invoice invoice) {
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    System.out.println(&quot;This is an example of post method hook&quot;);
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    return new OBError();
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  }
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>}
 </span></code></pre></div>
 <h3 id="how-to-define-a-undocloseorderhook-instance">How to define a UndoCloseOrderHook instance</h3>
 <ul>
 <li>Define the class for hook, implementing the UndoCloseOrderHook interface. This hook is executed when a user tries to undo a closed order:</li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>public class UndoOrderImpl implements UndoCloseOrderHook {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  @Override
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  public OBError preProcess(Order order) {
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    System.out.println(&quot;This is an example of pre method hook&quot;);
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    return new OBError();
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  }
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  @Override
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  public OBError postProcess(Order order) {
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    System.out.println(&quot;This is an example  of post method hook&quot;);
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    return new OBError();
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  }
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>public class UndoOrderImpl implements UndoCloseOrderHook {
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  @Override
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  public OBError preProcess(Order order) {
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    System.out.println(&quot;This is an example of pre method hook&quot;);
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    return new OBError();
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  }
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  @Override
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  public OBError postProcess(Order order) {
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    System.out.println(&quot;This is an example  of post method hook&quot;);
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    return new OBError();
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>  }
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>}
 </span></code></pre></div>
 
 
