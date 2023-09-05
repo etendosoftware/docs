@@ -151,13 +151,17 @@ sudo /etc/init.d/tomcat start
     Before removing your previous instance, make sure you migrate your attachment files.
 
 
-In the migration process, the attachments directory configuration is not changed. To move them to a new folder (for example `/opt/EtendoERP/attachments`), you must edit the `Openbravo.properties` file and move the attachments manually.  
-For example:
+In the migration process, the attachments directory configuration is not changed. To move them to a new folder (for example `/opt/EtendoERP/attachments`), you must edit the `Openbravo.properties` file:
 
 ``` bash title="Terminal" 
 vi /opt/EtendoERP/config/Openbravo.properties
 ## Change the attach.path property like this (do not include the #):
 ## attach.path=/opt/EtendoERP/attachments
+```
+
+ and move the attachments manually: 
+
+``` bash title="Terminal" 
 mv /opt/OpenbravoERP/attachments /opt/EtendoERP/attachments
 ## Deploy changes to tomcat
 ./gradlew smartbuild
@@ -194,7 +198,7 @@ sudo /etc/init.d/tomcat restart
         Replace `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=openbravo">` by `<META HTTP-EQUIV="Refresh" CONTENT="0; URL=etendo"> `  
         
     !!! warning
-        Make sure to replace `etendo` by the context you chose when executing the migration tool.
+        Make sure to replace `etendo` by the context you chose when in the `gradle.properties`file.
 
 
 3.  Restart apache:
@@ -249,82 +253,81 @@ The database to be dropped should be the Etendo database, but the script will dr
 
 - Change:
 
-```bash
+    ```bash
 
-su - postgres -c "psql -U postgres -c "drop database openbravo"" || true
-```
+    su - postgres -c "psql -U postgres -c "drop database openbravo"" || true
+    ```
 
-for
+    for:
+    ```bash
 
-```bash
+    su - postgres -c "psql -U postgres -c "drop database etendo"" || true
 
-  su - postgres -c "psql -U postgres -c "drop database etendo"" || true
-  
-```
+    ```
 
 - Change the line that creates the database:
 
-```bash
+    ```bash
 
-  su - postgres -c "psql -U postgres -c "create database openbravo WITH ENCODING='UTF8' OWNER=TAD;""
-  
-```
+    su - postgres -c "psql -U postgres -c "create database openbravo WITH ENCODING='UTF8' OWNER=TAD;""
 
-for
+    ```
 
-```bash
+    for
 
-  su - postgres -c "psql -U postgres -c "create database etendo WITH ENCODING='UTF8' OWNER=TAD;""
-  
-```
+    ```bash
+
+    su - postgres -c "psql -U postgres -c "create database etendo WITH ENCODING='UTF8' OWNER=TAD;""
+
+    ```
 
 - Change the target database on the lines that the pg\_restore is done, for example:
 
-```bash
+    ```bash
 
-  PGPASSWORD=tad pg_restore -U tad -h localhost -d openbravo -O $TEMP_FOLDER/db_backup.dmp || true
-  
-```
+    PGPASSWORD=tad pg_restore -U tad -h localhost -d openbravo -O $TEMP_FOLDER/db_backup.dmp || true
 
-for
+    ```
 
-```bash
+    for
 
-  PGPASSWORD=tad pg_restore -U tad -h localhost -d etendo -O $TEMP_FOLDER/db_backup.dmp || true
-  
-```
+    ```bash
+
+    PGPASSWORD=tad pg_restore -U tad -h localhost -d etendo -O $TEMP_FOLDER/db_backup.dmp || true
+
+    ```
 
 - Change the line which erases the tomcat files:
 
-```bash
+    ```bash
 
-  rm -rf /var/lib/tomcat/webapps/openbravo || true
-  
-```
+    rm -rf /var/lib/tomcat/webapps/openbravo || true
 
-for
+    ```
 
-```bash
+    for
 
-  rm -rf /var/lib/tomcat/webapps/etendo || true
-  
-```
+    ```bash
+
+    rm -rf /var/lib/tomcat/webapps/etendo || true
+
+    ```
 
 - Change the path of the sources for the new path created for Etendo, for example:
 
-```bash
+    ```bash
 
-  sudo chown openbravo:openbravo /opt/EtendoERP/
-  
-```
+    sudo chown openbravo:openbravo /opt/EtendoERP/
 
-for
+    ```
 
-```bash
+    for
 
-  sudo chown openbravo:openbravo /opt/EtendoERP/
-  
-```
+    ```bash
+
+    sudo chown openbravo:openbravo /opt/EtendoERP/
+
+    ```
 !!! warning
     The same warning for the backups applies here. Be careful with what you rename. If you see an error, please ask for support.
 
