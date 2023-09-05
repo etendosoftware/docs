@@ -8,7 +8,8 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q2.6](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-6) | 25/08/2023 | 23.2.6 | QAA	| | :white_check_mark:|
+| [23Q2.7](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-7) | 05/09/2023 | 23.2.7 | QAA	| | :white_check_mark:|
+| [23Q2.6](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
 | [23Q2.5](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-5) | 17/08/2023 | 23.2.5 | C	| | :white_check_mark:|
 | [23Q2.4](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-4) | 16/08/2023 | 23.2.4 | C	| | :white_check_mark:|
 | [23Q2.3](/docs/whats-new/release-notes/etendo-classic/versions/23Q2-3) | 04/08/2023 | 23.2.3 | C	| | :white_check_mark:|
