@@ -328,9 +328,11 @@ This section defines different types of containers or boxes, which include any k
 
 ## EAN 128 Type
 
-In this window you can add different types of barcodes. 
+In this window you can add different types of barcodes. They store information about the product in this code, either: date, warehouse, storage bin, and when you scanned, you can obtain this information from the barcode.
 
-**EAN 128 Type** header fields
+This window contains the following fields:
+
+**EAN 128 Type** header fields:
 
 -   **Module** : Module to export the data.
 -   **Organization** : Organizational entity within client.
@@ -339,7 +341,7 @@ In this window you can add different types of barcodes.
 -   **Default** : When selected, this EAN 128 Type will appears by default.
 -   **Active** : A flag indicating whether this record is available for use or deactivated.
 
-**EAN 128 Type** lines
+**EAN 128 Type** lines fields:
 
 -   **Module** : Module to export the data.
 -   **Organization** : Organizational entity within client.
@@ -347,7 +349,7 @@ In this window you can add different types of barcodes.
 -   **Content** : Name of the line content.
 -   **Al** : Aplication identifier.
 -   **Content Length** : Longitude of the ean type content.
--   **Data Type** : Type of the EAN 128 type data.
+-   **Data Type** : Type of the EAN 128 type data.(boolean, date, string, etc.)
 -   **Fixed Length** : This check set if round the longitude or not.
 -   **Lot** : A group of identical or similar items organized and placed into inventory under one number.
 -   **Serial No.** : A unique number of a product.
