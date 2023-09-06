@@ -4,9 +4,9 @@ title: Process Scheduling
 
 Process Scheduling folder allows the user to schedule and monitor Etendo background processes.
 
-## **Process Request**
+## Process Request
 
-### **Introduction**
+### Introduction
 
 A background process is a system action requested by the user, who has to previously provide auxiliary parameter values to execute that action.
 
@@ -29,7 +29,7 @@ Besides, there are other background processes which can also be scheduled and th
 !!! info
     All the processes above can be scheduled if logged as System Administrator.
 
-### **Process Request**
+### Process Request
 
 Process Request window allows the user to review and add background processes, which can be scheduled or unscheduled as required.
 
@@ -67,7 +67,7 @@ Process defined as "Run Immediately" and "Run Later" can either be _Scheduled_ o
 
 Processes defined as "Schedule" can either be _Scheduled_ or _Unscheduled_.
 
-### **Costing Background Process**
+### Costing Background Process
 
 The **Costing Background Process** is the process in charge of searching for goods transactions, such as:
 
@@ -109,7 +109,7 @@ Some costing algorithms such as "FIFO" implement the "Pending" Costing Status as
 
 This way, the costing calculation process is not stopped for the rest of the transactions having a _Not Calculated_ or _Pending_ status, for which it is possible to calculate the cost.
 
-### **Price Correction Background Process**
+### Price Correction Background Process
 
 Price correction background process searches for Goods Receipts that:
 
@@ -125,7 +125,7 @@ If the purchase price has changed, a Price Correction cost adjustment is created
 
 There is a process named "Process Price Different Adjustment" that manually adjusts if required all Goods Receipts already invoiced prior to upgrading Etendo to manage the Cost Adjustments feature.
 
-### **Process Group**
+### Process Group
 
 Process Request has been modified in order to be able to schedule a process group. There is a check Group. Marking the check, a field called Process Group will appear, and you will be able to select a Process Group.
 
@@ -135,7 +135,7 @@ More information in [Process Group](/docs/products/etendo-classic/user-guide/gen
 
 ![](/docs/assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
-### **Process Monitor**
+### Process Monitor
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. 
 
@@ -143,7 +143,7 @@ More information in [Process Monitor](/docs/products/etendo-classic/user-guide/g
 
 ![](/docs/assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
-### **Processes in Group**
+### Processes in Group
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. 
 
@@ -151,9 +151,9 @@ More information in [Process Group](/docs/products/etendo-classic/user-guide/gen
 
 ![](/docs/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
-## **Process Monitor**
+## Process Monitor
 
-### **Introduction**
+### Introduction
 
 Process monitor feature allows reviewing the status of processes executed by a user as well as the ones scheduled in the process request window.
 
@@ -166,7 +166,7 @@ In any case, only the users having a role which have access to a given process/p
 
 Besides, and as already explained, _"Security based on role"_ definition at process request level will allow defining the users which will be able to monitor a given background process in this window.
 
-### **Process Execution**
+### Process Execution
 
 Process Monitor window shows read-only information about individual process execution.
 
@@ -183,7 +183,7 @@ As shown in the image above, process monitor window provides the information bel
     - _Direct_ for transactional process executed manually by the user
     - Process Scheduler for background processes scheduled in the Process Request window.
 
-### **Processes in Group**
+### Processes in Group
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
 
@@ -191,9 +191,9 @@ More information in [Process Group](/docs/products/etendo-classic/user-guide/gen
 
 ![](/docs/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
-## **Process Group**
+## Process Group
 
-### **Introduction**
+### Introduction
 
 Create a Process Group to be able to schedule and execute a group of processes as a single unit from the Process Scheduler. The batch of processes will be executed in series.
 
@@ -204,7 +204,7 @@ The purpose of this functionality is being able to schedule and execute a group 
 - Each individual process is listed in the Process Monitor window, regardless if it ran successfully or with error.
 - The log for each is listed in its own entry.
 
-### **Process Group**
+### Process Group
 
 It creates a Process Group to be able to schedule and execute a group of processes as a single unit from the Process Scheduler. The batch of processes will be executed in series.
 
@@ -218,11 +218,11 @@ There are two options that can be selected defining a Process Group
 
 ![](/docs/assets/drive/E2KNZetYy11WqMd1jRFYVQsjkQodMAYF63N2y2wYFfkZu8ooMYqJUfvnTdOh0iQu1Gp2NJtbEWCqQFBQGrqnHUTbyLTrdxCY-OUrnYhC997G7hOFYRvo-5ZOsjMWbhwg-PLQLJk5.png)
 
-#### **Prevent Concurrent Execution of a Process Group**
+#### Prevent Concurrent Execution of a Process Group
 
 As the Prevent Concurrent Executions of a single process, mark the Prevent Concurrent Executions checkbox in a Process Group means that just before launch an execution of a Process Group the system will check if there is another instance of the same Process Group running (for the same Client and same Organization). If there is, the system will abort the execution and will show an error message in the log: _Concurrent attempt to execute._
 
-#### **Stop the group execution when a process fails**
+#### Stop the group execution when a process fails
 
 By default, if a process that is part of a Process Group fails, the following processes will be executed.
 
@@ -231,7 +231,7 @@ Marking this check-box "Stop the group execution when a process fails" the execu
 !!!info
     This option is useful if the processes are dependent between them.
 
-### **Process Group List**
+### Process Group List
 
 It creates a Process inside a Process Group with a sequence number.
 
@@ -239,25 +239,25 @@ Process Group List contains the list of processes that are part of the group, so
 
 ![](/docs/assets/drive/APyS4fin8Sb72dYf0TP1ZvLLpkZbsyrQ1Tv8_ABv1Byjurr0B1v8PanDaEytiR0NIhAS_TIbnsTe0aR5xQVNDybH_CicNv-TiGPgHq3deGKEyT8NuL3sPvf0J88asLgU9WWOtrMd.png)
 
-### **Other Considerations**
+### Other Considerations
 
-### **Error Result**
+### Error Result
 
 A process group will show an Error result if it has one or more Error results in the processes that conform the group.
 
-### **Permissions**
+### Permissions
 
 Process Group is a window, so you can manage permissions for creation of Process Group as you wish: Only System, some clients, some organizations, some roles, etc...
 
-### **Empty Groups**
+### Empty Groups
 
 You can not launch executions of empty groups. If you try, you will receive this error: No processes on the group: nameOfTheGroup.
 
-### **Prevent Concurrent Execution Co-Exists**
+### Prevent Concurrent Execution Co-Exists
 
 Prevent executions of single processes and group processes will co-exist. Which means that none of them overrides the other and both can be set at the same time.
 
-### **Process Group as Source Data**
+### Process Group as Source Data
 
 !!! info
     Only for developers

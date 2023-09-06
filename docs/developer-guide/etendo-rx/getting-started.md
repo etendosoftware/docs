@@ -1,4 +1,6 @@
-# Installing Etendo
+---
+title: Getting Started
+---
 
 ## Overview
 
@@ -6,7 +8,9 @@ This guide will help you set up the Etendo Platform, including both the Etendo C
 
 Follow these steps for a smooth installation:
 
-## Prerequisites
+## Installing Etendo
+
+### Prerequisites
 
 Ensure you have cloned the Etendo repository before proceeding:
 
@@ -14,11 +18,11 @@ Ensure you have cloned the Etendo repository before proceeding:
 git clone git@github.com:etendosoftware/etendo.git
 ```
 
-## Setting Up Configuration Variables
+### Setting Up Configuration Variables
 
 To compile and deploy an Etendo instance, you need to set up the configuration variables. To do this, create a copy of the `gradle.properties.template` file located in the root and `src-rx` folders:
 
-```bash
+```bash title="Terminal"
 cp gradle.properties.template gradle.properties
 cp src-rx/gradle.properties.template src-rx/gradle.properties
 ```
@@ -60,15 +64,15 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
     Variables appearing in both files must have identical values. To gain more insight into what's happening, run the Gradle tasks with the `--info` or `--debug` flag.
 
 
-## Database Setup
+### Database Setup
 
 For this tutorial, we will create a new database named `etendo` on a PostgreSQL server accessible at port `5432`. If you prefer different settings, modify the values in the `gradle.properties` files accordingly.
 
-## Generating Configuration Files
+### Generating Configuration Files
 
 Now we need to generate the configuration files, for this, run:
 
-```bash
+```bash title="Terminal"
 ./gradlew setup
 ./gradlew rx:setup
 ```
@@ -76,18 +80,18 @@ Now we need to generate the configuration files, for this, run:
 !!!warning
     If you change the default `bbdd.url` and/or `bbdd.sid`, you must update the `src-rx/rxconfig/das.yaml` file with the new values.
 
-## Installing Etendo Classic
+### Installing Etendo Classic
 
-At this point we have all the source code needed to create the arquitecture of Etendo.
+At this point, we have all the source code needed to create the arquitecture of Etendo.
 To do so, run the `install` task to create the initial database
 
-```bash
+``` bash title="Terminal"
 ./gradlew install
 ```
 
 After the database creation, compile the project and deploy Etendo ERP to Tomcat with the following command:
 
-```bash
+``` bash title="Terminal"
 ./gradlew smartbuild
 ```
 
@@ -98,29 +102,29 @@ Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8
 !!!note
     If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).
 
-## Compiling Etendo RX
+### Compiling Etendo RX
 
 Execute the `rx:generate.entities` task to create the needed jars to start working with Etendo RX:
 
-```bash
+``` bash title="Terminal"
 ./gradlew rx:generate.entities
 ```
 
 To launch the RX services, run:
 
-```bash
+``` bash title="Terminal"
 ./gradlew rx:rx
 ```
 
-The first time you run the above command, you will need to provide an access token for auth service, so now, we will proceed to configure the auth project.
+The first time you run the command above, you need to provide an access token for auth service, so now, we proceed to configure the auth project.
 
-## Configure auth project
+### Configure auth project
 
-After executing the rx:rx task it will start to setting up the services.
-It will start with the config service and when it starts to try with the auth service, it will fail because of the missing token.
+After executing the rx:rx task, it starts setting up the services.
+It starts with the configuration service and when it starts to try with the auth service, it will fail because of the missing token.
 To extract the token check Auth log file in `src-rx/logs/auth.log`
 
-You will find something like this:
+You will find something similar to:
 
 ```
 Populate the auth.yaml file with the following property:
@@ -146,4 +150,4 @@ By default, the following services should be up and running:
 - Async
 
 !!! success
-    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [First Steps section in the developer guide](/docs/developer-guide/etendo-rx/tutorials/first-steps).
+    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](/docs/developer-guide/etendo-rx/tutorials/creating-a-new-microservice).

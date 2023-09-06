@@ -1,6 +1,9 @@
 ---
 title: Advanced Intercompany Module
+hide:
+    - navigation
 ---
+
 ## **Introduction**
 
 This section describes the Intercompany module included in the Etendo Financial Extensions bundle.

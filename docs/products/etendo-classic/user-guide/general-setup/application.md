@@ -46,7 +46,7 @@ Fields to note:
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}.
 
-### **Overview**
+### Overview
 
 In this page, we will explain how to configure dynamic applications from Etendo classic, these are displayed dynamically according to the configuration in Etendo Mobile.
 In addition, it details how to configure access to sub applications and versions according to the role assigned to each user.
@@ -56,7 +56,7 @@ When logging into Etendo Mobile, the sub-applications are displayed according to
 !!! info
     For more information visit the [Etendo Mobile](/docs/products/etendo-mobile/getting-started/) documentation.
 
-### **Header**
+### Header
 
 ![](/docs/assets/products/etendo-classic/user-guide/general-setup/application/HeaderDynamicApp.png)
 
@@ -85,7 +85,7 @@ Finally, configure this application in the [Role Configuration](/docs/products/e
 
 ## Currency
 
-### **Introduction**
+### Introduction
 
 Currencies and conversion rates are basic settings in Etendo.
 
@@ -94,7 +94,7 @@ Currencies used worldwide are automatically created and listed in the currency w
 !!! info
     All these currencies are linked to the system organization (\*), that means that those currencies will be shared by all the organizations in the system.
 
-### **Currency**
+### Currency
 
 Currency window allows the user to visualize or to create and configure the currencies to use in monetary transactions.
 
@@ -116,7 +116,7 @@ Etendo allows the user to setup three types of currency precision:
 !!! warning
     Changes on currency precision can only be made at client level, therefore System Admin Role needs to be used.
 
-### **Conversion Rates**
+### Conversion Rates
 
 Conversion rates tab lists the available conversion rates for a given currency.
 
@@ -135,22 +135,22 @@ This implies that a single currency might have several conversion rates dependin
 !!! note
     Etendo recommends conversion rates to be configured in the Conversion Rates window, as it is required to defined both the "Multiple Rate By" (USD - €) and the "Divide Rate By" (€ - USD) to properly defined the exchange of two currencies.
 
-### **Translation**
+### Translation
 
 Currencies can be translated to any language if required.
 
 ![](/docs/assets/drive/h1lRXjQBmJVNgWlx_tv7RGfyF56NqhAfh872qimAXBSDYMLLQouPXNbHMF9dcByVgIoOc261XbWARBiXrTLsvtRQ8e8-rg-5wncWfV6QQxf6l1kRrHoe7u_xGC38Hq5GIdKojK94.png)
 
-## **Conversion Rates**
+## Conversion Rates
 
-### **Introduction**
+### Introduction
 
 Conversion rate also called currency exchange rate is the rate at which one currency may be converted into another one.
 
 !!! info
     Conversion rates can only be created at system organization level (\*), which implies they are available for all the organizations within the client.
 
-### **Conversion Rate**
+### Conversion Rate
 
 Conversion rates window allows the user to create the rates to be used for multi currency transactions.
 
@@ -163,9 +163,9 @@ For instance, USD exchange rate to EUR should have a _Multiple rate by_ = 0.68 s
 
 ![](/docs/assets/drive/0jd4xH1XIAHAk9o1yEa-ApHM2BcsMBuMK8YX9QPMH6u-A_h5M7O3lOaNA8xrMycgog-vAV-WgQhfCHf9UjwM6ftv1zZT_Fld28RaOTuwRU0Xw8V0Ql_A7KNgO20zKgYlvzlWcXs7.png)
 
-## **Country and Region**
+## Country and Region
 
-### **Introduction**
+### Introduction
 
 Countries and regions are basic settings to share within Etendo.
 
@@ -174,7 +174,7 @@ Countries and their corresponding regions are automatically created and listed i
 !!! info
     All these countries and regions are linked to the system organization (\*), that means that those countries and regions will be shared by all the organizations in the system.
 
-### **Country**
+### Country
 
 This window allows the user to visualize and/or to create and maintain the countries and the regions to be used in daily business activities.
 
@@ -194,22 +194,22 @@ As shown in the image above, country relevant data is:
 - the default _language_
 - and the default _currency_
 
-### **Translation**
+### Translation
 
 Countries and regions can be translated to any language.
 
 ![](/docs/assets/drive/J2nmC6HSXqsQMZ1gnwrSmgZ0GuXGZBR-l91sYP3vxBIZw_VxBHsjFzNhZg3aoxzWrIVgWjYl5oRXcb8pc9dh61OFDA4-B4XKaQEGctSmKA63gsKy0t7CqTHgF10Qq1XvPtWn4U1x.png)
 
-### **Region**
+### Region
 
 Regions tab allows the user to visualize and/or to create and maintain the regions of any type of country.
 
 !!! info
     Country regions are simply defined by a name and a description.
 
-## **Preference**
+## Preference
 
-### **Introduction**
+### Introduction
 
 A preference is a type of session value which can either be an attribute or a property.
 
@@ -233,11 +233,11 @@ For instance, there is an _Attribute_ named _"Autosave"_ which is currently assi
 
 - The preference above means that every user logging in Etendo will get that feature working regardless of its role and user and the client or the organization it is working on.
 
-### **Preference**
+### Preference
 
 Preference window allows the user to define and maintain session values which can be visible and therefore applied to different levels such as Client, Organization, User, Role and Window.
 
-#### **Preference Definition**
+#### Preference Definition
 
 ![](/docs/assets/drive/ORFZT6LvzmxT-rOY-l1Xw07GvftHNxLMJU6RxtHo8LmMioTFNJMYUcITNJlA5xrvFyW8PMzRi2grIoMM-tFBiotCV4s3YNbUzC5G7UyavRacVSjEpYLuQQtdo9v_aTHWIgVHoM1w.png)
 
@@ -326,7 +326,7 @@ As shown in the image above there is one field named "_Property List_" which is 
 - **"SaveAttachmentsOldWay"**  
   This attribute defines whether attachments should be saved using the old attachment model.
 
-#### **Preferences Visibility**
+#### Preferences Visibility
 
 Preference visibility section defines the _levels_ where a preference is going to be used and therefore applied.
 
@@ -342,7 +342,7 @@ Available levels are:
 - _Role_ - if this level is set to a given role, only that role will be able to see that preference.
 - _Window_ - if this level is set to a given window, only that window will be able to see that preference.
 
-#### **Preference Priority**
+#### Preference Priority
 
 Preference Priority section defines _priority_ of multiple preferences defined for same Property
 
@@ -368,7 +368,7 @@ Preference Priority will be applied while loading the default Preferences of the
 - **SAME PRIORITY**:
   - If all the above levels are the same then it will and will consider preference with column **"selected"=true**.
 
-#### **Preferences Values**
+#### Preferences Values
 
 When logging in Etendo or entering the role or the organization, the preferences visible for that user, role, client, organization or window are stored in the Etendo session. Those session values can be obtained by using the method: _org.openbravo.erpCommon.utility.Utility.getContext method._
 
@@ -381,7 +381,7 @@ Additionally:
 
 Conflicts can be manually resolved by checking and modifying the preference.
 
-## **Session Preferences**
+## Session Preferences
 
 Session preferences allow showing or hiding accounting tabs or translation tabs for a given user, role, client and organization.
 
@@ -448,13 +448,13 @@ The "javaclass" field is required but empty by default unless another module suc
 
 ![](/docs/assets/drive/1YjGbvShn-Mwb6iNpbajKgNo77ukscR3n.png)
 
-## **Window Personalization**
+## Window Personalization
 
-### **Introduction**
+### Introduction
 
 Etendo allows the customization of grid and form views. Customize windows and form views are stored once saved in the Window Personalization window. Etendo windows can be shown in _Form View_ and in _Grid View_, both ways can be customized as required.
 
-### **Window Personalization**
+### Window Personalization
 
 Window Personalization lists and maintains the customized form views.
 
@@ -462,9 +462,9 @@ Window Personalization lists and maintains the customized form views.
 
 Once a form has been customized, saved and listed in the _"Window Personalization"_ window, it is possible to configure the levels of visibility where that form personalization will apply.
 
-## **Alert**
+## Alert
 
-### **Introduction**
+### Introduction
 
 Alerts are notifications which inform about events happening whenever an alert rule has been properly defined to monitor those events.
 
@@ -493,7 +493,7 @@ Alerts can have 4 different status:
 
 The way to manage alerts instances is by manually selecting and moving them to the next or previous status once they are manually acknowledged, ignored or solved.
 
-### **Alert Rule**
+### Alert Rule
 
 Alert window allows the definition of alert rules as SQL queries which define the event to be monitored and how it will be monitored.
 
@@ -505,11 +505,11 @@ Alerts are defined by entering below data:
 
 ![](/docs/assets/drive/7FDlwrebuc8IysmRIryYm81mF7QPheC-khbM3NdpZUdAIlXzkhZMDvasxwUPYPDMEyJcP_oM5t16sfAW3ZOCyVNUmR8nE4WWZkLYexMWFuKDHaCb0j8Axa1AetNm9j5rEVq36Kri.png)
 
-### **Translation**
+### Translation
 
 Alerts can be translated to any language required.
 
-### **Alert Recipient**
+### Alert Recipient
 
 Alerts can be allocated to specific users or contact or to all of them.
 
@@ -520,7 +520,7 @@ Etendo supports alerts notification to user or roles by email:
 
 - for this, it is required to properly configure _e-mail_ server, account and password for the corresponding client in the header of the Client window, section "Request Management".
 
-### **Alert**
+### Alert
 
 Alert tab list the events happening which generate the corresponding alert.
 

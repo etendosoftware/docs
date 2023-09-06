@@ -1,5 +1,7 @@
 ---
 title: SII para IVA
+hide:
+    - navigation
 ---
 
 ## **Introducción**

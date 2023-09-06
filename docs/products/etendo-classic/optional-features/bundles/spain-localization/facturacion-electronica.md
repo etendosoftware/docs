@@ -1,6 +1,9 @@
 ---
 title: Facturación Electrónica 
+hide:
+    - navigation
 ---
+
 ## Facturación Electrónica
 
 ### Introducción

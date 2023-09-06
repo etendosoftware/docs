@@ -1,5 +1,7 @@
 ---
 title: Libro de facturas
+hide:
+    - navigation
 ---
 ## **Introducción**
 

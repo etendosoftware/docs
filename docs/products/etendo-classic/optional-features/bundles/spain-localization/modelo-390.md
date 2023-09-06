@@ -1,5 +1,7 @@
 ---
 title: Modelo 390
+hide:
+    - navigation
 ---
 ## **Introducción**
 

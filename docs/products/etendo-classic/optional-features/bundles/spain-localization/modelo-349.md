@@ -1,5 +1,7 @@
 ---
 title: Modelo 349
+hide:
+    - navigation
 ---
 ## **Introducción**
 

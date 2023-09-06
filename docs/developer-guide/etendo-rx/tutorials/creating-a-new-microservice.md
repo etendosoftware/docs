@@ -7,12 +7,12 @@ This section provides a step-by-step guide for working with Etendo RX, which inv
 ## Building a New Module for RX Capabilities
 
 !!!note
-    Make sure to complete the [Installing Etendo developer guide](/docs/developer-guide/etendo-rx/tutorials/installation) to set up the Etendo Platform.
+    Make sure to complete the [Getting Started section in the developer guide](/docs/developer-guide/etendo-rx/getting-started) to set up the Etendo Platform.
 
 
 ### Accessing as Admin User
 
-After setting the local environment up, as is described in the [**install etendo development environment**](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
+After setting the local environment up, as described in the [**install etendo development environment**](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
 
 Log in to your account as an administrator. The default login credentials for this administrative account are:
 
@@ -24,12 +24,12 @@ Once you're logged in, switch your role to "System Administrator", as the image 
   ![switch-sys-admin.png](/docs/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png)
 
 
-The "System Administrator" role allows us to access some windows and permission to create and manipulate the system to fulfill our needs  
+The "System Administrator" role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.
 
 ### Creating a New Module
 
-Now we'll create a new module. It's a self-contained unit of code that performs a specific function and for our case, it will contain all the resources needed in this guide.
-To create a new module, go to 'Module' window, and add a new record providing the following information:
+Now we'll create a new module. It's a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
+To create a new module, go to the 'Module' window, and add a new record providing the following information:
 
 | Parameter       | Value                                 |
 | --------------- | ------------------------------------- |
@@ -54,7 +54,7 @@ With our new module created, we'll start working with 'Projections'
 
 When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we don't need all the properties of the returned objects.
 
-In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the properties we care about. This is where projections come in handy.
+In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections come in handy.
 
 Start by opening 'Projections' windows and creating a new projection with the following properties:
 
@@ -70,7 +70,7 @@ Start by opening 'Projections' windows and creating a new projection with the fo
 ### Adding the projection to a table
 
 As we create the projection, now we need to assign it to a table where we want to extract data.
-For this, open the "Tables and Columns" window and look for the "Order" table (as we said in the introduction, we want to consume orders).
+For this, open the "Tables and Columns" window and look for the "Order" table (as mentioned in the introduction, we want to consume orders).
 
 ### Adding a Projection
 
@@ -97,9 +97,9 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 | documentTypeName    |`documentType.name`    |
 | grandTotalAmount    |`grandTotalAmount`     |
 
-!!!info
-    Note that the 'Property' field of this tab is handled with an Entity Mapping, this is like a Hiernate property.
-    So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, name in our case.
+!!!note
+    The 'Property' field of this tab is handled with an Entity Mapping, this is like a Hiernate property.
+    So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, "name" in our case.
 
 
   ![new-entity-fields.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
@@ -128,7 +128,7 @@ After selecting a table, in this case 'C_Order', we need to go to 'Repository' t
 
 ### Creating a New Search
 
-Next, we'll define a search method to use later when we want to consume the orders. This query will be taken as a filter for retrieving the orders.
+Next, we'll define a search method to use later when we want to consume the orders. This query is taken as a filter for retrieving the orders.
 To create this new filter/search method, under "Repository" tab of the C_Order table, create a new record with the following data:
 
 | Field       | Value                                                                                  |
@@ -141,7 +141,7 @@ To create this new filter/search method, under "Repository" tab of the C_Order t
 
 ### Creating a New Search Parameter
 
-As you can see on the above query, we use a parameter called `:documentType`. 
+As you can see in the query above, we use a parameter called `:documentType`. 
 We can add this type of parameter to use it later by adding a corresponding value to it and filtering depending on the current needs.
 To define the parameter, we need to create a new row on the 'Search Parameter' tab of the 'Search' tab. Fill it with the following settings:
 
@@ -160,12 +160,12 @@ In our case, we'll filter depending on the Document Type of the orders
 
 ## Creating a New Spring Boot Project
 
-Now that we have declared the projection, fields, repository, and searches on Entendo ERP, we'll need to create a new spring project to make use of these JPA resources that we have created just before.
-Ahead you'll find the steps to create the Spring Boot project and add it as a module on Etendo RX.
+Now that we have declared the projection, fields, repository, and searches on Etendo ERP, we'll need to create a new spring project to make use of these JPA resources that we have created just before.
+Next, you'll find the steps to create the Spring Boot project and add it as a module on Etendo RX.
 
 ### Project Creation
 
-1. Visit [**Spring Initializr**](https://start.spring.io/) to start your project setup.
+1. Visit [**Spring Initializr**](https://start.spring.io/){target="_blank"} to start your project setup.
 2. Fill in the following details:
 
     | Field        | Value                           |
@@ -270,7 +270,7 @@ After configuring the project, we'll need to generate the proper files for RX.
 RX generate.entities task will generate java files in the `src-gen` directory.
 Execute `rx:generate.entities` task to do so.
 
-```bash
+``` bash title="Terminal"
 ./gradlew rx:generate.entities
 ```
 
@@ -278,13 +278,13 @@ Execute `rx:generate.entities` task to do so.
 
 ## Configuring a Spring Boot Project
 
-Now we'll configure the new spring boot project to define how it will run
+Now we'll configure the new spring boot project to define how it will run.
 
 ### Updating the application.properties file
 
 Modify your `application.properties` file, under the new spring boot project created on the previous steps, with the following configurations:
 
-```
+```properties
 config.server.url=http://localhost:8888
 spring.config.import=configserver:${config.server.url}
 spring.application.name=rxtutorial
@@ -316,7 +316,7 @@ To generate the token value we need to follow these steps:
         Change the password for this record, you'll need it later.
         Also, check that the user is active.
 
-  6. On the tab 'RX Services Access' create a new row and fill it with the following values:
+  6. In the tab 'RX Services Access' create a new row and fill it with the following values:
     
     | Field Name           |  Property                     |
     | ------------------- | ------------------------------ |
@@ -329,7 +329,7 @@ To generate the token value we need to follow these steps:
 
   7. Let's run RX so we can make the request to the Auth service:
 
-    ```
+    ``` bash title="Terminal"
     ./gradlew rx:rx
     ```
 
@@ -349,7 +349,7 @@ To generate the token value we need to follow these steps:
     }
     ```
     !!!warning
-        Remember the password changed before
+        Remember the password changed before.
 
     ![postman-request.png](/docs/assets/developer-guide/etendo-rx/tutorial/postman-request.png)
   
@@ -403,79 +403,79 @@ public class RxtutorialApplication {
 
 ## Creating a New Spring Boot Service
 
-In this last step before launching our microservice, we'll create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps- 
+In this last step before launching the microservice, we'll create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps. 
 Follow the instructions below to create a new service:
 
 1. Create a new file at the following path:
 
-```
-modules_rx/com.tutorial.rxtutorial/src/main/java/com/tutorial/rxtutorial/RxtutorialService.java
-```
+    ```java
+    modules_rx/com.tutorial.rxtutorial/src/main/java/com/tutorial/rxtutorial/RxtutorialService.java
+    ```
 
 2. Then, copy and paste the following code into the file:
 
-```java
-package com.tutorial.rxtutorial;
+    ```java
+    package com.tutorial.rxtutorial;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RestController;
 
-import com.etendorx.clientrest.base.RestUtils;
-import com.etendorx.clientrest.base.RestUtilsException;
-import com.tutorial.rxtutorial.entities.org.openbravo.model.common.order.OrderRxtutorialModel;
+    import com.etendorx.clientrest.base.RestUtils;
+    import com.etendorx.clientrest.base.RestUtilsException;
+    import com.tutorial.rxtutorial.entities.org.openbravo.model.common.order.OrderRxtutorialModel;
 
-@RestController
-@RequestMapping(path = "/api")
-public class RxtutorialService {
-  @Autowired
-  RestUtils restUtils;
+    @RestController
+    @RequestMapping(path = "/api")
+    public class RxtutorialService {
+      @Autowired
+      RestUtils restUtils;
 
-  @GetMapping(path = "/")
-  public String get() throws RestUtilsException {
-    String url = "/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&projection=rxtutorial";
-    var orders = restUtils.getList(url, OrderRxtutorialModel.class);
-    StringBuilder html = new StringBuilder("<html>");
-    html.append("<head>");
-    html.append("<style type=\"text/css\">html {font-family: sans-serif;}</style>");
-    html.append("</head>");
-    html.append("<title>Orders</title></head>");
-    html.append("<body>");
-    html.append("<h2>Orders</h2>");
-    html.append("<table>");
-    for (OrderRxtutorialModel o : orders) {
-      html.append(
-          "<tr>" +
-              "<td>" + o.getDocumentNo() + "</td>" +
-              "<td>" + o.getBusinessPartnerName() + "</td>" +
-              "<td>" + o.getDocumentTypeName() + "</td>" +
-              "<td>" + o.getGrandTotalAmount() + "</td>" +
-              "</tr>"
-      );
+      @GetMapping(path = "/")
+      public String get() throws RestUtilsException {
+        String url = "/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&projection=rxtutorial";
+        var orders = restUtils.getList(url, OrderRxtutorialModel.class);
+        StringBuilder html = new StringBuilder("<html>");
+        html.append("<head>");
+        html.append("<style type=\"text/css\">html {font-family: sans-serif;}</style>");
+        html.append("</head>");
+        html.append("<title>Orders</title></head>");
+        html.append("<body>");
+        html.append("<h2>Orders</h2>");
+        html.append("<table>");
+        for (OrderRxtutorialModel o : orders) {
+          html.append(
+              "<tr>" +
+                  "<td>" + o.getDocumentNo() + "</td>" +
+                  "<td>" + o.getBusinessPartnerName() + "</td>" +
+                  "<td>" + o.getDocumentTypeName() + "</td>" +
+                  "<td>" + o.getGrandTotalAmount() + "</td>" +
+                  "</tr>"
+          );
+        }
+        html.append("</table></body></html>");
+        return html.toString();
+      }
     }
-    html.append("</table></body></html>");
-    return html.toString();
-  }
-}
-```
+    ```
 
-This file will display a simple HTML page with the retrieved orders.
-But first, we'll take a look at the class that we just created.
+    This file will display a simple HTML page with the retrieved orders.
+    But first, we'll take a look at the class that we just created.
 
-  ```java
-  String url = "/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&projection=rxtutorial";
-  ```
-  This URL is the one that the process will use to consume the service, as you can see, we add here the 'Search' filter that we created before and give it the document type parameter, with one document type id of the order that we'll filter. Also, we're adding the projection to use too, same as before, it's the one created before.
+      ```java
+      String url = "/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&projection=rxtutorial";
+      ```
+      This URL is the one that the process will use to consume the service, as you can see, we add here the 'Search' filter that we created before and give it the document type parameter, with one document type id of the order that we'll filter. Also, we're adding the projection to use too, same as before, it's the one created before.
 
-  
-  ```java
-  var orders = restUtils.getList(url, OrderRxtutorialModel.class);
-  ```
+      
+      ```java
+      var orders = restUtils.getList(url, OrderRxtutorialModel.class);
+      ```
 
-  The orders variable will store all the orders that will be filtered with our request, as you can see, the method `getList` receives two parameters, the first one is the URL that we'll use to make the request, and the second one is the model class of the retrieved object.
+      The orders variable will store all the orders that will be filtered with our request, as you can see, the method `getList` receives two parameters, the first one is the URL that we'll use to make the request, and the second one is the model class of the retrieved object.
 
-  Then, we simply create a StringBuilder as an HTML page that will be shown on the browser.
+3. Then, we simply create a StringBuilder as an HTML page that will be shown on the browser.
 
 ------------------------------------------------------------------
 
@@ -483,20 +483,22 @@ But first, we'll take a look at the class that we just created.
 
 To simplify RX executions you have a simplified run task:
 
-```
+``` bash title="Terminal"
 ./gradlew rx:rx
 ```
 
 !!!warning
-    Remember to configure the Auth service as described on the [**Installation**](/docs/developer-guide/etendo-rx/tutorials/installation) page
+    Remember to configure the Auth service as described on the [Getting Started](/docs/developer-guide/etendo-rx/getting-started/#configure-auth-project) page
 
 ## Run tutorial project
 
 Now we're able to run our new microservice. For that, execute the following task:
-```
+
+``` bash title="Terminal"
 ./gradlew :com.tutorial.rxtutorial:bootRun
 ```
 
-Open in your browser and you can view the generated page with the following URL: [**http://localhost:8101/api/**](http://localhost:8101/api/)
+Open your browser and you can view the generated page with the following URL: [**http://localhost:8101/api/**](http://localhost:8101/api/)
 
-Great job! You've successfully created a fully working RX service.
+!!! success
+    You've successfully created a fully working RX service.

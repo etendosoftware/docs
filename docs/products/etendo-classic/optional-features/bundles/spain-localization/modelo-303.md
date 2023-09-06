@@ -1,5 +1,7 @@
 ---
 title: Modelo 303
+hide:
+    - navigation
 ---
 ## **Introducción**
 

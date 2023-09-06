@@ -1,6 +1,9 @@
 ---
 title: Bulk Posting
+hide:
+    - navigation
 ---
+
 ## **Introduction**
 
 This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.

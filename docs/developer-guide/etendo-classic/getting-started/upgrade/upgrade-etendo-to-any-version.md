@@ -63,10 +63,10 @@ To work with the plugin you need to specify in the root project from where the p
 
 3.  Delete if the old plugin exists removing the "apply from" line:
 
-``` bash title="Terminal"
-apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle'
+    ``` bash title="Terminal"
+    apply from: 'https://repo.futit.cloud/repository/static-public-releases/com/etendo/etendo/latest/etendo-latest.gradle'
 
-```
+    ```
 
 === "JAR Core"
 

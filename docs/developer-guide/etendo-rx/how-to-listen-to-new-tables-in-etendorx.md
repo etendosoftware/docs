@@ -1,15 +1,15 @@
 ---
-title: How to listen new tables in Etendo RX
+title: How to listen to new tables in Etendo RX
 ---
 
 ## Overview
 
-This page explain how to setup Debezium and listen a specific table and fields in Etendo Rx environment.
+This page explain how to setup Debezium and listen to a specific table and fields in Etendo Rx environment.
 
 ## How to listen new tables in Etendo RX - Debezium UI
 
 !!! info
-    To follow this guide you must have an EtendoRx environment with Debezium and Kafka servises runing. To more information read [EtendoRx](https://docs/en/technical-documentation/etendo-environment/platform/EtendoRx).  
+    To follow this guide you must have an EtendoRx environment with Debezium and Kafka servises running. For more information, read[EtendoRx](https://docs/en/technical-documentation/etendo-environment/platform/EtendoRx).  
 
 1. **Debezium UI**: This application offers a user interface to configure all the properties that we need to listen to the tables that we need. With docker started, we access to [_http://localhost:8095/_](http://localhost:8095/).
 

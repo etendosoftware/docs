@@ -4,7 +4,7 @@ title: Enterprise Model
 
 Enterprise Model folder allows the user to create and model the Organizations which belong to a Client.
 
-### **Introduction**
+### Introduction
 
 Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.
 
@@ -16,9 +16,9 @@ Reference data can be imported or applied to organizations in the "Enterprise Mo
 - If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
 - If a reference data is only applied to an organization which does not have any organization underneath in the tree, only that organization will have access to that data.
 
-## **Initial Organization Setup**
+## Initial Organization Setup
 
-### **Introduction**
+### Introduction
 
 An Organization is an enterprise of a Client. A client can have at least one or even more than one organization as the way of configuring different types of enterprise models.
 
@@ -54,7 +54,7 @@ All of the above is possible due to the fact that there are different types of O
 - At the lowest level of the tree, there can be child organization/s with no organizations beneath it/them.
       - Master data such as business partners and products created at child organization level will not be accessible for the rest of the child organizations, if any.
 
-### **Initial Organization Setup**
+### Initial Organization Setup
 
 As already mentioned, Organizations are created by running the Initial Organization Setup process and not only that, once an organization has been created it must be set as "Ready" in the Organization window.
 
@@ -133,7 +133,7 @@ Finally, it is important to remark that:
     - Rest of reports such as sales, procurement and warehouse reports can be launched for any organization type.
 - A general ledger configuration should not be assigned to the (\*) organization because that one will then be shared by all the organizations underneath.
 
-### **Examples**
+### Examples
 
 **1.** Etendo Demo Data:
 
@@ -231,9 +231,9 @@ Additionally, an organization type can be configured as:
 !!! info
     Note that any of Etendo Organization types are configured as "Business Unit".
 
-## **Organization**
+## Organization
 
-### **Introduction**
+### Introduction
 
 An organization is an enterprise of a Client. Each client must have at least one organization created by running the Initial Organization Setup process. The process of creating an organization ends after setting it as "Ready".
 
@@ -241,7 +241,7 @@ In other words, the process of creating an organization ends after setting it as
 
 Once an organization is set as ready, no changes can be made to the organization anymore. New organizations can be added, but cannot be placed above the current organization. They can be added underneath or at the same level.
 
-### **Organization**
+### Organization
 
 The Organization window allows the user to maintain the organizations created by the Initial Organization Setup process.
 
@@ -329,7 +329,7 @@ Once an organization is set as ready:
 - The organization newly created can not be moved up or down within the enterprise tree and can not be deleted.
 - It is not possible to create new organizations up in the tree but underneath or at the same level.
 
-### **Information**
+### Information
 
 Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.
 
@@ -356,7 +356,7 @@ That is the case of Organizations like Public Sector organizations for which tax
 
 The field Sales Tax Exempt Rate allows entering a by default exempt sales tax rate to be used in the sales invoices by the non-tax-deductible organizations.
 
-### **Period Control**
+### Period Control
 
 Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.
 
@@ -380,7 +380,7 @@ As shown in the image below, the period Feb-19 has a mixed status, meaning that 
 
 For more information, see Open/Close Period Control.
 
-### **Documents**
+### Documents
 
 Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.
 
@@ -388,13 +388,13 @@ Documents tab is a read-only tab which lists the Document Category status for a 
 
 For more information, see Documents in the Open/Close Period Control window.
 
-### **Data Sets**
+### Data Sets
 
 Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.
 
 ![](/docs/assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
-### **Warehouse**
+### Warehouse
 
 Relation of prioritized on-hand warehouses of the Organization.
 

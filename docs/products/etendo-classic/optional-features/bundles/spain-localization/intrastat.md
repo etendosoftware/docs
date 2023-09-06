@@ -1,5 +1,7 @@
 ---
 title: Intrastat
+hide:
+    - navigation
 ---
 ## **Introducción**
 

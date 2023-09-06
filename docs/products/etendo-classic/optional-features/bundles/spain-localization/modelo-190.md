@@ -1,5 +1,7 @@
 ---
 title: Modelo 190
+hide:
+    - navigation
 ---
 ## **Introducción**
 

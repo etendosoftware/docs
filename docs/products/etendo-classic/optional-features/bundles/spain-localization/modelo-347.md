@@ -1,5 +1,7 @@
 ---
 title: Modelo 347
+hide:
+    - navigation
 ---
 ## **Introducción**
 
