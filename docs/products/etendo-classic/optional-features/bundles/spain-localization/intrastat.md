@@ -3,7 +3,13 @@ title: Intrastat
 hide:
     - navigation
 ---
-## **Introducción**
+
+## Javapakages 
+`org.openbravo.module.intrastat` <br>
+`org.openbravo.module.intrastat.spain` <br>
+`org.openbravo.module.intrastat.es.es`
+
+## Introducción
 
 Esta sección describe el módulo disponible de Etendo para la generación y presentación del informe oficial de Intrastat.
 
@@ -11,7 +17,7 @@ El informe Intrastat se debe presentar a las autoridades mensualmente, dentro de
 
 La declaración de Intrastat se debe enviar telemáticamente (a través Internet) en un fichero válido con un determinado formato específico de cada país.
 
-## **Descripción de los Módulos**
+## Descripción de los Módulos
 
 A continuación, se listan los diferentes **módulos** sobre los que se desarrolla la funcionalidad de Intrastat:
 

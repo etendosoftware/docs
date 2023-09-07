@@ -3,6 +3,10 @@ title: Modelo 390
 hide:
     - navigation
 ---
+
+## Javapakages 
+`org.openbravo.module.aeat390.es` 
+
 ## **Introducción**
 
 El presente manual de usuario explica el contenido y funcionamiento del módulo comercial de Etendo, “**Modelo 390**”. 

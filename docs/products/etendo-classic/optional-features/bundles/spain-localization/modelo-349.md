@@ -3,6 +3,9 @@ title: Modelo 349
 hide:
     - navigation
 ---
+## Javapakages 
+`org.openbravo.module.aeat349.es` <br>
+
 ## **Introducción**
 
 Esta sección aplica al módulo “**Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”** incluído en el módulo de Localización Española de Etendo.

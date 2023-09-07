@@ -3,6 +3,10 @@ title: Modelo 303
 hide:
     - navigation
 ---
+
+## Javapakages 
+`org.openbravo.module.aeat303.es` <br>
+
 ## **Introducción**
 
 El presente manual de usuario explica el contenido y funcionamiento del nuevo módulo comercial de Etendo, **"Modelo AEAT303"**, compatible con Etendo 21.4 o versiones posteriores. Este módulo forma parte del bundle de Localización española, al igual que todas las dependencias relacionadas.

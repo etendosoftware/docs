@@ -3,6 +3,9 @@ title: Modelo 190
 hide:
     - navigation
 ---
+## Javapakages 
+`org.openbravo.module.aeat190.es`
+
 ## **Introducción**
 
 Esta sección explica el contenido y funcionamiento del módulo **"Modelo 190"**, incluído dentro del bundle de Localización Española para Etendo.

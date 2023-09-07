@@ -3,6 +3,9 @@ title: Libro de facturas
 hide:
     - navigation
 ---
+## Javapakages 
+`org.openbravo.module.invoicesregisterbook.es_es`
+
 ## **Introducción**
 
 Este módulo de funcionalidad española se denomina “Libros Registro de IVA” o “Libros Registro de Facturas emitidas/recibidas”.

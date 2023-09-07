@@ -3,6 +3,9 @@ title: Configuración de impuestos para libro de facturas
 hide:
     - navigation
 ---
+## Javapakages 
+`org.openbravo.module.invoicesregisterbook.estaxes`
+
 ## **Introducción**
 
 Esta sección contiene información sobre la configuración de impuestos de los libros de facturas que forman parte del bundle de Localización española de Etendo.
