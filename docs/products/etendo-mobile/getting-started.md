@@ -22,7 +22,7 @@ To use the app, the user must access the ERP under the role “System Administra
 
 Once the app is downloaded, the first step will be setting up the Etendo server URL.
 
-![](/docs/assets/drive/gH4RGzqc_72n4XWPI8mNHG0J8Mxp_jcKD4I5csUf8tuyV0dIUhM1sG50ktUbaMrJvWglv0QblwuOnuLN0a5H_65imaA9rvoVFytd_-E_muFqu75sArDh0p83uhoy69PBfFBJDwgM.png){ width="300" }
+![](/docs/assets/products/etendo-mobile/user-interface/AddNewUrlMobile.jpeg){ width="300" }
 
 For this, click the “add” button, enter the URL and click “Add” again. Then, the URL will be shown in the “List of added URLs”.
 
