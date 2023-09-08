@@ -10,7 +10,7 @@ Datasets allow the user to define reference data such as master data or configur
 
 Reference data can be imported or applied to organizations in the "Enterprise Module Management" window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
 
-![](/docs/assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
+![](/assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
 
 - If a reference data is applied at (\*) organization, every organization in the system will have access to that data.
 - If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
@@ -58,7 +58,7 @@ All of the above is possible due to the fact that there are different types of O
 
 As already mentioned, Organizations are created by running the Initial Organization Setup process and not only that, once an organization has been created it must be set as "Ready" in the Organization window.
 
-![](/docs/assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png)
+![](/assets/drive/jaLNPOFQoCLMgujXvhC3sL--3PKbCLcfdvQubK5VvyRy85PwL7t_4V38fCTBCmrioEfhBQKvWWVq87sbLZsuP9D-YMUodiBeLsQrhbY-cnruPAjkkigHou5kknI1D0ZYc4-G0RiB.png)
 
 As shown in the image above, an organization can be created by providing the relevant data below:
 
@@ -139,7 +139,7 @@ Finally, it is important to remark that:
 
 Etendo includes demo data for demonstration purposes, which includes an "Enterprise Model" composed by a set of organizations.
 
-![](/docs/assets/drive/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn.png)
+![](/assets/drive/Vuf4G00AIK2uWFXjxHE733lf2QkM1WNhX1Eh29LCef9KNoZMGGnkD0O1vnkML26wZ7V_PHQHSgKtBgTxaB5Y3od9pFqzriF1nCYm7ysoMCJKrPf9-6jKp017i2QCIHKCBbV82bZn.png)
 
 - An organization type "Organization" named F&B International Group.
     - This organization is not a legal entity and it does not allow transactions
@@ -180,11 +180,11 @@ The basic variables to take into account while creating an organization of the t
 
 **3.** Enterprise Models examples:
 
-![](/docs/assets/drive/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA.png)
+![](/assets/drive/h9cS1Sgl07mpOdqMyrCNa-D3w4typy34vJcGl9wb5xk8vnpOkO4dPBwmBwY1JygGfPEeaQvh7katpn2-_fdTLWn5FyeIEPwZcNdkhkkKn0FUjTCTRLUosk2YcYwMoBegzLlVMzmCFCRzQztOKA.png)
 
-![](/docs/assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png)
+![](/assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png)
 
-![](/docs/assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png)
+![](/assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png)
 
 ## Organization type
 
@@ -253,7 +253,7 @@ There are different types of data left to be entered or changed for an organizat
   This flag can always be changed regardless if the organization is already set as ready, as it is always possible to add organizations underneath an existing one.
 - The Allow Period Control checkbox is only shown for "legal with accounting" organizations.
 
-![](/docs/assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png)
+![](/assets/drive/35uC1djW49ivi4h02RbbcaNyghZdV2ttZh-LGAZNR9ndREhkn74Dc06RJc6n4_htYuBL4OMH1uYDtMgr0qovmyhA6Pk7N-c7XWjF1e0C7Og1RQZb4y7SThakjOIZDfW8lhxjloWQ.png)
 
 If enabled, it allows selecting a Fiscal Calendar for which the corresponding fiscal periods can be opened or closed in the Open/Close Period Control window.
 
@@ -299,7 +299,7 @@ Food & Beverage (F&B) sample client shipped with Etendo illustrates scenario 1 a
 - The "F&B International Group" is an "Organization" Organization Type.  
   An Accounting CSV file was selected while it was created, in the same way as the "USD" currency, therefore this organization has the "F&B International Group US/A/Dollar" general ledger configuration assigned.
 
-![](/docs/assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png)
+![](/assets/drive/tLSZQxp8xgwVv1GQOCVPR1ChHCnrGZ2-UQzAddoZKw4FvXouGcLHhfnVJBS4CS4i2lHeEhxCwDy9SDIRpBmVxuKagI42qJ8Ol4kBnBZOKMxq0fiF6wEqW3BGHXfKEzxaaJjPK6HT.png)
 
 This general ledger configuration can also be shared by the organizations underneath, for instance "F&B US, Inc" and "F&B España S.A."
 
@@ -309,7 +309,7 @@ This general ledger configuration can also be shared by the organizations undern
 - Therefore, every time that an "F&B US Inc" transaction is posted to the ledger, Etendo opens a new window named "Journal Entries Report" which shows the journal entry created for the "F&B International Group US/A/Dollar" general ledger configuration in USD and in the corresponding accounts of a given Chart of Accounts.
 - Every time that an "F&B España S.A." transaction is posted to the ledger, Etendo opens two new windows, one per each general ledger configuration, one of them in USD and the other one in EUR, both of them in different accounts.
 
-The tree action button ![](/docs/assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png) allows dragging and dropping an organization within an enterprise model, whenever it is not "Set as Ready".
+The tree action button ![](/assets/drive/_YumQFCw0KLD-SFUaGI8zjTteIM6MCZo-pEA8IHbI757561hE9StOwYttf2lqUdlmcm8s7G6XtIR5ZjDwckNhEt8q9yIKTqpduMk-kYk3g5NPe24Pvq9DVCg_803cj5Y_cVbz1FX.png) allows dragging and dropping an organization within an enterprise model, whenever it is not "Set as Ready".
 
 **"Set as Ready"** process takes into account the list of requirements below per organization type:
 
@@ -333,7 +333,7 @@ Once an organization is set as ready:
 
 Information tab allows the user to add relevant information of an organization, information such as location and tax ID number.
 
-![](/docs/assets/drive/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi.png)
+![](/assets/drive/EsSwADTSSP7pJ1foh5fXjLZBaL1lb-u2MwMI9KFZaxpgC9ayM66e0NmIcdCOhXEzWLBG78RrjGI7VN_l1mdQg6COaMO0_lQhaXwafKPnSphAcus_1aqxM2Glbickzi645CuxqPVi.png)
 
 Fields to fill in are:
 
@@ -360,7 +360,7 @@ The field Sales Tax Exempt Rate allows entering a by default exempt sales tax ra
 
 Period Control tab is a read-only tab which lists the fiscal calendar period status of an organization.
 
-![](/docs/assets/drive/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo.png)
+![](/assets/drive/kwmxym70AykyaAYetGSTUoXl5ucDq29sJTt2mo3R0vCsxeSSnyIrP_1jtd36ENRoQHLrrHfFs3__qR6w2wn1hAbwEYbLmQtJ2SUoYa35ffgOHUiWFXUDDwnaL_Vt_ebrZIeAbDBo.png)
 
 **The Status**
 
@@ -376,7 +376,7 @@ This tab can be used for searching for a period (i.e. Jan-19) and get its curren
 
 As shown in the image below, the period Feb-19 has a mixed status, meaning that not all the Document Types have the same Status value within the Organization "F&B España S.A." which has the "Calendario España" assigned.
 
-![](/docs/assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png)
+![](/assets/drive/cjahc3FYZMghn48UlTxGriply3wDhO6ZrX7BsdnjoN5X3rcwWWdLMoeiUbYQ-z--lNwxjsqgmI0d4-8dldLYHy4kY5CqUaj4n7ZAWfg0ML8NxMm9M5ykXpt9kzkh5O-sI2KEjpnz.png)
 
 For more information, see Open/Close Period Control.
 
@@ -384,7 +384,7 @@ For more information, see Open/Close Period Control.
 
 Documents tab is a read-only tab which lists the Document Category status for a selected period of an organization.
 
-![](/docs/assets/drive/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss.png)
+![](/assets/drive/p2dQZKtljDS-XwNG0QoRVerVIGFhmR02mySLnF1RE_Cdjv1_jPAGhBCTccBupCha87MLhjnIjUOZGqEaJ1BndBl_sPUl2AGkTI23CJfcnbdB0fDJTRLXaN7oZ2EGhfHTa18bH_Ss.png)
 
 For more information, see Documents in the Open/Close Period Control window.
 
@@ -392,13 +392,13 @@ For more information, see Documents in the Open/Close Period Control window.
 
 Data sets tab allows viewing the reference data applied to the organization and informs in case there is any update of a reference data applied available.
 
-![](/docs/assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
+![](/assets/drive/eIRJ-zXUf_s6qjf9H9aPP6ynr5hrgULf6DqAwhPtKq4PeR86LpUlWRS8FmcHglGxffMZzBw4AV0vBcyc0xXQO5HV6cxmc6pB0P_qF67nS2NknaRuS58DK3izsNbbO-xj7PM9zLAO.png)
 
 ### Warehouse
 
 Relation of prioritized on-hand warehouses of the Organization.
 
-![](/docs/assets/drive/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC.png)
+![](/assets/drive/6fsqpwBtDAXTJbyug4QSODfEv9-GzyhEMHMQQYgnsIufDr4S4GOCjrOOCSSeGz_u4GnkuVlaUPnOiH83pQbORHhsf2pLzKJKAaPERxaqCNXaHXgWRTz8-sIFqQzg4h_NTOJHKPmC.png)
 
 In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.
 

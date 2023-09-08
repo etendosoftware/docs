@@ -173,7 +173,7 @@ The reports have to be uploaded in the correct folder, for example: `/var/lib/to
 
 Then, in the "Clear report cache" window, click ’Done’:
 
-![Clear Report Cache](/docs/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
+![Clear Report Cache](/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
 
 ## Etendo Advanced Security

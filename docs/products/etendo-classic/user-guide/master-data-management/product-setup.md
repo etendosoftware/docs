@@ -34,13 +34,13 @@ These three characteristics are assigned to the product in this way:
 
 It will create four variants/products and for all of them with the characteristic Sport. We can say that a characteristic that is not a variant is like a tag that is added to each new product.
 
-![](/docs/assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png)
+![](/assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png)
 
 ### **Value**
 
 Each of the values of a characteristic.
 
-![](/docs/assets/drive/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg.png)
+![](/assets/drive/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg.png)
 
 Fields to be into account:
 
@@ -48,13 +48,13 @@ Fields to be into account:
 - Code: To be used later when creating the variant. It will put in the _Search Key_ field
 - Summary level: It is allowed to create a tree structure. For example, if the characteristic is color and for the same value(i.e Green) there are different references depending on the supplier:
 
-![](/docs/assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png)
+![](/assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png)
 
 #### **Button Add Products**
 
 The " Add Products" button is shown when a product characteristic value is NOT a "Variant", therefore it can be assigned to any product.
 
-![](/docs/assets/drive/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q.png)
+![](/assets/drive/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q.png)
 
 It does not update current values. That is why the button only shows products where the characteristic is not assigned to.
 
@@ -101,7 +101,7 @@ The aim of this feature is to avoid having duplicate values (blue, blue, green, 
 
 Each of the values of the product characteristic assigned to the subset.
 
-![](/docs/assets/drive/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA.png)
+![](/assets/drive/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA.png)
 
 - Sequence number: To order the way of seeing the values
 - Name: Value. Notice that only values from the characteristic can be selected.
@@ -111,7 +111,7 @@ Each of the values of the product characteristic assigned to the subset.
 
 Fields based on columns whose reference is Product Characteristics can be filtered in grid assisted with a popup where the tree of available characteristics is displayed.
 
-![](/docs/assets/drive/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ.png)
+![](/assets/drive/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ.png)
 
 !!! info
     The characteristics available in this popup are limited to the ones applicable to data filtered in the grid where it is displayed with the current filtering criteria for the rest of the fields.
@@ -126,15 +126,15 @@ Anyway, some new features can be displayed as well with some simple configuratio
 
 You can select between the different product characteristics using the product selector. There you have a column showing product characteristics description (See image).
 
-![](/docs/assets/drive/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ.png)
+![](/assets/drive/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ.png)
 
 That is not the case when selecting from the suggestion box. There, just product names are used. Taking into account that the product with the characteristics share the name, it becomes impossible to distinguish one from another (See image).
 
-![](/docs/assets/drive/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw.png)
+![](/assets/drive/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw.png)
 
 User experience in this case would be completely different if products could be identified from the suggestion box (See image).
 
-![](/docs/assets/drive/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q.png)
+![](/assets/drive/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q.png)
 
 This can be easily improved by enabling some options of the selector.
 
@@ -145,12 +145,12 @@ Follow these simple steps to enable this configuration, and please do not forget
 - Go to lines tab and select product (M_Product_ID)
 - Navigate to selector (see image)
 
-![](/docs/assets/drive/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ.png)
+![](/assets/drive/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ.png)
 
 - Go to Defined Selector tab and then to Defined Selector field tab and select Characteristics Description field.
 - Edit and flag "Search in suggestion box" and "Show in Picklist" check boxes (See image)
 
-![](/docs/assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png)
+![](/assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png)
 
 - Last point would be to export these changes to the template. This is really important to avoid problems in future update processes and to keep these changes after the update.
 
@@ -200,7 +200,7 @@ Below, you can find a list of the unit of measure you could setup in Etendo:
 
 Products of any type are managed in non-monetary units of measure.
 
-![](/docs/assets/drive/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw.png)
+![](/assets/drive/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw.png)
 
 As shown in the image above, a non-monetary unit of measure can be created in Etendo by filling in below relevant data:
 
@@ -239,7 +239,7 @@ Besides, each product category allows the user to set up a different set of ledg
 
 Product category window allows the user to create and configure every product group your company may need.
 
-![](/docs/assets/drive/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg.png)
+![](/assets/drive/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg.png)
 
 As shown in the image above, the creation of a product category requires entering below listed information for each category:
 
@@ -254,7 +254,7 @@ Product categories can be arranged into a hierarchical structure, which can be l
 
 Each product category allows the user to configure a different set of ledger accounts.
 
-![](/docs/assets/drive/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g.png)
+![](/assets/drive/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g.png)
 
 There is a set of product related accounts which needs to be properly set up for the organization's general ledger configuration.
 
@@ -326,7 +326,7 @@ Etendo allows managing product attributes by following below steps:
 
 Attribute window allows the user to create and edit attributes such as color or size to be assigned to attribute sets.
 
-![](/docs/assets/drive/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw.png)
+![](/assets/drive/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw.png)
 
 As shown in the image above, an attribute can be easily defined by entering the relevant data below:
 
@@ -364,7 +364,7 @@ The steps to follow are:
 
 Attribute Set window allows creating as many combinations of attributes as required to define products with few or multiple characteristics.
 
-![](/docs/assets/drive/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg.png)
+![](/assets/drive/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg.png)
 
 As shown in the image above, an attribute set to be assigned to a specific product/s can contain:
 
@@ -382,7 +382,7 @@ As shown in the image above, an attribute set to be assigned to a specific produ
 
 An attribute set can have a single or a set of attributes assigned.
 
-![](/docs/assets/drive/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA.png)
+![](/assets/drive/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA.png)
 
 As shown in the image above, an attribute set can have only one attribute, for example Color or as many attributes as required, for example Size, Lot Number and Serial Number.
 
@@ -404,7 +404,7 @@ Some products require lot numbering to assure compliance with the tracking requi
 
 A Lot Number is a unique number given to a particular quantity of a product, which can be defined to have a prefix or a suffix among other characteristics.
 
-![](/docs/assets/drive/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ.png)
+![](/assets/drive/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ.png)
 
 A Lot Number Sequence can be setup:
 
@@ -428,7 +428,7 @@ Some products require serial numbering to assure compliance with the tracking re
 
 A Serial Number is a unique number given to each unit of a product/item which can be defined to have a prefix or a suffix among other characteristics.
 
-![](/docs/assets/drive/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w.png)
+![](/assets/drive/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w.png)
 
 A Serial Number Sequence can be setup:
 
@@ -450,4 +450,4 @@ The brands are manufacturers or commercial names used by manufacturers to identi
 
 To use this functionality, select an organization and add a new brand in the corresponding fields. It is also possible to enter a description when necessary.
 
-![](/docs/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png)
+![](/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png)

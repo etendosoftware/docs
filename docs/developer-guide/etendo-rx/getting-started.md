@@ -33,7 +33,7 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 
 !!! note
     The GitHub credentials are required.
-    To configure GitHub credentials read the [Use of Repositories technical guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/) in Etendo.
+    To configure GitHub credentials read the [Use of Repositories technical guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/) in Etendo.
 
 | Variable                | Description                                                      | Default Value      |
 | ----------------------- | ---------------------------------------------------------------- | ------------------ |
@@ -100,7 +100,7 @@ This task deploys the `webContent` folder into the `tomcat/webapps` directory. M
 Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo ERP.
 
 !!!note
-    If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).
+    If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).
 
 ### Compiling Etendo RX
 
@@ -150,4 +150,4 @@ By default, the following services should be up and running:
 - Async
 
 !!! success
-    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](/docs/developer-guide/etendo-rx/tutorials/creating-a-new-microservice).
+    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](/developer-guide/etendo-rx/tutorials/creating-a-new-microservice).

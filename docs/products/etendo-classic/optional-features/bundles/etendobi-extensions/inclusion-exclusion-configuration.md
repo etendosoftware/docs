@@ -19,7 +19,7 @@ The window consists of two main tabs: "Header" and "Lines". These tabs are used 
 
 ### _Header_
 
-![](/docs/assets/products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/header-bi.png)
+![](/assets/products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/header-bi.png)
 
 **Name and Description**: Text fields that allow the user to easily identify the configuration and understand its purpose.
 
@@ -87,24 +87,24 @@ Main categories for account configuration:
 
 #### Configuration of cash accounts:
 
-![cash.png](/docs/assets/products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/cashpng.png)
+![cash.png](/assets/products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/cashpng.png)
 
 #### Configuration of bank accounts:
 
-![bank.png](/docs/assets/legacy/bank.png)
+![bank.png](/assets/legacy/bank.png)
 
 #### Configuration of customer accounts:
 
-![customers.png](/docs/assets/legacy/customers.png)
+![customers.png](/assets/legacy/customers.png)
 
 #### Configuration of supplier accounts:
 
-![suppliers.png](/docs/assets/legacy/suppliers.png)
+![suppliers.png](/assets/legacy/suppliers.png)
 
 #### Configuration of sales accounts:
 
-![sales.png](/docs/assets/legacy/sales.png)
+![sales.png](/assets/legacy/sales.png)
 
 #### Configuration of sales costs accounts:
 
-![sales_cost.png](/docs/assets/legacy/sales_cost.png)
+![sales_cost.png](/assets/legacy/sales_cost.png)

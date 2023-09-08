@@ -46,7 +46,7 @@ The way these concepts work in Etendo is described below:
 
 Price list schema window supports the creation of as many price list schemas as required with the aim of obtaining an easy management of price lists and price list versions.
 
-![](/docs/assets/drive/8dm__0RGCoicJS7A0HIQ2wiXDhVxmgxLG0KI3K3QcCW8LIHOvh-QaKXy12rE-WHLQkVlr476bjI-t7tX7Q877O_4-ek18q8CU8MGnz_tTNhFahwOAvn9co79yD-EKha4_NQvAfHwLOmGt0J49g.png)
+![](/assets/drive/8dm__0RGCoicJS7A0HIQ2wiXDhVxmgxLG0KI3K3QcCW8LIHOvh-QaKXy12rE-WHLQkVlr476bjI-t7tX7Q877O_4-ek18q8CU8MGnz_tTNhFahwOAvn9co79yD-EKha4_NQvAfHwLOmGt0J49g.png)
 
 As shown in the image below, the creation of a price list schema is as easy as to create it and give it a Name.
 
@@ -56,7 +56,7 @@ The set of price and discount rules which might apply to a set of product catego
 
 Price list schema lines tab allows defining a set of price rules such as to apply a discount % to the net unit price of a given product category or specific product.
 
-![](/docs/assets/drive/1xuN1UnuUBcuYhWnHvIFMpKJ-OufSVW9rM0t-Otml29IRjyIQ5gjF3gIHNu1BdwLNikv9n3_5XmZ3rxWMDvg6Ig80WHdzCkEQI2q4cLeQ4Cbl_W3KVnYszYbQHJffZumj85Y1Q1RJjd_bFOp7w.png)
+![](/assets/drive/1xuN1UnuUBcuYhWnHvIFMpKJ-OufSVW9rM0t-Otml29IRjyIQ5gjF3gIHNu1BdwLNikv9n3_5XmZ3rxWMDvg6Ig80WHdzCkEQI2q4cLeQ4Cbl_W3KVnYszYbQHJffZumj85Y1Q1RJjd_bFOp7w.png)
 
 First thing to notice is that, as shown in the image above, "Lines" tab is split into two sections:
 
@@ -172,7 +172,7 @@ Price List version creation:
 
 Price List window allows creating purchase and sales price lists to be assigned to the business partners for its use in purchase and sales transactions such as orders and invoices.
 
-![](/docs/assets/drive/bHmRBT-3YqtSLK2PErojCQx8-FE-6UJK0_A3mkisnphxh5R2A7qev8UsVYgo9x7o8xbHuvmIhYY9ijGcJ9tymlAeIUqaNHJCOVNlXTv58MpI1iBTJ3ppDjXB0s_3ZXMro8cp8tS3d4oqD4_hHw.png)
+![](/assets/drive/bHmRBT-3YqtSLK2PErojCQx8-FE-6UJK0_A3mkisnphxh5R2A7qev8UsVYgo9x7o8xbHuvmIhYY9ijGcJ9tymlAeIUqaNHJCOVNlXTv58MpI1iBTJ3ppDjXB0s_3ZXMro8cp8tS3d4oqD4_hHw.png)
 
 As shown in the image above, a price list or a price list version can be created by just entering below relevant information:
 
@@ -211,7 +211,7 @@ Due to this (Net amount vs Gross amount), when using prices that include taxes, 
 
 There could be as many versions of an existing price list as required, versions which can be valid for a given time period and which can be defined according to certain commercial rules.
 
-![](/docs/assets/drive/ix0WIF0unAQdEluAH0VKvAHPQFFb5f6V5DlOMcJlQVi54MtuV41UG8GUHy1aHghfH4CH5Iz100WDv3Q8-fF_rPaNDGuFvqWwnTmVKxdNDFCSXnQFM3TAhlcxHapRGH4a7K2nXQVkk0lkuPJ1NQ.png)
+![](/assets/drive/ix0WIF0unAQdEluAH0VKvAHPQFFb5f6V5DlOMcJlQVi54MtuV41UG8GUHy1aHghfH4CH5Iz100WDv3Q8-fF_rPaNDGuFvqWwnTmVKxdNDFCSXnQFM3TAhlcxHapRGH4a7K2nXQVkk0lkuPJ1NQ.png)
 
 As shown in the image above, there are two types of "Price List Versions":
 
@@ -230,7 +230,7 @@ The process button named "Create Price List" must be used only in the case of cr
 
 Product Price tab allows the user to either add or edit products and their prices for a selected price list.
 
-![](/docs/assets/drive/rapFdQYs8ZYQ3c9wO_nEZ-tTniv5PDDLmdlXZ03ByVKh6Im-Jwt2KIB1Rj1Hm1agjXK55WcmCR6Xok4iO4s3zlRoP1TK-C6rh6oJSIBNVEdEcBRJB4OHbEtWV-7ZE8slY7CahOj4x7wU9GBuow.png)
+![](/assets/drive/rapFdQYs8ZYQ3c9wO_nEZ-tTniv5PDDLmdlXZ03ByVKh6Im-Jwt2KIB1Rj1Hm1agjXK55WcmCR6Xok4iO4s3zlRoP1TK-C6rh6oJSIBNVEdEcBRJB4OHbEtWV-7ZE8slY7CahOj4x7wU9GBuow.png)
 
 In other words:
 
@@ -271,9 +271,9 @@ You use a main price list (with a price list version) containing a price per bre
 
 The Create All Price Lists generates all price lists pending from the selected price list. The process checks for all child price lists, and applying the defined price list schema, it generates a new version for each price list.
 
-![](/docs/assets/drive/1gcdIPde692fCVAn9cq0PEXTyJBTBR9vT.png)
+![](/assets/drive/1gcdIPde692fCVAn9cq0PEXTyJBTBR9vT.png)
 
-![](/docs/assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
+![](/assets/drive/1JC58tbBLqjqN5hDZv5Puwp_lAmDafJqd.png)
 
 ## **Discounts and Promotions**
 
@@ -283,7 +283,7 @@ Discounts and Promotions is a mechanism that allows the user to adjust prices ba
 
 Discounts and Promotions, formerly Price Adjustments, defines rules to be applied to invoice and order lines to adjust prices.
 
-![](/docs/assets/drive/ls88i8jyKuvAYSUkKg3hrJyY9FkEKi8kj9CkQI0hn-YdEggr1Qd25cPG13CO5Y-jVh5L6w6X-Nlnc7l_7ht0zRV8_4TYSYs-_V7JrZxIkIxmK5XS_KS60noJsXVwMK5FWbeKtEctt6kpiZsEqw.png)
+![](/assets/drive/ls88i8jyKuvAYSUkKg3hrJyY9FkEKi8kj9CkQI0hn-YdEggr1Qd25cPG13CO5Y-jVh5L6w6X-Nlnc7l_7ht0zRV8_4TYSYs-_V7JrZxIkIxmK5XS_KS60noJsXVwMK5FWbeKtEctt6kpiZsEqw.png)
 
 This feature requires to set as "Active":
 
@@ -389,7 +389,7 @@ In this window Price Rules assigned to Price Rule Based services will be configu
 
 ### **Service Price Rule**
 
-![](/docs/assets/drive/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw.png)
+![](/assets/drive/X9LCI62xbhWb8fv-Kd56CnOQGzy2Bw1KXj1frgulzwbMa3UkXVFW2GtKdR1a0-BIXVVRePT4wgfzFCFI8LpQAZv66zLqQTzVV_5LuiBKK8wZecnNvki6Pu3rJ-4OBccqbSfCm45H2zJ4eX4xgw.png)
 
 Configuration fields:
 
@@ -403,7 +403,7 @@ Configuration fields:
 
 ### **Ranges**
 
-![](/docs/assets/drive/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw.png)
+![](/assets/drive/QwjLn0C5fh2kKYl7P1q381tMurECKsFm_xLVCviWtFqf48yaxSa0PfpjwM80ji2kQQmDQC3VQVL6YQYyRu9y39AgLl19QBGYO4E2iAXV7cC1qINdvHtHTYAQGmQCDrVeqBr-Jnhd_TVcKDDWcw.png)
 
 In this tab, different Ranges can be created based on the amount of the related order lines. Configuration fields:
 

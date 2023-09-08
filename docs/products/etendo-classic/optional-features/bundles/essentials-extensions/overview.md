@@ -13,7 +13,7 @@ The Essentials Extensions bundle includes the following modules:
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [the Advanced Business Partner module user guide](/docs/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
+    For more information, visit [the Advanced Business Partner module user guide](/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
 
 ## Translations
 

@@ -27,7 +27,7 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 ## Etendo plugin
 
 
-Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Latest Releases](/docs/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/){target="_blank"})
+Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Latest Releases](/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/){target="_blank"})
 
 ```groovy
 plugins {
@@ -181,7 +181,7 @@ etendo {
     - `-Ppkg=<package name>` The name of the module. **REQUIRED**
     - `-Precursive=true` This trigger the republication of all the modules which depends on the module being published. **OPTIONAL** - default false.
     - `-PupdateLeaf=true` This updates automatically the version of the project beign published. **OPTIONAL** - default false.
-- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://docs/en/technical-documentation/modules/uninstall)
+- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://en/technical-documentation/modules/uninstall)
   - Command line parameters
     - `-Ppkg=<modulename>` The javapackage of the source module to uninstall.
 

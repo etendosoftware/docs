@@ -74,7 +74,7 @@ The creation of the withdrawal transaction in the financial account can be done:
 
 The Payment Out window allows the user to make and manage supplier's payments done to settle different types of documents such as orders and invoices. This window also allows the user to manage the supplier's payments already made in the purchase invoice window, the same way as the G/L item payments made in a G/L Journal.
 
-![](/docs/assets/drive/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
+![](/assets/drive/1Ie6b5QE33TRiAtdGr4PGVCtT5VvH0nD8.png)
 
 There are just a few mandatory fields to fill in while making a payment in this window:
 
@@ -95,7 +95,7 @@ Other relevant fields to note are:
 
 The **Add Details** button opens the **Add Payment** window, where outstanding documents to be paid can be selected.
 
-![](/docs/assets/drive/1tsg4HMq519UXdo9UqGhV9-wOpqMPJRpy.png)
+![](/assets/drive/1tsg4HMq519UXdo9UqGhV9-wOpqMPJRpy.png)
 
 The **Add Payment** window is already explained in the Purchase Invoice payment article.
 
@@ -108,7 +108,7 @@ If no vendor has been selected in the field "Paying To", it is possible to pay d
 
 The "Actual Payment Out" field will then show the sum up value of all the transactions being selected to be paid.
 
-![](/docs/assets/drive/136-nlDAc31ndG9ibEJoUZk2oUgdZJNcS.png)
+![](/assets/drive/136-nlDAc31ndG9ibEJoUZk2oUgdZJNcS.png)
 
 Once the payment is processed, the lines tab lists all the orders and invoices and even G/L items included in the payment, same as the "**Description**" field of the payment header.
 
@@ -155,7 +155,7 @@ It is not possible to generate credit on a payment which is not related to a sin
 
 The creation of a credit payment requires not to select any document to pay in the **"Add Payment" window** which is shown after pressing the process button "**Add Details**", but to leave the credit amount to be used later.
 
-![](/docs/assets/drive/1J2H_kxh0hRWO5fHEllfFKXZ1oTDQFqPn.png)
+![](/assets/drive/1J2H_kxh0hRWO5fHEllfFKXZ1oTDQFqPn.png)
 
 A credit payment is created after processing. This credit payment specifies the amount left as credit in the "Description" field of the credit payment header.
 
@@ -163,7 +163,7 @@ Later on, the available credit generated for that vendor can be used to pay the 
 
 - in the "**Add Payment**" window once a new Payment Out is created for that vendor by just selecting the credit in the section "Credit to Use".
 
-![](/docs/assets/drive/18mZnJqpLFZa55nXSpoC-qSAFbS1TKg5l.png)
+![](/assets/drive/18mZnJqpLFZa55nXSpoC-qSAFbS1TKg5l.png)
 
 - or in the "**Select Credit Payments**" window which is **automatically shown** upon completion of a new vendor’s invoice.
 
@@ -208,7 +208,7 @@ If the checkbox "Deferred" is not selected, the additional step is still require
 
 The Execution History tab is a read-only tab which shows information about the execution of the payment such as the execution date, just once the payment has been executed.
 
-![](/docs/assets/drive/1o3dY5UJs0fh3LC5ry7249VZ2DZGwE3BQ.png)
+![](/assets/drive/1o3dY5UJs0fh3LC5ry7249VZ2DZGwE3BQ.png)
 
 #### Exchange rates
 
@@ -222,7 +222,7 @@ The creation of a "Credit" payment is already explained in the Credit Payments s
 
 This read-only tab shows the credit payment used to pay a vendor document (order, invoice or G/L item) payment.
 
-![](/docs/assets/drive/1ZRyS-NTJD17sB_CAQbG9-XYa1-a0N3fq.png)
+![](/assets/drive/1ZRyS-NTJD17sB_CAQbG9-XYa1-a0N3fq.png)
 
 ### Payment Removal
 
@@ -244,7 +244,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](/docs/assets/drive/1LQYSG9pRY0BisgiACaLpwwLYwF2yi9Ic.png)
+![](/assets/drive/1LQYSG9pRY0BisgiACaLpwwLYwF2yi9Ic.png)
 
 ### Bulk Posting
 
@@ -256,7 +256,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -266,24 +266,24 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 From the **Payment Out** window, it is possible to create a settlement by clicking on the **Add Details** button.
 In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. The **Actual Payment amount** to pay is set, then select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
-![](/docs/assets/drive/1VXTbJvoG4le_x7dTVC9lqV3puMIqwh-N.png)
+![](/assets/drive/1VXTbJvoG4le_x7dTVC9lqV3puMIqwh-N.png)
 
 From the **Invoice From Compensation** tab, select the sales invoice/s that will be used to pay and set the needed amount from the invoice/s to be netted.
 
 Below that, in the **Totals** tab, Etendo shows the total reference amounts to be netted.
 
-![](/docs/assets/drive/1T-gLPqseFzIa5If1LX93VlhdYIaOz4-5.png)
+![](/assets/drive/1T-gLPqseFzIa5If1LX93VlhdYIaOz4-5.png)
 
 After clicking the button Done, the system nets the invoices and credits for the corresponding business partner and creates a settlement record.
 
-![](/docs/assets/drive/11XJzDLx3VkjhY3Q57pxpyrOGdvrRbXXz.png)
+![](/assets/drive/11XJzDLx3VkjhY3Q57pxpyrOGdvrRbXXz.png)
 
 The settlement record is registered in the **Business Partner Settlement** window where the lines for the invoice/s (sales and purchase) used to net will be shown.
 
-![](/docs/assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
+![](/assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Payment Proposal**
 
@@ -312,7 +312,7 @@ The steps to follow are:
 
 The payment proposal window allows the user to enter a set of selection criteria that help the user to make payments massively.
 
-![Payment Proposal Header](/docs/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Payment Proposal Header](/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
 
 The fields to note are:
 
@@ -327,7 +327,7 @@ The **Select Expected Payments** header button displays the documents that match
 !!! info
     Notice that the data shown in the grid is filtered using the previous criteria (implicit filter). In order to see pending invoices or orders of a different Payment Method for instance, it is necessary to clear the filters by clicking the funnel icon.
 
-![Select Expected Payments](/docs/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Select Expected Payments](/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
 
 Besides, the "Select Expected Payments" window allows the user to:
 
@@ -355,7 +355,7 @@ Once executed:
 
 The lines tab shows the transactions (orders and/or invoices) included in the payment proposal.
 
-![Payment Proposal Lines](/docs/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
+![Payment Proposal Lines](/assets/drive/1DmluEWtuTWzy0oATmdcPRgODYgZlSz5Z.png)
 
 A payment proposal can be "**Reactivated**" that means that the payment/s created are deleted and therefore removed from the Payment Out window.
 
@@ -426,7 +426,7 @@ The creation of the deposit transaction in the financial account can be done:
 
 The Payment In window allows the user to record and manage customer's payments received against different types of documents issued by the organization, such as orders and invoices. This window also allows the user to manage the customer's payments already recorded in the sales invoice window, in the same way as the G/L item payments received in a G/L Journal.
 
-![](/docs/assets/drive/1fpeZSZHjXcKDr4wXaXJWREQHqKdD_B1c.png)
+![](/assets/drive/1fpeZSZHjXcKDr4wXaXJWREQHqKdD_B1c.png)
 
 There are just a few mandatory fields to fill in while recording a payment in this window:
 
@@ -448,10 +448,10 @@ Other relevant fields to note are:
 
 The **Add Details** button opens the **Add Payment** window, where the documents being paid can be selected.
 
-![](/docs/assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
+![](/assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
 
 !!! info
-    The "Add Payment" window is already explained in the [Sales Invoice Payment article](/docs/products/etendo-classic/user-guide/sales-management/transactions/#payment).
+    The "Add Payment" window is already explained in the [Sales Invoice Payment article](/products/etendo-classic/user-guide/sales-management/transactions/#payment).
 
 #### Payment of several document types from different customers
 
@@ -462,7 +462,7 @@ If no customer has been selected in the field "Received From", it is possible to
 
 The **Actual Payment** amount entered is automatically spread among the pending debts (invoices or orders pending to be paid). It is possible to avoid this automatic distribution by setting the Preference _Add Payment: Automatically distribute amounts_ to 'N'
 
-![](/docs/assets/drive/1mt_1DYKUPLmroqfwaT8dTs-QjPhH8wQp.png)
+![](/assets/drive/1mt_1DYKUPLmroqfwaT8dTs-QjPhH8wQp.png)
 
 The user can check or uncheck the transactions as required, and can also modify the amounts shown in the "Amount" field.
 
@@ -550,7 +550,7 @@ It is not possible to generate credit on a payment which is not related to a sin
 
 The creation of a credit payment requires not to select any document to pay in the "Add Payment" window which is shown after pressing the process button "Add Details", but to leave the amount to be used later.
 
-![](/docs/assets/drive/1SK4SF6ntwYbSpP5JZMwZNObD5ceJ1I1q.png)
+![](/assets/drive/1SK4SF6ntwYbSpP5JZMwZNObD5ceJ1I1q.png)
 
 A credit payment is going to be available for the customer after processing a payment as above.
 
@@ -560,7 +560,7 @@ Later on, the available credit generated for that customer can be used for furth
 
 - in the "Add Payment" window, once a new payment is created for that customer in the payment in window by just selecting a line and setting the amount in **credit to use grid.**
 
-![](/docs/assets/drive/15yfpM_16EYf7RNcNfI5IJTHrg8Xd-1lx.png)
+![](/assets/drive/15yfpM_16EYf7RNcNfI5IJTHrg8Xd-1lx.png)
 
 - or in the "Select Credit Payments" window which is automatically shown upon completion of a new customer's invoice.
 
@@ -604,7 +604,7 @@ If the checkbox "Deferred" is not selected, the additional step is still require
 
 The Execution History tab is a read-only tab which shows information about the execution of the payment such as the execution date, obviously once the payment has been executed.
 
-![](/docs/assets/drive/1iYYhQ7YfTWNOlhN5amCRAUoKV297gvq7.png)
+![](/assets/drive/1iYYhQ7YfTWNOlhN5amCRAUoKV297gvq7.png)
 
 #### Exchange rates
 
@@ -618,7 +618,7 @@ The creation of a "Credit" payment is already explained in the Credit Payments s
 
 This read-only tab shows the credit payment used to pay a customer's document (order, invoice or G/L item) payment.
 
-![](/docs/assets/drive/1OazvwkBhV5J6jSKEJwYlyyK5PfyYrnQr.png)
+![](/assets/drive/1OazvwkBhV5J6jSKEJwYlyyK5PfyYrnQr.png)
 
 ### Payment Removal
 
@@ -639,7 +639,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](/docs/assets/drive/1fp6B7szNMnCpcjm0METXUE4ydrRM2ePo.png)
+![](/assets/drive/1fp6B7szNMnCpcjm0METXUE4ydrRM2ePo.png)
 
 ### Bulk Posting
 
@@ -651,7 +651,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -660,24 +660,24 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 From the **Payment In** window, it is possible to create a settlement by clicking on the **Add Details** button. In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. First, set the **Actual Payment amount** to be paid and then, select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
-![](/docs/assets/drive/14Hd8Odyebc7szAzDDE-i6QimctGQGmAZ.png)
+![](/assets/drive/14Hd8Odyebc7szAzDDE-i6QimctGQGmAZ.png)
 
 From the **Invoice From Compensation tab**, select the purchase invoice/s that will be used to pay and set the needed amount from the invoice/s to be netted.
 
 Below that, in the **Totals** tab, Etendo shows the total reference amounts to be netted.
 
-![](/docs/assets/drive/18JZjM6yNh6hBTBbFDk-130_eYzTmI2As.png)
+![](/assets/drive/18JZjM6yNh6hBTBbFDk-130_eYzTmI2As.png)
 
 After clicking the button Done, the system nets the invoices and credits for the corresponding business partner and creates a settlement record.
 
-![](/docs/assets/drive/1f8SDqKDjiTO59I2Hxzlb3XosxMHDsQFQ.png)
+![](/assets/drive/1f8SDqKDjiTO59I2Hxzlb3XosxMHDsQFQ.png)
 
 The settlement record is registered in the **Business Partner Settlement** window where the lines for the invoice/s (sales and purchase) used to net will be shown.
 
-![](/docs/assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
+![](/assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Financial Account**
 
@@ -698,7 +698,7 @@ Payment obligations and amounts due from customers are created in the Purchase a
 
 The financial account window contains essential information such as the bank account number and allows the user to perform a set of processes such as to add deposit or withdrawal transactions to the financial account or to import and match a bank statement file.
 
-![Account](/docs/assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
+![Account](/assets/drive/1G1flRQCPZ_77ab9ntPfNwRfU9TwaaJDf.png)
 
 The **essential financial account information** to be filled in the top section of the financial account window is:
 
@@ -765,7 +765,7 @@ Those two transaction types can be created in three ways:
 
 or **manually**, by creating a new record in the transaction tab of the financial account window.
 
-![Transaction tab](/docs/assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
+![Transaction tab](/assets/drive/1zirkJ20dd1aVDIxtvwQeYybbNxP_tXiI.png)
 
 - Fields to note in transaction tab:
   - **Transaction Type:** The Transaction Type indicates the type of transaction to be submitted. The transaction tab also allows the user to create a "Deposit" or a "Withdrawal" transactions based on a "G/L Item" transaction type or on a "Payment".
@@ -785,17 +785,17 @@ If creating a "Bank Fee" is necessary, select "Bank Fee" in "Transaction Type" c
 
 Then save and process the transaction.
 
-![Bank fee](/docs/assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
+![Bank fee](/assets/drive/1hhSs7pd6WDlXjs26eC2SDsJ8vfo5kh7r.png)
 
 To create a new G/L item transaction, select "BP Deposit" or "BP Withdrawal" in transaction type and select the "**G/L Item**" in the G/L item combo, enter a transaction and accounting date, select a G/L Item, enter the amount either **received in** or **paid out** and save and process the transaction.
 
-![GL Item](/docs/assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
+![GL Item](/assets/drive/1C72EAORDre8_Eh44Fv-dwNc_bOlO209D.png)
 
 If the user needs to create a new payment transaction, it is allowed to select a created payment or create a new payment from the payment selector.
 
 - If the payment is created, the user should choose the payment in the payment selector.
 
-![Payment selector](/docs/assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
+![Payment selector](/assets/drive/1kLQZA0e7fHQtD4ZBSby4h-glL5R4DOAH.png)
 
 Description and amount fields in the transaction tab will be automatically filled and to complete the transaction it is necessary to save and process.
 
@@ -812,7 +812,7 @@ This window allows to:
 - and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
   Last step is to process the just created payment and get it deposited in the financial account.
 
-![Payment deposit transaction](/docs/assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
+![Payment deposit transaction](/assets/drive/1j47oaWj1O4_LLGPha7guEuKBccB3Rn0h.png)
 
 If creating a **payment withdrawal transaction** is necessary, the user should click '+' button' in the payment selector and an add payment popup will be opened. In the add payment popup, the option "**Paid Out**" needs to be selected in the field "Document". This window allows the user to:
 
@@ -825,15 +825,15 @@ If creating a **payment withdrawal transaction** is necessary, the user should c
 - and finally to enter a "G/L Item Payment" if needed, by adding "GL Items" in a GL item grid.  
   Last step is to process the just created payment and get it deposited in the financial account.
 
-![Payment withdrawal](/docs/assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
+![Payment withdrawal](/assets/drive/1DbaEJtPopUAIr5_S_L8g3mVOk3TQlqOT.png)
 
 Payment selector has applied an explicit filter (current financial account)
 
-![Payment filtered](/docs/assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
+![Payment filtered](/assets/drive/1DWBNx-RWSxny0gHyXIU2D-0cuKyKY5iA.png)
 
 It is possible to add payments for alternative financial accounts by clicking the funnel icon to clear the filters.
 
-![Payment without filter](/docs/assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
+![Payment without filter](/assets/drive/1dtzHFshO4AwVVl5S6FPHiHp9YqHgs4Hy.png)
 
 ##### **Add Multiple Payments**
 
@@ -843,7 +843,7 @@ The payments shown for selection are the ones having a payment status equal to "
 
 By default, the payments shown are the ones originally defined for this financial account. However, the user can remove this filter to show and select payments from other financial accounts.
 
-![Add multiple payments](/docs/assets/drive/1WDuGJ8r3aCcAzVGC1bFj1pc87CkaEJxG.png)
+![Add multiple payments](/assets/drive/1WDuGJ8r3aCcAzVGC1bFj1pc87CkaEJxG.png)
 
 Only actions to take are entering a "Transaction Date" and selecting as many payments as required at once.
 
@@ -875,7 +875,7 @@ You can either enter the ending balance or what the statement says and then sele
 !!! info
     It is possible to create a "G/L item" transaction in case there are some minor differences between what the statements say and the recorded transactions pending to be reconciled.
 
-![Reconciliation window](/docs/assets/drive/1N1L6_XETrXBZnbUB3YwVD_RJvVmd0G6V.png)
+![Reconciliation window](/assets/drive/1N1L6_XETrXBZnbUB3YwVD_RJvVmd0G6V.png)
 
 The "**Save**" process button saves a "**Draft**" of the reconciliation in the Reconciliations tab of the financial account and marks the transaction/s selected as "Cleared" as also "Cleared" in the financial account, transaction tab.
 
@@ -909,7 +909,7 @@ Depending on the module installed for this purpose, it will be possible to impor
 
 The "Import Statement" process button opens the "Import Bank File" window.
 
-![Import Statement](/docs/assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
+![Import Statement](/assets/drive/127lBLYWqTXTFWRW2bCr3BJ3M3RasGZ5W.png)
 
 This window allows to:
 
@@ -920,11 +920,11 @@ This window allows to:
 
 Once a bank statement file has been imported, the button "Match Statement" opens a new window where the imported bank statement lines and the existing financial transactions are displayed. By default, there is an implicit filter which hides the bank statement lines that are already matched.
 
-![Match Statement](/docs/assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
+![Match Statement](/assets/drive/1TBIUGHObHsHlBtGTmHZE_HHg3mK8PtuK.png)
 
 Before opening the window, a pop up is shown, asking whether the algorithm should run against unmatched bank statement lines or not. If so, the algorithm will try to find a match for all the unmatched bank statement lines. If not, the matching window will open and the user should do the matches manually.
 
-![Example 2](/docs/assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
+![Example 2](/assets/drive/1GimSn37f-WQGok4aqb0NWFwDg4Xri2ZM.png)
 
 This window has two column groups divided by the Match column.
 
@@ -956,23 +956,23 @@ All the criteria above can be selected, or just some of them.
 
 Let us take for instance the starting situation shown below where there are three bank statement lines which do not match:
 
-![Example 3](/docs/assets/drive/1K31lmmG2WiS1k6bunMTXgghMHLw9Chw3.png)
+![Example 3](/assets/drive/1K31lmmG2WiS1k6bunMTXgghMHLw9Chw3.png)
 
 - the "magnifying glass" icon helps to search transactions to match as it opens a new window which shows the financial account transactions registered the same day as the bank statement line or before. Several transactions can be selected at the same time to match with a single bank statement line. In that case, the system automatically splits the original bank statement line as many times as transactions are selected.
 
-![Example 4](/docs/assets/drive/1OL1GtOSH905zxVc9UjliNCM3UztnFK84.png)
+![Example 4](/assets/drive/1OL1GtOSH905zxVc9UjliNCM3UztnFK84.png)
 
 Back to our example, there is no transaction which matches the second transaction of the bank statement file (the one with an amount equal to 1.500,00). If there was a match, it could be selected by using as well the "magnifying glass" icon.
 
 - the "+" icon helps to add transactions to the financial account (and even create a payment to deposit or withdraw from the financial account) as it opens the "Add Transaction" window.
 
-![Example 5](/docs/assets/drive/1MhRo1pZgSopD5v9S3avUHPR5HUWW_XdZ.png)
+![Example 5](/assets/drive/1MhRo1pZgSopD5v9S3avUHPR5HUWW_XdZ.png)
 
 The image above shows that there was a "Received In" transaction pending to be created in the financial account. Once created it is matched.
 
 Back to our example the current situation is shown in the image below:
 
-![Example 6](/docs/assets/drive/1YjafVYkcIa5yMvLoNCt5jBMZbdyqUsFo.png)
+![Example 6](/assets/drive/1YjafVYkcIa5yMvLoNCt5jBMZbdyqUsFo.png)
 
 There is only one transaction pending to be matched. The "magnifying glass" icon helps again to search for transactions to match.
 
@@ -981,7 +981,7 @@ If a transaction that almost matches is selected, Etendo shows a message which i
 !!! info
     This last option will require to log out and log in.
 
-![Example 7](/docs/assets/drive/1U0DAE2Ad9SLeZF4HRRf6o_PkA8FPIk-w.png)
+![Example 7](/assets/drive/1U0DAE2Ad9SLeZF4HRRf6o_PkA8FPIk-w.png)
 
 This action matches the bank statement line and creates a new line pending to be matched for the difference.
 
@@ -1017,7 +1017,7 @@ _Input fields:_
 - **Description**:
   - Description is set as "Funds Transfer Transaction" by default. The user can overwrite the description if needed.
 
-![Funds transfer](/docs/assets/drive/12Q4Emkj5LA4t5Y7f16uy0IJWRKlJvkIo.png)
+![Funds transfer](/assets/drive/12Q4Emkj5LA4t5Y7f16uy0IJWRKlJvkIo.png)
 
 _Process:_
 
@@ -1099,7 +1099,7 @@ This tab allows the user to define an exchange rate to use while posting the fin
 
 This tab shows the accounting history of a given transaction.
 
-![Accounting history](/docs/assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
+![Accounting history](/assets/drive/1Bjg-OJiKl8bBeYN36lxwYnIUgtl1dbP3.png)
 
 As shown in the image above, this tab shows the general ledger entries created while posting/unposting a given transaction to the ledger.
 
@@ -1107,7 +1107,7 @@ As shown in the image above, this tab shows the general ledger entries created w
 
 The accounting configuration tab is used to define the accounts of a General Ledger to use while posting transactions such as a bank fee or a deposit.
 
-![Accounting configuration](/docs/assets/drive/1CYADTe8Ks-V7eoJVPSmVP8-8Ighure6S.png)
+![Accounting configuration](/assets/drive/1CYADTe8Ks-V7eoJVPSmVP8-8Ighure6S.png)
 
 As shown in the image above, the accounts listed below can be configured for a financial account and general ledger.
 
@@ -1193,13 +1193,13 @@ In this tab, there is the advanced feature (hidden by default) called **invoice 
 This combo can be set at payment method level (payment in and payment out) in each financial account. By default this combo is set as **payment received** or **payment made**, therefore we get the usual behavior of Etendo.
 
 !!! info
-    For additional information about payment method configuration, visit the [_Payment Method_](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#payment-method) article.
+    For additional information about payment method configuration, visit the [_Payment Method_](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#payment-method) article.
 
 #### **Imported Bank Statements**
 
 The tab lists the imported bank statement files as well as the bank statements created manually.
 
-![Imported bank statements](/docs/assets/drive/1JYuyMUUrwVxlwti9FdfNcdz_t-DgIPY3.png)
+![Imported bank statements](/assets/drive/1JYuyMUUrwVxlwti9FdfNcdz_t-DgIPY3.png)
 
 There are key fields to note:
 
@@ -1252,7 +1252,7 @@ The reconciliation tab shows the reconciliations created manually if no matching
 - Each reconciliation of that type once saved is also saved in this tab in "**Draft**" status until it is finally reconciled in the "Match using imported Bank Statement Lines" window therefore, its status changes to "**Completed**".
 - It is possible to "**Reactivate**" a reconciliation of that type, therefore it can be changed in the "**Match using imported Bank Statement Lines**" window and be reconciled from that window once more.
 
-![Reconciliations](/docs/assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
+![Reconciliations](/assets/drive/1ptaQQlAalghp30dTWFwNGupZaaGIhujf.png)
 
 ##### **Reconciliations Posting**
 
@@ -1285,7 +1285,7 @@ c. if the Payment Received was posted in the **"Payment In"** window or not and 
 | Upon Deposit Use the "Deposit Account" (i.e)                |                | Payment amount |
 
 !!! info
-    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the [_Doubtful Debt Run Window_](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#doubtful-debt-run)
+    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the [_Doubtful Debt Run Window_](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#doubtful-debt-run)
 
 A "**Withdrawal Reconciliation**" posting looks like:
 
@@ -1366,7 +1366,7 @@ Consider the following cases:
 - If the reconciliation is completed and the rest of the existing reconciliations are completed, then the reconciliation in question will be reopened to delete the relevant reconciliation line and closed again.
 - If the reconciliation is completed and there is a reconciliation in Draft status, the draft reconciliation is closed, the corresponding reconciliation is reactivated, the corresponding reconciliation line is deleted, it will be closed again and the one in Draft status will be reactivated.
 
-![](/docs/assets/drive/1M_IDKW70W9wRHEkPK6Uw9uLvfD03wyxx.png)
+![](/assets/drive/1M_IDKW70W9wRHEkPK6Uw9uLvfD03wyxx.png)
 
 #### Reconciliations
 
@@ -1378,7 +1378,7 @@ The following situations can be possible:
 - Reactivate a reconciliation in Completed status. The other existing reconciliations are also in Completed status: in this case the reconciliation is reactivated and its status returned to Draft.
 - Reactivate a reconciliation in Completed status. There is another reconciliation in Draft status: in this case, the reconciliation in Draft status is completed first and the selected reconciliation is reactivated and its new status will be : Draft.
 
-![](/docs/assets/drive/1ZyeE1vy7Gri5kslKF1fq1PzohDkwVPwK.png)
+![](/assets/drive/1ZyeE1vy7Gri5kslKF1fq1PzohDkwVPwK.png)
 
 ### Bulk Posting
 
@@ -1390,7 +1390,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ### Advanced Business Partner Settlement
 
@@ -1400,26 +1400,26 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 Etendo allows performing a settlement from a bank reconciliation.
 From the **Financial Account** window, once the bank statements are already imported and processed, the user is able to select the bank statement from the financial account and match it with the invoice to be paid by clicking on the **Match Statement** button.
 
-![](/docs/assets/drive/11F6-j76ebOwud3SCfJNtfFhgfuAcjh5d.png)
+![](/assets/drive/11F6-j76ebOwud3SCfJNtfFhgfuAcjh5d.png)
 
 In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice to net with its **Actual Payment** amount to be paid.
 
-![](/docs/assets/drive/1GufQeDY76qDFzfshhuTzhogcH10T0zxb.png)
+![](/assets/drive/1GufQeDY76qDFzfshhuTzhogcH10T0zxb.png)
 
 From the **Invoice From Compensation** tab, the user selects the invoice that will be used to pay (either sales or purchase, depending on the invoice previously chosen) and sets the needed amount from the invoice to be netted.
 
-![](/docs/assets/drive/1nRmzMoT6EiyE2m0yvApx99cpJladJZkA.png)
+![](/assets/drive/1nRmzMoT6EiyE2m0yvApx99cpJladJZkA.png)
 
 After clicking the Done button, Etendo opens another pop-up window to show the information for the new settlement to be created for the user to confirm the details by clicking Done.
 
-![](/docs/assets/drive/1XvbDRrKkyoporgm2uVTBDg-72m2iOOaa.png)
+![](/assets/drive/1XvbDRrKkyoporgm2uVTBDg-72m2iOOaa.png)
 
 The settlement record (payment in and payment out) is also registered in the **Business Partner Settlement** window where a line for the invoice (sales and purchase) used to net will be shown.
 
-![](/docs/assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
+![](/assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
 
 !!! info
-    For more information, visit the [the Business Partner Settlement module user guide](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit the [the Business Partner Settlement module user guide](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
 
 ## **Payment Execution**
 
@@ -1445,7 +1445,7 @@ and some other available filters such as:
 
 Once the process button "**Search**" is pressed, the payments to execute are shown.
 
-![Payment Execution](/docs/assets/drive/1fX1GLQHOzJHloXOAJSh9X2Y_3SfXqknL.png)
+![Payment Execution](/assets/drive/1fX1GLQHOzJHloXOAJSh9X2Y_3SfXqknL.png)
 
 Once the process button **"Process"** is pressed, a new window is displayed to allow the user to enter the input parameters required such as the check number, for instance if the execution process selected in the payment method used was "Print Check simple process".
 
@@ -1483,11 +1483,11 @@ Depending on the settlement type, the selected process button on the top and chi
 
 "Credit Settlement" type:
 
-![CS](/docs/assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png)
+![CS](/assets/drive/1annoerkei9LaS96_BUY5bysMxH8_E803.png)
 
 "Invoice Settlement" type:
 
-![IS](/docs/assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png)
+![IS](/assets/drive/16rHvcenj5_bk5_qSmaiq55vc-DtdPa2x.png)
 
 #### Credit settlement
 
@@ -1502,7 +1502,7 @@ In the Totals section, total amounts of the selected credit payments are calcula
 
 The information above means that Credit In Amount and Credit Out Amount should be the same, therefore Credit Payment is 0.00
 
-![IS](/docs/assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png)
+![IS](/assets/drive/1xh1LMaTcJWuLXzNeqesDDY0niWC1VLv6.png)
 
 #### Invoice settlement
 
@@ -1510,7 +1510,7 @@ As in credit settlements, by clicking Add Not Paid Invoices a popup is opened wi
 
 Once more, it is not possible to create settlement payments until "Pending Amount" is 0.00, as shown in the image below:
 
-![IS](/docs/assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png)
+![IS](/assets/drive/1_6G9sHyHAhvjBD4ktBmlwmj1E8QUivF7.png)
 
 #### Process settlement
 
@@ -1533,11 +1533,11 @@ See images below in the case of settlement payments related to invoices.
 
 **Payment In**
 
-![IS](/docs/assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png)
+![IS](/assets/drive/1jh-cvFM4r4uHBH11jspb2XVnp_GthyfW.png)
 
 **Payment Out**
 
-![IS](/docs/assets/drive/15MCP7JSy_YEdnBeOB8CUgNSRmtc75VZR.png)
+![IS](/assets/drive/15MCP7JSy_YEdnBeOB8CUgNSRmtc75VZR.png)
 
 The generated payments are set on the Business Partner Settlement header.
 
@@ -1595,7 +1595,7 @@ Tax payment process can be run after below detailed configuration is done:
 
 The tax payment window allows the user to calculate the amount of taxes to be paid to or received from the tax authority within a given period of time. It also allows the user to generate the corresponding payment to/from the tax authority.
 
-![Tax Payment Header](/docs/assets/drive/1YLUngAGz6MvriT9nplSWvYYnkY7pMnJt.png)
+![Tax Payment Header](/assets/drive/1YLUngAGz6MvriT9nplSWvYYnkY7pMnJt.png)
 
 As shown in the image above, the fields to fill in are:
 
@@ -1621,13 +1621,13 @@ The "**Unprocess**" button undoes the tax payment and deletes the G/L Journal cr
 
 Tax Register Header tab allows the user to see the calculated tax amount per each configured "Tax Register Type".
 
-![Tax Register Header](/docs/assets/drive/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
+![Tax Register Header](/assets/drive/1WDw5E4PuOhtmQemNXGYCGt40woWtWUYO.png)
 
 #### **Lines**
 
 The lines tab is a read-only tab which lists all the tax transactions related to the tax rates configured as part of a "Tax Register Type".
 
-![Tax Register Lines](/docs/assets/drive/1JAQeiows8-fzEHJq0r3TYYD6zWlzRLQ5.png)
+![Tax Register Lines](/assets/drive/1JAQeiows8-fzEHJq0r3TYYD6zWlzRLQ5.png)
 
 Some relevant fields to note are:
 
@@ -1666,7 +1666,7 @@ There are two types of remittances:
 - The bank informs of the payments (in/out) that have been settled (normally, if in one month the bank does not respond, these payments are considered settled) and of those that have been protested.
 
 !!! info
-    To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type window](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type).
+    To create a remittance, it is necessary to configure the remittance payment method. For this, go to the [Remittance Type window](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type).
    
 
 ### Non-Discount Remittance
@@ -1677,16 +1677,16 @@ To create a Non-Discount remittance follow these steps:
 
 Select “printable Remittance” as remittance type since it indicates it is a non-discount remittance.
 
-![](/docs/assets/drive/1W9yblveIbw8Ymm0xxR9hdL68MVENotFG.png)
+![](/assets/drive/1W9yblveIbw8Ymm0xxR9hdL68MVENotFG.png)
 
 By clicking on the “Select Orders or Invoices” button, the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
 By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
 
-![](/docs/assets/drive/1fbi6LAz_siOX7-cWfYIWusyPC-Y-kfrA.png)
+![](/assets/drive/1fbi6LAz_siOX7-cWfYIWusyPC-Y-kfrA.png)
 
 So the system inserts the selected lines:
 
-![](/docs/assets/drive/1UL_Jfk_HnKnZzsWZmPH9LRrgGd5TmVwS.png)
+![](/assets/drive/1UL_Jfk_HnKnZzsWZmPH9LRrgGd5TmVwS.png)
 
 If no further operations to the remittance are to be added, process the payment from the button with that name.
 When processing, the system shows the following options:
@@ -1697,16 +1697,16 @@ When processing, the system shows the following options:
 - Group by business partner: generates as many payments as there are business partners on the selected lines. It allocates the total amount of all lines that apply to each business partner.
 - Group by business partner and due date: creates as many payments as there are business partners and payment dates on the selected lines.
 
-![](/docs/assets/drive/1fyWdKNSAb7WLzWkRKnApaX1n39tA3QZF.png)
+![](/assets/drive/1fyWdKNSAb7WLzWkRKnApaX1n39tA3QZF.png)
 
 As an example, let’s create the payment by selecting the Group by business partner option.  
 When processing, the 3 payments have been created for the 3 lines included in the remittance due to the fact that all of them correspond to the same business partner.
 
-![](/docs/assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
+![](/assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
 
 When navigating to the payment, it can be observed that the status of the payments created is "Remitted".
 
-![](/docs/assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
+![](/assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
 
 When the remittance is posted, an accounting entry is obtained, according to the accounts defined.
 
@@ -1717,11 +1717,11 @@ Once the bank confirms the corresponding payments, access the "Settle/Protest Re
 !!! info
     The selected date is the posting date of the created document.
 
-![](/docs/assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
+![](/assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
 
 By settling the first line, it is observed that the line has been added to the settled tab of the corresponding remittance.
 
-![](/docs/assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
+![](/assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
 
 Once the remittance is posted, the accounting entry is obtained according to the indicated configuration. The posting should be line by line of the settled transactions.
 The returned remittance lines will appear in the returned tab.
@@ -1735,7 +1735,7 @@ The status of settled remittance transactions is changed to "Withdrawn not Clear
 
 If one of the payments has been returned, the status of the document is set to "Awaiting Execution".
 
-![](/docs/assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
+![](/assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
 
 !!! info
     It is possible to print the Non-discount remittances as well as the Remittances for Discount from the printer in the toolbar.
@@ -1745,11 +1745,11 @@ If one of the payments has been returned, the status of the document is set to "
 !!! info
     After the settlement, the system has automatically transferred these payments to the financial account indicated in the payments.
 
-![](/docs/assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
+![](/assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
 
 ##### Reconcile Payments
 
-![](/docs/assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
+![](/assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
 
 ### Remit for Discount
 
@@ -1757,16 +1757,16 @@ If one of the payments has been returned, the status of the document is set to "
 
 Create a remittance from the "Remittances" window. Select as type of remittance "Remittances for Discount". Once the header has been created, add the lines, either invoices, orders or payments, that are to be included in this remittance.
 
-![](/docs/assets/drive/1tKjtczsMOAoZJutgCwkjzcMVZuUwPW_Q.png)
+![](/assets/drive/1tKjtczsMOAoZJutgCwkjzcMVZuUwPW_Q.png)
 
 By clicking "Select Orders or Invoices" the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
 By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
 
-![](/docs/assets/drive/1ckmAALhyIqeYjttDtHZF9TLuYZkku37R.png)
+![](/assets/drive/1ckmAALhyIqeYjttDtHZF9TLuYZkku37R.png)
 
 The system inserts the selected lines:
 
-![](/docs/assets/drive/1ZWpRI7aDmG0--o7SU9SwXUMUNgJIUteC.png)
+![](/assets/drive/1ZWpRI7aDmG0--o7SU9SwXUMUNgJIUteC.png)
 
 If no further operations to the remittance are to be added, process the payment from the button with that name.
 
@@ -1780,15 +1780,15 @@ When processing, the system shows the following options:
 
 In this case, it is recommended to select the option "No grouping", since as many payments as operations of the remittance will be generated and a payment sum of all the operations which is the one that the bank will advance. The rest of the payments will be settled as known.
 
-![](/docs/assets/drive/1Yu7mxZBwdJZjhH125w0-bIa24-Uf4Hcc.png)
+![](/assets/drive/1Yu7mxZBwdJZjhH125w0-bIa24-Uf4Hcc.png)
 
 The next step is to take to the bank the sum payment of the remittance transactions, as in these cases the bank advances the money. From the financial account window, add the payment to the transaction and reconcile it with the bank statement.
 
-![](/docs/assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
+![](/assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
 
 Finally, settle the executed payments and/or return the necessary ones.
 
-![](/docs/assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
+![](/assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
 
 The status of the settled collections changed to Settled in Remittance and the status of the total payments of the remittance operations changed to Payment cleared.
 
@@ -1805,17 +1805,17 @@ If the Advanced Remittance module is installed, when using the “Process” but
 
 Also, when using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
 
-![error.png](/docs/assets/legacy/error.png)
+![error.png](/assets/legacy/error.png)
 
 !!! info
-    Bank accounts can be defined in the header of [purchase](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance_1) and [sales](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance_1) invoices as well as in [purchase](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance) and [sales](/docs/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance) orders.
+    Bank accounts can be defined in the header of [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance_1) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance_1) invoices as well as in [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#advanced-remittance) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#advanced-remittance) orders.
 
 **Default Bank Account**
 
 For each business partner, it is also possible to define a bank account that is selected by default.
 
 !!! info
-    To read more, visit [Bank Account](/docs/products/etendo-classic/user-guide/master-data-management/master-data/#advanced-remittance) in the Business Partner section.
+    To read more, visit [Bank Account](/products/etendo-classic/user-guide/master-data-management/master-data/#advanced-remittance) in the Business Partner section.
 
 **Select Invoices and Orders button**
 
@@ -1824,7 +1824,7 @@ For each business partner, it is also possible to define a bank account that is 
 
 In the “Remittance” window, the “select invoices and orders” button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.
 
-![filter.png](/docs/assets/legacy/filter.png)
+![filter.png](/assets/legacy/filter.png)
 
 ## **Doubtful Debt**
 
@@ -1939,13 +1939,13 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/docs/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
 
 ## **Doubtful Debt Run**
 
 **Doubtful Debt Run** window is used to define which debts, and in what percentage, are considered doubtful. These Doubtful Debts are shown in the Doubtful Debt Window afterwards.
 
-![Doubtful Debt Run window](/docs/assets/drive/1O6LI7av2TJyYTZyW8aE3gjlakxldIxhy.png)
+![Doubtful Debt Run window](/assets/drive/1O6LI7av2TJyYTZyW8aE3gjlakxldIxhy.png)
 
 Some fields to note:
 
@@ -1955,7 +1955,7 @@ Some fields to note:
 
 **Select Doubtful Debt**. After filling the necessary fields, the "Select Doubtful Debt" button is shown. By clicking it, a new pop-up is shown for selecting the debts that are going to be considered doubtful.
 
-![Select Doubtful Debt](/docs/assets/drive/14aXYdvA41Jd2AkO4x7yD3wesdB3q0LBG.png)
+![Select Doubtful Debt](/assets/drive/14aXYdvA41Jd2AkO4x7yD3wesdB3q0LBG.png)
 
 All the pending debts are shown in this window pre-filtered by the previously set parameters. These filters can be removed by clicking the funnel icon.
 
@@ -1975,9 +1975,9 @@ Once created, it will be possible to post them or to reactivate them through the
 
 In this tab, the previously selected records are shown. Afterwards, it will be necessary to Process the Doubtful Debt in order for it to be available in the Doubtful Debt Window.
 
-![Doubtful Debt grid](/docs/assets/drive/1OkWrTJKB0GNeSzk3shtcONfIEuexLMPT.png)
+![Doubtful Debt grid](/assets/drive/1OkWrTJKB0GNeSzk3shtcONfIEuexLMPT.png)
 
-![Doubtful Debt edition](/docs/assets/drive/1LKCMe9ihePjTcHhheD6mvtYeUls6zzKj.png)
+![Doubtful Debt edition](/assets/drive/1LKCMe9ihePjTcHhheD6mvtYeUls6zzKj.png)
 
 ---
 

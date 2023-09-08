@@ -25,7 +25,7 @@ To generate a Personal Access Token, follow these steps:
 3. Select "Developer settings" from the left menu and click on "Personal access tokens."
 4. In the developer settings page, click on "Personal access tokens".
 
-    ![personal-access-tokens.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
+    ![personal-access-tokens.png](/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
 
 5. Click the "Generate new token" button. 
 
@@ -34,7 +34,7 @@ To generate a Personal Access Token, follow these steps:
     !!! warning
         It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
 
-    ![new-personal-access-token.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
+    ![new-personal-access-token.png](/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
 
 6. Click "Generate token" and take note of the token value.
 

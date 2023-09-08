@@ -63,7 +63,7 @@ Sin embargo, debido a su estructura XML, este fichero se puede abrir directament
 
 A continuación se muestra como ejemplo un fragmento de dicho fichero:
 
-![](/docs/assets/drive/3QJUPmIRRgydZM5-NvNgNFFdnM3pL6nmrrOkKyK9954vq1uCkiyLLrpxXy6BYWDfqGCWGU-syZWT6e4-ELClbkW_zjf3sssmTsohd-XoHntzYFwUzQiw5aqWybMwI6NLu1zTGp7b_Kz_h4xexbEYQdvwGquwY_AUWxwg_7dXC0byB3bmWGfcgfGke70i5w.png)
+![](/assets/drive/3QJUPmIRRgydZM5-NvNgNFFdnM3pL6nmrrOkKyK9954vq1uCkiyLLrpxXy6BYWDfqGCWGU-syZWT6e4-ELClbkW_zjf3sssmTsohd-XoHntzYFwUzQiw5aqWybMwI6NLu1zTGp7b_Kz_h4xexbEYQdvwGquwY_AUWxwg_7dXC0byB3bmWGfcgfGke70i5w.png)
 
 Para facilitar el estudio y la comprensión de las cifras obtenidas y, debido al gran número de transacciones y tipos de impuestos que pueden incluirse en este modelo, el módulo del Modelo 390 de Etendo genera un fichero .csv que puede abrirse con cualquier software de Hoja de Cálculo. 
 
@@ -100,23 +100,23 @@ Es por ello que, una vez instalado el módulo, la "configuración del Modelo 390
 
 Configuración General | Organización | Gestión del módulo de Empresa.
 
-![](/docs/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
+![](/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
 
 !!! info
-    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
 
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
 
 1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
 
-![](/docs/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
+![](/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
 
 De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
 
 2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
 
-![](/docs/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
+![](/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
 
 En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al rango de impuesto "Entregas IVA 21%" se reflejarán en las casillas correspondientes del 390 relacionadas con:
 
@@ -177,7 +177,7 @@ En el Modelo 390 se deben declarar las principales actividades del I.A.E. (Impue
 
 El módulo Epígrafes I.A.E., instalado como dependencia del 390, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 390 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
 
-![](/docs/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+![](/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
 
 En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
 
@@ -185,7 +185,7 @@ En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clav
 
 Si su organización tiene uno o varios representantes legales debe declararlos en la solapa correspondiente de la ventana Organización, que está disponible al instalar el módulo Legal Representative of the Organization (representante legal de la organización).
 
-![](/docs/assets/drive/yXySL0UNxH9GjB2DhIDbmoLdXxISY9aj4zmmZbU-1Y2usima7UM_5a7yLx09zNDmAgbtkf_SSCNZPcb2urJ_3ePFmHFQnqtaVN4QDfNI2dRxwgdtOuMWhOx_gnpMfrN6STY5jh9ZswHTceH1gUWu-mnwenFo-yKbOn0DMs-0_eGv1QK2lsOEkuDf9vppNQ.png)
+![](/assets/drive/yXySL0UNxH9GjB2DhIDbmoLdXxISY9aj4zmmZbU-1Y2usima7UM_5a7yLx09zNDmAgbtkf_SSCNZPcb2urJ_3ePFmHFQnqtaVN4QDfNI2dRxwgdtOuMWhOx_gnpMfrN6STY5jh9ZswHTceH1gUWu-mnwenFo-yKbOn0DMs-0_eGv1QK2lsOEkuDf9vppNQ.png)
 
 ### **Generación del modelo 390**
 
@@ -195,7 +195,7 @@ Una vez que el usuario ha introducido los datos genéricos, tales como la "organ
 
 La ventana de "parámetros de entrada" del 390 se muestra en la siguiente imagen:
 
-![](/docs/assets/drive/8E1H3y4j_5fmJ2K87L8xc2v10m8UvRU-ub-M3flFlZbORFRpy9LDEs80TBAteUllGVPdzAJ6dCOeiVtQkk5506tixB29SWgte_QF8PKQPl7Kq_UKT8BWu8snG4dOTY_X6bKiaEol3NwlDrO6uvf-GGVmylSiX-3cejwlHi577Y1eKobtQFLwJBq1haz17A.png)
+![](/assets/drive/8E1H3y4j_5fmJ2K87L8xc2v10m8UvRU-ub-M3flFlZbORFRpy9LDEs80TBAteUllGVPdzAJ6dCOeiVtQkk5506tixB29SWgte_QF8PKQPl7Kq_UKT8BWu8snG4dOTY_X6bKiaEol3NwlDrO6uvf-GGVmylSiX-3cejwlHi577Y1eKobtQFLwJBq1haz17A.png)
 
 Los parámetros de entrada tienen que ver con datos que no pueden extraerse directamente desde Etendo. Datos como:
 
@@ -224,7 +224,7 @@ Como se puede observar, el número de parámetros de entrada es muy elevado. Par
 
 Por ejemplo, en nuestra organización el porcentaje de tributación en Territorio Común es el 50% por lo que cambiamos ese parámetro a tipo constante con un valor de 50
 
-![](/docs/assets/drive/oPL91YrGG3zCsXi6j_4OtAmkDz1BaSshkNuh7EHEaKaA0GRfAULiEa-FMJ9FAIvUYC0bmbd1opqeGAbrOyYqaqa1DuTCQEsBwYKu_1KYlCgVmXMg7MC1GIHOjh4m6DpDIQPYe7-l1rzoLdb6b_O58kAj31JExjZ7q4SUVrl_-2rNyDH59cMTDK7wJKkBdg.png)
+![](/assets/drive/oPL91YrGG3zCsXi6j_4OtAmkDz1BaSshkNuh7EHEaKaA0GRfAULiEa-FMJ9FAIvUYC0bmbd1opqeGAbrOyYqaqa1DuTCQEsBwYKu_1KYlCgVmXMg7MC1GIHOjh4m6DpDIQPYe7-l1rzoLdb6b_O58kAj31JExjZ7q4SUVrl_-2rNyDH59cMTDK7wJKkBdg.png)
 
 A partir de ahora, cada vez que generemos el informe de nuevo no será necesario introducir este parámetro, ya que ni siquiera aparecerá de nuevo en la ventana de parámetros de entrada del 390.
 
@@ -236,7 +236,7 @@ Una vez que el proceso de generación del informe ha finalizado, el sistema nos 
 
 Este fichero XML es compatible con el formato oficial publicado en el BOE para el modelo 390 listo para ser enviado a la AEAT. Este fichero se puede abrir con cualquier editor de texto plano para examinar o editar su contenido
 
-![](/docs/assets/drive/EUtcF7232b2XmCvVtzha9eEJfC7WDVPvbaKUX_WHEWEgiDANwi84Wd7cEUbO_NegLTIbeX80wxazDMZo4HlUKhCBOJqxBmM_KzHycha0gqHfpCaW4VjQaAZy_MYjcVCNb2cq_YfXnO_tBliBrdhmD-hN-4qUQjAjz5yzUJGD23C10KUBdY9ZVWR4q0On4g.png)
+![](/assets/drive/EUtcF7232b2XmCvVtzha9eEJfC7WDVPvbaKUX_WHEWEgiDANwi84Wd7cEUbO_NegLTIbeX80wxazDMZo4HlUKhCBOJqxBmM_KzHycha0gqHfpCaW4VjQaAZy_MYjcVCNb2cq_YfXnO_tBliBrdhmD-hN-4qUQjAjz5yzUJGD23C10KUBdY9ZVWR4q0On4g.png)
 
 ### **Fichero CSV**
 
@@ -248,11 +248,11 @@ A la hora de importar el fichero es importante que defina los siguientes filtros
 -   Separador: **punto y coma**, es decir **;**
 -   Delimitador de texto: **comilla doble**, es decir **“**
 
-![Aeat390 import.png](/docs/assets/drive/Fc1f4L1omag1JBtJviufoH3pfPYmhHhmEJQERSVywOgU-cFo61aeNpvBArNzHKqy8DZ3VYBrSGj2X61-lKXWeTMjuj3_2yzAH31aWmLXYUl3B7yu3XXn44ckoTvoIjc87sdMmULxPgqrgTNEr1bJ953euAb0AXns7Byum7nttim66d8Foevat49TzZB-1g.png)
+![Aeat390 import.png](/assets/drive/Fc1f4L1omag1JBtJviufoH3pfPYmhHhmEJQERSVywOgU-cFo61aeNpvBArNzHKqy8DZ3VYBrSGj2X61-lKXWeTMjuj3_2yzAH31aWmLXYUl3B7yu3XXn44ckoTvoIjc87sdMmULxPgqrgTNEr1bJ953euAb0AXns7Byum7nttim66d8Foevat49TzZB-1g.png)
 
 Este es el aspecto del fichero una vez importado como hoja de cálculo:
 
-![390 FicheroCSV.png](/docs/assets/drive/Gu3UCsXhF30LRTvr-afGt4BYargy1tzXgHIqBJgj6zBW-wYVgdriORZwzLc0tOxdOn_nNmnf43GaZj4MmVQY5YC6oyYYXlBnMm4zAVDOqYx6pVXDpIbCitc6K2NqxuKyfdrmsc2_7-fatxQprZvMwurwj-7bGWzwEmF7CYEvIRbNONDMupNEC-LPk60JMQ.png)
+![390 FicheroCSV.png](/assets/drive/Gu3UCsXhF30LRTvr-afGt4BYargy1tzXgHIqBJgj6zBW-wYVgdriORZwzLc0tOxdOn_nNmnf43GaZj4MmVQY5YC6oyYYXlBnMm4zAVDOqYx6pVXDpIbCitc6K2NqxuKyfdrmsc2_7-fatxQprZvMwurwj-7bGWzwEmF7CYEvIRbNONDMupNEC-LPk60JMQ.png)
 
 La hoja nos muestra las facturas que se han tenido en cuenta para generar el 390, el impuesto (porcentaje, cuota y base imponible en Euros) de cada factura y el grupo de casillas correspondientes del 390 en las que se ha incluido dicho importe.
 
@@ -270,7 +270,7 @@ Por ejemplo, en la fila número 2 del ejemplo anterior vemos que esa transacció
 
 Si buscamos estas casillas en el modelo 390 oficial, veremos que corresponden al Régimen ordinario del IVA devengado, por lo que esta transacción en concreto deberá reflejarse en las casillas *01* y *02* (IVA Devengado - Régimen Ordinario *4%*)
 
-![390 RegimenOrdinario.png](/docs/assets/drive/MIkgy9VbltH8VQNF1UrsspqDDWjP3Y8swgINiFHl8IuTC7lKcmgofIqY_C6uW6laaZPMi5AgeymL10lbz8YeiOdBPd9xInFqOWCxo64IzsRtA2gVw8Y6AW7FPzlj-eg8s1QkHIWOg2DPaJh0_73wOqcdmYbnyITCZK3hJsLZMmaVieULukdFPGrfgFonyw.png)
+![390 RegimenOrdinario.png](/assets/drive/MIkgy9VbltH8VQNF1UrsspqDDWjP3Y8swgINiFHl8IuTC7lKcmgofIqY_C6uW6laaZPMi5AgeymL10lbz8YeiOdBPd9xInFqOWCxo64IzsRtA2gVw8Y6AW7FPzlj-eg8s1QkHIWOg2DPaJh0_73wOqcdmYbnyITCZK3hJsLZMmaVieULukdFPGrfgFonyw.png)
 
 !!! warning
     *Es importante tener en cuenta que las casillas correspondientes a subtotales de los grupos de IVA deducible (por ejemplo casillas 48 y 49) no se incluyen en el fichero CSV pero sí se incluyen en el archivo XML que contiene el informe oficial. Estas casillas se autogeneran como el sumatorio de las bases imponibles y cuotas de las casillas correspondientes de su grupo (por ejemplo casillas 190 a 606) que sí se incluyen en el CSV. Esta es una limitación del fichero CSV que no afecta en absoluto al informe oficial generado.*
