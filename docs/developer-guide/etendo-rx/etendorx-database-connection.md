@@ -9,7 +9,7 @@ When the user needs to deploy EtendoRX on production or there is the need to tes
 
 
 
-To configure the connection to the database with the [default configuration method](https://docs/en/technical-documentation/etendo-environment/platform/etendorx-config-server) in EtendoRX, it is neccesary to modify the parameters specified in the files as follow: 
+To configure the connection to the database with the [default configuration method](https://en/technical-documentation/etendo-environment/platform/etendorx-config-server) in EtendoRX, it is neccesary to modify the parameters specified in the files as follow: 
 
 
 #### PostgreSQL database

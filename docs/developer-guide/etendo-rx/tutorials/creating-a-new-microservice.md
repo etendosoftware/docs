@@ -7,12 +7,12 @@ This section provides a step-by-step guide for working with Etendo RX, which inv
 ## Building a New Module for RX Capabilities
 
 !!!note
-    Make sure to complete the [Getting Started section in the developer guide](/docs/developer-guide/etendo-rx/getting-started) to set up the Etendo Platform.
+    Make sure to complete the [Getting Started section in the developer guide](/developer-guide/etendo-rx/getting-started) to set up the Etendo Platform.
 
 
 ### Accessing as Admin User
 
-After setting the local environment up, as described in the [**install etendo development environment**](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
+After setting the local environment up, as described in the [**install etendo development environment**](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
 
 Log in to your account as an administrator. The default login credentials for this administrative account are:
 
@@ -21,7 +21,7 @@ Log in to your account as an administrator. The default login credentials for th
 
 Once you're logged in, switch your role to "System Administrator", as the image shows:
 
-  ![switch-sys-admin.png](/docs/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png)
+  ![switch-sys-admin.png](/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png)
 
 
 The "System Administrator" role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.
@@ -43,7 +43,7 @@ To create a new module, go to the 'Module' window, and add a new record providin
 
 It should look like this:
 
-  ![new-module.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-module.png)
+  ![new-module.png](/assets/developer-guide/etendo-rx/tutorial/new-module.png)
 
 
 With our new module created, we'll start working with 'Projections'
@@ -65,7 +65,7 @@ Start by opening 'Projections' windows and creating a new projection with the fo
 | Description |`Projections needed for the tutorial`  |
 
 
-  ![new-projection.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-projection.png)
+  ![new-projection.png](/assets/developer-guide/etendo-rx/tutorial/new-projection.png)
 
 ### Adding the projection to a table
 
@@ -81,7 +81,7 @@ Next, navigate to the "Projections" tab and add a new projection with the follow
 | Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
 
 
-  ![assign-projection.png](/docs/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+  ![assign-projection.png](/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
 
 ### Adding Entity Fields
 
@@ -102,7 +102,7 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
     So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, "name" in our case.
 
 
-  ![new-entity-fields.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
+  ![new-entity-fields.png](/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
 
 ------------------------------------------------------------------
 
@@ -120,7 +120,7 @@ After selecting a table, in this case 'C_Order', we need to go to 'Repository' t
 | Module      |`tutorial - 1.0.0 - English (USA)`    |
 
 
- ![new-repository.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-repository.png)
+ ![new-repository.png](/assets/developer-guide/etendo-rx/tutorial/new-repository.png)
 
 ------------------------------------------------------------------
 
@@ -137,7 +137,7 @@ To create this new filter/search method, under "Repository" tab of the C_Order t
 |  Query      |`select o from Order o where o.documentType.id = :documentType order by o.documentNo`   |
 
 
-  ![new-search.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-search.png)
+  ![new-search.png](/assets/developer-guide/etendo-rx/tutorial/new-search.png)
 
 ### Creating a New Search Parameter
 
@@ -153,7 +153,7 @@ To define the parameter, we need to create a new row on the 'Search Parameter' t
 
 In our case, we'll filter depending on the Document Type of the orders
 
-  ![new-search-parameter.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
+  ![new-search-parameter.png](/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
 
 ------------------------------------------------------------------
 
@@ -190,7 +190,7 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
 3. Add the following dependencies: Spring Web, Lombok, Config Client
 4. Click on the 'Generate' button to download your project. The page will generate a file named `rxtutorial.zip`.
 
-    ![spring-initializr.png](/docs/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png)
+    ![spring-initializr.png](/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png)
 
 5. Uncompress the zip file to the platform project created in the first step, as: `modules_rx/com.tutorial.rxtutorial`.
 
@@ -306,7 +306,7 @@ To generate the token value we need to follow these steps:
     | Secret              |123                             |
     | Module              |Tutorial - 1.0.0 - English (USA)|
 
-    ![new-rx-service.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png)
+    ![new-rx-service.png](/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png)
 
   3. Change to 'F&B International Group Admin' role.
   4. Go to 'User' window.
@@ -325,7 +325,7 @@ To generate the token value we need to follow these steps:
     | Default Role        |F&B España, S.A - Sales         |
     | Default Org         |F&B España, S.A                 |
 
-    ![new-rx-service-access.png](/docs/assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png)
+    ![new-rx-service-access.png](/assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png)
 
   7. Let's run RX so we can make the request to the Auth service:
 
@@ -351,7 +351,7 @@ To generate the token value we need to follow these steps:
     !!!warning
         Remember the password changed before.
 
-    ![postman-request.png](/docs/assets/developer-guide/etendo-rx/tutorial/postman-request.png)
+    ![postman-request.png](/assets/developer-guide/etendo-rx/tutorial/postman-request.png)
   
   9. Take the token under the response and fill in the 'token' property on the application.properties of the tutorial module.
 
@@ -488,7 +488,7 @@ To simplify RX executions you have a simplified run task:
 ```
 
 !!!warning
-    Remember to configure the Auth service as described on the [Getting Started](/docs/developer-guide/etendo-rx/getting-started/#configure-auth-project) page
+    Remember to configure the Auth service as described on the [Getting Started](/developer-guide/etendo-rx/getting-started/#configure-auth-project) page
 
 ## Run tutorial project
 

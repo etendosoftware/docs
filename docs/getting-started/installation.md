@@ -16,7 +16,7 @@ This section explains how to install a new Etendo environment. It includes:
 ## Etendo Installation
 
 ### Requirements 
-In this section, you can read the [System Requirements](/docs/getting-started/requirements).
+In this section, you can read the [System Requirements](/getting-started/requirements).
 
 ### Install Etendo 
 === ":material-language-java: JAR Format"
@@ -36,7 +36,7 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         cd /opt/EtendoERP
         ```
 
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
        
         ```groovy
         nexusUser=
@@ -119,7 +119,7 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         ```
         
         !!! note
-                If you want to run Etendo locally, go to [Run Etendo Development Environment](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+                If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
 
     10. Open your browser in `https://<Public server IP>/<Context Name>`
 
@@ -139,7 +139,7 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
         ```groovy
         githubUser=username
         githubToken=*******
@@ -187,7 +187,7 @@ In this section, you can read the [System Requirements](/docs/getting-started/re
         ```
 
         !!! note
-                If you want to run Etendo locally, go to [Run Etendo Development Environment](/docs/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+                If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
                 
     9. Open your browser in `https://<Public server IP>/<Context Name>`
 

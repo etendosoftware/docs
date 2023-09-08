@@ -66,4 +66,4 @@ This guide explains how to upgrade your current Openbravo environment to version
 !!! success
     Your environment is ready to be migrated to Etendo.
 
-    Check the [Migration Tool’s guide](/docs/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/).
+    Check the [Migration Tool’s guide](/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/).

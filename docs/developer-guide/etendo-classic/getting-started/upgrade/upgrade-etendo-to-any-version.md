@@ -71,9 +71,9 @@ To work with the plugin you need to specify in the root project from where the p
 === "JAR Core"
 
     !!! warning
-        If you upgrade from a source Etendo instance, read [Core Format Migration](/docs/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/), because some directories must be deleted.
+        If you upgrade from a source Etendo instance, read [Core Format Migration](/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/), because some directories must be deleted.
 
-    1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/docs/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/).
+    1. Create a backup of your environment, following the [Etendo Backup and Restore Tool](/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/).
     2. Verify the target version inside `build.gradle`
 
         ```groovy title="build.gradle"

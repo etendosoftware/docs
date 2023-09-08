@@ -20,27 +20,27 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](/docs/products/etendo-classic/user-guide/financial-management/assets/overview/#bulk-posting)
-- [Goods Movements](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_1)
-- [Financial Account](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
-- [Matched Invoices](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_2)
-- [Cost Adjustment](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_3)
-- [Bill of Materials Production](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_2)
-- [Internal Consumption](/docs/products/etendo-classic/user-guide/production-management/transactions/#bulk-posting_1)
-- [Doubtful Debt](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_3)
-- [Landed Cost](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_4)
-- [G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#bulk-posting_1)
-- [Simple G/L Journal](/docs/products/etendo-classic/user-guide/financial-management/accounting/transactions/#bulk-posting)
-- [Work Effort](/docs/products/etendo-classic/user-guide/production-management/transactions/#bulk-posting)
-- [Goods Receipt](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting)
-- [Goods Shipment](/docs/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting)
-- [Return Material Receipt](/docs/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting_1)
-- [Return to Vendor Shipment](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_3)
-- [Sales Invoice](/docs/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting_2)
-- [Purchase Invoice](/docs/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_1)
-- [Payment In](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_1)
-- [Payment Out](/docs/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting)
-- [Physical Inventory](/docs/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting)
+- [Amortization](/products/etendo-classic/user-guide/financial-management/assets/overview/#bulk-posting)
+- [Goods Movements](/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_1)
+- [Financial Account](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
+- [Matched Invoices](/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_2)
+- [Cost Adjustment](/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_3)
+- [Bill of Materials Production](/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting_2)
+- [Internal Consumption](/products/etendo-classic/user-guide/production-management/transactions/#bulk-posting_1)
+- [Doubtful Debt](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_3)
+- [Landed Cost](/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_4)
+- [G/L Journal](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#bulk-posting_1)
+- [Simple G/L Journal](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#bulk-posting)
+- [Work Effort](/products/etendo-classic/user-guide/production-management/transactions/#bulk-posting)
+- [Goods Receipt](/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting)
+- [Goods Shipment](/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting)
+- [Return Material Receipt](/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting_1)
+- [Return to Vendor Shipment](/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_3)
+- [Sales Invoice](/products/etendo-classic/user-guide/sales-management/transactions/#bulk-posting_2)
+- [Purchase Invoice](/products/etendo-classic/user-guide/procurement-management/transactions/#bulk-posting_1)
+- [Payment In](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting_1)
+- [Payment Out](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#bulk-posting)
+- [Physical Inventory](/products/etendo-classic/user-guide/warehouse-management/transactions/#bulk-posting)
 
 
 ### Accounting Status
@@ -55,4 +55,4 @@ To configure the preference, go to the “Preference” window and create a new 
 
 It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
 
-![](/docs/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
+![](/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)

@@ -6,16 +6,16 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 Este bundle incluye los siguientes módulos:
 
-- [SII para IVA](/docs/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
-- [Tax Report: Modelo 303 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
-- [Withholding Report: Modelo 190 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
-- [Spain AEAT Modelo 347 for APR](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
-- [Modelo 349](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
-- [Impuestos para España](/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
-- [Intrastat](/docs/products/etendo-classic/optional-features/bundles/spain-localization/intrastat)
-- [Tax Report: Modelo 390 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
-- [Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
-- [Configuración de Impuestos para Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
+- [SII para IVA](/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
+- [Tax Report: Modelo 303 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
+- [Withholding Report: Modelo 190 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
+- [Spain AEAT Modelo 347 for APR](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
+- [Modelo 349](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
+- [Impuestos para España](/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
+- [Intrastat](/products/etendo-classic/optional-features/bundles/spain-localization/intrastat)
+- [Tax Report: Modelo 390 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
+- [Libro de Facturas](/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
+- [Configuración de Impuestos para Libro de Facturas](/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
 - Incoterms
 - European Union Countries
 - Provincias de España

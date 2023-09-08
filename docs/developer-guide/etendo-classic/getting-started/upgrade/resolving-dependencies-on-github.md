@@ -77,7 +77,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     }
     ```
 
-3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](/docs/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
 
     ```groovy title="gradle.properties"
     nexusUser=
