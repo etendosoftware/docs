@@ -34,7 +34,11 @@ Here, by selecting the profile image, you can navigate to the Settings and Profi
 
 ![](/assets/products//etendo-mobile/user-interface/HomeScreenOptionsProfile.png){ width="300" }
 
-If the drawer is displayed, you can navigate to Home and also to the sub applications you have loaded.
+If the drawer is displayed, you can navigate to Home and also to the sub applications you have loaded 
+
+!!! note
+
+    In this case shown the subapplication when acces whit "demo try".
 
 ![](/assets/products//etendo-mobile/user-interface/Drawer.png){ width="300" }
 
