@@ -2,7 +2,7 @@
 hide: 
     - toc
 ---
-![cover-developer-guide.png](/docs/assets/developer-guide/overview/cover-developer-guide.png)
+![cover-developer-guide.png](/assets/developer-guide/overview/cover-developer-guide.png)
 # 
 ## Welcome to the Developer's Section
 

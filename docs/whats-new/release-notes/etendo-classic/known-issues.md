@@ -6,7 +6,7 @@ tags:
 
 
 ### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221) Etendo does not compile with latest version of gradle plugin 
-??? example "Workaraund"
+??? example "Workaround"
 
 
     Before execute setup tasks in a etendo project in JAR format you must follow the next steps:

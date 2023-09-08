@@ -11,4 +11,4 @@ Besides the new authentication implementation, the module includes utilities for
 
 
 !!! info
-    For more information, follow this documentation  in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login) 
+    For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.

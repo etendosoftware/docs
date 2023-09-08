@@ -1,6 +1,9 @@
 ---
 title: Advanced Intercompany Module
+hide:
+    - navigation
 ---
+
 ## **Introduction**
 
 This section describes the Intercompany module included in the Etendo Financial Extensions bundle.
@@ -23,7 +26,7 @@ To be able to include this functionality, the Financial Extensions Bundle must b
 
 It is required for each organization using this module to have one business partner assigned.
 
-![](/docs/assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png)
+![](/assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png)
 
 ### **Business Partner Window**
 
@@ -33,16 +36,16 @@ It is required for each organization using this module to have one business part
 
 The Business Partner has to be configured as both vendor and customer, using the corresponding checkboxes.
 
-![](/docs/assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png)
+![](/assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png)
 
-![](/docs/assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png)
+![](/assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png)
 
 In the Intercompany Documents tab, it is necessary to select the required document types for this business partner.
 
 !!! info
     It is not mandatory to create new document types, but it is recommended.
 
-![](/docs/assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png)
+![](/assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png)
 
 !!! info
     Note: The information in both the source business partner and the target business partner should be the same.
@@ -60,7 +63,7 @@ The relevant fields are described below:
 -   Business Partner: it is necessary to select a business partner configured to work as an intercompany business partner (In the following example, “Be Soft Drinker, Inc.”).
 -   Transaction document: it is necessary to select the document type defined in the intercompany document tab of the business partner (In the following example, the document type “AR Invoice Intercompany”).
 
-![](/docs/assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png)
+![](/assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png)
 
 #### Lines
 
@@ -69,7 +72,7 @@ The relevant fields are described below:
 -   Product: The product must be visible for both organizations (In the following example, “Lemonade”). 
 -   G/L items: The necessary G/L items must be visible for both organizations.
 
-![](/docs/assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png)
+![](/assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png)
 
 #### Product Window
 
@@ -83,7 +86,7 @@ The relevant fields are described below:
 
 When you complete invoices or book orders, these processes generate the corresponding inverse document and complete or book both the source and the target documents.
 
-![](/docs/assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png)
+![](/assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png)
 
 #### Reactivate documents
 

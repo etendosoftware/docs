@@ -54,7 +54,7 @@ OBFBPS
 
 **javapackage**
 
-org.openbravo.financial.bpsettlement
+`org.openbravo.financial.bpsettlement`
 
 **Translation Required**
 
@@ -62,18 +62,18 @@ Yes
 
 **Dependant Modules**
 
-*Openbravo 3.0 Framework* PR14Q3.1 (2.1.24019)
+`*Openbravo 3.0 Framework* PR14Q3.1 (2.1.24019)`
 
 **datapackage**
 
-org.openbravo.financial.bpsettlement
+`org.openbravo.financial.bpsettlement`
 
 ### **BP Settlement window**
 
 -   **Window Name**:Business Partner Settlement
 -   **Help**: Window to manage settlements that cancels available credit or pending Payments of a Business Partner.
 -   **Type**: Maintain
--   **Menu folder**:Financial Management >> Receivables and Payables >> Transactions. Just above 'Financial Account' window
+-   **Menu folder**: Financial Management >> Receivables and Payables >> Transactions. Just above 'Financial Account' window
 
 #### **Header Tab**
 
@@ -112,7 +112,7 @@ Table Definition:
 
 Trigger to avoid modifying any field when the Settlement is in status Processed or Canceled.
 
-When the status is changing from *CO* to any other it should allow setting *FIN\_Payment\_In\_ID* and *FIN\_Payment\_Out\_ID* to null.
+When the status is changing from *CO* to any other it should allow setting `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID`  to null.
 
 #### **Credit In Tab**
 
@@ -142,7 +142,7 @@ Table Definition:
 
 Trigger to avoid modifying any field when the Settlement is in status Processed or Canceled.
 
-When the status is changing from *CO* to any other, it should allow setting *FIN\_Payment\_In\_ID* and *FIN\_Payment\_Out\_ID* to null.
+When the status is changing from *CO* to any other, it should allow setting `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` to null.
 
 #### **Credit Out Tab**
 
@@ -206,13 +206,13 @@ Same as Sales Invoice with these differences:
         -   Status *Draft (DR)*: *Process (CO)*
         -   Status *Processed (CO)*: *Cancel (VO)*, *Reactivate (RE)*
         -   Status *Canceled (VO)*: None (the button should be hidden as well).
-    -   Default value: value of *Process\_Settlement* column.
--   Process class: *org.openbravo.financial.bpsettlement.process.BPSettlementProcess*
+    -   Default value: value of `Process\_Settlement` column.
+-   Process class: `org.openbravo.financial.bpsettlement.process.BPSettlementProcess`
 -   Similar example in *Payment Process* Report and Process.
 
 #### ***BPSettlementProcess*** **java class**
 
-Extends *org.openbravo.service.db.DalBaseProcess*.
+Extends `org.openbravo.service.db.DalBaseProcess`.
 
 Validations:
 
@@ -229,31 +229,38 @@ This action does an extra validation:
     -   If it is a credit settlement type, the same check with credit payments.
 -   Ensure that there are no invoices and credit payments in the same settlement.
 
-**Invoice type**
+###### **Invoice type**
 
-Create and process a Payment In with all the sales Payment Schedule Details included in the *OBFBPS\_Invoice* table for the settlement. Create a similar Payment Out with the purchase Payment Schedule Details.
+Create and process a Payment In with all the sales Payment Schedule Details included in the `OBFBPS\_Invoice` table for the settlement. Create a similar Payment Out with the purchase Payment Schedule Details.
 
 Add a Payment Detail on each payment using the *GL Item* defined in the settlement, so the total amount of each payment is Zero.
 
-Set the generated payment ids on *FIN\_Payment\_In\_ID* and *FIN\_Payment\_Out\_ID* columns.
+Set the generated payment ids on `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
-Set the *BP\_Settlement\_Status* to *CO* and the *Process\_Settlement* to *VO*
+Set the `BP\_Settlement\_Status` to *CO* and the `Process\_Settlement` to *VO*
 
 To build the Payments based on the selected Payment Schedule details, use the following public method:
 
+```java
 org.openbravo.advpaymentmngt.process.FIN\_AddPayment.savePayment(FIN\_Payment \_payment, boolean isReceipt, DocumentType docType, String strPaymentDocumentNo, BusinessPartner businessPartner, FIN\_PaymentMethod paymentMethod, FIN\_FinancialAccount finAccount, String strPaymentAmount, Date paymentDate, Organization organization, String referenceNo, List<FIN\_PaymentScheduleDetail> selectedPaymentScheduleDetails, HashMap<String, BigDecimal> selectedPaymentScheduleDetailsAmounts, boolean isWriteoff, boolean isRefund, Currency paymentCurrency, BigDecimal finTxnConvertRate, BigDecimal finTxnAmount)
+```
+
 
 To add the GL Item payment details use the following public method:
 
+```java
 org.openbravo.advpaymentmngt.process.FIN\_AddPayment.saveGLItem(FIN\_Payment payment, BigDecimal glitemAmount, GLItem glitem)
+```
 
 To process the payment use the following public method (strAction: *P*):
 
+```java
 org.openbravo.advpaymentmngt.process.FIN\_AddPayment.processPayment(VariablesSecureApp vars, ConnectionProvider conn, String strAction, FIN\_Payment payment)
+```
 
-**Credit type**
+###### **Credit type**
 
-Create and process a Payment In with all the sales credit payments included in the *OBFBPS\_Credit\_Payment* table. A similar Payment Out is created with the purchase credit payments.
+Create and process a Payment In with all the sales credit payments included in the `OBFBPS\_Credit\_Payment` table. A similar Payment Out is created with the purchase credit payments.
 
 For each selected credit payment, update its description with the new payment document number and increment the Used Credit amount by the settled amount. Link the credit payment to the new payment.
 
@@ -261,39 +268,45 @@ Add a Payment Detail on each payment using the *GL Item* defined in the settleme
 
 See an example on how to add the selected credit payments to the new payments in the following method:
 
+```java
 org.openbravo.advpaymentmngt.actionHandler.AddPaymentActionHandler.addCredit(FIN\_Payment payment, JSONObject jsonparams)
+```
 
 Note that to link the credit payments with the new payment, it is used the public method:
 
+```java
 org.openbravo.advpaymentmngt.process.FIN\_PaymentProcess.linkCreditPayment(FIN\_Payment newPayment, BigDecimal usedAmount, FIN\_Payment creditPayment)
+```
 
 ##### ***Cancel VO*** **action**
 
-It cancels the Payments generated in this settlement and stored in *FIN\_Payment\_In\_ID* and *FIN\_Payment\_Out\_ID* columns.
+It cancels the Payments generated in this settlement and stored in `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 To cancel the payment, use the following public method (strAction: *V*):
 
+```java
 org.openbravo.advpaymentmngt.process.FIN\_AddPayment.processPayment(VariablesSecureApp vars, ConnectionProvider conn, String strAction, FIN\_Payment payment)
+```
 
-Sets the *BP\_Settlement\_Status* to *VO* and the *Process\_Settlement* to *VO*
+Sets the `BP\_Settlement\_Status` to *VO* and the `Process\_Settlement` to *VO*
 
 ##### ***Reactivate RE*** **action**
 
 As in *Cancel* action cancels the payment generated on the settlement.
 
-Sets the *BP\_Settlement\_Status* to *DR* and the *Process\_Settlement* to *CO*
+Sets the `BP\_Settlement\_Status` to *DR* and the `Process\_Settlement` to *CO*
 
-Sets to null the *FIN\_Payment\_In\_ID* and *FIN\_Payment\_Out\_ID* columns.
+Sets to null the `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 ## Banking Pool
 
 ### Overview
 
-This document covers how to create a process that automatically generates a new Finance Plan or updates a Finance Plan from the Financial Management - Accounting - Transactions - Financial Type Configuration window.  It also provides a structure that should be considered when creating the Java class that is responsible for performing these new processes.
+This document covers how to create a process that automatically generates a new Finance Plan or updates a Finance Plan from the Financial Management >> Accounting >> Transactions >> Financial Type Configuration window.  It also provides a structure that should be considered when creating the Java class that is responsible for performing these new processes.
 
 ### Creating the new Java Class
 
-The Java class in charge of creating the financing plan must extend the Java FinanceTypeTemplate class. It provides some abstract methods to be performed and other methods that are useful when creating the new process. The basic structure that the new Java class must follow is the following:
+The Java class in charge of creating the financing plan must extend the Java `FinanceTypeTemplate` class. It provides some abstract methods to be performed and other methods that are useful when creating the new process. The basic structure that the new Java class must follow is the following:
 
 ```java
 package com.etendoerp.bankingpool.types;
@@ -337,7 +350,7 @@ The Exec method receives 3 parameters:
 -   date: The date that is passed as a parameter when creating a finance Plan.
 -   isNewFinancePlan: Check that indicates whether a new finance plan is being created or updated. If called from the Create Finance Plan button this parameter will be True and if called from the Update Finance Plan button the parameter will be False.
 
-The abstract class FinanceTypeTemplate has implemented several methods that can be useful, among them can be found:
+The abstract class `FinanceTypeTemplate` has implemented several methods that can be useful, among them can be found:
 
 -   newFinancePlan: Creates a new installment of the finance plan
 -   setDate:  Assigns a date to the date field in a finance plan record
@@ -358,19 +371,19 @@ The abstract class FinanceTypeTemplate has implemented several methods that can 
 -   setFirstPendingAmortization: Method of calculating the outstanding amortization for the first installment
 -   getFinancePlanToRecalculate: Method that obtains all the financing plan installments to be updated if you want to update a finance plan
 
-The abstract methods must be implemented in the new Java class and, if required, an override can be made on any of the methods of the FinanceTypeTemplate class.
+The abstract methods must be implemented in the new Java class and, if required, an override can be made on any of the methods of the `FinanceTypeTemplate` class.
 
 ### Creating the new Financial Type
 
 In the Financial Type window a new record is created with the new Financial Type and in the Class Name field the package of the Java class that was implemented is entered followed by the Java class name.
 
-![](/docs/assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png)
+![](/assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png)
 
 By simply filling in the Class Name field, the Create New Funding Plan and Update Funding Plan button will be visible.
 
-![](/docs/assets/drive/aq3IBl8B85MUhWR_N0Buo6qjtcxAhESwYOpGkh8Hn1X-ka9jGGVpgfaW3jzbzfuY2Bca2F3O-zPaU3GEtdYEVLy2_u0_f1wVNF3rjteWPBBbCFIM4Lv_ZW5FEMni5EVA2IKgtiOckQPrzhSa1g.png)
+![](/assets/drive/aq3IBl8B85MUhWR_N0Buo6qjtcxAhESwYOpGkh8Hn1X-ka9jGGVpgfaW3jzbzfuY2Bca2F3O-zPaU3GEtdYEVLy2_u0_f1wVNF3rjteWPBBbCFIM4Lv_ZW5FEMni5EVA2IKgtiOckQPrzhSa1g.png)
 
-![](/docs/assets/drive/_r4oVdOsDGq8rLR2_c2foimTnGGh66TGlUIs1J_ZiWG4yuSXnNNMLDFAwtN4D6w_GU_XjgJ8Ix5s9KF4jrTAKHsdLliRdPS06BqHgl8hPYmf9QvYfbg9oOwWRUp9pBNbhcIDN6KOtS07OornYw.png)
+![](/assets/drive/_r4oVdOsDGq8rLR2_c2foimTnGGh66TGlUIs1J_ZiWG4yuSXnNNMLDFAwtN4D6w_GU_XjgJ8Ix5s9KF4jrTAKHsdLliRdPS06BqHgl8hPYmf9QvYfbg9oOwWRUp9pBNbhcIDN6KOtS07OornYw.png)
 
 There is no need to modify any of the 2 buttons, as they automatically execute the Exec method of the Java class specified in the Financial Type.
 
@@ -382,7 +395,7 @@ New hooks have been added to the 'Undo Close' and 'Unvoid' processes, from the S
 These hooks allow the developer to add new validations before and/or after the action is executed, and thus create new automations more easily.
 
 ### How to define an UnvoidInvoiceHook instance
-- Define the class for hook, implementing the UnvoidInvoiceHook interface. This hook is executed when a user tries to unvoid a voided invoice:
+- Define the class for hook, implementing the `UnvoidInvoiceHook`  interface. This hook is executed when a user tries to unvoid a voided invoice:
 
 ```
 public class UnvoidInvoiceImpl implements UnvoidInvoiceHook {

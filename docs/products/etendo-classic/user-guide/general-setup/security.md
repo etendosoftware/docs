@@ -4,21 +4,21 @@ title: Security
 
 Security folder allows creating and configuring basic security entities such as users, user roles and access rights.
 
-## **User**
+## User
 
-### **Introduction**
+### Introduction
 
 A user is an entity which can log into Etendo whenever it has a password and at least one role assigned to it.
 
-![](/docs/assets/drive/uYk0-n-xUoagkerOKb87gcQ11qfxJ4C2C_uPR-SR_HlmbDw89FyUm7UY86xbdoD3TjOPpEBVFu0aITdVibP7fnpylt_fn8SttMp0fH3HkNOAle71cVvxAmMtvbMPkBN4rHrhr21j.png)
+![](/assets/drive/uYk0-n-xUoagkerOKb87gcQ11qfxJ4C2C_uPR-SR_HlmbDw89FyUm7UY86xbdoD3TjOPpEBVFu0aITdVibP7fnpylt_fn8SttMp0fH3HkNOAle71cVvxAmMtvbMPkBN4rHrhr21j.png)
 
 As shown in the image above, Etendo allows the user to sign in by entering a username and a password previously created in Etendo. The user assigned to that username will be able to sign in only in case it has at least one user role assigned to it.
 
-### **User**
+### User
 
 User window allows the user to create as many Etendo users as required. Each person accessing Etendo can have a different user assigned.
 
-![](/docs/assets/drive/Xu1oqRnWMgbWI8-qp1RP-stpJ2YwNnKLJr04-gRcVOrIEkJm_er9fWwpe4F2Ncy_u3pATEEGw7t59JJrUW2y9QSsmNWTT9XXlC0cZuqlakWhF2KIfYfw6IaJhrseTY1tKjE0Uavl.png)
+![](/assets/drive/Xu1oqRnWMgbWI8-qp1RP-stpJ2YwNnKLJr04-gRcVOrIEkJm_er9fWwpe4F2Ncy_u3pATEEGw7t59JJrUW2y9QSsmNWTT9XXlC0cZuqlakWhF2KIfYfw6IaJhrseTY1tKjE0Uavl.png)
 
 As shown in the image above, a user can be created by entering the basic information below:
 
@@ -27,11 +27,11 @@ As shown in the image above, a user can be created by entering the basic informa
 - and in the case of being an "Employee", the employee business partner records in the field "Business Partner", under the "More Information" section.
 - the _"Expired Password"_ checkbox: if it is checked, the user's password will be set as expired and when the user logs in, he will be forced to change it.
 
-### **User Roles**
+### User Roles
 
 Roles are the connection between users and access rights. Each user can have more than one role assigned, however, a user can only log into Etendo by using just one role.
 
-![](/docs/assets/drive/IdpYeASr5qFi9zCa5EgsKRJfg54EoyBsxbVbj3d7DIbN-8XztHzj2QI35lguEXIKt6FxAmkozQnh7sGeMaKYD4m7-x5QSemv2M48ShmpCxhVWCLFwGa4e94oA1yl4K7-JprsrIcf.png)
+![](/assets/drive/IdpYeASr5qFi9zCa5EgsKRJfg54EoyBsxbVbj3d7DIbN-8XztHzj2QI35lguEXIKt6FxAmkozQnh7sGeMaKYD4m7-x5QSemv2M48ShmpCxhVWCLFwGa4e94oA1yl4K7-JprsrIcf.png)
 
 For instance, it is possible to create and configure a role for Sales, a role for Finance, a role for Warehouse, and another role for Procurement.
 
@@ -41,11 +41,11 @@ Whenever there is a new member in the organization, a new user could be created 
 
 There can be a user having a given role set up as "Role Administrator", that user will be able to add new users to that role.
 
-![](/docs/assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
+![](/assets/drive/6lcpMBWvPHq9NQ2VCpAiYVfd_SBR-7j3aDTZ9c4QyqmQi7Nguuid_7y8TQNEXkh7pLH26YU7fKgqpdMEgi1L3aXyKnoyf6PTz-tutOmotGaFFhh7BG_2-QoafKz4JSrmS8mpXVzS.png)
 
-## **Role**
+## Role
 
-### **Introduction**
+### Introduction
 
 The aim of a role is to group user/s depending on what parts of Etendo they are allowed to access to and therefore to work in.
 
@@ -70,7 +70,7 @@ Having said that, Etendo allows the creation of as many new "Roles" as required 
 !!! info
     Roles group user/s depend on the tasks they do and therefore the parts of Etendo they should have access to parts such as windows, processes, forms, widgets and views.
 
-### **Permissions Inheritance**
+### Permissions Inheritance
 
 It is possible to configure roles to retrieve their access to the different Etendo elements automatically, by inheriting them from other "parent" roles. This configuration is possible thanks to a feature known as Role Inheritance.
 
@@ -85,7 +85,7 @@ When inheriting from multiple roles, the permission application order is determi
 
 This process eases the role management, specially when the number of roles defined for a Client is high. Thus, it is possible to define template roles to give access for a particular set of elements, and then create multiple combinations of functional roles in order to give personalized access for the different users. This is illustrated in the picture below.
 
-![](/docs/assets/drive/vyHTH7_aVNAVElZ2_BGWT5QcVh9MD3w_DCfz20k4Bu6mxa_QCvrKo2ufgIMmvqericF1SZnMm4ONeysEKiw2kON-47niJ5HlcjaVqGiiqPkcNyg9k0FOmnZHHfbqpioJ9At6rbTI.png)
+![](/assets/drive/vyHTH7_aVNAVElZ2_BGWT5QcVh9MD3w_DCfz20k4Bu6mxa_QCvrKo2ufgIMmvqericF1SZnMm4ONeysEKiw2kON-47niJ5HlcjaVqGiiqPkcNyg9k0FOmnZHHfbqpioJ9At6rbTI.png)
 
 The current list of inheritable elements include the following: organizations, windows, tabs, fields, processes, forms, widgets, views, process definitions, preferences and alert recipients.
 
@@ -105,13 +105,13 @@ As mentioned before, the changes (create, edit or remove) done in a permission w
 
 This warning message is similar to the one shown below. It appears when creating or editing a record that belongs to a template role, in a tab of an inheritable entity.
 
-![](/docs/assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
+![](/assets/drive/ibtK-OMAXBsv2UVQXFaPN7YvQMlh2rgo41Vt21hwrkhk0Grj3gy0Y_7tYhGZU4JZaX7i75-eo6xHmT7P7bHhUWyy2xIpcK5VB8rC7PqSxERaqBP7HXaLXKSeiyNf_1Sj_ZXhxDzb.png)
 
-### **Role**
+### Role
 
 The Role window allows the user to review, create, configure and maintain the roles to use in a given client.
 
-![](/docs/assets/drive/8MOJrcJaif8MbvpR7NwOIA6JjqOIlmOf3df8nsTRJa7Zq02aanCB7SGImtBiEGqou4crWjRy_nGJNhUVj3rHpcNyYOVw8H-F_X4veFkEtGw_6KCGoJxom1R_MkOlm0pJhIbEYzMB.png)
+![](/assets/drive/8MOJrcJaif8MbvpR7NwOIA6JjqOIlmOf3df8nsTRJa7Zq02aanCB7SGImtBiEGqou4crWjRy_nGJNhUVj3rHpcNyYOVw8H-F_X4veFkEtGw_6KCGoJxom1R_MkOlm0pJhIbEYzMB.png)
 
 As already described, there are roles automatically created by Etendo which can be reviewed in this window.
 
@@ -155,22 +155,22 @@ The fields to fill in are:
 - Client Administrator checkbox allows a role to admin other users' _Workspace_ as well as _Customized Forms"_:
     - In other words, a client administrator role can assign widgets to the workspace of any client user as well as customized forms.
 
-### **Org Access**
+### Org Access
 
 Org Access tab allows the user to define the organization/s to which a given role will have access rights to.
 
 As already mentioned, every record in Etendo belongs to an organization, therefore the only way for a user role to edit a record which belongs to an organization is to provide that user role with access to that organization.
 
-![](/docs/assets/drive/vE-K35fSEj9-BIvgbMGezZvFFgFx4-bfY-LNbMosiyjun4B_-bSKiWnHr-K7bpJSnYwrSypNacZYFmcO9x46g3yGgrHxrywB-z2Agfywx-qVesqxPN9ruiBg45aTxqkyn15BsOkb.png)
+![](/assets/drive/vE-K35fSEj9-BIvgbMGezZvFFgFx4-bfY-LNbMosiyjun4B_-bSKiWnHr-K7bpJSnYwrSypNacZYFmcO9x46g3yGgrHxrywB-z2Agfywx-qVesqxPN9ruiBg45aTxqkyn15BsOkb.png)
 
 - _Organization Administrator_ checkbox allows a role to admin other users' "_Workspace_ as well as _Customized Forms_":
     - In other words, an organization administrator can assign widgets to the workspace of any user of the organization as well as customized forms.
 
-### **User Assignment**
+### User Assignment
 
 The User Assignment tab allows the user to add users to a given role.
 
-![](/docs/assets/drive/iBeXu8RdIKr-srDU5Q-1Y5e5wYtbvNbXqD8KtMx8MK2gHEXc9BJUcYsA19OgHzCNv7chh30Ws8bVjbtjFkllwl5w8kZZ2ZoAbiXLOeFJDzwEisQu04z8dGAj3CmIy0OOxneMJtz6.png)
+![](/assets/drive/iBeXu8RdIKr-srDU5Q-1Y5e5wYtbvNbXqD8KtMx8MK2gHEXc9BJUcYsA19OgHzCNv7chh30Ws8bVjbtjFkllwl5w8kZZ2ZoAbiXLOeFJDzwEisQu04z8dGAj3CmIy0OOxneMJtz6.png)
 
 "_Role Administrator_" checkbox allows the user to administer the given role for:
 
@@ -180,7 +180,7 @@ The User Assignment tab allows the user to add users to a given role.
 !!! info
     As _Role Administrator_ flag allows the user to modify behavior of other users with the same role, it should only be granted to trusted users.
 
-### **Window Access**
+### Window Access
 
 This tab lists and/or allows the user to add the windows to which a role will have access to.
 
@@ -188,13 +188,13 @@ As already mentioned, every time a new role is created and saved without selecti
 
 The information above means that the newly created role will have access to every Etendo window.
 
-![](/docs/assets/drive/vt5fH1QoVLs_KcIpoESYAQqhSe01e6oHVVFbF-UQy6fwJnDu8B4qOgQDCI34dQheclrgChwDy-IuurthKMqxAljaRU-jVczgUCGnXrXDTv2vERvhxlgGjRy7SA6ivWpqpYMBhcmQ.png)
+![](/assets/drive/vt5fH1QoVLs_KcIpoESYAQqhSe01e6oHVVFbF-UQy6fwJnDu8B4qOgQDCI34dQheclrgChwDy-IuurthKMqxAljaRU-jVczgUCGnXrXDTv2vERvhxlgGjRy7SA6ivWpqpYMBhcmQ.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to _manually_ add a subset of windows which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow window access for a given Etendo module or area such as Projects, Finance or Sales.
 
 _Editable Field_ checkbox defines if the accessible data in a window can be edited by the role or not.
 
-### **Tab Access**
+### Tab Access
 
 It defines whether a tab is editable or read-only for a concrete role.
 
@@ -204,7 +204,7 @@ If the window is editable (_Editable Field_ is checked), by default all its tabs
 
 In the same way, having a non-editable window, it is possible to define some of its tabs as editable by checking _Editable Tab_.
 
-### **Field Access**
+### Field Access
 
 It defines whether a field is editable or read-only for a concrete role.
 
@@ -214,7 +214,7 @@ So if a tab is editable for a role, a concrete set of fields can be made read-on
 
 When editing a tab with some fields defined not to be editable in this way, backend checks modifications in that tab to prevent this to happen. Note this also affects the field in case it was modified by, for example, a callout or a default expression. This is controlled by the _Check on Save_ property, unflagging it, this check will not be performed allowing thus the field to be modified by a callout.
 
-### **Report and Process Access**
+### Report and Process Access
 
 This tab lists and/or allows the user to add the reports and processes to which a role will have access to.
 
@@ -222,7 +222,7 @@ As already mentioned, every time a new role is created and saved without selecti
 
 Above means that the newly created role will have access to every Etendo report and process.
 
-![](/docs/assets/drive/jeSO8cKGRMnO5jlOseLchbPh4OE2fDeLeAAS0VSOIngREivxtfTmTPmNLaDwnn7ujstw7z6Pgqp0oZLZAHxwT1XwtyGmlZdj-vuNEBXnBq1dFNo5UvBFIC_CIAJc6Tn2gweJJPKq.png)
+![](/assets/drive/jeSO8cKGRMnO5jlOseLchbPh4OE2fDeLeAAS0VSOIngREivxtfTmTPmNLaDwnn7ujstw7z6Pgqp0oZLZAHxwT1XwtyGmlZdj-vuNEBXnBq1dFNo5UvBFIC_CIAJc6Tn2gweJJPKq.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to manually add a subset of report and process which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow report or process access for a given Etendo module or area such as Projects, Finance or Sales.
 
@@ -233,7 +233,7 @@ By default, access to processes in a standard window given from a button is inhe
 - To revoke this inherited access and manually decide case by case which are the accessible processes, it is possible to define a "Secured Process" Preference (at system level or for that specific window) with "Y" as value.
 - If the developer defined the process as _Requires Explicit Access Permission_. In this case, permissions will never be inherited for that process.
 
-### **Form Access**
+### Form Access
 
 This tab lists and/or allows adding the forms to which a role will have access to.
 
@@ -241,21 +241,21 @@ As already mentioned, every time a new role is created and saved without selecti
 
 The information above means that the newly created role will have access to every Etendo form.
 
-![](/docs/assets/drive/h71SGbrOND-3ZRiDfheu69SJe6ZUIfQdyVOKmL_RaRtqSCRmQ84JoLrhPok37CDsfNRt0BbqoKwNzchby0i1ffWbKxN1JZZy2wBjC_akKrtaYwtR9FNCgEJaYGEFtse9xsx2kG4_.png)
+![](/assets/drive/h71SGbrOND-3ZRiDfheu69SJe6ZUIfQdyVOKmL_RaRtqSCRmQ84JoLrhPok37CDsfNRt0BbqoKwNzchby0i1ffWbKxN1JZZy2wBjC_akKrtaYwtR9FNCgEJaYGEFtse9xsx2kG4_.png)
 
 Having said that, if the "Manual" checkbox is selected, it will be required to manually add a subset of forms which will be accessible for a given role, or it will be required to automatically add them by using the action process "Grant Access". This process will allow form access for a given Etendo module or area such as Projects, Finance or Sales.
 
 Editable Field checkbox defines if the accessible data in a form can be edited by the role or not.
 
-### **Widget Class Access**
+### Widget Class Access
 
 This tab lists and/or allows adding the widget classes to which a role will have access to.
 
-![](/docs/assets/drive/UJdYTlYdE7iCbPZXvMLbM-FtRsvCjm1H0ogLpoAgaHlt18r4-hS0gB0jXOCtea26kAn3l9phNMuoqFO5uvrKDqHnd_99mcY6FqmqGhHKwcwIiozXLsji0LHlgp6KWLzKuvVYq6S_.png)
+![](/assets/drive/UJdYTlYdE7iCbPZXvMLbM-FtRsvCjm1H0ogLpoAgaHlt18r4-hS0gB0jXOCtea26kAn3l9phNMuoqFO5uvrKDqHnd_99mcY6FqmqGhHKwcwIiozXLsji0LHlgp6KWLzKuvVYq6S_.png)
 
 Widgets are _User Interface_ elements which can either be placed in the Users' Workspace tab or be part of a generated window.
 
-### **View Implementation**
+### View Implementation
 
 View implementation tab allows the user to select customized views.
 
@@ -263,32 +263,32 @@ A view implementation is a completely custom implementation of a main view.
 
 The access to a _custom view_ can be controlled through this role access tab.
 
-![](/docs/assets/drive/5OCz4Fl8K2i8uYaKdMnh3lg-DT_9IQBDjimbD37HCtwzOs74M-OTqbTorDwTzxEQaWJBKZRxkhNJc_jF-4kjLOllZSlfZe_9kcngt9KUQB0X3KVYFyeOblGXuzo0LCGDI-C_QlvI.png)
+![](/assets/drive/5OCz4Fl8K2i8uYaKdMnh3lg-DT_9IQBDjimbD37HCtwzOs74M-OTqbTorDwTzxEQaWJBKZRxkhNJc_jF-4kjLOllZSlfZe_9kcngt9KUQB0X3KVYFyeOblGXuzo0LCGDI-C_QlvI.png)
 
 For additional information about views, visit How to implement a new main view.
 
-### **Process Definition**
+### Process Definition
 
 Grants access to Process Definition. By default, access to process definitions in a window (given from a button), is inherited from the permission to the window. To cancel this inherited access and manually decide case by case which are the accessible processes, it is necessary to define a "Secured Process" Preference (at system level or for that specific window) with "Y" as value.
 
-![](/docs/assets/drive/IFXcBPxniL5TViWp3QIr2LiircvQoutdDPZ4K-zMHibWBRtwsI2fNh8dTXWG5H8_GROHo17oFdKjb-Kuj696jezS3flqH9VJL8yAlFYFV0__mtN4aDKFHrIuosLt28EfSLpfT5iR.png)
+![](/assets/drive/IFXcBPxniL5TViWp3QIr2LiircvQoutdDPZ4K-zMHibWBRtwsI2fNh8dTXWG5H8_GROHo17oFdKjb-Kuj696jezS3flqH9VJL8yAlFYFV0__mtN4aDKFHrIuosLt28EfSLpfT5iR.png)
 
 Access when the process is invoked from a standard window button is inherited in the same way that for Processes.
 
-### **Role Inheritance**
+### Role Inheritance
 
 It allows defining an inheritance for a role. An inheritance is a relationship between two roles: if role A inherits from role B, that means that all the permissions that role B has for different application elements like organizations, windows, reports, processes, widgets etc. will be automatically inherited by role A, allowing it to access those elements in the same way as B. It is also possible to define an inheritance hierarchy, i.e., a role can inherit from different roles, and the priority (order) to inherit the permissions is defined by the sequence number. This means that if two inheritances have accesses in common, the accesses of the inheritance with lower sequence number will be overridden with the accesses of the inheritance with higher sequence number.
 
 Within this tab is where the Role Inheritance configuration of a particular role is set.
 
-![](/docs/assets/drive/KI9-ImqA0ErnTQS_fepHzt63s_3ExEUeRwCXREoaE2NKc1e13FAmtPhHnCQC4CPLwWzbUvWZbertcWG81CDPmYaZzLhN8IrliDLcJ9V48S3VxosZwI2vzSlPc0suV5WKwYcPi8JF.png)
+![](/assets/drive/KI9-ImqA0ErnTQS_fepHzt63s_3ExEUeRwCXREoaE2NKc1e13FAmtPhHnCQC4CPLwWzbUvWZbertcWG81CDPmYaZzLhN8IrliDLcJ9V48S3VxosZwI2vzSlPc0suV5WKwYcPi8JF.png)
 
 The fields to fill in are:
 
 - **Inherit From**: In this field, it should be selected the role whose permissions will be inherited. It defines the role that will be used to retrieve access to its permissions automatically.
 - **Sequence Number**: It defines the order in the application of the role inheritance, when having multiple records in the tab. The lower this value is, the earlier will be retrieved the permissions of the related template role. This means that if the same permission is accessed by two template roles selected to inherit from them, the permission related to the inheritance with higher sequence number will override the other one.
 
-### **Dynamic App**
+### Dynamic App
 
 !!! info
 
@@ -296,7 +296,7 @@ The fields to fill in are:
 
 In this tab, you can configure the dynamic applications that the selected role has access to.
 
-![](/docs/assets/products/etendo-classic/user-guide/general-setup/security/DynamicAppRoleTab.png)
+![](/assets/products/etendo-classic/user-guide/general-setup/security/DynamicAppRoleTab.png)
 
 Fields to note:
 
@@ -313,11 +313,11 @@ Edit a role to give or withhold the necessary access to tables and columns table
 
 Create or edit access to DB tables for a selected role. The user can give access to the needed information by selecting the options displayed in the table tab.
 
-![](/docs/assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png)
+![](/assets/drive/ltwp9ZQne8C_2iz5c7u3hay0dodgaB28TeFFxVkLJqhFV3Zgq9LMahoeVrH2BRiz6NH9n1QeCsDSrOoPD_CtKV8cYZULNDDPG5Fly-WhZo5h7_2ASJRlnoS_GinX2nYC6efQebJ6uZYnYAeyabg.png)
 
-## **Audit Trail**
+## Audit Trail
 
-### **Introduction**
+### Introduction
 
 Audit Trail allows the user to monitor every data change done in any table or entity through the user interface.
 
@@ -331,17 +331,17 @@ Audit trail feature must be enabled by the "System Administrator Role" in the Ap
 
 Once a change has been made in a table for which the audit trail feature has been enabled, it is possible to monitor that change through the user interface by using the action button "Audit Trail".
 
-![](/docs/assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
+![](/assets/drive/V-wLKxec4uzSuG-eFItBU00cQYeO5SNhiLTDkY78kPRaK6e-P_R_z39-K5icHtUSX-WjoeFL34_Iv45c0aym2FRV9_F_e0W6QA0U8Lim_qkovbX44ihOl-nH-mKEio1pSpfQDqlm.png)
 
-### **Audit Trail**
+### Audit Trail
 
 Audit Trail view displays read-only information about all the recorded data changes done in the tables for which the audit trail feature has been enabled.
 
-![](/docs/assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png)
+![](/assets/drive/CkScAz_BHFw9uZIejCEG18y9IOkyiO23K5CMqCRWCkc-DEAWZ0x5G8RyDwjqApky49FILfUisRIJUnqS_Sfob0j128cKfhFFQhfOI92bmbTAPsN1TyfGVMaPXeoj9tbBzqsTB-r4.png)
 
 The changes done in a given table, column and record are viewed by showing the corresponding record ID or UI of the records in the database.
 
-### **Configuration**
+### Configuration
 
 In order to track audit information, the system administrator needs to perform two tasks:
 
@@ -350,7 +350,7 @@ In order to track audit information, the system administrator needs to perform t
 
 In the following sections, a step-by-step guide with more detailed information is provided.
 
-### **Enabling audit trail for a table**
+### Enabling audit trail for a table
 
 Enabling/disabling the audit trail feature for a table is done in the Table definition in the Application Dictionary.
 
@@ -360,23 +360,23 @@ Enabling/disabling the audit trail feature for a table is done in the Table defi
 - Switch to Edit View
 - Mark the "Fully Audited" checkbox and save
 
-#### **Audit Inserts**
+#### Audit Inserts
 
 When a table is flagged as Fully Audited, the users can decide if they want to audit the insertions done in that table.
 
-![](/docs/assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png)
+![](/assets/drive/ebTtUMQskmHQd1Fd5BWoW0_lKwtwgNTn41V1uJKV4RGTKR_uXKuR_PqU4rzTUBVQct38OejbovWWycB-z1A7YEvwNedzpv6VCi38eHb2telDh9994cV4vCW1QEOGlDw1Ojs11Und.png)
 
 If the Audit Inserts field is checked in a table, when a new row is inserted in that table several records will be inserted in the Audit Trail table, one for each column in the audited table. These records will contain the original value of the columns of the new row.
 
 Usually, it is not necessary to store this information, because the original value of a column could be easily obtained by using the Old Value and New Value fields of the Audit Trial table that correspond with that column. If the Audit Inserts field is left unchecked, only one row will be inserted in the Audit Trial table for each record inserted in the audited table. At least this one record needs to be inserted in the Audit Trial table to be able to store which process was used to create the record in the audited table.
 
-#### **Excluding columns**
+#### Excluding columns
 
 By default, when a table is audited, modifications in any of its columns are audited. In some cases, it makes sense not to audit changes for some of them. This can be configured by setting the _Exclude Audit_ flag in _Tables and Columns > Table > Column_ tab.
 
-![](/docs/assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
+![](/assets/drive/Xy3wTyW3wrUeerAoND_Rw2c6wVVhxkq_AEzzTjBLLpiBg6VsMWcQjAn6T4te4akp_o-x381v3wT3012cttvLqjKWRsd-Tfe0Go0FX1KGlG_vSG57Bm4yo8ZnB0gxdTSV3qi7f-4b.png)
 
-### **Running the System Compilation**
+### Running the System Compilation
 
 The audit trail system uses a number of generated triggers (one per table to be audited) to collect the audit data for all changes.
 
@@ -385,16 +385,16 @@ These triggers need to be regenerated, when executing a system compilation, once
 - The Audit Trail feature has been enabled or disabled for a table
 - There has been any structural change to a table being audited (i.e. new columns, changed columns)
 
-### **The Audit Trail Popup**
+### The Audit Trail Popup
 
-For the set of tables for which the audit trail feature has been enabled, the button ![](/docs/assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png) is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
+For the set of tables for which the audit trail feature has been enabled, the button ![](/assets/drive/tmlPernhlkGB49t7gLt12N3zfxbYevzxuPC65DZavmEO8p5UBe2_sO_YD6lBTkhBvnNrQ64jkRAnuahaKRTGnLPGUvmSEX_K5_Ekh5Ojd-21ZyZ4KWEFIjujNg_xqg_PCFahXdJo.png) is shown in the toolbar of the corresponding windows. It gives access to the Audit Trail Popup.
 
 This popup allows examination of the history of the record which is currently shown in the window. It has two main view modes which allow examining the following data:
 
 - 'Record history' of a single record
 - 'Deleted records' of a single tab
 
-### **The 'Record History' view**
+### The 'Record History' view
 
 This view is displayed when the popup is opened from an existing record via the new toolbar button.
 
@@ -409,15 +409,15 @@ The grid in the lower area shows all changes done to this record while the audit
 
 A row in this grid corresponds to a single changed field. For changes to an existing record, the number of grid entries shown correspond to the number of fields changed. For new record creations or record deletion, one row in the grid is shown per field of the inserted/deleted record.
 
-![](/docs/assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png)
+![](/assets/drive/xuE5w_TI2LS9M4nl1fyqWctoD-pU08N6dq7mQJT7qr-wsocs2FehRp7Gu1jGCsJUu_UZeo1hmDjBPQRFV_d1aM26q9zxMjXPX5GbX-SZOJYuZTwo1PYtoD-oi3XRzlyS723rbaWL.png)
 
 Finally, a link just on top of the grid allows switching to the 'Deleted Records' view. Following that link will show deleted records for the tab from which the Audit Trail popup was opened.
 
-#### **Disable filtering by User**
+#### Disable filtering by User
 
 The User filter can be removed from both the 'Record History' and the 'Deleted Records' view. This can be interesting for performance reasons when the number of users available is high. In order to do this, go to General Setup|Application|Preference and add the following preference: Show Audit Trail User filter with value Y.
 
-### **The 'Deleted Records' view**
+### The 'Deleted Records' view
 
 This view allows examination of records which have been deleted from a tab and are otherwise no longer accessible in the user interface.
 
@@ -427,15 +427,15 @@ An info on the top shows a reference to the entity for which the deleted records
 
 Then a grid displays all deleted records belonging to this tab/entity. Here one row shown corresponds to a single deleted record and the columns shown are the same as the ones shown in the normal grid view of the same tab.
 
-![](/docs/assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png)
+![](/assets/drive/lsX2HjGHdMbgCKFRs-_KuE1qmeMs2u9cZ5PXrJ5RmYw08PYbdJ6KB_dY93TwaW9ycfaNUc9fEWmsMFKPipMYza0ZCPZdMcl4c9sjFemg7ndkntS2ai5Rs-eePUDaFXXNdKFJ6VOV.png)
 
 This view offers a number of navigation choices to view related or more detailed information.
 
-#### **Navigation: Back to history**
+#### Navigation: Back to history
 
 The first one is Back to history. Following this link, the view is just switched back to 'Record History' showing the same records as shown before going to the deleted records view.
 
-#### **Navigation: History of selected record**
+#### Navigation: History of selected record
 
 The next one, View history of selected deleted record below, allows examining the detailed history of a deleted record, instead of the summary view which is shown here.
 
@@ -443,9 +443,9 @@ This detailed history is displayed in the same 'Record History' view, however it
 
 The following screenshot shows an example of the history view of the same deleted 'Sales Order' entry. Compared with the previous example of this view, new history entries corresponding to the deletion are shown in addition to the older information about the record creation and modification.
 
-![](/docs/assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
+![](/assets/drive/GtW2mnbfKHPPLTLwrt_Kqjlbdm7lo_7CLDntpxMg4vRZnjAaRkOeUzxOg19gnju2DAgUuLBNrm0szABl1MVSV5Ft9_5ASwBs9jTI9IYuQt1iBTBU3r2z5J-octdDlOzNknRzXKKz.png)
 
-#### **Navigation: Child Tabs**
+#### Navigation: Child Tabs
 
 As the last method of navigation, the popup allows filtering records based on a parent record. This can be useful to search for deleted lines belonging to a sales order.
 
@@ -459,7 +459,7 @@ If the parent record (i.e. a Sales Order) does still exist, then the following s
 
 As the lines tab is not a top level tab (it has a parent tab Sales Order) the deleted records view is automatically filtered to only show lines belonging to the current Sales Order. As visual information that the information shown is filtered, the top info area shows:
 
-![](/docs/assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png)
+![](/assets/drive/TLPq4qy1yN9UkGD66_5njmuYw_ks8rUXRuOSuS6oXS_BmY92i1kLNyPns4CRsopMKIif0JPp6uJfWpDHgeKgtD07RAR8XcmrVEafUyhiVJ-OEUHhxUF3i77gURAyQPl8yK7PZMLk.png)
 
 If the parent record (i.e. a Sales Order) does not exist anymore, then the same can be accomplished by using the following steps:
 
@@ -469,7 +469,7 @@ If the parent record (i.e. a Sales Order) does not exist anymore, then the same 
 
 Then the deleted records view will show the deleted lines belonging to the selected (deleted) Sales Order.
 
-### **A generated Audit Trail Window**
+### A generated Audit Trail Window
 
 The second interface to view audit data is a normal generated window which is based on the AuditTrail entity, and allows browsing all audit information filtered by the currently active client. Open the Application menu and navigate to General Setup, Security and select Audit Trail.
 
@@ -477,9 +477,9 @@ It offers a raw view of the audit data, meaning that no translation of raw value
 
 Simultaneously, this window allows a much more flexible filtering/searching.
 
-![](/docs/assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
+![](/assets/drive/rw7tPRLbT6ngBKyscK7lPe8F8irNUTp74vKBpDDST539eM5zHpl99Sr2fMXFLMcFks6BVhyNsMfFaSeWHgHYSr2vF2GDYjZ6a5fyAa3Nj2QEcpUhGAL6xOPIVwY177LL6kESljcr.png)
 
-### **Limitations**
+### Limitations
 
 The audit trail feature will record all data changes (for the table for which it has been enabled) with the following exceptions:
 
@@ -487,7 +487,7 @@ The audit trail feature will record all data changes (for the table for which it
 - text fields of types (nchar,nvarchar) with a length >= 2k will not be audited
 - BLOB fields (binary stored inside the database) will not be audited
 
-### **Etendo Advanced Security**
+### Etendo Advanced Security
 
 The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
 
@@ -499,4 +499,4 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 - Expiration Time (Autolock Password)
 
 !!! info
-    For more information, visit the [Etendo Advanced Security module User Guide](/docs/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).
+    For more information, visit the [Etendo Advanced Security module User Guide](/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).

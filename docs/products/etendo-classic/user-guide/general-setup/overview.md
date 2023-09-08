@@ -16,7 +16,7 @@ Etendo can be localized for any country thanks to a key Etendo feature which is 
 A Localization Pack can include at least:
 
 -the complete **translation** for the official language(s) in the country.
-The language is automatically available once the localization Pack has been successfully installed, therefore it can be selected as described at [profile](/docs/getting-started/user-interface/workspace#profile).
+The language is automatically available once the localization Pack has been successfully installed, therefore it can be selected as described at [profile](/getting-started/user-interface/workspace#profile).
 
 -the **chart of accounts** that defines the accounting structure if any to comply with the approved local practice and laws.
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
@@ -33,7 +33,7 @@ This can be considered the first basic step while setting Etendo instances as it
 
 A **Client** in Etendo is the top-most level of configuration and data within Etendo.
 
-Above means that certain configurations such as users, customers, vendors and other [master data](/docs/products/etendo-classic/user-guide/master-data-management/master-data) can be managed in a client and therefore be available across all the organizations within the client.
+Above means that certain configurations such as users, customers, vendors and other [master data](/products/etendo-classic/user-guide/master-data-management/master-data) can be managed in a client and therefore be available across all the organizations within the client.
 
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
@@ -73,7 +73,7 @@ This time the data, if applied to the Organization, will be available just for t
 - The **Users and Roles setup**:
 
 Etendo security can be split into "Functional" and "Data" security.
-"**Functional**" security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](/docs/products/etendo-classic/user-guide/general-setup/security#user) and [roles](/docs/products/etendo-classic/user-guide/general-setup/security#role):
+"**Functional**" security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](/products/etendo-classic/user-guide/general-setup/security#user) and [roles](/products/etendo-classic/user-guide/general-setup/security#role):
 
 A **User** is an entity which can log into Etendo whenever it has a password and at least one role assigned.
 Each person accessing Etendo should have a different user assigned properly configured.
@@ -86,23 +86,23 @@ Etendo creates two users by default, the "System" user and the "Etendo" user:
 - the "**System**" user is the owner of Etendo application data. It is not possible to log into Etendo as "System" user.
 - the "**Etendo** " user is a "super" user which has access to any Etendo Client.
 
-The password assigned to this user is "Etendo ", however it can be changed if needed in the [user](/docs/products/etendo-classic/user-guide/general-setup/security#user) window.
+The password assigned to this user is "Etendo ", however it can be changed if needed in the [user](/products/etendo-classic/user-guide/general-setup/security#user) window.
 
 This user is assigned to the "System Administrator Role", a role with no access restrictions.
-**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](/docs/products/etendo-classic/user-guide/general-setup/security#role-access) at table level and the [role](/docs/products/etendo-classic/user-guide/general-setup/security#role):
+**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](/products/etendo-classic/user-guide/general-setup/security#role-access) at table level and the [role](/products/etendo-classic/user-guide/general-setup/security#role):
 
 !!! info
     Data Access level defines the client and/or the organization each record is going to be visible from.
 
-Every [table](/docs/products/etendo-classic/user-guide/general-setup/security#role-access) in Etendo has a "Data Access Level" column.
+Every [table](/products/etendo-classic/user-guide/general-setup/security#role-access) in Etendo has a "Data Access Level" column.
 
-User Access Level allows limiting the records which will be accessible in entities such as [Windows, Processes, Forms, Widget Classes and Views](/docs/products/etendo-classic/user-guide/general-setup/security#role) for a role, or even limit the access to a given entity.
+User Access Level allows limiting the records which will be accessible in entities such as [Windows, Processes, Forms, Widget Classes and Views](/products/etendo-classic/user-guide/general-setup/security#role) for a role, or even limit the access to a given entity.
 
 ### Basic Setup Diagram
 
 The diagram below shows the Etendo "basic" General Setup flow for a legal entity with accounting. This flow is one part of the overall Business setup flow.
 
-![](/docs/assets/drive/18h9kcOERmyWWpbyF7PsZJoOuFDHXtJ_q.png)
+![](/assets/drive/18h9kcOERmyWWpbyF7PsZJoOuFDHXtJ_q.png)
 
 In the example above, the "**Accounting**" data can not be shared across all the organization/s of the client because it was not applied at client level but to the Organization being created.
 
@@ -110,9 +110,9 @@ This setup would fit in the case of a Client which has **one or more independent
 
 There is a close relationship between the general setup which allows the creation and configuration of an enterprise, and the accounting configuration area because to set a "Legal with Accounting" Organization as ready, it requires below accounting items to be properly created and configured first:
 
-1. a [Fiscal Calendar](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#fiscal-calendar)
+1. a [Fiscal Calendar](/products/etendo-classic/user-guide/financial-management/accounting/setup#fiscal-calendar)
 
-2. and an organization's [General Ledger configuration](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup#general-ledger-configuration) which includes a dimension that is the [Account Tree](/docs/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-tree) or "Chart of Accounts".
+2. and an organization's [General Ledger configuration](/products/etendo-classic/user-guide/financial-management/accounting/setup#general-ledger-configuration) which includes a dimension that is the [Account Tree](/products/etendo-classic/user-guide/financial-management/accounting/setup/#account-tree) or "Chart of Accounts".
 
 !!! info
     The Fiscal Calendar, once manually created, can be available to all the organizations within the client if it is created for the (\* (asterisk)) organization.

@@ -49,8 +49,8 @@ Based on the Spring cloud stream framework and Kafka as message bus.
 
 ## 2. Architectural Representation
 
-![6274e20b-056b-4448-a7d0-6569f3960567.png](/docs/assets/legacy/technicaldocumentation/platform/6274e20b-056b-4448-a7d0-6569f3960567.png)
-![05538c4b-7666-428e-8c8e-7c42b1e436fa.png](/docs/assets/legacy/technicaldocumentation/platform/05538c4b-7666-428e-8c8e-7c42b1e436fa.png)
+![6274e20b-056b-4448-a7d0-6569f3960567.png](/assets/legacy/technicaldocumentation/platform/6274e20b-056b-4448-a7d0-6569f3960567.png)
+![05538c4b-7666-428e-8c8e-7c42b1e436fa.png](/assets/legacy/technicaldocumentation/platform/05538c4b-7666-428e-8c8e-7c42b1e436fa.png)
 
 This framework will bring the base code to develop in a reactive and scalable way, following well known patterns and good practices.
 
@@ -162,7 +162,7 @@ This library will be added to any EtendoRX project , then, all access points in 
 
 The token will be signed with a value stored as a global configuration.
 
-![ece5ac3f-f64f-4f08-a26e-6bc79ee9c676.png](/docs/assets/legacy/technicaldocumentation/platform/ece5ac3f-f64f-4f08-a26e-6bc79ee9c676.png)
+![ece5ac3f-f64f-4f08-a26e-6bc79ee9c676.png](/assets/legacy/technicaldocumentation/platform/ece5ac3f-f64f-4f08-a26e-6bc79ee9c676.png)
 
 #### **b. Debezium: Improve configuration and funcionality (TBD)**
 

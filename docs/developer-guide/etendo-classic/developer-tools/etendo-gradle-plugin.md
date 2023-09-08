@@ -4,67 +4,44 @@ title: Etendo  Gradle  Plugin
 
 ## Overview
 
-This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. (For additional info read: [What is gradle?](https://docs.gradle.org/current/userguide/what_is_gradle.html))
+This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. (For additional info read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}) .
 
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
 
 
 ## How to use Gradle
 
-Etendo project includes an embedded wrapper from Gradle called `gradlew`. Run the `./gradlew <task>` command in the Etendo project directory, and it will execute the mentioned task.
+Etendo project includes an embedded wrapper from Gradle called `gradlew`. Run the following  command in the Etendo project directory, and it will execute the mentioned task.
+
+```bash title="Terminal"
+ ./gradlew <task>
+```
+ 
 
 You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 
-```plaintext
-
+```bash title="Terminal"
 ./gradlew publishVersion -Ppkg=test.package
 ```
 
 ## Etendo plugin
 
-To work with the plugin you need to specify in the root project from where the plugin will be resolved.
 
-- Create the `settings.gradle` file with the next content.
-
-```groovy
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-        maven {
-            url 'https://repo.futit.cloud/repository/maven-public-releases'
-        }
-        maven {
-            url 'https://repo.futit.cloud/repository/maven-public-snapshots'
-        }
-    }
-}
-
-// Add modules subprojects
-new File("${this.rootDir}/modules").listFiles().each {
-    if (it.directory && new File(it, 'build.gradle').exists()) {
-        include(":modules:${it.name}")
-    }
-}
-
-rootProject.name = "core"
-```
-
-- Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Nexus](https://repo.futit.cloud/#browse/browse:maven-public-releases:com%2Fetendoerp%2Fgradleplugin))
+Add in the `build.gradle` file the plugin version to be used (you could ckeck the latest version available in [Latest Releases](/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/){target="_blank"})
 
 ```groovy
 plugins {
-    id 'com.etendoerp.gradleplugin' version <'version'>
+    id 'com.etendoerp.gradleplugin' version <'lastest.release'>
 }
 ```
 
 ### Plugin flags
 
-The plugin flags needs to be declared in the 'etendo plugin block'.
+The plugin flags need to be declared in the 'etendo plugin block'.
 
-The etendo plugin block can be specified in the build.gradle
+The etendo plugin block can be specified in:
 
-```groovy
+```groovy  title="build.gradle"
 etendo {
 
 }
@@ -72,7 +49,7 @@ etendo {
 
 For example, to ignore the conflicts between the core versions you can use the 'forceResolution' flag.
 
-```groovy
+```groovy  title="build.gradle"
 etendo {
 	forceResolution = true
 }
@@ -204,7 +181,7 @@ etendo {
     - `-Ppkg=<package name>` The name of the module. **REQUIRED**
     - `-Precursive=true` This trigger the republication of all the modules which depends on the module being published. **OPTIONAL** - default false.
     - `-PupdateLeaf=true` This updates automatically the version of the project beign published. **OPTIONAL** - default false.
-- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://docs/en/technical-documentation/modules/uninstall)
+- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://en/technical-documentation/modules/uninstall)
   - Command line parameters
     - `-Ppkg=<modulename>` The javapackage of the source module to uninstall.
 
@@ -214,7 +191,7 @@ etendo {
 
 - `./gradlew cloneDependencies --info` Used to clone all the git submodules of a module extension (bundle). The module **build.gradle** should contain the property
 
-```groovy
+```groovy  title="build.gradle"
 ext.defaultExtensionModules = [
       'git@bitbucket.org:example1.git',
       'git@bitbucket.org:example2.git'
@@ -278,14 +255,15 @@ ext.defaultExtensionModules = [
 
 Most of [ant build tasks](http://wiki.openbravo.com/wiki/Development_Build_Tasks#Detailed_Build_Tasks), previously used in Openbravo, can be run with Gradle (but they do not have support):
 
-```plaintext
+```bash title="Terminal"
 
 ./gradlew <ant task> [params]
 ```
 
 Except some commands:
-|Old Command| New Command|
-|---|---|
+
+|Old Command| New Command| 
+|---|---| 
 |clean| antClean|
 |setup|antSetup|
 |init |antInit|
@@ -295,15 +273,13 @@ Except some commands:
 ## Consistency Verification
 
 ### Resolution of conflicts
-Etendo make uses of the [conflict resolution strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html) offered by GRADLE.
+Etendo make uses of the [conflict resolution strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
 
 This approach is used to identify conflict between Etendo artifacts published to Nexus.
 
+For example, when you make use of an Etendo module, which depends on the Etendo core.
 
-
-For example, when you make use of a Etendo module, which depends on the Etendo core.
-
-```groovy
+```groovy title="build.gradle"
 group          = 'com.etendo'
 ext.artifact   = "moduleCextract"
 version        = '1.0.1'
@@ -334,7 +310,7 @@ etendo {
 
 
 ### Version consistency
-The version consistency approach verifies that a extracted Etendo JAR artifact is consistent with the installed one (**Equal** version).
+The version consistency approach verifies that an extracted Etendo JAR artifact is consistent with the installed one (**Equal** version).
 
 When a new Etendo JAR dependency is added or the version is updated, a `update.database` is need it to run before executing any compilation task (smartbuild, compile.complete, etc).
 You can force the compilation tasks adding to the Etendo plugin extension the ignore flag
@@ -355,105 +331,123 @@ etendo {
 
 ## Search Jars Tool
 
-This tool is used to filter all the **JAR** files in a specified directory.
+This tool is used to filter all the JAR files in a specified directory.
 
-A lookup is performed in the **Maven Central Repository** or a specified **Nexus** repository to verify if the **JAR** file already exists. The search is based on **sha1** checksums.
+A lookup is performed in the Maven Central Repository or a specified Nexus repository to verify if the JAR file already exists. The search is based on sha1 checksums.
 
-Depending if the **JAR** file is found or not, two **build files** are generated.
+Depending if the JAR file is found or not, two build files are generated.
 
-For the **resolved JAR** files, the build file contains the block of code that you can use to import the JARs from the cloud.
+For the resolved JAR files, the build file contains the block of code that you can use to import the JARs from the cloud.
 
-For the **unresolved JAR** files, the build file contains all the necessary configuration and tasks to publish the JARs to a custom repository.
+For the unresolved JAR files, the build file contains all the necessary configuration and tasks to publish the JARs to a custom repository.
 
 To execute the tool, run:
 
-`./gradlew searchJarDependency -Prepo=customrepo  -Plocation=customlocation -Pdestination=customdestination`
+``` bash title="Terminal"
+./gradlew searchJarDependency -Prepo=customrepo  -Plocation=customlocation -Pdestination=customdestination
+```
 
-Where 
-* **-Prepo:** Specifies the **Nexus** repository used to resolve **JAR** files or where uploading the unresolved ones.
+Where
 
-* **-Plocation:** Specifies the location used to search **JAR** files locally in the project. The **default** location is the root project.
+* -Prepo: Specifies the Nexus repository used to resolve JAR files or where uploading the unresolved ones.
 
-* **-Pdestination:** Specifies the location where the **build files** will be created. The **default** location is the root project.
+* -Plocation: Specifies the location used to search JAR files locally in the project. The default location is the root project.
+
+* -Pdestination: Specifies the location where the build files will be created. The default location is the root project.
 
 ---
 
 #### JAR Scopes
 
-This tool supports two scopes, **Test** and **Compilation**.
+This tool supports two scopes, Test and Compilation.
 
-For each scope, **two build** files will be created.
+For each scope, two build files will be created.
 
-* The **Test** scope filters all the **JAR** files located under a **'test'** named directory (using the  ****/test/\*\*** pattern).
+* The Test scope filters all the JAR files located under a 'test' named directory (using the  **/test/\*\* pattern).
 
 !!! info
-   The files created will be **resolved.TEST.artifacts.gradle** and **unresolved.TEST.artifacts.gradle**
+    The files created will be resolved.TEST.artifacts.gradle and unresolved.TEST.artifacts.gradle
 
-* The **Compilation** scope filter all the **JAR** files excluding those in a **'test'** named directory.
+* The Compilation scope filter all the JAR files excluding those in a 'test' named directory.
+
 !!! info
-    The files created will be **resolved.COMPILATION.artifacts.gradle** and **unresolved.COMPILATION.artifacts.gradle**
+    The files created will be resolved.COMPILATION.artifacts.gradle and unresolved.COMPILATION.artifacts.gradle
 
 
-Once the build files are created, you can use the [apply from](https://docs.gradle.org/current/userguide/plugins.html#sec:script_plugins) Gradle clause to import the build file, or copy the content in your custom Gradle project (**build.gradle**).
+Once the build files are created, you can use the [apply from](https://docs.gradle.org/current/userguide/plugins.html#sec:script_plugins){target="_blank"} Gradle clause to import the build file, or copy the content in your custom Gradle project (build.gradle).
 
-The **unresolved** build file generated contains a custom task to publish the JAR files depending on the scope:
+The unresolved build file generated contains a custom task to publish the JAR files depending on the scope:
 
-* **Test:** To publish, you need to run `./gradlew publishUnresolvedTestJars`
+* Test: To publish, you need to run 
 
-* **Compilation:** To publish, you need to run `./gradlew publishUnresolvedCompilationJars`
+``` bash title="Terminal"
+./gradlew publishUnresolvedTestJars
+```
+
+* Compilation: To publish, you need to run 
+
+``` bash title="Terminal"
+./gradlew publishUnresolvedCompilationJars
+```
 
 !!! warning
-   The JARs will be published in the repository declared in the `searchJarDependency` task. 
+    The JARs will be published in the repository declared in the `searchJarDependency` task. 
 
 ## Uninstall modules
 
 
 ### Source modules
-To uninstall a Etendo module you need to run the gradle task.
+To uninstall an Etendo module you need to run the gradle task.
 
-`./gradlew uninstallModule -Ppkg=<modulename>`
+``` bash title="Terminal"
+./gradlew uninstallModule -Ppkg=<modulename>
+```
 
 This task will try to delete the source module and the source dependencies which depends on.
 
-If the module to uninstall is a dependency of other source module, a exception will be throw. You can force the uninstall providing the flag '**-Pforce=true**'.
+If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag '-Pforce=true'.
 
 #### Jar modules
 
 You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
 In the build.gradle of the root project you can specify the dependency to exclude.
-``` groovy
+
+``` groovy title="build.gradle"
 configurations.implementation {
 	exclude group: 'com.test', module: 'custommodule1'
   exclude group: 'com.test', module: 'custommodule2'
 }
 ```
 
-If the dependency belongs to a build.gradle of a source module, it maybe downloaded when the 'javaCompile' task is executed. You can also can make use of **gradle** exclude rules.
+If the dependency belongs to a build.gradle of a source module, it may be downloaded when the 'javaCompile' task is executed. You can also make use of gradle exclude rules.
 
 !!! warning
-    When you make use of excluded rules in a custom source module, the pom.xml can be affected when you publish a new version.
+    When you make use of exclude rules in a custom source module, the pom.xml can be affected when you publish a new version.
 
-To prevent downloading dinamic JAR modules, you need to remove the dependency from each **build.gradle**.
+To prevent downloading dinamic JAR modules, you need to remove the dependency from each build.gradle.
 
 The JAR module also could also be a transitive dependency.
 You can see the transitive dependencies tree running the gradle task
 `./gradlew dependencies --info`
 and remove the root parent dependency.
 
-When you declare a dependency you can also exclude custom modules. See [Gradle dependency exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps)
+When you declare a dependency you can also exclude custom modules. See [Gradle dependency exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}.
 
 !!! info
-    Etendo JAR modules are dinamically extracted in the root project '**build/etendo/modules**' directory.
+    Etendo JAR modules are dinamically extracted in the root project 'build/etendo/modules' directory.
 
 !!! warning
-    Each **build.gradle** file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.
+    Each build.gradle file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.
 
-Finally you need to rebuild the system .
-`./gradlew update.database compile.complete`
+Finally you need to rebuild the system:
+
+``` bash title="Terminal"
+./gradlew update.database compile.complete
+```
 
 ## Recompile CSS files
 
-The `cssCompile` task in the **Etendo** Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you'll need to work with .scss files. When making changes to the .scss files, in order to modify the ERP skin, it is necessary to run the `cssCompile` task and restart Tomcat to generate the new .css files.
+The `cssCompile` task in the Etendo Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you'll need to work with .scss files. When making changes to the .scss files, in order to modify the ERP skin, it is necessary to run the `cssCompile` task and restart Tomcat to generate the new .css files.
 
 ### Set-Up
 
@@ -570,15 +564,15 @@ The `cssCompile` task in the **Etendo** Gradle configuration is specifically des
 
 ### Execution
 
-1. Ensure your terminal or **command-line** tool is open.
-2. Navigate to the root directory of the **Etendo project**.
-3. Run the following **command**:
+1. Ensure your terminal or command-line tool is open.
+2. Navigate to the root directory of the Etendo project
+3. Run the following command
 
 ```bash
 ./gradlew cssCompile smartbuild --info
 ```
 
-After executing the task, look for the following output to indicate a **successful build**:
+After executing the task, look for the following output to indicate a successful build:
 !!! success "Successful Execution"
     After executing the task, the following output indicates a successful build:
 
@@ -589,4 +583,4 @@ After executing the task, look for the following output to indicate a **successf
 
     This confirms the successful processing of the files.
 
-Finally, **Restart Tomcat** to apply the changes and ensure the updated .css files are properly served.
+Finally, Restart Tomcat to apply the changes and ensure the updated .css files are properly served.

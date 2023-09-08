@@ -5,23 +5,23 @@ title: Warehouse Management Setup
 
 This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:
 
-[:material-file-document-outline:Process Price Difference Adjustment](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#process-price-difference-adjustment){ .md-button } <br>
+[:material-file-document-outline:Process Price Difference Adjustment](/products/etendo-classic/user-guide/warehouse-management/setup/#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse and Storage Bins](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button } <br>
+[:material-file-document-outline: Warehouse and Storage Bins](/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipping Company](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#shipping-company){ .md-button } <br>
+[:material-file-document-outline: Shipping Company](/products/etendo-classic/user-guide/warehouse-management/setup/#shipping-company){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Freight Category](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#freight-category){ .md-button } <br>
+[:material-file-document-outline: Freight Category](/products/etendo-classic/user-guide/warehouse-management/setup/#freight-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-rules){ .md-button } <br>
+[:material-file-document-outline: Costing Rules](/products/etendo-classic/user-guide/warehouse-management/setup/#costing-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Algorithm](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#costing-algorithm){ .md-button } <br>
+[:material-file-document-outline: Costing Algorithm](/products/etendo-classic/user-guide/warehouse-management/setup/#costing-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Landed Cost Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#landed-cost-type){ .md-button } <br>
+[:material-file-document-outline: Landed Cost Type](/products/etendo-classic/user-guide/warehouse-management/setup/#landed-cost-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse Rules](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-rules){ .md-button } <br>
+[:material-file-document-outline: Warehouse Rules](/products/etendo-classic/user-guide/warehouse-management/setup/#warehouse-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Referenced Inventory Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button } <br>
+[:material-file-document-outline:Referenced Inventory Type](/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
 
 ## Process Price Difference Adjustment
@@ -44,7 +44,7 @@ The user can create warehouses for their organizations.
 
 It is important to have a previous overview before creating warehouses. **Warehouse** tab contains essential details of the warehouse, meaningful ones are **Name** and **Location / Address.**
 
-![Warehouse](/docs/assets/drive/1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE.png)
+![Warehouse](/assets/drive/1vxTgfKhjgIIhpZbIFp7FC8y1X9mJOcrE.png)
 
 Fields to note:
 
@@ -58,7 +58,7 @@ The user can create storage bins for a selected warehouse.
 
 It defines **Storage Bin** position in the warehouse: **Row (X)**, **Stack (Y)** and **Level (Z)** fields and other parameters.
 
-![Storage Bin](/docs/assets/drive/1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT.png)
+![Storage Bin](/assets/drive/1AN5LR3kYTm3OhGshk_DUgJD75I1S5AxT.png)
 
 Other fields to note:
 
@@ -66,7 +66,7 @@ Other fields to note:
 -   **Default:** when selected, this storage bin appears by default in documents.
 -   **Barcode:** There is no logic behind this field. It has been created in order to be used/implemented by other modules such as **Etendo Mobile Application.**
 -   **Inventory Status:** It is the current Inventory Status of the selected Storage Bin. It can be changed by clicking on *Change Status* button. 
-For more information, visit [Inventory Status](/docs/developer-guide/etendo-classic/concepts/inventory-status).
+For more information, visit [Inventory Status](/developer-guide/etendo-classic/concepts/inventory-status).
 
 ### Product Transactions
 
@@ -80,7 +80,7 @@ The user can view the stored products of a selected storage bin.
 
 **Bin Contents** read-only tab lists products stored in a particular storage bin.
 
-![Bin Contents](/docs/assets/drive/1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x.png)
+![Bin Contents](/assets/drive/1g3JvIz3nAMp_BxJLc13QyIFIRRRLfG_x.png)
 
 Fields to note:
 
@@ -149,7 +149,7 @@ In order to create and validate a "Costing Rule", the user has to take into acco
 
 The costing rule window allows the user to define and validate costing rules.
 
-![Costing Rule](/docs/assets/drive/1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5.png)
+![Costing Rule](/assets/drive/1MxTiOhHzaaxhZQlKOMkF9jA6DKEbD-b5.png)
 
 As shown in the image above, a "Costing Rule" can be defined and assigned to an organization for which the cost of the transactions need to be calculated.
 
@@ -210,7 +210,7 @@ To make this work, one of the following two actions can be taken:
     This way fix backdated transactions feature gets activated by using the process button "Fix Backdated Transactions".  
     This option allows entering a "Fix Backdated From" date as starting date, before running the process.
 
-![Fix Backdated Transactions](/docs/assets/drive/1dSn2VWGuwWybweNlYEgdtUImlXA8UihG.png)
+![Fix Backdated Transactions](/assets/drive/1dSn2VWGuwWybweNlYEgdtUImlXA8UihG.png)
  
 
 2\. create and validate a new Costing Rule.  
@@ -288,7 +288,7 @@ A landed cost type can either be created as an "**Account**" or as a "**Product*
 -   "**Product**" landed cost types requires a Product to be created, for instance "Freight", therefore this type of landed costs can be booked through a purchase invoice.
     -   "Expense" type ledger account used while posting purchase invoice including a landed cost of this type are the ones setup in the Accounting tab of the Product.
 
-![Landed Cost Type](/docs/assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png)
+![Landed Cost Type](/assets/drive/1RtueiqPAlE2jmnhvOF5o4nkkwutJL1e6.png)
 
 ## Warehouse Rules
 

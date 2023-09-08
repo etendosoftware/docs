@@ -1,10 +1,10 @@
 ---
-title: Setup Etendo Rx Autentication keys
+title: Setup Etendo Rx Authentication keys
 ---
 ## Overview
-This page explain how to update the public and private key needed for Etendo RX to autenticate conections.
+This page explain how to update the public and private key needed for Etendo RX to authenticate conections.
 
-## Setup Etendo Rx autentication keys
+## Setup Etendo Rx authentication keys
 1. Open a terminal in  `etendo_rx_compose` directory.
 2. Generate the public and private keys that will be used in the Auth and Edge services:
 
