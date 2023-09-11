@@ -188,6 +188,9 @@ nav:
           - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
           - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
+      - Etendo Mobile:
+        - Bundles:
+          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
