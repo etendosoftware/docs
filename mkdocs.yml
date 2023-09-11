@@ -110,7 +110,7 @@ nav:
           - Enterprise Model: products/etendo-classic/user-guide/general-setup/enterprise-model.md
           - Security: products/etendo-classic/user-guide/general-setup/security.md
           - Process Scheduling: products/etendo-classic/user-guide/general-setup/process-scheduling.md
-        - Jobs: products/etendo-classic/user-guide/jobs/index.md
+        # - Jobs: products/etendo-classic/user-guide/jobs/index.md
         - Master Data Management: 
           - Master Data: products/etendo-classic/user-guide/master-data-management/master-data.md
           - Business Partner Setup: products/etendo-classic/user-guide/master-data-management/business-partner-setup.md
@@ -134,7 +134,7 @@ nav:
           - Transactions: products/etendo-classic/user-guide/sales-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/sales-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
-        - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
+        # - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
         - Financial Management: 
           - Receivables and Payables:
             - Transactions: products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions.md
