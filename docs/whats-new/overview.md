@@ -2,7 +2,7 @@
 hide: 
     - toc
 ---
-![cover-whats-new.png](/docs/assets/whats-new/overview/cover-whats-new.png)
+![cover-whats-new.png](/assets/whats-new/overview/cover-whats-new.png)
 # 
 ## Welcome to our Release Notes Documentation
 

@@ -9,7 +9,7 @@ Welcome to **Etendo Copilot** – an innovative project designed to streamline y
 
 At its core, **Etendo Copilot** is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the "Agent," which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as "Tools." The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
-### Agent: Your Trusted Assistant
+### Agent: Your Assistant
 
 The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
@@ -30,7 +30,7 @@ Each Tool represents a separate, independent project, designed to excel at speci
 
 ## Join the Future of Development
 
-Etendo Copilot isn't just another tool; it's a revolution in how you approach development challenges. Say goodbye to tedious searches and hello to a streamlined, dynamic development experience. Join us on this exciting journey as we redefine the way you interact with your tools.
+**Etendo Copilot** isn't just another tool; it's a revolution in how you approach development challenges. Say goodbye to tedious searches and hello to a streamlined, dynamic development experience. Join us on this exciting journey as we redefine the way you interact with your tools.
 
 Explore more at etendo copilot and elevate your development prowess today! 
 

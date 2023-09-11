@@ -6,16 +6,16 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 Este bundle incluye los siguientes módulos:
 
-- [SII para IVA](/docs/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
-- [Tax Report: Modelo 303 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
-- [Withholding Report: Modelo 190 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
-- [Spain AEAT Modelo 347 for APR](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
-- [Modelo 349](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
-- [Impuestos para España](/docs/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
-- [Intrastat](/docs/products/etendo-classic/optional-features/bundles/spain-localization/intrastat)
-- [Tax Report: Modelo 390 (Spain)](/docs/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
-- [Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
-- [Configuración de Impuestos para Libro de Facturas](/docs/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
+- [SII para IVA](/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
+- [Tax Report: Modelo 303 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
+- [Withholding Report: Modelo 190 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
+- [Spain AEAT Modelo 347 for APR](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
+- [Modelo 349](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
+- [Impuestos para España](/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
+- [Intrastat](/products/etendo-classic/optional-features/bundles/spain-localization/intrastat)
+- [Tax Report: Modelo 390 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
+- [Libro de Facturas](/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
+- [Configuración de Impuestos para Libro de Facturas](/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -40,25 +40,35 @@ Este bundle incluye los siguientes módulos:
 
 ## Incoterms
 
+`javapackage: org.openbravo.module.incoterms`
+
 Este módulo añade el listado de Incoterms al ERP.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
 ## European Union Countries
 
+`javapackage: org.openbravo.module.eucountries`
+
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
 ## Provincias de España
 
+`javapackage: org.openbravo.spain.regions`
+
 Este módulo añade el listado de provincias españolas al ERP.
 
 ## Legal Representative of the Organization
+
+`javapackage: org.openbravo.module.organization.representative.es`
 
 Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
 
 La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
 
 ## I.A.E. Epigraphs (Epígrafes del I.A.E.)
+
+`javapackage: org.openbravo.module.epigrafes.iae.es`
 
 Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
 
@@ -68,11 +78,15 @@ En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea
 
 ## CIF and NIF validator
 
+`javapackage: org.openbravo.module.cifnifvalidator`
+
 Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
 ## Validador de número de cuenta financiera
+
+`javapackage: org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
@@ -99,13 +113,19 @@ Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón �
 
 ## Tipo de Número de Identificación de Tercero
 
+`javapackage: org.openbravo.module.bptaxidkey`
+
 Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
 ## Professional Localization pack Spain (España) Datasets
 
+`javapackage: org.openbravo.proflocalization.spain.dataset`
+
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
 ## Multidimensional Tax Report
+
+`javapackage: org.openbravo.module.invoicetaxreportenhanced30`
 
 Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
 
@@ -115,19 +135,27 @@ La información obtenida mediante este módulo es útil para que las empresas pu
 
 ## Cuaderno 43
 
+`javapackage: org.openbravo.module.cuaderno43.es`
+
 Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
 ## 3 digits ISO country codes
 
+`javapackage: org.openbravo.module.countryisocode`
+
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
 ## Métodos de Pago
+
+`javapackage: org.openbravo.spanishdefaultdata.paymentmethods`
 
 Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
 
 El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
 
 ## Tax Report Launcher
+
+`javapackage: org.openbravo.module.taxreportlauncher`
 
 Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
 
@@ -177,6 +205,8 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 
 ## Spanish Tax Module Improvements
 
+`javapackage: org.openbravo.module.taximprovements.es`
+
 Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
 
 - Tipo de Libro (“Tax Book Type”): El usuario puede configurar si un rango de impuesto debe ser reportado en la compra (recibido) o en la venta (enviado) del Libro de Facturas.
@@ -190,9 +220,13 @@ Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplic
 
 ## Condiciones de pago
 
+`javapackage: org.openbravo.spanishdefaultdata.paymentterms`
+
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
 ## Chart of accounts: PGC 2007 General
+
+`javapackage: org.openbravo.localization.spain.referencedata.accounts`
 
 Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
 
@@ -219,6 +253,8 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 - Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
 
 ## Chart of accounts: PGC 2007 PYMEs
+
+`javapackage: org.openbravo.localization.spain.referencedata.accounts.pymes`
 
 Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
 

@@ -11,7 +11,7 @@ The Platform Extensions bundle includes the following modules:
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-        For more information, visit the [Print Document Web Service developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+        For more information, visit the [Print Document Web Service developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
 
 
 
@@ -20,7 +20,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-        For more information, visit [Number To Word Converter user guide](/docs/products/etendo-classic/user-guide/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
+        For more information, visit [Number To Word Converter user guide](/products/etendo-classic/user-guide/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
 
 
 ### Javax XML SOAP API
@@ -28,7 +28,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-        For more information, visit the [Javax XML SOAP API developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
+        For more information, visit the [Javax XML SOAP API developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
 
 
 ### Report Cache Management
@@ -36,21 +36,21 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-        For more information, visit [Clear Report Cache user guide](/docs/products/etendo-classic/user-guide/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
+        For more information, visit [Clear Report Cache user guide](/products/etendo-classic/user-guide/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
 
 ### Etendo Advanced Security
 
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-        For more information, visit the [Etendo Advanced Security user guide](/docs/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/docs/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+        For more information, visit the [Etendo Advanced Security user guide](/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
 ### Dynamic App 
 
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-        For more information, visit the [Dynamic App user guide](/docs/products/etendo-classic/user-guide/general-setup/application/#dynamic-app)
+        For more information, visit the [Dynamic App user guide](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app)
         
 ### EAN 128
 

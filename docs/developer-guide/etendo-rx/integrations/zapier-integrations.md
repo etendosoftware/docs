@@ -7,7 +7,7 @@ title: Zapier Integration
 This page explains the Zapier integration architecture developed in EtendoRx platform and how to set up and run the service.
 
 !!! info
-    You could try the Etendo Zapier Integration using a demo environment following the functional documentation [Setup an Etendo Zap](/docs/legacy/end-user-documentation/integrations/zapier).
+    You could try the Etendo Zapier Integration using a demo environment following the functional documentation [Setup an Etendo Zap](/legacy/end-user-documentation/integrations/zapier).
 
 ## Zapier Integration
 
@@ -20,7 +20,7 @@ Infraestructura
 ### Etendo Rx
 
 Etendo Rx is the development platform, where the Zapier Integration service is developed. This platform provides some services which simplify the comunication, security and access layers.  
-For more information read [EtendoRX](/docs/legacy/technical-documentation/etendo-environment/platform/EtendoRx)
+For more information read [EtendoRX](/legacy/technical-documentation/etendo-environment/platform/EtendoRx)
 
 This connector uses the following services:
 
@@ -50,7 +50,7 @@ git clone https://github.com/etendosoftware/etendorx_default_config main/rxconfi
 ```
 
 !!! failure
-    The public and private keys needed to autenticate the connections are distributed by default in the `etendorx_default_config` reporitory, this credentials are only to **demo porpouse**, in other case you have to generate a new one keys following the guide [Setup Etendo Rx autentication keys](/docs/legacy/end-user-documentation/integrations/zapier/setup-etendorx-autentication-keys)
+    The public and private keys needed to autenticate the connections are distributed by default in the `etendorx_default_config` reporitory, this credentials are only to **demo porpouse**, in other case you have to generate a new one keys following the guide [Setup Etendo Rx autentication keys](/legacy/end-user-documentation/integrations/zapier/setup-etendorx-autentication-keys)
 
 3.  To run the dockerization execute:
 
@@ -80,7 +80,7 @@ watch 'docker ps --format "table {{.Names}}\t {{.Status}}" --filter name=rx-das-
 ### Etendo Classic
 
 1. An Etendo instance with the Zapier Integration `com.etendoerp.integration.zapier` module in its latest version is necessary.
-   Follow the guide [Install Etendo in JAR format](/docs/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation#install-etendo-in-jar-format) and include the following in the step where the build.gradle is changed:
+   Follow the guide [Install Etendo in JAR format](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation#install-etendo-in-jar-format) and include the following in the step where the build.gradle is changed:
 
 ```plaintext
 plugins {
@@ -114,4 +114,4 @@ bbdd.systemPassword=syspass
 
 ## Setup a new Zap
 
-Set up a Zap connecting Etendo with other Zapier application like Google Contacts following the guide [Setup an Etendo Zap](/docs/legacy/end-user-documentation/integrations/zapier)
+Set up a Zap connecting Etendo with other Zapier application like Google Contacts following the guide [Setup an Etendo Zap](/legacy/end-user-documentation/integrations/zapier)

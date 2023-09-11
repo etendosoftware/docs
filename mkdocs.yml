@@ -2,7 +2,7 @@ site_name: Etendo Documentation
 
 repo_url: https://github.com/etendosoftware
 repo_name: etendosoftware
-site_url: https://etendosoftware.github.io/docs/
+site_url: https://docs.etendo.software
 theme:
   name: material
   logo: assets/logo.png
@@ -80,6 +80,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/etendo-software/
       name: Linkedin
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/etendo.software/
+      name: Instagram
 
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
 
@@ -107,7 +110,7 @@ nav:
           - Enterprise Model: products/etendo-classic/user-guide/general-setup/enterprise-model.md
           - Security: products/etendo-classic/user-guide/general-setup/security.md
           - Process Scheduling: products/etendo-classic/user-guide/general-setup/process-scheduling.md
-        - Jobs: products/etendo-classic/user-guide/jobs/index.md
+        # - Jobs: products/etendo-classic/user-guide/jobs/index.md
         - Master Data Management: 
           - Master Data: products/etendo-classic/user-guide/master-data-management/master-data.md
           - Business Partner Setup: products/etendo-classic/user-guide/master-data-management/business-partner-setup.md
@@ -131,7 +134,7 @@ nav:
           - Transactions: products/etendo-classic/user-guide/sales-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/sales-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
-        - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
+        # - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
         - Financial Management: 
           - Receivables and Payables:
             - Transactions: products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions.md
@@ -146,38 +149,24 @@ nav:
         - Bundles:
           - Essentials Extensions Bundle: 
             - Overview: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-            - Advanced Business Partner: products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
           - Platform Extensions Bundle: 
             - Overview: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
-            - Etendo Advanced Security: products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
           - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: 
             - Overview: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
-            - Bulk Posting: products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
-            - Intercompany: products/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
           - Spanish Localization Bundle: 
             - Overview: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
-            - SII para IVA: products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
-            - Tax Report Modelo 303 (Spain): products/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md
-            - Withholding Report Modelo 190 (Spain): products/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md
-            - Spain AEAT Modelo 347 for APR: products/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
-            - Modelo 349: products/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
-            - Impuestos para España: products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
-            - Intrastat: products/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
-            - Tax Report Modelo 390 (Spain): products/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
-            - Libro de Facturas: products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md
-            - Configuracion de Impuestos para Libro de Facturas: products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md 
           - Etendo BI Bundle: 
             - Overview: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
-            - Etendo BI Inclusion / Exclusion Module: products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
-            - Etendo BI Connector Module: products/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
     - Etendo Mobile: 
       - Getting Started: products/etendo-mobile/getting-started.md
       - User interface: products/etendo-mobile/user-interface/user-interface.md
+      - Bundles:
+        - Etendo Classic Subapp Extensions: products/etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions.md
     - Etendo Copilot: 
       - Getting Started:
         - Bastian: products/etendo-copilot/getting-started/bastian.md
@@ -199,6 +188,9 @@ nav:
           - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
           - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
+      - Etendo Mobile:
+        - Bundles:
+          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -235,14 +227,20 @@ nav:
         - Platform Extensions Bundle: developer-guide/etendo-classic/bundles/platform-extensions-bundle.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
-        - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - Tutorials:    
+        - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-      - Tutorial:   
-        - First Steps: developer-guide/etendo-rx/tutorials/first-steps.md
+      #   - How to Format dates in a request:  developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
+      # - Developer Tools:
+      #   - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
+      # - Integrations:
+      #   - Etendo RX Authentication Keys: developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys.md
+      #   - Zapier Integrations: developer-guide/etendo-rx/integrations/zapier-integrations.md
+      #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Getting Started: developer-guide/etendo-copilot/getting-started.md 

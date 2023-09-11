@@ -2,9 +2,7 @@
 title: Client
 ---
 
-Client folder collects client basic configuration as well as the role of the client to assign to those users not linked to a Google account.
-
-### **Introduction**
+## Introduction
 
 A client is an independent entity composed of at least an organization. A client can include and manage master data such as users, customers and vendors. That master data is then shared among all the organizations which belong to that client.
 
@@ -20,11 +18,11 @@ Clients are created by running the Initial Client setup process available for th
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 
-### **Client**
+## Client
 
 The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.
 
-![](/docs/assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
+![](/assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png)
 
 !!! info
     The field "Days To Password expiration" allows the user to set a day limit during which a password may be valid for users. The limit will be reset every time a user changes his password.
@@ -79,11 +77,11 @@ It is always possible to customize the defaulted configuration, for instance:
     - check the checkbox "Show in Lines" for the Organization dimension
     - and delete or modify the records linked to the "Organization" accounting dimension in the Dimension tab as all those records are defaulted not to show Organization in any document category lines.
 
-### **Information**
+## Information
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
-![](/docs/assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
+![](/assets/drive/xj_ATfvJhEVYxSBgsLALNk4ZzrjF9oF5bONVGhnh_MFd676cYAJ-y_SPwBYm8QRYOZeFR7Vl1JakOWLL7-6FmeWEASYdUDRk_e672LxTfNp7z-hc9dred0Imhz4zKW8kuv-FA_1Q.png)
 
 Additional information allowed to be specified:
 
@@ -104,11 +102,11 @@ Additional information allowed to be specified:
       - and _Company Documents_
 - _Allow Negative stock_ to do this, Etendo does not check stock if that is not required.
 
-### **Email Configuration**
+## Email Configuration
 
 Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
 
-![](/docs/assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
+![](/assets/drive/39VWRTt1ZP4Xnxtq9P8nnTWYiFGuxRrPtT_D6sOzAaefl61XCFVGf8My_6SP0a1sODWMVaXB2Lrz3am4UOlKoblc1V8ubFZlQwD679lQjDUYzK-ET3pdoLDP2pekKPTNzZw55-Ma.png)
 
 "Email Configuration" tab gathers the email configuration required for sending out documents such as orders or invoices.
 
@@ -138,7 +136,7 @@ In the provided screenshot, you can see a valid configuration for a gmail accoun
 - **SMTP Port**, 465
 - **SMTP Connection Timeout**, 600 (10 minutes)
 
-### **Dimensions**
+## Dimensions
 
 Dimensions tab allows the user to configure whether a given accounting dimension is going to be available in the header and/or in the lines of a given document category or not.
 
@@ -146,6 +144,6 @@ This tab can be used to configure accounting dimensions availability at document
 
 For example, if a client needs to display project dimension in the header and lines in all documents less in amortization document, the client window should have the following configuration:
 
-![](/docs/assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
+![](/assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.

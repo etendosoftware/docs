@@ -1,6 +1,9 @@
 ---
 title: Impuestos para España
+hide:
+    - navigation
 ---
+
 ## **Introducción**
 
 El módulo de impuestos para España es un conjunto de datos que contiene:

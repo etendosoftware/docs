@@ -13,7 +13,7 @@ The Warehouse Extensions bundle includes the following modules:
 It provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](/docs/products/etendo-classic/user-guide/warehouse-management/analysis-tools#stock-history) and [the Stock History developer guide](/docs/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle#stock-history).
+    For more information, visit [the Stock History user guide](/products/etendo-classic/user-guide/warehouse-management/analysis-tools#stock-history) and [the Stock History developer guide](/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle#stock-history).
 
 ### Reactivate Warehouse Documents
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -23,10 +23,10 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 !!! info
         For more information, visit the user guide for:
 
-        - [Goods Movements](/docs/products/etendo-classic/user-guide/warehouse-management/transactions#how-to-reactivate-goods-movements)
-        - [Goods Receipts](/docs/products/etendo-classic/user-guide/procurement-management/transactions#how-to-reactivate-goods-receipts)
-        - [Goods Shipments](/docs/products/etendo-classic/user-guide/sales-management/transactions#how-to-reactivate-goods-shipments)
-        - [Physical Inventory](/docs/products/etendo-classic/user-guide/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+        - [Goods Movements](/products/etendo-classic/user-guide/warehouse-management/transactions#how-to-reactivate-goods-movements)
+        - [Goods Receipts](/products/etendo-classic/user-guide/procurement-management/transactions#how-to-reactivate-goods-receipts)
+        - [Goods Shipments](/products/etendo-classic/user-guide/sales-management/transactions#how-to-reactivate-goods-shipments)
+        - [Physical Inventory](/products/etendo-classic/user-guide/warehouse-management/transactions#how-to-reactivate-physical-inventories)
 
 ### Uninstall bundle
 

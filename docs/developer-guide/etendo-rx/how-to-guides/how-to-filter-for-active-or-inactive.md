@@ -1,6 +1,6 @@
 ## You can filter any request by active or all rows
 
-The **\_noActiveFilter** parameter can be used in any request method to filter active records or all records (active and inactive). This way it allows more control when obtaining the results.
+The \_noActiveFilter parameter can be used in any request method to filter active records or all records (active and inactive). This way it allows more control when obtaining the results.
 
 ---
 
@@ -32,4 +32,4 @@ Open Postman and we'll make a get request.
 
 ---
 
-Another way to get active rows is to remove the parameter **\_noActiveFilter** parameter, because by default the active row always applies the active row filter.
+Another way to get active rows is to remove the parameter \_noActiveFilter parameter, because by default the active row always applies the active row filter.

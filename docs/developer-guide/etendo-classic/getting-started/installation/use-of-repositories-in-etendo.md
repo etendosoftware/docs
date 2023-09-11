@@ -25,19 +25,21 @@ To generate a Personal Access Token, follow these steps:
 3. Select "Developer settings" from the left menu and click on "Personal access tokens."
 4. In the developer settings page, click on "Personal access tokens".
 
-![personal-access-tokens.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
+    ![personal-access-tokens.png](/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/personal-access-tokens.png) 
 
-5. Click the "Generate new token" button. 6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
+5. Click the "Generate new token" button. 
 
-!!! warning
-    It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
+6. Give your token a name and select the permissions you want to grant it. In this case, select **read:packages** check.
 
-![new-personal-access-token.png](/docs/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
+    !!! warning
+        It is strongly recommended to set an expiration date, but it is also posible to set an undefined expiration.
 
-7. Click "Generate token" and take note of the token value.
+    ![new-personal-access-token.png](/assets/developer-guide/etendo-classic/getting-started/instalation/use-of-repositories-in-etendo/new-personal-access-token.png) 
 
-!!! warning
-        You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
+6. Click "Generate token" and take note of the token value.
+
+    !!! warning
+            You will not be able to see this value again, so be sure to copy it and keep it in a secure location.
 
 ### Setting Up the Personal Access Token in Etendo Projects
 
@@ -45,15 +47,13 @@ Once you have generated a Personal Access Token, you will need to set it up in y
 
 1. Open the `gradle.properties` file in your project.
 2. Add the following lines to the file, replacing `YOUR_GITHUB_USERNAME` and `YOUR_PERSONAL_ACCESS_TOKEN` with your actual GitHub username and Personal Access Token:
-
-   ```
-   githubUser=YOUR_GITHUB_USERNAME
-   githubToken=YOUR_PERSONAL_ACCESS_TOKEN
-
-   context.name=etendo
-   bbdd.sid=etendo
-   bbdd.port=5432
-   ```
+        ``` bash title="gradle.properties"
+        githubUser=YOUR_GITHUB_USERNAME
+        githubToken=YOUR_PERSONAL_ACCESS_TOKEN
+        context.name=etendo
+        bbdd.sid=etendo
+        bbdd.port=5432
+        ```
 
 3. Save the `gradle.properties` file.
 

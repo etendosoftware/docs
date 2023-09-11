@@ -27,9 +27,10 @@ The supported documents are:
 -   Proforma Order
 -   Proforma Quotation
 
-To call the Web Service, the following URL is needed:  
-[http://client-url/etendo/sws/com.etendoerp.printdocumentws.printDocument](http://client-url/etendo/sws/com.etendoerp.printdocumentws.printDocument)
-
+To call the Web Service, the following URL is needed:
+```
+http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
+```
 It is necessary to configure Token authentication to use the web service.
 
 Values that can be used to call the Web Service are:
@@ -54,7 +55,7 @@ The NumberToWord module deploys an infrastructure to define Number to Word conve
 
 To introduce a different language (other than English and Spanish), follow this example to extend this Number to Word extend: 
 
-```plaintext
+```java
 public class NumberToWord_es extends NumberToWord {
   private static String[] _grupos = { "", "millon", "billon", "trillon" };
 
@@ -166,17 +167,14 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ### Technical Aspects
 
-This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in tomcat.
+This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server. It allows clearing the cache for compiled reports in Tomcat.
 
 The reports have to be uploaded in the correct folder, for example: `/var/lib/tomcat/webapps/etendo/…`
 
 Then, in the "Clear report cache" window, click ’Done’:
 
-![Clear Report Cache](/docs/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
+![Clear Report Cache](/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
-When you try to get the Jasper report, this repository should have been updated:
-
-[https://bitbucket.org/koodu\_software/com.exos.erp.reportcachemanagement/src/master/](https://bitbucket.org/koodu_software/com.exos.erp.reportcachemanagement/src/master/)
 
 ## Etendo Advanced Security
 
@@ -191,9 +189,9 @@ This module allows customizing several security features related to
 - Changing Password after Login
 - Expiration Time (Autolock Password)
 
-To make this module work, **authentication Java class** must be configured in the `gradle.properties` file by adding the following line:
+To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
 
-```
+```groovy title="gradle.properties"
 authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
 
