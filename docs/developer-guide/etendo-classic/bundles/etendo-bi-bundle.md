@@ -11,35 +11,60 @@ In this section, the user can find technical information about the Etendo BI Bun
 
 To ensure proper functioning of the script, follow the steps below:
 
+!!! note
+    The following steps can only be used for Linux OS.
+
 1. rsync must be installed in our system, since this is the tool we use to connect to the server.
 
-    `sudo apt install rsync`
+    ``` bash title="Terminal"
+    sudo apt install rsync
+    ```
 
 
 2. Make sure you have python3 installed on your system. You can verify the installation by running
 
-    `python3 --version`
+    ``` bash title="Terminal"
+    python3 --version
+    ```
 
-    If it is not installed, run `sudo apt update && sudo apt install python3`
+    If it is not installed, run 
+    
+    ``` bash title="Terminal"
+    sudo apt update && sudo apt install python3
+    ```
 
 3. It is highly likely that pip3 comes bundled with the installation of python3. Verify if it is installed by running 
 
-    `pip3 --version`
+    ``` bash title="Terminal"
+    pip3 --version
+    ```
 
-    If it is not installed, run `sudo apt install python3-pip
-    `
+    If it is not installed, run
+
+    ``` bash title="Terminal"
+    sudo apt install python3-pip
+    ```
 
 4. The user needs to install libpq-dev to ensure seamless communication and compatibility between our python script and the postgresql database.
 
-    To install it, run `sudo apt install libpq-dev`
+    To install it, run 
+        ``` bash title="Terminal"
+        sudo apt install libpq-dev
+        ```
 
 5. The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:
 
-    `pip3 install psycopg2`
+    ``` bash title="Terminal"
+    pip3 install psycopg2
+    ```
 
-    `pip3 install pandas`
+    ``` bash title="Terminal"
+    pip3 install pandas
+    ```
 
-    `pip3 install requests`
+    ``` bash title="Terminal"
+    pip3 install requests
+    ```
 
 ### Etendo BI Connector
 
@@ -47,17 +72,16 @@ In the filesystem, two new directories should be created. One will contain the l
 
 In this example, in the path where the script is allocated, a new directory named “Etendo” should be created. Inside it, there should be two folders for the organization that set the background process (F&B US West Coast).
 
-`drwxrwxr-x 1 openbravo openbravo 9,1K jun 8 16:52 ETPBIC_SyncScript.py
-`
-`drwxrwxr-x 4 openbravo openbravo 4,0K jun 8 17:39 Etendo/
-`
+`drwxrwxr-x 1 <user> <group> 9,1K jun 8 16:52 ETPBIC_SyncScript.py`
+
+`drwxrwxr-x 4 <user> <group> 4,0K jun 8 17:39 Etendo/`
 
 Inside the Etendo/ folder, we have:
 
-`drwxrwxr-x 2 openbravo openbravo 4,0K jun 8 16:54 F+B_US_West_Coast_logs/
-`
-`drwxrwxr-x 2 openbravo openbravo 4,0K jun 8 16:54 F+B_US_West_Coast_output/
-`
+`drwxrwxr-x 2 <user> <group> 4,0K jun 8 16:54 F+B_US_West_Coast_logs/`
+
+`drwxrwxr-x 2 <user> <group> 4,0K jun 8 16:54 F+B_US_West_Coast_output/`
+
 
 The output directory, will contain all the CSVs that should have been uploaded to the server.
 

@@ -98,7 +98,7 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 | grandTotalAmount    |`grandTotalAmount`     |
 
 !!!note
-    The 'Property' field of this tab is handled with an Entity Mapping, this is like a Hiernate property.
+    The 'Property' field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
     So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, "name" in our case.
 
 
