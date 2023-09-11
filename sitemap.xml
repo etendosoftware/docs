@@ -26,11 +26,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/developer-guide/etendo-classic/bundles/spanish-localization-bundle/</loc>
-         <lastmod>2023-09-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/</loc>
          <lastmod>2023-09-11</lastmod>
          <changefreq>daily</changefreq>
@@ -627,6 +622,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/products/etendo-mobile/getting-started/</loc>
+         <lastmod>2023-09-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/products/etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions/</loc>
          <lastmod>2023-09-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

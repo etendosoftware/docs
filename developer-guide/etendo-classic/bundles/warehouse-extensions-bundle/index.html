@@ -1908,6 +1908,54 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../products/etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3091,20 +3139,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../spanish-localization-bundle/" class="md-nav__link">
-        Spanish Localization Bundle
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../etendo-bi-bundle/" class="md-nav__link">
         Etendo BI Bundle
       </a>
@@ -3522,7 +3556,7 @@
 <p>In this section, the user can find technical information about the Warehouse Extensions Bundle.</p>
 <h2 id="stock-history">Stock History</h2>
 <p>This module is added to the Create Stock History process and has the following characteristics: </p>
-<p>It takes all the stock data from each product (present in the table ‘m_storage_detail_history’) and enters them into the table ‘etst_storage_detail_history’, under the day the process was executed. If there is already data loaded on that date it is overwritten with the new data. The whole process is monitored by logs that can be viewed in the 'Process Request' window under the 'Process Monitor' tab of the process.</p>
+<p>It takes all the stock data from each product (present in the table <code>m_storage_detail_history</code>) and enters them into the table <code>etst_storage_detail_history</code>, under the day the process was executed. If there is already data loaded on that date it is overwritten with the new data. The whole process is monitored by logs that can be viewed in the 'Process Request' window under the 'Process Monitor' tab of the process.</p>
 <p>If the user would like to make changes on the table, and would like them to be taken into account in the data loading process, it  can be done by means of the hooks functionality present in the module. Just create a class that implements the StockHistoryHooks interface and extends the StockHistoryPioritizer abstract class, and implement the desired functionality under the doExecute method. This method will be executed once for each row added to the table. If multiple instances of the same interface are implemented, the order of execution can be decided by the getPriority method. The priority is given by how close to 0 is the number returned by this method. </p>
 <h3 id="how-to-define-a-stock-history-hook">How to define a Stock History Hook</h3>
 <ul>
