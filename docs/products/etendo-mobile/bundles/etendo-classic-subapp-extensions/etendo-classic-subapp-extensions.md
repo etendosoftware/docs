@@ -32,9 +32,7 @@ In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
 In the Home option, the user can find an option menu from which they can access to different windows allowed according to their role. From this menu, it is also possible to:
 
-- Access the Settings window (option Settings)
-- Access the Profile window (clicking the profile picture)
-- Go back (Option Go back)
+- Go back (Option to Go back to Etendo Mobile)
 
 ![](/assets/products/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
 
