@@ -38,7 +38,7 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
 
 !!! note
 
-    In this case shown the subapplication when acces whit "demo try".
+    In this case shown the subapplication when acces whit "Demo try".
 
 ![](/assets/products//etendo-mobile/user-interface/Drawer.png){ width="300" }
 

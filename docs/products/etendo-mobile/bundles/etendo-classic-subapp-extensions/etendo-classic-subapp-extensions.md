@@ -12,7 +12,7 @@ title: Etendo Classic Subapp Extensions
 
 !!! info
 
-    - Initialy you should add Etendo Classic Subapp bundle in Etendo Classic.
+    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic.
 
 
     - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](/docs/products/etendo-classic/user-guide/general-setup/security/#dynamic-app).
@@ -26,14 +26,14 @@ To add the windows to be shown in the subapp must be configured entering the Ete
 
 ![](/assets/products//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
 
-In the welcome window, the user can enter Profile, Settings and Navigation Menu.
+In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
 ### Navigation Menu
 
 In the Home option, the user can find an option menu from which they can access to different windows allowed according to their role. From this menu, it is also possible to:
 
 - Access the Settings window (option Settings)
-- Access the window Profile (clicking the profile picture)
+- Access the Profile window (clicking the profile picture)
 - Log out (Option Log Out)
 
 ![](/assets/products/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
@@ -50,7 +50,7 @@ Each window will show its content splitting the records in small boxes, which wi
 
 The same field present in the preview, will be the criteria by which you can filter if you want to search for a record. (View Actions on records>Find a record.)
 
-Considering as an example the Sales invoice window, the preview of each record provides information regarding the document number and invoice date.
+Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
 
 ![](/assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ width="300" }
 
@@ -132,6 +132,6 @@ Each window will have certain filters available by field which will match those 
 
 In case the user needs to add more filters or to remove some of them, customization will be required.
 
-Continuing with the example of the Sales invoice window, the available filters are the document number, which will be entered in the search bar together with the invoice date.
+Continuing with the example of the Sales Invoice window, the available filters are the document number, which will be entered in the search bar together with the invoice date.
 
 ![](/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
