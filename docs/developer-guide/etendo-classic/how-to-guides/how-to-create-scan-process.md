@@ -50,7 +50,7 @@ Optional:
 2. Define a db column in the table in which you want to add a scan process, to add a button to execute the process. E.g.: 
 
     ```sql
-    `ALTER TABLE a_asset ADD COLUMN smfms_scan_process CHARACTER(1);`
+    ALTER TABLE a_asset ADD COLUMN smfms_scan_process CHARACTER(1);
     ```
 
 3. To associate the process with the button,open `Aplication` > `Aplication Dictionary` > `Tables and Colums`, search the table and press **CREATE COLUMNS FROM DB**. This process will create the column.

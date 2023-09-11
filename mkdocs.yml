@@ -222,7 +222,6 @@ nav:
         - Platform Extensions Bundle: developer-guide/etendo-classic/bundles/platform-extensions-bundle.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
-        - Spanish Localization Bundle: developer-guide/etendo-classic/bundles/spanish-localization-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 

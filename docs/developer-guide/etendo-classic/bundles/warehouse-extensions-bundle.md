@@ -9,7 +9,7 @@ In this section, the user can find technical information about the Warehouse Ext
 
 This module is added to the Create Stock History process and has the following characteristics: 
 
-It takes all the stock data from each product (present in the table ‘m_storage_detail_history’) and enters them into the table ‘etst_storage_detail_history’, under the day the process was executed. If there is already data loaded on that date it is overwritten with the new data. The whole process is monitored by logs that can be viewed in the 'Process Request' window under the 'Process Monitor' tab of the process.
+It takes all the stock data from each product (present in the table `m_storage_detail_history`) and enters them into the table `etst_storage_detail_history`, under the day the process was executed. If there is already data loaded on that date it is overwritten with the new data. The whole process is monitored by logs that can be viewed in the 'Process Request' window under the 'Process Monitor' tab of the process.
 
 If the user would like to make changes on the table, and would like them to be taken into account in the data loading process, it  can be done by means of the hooks functionality present in the module. Just create a class that implements the StockHistoryHooks interface and extends the StockHistoryPioritizer abstract class, and implement the desired functionality under the doExecute method. This method will be executed once for each row added to the table. If multiple instances of the same interface are implemented, the order of execution can be decided by the getPriority method. The priority is given by how close to 0 is the number returned by this method. 
 

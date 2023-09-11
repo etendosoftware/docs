@@ -191,7 +191,7 @@ This module allows customizing several security features related to
 
 To make this module work, authentication Java class must be configured in the `gradle.properties` file by adding the following line:
 
-```
+```groovy title="gradle.properties"
 authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
 

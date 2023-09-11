@@ -171,9 +171,6 @@ etendo {
 
 ### Submodules
 
-- `./gradlew registerModule --info` Creates the privileges to publish a new module in a specific repository`Command line parameters:
--`-Ppkg=<package name>`The name of the module.
--`-Prepo=<repository name>` The name of the repository.
 - `./gradlew createModuleBuild --info` Creates the 'build.gradle' file with all the necessary information to publish.
   Command line parameters - `-Ppkg=<package name>` The name of the module. - `-Prepo=<repository name>` The name of the repository.
 - `./gradlew publishVersion --info` Publish the module to a custom repository
@@ -181,7 +178,7 @@ etendo {
     - `-Ppkg=<package name>` The name of the module. **REQUIRED**
     - `-Precursive=true` This trigger the republication of all the modules which depends on the module being published. **OPTIONAL** - default false.
     - `-PupdateLeaf=true` This updates automatically the version of the project beign published. **OPTIONAL** - default false.
-- `./gradlew uninstallModule --info` Uninstall a source module. Refer to the [documentation](https://en/technical-documentation/modules/uninstall)
+- `./gradlew uninstallModule --info` Uninstall a source module.
   - Command line parameters
     - `-Ppkg=<modulename>` The javapackage of the source module to uninstall.
 
@@ -211,8 +208,6 @@ ext.defaultExtensionModules = [
       - `-PcoreName=<core name>` The core name. **OPTIONAL**
       - `-PcoreVersion=<core version>` The core version. **OPTIONAL**
     - Parameters to override the default repository.
-      - `-PcommercialRepo=<commercial repo name>` Used when the module is commercial. **OPTIONAL**
-      - `-PpublicRepo=<public repo name>` Used when the module is not commercial. **OPTIONAL**
 - `./gradlew publishAll --info` Publish all the modules located in the source 'modules' directory.
   - Command line parameters
     - `-PupdateLeaf=true` This updates automatically the version of all the project beign published. **OPTIONAL** - (Default false).

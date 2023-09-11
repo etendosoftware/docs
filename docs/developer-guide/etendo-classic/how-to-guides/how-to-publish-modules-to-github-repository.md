@@ -40,9 +40,9 @@ Example:
 
 !!! warning "Important"
         - If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
-        Before adding an Etendo module dependency, they have to be published in Nexus.
+        Before adding an Etendo module dependency, they have to be published in the repository.
         - You need to make sure those dependencies are also published.
-        - Add the dependencies manually in build.gradle file.
+        - Add the dependencies manually in `build.gradle` file.
         - Add Core dependency to define the range of versions the module is compatible with.
 
 !!! info
