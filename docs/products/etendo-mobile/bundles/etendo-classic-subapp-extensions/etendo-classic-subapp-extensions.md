@@ -34,7 +34,7 @@ In the Home option, the user can find an option menu from which they can access 
 
 - Access the Settings window (option Settings)
 - Access the Profile window (clicking the profile picture)
-- Log out (Option Log Out)
+- Go back (Option Go back)
 
 ![](/assets/products/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
 
