@@ -48,6 +48,8 @@ Los Incoterms or International Commercial Terms son una serie de términos de ve
 
 ## European Union Countries
 
+`javapackage: org.openbravo.module.eucountries`
+
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
 ## Provincias de España
@@ -76,11 +78,15 @@ En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea
 
 ## CIF and NIF validator
 
+`javapackage: org.openbravo.module.cifnifvalidator`
+
 Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
 ## Validador de número de cuenta financiera
+
+`javapackage: org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
