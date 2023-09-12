@@ -23,7 +23,7 @@ This section describes the steps that need to be performed to configure the ware
 
 [:material-file-document-outline:Referenced Inventory Type](/products/etendo-classic/user-guide/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:EAN 128 Type](/docs/products/etendo-classic/user-guide/warehouse-management/setup/#ean-128-type){ .md-button } <br>
+[:material-file-document-outline:EAN 128 Type](/products/etendo-classic/user-guide/warehouse-management/setup/#ean-128-type){ .md-button .md-button--primary } <br>
 
 ## Process Price Difference Adjustment
 
@@ -326,33 +326,104 @@ This section defines different types of containers or boxes, which include any k
 -   **Referenced Inventory Type**
 -   **Client** : Client for this installation.
 
-## EAN 128 Type
+## EAN 128 Type Window
 
-In this window you can add different types of barcodes. They store information about the product in this code, either: date, warehouse, storage bin, and when you scanned, you can obtain this information from the barcode.
+In this window you can add different types of barcodes. They store information about the product in this code, either: Date, Product, Physical Inventory Line, and when you scanned, you can obtain this information from the barcode.
 
-This window contains the following fields:
+![EAN128 Type Window](/assets/products/etendo-classic/user-guide/warehouse-management/EAN128Type.png)
 
-**EAN 128 Type** header fields:
+### Header
 
--   **Module** : Module to export the data.
--   **Organization** : Organizational entity within client.
--   **Name** : A non-unique identifier for a record/document often used as a search tool.
--   **Description** : A description describing the usefulness of this new type is placed here.
--   **Default** : When selected, this EAN 128 Type will appears by default.
--   **Active** : A flag indicating whether this record is available for use or deactivated.
+![](/assets/products/etendo-classic/user-guide/warehouse-management/EAN128Header.png)
 
-**EAN 128 Type** lines fields:
+- **EAN 128 Type** header fields:
 
--   **Module** : Module to export the data.
--   **Organization** : Organizational entity within client.
--   **Active** : A flag indicating whether this record is available for use or deactivated.
--   **Content** : Name of the line content.
--   **Al** : Aplication identifier.
--   **Content Length** : Longitude of the ean type content.
--   **Data Type** : Type of the EAN 128 type data.(boolean, date, string, etc.)
--   **Fixed Length** : This check set if round the longitude or not.
--   **Lot** : A group of identical or similar items organized and placed into inventory under one number.
--   **Serial No.** : A unique number of a product.
--   **Expiration Date** : The date than a product expires.
--   **Sequence Number** : The order of records in a specified document. The Sequence indicates the order of records.
--   **Entity Field** : Property of the entity that the value is obteined. Refears the HQL field name of the entity.
+- **Module** : Module to export the data.
+
+- **Organization** : Organizational entity within client.
+
+- **Name** : A non-unique identifier for a record/document often used as a search tool.
+
+- **Description** : A description describing the usefulness of this new type is placed here.
+
+- **Default** : When selected, this EAN 128 Type will appears by default.
+
+- **Active** : A flag indicating whether this record is available for use or deactivated.
+
+### Lines
+
+In the lines you can add a record referring to the parent already created. Here you will create a data that will be received when scanning a barcode.
+
+![](/assets/products/etendo-classic/user-guide/warehouse-management/EAN128Lines.png)
+
+- **EAN 128 Type** lines fields:
+
+- **Module** : Module to export the data.
+
+- **Organization** : Organizational entity within client.
+
+- **Active** : A flag indicating whether this record is available for use or deactivated.
+
+- **Content** : Name of the line content.
+
+- **Al** : Application identifier, that refers to the extra numbers in the code.
+
+- **Content Length** : Longitude of the ean type content.
+
+- **Data Type** : Type of the EAN 128 type data.
+
+- **Fixed Length** : This check is set if the code only contains the data or not.
+
+- **Lot** : indicator that determines if the EAN code corresponds to a "lot" or "lot number".
+
+- **Serial No.** : A unique number of products.
+
+- **Expiration Date** : Determinants if is an expiration date.
+
+- **Sequence Number** : The order of records in a specified document. The Sequence indicates the order of records.
+
+- **Attribute**: An attribute to define an item.
+
+- **Entity**: The group the scanned item refers to.
+
+- **Entity Field** : Property of the entity that the value is obtained. Refears the HQL field of the entity.
+
+### Example
+
+For example we will see a record created here:
+
+![](/assets/products/etendo-classic/user-guide/warehouse-management/EANLineExample.png)
+
+- **Content** : The name of this new type that is being created will be added here.
+
+- **Al** : AI gives a number of decimal places in the following value. The represented value is the following integer divided by 10X. For example, a net weight of 22.7 kg could be coded as 3101 000227, 3102 002270, 3103 022700, or 3104 227000. Registered AI should be 310X.
+
+- **Content Length** :This will be the length of the code, depending on what it will be used for, it can be longer or shorter.
+
+- **Data Type** : This refers to the type of data to be stored in the barcode. These can be: Date, String, Integer or Decimal.
+
+- **Fixed Length** : This check leaves only the relevant information in the scanned code.
+
+- **Lot** : the lot attribute appears to be a flag or indicator that determines whether the current content extracted from the EAN code corresponds to a "lot" or "lot number".
+
+- **Serial No.** : A unique number, this represents a serial number.
+
+- **Expiration Date** : This field defines that the value of the barcode is an expiration date.
+
+- **Sequence Number** : This field helps keep track of the sequence number for each entry. If there are multiple entries with the same entityFieldName, the code uses the sequence number to determine which has the most recent number and, based on that, decides whether or not to update the content stored in the object.
+
+- **Entity**: in this field you can assign the entity to which this value corresponds. it has 5 options:
+
+
+- **Attribute**: when this option is selected, the "Attribute" field will appear on the screen. If you do not have any created, you can go to this window and create it. An attribute is a characteristic that can be added to the scanned value, to have a better reference to it.
+    * **Order Line**.
+    * **Physical Inventory Line.**
+    * **Product Line.**
+    * **Shipment/Receipt Line.**
+
+
+These last 4 options show the Entity Field therefore by selecting one of these 4 options. 
+
+- **Entity Field**: In this selector you can choose the specific field to the entity field that it references.
+
+
