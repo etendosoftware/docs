@@ -2375,6 +2375,88 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3527,10 +3609,10 @@
   <h1>How to Filter any request for Active or all Records</h1>
 
 <h2 id="you-can-filter-any-request-by-active-or-all-rows">You can filter any request by active or all rows</h2>
-<p>The _noActiveFilter parameter can be used in any request method to filter active records or all records (active and inactive). This way it allows more control when obtaining the results.</p>
+<p>The <code>_noActiveFilter</code> parameter can be used in any request method to filter active records or all records (active and inactive). This way it allows more control when obtaining the results.</p>
 <hr />
 <h2 id="example-of-get-request-for-all-records">Example of GET request for all records</h2>
-<p>Open Postman and we'll make a get request.</p>
+<p>Open Postman and we will make a get request.</p>
 <div class="language-text highlight"><pre><span></span><code>Verbose: GET
 
 URL: http://localhost:8094/BusinessPartner?_noActiveFilter=true
@@ -3541,7 +3623,7 @@ Return: a json object with all businessPartners active or inactive
 </code></pre></div>
 <hr />
 <h2 id="example-of-get-request-only-for-active-records">Example of GET request only for active records</h2>
-<p>Open Postman and we'll make a get request.</p>
+<p>Open Postman and we will make a get request.</p>
 <div class="language-text highlight"><pre><span></span><code>Verbose: GET
 
 URL: http://localhost:8094/BusinessPartner?_noActiveFilter=false
@@ -3551,7 +3633,7 @@ Body: empty
 Return: a json object with all active BusinessPartner rows
 </code></pre></div>
 <hr />
-<p>Another way to get active rows is to remove the parameter _noActiveFilter parameter, because by default the active row always applies the active row filter.</p>
+<p>Another way to get active rows is to remove the parameter <code>_noActiveFilter parameter</code> , because by default the active row always applies the active row filter.</p>
 
 
 

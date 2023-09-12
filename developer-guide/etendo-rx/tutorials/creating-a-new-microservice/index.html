@@ -2375,6 +2375,88 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3368,7 +3450,7 @@
         
           <li class="md-nav__item">
   <a href="#adding-the-token-value" class="md-nav__link">
-    Adding the 'token' value
+    Adding the token value
   </a>
   
 </li>
@@ -3831,7 +3913,7 @@
         
           <li class="md-nav__item">
   <a href="#adding-the-token-value" class="md-nav__link">
-    Adding the 'token' value
+    Adding the token value
   </a>
   
 </li>
@@ -3893,7 +3975,7 @@
   <h1>Creating a New Microservice</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This section provides a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo ERP.</p>
+<p>This section provides a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo Classic.</p>
 <hr />
 <h2 id="building-a-new-module-for-rx-capabilities">Building a New Module for RX Capabilities</h2>
 <div class="admonition note">
@@ -3901,18 +3983,18 @@
 <p>Make sure to complete the <a href="/developer-guide/etendo-rx/getting-started">Getting Started section in the developer guide</a> to set up the Etendo Platform.</p>
 </div>
 <h3 id="accessing-as-admin-user">Accessing as Admin User</h3>
-<p>After setting the local environment up, as described in the <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment"><strong>install etendo development environment</strong></a>, we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.</p>
+<p>After setting the local environment up, as described in the <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment"><strong>install etendo development environment</strong></a>, we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.</p>
 <p>Log in to your account as an administrator. The default login credentials for this administrative account are:</p>
 <ul>
 <li>Username: <code>admin</code></li>
 <li>Password: <code>admin</code></li>
 </ul>
-<p>Once you're logged in, switch your role to "System Administrator", as the image shows:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="switch-sys-admin.png" src="/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png" /></a></p>
-<p>The "System Administrator" role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.</p>
+<p>Once you are logged in, switch your role to <em>System Administrator</em>, as the image shows:</p>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/switch-admin.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="switch-admin.png" src="/assets/developer-guide/etendo-rx/tutorial/switch-admin.png" /></a></p>
+<p>The <em>System Administrator</em> role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.</p>
 <h3 id="creating-a-new-module">Creating a New Module</h3>
-<p>Now we'll create a new module. It's a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
-To create a new module, go to the 'Module' window, and add a new record providing the following information:</p>
+<p>Now we will create a new module. It is a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
+To create a new module, go to the Module window, and add a new record providing the following information:</p>
 <table>
 <thead>
 <tr>
@@ -3949,12 +4031,12 @@ To create a new module, go to the 'Module' window, and add a new record providin
 </table>
 <p>It should look like this:</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-module.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-module.png" src="/assets/developer-guide/etendo-rx/tutorial/new-module.png" /></a></p>
-<p>With our new module created, we'll start working with 'Projections'</p>
+<p>With our new module created, we will start working with <em>Projections</em>.</p>
 <hr />
 <h2 id="projection">Projection</h2>
-<p>When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we don't need all the properties of the returned objects.</p>
+<p>When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we do not need all the properties of the returned objects.</p>
 <p>In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections come in handy.</p>
-<p>Start by opening 'Projections' windows and creating a new projection with the following properties:</p>
+<p>Start by opening <em>Projections</em> windows and creating a new projection with the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -3980,9 +4062,9 @@ To create a new module, go to the 'Module' window, and add a new record providin
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-projection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-projection.png" src="/assets/developer-guide/etendo-rx/tutorial/new-projection.png" /></a></p>
 <h3 id="adding-the-projection-to-a-table">Adding the projection to a table</h3>
 <p>As we create the projection, now we need to assign it to a table where we want to extract data.
-For this, open the "Tables and Columns" window and look for the "Order" table (as mentioned in the introduction, we want to consume orders).</p>
+For this, open the <em>Tables and Columns</em> window and look for the <em>Order</em> table (as mentioned in the introduction, we want to consume orders).</p>
 <h3 id="adding-a-projection">Adding a Projection</h3>
-<p>Next, navigate to the "Projections" tab and add a new projection with the following value:</p>
+<p>Next, navigate to the <em>Projections</em> tab and add a new projection with the following value:</p>
 <table>
 <thead>
 <tr>
@@ -4000,8 +4082,8 @@ For this, open the "Tables and Columns" window and look for the "Order" table (a
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/assign-projection.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="assign-projection.png" src="/assets/developer-guide/etendo-rx/tutorial/assign-projection.png" /></a></p>
 <h3 id="adding-entity-fields">Adding Entity Fields</h3>
 <p>When a projection is created, we need to define which fields we want to retrieve.
-In our case, we'll need the record ID, Business Partner name, Document No, Document Type name, and the Grand total.
-Under the 'Projection' tab navigate to the "Entity Field" tab and add the following fields:</p>
+In our case, we will need the record ID, Business Partner name, Document No, Document Type name, and the Grand total.
+Under the Projection tab navigate to the <em>Entity Field</em> tab and add the following fields:</p>
 <table>
 <thead>
 <tr>
@@ -4034,16 +4116,16 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The 'Property' field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
-So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, "name" in our case.</p>
+<p>The <em>Property</em> field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
+So, you can navigate the entities related from here. E.g. To get the Business Partner name, you can have it by accessing the entity <em>businessPartner</em> and then, adding the field that you want to filter, <em>name</em> in this case.</p>
 </div>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-entity-fields.png" src="/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" /></a></p>
 <hr />
 <h2 id="repository">Repository</h2>
 <p>In Spring Data, a repository is an abstraction that provides the operations relative to a domain class to interact with a data store.
-To create the repository for our purpose, and the same as we did for projections, we need to go to Tables and Columns and look for 'C_Order' table</p>
+To create the repository for our purpose, and the same as we did for projections, we need to go to Tables and Columns and look for <code>C_Order</code> table.</p>
 <h3 id="creating-a-new-repository">Creating a New Repository</h3>
-<p>After selecting a table, in this case 'C_Order', we need to go to 'Repository' tab and create a new record with the following values:</p>
+<p>After selecting a table, in this case <code>C_Order</code>, we need to go to <em>Repository</em> tab and create a new record with the following values:</p>
 <table>
 <thead>
 <tr>
@@ -4062,8 +4144,8 @@ To create the repository for our purpose, and the same as we did for projections
 <hr />
 <h2 id="search">Search</h2>
 <h3 id="creating-a-new-search">Creating a New Search</h3>
-<p>Next, we'll define a search method to use later when we want to consume the orders. This query is taken as a filter for retrieving the orders.
-To create this new filter/search method, under "Repository" tab of the C_Order table, create a new record with the following data:</p>
+<p>Next, we will define a search method to use later when we want to consume the orders. This query is taken as a filter for retrieving the orders.
+To create this new filter/search method, under Repository tab of the <code>C_Order</code> table, create a new record with the following data:</p>
 <table>
 <thead>
 <tr>
@@ -4086,7 +4168,7 @@ To create this new filter/search method, under "Repository" tab of the C_Order t
 <h3 id="creating-a-new-search-parameter">Creating a New Search Parameter</h3>
 <p>As you can see in the query above, we use a parameter called <code>:documentType</code>. 
 We can add this type of parameter to use it later by adding a corresponding value to it and filtering depending on the current needs.
-To define the parameter, we need to create a new row on the 'Search Parameter' tab of the 'Search' tab. Fill it with the following settings:</p>
+To define the parameter, we need to create a new row on the <em>Search Parameter</em> tab of the <em>Search</em> tab. Fill it with the following settings:</p>
 <table>
 <thead>
 <tr>
@@ -4109,12 +4191,12 @@ To define the parameter, we need to create a new row on the 'Search Parameter' t
 </tr>
 </tbody>
 </table>
-<p>In our case, we'll filter depending on the Document Type of the orders</p>
+<p>In our case, we will filter depending on the Document Type of the orders.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-search-parameter.png" src="/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" /></a></p>
 <hr />
 <h2 id="creating-a-new-spring-boot-project">Creating a New Spring Boot Project</h2>
-<p>Now that we have declared the projection, fields, repository, and searches on Etendo ERP, we'll need to create a new spring project to make use of these JPA resources that we have created just before.
-Next, you'll find the steps to create the Spring Boot project and add it as a module on Etendo RX.</p>
+<p>Now that we have declared the projection, fields, repository, and searches on Etendo Classic, we will need to create a new spring project to make use of these JPA resources that we have created just before.
+Next, you will find the steps to create the Spring Boot project and add it as a module on Etendo RX.</p>
 <h3 id="project-creation">Project Creation</h3>
 <ol>
 <li>Visit <a href="https://start.spring.io/" target="_blank"><strong>Spring Initializr</strong></a> to start your project setup.</li>
@@ -4186,7 +4268,7 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
 <p>Add the following dependencies: Spring Web, Lombok, Config Client</p>
 </li>
 <li>
-<p>Click on the 'Generate' button to download your project. The page will generate a file named <code>rxtutorial.zip</code>.</p>
+<p>Click on the <em>Generate</em> button to download your project. The page will generate a file named <code>rxtutorial.zip</code>.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="spring-initializr.png" src="/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" /></a></p>
 </li>
 <li>
@@ -4198,7 +4280,7 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
 <p>Remember to create the <code>com.tutorial.rxtutorial</code> folder, inside of <code>modules_rx</code> before extract it.</p>
 </div>
 <h3 id="project-configuration">Project Configuration</h3>
-<p>After creating the project, we need to add some configuration in order to work with our ERP.</p>
+<p>After creating the project, we need to add some configuration in order to work with Etendo Classic.</p>
 <h3 id="modify-buildgradle-file">Modify build.gradle File</h3>
 <p>Remove version of spring plugins:</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
@@ -4248,27 +4330,27 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="o">}</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">}</span>
 </span></code></pre></div>
-After configuring the project, we'll need to generate the proper files for RX.
+After configuring the project, we will need to generate the proper files for RX.
 RX generate.entities task will generate java files in the <code>src-gen</code> directory.
 Execute <code>rx:generate.entities</code> task to do so.</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>rx:generate.entities
 </span></code></pre></div>
 <hr />
 <h2 id="configuring-a-spring-boot-project">Configuring a Spring Boot Project</h2>
-<p>Now we'll configure the new spring boot project to define how it will run.</p>
+<p>Now we will configure the new spring boot project to define how it will run.</p>
 <h3 id="updating-the-applicationproperties-file">Updating the application.properties file</h3>
 <p>Modify your <code>application.properties</code> file, under the new spring boot project created on the previous steps, with the following configurations:</p>
-<div class="language-properties highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="na">config.server.url</span><span class="o">=</span><span class="s">http://localhost:8888</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">spring.config.import</span><span class="o">=</span><span class="s">configserver:${config.server.url}</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="na">spring.application.name</span><span class="o">=</span><span class="s">rxtutorial</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="na">server.port</span><span class="o">=</span><span class="s">8101</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="na">token</span><span class="o">=</span>
+<div class="language-groovy highlight"><span class="filename">application.properties</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">config</span><span class="o">.</span><span class="na">server</span><span class="o">.</span><span class="na">url</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//localhost:8888</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">spring</span><span class="o">.</span><span class="na">config</span><span class="o">.</span><span class="na">import</span><span class="o">=</span><span class="nl">configserver:</span><span class="n">$</span><span class="o">{</span><span class="n">config</span><span class="o">.</span><span class="na">server</span><span class="o">.</span><span class="na">url</span><span class="o">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">spring</span><span class="o">.</span><span class="na">application</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">rxtutorial</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">server</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">8101</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">token</span><span class="o">=</span>
 </span></code></pre></div>
-<p>The token is empty, but now we'll generate a new one</p>
-<h3 id="adding-the-token-value">Adding the 'token' value</h3>
+<p>The token is empty, but now we will generate a new one. </p>
+<h3 id="adding-the-token-value">Adding the token value</h3>
 <p>To generate the token value we need to follow these steps:</p>
 <ol>
-<li>As 'System Administrator' role on the ERP, go to 'RX Services' window.</li>
+<li>As <em>System Administrator</em> role on Etendo Classic, go to <em>RX Services</em> window.</li>
 <li>
 <p>Create a new row with the following values:</p>
 <table>
@@ -4296,19 +4378,19 @@ Execute <code>rx:generate.entities</code> task to do so.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new-rx-service.png" src="/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" /></a></p>
 </li>
 <li>
-<p>Change to 'F&amp;B International Group Admin' role.</p>
+<p>Change to <em>F&amp;B International Group Admin</em> role.</p>
 </li>
-<li>Go to 'User' window.</li>
+<li>Go to <em>User</em> window.</li>
 <li>
-<p>Choose a user, e.g. 'F&amp;B ES User'</p>
+<p>Choose a user, e.g. F&amp;B ES User</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Change the password for this record, you'll need it later.
+<p>Change the password for this record, you will need it later.
 Also, check that the user is active.</p>
 </div>
 </li>
 <li>
-<p>In the tab 'RX Services Access' create a new row and fill it with the following values:</p>
+<p>In the tab <em>RX Services Access</em> create a new row and fill it with the following values:</p>
 <table>
 <thead>
 <tr>
@@ -4343,17 +4425,17 @@ Also, check that the user is active.</p>
 </span></code></pre></div>
 </li>
 <li>
-<p>Open Postman and we'll make an authenticate request.</p>
-<p>Verbose: POST</p>
-<p>URL: http://localhost:8094/api/authenticate</p>
-<p>Body:
-<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;F&amp;BESUser&quot;</span><span class="p">,</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;EtendoAdmin1&quot;</span><span class="p">,</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="s2">&quot;Tutorial&quot;</span><span class="p">,</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="nt">&quot;secret&quot;</span><span class="p">:</span><span class="s2">&quot;123&quot;</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
-</span></code></pre></div></p>
+<p>Open Postman and we will make an authenticate request.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">Verbose</span><span class="p">:</span><span class="w"> </span><span class="err">POST</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="err">URL</span><span class="p">:</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8094/api/authenticate</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="err">Body</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="s2">&quot;F&amp;BESUser&quot;</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;EtendoAdmin1&quot;</span><span class="p">,</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="s2">&quot;Tutorial&quot;</span><span class="p">,</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nt">&quot;secret&quot;</span><span class="p">:</span><span class="s2">&quot;123&quot;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
+</span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Remember the password changed before.</p>
@@ -4361,7 +4443,7 @@ Also, check that the user is active.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/postman-request.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="postman-request.png" src="/assets/developer-guide/etendo-rx/tutorial/postman-request.png" /></a></p>
 </li>
 <li>
-<p>Take the token under the response and fill in the 'token' property on the application.properties of the tutorial module.</p>
+<p>Take the token under the response and fill in the <em>token</em> property on the <code>application.properties</code> of the tutorial module.</p>
 </li>
 </ol>
 <h3 id="adding-component-scan-annotation-to-the-application-class">Adding Component Scan Annotation to the Application Class</h3>
@@ -4405,7 +4487,7 @@ Also, check that the user is active.</p>
 </span></code></pre></div>
 <hr />
 <h2 id="creating-a-new-spring-boot-service">Creating a New Spring Boot Service</h2>
-<p>In this last step before launching the microservice, we'll create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps. 
+<p>In this last step before launching the microservice, we will create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps. 
 Follow the instructions below to create a new service:</p>
 <ol>
 <li>
@@ -4460,13 +4542,13 @@ Follow the instructions below to create a new service:</p>
 </span><span id="__span-13-43"><a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>This file will display a simple HTML page with the retrieved orders.
-But first, we'll take a look at the class that we just created.</p>
+But first, we will take a look at the class that we just created.</p>
 <p><div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&amp;projection=rxtutorial&quot;</span><span class="p">;</span>
 </span></code></pre></div>
-  This URL is the one that the process will use to consume the service, as you can see, we add here the 'Search' filter that we created before and give it the document type parameter, with one document type id of the order that we'll filter. Also, we're adding the projection to use too, same as before, it's the one created before.</p>
+  This URL is the one that the process will use to consume the service, as you can see, we add here the <em>Search</em> filter that we created before and give it the document type parameter, with one document type id of the order that we will filter. Also, we are adding the projection to use too, same as before, it is the one created before.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">var</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">restUtils</span><span class="p">.</span><span class="na">getList</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">OrderRxtutorialModel</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
 </span></code></pre></div>
-<p>The orders variable will store all the orders that will be filtered with our request, as you can see, the method <code>getList</code> receives two parameters, the first one is the URL that we'll use to make the request, and the second one is the model class of the retrieved object.</p>
+<p>The orders variable will store all the orders that will be filtered with our request, as you can see, the method <code>getList</code> receives two parameters, the first one is the URL that we will use to make the request, and the second one is the model class of the retrieved object.</p>
 </li>
 <li>
 <p>Then, we simply create a StringBuilder as an HTML page that will be shown on the browser.</p>
@@ -4479,16 +4561,16 @@ But first, we'll take a look at the class that we just created.</p>
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to configure the Auth service as described on the <a href="/developer-guide/etendo-rx/getting-started/#configure-auth-project">Getting Started</a> page</p>
+<p>Remember to configure the Auth service as described on the <a href="/developer-guide/etendo-rx/getting-started/#configure-auth-project">Getting Started</a> page.</p>
 </div>
 <h2 id="run-tutorial-project">Run tutorial project</h2>
-<p>Now we're able to run our new microservice. For that, execute the following task:</p>
+<p>Now we are able to run our new microservice. For that, execute the following task:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./gradlew<span class="w"> </span>:com.tutorial.rxtutorial:bootRun
 </span></code></pre></div>
 <p>Open your browser and you can view the generated page with the following URL: <a href="http://localhost:8101/api/"><strong>http://localhost:8101/api/</strong></a></p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>You've successfully created a fully working RX service.</p>
+<p>You have successfully created a fully working RX service.</p>
 </div>
 
 
