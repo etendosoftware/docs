@@ -21,9 +21,9 @@ There are different types of menu items which are identified with different icon
 |     |     |
 | --- | --- |
 | ![](/assets/drive/1apop_xv-FUNdRrbFRKYftecCOtoNPBsW.png ) | Folders are used to organize other items within them. They can be expanded or collapsed to show their contents by clicking them. |
-| ![](/assets/drive/1NRP6x7Skj7LAT4mVS3QtloWPHncJGIQD.png) | Reports explode information from Etendo ERP. |
+| ![](/assets/drive/1NRP6x7Skj7LAT4mVS3QtloWPHncJGIQD.png) | Reports explode information from Etendo Classic. |
 | ![](/assets/drive/19YyKApp-ccjaq7vy_2NkpEtEOimOU1jW.png) | Processes allow complex operations to be performed. Some examples would be to import data from a file or the automatic creation of invoices from purchase orders. |
-| ![](/assets/drive/1uO4tHOiBKtbZC9303O3-we-NWVlYLgQx.png) | Windows allow the user to create, modify or query records. By records, it is meant any entity that has its own data within Etendo ERP, such as a product, an order, an invoice, etc. |
+| ![](/assets/drive/1uO4tHOiBKtbZC9303O3-we-NWVlYLgQx.png) | Windows allow the user to create, modify or query records. By records, it is meant any entity that has its own data within Etendo Classic, such as a product, an order, an invoice, etc. |
 
 ## Application Areas 
 
