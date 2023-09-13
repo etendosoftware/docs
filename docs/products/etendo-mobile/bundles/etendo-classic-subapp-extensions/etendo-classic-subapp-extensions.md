@@ -133,3 +133,24 @@ In case the user needs to add more filters or to remove some of them, customizat
 Continuing with the example of the Sales Invoice window, the available filters are the document number, which will be entered in the search bar together with the invoice date.
 
 ![](/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
+
+## Mobile Scan
+### Usage Examples
+
+ The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
+
+ Ahora se mostrará un ejemplo desde la aplicacion Etendo Mobile:
+
+ When you enter the Physical inventory window and select a record, you will see the "Actions" button.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.png)
+
+In this button, you can see the process it incorporates, called Inventory Scan.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
+
+ When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
+ 
+ ![](/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
+
+ After this change has been made on the item, it will be reflected in the scan tab of the line that the value has been changed, in the lines tab of the physical inventory window.
