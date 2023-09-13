@@ -3,8 +3,9 @@ title: Modelo 190
 hide:
     - navigation
 ---
-## Javapakages 
-`org.openbravo.module.aeat190.es`
+## Javapackages 
+
+:octicons-package-16: Javapackage:org.openbravo.module.aeat190.es
 
 ## **Introducción**
 

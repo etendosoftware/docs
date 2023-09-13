@@ -3,8 +3,9 @@ title: Modelo 349
 hide:
     - navigation
 ---
-## Javapakages 
-`org.openbravo.module.aeat349.es` <br>
+## Javapackages 
+
+:octicons-package-16: Javapackage:org.openbravo.module.aeat349.es <br>
 
 ## **Introducción**
 
