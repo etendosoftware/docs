@@ -150,19 +150,14 @@ nav:
           - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-          - Platform Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
+          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
           - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/overview.md
-          - Financial Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
-          - Spanish Localization Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
-          - Etendo BI Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
+          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
     - Etendo Mobile: 
