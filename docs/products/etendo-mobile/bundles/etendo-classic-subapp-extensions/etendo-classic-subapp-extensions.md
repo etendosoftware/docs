@@ -135,11 +135,17 @@ Continuing with the example of the Sales Invoice window, the available filters a
 ![](/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
 ## Mobile Scan
+
+Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/products/etendo-mobile/getting-started/) App
+
+!!! info
+        For more information, visit the [Mobile Scan developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#mobile-scan).
+
 ### Usage Examples
 
  The module has by default the Inventory Scan process, which is responsible for scanning from a mobile this code, and thus change values of the Physical Inventory lines.
 
- Ahora se mostrará un ejemplo desde la aplicacion Etendo Mobile:
+ Now an example will be shown from the Etendo Mobile application:
 
  When you enter the Physical inventory window and select a record, you will see the "Actions" button.
 
@@ -153,4 +159,8 @@ In this button, you can see the process it incorporates, called Inventory Scan.
  
  ![](/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
- After this change has been made on the item, it will be reflected in the scan tab of the line that the value has been changed, in the lines tab of the physical inventory window.
+ After execute the scanning proccess, when you click on save, it will be reflected in the scan tab of the line that the value has been changed, in the lines tab of the physical inventory window.
+ Finally, a background process will be executed to update the physical inventory.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/scansTabs.png) 
+
