@@ -6,7 +6,7 @@ hide:
 
 ## Javapackages 
 
-:octicons-package-16: Javapackage:org.openbravo.localization.spain.referencedata.taxes
+:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.taxes
 
 ## **Introducción**
 

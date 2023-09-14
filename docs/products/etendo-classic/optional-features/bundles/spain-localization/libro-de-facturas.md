@@ -5,9 +5,9 @@ hide:
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage:org.openbravo.module.invoicesregisterbook
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook
 
-:octicons-package-16: Javapackage:org.openbravo.module.invoicesregisterbook.es_es
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.es_es
 
 ## **Introducción**
 

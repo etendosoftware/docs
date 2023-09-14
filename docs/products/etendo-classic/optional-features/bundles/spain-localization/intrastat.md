@@ -6,9 +6,9 @@ hide:
 
 ## Javapackages
 
-:octicons-package-16: Javapackage:org.openbravo.module.intrastat <br>
-:octicons-package-16: Javapackage:org.openbravo.module.intrastat.spain <br>
-:octicons-package-16: Javapackage:org.openbravo.module.intrastat.es.es
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.spain <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.es.es
 
 ## Introducción
 

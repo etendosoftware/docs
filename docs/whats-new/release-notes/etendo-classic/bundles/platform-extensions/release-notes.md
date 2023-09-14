@@ -23,13 +23,13 @@ title: Release Notes
 
 ## Release Notes
 ### 1.9.0
-- Add *Generic Utils for EAN128 Definition and parsing* module, Javapackage: `com.smf.ean128`
+- Add *Generic Utils for EAN128 Definition and parsing* module, Javapackage:  `com.smf.ean128`
 ### 1.8.0
 - Add *Dynamic App* module, Javapakage: `com.etendoerp.dynamic.app`
 ### 1.7.1
 - Fix incompatibility of the com.etendoerp.etendorx module with Oracle
 ### 1.6.0
-- Add *Etendo Advanced Security* module, Javapackage: `com.etendoerp.advanced.security`
+- Add *Etendo Advanced Security* module, Javapackage:  `com.etendoerp.advanced.security`
 ### 1.5.0
 - Update Core compatibility until 23.2.x
 ### 1.4.0
