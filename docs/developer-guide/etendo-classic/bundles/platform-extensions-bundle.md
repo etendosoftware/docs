@@ -220,7 +220,7 @@ Then `./gradlew setup` must be executed.
 
 ## EAN 128
 
-### Overview
+### Technical Aspects
 
 It is a module for the transmission of information between the agents of the supply chain under the specifications of the Code 128 barcode. This, provide generic Utils for EAN128 Definition and parsing
 
