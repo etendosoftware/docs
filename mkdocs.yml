@@ -68,11 +68,15 @@ markdown_extensions:
 
 plugins:
   - search:
+      separator: '[\s\.\-]+'
       lang:
         - en
   - tags
   - glightbox
 extra:
+  version:
+    provider: mike
+    default: stable
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/etendosoftware
@@ -147,19 +151,14 @@ nav:
           - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-          - Platform Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
+          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
           - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/overview.md
-          - Financial Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
-          - Spanish Localization Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
-          - Etendo BI Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
+          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
     - Etendo Mobile: 
@@ -249,3 +248,66 @@ nav:
     - Overview: help-and-support/overview.md
     - Support Service: help-and-support/support-service.md
     - How to report bugs: help-and-support/how-to-report-bugs.md
+Pages:
+- Platform Extensions - Release Notes: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
+- what-is-etendo-platform: developer-guide/etendo-platform/concepts/what-is-etendo-platform.md
+- advanced-business-partner: products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
+- essentials-extensions/release-notes: products/etendo-classic/optional-features/bundles/essentials-extensions/release-notes.md
+- etendo-bi-connector: products/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
+- inclusion-exclusion-configuration: products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
+- bulk-posting: products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting.md
+- intercompany: products/etendo-classic/optional-features/bundles/financial-extensions/intercompany.md
+- etendo-advanced-security: products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md 
+- configuracion-de-impuestos-para-libro-de-facturas: products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
+- impuestos-para-españa: products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
+- intrastat: products/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
+- libro-de-facturas: products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md
+- modelo-190: products/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md
+- modelo-303: products/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md
+- modelo-347: products/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
+- modelo-349: products/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
+- modelo-390: products/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
+- spain-localization-release-notes: products/etendo-classic/optional-features/bundles/spain-localization/release-notes.md
+- sii-para-iva: products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
+- 21Q4-0: whats-new/release-notes/etendo-classic/versions/21Q4-0.md
+- 21Q4-2: whats-new/release-notes/etendo-classic/versions/21Q4-2.md
+- 21Q4-3: whats-new/release-notes/etendo-classic/versions/21Q4-3.md
+- 21Q4-4: whats-new/release-notes/etendo-classic/versions/21Q4-4.md
+- 21Q4-5: whats-new/release-notes/etendo-classic/versions/21Q4-5.md
+- 21Q4-6: whats-new/release-notes/etendo-classic/versions/21Q4-6.md
+- 21Q4-7: whats-new/release-notes/etendo-classic/versions/21Q4-7.md
+- 21Q4-8: whats-new/release-notes/etendo-classic/versions/21Q4-8.md
+- 21Q4-9: whats-new/release-notes/etendo-classic/versions/21Q4-9.md
+- 22Q1-0: whats-new/release-notes/etendo-classic/versions/22Q1-0.md
+- 22Q1-1: whats-new/release-notes/etendo-classic/versions/22Q1-1.md
+- 22Q1-2: whats-new/release-notes/etendo-classic/versions/22Q1-2.md
+- 22Q1-3: whats-new/release-notes/etendo-classic/versions/22Q1-3.md
+- 22Q2-0: whats-new/release-notes/etendo-classic/versions/22Q2-0.md
+- 22Q2-1: whats-new/release-notes/etendo-classic/versions/22Q2-1.md
+- 22Q2-2: whats-new/release-notes/etendo-classic/versions/22Q2-2.md
+- 22Q3-0: whats-new/release-notes/etendo-classic/versions/22Q3-0.md
+- 22Q4-0: whats-new/release-notes/etendo-classic/versions/22Q4-0.md
+- 22Q4-1: whats-new/release-notes/etendo-classic/versions/22Q4-1.md
+- 22Q4-2: whats-new/release-notes/etendo-classic/versions/22Q4-2.md
+- 22Q4-3: whats-new/release-notes/etendo-classic/versions/22Q4-3.md
+- 22Q4-4: whats-new/release-notes/etendo-classic/versions/22Q4-4.md
+- 22Q4-5: whats-new/release-notes/etendo-classic/versions/22Q4-5.md
+- 22Q4-6: whats-new/release-notes/etendo-classic/versions/22Q4-6.md
+- 23Q1-0: whats-new/release-notes/etendo-classic/versions/23Q1-0.md
+- 23Q1-1: whats-new/release-notes/etendo-classic/versions/23Q1-1.md
+- 23Q1-2: whats-new/release-notes/etendo-classic/versions/23Q1-2.md
+- 23Q1-3: whats-new/release-notes/etendo-classic/versions/23Q1-3.md
+- 23Q1-4: whats-new/release-notes/etendo-classic/versions/23Q1-4.md
+- 23Q1-5: whats-new/release-notes/etendo-classic/versions/23Q1-5.md
+- 23Q2-0: whats-new/release-notes/etendo-classic/versions/23Q2-0.md
+- 23Q2-1: whats-new/release-notes/etendo-classic/versions/23Q2-1.md
+- 23Q2-2: whats-new/release-notes/etendo-classic/versions/23Q2-2.md
+- 23Q2-3: whats-new/release-notes/etendo-classic/versions/23Q2-3.md
+- 23Q2-4: whats-new/release-notes/etendo-classic/versions/23Q2-4.md
+- 23Q2-5: whats-new/release-notes/etendo-classic/versions/23Q2-5.md
+- 23Q2-6: whats-new/release-notes/etendo-classic/versions/23Q2-6.md
+- 23Q2-7: whats-new/release-notes/etendo-classic/versions/23Q2-7.md
+- 22Q1-0-details: whats-new/release-notes/etendo-classic/versions/details/22Q1-0-details.md
+- 22Q2-0-details: whats-new/release-notes/etendo-classic/versions/details/22Q2-0-details.md
+- 23Q1-0-details: whats-new/release-notes/etendo-classic/versions/details/23Q1-0-details.md
+- 23Q2-0-details: whats-new/release-notes/etendo-classic/versions/details/23Q2-0-details.md

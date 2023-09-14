@@ -89,7 +89,7 @@ To do so, run the `install` task to create the initial database
 ./gradlew install
 ```
 
-After the database creation, compile the project and deploy Etendo ERP to Tomcat with the following command:
+After the database creation, compile the project and deploy Etendo Classic to Tomcat with the following command:
 
 ``` bash title="Terminal"
 ./gradlew smartbuild
@@ -97,7 +97,7 @@ After the database creation, compile the project and deploy Etendo ERP to Tomcat
 
 This task deploys the `webContent` folder into the `tomcat/webapps` directory. Make sure to set `$CATALINA_HOME` to the correct path.
 
-Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo ERP.
+Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo Classic.
 
 !!!note
     If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).

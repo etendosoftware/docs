@@ -4,10 +4,11 @@ hide:
     - navigation
 ---
 
-## Javapakages 
-`org.openbravo.module.intrastat` <br>
-`org.openbravo.module.intrastat.spain` <br>
-`org.openbravo.module.intrastat.es.es`
+## Javapackages
+
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.spain <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.es.es
 
 ## Introducción
 

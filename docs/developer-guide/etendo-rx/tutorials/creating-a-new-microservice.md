@@ -1,6 +1,6 @@
 ## Overview
 
-This section provides a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo ERP.
+This section provides a step-by-step guide for working with Etendo RX, which involves creating a new module with RX capabilities and building a Spring Boot project to consume orders making use of projections, repository and other JPA resources that we will create on our Etendo Classic.
 
 ------------------------------------------------------------------
 
@@ -12,24 +12,24 @@ This section provides a step-by-step guide for working with Etendo RX, which inv
 
 ### Accessing as Admin User
 
-After setting the local environment up, as described in the [**install etendo development environment**](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we'll need to log in to the system with administration permissions to create the new module, projections, repository, etc.
+After setting the local environment up, as described in the [**install etendo development environment**](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.
 
 Log in to your account as an administrator. The default login credentials for this administrative account are:
 
 - Username: `admin`
 - Password: `admin`
 
-Once you're logged in, switch your role to "System Administrator", as the image shows:
+Once you are logged in, switch your role to *System Administrator*, as the image shows:
 
-  ![switch-sys-admin.png](/assets/developer-guide/etendo-rx/tutorial/switch-sys-admin.png)
+  ![switch-admin.png](/assets/developer-guide/etendo-rx/tutorial/switch-admin.png)
 
 
-The "System Administrator" role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.
+The *System Administrator* role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.
 
 ### Creating a New Module
 
-Now we'll create a new module. It's a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
-To create a new module, go to the 'Module' window, and add a new record providing the following information:
+Now we will create a new module. It is a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
+To create a new module, go to the Module window, and add a new record providing the following information:
 
 | Parameter       | Value                                 |
 | --------------- | ------------------------------------- |
@@ -46,17 +46,17 @@ It should look like this:
   ![new-module.png](/assets/developer-guide/etendo-rx/tutorial/new-module.png)
 
 
-With our new module created, we'll start working with 'Projections'
+With our new module created, we will start working with *Projections*.
 
 ------------------------------------------------------------------
 
 ## Projection
 
-When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we don't need all the properties of the returned objects.
+When using Spring Data JPA to implement the persistence layer, the repository typically returns one or more instances of the root class. However, more often than not, we do not need all the properties of the returned objects.
 
 In such cases, we might want to retrieve data as objects of customized types. These types reflect partial views of the root class, containing only the necessary properties. This is where projections come in handy.
 
-Start by opening 'Projections' windows and creating a new projection with the following properties:
+Start by opening *Projections* windows and creating a new projection with the following properties:
 
 | Field       | Value                                 |
 | ----------- | ------------------------------------- |
@@ -70,11 +70,11 @@ Start by opening 'Projections' windows and creating a new projection with the fo
 ### Adding the projection to a table
 
 As we create the projection, now we need to assign it to a table where we want to extract data.
-For this, open the "Tables and Columns" window and look for the "Order" table (as mentioned in the introduction, we want to consume orders).
+For this, open the *Tables and Columns* window and look for the *Order* table (as mentioned in the introduction, we want to consume orders).
 
 ### Adding a Projection
 
-Next, navigate to the "Projections" tab and add a new projection with the following value:
+Next, navigate to the *Projections* tab and add a new projection with the following value:
 
 | Field      | Value                                          |
 | ---------- | ---------------------------------------------- |
@@ -86,8 +86,8 @@ Next, navigate to the "Projections" tab and add a new projection with the follow
 ### Adding Entity Fields
 
 When a projection is created, we need to define which fields we want to retrieve.
-In our case, we'll need the record ID, Business Partner name, Document No, Document Type name, and the Grand total.
-Under the 'Projection' tab navigate to the "Entity Field" tab and add the following fields:
+In our case, we will need the record ID, Business Partner name, Document No, Document Type name, and the Grand total.
+Under the Projection tab navigate to the *Entity Field* tab and add the following fields:
 
 |  Field Name         |  Property             |
 | ------------------- | --------------------- |
@@ -98,8 +98,8 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 | grandTotalAmount    |`grandTotalAmount`     |
 
 !!!note
-    The 'Property' field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
-    So, you can navigate the entities related from here, e.g., the Business Partner name, we have it by accessing the entity 'businessPartner' and, then, adding the field that we want, "name" in our case.
+    The *Property* field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
+    So, you can navigate the entities related from here. E.g. To get the Business Partner name, you can have it by accessing the entity *businessPartner* and then, adding the field that you want to filter, *name* in this case.
 
 
   ![new-entity-fields.png](/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
@@ -109,11 +109,11 @@ Under the 'Projection' tab navigate to the "Entity Field" tab and add the follow
 ## Repository
 
 In Spring Data, a repository is an abstraction that provides the operations relative to a domain class to interact with a data store.
-To create the repository for our purpose, and the same as we did for projections, we need to go to Tables and Columns and look for 'C_Order' table
+To create the repository for our purpose, and the same as we did for projections, we need to go to Tables and Columns and look for `C_Order` table.
 
 ### Creating a New Repository
 
-After selecting a table, in this case 'C_Order', we need to go to 'Repository' tab and create a new record with the following values:
+After selecting a table, in this case `C_Order`, we need to go to *Repository* tab and create a new record with the following values:
 
 | Field       | Value                                |
 | ----------- | ------------------------------------ |
@@ -128,8 +128,8 @@ After selecting a table, in this case 'C_Order', we need to go to 'Repository' t
 
 ### Creating a New Search
 
-Next, we'll define a search method to use later when we want to consume the orders. This query is taken as a filter for retrieving the orders.
-To create this new filter/search method, under "Repository" tab of the C_Order table, create a new record with the following data:
+Next, we will define a search method to use later when we want to consume the orders. This query is taken as a filter for retrieving the orders.
+To create this new filter/search method, under Repository tab of the `C_Order` table, create a new record with the following data:
 
 | Field       | Value                                                                                  |
 | ----------- | -------------------------------------------------------------------------------------- |
@@ -143,7 +143,7 @@ To create this new filter/search method, under "Repository" tab of the C_Order t
 
 As you can see in the query above, we use a parameter called `:documentType`. 
 We can add this type of parameter to use it later by adding a corresponding value to it and filtering depending on the current needs.
-To define the parameter, we need to create a new row on the 'Search Parameter' tab of the 'Search' tab. Fill it with the following settings:
+To define the parameter, we need to create a new row on the *Search Parameter* tab of the *Search* tab. Fill it with the following settings:
 
 | Field | Value         |
 | ----- | ------------- |
@@ -151,7 +151,7 @@ To define the parameter, we need to create a new row on the 'Search Parameter' t
 | Name  |`documentType` |
 | Type  |`String`       |
 
-In our case, we'll filter depending on the Document Type of the orders
+In our case, we will filter depending on the Document Type of the orders.
 
   ![new-search-parameter.png](/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
 
@@ -160,8 +160,8 @@ In our case, we'll filter depending on the Document Type of the orders
 
 ## Creating a New Spring Boot Project
 
-Now that we have declared the projection, fields, repository, and searches on Etendo ERP, we'll need to create a new spring project to make use of these JPA resources that we have created just before.
-Next, you'll find the steps to create the Spring Boot project and add it as a module on Etendo RX.
+Now that we have declared the projection, fields, repository, and searches on Etendo Classic, we will need to create a new spring project to make use of these JPA resources that we have created just before.
+Next, you will find the steps to create the Spring Boot project and add it as a module on Etendo RX.
 
 ### Project Creation
 
@@ -188,7 +188,7 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
     | Java Version |11                         |
 
 3. Add the following dependencies: Spring Web, Lombok, Config Client
-4. Click on the 'Generate' button to download your project. The page will generate a file named `rxtutorial.zip`.
+4. Click on the *Generate* button to download your project. The page will generate a file named `rxtutorial.zip`.
 
     ![spring-initializr.png](/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png)
 
@@ -200,7 +200,7 @@ Next, you'll find the steps to create the Spring Boot project and add it as a mo
 
 ### Project Configuration
 
-After creating the project, we need to add some configuration in order to work with our ERP.
+After creating the project, we need to add some configuration in order to work with Etendo Classic.
 
 ### Modify build.gradle File
 
@@ -266,7 +266,7 @@ sourceSets {
     }
 }
 ```
-After configuring the project, we'll need to generate the proper files for RX.
+After configuring the project, we will need to generate the proper files for RX.
 RX generate.entities task will generate java files in the `src-gen` directory.
 Execute `rx:generate.entities` task to do so.
 
@@ -278,13 +278,13 @@ Execute `rx:generate.entities` task to do so.
 
 ## Configuring a Spring Boot Project
 
-Now we'll configure the new spring boot project to define how it will run.
+Now we will configure the new spring boot project to define how it will run.
 
 ### Updating the application.properties file
 
 Modify your `application.properties` file, under the new spring boot project created on the previous steps, with the following configurations:
 
-```properties
+```groovy title="application.properties"
 config.server.url=http://localhost:8888
 spring.config.import=configserver:${config.server.url}
 spring.application.name=rxtutorial
@@ -292,12 +292,13 @@ server.port=8101
 token=
 ```
 
-The token is empty, but now we'll generate a new one
-### Adding the 'token' value
+The token is empty, but now we will generate a new one. 
+
+### Adding the token value
 
 To generate the token value we need to follow these steps:
 
-  1. As 'System Administrator' role on the ERP, go to 'RX Services' window.
+  1. As *System Administrator* role on Etendo Classic, go to *RX Services* window.
   2. Create a new row with the following values:
 
     |  Field Name         |  Property                      |
@@ -308,15 +309,15 @@ To generate the token value we need to follow these steps:
 
     ![new-rx-service.png](/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png)
 
-  3. Change to 'F&B International Group Admin' role.
-  4. Go to 'User' window.
-  5. Choose a user, e.g. 'F&B ES User'
+  3. Change to *F&B International Group Admin* role.
+  4. Go to *User* window.
+  5. Choose a user, e.g. F&B ES User
   
     !!! info
-        Change the password for this record, you'll need it later.
+        Change the password for this record, you will need it later.
         Also, check that the user is active.
 
-  6. In the tab 'RX Services Access' create a new row and fill it with the following values:
+  6. In the tab *RX Services Access* create a new row and fill it with the following values:
     
     | Field Name           |  Property                     |
     | ------------------- | ------------------------------ |
@@ -333,14 +334,12 @@ To generate the token value we need to follow these steps:
     ./gradlew rx:rx
     ```
 
-  8. Open Postman and we'll make an authenticate request.
-  
-    Verbose: POST
-
-    URL: http://localhost:8094/api/authenticate
-
-    Body:
+  8. Open Postman and we will make an authenticate request.
+    
     ```json
+    Verbose: POST
+    URL: http://localhost:8094/api/authenticate
+    Body:
     {
       "username":"F&BESUser",
       "password":"EtendoAdmin1",
@@ -348,12 +347,13 @@ To generate the token value we need to follow these steps:
       "secret":"123"
     }
     ```
+
     !!!warning
         Remember the password changed before.
 
     ![postman-request.png](/assets/developer-guide/etendo-rx/tutorial/postman-request.png)
   
-  9. Take the token under the response and fill in the 'token' property on the application.properties of the tutorial module.
+  9. Take the token under the response and fill in the *token* property on the `application.properties` of the tutorial module.
 
 ### Adding Component Scan Annotation to the Application Class
 
@@ -403,7 +403,7 @@ public class RxtutorialApplication {
 
 ## Creating a New Spring Boot Service
 
-In this last step before launching the microservice, we'll create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps. 
+In this last step before launching the microservice, we will create the logic to consume the orders using the projection and all the JPA resources that we defined in the previous steps. 
 Follow the instructions below to create a new service:
 
 1. Create a new file at the following path:
@@ -461,19 +461,19 @@ Follow the instructions below to create a new service:
     ```
 
     This file will display a simple HTML page with the retrieved orders.
-    But first, we'll take a look at the class that we just created.
+    But first, we will take a look at the class that we just created.
 
       ```java
       String url = "/Order/search/findSalesOrder?documentType=AB22CE8FFA5E4AF29F2AC90FCDD400D8&projection=rxtutorial";
       ```
-      This URL is the one that the process will use to consume the service, as you can see, we add here the 'Search' filter that we created before and give it the document type parameter, with one document type id of the order that we'll filter. Also, we're adding the projection to use too, same as before, it's the one created before.
+      This URL is the one that the process will use to consume the service, as you can see, we add here the *Search* filter that we created before and give it the document type parameter, with one document type id of the order that we will filter. Also, we are adding the projection to use too, same as before, it is the one created before.
 
       
       ```java
       var orders = restUtils.getList(url, OrderRxtutorialModel.class);
       ```
 
-      The orders variable will store all the orders that will be filtered with our request, as you can see, the method `getList` receives two parameters, the first one is the URL that we'll use to make the request, and the second one is the model class of the retrieved object.
+      The orders variable will store all the orders that will be filtered with our request, as you can see, the method `getList` receives two parameters, the first one is the URL that we will use to make the request, and the second one is the model class of the retrieved object.
 
 3. Then, we simply create a StringBuilder as an HTML page that will be shown on the browser.
 
@@ -488,11 +488,11 @@ To simplify RX executions you have a simplified run task:
 ```
 
 !!!warning
-    Remember to configure the Auth service as described on the [Getting Started](/developer-guide/etendo-rx/getting-started/#configure-auth-project) page
+    Remember to configure the Auth service as described on the [Getting Started](/developer-guide/etendo-rx/getting-started/#configure-auth-project) page.
 
 ## Run tutorial project
 
-Now we're able to run our new microservice. For that, execute the following task:
+Now we are able to run our new microservice. For that, execute the following task:
 
 ``` bash title="Terminal"
 ./gradlew :com.tutorial.rxtutorial:bootRun
@@ -501,4 +501,4 @@ Now we're able to run our new microservice. For that, execute the following task
 Open your browser and you can view the generated page with the following URL: [**http://localhost:8101/api/**](http://localhost:8101/api/)
 
 !!! success
-    You've successfully created a fully working RX service.
+    You have successfully created a fully working RX service.

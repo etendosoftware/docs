@@ -3,6 +3,10 @@ title: Modelo 347
 hide:
     - navigation
 ---
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat347apr.es
+:octicons-package-16: Javapackage: org.openbravo.module.aeat347apr.es.es_es
+
 ## **Introducción**
 
 Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros**” como un fichero de texto ("\*.txt") válido conforme a los requerimientos de la Hacienda Pública española, es por ello que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.

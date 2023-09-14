@@ -16,6 +16,10 @@ The Platform Extensions bundle includes the following modules:
 
 ## Print Document Web Service
 
+:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+
+:octicons-package-16: Javapackage: com.smf.ws.printdocument
+
 ### Technical Aspects
 
 This module allows downloading a PDF from some transaction documents using a web service called printDocument. It returns a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
@@ -51,6 +55,10 @@ This is a RESTful Web Service that returns a .PDF file of the document using the
 It is mandatory to insert the organization ID when you call the web service because it filters by organization.
 
 ## Number To Word (English)
+
+:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+
+:octicons-package-16: Javapackage: org.openbravo.numbertoword
 
 ### Technical Aspects
 
@@ -162,11 +170,15 @@ public class NumberToWord_es extends NumberToWord {
 
 ## Javax XML SOAP API
 
+:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+
 ### Technical Aspects
 
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 ## Report Cache Management
+
+:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement.
 
 ### Technical Aspects
 
@@ -179,6 +191,10 @@ Then, in the "Clear report cache" window, click ’Done’:
 ![Clear Report Cache](/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
 ## Etendo Advanced Security
+
+:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+
+:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
 
 ### Technical Aspects
 

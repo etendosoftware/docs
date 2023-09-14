@@ -13,13 +13,15 @@ pip install mike
 
 ```bash
 source venv/bin/activate
-mkdocs serve
+mike serve
+#mkdocs serve
 ```
 
 # Publish new version
 
 ```bash
-mkdocs gh-deploy --force
-# mike deploy --push --update-aliases 23.x latest
+source venv/bin/activate
+mike deploy --push --update-aliases 23.x latest
+#mkdocs gh-deploy --force
 # mike set-default --push latest
 ```

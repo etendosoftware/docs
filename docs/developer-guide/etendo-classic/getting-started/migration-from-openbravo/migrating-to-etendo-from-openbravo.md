@@ -44,11 +44,11 @@ It is necessary to ensure following the next steps:
 
 ### Manual Migration Process
 
-These are the steps to follow for the manual migration from OpenbravoERP to EtendoERP:
+These are the steps to follow for the manual migration from OpenbravoERP to Etendo Classic:
 
-1. Create and enter the folder Etendo ERP.
+1. Create and enter the folder Etendo Classic.
 
-2. Insert the **etendo_base** sources in the Etendo ERP folder. They can be extracted after downloading Etendo from [Resources](https://etendo.software/es/recursos){target="_blank"}. To do this, use your gitHub user and token.
+2. Insert the **etendo_base** sources in the Etendo Classic folder. They can be extracted after downloading Etendo from [Resources](https://etendo.software/es/recursos){target="_blank"}. To do this, use your gitHub user and token.
 
 3. The `gradle.properties` file has default params but if needed this can be changed.  
 

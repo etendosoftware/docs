@@ -18,7 +18,7 @@ The main advantage of these new sequences is dynamic masking, which makes it pos
 !!! info
     For more information about this configuration, visit the technical documentation about [Sequences](/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences).
 
-After that, in the `Financial Management>Accounting>Setup>Document Sequence` window the user can see and edit the sequences generated.
+After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequence` window the user can see and edit the sequences generated.
 
 ![sequenceslist.png](/assets/legacy/technicaldocumentation/platform/sequenceslist.png)
 

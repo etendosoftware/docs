@@ -7,12 +7,12 @@ tags:
 ---
 ## Overview
 
-Welcome to the getting started guide for the **Copilot** API. This tool allows interaction with a bot that selects the appropriate tool to answer a query.
+The getting started guide for the Copilot API is a tool that allows interaction with a bot that selects the appropriate tool to answer a query.
 
 ## Environment Setup
 
 ### Requirements
-- **Etendo Classic**. If you don't have it, [install it here](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
+- **Etendo Classic**. If you do not have it, [install it here](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
 - **Python** versión ^3.10, [install it here](https://www.python.org/downloads/){target="_blank"}.
 
 ### Run copilot locally
@@ -87,5 +87,5 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
     ./gradlew update.database smartbuild --info
     ```
 
-5. Now we can see the "Financial Type Configuration" windows with their respective fields translated into Spanish.
+5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
     ![](/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)

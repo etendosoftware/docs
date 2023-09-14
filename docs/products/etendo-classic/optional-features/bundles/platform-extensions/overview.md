@@ -8,6 +8,10 @@ The Platform Extensions bundle includes the following modules:
 ## Modules
 ### Print Document Web Service
 
+:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+
+:octicons-package-16: Javapackage: com.smf.ws.printdocument
+
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
@@ -17,6 +21,10 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 ### Number To Word (English)
 
+:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+
+:octicons-package-16: Javapackage: org.openbravo.numbertoword
+
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
@@ -24,6 +32,8 @@ It provides the infrastructure to convert a number into its equivalent in words.
 
 
 ### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
 
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
@@ -33,6 +43,8 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ### Report Cache Management
 
+:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement.
+
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
@@ -40,12 +52,18 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 ### Etendo Advanced Security
 
+:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+
+:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
         For more information, visit the [Etendo Advanced Security user guide](/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
 ### Dynamic App 
+
+:octicons-package-16: Javapackage: com.etendoerp.dynamic.app
 
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
@@ -61,6 +79,22 @@ EAN 128 allows to use bar code in your application
 !!! info
         For more information, visit the [EAN 128 developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
 
+
+### Etendo RX
+
+:octicons-package-16: Javapackage: com.etendoerp.etendorx
+
+### Etendo RX
+
+:octicons-package-16: Javapackage: com.etendoerp.reactor
+
+### Webhook Events
+
+:octicons-package-16: Javapackage: com.etendoerp.webhookevents
+
+### Etendo Async Processes
+
+:octicons-package-16: Javapackage: com.etendoerp.asyncprocess
 
 ## Translations
 

@@ -4,8 +4,9 @@ hide:
     - navigation
 ---
 
-## Javapakages 
-`org.openbravo.module.aeat390.es` 
+## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
 
 ## **Introducción**
 
@@ -83,7 +84,7 @@ El soporte para el Modelo 390 en Etendo se distribuye en un único módulo. Este
 
 Para su instalación el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
 
--   Instalación de la última versión disponible del paquete profesional de Etendo ERP para España
+-   Instalación de la última versión disponible del paquete profesional de Etendo Classic para España
 -   o la instalación del módulo(s) de forma separada.
 
 !!! info
