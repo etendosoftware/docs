@@ -173,7 +173,7 @@ When the arrow to continue is selected, the code of the storage bin in which the
 
  ![](/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
- In the meantime, on the back of Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+ In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
 
  ![](/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 

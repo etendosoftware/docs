@@ -243,35 +243,3 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 ### SMFEANComponentProvider.java
 
 **Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
-
-## Mobile Scan
-
-### Overview
-
-This module is responsible for allowing the [Etendo Mobile](https://etendosoftware.github.io/docs/products/etendo-mobile/getting-started/) application to use the camera to scan codes, either barcodes or QR codes.
-This allows the Inventory Scan process to be used in the physical inventory window of Etendo mobile. This process is responsible for scanning a barcode and receiving the scanned product data.
-
-#### **Methods and key features:**
-
- **doExecute(Map<String, Object> parameters, String content):** this is the main method called to execute the scanning process. It receives a set of parameters and content in JSON format.
-
-- Loads an instance of an InventoryCount based on an ID.
-- Processes a JSON containing groups of items in different storage locations.
-- For each group and each item, creates or updates a line in the InventoryCount using the createOrUpdateLine method.
-
- **createOrUpdateLine(...):** Creates or updates a line in the InventoryCount.
-
-- It searches for a product according to the barcode and other data.
-- If the product is not found, it adds the barcode to a list of not found codes.
-- If the product is found, it creates or updates an inventory line with the specified quantity.
-- It also creates a scan history.
-
- **getAttributeSetInstance(...):** Gets an instance of the attribute set for a product.
-
- **getStorageBin(...):** Gets a Locator (location in the warehouse) based on a barcode.
-
- **findProduct(...):** Finds a product based on its ID or barcode.
-
- **findLine(...):** Finds an existing inventory line for a product in an InventoryCount.
-
- **getMaxLineNumber(...)**: Gets the maximum line number for an InventoryCount.
