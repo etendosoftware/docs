@@ -881,6 +881,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/whats-new/release-notes/etendo-classic/versions/23Q2-8/</loc>
+         <lastmod>2023-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/whats-new/release-notes/etendo-classic/versions/details/22Q1-0-details/</loc>
          <lastmod>2023-09-14</lastmod>
          <changefreq>daily</changefreq>
