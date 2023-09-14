@@ -1,17 +1,18 @@
 ---
 title: Platform Extensions Bundle | Technical Documentation
 ---
+
 ## Overview
 
 This bundle includes enhancements for platform functionalities in Etendo.
 
 The Platform Extensions bundle includes the following modules:
 
--   **Print Document Web Service**: It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
--   **Multiple Business Partner Selector**: It provides a selector which allows selecting multiple business partners in one step.
--   **Number To Word** (English): It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
--   **Javax XML SOAP API**: This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
--   **Report Cache Management**: This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
+- **Print Document Web Service**: It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require making printables accessible from those applications.
+- **Multiple Business Partner Selector**: It provides a selector which allows selecting multiple business partners in one step.
+- **Number To Word** (English): It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
+- **Javax XML SOAP API**: This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+- **Report Cache Management**: This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 ## Print Document Web Service
 
@@ -21,27 +22,29 @@ This module allows downloading a PDF from some transaction documents using a web
 
 The supported documents are:
 
--   Sales Quotation
--   Invoice
--   Shipment
--   Proforma Order
--   Proforma Quotation
+- Sales Quotation
+- Invoice
+- Shipment
+- Proforma Order
+- Proforma Quotation
 
 To call the Web Service, the following URL is needed:
+
 ```
 http://<client-url/etendo>/sws/com.etendoerp.printdocumentws.printDocument
 ```
+
 It is necessary to configure Token authentication to use the web service.
 
 Values that can be used to call the Web Service are:
 
--   order
--   invoice
--   shipment
--   quotation
--   orderProforma
--   shipmentValued
--   quotationProforma
+- order
+- invoice
+- shipment
+- quotation
+- orderProforma
+- shipmentValued
+- quotationProforma
 
 This is a RESTful Web Service that returns a .PDF file of the document using the template that is configured. The supported documents are Sales Quotation, Invoice, Shipment, Proforma Order, Proforma Quotation.
 
@@ -53,7 +56,7 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 The NumberToWord module deploys an infrastructure to define Number to Word conversion modules so that different logics for different languages can be deployed.
 
-To introduce a different language (other than English and Spanish), follow this example to extend this Number to Word extend: 
+To introduce a different language (other than English and Spanish), follow this example to extend this Number to Word extend:
 
 ```java
 public class NumberToWord_es extends NumberToWord {
@@ -175,7 +178,6 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 ![Clear Report Cache](/assets/drive/10BWG7z1bmplzWz--wUqI6maavHs4dC1c.png)
 
-
 ## Etendo Advanced Security
 
 ### Technical Aspects
@@ -184,7 +186,7 @@ This module allows customizing several security features related to
 
 - Password Security
 - Password History
-- User Lockout 
+- User Lockout
 - Multiple Session Verification
 - Changing Password after Login
 - Expiration Time (Autolock Password)
@@ -195,11 +197,10 @@ To make this module work, authentication Java class must be configured in the `g
 authentication.class=com.etendoerp.advanced.security.process.AdvancedAuthenticationManager
 ```
 
-Then `./gradlew setup` must be executed. 
+Then `./gradlew setup` must be executed.
 
 !!! warning
-    It is mandatory to execute this step before installing the module. 
-
+      It is mandatory to execute this step before installing the module. 
 
 ## EAN 128
 
@@ -212,14 +213,14 @@ Is a Java-based module for managing EAN-128 barcodes in an Etendo ERP context. B
 ### SelectorFieldPropertyDataSource.java
 
 **Purpose**: Implements a data source for a custom field selector.
-**Main Operations**:Verifies whether a user has the access right to fetch data from the datasource.
+**Main Operations**: Verifies whether a user has the access right to fetch data from the datasource.
 Filters out Blob and OneToMany properties when getting entity properties.
 
 ### EAN128Utils.java
 
 **Purpose**: Utility class for handling EAN-128 data parsing and manipulation.
 
-**Main Operations**:Defines standard date formats and JSON keys.
+**Main Operations**: Defines standard date formats and JSON keys.
 Parses incoming EAN128 Data JSON and extracts relevant information such as lot, serial number, expiration dates, etc.
 If Inventory Line quantity was parsed, it modifies the relevant BaseOBObject's quantity.
 Provides methods to edit OpenBravo base objects (BaseOBObject) based on the parsed EAN-128 data.
@@ -228,12 +229,13 @@ Provides methods to edit OpenBravo base objects (BaseOBObject) based on the pars
 
 **Purpose**: Web Service to manage EAN-128 Types.
 
-**Main Operations**:Handles HTTP GET requests and retrieves EAN-128 type information.
+**Main Operations**: Handles HTTP GET requests and retrieves EAN-128 type information.
 The information fetched depends on the warehouse specified in the request parameters.
 If a warehouse-specific EAN-128 type isn't available, it attempts to fetch the default one.
 Converts EAN-128 type to a JSON object and returns it as a response.
 
 **Key Libraries used**:
+
 - Etendo DAL for database interaction.
 - Apache Commons Lang for String manipulations.
 - JSON and Jettison for JSON parsing.
