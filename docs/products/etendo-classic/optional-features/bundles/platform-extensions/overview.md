@@ -69,6 +69,16 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
         For more information, visit the [Dynamic App user guide](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app)
+        
+### EAN 128
+
+:octicons-package-16: Javapackage: com.smf.ean128
+
+EAN 128 allows to use bar code in your application
+
+!!! info
+        For more information, visit the [EAN 128 developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
+
 
 ### Etendo RX
 
