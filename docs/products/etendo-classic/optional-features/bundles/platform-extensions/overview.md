@@ -54,6 +54,8 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
         
 ### EAN 128
 
+:octicons-package-16: Javapackage: com.smf.ean128
+
 EAN 128 allows to use bar code in your application
 
 !!! info

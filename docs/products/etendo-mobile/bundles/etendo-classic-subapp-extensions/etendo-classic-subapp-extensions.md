@@ -134,7 +134,9 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ![](/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
-## Mobile Scan
+## Mobile App Scanning Helpers
+
+:octicons-package-16: Javapackage: com.smf.mobile.scan
 
 Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/products/etendo-mobile/getting-started/) App
 
@@ -149,7 +151,7 @@ Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware
 
  When you enter the Physical inventory window and select a record, you will see the "Actions" button.
 
- ![](/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.png)
+ ![](/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
 In this button, you can see the process it incorporates, called Inventory Scan.
 
@@ -159,8 +161,35 @@ In this button, you can see the process it incorporates, called Inventory Scan.
  
  ![](/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
- After execute the scanning proccess, when you click on save, it will be reflected in the scan tab of the line that the value has been changed, in the lines tab of the physical inventory window.
- Finally, a background process will be executed to update the physical inventory.
+When the arrow to continue is selected, the code of the storage bin in which the product is located must be entered manually or scanned.
 
- ![](/assets/developer-guide/etendo-classic/bundles/scansTabs.png) 
+ ![](/assets/developer-guide/etendo-classic/bundles/StorageBinBarCode.png) 
+
+ After selecting the storage bin, the product to be modified must be scanned or selected.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
+
+ Finally, enter the amount you want to add of that product, press Done and Save.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
+
+ In the meantime, on the back of Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
+
+In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
+
+ ![](/assets/developer-guide/etendo-classic/bundles/Process.png) 
+
+And here we will observe the quantities before the process:
+
+ ![](/assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
+
+ And after:
+
+ ![](/assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
+
+We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
+
+ ![](/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
 
