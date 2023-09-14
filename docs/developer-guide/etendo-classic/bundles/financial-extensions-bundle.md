@@ -7,6 +7,8 @@ In this section, the user can find technical information about the Financial Ext
 
 ## Conversion Rate Downloader
 
+:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+
 ### Technical Aspects
 
 In the Currency Converters window, the necessary Apilayer data has to be configured:
@@ -21,6 +23,8 @@ In the Conversion Rate Downloader Rule window, the configuration includes which 
 The "Conversion Rate Downloader" process in the background also needs to be configured. This is the one that will obtain the conversion and insert it in the Conversion Rates window.
 
 ## Business Partner Settlement
+
+:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
 
 ### **Introduction**
 
@@ -300,6 +304,8 @@ Sets to null the `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 ## Banking Pool
 
+:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+
 ### Overview
 
 This document covers how to create a process that automatically generates a new Finance Plan or updates a Finance Plan from the Financial Management >> Accounting >> Transactions >> Financial Type Configuration window.  It also provides a structure that should be considered when creating the Java class that is responsible for performing these new processes.
@@ -388,6 +394,10 @@ By simply filling in the Class Name field, the Create New Funding Plan and Updat
 There is no need to modify any of the 2 buttons, as they automatically execute the Exec method of the Java class specified in the Financial Type.
 
 ## Advanced Financial Docs. Processing
+
+:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+
+:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
 
 ### Undo Closed orders / Unvoid voided invoices hooks
 
