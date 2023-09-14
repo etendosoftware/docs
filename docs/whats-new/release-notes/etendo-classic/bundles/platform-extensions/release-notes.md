@@ -5,7 +5,8 @@ title: Release Notes
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| 1.8.0 	|28/08/2023	| 23.2.0 | 23.2.x   | CS    | :white_check_mark:    |
+| 1.9.0 	|14/09/2023	| 23.2.0 | 23.2.x   | CS    | :white_check_mark:    |
+| 1.8.0 	|28/08/2023	| 23.2.0 | 23.2.x   | C     | :white_check_mark:    |
 | 1.7.1 	|17/08/2023	| 23.2.0 | 23.2.x   | C     | :white_check_mark:    |
 | 1.6.0 	|29/06/2023	| 23.2.0 | 23.2.x   | C     | :white_check_mark:    |
 | 1.5.0 	|27/06/2023	| 22.1.0 | 23.2.x	| C 	| :white_check_mark:    |
@@ -21,20 +22,22 @@ title: Release Notes
 | 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
 
 ## Release Notes
+### 1.9.0
+- Add *Generic Utils for EAN128 Definition and parsing* module, Javapackage: `com.smf.ean128`
 ### 1.8.0
-- Add Dynamic App module
+- Add *Dynamic App* module, Javapakage: `com.etendoerp.dynamic.app`
 ### 1.7.1
 - Fix incompatibility of the com.etendoerp.etendorx module with Oracle
 ### 1.6.0
-- Add Advanced Security module
+- Add *Etendo Advanced Security* module, Javapackage: `com.etendoerp.advanced.security`
 ### 1.5.0
 - Update Core compatibility until 23.2.x
 ### 1.4.0
 - All packages have been published on GitHub.
 
 ### 1.3.0
-- Add com.etendoerp.asyncprocess module
-- Add com.etendoerp.webhookevents module
+- Add `com.etendoerp.asyncprocess` module
+- Add `com.etendoerp.webhookevents` module
 
 ### 1.1.3 
 - Move Amortization Report module (Platform Bundle) to Financial Extension (Financial Bundle)
