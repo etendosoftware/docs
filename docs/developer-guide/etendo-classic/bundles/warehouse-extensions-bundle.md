@@ -7,6 +7,8 @@ In this section, the user can find technical information about the Warehouse Ext
 
 ## Stock History 
 
+:octicons-package-16: Javapackage: com.etendoerp.stock.history
+
 This module is added to the Create Stock History process and has the following characteristics: 
 
 It takes all the stock data from each product (present in the table `m_storage_detail_history`) and enters them into the table `etst_storage_detail_history`, under the day the process was executed. If there is already data loaded on that date it is overwritten with the new data. The whole process is monitored by logs that can be viewed in the 'Process Request' window under the 'Process Monitor' tab of the process.
