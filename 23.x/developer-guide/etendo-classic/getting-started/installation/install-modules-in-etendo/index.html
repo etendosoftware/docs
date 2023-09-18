@@ -17,7 +17,7 @@
         <link rel="next" href="../../migration-from-openbravo/migrating-to-etendo-from-openbravo/">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3489,17 +3489,17 @@
 <h2 id="overview">Overview</h2>
 <p>This page explains how to install modules either from the Etendo Marketplace or by searching for the dependencies on GitHub, taking into account that these can be installed in JAR or Sources format. </p>
 <h2 id="1-dependency-resolution">1. Dependency resolution</h2>
-<p>It is important to mention that the dependencies will be resolved from GitHub, so you must have the credentials properly configured as explained in the <a href="/getting-started/installation/">Etendo installation guide</a>. Depending on the level of access your GitHub user has, you will have access to packages in public or private repositories.</p>
+<p>It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the <a href="/getting-started/installation/">Etendo installation guide</a>. Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.</p>
 <div class="admonition success">
 <p class="admonition-title">Info</p>
-<p>Along your license, you will have access to all packages distributed by Etendo.</p>
+<p>Along your license, you have access to all packages distributed by Etendo.</p>
 </div>
 <h2 id="2-search-for-dependencies">2. Search for dependencies</h2>
 <p>There are two ways to search for and install modules on Etendo: </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16V4Z"/></svg></span> Marketplace</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> GitHub Packages</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Install bundles from the Etendo Marketplace: In this case you will install bundles that include a set of modules grouped by functionality.</p>
+<p>Install bundles from the Etendo Marketplace: In this case, you will install bundles that include a set of modules grouped by functionality.</p>
 <p><a class="glightbox" href="/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png" /></a></p>
 <ol>
 <li>First, go to <a href="http://marketplace.etendo.cloud" target="_blank">Etendo Marketplace</a>.</li>
@@ -3512,17 +3512,17 @@
 </div>
 <div class="tabbed-block">
 <p>In case you only need to install one package or a set of packages separately, you can do so by resolving the dependencies from GitHub.</p>
-<p>First, you can search within the <a href="https://github.com/orgs/etendosoftware/packages" target="_blank">Etendo Software organization packages</a> section for the necessary javapakage. Or if it is your own repository, search for the packages associated with it.</p>
-<p>Exploring in the bundles and modules documentation, you will find the javapackages of each one. E.g. <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool">Banking Pool</a> documentation.</p>
+<p>First, you can search within the <a href="https://github.com/orgs/etendosoftware/packages" target="_blank">Etendo Software organization packages</a> section for the necessary javapackage. Or if it is your own repository, search for the packages associated with it.</p>
+<p>Exploring the bundles and modules documentation, you find the javapackages of each one. E.g. <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool">Banking Pool</a> documentation.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="search-packages.png" src="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png" /></a></p>
-<p>When you select a package you will see the related information, e.g. </p>
+<p>When you select a package, you see the related information, e.g. </p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="package.png" src="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png" /></a></p>
 <p>You should use this information to include the dependency, in our case in Gradle format.</p>
 </div>
 </div>
 </div>
 <h2 id="3-set-dependencies">3. Set dependencies</h2>
-<p>Based on the modules format you want to work with, you need to specify differents configurations.</p>
+<p>Based on the modules format you want to work with, you need to specify different configurations.</p>
 <ul>
 <li>In your Etendo project, open the <code>build.gradle</code> file.</li>
 <li>In the dependencies area, declare your modules.</li>
@@ -3530,7 +3530,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Sources Format</label><label for="__tabbed_2_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 6.08s-6.84 1.71-3.56 5.48c.97 1.11-.25 2.11-.25 2.11s2.45-1.25 1.31-2.85c-1.06-1.47-1.86-2.2 2.5-4.74m-4.47 1.2C16.08 4.08 14 2 14 2c.84 3.3-2.96 4.3-4.33 6.36-.94 1.4.46 2.91 2.33 4.64-.71-1.7-3.22-3.16.03-5.72M9.37 17.47c-3.08.86 1.88 2.63 5.79.96-.38-.15-.75-.33-1.1-.54-1.36.31-2.76.37-4.14.18-1.31-.16-.55-.6-.55-.6m5.32-1.68c-1.75.38-3.56.47-5.34.26-1.31-.13-.45-.77-.45-.77-3.4 1.13 1.88 2.4 6.6 1.02-.29-.11-.57-.3-.81-.51m3.42 3.3s.57.47-.61.83c-2.28.68-9.43.89-11.41.03-.71-.31.63-.74 1.05-.83.23-.06.46-.08.69-.08-.79-.54-5.13 1.1-2.19 1.56 7.97 1.3 14.54-.6 12.47-1.51m-2.74-4.86c.29-.19.6-.35.92-.49 0 0-1.51.26-3.02.4-1.6.16-3.21.18-4.81.06-2.35-.31 1.29-1.2 1.29-1.2-1.1 0-2.18.26-3.16.75-2.05 1 5.1 1.45 8.78.48m.9 2.42c-.02.04-.04.07-.08.1 5.01-1.31 3.17-4.64.77-3.81-.13.06-.24.14-.31.25.14-.05.28-.09.43-.12 1.2-.24 2.92 1.63-.81 3.58m.13 4.61c-3.01.52-6.09.56-9.12.14 0 0 .46.38 2.81.53 3.6.23 9.13-.13 9.26-1.83.03.01-.23.65-2.95 1.16Z"/></svg></span> JAR Format</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>If you want to work with sources modules, declare your dependencies using the <em>moduleDeps</em> configuration. (notice the @zip extension)</p>
+<p>If you want to work with source modules, declare your dependencies using the <em>moduleDeps</em> configuration. (notice the @zip extension)</p>
 <div class="language-groovy highlight"><span class="filename">ModuleDeps Template</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">moduleDeps</span><span class="o">(</span><span class="s1">&#39;&lt;groupId&gt;:&lt;artifactId&gt;:&lt;version&gt;@zip&#39;</span><span class="o">){</span><span class="w"> </span><span class="n">transitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">}</span>
 </span></code></pre></div>
 <p>E.g:</p>
@@ -3569,11 +3569,11 @@ And any other possible combination</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Sources Format</label><label for="__tabbed_3_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 6.08s-6.84 1.71-3.56 5.48c.97 1.11-.25 2.11-.25 2.11s2.45-1.25 1.31-2.85c-1.06-1.47-1.86-2.2 2.5-4.74m-4.47 1.2C16.08 4.08 14 2 14 2c.84 3.3-2.96 4.3-4.33 6.36-.94 1.4.46 2.91 2.33 4.64-.71-1.7-3.22-3.16.03-5.72M9.37 17.47c-3.08.86 1.88 2.63 5.79.96-.38-.15-.75-.33-1.1-.54-1.36.31-2.76.37-4.14.18-1.31-.16-.55-.6-.55-.6m5.32-1.68c-1.75.38-3.56.47-5.34.26-1.31-.13-.45-.77-.45-.77-3.4 1.13 1.88 2.4 6.6 1.02-.29-.11-.57-.3-.81-.51m3.42 3.3s.57.47-.61.83c-2.28.68-9.43.89-11.41.03-.71-.31.63-.74 1.05-.83.23-.06.46-.08.69-.08-.79-.54-5.13 1.1-2.19 1.56 7.97 1.3 14.54-.6 12.47-1.51m-2.74-4.86c.29-.19.6-.35.92-.49 0 0-1.51.26-3.02.4-1.6.16-3.21.18-4.81.06-2.35-.31 1.29-1.2 1.29-1.2-1.1 0-2.18.26-3.16.75-2.05 1 5.1 1.45 8.78.48m.9 2.42c-.02.04-.04.07-.08.1 5.01-1.31 3.17-4.64.77-3.81-.13.06-.24.14-.31.25.14-.05.28-.09.43-.12 1.2-.24 2.92 1.63-.81 3.58m.13 4.61c-3.01.52-6.09.56-9.12.14 0 0 .46.38 2.81.53 3.6.23 9.13-.13 9.26-1.83.03.01-.23.65-2.95 1.16Z"/></svg></span> JAR Format</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>To work with sources, you must expand manually the modules with a <em>Gradle</em> task</p>
+<p>To work with sources, you must expand manually the modules with a <em>Gradle</em> task.</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>expandModules
 </span></code></pre></div>
 <p>This task will try to download or update the modules declared as <em>moduleDeps</em> in the <code>build.gradle</code> file.   </p>
-<p>A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.</p>
+<p>A menu is displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/expand.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="expand.png" src="/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/expand.png" /></a></p>
 <p>You can manually exclude the expansion of modules adding it in the <em>sourceModulesInDevelopment</em> list.</p>
 <div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
@@ -3582,13 +3582,13 @@ And any other possible combination</p>
 </span></code></pre></div>
 <details class="warning">
 <summary>Warning</summary>
-<p><em>Transitive dependencies</em> (not declared in the <em>moduleDeps</em> configuration), by default will be extracted, updating or overwriting the source modules if exists. To prevent this behavior, you can set in the plugin extension the flag <em>overwriteTransitiveExpandModules</em> to false</p>
+<p><em>Transitive dependencies</em> (not declared in the <em>moduleDeps</em> configuration), by default will be extracted, updating or overwriting the source modules if exists. To prevent this behavior, you can set in the plugin extension the flag <em>overwriteTransitiveExpandModules</em> to false.</p>
 <div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">overwriteTransitiveExpandModules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">}</span>
 </span></code></pre></div>
 </details>
-<p>To expand only a specific module, you can use the <code>-Ppkg</code> flag and have defined the module in the <em>moduleDeps</em> configuration</p>
+<p>To expand only a specific module, you can use the <code>-Ppkg</code> flag and have defined the module in the <em>moduleDeps</em> configuration.</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>expandModules<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.custommodule
 </span></code></pre></div>
 <div class="admonition info">
@@ -3608,7 +3608,7 @@ You can force the compilation tasks adding to the Etendo extension the ignore fl
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="o">}</span>
 </span></code></pre></div>
 <p>Or run the tasks with the <code>-PignoreConsistency=true</code> flag.</p>
-<p>By default, Etendo will not allow you to add a <em>JAR dependency</em> with an old version to the current installed one.
+<p>By default, Etendo does not allow you to add a <em>JAR dependency</em> with an old version to the current installed one.
 You can ignore this behavior adding the module name to be updated with an old version in the</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">ignoredArtifacts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;com.etendoerp.mymodulename&#39;</span><span class="o">]</span>
@@ -3617,7 +3617,7 @@ You can ignore this behavior adding the module name to be updated with an old ve
 </div>
 </div>
 </div>
-<p>Finally, update the database and compile the new modules</p>
+<p>Finally, update the database and compile the new modules.</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>
 </span></code></pre></div>
 <div class="admonition success">
@@ -3626,14 +3626,14 @@ You can ignore this behavior adding the module name to be updated with an old ve
 The module is ready to use in Etendo!</p>
 </div>
 <h2 id="installing-translation-modules">Installing translation modules</h2>
-<p>If you want to install translation modules, you have to follow some more steps.The translation modules are installed automatically when you compile the code for first time. E.g. after running <code>./gradlew install</code> command to create a new client's instance.<br />
-But if you want to update a translation module version you can execute:</p>
+<p>If you want to install translation modules, you have to follow some more steps.The translation modules are installed automatically when you compile the code for the first time. E.g. after running <code>./gradlew install</code> command to create a new client's instance.<br />
+But if you want to update a translation module version, you can execute:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew<span class="w"> </span>install.translation<span class="w"> </span>-Dmodule<span class="o">=</span>&lt;javapackage&gt;
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <details class="info">
 <summary>Info</summary>
-<p>The <em>install.translation</em> task changes the status of the module and the translations will be installed on the next run of <em>update.database</em>.</p>
+<p>The <em>install.translation</em> task changes the status of the module and the translations is installed on the next run of <em>update.database</em>.</p>
 </details>
 <p>Another option to force the installation of all the translation modules is to add the <code>forceRefData=true</code> property in the <code>gradle.properties</code> file and then running:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./gradlew<span class="w"> </span>setup
