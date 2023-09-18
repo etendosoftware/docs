@@ -478,8 +478,8 @@ To configure the remittance payment method it is necessary to previously execute
 The next step is the configuration of the type of remittance and the assignment of the accounting accounts for its posting.
 It is possible to create as many remittance types as financial accounts available so that the appropriate accounting accounts can be assigned to each of them. 
 
-The following accounts are defined:
-**Sent account:** the account to be used in the remittance posting.
+The following accounts are defined:<br>
+**Sent account:** the account to be used in the remittance posting.<br>
 **Settlement account:** account to be used for the remittance settlement posting, which refers to the amount having been collected or paid.
 
 ![](/assets/drive/1fUwM5P-aNQOSlIm1u_mYfDAdQzbPO6ur.png)
@@ -514,7 +514,7 @@ To configure Remittances for Discount, define the type from the Remit for Discou
 ![](/assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
-    To create a Remitt for Discount remittance go to the [Remittance window](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#remittance).
+    To create a Remit for Discount remittance go to the [Remittance window](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#remittance).
 
 
 ## **Doubtful Debt Method**

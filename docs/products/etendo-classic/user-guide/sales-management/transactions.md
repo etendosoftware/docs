@@ -356,12 +356,12 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Sales Order with a new field: “Bank account”.
+The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
 
 ![bank_account_4.png](/assets/legacy/bank_account_4.png)
 
@@ -913,12 +913,12 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
+The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
 
 ![bank_account_2.png](/assets/legacy/bank_account_2.png)
 

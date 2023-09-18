@@ -10,6 +10,8 @@ The Financial Extensions bundle includes the following modules:
 
 ### Accounting Templates
 
+:octicons-package-16: Javapackage: com.etendoerp.accounting.templates
+
 This module allows setting a non deductible tax's amount to a specified financial account
 
 !!! info
@@ -187,16 +189,6 @@ This functionality allows the user to create settlements for invoices, both sale
     - [Payment Out](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
     - [Financial Account](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
 
-### Advanced Remittance
-
-This functionality allows the user to set a bank account as the default for business partners. This information is used for the creation of orders and invoices, and, therefore, in the remittances process. It is also possible to filter invoices with a new pop-up window in the Remittance window.
-
-!!! info
-    For more information, visit the [Advanced Remittance user guide](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions#advanced-remittance).
-
-### New Accounting Templates 
-
-:octicons-package-16: Javapackage: com.etendoerp.accounting.templates
 
 ### Currency API Configuration
 

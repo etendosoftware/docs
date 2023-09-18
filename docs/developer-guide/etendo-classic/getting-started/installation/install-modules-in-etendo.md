@@ -7,10 +7,10 @@ This page explains how to install modules either from the Etendo Marketplace or 
 
 ## 1. Dependency resolution
 
-It is important to mention that the dependencies will be resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](/getting-started/installation/). Depending on the level of access your GitHub user has, you will have access to packages in public or private repositories.
+It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](/getting-started/installation/). Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.
 
 !!! success "Info"
-    Along your license, you will have access to all packages distributed by Etendo.
+    Along your license, you have access to all packages distributed by Etendo.
 
 
 ## 2. Search for dependencies
@@ -18,7 +18,7 @@ There are two ways to search for and install modules on Etendo:
 
 === ":material-store: Marketplace"
 
-    Install bundles from the Etendo Marketplace: In this case you will install bundles that include a set of modules grouped by functionality.
+    Install bundles from the Etendo Marketplace: In this case, you will install bundles that include a set of modules grouped by functionality.
 
     ![](/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png)
     
@@ -34,13 +34,13 @@ There are two ways to search for and install modules on Etendo:
 
     In case you only need to install one package or a set of packages separately, you can do so by resolving the dependencies from GitHub.
 
-    First, you can search within the [Etendo Software organization packages](https://github.com/orgs/etendosoftware/packages){target="_blank"} section for the necessary javapakage. Or if it is your own repository, search for the packages associated with it.
+    First, you can search within the [Etendo Software organization packages](https://github.com/orgs/etendosoftware/packages){target="_blank"} section for the necessary javapackage. Or if it is your own repository, search for the packages associated with it.
 
-    Exploring in the bundles and modules documentation, you will find the javapackages of each one. E.g. [Banking Pool](/products/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool) documentation.
+    Exploring the bundles and modules documentation, you find the javapackages of each one. E.g. [Banking Pool](/products/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool) documentation.
     
     ![search-packages.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png)
 
-    When you select a package you will see the related information, e.g. 
+    When you select a package, you see the related information, e.g. 
 
     ![package.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png)
 
@@ -48,14 +48,14 @@ There are two ways to search for and install modules on Etendo:
 
 ## 3. Set dependencies
 
-Based on the modules format you want to work with, you need to specify differents configurations.
+Based on the modules format you want to work with, you need to specify different configurations.
 
 - In your Etendo project, open the `build.gradle` file.
 - In the dependencies area, declare your modules.
 
 === ":octicons-package-16: Sources Format"
 
-    If you want to work with sources modules, declare your dependencies using the *moduleDeps* configuration. (notice the @zip extension)
+    If you want to work with source modules, declare your dependencies using the *moduleDeps* configuration. (notice the @zip extension)
 
     ```groovy title="ModuleDeps Template"
         moduleDeps('<groupId>:<artifactId>:<version>@zip'){ transitive = true }
@@ -103,7 +103,7 @@ Based on the modules format you want to work with, you need to specify different
 
 === ":octicons-package-16: Sources Format"
 
-    To work with sources, you must expand manually the modules with a *Gradle* task
+    To work with sources, you must expand manually the modules with a *Gradle* task.
 
     ``` bash title="Terminal" 
     ./gradlew expandModules
@@ -111,7 +111,7 @@ Based on the modules format you want to work with, you need to specify different
     
     This task will try to download or update the modules declared as *moduleDeps* in the `build.gradle` file.   
     
-    A menu will be displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.
+    A menu is displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.
 
     ![expand.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/expand.png)
 
@@ -124,7 +124,7 @@ Based on the modules format you want to work with, you need to specify different
     ```
 
     ??? warning 
-        *Transitive dependencies* (not declared in the *moduleDeps* configuration), by default will be extracted, updating or overwriting the source modules if exists. To prevent this behavior, you can set in the plugin extension the flag *overwriteTransitiveExpandModules* to false
+        *Transitive dependencies* (not declared in the *moduleDeps* configuration), by default will be extracted, updating or overwriting the source modules if exists. To prevent this behavior, you can set in the plugin extension the flag *overwriteTransitiveExpandModules* to false.
 
         ```groovy title="build.gradle"
         etendo {
@@ -132,7 +132,7 @@ Based on the modules format you want to work with, you need to specify different
         }
         ```
 
-    To expand only a specific module, you can use the `-Ppkg` flag and have defined the module in the *moduleDeps* configuration
+    To expand only a specific module, you can use the `-Ppkg` flag and have defined the module in the *moduleDeps* configuration.
 
      ```bash title="Terminal"
      ./gradlew expandModules -Ppkg=com.etendoerp.custommodule
@@ -160,7 +160,7 @@ Based on the modules format you want to work with, you need to specify different
 
     Or run the tasks with the `-PignoreConsistency=true` flag.
 
-    By default, Etendo will not allow you to add a *JAR dependency* with an old version to the current installed one.
+    By default, Etendo does not allow you to add a *JAR dependency* with an old version to the current installed one.
     You can ignore this behavior adding the module name to be updated with an old version in the
 
     ```groovy
@@ -169,7 +169,7 @@ Based on the modules format you want to work with, you need to specify different
     }
     ```
 
-Finally, update the database and compile the new modules
+Finally, update the database and compile the new modules.
 
 ```bash title="Terminal"
 ./gradlew update.database smartbuild 
@@ -182,8 +182,8 @@ Finally, update the database and compile the new modules
 
 ## Installing translation modules
 
-If you want to install translation modules, you have to follow some more steps.The translation modules are installed automatically when you compile the code for first time. E.g. after running `./gradlew install` command to create a new client's instance.  
-But if you want to update a translation module version you can execute:
+If you want to install translation modules, you have to follow some more steps.The translation modules are installed automatically when you compile the code for the first time. E.g. after running `./gradlew install` command to create a new client's instance.  
+But if you want to update a translation module version, you can execute:
 
 ```bash title="Terminal"
 
@@ -192,7 +192,7 @@ But if you want to update a translation module version you can execute:
 ```
 
 ??? info
-    The *install.translation* task changes the status of the module and the translations will be installed on the next run of *update.database*.
+    The *install.translation* task changes the status of the module and the translations is installed on the next run of *update.database*.
 
 Another option to force the installation of all the translation modules is to add the `forceRefData=true` property in the `gradle.properties` file and then running:
 

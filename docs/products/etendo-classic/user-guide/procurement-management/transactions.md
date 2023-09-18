@@ -188,12 +188,12 @@ It is possible to take up to **three possible actions regarding a purchase order
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
+The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
 
 ![bank_account_3.png](/assets/legacy/bank_account_3.png)
 
@@ -559,12 +559,12 @@ Once completed, a purchase invoice can be:
 
 ![Purchase invoice window](/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
+The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
 
 ![bank_account.png](/assets/legacy/bank_account.png)
 
