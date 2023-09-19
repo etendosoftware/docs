@@ -9,7 +9,8 @@ En esta página se documentarán las versiones disponibles del paquete `com.eten
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| 1.4.0 | 27/06/2023 | 22.4.3 | 23.2.x | CS | :white_check_mark:|
+| 1.4.1 | 19/09/2023 | 22.4.3 | 23.2.x | CS | :white_check_mark:|
+| 1.4.0 | 27/06/2023 | 22.4.3 | 23.2.x | C  | :white_check_mark:|
 | 1.3.0 | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
 | 1.2.1 | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
 | 1.2.0 | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
@@ -23,6 +24,8 @@ En esta página se documentarán las versiones disponibles del paquete `com.eten
 
 
 ## Notas
+### Version 1.4.1
+- [EE-720](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/2){target="\_blank"} Se renombró a minúsculas el java package del modulo `org.openbravo.localization.spain.referencedata.translation.eses` 
 ### Version 1.4.0
 - Se actualizó la compatibilidad de Core incluyendo hasta 23.2.x
 ### Versión 1.3.0
