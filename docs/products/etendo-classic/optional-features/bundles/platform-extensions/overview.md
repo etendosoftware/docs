@@ -84,9 +84,6 @@ EAN 128 allows to use bar code in your application
 
 :octicons-package-16: Javapackage: com.etendoerp.etendorx
 
-### Etendo RX
-
-:octicons-package-16: Javapackage: com.etendoerp.reactor
 
 ### Webhook Events
 
