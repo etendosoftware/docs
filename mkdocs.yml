@@ -24,6 +24,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.tooltips
   language: en
   palette:
     # Palette toggle for light mode
@@ -46,6 +47,9 @@ extra_css:
 
 
 markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
   - tables
   - pymdownx.highlight:
       anchor_linenums: true

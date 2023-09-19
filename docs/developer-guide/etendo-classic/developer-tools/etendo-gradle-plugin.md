@@ -4,7 +4,11 @@ title: Etendo  Gradle  Plugin
 
 ## Overview
 
-This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. (For additional info read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}) .
+This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. 
+
+!!! note
+    For additional info read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}.
+
 
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
 
@@ -37,7 +41,7 @@ plugins {
 
 ### Plugin flags
 
-The plugin flags need to be declared in the 'etendo block'. <br>
+The plugin flags need to be declared in the *etendo block*. <br>
 In the following sections, you can find all the flags or variables available to set up and a brief description of each one.
 
 ```groovy title="build.gradle"
@@ -132,99 +136,237 @@ etendo {
 - Creates the properties and configuration files.
   
     ``` bash title="Terminal"
-    ./gradlew setup
+    ./gradlew setup 
     
     ```
   
-#### OPTIONAL Command line parameters:
-    - `-PforceDefaultProps=true`: recreates the default properties file from the template.
-    - `-PforceBackupProps=true`: recreates the backup.properties file from the template.
-    - `-PforceQuartzProps=true`: recreates the quartz.properties file from the template. 
+    | Command line parameters                  | Description                                               |                       
+    |  -------------------       | ------------------------------------                      |
+    | `-PforceDefaultProps=true` | Recreates the default properties file from the template.  |
+    | `-PforceBackupProps=true`  | Recreates the backup.properties file from the template.   |
+    | `-PforceQuartzProps=true`  | Recreates the quartz.properties file from the template.   |
 
-- Creates the properties files from the templates, the **setup** tasks depends on this task.
-  ``` bash title="Terminal"
+
+
+
+
+- Creates the properties files from the templates in `/config` folder. The *setup* tasks depend on this task.
+    ``` bash title="Terminal"
     ./gradlew prepareConfig
-    
-  ```
+      
+    ```
 
-- `./gradlew install --info`
-- `./gradlew smartbuild --info`
-  - Command line parameters - `-PignoreConsistency=true` Flag used to ignore the consistency verification (verifies the versions between the local modules and the installed ones)
-- `./gradlew compile.complete --info`
-- `./gradlew update.database --info`
-- `./gradlew export.database --info`
-- `./gradlew export.config.script --info`
-- `./gradlew expandCore --info` Task to download core dependency.
-  - Command line parameters - `-PforceExpand=<true>` Flag used to force the sources expansion when the core is in JAR. **OPTIONAL**
-- `./gradlew expandModules --info` Task to download the modules dependencies in sources.
-  - Command line parameters - `-Ppkg=<package name>` The name of the module to be **re expanded** in case that is already in sources (this will **OVERWRITE** all the changes in the module). **OPTIONAL**
+- Creates the database and installs reference data. 
+    ``` bash title="Terminal"
+    ./gradlew install
+        
+    ```
+
+-  Compiles the Java classes that were modified and deploys them to Tomcat.
+
+    ``` bash title="Terminal"
+    ./gradlew smartbuild
+        
+    ``` 
+    
+    | Command line parameter         | Description                                                                                                            |          
+    |  -------------------           | ------------------------------------                                                                                     |
+    | `PignoreConsistency=true`      | Flag used to ignore the consistency verification (verifies the versions between the local modules and the installed ones)|
+    
+
+- Deletes all the Java Classes and recompiles them. 
+    ``` bash title="Terminal"
+    ./gradlew compile.complete
+          
+    ``` 
+       
+- Updates the database applying the changes in XML files.
+    ``` bash title="Terminal"
+    ./gradlew update.database
+            
+    ``` 
+
+- Exports the database changes to XML files
+    ``` bash title="Terminal"
+    ./gradlew export.database
+              
+    ``` 
+      
+- The first one exports the module Application Dictionary data and the second one exports the configuration script. 
+  ``` bash title="Terminal"
+  ./gradlew export.database
+  ./gradlew export.config.script
+                
+  ``` 
+   
+
+- Task to download core dependency.
+    ``` bash title="Terminal"
+    ./gradlew expandCore
+                      
+    ``` 
+      
+
+    | Command line parameter    | Description                                                        |                       
+    |  -------------------       | ------------------------------------                               |
+    | `-PforceExpand=<true>`     | Flag used to force the sources expansion when the core is in JAR.  |
+
+
+
+- Task to download the modules dependencies in sources.
+    ``` bash title="Terminal"
+    ./gradlew expandModules
+                      
+    ``` 
+
+
+    | Command line parameter    | Description                                                        |  
+    |  -------------------       | ------------------------------------                                                                                                  |
+    | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
+
 
 ### Submodules
 
-- `./gradlew createModuleBuild --info` Creates the 'build.gradle' file with all the necessary information to publish.
-  Command line parameters - `-Ppkg=<package name>` The name of the module. - `-Prepo=<repository name>` The name of the repository.
-- `./gradlew publishVersion --info` Publish the module to a custom repository
-  - Command line parameters.
-    - `-Ppkg=<package name>` The name of the module. **REQUIRED**
-    - `-Precursive=true` This trigger the republication of all the modules which depends on the module being published. **OPTIONAL** - default false.
-    - `-PupdateLeaf=true` This updates automatically the version of the project beign published. **OPTIONAL** - default false.
-- `./gradlew uninstallModule --info` Uninstall a source module.
-  - Command line parameters
-    - `-Ppkg=<modulename>` The javapackage of the source module to uninstall.
+- Creates the `build.gradle` file with all the necessary information to publish.
+    ``` bash title="Terminal"
+    ./gradlew createModuleBuild
+                      
+    ```  
 
----
+    | Comand line parameters                  | Description                                               |                       
+    |  -------------------       | ------------------------------------                      |
+    | `-Ppkg=<package name>`     | The name of the module.                                   |
+    | `-Prepo=<repository name>` | The name of the repository.                               |
+
+
+
+
+- Publish the module to a custom repository.
+    
+    ``` bash title="Terminal"
+    ./gradlew publishVersion
+                            
+    ``` 
+
+    |   Command Line Parameters         | Description| 
+    |  :------------------------------- | :--- |
+    | `-Ppkg=<packagename>`     | **Required** The name of the module.                                                |
+    | `-Precursive=true    `     | This trigger the republication of all the modules which depends on the module being published. By default false.|
+    | `-PupdateLeaf=true   `     | This updates automatically the version of the project beign published.By default false.|
+
+  
+  
+- Uninstalls a source module.
+    ``` bash title="Terminal"
+    ./gradlew uninstallModule
+                              
+    ``` 
+    
+    | Comand line parameter                  | Description                                                                         |                       
+    |  -------------------       | ------------------------------------                                                |
+    | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
+
+
 
 ### Internal developer tasks
 
-- `./gradlew cloneDependencies --info` Used to clone all the git submodules of a module extension (bundle). The module **build.gradle** should contain the property
+- Used to clone all the git submodules of a module extension (bundle). The module *build.gradle* should contain the property
+      ``` bash title="Terminal"
+      ./gradlew cloneDependencies
+                                    
+      ```
+    
 
-```groovy  title="build.gradle"
-ext.defaultExtensionModules = [
-      'git@bitbucket.org:example1.git',
-      'git@bitbucket.org:example2.git'
-    ]
-```
 
-- Command line parameters.
-  - `-Ppkg=<package name>` The name of the bundle. **REQUIRED**
-- `./gradlew createModuleBuild`
-  - Command line parameters.
-    - `-Ppkg=<package name>` The name of the module. **REQUIRED**
-      - `-Prepo=<repository name>` The name of the repository. **REQUIRED**
-      - `-Pbundle=<bundle package name>` The name of the bundle. **OPTIONAL**
-      - `-Ppkg=all` Creates all the build.gradle files for each module, each build.gradle file will contain the dependencies between projects (in the dependencies block).
-    - Parameters to override the default core group, name and version.
-      - `-PcoreGroup=<core group>` The core group name. **OPTIONAL**
-      - `-PcoreName=<core name>` The core name. **OPTIONAL**
-      - `-PcoreVersion=<core version>` The core version. **OPTIONAL**
-    - Parameters to override the default repository.
-- `./gradlew publishAll --info` Publish all the modules located in the source 'modules' directory.
-  - Command line parameters
-    - `-PupdateLeaf=true` This updates automatically the version of all the project beign published. **OPTIONAL** - (Default false).
-    - `-Pupdate=<mayor, minor, patch>` Used to specify which part of the version will be updated. **OPTIONAL** - (Default patch).
-    - `-PpushAndTag=true` Used to specify if the modules published should push the changes and create a tag in the git repository. **OPTIONAL** - (Default false).
-    - `-PpushAll=true` Used to specify if all the modules should run the push and tag. **OPTIONAL** - (Default false).
-- `./gradlew pushToGit --info` Task used to push and tag the modules changes
-  - Command line parameters - `-PpushAll=true` Used to specify if all the modules should run the push and tag. **OPTIONAL** - (Default false).
-- `./gradlew updateModuleBuildDependency`. Updates the version of a dependency in each build.gradle submodule.
+      ```groovy  title="build.gradle"
+      ext.defaultExtensionModules = [
+          'git@bitbucket.org:example1.git',
+          'git@bitbucket.org:example2.git'
+        ]
+      ```
+
+
+
+      | Comand line parameter                  | Description                                                  |                       
+      |  -------------------                   | ------------------------------------                         |
+      | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
+
+
+
+- Creates modules
+    ``` bash title="Terminal"
+    ./gradlew createModuleBuild
+                                          
+    ```
+
+    | Comand line parameter                  | Description                                                  |                       
+    |  -------------------                   | ------------------------------------                         |
+    | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
+    | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
+    | `-Pbundle=<bundle package name>`       | The name of the bundle                                       |
+  
+      
+    
+      - `-Ppkg=all` Creates all the `build.gradle` files for each module, each `build.gradle` file will contain the dependencies between projects (in the dependencies block).
+
+- Parameters to override the default core group, name and version.
+
+    | Comand line parameters                  | Description                                                  |                       
+    |  -------------------                   | ------------------------------------                         |
+    | `-PcoreGroup=<core group>`             | The core group name                                          |
+    | `-PcoreName=<core name>`               | The core name                                                |
+    | `-PcoreVersion=<core version>`         | The core version                                             |
+
+
+     
+- Parameters to override the default repository. Publish all the modules located in the source modules directory.
+    ``` bash title="Terminal"
+    ./gradlew publishAll
+                                              
+    ```
+
+    | Comand line parameters                  | Description                                                  |                       
+    |  -------------------                    | ------------------------------------                         |
+    | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
+    | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
+    | `-PpushAndTag=true`                     | Used to specify if the modules published should push the changes and create a tag in the git repository. By default false.|
+    | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By default false.|
+        
+
+- Task used to push and tag the modules' changes.
+    ``` bash title="Terminal"
+    ./gradlew pushToGit
+                                                          
+    ```
+
+    | Comand line parameters                  | Description                                                  |                       
+    |  -------------------                    | ------------------------------------                         |
+    | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
+        
+ 
+
+- Updates the version of a dependency in each `build.gradle` submodule.
+    ``` bash title="Terminal"
+    ./gradlew updateModuleBuildDependency
+                                                              
+    ```
+
 
 !!! warning
     If you put a wrong version, you have to revert the changes manually.
 
 
-  - Command line parameters
-    - `-Pdependency=<dependency name>` The name of the module to update in each build.gradle.
-      **OPTIONAL**. Default 'com.etendoerp.platform.etendo-core'
-    - `-PlowerBound=<version>` The lower version bound.
-      **OPTIONAL**. Example: `-PlowerBound=1.0.3`
-    - `-PlowerBoundInclusive=<true or false>`
-      **OPTIONAL**. (Default false)
-    - `-PupperBound=<version>` The upper version bound.
-      **OPTIONAL**. Example: `-PupperBound=1.0.3`
-    - `-PupperBoundInclusive=<true or false>`
-      **OPTIONAL**. (Default false)
-    - `-PexactVersion=<version>` Will replace the current version with the specified one. The version should be between quotes.
-      **OPTIONAL** Example: `-PexactVersion="[1.0.3]"`
+
+| Comand line parameters                      | Description                                                  |                       
+|  -------------------                    | ------------------------------------                         |
+| `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
+| `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
+| `-PlowerBoundInclusive=<true or false>` | (Default false)|
+| `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
+| `-PupperBoundInclusive=<true or false>` |(Default false)|
+| `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+
+  
 
 ## Common Gradle flags
 
