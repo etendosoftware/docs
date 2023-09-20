@@ -146,6 +146,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-mobile/getting-started/</loc>
+         <lastmod>2023-09-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-mobile/tutorials/create-new-subapplication/</loc>
+         <lastmod>2023-09-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-platform/concepts/what-is-etendo-platform/</loc>
          <lastmod>2023-09-20</lastmod>
          <changefreq>daily</changefreq>
