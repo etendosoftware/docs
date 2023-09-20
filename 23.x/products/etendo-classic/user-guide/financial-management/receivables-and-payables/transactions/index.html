@@ -17,7 +17,7 @@
         <link rel="next" href="../analysis-tools/">
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -2149,6 +2149,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remittance-window" class="md-nav__link">
+    Remittance window
+  </a>
+  
+    <nav class="md-nav" aria-label="Remittance window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#types-of-remittances" class="md-nav__link">
     Types of Remittances
   </a>
@@ -2237,7 +2264,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
+  <a href="#configuration_2" class="md-nav__link">
     Configuration
   </a>
   
@@ -5136,6 +5163,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remittance-window" class="md-nav__link">
+    Remittance window
+  </a>
+  
+    <nav class="md-nav" aria-label="Remittance window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#types-of-remittances" class="md-nav__link">
     Types of Remittances
   </a>
@@ -5224,7 +5278,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
+  <a href="#configuration_2" class="md-nav__link">
     Configuration
   </a>
   
@@ -6768,14 +6822,43 @@ both payments, therefore the net effect on the GL item balance is null. In other
 <h3 id="introduction_9">Introduction</h3>
 <p>In the remittance window, the user is able to create remittances to manage payments in or out to customers or suppliers.</p>
 <p>A remittance is a group of payments (in/out) or orders/invoices which can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.</p>
-<p><strong>Select Invoices and Orders button</strong></p>
-<p>In the Remittance window, the <em>select invoices and orders</em> button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.</p>
-<p><strong>Default Bank Account</strong></p>
-<p>For each business partner, it is possible to define a bank account that is selected by default each time creating a remittance is necessary.</p>
+<h3 id="configuration_1">Configuration</h3>
+<p>To be able to use this functionality, it is necessary to configure some aspects first.</p>
+<ul>
+<li>
+<p>Remittance Dataset: it is necessary to install the Remittance dataset before using the Remittance window. </p>
+<p>For this, go to the <em>Enterprise Module Management</em> window and select the corresponding dataset as shown below.</p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/enterprise-module-management.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="emm.png" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/enterprise-module-management.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/user-guide/general-setup/enterprise-model/#enterprise-module-management">Enterprise Module Management</a>.</p>
+</div>
+</li>
+<li>
+<p>Remittance Type: It is necessary to define a remittance type with a certain payment method in the <em>Remittance Type</em> window.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type">Remittance Type window</a>.</p>
+</div>
+</li>
+<li>
+<p>Business Partner default bank account: For each business partner, it is possible to   define a bank account that is selected by default each time creating a remittance is necessary.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>To read more, visit <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#remittance">Bank Account</a> in the Business Partner section.</p>
 </div>
+</li>
+</ul>
+<h3 id="remittance-window">Remittance window</h3>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/remittance-window.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Remittance window" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/remittance-window.png" /></a></p>
+<p>As shown in the image above, it is necessary to fill in the fields in the window and 3 different buttons appear so as to continue with the process.</p>
+<h4 id="buttons">Buttons</h4>
+<p><strong>Select Payments</strong></p>
+<p>Using this button, the user is able to select a payment to be included in the remittance.</p>
+<p><strong>Process</strong></p>
+<p>Using this button, the user processes the payments and groups lines according to the options shown in its corresponding pop-up window. </p>
+<p><strong>Select Invoices and Orders</strong></p>
+<p>In the Remittance window, the <em>select invoices and orders</em> button is shown. With this button, the user is able to select not only invoices, but also orders to include in the remittance. In the pop-up window shown when this button is clicked, the user can order and filter each column, payments in and out are shown at the same time and, orders and invoices are shown together.</p>
 <p><a class="glightbox" href="/assets/legacy/filter.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="filter.png" src="/assets/legacy/filter.png" /></a></p>
 <h3 id="types-of-remittances">Types of Remittances</h3>
 <p>There are two types of remittances:</p>
@@ -6789,23 +6872,19 @@ both payments, therefore the net effect on the GL item balance is null. In other
 <li>The remittance generates as many payments (in/out) as those incorporated in the remittance plus one for the global amount, which is the one that is taken to the financial account due to the advance of such amount.</li>
 <li>The bank informs of the payments (in/out) that have been settled (normally, if in one month the bank does not respond, these payments are considered settled) and of those that have been protested.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To create a remittance, it is necessary to configure the remittance payment method. For this, go to the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/#remittance-type">Remittance Type window</a>.</p>
-</div>
 <h4 id="non-discount-remittance">Non-Discount Remittance</h4>
 <p>To create a Non-Discount remittance follow these steps:</p>
 <ol>
 <li>
 <p>Add a new remittance to the Remittance window and select “printable Remittance” as remittance type since it indicates it is a non-discount remittance.</p>
-<p><a class="glightbox" href="/assets/drive/1W9yblveIbw8Ymm0xxR9hdL68MVENotFG.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1W9yblveIbw8Ymm0xxR9hdL68MVENotFG.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va.png" /></a></p>
 </li>
 <li>
 <p>By clicking the “Select Invoices and Orders” button, the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
     By checking this checkbox, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.</p>
-<p><a class="glightbox" href="/assets/drive/1fbi6LAz_siOX7-cWfYIWusyPC-Y-kfrA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1fbi6LAz_siOX7-cWfYIWusyPC-Y-kfrA.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va2.png" /></a></p>
 <p>So the system inserts the selected lines:</p>
-<p><a class="glightbox" href="/assets/drive/1UL_Jfk_HnKnZzsWZmPH9LRrgGd5TmVwS.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1UL_Jfk_HnKnZzsWZmPH9LRrgGd5TmVwS.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va3.png" /></a></p>
 </li>
 <li>
 <p>If no further operations to the remittance are to be added, process the payment clicking the "Process" button.</p>
@@ -6830,7 +6909,7 @@ both payments, therefore the net effect on the GL item balance is null. In other
 <li>Group by order: generates a payment for each order (in case there is more than one).</li>
 <li>Group by order and due date: generates a payment for each order and due date.</li>
 </ul>
-<p><a class="glightbox" href="/assets/drive/1fyWdKNSAb7WLzWkRKnApaX1n39tA3QZF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1fyWdKNSAb7WLzWkRKnApaX1n39tA3QZF.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png" /></a></p>
 </li>
 </ol>
 <p><strong>Example</strong></p>
@@ -6876,14 +6955,14 @@ The returned remittance lines will appear in the returned tab.</p>
 <ol>
 <li>
 <p>Create a remittance from the Remittances window. Select as type of remittance "Remittances for Discount". Once the header has been   created, add the lines, either invoices, orders or payments, that are to be included in this remittance.</p>
-<p><a class="glightbox" href="/assets/drive/1tKjtczsMOAoZJutgCwkjzcMVZuUwPW_Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1tKjtczsMOAoZJutgCwkjzcMVZuUwPW_Q.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va4.png" /></a></p>
 </li>
 <li>
 <p>By clicking "Select Invoices and Orders" the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
     By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.</p>
-<p><a class="glightbox" href="/assets/drive/1ckmAALhyIqeYjttDtHZF9TLuYZkku37R.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1ckmAALhyIqeYjttDtHZF9TLuYZkku37R.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va5.png" /></a></p>
 <p>The system inserts the selected lines:</p>
-<p><a class="glightbox" href="/assets/drive/1ZWpRI7aDmG0--o7SU9SwXUMUNgJIUteC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1ZWpRI7aDmG0--o7SU9SwXUMUNgJIUteC.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va6.png" /></a></p>
 </li>
 <li>
 <p>If no further operations to the remittance are to be added, process the payment clicking the "Process" button.</p>
@@ -6909,7 +6988,7 @@ The returned remittance lines will appear in the returned tab.</p>
 <li>Group by order and due date: generates a payment for each order and due date.</li>
 </ul>
 <p>In this case, it is recommended to select the option "No grouping", since as many payments as operations of the remittance will be generated and a payment sum of all the operations which is the one that the bank will advance. The rest of the payments will be settled as known.</p>
-<p><a class="glightbox" href="/assets/drive/1Yu7mxZBwdJZjhH125w0-bIa24-Uf4Hcc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Yu7mxZBwdJZjhH125w0-bIa24-Uf4Hcc.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png" /></a></p>
 </li>
 <li>
 <p>The next step is to take to the bank the sum payment of the remittance transactions, as in these cases the bank advances the money. From the financial account window, add the payment to the transaction and reconcile it with the bank statement.
@@ -7090,7 +7169,7 @@ The returned remittance lines will appear in the returned tab.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="configuration_1"><strong>Configuration</strong></h4>
+<h4 id="configuration_2"><strong>Configuration</strong></h4>
 <p>Before starting working with Doubtful Debt, some previous configuration steps are required:</p>
 <ul>
 <li>To configure Accounting for Doubtful Debts. The accounts that need to be configured are:</li>
