@@ -1,6 +1,8 @@
 ---
 title: Financial Extensions Bundle | Technical Documentation
 ---
+:octicons-package-16: Javapackage: com.etendoerp.financial.extensions
+
 ## Overview
 
 In this section, the user can find technical information about the Financial Extensions Bundle.

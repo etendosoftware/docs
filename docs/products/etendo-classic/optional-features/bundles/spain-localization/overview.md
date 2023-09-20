@@ -1,10 +1,12 @@
 ---
 title: Localización Española
 ---
+:octicons-package-16: Javapackage: com.etendoerp.localization.spain.extensions
 
+## Descripción
 El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar el ERP a los requerimientos legales y/o fiscales españoles.
 
-Este bundle incluye los siguientes módulos:
+## Módulos
 
 - [Spain SII](/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
 - [Tax Report: Modelo 303 (Spain)](/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
@@ -66,7 +68,7 @@ Este bundle incluye los siguientes módulos:
 
 :octicons-package-16: Javapackage: org.openbravo.module.incoterms
 
-Este módulo añade el listado de Incoterms al ERP.
+Este módulo añade el listado de Incoterms a Etendo Classic.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 

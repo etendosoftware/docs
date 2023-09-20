@@ -1,9 +1,13 @@
 ---
 title: Etendo BI Bundle
 ---
-**The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.**
 
-This bundle includes the following modules: 
+:octicons-package-16: Javapackage: com.etendoerp.etendobi.extensions
+
+## Overview
+The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
+
+## Translations
 
 ## Modules
 
@@ -34,5 +38,3 @@ A background process must be set which creates CSV files that will be uploaded t
 ### Base Queries for Etendo BI 
 
 :octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
-
-## Translations

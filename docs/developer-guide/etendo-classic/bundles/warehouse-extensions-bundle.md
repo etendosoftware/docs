@@ -1,6 +1,9 @@
 ---
 title: Warehose Extensions Bundle | Technical Documentation
 ---
+
+:octicons-package-16: Javapackage: com.etendoerp.warehouse.extensions
+
 ## Overview
 
 In this section, the user can find technical information about the Warehouse Extensions Bundle.

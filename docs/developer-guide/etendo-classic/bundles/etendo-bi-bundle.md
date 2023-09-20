@@ -1,6 +1,9 @@
 ---
 title: Etendo BI Bundle | Technical Documentation
 ---
+
+:octicons-package-16: Javapackage: com.etendoerp.etendobi.extensions
+
 ## Overview
 
 In this section, the user can find technical information about the Etendo BI Bundle.

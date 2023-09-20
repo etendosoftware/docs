@@ -2,9 +2,13 @@
 title: Financial Extensions Bundle
 ---
 
-**This bundle includes enhancements for Financial Management functionalities in Etendo.**
+:octicons-package-16: Javapackage: com.etendoerp.financial.extensions
 
-The Financial Extensions bundle includes the following modules:
+## Overview
+This bundle includes enhancements for Financial Management functionalities in Etendo.
+
+## Translations
+-  :material-translate: Spanish: [Financial Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
 
 ## Modules
 
@@ -25,6 +29,11 @@ This process allows keeping currency conversions up to date by generating conver
 
 !!! info
     For more information, visit the [Conversion Rate Downloader user guide](/products/etendo-classic/user-guide/general-setup/application#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](/developer-guide/etendo-classic/bundles/financial-extensions-bundle#conversion-rate-downloader).
+
+
+### Currency API Configuration
+
+:octicons-package-16: Javapackage: com.smf.currency.apiconfig
 
 ### Banking Pool
 
@@ -188,11 +197,3 @@ This functionality allows the user to create settlements for invoices, both sale
     - [Payment In](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
     - [Payment Out](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
     - [Financial Account](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
-
-
-### Currency API Configuration
-
-:octicons-package-16: Javapackage: com.smf.currency.apiconfig
-
-## Translations
-- ### Spanish: [Financial Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}

@@ -2,9 +2,14 @@
 title: Warehouse Extensions Bundle
 ---
 
-**This bundle includes enhancements for the Warehouse Management functionalities in Etendo.**
+:octicons-package-16: Javapackage: com.etendoerp.warehouse.extensions
 
-The Warehouse Extensions bundle includes the following modules:
+## Overview
+This bundle includes enhancements for the Warehouse Management functionalities in Etendo.
+
+## Translations
+
+-  :material-translate: Spanish: [Warehouse Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}
 
 ## Modules
 
@@ -21,7 +26,7 @@ It provides updated information about the daily history stock of the products.
 
 :octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template.
+:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -47,6 +52,3 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
 
-## Translations
-
-- ### Spanish: [Warehouse Extensions ES](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}

@@ -2,6 +2,8 @@
 title: Platform Extensions Bundle | Technical Documentation
 ---
 
+:octicons-package-16: Javapackage: com.etendoerp.platform.extensions
+
 ## Overview
 
 This bundle includes enhancements for platform functionalities in Etendo.

@@ -1,11 +1,15 @@
 ---
 title: Essentials Extensions Bundle
 ---
-**This bundle includes fundamental modules that affect most areas in Etendo.**
+:octicons-package-16: Javapackage: com.etendoerp.essentials.extensions
 
-The Essentials Extensions bundle includes the following modules:
+## Overview 
+This bundle includes fundamental modules that affect most areas in Etendo.
+
+## Translations
 
 ## Modules
+
 ### Advanced Business Partner
 
 :octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner
@@ -18,6 +22,3 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 !!! info
     For more information, visit [the Advanced Business Partner module user guide](/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
-
-## Translations
-

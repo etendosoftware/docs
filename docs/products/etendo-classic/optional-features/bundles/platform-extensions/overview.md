@@ -1,9 +1,14 @@
 ---
 title: Platform Extensions Bundle
 ---
-**This bundle includes enhancements for Platform functionalities in Etendo.**
 
-The Platform Extensions bundle includes the following modules:
+:octicons-package-16: Javapackage: com.etendoerp.platform.extensions
+
+## Overview
+This bundle includes enhancements for Platform functionalities in Etendo.
+
+## Translations
+-  :material-translate: Spanish: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 ## Modules
 ### Print Document Web Service
@@ -84,6 +89,9 @@ EAN 128 allows to use bar code in your application
 
 :octicons-package-16: Javapackage: com.etendoerp.etendorx
 
+## Etendo Reactor
+
+:octicons-package-16: Javapackage: com.etendoerp.reactor
 
 ### Webhook Events
 
@@ -92,10 +100,6 @@ EAN 128 allows to use bar code in your application
 ### Etendo Async Processes
 
 :octicons-package-16: Javapackage: com.etendoerp.asyncprocess
-
-## Translations
-
-- ### Spanish: [Platform Extensions ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 ---
 
