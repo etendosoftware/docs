@@ -180,7 +180,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ## Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement.
+:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
 
 ### Technical Aspects
 

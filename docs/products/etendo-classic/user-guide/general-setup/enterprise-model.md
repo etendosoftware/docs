@@ -4,18 +4,6 @@ title: Enterprise Model
 
 Enterprise Model folder allows the user to create and model the Organizations which belong to a Client.
 
-### Introduction
-
-Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.
-
-Reference data can be imported or applied to organizations in the "Enterprise Module Management" window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
-
-![](/assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
-
-- If a reference data is applied at (\*) organization, every organization in the system will have access to that data.
-- If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
-- If a reference data is only applied to an organization which does not have any organization underneath in the tree, only that organization will have access to that data.
-
 ## Initial Organization Setup
 
 ### Introduction
@@ -185,6 +173,20 @@ The basic variables to take into account while creating an organization of the t
 ![](/assets/drive/0mFr7Nl9jVy9ZVIfNVOl8pKVHpLv2h6waw6r0iGBnpjTs8A0P4wYIWAHFbYJKGrduahpu1QbmH4UXDq9n27_ffdvfgAcd8_plxvBEXx8cY7j7eWRjIvLBtByLU0-9Zw1iKsVttxtv3ecG9oNZA.png)
 
 ![](/assets/drive/2IIoZGBxPH1gigLWVMWKxE0GxWoAtAFJX2yheNUuOYoy_orJdRJII2rVZUpGcA8j4aJavDIoRIi1WJDymLDxqAbg-r-u6z4E91SRafrj9bX-EK4M8nhpqUqM1ufnYsgBc51D3HXAxZDPuy7R5A.png)
+
+## Enterprise Module Management
+
+### Introduction
+
+Datasets allow the user to define reference data such as master data or configuration data for modules or even for Etendo core.
+
+Reference data can be imported or applied to organizations in the "Enterprise Module Management" window by just selecting the organization for which the reference data needs to be applied and the reference data to apply or to import.
+
+![](/assets/drive/GCwDdNOwwnsS4qqc5AOasqxELrfP6UKdw6AY3ffwJuGxF0qL36O0MLh6_BZI9TPXNT8ywlVdzqL7nn4gf-opz7Zxo-tX5Ap1o99nZMhU3fLcn3mofw12qESDtmyyLrJJcRh2zdX7.png)
+
+- If a reference data is applied at (\*) organization, every organization in the system will have access to that data.
+- If a reference data is applied at a parent organization, all the organizations which belong to it will have access to that data.
+- If a reference data is only applied to an organization which does not have any organization underneath in the tree, only that organization will have access to that data.
 
 ## Organization type
 
