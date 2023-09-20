@@ -1,10 +1,12 @@
 ---
 title: Etendo Classic Subapp Extensions
 ---
+:octicons-package-16: Javapackage: com.etendoerp.classic.subapp.extensions
 
-!!! info
 
-    This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](/docs/products/etendo-mobile/getting-started/).
+## Overview
+
+This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](/docs/products/etendo-mobile/getting-started/).
 
 ## Etendo Classic Sub App
 

@@ -1,11 +1,19 @@
 ---
 title: Sales Extensions Bundle
 ---
-**This bundle includes enhancements for the Sales Management functionalities in Etendo.** 
+:octicons-package-16: Javapackage: com.etendoerp.sales.extensions
 
-The Sales Extensions bundle includes the following modules:
+## Overview 
+This bundle includes enhancements for the Sales Management functionalities in Etendo Classic.
+
+
+## Translations
+
+-  :material-translate: Spanish: [Sales Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
+
 
 ## Modules
+
 
 ### Sales Quotation
 
@@ -34,7 +42,3 @@ This functionality allows the user to configure and grant rappels to business pa
 
 !!! info
         For more information, visit the [Advanced Rappels user guide](/products/etendo-classic/user-guide/master-data-management/master-data/#rappel-configuration).
-
-## Translations
-
-- ### Spanish: [Sales Extensions ES](https://marketplace.etendo.cloud/?#/product-details?module=32AF7995603A4CCBB68FE24DDD8536D7){target="_blank"}
