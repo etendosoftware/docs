@@ -7,7 +7,7 @@ title: Etendo  Gradle  Plugin
 This article explains how to use Gradle, an open-source build automation tool that is designed to be flexible enough to build almost any type of software. 
 
 !!! note
-    For additional info read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}.
+    For additional information read: [What is gradle?](https://docs.gradle.org/7.3/userguide/what_is_gradle.html){target="_blank"}.
 
 
 Etendo uses Gradle to define and improve compilation, version management, modules publication, migrations and more tasks.
@@ -192,7 +192,7 @@ etendo {
               
     ``` 
       
-- The first one exports the module Application Dictionary data and the second one exports the configuration script. 
+- The first task exports the module Application Dictionary data and the second one exports the configuration script. 
   ``` bash title="Terminal"
   ./gradlew export.database
   ./gradlew export.config.script
@@ -270,7 +270,7 @@ etendo {
 
 ### Internal developer tasks
 
-- Used to clone all the git submodules of a module extension (bundle). The module *build.gradle* should contain the property
+- Used to clone all the git submodules of a module extension (bundle). The module `build.gradle` should contain the property
       ``` bash title="Terminal"
       ./gradlew cloneDependencies
                                     
@@ -293,7 +293,7 @@ etendo {
 
 
 
-- Creates modules
+- Creates all the `build.gradle` files for each module using the database from AD_MODULExml.
     ``` bash title="Terminal"
     ./gradlew createModuleBuild
                                           
@@ -304,10 +304,9 @@ etendo {
     | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
     | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
     | `-Pbundle=<bundle package name>`       | The name of the bundle                                       |
+    | `--Ppkg=all`                           |Creates all the `build.gradle` files for each module, each `build.gradle` file will contain the dependencies between projects (in the dependencies block).                |
   
       
-    
-      - `-Ppkg=all` Creates all the `build.gradle` files for each module, each `build.gradle` file will contain the dependencies between projects (in the dependencies block).
 
 - Parameters to override the default core group, name and version.
 
@@ -351,20 +350,20 @@ etendo {
                                                               
     ```
 
-
-!!! warning
-    If you put a wrong version, you have to revert the changes manually.
-
+    !!! warning
+        If you put a wrong version, you have to revert the changes manually.
 
 
-| Comand line parameters                      | Description                                                  |                       
-|  -------------------                    | ------------------------------------                         |
-| `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
-| `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
-| `-PlowerBoundInclusive=<true or false>` | (Default false)|
-| `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
-| `-PupperBoundInclusive=<true or false>` |(Default false)|
-| `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+    | Comand line parameters                  | Description                                                  |                       
+    |  -------------------                    | ------------------------------------                         |
+    | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
+    | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
+    | `-PlowerBoundInclusive=<true or false>` | (Default false)|
+    | `-PupperBound=<version>`                | The upper version bound. Example: `-PupperBound=1.0.3`|
+    | `-PupperBoundInclusive=<true or false>` |(Default false)|
+    | `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
+
+
 
   
 
@@ -376,18 +375,18 @@ etendo {
 | --stop                 | To stop all Gradle daemons.                          |
 | --no-daemon            | To execute a Gradle task without launching a daemon. |
 | --info                 | To give more information in the task execution.      |
-| --refresh-dependencies | will force download of dependencies.                 |
+| --refresh-dependencies | Will force download of dependencies.                 |
 
 ## Ant tasks
 
-Most of [ant build tasks](http://wiki.openbravo.com/wiki/Development_Build_Tasks#Detailed_Build_Tasks), previously used in Openbravo, can be run with Gradle (but they do not have support):
+Most of [ant build tasks](http://wiki.openbravo.com/wiki/Development_Build_Tasks#Detailed_Build_Tasks){target="_blank"} previously used can be run with Gradle:
 
 ```bash title="Terminal"
 
 ./gradlew <ant task> [params]
 ```
 
-Except some commands:
+Except for some commands:
 
 |Old Command| New Command| 
 |---|---| 
@@ -400,11 +399,13 @@ Except some commands:
 ## Consistency Verification
 
 ### Resolution of conflicts
-Etendo make uses of the [conflict resolution strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
 
-This approach is used to identify conflict between Etendo artifacts published to Nexus.
+!!!note
+    Etendo makes use of the [conflict resolution strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
 
-For example, when you make use of an Etendo module, which depends on the Etendo core.
+This approach is used to identify conflict between Etendo artifacts published in a repository.
+
+For example, when you make use of an Etendo module, which depends on the Etendo core
 
 ```groovy title="build.gradle"
 group          = 'com.etendo'
@@ -418,170 +419,110 @@ dependencies {
 
 and you are currently working with the Etendo core in `22.1.0`, then a conflict resolution is found.
 
-Depending on the type of conflict, if the problem is with the Etendo Core, then a Exception will be throw.
+Depending on the type of conflict, if the problem is with the Etendo Core, then a Exception will be thrown.
 
-You can force the resolution using the extension flag
 
-``` groovy
-etendo {
-	forceResolution = true
-}
-```
+!!!danger "To force the dependencies' resolution must be the last step to follow"
+    You can force the resolution using the extension flag
+    ``` groovy
+    etendo {
+      forceResolution = true
+    }
+    ```
 
-If you want to skip the resolution you can add to the plugin extension the flag
-``` groovy
-etendo {
-	performResolutionConflicts = false
-}
-```
+    If you want to skip the resolution you can add to the plugin extension the flag.
+    ``` groovy
+    etendo {
+      performResolutionConflicts = false
+    }
+    ```
 
 
 ### Version consistency
-The version consistency approach verifies that an extracted Etendo JAR artifact is consistent with the installed one (**Equal** version).
+The version consistency approach verifies that an extracted Etendo JAR artifact is consistent with the installed one (Equal version).
 
-When a new Etendo JAR dependency is added or the version is updated, a `update.database` is need it to run before executing any compilation task (smartbuild, compile.complete, etc).
-You can force the compilation tasks adding to the Etendo plugin extension the ignore flag
-``` groovy
-etendo {
-	ignoreConsistencyVerification = true 
-}
-```
-Or run the tasks with the `-PignoreConsistency=true` flag.
+When a new Etendo JAR dependency is added or the version is updated, a `update.database` is needed to run before executing any compilation task (smartbuild, compile.complete, etc).
+You can force the compilation tasks by adding to the Etendo plugin extension the ignore flag
 
-By default Etendo not allow you to add a JAR dependency with an old version to the current installed one.
-You can ignore this behavior adding the module name to be updated with an old version as a configuration
-``` groovy
-etendo {
-	ignoredArtifacts = ['com.etendoerp.mymodulename']
-}
-```
+!!!warning "These section explains how to ingore the consistency verification. Use this approach only if there are no conflicts between versions. "
+    ``` groovy
+    etendo {
+      ignoreConsistencyVerification = true 
+    }
+    ```
+    or run the tasks with the `-PignoreConsistency=true` flag.
 
-## Search Jars Tool
-
-This tool is used to filter all the JAR files in a specified directory.
-
-A lookup is performed in the Maven Central Repository or a specified Nexus repository to verify if the JAR file already exists. The search is based on sha1 checksums.
-
-Depending if the JAR file is found or not, two build files are generated.
-
-For the resolved JAR files, the build file contains the block of code that you can use to import the JARs from the cloud.
-
-For the unresolved JAR files, the build file contains all the necessary configuration and tasks to publish the JARs to a custom repository.
-
-To execute the tool, run:
-
-``` bash title="Terminal"
-./gradlew searchJarDependency -Prepo=customrepo  -Plocation=customlocation -Pdestination=customdestination
-```
-
-Where
-
-* -Prepo: Specifies the Nexus repository used to resolve JAR files or where uploading the unresolved ones.
-
-* -Plocation: Specifies the location used to search JAR files locally in the project. The default location is the root project.
-
-* -Pdestination: Specifies the location where the build files will be created. The default location is the root project.
-
----
-
-#### JAR Scopes
-
-This tool supports two scopes, Test and Compilation.
-
-For each scope, two build files will be created.
-
-* The Test scope filters all the JAR files located under a 'test' named directory (using the  **/test/\*\* pattern).
-
-!!! info
-    The files created will be resolved.TEST.artifacts.gradle and unresolved.TEST.artifacts.gradle
-
-* The Compilation scope filter all the JAR files excluding those in a 'test' named directory.
-
-!!! info
-    The files created will be resolved.COMPILATION.artifacts.gradle and unresolved.COMPILATION.artifacts.gradle
+    By default Etendo does not allow you to add a JAR dependency with an old version to the current installed one.
+    You can ignore this behavior adding the module name to be updated with an old version as a configuration.
+    ``` groovy
+    etendo {
+      ignoredArtifacts = ['com.etendoerp.mymodulename']
+    }
+    ```
 
 
-Once the build files are created, you can use the [apply from](https://docs.gradle.org/current/userguide/plugins.html#sec:script_plugins){target="_blank"} Gradle clause to import the build file, or copy the content in your custom Gradle project (build.gradle).
-
-The unresolved build file generated contains a custom task to publish the JAR files depending on the scope:
-
-* Test: To publish, you need to run 
-
-``` bash title="Terminal"
-./gradlew publishUnresolvedTestJars
-```
-
-* Compilation: To publish, you need to run 
-
-``` bash title="Terminal"
-./gradlew publishUnresolvedCompilationJars
-```
-
-!!! warning
-    The JARs will be published in the repository declared in the `searchJarDependency` task. 
 
 ## Uninstall modules
 
+=== ":simple-homeassistantcommunitystore: Source Modules"
 
-### Source modules
-To uninstall an Etendo module you need to run the gradle task.
+    To uninstall an Etendo module you need to run the gradle task.
 
-``` bash title="Terminal"
-./gradlew uninstallModule -Ppkg=<modulename>
-```
+    ``` bash title="Terminal"
+    ./gradlew uninstallModule -Ppkg=<modulename>
+    ```
 
-This task will try to delete the source module and the source dependencies which depends on.
+    This task will try to delete the source module and the source dependencies which depends on it.
 
-If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag '-Pforce=true'.
+    If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag `-Pforce=true`.
 
-#### Jar modules
 
-You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
-In the build.gradle of the root project you can specify the dependency to exclude.
+=== ":simple-homeassistantcommunitystore: Jar Modules"
 
-``` groovy title="build.gradle"
-configurations.implementation {
-	exclude group: 'com.test', module: 'custommodule1'
-  exclude group: 'com.test', module: 'custommodule2'
-}
-```
+    You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
+    In the `build.gradle` of the root project you can specify the dependency to exclude.
 
-If the dependency belongs to a build.gradle of a source module, it may be downloaded when the 'javaCompile' task is executed. You can also make use of gradle exclude rules.
+    ``` groovy title="build.gradle"
+    configurations.implementation {
+      exclude group: 'com.test', module: 'custommodule1'
+      exclude group: 'com.test', module: 'custommodule2'
+    }
+    ```
 
-!!! warning
-    When you make use of exclude rules in a custom source module, the pom.xml can be affected when you publish a new version.
+    If the dependency belongs to a `build.gradl` of a source module, it may be downloaded when the `javaCompile` task is executed. You can also make use of gradle exclude rules.
 
-To prevent downloading dinamic JAR modules, you need to remove the dependency from each build.gradle.
+    !!! warning
+        When you make use of exclude rules in a custom source module, the `pom.xml` can be affected when you publish a new version.
 
-The JAR module also could also be a transitive dependency.
-You can see the transitive dependencies tree running the gradle task
-`./gradlew dependencies --info`
-and remove the root parent dependency.
+    To prevent downloading dinamic JAR modules, you need to remove the dependency from each `build.gradle`.
 
-When you declare a dependency you can also exclude custom modules. See [Gradle dependency exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}.
+    The JAR module could also be a transitive dependency.
+    You can see the transitive dependencies tree running the gradle task
+    `./gradlew dependencies --info`
+    and remove the root parent dependency.
 
-!!! info
-    Etendo JAR modules are dinamically extracted in the root project 'build/etendo/modules' directory.
+    When you declare a dependency you can also exclude custom modules. See [Gradle dependency exclusion](https://docs.gradle.org/current/userguide/dependency_downgrade_and_exclude.html#sec:excluding-transitive-deps){target="_blank"}.
 
-!!! warning
-    Each build.gradle file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.
+    !!! info
+        Etendo JAR modules are dinamically extracted in the root project `build/etendo/modules` directory.
 
-Finally you need to rebuild the system:
+    !!! warning
+        Each `build.gradle` file (from the root project or source modules) can be using the dependency directly or by transitivity and this can lead to resolution of the module.
 
-``` bash title="Terminal"
-./gradlew update.database compile.complete
-```
+    Finally you need to rebuild the system:
+
+    ``` bash title="Terminal"
+    ./gradlew update.database compile.complete
+    ```
 
 ## Recompile CSS files
 
-The `cssCompile` task in the Etendo Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you'll need to work with .scss files. When making changes to the .scss files, in order to modify the ERP skin, it is necessary to run the `cssCompile` task and restart Tomcat to generate the new .css files.
+### Requirements
 
-### Set-Up
+  - *Node.js*: Version 16 or higher.
+  - *npm*: Node Package Manager.
+  - *Sass*: Must have a Sass compiler installed.
 
-!!! warning "Requirements"
-    - **Node.js**: Version 16 or higher.
-    - **npm**: Node Package Manager.
-    - **Sass**: Must have a Sass compiler installed.
 
 ??? info "How to install Node.js, npm and Sass"
 
@@ -691,13 +632,13 @@ The `cssCompile` task in the Etendo Gradle configuration is specifically designe
 
 ### Execution
 
-1. Ensure your terminal or command-line tool is open.
-2. Navigate to the root directory of the Etendo project
-3. Run the following command
+The `cssCompile` task in the Etendo Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you will need to work with `.scss` files, for this, it is necessary to run the `cssCompile` task and restart Tomcat.
 
-```bash
-./gradlew cssCompile smartbuild --info
+
+``` bash title="Terminal"
+./gradlew cssCompile smartbuild
 ```
+
 
 After executing the task, look for the following output to indicate a successful build:
 !!! success "Successful Execution"
@@ -710,4 +651,4 @@ After executing the task, look for the following output to indicate a successful
 
     This confirms the successful processing of the files.
 
-Finally, Restart Tomcat to apply the changes and ensure the updated .css files are properly served.
+Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly set.

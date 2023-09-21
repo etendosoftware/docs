@@ -163,7 +163,7 @@ Al generar una declaración de Intrastat, el sistema crea automáticamente una n
 
 ![](/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png)
 
-El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, el ERP habrá rellenado automáticamente todos estos valores en las líneas de la declaración.
+El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, Etendo Classic habrá rellenado automáticamente todos estos valores en las líneas de la declaración.
 
 Si por el contrario le falta algún dato, si desea modificar alguno, o incluso si quiere añadir manualmente nuevas líneas o excluir alguna de ellas, puede hacerlo mientras la declaración esté en estado borrador.
 

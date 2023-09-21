@@ -4,7 +4,7 @@ title: Localización Española
 :octicons-package-16: Javapackage: com.etendoerp.localization.spain.extensions
 
 ## Descripción
-El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar el ERP a los requerimientos legales y/o fiscales españoles.
+El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.
 
 ## Módulos
 
@@ -82,7 +82,7 @@ Este módulo identifica qué países pertenecen a la Unión Europea.
 
 :octicons-package-16: Javapackage: org.openbravo.spain.regions
 
-Este módulo añade el listado de provincias españolas al ERP.
+Este módulo añade el listado de provincias españolas a Etendo Classic.
 
 ## Legal Representative of the Organization
 
