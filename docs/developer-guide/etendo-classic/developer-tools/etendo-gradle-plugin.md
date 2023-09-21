@@ -1,5 +1,10 @@
 ---
-title: Etendo  Gradle  Plugin
+title: Etendo  Gradle  Plugin 
+tags: 
+  - Gradle
+  - Tasks
+  - Plugin
+  - Parameters
 ---
 
 ## Overview
@@ -28,20 +33,31 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 ./gradlew publishVersion -Ppkg=test.package
 ```
 
+## Common Gradle flags
+
+| Flag                   | Description                                          |
+| ---------------------- | ---------------------------------------------------- |
+| --offline              | To execute Gradle without internet connection.       |
+| --stop                 | To stop all Gradle daemons.                          |
+| --no-daemon            | To execute a Gradle task without launching a daemon. |
+| --info                 | To give more information in the task execution.      |
+| --refresh-dependencies | Will force download of dependencies.                 |
+
+
 ## Etendo plugin
 
 
-Add in the `build.gradle` file the plugin version to be used (you could check the latest version available in [Latest Releases](/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/){target="_blank"})
+Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/) or use `lastest.release` to resolve the latest version.
 
 ```groovy title="build.gradle"
 plugins {
-    id 'com.etendoerp.gradleplugin' version <'lastest.release'>
+    id 'com.etendoerp.gradleplugin' version 'lastest.release'
 }
 ```
 
-### Plugin flags
+## Plugin configuration
 
-The plugin flags need to be declared in the *etendo block*. <br>
+The plugin configuration need to be declared in the *etendo block*. <br>
 In the following sections, you can find all the flags or variables available to set up and a brief description of each one.
 
 ```groovy title="build.gradle"
@@ -55,83 +71,83 @@ etendo {
   boolean loadTestDependencies = false
 
   /**
-    * Flag used to ignore loading the source modules to perform resolution conflicts.
-    * Default true
-    */
+  * Flag used to ignore loading the source modules to perform resolution conflicts.
+  * Default true
+  */
   boolean ignoreSourceModulesResolution = true
 
   /**
-    * Flag used to perform or not the resolution of conflicts.
-    * Default true
-    */
+  * Flag used to perform or not the resolution of conflicts.
+  * Default true
+  */
   boolean performResolutionConflicts = true
 
   /**
-    * Flag used to ignore throwing a error if there is conflict resolutions with the Core dependency.
-    * Default false
-    */
+  * Flag used to ignore throwing a error if there is conflict resolutions with the Core dependency.
+  * Default false
+  */
   boolean forceResolution = false
 
   /**
-    * Flag used to apply the subproject dependencies to the main project.
-    * Default true
-    */
+  * Flag used to apply the subproject dependencies to the main project.
+  * Default true
+  */
   boolean applyDependenciesToMainProject = true
 
   /**
-    * Flag used to prevent overwriting the transitive source modules when performing the expandModules task.
-    * Default true
-    */
+  * Flag used to prevent overwriting the transitive source modules when performing the expandModules task.
+  * Default true
+  */
   boolean overwriteTransitiveExpandModules = true
 
   /**
-    * Flag used to exclude the Core dependency from each subproject to all the configurations.
-    * Default true
-    */
+  * Flag used to exclude the Core dependency from each subproject to all the configurations.
+  * Default true
+  */
   boolean excludeCoreDependencyFromSubprojectConfigurations = true
 
   /**
-    *  Flag used to indicate that the current Core version support jars.
-    *  Default true.
-    * 	When this flag is set to false, the behavior of the 'expandModules' task will change, forcing to expand all the declared modules with 'moduleDeps' to sources.
-    */
+  *  Flag used to indicate that the current Core version support jars.
+  *  Default true.
+  * 	When this flag is set to false, the behavior of the 'expandModules' task will change, forcing to expand all the declared modules with 'moduleDeps' to sources.
+  */
   boolean supportJars = true
 
   /**
-    * List of Etendo artifacts to always extract and ignore from the version consistency verification.
-    */
+  * List of Etendo artifacts to always extract and ignore from the version consistency verification.
+  */
   List<String> ignoredArtifacts = []
 
   /**
-    * Flag use to prevent throwing error on version inconsistency between modules.
-    * Default false
-    */
+  * Flag use to prevent throwing error on version inconsistency between modules.
+  * Default false
+  */
   boolean ignoreConsistencyVerification = false
 
   /**
-    * Flag used to prevent throwing error when an artifact could not be resolved.
-    * This includes transitives ones.
-    * Default false
-    */
+  * Flag used to prevent throwing error when an artifact could not be resolved.
+  * This includes transitives ones.
+  * Default false
+  */
   boolean ignoreUnresolvedArtifacts = false
 
   /**
-    * The list of modules that should not be re expanded.
-    * Default empty.
-    */
+  * The list of modules that should not be re expanded.
+  * Default empty.
+  */
   List<String> sourceModulesInDevelopment = []
 
   /**
-    * Flag used to ignore the Etendo CORE jar dependency located in the
-    * build.gradle of the root project.
-    * Default false.
-    */
+  * Flag used to ignore the Etendo CORE jar dependency located in the
+  * build.gradle of the root project.
+  * Default false.
+  */
   boolean ignoreCoreJarDependency = false
 }
 
 ```
 
-## Common Gradle tasks in Etendo
+## Common Gradle tasks
 
 - Creates the properties and configuration files.
   
@@ -192,12 +208,17 @@ etendo {
               
     ``` 
       
-- The first task exports the module Application Dictionary data and the second one exports the configuration script. 
-  ``` bash title="Terminal"
-  ./gradlew export.database
-  ./gradlew export.config.script
-                
-  ``` 
+- Exports the module Application Dictionary data.
+    ``` bash title="Terminal"
+    ./gradlew export.database
+                  
+    ``` 
+
+- Exports the configuration script. 
+    ``` bash title="Terminal"
+    ./gradlew export.config.script 
+                  
+    ``` 
    
 
 - Task to download core dependency.
@@ -225,7 +246,7 @@ etendo {
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
 
 
-### Submodules
+## Submodules
 
 - Creates the `build.gradle` file with all the necessary information to publish.
     ``` bash title="Terminal"
@@ -233,7 +254,7 @@ etendo {
                       
     ```  
 
-    | Comand line parameters                  | Description                                               |                       
+    | Command line parameters                  | Description                                               |                       
     |  -------------------       | ------------------------------------                      |
     | `-Ppkg=<package name>`     | The name of the module.                                   |
     | `-Prepo=<repository name>` | The name of the repository.                               |
@@ -262,13 +283,13 @@ etendo {
                               
     ``` 
     
-    | Comand line parameter                  | Description                                                                         |                       
+    | Command line parameter                  | Description                                                                         |                       
     |  -------------------       | ------------------------------------                                                |
     | `-Ppkg=<modulename>`       | The javapackage of the source module to uninstall.                                  |
 
 
 
-### Internal developer tasks
+## Internal developer tasks
 
 - Used to clone all the git submodules of a module extension (bundle). The module `build.gradle` should contain the property
       ``` bash title="Terminal"
@@ -287,7 +308,7 @@ etendo {
 
 
 
-      | Comand line parameter                  | Description                                                  |                       
+      | Command line parameter                  | Description                                                  |                       
       |  -------------------                   | ------------------------------------                         |
       | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
 
@@ -299,7 +320,7 @@ etendo {
                                           
     ```
 
-    | Comand line parameter                  | Description                                                  |                       
+    | Command line parameter                  | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-Ppkg=<package name>`                 | **Required** The name of the bundle                          |
     | `-Prepo=<repository name>`             | **Required** The name of the repository                      |
@@ -310,7 +331,7 @@ etendo {
 
 - Parameters to override the default core group, name and version.
 
-    | Comand line parameters                  | Description                                                  |                       
+    | Command line parameters                  | Description                                                  |                       
     |  -------------------                   | ------------------------------------                         |
     | `-PcoreGroup=<core group>`             | The core group name                                          |
     | `-PcoreName=<core name>`               | The core name                                                |
@@ -324,7 +345,7 @@ etendo {
                                               
     ```
 
-    | Comand line parameters                  | Description                                                  |                       
+    | Command line parameters                  | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PupdateLeaf=true`                     | This updates automatically the version of all the project beign published. By defaul false.|
     | `-Pupdate=<mayor, minor, patch>`        | Used to specify which part of the version will be updated. By default patch.               |
@@ -338,7 +359,7 @@ etendo {
                                                           
     ```
 
-    | Comand line parameters                  | Description                                                  |                       
+    | Command line parameters                  | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-PpushAll=true`                        | Used to specify if all the modules should run the push and tag. By defaul false.|
         
@@ -354,7 +375,7 @@ etendo {
         If you put a wrong version, you have to revert the changes manually.
 
 
-    | Comand line parameters                  | Description                                                  |                       
+    | Command line parameters                  | Description                                                  |                       
     |  -------------------                    | ------------------------------------                         |
     | `-Pdependency=<dependency name>`        | The name of the module to update in each `build.gradle`. Default `com.etendoerp.platform.etendo-core`|
     | `-PlowerBound=<version>`                | The lower version bound. Example: `-PlowerBound=1.0.3`|
@@ -364,18 +385,6 @@ etendo {
     | `-PexactVersion=<version>`             |Will replace the current version with the specified one. The version should be between quotes. Example: `-PexactVersion="[1.0.3]"`|
 
 
-
-  
-
-## Common Gradle flags
-
-| Flag                   | Description                                          |
-| ---------------------- | ---------------------------------------------------- |
-| --offline              | To execute Gradle without internet connection.       |
-| --stop                 | To stop all Gradle daemons.                          |
-| --no-daemon            | To execute a Gradle task without launching a daemon. |
-| --info                 | To give more information in the task execution.      |
-| --refresh-dependencies | Will force download of dependencies.                 |
 
 ## Ant tasks
 
@@ -396,12 +405,11 @@ Except for some commands:
 |install.source|antInstall|
 |war|antWar|
 
-## Consistency Verification
 
-### Resolution of conflicts
+## Conflict resolution
 
 !!!note
-    Etendo makes use of the [conflict resolution strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
+    Etendo makes use of the [Conflict Resolution Strategy](https://docs.gradle.org/current/userguide/dependency_resolution.html){target="_blank"} offered by GRADLE.
 
 This approach is used to identify conflict between Etendo artifacts published in a repository.
 
@@ -438,7 +446,7 @@ Depending on the type of conflict, if the problem is with the Etendo Core, then 
     ```
 
 
-### Version consistency
+## Version consistency
 The version consistency approach verifies that an extracted Etendo JAR artifact is consistent with the installed one (Equal version).
 
 When a new Etendo JAR dependency is added or the version is updated, a `update.database` is needed to run before executing any compilation task (smartbuild, compile.complete, etc).
@@ -464,7 +472,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
 
 ## Uninstall modules
 
-=== ":simple-homeassistantcommunitystore: Source Modules"
+=== ":octicons-package-16: Source Modules"
 
     To uninstall an Etendo module you need to run the gradle task.
 
@@ -477,7 +485,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
     If the module to uninstall is a dependency of other source module, an exception is thrown. You can force the uninstall providing the flag `-Pforce=true`.
 
 
-=== ":simple-homeassistantcommunitystore: Jar Modules"
+=== ":material-language-java: Jar Modules"
 
     You can make use of Gradle exclusion rules to prevent the extraction of a JAR dependency.
     In the `build.gradle` of the root project you can specify the dependency to exclude.
@@ -632,8 +640,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
 
 ### Execution
 
-The `cssCompile` task in the Etendo Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you will need to work with `.scss` files, for this, it is necessary to run the `cssCompile` task and restart Tomcat.
-
+The `cssCompile` task in the Etendo Gradle configuration is specifically designed to convert `.scss` files into `.css` files. To customize the Etendo skin, you will need to work with `.scss` files. 
 
 ``` bash title="Terminal"
 ./gradlew cssCompile smartbuild
@@ -651,4 +658,4 @@ After executing the task, look for the following output to indicate a successful
 
     This confirms the successful processing of the files.
 
-Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly set.
+Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly deployed.
