@@ -5,7 +5,7 @@ tags:
 ---
 
 
-### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221) Etendo does not compile with latest version of gradle plugin 
+### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221) Etendo does not compile with latest version of gradle plugin in JAR format.
 ??? example "Workaround"
 
 
