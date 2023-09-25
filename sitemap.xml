@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/</loc>
+         <lastmod>2023-09-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/</loc>
          <lastmod>2023-09-25</lastmod>
          <changefreq>daily</changefreq>
@@ -102,6 +107,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/</loc>
+         <lastmod>2023-09-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/</loc>
          <lastmod>2023-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
