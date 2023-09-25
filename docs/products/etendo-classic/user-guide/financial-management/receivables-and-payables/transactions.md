@@ -1717,148 +1717,148 @@ There are two types of remittances:
 - The remittance generates as many payments (in/out) as those incorporated in the remittance plus one for the global amount, which is the one that is taken to the financial account due to the advance of such amount.
 - The bank informs of the payments (in/out) that have been settled (normally, if in one month the bank does not respond, these payments are considered settled) and of those that have been protested.
 
-#### Non-Discount Remittance
+=== "Non-Discount Remittance"
+    To create a Non-Discount remittance follow these steps:
 
-To create a Non-Discount remittance follow these steps:
+    1. Add a new remittance to the Remittance window and select “printable Remittance” as remittance type since it indicates it is a non-discount remittance.
 
-1. Add a new remittance to the Remittance window and select “printable Remittance” as remittance type since it indicates it is a non-discount remittance.
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va.png)
 
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va.png)
+    2. By clicking the “Select Invoices and Orders” button, the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
+        By checking this checkbox, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
 
-2. By clicking the “Select Invoices and Orders” button, the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
-    By checking this checkbox, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va2.png)
 
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va2.png)
+        So the system inserts the selected lines:
 
-    So the system inserts the selected lines:
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va3.png)
 
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va3.png)
+    3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
 
-3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
+        !!! warning
+            When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
 
-    !!! warning
-        When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
+        ![error.png](/assets/legacy/error.png)
 
-    ![error.png](/assets/legacy/error.png)
-
-    !!! info
-        Bank accounts can be defined in the header of [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance_1) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance) orders.
-
-
-4. When processing, the system shows the following options:
-
-    - No grouping: generates a payment for each of the selected lines.
-    - Group by invoice: generates a payment for each invoice (in case there is more than one).
-    - Group by invoice and due date: generates a payment for each invoice and due date.
-    - Group by business partner: generates as many payments as there are business partners on the selected lines. It allocates the total amount of all lines that apply to each business partner.
-    - Group by business partner and due date: creates as many payments as there are business partners and payment dates on the selected lines.
-    - Group by order: generates a payment for each order (in case there is more than one).
-    - Group by order and due date: generates a payment for each order and due date.
+        !!! info
+            Bank accounts can be defined in the header of [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance_1) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance) orders.
 
 
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png)
+    4. When processing, the system shows the following options:
 
-**Example**
+        - No grouping: generates a payment for each of the selected lines.
+        - Group by invoice: generates a payment for each invoice (in case there is more than one).
+        - Group by invoice and due date: generates a payment for each invoice and due date.
+        - Group by business partner: generates as many payments as there are business partners on the selected lines. It allocates the total amount of all lines that apply to each business partner.
+        - Group by business partner and due date: creates as many payments as there are business partners and payment dates on the selected lines.
+        - Group by order: generates a payment for each order (in case there is more than one).
+        - Group by order and due date: generates a payment for each order and due date.
 
-As an example, let us create the payment by selecting the Group by business partner option.  
-When processing, the 3 payments have been created for the 3 lines included in the remittance due to the fact that all of them correspond to the same business partner.
 
-![](/assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png)
 
-When navigating to the payment, it can be observed that the status of the payments created is "Remitted".
+    **Example**
 
-![](/assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
+    As an example, let us create the payment by selecting the Group by business partner option.  
+    When processing, the 3 payments have been created for the 3 lines included in the remittance due to the fact that all of them correspond to the same business partner.
 
-When the remittance is posted, an accounting entry is obtained, according to the accounts defined.
+    ![](/assets/drive/1-UUBayBZD-1QRbyj3yj62RmFsdw5tkE6.png)
 
-##### Settle/ Protest Remittance
+    When navigating to the payment, it can be observed that the status of the payments created is "Remitted".
 
-Once the bank confirms the corresponding payments, access the "Settle/Protest Remittances" window and check the settled and protested remittances.
+    ![](/assets/drive/11-m5CC8wd0k4YLB3BjnqKq9ujwa-GJfm.png)
 
-!!! info
-    The selected date is the posting date of the created document.
+    When the remittance is posted, an accounting entry is obtained, according to the accounts defined.
 
-![](/assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
+    ##### Settle/ Protest Remittance
 
-By settling the first line, it is observed that the line has been added to the settled tab of the corresponding remittance.
-
-![](/assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
-
-Once the remittance is posted, the accounting entry is obtained according to the indicated configuration. The posting should be line by line of the settled transactions.
-The returned remittance lines will appear in the returned tab.
-
-The accounting of returned operations are accounted for in the same way as settled operations, from the 401 of the remittance statement to the 400, leaving the outstanding debt again.
-
-!!! info
-    The returned transactions may be managed again later in other remittances or directly in the financial accounts.
-
-The status of settled remittance transactions is changed to "Withdrawn not Cleared" and in the case of payment outs to “Deposited not Cleared”.
-
-If one of the payments has been returned, the status of the document is set to "Awaiting Execution".
-
-![](/assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
-
-!!! info
-    It is possible to print the Non-discount remittances as well as the Remittances for Discount from the printer in the toolbar.
-
-##### Settled payments to the financial account
-
-!!! info
-    After the settlement, the system has automatically transferred these payments to the financial account indicated in the payments.
-
-![](/assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
-
-###### Reconcile Payments
-
-![](/assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
-
-#### Remittance for Discount
-
-To create a remittance for discount follow these steps:
-
-1. Create a remittance from the Remittances window. Select as type of remittance "Remittances for Discount". Once the header has been   created, add the lines, either invoices, orders or payments, that are to be included in this remittance.
-
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va4.png)
-
-2. By clicking "Select Invoices and Orders" the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
-    By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
-
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va5.png)
-
-    The system inserts the selected lines:
-
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va6.png)
-
-3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
-
-    !!! warning
-        When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
-
-    ![error.png](/assets/legacy/error.png)
+    Once the bank confirms the corresponding payments, access the "Settle/Protest Remittances" window and check the settled and protested remittances.
 
     !!! info
-        Bank accounts can be defined in the header of [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance_1) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance) orders.
+        The selected date is the posting date of the created document.
+
+    ![](/assets/drive/1wK9U8kZzmOuxtNJAwZ02iWEgYpYRPrSN.png)
+
+    By settling the first line, it is observed that the line has been added to the settled tab of the corresponding remittance.
+
+    ![](/assets/drive/1QpvCzdNsUsa4FJBZwvJWH7YfxuapHAO4.png)
+
+    Once the remittance is posted, the accounting entry is obtained according to the indicated configuration. The posting should be line by line of the settled transactions.
+    The returned remittance lines will appear in the returned tab.
+
+    The accounting of returned operations are accounted for in the same way as settled operations, from the 401 of the remittance statement to the 400, leaving the outstanding debt again.
+
+    !!! info
+        The returned transactions may be managed again later in other remittances or directly in the financial accounts.
+
+    The status of settled remittance transactions is changed to "Withdrawn not Cleared" and in the case of payment outs to “Deposited not Cleared”.
+
+    If one of the payments has been returned, the status of the document is set to "Awaiting Execution".
+
+    ![](/assets/drive/1YZ5mcnLw9KQ5KZ4svYJF9S8vrR-xuvzf.png)
+
+    !!! info
+        It is possible to print the Non-discount remittances as well as the Remittances for Discount from the printer in the toolbar.
+
+    ##### Settled payments to the financial account
+
+    !!! info
+        After the settlement, the system has automatically transferred these payments to the financial account indicated in the payments.
+
+    ![](/assets/drive/1HAoN4VJmSrj-MdVzuICt4x0pKUt6_fvN.png)
+
+    ###### Reconcile Payments
+
+    The Reconcile Payments option in any remittance process refers to the action of comparing and adjusting financial records to ensure that payments are accurately and properly recorded. By using the *reconcile* button in the *financial account* window, it is possible to access the window shown below.
+
+    ![](/assets/drive/1B-eqtToHww-gMuD5CldZ2fwBm2x5-OIu.png)
+=== "Remittance for Discount"
+
+    To create a remittance for discount follow these steps:
+
+    1. Create a remittance from the Remittances window. Select as type of remittance "Remittances for Discount". Once the header has been   created, add the lines, either invoices, orders or payments, that are to be included in this remittance.
+
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va4.png)
+
+    2. By clicking "Select Invoices and Orders" the system displays a pop up with, by default, the "Show collections/payments for alternative payment methods" selector unchecked, displaying only invoices that have Remittance payment method.
+        By checking this check box, the system shows all the invoices and orders pending to be taken to the bank. Select those operations needed to remit and process.
+
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va5.png)
+
+        The system inserts the selected lines:
+
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va6.png)
+
+    3. If no further operations to the remittance are to be added, process the payment clicking the "Process" button.
+
+        !!! warning
+            When using the "process" button and grouping lines, it is necessary for the bank accounts of those lines of a remittance document to coincide. If they are different from one another, Etendo shows an error notification as seen below.
+
+        ![error.png](/assets/legacy/error.png)
+
+        !!! info
+            Bank accounts can be defined in the header of [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance_1) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/products/etendo-classic/user-guide/procurement-management/transactions/#remittance) and [sales](/products/etendo-classic/user-guide/sales-management/transactions/#remittance) orders.
 
 
-4. When processing, the system shows the following options:
-    - No grouping: generates a payment for each of the selected lines.
-    - Group by invoice: generates a payment for each invoice (in case there is more than one).
-    - Group by invoice and due date: generates a payment for each invoice and due date.
-    - Group by business partner: generates as many payments as there are third parties on the selected lines. It allocates the total amount of all lines that apply to each third party.
-    - Group by business partner and due date: creates as many payments as there are third parties and payment dates on the selected lines.
-    - Group by order: generates a payment for each order (in case there is more than one).
-    - Group by order and due date: generates a payment for each order and due date.
+    4. When processing, the system shows the following options:
+        - No grouping: generates a payment for each of the selected lines.
+        - Group by invoice: generates a payment for each invoice (in case there is more than one).
+        - Group by invoice and due date: generates a payment for each invoice and due date.
+        - Group by business partner: generates as many payments as there are third parties on the selected lines. It allocates the total amount of all lines that apply to each third party.
+        - Group by business partner and due date: creates as many payments as there are third parties and payment dates on the selected lines.
+        - Group by order: generates a payment for each order (in case there is more than one).
+        - Group by order and due date: generates a payment for each order and due date.
 
-    In this case, it is recommended to select the option "No grouping", since as many payments as operations of the remittance will be generated and a payment sum of all the operations which is the one that the bank will advance. The rest of the payments will be settled as known.
+        In this case, it is recommended to select the option "No grouping", since as many payments as operations of the remittance will be generated and a payment sum of all the operations which is the one that the bank will advance. The rest of the payments will be settled as known.
 
-    ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png)
+        ![](/assets/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/new-va7.png)
 
-5. The next step is to take to the bank the sum payment of the remittance transactions, as in these cases the bank advances the money. From the financial account window, add the payment to the transaction and reconcile it with the bank statement.
-  ![](/assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
+    5. The next step is to take to the bank the sum payment of the remittance transactions, as in these cases the bank advances the money. From the financial account window, add the payment to the transaction and reconcile it with the bank statement.
+      ![](/assets/drive/1jeThcgRV1wHyXRiOZpG2N-w-uuMVgAqo.png)
 
-6. Finally, settle the executed payments and/or return the necessary ones.
-  ![](/assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
-  The status of the settled collections changed to Settled in Remittance and the status of the total payments of the remittance operations changed to Payment cleared.
+    6. Finally, settle the executed payments and/or return the necessary ones.
+      ![](/assets/drive/1ZbcAE5TCXIEo4wQU6AHrdtlhaQAVmZeC.png)
+      The status of the settled collections changed to Settled in Remittance and the status of the total payments of the remittance operations changed to Payment cleared.
 
 ## **Doubtful Debt**
 
