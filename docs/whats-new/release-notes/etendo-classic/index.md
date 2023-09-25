@@ -46,5 +46,5 @@ tags:
 | [21Q4.4](/whats-new/release-notes/etendo-classic/versions/21Q4-4) | 25/05/2022 | 21.4.4 | C   | | |
 | [21Q4.3](/whats-new/release-notes/etendo-classic/versions/21Q4-3) | 11/05/2022 | 21.4.3 | C   | | |
 | [21Q4.2](/whats-new/release-notes/etendo-classic/versions/21Q4-2) | 10/03/2022 | 21.4.2 | C   | | |
-| 21Q4.1                                                     | 17/12/2021 | 21.4.1 | C   | | |
+| [21Q4.1](/whats-new/release-notes/etendo-classic/versions/21Q4-1) | 17/12/2021 | 21.4.1 | C   | | |
 | [21Q4.0](/whats-new/release-notes/etendo-classic/versions/21Q4-0) | 13/12/2021 | 21.4.0 | C   | | |
