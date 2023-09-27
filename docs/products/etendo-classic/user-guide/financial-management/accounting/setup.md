@@ -1189,9 +1189,12 @@ The account combination window shows the data below:
 
 ### **Introduction** 
 
-In this window, the user can enter 
+In this window, the user can configure necessary accounting processes.
 
 ![](/assets/products/etendo-classic/user-guide/financial-management/accounting/set-up/accounting-process.png)
+
+!!!info
+    For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process).
   
 ## **G/L Item**
 
