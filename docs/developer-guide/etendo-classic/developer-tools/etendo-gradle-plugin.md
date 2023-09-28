@@ -536,19 +536,31 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
 
     === ":simple-linux: Linux"
         
-        **Node.js & npm:**
+        **Node.js 16.10.0 using NVM:**
         
-        1. Update the package repository:
+        1. Install NVM (Node Version Manager):
         ```bash
-        sudo apt update
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+        ```
+        Close and reopen your terminal to start using NVM, or execute the following commands:
+        ```bash
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
         ```
         
-        2. Install Node.js and npm:
+        2. Install Node.js version 16.10.0:
         ```bash
-        sudo apt install nodejs npm
+        nvm install 16.10.0
         ```
-
-        3. Verify the installation:
+        
+        3. Set Node.js version 16.10.0 as the default version:
+        ```bash
+        nvm use 16.10.0
+        nvm alias default 16.10.0
+        ```
+        
+        4. Verify the installation:
         ```bash
         node -v
         npm -v
