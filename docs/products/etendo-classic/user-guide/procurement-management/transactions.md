@@ -450,7 +450,7 @@ Void action implies that:
 
 #### **Landed Cost**
 
-Landed Cost window allows to allocate additional costs to the goods receipt.
+Landed Cost tab allows to allocate additional costs to the goods receipt.
 
 ![Landed cost window](/assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
 
@@ -1132,15 +1132,11 @@ Cancel matching action implies that:
 
 Matched Amount tab is a read only tab that allows to review the purchase invoice lines matched against landed cost lines.
 
-IMG
-
 #### **Accounting Cost**
 
 This tab provides Landed Cost document accounting information.
 
 As any other accounting tabs, this tab shows the ledger journal entries of landed cost posting.
-
-IMG
 
 #### **Receipt**
 
