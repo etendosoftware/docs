@@ -1,0 +1,3996 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.etendo.software/23.x/products/etendo-classic/optional-features/bundles/spain-localization/intrastat/">
+      
+      
+      
+      <link rel="icon" href="../../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Intrastat - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#javapackages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intrastat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../getting-started/overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../overview/" class="md-tabs__link">
+        Products
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../whats-new/overview/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../developer-guide/overview/" class="md-tabs__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../live-builds/overview/" class="md-tabs__link">
+      Live Builds
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../help-and-support/overview/" class="md-tabs__link">
+        Help and Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/clear-report-cache/" class="md-nav__link">
+        Clear Report Cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/attachments-configuration/" class="md-nav__link">
+        Attachments Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/application/" class="md-nav__link">
+        Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/crm-connector/" class="md-nav__link">
+        CRM Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/enterprise-model/" class="md-nav__link">
+        Enterprise Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/general-setup/process-scheduling/" class="md-nav__link">
+        Process Scheduling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+          Master Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/master-data-management/master-data/" class="md-nav__link">
+        Master Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/master-data-management/business-partner-setup/" class="md-nav__link">
+        Business Partner Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/master-data-management/product-setup/" class="md-nav__link">
+        Product Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/master-data-management/pricing/" class="md-nav__link">
+        Pricing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+          Procurement Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/procurement-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/procurement-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
+          Warehouse Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Warehouse Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/warehouse-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/warehouse-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/warehouse-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_5" id="__nav_3_2_1_5_label" tabindex="0">
+          Production Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Production Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/production-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/production-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/etendo-rx/" class="md-nav__link">
+        Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_7" id="__nav_3_2_1_7_label" tabindex="0">
+          Material Requirement Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Material Requirement Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/material-requirement-planning/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/material-requirement-planning/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8" id="__nav_3_2_1_8_label" tabindex="0">
+          Sales Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sales Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/sales-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/sales-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/sales-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9" id="__nav_3_2_1_9_label" tabindex="0">
+          Financial Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Financial Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_1" id="__nav_3_2_1_9_1_label" tabindex="0">
+          Receivables and Payables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Receivables and Payables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/receivables-and-payables/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_2" id="__nav_3_2_1_9_2_label" tabindex="0">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/accounting/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/accounting/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/accounting/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../user-guide/financial-management/assets/overview/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../essentials-extensions/overview/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platform-extensions/overview/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-extensions/overview/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../production-extensions/overview/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-extensions/overview/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-extensions/overview/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../etendobi-extensions/overview/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+          Supported Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../supported-modules/tax-report-launcher/" class="md-nav__link">
+        Tax Report Launcher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-copilot/getting-started/bastian/" class="md-nav__link">
+        Bastian
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          What's New
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          What's New
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.etendo.software" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1_3" id="__nav_4_4_1_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_1" id="__nav_5_2_1_1_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+        IntelliJ Code Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+          Migration from Openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Migration from Openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+        Migrating to Etendo (from Openbravo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_3" id="__nav_5_2_1_3_label" tabindex="0">
+          Upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+        Core format migration (JAR- Sources)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+        Resolving Dependencies on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+        Etendo Jars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+        Naming Guideliness for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+        How to Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+        How to Create and Update Translation Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+        How to Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+        How to Create a Clone Hook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+        How to Use Advanced Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+        How to Create Scan Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+        How to Use Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+        How to Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+        How to Create a Module that Adds an Accounting Process
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+          Developer Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_5" id="__nav_5_2_5_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Etendo RX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo RX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+        Creating a New Microservice
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+        How to Filter any request for Active or all Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-copilot/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-copilot/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+        Create New Subapliction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../live-builds/overview/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Help and Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Help and Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/support-service/" class="md-nav__link">
+        Support Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to report bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javapackages" class="md-nav__link">
+    Javapackages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-los-modulos" class="md-nav__link">
+    Descripción de los Módulos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-los-modulos" class="md-nav__link">
+    Instalación de los módulos
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de los módulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-de-los-datasets-conjuntos-de-datos" class="md-nav__link">
+    Aplicación de los Datasets (Conjuntos de datos)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaz-de-usuario" class="md-nav__link">
+    Interfaz de Usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaz de Usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-datos-maestros-producto-producto-intrastat" class="md-nav__link">
+    Gestión de Datos Maestros | Producto  |  Producto  &gt;&gt;  Intrastat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-datos-maestros-terceros-terceros-cliente-envios-de-intrastat-y-gestion-de-datos-maestros-terceros-terceros-proveedoracreedor-adquisiciones-de-intrastat" class="md-nav__link">
+    Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Cliente  &gt;&gt;  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  | Terceros  &gt;&gt;  Proveedor/Acreedor  &gt;&gt;  Adquisiciones de Intrastat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-datos-maestros-terceros-terceros-cliente-y-gestion-de-datos-maestros-terceros-terceros-proveedoracreedor-campo-incoterms" class="md-nav__link">
+    Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Cliente y Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Proveedor/Acreedor, campo Incoterms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-financiera-contabilidad-configuracion-tipo-de-documento-definicion-de-documento" class="md-nav__link">
+    Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-general-organizacion-organizacion-organizacion-campo-calendario-de-intrastat" class="md-nav__link">
+    Configuración General | Organización | Organización | Organización, campo Calendario de Intrastat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-general-organizacion-organizacion-organizacion-intrastat" class="md-nav__link">
+    Configuración General | Organización | Organización  |  Organización  &gt;&gt;  Intrastat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solapa-intrastat-en-linea-de-pedido-albaran-y-factura-compra-o-venta" class="md-nav__link">
+    Solapa Intrastat en Línea de Pedido, Albarán y Factura (compra o venta)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intrastat-herramientas-de-analisis-generador-de-intrastat" class="md-nav__link">
+    Intrastat | Herramientas de análisis | Generador de Intrastat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intrastat-herramientas-de-analisis-declaracion-de-intrastat" class="md-nav__link">
+    Intrastat | Herramientas de análisis | Declaración de Intrastat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-de-instrucciones" class="md-nav__link">
+    Manual de Instrucciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual de Instrucciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-general" class="md-nav__link">
+    Configuración General
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-intrastat" class="md-nav__link">
+    Configuración de Intrastat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-transacciones" class="md-nav__link">
+    Creación de transacciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de transacciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-transacciones-desde-otras-transacciones" class="md-nav__link">
+    Creación de transacciones desde otras transacciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-de-declaraciones-de-intrastat" class="md-nav__link">
+    Generación de declaraciones de Intrastat
+  </a>
+  
+    <nav class="md-nav" aria-label="Generación de declaraciones de Intrastat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#revision-modificacion-y-procesado-de-la-declaracion-de-intrastat" class="md-nav__link">
+    Revisión, Modificación y Procesado de la declaración de Intrastat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-fichero-de-intrastat" class="md-nav__link">
+    Generación del fichero de Intrastat
+  </a>
+  
+    <nav class="md-nav" aria-label="Generación del fichero de Intrastat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finalizar-el-ano-copia-de-configuracion-al-siguiente-ano" class="md-nav__link">
+    Finalizar el año. Copia de configuración al siguiente año
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+  
+
+
+
+
+  
+  
+
+
+  <h1>Intrastat</h1>
+
+<h2 id="javapackages">Javapackages</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: org.openbravo.module.intrastat <br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: org.openbravo.module.intrastat.spain <br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: org.openbravo.module.intrastat.es.es</p>
+<h2 id="introduccion">Introducción</h2>
+<p>Esta sección describe el módulo disponible de Etendo para la generación y presentación del informe oficial de Intrastat.</p>
+<p>El informe Intrastat se debe presentar a las autoridades mensualmente, dentro de los 12 días posteriores al mes en el que se realizaron las transacciones.</p>
+<p>La declaración de Intrastat se debe enviar telemáticamente (a través Internet) en un fichero válido con un determinado formato específico de cada país.</p>
+<h2 id="descripcion-de-los-modulos">Descripción de los Módulos</h2>
+<p>A continuación, se listan los diferentes <strong>módulos</strong> sobre los que se desarrolla la funcionalidad de Intrastat:</p>
+<ul>
+<li><strong>Intrastat.</strong> Este módulo proporciona la infraestructura necesaria que permite la configuración, ejecución y generación del fichero de Intrastat. Si sólo instala este módulo, Etendo será capaz de reconocer todas las transacciones que formarán parte del fichero de Intrastat.</li>
+</ul>
+<p>Éste es un módulo del que dependen el resto de módulos de Intrastat, proporciona la funcionalidad genérica para los países de la Unión Europea. Sin embargo, tenga en cuenta que cada país de la UE tiene sus propias peculiaridades, y este módulo es incapaz de conocerlas y manejarlas él sólo. Por este motivo, es posible que necesite instalar además el módulo de Intrastat concreto para su país, que será el que proporcione las peculiaridades propias de su país.</p>
+<ul>
+<li><strong>Intrastat for Spain (Intrastat para España).</strong> Este módulo complementa al módulo anterior y proporciona las características específicas para España, como por ejemplo:<ul>
+<li>Excluye las transacciones que tienen como origen o destino las Islas Canarias (como requiere la ley)</li>
+<li>Genera un fichero de Intrastat con el formato oficial listo para ser enviado mensualmente a las Autoridades.</li>
+</ul>
+</li>
+<li><strong>Intrastat – Spanish Translation (Intrastat - Traducción al español).</strong> Añade la traducción al español (España) del módulo Intrastat.</li>
+</ul>
+<p>Además de los módulos anteriores, necesitará instalar las siguientes dependencias obligatorias:</p>
+<ul>
+<li><strong>Incoterms.</strong> Añade la lista de Incoterms oficiales (Condiciones de Entrega) a su instalación de Etendo</li>
+<li><strong>European Union Countries.</strong> Añade la lista de países miembros de la Unión Europea a su instalación de Etendo</li>
+<li><strong>Provincias de España.</strong> Añade la lista de provincias españolas a su instalación de Etendo</li>
+</ul>
+<p>Todas estas dependencias se instalarán automáticamente al instalar los módulos de Intrastat, por lo que no tendrá que hacerse manualmente.</p>
+<h2 id="instalacion-de-los-modulos"><strong>Instalación de los módulos</strong></h2>
+<p>Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:</p>
+<ul>
+<li>Instalación de la última versión disponible de Etendo</li>
+<li>o la instalación del módulo de Localización Española.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Para la instalación del módulo de Localización Española, visite <a href="https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5" target="_blank"><em>Marketplace</em></a>. </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Nota importante</strong>: Las transacciones realizadas con anterioridad a la instalación del módulo <em>“Intrastat”</em> no se tendrán en cuenta a la hora de generar las declaraciones de Intrastat.</p>
+</div>
+<p>Tenga en cuenta que, como es lógico, el sistema solo es capaz de reconocer las transacciones a incluir en el informe de Intrastat desde el momento que se instala y configura dicha funcionalidad en Etendo.</p>
+<h3 id="aplicacion-de-los-datasets-conjuntos-de-datos"><strong>Aplicación de los Datasets (Conjuntos de datos)</strong></h3>
+<p>Una vez instalado el módulo, se deberán aplicar los datasets incluidos a su instalación.</p>
+<p>Si está realizando la configuración inicial de Etendo, puede utilizar el proceso “Crear Organización” para aplicar estos datos.</p>
+<p>Si, por el contrario, está instalando estos módulos en un sistema en productivo, deberá aplicar los datasets desde la ventana Configuración General | Organización | Gestión del módulo de Empresa  |  Gestión del módulo de Empresa:</p>
+<p><a class="glightbox" href="/assets/drive/9E8pdSDAB1cQjG039Rhp_c3Z-XDg2LC-1tnuokHzaQ6MVZ1TTuM5YTyX1q0-wYHGGRAH0OtCyMQ6uICIwQHcHfwz7sBTqVtvAKlc6SSyZGiCuCAJhZ8bsQt9m3qLT4Eiw3mR4XSTNY01hZtqqw9IwQKG9zaQzBnRd89An6VyGUsO7DNXkQl1Q19l9A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/9E8pdSDAB1cQjG039Rhp_c3Z-XDg2LC-1tnuokHzaQ6MVZ1TTuM5YTyX1q0-wYHGGRAH0OtCyMQ6uICIwQHcHfwz7sBTqVtvAKlc6SSyZGiCuCAJhZ8bsQt9m3qLT4Eiw3mR4XSTNY01hZtqqw9IwQKG9zaQzBnRd89An6VyGUsO7DNXkQl1Q19l9A.png" /></a></p>
+<p>Seleccione los datos de referencia “Incoterms” e “Intrastat for Spain” y aplíquelos a su organización de nivel de agrupación o a su entidad legal dependiendo de su árbol de organizaciones.</p>
+<p>Si el proceso se ha ejecutado correctamente, el sistema debería mostrar la siguiente información:</p>
+<p><a class="glightbox" href="/assets/drive/WFgwGX-k5cQwljyb0pvetphDd1B4qebt3L2mRNX9o2MhfjH5nTqVpG9O4TUCMwn6NJ1cK1bfQhtosDVfnjno3suZce-SgBk9JC9aZgaRntutQfEf7cc5GLPaBmCSu_L29LYfA3n-g6DMfo8M-NnfKSZnQ8TDR6o3VoM1Y9W75yEjs4v_2POlWyUEpA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/WFgwGX-k5cQwljyb0pvetphDd1B4qebt3L2mRNX9o2MhfjH5nTqVpG9O4TUCMwn6NJ1cK1bfQhtosDVfnjno3suZce-SgBk9JC9aZgaRntutQfEf7cc5GLPaBmCSu_L29LYfA3n-g6DMfo8M-NnfKSZnQ8TDR6o3VoM1Y9W75yEjs4v_2POlWyUEpA.png" /></a></p>
+<h2 id="interfaz-de-usuario"><strong>Interfaz de Usuario</strong></h2>
+<p>El módulo “Intrastat” proporciona campos, ventanas y solapas necesarios para la configuración y generación de la declaración de Intrastat.</p>
+<p>A continuación se muestran unas capturas de pantalla de estos elementos junto a una breve descripción de cada uno de ellos.</p>
+<h6 id="gestion-de-datos-maestros-producto-producto-intrastat"><strong>Gestión de Datos Maestros | Producto  |  Producto  &gt;&gt;  Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/G5Llm2flNrOzJt-k1_SvtgklRXnnQtgz0wyBL4ouCXVxOoe30GaKqSgN5KgrXlgH21xq0_T0EUyZlwpaGQgjhcLP8cpt1HqqiAK9EGzkjzgcObg1bTkeIMUdoTtcM7WbTd0oTcgVEi4iAQdWhJ76AyrmUSnh2bw8Zo0tU15gL3AYtIFQr1wMBybNXA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/G5Llm2flNrOzJt-k1_SvtgklRXnnQtgz0wyBL4ouCXVxOoe30GaKqSgN5KgrXlgH21xq0_T0EUyZlwpaGQgjhcLP8cpt1HqqiAK9EGzkjzgcObg1bTkeIMUdoTtcM7WbTd0oTcgVEi4iAQdWhJ76AyrmUSnh2bw8Zo0tU15gL3AYtIFQr1wMBybNXA.png" /></a></p>
+<p>Las transacciones entre países de la UE que incluyan productos de tipo Artículo se deben registrar en la declaración de Intrastat. Cada uno de los productos tiene asociado un código de mercancía obligatorio y una masa neta en Kg (por unidad de facturación). Opcionalmente, y siempre dependiendo del producto, se puede configurar una unidad de medida suplementaria junto a su correspondiente conversión.</p>
+<p>En esta solapa, el usuario debe configurar los datos particulares de cada producto.</p>
+<h6 id="gestion-de-datos-maestros-terceros-terceros-cliente-envios-de-intrastat-y-gestion-de-datos-maestros-terceros-terceros-proveedoracreedor-adquisiciones-de-intrastat"><strong>Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Cliente  &gt;&gt;  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  | Terceros  &gt;&gt;  Proveedor/Acreedor  &gt;&gt;  Adquisiciones de Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/7azhjfSW95mKDO_Umt-b50nUiixohLlwZ1zx_oZKMbNAO7R79nOk7oMsT2Rq-iOC-rY16uPaSnyHXz5_5bwULKS1eSqn7bmhL85Um2Qs-f_RNafxL9RFYkcEXvV_l-7QVXpWVGjPDbIghA2hw-mXyPncKMBU1GIqXCrUt8KkoklL6WlVFouQKsXX8A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/7azhjfSW95mKDO_Umt-b50nUiixohLlwZ1zx_oZKMbNAO7R79nOk7oMsT2Rq-iOC-rY16uPaSnyHXz5_5bwULKS1eSqn7bmhL85Um2Qs-f_RNafxL9RFYkcEXvV_l-7QVXpWVGjPDbIghA2hw-mXyPncKMBU1GIqXCrUt8KkoklL6WlVFouQKsXX8A.png" /></a></p>
+<p>Cada tercero con el que trabaje, ya sea cliente o proveedor, tendrá su propia configuración para Intrastat por defecto. Por ejemplo, es posible que su proveedor siempre le envíe la mercancía mediante un medio de transporte determinado.</p>
+<p>Desde esta solapa el usuario tiene la oportunidad de configurar esos valores por defecto de cada tercero. El sistema siempre recuperará la información configurada aquí y la utilizará para generar la declaración de Intrastat.</p>
+<p>Sin embargo, es posible que en alguna transacción en particular, la modalidad de transporte varíe de la que tiene configurada por defecto en esta ventana. Si éste es el caso, el usuario siempre tiene la oportunidad de cambiar manualmente esta información a nivel de transacción o de declaración de Intrastat como veremos más adelante en este manual.</p>
+<h6 id="gestion-de-datos-maestros-terceros-terceros-cliente-y-gestion-de-datos-maestros-terceros-terceros-proveedoracreedor-campo-incoterms"><strong>Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Cliente y Gestión de Datos Maestros | Terceros  |  Terceros  &gt;&gt;  Proveedor/Acreedor, campo Incoterms</strong></h6>
+<p><a class="glightbox" href="/assets/drive/FxL2ss3KNP9of-xib9m4PqSBvMrXhhFCKBFlFLq06LGNxkxNzb2A0R55NPFpGogVFQ6Zc9ztwL-EjSxQYPAZTkDgpbCN-Unh4iJGItzb1np0W0YBfO6_PiM-PSbp20vpW5T38UEp2vXdogNtyh-osvVMoIUHGJDlSf4HDqNXCsD2YbFUGULEr1gW0A.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/FxL2ss3KNP9of-xib9m4PqSBvMrXhhFCKBFlFLq06LGNxkxNzb2A0R55NPFpGogVFQ6Zc9ztwL-EjSxQYPAZTkDgpbCN-Unh4iJGItzb1np0W0YBfO6_PiM-PSbp20vpW5T38UEp2vXdogNtyh-osvVMoIUHGJDlSf4HDqNXCsD2YbFUGULEr1gW0A.png" /></a></p>
+<p>El campo Incoterms permite definir el Incoterm (Condición de Entrega) por defecto para el tercero. Es importante tener en cuenta que se pueden configurar dos Incoterms para el tercero, uno cuando el tercero es cliente y otro cuando es proveedor.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.</p>
+</div>
+<h6 id="gestion-financiera-contabilidad-configuracion-tipo-de-documento-definicion-de-documento"><strong>Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento</strong></h6>
+<p><a class="glightbox" href="/assets/drive/IoUclg9rhO_Gqhw_0FuLoJa54gQjUysOPDNlGgbwsbczidBrKgSlXDVgV06YLVDXTwMPbgeJ041zklsHvsDQKu0lhSTvKh3uI3TPmCeYv4qY466B-at_lMNxdR24jh40VhYtkBzLxGKGPkQIFVHGJSLZfwjDeImzQu1key6CJmHNBTfZEDth6QQCeg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/IoUclg9rhO_Gqhw_0FuLoJa54gQjUysOPDNlGgbwsbczidBrKgSlXDVgV06YLVDXTwMPbgeJ041zklsHvsDQKu0lhSTvKh3uI3TPmCeYv4qY466B-at_lMNxdR24jh40VhYtkBzLxGKGPkQIFVHGJSLZfwjDeImzQu1key6CJmHNBTfZEDth6QQCeg.png" /></a></p>
+<p>Los campos <em>Tipo de Transacción</em> y <em>Regimén estadístico</em> van asociados al tipo de documento (facturas). En esta ventana puede definir los valores por defecto que, al igual que sucedía con los valores de Intrastat para Producto o Tercero, pueden ser sobrescritos para transacciones o declaraciones de Intrastat en concreto.</p>
+<h6 id="configuracion-general-organizacion-organizacion-organizacion-campo-calendario-de-intrastat"><strong>Configuración General | Organización | Organización | Organización, campo Calendario de Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/mVJ1pyaJF0A0_AhDbNggeRZnZvxKq2pl9cs7i7n-0TuQfxS-sucLH8Dj83qvRSIDnttYFzgSMZK5LRnWS5n5Wp6liQUUZnaOeJfKjfHFFm7q5eFQ68kpmuLi_V-SI8N2d28S3lOfQfGwc6Rhq-U_RROZKyUL9fmjd9LM_xCuM2H3pzd__651wvaibg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/mVJ1pyaJF0A0_AhDbNggeRZnZvxKq2pl9cs7i7n-0TuQfxS-sucLH8Dj83qvRSIDnttYFzgSMZK5LRnWS5n5Wp6liQUUZnaOeJfKjfHFFm7q5eFQ68kpmuLi_V-SI8N2d28S3lOfQfGwc6Rhq-U_RROZKyUL9fmjd9LM_xCuM2H3pzd__651wvaibg.png" /></a></p>
+<p>El campo <em>Calendario de Intrastat</em> define el calendario de declaraciones de Intrastat. En España, el Intrastat se debe presentar mensualmente, por lo que el calendario de Intrastat seleccionado debe tener doce periodos que coincidan con los dos meses naturales de un año. Si su calendario fiscal cumple esas condiciones, puede usarlo también como calendario de Intrastat sin necesidad de crear uno nuevo.</p>
+<p>En este nuevo campo, sólo aparecerán los calendarios que estén marcados como <em>“Calendario de Intrastat”</em> en la configuración del calendario:</p>
+<p><a class="glightbox" href="/assets/drive/bO3u93UFfmKU1W9mLFKYj-ZbmYv8cKLtPjLvC-yacQkkRXAfcnGz3HeIrfsjW08XXL8iBOP656gydvYIYVKSIthvyYK8IEsipoh7XADziIBF77qqffJlwOH11cgdPlb0tWT9wCtR11_P3CSWWbkOUracp5Ui3Ul0irS50FTaDLewU1rdVdJ1TEVmMg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/bO3u93UFfmKU1W9mLFKYj-ZbmYv8cKLtPjLvC-yacQkkRXAfcnGz3HeIrfsjW08XXL8iBOP656gydvYIYVKSIthvyYK8IEsipoh7XADziIBF77qqffJlwOH11cgdPlb0tWT9wCtR11_P3CSWWbkOUracp5Ui3Ul0irS50FTaDLewU1rdVdJ1TEVmMg.png" /></a></p>
+<h6 id="configuracion-general-organizacion-organizacion-organizacion-intrastat"><strong>Configuración General | Organización | Organización  |  Organización  &gt;&gt;  Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/C03LX7XPMO-rvqovv8Gtmu6l-HoRmUqQPf0Q321iltU61rfVQyiGCo1dsu6oQ_oFXHLbF0528kEHLoOx8qWAmbJx0NcgwVmw_Iy-lNzSCRXYB4jO9P0zcaOAU44PXqja7AgrdctRRSNeYtErmY50OYAT0RKfFXgrX6lTf20j5WzMnDQexGT1AqaK0g.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/C03LX7XPMO-rvqovv8Gtmu6l-HoRmUqQPf0Q321iltU61rfVQyiGCo1dsu6oQ_oFXHLbF0528kEHLoOx8qWAmbJx0NcgwVmw_Iy-lNzSCRXYB4jO9P0zcaOAU44PXqja7AgrdctRRSNeYtErmY50OYAT0RKfFXgrX6lTf20j5WzMnDQexGT1AqaK0g.png" /></a></p>
+<p>En esta solapa se introduce la información de Intrastat relativa a la organización (sólo entidades legales).</p>
+<p>Cada año se debe introducir un registro en esta solapa para configurar los siguientes datos:</p>
+<ul>
+<li><em>Formato de Fichero</em>: Cada país tiene su propio formato de Intrastat. En este campo seleccionamos el formato de fichero concreto que queremos que cree el sistema. En el caso de España, el módulo “Intrastat for Spain” es el encargado de generar el fichero con formato para España.</li>
+<li><em>Ejercicio</em>: Año de la declaración</li>
+<li><em>Declaración de Intrastat</em>: Adquisiciones o Entregas</li>
+<li><em>Importe Límite</em>: Cada año las Autoridades suelen modificar el importe que delimita la obligatoriedad de presentar o no la declaración de Intrastat. En este campo el usuario debe indicar el importe límite de cada año.</li>
+<li><em>Importe Acumulado del año</em>: Cada vez que se presente una declaración mensual, el sistema irá actualizando automáticamente el valor de este campo con el importe acumulado. Si el año anterior se generó la declaración de Intrastat fuera de Etendo, o desea empezar a generar la declaración una vez empezado el año, puede configurar aquí el importe que declaró en su momento.</li>
+<li><em>Valores por Defecto (Incoterms, Tipo de transacción, Modalidad de transporte, Régimen estadístico, Valor estadístico)</em>: Como ha visto anteriormente, en las ventanas de <em>Tercero</em> o <em>Tipo de documento</em> se pueden definir todos estos valores. Sin embargo, definir la misma <em>Modalidad de transporte</em> (por ejemplo) para todos los terceros puede resultar un poco molesto. Así que, si lo desea, puede definir la configuración global de estos valores en esta solapa. De esta forma, si por ejemplo no especifica nada en la <em>Modalidad de Transporte</em> de un Tercero, el sistema utilizará por defecto la configurada en esta solapa. Podrá modificar manualmente esta configuración siempre que lo desee en cada transacción o declaración de Intrastat.</li>
+</ul>
+<h6 id="solapa-intrastat-en-linea-de-pedido-albaran-y-factura-compra-o-venta"><strong>Solapa Intrastat en Línea de Pedido, Albarán y Factura (compra o venta)</strong></h6>
+<p><a class="glightbox" href="/assets/drive/MPXVxD2cgEZhT-sITSN4LLZJV59vTsxYwzj5fC8IKyIZuUjHq8BWShP7aSB5M5vue9kXWhNUL54W0Q7vNGkN1OJvPXInGUWRPOhsSix8csKzNIAYHwIxwxany7JR3xAeifSGeUfUOLCeOoxyR55QMrajFQjcsrPYt5AnOUALpnHeh82pH3O9mGbIKg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/MPXVxD2cgEZhT-sITSN4LLZJV59vTsxYwzj5fC8IKyIZuUjHq8BWShP7aSB5M5vue9kXWhNUL54W0Q7vNGkN1OJvPXInGUWRPOhsSix8csKzNIAYHwIxwxany7JR3xAeifSGeUfUOLCeOoxyR55QMrajFQjcsrPYt5AnOUALpnHeh82pH3O9mGbIKg.png" /></a></p>
+<p>A nivel de línea de Pedido, Albarán y Factura, tanto de compra como de venta, se ha creado una nueva solapa que contiene toda la información de Intrastat relativa a esa transacción en concreto.</p>
+<p>Cada vez que se introduce una nueva línea de pedido, albarán o factura, el sistema comprueba si esa transacción se debe incluir en el informe de Intrastat (por ejemplo, si se trata de una compra/venta intracomunitaria) y, en caso afirmativo, genera un registro en la pestaña Intrastat con toda la información de Intrastat que se ha configurado por defecto. El usuario puede modificar manualmente cada uno de esos campos antes de completar el documento.</p>
+<p>La razón por la que se ha añadido una solapa de Intrastat tanto en las líneas de pedido como de albarán (teniendo en cuenta que estos documentos no se incluyen en el Intrastat, sino sólo las facturas contabilizadas) es que las facturas en Etendo pueden crearse desde los pedidos y/o los albaranes. Es por ello que si la información relativa a Intrastat se introduce en la línea de un pedido, esa información se trasladará a la correspondiente línea de factura si la factura se genera copiando del pedido.</p>
+<h6 id="intrastat-herramientas-de-analisis-generador-de-intrastat"><strong>Intrastat | Herramientas de análisis | Generador de Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/XxYQ02-DL0rr3DGMZ_FUOn2gVmqY34Iko4NBU_Wr7JXNbchAgTSr_BaLU_6bf9giEwaUVf8c2b2pvk2dc2U6NwRsa7CX8uFXET_eiMgxybpB8swm-0wSw9ln1r_FcRFaFlYvumc30KMLbEhCxNLFPy7NfCiPVYvY41yrCbbhVWZ75HgRrxwNyEYkdg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/XxYQ02-DL0rr3DGMZ_FUOn2gVmqY34Iko4NBU_Wr7JXNbchAgTSr_BaLU_6bf9giEwaUVf8c2b2pvk2dc2U6NwRsa7CX8uFXET_eiMgxybpB8swm-0wSw9ln1r_FcRFaFlYvumc30KMLbEhCxNLFPy7NfCiPVYvY41yrCbbhVWZ75HgRrxwNyEYkdg.png" /></a></p>
+<p>Una vez finalizado el mes, se debe generar la declaración de Intrastat de ese mes. Desde esta ventana podremos hacerlo. Para ello seleccionamos la Organización (sólo entidades legales), Ejercicio, Periodo, Adquisiciones o Entregas y Tipo de declaración (Normal o Anulativa).</p>
+<p>El sistema generará automáticamente una cabecera de declaración junto a sus líneas, accesible desde Intrastat | Herramientas de análisis | Declaración de Intrastat.</p>
+<h6 id="intrastat-herramientas-de-analisis-declaracion-de-intrastat"><strong>Intrastat | Herramientas de análisis | Declaración de Intrastat</strong></h6>
+<p><a class="glightbox" href="/assets/drive/er07E5V7YGKLkaVl1A9lUzWMFj3FREeBMgFaqnjtq6fB2w7ek7q6ztujPw2KNRxtVq45PS7SU6MzaKmrNSdDnNXw6nkGRo0s_Y1aY0KKEyigXKHj9w8_RqGCSKo-Hj3AiqoUKo2sNu19GNJ6xTBoUMHzLYDpfMVL8JcyS1evqol-e3m-weEBCbbB5Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/er07E5V7YGKLkaVl1A9lUzWMFj3FREeBMgFaqnjtq6fB2w7ek7q6ztujPw2KNRxtVq45PS7SU6MzaKmrNSdDnNXw6nkGRo0s_Y1aY0KKEyigXKHj9w8_RqGCSKo-Hj3AiqoUKo2sNu19GNJ6xTBoUMHzLYDpfMVL8JcyS1evqol-e3m-weEBCbbB5Q.png" /></a></p>
+<p>Al generar una declaración de Intrastat, el sistema crea automáticamente una nueva cabecera (sólo lectura) junto con sus líneas. En este momento la declaración se encuentra en estado borrador, y se permiten modificaciones en las líneas de la declaración. Veamos un ejemplo de la información que contiene una línea:</p>
+<p><a class="glightbox" href="/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png" /></a></p>
+<p>El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, Etendo Classic habrá rellenado automáticamente todos estos valores en las líneas de la declaración.</p>
+<p>Si por el contrario le falta algún dato, si desea modificar alguno, o incluso si quiere añadir manualmente nuevas líneas o excluir alguna de ellas, puede hacerlo mientras la declaración esté en estado borrador.</p>
+<p>En la solapa de líneas de declaración de Intrastat, al margen de los campos relativos a la información de Intrastat, aparecen dos campos de especial importancia para el usuario: el campo <em>“Incluir”</em> y el campo <em>“Modificado Manualmente”:</em></p>
+<ul>
+<li><em>Incluir</em>: Por defecto, todas las líneas de la declaración de Intrastat se incluirán a la hora de generar el fichero de Intrastat. Sin embargo, si desmarca esta casilla, la línea en cuestión se excluirá de la declaración.</li>
+<li><em>Modificado Manualmente</em>: Cada vez que se modifique un dato de una línea de declaración de Intrastat o añada manualmente una nueva línea, el sistema marcará automáticamente esta casilla.</li>
+</ul>
+<p>Mientras la declaración está en estado borrador, la declaración de Intrastat se puede relanzar todo lo necesario. Cuando se haga, el sistema volverá a recalcular de nuevo la declaración, conservando intactas todas las líneas que tengan marcado el campo de <em>Modificado Manualmente.</em></p>
+<h2 id="manual-de-instrucciones"><strong>Manual de Instrucciones</strong></h2>
+<p>Una vez que conoce las ventanas más importantes que proporcionan la funcionalidad de Intrastat en Etendo, es hora de conocer el flujo de trabajo para usar correctamente dicha funcionalidad.</p>
+<h3 id="configuracion-general"><strong>Configuración General</strong></h3>
+<p>Toda la lógica detrás de la funcionalidad de Intrastat en Etendo se basa en la ubicación física de su organización y de sus terceros. Por ese motivo es fundamental que especifique la dirección completa de cada uno de ellos. Si la dirección es de España, deberá indicar también la Provincia en la que se ubica.</p>
+<h4 id="configuracion-de-intrastat"><strong>Configuración de Intrastat</strong></h4>
+<p>Como habrá podido observar, la configuración para Intrastat se realiza principalmente en los siguientes lugares:</p>
+<ul>
+<li><strong>Configuración General | Organización | Organización</strong>. Para cada entidad legal, deberá seleccionar un calendario válido para Intrastat (que tenga ejercicios con 12 periodos que coincidan con los meses naturales). Recuerde marcar la casilla “Calendario de Intrastat” cuando configure su calendario (<em>Gestión Financiera | Contabilidad | Configuración | Calendario anual y periodos</em>) para que éste aparezca en el campo de <em>Calendario de Intrastat</em> de la ventana de Organización.</li>
+<li><strong>Configuración General | Organización | Organización  |</strong>  Organización  <strong>>&gt;  Intrastat</strong>. Recuerde que en esta solapa se configuran:</li>
+<li>Los importes y tipos de declaraciones que desea generar para cada entidad legal</li>
+<li>Los valores por defecto globales que se utilizarán en caso de que no se definan concretamente donde corresponda (<em>Tercero</em> o <em>Tipo de documento</em>)</li>
+</ul>
+<p>El sistema necesita saber cuánto se declaró el año anterior. Para proporcionar esta información, se debe crear un nuevo registro en esta solapa. Solamente a modo de ejemplo, en <em>2021</em> para la organización <em>España</em>, declaramos un Intrastat de <em>adquisiciones</em> por un importe de <em>0.00</em> Euros:</p>
+<p><a class="glightbox" href="/assets/drive/9X5udGu8RP0DTGJquv2Li6dXdSXPxg03D1QBGQ6qnrs6VxCayvbcoqtu-IyOzhhT5L2lb7CWeHMST-gvve1CpWU8RyBTrUcgu-CIGup0h6kG9MrY0-DbIZ-LQIrMrLttuy0FAM3Ax2-CPquZMG8IOmqkZGLr6bl1mhCpSe2_IErNZTQfX5RfnIIrfg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/9X5udGu8RP0DTGJquv2Li6dXdSXPxg03D1QBGQ6qnrs6VxCayvbcoqtu-IyOzhhT5L2lb7CWeHMST-gvve1CpWU8RyBTrUcgu-CIGup0h6kG9MrY0-DbIZ-LQIrMrLttuy0FAM3Ax2-CPquZMG8IOmqkZGLr6bl1mhCpSe2_IErNZTQfX5RfnIIrfg.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Nota: Si su calendario de Intrastat no tiene creado el año 2021, deberá crearlo (junto a sus respectivos periodos) antes de poder introducir este registro.</p>
+</div>
+<p>Ahora repita ese proceso para el año presente. Si ya ha empezado el año y se han realizado transacciones intracomunitarias de bienes (presentando o no la declaración de Intrastat), deberá indicar el importe acumulado de este año. De esta forma, el sistema podrá saber si debe presentar la declaración de Intrastat o no a lo largo del presente año.</p>
+<p>También existe la opción de configurar los valores globales por defecto, lo que es especialmente útil si, por ejemplo, casi todos sus Terceros comparten el mismo Incoterm. Posteriormente, a nivel de tercero, se podrá especificar la configuración concreta para cada uno de ellos.</p>
+<p><a class="glightbox" href="/assets/drive/oVnu7ahLXMceKTVmUBhewKFKYODlv-fRnLLXvLdTrg6rsJdYzXk9_nRSj9_6COfueYVEub-2ISJZV49Abl1WRLhdVqzJ5DCV5n0d3vMDePDlcYKGY6pUDeQSSSrpRz6k--F-438sLk7NF_QCydiwA2C2X6nWOSbZ5u0D0Zn7UyfdJsZm1IRoRMPjAQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/oVnu7ahLXMceKTVmUBhewKFKYODlv-fRnLLXvLdTrg6rsJdYzXk9_nRSj9_6COfueYVEub-2ISJZV49Abl1WRLhdVqzJ5DCV5n0d3vMDePDlcYKGY6pUDeQSSSrpRz6k--F-438sLk7NF_QCydiwA2C2X6nWOSbZ5u0D0Zn7UyfdJsZm1IRoRMPjAQ.png" /></a></p>
+<ul>
+<li><strong>Gestión de Datos Maestros | Producto  |</strong>  Producto  <strong>>&gt;  Intrastat</strong> Como ya vió en el apartado Interface de Usuario, debe definir la información de Intrastat para los productos de tipo <em>Artículo.</em></li>
+<li><strong>Gestión de Datos Maestros | Terceros  |</strong>  Terceros  <strong>>&gt;  Cliente y Gestión de Datos Maestros | Terceros  |</strong>  Terceros  <strong>>&gt;  Proveedor/Acreedor, campo Incoterms.</strong> Como ya se vió en el apartado Interfaz de Usuario, se puede definir el Incoterm de cada Tercero.</li>
+<li><strong>Gestión de Datos Maestros | Terceros  |</strong>  Terceros  <strong>>&gt;</strong>  Cliente  <strong>>&gt;  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  |</strong>  Terceros  <strong>>&gt;</strong>  Proveedor/Acreedor  <strong>>&gt;  Adquisiciones de Intrastat .</strong> Como ya se vió en el apartado Interfaz de Usuario, se puede definir la información de Intrastat de cada Tercero.</li>
+<li><strong>Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento.</strong> Como ya se vió en el apartado Interfaz de Usuario, puede definir el <em>Tipo de Transacción</em> y <em>Régimen estadístico</em> para sus documentos de tipo Factura.</li>
+</ul>
+<h3 id="creacion-de-transacciones"><strong>Creación de transacciones</strong></h3>
+<p>Una vez que nuestros datos están perfectamente configurados, es el momento de empezar a crear las transacciones que posteriormente se incluirán en la declaración de Intrastat.</p>
+<p>Como ya se ha visto en apartados anteriores, su instalación cuenta con una nueva solapa, llamada <em>“Intrastat”</em>, a nivel de línea de pedido, albarán y factura que contiene toda la información relativa al Intrastat. Si se han introducido todos los datos de configuración necesarios anteriormente, se utilizará esta información automáticamente para rellenar esa solapa. Si, por el contrario, no se ha configurado toda esta información, o desea modificar algún dato en concreto, podrá hacerlo de forma manual.</p>
+<p>Cada vez que se introduce una línea de pedido, albarán o factura, el sistema comprueba si se cumplen todas estas condiciones:</p>
+<ol>
+<li>La organización y el tercero del documento se encuentran en países distintos de la Unión Europea</li>
+<li>Todas las direcciones incluidas en la cabecera del documento, que están relacionadas con el tercero, están ubicadas en la UE. Si al menos una de las direcciones no pertenece a la UE, no se generará información de Intrastat</li>
+<li>El producto incluido en la línea es un artículo</li>
+<li>Si se ha instalado el módulo de <em>“Intrastat for Spain”</em>, el sistema también comprobará que tercero y organización no se encuentren ubicados en las Islas Canarias, ya que en este caso las transacciones se deben excluir del Intrastat.</li>
+</ol>
+<p>Si todas esas condiciones se cumplen, cada vez que inserte una línea de documento, el sistema creará automáticamente la información en la pestaña de Intrastat.</p>
+<p>El sistema recupera los valores por defecto que haya configurado a nivel de tercero, producto, tipo de documento y organización (este último si no encuentra los valores correspondientes anteriormente). Pero recuerde que, independientemente de los valores configurados, el usuario tiene la libertad de modificarlos para cada línea en concreto mientras el documento no se haya completado.</p>
+<h4 id="creacion-de-transacciones-desde-otras-transacciones"><strong>Creación de transacciones desde otras transacciones</strong></h4>
+<p>En Etendo existe la posibilidad de crear albaranes desde pedidos; en este caso, el sistema recuperará la información de Intrastat introducida a nivel de pedido y la copiará al albarán.</p>
+<p>Imagine que ha creado un pedido y que ha cambiado el Incoterm por defecto. Cuando se cree un albarán desde ese pedido, el Incoterm que se incluirá en la línea de Intrastat del albarán será el que se haya redefinido en el pedido, y no el que estuviera configurado en el sistema por defecto.</p>
+<p>Lo mismo sucede para las facturas. En Etendo se pueden crear facturas desde albaranes o pedidos. En este caso, el sistema siempre intentará recuperar la información de Intrastat del albarán o del pedido. Si la factura se crea sin albarán o pedido asociado, Etendo recuperará la configuración del sistema para rellenar la solapa del Intrastat.</p>
+<h3 id="generacion-de-declaraciones-de-intrastat"><strong>Generación de declaraciones de Intrastat</strong></h3>
+<p>Una vez finalizado el mes natural, llega el momento de generar la declaración de Intrastat. Para hacerlo debemos ir a la ventana Intrastat | Herramientas de análisis | Generador de Intrastat. Seleccionaremos la entidad legal, año, periodo y tipo de declaración.</p>
+<p><a class="glightbox" href="/assets/drive/-xOOy1tCY12Yc8KLtr_QEIiGwyUIQ8O9dXuGoMTnHHhDwYTKty5cP1dog-im2f-iHQoE-UEbMJcoseuQvPEnMqTTwZvEEwMyHin7jQyDByPcGvhswO9pAz2e07LqRCkFPWXTXlMJEwr09pCoiupjWHCQLHRcPRdjgZhysMOmd4ZvJbmmRELeLdO7gg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/-xOOy1tCY12Yc8KLtr_QEIiGwyUIQ8O9dXuGoMTnHHhDwYTKty5cP1dog-im2f-iHQoE-UEbMJcoseuQvPEnMqTTwZvEEwMyHin7jQyDByPcGvhswO9pAz2e07LqRCkFPWXTXlMJEwr09pCoiupjWHCQLHRcPRdjgZhysMOmd4ZvJbmmRELeLdO7gg.png" /></a></p>
+<p>Actualmente, Etendo soporta dos tipos de declaraciones: <em>Normales</em> y <em>Anulativas</em>, estas últimas anulan las declaraciones normales procesadas en el periodo seleccionado y generan una nueva declaración normal.</p>
+<p>Tenga en cuenta que un mismo periodo sólo puede tener como máximo una declaración normal para adquisiciones y otra para entregas.</p>
+<p>Mientras la declaración normal para un periodo se encuentre en estado borrador, el usuario puede lanzar la generación de la declaración tantas veces como quiera. El sistema actualizará todas las líneas de la declaración, conservando todos los cambios manuales realizados por el usuario.</p>
+<p>Como veremos más adelante, cuando se procese una declaración ya no se podrá realizar más cambios sobre ella. Sin embargo, el usuario siempre puede anular la declaración procesada para volver a generar una nueva declaración normal para ese periodo.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Nota importante:</strong> Etendo recomienda cerrar el periodo contable antes de generar la declaración de Intrastat.</p>
+</div>
+<h4 id="revision-modificacion-y-procesado-de-la-declaracion-de-intrastat"><strong>Revisión, Modificación y Procesado de la declaración de Intrastat</strong></h4>
+<p>Una vez generada la declaración, podemos examinarla antes de procesarla. Para ello utilizaremos la ventana Intrastat | Herramientas de análisis | Declaración de Intrastat. La cabecera de la declaración se encuentra por defecto en estado borrador, con todos los campos de solo lectura.</p>
+<p>Si navegamos a las líneas, podemos comprobar los datos que se incluirán en la declaración. Mientras la declaración esté en borrador, podremos modificar datos de las líneas, incluir manualmente nuevas líneas (para transacciones al margen de Etendo), o excluir líneas (mediante el campo <em>Incluir</em>) que no queramos que aparezcan en el fichero de Intrastat.</p>
+<p>Cuando estemos seguros de que la declaración es correcta, navegaremos a la cabecera y pulsaremos el botón <em>“Procesar Declaración”.</em> Este proceso comprobará que todos los datos necesarios para generar el fichero de Intrastat están en el sistema y nos mostrará un error detallado en caso de que encuentre algún fallo. Ejemplo:</p>
+<p><a class="glightbox" href="/assets/drive/YmqOUWlEagUpEcF7v1V8AbomnzuIy8PSzX0CHXiNQTThWHi821JdV-yVpHHydVZOZbxkF1ybQSff-K0KbKoaGSgYekcjm2ofbGreyprdx482TGdM8m4S-076wHnQt16isDz4Vn-gSMkN2Q5qEft7hRWTILjXA2NWVp2G7bVxcmzeCxVVxcfB7Bal7Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/YmqOUWlEagUpEcF7v1V8AbomnzuIy8PSzX0CHXiNQTThWHi821JdV-yVpHHydVZOZbxkF1ybQSff-K0KbKoaGSgYekcjm2ofbGreyprdx482TGdM8m4S-076wHnQt16isDz4Vn-gSMkN2Q5qEft7hRWTILjXA2NWVp2G7bVxcmzeCxVVxcfB7Bal7Q.png" /></a></p>
+<p>Una vez procesada la declaración, el campo <em>“Importe Acumulado del año”</em> a nivel de organización se actualizará automáticamente, sumando el importe de esta declaración a lo acumulado en el año. Si posteriormente anula esta declaración, el sistema restará el importe de la declaración anulada al acumulado del año.</p>
+<h3 id="generacion-del-fichero-de-intrastat"><strong>Generación del fichero de Intrastat</strong></h3>
+<p>Al procesar la declaración, aparece automáticamente el botón de “Generar fichero”.</p>
+<p><a class="glightbox" href="/assets/drive/qZnZAQ6qT2iKqwv_ZgjHxgD_ytT0UxvLoevWs3yIh-DMPFriliEcja2bxMfH3znnY9CkX0Dvzw80Z99vu-3jyD_vSjaqb8Hds-METiaoAqj7KWg5WzgJq2u8FJ5qg2yBrBTlM20qrC_8jDo03XDeametjvbJwchZo4gBISB7-1D6NEtn8k3cp4hVDA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/qZnZAQ6qT2iKqwv_ZgjHxgD_ytT0UxvLoevWs3yIh-DMPFriliEcja2bxMfH3znnY9CkX0Dvzw80Z99vu-3jyD_vSjaqb8Hds-METiaoAqj7KWg5WzgJq2u8FJ5qg2yBrBTlM20qrC_8jDo03XDeametjvbJwchZo4gBISB7-1D6NEtn8k3cp4hVDA.png" /></a></p>
+<p>Cuando lo pulsemos, el sistema comprobará si estamos obligados a presentar la declaración para este periodo o no. Para llevar a cabo esta operación, el sistema comprueba el importe declarado el año anterior y el acumulado de este año, por ese motivo es muy importante que configure correctamente estos valores en la ventana Intrastat a nivel de Organización.</p>
+<p>Si durante el año anterior superamos el límite de declaración de Intrastat, o lo hemos superado a lo largo del presente año, Etendo nos generará el fichero de Intrastat con el formato apropiado para ser enviado telemáticamente (a través de Internet) a las Autoridades. Ejemplo:</p>
+<p>FR;31;FOB;11;3;;85182190;CN;1;115;162;15,37;15,37</p>
+<p>DE;28;CIF;11;1;0811;85182190;US;1;2459;1982;4589,46;4589,46</p>
+<p>IT;12;FOB;11;3;;02012030;;1;800;;987,00;890,45</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Si las líneas de la declaración sobre la que vamos a generar el fichero son superiores a 1000, generará un fichero zip con tantos txt como sean necesarios, ya que cada archivo podrá contener un máximo de 1000 líneas.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html" target="_blank"><em>enlace</em></a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Es importante recalcar que superado el umbral de presentación en caso de que en un periodo (mes) no se realicen transacciones de intercambio de bienes intracomunitarias, habrá que presentar la correspondiente declaración sin transacciones. </p>
+</div>
+<h4 id="finalizar-el-ano-copia-de-configuracion-al-siguiente-ano"><strong>Finalizar el año. Copia de configuración al siguiente año</strong></h4>
+<p>Una vez que hemos generado todas las declaraciones del año, es momento de configurar el sistema para el próximo año. Lo único que debe hacer es ir a la configuración del presente año en Configuración General | Organización | Organización  |  Organización]  &gt;&gt;  Intrastat y presionar el botón <em>“Copiar al año siguiente”.</em> En la ventana emergente aparecerá un campo numérico para que introduzca el nuevo importe límite del siguiente año.</p>
+<p><a class="glightbox" href="/assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png" /></a></p>
+<p>El proceso comprobará que haya procesado todas las declaraciones del presente año y, en ese caso, creará un nuevo registro copiando toda la información de configuración del presente año junto al nuevo importe límite de declaración de Intrastat.</p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/etendo.software/" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
