@@ -1,7 +1,9 @@
 ---
 title: Localización Española
 ---
-:octicons-package-16: Javapackage: com.etendoerp.localization.spain.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
+
+:material-store: Etendo Marketplace:  [Bundle de Localizacion Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}
 
 ## Descripción
 El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.

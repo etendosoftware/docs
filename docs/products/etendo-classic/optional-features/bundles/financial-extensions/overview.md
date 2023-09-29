@@ -1,8 +1,9 @@
 ---
 title: Financial Extensions Bundle
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.financial.extensions`
 
-:octicons-package-16: Javapackage: com.etendoerp.financial.extensions
+:material-store: Etendo Marketplace:  [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}
 
 ## Overview
 This bundle includes enhancements for Financial Management functionalities in Etendo.

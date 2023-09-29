@@ -1,7 +1,9 @@
 ---
 title: Essentials Extensions Bundle
 ---
-:octicons-package-16: Javapackage: com.etendoerp.essentials.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.essentials.extensions`
+
+:material-store: Etendo Marketplace:  [Essentials Bundle](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}
 
 ## Overview 
 This bundle includes fundamental modules that affect most areas in Etendo.

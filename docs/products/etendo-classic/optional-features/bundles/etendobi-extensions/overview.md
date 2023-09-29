@@ -2,7 +2,9 @@
 title: Etendo BI Bundle
 ---
 
-:octicons-package-16: Javapackage: com.etendoerp.etendobi.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.etendobi.extensions`
+
+:material-store: Etendo Marketplace:  [Etendo BI Bundle](https://marketplace.etendo.cloud/#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}
 
 ## Overview
 The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.

@@ -1,8 +1,9 @@
 ---
 title: Warehouse Extensions Bundle
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 
-:octicons-package-16: Javapackage: com.etendoerp.warehouse.extensions
+:material-store: Etendo Marketplace:  [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}
 
 ## Overview
 This bundle includes enhancements for the Warehouse Management functionalities in Etendo.
