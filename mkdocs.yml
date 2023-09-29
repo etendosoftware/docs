@@ -170,7 +170,7 @@ nav:
       - Getting Started: products/etendo-mobile/getting-started.md
       - User interface: products/etendo-mobile/user-interface/user-interface.md
       - Bundles:
-        - Etendo Classic Subapp Extensions: products/etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions.md
+        - Etendo Classic Subapp Extensions: products/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot: 
       - Getting Started:
         - Bastian: products/etendo-copilot/getting-started/bastian.md
@@ -194,7 +194,7 @@ nav:
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
-          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes.md
+          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md

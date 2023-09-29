@@ -1,7 +1,7 @@
 ---
 title: Etendo Classic Subapp Extensions
 ---
-:octicons-package-16: Javapackage: com.etendoerp.classic.subapp.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.classic.subapp.extensions`
 
 
 ## Overview

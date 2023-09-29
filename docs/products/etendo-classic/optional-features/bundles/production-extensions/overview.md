@@ -1,8 +1,9 @@
 ---
 title: Production Extensions Bundle
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.production.extensions`
 
-:octicons-package-16: Javapackage: com.etendoerp.production.extensions
+:material-store: Etendo Marketplace:  [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}
 
 ## Overview
 This bundle includes enhancements for the Production Management functionalities in Etendo.

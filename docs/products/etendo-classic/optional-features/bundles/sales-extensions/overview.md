@@ -1,7 +1,9 @@
 ---
 title: Sales Extensions Bundle
 ---
-:octicons-package-16: Javapackage: com.etendoerp.sales.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.sales.extensions`
+
+:material-store: Etendo Marketplace:  [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}
 
 ## Overview 
 This bundle includes enhancements for the Sales Management functionalities in Etendo Classic.

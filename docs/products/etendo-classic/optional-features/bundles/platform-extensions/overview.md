@@ -1,8 +1,9 @@
 ---
 title: Platform Extensions Bundle
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.platform.extensions`
 
-:octicons-package-16: Javapackage: com.etendoerp.platform.extensions
+:material-store: Etendo Marketplace:  [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}
 
 ## Overview
 This bundle includes enhancements for Platform functionalities in Etendo.
