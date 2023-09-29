@@ -1,0 +1,4722 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.etendo.software/23.x/products/etendo-classic/optional-features/supported-modules/tax-report-launcher/">
+      
+      
+        <link rel="prev" href="../../bundles/etendobi-extensions/overview/">
+      
+      
+        <link rel="next" href="../../../../etendo-mobile/getting-started/">
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Tax Report Launcher - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tax Report Launcher
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../getting-started/overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../overview/" class="md-tabs__link md-tabs__link--active">
+        Products
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../whats-new/overview/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../developer-guide/overview/" class="md-tabs__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../live-builds/overview/" class="md-tabs__link">
+      Live Builds
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../help-and-support/overview/" class="md-tabs__link">
+        Help and Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/clear-report-cache/" class="md-nav__link">
+        Clear Report Cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/attachments-configuration/" class="md-nav__link">
+        Attachments Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/application/" class="md-nav__link">
+        Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/crm-connector/" class="md-nav__link">
+        CRM Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/enterprise-model/" class="md-nav__link">
+        Enterprise Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/general-setup/process-scheduling/" class="md-nav__link">
+        Process Scheduling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+          Master Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/master-data-management/master-data/" class="md-nav__link">
+        Master Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/master-data-management/business-partner-setup/" class="md-nav__link">
+        Business Partner Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/master-data-management/product-setup/" class="md-nav__link">
+        Product Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/master-data-management/pricing/" class="md-nav__link">
+        Pricing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+          Procurement Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/procurement-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/procurement-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
+          Warehouse Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Warehouse Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/warehouse-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/warehouse-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/warehouse-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_5" id="__nav_3_2_1_5_label" tabindex="0">
+          Production Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Production Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/production-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/production-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/etendo-rx/" class="md-nav__link">
+        Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_7" id="__nav_3_2_1_7_label" tabindex="0">
+          Material Requirement Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Material Requirement Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/material-requirement-planning/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/material-requirement-planning/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8" id="__nav_3_2_1_8_label" tabindex="0">
+          Sales Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sales Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/sales-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/sales-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/sales-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9" id="__nav_3_2_1_9_label" tabindex="0">
+          Financial Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Financial Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_1" id="__nav_3_2_1_9_1_label" tabindex="0">
+          Receivables and Payables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Receivables and Payables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/receivables-and-payables/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_2" id="__nav_3_2_1_9_2_label" tabindex="0">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/accounting/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/accounting/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/accounting/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/financial-management/assets/overview/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/essentials-extensions/overview/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/platform-extensions/overview/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/warehouse-extensions/overview/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/production-extensions/overview/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/sales-extensions/overview/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/financial-extensions/overview/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/spain-localization/overview/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bundles/etendobi-extensions/overview/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+          Supported Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tax Report Launcher
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tax Report Launcher
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    Scope
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-considerations" class="md-nav__link">
+    Design Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    Functional Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles-profiles" class="md-nav__link">
+    User roles &amp; profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-types" class="md-nav__link">
+    Report types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-stories" class="md-nav__link">
+    User stories
+  </a>
+  
+    <nav class="md-nav" aria-label="User stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-system-setup" class="md-nav__link">
+    Overall system Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Overall system Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-step" class="md-nav__link">
+    First step:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-step" class="md-nav__link">
+    Second step:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-setup-and-transactions" class="md-nav__link">
+    Specific setup and transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific setup and transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purchase-overall-scenario" class="md-nav__link">
+    Purchase – Overall scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-specific-scenarios-setup-required" class="md-nav__link">
+    Purchase - Specific scenarios &amp; setup required
+  </a>
+  
+    <nav class="md-nav" aria-label="Purchase - Specific scenarios & setup required">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goods-purchase-invoices" class="md-nav__link">
+    Goods Purchase invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-charge" class="md-nav__link">
+    Equivalence Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-service-purchase-invoices" class="md-nav__link">
+    Professional Service Purchase Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-charge" class="md-nav__link">
+    Reverse charge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-credit-notes" class="md-nav__link">
+    Purchase credit notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-overall-scenario" class="md-nav__link">
+    Sales - Overall scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-specific-scenarios-setup-required" class="md-nav__link">
+    Sales - Specific scenarios &amp; setup required
+  </a>
+  
+    <nav class="md-nav" aria-label="Sales - Specific scenarios & setup required">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goods-sales-invoices" class="md-nav__link">
+    Goods Sales invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-charge_1" class="md-nav__link">
+    Equivalence Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-service-sales-invoices" class="md-nav__link">
+    Professional Service Sales Invoices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-credit-invoices" class="md-nav__link">
+    Sales credit invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-settlements" class="md-nav__link">
+    Manual Settlements
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Settlements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#employee-salary-payments" class="md-nav__link">
+    Employee salary payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prizes-payments" class="md-nav__link">
+    Prizes payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renting-in-case-of-a-building-do-not-linked-to-an-economic-activity" class="md-nav__link">
+    Renting in case of a building do not linked to an economic activity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax-report-launcher-setup" class="md-nav__link">
+    Tax Report Launcher setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax-report-output" class="md-nav__link">
+    Tax Report Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-copilot/getting-started/bastian/" class="md-nav__link">
+        Bastian
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          What's New
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          What's New
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.etendo.software" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1_3" id="__nav_4_4_1_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_1" id="__nav_5_2_1_1_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+        IntelliJ Code Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+          Migration from Openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Migration from Openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+        Migrating to Etendo (from Openbravo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_3" id="__nav_5_2_1_3_label" tabindex="0">
+          Upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+        Core format migration (JAR- Sources)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+        Resolving Dependencies on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+        Etendo Jars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+        Naming Guideliness for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+        How to Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+        How to Create and Update Translation Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+        How to Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+        How to Create a Clone Hook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+        How to Use Advanced Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+        How to Create Scan Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+        How to Use Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+        How to Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+        How to Create a Module that Adds an Accounting Process
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+          Developer Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_5" id="__nav_5_2_5_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Etendo RX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo RX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+        Creating a New Microservice
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+        How to Filter any request for Active or all Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+        Create New Subapliction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../live-builds/overview/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Help and Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Help and Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/support-service/" class="md-nav__link">
+        Support Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to report bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    Scope
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-considerations" class="md-nav__link">
+    Design Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    Constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery" class="md-nav__link">
+    Delivery
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functional-requirements" class="md-nav__link">
+    Functional Requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Functional Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-roles-profiles" class="md-nav__link">
+    User roles &amp; profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-types" class="md-nav__link">
+    Report types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-stories" class="md-nav__link">
+    User stories
+  </a>
+  
+    <nav class="md-nav" aria-label="User stories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-system-setup" class="md-nav__link">
+    Overall system Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Overall system Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-step" class="md-nav__link">
+    First step:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-step" class="md-nav__link">
+    Second step:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specific-setup-and-transactions" class="md-nav__link">
+    Specific setup and transactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific setup and transactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purchase-overall-scenario" class="md-nav__link">
+    Purchase – Overall scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-specific-scenarios-setup-required" class="md-nav__link">
+    Purchase - Specific scenarios &amp; setup required
+  </a>
+  
+    <nav class="md-nav" aria-label="Purchase - Specific scenarios & setup required">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goods-purchase-invoices" class="md-nav__link">
+    Goods Purchase invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-charge" class="md-nav__link">
+    Equivalence Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-service-purchase-invoices" class="md-nav__link">
+    Professional Service Purchase Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-charge" class="md-nav__link">
+    Reverse charge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-credit-notes" class="md-nav__link">
+    Purchase credit notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-overall-scenario" class="md-nav__link">
+    Sales - Overall scenario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-specific-scenarios-setup-required" class="md-nav__link">
+    Sales - Specific scenarios &amp; setup required
+  </a>
+  
+    <nav class="md-nav" aria-label="Sales - Specific scenarios & setup required">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goods-sales-invoices" class="md-nav__link">
+    Goods Sales invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equivalence-charge_1" class="md-nav__link">
+    Equivalence Charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-service-sales-invoices" class="md-nav__link">
+    Professional Service Sales Invoices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-credit-invoices" class="md-nav__link">
+    Sales credit invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-settlements" class="md-nav__link">
+    Manual Settlements
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Settlements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#employee-salary-payments" class="md-nav__link">
+    Employee salary payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prizes-payments" class="md-nav__link">
+    Prizes payments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renting-in-case-of-a-building-do-not-linked-to-an-economic-activity" class="md-nav__link">
+    Renting in case of a building do not linked to an economic activity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax-report-launcher-setup" class="md-nav__link">
+    Tax Report Launcher setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax-report-output" class="md-nav__link">
+    Tax Report Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+  <h1>Tax Report Launcher</h1>
+
+<h2 id="overview">Overview</h2>
+<h3 id="purpose">Purpose</h3>
+<p>The aim of this document is to describe the functional specifications for a new extension module which is the “Tax report launcher".
+The tax report launcher module allows the end users to create and submit tax reports to the tax authorities as required by the in-country tax authorities.
+These functional specifications will be later on implemented according to the Technical documentation. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is important to note that this functional specification is oriented to the Spanish Professional localization pack by now, mainly in relation to the setup and scenarios covered, regardless Tax Launcher report feature must be implemented as generic as possible in order to cover other countries scenarios.</p>
+</div>
+<p>It is also a matter of fact that the current specification is mainly related to the Spanish needs as those are the ones currently known, therefore current documentation and tax report launcher implementation will be enhanced or adjusted later on if needed.</p>
+<h3 id="scope">Scope</h3>
+<p>Tax report launcher is an <strong>extended tax module</strong> which allows the end-user:
+1. to set up different <strong>“tax parameters” </strong>as well as <strong>"tax report parameters"</strong> depending on the tax type and on the tax report requirements, respectively
+2. to set up different <strong>“tax reports”</strong> in a unique window and according to the in-country tax requirements
+3. to "launch" a selected tax report for a specific period
+4. and to get the required <strong>"tax output as a file"</strong> to be submitted to the tax authorities in a valid format.</p>
+<p>Besides, Tax report Launcher is a <strong>framework</strong> which will allow the end-user to develop new tax reports as required.</p>
+<h2 id="design-considerations">Design Considerations</h2>
+<h3 id="dependencies">Dependencies</h3>
+<p>As there should probably be more new tax reports to implement for the same country or others and even the existing ones might probably change, the tax report launcher module has to be implemented in a way that each tax report business logic is isolated from the rest, so in case there is a need of modifying an existing tax report, that change will not affect the rest and in case there are new tax reports to be implemented, those new ones will have its own business logic.</p>
+<h3 id="constraints">Constraints</h3>
+<p>Etendo already provides tax setup, tax transactions and in general tax related features, therefore and in order to be consistent, the existing tax related features are taken into account as part of this new module. Besides, it could be that some of the existing tax features have to be enhanced in order to get the tax information required for this extension module to work.</p>
+<h3 id="delivery">Delivery</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This feature is going to be delivered as a module. Configuration data will be delivered as an additional module which could be imported by the end-user, containing by default setup; besides every report will be included in a particular module.</p>
+</div>
+<h2 id="functional-requirements">Functional Requirements</h2>
+<h3 id="user-roles-profiles">User roles &amp; profiles</h3>
+<p>The following roles are involved:</p>
+<ul>
+<li>Accounting manager (Mary): Mary is the accounting manager. She must know which tax reports need to be submitted to the tax authorities depending on the in-country tax authorities requirements as well as the business specifics. Therefore she must be sure that once the "Configuration Data" extension delivered as an additional module to the Tax Report Launcher is installed, the default data or setup required for the specific tax reports she needs to submit to the tax authorities is properly set up in the system. Mary will do that in collaboration with Peter.</li>
+<li>Accounting staff (Peter): Peter is an employee part of the accounting staff. He will be responsible for helping Mary by checking or setting up the parameters needed, as well as entering the correspondent accounting transactions in collaboration with sales (Mike) and purchase staff (Alice) and launching the tax reports and finally, getting the tax report output to be submitted to the tax authorities.</li>
+</ul>
+<h3 id="report-types">Report types</h3>
+<p>Tax report launcher module allows to define below described type of tax reports:</p>
+<ul>
+<li><strong>statement tax reports</strong>, which are the reports intended just to <strong>list a specific type of tax transactions</strong> so tax authorities are informed about it. For example, tax authorities need to be informed about every sales and/or purchase transaction exceeding a specific amount or the ones within EU countries.</li>
+<li>tax reports, which are the reports intended to collect tax base amounts, tax rates and tax amounts in a way to get the net amounts of <strong>tax assessment or tax revenue</strong> or any other kind of tax output.</li>
+</ul>
+<p>The most common and relevant tax reports to be submitted to the tax authorities are:
+- Value Added tax (VAT)
+- and Withholding tax reports
+in relation to those tax there are some important concepts to take into account listed below:</p>
+<ul>
+<li><strong>Value added tax</strong> is an indirect tax on consumption and applicable to supplies of services or goods, goods imports and intra-community goods acquisitions, therefore VAT tax setup depends on the transaction type and the goods/services type being purchased and/or sold.</li>
+<li><strong>Withholdings</strong> are amounts subtracted by the retainer (i.e. a company) to the tax payer (i.e and employee) for incomes paid (i.e. a salary) which are paid by the retainer as an “advance” amount to the tax which the tax payer has to pay at the end of the fiscal year to the tax authorities, therefore Withholding tax setup depends on who generates an income as well as the type of income itself.</li>
+</ul>
+<p>In some countries, like Spain, there is another type of withholding commonly known as Payments on account. <strong>Payment on account</strong> is a withholding. It is an amount “paid” by the companies to the tax authorities for certain items of income (goods) as an advance of the tax amount to be paid by the beneficiary of that income, therefore payment on account tax setup depends on who generated an income as well as the type of income itself.
+- <strong>Income types</strong> can be “cash” (monetary/by example a salary or a fee paid to a professional) or “goods” (not monetary/by example a company car or a company flat)
+- <strong>Withholding</strong> term applies to <strong>cash incomes</strong>
+and <strong>Payment on account</strong> term applies to <strong>goods incomes</strong> in some countries like Spain.</p>
+<h3 id="user-stories">User stories</h3>
+<p>Mary is the Accounting manager of a Spanish located company responsible for deciding which tax reports need to be submitted to the tax authorities. For sure VAT and Withholding tax reports will have to be submitted to the tax authorities. Based on "in-country tax types" as well as in-country tax authorities requirements and the type of business running, Mary should know exactly which VAT and withholding tax reports have to be mandatory submitted to the tax authorities by her company.</p>
+<p>Mary knows that as an overall rule <strong>VAT</strong> related tax reports <strong>recognize tax liability</strong> at the time goods are delivered and therefore invoiced or at the time services have been executed and therefore invoiced and <strong>withholding</strong> tax reports <strong>recognize tax liability</strong> at the time goods or services invoice are posted but in other countries like Spain at the time cash or goods incomes already invoiced and post are satisfied or paid.</p>
+<p>Therefore, and having into account her company is located in Spain, Etendo has to fulfill her accounting needs which are:</p>
+<p><strong>VAT tax amounts must be posted</strong> and therefore included in accounting, <strong>at the time an invoice</strong> containing VAT <strong>is posted</strong> whenever invoice date is the same as goods expedition date or service execution date
+<strong>Withholding tax amounts must be posted</strong> and therefore included in accounting, <strong>at the time an invoice containing Withholding is posted</strong> as there are some countries like Spain where withholding tax amounts must be posted at the same as VAT tax amounts, that is at the time an invoice containing withholding tax is posted, regardless tax liability for this type of taxes is recognize at the time that invoice is paid.</p>
+<p>Mary should also be aware of the fact that most taxable transactions will be entered in the system either as a purchase or sales transaction and therefore as a purchase or sales invoice but there will also be some of them which will not have an invoice behind. Those last cases are mainly related to withholding tax, which will have to be entered in the system as <strong>manual settlements linked to the correspondent G/L items.</strong>
+<strong>Manual settlement will generate withholding tax posting</strong> in the case of withholding which do not have an invoice linked to them and therefore should be entered in the system as a manual settlement which will imply a cash or bank payment afterward.</p>
+<h4 id="overall-system-setup">Overall system Setup</h4>
+<p>Mary lets accounting staff know which tax reports need to be submitted to the tax authorities by the company so Peter can either check or set up the tax parameters, business partner tax categories and the tax reports and tax report parameters needed; after that enter the correspondent accounting transactions in collaboration with sales and purchase staff in order to finally launch the tax reports and get the tax report output to be submitted to the tax authorities.</p>
+<h5 id="first-step">First step:</h5>
+<p>The <strong>first</strong> step that Peter should perform is either <strong>to check the setup</strong> or <strong>to set up</strong> the tax parameters required according to the work flow listed below:</p>
+<ol>
+<li>Peter goes to <strong>Financial Management / Accounting / Setup / Business Partner Tax category</strong> to create the <strong>business partner tax categories</strong> needed depending on who generated a sales or purchase transaction subject to VAT or who generated an income subject to withholding. For example, he should enter as BP tax category: National Vendor, EU Vendor, International Vendor, National customer, EU Customer, International customer, Employees, Non-resident employees, Professionals, EU Professionals, International Professional, Renting, Economic Activities and so on so forth. </li>
+<li>Peter goes to <strong>Financial Management / Accounting / Setup / Transaction code</strong> to check that the required VAT "Transaction codes" for either purchase or sales transactions are set up by default. As already said most common ones are =&gt; Supplies (For example, this type of transaction code in Spain is ="E") and Acquisitions (For example, this type of transaction code in Spain is ="A")</li>
+<li>After that, Peter goes to <strong>Financial Management / Accounting / Setup / Tax key</strong> to check that the required <strong>Tax keys and sub-keys</strong> are set up by default depending on the type of income and the business partner who generated that income. For example, in the case of the Spanish tax report 110, he should know that he has to create a Tax key = "A" for employment incomes, a Tax key = "G" for professional activities incomes, a Tax key = "K" for prizes and so on and so forth. </li>
+<li>Once the above is done Peter goes to <strong>Financial Management / Accounting / Setup / Tax Category</strong> as it could be new Tax categories have to be created. For example VAT (in case of purchase VAT), SalesVAT, IntraVAT, SalesIntraVAT, ImportVAT, ExportVAT, VAT+EC, SalesVAT+EC, WSalary, WProfessionals, WPrizes, PSalary, PProfessionals,PPrizes.</li>
+<li>And once the above is done, Peter goes to <strong>Financial Management / Accounting / Setup / Tax rates</strong> as it could be new <strong>VAT tax rates</strong> and new <strong>Withholding rates</strong> have to be created. VAT tax rates depend on the type of transaction, whether it is a purchase or a sale, and the type of goods being purchased or sold and Withholding rates depends on the type of income being paid and the business partner who generated that income.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By using this way of withholding set up Peter has to make sure he is willing to post withholding at the time an invoice containing an income subject to withhold is posted, regardless of which withholding liability will be recognized at the payment date, and not at the time that invoice is paid. Tax rates have to be linked to the correspondent BP tax category and the correspondent accounting must be setup.</p>
+</div>
+<p>VAT rates = for example VAT21%, VAT10%, VAT4%, VAT21%+EC4%, VAT10%+EC1,5%, VAT4%+EC0,5%, SalesVAT21%, SalesVAT10%, SalesVAT4%, SalesVAT21%+EC4%, SalesVAT10%+EC1,5%, SalesVAT4%+EC0,5%, Intra-VAT21%/-21%, Intra-VAT0%, ImportVAT21%, ExportVAT0%. Besides the existing and new VAT rates will have to be <strong>linked</strong> to the correspondent <strong>Transaction Codes</strong> depending on the VAT direction. 
+Withholding rates = for example WSalary35%, WPrizes18%, WProfessionals15%, WProfessionals7%. Besides the existing and new withholding and payment on account tax rates have to be <strong>linked</strong> to the correspondent Tributary <strong>keys and sub-keys</strong> depending on the tax reports those tax rates are going to be included. </p>
+<ol>
+<li>Above step could be also done by Peter from <strong>Master data Management / Business partner setup / Withholding</strong>. He will have to choose this way and not above one in relation to withholding rates in case he needs to post withholding amounts at the time an invoice is paid and not at the time the invoice is posted. For example WSalary35%, WPrizes18%, WProfessionals15%, WProfessionals7%. Besides the existing and new withholding rates have to be <strong>linked</strong> to the correspondent Tributary <strong>keys and sub-keys</strong> depending on the tax reports those tax rates are going to be included. </li>
+</ol>
+<h5 id="second-step">Second step:</h5>
+<p>The <strong>second</strong> step that Peter should perform is to check that the <strong>tax reports</strong> and the <strong>tax report parameters</strong> are properly set up by default. To get this done he will have to navigate to <strong>Financial Management / Accounting / Setup / Tax report.</strong></p>
+<p><strong>Tax Report.</strong> There should be a record for each tax report which needs to be submitted to the tax authorities. Each tax report should have below information:</p>
+<p>a) <strong>Tax Report groups.</strong> For some countries such Spain withholding tax reports have a fixed section structure named Tax report groups. For example, in the case of Spain, withholding tax reports have 7 default section which are:
+(1) Identification
+(2) Accrual
+(3) Tax assessment
+(4) Tax revenue
+(5) Negative declaration
+(6) Complementary declaration and
+(7) Signature.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In general VAT reports do not have those kinds of sections because they are not tax reports as such but statement tax reports, so a unique output section must be created for this type of reports. </p>
+</div>
+<p>b) <strong>Tax report parameters</strong>. Each tax report will have specific tax report parameters Peter should be aware of in order to get the right setup
+<strong><em>In parameters</em>*. Those are specific tax report parameters which are needed by the time a tax report or a statement tax report is launched, therefore this type of parameters will have to be </strong>manually entered<strong> by him while launching a tax report
+For example "Tax report file name", "contact person" or others more specific depending on the type of tax report.
+</strong><em>Constant parameters.</em><em> Specific constant tax report parameters which must be </em><em>set up by default</em><em> as there will always be the same
+For example, in the case of the Spanish tax report 110, he should check that "Tax model" constant parameter is entered as "110", and "01" as page number.
+</em><strong>Out parameters</strong>. Peter should know that out parameters are tax report parameters which will get information from the system, such as "Company Name", "Company Tax ID number" as well as more complex data/output related to transactions linked to a specific <strong>"Tax keys and/or sub-keys"</strong> for example. It is time for him to check that those output parameters are set up by default properly and linked to a specific tax report.</p>
+<h4 id="specific-setup-and-transactions">Specific setup and transactions</h4>
+<p>In collaboration with sales (Mike) and purchase staff (Alice), Peter needs to enter in the system the normal activity transactions which will be included in one or another tax report depending on the type of transaction we are talking about:</p>
+<h5 id="purchase-overall-scenario">Purchase – Overall scenario</h5>
+<p>Alice creates a <strong>requisition</strong> based on the company or entity's items and / or services needs. As soon as requisitions are confirmed by Dan, the Purchase manager, she converts the requisition/s into a/some <strong>purchase orders</strong> and sends them to the correspondent business partner (vendor or creditor or professional).
+Once the <strong>goods have been received</strong> by her company or once the <strong>services have been executed</strong> by the creditor as requested by her company, the vendor or creditor will issue an invoice. That invoice will have to be entered by Alice in the system as a <strong>purchase invoice</strong>.
+In general, purchase transactions and therefore purchase invoice could be the result of goods acquisition or services provided by vendors located in Spain or located in the EU or located abroad, so depending on the origin of the goods and the type of goods/services exchanged, the VAT rate to pay (VAT-fiscal credit) as well as the transactions code will be different.
+Besides, there are some kind of purchase transactions for which withholding tax will be applicable as well as the correspondent tributary keys depending on the type of income generated and the type of business partner who generated them.</p>
+<h5 id="purchase-specific-scenarios-setup-required">Purchase - Specific scenarios &amp; setup required</h5>
+<p>Alice could enter in the system any of the purchase invoices listed below as those are very common purchase scenarios for a small-medium size company located in an EU country like Spain. Peter and Alice will have to check that at least the information listed below per purchase invoice transaction is correctly set up before entering any purchase transaction.</p>
+<p>1- <strong>Goods purchase to a national vendor</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: National vendor
+3. Tax category : VAT
+4. Tax rate (Purchase tax) : VAT21% and/or VAT10% and/or VAT4%
+5. Tax rate - transaction code: "A" (acquisition)</p>
+<p>2- <strong>Goods purchase to a national vendor (EC scenario)</strong>
+1. Business partner tax category: National vendor
+2. Tax category (purchase tax) : VAT+EC
+3. Tax rate (Purchase tax) : VAT21%+EC4% and/or VAT10%+EC1,5% and/or VAT4%+EC0,5%
+4. Tax rate - Transaction code: "A"(acquisition)</p>
+<p>3- <strong>Goods purchase to an EU vendor</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: EU vendor
+3. Tax category : IntraVAT
+4. Tax rate (Purchase tax and Sales VAT) : IntraVAT21%/-21%
+5. Tax rate - transaction code: "A" (acquisition)</p>
+<p>4- <strong>Goods purchase to an international vendor</strong></p>
+<ol>
+<li>System path: Procurement management / Transactions / Purchase invoices</li>
+<li>Business partner tax category: International vendor</li>
+<li>Tax category : ImportVAT</li>
+<li>Tax rate (Purchase tax) : ImportVAT21%</li>
+<li>Tax rate - transaction code: "A" (acquisition)</li>
+</ol>
+<p>5- <strong>Purchase of professional services to a national professional</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: National professionals
+3. Tax category : VAT+WProfessionals
+4. Tax rate (Purchase tax) : VAT21%+WProfessionals15%
+5. Tax rate - Tributary key: "G-01 or G-02 or G-03
+6. Tax rate - transaction code: "A" (acquisition)</p>
+<p>6- <strong>Purchase of professional services to an UE professional</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: EU professionals
+3. Tax category : IntraVAT+WProfessionals
+4. Tax rate (purchase VAT and sales VAT): IntraVAT21%/-21%+WProfessionals24%
+5. Tax rate - tributary key: "19"
+6. Tax rate - transaction code: "A" (acquisition)</p>
+<p>7- <strong>Purchase of professional services to an international professional</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: International professionals
+3. Tax category : ImportVAT+WProfessionals
+4. Tax rate (Purchase tax) :ImportVAT21%+WProfessionals24%
+5. Tax rate - tributary key: "19"
+6. Tax rate - transaction code: "A" (acquisition)</p>
+<h6 id="goods-purchase-invoices">Goods Purchase invoices</h6>
+<p>While entering a Goods purchase invoice in the system, Alice must be sure VAT tax is going to be calculated properly as described above:
+National vendor:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+VAT21% = 100.000 € x 21% = 21.000 € =&gt; VAT amount = 21.000 €
+Total invoice amount to be paid to the vendor = 121.000 €
+EU vendor;
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+IntraVAT21%/-21% = [100.000 € x 21% = 21.000] + [100.000 € x -21% = -21.000] = 0 € =&gt; VAT amount = 0 €
+Total invoice amount to be paid to the vendor = 100.000 €
+International vendor:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+ImportVAT21% = 100.000 € x 21% = 21.000 € =&gt; VAT amount = 21.000 €
+Total invoice amount to be paid to the vendor = 121.000 €</p>
+<h6 id="equivalence-charge">Equivalence Charge</h6>
+<p>In this case, Alice's company (Etendo legal entity) is a retailer company which buys goods to National vendors only and under this specific VAT regimen.
+While Alice's company is not forced to keep tracking of the VAT-fiscal credit and the VAT-fiscal debit and it is not forced to settle VAT, Alice's company is forced to tell its vendors they are subject to EC special regimen with the aim of allowing their vendors to charge them with an additional tax rate named EC tax rate.
+While entering a Goods purchase invoice in the system under this specific VAT regimen, Alice must be sure VAT and EC taxes are calculated properly as described above:</p>
+<p>Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+VAT21% = 100.000 € x 21% = 21.000 =&gt; VAT amount = 21.000 €
+EC4% = 100.000 € x 4% = 4.000 €
+Total invoice amount to be paid to national vendor = 100.000 € + 21.000 € + 4.000 € = 125.000 €</p>
+<h6 id="professional-service-purchase-invoices">Professional Service Purchase Invoices</h6>
+<p>While entering a services purchase invoice in the system, Alice must be sure VAT tax and withholding tax are going to be calculated properly as described above:</p>
+<p>Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+VAT21% = 100.000 € x 21% = 21.000 =&gt; VAT amount = 21.000 €
+W-18% = 100.000 € x -15% = -15.000 =&gt; Withholding amount = -15.000 €
+Total invoice amount to be paid to a professional vendor = 100.000 € + 21.000 € -15.000 € = 106.000 €</p>
+<h6 id="reverse-charge">Reverse charge</h6>
+<p>Alice should know that an IntraVAT tax rate could be checked as “Reverse Charge” just in the case of services provided by UE professionals because it is not mandatory for UE goods acquisitions anymore. In that case the company will have to create and Auto-Invoice after receiving services purchase invoice with a VAT tax rate = 0%
+Therefore, there will have to be 3 entries for each invoice under this scenario with an operation code = "I":</p>
+<ul>
+<li>the line for the Auto-invoice of the VAT-fiscal credit (IntraVAT21%=21%)</li>
+<li>the line for the Auto-invoice of the VAT-fiscal debit (SalesIntraVAT=-21%)</li>
+<li>and the line for the original purchase Invoice as import or exempt (ImportVAT = 0%).</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Notice that the line for VAT-fiscal credit and the line for import or exempt VAT will be shown and stored as purchase/received VAT (VAT-fiscal credit) while the VAT-fiscal debit line will be shown and stored as sales/issued VAT.</p>
+</div>
+<h5 id="purchase-credit-notes">Purchase credit notes</h5>
+<p>In case there is any error in the purchase invoices for goods or services provided by a business partner or in the case any goods have to be returned back to a vendor due to lack of quality or any other kind of error, Alice and the accounting staff will have to void the correspondent purchase invoice and create and post a new purchase credit invoice (purchase credit memo). In this case the applicable scenarios are the same as described in section above, but:
+1. Purchase credit invoices amounts will be negative amounts
+2. Peter needs to be sure similar purchase credit invoices are not grouped while being included in VAT tax reports.</p>
+<h5 id="sales-overall-scenario">Sales - Overall scenario</h5>
+<p>Mike creates a <strong>sales order</strong> based on a customer/s need/s. Once the <strong>goods have been sent</strong> by his company through a Good shipment, it is possible for him to issue a <strong>sales invoice</strong> and send it to the customer together with good shipment documentation, for example a packing slip.
+In general, sales transactions and therefore <strong>sales invoices</strong> could be the result of goods shipments or services provide by a company to a customer or third party located in Spain or located in the EU or located abroad, so depending on the destination of the goods and the type of goods/services provided, the VAT rate to collect (VAT-fiscal debit) as well as the transactions code will be different.
+Besides, there are some kinds of sales transactions for which withholding tax will be applicable as well as the correspondent tributary keys depending on the type of income generated.</p>
+<h5 id="sales-specific-scenarios-setup-required">Sales - Specific scenarios &amp; setup required</h5>
+<p>Mike could enter in the system any of the sales transactions listed below as those are very common sales scenarios for a small-medium size company located in an EU country like Spain. Peter and Mike will have to check that at least the information listed below per sales invoice transaction is correctly set up before entering any sales transaction.</p>
+<p>1- <strong>Sales of goods to a National customer(Spain)</strong>
+1. System path: Sales Management / Transactions / Sales Invoice
+2. Business partner tax category: National customer
+3. Tax category : SalesVAT
+4. Tax rate (Sales tax) : SalesVAT21% and/or SalesVAT10% and/or SalesVAT4%
+5. Tax rate - transaction code: "E" (Supply)</p>
+<p>2- <strong>Sales of goods to a National retailed (EC scenario)</strong>
+1. And Business partner tax category: National retailer
+2. Tax category : SalesVAT+EC
+3. Tax rate (Sales tax) : SalesVAT21%+EC4% and/or SalesVAT10%+EC1,5% and/or SalesVAT4%+EC0,5%
+4. Tax rate - Transaction code: "E"(supply)</p>
+<p>3- <strong>Sales of goods to an EU customer</strong>
+1. System path: Sales Management / Transactions / Sales Invoice
+2. Business partner tax category: EU customer
+3. Tax category : SalesIntraVAT
+4. Tax rate (Sales tax) : SalesIntraVAT0%
+5. Tax rate - transaction code: "E" (supply)</p>
+<p>4- <strong>Sales of goods to an international customer</strong>
+1. System path: Procurement management / Transactions / Purchase invoices
+2. Business partner tax category: International vendor
+3. Tax category : ExportVAT
+3. Tax rate (Sales tax) : ExportVAT0%
+4. Tax rate - transaction code: "E" (Supply)</p>
+<p>5- <strong>Service provided to National customer</strong>
+1. System path: Sales Management / Transactions / Sales Invoice
+2. Business partner tax category: National customers
+3. Tax category : SalesVAT+SalesW
+4. Tax rate (sales tax9 : SalesVAT21%+SalesWProfessionals15%
+5. Tax rate - Tributary key: not applicable
+5. Tax rate - transaction code: "E" (Supply)</p>
+<p>6- <strong>Service provided to an UE customer</strong>
+1. System path: Sales Management / Transactions / Sales Invoice
+2. Business partner tax category: EU customer
+3. Tax category : SalesIntaVAT+SalesW
+4. Tax rate (Sales tax) : SalesIntraVAT0%+SalesWProfessionals15%
+5. Tax rate - tributary key: not applicable
+6. Tax rate - transaction code: "E" (Supply)</p>
+<p>7- <strong>Service provided to an International customer</strong>
+1. S1. ystem path: Sales Management / Transactions / Sales Invoice
+2. Business partner tax category: International customers
+3. Tax category : ExportVAT+SalesW
+4. Tax rate (Sales tax) :ExportVAT0%+SalesWProfessionals15%
+5. Tax rate - tributary key: not applicable
+6. Tax rate - transaction code: "E" (Supply)</p>
+<h6 id="goods-sales-invoices">Goods Sales invoices</h6>
+<p>While entering a Goods Sales invoice in the system, Mike must be sure Sales VAT tax is going to be calculated properly as described above:
+National customer:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+SalesVAT21% = 100.000 € x 21% = 21.000 =&gt; Sales VAT amount = 21.000 €
+Total invoice amount to be collected from the customer = 121.000 €
+EU vendor;
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+SalesIntraVAT0% = 100.000 € x 0% = 0 €=&gt; Sales VAT amount = 0 €
+Total invoice amount to be collected from the customer = 100.000 €
+International vendor:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+Export0% = 100.000 € x 0% = 0 € =&gt; VAT amount = 0 €
+Total invoice amount to be collected from the customer = 100.000 €</p>
+<h6 id="equivalence-charge_1">Equivalence Charge</h6>
+<p>In this case, Mike's company sells goods to a national retailer company he must charge them with an additional tax rate named EC tax rate.
+Therefore while entering a Goods sales invoice in the system under this specific VAT regimen, Mike must be sure Sales VAT and EC taxes are calculated properly as described above:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+SalesVAT21% = 100.000 € x 21% = 21.000 € =&gt; Sales VAT amount = 21.000 €
+EC4% = 100.000 € x 4% = 4.000 €
+Total invoice amount to be collected from the retailer = 100.000 € + 21.000 € + 4.000 € = 125.000 €</p>
+<h6 id="professional-service-sales-invoices">Professional Service Sales Invoices</h6>
+<p>While entering a services sales invoice in the system, Mike must be sure Sales VAT tax and withholding tax are going to be calculated properly as described above:
+Invoice amount = 100.000 € =&gt; Tax base amount = 100.000 €
+Sales VAT21% = 100.000 € x 21% = 21.000 =&gt; VAT amount = 21.000 €
+SalesWProfessionals15% = 100.000 € x -15% = -15.000 =&gt; Withholding amount = -15.000 €
+Total invoice amount to be collected from the customer = 100.000 € + 21.000 € -15.000 € = 106.000 €</p>
+<h5 id="sales-credit-invoices">Sales credit invoices</h5>
+<p>In case there is an error in the sales invoices of goods or services Mike's company is providing to his customers or in case a customer wants to return back any goods due to lack of quality or any other kind of error, Mike and the accounting staff will have to void the correspondent sales invoice and create and post a new sales credit invoice (sales credit memo). In this case the applicable scenarios are the same as described in section above, but:
+1. Sales credit invoices amounts will be negative amounts
+2. Mike needs to be sure similar sales credit invoices are not grouped while being included in VAT tax reports.</p>
+<h5 id="manual-settlements">Manual Settlements</h5>
+<p>Peter will have to use Etendo Manual Settlements feature for <strong>entering in the system the rest of taxable incomes</strong> <strong>which can not be entered in the system</strong> either as a purchase transaction and therefore as a purchase invoice or as a sales transaction and therefore as a sales invoice.
+Peter will have to use <strong>G/L items</strong> while entering manual settlements as there is not going to be an invoice behind this type of transactions but a business partner and an income satisfied or paid by his company or an income collected by his company; therefore Peter will have to create as much G/L items as required depending on the <strong>type of incomes</strong> either collected or paid and the <strong>type of business partners</strong> involved in the income generation.</p>
+<p><strong>G/L items creation is mainly related to Withholding tax reports</strong> as those reports are the ones containing income taxable transactions not supported by either purchase or sales invoices.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Peter will have to make sure that G/L items are linked to the correspondent tax rate and withholding rates if applicable, and besides Peter will have to make sure that G/L items have the correspondent accounting setup in advance.</p>
+</div>
+<p>Scenarios below explain that Peter will have to create at least two G/L items per transaction, he will not use direct posting feature as these types of withholding tax, the ones entered in the system as manual settlement, can be only posted at the time of payment via cash journal or payment journal.</p>
+<h6 id="employee-salary-payments">Employee salary payments</h6>
+<p>Peter knows that Etendo does not automate payroll payment transactions so, in order to get in the system an employee salary payment transaction, Peter will have to use the "manual settlement" feature as a first step and then settle or pay it by using either a cash payment or a bank payment.
+While doing that, he needs to be sure that the transaction is linked to the specific G/L items created for that reason and besides Peter must enter the correspondent withholding tax as those kinds of payment are subject to withholding which must be submitted to the tax authorities later on.</p>
+<p>To accomplish above scenario, Peter will have to navigate to:</p>
+<ul>
+<li>Financial Management / Accounting / setup / <strong>Business Partner Tax Category</strong> to create the BP tax category =&gt; "Employee" (Need to be discussed)</li>
+<li>Financial Management / Accounting / setup / <strong>Tax category</strong> to create the Tax category =&gt; "WSalary"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax key</strong> to check the correspondent Tax key and sub-keys is setup by default =&gt; "A = Employment Income"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax rate</strong> to create the Tax rate =&gt; "WSalary35%", in this same screen and under <strong>"Tax parameter"</strong> tab Peter must setup the correspondent Tax Report Parameter so the tax rate can be linked to the correspondent tax report (110), tax report group (Assessments), tax parameter (Withholding and payments on account) and tributary key (A-Employment income).</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item = &gt; "Employee income in cash withholding" which must be linked to Tax rate "WSalary35%" and the correspondent accounting setup.</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item ="Outstanding salary payments" with the correspondent accounting setup.</li>
+</ul>
+<p>Once the above is setup in the system Peter must navigate to Financial Management /Receivable &amp; Payable / Transactions / Manual settlement and create a new manual settlement as described below:
+Transaction date =&gt; 26-June-2021
+Accounting date =&gt; 30-June-2021
+Description =&gt; Alice's salary</p>
+<p>Then Peter goes to "Create Payment" window and enter two new ones as described below:
+Business Partner =&gt; Alice (previously created as and employee with BP tax category = Employee
+Description =&gt; Alice's salary June
+Amount =&gt; 1000
+Receipt =&gt; No
+Direct posting =&gt; No</p>
+<p>Then Peter goes to "Balance Payment" window and enter a new one as described below:
+G/L item =&gt; Employment income in cash withholding
+Debit amount =&gt; 350
+and G/L item =&gt; "Outstanding salary payments"
+Debit amount =&gt; 650</p>
+<p>Once all of the above is done, Peter process the manual settlement and navigate to Financial Management / Receivable &amp; Payable / Transactions / Cash Journal and create a new one and enters:
+Transaction date=&gt; 30-June-2021
+Accounting date=&gt; 30-June-2021</p>
+<p>and then go to Lines and creates a new one as:
+Cash Type =&gt; Debt-payment and then click in Debt/payment feature to get into Debt Payment Selector.</p>
+<p>Once in the Debt Payment Selector Peter has to remove "Receipt" check and search by pending ones to select the one just entered.</p>
+<p>After that Peter processes and posts.
+Peter can navigate to the journal entry and then to the cash journal lines, and then to the payment, and once there Peter can select and post the "Settlement Canceled" in order to generate and check the final posting.</p>
+<p>Finally, Peter has to verify that the correspondent Withholding tax reports is showing a withholding amount of 350 linked to WSalary35% rate.</p>
+<h6 id="prizes-payments">Prizes payments</h6>
+<p>Peter's company organized a competition between their employees. Alice won that prize which was an "in cash" prize of 500 €, which has to be included in the system. For doing that Peter will have to use the "manual settlement" feature as a first step and then settle or pay it by using either a cash payment or a bank payment.
+While doing that he needs to be sure that the transaction is linked to the specific G/L items created for that reason and besides Peter must enter the correspondent withholding tax as those kinds of payment are subject to withholding which must be submitted to the tax authorities later on.</p>
+<p>To accomplish above scenario, Peter will have to navigate to:</p>
+<ul>
+<li>Financial Management / Accounting / setup / <strong>Business Partner Tax Category</strong> to create the BP tax category =&gt; "Employee"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax category</strong> to create the Tax category =&gt; "WPrize"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax key</strong> to create the correspondent Tax key and sub-keys =&gt; "K_01=Prizes_01"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax rate</strong> to create the Tax rate =&gt; "WPrize18%", in this same screen and under <strong>"Tax parameter"</strong> tab Peter must setup the correspondent Tax Report Parameter so the tax rate can be linked to the correspondent tax report (110), tax report group (Assessments), tax parameter (Withholding and payments on account) and tributary key (K_01 - Prizes 01).</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item = &gt; "Prizes income in cash withholding" which must be linked to Tax rate "WPrize18%" and the correspondent accounting.</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item =&gt; "Prizes in cash" with the correspondent accounting setup.</li>
+</ul>
+<p>Once the above is setup in the system Peter must navigate to Financial Management /Receivable &amp; Payable / Transactions / Manual settlement and create a new manual settlement as described below:</p>
+<p>Transaction date =&gt; 01-July-2021
+Accounting date =&gt; 01-July-2021
+Description =&gt; Alice's prize (best product X design)</p>
+<p>Then Peter goes to "Create Payment" window and enter a new one as described below:
+Business Partner =&gt; Alice (previously created as and employee with BP tax category = Employee
+Description =&gt; Alice's prize
+Amount =&gt; 500
+Receipt =&gt; No
+Direct posting =&gt; No</p>
+<p>Then Peter goes to "Balance Payment" window and enter two new ones as described below:
+G/L item =&gt; Prizes in cash
+Debit amount =&gt; 450
+and G/L item =&gt; Prizes income in cash withholding
+Debit amount =&gt; 50</p>
+<p>Once all of the above is done, Peter process the manual settlement and navigate to Financial Management / Receivable &amp; Payable / Transactions / Cash Journal and create a new one and enters:
+Transaction date=&gt; 01-July-2021
+Accounting date=&gt; 01-July-2021
+and then go to Lines and creates a new one as:</p>
+<p>Cash Type =&gt; Debt-payment and then click in Debt/payment feature to get into Debt Payment Selector.</p>
+<p>Once in the Debt Payment Selector Peter has to remove "Receipt", check and search by pending ones, so "prize" one just created can be selected.</p>
+<p>After that Peter processes and posts.
+Peter can navigate to the journal entry and then to the cash journal lines, and then to the payment, and once there Peter can select and post the "Settlement Canceled" in order to generate and check the final posting.</p>
+<p>Finally, Peter has to verify that the correspondent Withholding tax reports is showing a withholding amount of 50 linked to WPrize18% rate.</p>
+<p><strong>Building Renting in case of 3rd party building</strong></p>
+<p>Peter's company rents a 3rd party owned building in which Peter's company office is located. The owner of that building issues a "statement or a receipt" to Peter's company every month in order to be paid for that rent. Peter's company has to pay that rent and enter in the system the correspondent statement and payment, therefore Peter will have to use the "manual settlement" feature as a first step and then pay it by using either a cash payment or a bank payment.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>While doing that he needs to be sure that the transaction is linked to the specific G/L items created for that reason and besides Peter must enter the correspondent withholding tax as those kinds of payment are subject to withholding which must be submitted to the tax authorities later on.</p>
+</div>
+<p>To accomplish above scenario, Peter will have to navigate to:</p>
+<ul>
+<li>Financial Management / Accounting / setup / <strong>Business Partner Tax Category</strong> to create the BP tax category =&gt; "Lessor"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax category</strong> to create the Tax category =&gt; "WRenting"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax key</strong> to create the correspondent Tax key and sub-keys =&gt; "P -Renting"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax rate</strong> to create the Tax rate =&gt; "WRenting18%", in this same screen and under <strong>"Tax parameter"</strong> tab Peter must setup the correspondent Tax Report Parameter so the tax rate can be linked to the correspondent tax report (115), tax report group (Assessments), tax parameter (Withholding and payments on account) and tributary key (P-Renting).</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item = &gt; "3rd party rent in cash Withholding" which must be linked to Tax rate "WRenting18%" and the correspondent accounting setup.</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item =&gt; "3rd party rent" with the correspondent accounting setup.</li>
+</ul>
+<p>Once the above is setup in the system Peter must navigate to Financial Management /Receivable &amp; Payable / Transactions / Manual settlement and create a new manual settlement as described below:</p>
+<p>Transaction date =&gt; 29-August-2021
+Accounting date =&gt; 01-September-2021
+Description =&gt; September renting</p>
+<p>Then Peter goes to "Create Payment" window and enter a new one as described below:
+Business Partner =&gt; Lessor BP (previously created as a creditor and with BP tax category = Lessor
+Description =&gt; September renting
+Amount =&gt; 2000
+Receipt =&gt; No
+Direct posting =&gt; No</p>
+<p>Then Peter goes to "Balance Payment" window and enter two new ones as described below:
+G/L item =&gt; "3rd party rent in cash withholding"
+Debit amount =&gt; 360
+G/L item =&gt; "3rd party rent in cash"
+Debit amount =&gt; 1640</p>
+<p>Once all of the above is done, Peter process the manual settlement and navigate to Financial Management / Receivable &amp; Payable / Transactions / Cash Journal and create a new one and enters:</p>
+<p>Transaction date=&gt; 01-September-2021
+Accounting date=&gt; 01-September-2021
+and then go to Lines and creates a new one as:
+Cash Type =&gt; Debt-payment and then click in Debt/payment feature to get into Debt Payment Selector.</p>
+<p>Once in the Debt Payment Selector Peter has to remove "Receipt", check and search by pending ones, so "rent" one just created can be selected.</p>
+<p>After that Peter processes and posts.
+Peter can navigate to the journal entry and then to the cash journal lines, and then to the payment, and once there Peter can select and post the "Settlement Canceled" in order to generate and check the final posting.</p>
+<p>Finally, Peter has to verify that the correspondent Withholding tax reports is showing a withholding amount of 360 linked to WRenting18% rate.</p>
+<h6 id="renting-in-case-of-a-building-do-not-linked-to-an-economic-activity">Renting in case of a building do not linked to an economic activity</h6>
+<p>Peter's company owns a building not related to Peter's company's economic activity. That building is being rented to a 3rd party or lessee. Peter's company issues a statement or a receipt and sends it to the lessee in order to be paid on a monthly basis. Peter's company must collect the money and enter in the system the correspondent payment, in order to get that in the system, Peter will have to use the "manual settlement" feature as a first step and then get it paid by using either a cash payment or a bank payment.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>While doing that he needs to be sure that the transaction is linked to a specific G/L item created for that reason and besides Peter must enter the correspondent withholding tax as those kinds of payment are subject to withholding which must be submitted to the tax authorities later on.</p>
+</div>
+<p>To accomplish above scenario, Peter will have to navigate to:</p>
+<ul>
+<li>Financial Management / Accounting / setup / <strong>Business Partner Tax Category</strong> to create the BP tax category =&gt; "Lessee"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax category</strong> to create the Tax category =&gt; "WPropertyRent"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax key</strong> to create the correspondent Tax key and sub-keys =&gt; "C_04-Property Rent"</li>
+<li>Financial Management / Accounting / setup / <strong>Tax rate</strong> to create the Tax rate =&gt; "WPropertyRent18%", in this same screen and under <strong>"Tax parameter"</strong> tab Peter must setup the correspondent Tax Report Parameter so the tax rate can be linked to the correspondent tax report (123), tax report group (Assessments), tax parameter (Withholding and payments on account) and tributary key (C_04-Property Rent).</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item = &gt; "Property Rent in cash withholding" which must be linked to Tax rate "WPropertyRent18%"</li>
+<li>Financial Management / Accounting / setup / <strong>G/L Item</strong> to create the G/L item =&gt; "Property Rent in cash" with the correspondent accounting setup.</li>
+</ul>
+<p>Once the above is setup in the system Peter must navigate to Financial Management /Receivable &amp; Payable / Transactions / Manual settlement and create a new manual settlement as described below:</p>
+<p>Transaction date =&gt; 29-September-2021
+Accounting date =&gt; 01-October-2021
+Description =&gt; October renting</p>
+<p>Then Peter goes to "Create Payment" window and enter a new one as described below:
+Business Partner =&gt; Lessee BP (previously created as a creditor and with BP tax category = Lessee)
+Description =&gt; October renting
+Amount =&gt; -3500
+Receipt =&gt; Yes
+Direct posting =&gt; No</p>
+<p>Then Peter goes to "Balance Payment" window and enter two new ones as described below:
+G/L item =&gt; "Property Rent in cash withholding"
+Debit amount =&gt; -630
+G/L item =&gt; "Property Rent in cash"
+Debit amount =&gt; -2870</p>
+<p>Once all of the above is done, Peter process the manual settlement and navigate to Financial Management / Receivable &amp; Payable / Transactions / Cash Journal and create a new one and enters:
+Transaction date=&gt; 01-October-2021
+Accounting date=&gt; 01-October-2021
+and then go to Lines and creates a new one as:
+Cash Type =&gt; Debt-payment and then click in Debt/payment feature to get into Debt Payment Selector.</p>
+<p>Once in the Debt Payment Selector Peter has to check "Receipt" and search by pending ones, so " proprietary rent" one just created can be selected.</p>
+<p>After that Peter processes and posts.
+Peter can navigate to the journal entry and then to the cash journal lines, and then to the payment, and once there Peter can select and post the "Settlement Canceled" in order to generate and check the final posting.</p>
+<p>Finally, Peter has to verify that the correspondent Withholding tax reports is showing a withholding amount of 630 linked to WPropertyRent18% rate.</p>
+<h3 id="tax-report-launcher-setup">Tax Report Launcher setup</h3>
+<p>As described above, Mary, the accounting manager, must decide which tax reports need to be submitted to the tax authorities depending on her company's business and in-country tax authorities requirements. Peter would help her here as he is responsible for checking the default setup and/or setting up the tax parameters, tax reports and tax report parameters as well as entering the correspondent accounting transactions in collaboration with sales (Mike) and purchase staff (Alice). Last thing for him to do will be to launch the tax reports and finally, to get the tax report output to be submitted to the tax authorities.</p>
+<p>Once Peter knows which tax reports must be submitted to the tax authorities by talking to Mary, He will have to <strong>install the configuration data module</strong> delivered as part of the Tax Report Launcher module, once done he must navigate to Financial Management / Accounting / Setup / Tax Report Launcher to check that the default set up for each tax report is setup as described below:</p>
+<p>1-Peter will have to check that there is a <strong>new record for each tax report</strong> which needs to be submitted to the tax authorities, containing the info below:</p>
+<ol>
+<li><strong>Search key</strong> = tax report id (in our example the Spanish tax report "110")</li>
+<li><strong>Name</strong> = Name of the tax report (in our example " Withholdings and payments on account of income tax (IRPF) - Spain")</li>
+<li><strong>Description</strong> = Description of the tax report by including tax report type and main purpose "Withholdings and payments on account made on income satisfied by Companies during a period of time "</li>
+<li><strong>Period</strong> = it could be either monthly, quarterly or yearly depending on tax authorities requirements and company size.</li>
+<li><strong>Java Class Name</strong> = separate Java class per tax report has to be entered here.</li>
+<li><strong>Active</strong> = set to "Yes"</li>
+</ol>
+<p>2- For a specific report (the one just being created) and once the above is done, Peter will have to navigate to <strong>"Tax Report Group"</strong> tab and check that below 7 tax report groups are created for withholding reports, as well as 1 output tax report group is created in case of VAT reports:</p>
+<ol>
+<li><strong>Identification</strong> (1) - This tax report group must contain general data like company name, tax id number, address and so on and so forth depending on the tax report being entered in the system.
+<em>Those data are considered </em><em>tax report parameters</em><em> for that specific tax report group; therefore Peter will have to navigate to the tax report parameter tab and check the parameters. Every parameter should be either a </em><em>"constant"</em>*, in that case a constant value will have to be entered in the correspondent field; or an "input parameter", in that case an input type parameter will have to be selected from a list (Check box or text); or "output parameter", in that case either a Tributary key and tributary sub-key or a transaction code will have to be selected.</li>
+</ol>
+<p><em>Identification section will have all kind of tax parameters, </em><em>"constant"</em><em> parameters as "tax report id", </em><em>"in parameters"</em><em> to be entered by the user while launching the report, such as "contact name", as well as </em><em>"out parameters"</em>* got from the system such as "Organization/Entity name" and "Organization/Entity tax id" as well as those tax transactions linked to a tax key and sub-key or a transaction code (in case of VAT section, see note below).</p>
+<ol>
+<li>
+<p><strong>Accrual</strong> (2) - This section must contain year and period data depending on when a specific tax report has to be launched and submitted to the tax authorities.
+*Those data are "in parameters" which will have to be entered by him while launching the report from Financial Management / Accounting / Analysis tools / Tax Report Launcher".</p>
+</li>
+<li>
+<p><strong>Tax assessment</strong> (3) - This section must contain tax related information such as the number of beneficiaries of an income, income type, income amounts and tax amounts for a given period. The content of this section would depend on the tax report we are entering in the system.</p>
+</li>
+</ol>
+<p><em>Those data are considered </em><em>tax report parameters</em>* for that specific tax report group; therefore Peter will have to navigate to the tax report parameter tab and check that the correspondent parameters are there.</p>
+<p><em>Tax assessment section will have </em><em>"in parameters"</em><em> to be entered by the user, such as "Amount to deduct only in case of complementary declaration scenario"; in general "in parameters" will be all kind of tax information needed for the tax report group which can not be obtained from the system because there is not a business logic behind. Besides, it will also have </em><em>"out parameters"</em>* such as the sum of all the "monetary income amounts linked to a specific tax rate" regardless of the way it was entered in the system (either as a purchase or sales invoice or as a manual settlement). In general "out parameters" will be all those parameters whose value can be obtained from the system as there is a business logic behind.</p>
+<ol>
+<li>T<strong>ax revenue</strong> (4) - This section must contain mainly the net tax amount to be paid to the tax authorities based on section (3) result</li>
+<li>
+<p>Those data are considered <strong>tax report parameters</strong> for that specific tax report group; therefore Peter will have to navigate to the tax report parameter tab and check that the correspondent parameters are there.</p>
+</li>
+<li>
+<p>Tax revenue section will have <strong>"in parameters"</strong> to be entered by the user while launching a tax report, such a "X" in the case positive tax revenue is going to be paid by cash or "D" in case positive tax revenue is going to be paid by a direct debit. In general "in parameters" will be all kinds of tax information needed for the tax report group which can not be obtained from the system because there is not a business logic behind. Besides, it will also have <strong>"out parameters"</strong> such as "tax revenue amount" whose value will have to be a calculated value depending on section (3). In general "out parameters" will be all those parameters whose value can be obtained from the system as there is a business logic behind.</p>
+</li>
+<li>
+<p><strong>Negative declaration</strong> (5) - This section will be shown in a withholding report only in case the calculated net tax amount (Tax revenue section (4)) is = 0 , therefore this section will only have an "out parameter" based on the tax revenue value.</p>
+</li>
+<li>
+<p><strong>Complementary declaration</strong> (6) - This section will be shown in a withholding report only in case the tax report being launched is a complementary tax report to one or more tax reports already submitted to the tax authorities by the same concept and for the same period.</p>
+</li>
+<li>
+<p>Those data are considered <strong>tax report parameters</strong> for that specific tax report group; therefore Peter will have to navigate to the tax report parameter tab and check that the correspondent parameters are there in the case he needs to create a complementary tax report.</p>
+</li>
+<li>
+<p>Complementary declaration section will have <strong>"in parameters"</strong> to be entered by the user, such as "Former tax report electronic code".</p>
+</li>
+<li>
+<p>and <strong>Signature</strong> (7). This section will contain a retainer/declarator (company) signature which is only needed in case of printed format not while generating an electronic format therefore there is no need for us to create this tax report group.</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>VAT tax reports do not have those kinds of above sections because they are not tax reports as such but statement tax reports, therefore a generic tax group will have to be created linked to a generic Output tax report parameter related to Transaction code parameter, for that type of VAT tax reports. </p>
+</div>
+<h3 id="tax-report-output">Tax Report Output</h3>
+<p>Tax reports can be submitted to the tax authorities either as <em>.pdf files, which means a printed format or as a </em>.txt files, which means an electronic presentation that can be sent to the tax authorities via Internet. Both formats have to comply with tax authorities well known requirements so after getting the correspondent output files Peter will have to verify that the formats are the correct ones.</p>
+<p>Besides *.txt files can be submitted to the tax authorities by using tax authorities web applications so Peter has to make sure he gets the correspondent tax certification required to submit the files as well as he has to make sure that the files are not rejected.</p>
+<p>Peter has also to be aware that depending on the number of transactions to be included in a tax reports as well as the company size, presentation format should be either mandatory printed format or mandatory electronic format.</p>
+<p>Peter will have to navigate to Financial Management / Accounting / Analysis tools / Tax Report Launcher to get tax report outputs.
+Once there, the information which Peter will have to enter as input parameters is:
+- Organization
+- Tax report
+- Accounting schema
+- Year
+- Period
+- and <em>.txt file name for example as an Input Parameter
+Once the above is filled-in Peter can press "Generate Electronic file" to generate the </em>.txt file.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/etendo.software/" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
