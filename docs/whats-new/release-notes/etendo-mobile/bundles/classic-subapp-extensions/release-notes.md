@@ -6,6 +6,8 @@ tags:
     - Bundle
     - Versions
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.classic.subapp.extensions`
+
 ## Overview
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
