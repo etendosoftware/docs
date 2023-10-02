@@ -26,6 +26,8 @@ Due to its complexity and different roles involved, it is convenient to split Pr
 1. *Requisition to Receipt* process starts by the creation and management of purchase requisitions and corresponding purchase orders to the moment the warehouse staff receives the merchandise.
 2. *Supplier Invoice to Payment* continues the previous sub-process by registering the supplier invoices and closes it by paying supplier invoices.
 
+![procure-to-pay](/assets/products/etendo-classic/user-guide/procurement-management/getting-started/procure-to-pay-business-flow.png)
+
 ### Configuration
 
 The following setup needs to be done before performing the process:
@@ -145,6 +147,8 @@ This workflow manages the return of purchased goods back to the supplier. Due to
 1. *Supplier Return to Debit*: This process manages the return of goods back to the vendor and the request of a debit.
 
 2. *Supplier Return to Replacement*: This process manages the return of goods back to the vendor and the request of a goods replacement.
+
+![supplier-returns](/assets/products/etendo-classic/user-guide/procurement-management/getting-started/supplier-return-debit.png)
 
 ### Configuration
 The [Return reasons](/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#return-reasons) window is the only one that requires configuration before performing this process.
