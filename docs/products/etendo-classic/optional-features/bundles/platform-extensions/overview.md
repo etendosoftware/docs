@@ -85,12 +85,11 @@ EAN 128 allows to use bar code in your application
 !!! info
         For more information, visit the [EAN 128 developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
 
-
 ### Etendo RX
 
 :octicons-package-16: Javapackage: com.etendoerp.etendorx
 
-## Etendo Reactor
+### Etendo Reactor
 
 :octicons-package-16: Javapackage: com.etendoerp.reactor
 
