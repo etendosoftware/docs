@@ -12,20 +12,21 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 ## Environment Setup
 
 ### Requirements
-- **Etendo Classic**. If you do not have it, [install it here](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
-- **Python** versión ^3.10, [install it here](https://www.python.org/downloads/){target="_blank"}.
+- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
+- *Python* version ^3.10, to install it follow [The Official Installation Guide](https://www.python.org/downloads/){target="_blank"}.
+- *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/engine/install/)
 
 ### Run copilot locally
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation 'com.etendoerp.copilot'
+    implementation('com.etendoerp:copilot:latest.release')
     ```
 
-    ??? warning "Ensure you have the latest version of the plugin:"
+    ??? warning "Ensure you have 1.1.4 plugin version or greater:"
         
         ```groovy
-        id 'com.etendoerp.gradleplugin' version 'latest.release'
+        id 'com.etendoerp.gradleplugin' version '1.1.4'
         ```
 
 2. In the terminal, execute:
@@ -36,14 +37,14 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 3. In gradle.properties, add:
     ```groovy title="build.gradle"
     copilotPort=5000
-    copilotAPIKey=YOUR_API_KEY_HERE
+    openaiAPIKey=YOUR_API_KEY_HERE
     ```
 
     ??? warning "Remember to replace YOUR_API_KEY_HERE with your actual API key."
 
         You can get it from this link [get it](https://platform.openai.com/account/api-keys){target="_blank"}.
 
-4. To start Copilot:
+4. To download the latest copilot Docker image and run it:
 
     ``` bash title="Terminal"
     ./gradlew copilot.start
