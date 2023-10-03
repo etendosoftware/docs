@@ -1,21 +1,11 @@
-
-## Requirements
-
-To start with this tutorial you should have *Etendo Classic* up locally, our Etendo Mobile container application, Node in version 16.10.0 and a package manager for JavaScript code such as Yarn.
-
-Also our Platform Extensions Bundle which includes enhancements for platform functionality in Etendo.
-
-!!!note
-    If you do not have these requirements you can follow the [Getting Started section in the Etendo Mobile](/developer-guide/etendo-mobile/getting-started/) and [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614) (For more information see [Platform Extensions Bundle section in the Bunldes](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/)) to continue with this tutorial.
-    
 ## Overview
 
 This section provides a step-by-step guide on how to create a new sub-application to work with Etendo RX, which involves creating a new module with RX capabilities and building a React-native project to consume commands making use of projections, repository and other resources that we will create in our Etendo Classic.
 
 ## Building a New Module for RX Capabilities
 
-!!!note
-    Make sure to complete the [Getting Started section in the developer guide](/developer-guide/etendo-rx/getting-started) to set up the Etendo Platform.
+!!! info
+    Make sure to complete the [Getting Started section in Etendo Mobile](/developer-guide/etendo-mobile/getting-started.md) to set up the Etendo Platform.
 
 
 ### Accessing as Admin User
@@ -29,15 +19,11 @@ Log in to your account as an administrator. The default login credentials for th
 
 Once you are logged in, switch your role to *System Administrator*, as the image shows:
 
-  ![switch-admin.png](/assets/developer-guide/etendo-rx/tutorial/switch-admin.png)
-
-
-The *System Administrator* role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.
+  ![switch-admin.png](/assets/developer-guide/etendo-mobile/tutorials/system-etendo-mobile-products.png)
 
 ### Creating a New Module
 
-Now we will create a new module. It is a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
-To create a new module, go to the Module window, and add a new record providing the following information:
+Now we will create a new module for the sub-application. To create a new module, go to the Module window, and add a new record by providing the following information:
 
 | Parameter       | Value                                 |
 | --------------- | ------------------------------------- |
@@ -54,7 +40,24 @@ It should look like this:
 
   ![new-module.png](/assets/developer-guide/etendo-mobile/tutorials/module-etendo-mobile-products.png)
 
+### Creating a New Projection
 
+
+Creates a projection by adding the name of the module created and the name of the projection.
+
+| Parameter       | Value                                 |
+| --------------- | ------------------------------------- |
+| Module          |`Products - 1.0.0 - English (USA)`     |
+| Name            |`Tutorial`                             |
+
+It should look like this:
+
+  ![new-projection.png](/assets/developer-guide/etendo-mobile/tutorials/projection-etendo-mobile-products.png)
+
+
+
+  ![new-projection.png](/assets/developer-guide/etendo-mobile/tutorials/table-and-column-etendo-mobile-product.jpg)
+  
 With our new module created, we will start working by exporting the database and generating the entities as follows.
 
 ------------------------------------------------------------------

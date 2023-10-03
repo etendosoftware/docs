@@ -138,4 +138,4 @@ In this page we will explain what are the requirements to create a sub applicati
             ``` bash title="Terminal"
             nvm use 16.10.0
             ``` 
-Then continue with the [Create New Subapliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
+Then continue with the [Create New Subappliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/) tutorial.
