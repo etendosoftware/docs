@@ -140,6 +140,7 @@ nav:
           - Transactions: products/etendo-classic/user-guide/material-requirement-planning/transactions.md
           - Setup: products/etendo-classic/user-guide/material-requirement-planning/setup.md
         - Sales Management: 
+          - Getting Started: products/etendo-classic/user-guide/sales-management/getting-started.md
           - Transactions: products/etendo-classic/user-guide/sales-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/sales-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
