@@ -49,7 +49,15 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ./gradlew copilot.start
     ```
 
-## Translation Tool: XMLTranslatorTool
+5. When done using Etendo Copilot, run:
+
+    ```bash
+    ./gradlew copilot.stop
+    ```
+
+    This command will stop the Docker container running Copilot.
+
+## 🛠 Translation Tool: XMLTranslatorTool
 
 Translates the content of an XML file from one language to another, as specified within the XML.  
 
