@@ -317,7 +317,7 @@ The database to be dropped should be the Etendo database, but the script will dr
 
     ```bash
 
-    sudo chown openbravo:openbravo /opt/EtendoERP/
+    sudo chown openbravo:openbravo /opt/OpenbravoERP/
 
     ```
 

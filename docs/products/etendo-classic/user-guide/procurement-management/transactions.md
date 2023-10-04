@@ -361,7 +361,7 @@ Supplier can send a "Purchase Invoice" together with the "Delivery Note" of the 
 This action implies a **link between the goods receipt and the purchase invoice**, the user can be aware of when inquiring about the corresponding purchase invoice.
 
 !!! info
-    To learn more, visit _Purchase Invoice._
+    To learn more, visit [Purchase Invoice](/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-invoice).
 
 ### **Lines**
 
@@ -497,9 +497,9 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 This window allows the user to:
 
 - **Use the Filter options** to narrow down the search of pending purchase orders to be delivered. It is possible to search by:
-  - Business Partner
-  - From Purchase Order Date -> To Purchase Order Date
-  - Purchase Order number
+    - Business Partner
+    - From Purchase Order Date -> To Purchase Order Date
+    - Purchase Order number
 - Enter a **"Reception date".**
 - **Select** the "**Order line/s of a purchase order/s" delivered** which are shown grouped by Business Partner and Purchase Order.
 - **Change** the "**Quantity**" of the goods being receipt if needed.
