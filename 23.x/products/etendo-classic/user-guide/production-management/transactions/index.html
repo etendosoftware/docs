@@ -1,0 +1,5163 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.etendo.software/23.x/products/etendo-classic/user-guide/production-management/transactions/">
+      
+      
+        <link rel="prev" href="../../warehouse-management/setup/">
+      
+      
+        <link rel="next" href="../setup/">
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Production Management - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Production Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../getting-started/overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../overview/" class="md-tabs__link md-tabs__link--active">
+        Products
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../whats-new/overview/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../developer-guide/overview/" class="md-tabs__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../live-builds/overview/" class="md-tabs__link">
+      Live Builds
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../help-and-support/overview/" class="md-tabs__link">
+        Help and Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/clear-report-cache/" class="md-nav__link">
+        Clear Report Cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/attachments-configuration/" class="md-nav__link">
+        Attachments Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/" class="md-nav__link">
+        Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/crm-connector/" class="md-nav__link">
+        CRM Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/enterprise-model/" class="md-nav__link">
+        Enterprise Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/process-scheduling/" class="md-nav__link">
+        Process Scheduling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+          Master Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data-management/master-data/" class="md-nav__link">
+        Master Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data-management/business-partner-setup/" class="md-nav__link">
+        Business Partner Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data-management/product-setup/" class="md-nav__link">
+        Product Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../master-data-management/pricing/" class="md-nav__link">
+        Pricing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+          Procurement Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
+          Warehouse Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Warehouse Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_5" id="__nav_3_2_1_5_label" tabindex="0">
+          Production Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Production Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Transactions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Transactions
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#production-management" class="md-nav__link">
+    Production Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Production Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    Execution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-with-other-areas" class="md-nav__link">
+    Relationship with other areas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-requirement" class="md-nav__link">
+    Work Requirement
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Requirement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    Operation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-effort" class="md-nav__link">
+    Work Effort
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Effort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-effort_1" class="md-nav__link">
+    Work Effort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidence" class="md-nav__link">
+    Incidence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-use" class="md-nav__link">
+    Global Use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-run" class="md-nav__link">
+    Production Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolset" class="md-nav__link">
+    Toolset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product_1" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salary-category-employee" class="md-nav__link">
+    Salary Category / Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-cost" class="md-nav__link">
+    Indirect Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine" class="md-nav__link">
+    Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced" class="md-nav__link">
+    Outsourced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-reactivate-work-efforts" class="md-nav__link">
+    How to Reactivate Work Efforts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-run_1" class="md-nav__link">
+    Production Run
+  </a>
+  
+    <nav class="md-nav" aria-label="Production Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-run_2" class="md-nav__link">
+    Production Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidence_1" class="md-nav__link">
+    Incidence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolset_1" class="md-nav__link">
+    Toolset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product_2" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salary-category-employee_1" class="md-nav__link">
+    Salary Category / Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-cost_1" class="md-nav__link">
+    Indirect Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine_1" class="md-nav__link">
+    Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced_1" class="md-nav__link">
+    Outsourced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control-report" class="md-nav__link">
+    Quality Control Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-shift" class="md-nav__link">
+    Date and Shift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-point-set" class="md-nav__link">
+    Check Point Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Check Point Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periodic-quality-control-data" class="md-nav__link">
+    Periodic Quality Control Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Periodic Quality Control Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodic-quality-control-data-window" class="md-nav__link">
+    Periodic Quality Control Data window
+  </a>
+  
+    <nav class="md-nav" aria-label="Periodic Quality Control Data window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-consumption" class="md-nav__link">
+    Internal Consumption
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Consumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_1" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting_1" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-order" class="md-nav__link">
+    Maintenance Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenance Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worker" class="md-nav__link">
+    Worker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-maintenances" class="md-nav__link">
+    Insert Maintenances
+  </a>
+  
+    <nav class="md-nav" aria-label="Insert Maintenances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-plan" class="md-nav__link">
+    Maintenance Plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenance Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_8" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    Maintenance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate-standard-costs" class="md-nav__link">
+    Calculate Standard Costs
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculate Standard Costs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_9" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../etendo-rx/" class="md-nav__link">
+        Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_7" id="__nav_3_2_1_7_label" tabindex="0">
+          Material Requirement Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Material Requirement Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material-requirement-planning/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material-requirement-planning/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8" id="__nav_3_2_1_8_label" tabindex="0">
+          Sales Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sales Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9" id="__nav_3_2_1_9_label" tabindex="0">
+          Financial Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Financial Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_1" id="__nav_3_2_1_9_1_label" tabindex="0">
+          Receivables and Payables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Receivables and Payables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_2" id="__nav_3_2_1_9_2_label" tabindex="0">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/assets/overview/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+          Supported Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
+        Tax Report Launcher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-copilot/getting-started/bastian/" class="md-nav__link">
+        Bastian
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          What's New
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          What's New
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.etendo.software" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1_3" id="__nav_4_4_1_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_1" id="__nav_5_2_1_1_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+        IntelliJ Code Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+          Migration from Openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Migration from Openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+        Migrating to Etendo (from Openbravo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_3" id="__nav_5_2_1_3_label" tabindex="0">
+          Upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+        Core format migration (JAR- Sources)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+        Resolving Dependencies on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+        Etendo Jars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+        Naming Guideliness for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+        How to Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+        How to Create and Update Translation Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+        How to Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+        How to Create a Clone Hook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+        How to Use Advanced Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+        How to Create Scan Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+        How to Use Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+        How to Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+        How to Create a Module that Adds an Accounting Process
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+          Developer Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_5" id="__nav_5_2_5_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Etendo RX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo RX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+        Creating a New Microservice
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+        How to Filter any request for Active or all Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+        Create New Subapliction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../live-builds/overview/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Help and Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Help and Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/support-service/" class="md-nav__link">
+        Support Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to report bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#production-management" class="md-nav__link">
+    Production Management
+  </a>
+  
+    <nav class="md-nav" aria-label="Production Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    Execution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-with-other-areas" class="md-nav__link">
+    Relationship with other areas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-requirement" class="md-nav__link">
+    Work Requirement
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Requirement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation" class="md-nav__link">
+    Operation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-effort" class="md-nav__link">
+    Work Effort
+  </a>
+  
+    <nav class="md-nav" aria-label="Work Effort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-effort_1" class="md-nav__link">
+    Work Effort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidence" class="md-nav__link">
+    Incidence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-use" class="md-nav__link">
+    Global Use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-run" class="md-nav__link">
+    Production Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolset" class="md-nav__link">
+    Toolset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product_1" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salary-category-employee" class="md-nav__link">
+    Salary Category / Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-cost" class="md-nav__link">
+    Indirect Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine" class="md-nav__link">
+    Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced" class="md-nav__link">
+    Outsourced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-reactivate-work-efforts" class="md-nav__link">
+    How to Reactivate Work Efforts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-run_1" class="md-nav__link">
+    Production Run
+  </a>
+  
+    <nav class="md-nav" aria-label="Production Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#production-run_2" class="md-nav__link">
+    Production Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidence_1" class="md-nav__link">
+    Incidence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolset_1" class="md-nav__link">
+    Toolset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product_2" class="md-nav__link">
+    Product
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salary-category-employee_1" class="md-nav__link">
+    Salary Category / Employee
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indirect-cost_1" class="md-nav__link">
+    Indirect Cost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine_1" class="md-nav__link">
+    Machine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outsourced_1" class="md-nav__link">
+    Outsourced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control-report" class="md-nav__link">
+    Quality Control Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-shift" class="md-nav__link">
+    Date and Shift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-point-set" class="md-nav__link">
+    Check Point Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Check Point Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#periodic-quality-control-data" class="md-nav__link">
+    Periodic Quality Control Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Periodic Quality Control Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodic-quality-control-data-window" class="md-nav__link">
+    Periodic Quality Control Data window
+  </a>
+  
+    <nav class="md-nav" aria-label="Periodic Quality Control Data window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-consumption" class="md-nav__link">
+    Internal Consumption
+  </a>
+  
+    <nav class="md-nav" aria-label="Internal Consumption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_1" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting_1" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-order" class="md-nav__link">
+    Maintenance Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenance Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order" class="md-nav__link">
+    Order
+  </a>
+  
+    <nav class="md-nav" aria-label="Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worker" class="md-nav__link">
+    Worker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-maintenances" class="md-nav__link">
+    Insert Maintenances
+  </a>
+  
+    <nav class="md-nav" aria-label="Insert Maintenances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance-plan" class="md-nav__link">
+    Maintenance Plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenance Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_8" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    Maintenance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculate-standard-costs" class="md-nav__link">
+    Calculate Standard Costs
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculate Standard Costs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_9" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+  <h1>Transactions</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The Production Management module allows managing the standard productive process: production plan, work requirement, end products report and its direct and indirect costs. It is also possible to manage quality control and machine maintenance in production.</p>
+<h3 id="production-management"><strong>Production Management</strong></h3>
+<p>The main documents to manage the production process are:</p>
+<ul>
+<li>the Process Plan</li>
+<li>the Work Requirement</li>
+<li>the Work Effort</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png" /></a></p>
+<h4 id="configuration"><strong>Configuration</strong></h4>
+<p>Apart from the setup screens in the Production module, additional setups are required.</p>
+<p>For Production, there are different products that are set up:</p>
+<ul>
+<li>Raw material used in production</li>
+<li>the Production checkbox is selected to indicate that the product is used for production</li>
+<li>the process plan is selected</li>
+<li>the default storage bin that is used for P- raw materials is defined in the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</li>
+<li>Finished products manufactured in production</li>
+<li>the Production checkbox is selected to indicate the product is manufactured in production</li>
+<li>the process plan is selected</li>
+<li>the default storage bin that is used for the product is defined in the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab</li>
+<li>based on <a href="/products/etendo-classic/user-guide/production-management/transactions/#calculate-standard-costs">cost calculations</a>, a "theoretical" standard cost can be determined for the finished product</li>
+<li>a safety stock level is determined and entered for the product</li>
+</ul>
+<p>Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about the configuration of products, please refer to the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#product"><em>Product</em></a> section.</p>
+</div>
+<p>Also, Business Partners are configured for production:</p>
+<p>In the Employee tab, any employees that are involved in the production process have the operator checkbox selected.</p>
+<p>Likewise, the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#salary-category"><em>Salary category</em></a> configured for employees is very important since they are included in the final cost calculations.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about the configuration of business partners, please refer to the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner"><em>Business Partner</em></a> section.</p>
+</div>
+<p>Work Efforts can be posted to the <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal"><em>General Ledger Journal</em></a>. In order to facilitate the posting, the <strong>MaterialMgmtProductionTransaction</strong> table is activated in the <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#glconfig"><em>Active Tables</em></a> tab of the General Ledger configuration.</p>
+<h4 id="execution"><strong>Execution</strong></h4>
+<p>Sales staff enter Sales Order for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced.</p>
+<p>Also, if the stock level is below the safety stock level, products have to be produced.</p>
+<p>The information about the demand from sales orders and safety stock is handled in 2 ways:</p>
+<ul>
+<li>automatically in MRP</li>
+<li>manually by a production manager</li>
+</ul>
+<p>Ideally, the information is handled by MRP. If not, a production manager reviews if production of the product is required by reviewing the total demand:</p>
+<ul>
+<li>the outstanding sales orders</li>
+<li>the safety stock level</li>
+</ul>
+<p>and compare it with the total supply:</p>
+<ul>
+<li>the stock level</li>
+<li>scheduled Work Requirements</li>
+</ul>
+<p>If the demand is higher than the supply, or the dates of scheduled Work Requirements are not matching the dates of the outstanding sales orders, the product needs to be produced and a production manager executes:</p>
+<ul>
+<li>review of the stock of the raw material. If needed, the raw material will be requested and used in the <a href="/products/etendo-classic/user-guide/procurement-management/transactions/"><em>procurement management</em></a> process.</li>
+<li>entry of the Work Requirement for the required quantity with the required quantity and the planned date</li>
+<li>generate Work Efforts from the Work Requirement.</li>
+</ul>
+<p>The staff responsible for executing the production can see on the Production Run Status Report what production has to be executed.</p>
+<p>At the end of each shift, the production managers enter the information of what is produced in the <a href="/products/etendo-classic/user-guide/production-management/transactions/#production-run_1"><em>Production Run</em></a> screen.</p>
+<h3 id="relationship-with-other-areas"><strong>Relationship with other areas</strong></h3>
+<p>Production Management interacts with the following modules:</p>
+<ul>
+<li><a href="/products/etendo-classic/user-guide/procurement-management/transactions/"><em>Procurement Management</em></a>: raw material required for use in production is bought using the Procure to Pay process</li>
+<li><a href="/products/etendo-classic/user-guide/sales-management/transactions/"><em>Sales Management</em></a>: demand for the products that are produced are generated through the Order to Cash process</li>
+<li><a href="/products/etendo-classic/user-guide/warehouse-management/transactions/"><em>Warehouse Management</em></a>:<ul>
+<li>raw material is taken from the warehouse to be used in production</li>
+<li>end products that come out of production are put into stock</li>
+</ul>
+</li>
+<li><a href="/products/etendo-classic/user-guide/material-requirement-planning/transactions/"><em>MRP</em></a>: Work Requirements can be a result of MRP</li>
+<li><a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/"><em>Financial Management</em></a>: Cost related to Production is calculated for finance.</li>
+</ul>
+<h2 id="work-requirement">Work Requirement</h2>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>In this window, the user is able to create and manage an order for a <a href="/products/etendo-classic/user-guide/production-management/setup/#process-plan"><em>Process Plan</em></a> to be executed a certain number of times to satisfy the production requirements.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Important: Before creating a work requirement, it is necessary to have a Process Plan defined.</p>
+</div>
+<p>A work requirement is a document indicating what has to be produced and by what date. The work requirement is created based on a process plan. The operations with the related details are populated in the work requirement. Once the operations are populated, the information can be overwritten if needed.</p>
+<p>A work requirement can be created in two ways:</p>
+<ul>
+<li>manually in the screen</li>
+<li>automatically as an outcome of the manufacturing plan in MRP.</li>
+</ul>
+<h3 id="header"><strong>Header</strong></h3>
+<p>Here, it is possible to create production orders by choosing dates and the previously defined work requirement model.</p>
+<p><a class="glightbox" href="/assets/drive/uQ0cCZZcOZ0js49Mxwbyb-55Gpvl3P_G92Uqjcar8wwUJjMJ0IMJnxhzBNfsfEewvjDvOmWbuRZBp_gbg8sI8M04f6JZwNxoojOqXX1uKZjNYsprjBmAAP-bPKAl7AY9-YBip2AvbrJ4YGOWFp2hjoU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/uQ0cCZZcOZ0js49Mxwbyb-55Gpvl3P_G92Uqjcar8wwUJjMJ0IMJnxhzBNfsfEewvjDvOmWbuRZBp_gbg8sI8M04f6JZwNxoojOqXX1uKZjNYsprjBmAAP-bPKAl7AY9-YBip2AvbrJ4YGOWFp2hjoU.png" /></a></p>
+<p><strong>Organization</strong>: organization in which the production will be executed.</p>
+<p><strong>Document Type</strong>: used for easy filtering, for example separate production department names can be set up as document types.</p>
+<p><strong>Document No.</strong>: number of the work requirement.</p>
+<p><strong>Process Plan</strong>: name of the process plan that is used for this production.</p>
+<p><strong>Quantity</strong>: number of batches to be produced. The field is automatically populated based on the entered process quantity and conversion rate.</p>
+<p><strong>WR Creation Date</strong>: the date the document is created. This date is used as a reference to define the corresponding process plan version.</p>
+<p><strong>Starting Date</strong>: date that the production is planned to start</p>
+<p><strong>Ending Date</strong>: date that the production is planned to end</p>
+<p><strong>Conversion Rate</strong>: batch size for production</p>
+<p><strong>Include Phases when inserting checkbox</strong>: when the checkbox is selected: in the Work Requirement, when the information from the process plan is copied, the operations and the products are included. The setup is also in the process plan, but that set up can be overwritten in this screen if needed.</p>
+<p><strong>Process Quantity</strong>: total quantity to be produced</p>
+<p><strong>Process Unit</strong>: the product to be produced</p>
+<p><strong>Estimated Time</strong>: information of the estimated execution time, that is populated when the work requirement is processed. The calculation is: estimated time taken from the process plan x process quantity on the work requirement.</p>
+<p><strong>Run Time</strong>: populated information of the real execution time, taken from the work effort.</p>
+<p><strong>Process Work Requirement button</strong>: to insert the information from the process plan in the work requirement</p>
+<p><strong>Create Work Effort button</strong>: to create work related to the work requirement once the work requirement is processed. Work efforts related to all operations are created at once, so depending on the amount of operations, one or more work efforts are created. If the create standards checkbox is selected in the operation, the create standards process is executed also, to insert the product information in the work effort. In all cases, the processing of the work effort is executed manually.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the [Production Run] tab is set to the full quantity on the operation.</p>
+</div>
+<h3 id="operation"><strong>Operation</strong></h3>
+<p>In this tab, the user can add or edit operations and activities to be performed for the related work requirement.</p>
+<p>After processing the Work Requirement, the information in the operation tab is populated from the Process Plan. The main tab of the Work Requirement is showing that the Work Requirement is processed and the Estimated Time is showing the total of estimated times of all operations.</p>
+<p><a class="glightbox" href="/assets/drive/N6jCi7z3kPJFRjTaGh1Zwl2AIPqDhVFRjAP-AIcQGcJvpNoNSodF59YXkkaqItTPcDChIEY3UEtldpAeYepSxijP576q9RhfctGFSVZ10SqTiJ70mp4nN4cu919QNA2-s6HrrpEUDCScHiOfoObefwo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/N6jCi7z3kPJFRjTaGh1Zwl2AIPqDhVFRjAP-AIcQGcJvpNoNSodF59YXkkaqItTPcDChIEY3UEtldpAeYepSxijP576q9RhfctGFSVZ10SqTiJ70mp4nN4cu919QNA2-s6HrrpEUDCScHiOfoObefwo.png" /></a></p>
+<p>The fields in these two tabs are mostly taken from the Process Plan, but can be overwritten in the Work Requirement. For a description of these fields, please see the <a href="/products/etendo-classic/user-guide/production-management/setup/#process-plan"><em>Process Plan</em></a> section.</p>
+<p>The <strong>Starting Date</strong> and <strong>Ending Date</strong> of the operations are defaulting from the main tab of the Work Requirement, but can be overwritten.</p>
+<p>The <strong>Estimated Time</strong> on the operation is calculated using the formula: estimated time of the operation taken from the process plan x quantity on the operation.</p>
+<p>The <strong>Run Time information</strong> is populated based on total actual hours populated from the Work Effort for the operation.</p>
+<p><strong>Close Phase</strong>: With this process, the work requirement phase is closed. If all the phases are closed the work requirement will also be closed.</p>
+<h3 id="product"><strong>Product</strong></h3>
+<p>In this tab, it is possible to add or edit I/O products to be used for the selected operation of the work requirement.</p>
+<p>The information in the Product tab is populated from the information in the I/O Products tab of the Process Plan, upon processing of the Work Requirement.</p>
+<p><a class="glightbox" href="/assets/drive/v34LYr8HTiICG-MCBVPKhxHFVxGCV-MlnHJPodY19SGOjtHX2QkbdJZk-s0JU6vntb5nHV_axLiVVZ05FEuuuvrNNVDGjumOD5YMs-ephN693XbGD0d1l2cKGBPcPnKyhwSLK_tc0uYZNOxiiUgLWY4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/v34LYr8HTiICG-MCBVPKhxHFVxGCV-MlnHJPodY19SGOjtHX2QkbdJZk-s0JU6vntb5nHV_axLiVVZ05FEuuuvrNNVDGjumOD5YMs-ephN693XbGD0d1l2cKGBPcPnKyhwSLK_tc0uYZNOxiiUgLWY4.png" /></a></p>
+<ul>
+<li><strong>Movement Quantity</strong>: value populated from the Quantity field in the I/O Products tab of the Process plan.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For a description of the rest of the fields, please refer to the <a href="/products/etendo-classic/user-guide/production-management/setup/#process-plan"><em>Process Plan</em></a>.</p>
+</div>
+<h2 id="work-effort">Work Effort</h2>
+<h3 id="introduction_1"><strong>Introduction</strong></h3>
+<p>In this window, the use can edit precisely what has been produced from a selected product order.</p>
+<p>The work effort records the work executed by employees during a production shift. The document is used for the following purposes:</p>
+<ul>
+<li>to calculate the real cost related to the production of a product.</li>
+<li>to keep track of the remaining effort on work requirements.</li>
+</ul>
+<h3 id="work-effort_1"><strong>Work Effort</strong></h3>
+<p>Here, it is possible to create a report for the completed work requirement for a desired date and time.</p>
+<p><a class="glightbox" href="/assets/drive/ejgAV4yI6GlnDlpw3vEvTT8yPma9TU_bPgqcPZFtdaX5tVCUetfOsDmuofJEgqQWcbIPtJzBdbt71hKzTWEAY-jbK14BTXmSA5VG1D9pV4ZNsODaIa_kQIR4K2_kED0dvtSE158MnsvF_xkvgKALIrM.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/ejgAV4yI6GlnDlpw3vEvTT8yPma9TU_bPgqcPZFtdaX5tVCUetfOsDmuofJEgqQWcbIPtJzBdbt71hKzTWEAY-jbK14BTXmSA5VG1D9pV4ZNsODaIa_kQIR4K2_kED0dvtSE158MnsvF_xkvgKALIrM.png" /></a></p>
+<ul>
+<li>The Movement Date, Starting Time and Ending Time indicate on which date and during which shift the production took place.</li>
+<li>The Create Standards button (displayed in the "Production Run" tab) is used to execute the process that loads all the P- and P+ information as well as global used products, machines, salary categories, indirect cost, toolsets. When the standards are created, also stock of all P- products is checked and an error appears if any products do not have stock. For the Create Standards process to complete successfully, the Completed Quantity has to be greater than zero.</li>
+<li>Once the standards are created and all the correct information concerning the production is entered, the work effort is validated by clicking the Validate Work Effort button. At this point, the stock information is updated. For P-, the stock decreases and, for P+, it increases.</li>
+<li>Optionally, the Work Effort can be posted to the general ledger journal once the <a href="/products/etendo-classic/user-guide/production-management/transactions/#configuration"><em>configuration</em></a> is added. If done, information related to the cost of the raw material and produced products is posted.</li>
+</ul>
+<h3 id="employee"><strong>Employee</strong></h3>
+<p>Here, it is possible to add employees that took part in the completion of a related work requirement.</p>
+<p>Any business partners that are set up as operator in the Employee tab of the Business Partner screen, can be selected as employee that worked on the production of the product.</p>
+<p><a class="glightbox" href="/assets/drive/7h69ee196GkDtEwIegH-w_-DnbqHT9gs0_Ne9r4dTQdX3mybqUjtEZI2D1EaiMlF5Lc-us7mZ3ZBAbb6RoseTdfHnbkr_c0RRFgpn7Drsxjr-qWHBGxYMRwVto7mzXbLoc5l7Ad6JyzJRb0z272fkEE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/7h69ee196GkDtEwIegH-w_-DnbqHT9gs0_Ne9r4dTQdX3mybqUjtEZI2D1EaiMlF5Lc-us7mZ3ZBAbb6RoseTdfHnbkr_c0RRFgpn7Drsxjr-qWHBGxYMRwVto7mzXbLoc5l7Ad6JyzJRb0z272fkEE.png" /></a></p>
+<h3 id="incidence"><strong>Incidence</strong></h3>
+<p>Here, it is possible to add work incidences that might have occurred during the completion of a related work requirement.</p>
+<p>This tab is used to register any incidence that occurs during the production run, the amount of downtime that it caused, and a description.</p>
+<p><a class="glightbox" href="/assets/drive/dKafnyApuWpd-qZHvxzBhp3qmQ5uzfKQGgSIhMgObnVESUc-Pc4AX8oI-6fP4Urc_PeZFpuHhhYbW9gO-VlVGKxrf2BaYeRo-NO1mdWOfNpnVwolYSBS42OMCAs35-FWyANjlf9toOYLexsnWBmL_1k.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/dKafnyApuWpd-qZHvxzBhp3qmQ5uzfKQGgSIhMgObnVESUc-Pc4AX8oI-6fP4Urc_PeZFpuHhhYbW9gO-VlVGKxrf2BaYeRo-NO1mdWOfNpnVwolYSBS42OMCAs35-FWyANjlf9toOYLexsnWBmL_1k.png" /></a></p>
+<h3 id="global-use"><strong>Global Use</strong></h3>
+<p>Here, it is possible to add global use of products used for completion of a related work requirement.</p>
+<p>In this tab, any products that are not specified in the process plan but are used in production are entered. For example, packaging material:</p>
+<p><a class="glightbox" href="/assets/drive/EgHIDMDxXAnH_Uu6xKmHcyI1jVk2ARDkz41OflXTBIN2jae9K5r7NkMG-qr5CrQDoUf2GEbrjVgq_HQ-mC9JCIeMwp4OiPT3-97Fll08BwnO5Zli4G60lB-4sy2pInhsgbFmulxo3tOpsXkMV9WLZ8I.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/EgHIDMDxXAnH_Uu6xKmHcyI1jVk2ARDkz41OflXTBIN2jae9K5r7NkMG-qr5CrQDoUf2GEbrjVgq_HQ-mC9JCIeMwp4OiPT3-97Fll08BwnO5Zli4G60lB-4sy2pInhsgbFmulxo3tOpsXkMV9WLZ8I.png" /></a></p>
+<h3 id="production-run"><strong>Production Run</strong></h3>
+<p>Here, it is possible to add progress details of the specified work requirements.</p>
+<p>The information related to the executed operation is entered in this tab:</p>
+<p><a class="glightbox" href="/assets/drive/A5CChqOgLunuEMkNM6nQ3nimEEazTpqi6chLsz1W2pX-WKkASGAu0oelnLboU9-6Pf5FgM5cDm1uBTXNGinyr2hJUN1H_VhYh4JPFAywA1uLdKcvZnpIHtAhRCsaGDPY-7a8xvRHJyco9MnzYP05RS8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/A5CChqOgLunuEMkNM6nQ3nimEEazTpqi6chLsz1W2pX-WKkASGAu0oelnLboU9-6Pf5FgM5cDm1uBTXNGinyr2hJUN1H_VhYh4JPFAywA1uLdKcvZnpIHtAhRCsaGDPY-7a8xvRHJyco9MnzYP05RS8.png" /></a></p>
+<ul>
+<li><strong>Required Quantity</strong>: required quantity of the operation. Populated information when the work requirement phase is selected.</li>
+<li><strong>Completed Quantity:</strong> the quantity of units produced.</li>
+<li><strong>Starting Time</strong>: actual start time of the production run</li>
+<li><strong>Ending Time</strong>: actual end time of the production run</li>
+<li><strong>Rejected Quantity</strong>: information only field of any rejected quantities during production of the operation.</li>
+<li><strong>Cost Center Use</strong>: the actual use of the cost center for this operation</li>
+<li><strong>Outsourced checkbox</strong>: indication of the operation being executed by a third party</li>
+<li><strong>Close Phase checkbox</strong>: selected if a partial quantity was built, but the operation needs to be closed indicating that the remaining quantity will not be built.</li>
+</ul>
+<h3 id="toolset"><strong>Toolset</strong></h3>
+<p>Here, it is possible to add or edit toolsets used to complete a specific part of a work requirement.</p>
+<p>The information in this tab is populated automatically when the create standards process is executed. The information is taken from toolset information in the activity screen. The toolset uses is populated based on the utilization coefficient in the activity screen multiplied by the completed quantity on the work effort. The information that is populated can be updated with the actual information of the toolsets used during production, before validating the work effort.</p>
+<p><a class="glightbox" href="/assets/drive/NEF9g-7ajQYdxyTWt2HW_Fg4F1Vj-GU6uOvxgXWHMcPdpgkVrIwsqS2V8hFwp1PLcB9yq8WT5SWKlvLd8vr1Yp3ciSK19pxp6MH08H7GApC5qLrHYngl_B-h9nwp9vEbuJIWsSXVSWi_GRcYa3QmI_8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/NEF9g-7ajQYdxyTWt2HW_Fg4F1Vj-GU6uOvxgXWHMcPdpgkVrIwsqS2V8hFwp1PLcB9yq8WT5SWKlvLd8vr1Yp3ciSK19pxp6MH08H7GApC5qLrHYngl_B-h9nwp9vEbuJIWsSXVSWi_GRcYa3QmI_8.png" /></a></p>
+<h3 id="product_1"><strong>Product</strong></h3>
+<p>Here, it is possible to add and edit I/O products related to a completed part of a work requirement.</p>
+<p>The information is populated automatically when the create standards process is executed, based on the work requirement phase information and the completed quantity on the work effort. The information that is populated can be updated with the actual product information before validating the work effort.</p>
+<p><a class="glightbox" href="/assets/drive/lbrPJfhjehblSoh-nP0ekL0Ex2vdgpcdYfb5On2Yf_u-GJSI6xfO2Xc3LIjgQVDzcoz7M2IorKsq-RTOlxfAkVbl4kcmQFKP4nmWm2-KUizzQFui2_6NCIUBx9evz0nJEZaemkGoWfi4brQ4T0fszq0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/lbrPJfhjehblSoh-nP0ekL0Ex2vdgpcdYfb5On2Yf_u-GJSI6xfO2Xc3LIjgQVDzcoz7M2IorKsq-RTOlxfAkVbl4kcmQFKP4nmWm2-KUizzQFui2_6NCIUBx9evz0nJEZaemkGoWfi4brQ4T0fszq0.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For details about the fields, please refer to the <a href="/products/etendo-classic/user-guide/production-management/setup/#process-plan"><em>Process Plan</em></a> section.</p>
+</div>
+<h3 id="salary-category-employee"><strong>Salary Category / Employee</strong></h3>
+<p>Here, the user can add or edit salary category workers that took part in a work requirement.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The information in this tab is populated automatically when the create standards process is executed, taking the employee information on the process plan into account. The information that is populated can be updated with the actual information of the employee effort during production before validating the work effort.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/KVrf-Pn7jX-2OpevFjDXIoxSLlYh8WHUJCUpeE3IsCdMoJJxVvHlhZYYf--EeQVX_DUs1Rt0ZkP7qVVDVWsc0POFyFhqlHI8r4PzKpBHfz58dolmqurRcDgrPjJLDjTUhoeqozVl20oA60gihkiybQk.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/KVrf-Pn7jX-2OpevFjDXIoxSLlYh8WHUJCUpeE3IsCdMoJJxVvHlhZYYf--EeQVX_DUs1Rt0ZkP7qVVDVWsc0POFyFhqlHI8r4PzKpBHfz58dolmqurRcDgrPjJLDjTUhoeqozVl20oA60gihkiybQk.png" /></a></p>
+<ul>
+<li><strong>Salary Category</strong>: information taken from the cost center setup. The populated information can be updated, for example, to enter another line for additional employees with different salary categories.</li>
+<li><strong>Business Partner</strong>: the name of the employee that executed the production.</li>
+<li><strong>Quantity</strong>: the number of employees of this salary category that executed the production. In the cost center set up, the number of employees of a concrete salary category that are related to the cost center is defined. The value can be overwritten here to reflect a different number of employees.</li>
+<li><strong>Estimated Cost</strong>: the cost calculated when the production costs are calculated, which takes into account the cost center use time.</li>
+<li><strong>Runtime</strong>:the time dedicated per employee to the production.</li>
+</ul>
+<h3 id="indirect-cost"><strong>Indirect Cost</strong></h3>
+<p>Here, it is possible to add and edit indirect costs related to a specified completed part of a work requirement.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The information in this tab is populated automatically when the create standards process is executed, based on the indirect cost entered on the process plan. The information that is populated can be updated with the actual information of any indirect cost related to the production, before validating the work effort.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/iuv3Te0GxcXZs0VXdS0MxCRy47S_PK0fFyxD7HQy6fTzO9M4hhDZEH2P62zTHl8GvZ5wYNjgWvd0c8S9y_bSbcvi65EHPFSe6vXhdG1Q3QFEYTwYgqqaE27FjVMSd8L0P-poFkey1ACplVzR7mC-EZI.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/iuv3Te0GxcXZs0VXdS0MxCRy47S_PK0fFyxD7HQy6fTzO9M4hhDZEH2P62zTHl8GvZ5wYNjgWvd0c8S9y_bSbcvi65EHPFSe6vXhdG1Q3QFEYTwYgqqaE27FjVMSd8L0P-poFkey1ACplVzR7mC-EZI.png" /></a></p>
+<h3 id="machine"><strong>Machine</strong></h3>
+<p>Here, it is possible to add and edit resources used to complete a specified part of a work requirement.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The information in this tab is populated automatically when the create standards process is executed, based on the machine information entered on the process plan. The information that is populated can be updated with the actual information of machines used during the production, before validating the work effort.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/du83cQoKoqRc-ivEUqD32zUTyQ0Z0bA1o903Kduu64hqqoUe_qjtPfSHnb35g_YeAZVgtuPqqRWslEIhTA_cwW2-mNlFoP-Ov6-VE2fi6GkVTj6oAkqwZLdwBufrWj2YtkQO_WnF2aRnO-Vl1ri0YzI.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/du83cQoKoqRc-ivEUqD32zUTyQ0Z0bA1o903Kduu64hqqoUe_qjtPfSHnb35g_YeAZVgtuPqqRWslEIhTA_cwW2-mNlFoP-Ov6-VE2fi6GkVTj6oAkqwZLdwBufrWj2YtkQO_WnF2aRnO-Vl1ri0YzI.png" /></a></p>
+<h3 id="outsourced"><strong>Outsourced</strong></h3>
+<p>Here, it is possible to add invoices corresponding to the outsourced part of a completed work requirement.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Any outsourced cost for the production is entered manually in this tab based on purchase invoices received from the company that executed the outsourced work.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/t18fChED8nHdZ7FgYDp8bSVGdDEdEnuq-VazT0WhJB5kkkanRMM5GUl9HPpxbnDM9wcEPcYmExxIvye2yw-5nZbHxQHkM39lEe9CIiYyDl3zBl6Vxm-DlQ0KoF11bZjvEhY_RpwxbHatzjZpftkhBUU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/t18fChED8nHdZ7FgYDp8bSVGdDEdEnuq-VazT0WhJB5kkkanRMM5GUl9HPpxbnDM9wcEPcYmExxIvye2yw-5nZbHxQHkM39lEe9CIiYyDl3zBl6Vxm-DlQ0KoF11bZjvEhY_RpwxbHatzjZpftkhBUU.png" /></a></p>
+<h3 id="how-to-reactivate-work-efforts">How to Reactivate Work Efforts</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5" target="_blank">Production Extensions Bundle</a>.</p>
+</div>
+<p>This functionality is useful when the user needs to reactivate a work effort.</p>
+<p>From the Work Effort window, the user is able to reactivate a previously generated effort just by selecting the corresponding record and clicking the Reactivate button.</p>
+<p>Once the effort is successfully reactivated, the state of the document changes to Not processed as it can be observed in the status bar.</p>
+<p><a class="glightbox" href="/assets/drive/j7x8yhwYGogcMN0tOknI1k6U0hlr0QXVGKW8AWvJe98_IPTIz8_WVYfDMOSVV5S80kFMEcJn2lbsGR-rApAobtnK2_miTFCFQpmi_BAv2DtzH6w9EOaBVY_8Z_feQQbcThY5scJYoVxUO3dQlwdAQtEKbOhAfcqTwLnIhJqFTSE5mrIzBaJxL2sc5v1AKw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/j7x8yhwYGogcMN0tOknI1k6U0hlr0QXVGKW8AWvJe98_IPTIz8_WVYfDMOSVV5S80kFMEcJn2lbsGR-rApAobtnK2_miTFCFQpmi_BAv2DtzH6w9EOaBVY_8Z_feQQbcThY5scJYoVxUO3dQlwdAQtEKbOhAfcqTwLnIhJqFTSE5mrIzBaJxL2sc5v1AKw.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit <a href="/products/etendo-classic/user-guide/warehouse-management/setup/#storage-bin">Storage Bin</a>.</p>
+</div>
+<h3 id="bulk-posting">Bulk Posting</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a></p>
+</div>
+<p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
+<p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+</div>
+<h2 id="production-run_1">Production Run</h2>
+<h3 id="introduction_2"><strong>Introduction</strong></h3>
+<p>Here, the user can edit precisely what has been produced from a selected product order.</p>
+<p>The Production Run screen displays the work efforts that are not validated. The listed work efforts are either created from the Work Requirement screen or directly in the Work Effort screen. The screen gives an overview to production workers of the production tasks that are scheduled to be executed.</p>
+<h3 id="production-run_2"><strong>Production Run</strong></h3>
+<p>In this window, it is possible to add progress details of the specified work requirements.</p>
+<p>The screens are identical to the Work Effort, with the exception that the work effort main tab is not displayed, but directly the information in the Production Run tab. This way, the screen gives an easy-to-read overview of the planned production runs. The Incidence information is a tab on the Production Run. The Production Run number is corresponding to the Work Effort number.</p>
+<p><a class="glightbox" href="/assets/drive/uYe5s0l6N_2p3yNcZZ9CmoCm8hsv0r5shLWAk5i1KoNMrWrBiKRKPwN6mIpKQFQXV3NCKYFKawIlL8Q05zcR-ZXe6xfoS-XklUbGLlp6azvuHga8Horfg6qSCS-08Ifbp6YcFiEL0paI4h8HbFRIQr4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/uYe5s0l6N_2p3yNcZZ9CmoCm8hsv0r5shLWAk5i1KoNMrWrBiKRKPwN6mIpKQFQXV3NCKYFKawIlL8Q05zcR-ZXe6xfoS-XklUbGLlp6azvuHga8Horfg6qSCS-08Ifbp6YcFiEL0paI4h8HbFRIQr4.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For details on the fields, please refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#production-run">Work Effort Production Run</a> section.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Deleting a production run is done in the corresponding Work Effort, not in this screen.</p>
+</div>
+<h3 id="incidence_1"><strong>Incidence</strong></h3>
+<p>In this tab, it is possible to add work incidences that might have occurred during the completion of a related work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/9Vj5p-rT0DvWXljBKw7z6R3MMWhh8Lkp6sI851WEGEaaIQyt-mzLltdRl3JUrkmXY9yvOqK24T13IHxKfz5bbGDVcDH9whF61Qy0H5AyciX2dMe59W7If7CxHVXUpnTrNAR1QY5TDTJ9yg44JxlF7-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/9Vj5p-rT0DvWXljBKw7z6R3MMWhh8Lkp6sI851WEGEaaIQyt-mzLltdRl3JUrkmXY9yvOqK24T13IHxKfz5bbGDVcDH9whF61Qy0H5AyciX2dMe59W7If7CxHVXUpnTrNAR1QY5TDTJ9yg44JxlF7-4.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#incidence">Work Effort Incidence</a> section for details.</p>
+</div>
+<h3 id="toolset_1"><strong>Toolset</strong></h3>
+<p>Here, it is possible to add or edit toolsets used to complete a specified part of a work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/Q5p4iUveKtYise9CCTg7VmF0jvVXwKsxdEU3sMWQmljUxumVGVlIW8wGmQYYN28J77yvNUZ-Ny_tv0_rOn-9ZvYr6UhpuNytC47pr3_1Bj5bOQA0cX6vloW_hGFjMMykVAW4w8aiX0gwFt7wrY9r0RY.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/Q5p4iUveKtYise9CCTg7VmF0jvVXwKsxdEU3sMWQmljUxumVGVlIW8wGmQYYN28J77yvNUZ-Ny_tv0_rOn-9ZvYr6UhpuNytC47pr3_1Bj5bOQA0cX6vloW_hGFjMMykVAW4w8aiX0gwFt7wrY9r0RY.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#toolset">Work Effort Toolset</a> section for details.</p>
+</div>
+<h3 id="product_2"><strong>Product</strong></h3>
+<p>Here, it is possible to add and edit I/O products related to a completed part of a work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/Gc6Uzzq-t4k22Uz5oDXh7fjTl_tGK424VU_jcwMiiAoD8Vr7M6mNZm3juSgCK8jFlSU4GXsrKST3R97seVusNoQeu1zCIMQJwUxLpY5sXhkqy2-rVAfTYwGQtuqadeyHg-2kaeK78SsHcMb_T-zZeZw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/Gc6Uzzq-t4k22Uz5oDXh7fjTl_tGK424VU_jcwMiiAoD8Vr7M6mNZm3juSgCK8jFlSU4GXsrKST3R97seVusNoQeu1zCIMQJwUxLpY5sXhkqy2-rVAfTYwGQtuqadeyHg-2kaeK78SsHcMb_T-zZeZw.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#product_1">Work Effort Product</a> section for details.</p>
+</div>
+<h3 id="salary-category-employee_1"><strong>Salary Category / Employee</strong></h3>
+<p>Here, it is possible to add or edit salary category workers that took part in a work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/k-se48cgS1yUpNHPL_i9PB0n3p4hQfdag3_cuAz4tWcA-KuIB6p8pqN_fgdU-B2JTYqT9sNBTdspSOCj-dcz9eYvJtYtB8smHudxN5aFssaeOVrk99WwJ0JlMxcJd8kysbVvSdsktJ4uaU2bWu3tmOg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/k-se48cgS1yUpNHPL_i9PB0n3p4hQfdag3_cuAz4tWcA-KuIB6p8pqN_fgdU-B2JTYqT9sNBTdspSOCj-dcz9eYvJtYtB8smHudxN5aFssaeOVrk99WwJ0JlMxcJd8kysbVvSdsktJ4uaU2bWu3tmOg.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#salary-category-employee">Work Effort Salary Category/Employee</a> section for details.</p>
+</div>
+<h3 id="indirect-cost_1"><strong>Indirect Cost</strong></h3>
+<p>Here, it is possible to add and edit indirect costs related to a specified completed part of a work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/IcPzMtAZbsDiPx4Btb7ixAEzC5olQai3DJ2y_airaujavIcaVDlnQgFj0nAz96QAX2KPy7OfdWkuX_uI6KvBeilA2UqBGfb2g5IFyVKEZokS-xWcRYDkHtf5mEH0nMiCZNd798T7xCOeSZMR1VJzlJ4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/IcPzMtAZbsDiPx4Btb7ixAEzC5olQai3DJ2y_airaujavIcaVDlnQgFj0nAz96QAX2KPy7OfdWkuX_uI6KvBeilA2UqBGfb2g5IFyVKEZokS-xWcRYDkHtf5mEH0nMiCZNd798T7xCOeSZMR1VJzlJ4.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#indirect-cost">Work Effort Indirect Cost</a> section for details.</p>
+</div>
+<h3 id="machine_1"><strong>Machine</strong></h3>
+<p>Here, it is possible to add and edit resources used to complete a specified part of a work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/6iUU--CNzMyPMA1sgX1ICpnnlXuYIdUFTy6uEZbWis0reuAH73_FD8lijEgN-97XBXhviIve9PbfvMtS6d5Ec1UH5vo1E2fsAHMou4GG6hUw5JhP2rSCbhcKuMnRmi1UGobBO4xHLxALmpJqTY7pDqE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/6iUU--CNzMyPMA1sgX1ICpnnlXuYIdUFTy6uEZbWis0reuAH73_FD8lijEgN-97XBXhviIve9PbfvMtS6d5Ec1UH5vo1E2fsAHMou4GG6hUw5JhP2rSCbhcKuMnRmi1UGobBO4xHLxALmpJqTY7pDqE.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#machine">Work Effort Machine</a> section for details.</p>
+</div>
+<h3 id="outsourced_1"><strong>Outsourced</strong></h3>
+<p>Here, it is possible to add invoices corresponding to the outsourced part of a completed work requirement.</p>
+<p><a class="glightbox" href="/assets/drive/IJs1mYGVcDg0ktrAk3FK7dFOn9f-vC7Sag9Vpj8NUkRF-29hh0Zub78jma19Hy9AHnzFxmlDncIQK9G-C9fNpR8evDlI306Zki5wBcRpMRATp7dD2iTf9kjGJaCjfby7qjQqyHdhV_yzQcRY6z4ysN0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/IJs1mYGVcDg0ktrAk3FK7dFOn9f-vC7Sag9Vpj8NUkRF-29hh0Zub78jma19Hy9AHnzFxmlDncIQK9G-C9fNpR8evDlI306Zki5wBcRpMRATp7dD2iTf9kjGJaCjfby7qjQqyHdhV_yzQcRY6z4ysN0.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Please, refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#outsourced">Work Effort Outsourced</a> section for details.</p>
+</div>
+<h2 id="quality-control-report">Quality Control Report</h2>
+<h3 id="introduction_3"><strong>Introduction</strong></h3>
+<p>In this window, it is possible to create and edit measurements and report findings at predefined checkpoints. The goal is to ensure output quality during production.</p>
+<p>For the production cycle, a Quality Control Point can be set up, in order to execute a check related to the production process. For example, checks on machinery or tools that are used in production.</p>
+<p>The execution of the checks is documented in the Quality Control Report.</p>
+<h3 id="date-and-shift"><strong>Date and Shift</strong></h3>
+<p>Here, it is possible to create measurements and insert gathered values or a specific date and shift.</p>
+<p>The date and shift during which a particular quality control point is documented, as well as the time when the check took place. Also, a contact name is entered:</p>
+<p><a class="glightbox" href="/assets/drive/AXduTqsMvEKpdg4y7gc6rhi91JPwt2Cq4iO6ymUhcF_hsfFaHkSwV4DhN8xLjzgAPSYdVd5UWEbj6gorXKI3L7EU-tTjr_W1-bjGUPcaWg_TWMgctRI98LOzLhFANWnVT3bw4Q1NEhwKDQu9LPO7Ays.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/AXduTqsMvEKpdg4y7gc6rhi91JPwt2Cq4iO6ymUhcF_hsfFaHkSwV4DhN8xLjzgAPSYdVd5UWEbj6gorXKI3L7EU-tTjr_W1-bjGUPcaWg_TWMgctRI98LOzLhFANWnVT3bw4Q1NEhwKDQu9LPO7Ays.png" /></a></p>
+<p>The Create CCP button is used to automatically populate the information in the Check Point Set and Time tabs about the check(s) that are configured to take place during the selected shift.</p>
+<p><a class="glightbox" href="/assets/drive/g9Qs9AbBjSGJ48NOvAAaOLdqPlZItdZXUcQ5lWi6BOLYjbZw0cnsxuFw5veceYk01kDtrHtpQ1PS8Hwy4Eu6wQba-F-5Gpdt6cfpc2DuxZLVDTfQ6tsXsxjQXrm-0qGQrQiJ-YbVug5uWhNEEzQL87g.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/g9Qs9AbBjSGJ48NOvAAaOLdqPlZItdZXUcQ5lWi6BOLYjbZw0cnsxuFw5veceYk01kDtrHtpQ1PS8Hwy4Eu6wQba-F-5Gpdt6cfpc2DuxZLVDTfQ6tsXsxjQXrm-0qGQrQiJ-YbVug5uWhNEEzQL87g.png" /></a></p>
+<p>Once the action above has been executed, the Edit CCP Measured Values button appears. When clicked, a popup appears in which the value of the check is entered:</p>
+<p><a class="glightbox" href="/assets/drive/lGjS_zMdUlNNVj4bkukepsGQaaAzl4l3K1eXK95Xj6RWbO7APL8z-H7wp_7KMEIFrlpDD5xSPmveCbgaG6Jg6uSNeUF0w88hd8O0mUJ5qERvwlme0Yx24rSDYT4wuH-t92Zc6bMYvDdSJS05UuIWxs8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/lGjS_zMdUlNNVj4bkukepsGQaaAzl4l3K1eXK95Xj6RWbO7APL8z-H7wp_7KMEIFrlpDD5xSPmveCbgaG6Jg6uSNeUF0w88hd8O0mUJ5qERvwlme0Yx24rSDYT4wuH-t92Zc6bMYvDdSJS05UuIWxs8.png" /></a></p>
+<p>After entering the value and clicking the OK button, the entered value appears in the Values tab.</p>
+<p>Once the value has been entered this way, the Input Time Measurement button appear. When clicked, a popup appears to process the information entered in the time tab:</p>
+<p><a class="glightbox" href="/assets/drive/jiWhuZFWP4dsSXIO-yc2gszXEB1MQL5OEDrusT5w3bWdzPWM9jiKqNx6p4ZF-P8QjMwvdZ1jvUuY2jH3DgDHDgNQ-qLdegHy53DpHg9e2-hiPYlWTxjUsZY-V1fmGyZoZNW7NssxKOpcvcR_0-Zmgo0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/jiWhuZFWP4dsSXIO-yc2gszXEB1MQL5OEDrusT5w3bWdzPWM9jiKqNx6p4ZF-P8QjMwvdZ1jvUuY2jH3DgDHDgNQ-qLdegHy53DpHg9e2-hiPYlWTxjUsZY-V1fmGyZoZNW7NssxKOpcvcR_0-Zmgo0.png" /></a></p>
+<h3 id="check-point-set"><strong>Check Point Set</strong></h3>
+<p>In this tab, it is possible to create and edit checkpoints for the related measurement.</p>
+<p>The information is populated with any checks that take place during the shift.</p>
+<p><a class="glightbox" href="/assets/drive/JL6RUh2Ew7-xaa-NsuOmFl0xyOE6u83pxeb62axr9rVadjxfmeJbvKCpxfFiDINvJItbszYw7QsNfdNN-aOqRGWz9yNoUcj9LD0jbG_NO27LrPrYCjtVkpz4R0Z4irN-oyfbYIfEn4b-8bmLyHy6WR4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/JL6RUh2Ew7-xaa-NsuOmFl0xyOE6u83pxeb62axr9rVadjxfmeJbvKCpxfFiDINvJItbszYw7QsNfdNN-aOqRGWz9yNoUcj9LD0jbG_NO27LrPrYCjtVkpz4R0Z4irN-oyfbYIfEn4b-8bmLyHy6WR4.png" /></a></p>
+<h4 id="time"><strong>Time</strong></h4>
+<p>Here, it is possible to create and edit times for related checkpoints.</p>
+<p>The information is automatically populated when the CCP button is clicked: the time that appears is the shift start date that is configured in the <a href="/products/etendo-classic/user-guide/production-management/setup/#shift">Quality Control Point Shift</a> information. When populated automatically, the status is processed.</p>
+<p>In the case that the information is entered manually, the information is processed by clicking the Input Time Measurement button.</p>
+<p><a class="glightbox" href="/assets/drive/3hziy8dLROOJxGjjQhkXtZaIyzJFS9XqcjzQaubPpXZeumnO9UGEllR1pRPqPCeyNgXDT5hLc_UfJGSExFBWwGH0LECB3IUbo4LZd26Hob071Eyow-o8pQyUYlR04QkVEX2pnjjwBcYYlX6FL5XxioI.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/3hziy8dLROOJxGjjQhkXtZaIyzJFS9XqcjzQaubPpXZeumnO9UGEllR1pRPqPCeyNgXDT5hLc_UfJGSExFBWwGH0LECB3IUbo4LZd26Hob071Eyow-o8pQyUYlR04QkVEX2pnjjwBcYYlX6FL5XxioI.png" /></a></p>
+<h4 id="values"><strong>Values</strong></h4>
+<p>Here, it is possible to create and edit values for a related measurement.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The information in this tab is automatically populated when the button of the Edit CCP Measured Values is clicked and a value is entered in the pop up screen. Alternatively, a value of what was measured during the check can be entered manually.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/4jyrm2KoM2sC0Zy5FmPXb0aEli0iR6pDWelkPfreobeFGrrnuf6aZfZY8WtXIdr9WaHQBC-sVYPwhTBS6JH9dZOAC7LAN3QXHCv9NtMuovd0OyFe1C1LfKlb-Bb-UB0fZMrbLBeR6fa5fAeP0aL1x2U.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/4jyrm2KoM2sC0Zy5FmPXb0aEli0iR6pDWelkPfreobeFGrrnuf6aZfZY8WtXIdr9WaHQBC-sVYPwhTBS6JH9dZOAC7LAN3QXHCv9NtMuovd0OyFe1C1LfKlb-Bb-UB0fZMrbLBeR6fa5fAeP0aL1x2U.png" /></a></p>
+<h2 id="periodic-quality-control-data">Periodic Quality Control Data</h2>
+<h3 id="introduction_4"><strong>Introduction</strong></h3>
+<p>In this window, the user can create and edit data collection and measurements related to quality control. This is done at predefined checkpoints for a manufactured product.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The results of the executed Periodic Quality Control is documented in this screen.</p>
+</div>
+<h3 id="periodic-quality-control-data-window"><strong>Periodic Quality Control Data window</strong></h3>
+<p>It is possible to create measurements at a predefined checkpoint for produced products.</p>
+<p>All relevant general information about the executed quality control is entered in this screen, such as which check was executed when and for which product:</p>
+<p><a class="glightbox" href="/assets/drive/VfilQBFh6Pl64kSKf_-p4e0sLGM73szKJy2qMCt7hcWPScFVz_K3jfqXfnqlAm_nAFN4u0XdQKuffM5kerObcgKqzaTVa9biz7IksSksW3oE3vKYX-ISF58oIH35EHKIETVpuf_qb5pot_P3SctW1qo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/VfilQBFh6Pl64kSKf_-p4e0sLGM73szKJy2qMCt7hcWPScFVz_K3jfqXfnqlAm_nAFN4u0XdQKuffM5kerObcgKqzaTVa9biz7IksSksW3oE3vKYX-ISF58oIH35EHKIETVpuf_qb5pot_P3SctW1qo.png" /></a></p>
+<p>After the main tab information is filled out, the Run Periodic Control button is clicked to populate information in the Result tab.</p>
+<h4 id="result"><strong>Result</strong></h4>
+<p>In this tab, it is possible to create and edit quality tests for a specified checkpoint, and add test results of the performed tests.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All information is this tab is automatically populated by the Run Periodic Control process, except for the Test Result field, which is entered manually.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/FqKAJrtkNbhmdc2OFOewWY9baewuUgIOxR7lS6vGBYJdl16KDkPYcUN8ulfBlBXGngl0FJNLEp9G17kVOoZcvql6tmUvr1aA-qKvAqPILie_SeeHL1vmonRIoVjSYqoqK1PB9OYLO9c9uTsd9aVm0qE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/FqKAJrtkNbhmdc2OFOewWY9baewuUgIOxR7lS6vGBYJdl16KDkPYcUN8ulfBlBXGngl0FJNLEp9G17kVOoZcvql6tmUvr1aA-qKvAqPILie_SeeHL1vmonRIoVjSYqoqK1PB9OYLO9c9uTsd9aVm0qE.png" /></a></p>
+<h2 id="internal-consumption">Internal Consumption</h2>
+<h3 id="introduction_5"><strong>Introduction</strong></h3>
+<p>In this window, it is possible to define products which are only to be used inside the company.</p>
+<p>The Internal Consumption screen is used to administer any products that are used during the execution of maintenance tasks. When processed, the stock is reduced. The products are purchased through the <a href="/products/etendo-classic/user-guide/procurement-management/transactions/">procurement process</a>. The products are set up as a regular item, without the Production checkbox being selected, since they are not part of the production process.</p>
+<h3 id="header_1"><strong>Header</strong></h3>
+<p>Here, it is possible to create products which are to be used inside the organization, and not sold to customers.</p>
+<p><a class="glightbox" href="/assets/drive/KIpOaB03M-1zAUmqLNzfu9ARrAWOZeHIQouUQYlDgkJb_inQARRCvSMFnCxiwEt-K_1XqOQUXFqiBA26Ca1dZWT6kirj7AbOvbDtThM1xH3Lj84yR1JdjPkhtelIaa4HGoIRr_1Karc9QwCzzeslEXE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/KIpOaB03M-1zAUmqLNzfu9ARrAWOZeHIQouUQYlDgkJb_inQARRCvSMFnCxiwEt-K_1XqOQUXFqiBA26Ca1dZWT6kirj7AbOvbDtThM1xH3Lj84yR1JdjPkhtelIaa4HGoIRr_1Karc9QwCzzeslEXE.png" /></a></p>
+<p>The name is a selectable value in the task tab of the <a href="/products/etendo-classic/user-guide/production-management/transactions/#maintenance-order">Maintenance Order</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Optionally, the Internal Consumption can be posted to the general ledger journal once the configuration is added. If done, information related to the cost of the product is posted.</p>
+</div>
+<h3 id="lines"><strong>Lines</strong></h3>
+<p>Here, it is possible to add internal consumption lines. Each line corresponds to one product.</p>
+<p>The information of the product, its location in the warehouse and the quantity used during the maintenance task is entered. When clicking the Process Internal Consumption, the stock level is decreased with the selected movement quantity.</p>
+<p><a class="glightbox" href="/assets/drive/0-R3JjQCmz0L-hVct2jtU1rrVJz-zAcjxHU--akKhVCaRmtjxfFZzJjJVxF30mdfYGCJoAhtdJASRKHtq2DfnMfWQE90TY2VQJ_0lp-4yb6Q6wpz_pdJOJHvu30XfnL6dBhW7BHNZ5vn5Igeg6HSIx8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/0-R3JjQCmz0L-hVct2jtU1rrVJz-zAcjxHU--akKhVCaRmtjxfFZzJjJVxF30mdfYGCJoAhtdJASRKHtq2DfnMfWQE90TY2VQJ_0lp-4yb6Q6wpz_pdJOJHvu30XfnL6dBhW7BHNZ5vn5Igeg6HSIx8.png" /></a></p>
+<h3 id="bulk-posting_1">Bulk Posting</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
+<p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+</div>
+<h2 id="maintenance-order">Maintenance Order</h2>
+<h3 id="introduction_6"><strong>Introduction</strong></h3>
+<p>In this window, it is possible to create and edit the results of a scheduled maintenance order.</p>
+<p>This document is used to register the execution and results of maintenance tasks. Any tasks that are confirmed in the <a href="/products/etendo-classic/user-guide/production-management/transactions/#maintenance-plan">maintenance plan</a> are selectable in this screen.</p>
+<h3 id="order"><strong>Order</strong></h3>
+<p>Here, it is possible to add previously scheduled maintenance for a specific date and report observations.</p>
+<p>In the main section of the document, the date and shift during which the tasks were executed is selected.</p>
+<p><a class="glightbox" href="/assets/drive/7J_RMrdg69_k9JI8v239krFRe_1mcIhvGmWL4P2EhN4vKyiE98FNe5eDau4xbyzz9KUuWO6nBUWdwk4F1SZ9QMs2f4neaZa9ubZDp-zAE27q_X4IzxrQwTlecgnYd_Eh2gis498mI53jQrgsW16lVok.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/7J_RMrdg69_k9JI8v239krFRe_1mcIhvGmWL4P2EhN4vKyiE98FNe5eDau4xbyzz9KUuWO6nBUWdwk4F1SZ9QMs2f4neaZa9ubZDp-zAE27q_X4IzxrQwTlecgnYd_Eh2gis498mI53jQrgsW16lVok.png" /></a></p>
+<ul>
+<li>the Insert Maintenances button is clicked to populate the information in the Task tab. In the following case, no scheduled maintenances are found.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/JwhbYeUF4gmYRZiwiXMbxwtX78WAWD2kbKqzeTa88X3NxXiM3rbE4aY1Jpc_05NO5y97SoqpWL0p5QM6ad-TZCwVoDg8HaT816mLbQDaaltM6cp5C1RHZ7r4YvjhZWpwDF1XYAB2ciL-Nu8dUlJ19U4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/JwhbYeUF4gmYRZiwiXMbxwtX78WAWD2kbKqzeTa88X3NxXiM3rbE4aY1Jpc_05NO5y97SoqpWL0p5QM6ad-TZCwVoDg8HaT816mLbQDaaltM6cp5C1RHZ7r4YvjhZWpwDF1XYAB2ciL-Nu8dUlJ19U4.png" /></a></p>
+<ul>
+<li><strong>OK checkbox</strong>: to indicate that the maintenance ended successfully. In the task tab, this results in the Result checkbox showing as selected.</li>
+<li><strong>Time</strong>: time in hours to execute the maintenance.</li>
+<li><strong>Observations</strong>: the results of the maintenance task are entered here.</li>
+</ul>
+<h4 id="worker"><strong>Worker</strong></h4>
+<p>In this tab, it is possible to add or edit workers that took part in a specified maintenance part.</p>
+<p>The employee that executed the maintenance task is entered in this tab. As per the information in the set up section, all employees that have the operator checkbox selected appear in the value list of the business partner field in this screen.</p>
+<p><a class="glightbox" href="/assets/drive/_ixGkV3uChoxlpefdf6jl-sGeUxGX0J3_rmlW4GN1HW6-cnTy-c8BL-SlMnvhoTb9SrO9Nf1VzSY9EgrWewlmBNK9dLoelWB3qBmP73kpEQeL9zbRljxqy3PshYgNVVRmUaGC208Ly7HtTtOWOivGAs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/_ixGkV3uChoxlpefdf6jl-sGeUxGX0J3_rmlW4GN1HW6-cnTy-c8BL-SlMnvhoTb9SrO9Nf1VzSY9EgrWewlmBNK9dLoelWB3qBmP73kpEQeL9zbRljxqy3PshYgNVVRmUaGC208Ly7HtTtOWOivGAs.png" /></a></p>
+<h3 id="task"><strong>Task</strong></h3>
+<p>In this tab, it is possible to edit maintenance tasks of a specified order.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Most of the information in this tab is automatically populated by clicking the Insert Maintenances button, apart from the <strong>Internal Consumption</strong> field. Only the <strong>Internal Consumption</strong> field and the <strong>Comments</strong> field are updatable. In this screen, any products that were used for the execution of the maintenance tasks are entered in the Internal Consumption field. For more information, please refer to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#internal-consumption">Internal Consumption</a> section.</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/TW1-CvgYU9cXZM8ywo45abWaFYebU1wQqjnpzyxRZIEFVp6Sk6rlkraqcuqiece_oSL_phqMNTpPQadoBswcjCT8eQe8rO8fx-8lU-rRHbd67thf74vGFgtht2bbw1_teYi2cLAneOydEiCFDg4Hmss.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/TW1-CvgYU9cXZM8ywo45abWaFYebU1wQqjnpzyxRZIEFVp6Sk6rlkraqcuqiece_oSL_phqMNTpPQadoBswcjCT8eQe8rO8fx-8lU-rRHbd67thf74vGFgtht2bbw1_teYi2cLAneOydEiCFDg4Hmss.png" /></a></p>
+<ul>
+<li><strong>Result checkbox</strong>: indication that the maintenance task is executed successfully. If the result is not successful, the task is still considered completed. For any follow up actions, a new maintenance plan is created.</li>
+</ul>
+<h2 id="insert-maintenances">Insert Maintenances</h2>
+<h3 id="introduction_7"><strong>Introduction</strong></h3>
+<p>The insert maintenances process executes population of the scheduled maintenance tasks to the <a href="/products/etendo-classic/user-guide/production-management/transactions/#maintenance-plan">Maintenance Plan</a> based on the maintenance information in the machine category and/or machine screen.</p>
+<p>The creation of the maintenance plan is based on a date range that is entered upon launching the process.</p>
+<p><a class="glightbox" href="/assets/drive/eysNqSiPXml7NzZWE6qc7Nxv5ndjJ23QY7wfGJOdQk15Bape9nMC2VzAgoXVsCqzgrNbjt88Y49Jt_l2-gTOfRJQWpne5dFblNZdTy271PHt3zMHSEUTMZ-CskKAhe9I8AFJnNrtOmh2lnJdsXyAo88.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/eysNqSiPXml7NzZWE6qc7Nxv5ndjJ23QY7wfGJOdQk15Bape9nMC2VzAgoXVsCqzgrNbjt88Y49Jt_l2-gTOfRJQWpne5dFblNZdTy271PHt3zMHSEUTMZ-CskKAhe9I8AFJnNrtOmh2lnJdsXyAo88.png" /></a></p>
+<h2 id="maintenance-plan">Maintenance Plan</h2>
+<h3 id="introduction_8"><strong>Introduction</strong></h3>
+<p>Here, it is possible to add and edit predefined maintenance plans.</p>
+<p>The Maintenance Plan information is created in 2 possible ways:</p>
+<ul>
+<li>populated automatically by the insert maintenances process</li>
+<li>manually: for example, to enter data when a machine breaks down and needs corrective maintenance.</li>
+</ul>
+<p>Any maintenance tasks that have a <a href="/products/etendo-classic/user-guide/production-management/transactions/#maintenance-order">Maintenance Order</a> linked, are hidden by a default filter that is applied to the screen.</p>
+<h3 id="maintenance"><strong>Maintenance</strong></h3>
+<p>Here, it is possible to create and edit maintenance tasks for a specific date.</p>
+<p>The Maintenance Plan gives an overview of all the maintenance tasks for a certain time period that are entered by the insert maintenances process or manually. Regardless of how the records were created, the information can be updated to change dates or add comments.</p>
+<p>Once the maintenance task is correctly reflected, the confirmation checkbox is selected.</p>
+<p><a class="glightbox" href="/assets/drive/t7AGwwCGujuokaQuwH_fJLSj6w1v-0cm5e5GK0kOCXhyv57GXxfWlTs2TzK-hh__GP-gAU6FCSglWGH1A_DNJ1IJ0Uq9iEJTAtT_pEQX_z34ctnjHAEKk1Y_R4B7vPKJ8jEPKKfU7y26hHm3LKPDTgE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/t7AGwwCGujuokaQuwH_fJLSj6w1v-0cm5e5GK0kOCXhyv57GXxfWlTs2TzK-hh__GP-gAU6FCSglWGH1A_DNJ1IJ0Uq9iEJTAtT_pEQX_z34ctnjHAEKk1Y_R4B7vPKJ8jEPKKfU7y26hHm3LKPDTgE.png" /></a></p>
+<h2 id="calculate-standard-costs">Calculate Standard Costs</h2>
+<h3 id="introduction_9"><strong>Introduction</strong></h3>
+<p>The Calculate Standard Costs process is run to generate the standard (= theoretical) cost of manufactured products.</p>
+<p>Cost information is set up in several screens:</p>
+<ul>
+<li>in the <a href="/products/etendo-classic/user-guide/production-management/setup/#process-plan">Process Plan</a>, the use of the <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#cost-center">Cost center</a> is defined</li>
+<li>in the cost center, the following cost is defined:</li>
+<li><strong>Employee information</strong>: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#salary-category">Salary Category</a> screen.</li>
+<li><strong>Machine information</strong>: the machine and usage information is entered in the cost center screen. The machine cost is entered in the <a href="/products/etendo-classic/user-guide/production-management/setup/#machine_1">Machine</a> screen.</li>
+<li><strong>Indirect cost information</strong>: all indirect cost items related to a cost center are list. The indirect cost is entered in the <a href="/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2">Indirect Cost</a> screen.</li>
+<li>in the process plan, the quantities and cost of the materials used in the production process are defined.</li>
+</ul>
+<p>For raw material, the price list information is used for the cost of the P-. The purchase price list that is used for the raw material cost is marked as default.</p>
+<p>The cost information that is calculated for a product P+ is used when that product is a P- for another operation<strong>.</strong></p>
+<p>The formula that is used by the process is the following:</p>
+<p>(Cost of Cost Center + Cost Employees + Cost Machines + Indirect Costs) + (Quantity P- x Cost P-) = the cost per unit.</p>
+<p>When the costs of the cost center, machines, employees and indirect costs are calculated, they are multiplied by different values depending on their unit of measure:</p>
+<ul>
+<li>If per Hour is used, the cost is multiplied by the Use of the cost center in the Process Plan</li>
+<li>If per Unit is used, the cost is multiplied by the sum of the quantities of the P+'s of the sequence.</li>
+<li>If per Kilogram is used, the cost is multiplied by the sum of the weight of all the P+'s of the sequence.</li>
+</ul>
+<p>For Indirect costs, the additional unit of measure percentage is available. This adds the defined percentage to the total cost calculated (cost center, employee, machine, indirect costs and P- products). For example, if defined as 1.15, an additional 15% is added to the cost.</p>
+<div class="admonition info">
+<p class="admonition-title">Info<p>For the Indirect Cost to be included correctly, the following configuration is important in the <a href="/products/etendo-classic/user-guide/production-management/setup/#indirect-cost_2">Indirect Cost</a> screen:<br>
+    -select Cost Type = Production,<br>
+    -a date range that includes the date of the standard cost calculation in the Value tab.<br>
+This way, the standard cost for each operation is calculated.</p>
+</p>
+</div>
+<p><a class="glightbox" href="/assets/drive/tbl7rEZD5KfBpyiysFXuwOq3v7iaGF2IvjdC7si9PCqrkPxA2GUfVF0vy0uNFVcwY_XMaJ6lTMCENUfE_S51YX3bqX2YT7-J-yENd8-wq0McDEPeiQJRyLM4LeBCplhwbNEVMCzY31jvIwY3MHrvFuU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/tbl7rEZD5KfBpyiysFXuwOq3v7iaGF2IvjdC7si9PCqrkPxA2GUfVF0vy0uNFVcwY_XMaJ6lTMCENUfE_S51YX3bqX2YT7-J-yENd8-wq0McDEPeiQJRyLM4LeBCplhwbNEVMCzY31jvIwY3MHrvFuU.png" /></a></p>
+<p>The outcome of the calculation appears in the tabs of the Process Plan:</p>
+<p>In the Employee, Machine and Indirect Cost tabs, the result of the costs are automatically populated.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/etendo.software/" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
