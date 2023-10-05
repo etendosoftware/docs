@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -1228,6 +1228,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Getting Started
@@ -1245,6 +1247,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="In This Page">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -3594,6 +3598,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3714,9 +3720,8 @@
   
 
 
-  <h1>Getting Started</h1>
-
 <p><a class="glightbox" href="/assets/getting-started/overview/cover-getting-started.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cover-getting-started.png" src="/assets/getting-started/overview/cover-getting-started.png" /></a></p>
+<h1 id="_1"></h1>
 <h2 id="overview">Overview</h2>
 <p>Sales Management deals with all activities related to the customer sales process and corresponding reporting.</p>
 <p>This application area of Etendo covers Order to Shipment and Invoicing parts of <a href="/products/etendo-classic/user-guide/sales-management/getting-started/#order-to-cash-business-flow">Order to Cash</a> business flow and <a href="/products/etendo-classic/user-guide/sales-management/getting-started/#customer-returns-business-flow">Customer Returns</a> business process. </p>
@@ -3755,46 +3760,46 @@ Same way, each product that is being sold needs to be defined in a <em>unit of m
 <p class="admonition-title">Info</p>
 <p>For more information, visit <a href="/products/etendo-classic/user-guide/master-data-management/business-partner-setup/">Business Partner Setup</a> and <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner">Business Partner</a>.</p>
 </div>
-<p>Above configuration is one part of the overall Business setup flow within the Master Data Management setup.</p>
-<p>Finally, the Quotation document type requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.</p>
+<p>Above configuration is one part of the overall business setup flow within the Master Data Management setup.</p>
+<p>Finally, the Quotation <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type">document type</a> requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is not required to perform any additional setup for the Sales Management application area if Food &amp; Beverage (F&amp;B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.</p>
 </div>
 <h3 id="execution">Execution</h3>
 <p>In Sales Management the Order to Cash business process is executed as follows.</p>
-<p>Customers can ask directly for a Sales Order or request a Quotation. If the Business Partner asks for a Quotation Sales staff:</p>
+<p>Customers can ask directly for a Sales Order or request a Quotation. If the Business Partner asks for a quotation, the sales staff:</p>
 <ul>
 <li>Creates a new document in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/">Sales Quotation</a> window and looks up the customer name in the Business Partner field. If the Business Partner does not exist, it is entered in the application with the <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner">Business Partner</a> window.</li>
 <li>Then Sales staff fills the <a href="/products/etendo-classic/user-guide/sales-management/transactions/">Sales Quotation</a> window. The transaction document is set to Quotation by default. And continues by adding for each product a line with the product, quantity and if needed its attribute (size and/or color and/or serial number, etc.).</li>
 <li>Once the quotation is ready, it is booked. The Document Status of the quotation changes to Under Evaluation. The Quotation can be printed and sent to the Business Partner by email.</li>
 <li>When the Quotation is accepted by the Business Partner a sales order can be created based on this quotation. When this is done the status of the quotation changes to <em>Closed - Order</em> created and the Sales Order can be printed and sent to the Business Partner by email as a confirmation.</li>
 </ul>
-<p>If the Business Partner places an order directly Sales staff:</p>
+<p>If the Business Partner places an order directly, the sales staff:</p>
 <ul>
 <li>Creates it with the same <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-order">Sales Order</a> window setting the Transaction Document to the desired type of Order (<em>Standard Order, POS Order, Warehouse Order</em>). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.</li>
 <li>When the Sales Order is processed, it reserves the material for its shipment.</li>
-<li>To review past sales of the Business Partner Sales staff uses <a href="">Sales Dimensional Report</a>.</li>
+<li>To review past sales of the Business Partner Sales staff uses <a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-dimensional-report">Sales Dimensional Report</a>.</li>
 </ul>
 <p>Warehouse staff:</p>
 <ul>
-<li>Looks for orders pending for preparation in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=create+shipments+orders#create-shipments-from-orders">Create Shipments from Orders</a> window or with the help of Orders Awaiting Delivery Report.</li>
+<li>Looks for orders pending for preparation in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#create-shipments-from-orders">Create Shipments from Orders</a> window or with the help of <a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#orders-awaiting-delivery-report">Orders Awaiting Delivery Report</a>.</li>
 <li>The Warehouse staff can create a Shipment in 2 ways:</li>
 </ul>
-<p>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=create+shipments+orders#create-shipments-from-orders">Create Shipments from Orders</a> window. It creates a shipment completed for the selected Sales Orders.</p>
-<p>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=goods+shipment#goods-shipment">Goods Shipment</a> window in which the Warehouse staff creates the shipment in a manual way.</p>
+<p>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#create-shipments-from-orders">Create Shipments from Orders</a> window. It creates a shipment completed for the selected Sales Orders.</p>
+<p>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#goods-shipment">Goods Shipment</a> window in which the Warehouse staff creates the shipment in a manual way.</p>
 <ul>
 <li>Completed shipment updates stock information (product levels go down) and can be posted to create the accounting entries of the shipment.</li>
-<li>Shipments Dimensional Report is used to review past shipments to the Business Partner.</li>
+<li><a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#shipments-dimensional-report">Shipments Dimensional Report</a> is used to review past shipments to the Business Partner.</li>
 </ul>
 <p>Finance staff can generate invoices in different ways:</p>
 <ul>
-<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=generate+invoices#generate-invoices">Generate Invoices</a> window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.</li>
-<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=invoices+orders#create-invoices-from-orders">Create Invoices from Orders</a> window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.</li>
+<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#generate-invoices">Generate Invoices</a> window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.</li>
+<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#create-invoices-from-orders">Create Invoices from Orders</a> window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.</li>
 <li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window in which the Finance staff creates the invoice in a manual way.</li>
-<li>Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the payment plan can be modified.</li>
-<li>Orders Awaiting Invoice Report helps Finance staff to plan and verify invoicing of the Business Partners.</li>
-<li>Finance staff is able to review past customer invoicing information in the Sales Invoice Dimensional Report.</li>
+<li>Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#payment-removal_1">payment plan</a> can be modified.</li>
+<li><a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#orders-awaiting-invoice-report">Orders Awaiting Invoice Report</a> helps Finance staff to plan and verify invoicing of the Business Partners.</li>
+<li>Finance staff is able to review past customer invoicing information in the <a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-invoice-dimensional-report">Sales Invoice Dimensional Report</a>.</li>
 </ul>
 <p>Sales revenues expenses can be recognized in different ways:</p>
 <ul>
@@ -3805,7 +3810,7 @@ In Etendo, in this situation, revenue is generated as part of the accounting of 
 <p>In Etendo, in this situation, the revenue can be deferred until a given starting period and within a given number of periods by entering a revenue deferred plan in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#lines_5">sales invoice lines</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For a full description of this functionality visit <a href="http://wiki.openbravo.com/wiki/How_to_manage_deferred_revenue_and_expenses" target="_blank">How to manage deferred revenue and expenses</a> article.</p>
+<p>For a full description of this functionality visit <a href="">How to manage deferred revenue and expenses</a> article.</p>
 </div>
 <p>Credit limit for business partner</p>
 <ul>
@@ -3814,7 +3819,7 @@ In Etendo, in this situation, revenue is generated as part of the accounting of 
 <p>Finally, the finance staff is in charge of recording and managing the customer payments:</p>
 <ul>
 <li>When a payment is received against an invoice it can be recorded in the Sales Invoice window by using the Add Payment button. It is also possible to receive a prepayment for the Sales Order. 
-For more information about payment management documentation visit the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/">Financial Management//Receivables&amp;Payables</a> and in the <a href="http://wiki.openbravo.com/wiki/How_to_Manage_Prepaid_Invoices_in_Receivables">How to manage prepaid invoices in receivables</a> .</li>
+For more information about payment management documentation visit the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/">Financial Management//Receivables&amp;Payables</a> and in the <a href="">How to manage prepaid invoices in receivables</a> .</li>
 </ul>
 <h2 id="customer-returns-business-flow">Customer Returns Business Flow</h2>
 <p>Customer Returns workflow manages the business processes for returning items back from customers either for credit</p>
@@ -3824,24 +3829,24 @@ For more information about payment management documentation visit the <a href="/
 <h3 id="configuration_1">Configuration</h3>
 <p>The following configuration options are available in this process:</p>
 <ul>
-<li><a href="/products/etendo-classic/user-guide/master-data-management/business-partner-setup/?h=return+reason#return-reasons_1">Return reasons</a></li>
-<li><a href="/products/etendo-classic/user-guide/sales-management/setup/?h=condition#condition-of-the-goods">Condition of the goods</a></li>
+<li><a href="/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#return-reasons">Return reasons</a></li>
+<li><a href="/products/etendo-classic/user-guide/sales-management/setup/#condition-of-the-goods">Condition of the goods</a></li>
 <li>Accounts for <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#accounting">Cost of Goods Sold</a> (COGS) for returns and <a href="/products/etendo-classic/user-guide/master-data-management/master-data/#accounting">Revenue for returns</a></li>
 </ul>
 <h3 id="execution_1">Execution</h3>
 <p>In Sales Management the Customer Returns business process is executed as follows.
-Customers can request a return material for whatever reason.
+Customers can request a <a href="/products/etendo-classic/user-guide/master-data-management/business-partner-setup/#return-reasons">return material</a> for whatever reason.
 Sales staff:</p>
 <ul>
-<li>Creates a new document in the <a href="http://wiki.openbravo.com/wiki/Return_from_Customer#Header" target="_blank">Return from Customer</a> window and looks for the customer name in the Business Partner field.</li>
-<li>And continues by adding lines clicking the button Pick/Edit lines.
+<li>Creates a new document in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#return-from-customer">Return from Customer</a> window and looks for the customer name in the Business Partner field.</li>
+<li>And continues by adding lines clicking the button <a href="/products/etendo-classic/user-guide/sales-management/transactions/#lines_3">Pick/Edit lines</a>.
 Picks Goods shipment lines and edits the quantity the customer wants to return, price and return reasons.</li>
 <li>Once the Return Material document is accepted, process it by clicking the button Book. The status of the document changes from Draft to Booked.</li>
 </ul>
 <p>Warehouse staff:</p>
 <ul>
-<li>Creates a new document in the Return Material Receipt window and looks for the vendor name in the Business Partner field.</li>
-<li>And continues by adding lines clicking the button Pick/Edit lines.
+<li>Creates a new document in the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#return-material-receipt">Return Material Receipt</a> window and looks for the vendor name in the Business Partner field.</li>
+<li>And continues by adding lines clicking the button <a href="/products/etendo-classic/user-guide/sales-management/transactions/#lines_4">Pick/Edit lines</a>.
 Picks lines created in the Return from Customer window.
 If needed, edit the quantity received and its location (storage bin).</li>
 <li>Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed</li>
@@ -3850,19 +3855,18 @@ If needed, edit the quantity received and its location (storage bin).</li>
 <p>Finance staff:
 To invoice these documents can do it from several windows / processes:</p>
 <ul>
-<li>With <a href="http://wiki.openbravo.com/wiki/Return_from_Customer#Header" target="_blank">Return from Customer</a> window where a new button Create Credit might appear or not based on the original sales order. If the order is already invoiced then it will be present, if not - it won't. Using this button it is possible to invoice the return order following the standard process, that is, depending on the invoice terms.</li>
-<li>With the same <a href="http://wiki.openbravo.com/wiki/Return_from_Customer#Header" target="_blank">Create Credit</a> button it is also possible to create an invoice and leave it as credit to be used later.</li>
-<li>Using <a href="/products/etendo-classic/user-guide/sales-management/transactions/?h=generate+invoices#generate-invoices">Generate Invoices</a> process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a <a href="http://wiki.openbravo.com/wiki/Document_Type" target="_blank">Return Material Sales Invoices</a>).</li>
-<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window by picking lines and either grouping them from standard sales orders and return orders or by creating individual <a href="http://wiki.openbravo.com/wiki/Document_Type" target="_blank">Return Material Sales Invoices</a> only from return orders.</li>
-<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window by picking lines and either grouping them from standard sales orders and return orders or by creating individual <a href="http://wiki.openbravo.com/wiki/Document_Type" target="_blank">Return Material Sales Invoices</a> only from return orders.</li>
+<li>With <a href="/products/etendo-classic/user-guide/sales-management/transactions/#return-from-customer">Return from Customer</a> window where a new button Create Credit might appear or not based on the original sales order. If the order is already invoiced then it will be present, if not - it won't. Using this button it is possible to invoice the return order following the standard process, that is, depending on the invoice terms.</li>
+<li>With the same <a href="/products/etendo-classic/user-guide/sales-management/transactions/#return-from-customer">Create Credit</a> button it is also possible to create an invoice and leave it as credit to be used later.</li>
+<li>Using <a href="/products/etendo-classic/user-guide/sales-management/transactions/#generate-invoices">Generate Invoices</a> process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type">Return Material Sales Invoices</a>).</li>
+<li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window by picking lines and either grouping them from standard sales orders and return orders or by creating individual <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type">Return Material Sales Invoices</a> only from return orders.</li>
 <li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window creating a Return Material Sales Invoice making sure that the amount of the Invoice is negative.</li>
 </ul>
 <h2 id="relationship-with-other-application-areas">Relationship with other application areas</h2>
 <p>Sales Management has a connection with other application areas:</p>
 <ul>
-<li><a href="/products/etendo-classic/user-guide/warehouse-management/transactions/">Warehouse Management</a> as shipment changes stock quantity and its value.</li>
-<li><a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/">Financial Management</a> in terms of managing payments.</li>
-<li><a href="/products/etendo-classic/user-guide/material-requirement-planning/transactions/?h=material">Material Requirement</a> (MRP) because pending sales orders are one of the inputs for the prodReversal Sales Invoiceuction process.</li>
+<li><a href="">Warehouse Management</a> as shipment changes stock quantity and its value.</li>
+<li><a href="">Financial Management</a> in terms of managing payments.</li>
+<li><a href="">Material Requirement</a> (MRP) because pending sales orders are one of the inputs for the prodReversal Sales Invoiceuction process.</li>
 </ul>
 
 
