@@ -128,7 +128,8 @@ nav:
           - Getting Started: products/etendo-classic/user-guide/procurement-management/getting-started.md 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
-        - Warehouse Management: 
+        - Warehouse Management:
+          - Getting Started: products/etendo-classic/user-guide/warehouse-management/getting-started.md 
           - Transactions: products/etendo-classic/user-guide/warehouse-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/warehouse-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/warehouse-management/setup.md

@@ -11,6 +11,8 @@ tags:
 
 ## Overview
 
+<iframe width="720" height="480"  src="https://www.youtube.com/embed/d33J6fTMEqM?si=NlHOoCq82bCJG3Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Procurement Management deals with all the activities related to the purchase of goods and services from external suppliers and the corresponding reporting.
 
 This application area of Etendo covers Requisition to Receipt and Invoicing parts of the [Procure To Pay business flow](/products/etendo-classic/user-guide/procurement-management/getting-started/#procure-to-pay-business-flow) and [Supplier Returns business flow](/products/etendo-classic/user-guide/procurement-management/getting-started/#supplier-returns-business-flow).
