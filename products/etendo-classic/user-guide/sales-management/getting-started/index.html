@@ -3741,17 +3741,19 @@
 <p>This application area of Etendo covers Order to Shipment and Invoicing parts of <a href="/products/etendo-classic/user-guide/sales-management/getting-started/#order-to-cash-business-flow">Order to Cash</a> business flow and <a href="/products/etendo-classic/user-guide/sales-management/getting-started/#customer-returns-business-flow">Customer Returns</a> business process. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For Payments Management of Order to Cash see the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/">Financial Management</a> application area.</p>
+<p>For Payments Management of Order to Cash see the <a href="">Financial Management</a> application area.</p>
 </div>
 <h2 id="order-to-cash-business-flow">Order to Cash Business Flow</h2>
 <p><em>Order to Cash</em> workflow manages the life-cycle of a sales process.</p>
 <p>Due to its complexity and different roles involved, it is convenient to split Order to Cash down into two main sub-processes:</p>
 <ol>
-<li><em>Order to Shipment</em> process starts when a customer requests a quotation or orders goods to the moment the warehouse staff ships the merchandise.</li>
-</ol>
+<li>
+<p><em>Order to Shipment</em> process starts when a customer requests a quotation or orders goods to the moment the warehouse staff ships the merchandise.</p>
 <p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/sales-management/getting-started/ord-to-ship-bus-pro.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ord-to-ship-bus-pro" src="/assets/products/etendo-classic/user-guide/sales-management/getting-started/ord-to-ship-bus-pro.png" /></a></p>
-<ol>
-<li><em>Customer Invoice to Cash</em> continues the previous sub-process by invoicing customer deliveries and closes it by receiving payments from buyers.</li>
+</li>
+<li>
+<p><em>Customer Invoice to Cash</em> continues the previous sub-process by invoicing customer deliveries and closes it by receiving payments from buyers.</p>
+</li>
 </ol>
 <p><a class="glightbox" href="/assets/products/etendo-classic/user-guide/sales-management/getting-started/cust-inv-bus-proc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cust-inv-bus-proc" src="/assets/products/etendo-classic/user-guide/sales-management/getting-started/cust-inv-bus-proc.png" /></a></p>
 <h3 id="configuration">Configuration</h3>
@@ -3791,7 +3793,7 @@ Same way, each product that is being sold needs to be defined in a <em>unit of m
 </ul>
 <p>If the Business Partner places an order directly, the sales staff:</p>
 <ul>
-<li>Creates it with the same <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-order">Sales Order</a> window setting the Transaction Document to the desired type of Order (<em>Standard Order, POS Order, Warehouse Order</em>). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.</li>
+<li>Creates it with the same <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-order">Sales Order</a> window setting the Transaction Document to the desired type of Order (<em>Standard Order, Warehouse Order</em>). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.</li>
 <li>When the Sales Order is processed, it reserves the material for its shipment.</li>
 <li>To review past sales of the Business Partner Sales staff uses <a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-dimensional-report">Sales Dimensional Report</a>.</li>
 </ul>
@@ -3811,7 +3813,7 @@ Same way, each product that is being sold needs to be defined in a <em>unit of m
 <li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#generate-invoices">Generate Invoices</a> window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.</li>
 <li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#create-invoices-from-orders">Create Invoices from Orders</a> window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.</li>
 <li>With the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice">Sales Invoice</a> window in which the Finance staff creates the invoice in a manual way.</li>
-<li>Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#payment-removal_1">payment plan</a> can be modified.</li>
+<li>Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#payment">payment plan</a> can be modified.</li>
 <li><a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#orders-awaiting-invoice-report">Orders Awaiting Invoice Report</a> helps Finance staff to plan and verify invoicing of the Business Partners.</li>
 <li>Finance staff is able to review past customer invoicing information in the <a href="/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-invoice-dimensional-report">Sales Invoice Dimensional Report</a>.</li>
 </ul>
@@ -3833,7 +3835,7 @@ In Etendo, in this situation, revenue is generated as part of the accounting of 
 <p>Finally, the finance staff is in charge of recording and managing the customer payments:</p>
 <ul>
 <li>When a payment is received against an invoice it can be recorded in the Sales Invoice window by using the Add Payment button. It is also possible to receive a prepayment for the Sales Order. 
-For more information about payment management documentation visit the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/">Financial Management//Receivables&amp;Payables</a> and in the <a href="">How to manage prepaid invoices in receivables</a> .</li>
+For more information about payment management documentation visit the <a href="">Financial Management//Receivables&amp;Payables</a> and in the <a href="">How to manage prepaid invoices in receivables</a> .</li>
 </ul>
 <h2 id="customer-returns-business-flow">Customer Returns Business Flow</h2>
 <p>Customer Returns workflow manages the business processes for returning items back from customers either for credit</p>
