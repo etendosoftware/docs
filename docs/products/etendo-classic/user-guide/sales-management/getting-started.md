@@ -16,7 +16,7 @@ Sales Management deals with all activities related to the customer sales process
 This application area of Etendo covers Order to Shipment and Invoicing parts of [Order to Cash](/products/etendo-classic/user-guide/sales-management/getting-started/#order-to-cash-business-flow) business flow and [Customer Returns](/products/etendo-classic/user-guide/sales-management/getting-started/#customer-returns-business-flow) business process. 
 
 !!! Info
-    For Payments Management of Order to Cash see the [Financial Management](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/) application area.
+    For Payments Management of Order to Cash see the [Financial Management]() application area.
 
 ## Order to Cash Business Flow
 
@@ -26,7 +26,7 @@ Due to its complexity and different roles involved, it is convenient to split Or
 
 1. *Order to Shipment* process starts when a customer requests a quotation or orders goods to the moment the warehouse staff ships the merchandise.
 
-![ord-to-ship-bus-pro](/assets/products/etendo-classic/user-guide/sales-management/getting-started/ord-to-ship-bus-pro.png)
+    ![ord-to-ship-bus-pro](/assets/products/etendo-classic/user-guide/sales-management/getting-started/ord-to-ship-bus-pro.png)
 
 2. *Customer Invoice to Cash* continues the previous sub-process by invoicing customer deliveries and closes it by receiving payments from buyers.
 
@@ -73,7 +73,7 @@ Customers can ask directly for a Sales Order or request a Quotation. If the Busi
 
 If the Business Partner places an order directly, the sales staff:
 
-- Creates it with the same [Sales Order](/products/etendo-classic/user-guide/sales-management/transactions/#sales-order) window setting the Transaction Document to the desired type of Order (*Standard Order, POS Order, Warehouse Order*). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.
+- Creates it with the same [Sales Order](/products/etendo-classic/user-guide/sales-management/transactions/#sales-order) window setting the Transaction Document to the desired type of Order (*Standard Order, Warehouse Order*). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.
 - When the Sales Order is processed, it reserves the material for its shipment.
 - To review past sales of the Business Partner Sales staff uses [Sales Dimensional Report](/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-dimensional-report).
 
@@ -94,7 +94,7 @@ Finance staff can generate invoices in different ways:
 - With the [Generate Invoices](/products/etendo-classic/user-guide/sales-management/transactions/#generate-invoices) window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.
 - With the [Create Invoices from Orders](/products/etendo-classic/user-guide/sales-management/transactions/#create-invoices-from-orders) window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.
 - With the [Sales Invoice](/products/etendo-classic/user-guide/sales-management/transactions/#sales-invoice) window in which the Finance staff creates the invoice in a manual way.
-- Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the [payment plan](/products/etendo-classic/user-guide/sales-management/transactions/#payment-removal_1) can be modified.
+- Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the [payment plan](/products/etendo-classic/user-guide/sales-management/transactions/#payment) can be modified.
 - [Orders Awaiting Invoice Report](/products/etendo-classic/user-guide/sales-management/analysis-tools/#orders-awaiting-invoice-report) helps Finance staff to plan and verify invoicing of the Business Partners.
 - Finance staff is able to review past customer invoicing information in the [Sales Invoice Dimensional Report](/products/etendo-classic/user-guide/sales-management/analysis-tools/#sales-invoice-dimensional-report).
 
@@ -119,7 +119,7 @@ Credit limit for business partner
 Finally, the finance staff is in charge of recording and managing the customer payments:
 
 - When a payment is received against an invoice it can be recorded in the Sales Invoice window by using the Add Payment button. It is also possible to receive a prepayment for the Sales Order. 
-For more information about payment management documentation visit the [Financial Management//Receivables&Payables](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/) and in the [How to manage prepaid invoices in receivables]() .
+For more information about payment management documentation visit the [Financial Management//Receivables&Payables]() and in the [How to manage prepaid invoices in receivables]() .
 
 
 ## Customer Returns Business Flow
