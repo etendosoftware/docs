@@ -4626,47 +4626,47 @@
 <h3 id="header">Header</h3>
 <p>Requisition header allows entering the following data:</p>
 <ul>
-<li>The business partner or <strong>supplier</strong>, this is an optional field that could be filled in by the requester in case it is known, therefore:</li>
-<li>The <strong>supplier entered in the header</strong> will be the one <strong>used for every requisition line unless it is changed</strong> at lines level for a particular line.</li>
-<li>If there is <strong>no supplier entered in the requisition header</strong> the <strong>one setup by default for the product</strong> in its master data window, "<strong>Purchasing</strong>" tab will be used.</li>
-<li>If <strong>there is no business partner or supplier</strong> in the header, or in the lines, or setup in the product, <strong>the user will have to enter it while creating the purchase order from the requisition</strong>.</li>
-<li>The <strong>purchase price list</strong>. This is also an optional field to be filled-in, in case it is known by the requester and its behaviour is the same as described above as it is linked to the Business Partner.</li>
+<li>The business partner or supplier, this is an optional field that could be filled in by the requester in case it is known, therefore:</li>
+<li>The supplier entered in the header will be the one used for every requisition line unless it is changed at lines level for a particular line.</li>
+<li>If there is no supplier entered in the requisition header the one setup by default for the product in its master data window, <em>Purchasing</em> tab will be used.</li>
+<li>If there is no business partner or supplier in the header, or in the lines, or setup in the product, the user will have to enter it while creating the purchase order from the requisition.</li>
+<li>The purchase price list. This is also an optional field to be filled-in, in case it is known by the requester and its behaviour is the same as described above as it is linked to the Business Partner.</li>
 </ul>
 <p>Besides, the system populates the following data:</p>
 <ul>
-<li>The <strong>document No.</strong>, which is the Requisition number.</li>
-<li>The <strong>requester</strong>, which is the user entering the requisition.</li>
+<li>The document No., which is the Requisition number.</li>
+<li>The requester, which is the user entering the requisition.</li>
 </ul>
 <p><a class="glightbox" href="/assets/drive/1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Requisition" src="/assets/drive/1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7.png" /></a></p>
-<p>The requester can then move to the "<strong>Lines</strong>" tab to enter <strong>additional data</strong>.</p>
-<h3 id="lines"><strong>Lines</strong></h3>
+<p>The requester can then move to the "Lines" tab to enter additional data.</p>
+<h3 id="lines">Lines</h3>
 <p>Each requisition line shows a product demand for a specific date.</p>
 <p>Requisition "Lines" tab collects the following demand data:</p>
 <ul>
-<li>The <strong>need by date</strong>, that is the date when the product is required to arrive.</li>
-<li>The <strong>product</strong>, items/products which need to be purchased.</li>
-<li>The <strong>quantity</strong> requested, or the <strong>operative quantity</strong> requested if the product has an <em>alternative unit of measure (AUM)</em> configured.</li>
-<li>The product's <strong>UOM</strong>, or product's <strong>Alternative UOM</strong> depending on product configuration in regards to measure unit.</li>
-<li>The <strong>business partner:</strong> This is an optional field the user can enter if the supplier entered at the requisition header needs to be changed for a particular line.</li>
+<li>The <em>need by date</em>, that is the date when the product is required to arrive.</li>
+<li>The <em>product</em>, items/products which need to be purchased.</li>
+<li>The <em>quantity</em> requested, or the <em>operative quantity</em> requested if the product has an <em>alternative unit of measure (AUM)</em> configured.</li>
+<li>The product's <em>UOM</em>, or product's <em>Alternative UOM</em> depending on product configuration in regards to measure unit.</li>
+<li>The <em>business partner:</em> This is an optional field the user can enter if the supplier entered at the requisition header needs to be changed for a particular line.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If there is not a supplier entered at the requisition header, neither at the requisition line, the supplier used will be the one setup by default for the product, therefore this field at line level can also be used to overwrite that defaulted one.</p>
 </div>
 <ul>
-<li>The <strong>purchase price list</strong>: This is also an optional field that can be entered if the price list entered at the header level or the default product price list information should be overwritten for a particular line.</li>
-<li>The <strong>net list price</strong>: This one is the price of the corresponding price list for a given date. It's an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.</li>
-<li>The <strong>net unit price:</strong> This one can be either equal to the net list price or not, based on the formula: [net unit price = net list price - discount]. It is an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.</li>
-<li>The <strong>discount</strong>, if any, is based on a used price list.</li>
+<li>The <em>purchase price list</em>: This is also an optional field that can be entered if the price list entered at the header level or the default product price list information should be overwritten for a particular line.</li>
+<li>The <em>net list price</em>: This one is the price of the corresponding price list for a given date. It's an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.</li>
+<li>The <em>net unit price:</em> This one can be either equal to the net list price or not, based on the formula: [net unit price = net list price - discount]. It is an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.</li>
+<li>The <em>discount</em>, if any, is based on a used price list.</li>
 </ul>
 <p><a class="glightbox" href="/assets/drive/1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Requisition Lines" src="/assets/drive/1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC.png" /></a></p>
 <p>It is possible to enter as many requisition lines as products demand.</p>
-<p>The last step is to register the "<strong>Requisition</strong>" as "<strong>Complete</strong>" by using the header button "Complete", then:</p>
+<p>The last step is to register the <em>Requisition</em> as <em>Complete</em> by using the header button "Complete", then:</p>
 <ul>
-<li><strong>Requisition header status bar</strong> informs us that the Requisition is "<strong>Completed</strong>".</li>
-<li><strong>Requisition lines status bar</strong> informs us that the "<strong>Matched purchase order quantity" for each line is equal to 0</strong>, as there is no purchase order linked to each requisition line yet, and the requisition line/s status is "<strong>Open</strong>".</li>
+<li><em>Requisition header status bar</em> informs us that the Requisition is <em>Completed</em>.</li>
+<li><em>Requisition lines status bar</em> informs us that the <em>Matched purchase order quantity</em> for each line is equal to 0<em><em>, as there is no purchase order linked to each requisition line yet, and the requisition line/s status is </em>Open</em>.</li>
 </ul>
-<p>It is important to remark that "<strong>Requisitions</strong>" does not have any impact on:</p>
+<p>It is important to remark that <em>Requisitions</em> does not have any impact on:</p>
 <ul>
 <li>Items quantity on hand</li>
 <li>Items costing</li>
