@@ -34,15 +34,25 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ./gradlew update.database smartbuild --info
     ```
 
-3. In gradle.properties, add:
-    ```groovy title="build.gradle"
-    copilotPort=5000
-    openaiAPIKey=YOUR_API_KEY_HERE
+3. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
+
+
+    ```groovy title="gradle.properties"
+    COPILOT_PORT=
+    OPENAI_API_KEY=
+    OPENAI_MODEL=
+    BUSINESS_TOPIC=
     ```
 
-    ??? warning "Remember to replace YOUR_API_KEY_HERE with your actual API key."
+    | **Environment Variable**   | **Options**                                | **Info**                                                                                             |
+    | ---------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+    | COPILOT_PORT           | `5000`                                         | **Required** The copilot port can be defined by the user                                             |
+    | OPENAI_API_KEY         | `***********************`                      | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
+    | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
+    | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`   | This parameter indicates the category to which the translations will be focused.                     |
+  
 
-        You can get it from this link [get it](https://platform.openai.com/account/api-keys){target="_blank"}.
+        
 
 4. To download the latest copilot Docker image and run it:
 
@@ -58,13 +68,20 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
     This command will stop the Docker container running Copilot.
 
-## 🛠 Translation Tool: XMLTranslatorTool
+## Translation Tool: XMLTranslatorTool
 
 Translates the content of an XML file from one language to another, as specified within the XML.  
 
 ### Functionality
 
-1. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
+
+1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
+    ```groovy
+    implementation('com.etendoerp:copilot.xmltranslationtool:latest.release')
+    ```
+2. Restart Doker image using `./gradlew copilot.stop` and `./gradlew copilot start` tasks
+
+3. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
 
     ```xml
     <compiereTrl baseLanguage="en_US" language="es_ES" table="AD_ELEMENT" version="">
@@ -72,7 +89,7 @@ Translates the content of an XML file from one language to another, as specified
 
     The tool will know that the language to be translated will be Spanish.
 
-2. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+4. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
 
 ### How to use the XML translation tool shown in an example
 
