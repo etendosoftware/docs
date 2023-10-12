@@ -3782,17 +3782,19 @@ The following code is an example, you must modify your current file</p>
 </li>
 <li>
 <p>Modify the <code>gradle.properties</code> file with your environment variables, if it is necessary:</p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">githubUser</span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">githubToken</span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">token</span><span class="o">&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">nexusUser</span><span class="o">=</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">nexusPassword</span><span class="o">=</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">githubUser</span><span class="o">=</span><span class="w"> </span><span class="n">username</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">githubToken</span><span class="o">=*******</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
 </span></code></pre></div>
 </li>
 <li>
@@ -3835,49 +3837,80 @@ The following code is an example, you must modify your current file</p>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">cd</span><span class="w"> </span>/opt/EtendoERP
 </span></code></pre></div></p>
 </li>
-<li>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo">guide</a>.
-    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">githubUser</span><span class="o">=</span><span class="n">username</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">githubToken</span><span class="o">=*******</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">jvmargs</span><span class="o">=-</span><span class="n">Xmx2g</span><span class="w"> </span><span class="o">-</span><span class="nl">XX:</span><span class="n">MaxPermSize</span><span class="o">=</span><span class="mi">512</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="nl">XX:</span><span class="o">+</span><span class="n">HeapDumpOnOutOfMemoryError</span><span class="w"> </span><span class="o">-</span><span class="n">Dfile</span><span class="o">.</span><span class="na">encod</span><span class="o">&gt;</span>
-</span></code></pre></div></li>
+<li>
+<p>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo">guide</a>.
+    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">nexusUser</span><span class="o">=</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">nexusPassword</span><span class="o">=</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">githubUser</span><span class="o">=</span><span class="w"> </span><span class="n">username</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">githubToken</span><span class="o">=*******</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="n">org</span><span class="o">.</span><span class="na">gradle</span><span class="o">.</span><span class="na">jvmargs</span><span class="o">=-</span><span class="n">Xmx2g</span><span class="w"> </span><span class="o">-</span><span class="nl">XX:</span><span class="n">MaxPermSize</span><span class="o">=</span><span class="mi">512</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="nl">XX:</span><span class="o">+</span><span class="n">HeapDumpOnOutOfMemoryError</span><span class="w"> </span><span class="o">-</span><span class="n">Dfile</span><span class="o">.</span><span class="na">encod</span><span class="o">&gt;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>By default, the latest core version available will be expanded but if there is a need to change it, edit the <code>build.gradle</code> file changing the <code>coreVersion = "[&lt;version&gt;,&lt;version&gt;)"</code>. The following code is an example, you must modify your current file</p>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;java&#39;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;groovy&#39;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;maven-publish&#39;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;latest.release&#39;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="o">}</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">etendo</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="n">coreVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;version&gt;&quot;</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="o">}</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="cm">/*</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="cm">    To use Etendo in JAR format delete the Etendo section and uncomment the following line.</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="cm">    Then when executing any gradle command the core will be dynamically downloaded as a dep&gt;</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="cm">    Set up the credentials in gradle.properties file</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="cm">    implementation(&#39;com.etendoerp.platform:etendo-core:&lt;version&gt;&#39;)</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="cm">     */</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="c1">//Add other dependencies bellow</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="o">}</span>
+</span></code></pre></div>
+</li>
 <li>
 <p>Expand Etendo Base</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>./gradlew expand 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./gradlew expand 
 </span></code></pre></div>
 </li>
 <li>
 <p>Modify the <code>gradle.properties</code> file with your environment variables, if it is necessary:</p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">context</span><span class="o">.</span><span class="na">name</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">sid</span><span class="o">=</span><span class="n">etendo</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">port</span><span class="o">=</span><span class="mi">5432</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemUser</span><span class="o">=</span><span class="n">postgres</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">systemPassword</span><span class="o">=</span><span class="n">syspass</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">user</span><span class="o">=</span><span class="n">tad</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="n">bbdd</span><span class="o">.</span><span class="na">password</span><span class="o">=</span><span class="n">tad</span>
 </span></code></pre></div>
 </li>
 <li>
 <p>Setup: to apply or create the initial configurations
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./gradlew setup
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>./gradlew setup
 </span></code></pre></div></p>
 </li>
 <li>Installation: Create the database, compile the sources and deploy to Apache Tomcat
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>./gradlew install smartbuild
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>./gradlew install smartbuild
 </span></code></pre></div></li>
 <li>
 <p>Start the Tomcat, in case of Linux you can run:
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo /etc/init.d/tomcat start
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo /etc/init.d/tomcat start
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note<p>If you want to run Etendo locally, go to <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment">Run Etendo Development Environment</a>.</p>
