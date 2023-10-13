@@ -17,7 +17,7 @@
         <link rel="next" href="../../etendo-mobile/getting-started/">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3341,10 +3341,10 @@
       
         <li class="md-nav__item">
   <a href="#translation-tool-xmltranslatortool" class="md-nav__link">
-    🛠 Translation Tool: XMLTranslatorTool
+    Translation Tool: XMLTranslatorTool
   </a>
   
-    <nav class="md-nav" aria-label="🛠 Translation Tool: XMLTranslatorTool">
+    <nav class="md-nav" aria-label="Translation Tool: XMLTranslatorTool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3640,10 +3640,10 @@
       
         <li class="md-nav__item">
   <a href="#translation-tool-xmltranslatortool" class="md-nav__link">
-    🛠 Translation Tool: XMLTranslatorTool
+    Translation Tool: XMLTranslatorTool
   </a>
   
-    <nav class="md-nav" aria-label="🛠 Translation Tool: XMLTranslatorTool">
+    <nav class="md-nav" aria-label="Translation Tool: XMLTranslatorTool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3734,14 +3734,43 @@
 </span></code></pre></div></p>
 </li>
 <li>
-<p>In gradle.properties, add:
-    <div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">copilotPort</span><span class="o">=</span><span class="mi">5000</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">openaiAPIKey</span><span class="o">=</span><span class="n">YOUR_API_KEY_HERE</span>
-</span></code></pre></div></p>
-<details class="warning">
-<summary>Remember to replace YOUR_API_KEY_HERE with your actual API key.</summary>
-<p>You can get it from this link <a href="https://platform.openai.com/account/api-keys" target="_blank">get it</a>.</p>
-</details>
+<p>In <code>gradle.properties</code> file is necessary to add some environment variables as a mandatory requirement</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">COPILOT_PORT</span><span class="o">=</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">OPENAI_MODEL</span><span class="o">=</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">BUSINESS_TOPIC</span><span class="o">=</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th><strong>Environment Variable</strong></th>
+<th><strong>Options</strong></th>
+<th><strong>Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COPILOT_PORT</td>
+<td><code>5000</code></td>
+<td><strong>Required</strong> The copilot port can be defined by the user</td>
+</tr>
+<tr>
+<td>OPENAI_API_KEY</td>
+<td><code>***********************</code></td>
+<td><strong>Required</strong> You can get it from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API keys</a></td>
+</tr>
+<tr>
+<td>OPENAI_MODE</td>
+<td><code>gpt-4</code>, <code>gpt-3.5-turbo-16k</code> , <code>gpt-3.5-turbo</code></td>
+<td>Among others that have the same number of requests per minute</td>
+</tr>
+<tr>
+<td>BUSINESS_TOPIC</td>
+<td><code>ERP</code> , <code>Human Resorces</code>, <code>Finance</code>, <code>Other</code></td>
+<td>This parameter indicates the category to which the translations will be focused.</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p>To download the latest copilot Docker image and run it:</p>
@@ -3755,13 +3784,19 @@
 <p>This command will stop the Docker container running Copilot.</p>
 </li>
 </ol>
-<h2 id="translation-tool-xmltranslatortool">🛠 Translation Tool: XMLTranslatorTool</h2>
+<h2 id="translation-tool-xmltranslatortool">Translation Tool: XMLTranslatorTool</h2>
 <p>Translates the content of an XML file from one language to another, as specified within the XML.  </p>
 <h3 id="functionality">Functionality</h3>
 <ol>
+<li>Add Copilot Translation Tool dependency in the Etendo Classic project, In <code>build.gradle</code>, add:
+    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot.xmltranslationtool:latest.release&#39;</span><span class="o">)</span>
+</span></code></pre></div></li>
+<li>
+<p>Restart Doker image using <code>./gradlew copilot.stop</code> and <code>./gradlew copilot start</code> tasks</p>
+</li>
 <li>
 <p>The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;compiereTrl</span><span class="w"> </span><span class="na">baseLanguage=</span><span class="s">&quot;en_US&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;es_ES&quot;</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;AD_ELEMENT&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;compiereTrl</span><span class="w"> </span><span class="na">baseLanguage=</span><span class="s">&quot;en_US&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;es_ES&quot;</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;AD_ELEMENT&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
 </span></code></pre></div>
 <p>The tool will know that the language to be translated will be Spanish.</p>
 </li>
@@ -3779,7 +3814,7 @@
 </li>
 <li>
 <p>To execute translation tool, in a new terminal, run:
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>copilot.translate<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.bankingpool.es_es
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>copilot.translate<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.bankingpool.es_es
 </span></code></pre></div></p>
 </li>
 <li>
@@ -3787,7 +3822,7 @@
 </li>
 <li>
 <p>To apply the translation compile the enviroment
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>--info
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>--info
 </span></code></pre></div></p>
 </li>
 <li>
