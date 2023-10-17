@@ -176,7 +176,7 @@ Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de dec
 -   **Fichero**
     -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
 -   **Tipo de declaración**
-    -   Esta sección contiene a 7 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
+    -   Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
         -   Compensación
         -   Devolución
         -   Ingreso
@@ -184,6 +184,7 @@ Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de dec
         -   Ingreso domiciliación bancaria
         -   Ingreso cuenta corriente tributaria
         -   Devolución cuenta corriente tributaria
+        -   Devolución por transferencia al extranjero
 -   **Sin Actividad**
     -   Esta sección contiene 1 parámetro de tipo "Entrada" para que el usuario pueda marcar una liquidación de IVA como "Sin Actividad".
 -   **Constantes**
@@ -464,6 +465,34 @@ El resto de datos deben ser introducidos manualmente por el usuario a la hora de
 
 ![](/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
 
+### **Devoluciones - escenarios**
+
+El modelo 303 tiene 3 tipos de declaraciones de devoluciones:
+
+- Devolución
+- Devolución cuenta corriente tributaria
+- Devolución por transferencia al extranjero
+
+Para todos estos tipos de declaraciones es necesario llenar el campo '[65] Atribuible a la Admin. del Estado (%)'
+
+#### **Devoluciones - Devolución/Devolución cuenta corriente tributaria**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
+
+- IBAN
+- Marca SEPA
+
+#### **Devoluciones - Devolución por transferencia al extranjero**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios: 
+
+- Domiciliación/Devolución - IBAN (cuenta bancaria)
+- Devolución - Banco/Bank name
+- Devolución - Dirección del Banco/ Bank address
+- Devolución - Ciudad/City
+- Devolución - Código País/Country code
+- Devolución - Marca SEPA
+
 ### **Generación del modelo 303**
 
 Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
@@ -489,7 +518,7 @@ Las secciones de la nueva ventana que se muestra se corresponden con las seccion
 
 Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
 
-![](/assets/drive/bpFz8cRTsc3W3ZVVCTGLokr_d4v1SUHN7G6vqO06Hi6-QW8coINqtV9RpvmU-N4q0XCcsVgU631CxMVMvEJo-XQtAdLTSyeHuGCST7tS0PvC_X5DTwV8Swq5dXsH_ihVUjsXamo9RQmP2b4F1eAdI3Q.png)
+![](/assets/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
 
 Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
 
