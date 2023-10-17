@@ -38,10 +38,10 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 
     ```groovy title="gradle.properties"
-    COPILOT_PORT=
-    OPENAI_API_KEY=
-    OPENAI_MODEL=
-    BUSINESS_TOPIC=
+    COPILOT_PORT=5000
+    OPENAI_API_KEY= ****
+    OPENAI_MODEL=gpt-4
+    BUSINESS_TOPIC=ERP
     ```
 
     | **Environment Variable**   | **Options**                                | **Info**                                                                                             |
