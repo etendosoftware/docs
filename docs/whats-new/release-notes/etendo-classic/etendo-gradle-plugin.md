@@ -21,7 +21,7 @@ tags:
 ## Release Notes
 
 ### 1.2.0
--  Add copilot tasks
+-  Add copilot tasks [Etendo Gradle Plugin](/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/#copilot)
 
 ### 1.1.3
 - EPL-855: Bug fix for compilation of Etendo on Windows, resolving `"File name or file extension is too long"` error.
