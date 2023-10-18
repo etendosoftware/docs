@@ -464,6 +464,20 @@ El resto de datos deben ser introducidos manualmente por el usuario a la hora de
 
 ![](/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
 
+### Configuración previa antes de generar el Informe
+
+#### **Actividades del I.A.E.**
+
+En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
+
 ### **Generación del modelo 303**
 
 Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
@@ -498,6 +512,7 @@ Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
 Secciones:  **"Complementaria", “Tributación por razón de territorio” y “Additional Information”**
 
 ![](/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
+
 
 Una vez que el fichero se ha generado, tendrá este aspecto:
 
@@ -606,7 +621,9 @@ Este anexo incluye el listado completo de los rangos de impuestos asociados a lo
 -   Prestación servicios nacional 21%
 -   Prestación servicios nacional 18% -15%R (+18%)
 -   Prestación servicios nacional 18% -1%R (18%)
--   Prestación servicios nacional 18% -7%R (+18%)
+-   Prestación servicios nacional 18% -7%R (+18%)modificamos el diseño de registro para el 303 de 2023 y sig segun requerimientos de la agencia tributaria
+devoluciones al extrnajero
+solo aclarar que se hicieron cambios para cumplimentar la normativa en las release notesd
 -   Prestación servicios nacional 21% -21%R (+21%)
 -   Prestación servicios nacional 21% -1%R (+21%)
 -   Prestación servicios nacional 21% -9%R (+21%)
