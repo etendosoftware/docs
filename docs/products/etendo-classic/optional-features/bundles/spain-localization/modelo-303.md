@@ -467,14 +467,6 @@ El resto de datos deben ser introducidos manualmente por el usuario a la hora de
 
 ### **Devoluciones - escenarios**
 
-El modelo 303 tiene 3 tipos de declaraciones de devoluciones:
-
-- Devolución
-- Devolución cuenta corriente tributaria
-- Devolución por transferencia al extranjero
-
-Para todos estos tipos de declaraciones es necesario llenar el campo '[65] Atribuible a la Admin. del Estado (%)'
-
 #### **Devoluciones - Devolución/Devolución cuenta corriente tributaria**
 
 Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
