@@ -11,7 +11,8 @@ tags:
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| 1.2.0 | 17/10/2023 | CS |
+| 1.2.1 | 18/10/2023 | CS |
+| 1.2.0 | 17/10/2023 | C  |
 | 1.1.3 | 31/08/2023 | C  |
 | 1.1.2 | 31/07/2023 | C  |
 | 1.1.1 | 10/07/2023 | C  |
@@ -20,8 +21,11 @@ tags:
 
 ## Release Notes
 
+### 1.2.1
+-  [EPL-1047](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/16) Bug Fix for copilot translation task. When the copilot.translate task is executed and API fails, it ends with build successful.
+
 ### 1.2.0
--  Add copilot tasks [Etendo Gradle Plugin](/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/#copilot)
+-  Add copilot tasks in [Etendo Gradle Plugin](/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/#copilot)
 
 ### 1.1.3
 - EPL-855: Bug fix for compilation of Etendo on Windows, resolving `"File name or file extension is too long"` error.
