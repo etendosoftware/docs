@@ -3097,6 +3097,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#copilot" class="md-nav__link">
+    Copilot
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3764,6 +3771,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copilot" class="md-nav__link">
+    Copilot
+  </a>
   
 </li>
       
@@ -4583,6 +4597,38 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <p>This confirms the successful processing of the files.</p>
 </div>
 <p>Finally, restart Tomcat to apply the changes and ensure the updated <code>.css</code> files are properly deployed.</p>
+<h2 id="copilot">Copilot</h2>
+<ul>
+<li>
+<p>Running the Copilot docker image locally.</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>./gradlew<span class="w"> </span>copilot.start
+</span></code></pre></div>
+</li>
+<li>
+<p>Stop the Copilot docker image.</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>./gradlew<span class="w"> </span>copilot.stop
+</span></code></pre></div>
+</li>
+<li>
+<p>Execute Copilot translation Tool with Gradle.</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>./gradlew<span class="w"> </span>copilot.translate
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command line parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-Ppkg=&lt;package name&gt;</code></td>
+<td><strong>Required</strong> Module Javapackage to be translated</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
 
 
 
