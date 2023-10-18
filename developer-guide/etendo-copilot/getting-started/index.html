@@ -3313,11 +3313,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-setup" class="md-nav__link">
-    Environment Setup
+  <a href="#etendo-copilot" class="md-nav__link">
+    Etendo Copilot
   </a>
   
-    <nav class="md-nav" aria-label="Environment Setup">
+    <nav class="md-nav" aria-label="Etendo Copilot">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3612,11 +3612,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-setup" class="md-nav__link">
-    Environment Setup
+  <a href="#etendo-copilot" class="md-nav__link">
+    Etendo Copilot
   </a>
   
-    <nav class="md-nav" aria-label="Environment Setup">
+    <nav class="md-nav" aria-label="Etendo Copilot">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3709,7 +3709,8 @@
 
 <h2 id="overview">Overview</h2>
 <p>The getting started guide for the Copilot API is a tool that allows interaction with a bot that selects the appropriate tool to answer a query.</p>
-<h2 id="environment-setup">Environment Setup</h2>
+<h2 id="etendo-copilot">Etendo Copilot</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: <code>com.etendoerp.copilot</code></p>
 <h3 id="requirements">Requirements</h3>
 <ul>
 <li><em>Etendo Classic</em>. If you do not have it, you can install it using the <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" target="_blank">Etendo Installation Developer Guide</a>.</li>
@@ -3723,8 +3724,8 @@
     <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot:latest.release&#39;</span><span class="o">)</span>
 </span></code></pre></div></p>
 <details class="warning">
-<summary>Ensure you have 1.1.4 plugin version or greater:</summary>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;1.1.4&#39;</span>
+<summary>Ensure you have 1.2.0 plugin version or greater:</summary>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">id</span><span class="w"> </span><span class="s1">&#39;com.etendoerp.gradleplugin&#39;</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;1.2.0&#39;</span>
 </span></code></pre></div>
 </details>
 </li>
@@ -3737,8 +3738,6 @@
 <p>In <code>gradle.properties</code> file is necessary to add some environment variables as a mandatory requirement</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5000</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">OPENAI_MODEL</span><span class="o">=</span><span class="n">gpt</span><span class="o">-</span><span class="mi">4</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">BUSINESS_TOPIC</span><span class="o">=</span><span class="n">ERP</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -3759,16 +3758,6 @@
 <td><code>***********************</code></td>
 <td><strong>Required</strong> You can get it from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API keys</a></td>
 </tr>
-<tr>
-<td>OPENAI_MODE</td>
-<td><code>gpt-4</code>, <code>gpt-3.5-turbo-16k</code> , <code>gpt-3.5-turbo</code></td>
-<td>Among others that have the same number of requests per minute</td>
-</tr>
-<tr>
-<td>BUSINESS_TOPIC</td>
-<td><code>ERP</code> , <code>Human Resorces</code>, <code>Finance</code>, <code>Other</code></td>
-<td>This parameter indicates the category to which the translations will be focused.</td>
-</tr>
 </tbody>
 </table>
 </li>
@@ -3785,6 +3774,7 @@
 </li>
 </ol>
 <h2 id="translation-tool-xmltranslatortool">Translation Tool: XMLTranslatorTool</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: com.etendoerp.copilot.xmltranslationtool</p>
 <p>Translates the content of an XML file from one language to another, as specified within the XML.  </p>
 <h3 id="functionality">Functionality</h3>
 <ol>
@@ -3792,11 +3782,41 @@
     <div class="language-groovy highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot.xmltranslationtool:latest.release&#39;</span><span class="o">)</span>
 </span></code></pre></div></li>
 <li>
+<p>In <code>gradle.properties</code> file you can add some environment variables. If they are not set, the default values will be used.</p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">OPENAI_MODEL</span><span class="o">=</span><span class="n">gpt</span><span class="o">-</span><span class="mi">4</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">BUSINESS_TOPIC</span><span class="o">=</span><span class="n">ERP</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th><strong>Environment Variable</strong></th>
+<th><strong>Options</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Info</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPENAI_MODE</td>
+<td><code>gpt-4</code>, <code>gpt-3.5-turbo-16k</code> , <code>gpt-3.5-turbo</code></td>
+<td><code>gpt-3.5-turbo</code></td>
+<td>Among others that have the same number of requests per minute</td>
+</tr>
+<tr>
+<td>BUSINESS_TOPIC</td>
+<td><code>ERP</code> , <code>Human Resorces</code>, <code>Finance</code>, <code>Other</code></td>
+<td><code>ERP</code></td>
+<td>This parameter indicates the category to which the translations will be focused.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
 <p>Restart Doker image using <code>./gradlew copilot.stop</code> and <code>./gradlew copilot start</code> tasks</p>
 </li>
 <li>
 <p>The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;compiereTrl</span><span class="w"> </span><span class="na">baseLanguage=</span><span class="s">&quot;en_US&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;es_ES&quot;</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;AD_ELEMENT&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;compiereTrl</span><span class="w"> </span><span class="na">baseLanguage=</span><span class="s">&quot;en_US&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;es_ES&quot;</span><span class="w"> </span><span class="na">table=</span><span class="s">&quot;AD_ELEMENT&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
 </span></code></pre></div>
 <p>The tool will know that the language to be translated will be Spanish.</p>
 </li>
@@ -3814,7 +3834,7 @@
 </li>
 <li>
 <p>To execute translation tool, in a new terminal, run:
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>copilot.translate<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.bankingpool.es_es
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>copilot.translate<span class="w"> </span>-Ppkg<span class="o">=</span>com.etendoerp.bankingpool.es_es
 </span></code></pre></div></p>
 </li>
 <li>
@@ -3822,7 +3842,7 @@
 </li>
 <li>
 <p>To apply the translation compile the enviroment
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>--info
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild<span class="w"> </span>--info
 </span></code></pre></div></p>
 </li>
 <li>
