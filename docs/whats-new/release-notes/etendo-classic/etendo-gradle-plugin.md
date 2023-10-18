@@ -11,13 +11,17 @@ tags:
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| 1.1.3 | 31/08/2023 | CS |
+| 1.2.0 | 17/10/2023 | CS |
+| 1.1.3 | 31/08/2023 | C  |
 | 1.1.2 | 31/07/2023 | C  |
 | 1.1.1 | 10/07/2023 | C  |
 | 1.1.0 | 30/05/2023 | C  |
 | 1.0.7 | 05/04/2023 | C  |
 
 ## Release Notes
+
+### 1.2.0
+-  Add copilot tasks
 
 ### 1.1.3
 - EPL-855: Bug fix for compilation of Etendo on Windows, resolving `"File name or file extension is too long"` error.
