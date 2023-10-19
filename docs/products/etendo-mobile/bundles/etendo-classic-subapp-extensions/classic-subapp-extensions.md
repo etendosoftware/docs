@@ -14,7 +14,9 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
 !!! info
 
-    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic.
+    - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
+    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
 
     - Once the sub-application module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](/docs/products/etendo-classic/user-guide/general-setup/security/#dynamic-app).

@@ -38,7 +38,9 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
 
 !!! note
 
-    In this case shown the subapplication when acces whit "Demo try".
+    In this case shown the subapplication when acces whit "Demo try". <br>
+    To be able to include this sub-application, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
 ![](/assets/products/etendo-mobile/user-interface/Drawer.png){ width="300" }
 
