@@ -671,3 +671,30 @@ After executing the task, look for the following output to indicate a successful
     This confirms the successful processing of the files.
 
 Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly deployed.
+
+## Copilot
+
+- Running the Copilot docker image locally.
+    
+    ``` bash title="Terminal"
+    ./gradlew copilot.start
+                                          
+    ```
+
+- Stop the Copilot docker image.
+    
+    ``` bash title="Terminal"
+    ./gradlew copilot.stop
+                                            
+    ```
+
+- Execute Copilot translation Tool with Gradle.
+
+    ``` bash title="Terminal"
+    ./gradlew copilot.translate
+                                            
+    ```
+
+    | Command line parameter                  | Description                                                 |                       
+    |  -------------------                   | ------------------------------------                         |
+    | `-Ppkg=<package name>`                 | **Required** Module Javapackage to be translated             |
