@@ -3726,6 +3726,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#devoluciones-escenarios" class="md-nav__link">
+    Devoluciones - escenarios
+  </a>
+  
+    <nav class="md-nav" aria-label="Devoluciones - escenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devoluciones-devoluciondevolucion-cuenta-corriente-tributaria" class="md-nav__link">
+    Devoluciones - Devolución/Devolución cuenta corriente tributaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devoluciones-devolucion-por-transferencia-al-extranjero" class="md-nav__link">
+    Devoluciones - Devolución por transferencia al extranjero
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#generacion-del-modelo-303" class="md-nav__link">
     Generación del modelo 303
   </a>
@@ -4016,7 +4043,7 @@
 </ul>
 </li>
 <li><strong>Tipo de declaración</strong><ul>
-<li>Esta sección contiene a 7 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.<ul>
+<li>Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.<ul>
 <li>Compensación</li>
 <li>Devolución</li>
 <li>Ingreso</li>
@@ -4024,6 +4051,7 @@
 <li>Ingreso domiciliación bancaria</li>
 <li>Ingreso cuenta corriente tributaria</li>
 <li>Devolución cuenta corriente tributaria</li>
+<li>Devolución por transferencia al extranjero</li>
 </ul>
 </li>
 </ul>
@@ -4301,6 +4329,23 @@
 </ul>
 <p>El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:</p>
 <p><a class="glightbox" href="/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png" /></a></p>
+<h3 id="devoluciones-escenarios"><strong>Devoluciones - escenarios</strong></h3>
+<h4 id="devoluciones-devoluciondevolucion-cuenta-corriente-tributaria"><strong>Devoluciones - Devolución/Devolución cuenta corriente tributaria</strong></h4>
+<p>Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:</p>
+<ul>
+<li>IBAN</li>
+<li>Marca SEPA</li>
+</ul>
+<h4 id="devoluciones-devolucion-por-transferencia-al-extranjero"><strong>Devoluciones - Devolución por transferencia al extranjero</strong></h4>
+<p>Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios: </p>
+<ul>
+<li>Domiciliación/Devolución - IBAN (cuenta bancaria)</li>
+<li>Devolución - Banco/Bank name</li>
+<li>Devolución - Dirección del Banco/ Bank address</li>
+<li>Devolución - Ciudad/City</li>
+<li>Devolución - Código País/Country code</li>
+<li>Devolución - Marca SEPA</li>
+</ul>
 <h3 id="generacion-del-modelo-303"><strong>Generación del modelo 303</strong></h3>
 <p>Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos</p>
 <p>Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":</p>
@@ -4318,7 +4363,7 @@
 <p>Es importante recalcar que si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de entrada a constante se sobreescribirán, por lo que será necesario el volver a configurarlos.</p>
 <p>Las secciones de la nueva ventana que se muestra se corresponden con las secciones definidas para el Modelo 303:</p>
 <p>Secciones: "<strong>Fichero</strong>", "<strong>Tipo de declaración</strong>" y "<strong>Sin actividad</strong>":</p>
-<p><a class="glightbox" href="/assets/drive/bpFz8cRTsc3W3ZVVCTGLokr_d4v1SUHN7G6vqO06Hi6-QW8coINqtV9RpvmU-N4q0XCcsVgU631CxMVMvEJo-XQtAdLTSyeHuGCST7tS0PvC_X5DTwV8Swq5dXsH_ihVUjsXamo9RQmP2b4F1eAdI3Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/bpFz8cRTsc3W3ZVVCTGLokr_d4v1SUHN7G6vqO06Hi6-QW8coINqtV9RpvmU-N4q0XCcsVgU631CxMVMvEJo-XQtAdLTSyeHuGCST7tS0PvC_X5DTwV8Swq5dXsH_ihVUjsXamo9RQmP2b4F1eAdI3Q.png" /></a></p>
+<p><a class="glightbox" href="/assets/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png" /></a></p>
 <p>Secciones: "<strong>IVA deducible</strong>", <strong>"Liquidación-resultado"</strong> y <strong>"Banco"</strong>:</p>
 <p><a class="glightbox" href="/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png" /></a></p>
 <p>Secciones:  <strong>"Complementaria", “Tributación por razón de territorio” y “Additional Information”</strong></p>
