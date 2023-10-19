@@ -147,6 +147,7 @@ nav:
           - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
         # - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
         - Financial Management: 
+          - Getting Started: products/etendo-classic/user-guide/financial-management/getting-started.md
           - Receivables and Payables:
             - Transactions: products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions.md
             - Analysis Tools: products/etendo-classic/user-guide/financial-management/receivables-and-payables/analysis-tools.md
