@@ -21,13 +21,13 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot:latest.release')
+    implementation('com.etendoerp:copilot:1.0.1')
     ```
 
-    ??? warning "Ensure you have 1.2.1 plugin version or greater:"
+    ??? warning "Ensure you have 1.2.2 plugin version or greater:"
         
         ```groovy
-        id 'com.etendoerp.gradleplugin' version '1.2.1'
+        id 'com.etendoerp.gradleplugin' version '1.2.2'
         ```
 
 2. In the terminal, execute:
@@ -75,7 +75,7 @@ Translates the content of an XML file from one language to another, as specified
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot.xmltranslationtool:latest.release')
+    implementation('com.etendoerp:copilot.xmltranslationtool:1.0.0')
     ```
 2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
 
@@ -90,7 +90,7 @@ Translates the content of an XML file from one language to another, as specified
     | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
     | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
   
-3. Restart Doker image using `./gradlew copilot.stop` and `./gradlew copilot start` tasks
+3. Restart Doker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
 4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
 
