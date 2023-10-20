@@ -51,7 +51,7 @@ Add in the `build.gradle` file the plugin version available in [Gradle Plugin Re
 
 ```groovy title="build.gradle"
 plugins {
-    id 'com.etendoerp.gradleplugin' version 'lastest.release'
+    id 'com.etendoerp.gradleplugin' version '1.2.2'
 }
 ```
 
@@ -697,4 +697,4 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
 
     | Command line parameter                  | Description                                                 |                       
     |  -------------------                   | ------------------------------------                         |
-    | `-Ppkg=<package name>`                 | **Required** Module Javapackage to be translated             |
+    | `-Parg=<package name>`                 | **Required** Module Javapackage to be translated             |
