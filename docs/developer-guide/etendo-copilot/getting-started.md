@@ -114,7 +114,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 2.  To execute translation tool, in a new terminal, run:
     ``` bash title="Terminal"
-    ./gradlew copilot.translate -Ppkg=com.etendoerp.bankingpool.es_es
+    ./gradlew copilot.translate -Parg=com.etendoerp.bankingpool.es_es
     ```
 
 3. In the folder ```modules/com.etendoerp.bankingpool.es_es``` you will find the automatic translations.
