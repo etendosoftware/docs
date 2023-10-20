@@ -40,7 +40,7 @@ Open a terminal in the root of your etendo classic and execute the following com
 
 4. In the section below you going to set two important values:
 
-    - _Name_: TODO: ask why is 1.0.0 (the same as the module version?)
+    - _Name_: in thes case type 1.0.0
     - _File Name_: is the name of the bundle that you going to create.
 
 The final result must be like this:
@@ -49,10 +49,16 @@ The final result must be like this:
 
 Then you have to relate the dynamic app with the role allowed to use it.
 
+!!! info
+    For more information [check this guide](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"} about dynamic app configuration.
+
 #### Role configuration
 1. Go to `role` window and select the role that you want to use.
 2. In this case we going to use the _admin role_, so select it.
-3. In the section bellow, select which _organization, App and Version_ you want to relate.
+3. In the tab `dynamic app` bellow, select which _organization, App and Version_ you want to relate.
+
+
+![role-configuration.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/role-configuration.png)
 
 !!! warning "Important"
     Keep this dynamic app as _active_.
@@ -62,23 +68,23 @@ The following steps are center about a new subapp forking from our base app exam
 
 ## Fork the base sub-application
 
-To begin with we must make a _fork_ of our base sub app [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}.
-In this case we going to use this name: _com.etendorx.subapp.product_ (TODO: ask about the name, com.etendorx.subapp.XXXX is for all subapps?)
+To begin with we must make a _fork_ of our base sub app [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base).
+In this case we going to use this name: _com.etendorx.subapp.product_.
 
 ![create-fork-base.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/create-fork-base.png)
 
-After fork, _clone_ the repository inside the modulesrx folder in our Etendo environment.
+After fork, _clone_ the repository inside the `modules_rx` folder in our Etendo environment.
 
 ![repository-cloned.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png)
 
 !!! warning "Important"
     Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in this link [here](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
 
-[here](image of dynamic app empty rendered in etendo mobile) TODO: pedir imaagen a lean
+[here](image of dynamic app empty rendered in etendo mobile)
 
 ## Customizing and Programming a Sub-Application
 
-In this section we will explain how to customize and program a sub-application. We will use our example of a product sub-application, which will allow us to manage the products of our company. This sub-application will have a list of products, a form to create and edit products and a detail of the product.
+In this section we will explain how to customize and program a sub-application. We will use our example of a product sub-application, which will allow us to manage the products of our company. This sub-application will have a list of products, a form to create, edit and a delete product.
 
 But first, we will explain the _main parts and files of the sub-application_ that we will use.
 
@@ -94,7 +100,7 @@ Etendo Mobile _sends_ the following params to the sub-application:
 
 !!! abstract "Params"
     - _ _id_: id of the sub-application
-    - _url_: the url setted in setting's Etendo Mobile
+    - _url_: the environment url (setted in setting's Etendo Mobile)
     - _navigationContainer_: an instance of the navigation container of Etendo Mobile
     - _token_: Token
     - _language_: Language
@@ -102,21 +108,50 @@ Etendo Mobile _sends_ the following params to the sub-application:
 
 In our example, we will receive these params in App.tsx of the subapp:
 
-![params-of-app-file.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/params-of-app-file.png)
+``` typescript title="App.tsx"
+  interface AppProps {
+    language: string;
+    dataUser: IData;
+    navigationContainer: INavigationContainerProps;
+  }
+
+  const App = ({language, navigationContainer, dataUser}: AppProps) => {
+
+```
 
 #### Language
 The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the sub-application. In our example, we will utilize the _language parameter received as input_ to initialize the remaining aspects of the application in the "App.tsx" file.
 
-![language-initalization.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/language-initalization.png)
+``` typescript title="App.tsx"
+  locale.init();
+  locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
+```
+!!! tip
+    All subapps have to have at least two languages: _en-US_ and _es-ES_.  
 
 As you can see, we use `locale` to set the language of the sub-application. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in this path `resources/src/localization/locale.ts`.
 
-![locale-functions.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/locale-functions.png)
+``` typescript title="locale.ts"
+const locale: LocaleModule = {
+  currentDateLocale: null,
+
+  i18n,
+  init() {...}
+
+  t(key, params) {...}
+
+  setCurrentLanguage(input) {...}
+
+};
+
+export default locale;
+
+```
 
 Between the functions of the `locale` handler, some of the most important are:
 
 !!! info "Functions"
-    - _t(key, params)_: this function receive a key (and other optional params) and returns the text translated to the language of the sub-application. This function is based in `i18n.t` and the keys are defined in .json files in `resources/src/lang`.
+    - _t(key, params)_: this function receive a key (and other optional params) and returns the text translated to the language of the sub-application. This function is based in [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in .json files in `resources/src/lang`. 
     - _setCurrentLanguage(input)_: gets a language as a param and sets this language as default in the sub-application.
 
 
@@ -127,22 +162,70 @@ In our example we will use just two screens:
 - _Home_: this is the main screen of the sub-application (`initialRouteName` in stack). It will show a list of products.
 - _ProductDetail_: this screen will show the detail of a product. Also, it will allow us to edit the product.
 
-![all-app-file.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/all-app-file.png)
+``` typescript title="App.tsx"
+import React from 'react';
+import Home from './src/screens/home';
+import {createStackNavigator} from '@react-navigation/stack';
+import locale from './src/localization/locale';
+import ProductDetail from './src/screens/productDetail';
+import {IData, INavigationContainerProps} from './src/interfaces';
+
+interface AppProps {
+  language: string;
+  dataUser: IData;
+  navigationContainer: INavigationContainerProps;
+}
+
+const App = ({language, navigationContainer, dataUser}: AppProps) => {
+  const Stack = createStackNavigator();
+
+  locale.init();
+  locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
+
+  return (
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Home"
+        initialParams={{dataUser}}>
+        {props => <Home {...props} navigationContainer={navigationContainer} />}
+      </Stack.Screen>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ProductDetail"
+        initialParams={{dataUser}}>
+        {props => <ProductDetail {...props} />}
+      </Stack.Screen>
+    </Stack.Navigator>
+  );
+};
+
+export {App};
+export default App;
+
+```
 
 #### Etendo UI
 Etendo UI is a _library of components_ that we use along our sub-application example. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your sub-applications.
-  In this library we can find components like: - Button - Input - Text - Navbar etc.
+  In this library we can find components like:  Button, Input, Navbar etc.
 
 ![etendo-ui-library-npm.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/etendo-ui-library-npm.png)
 
-You can find more information about this library in this [link](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} TODO: get the prod link
+You can find more information about in [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+
 _Storybook_ is a place where you can try and see all the components of the library. Also, you can see the code of each component and how to use it.
 
 ![storybook.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/storybook.png)
 
 ### Product subapp example
 
-In this section we will do an overview about the product sub-application example screens. principal parts of the sub-application where covered in the previous section.
+In this section we will do an overview about the product sub-application example screens, principal parts of the sub-application where covered in the previous section.
+
+!!! info "Consideration"
+    This sub-application example was develp for both platforms (phone and tablet). 
+    When you create a new sub-application, you have to develop it for both platforms (phone and tablet). 
+    The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
+
 
 #### Home
   - This is the main screen of the sub-application. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
@@ -151,6 +234,8 @@ In this section we will do an overview about the product sub-application example
       ![home-screen.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
       ![remove-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
     </figure>
+    _Tablet version_
+    ![home-screen-tablet.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen-tablet.png)
 
 #### ProductDetail
   - This screen will show the detail of a product. Also, it will allow us to edit the product.
@@ -160,3 +245,5 @@ In this section we will do an overview about the product sub-application example
       ![add-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
       ![edit-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
     </figure>
+    _Tablet version_
+    ![add-product-tablet.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
