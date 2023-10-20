@@ -227,15 +227,12 @@ The Sales Order window allows the user to register sales related documents with 
 
 **Standard Order:** When the transaction document is standard upon booking of the document, there are no additional documents created. Goods shipment and sales invoice still have to be created.
 
-![Sales Order transaction document.png](/assets/drive/RHAkJe21vaTiszWDj0uctmA_1Dfqz8RhP73fiF8zNWSpw4ad-gbDn1kjQGfXi2GO51Dqr0GRBmzB3NkdF8NjjEJ1eciYiNdYauufXwjF-tYrWYYTnyzSPkkzzm98sjg_O7FsGxz0.png)
+![Sales Order.png](/assets/products/etendo-classic/user-guide/sales-management/transactions/sales-order.png)
 
-**POS Order:** The Point of Sale order is for the situation when a customer walks into a shop, orders a product, pays for it and takes the product home. Upon booking of the sales order with this document type, the shipment and the sales invoice are created automatically.
-
-![POS transaction document.png](/assets/drive/hnY0GwS-BtTe7ONXz0VloeDLqMi-GZPDfYz59DqfAXaKK7bLgtuzSYSVa-QMCCvyaoQwJ6PBWzhrROhzOOPPO2uoYlWN0_7OU-9kfT7HfE5gutLtE1dMuSi2Ft76P_AXb4KsgqW3.png)
 
 **Warehouse Order:** A warehouse order is used for the situation where the good shipment takes place at the time that the sales order is booked (for example, the customer is taking goods right away directly from the warehouse). This also means that both Documents have the same Order/Delivery dates.
 
-![Warehouse transaction document.png](/assets/drive/UcQ1waIVTsmDYzegiwRTkknZe7ipSTJc1QnRW7Ldukg95hX7Nbc-ZUKGy9SXwjrRBedCnIGSRF0LEOhFyDSlc8o4I6Jkv79oUT3thbfYf6hcsH2tUBZDQ1sgqDvDJzu5tgzqv7-9.png)
+![Warehouse order document.png](/assets/products/etendo-classic/user-guide/sales-management/transactions/warehouse-order.png)
 
 ### Header
 
@@ -356,12 +353,12 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 
 **Canceled Order**, this field stores the document number of the original order canceled by the inverse order.
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Sales Order with a new field: “Bank account”.
+The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
 
 ![bank_account_4.png](/assets/legacy/bank_account_4.png)
 
@@ -913,12 +910,12 @@ Once completed a sales invoice can be:
 - **voided** by using the button Reactivate
 - **paid** by using the button Add Payment.
 
-#### Advanced Remittance
+#### Remittance
 
 !!! info
-    To be able to include this functionality, the Advanced Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.
 
-The Advanced Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
+The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
 
 ![bank_account_2.png](/assets/legacy/bank_account_2.png)
 

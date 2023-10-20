@@ -6,9 +6,13 @@ tags:
 ---
 ## Overview
 
-*Etendo Mobile* is a sub-application development platform that includes the possibility to log into an *Etendo Classic* server and get the sub-applications configured there. 
+*Etendo Mobile* is a sub-application development platform that includes the possibility to log in to an *Etendo Classic* server and configure the available dynamic sub-applications there according to role. 
 
-In this page we will explain what are the requirements to create a sub application and to be able to visualize it in *Etendo Mobile*.
+A schematic of the infrastructure is shown here:
+
+![etendo-mobile-infrastructure.png](/assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png)
+
+On this page we will explain what are the requirements to create a sub-application and how to install all the necessary tools to develop a new sub-application.
 
 ## Environment Setup
 

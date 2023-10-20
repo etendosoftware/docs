@@ -18,7 +18,8 @@ Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fa
 
     For this, first you need to download TestFlight, next you must search fot Etendo App and download.
 
-    ![](/assets/products/etendo-mobile/user-interface/TestflightEtendo.png)
+    <a href="https://testflight.apple.com/join/MWqctJS2" target="_blank"><img src="/assets/products/etendo-mobile/user-interface/TestflightEtendo.png" alt="TestflightEtendo.png"></a>
+    
 
 ## Initial Configuration
 

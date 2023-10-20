@@ -24,6 +24,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.tooltips
   language: en
   palette:
     # Palette toggle for light mode
@@ -46,6 +47,9 @@ extra_css:
 
 
 markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets
   - tables
   - pymdownx.highlight:
       anchor_linenums: true
@@ -68,6 +72,7 @@ markdown_extensions:
 
 plugins:
   - search:
+      separator: '[\s\.\-]+'
       lang:
         - en
   - tags
@@ -119,10 +124,12 @@ nav:
           - Business Partner Setup: products/etendo-classic/user-guide/master-data-management/business-partner-setup.md
           - Product Setup: products/etendo-classic/user-guide/master-data-management/product-setup.md
           - Pricing: products/etendo-classic/user-guide/master-data-management/pricing.md
-        - Procurement Management: 
+        - Procurement Management:
+          - Getting Started: products/etendo-classic/user-guide/procurement-management/getting-started.md 
           - Transactions: products/etendo-classic/user-guide/procurement-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/procurement-management/analysis-tools.md
-        - Warehouse Management: 
+        - Warehouse Management:
+          - Getting Started: products/etendo-classic/user-guide/warehouse-management/getting-started.md 
           - Transactions: products/etendo-classic/user-guide/warehouse-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/warehouse-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/warehouse-management/setup.md
@@ -134,11 +141,13 @@ nav:
           - Transactions: products/etendo-classic/user-guide/material-requirement-planning/transactions.md
           - Setup: products/etendo-classic/user-guide/material-requirement-planning/setup.md
         - Sales Management: 
+          - Getting Started: products/etendo-classic/user-guide/sales-management/getting-started.md
           - Transactions: products/etendo-classic/user-guide/sales-management/transactions.md
           - Analysis Tools: products/etendo-classic/user-guide/sales-management/analysis-tools.md
           - Setup: products/etendo-classic/user-guide/sales-management/setup.md 
         # - Project & Service Management: products/etendo-classic/user-guide/project-and-services-management/index.md
         - Financial Management: 
+          - Getting Started: products/etendo-classic/user-guide/financial-management/getting-started.md
           - Receivables and Payables:
             - Transactions: products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions.md
             - Analysis Tools: products/etendo-classic/user-guide/financial-management/receivables-and-payables/analysis-tools.md
@@ -150,26 +159,21 @@ nav:
           - Assets: products/etendo-classic/user-guide/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-          - Platform Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+          - Essentials Extensions Bundle: products/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
+          - Platform Extensions Bundle: products/etendo-classic/optional-features/bundles/platform-extensions/overview.md
           - Warehouse Extensions Bundle: products/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: products/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: products/etendo-classic/optional-features/bundles/sales-extensions/overview.md
-          - Financial Extensions Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
-          - Spanish Localization Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
-          - Etendo BI Bundle: 
-            - Overview: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+          - Financial Extensions Bundle: products/etendo-classic/optional-features/bundles/financial-extensions/overview.md
+          - Spanish Localization Bundle: products/etendo-classic/optional-features/bundles/spain-localization/overview.md
+          - Etendo BI Bundle: products/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
         - Supported Modules:
           - Tax Report Launcher: products/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
     - Etendo Mobile: 
       - Getting Started: products/etendo-mobile/getting-started.md
       - User interface: products/etendo-mobile/user-interface/user-interface.md
       - Bundles:
-        - Etendo Classic Subapp Extensions: products/etendo-mobile/bundles/etendo-classic-subapp-extensions/etendo-classic-subapp-extensions.md
+        - Etendo Classic Subapp Extensions: products/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot: 
       - Getting Started:
         - Bastian: products/etendo-copilot/getting-started/bastian.md
@@ -193,7 +197,7 @@ nav:
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
-          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/etendo-classic-subapp-extensions/release-notes.md
+          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -203,7 +207,7 @@ nav:
           - Install Etendo Development Environment: developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md
           - IntelliJ Code Formatting: developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting.md
           - Use of Repositories in Etendo: developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md
-          - Install Modules from Marketplace: developer-guide/etendo-classic/getting-started/installation/install-modules-from-marketplace.md
+          - Install Modules: developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md
         - Migration from Openbravo:
           - Migrating to Etendo (from Openbravo): developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo.md
           - Upgrading to Openbravo 21Q3.2: developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md
@@ -214,6 +218,7 @@ nav:
       - Concepts:
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
+        - Naming Guideliness for Modules: developer-guide/etendo-classic/concepts/naming-guidelines-for-modules.md
       - How to guides: 
         - How to Publish Modules to a GitHub Repository: developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
@@ -223,6 +228,7 @@ nav:
         - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
         - How to Use Secure Webservices: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
+        - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
       - Developer Tools:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
@@ -250,7 +256,12 @@ nav:
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
+<<<<<<< HEAD
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
+=======
+        - Create New Subapliction: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
+        - Create Example Subapplication with RX: developer-guide/etendo-mobile/tutorials/create-example-subapplication-rx.md
+>>>>>>> d6ceab93145fca8d8f8b409dc73a3c5c3f989b10
   - Live Builds: live-builds/overview.md
   - Help and Support:
     - Overview: help-and-support/overview.md

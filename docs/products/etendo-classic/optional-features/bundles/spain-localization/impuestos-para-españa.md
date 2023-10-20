@@ -1,8 +1,12 @@
 ---
-title: Impuestos para España
+title: Taxes:configuration for Spain (Impuestos para España)
 hide:
     - navigation
 ---
+
+## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.taxes
 
 ## **Introducción**
 
