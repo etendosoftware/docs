@@ -40,6 +40,140 @@ In the Role window, the Admin role is found, in the "DYNAMIC APPS - Subapp" tab,
 
 ![role-dynamicapp.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
 
+## Customizing and Programming a Sub-Application
+
+In this section we will explain how to customize and program a sub-application. We will use our example of a product sub-application, which will allow us to manage the products of our company. This sub-application will have a list of products, a form to create, edit and a delete product.
+
+But first, we will explain the _main parts and files of the sub-application_ that we will use.
+
+### Main parts and files
+
+#### App.tsx
+  This file is located in the _root_ of the sub-application and is the main file of the sub-application. In this file we will define the _routes_ of the sub-application and the components that will be rendered in each route. In addition, this file is responsible of the _initialization_ of the sub-application and gets the _params_ from Etendo Mobile.
+
+![path-to-app-file.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
+
+#### Params from Etendo Mobile
+Etendo Mobile _sends_ the following params to the sub-application:
+
+!!! abstract "Params"
+    - _ _id_: id of the sub-application
+    - _url_: the environment url (setted in setting's Etendo Mobile)
+    - _navigationContainer_: an instance of the navigation container of Etendo Mobile
+    - _token_: Token
+    - _language_: Language
+    - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
+
+In our example, we will receive these params in App.tsx of the subapp:
+
+``` typescript title="App.tsx"
+  interface AppProps {
+    language: string;
+    dataUser: IData;
+    navigationContainer: INavigationContainerProps;
+  }
+
+  const App = ({language, navigationContainer, dataUser}: AppProps) => {
+
+```
+
+#### Language
+The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the sub-application. In our example, we will utilize the _language parameter received as input_ to initialize the remaining aspects of the application in the "App.tsx" file.
+
+``` typescript title="App.tsx"
+  locale.init();
+  locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
+```
+!!! tip
+    All subapps have to have at least two languages: _en-US_ and _es-ES_.  
+
+As you can see, we use `locale` to set the language of the sub-application. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in this path `resources/src/localization/locale.ts`.
+
+``` typescript title="locale.ts"
+const locale: LocaleModule = {
+  currentDateLocale: null,
+
+  i18n,
+  init() {...}
+
+  t(key, params) {...}
+
+  setCurrentLanguage(input) {...}
+
+};
+
+export default locale;
+
+```
+
+Between the functions of the `locale` handler, some of the most important are:
+
+!!! info "Functions"
+    - _t(key, params)_: this function receive a key (and other optional params) and returns the text translated to the language of the sub-application. This function is based in [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in .json files in `resources/src/lang`. 
+    - _setCurrentLanguage(input)_: gets a language as a param and sets this language as default in the sub-application.
+
+
+#### Navigation Stack
+The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component that is provided by _react-navigation_.
+In our example we will use just two screens:
+
+- _Home_: this is the main screen of the sub-application (`initialRouteName` in stack). It will show a list of products.
+- _ProductDetail_: this screen will show the detail of a product. Also, it will allow us to edit the product.
+
+``` typescript title="App.tsx"
+import React from 'react';
+import Home from './src/screens/home';
+import {createStackNavigator} from '@react-navigation/stack';
+import locale from './src/localization/locale';
+import ProductDetail from './src/screens/productDetail';
+import {IData, INavigationContainerProps} from './src/interfaces';
+
+interface AppProps {
+  language: string;
+  dataUser: IData;
+  navigationContainer: INavigationContainerProps;
+}
+
+const App = ({language, navigationContainer, dataUser}: AppProps) => {
+  const Stack = createStackNavigator();
+
+  locale.init();
+  locale.setCurrentLanguage(locale.formatLanguageUnderscore(language));
+
+  return (
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Home"
+        initialParams={{dataUser}}>
+        {props => <Home {...props} navigationContainer={navigationContainer} />}
+      </Stack.Screen>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ProductDetail"
+        initialParams={{dataUser}}>
+        {props => <ProductDetail {...props} />}
+      </Stack.Screen>
+    </Stack.Navigator>
+  );
+};
+
+export {App};
+export default App;
+
+```
+
+#### Etendo UI
+Etendo UI is a _library of components_ that we use along our sub-application example. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your sub-applications.
+  In this library we can find components like:  Button, Input, Navbar etc.
+
+![etendo-ui-library-npm.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
+
+You can find more information about in [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+
+_Storybook_ is a place where you can try and see all the components of the library. Also, you can see the code of each component and how to use it.
+
+![storybook.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png)
 
 ## Development mode workflow
 ### Etendo Classic and Etendo Mobile
