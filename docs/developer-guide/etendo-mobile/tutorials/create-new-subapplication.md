@@ -47,12 +47,10 @@ From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp"
 
 ## Main parts, files and Programming a Sub-Application
 
-In this section we will explain how to customize and program a sub-application. We will use our example of a product sub-application, which will allow us to manage the products of our company. This sub-application will have a list of products, a form to create, edit and a delete product.
-
-But first, we will explain the _main parts and files of the sub-application_ that we will use.
+In this section we will explain the main parts and files of the sub-application that we will use.
 
 #### App.tsx
-  This file is located in the _root_ of the sub-application and is the main file of the sub-application. In this file we will define the _routes_ of the sub-application and the components that will be rendered in each route. In addition, this file is responsible of the _initialization_ of the sub-application and gets the _params_ from Etendo Mobile.
+  This file is located in the root of the sub-application and is the main file of the sub-application. In this file we will define the routes of the sub-application and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the sub-application and gets the params from Etendo Mobile.
 
 ![path-to-app-file.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
 
@@ -117,11 +115,7 @@ Between the functions of the `locale` handler, some of the most important are:
 
 
 #### Navigation Stack
-The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component that is provided by _react-navigation_.
-In our example we will use just two screens:
-
-- _Home_: this is the main screen of the sub-application (`initialRouteName` in stack). It will show a list of products.
-- _ProductDetail_: this screen will show the detail of a product. Also, it will allow us to edit the product.
+The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In our example we will use only one screen called Home which is the main screen of the sub-application (initialRouteName in stack).
 
 ``` typescript title="App.tsx"
 import React from 'react';
