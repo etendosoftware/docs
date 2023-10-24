@@ -229,14 +229,14 @@ In the package.json it is defined where the local server will be raised with [Ht
   },
 ```
 
-In a terminal I would execute the following commands to build the sub-application and launch it on a local server
+In a terminal I would execute the following commands to build the sub-application and launch it on a local server.
     ``` bash title="Terminal"
     cd modules/com.etendoerp.subapp.base/resources
     yarn build && yarn dev
     ```
 
 ### Ngrok
-So that from Etendo Mobile we can access a sub-application we will use [Ngrok](https://ngrok.com/){target="_blank"} that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command
+So that from Etendo Mobile we can access a sub-application we will use [Ngrok](https://ngrok.com/){target="_blank"} that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command.
     ``` bash title="Terminal"
     ngrok http 3000 
     ```
@@ -255,7 +255,7 @@ So that from Etendo Mobile we can access a sub-application we will use [Ngrok](h
 5. Here is the sub-application.
     ![sub-app.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
 ### Applying changes
-1. Add any changes for example in `modules/com.etendoerp.subapp.base/resources/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`
+1. Add any changes for example in `modules/com.etendoerp.subapp.base/resources/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
 
     ```groovy title="index.tsx"
     import React from 'react';
@@ -290,7 +290,7 @@ So that from Etendo Mobile we can access a sub-application we will use [Ngrok](h
 
     export default Home;
     ```
-2.  In a terminal run the following commands to build the sub-application and to lift it on a local server
+2.  In a terminal run the following commands to build the sub-application and to lift it on a local server.
         ``` bash title="Terminal"
         cd modules/com.etendoerp.subapp.base/resources
         yarn build && yarn dev
