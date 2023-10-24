@@ -174,7 +174,7 @@ To invoice these documents can do it from several windows / processes:
 
 Sales Management has a connection with other application areas:
 
-- [Warehouse Management]() as shipment changes stock quantity and its value.
+- [Warehouse Management](/products/etendo-classic/user-guide/warehouse-management/getting-started/) as shipment changes stock quantity and its value.
 - [Financial Management]() in terms of managing payments.
 - [Material Requirement]() (MRP) because pending sales orders are one of the inputs for the prodReversal Sales Invoiceuction process.
 
