@@ -7,14 +7,18 @@ This section provides a step-by-step guide on how to run a sub-application in de
 
 ## Fork the dummy application
 
-To start with it requires a fork of our dummy application [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in our Etendo environment.
+2. To start with it requires a fork of our dummy application [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in our Etendo environment.
     ``` bash title="Terminal"
     git@github.com:etendosoftware/com.etendoerp.subapp.base.git
     ```
 
+    ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
-
-![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
+1. In a terminal in `modules/com.etendoerp.subapp.base/resources` to be able to install the depedencias delcaradas in the package.json and for it the following command would be executed.
+    Install the dependencies 
+    ``` bash title="Terminal"
+    yarn install 
+    ```
 
 ## Dynamic app window
 
@@ -29,7 +33,8 @@ This is a window where dynamic applications can be configured to open from the E
 
 ![dynamicapp-versio.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
 
-In the Role window, the Admin role is found, in the "DYNAMIC APPS - Subapp" tab, the example record Subapp Example with dev version must be added.  
+It is necessary to give permissions to the Admin role to be able to see our application inside the Etendo Mobile application.
+From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp" tab, add the example record Subapp Example with dev version.
 
 | Variable                | Description                                                      | Default Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
@@ -40,13 +45,11 @@ In the Role window, the Admin role is found, in the "DYNAMIC APPS - Subapp" tab,
 
 ![role-dynamicapp.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
 
-## Customizing and Programming a Sub-Application
+## Main parts, files and Programming a Sub-Application
 
 In this section we will explain how to customize and program a sub-application. We will use our example of a product sub-application, which will allow us to manage the products of our company. This sub-application will have a list of products, a form to create, edit and a delete product.
 
 But first, we will explain the _main parts and files of the sub-application_ that we will use.
-
-### Main parts and files
 
 #### App.tsx
   This file is located in the _root_ of the sub-application and is the main file of the sub-application. In this file we will define the _routes_ of the sub-application and the components that will be rendered in each route. In addition, this file is responsible of the _initialization_ of the sub-application and gets the _params_ from Etendo Mobile.
@@ -178,16 +181,9 @@ _Storybook_ is a place where you can try and see all the components of the libra
 ## Development mode workflow
 ### Etendo Classic and Etendo Mobile
 
-1. To start in a terminal in `modules/com.etendoerp.subapp.base/resources` and will be executed the following command.
+1. Etendo Classic should be running.
 
-    Install the dependencies 
-    ``` bash title="Terminal"
-    yarn install 
-    ```
-
-2. Etendo Classic should be running.
-
-3. Open the Etendo Mobile application on a mobile device. You can use either an emulator or a physical device.
+2. Open the Etendo Mobile application on a mobile device. You can use either an emulator or a physical device.
 
 ### Rollup
 [Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something larger and more complex, this is already installed in the module.
