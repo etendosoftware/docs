@@ -7,14 +7,14 @@ This section provides a step-by-step guide on how to run a sub-application in de
 
 ## Fork the dummy application
 
-2. To start with it requires a fork of our dummy application [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in our Etendo environment.
+2. To start with it requires a fork of the dummy application [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in the Etendo environment.
     ``` bash title="Terminal"
     git@github.com:etendosoftware/com.etendoerp.subapp.base.git
     ```
 
     ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
-1. In a terminal in `modules/com.etendoerp.subapp.base/resources` to be able to install the depedencias delcaradas in the package.json and for it the following command would be executed.
+1. In a terminal in `modules/com.etendoerp.subapp.base/resources` to be able to install the depedencies declared in the package.json and for it the following command would be executed.
     Install the dependencies 
     ``` bash title="Terminal"
     yarn install 
@@ -33,7 +33,7 @@ This is a window where dynamic applications can be configured to open from the E
 
 ![dynamicapp-versio.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
 
-It is necessary to give permissions to the Admin role to be able to see our application inside the Etendo Mobile application.
+Permissions must be given to the Admin role in order to view the application within the Etendo Mobile application.
 From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp" tab, add the example record Subapp Example with dev version.
 
 | Variable                | Description                                                      | Default Value                          |
@@ -65,7 +65,7 @@ Etendo Mobile _sends_ the following params to the sub-application:
     - _language_: Language
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
 
-In our example, we will receive these params in App.tsx of the subapp:
+In this example, we will receive these params in App.tsx of the subapp:
 
 ``` typescript title="App.tsx"
   interface AppProps {
@@ -79,7 +79,7 @@ In our example, we will receive these params in App.tsx of the subapp:
 ```
 
 #### Language
-The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the sub-application. In our example, we will utilize the _language parameter received as input_ to initialize the remaining aspects of the application in the "App.tsx" file.
+The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the sub-application. In this example, we will utilize the _language parameter received as input_ to initialize the remaining aspects of the application in the "App.tsx" file.
 
 ``` typescript title="App.tsx"
   locale.init();
@@ -115,7 +115,7 @@ Between the functions of the `locale` handler, some of the most important are:
 
 
 #### Navigation Stack
-The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In our example we will use only one screen called Home which is the main screen of the sub-application (initialRouteName in stack).
+The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In this example we will use only one screen called Home which is the main screen of the sub-application (initialRouteName in stack).
 
 ``` typescript title="App.tsx"
 import React from 'react';
@@ -145,12 +145,6 @@ const App = ({language, navigationContainer, dataUser}: AppProps) => {
         initialParams={{dataUser}}>
         {props => <Home {...props} navigationContainer={navigationContainer} />}
       </Stack.Screen>
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="ProductDetail"
-        initialParams={{dataUser}}>
-        {props => <ProductDetail {...props} />}
-      </Stack.Screen>
     </Stack.Navigator>
   );
 };
@@ -161,7 +155,7 @@ export default App;
 ```
 
 #### Etendo UI
-Etendo UI is a _library of components_ that we use along our sub-application example. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your sub-applications.
+Etendo UI is a _library of components_ that will be used throughout the example sub-application. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your sub-applications.
   In this library we can find components like:  Button, Input, Navbar etc.
 
 ![etendo-ui-library-npm.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
@@ -236,7 +230,7 @@ In a terminal I would execute the following commands to build the sub-applicatio
     ```
 
 ### Ngrok
-So that from Etendo Mobile we can access a sub-application we will use [Ngrok](https://ngrok.com/){target="_blank"} that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command.
+So that from Etendo Mobile we can access a sub-application in development mode we will use [Ngrok](https://ngrok.com/){target="_blank"} that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command.
     ``` bash title="Terminal"
     ngrok http 3000 
     ```
