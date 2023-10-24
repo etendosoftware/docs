@@ -83,6 +83,6 @@ This window allows reviewing different types of cost adjustment sources together
 
 Warehouse Management has a connection with other application areas:
 
-- *Procurement Management* as goods received change stock quantity and its value.
-- *Sales Management* as shipment changes stock quantity and its value.
+- [Procurement Management](/products/etendo-classic/user-guide/procurement-management/getting-started/) as goods received change stock quantity and its value.
+- [Sales Management](/products/etendo-classic/user-guide/sales-management/getting-started/) as shipment changes stock quantity and its value.
 - *Production Management* because raw materials are taken out of warehouse and produced goods are sent back to the stock during production process.
