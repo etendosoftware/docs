@@ -14,7 +14,7 @@ Once Loged in, go to the modules window, and create a new one as the image shows
 | `Java Package`          | Java Package                                                     | com.etendoerp.subapp.base              | 
 | `Name`                  | Module name                                                      | Subapp Base                            |
 | `Type`                  | Module type                                                      | Module                                 |
-| `Description`           | Description                                                      | An subapp example to develop into dynamic app                                      |
+| `Description`           | Description                                                      | An subapp example to develop into dynamic app |
 | `Version`               | Version name                                                     | 1.0.0                                   |
 
 
@@ -85,7 +85,7 @@ From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp"
 
 ![role-dynamicapp.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
 
-## Main parts, files and Programming a Sub-Application
+## Concepts
 
 In this section we will explain the main parts and files of the sub-application that we will use.
 
