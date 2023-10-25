@@ -5,26 +5,66 @@ This section provides a step-by-step guide on how to run a sub-application in de
 !!! info
     Before starting this tutorial requires Etendo, Etendo Mobile, Ngrok and Node.js in the local environment. For more information check the [Getting Started in the Etendo Mobile section](/developer-guide/etendo-mobile/getting-started/){target="_blank"}.
 
+## Create a new Etendo Classic module
+
+Once Loged in, go to the modules window, and create a new one as the image shows:
+
+| Variable                | Description                                                      | Example Value                          |
+| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
+| `Java Package`          | Java Package                                                     | com.etendoerp.subapp.base              | 
+| `Name`                  | Module name                                                      | Subapp Base                            |
+| `Type`                  | Module type                                                      | Module                                 |
+| `Description`           | Description                                                      | An subapp example to develop into dynamic app                                      |
+| `Version`               | Version name                                                     | 1.0.0                                   |
+
+
+![create-module..png](/assets/developer-guide/etendo-mobile/create-new-subapplication/create-module.png)
+
+!!! Tip
+    - Notice that the name can be anything you want, but the type have to be setted as Module.
+    - The description field is free and also required.
+
+In this case we going to start from 1.0.0 version and set the DB prefix as ETAPP.
+
+After save all the configuration, you have to export it. Open a terminal in the root of your etendo classic and execute the following command:
+    ``` bash title="Terminal"
+    ./gradlew export.database
+    ```
+
+!!! warning "Important"
+    The output must be a "BUILD SUCCESSFUL" message.
+
+
 ## Fork the dummy application
 
-2. To start with it requires a fork of the dummy application [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in the Etendo environment.
+2. To start with it requires a fork of the dummy application [subapp](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in the Etendo environment.
     ``` bash title="Terminal"
-    git@github.com:etendosoftware/com.etendoerp.subapp.base.git
+    git clone git@github.com:etendosoftware/subapp.git
     ```
 
     ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
-1. In a terminal in `modules/com.etendoerp.subapp.base/resources` to be able to install the depedencies declared in the package.json and for it the following command would be executed.
+1. In a terminal in `modules/com.etendoerp.subapp.base/subapp` to be able to install the depedencies declared in the package.json and for it the following command would be executed.
     Install the dependencies 
     ``` bash title="Terminal"
     yarn install 
     ```
 
 ## Dynamic app window
+This is a window in which dynamic applications can be configured to open from the Etendo Mobile application. To do this we create a record in this window we declare the module, the name of the application and the location of the building of our application.
 
-This is a window where dynamic applications can be configured to open from the Etendo Mobile application. Forking the dummy app will result in a base sub-application loaded by default in development mode, allowing the developer to use a development URL and not a productive one within Etendo Mobile. For more information check the [Dynamic App](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"}.
+After selecting this record in the DYNAMIC APP VERSION tab you should add a version name, the name of our built file and check the "is Development" checkbox to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the [Dynamic App](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"}.
 
-| Variable                | Description                                                      | Default Value                          |
+| Variable                | Description                                                      | Example Value                          |
+| ----------------------- | ---------------------------------------------------------------- | ------------------                     |
+| `Module`                | Module name                                                      | Subapp Base - 1.0.0 - English (USA)    | 
+| `Name`                  | Sub-application Name                                             | Subapp Example                         |
+| `Dyrectory Location`    | Sub-application build location                                   | /                                      |
+| `Active`                | If active                                                        | true                                   |
+
+### Dynamic app version
+
+| Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
 | `Name`                  | Version name                                                     | dev                                    | 
 | `File Name`             | Bundle name                                                      | subappexample.js                       |
@@ -36,10 +76,10 @@ This is a window where dynamic applications can be configured to open from the E
 Permissions must be given to the Admin role in order to view the application within the Etendo Mobile application.
 From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp" tab, add the example record Subapp Example with dev version.
 
-| Variable                | Description                                                      | Default Value                          |
+| Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
 | `Organization`          | Name of organization                                             | *                                      | 
-| `App`                   | Name of application                                              | Subapp Example                         |
+| `App`                   | Name of Sub-application                                          | Subapp Example                         |
 | `Version`               | Version number                                                   | dev                                    |
 | `Active`                | If active                                                        | true                                   |
 
@@ -197,7 +237,7 @@ export default {
   output: [
     {
     //Path where the application build will be generated. 
-      file: '../web/com.etendorx.subapp.base/subappexample.js', 
+      file: '../web/com.etendoerp.subapp.base/subappexample.js', 
       format: 'cjs',
       exports: 'auto',
       strict: false,
@@ -219,7 +259,7 @@ In the package.json it is defined where the local server will be raised with [Ht
     "test": "jest",
     "lint": "eslint .",
     "build": "rollup -c",
-    "dev": "http-server -p 3000 ../web/com.etendorx.subapp.base/"
+    "dev": "http-server -p 3000 ../web/com.etendorx.subapp.base/subapp"
   },
 ```
 
