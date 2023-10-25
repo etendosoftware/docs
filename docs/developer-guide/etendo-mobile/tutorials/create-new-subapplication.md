@@ -31,7 +31,7 @@ After save all the configuration, you have to export it. Open a terminal in the 
     ./gradlew export.database
     ```
 
-!!! warning "Important"
+!!! success "Important"
     The output must be a "BUILD SUCCESSFUL" message.
 
 
