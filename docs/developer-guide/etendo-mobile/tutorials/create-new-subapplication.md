@@ -35,25 +35,19 @@ After save all the configuration, you have to export it. Open a terminal in the 
     The output must be a "BUILD SUCCESSFUL" message.
 
 
-## Fork the dummy application
-
-2. To start with it requires a fork of the dummy application [subapp](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"} and clone it inside the modules folder in the Etendo environment.
-    ``` bash title="Terminal"
-    git clone git@github.com:etendosoftware/subapp.git
-    ```
-
+## Add the dummy application
+1. To start you must download the latest version of the [Dummy sub application zip](https://github.com/etendosoftware/subapp/releases){target="_blank"}  file and unzip it from the module you have just created.
     ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
-1. In a terminal in `modules/com.etendoerp.subapp.base/subapp` to be able to install the depedencies declared in the package.json and for it the following command would be executed.
-    Install the dependencies 
+2. In a terminal in `modules/<java package>/subapp` install the depedencies declared in the package.json and for it the following command would be executed.
     ``` bash title="Terminal"
     yarn install 
     ```
 
 ## Dynamic app window
-This is a window in which dynamic applications can be configured to open from the Etendo Mobile application. To do this we create a record in this window we declare the module, the name of the application and the location of the building of our application.
+In the `Dynamic App` window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the sub-application is declared.
 
-After selecting this record in the DYNAMIC APP VERSION tab you should add a version name, the name of our built file and check the "is Development" checkbox to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the [Dynamic App](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"}.
+After selecting this record in the `Dynamic App Version` tab we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the [Dynamic App](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"}.
 
 | Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
@@ -73,8 +67,8 @@ After selecting this record in the DYNAMIC APP VERSION tab you should add a vers
 
 ![dynamicapp-versio.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
 
-Permissions must be given to the Admin role in order to view the application within the Etendo Mobile application.
-From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp" tab, add the example record Subapp Example with dev version.
+Permissions must be given to the Admin role in order to view the application within the Etendo Mobile sub-application.
+From the `Role` window, look for the name Admin and in the `DYNAMIC APPS - Subapp` tab, add the example record Subapp Example with dev version.
 
 | Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
@@ -90,7 +84,7 @@ From the Role window, look for the name Admin and in the "DYNAMIC APPS - Subapp"
 In this section we will explain the main parts and files of the sub-application that we will use.
 
 #### App.tsx
-  This file is located in the root of the sub-application and is the main file of the sub-application. In this file we will define the routes of the sub-application and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the sub-application and gets the params from Etendo Mobile.
+  This file is located in the root of the sub-application and is the main file. In this file we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the sub-application and gets the params from Etendo Mobile.
 
 ![path-to-app-file.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
 
@@ -128,7 +122,7 @@ The language is a string that serves as a representation of the user's selected 
 !!! tip
     All subapps have to have at least two languages: _en-US_ and _es-ES_.  
 
-As you can see, we use `locale` to set the language of the sub-application. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in this path `resources/src/localization/locale.ts`.
+As you can see, we use `locale` to set the language of the sub-application. This `locale` is an instace of a custom handler of the language which is based in `i18n` and defined in this path `subapp/src/localization/locale.ts`.
 
 ``` typescript title="locale.ts"
 const locale: LocaleModule = {
@@ -150,7 +144,7 @@ export default locale;
 Between the functions of the `locale` handler, some of the most important are:
 
 !!! info "Functions"
-    - _t(key, params)_: this function receive a key (and other optional params) and returns the text translated to the language of the sub-application. This function is based in [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in .json files in `resources/src/lang`. 
+    - _t(key, params)_: this function receive a key (and other optional params) and returns the text translated to the language of the sub-application. This function is based in [i18n](https://github.com/fnando/i18n#readme){target="_blank"} and the keys are defined in .json files in `subapp/src/lang`. 
     - _setCurrentLanguage(input)_: gets a language as a param and sets this language as default in the sub-application.
 
 
@@ -162,7 +156,6 @@ import React from 'react';
 import Home from './src/screens/home';
 import {createStackNavigator} from '@react-navigation/stack';
 import locale from './src/localization/locale';
-import ProductDetail from './src/screens/productDetail';
 import {IData, INavigationContainerProps} from './src/interfaces';
 
 interface AppProps {
@@ -206,7 +199,8 @@ _Storybook_ is a place where you can try and see all the components of the libra
 
 ![storybook.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png)
 
-## Development mode workflow
+## Development mode setup
+
 ### Etendo Classic and Etendo Mobile
 
 1. Etendo Classic should be running.
@@ -214,9 +208,11 @@ _Storybook_ is a place where you can try and see all the components of the libra
 2. Open the Etendo Mobile application on a mobile device. You can use either an emulator or a physical device.
 
 ### Rollup
-[Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something larger and more complex, this is already installed in the module.
+[Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.
 
-Inside the project there is a file rollup.config.js where it is defined where the packaged file with .js extension is going to be generated.
+Inside the project there is a file rollup.config.js where the path where the packaged file with .js extension will be generated is defined.
+
+It is necessary to modify this path adding the `javapackage` of the generated module.
 
 ```groovy title="rollup.config.js"
 import typescript from '@rollup/plugin-typescript';
@@ -236,8 +232,8 @@ export default {
   input: './App.tsx',
   output: [
     {
-    //Path where the application build will be generated. 
-      file: '../web/com.etendoerp.subapp.base/subappexample.js', 
+    //Change the javapackge in the path where the application build will be generated. 
+      file: '../web/<java package>/subappexample.js', 
       format: 'cjs',
       exports: 'auto',
       strict: false,
@@ -249,7 +245,9 @@ export default {
 };
 ```
 
-In the package.json it is defined where the local server will be raised with [Http-server](https://www.npmjs.com/package/http-server){target="_blank"} with the `yarn dev` command (In this case on port 3000).
+In the package.json you define the path where the local server will be raised with [Http-server](https://www.npmjs.com/package/http-server){target="_blank"} with the `yarn dev` command.
+This path must coincide with the path where the build of the application was generated. Also the local port to be exposed is defined here (in this case port 3000).
+
 
 ```groovy title="package.json"
 "scripts": {
@@ -259,13 +257,13 @@ In the package.json it is defined where the local server will be raised with [Ht
     "test": "jest",
     "lint": "eslint .",
     "build": "rollup -c",
-    "dev": "http-server -p 3000 ../web/com.etendorx.subapp.base/subapp"
+    "dev": "http-server -p 3000 ../web/<java package>/subapp"
   },
 ```
 
-In a terminal I would execute the following commands to build the sub-application and launch it on a local server.
+In a terminal execute the following commands to build the sub-application and launch it on a local server.
     ``` bash title="Terminal"
-    cd modules/com.etendoerp.subapp.base/resources
+    cd modules/<java package>/subapp
     yarn build && yarn dev
     ```
 
@@ -274,22 +272,24 @@ So that from Etendo Mobile we can access a sub-application in development mode w
     ``` bash title="Terminal"
     ngrok http 3000 
     ```
+
+ ![ngrok-terminal.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/ngrok-terminal.png)
 ### Etendo Mobile Setup
-1. First of all it is necessary to configure the public url that we previously generated with ngrok inside Etendo Mobile.  Accessing with the System Administrator role and change the default role from the backend.
+1. First we need to configure the public URL that we have previously generated with Ngrok inside Etendo Mobile. To do this we must access the `System Administrator` role and set `set as default` to true, since when entering the Etendo Mobile application it will log in with the default role.
     ![system-default.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/system-default.png)
 
-2. In Etendo Mobile, in the configuration window, save the ngrok url in the debug url field (you must be logged in with the system administrator role for this field to appear).
+2. In Etendo Mobile, in the `Settings` window, save the Ngrok URL in the `Debug URL` field (you must be logged in with the `System Administrator` role for this field to appear).
     ![debug-url.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/debug-url.png)
     
-3. Log out of Etendo Mobile and in Etendo Classic change the role to admin by default.
+3. Log out of Etendo Mobile and in Etendo Classic change the role to admin by default again.
     ![admin-default.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/admin-default.png)
 
-4. In Etendo Mobile you will see the list of subapps. Clicking on Subapp Example will download the build previously generated and exposed in the ngrok url.
+4. In Etendo Mobile you will see the list of subapps. Clicking on `Subapp Example` will download the build previously generated and exposed in the Ngrok URL.
     ![app-home.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png)
 5. Here is the sub-application.
     ![sub-app.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
-### Applying changes
-1. Add any changes for example in `modules/com.etendoerp.subapp.base/resources/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
+## Applying changes workflow
+1. Add any changes for example in `modules/<java package>/subapp/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
 
     ```groovy title="index.tsx"
     import React from 'react';
@@ -326,10 +326,10 @@ So that from Etendo Mobile we can access a sub-application in development mode w
     ```
 2.  In a terminal run the following commands to build the sub-application and to lift it on a local server.
         ``` bash title="Terminal"
-        cd modules/com.etendoerp.subapp.base/resources
+        cd modules/<java package>/subapp
         yarn build && yarn dev
         ```
-3.  Exit and re-enter the sub-application to visualize the changes.
+3.  Exit and re-enter the sub-application to visualize the changes.(No need to log out).
      ![app-test.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)
 
 
