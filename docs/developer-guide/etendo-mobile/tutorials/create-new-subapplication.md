@@ -36,10 +36,10 @@ After save all the configuration, you have to export it. Open a terminal in the 
 
 
 ## Add the dummy application
-1. To start you must download the latest version of the [Dummy sub application zip](https://github.com/etendosoftware/subapp/releases){target="_blank"}  file and unzip it from the module you have just created.
+1. To start you must download the latest version of the [Dummy sub-application zip](https://github.com/etendosoftware/subapp/releases){target="_blank"} file and unzip it inside the module just created in the `subapp` folder.
     ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
-2. In a terminal in `modules/<java package>/subapp` install the depedencies declared in the package.json and for it the following command would be executed.
+2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and for it the following command would be executed.
     ``` bash title="Terminal"
     yarn install 
     ```
@@ -233,7 +233,7 @@ export default {
   output: [
     {
     //Change the javapackge in the path where the application build will be generated. 
-      file: '../web/<java package>/subappexample.js', 
+      file: '../web/<javapackage>/subappexample.js', 
       format: 'cjs',
       exports: 'auto',
       strict: false,
@@ -257,13 +257,12 @@ This path must coincide with the path where the build of the application was gen
     "test": "jest",
     "lint": "eslint .",
     "build": "rollup -c",
-    "dev": "http-server -p 3000 ../web/<java package>/subapp"
+    "dev": "http-server -p 3000 ../web/<javapackage>/subapp"
   },
 ```
 
-In a terminal execute the following commands to build the sub-application and launch it on a local server.
+In a terminal on path `modules/<javapackage>/subapp`, run the following commands to build the sub-application and deploy it to a local server.
     ``` bash title="Terminal"
-    cd modules/<java package>/subapp
     yarn build && yarn dev
     ```
 
@@ -289,7 +288,7 @@ So that from Etendo Mobile we can access a sub-application in development mode w
 5. Here is the sub-application.
     ![sub-app.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
 ## Applying changes workflow
-1. Add any changes for example in `modules/<java package>/subapp/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
+1. Add any changes for example in `modules/<javapackage>/subapp/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
 
     ```groovy title="index.tsx"
     import React from 'react';
@@ -324,11 +323,10 @@ So that from Etendo Mobile we can access a sub-application in development mode w
 
     export default Home;
     ```
-2.  In a terminal run the following commands to build the sub-application and to lift it on a local server.
-        ``` bash title="Terminal"
-        cd modules/<java package>/subapp
-        yarn build && yarn dev
-        ```
+2.  In a terminal on path `modules/<javapackage>/subapp`, run the following commands to build the sub-application and deploy it to a local server.
+    ``` bash title="Terminal"
+    yarn build && yarn dev
+    ```
 3.  Exit and re-enter the sub-application to visualize the changes.(No need to log out).
      ![app-test.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)
 
