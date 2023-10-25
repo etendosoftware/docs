@@ -256,7 +256,7 @@ nav:
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
-        - Create New Subapliction: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
+        - Create New Sub-application: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
 
   - Live Builds: live-builds/overview.md
   - Help and Support:
