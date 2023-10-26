@@ -40,8 +40,11 @@ Open a terminal in the root of your etendo classic and execute the following com
 
 4. In the section below you going to set two important values:
 
-    - _Name_: in thes case type 1.0.0
+    - _Name_: in this case type 1.0.0
     - _File Name_: is the name of the bundle that you going to create.
+
+    !!! warning "Important"
+        Check _Is Development_ to continue with the next step.
 
 The final result must be like this:
 
