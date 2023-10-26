@@ -6,7 +6,6 @@ title: Sales Management
 
 Sales Management deals with all activities related to the customer sales process and corresponding reporting.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n6q-ViGRxcE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## **Sales Quotation**
 
