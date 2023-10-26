@@ -11,6 +11,9 @@ tags:
 
 ## Overview
 
+<iframe width="720" height="480"  src="https://www.youtube.com/embed/JxTGQIJ9JqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 Sales Management deals with all activities related to the customer sales process and corresponding reporting.
 
 This application area of Etendo covers Order to Shipment and Invoicing parts of [Order to Cash](/products/etendo-classic/user-guide/sales-management/getting-started/#order-to-cash-business-flow) business flow and [Customer Returns](/products/etendo-classic/user-guide/sales-management/getting-started/#customer-returns-business-flow) business process. 
