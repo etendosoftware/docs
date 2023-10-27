@@ -4845,23 +4845,26 @@ And then verify that the version is correct.</p>
 <p>It is highly likely that pip3 comes bundled with the installation of python3. Verify if it is installed by running </p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip3<span class="w"> </span>--version
 </span></code></pre></div>
+<p>Then ensure to have an updated version of it</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span></code></pre></div>
 <p>If it is not installed, run</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
 </span></code></pre></div>
 </li>
 <li>
 <p>The user needs to install libpq-dev to ensure seamless communication and compatibility between our python script and the postgresql database.</p>
 <p>To install it, run 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpq-dev
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpq-dev
 </span></code></pre></div></p>
 </li>
 <li>
 <p>The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>psycopg2
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>psycopg2-binary
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>pandas
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>pandas
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>requests
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>requests
 </span></code></pre></div>
 </li>
 </ol>
