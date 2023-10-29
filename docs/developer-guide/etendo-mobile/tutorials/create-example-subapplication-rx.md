@@ -1,9 +1,9 @@
 ## Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app by forking it from our base project, which can be found on Github [com.etendoerp.subapp.base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone sub-application, utilizing the power of RX, as explained in this [RX tutorial](link to RX tutorial), and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide on installation and usage on the [documentation](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone sub-application, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
-    Before starting this tutorial must have done [how to create a new subapp](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
+    Before starting this tutorial must have done in [Create New Sub-application](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
 
 ## Configuration of Etendo classic
 
