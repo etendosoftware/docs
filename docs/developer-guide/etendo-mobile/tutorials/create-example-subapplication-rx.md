@@ -5,10 +5,10 @@ This tutorial provides an extensive, step-by-step guide to help you create a new
 !!! info
     Before starting this tutorial must have done in [Create New Sub-application](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
 
-## Configuration of Etendo classic
+## Setup
 
 ----------
-### Module and export database
+### Create new Module
 
 Following the documentation about [how to create a new etendo classic module](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the etendo classic and it have to look like this:
 
@@ -41,30 +41,30 @@ At this point you have _done_ with the etendo classic configuration.
 
 ## Download the sub-application
 
-This tutorial is based in our example of a product sub-application, which allows to manage the products of a company. This sub-application will have a list of products, a form to create, edit and a delete product.
+This tutorial is based in our example of a product sub-application, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
 
 !!! tip "Keep in mind"
     All related to the main concepts of a sub-application are explained in the [concepts](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#concepts){target="_blank"} section in create new sub-application tutorial.
     The following sections are focused on the product sub-application example.
 
-To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules_rx` folder in our Etendo environment. Then unzip the file and the folder must look like this:
+To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
 
 ![repository-cloned.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png)
 
 !!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in this link [here](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
+    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Sub-application](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
 
 ## Customizing and Programming a Sub-Application
 
-This section explains how to customize and program a sub-application. It uses as an example our [product sub-application](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
+This section explains how to customize and program a sub-application. It uses as an example the [Product Sub-application](https://github.com/etendosoftware/subapp-product/releases/){target="_blank"} .
 
 ### Product subapp example
 
-Here you going to read an overview about the product sub-application example screens and principal parts of the sub-application where covered in [create new sub-application](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"}.
+This section covers an overview about the product sub-application example screens and principal parts of the sub-application where covered in [Create New Sub-application](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"}.
 
 !!! info "Consideration"
     This sub-application example was developed for both platforms (phone and tablet). 
-    When you create a new sub-application, you have to develop it for both platforms (phone and tablet). 
+    When you create a new sub-application, you have to do the same. 
     The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
 
 
