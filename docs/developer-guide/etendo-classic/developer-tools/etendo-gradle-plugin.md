@@ -565,6 +565,17 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
         node -v
         npm -v
         ```
+        
+        ### Note
+        If you encounter issues with the installation, especially when using the `curl` command, it might be because `curl` isn't installed or is misconfigured on your system. In such cases, you can try the following alternative method:
+
+        ```bash
+        sudo snap remove curl
+        sudo apt install curl
+        ```
+        
+        After installing curl using the alternative method, please return to and execute the steps above corresponding to the installation of NVM and Node.js.
+
 
     === ":simple-macos: Mac OS"
 
