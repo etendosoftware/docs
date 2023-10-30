@@ -553,6 +553,15 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
         ```bash
         nvm install 16.10.0
         ```
+
+            **Note:** If you encounter errors during the installation of Node.js with the `nvm install 16.10.0` command, it might be because `curl` isn't installed or is misconfigured on your system. In such cases, you can try running the following commands:
+
+            ```bash
+            sudo snap remove curl
+            sudo apt install curl
+            ```
+
+            After successfully configuring `curl` using this method, return to this guide and execute the steps above to install NVM and set up Node.js.
         
         3. Set Node.js version 16.10.0 as the default version:
         ```bash
@@ -565,16 +574,6 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
         node -v
         npm -v
         ```
-        
-        ### Note
-        If you encounter issues with the installation, especially when using the `curl` command, it might be because `curl` isn't installed or is misconfigured on your system. In such cases, you can try the following alternative method:
-
-        ```bash
-        sudo snap remove curl
-        sudo apt install curl
-        ```
-        
-        After installing curl using the alternative method, please return to and execute the steps above corresponding to the installation of NVM and Node.js.
 
 
     === ":simple-macos: Mac OS"
