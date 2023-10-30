@@ -17,7 +17,7 @@
         <link rel="next" href="../../../../live-builds/overview/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3434,16 +3434,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-of-etendo-classic" class="md-nav__link">
-    Configuration of Etendo classic
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
-    <nav class="md-nav" aria-label="Configuration of Etendo classic">
+    <nav class="md-nav" aria-label="Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#module-and-export-database" class="md-nav__link">
-    Module and export database
+  <a href="#create-new-module" class="md-nav__link">
+    Create new Module
   </a>
   
 </li>
@@ -3682,16 +3682,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration-of-etendo-classic" class="md-nav__link">
-    Configuration of Etendo classic
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
-    <nav class="md-nav" aria-label="Configuration of Etendo classic">
+    <nav class="md-nav" aria-label="Setup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#module-and-export-database" class="md-nav__link">
-    Module and export database
+  <a href="#create-new-module" class="md-nav__link">
+    Create new Module
   </a>
   
 </li>
@@ -3804,9 +3804,9 @@
 <p class="admonition-title">Info</p>
 <p>Before starting this tutorial must have done in <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication" target="_blank">Create New Sub-application</a> tutorial.</p>
 </div>
-<h2 id="configuration-of-etendo-classic">Configuration of Etendo classic</h2>
+<h2 id="setup">Setup</h2>
 <hr />
-<h3 id="module-and-export-database">Module and export database</h3>
+<h3 id="create-new-module">Create new Module</h3>
 <p>Following the documentation about <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#create-a-new-etendo-classic-module" target="_blank">how to create a new etendo classic module</a>, you have to create a new module in the etendo classic and it have to look like this:</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modules-creation.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png" /></a></p>
 <div class="admonition tip">
@@ -3830,26 +3830,26 @@
 </div>
 <p>At this point you have <em>done</em> with the etendo classic configuration.</p>
 <h2 id="download-the-sub-application">Download the sub-application</h2>
-<p>This tutorial is based in our example of a product sub-application, which allows to manage the products of a company. This sub-application will have a list of products, a form to create, edit and a delete product.</p>
+<p>This tutorial is based in our example of a product sub-application, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.</p>
 <div class="admonition tip">
 <p class="admonition-title">Keep in mind</p>
 <p>All related to the main concepts of a sub-application are explained in the <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#concepts" target="_blank">concepts</a> section in create new sub-application tutorial.
 The following sections are focused on the product sub-application example.</p>
 </div>
-<p>To begin with we must have to download the <a href="https://github.com/etendosoftware/subapp-product/releases" target="_blank"> latest version of the project</a> inside the <code>modules_rx</code> folder in our Etendo environment. Then unzip the file and the folder must look like this:</p>
+<p>To begin with we must have to download the <a href="https://github.com/etendosoftware/subapp-product/releases" target="_blank"> latest version of the project</a> inside the <code>modules/&lt;javapackage&gt;</code> folder in the Etendo environment. Then unzip the file and the folder must look like this:</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="repository-cloned.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png" /></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>Whole process to run a subapp in <em>developer mode</em> among with etendo classic and etendo mobile is detailed in this link <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication" target="_blank">here</a></p>
+<p>Whole process to run a subapp in <em>developer mode</em> among with etendo classic and etendo mobile is detailed in <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication" target="_blank">Create New Sub-application</a></p>
 </div>
 <h2 id="customizing-and-programming-a-sub-application">Customizing and Programming a Sub-Application</h2>
-<p>This section explains how to customize and program a sub-application. It uses as an example our <a href="https://github.com/etendosoftware/subapp-product/releases/" target="_blank">product sub-application</a> .</p>
+<p>This section explains how to customize and program a sub-application. It uses as an example the <a href="https://github.com/etendosoftware/subapp-product/releases/" target="_blank">Product Sub-application</a> .</p>
 <h3 id="product-subapp-example">Product subapp example</h3>
-<p>Here you going to read an overview about the product sub-application example screens and principal parts of the sub-application where covered in <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication/" target="_blank">create new sub-application</a>.</p>
+<p>This section covers an overview about the product sub-application example screens and principal parts of the sub-application where covered in <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication/" target="_blank">Create New Sub-application</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Consideration</p>
 <p>This sub-application example was developed for both platforms (phone and tablet). 
-When you create a new sub-application, you have to develop it for both platforms (phone and tablet). 
+When you create a new sub-application, you have to do the same. 
 The provided <a href="/developer-guide/etendo-mobile/tutorials/create-new-subapplication" target="_blank">base subapplication</a>  is already configured for both platforms.</p>
 </div>
 <h4 id="home">Home</h4>

@@ -17,7 +17,7 @@
         <link rel="next" href="../analysis-tools/">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -1057,33 +1057,6 @@
   <a href="#overview" class="md-nav__link">
     Overview
   </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relationship-with-other-application-areas" class="md-nav__link">
-    Relationship with other application areas
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4081,33 +4054,6 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relationship-with-other-application-areas" class="md-nav__link">
-    Relationship with other application areas
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4601,78 +4547,7 @@
   <h1>Transactions</h1>
 
 <h2 id="overview">Overview</h2>
-<p>In Etendo, most of the warehouse movements are made automatically based on the transactions of <strong>Sales</strong> and <strong>Procurement</strong> processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the <strong>Warehouse Management</strong> application area and are gathered in the Inventory Accuracy business flow which is described below.</p>
-<p><a class="glightbox" href="/assets/drive/12r6iycSYJzLIVpgBrp3xG8CSxd13L-eZ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/12r6iycSYJzLIVpgBrp3xG8CSxd13L-eZ.png" /></a></p>
-<p>Main sub-processes of the <strong>Inventory Accuracy</strong> business flow are:</p>
-<ul>
-<li><em>Physical Inventory.</em> This is a process where a business physically counts individual items in stock at a particular point in time and updates their inventory count within the system (if needed). It represents an opportunity to correct any inaccuracies in the records. Here are several reasons to conduct a physical inventory:<ul>
-<li>To initiate the stock.</li>
-<li>To verify the physical amount, condition, and location of inventory items.</li>
-<li>To identify, document, and add items to its inventory list that are on-hand and meet qualifying criteria, but are not currently shown as part of the inventory.</li>
-<li>To ensure that legitimately transferred or disposed items are no longer carried on the inventory listing.</li>
-<li>To identify any missing or damaged items that need to be located, repaired, or replaced.</li>
-</ul>
-</li>
-<li><em>Goods Movement.</em> Transfers inventory between storage bins or warehouses. Possible reasons for goods movement are:<ul>
-<li>Goods received at a warehouse from another party or warehouse.</li>
-<li>Inventory movement due to conversion of goods.</li>
-</ul>
-</li>
-<li><em>Goods Tracking.</em> Displays all the different movement types that happen in a warehouse to verify the history, location, or application of an item by means of documented recorded identification.</li>
-<li><em>Inventory Valuation.</em> Allows a company to provide a monetary value for items that make up their inventory.</li>
-<li><em>Inventory Update</em>. Allows a company to change either current inventory amount or current unit cost of products in stock.</li>
-<li><em>Cost Adjustments Review</em>. Allows a company to review product cost adjustments caused by changes in purchase prices, landed cost allocation or manual / negative cost corrections.</li>
-</ul>
-<h5 id="setup"><strong>Setup</strong></h5>
-<p>Warehouse and Storage Bins need to be created and configured before performing the business flow.</p>
-<p>In addition to this, a Costing Rule needs to be defined and validated for the legal entity. Each costing rule requires a starting date from when it is going to be valid as well as a Costing Algorithm to be used by the Costing Background Process which has to be scheduled.</p>
-<p>Besides that, Landed Cost Types need to be configured here therefore can be selected while allocating this type of cost to goods receipts.</p>
-<p>Finally, Warehouse Rules can be configured to be applied while retrieving stock from the inventory automatically.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is not required to do any additional setup for the <strong>Warehouse Management</strong> application area if Food &amp; Beverage (F&amp;B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, and products pre-configured.</p>
-</div>
-<p>Above configuration is part of the overall Business setup flow within "Warehouse" setup.</p>
-<h5 id="execution"><strong>Execution</strong></h5>
-<p>In <strong>Warehouse Management</strong> main <strong>Inventory Accuracy</strong> operations are executed as follows.</p>
-<p>To get the <em>Physical Inventory</em>, the user:</p>
-<ul>
-<li>Starts with the products classifications and runs Pareto product report which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.<br />
-  Based on the classification the frequency of counting cycle, it can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).<br />
-  The ABC classification is then populated to the Manufacturing  tab of the <strong>Product</strong> window by clicking the <strong>Update ABC</strong> button.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Note that the ABC classification is based on the cost of the product's transactions. That is why, a Costing Rule for the legal entity must be configured and validated and the Costing Background Process process has to be scheduled.</p>
-</div>
-<ul>
-<li>After this procedure, the user creates the physical inventory document in the  Physical Inventory  window by selecting the <strong>Warehouse</strong> where to execute this activity and pressing  <strong>Create Inventory Count List</strong> button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the List of products  with their current quantities that is brought to the warehouse and verified against physical inventory.</li>
-<li>In order to update Etendo stock if differences are found, first the user can select the Physical Inventory that was previously created. Then, in the lines tab, the user can find the required products and update the <strong>Quantity Count</strong> field with a new value. After that, the inventory count can be finished by clicking the <strong>Process Inventory Count</strong> button, which updates inventory and triggers document posting (if configured).</li>
-</ul>
-<p>To execute <em>Goods Movement</em>,:</p>
-<ul>
-<li>The Goods movement window lists products to be moved with source and destination information and the respective quantity and then <strong>Processes</strong> the document which updates all product quantities listed under <strong>Lines</strong> tab in the warehouse and triggers document posting (if configured).</li>
-</ul>
-<p>For <em>Goods Tracking</em>, the user can use:</p>
-<ul>
-<li>Stock Report that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.</li>
-<li>Goods Transaction window that offers a read only view with extensive filtering capabilities that shows all inventory transactions.</li>
-<li>Product Movements Report shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.</li>
-<li>Material Transaction Report lists all documents (shipments or receipts) grouped by Business Partner.</li>
-</ul>
-<p><em>Inventory Valuation</em> is done with the help of the Valued Stock Report.</p>
-<p>This report shows the cost of the stock calculated by the Costing Server process.</p>
-<p><em>Inventory Update</em> is done with the help of the Inventory Amount Update window.</p>
-<p>This window allows the user to change either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the Physical Inventory window.</p>
-<p>For <em>Cost Adjustments</em> Review Warehouse Staff uses Cost Adjustment  window.</p>
-<p>This window allows the user to review different types of cost adjustment sources together with the product's transactions whose costs are being adjusted, as well as adjustment amounts.</p>
-<h4 id="relationship-with-other-application-areas"><strong>Relationship with other application areas</strong></h4>
-<p><strong>Warehouse Management</strong> has a connection with other application areas:</p>
-<ul>
-<li><a href="/products/etendo-classic/user-guide/procurement-management/transactions">Procurement Management</a> as goods received change stock quantity and its value.</li>
-<li><a href="/products/etendo-classic/user-guide/sales-management/transactions">Sales Management</a> as shipment changes stock quantity and its value.</li>
-<li><a href="/products/etendo-classic/user-guide/production-management/transactions">Production Management</a> because raw materials are taken out of the warehouse and produced goods are sent back to the stock during the production process.</li>
-</ul>
+<p>Warehouse Management deals with all activities related to the warehouse actions necessary for sales and procurement processes.</p>
 <h2 id="physical-inventory">Physical Inventory</h2>
 <p><strong>Physical Inventory</strong> window allows the user to execute goods count process in Etendo.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xqE_UnYO6cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -4704,7 +4579,7 @@
 <li>empty - all product on physical inventory will be shown regardless its quantity</li>
 <li>0 - only products on physical inventory having 0 quantity in stock will be shown.</li>
 <li>&lt;0 - only products on physical inventory having a positive quantity in stock will be shown.</li>
-<li>&gt;0 - only products on physical inventory having a negative quantity in stock will be shown.</li>
+<li>>0 - only products on physical inventory having a negative quantity in stock will be shown.</li>
 <li>not 0 - only products on physical inventory having a quantity in stock different to 0 will be shown.</li>
 </ul>
 </li>
