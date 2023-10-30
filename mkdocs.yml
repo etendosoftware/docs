@@ -239,6 +239,8 @@ nav:
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - Concepts: 
+        - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to guides:

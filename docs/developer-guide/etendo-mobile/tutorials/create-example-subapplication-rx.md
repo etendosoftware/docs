@@ -248,3 +248,107 @@ In this section we will do an overview about the product sub-application example
     </figure>
     _Tablet version_
     ![add-product-tablet.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
+
+# Projections, Repository and Search
+!!! info
+    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit [Projections, Repository And Search](/developer-guide/etendo-rx/concepts/projections){target="_blank"}  official documentation. 
+
+## Create a projection
+
+It is required to create projections that reflect partial views of the root class and contain only the necessary properties.
+To do this we will go to the `Projections` window and create a projection with the following properties:
+
+
+  | Field       | Value                                               |
+  | ----------- | ----------------------------------------------------|
+  | Module      |`Subapp Product Module - 1.0.0 - English (USA)`      |
+  | Name        |`ProdSubApp`                                         |
+  | Description |`-`                                                  |
+
+
+  ![projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
+
+
+### Adding the projection to a table
+
+As we have created the projection, we now have to assign it to a table from which we want to extract data. To do this, we open the Tables and Columns window and look for the `M_Product` table.
+
+Next, navigate to the *Projections* tab and add a new projection with the following value:
+
+  | Field      | Value                                          |
+  | ---------- | ---------------------------------------------- |
+  | Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
+
+
+  ![assign-projection.png](/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+
+
+
+### Adding entity fields
+
+Once we have the projection, we must define which fields we want to retrieve.
+For it in the Tables and columns window we look for the table M_Product and in the Projection tab navigate to the Entity Field tab and add the following fields:
+
+|  Field Name         |  Property             |
+| ------------------- | --------------------- |
+| id                  |`id`                   |
+| name                |`name`                 |
+| productCategory     |`productCategory`      |
+| uPCEAN              |`uPCEAN`               |
+
+  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/entity-field.png)
+
+
+## Create a New Repository
+
+Now to interact with a data warehouse we have to create a repository in the Tables and Columns window select the table `M_Product`, go to the `Repository` tab and create a new record with the following values:
+
+| Field       | Value                                             |
+| ----------- | --------------------------------------------------|
+| Module      |`Subapp Product Module - 1.0.0 - English (USA)`    |
+
+
+  ![repository.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/repository.png)
+
+## Create a New Search
+
+Next we will define a search method to be used later when we want to consume the products. To create this new filter/search method, in the Repository tab of the `M_Product` table, create a new record with the following data:
+
+| Field       | Value                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------ |
+| Method Name |`getFilteredProducts`                                                                             |
+|  Query      |`select e from Product e where e.active = true and e.name like :name or e.uPCEAN like :barcode`   |
+
+
+  ![search.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
+
+### Creating a New Search Parameter
+
+  To define the parameters we defined in the previous query we need to create a new row in the Search Parameter tab and add the following records:
+
+| Field | Value         |
+| ----- | ------------- |
+| Line  |`20`           |
+| Name  |`barcode`      |
+| Type  |`String`       |
+
+| Field | Value         |
+| ----- | ------------- |
+| Line  |`10`           |
+| Name  |`name`         |
+| Type  |`String`       |
+
+
+  ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
+
+
+  Finally, launch this command in the root of the environment to generate the entities: 
+
+  ``` bash title="Terminal"
+  ./gradlew rx:generate.entities
+  ```
+
+  It should generate the following files:
+
+  ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/generate-entities.png)
+
