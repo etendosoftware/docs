@@ -91,6 +91,8 @@ Finally, in the **Execution variables** tab, some records must be created being 
 -   **client**: the name of our client **(mandatory)**
 -   **user**: the user used to connect to the server. **(mandatory)**
 
+- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
+
 - **port**: port of the server where the user is  connecting to **(default: 22)** 
 
 - **path**: path of the server where the files will be sent **(default: /)**
@@ -100,6 +102,8 @@ Finally, in the **Execution variables** tab, some records must be created being 
 - **bbdd\_user**: username of a read only user to access the database
 
 - **bbdd\_password**: password of the read only user
+
+- **csv_separator**: delimiter to use in the final csv files (default: |)
 
 **“private-key-path”** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
 In the **“bbdd\_user” and “bbdd\_password” variables**, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
