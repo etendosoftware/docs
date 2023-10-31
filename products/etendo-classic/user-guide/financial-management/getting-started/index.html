@@ -4161,7 +4161,7 @@ Accounts such as balance sheet accounts (assets, liabilities and owner's equity)
 <li>and a Fiscal Calendar</li>
 </ul>
 <p>Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the <a href="/products/etendo-classic/user-guide/general-setup/enterprise-model/#initial-organization-setup">Initial Organization Setup</a> and in the <a href="/products/etendo-classic/user-guide/general-setup/enterprise-model/#organization">Organization</a> articles.</p>
+Rest of the Organization types behave as explained in the <a href="/products/etendo-classic/user-guide/general-setup/enterprise-model/#initial-organization-setup">Initial Organization Setup</a> and in the <a href="/products/etendo-classic/user-guide/general-setup/enterprise-model/#organization">Organization</a> section.</p>
 <p>Very briefly:</p>
 <ul>
 <li><em>Legal without accounting</em> organizations do not require accounting therefore do not require any basic nor advanced accounting configuration.</li>
@@ -4205,8 +4205,8 @@ A localization Pack which also includes the taxes setup for Spain.</p>
 </ul>
 <p>It is important to remark that:</p>
 <p>If the Localization Pack includes the <em>in-country taxes</em> setup, the only configuration left to do is:</p>
-<p>to assign the corresponding <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category">Tax Categories</a>to the products
-  and to assign the corresponding <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category">Business Partner Tax category</a> to the business partners of the Organization, otherwise review the last step of scenario 3 below which describes how to create and set up the taxes.</p>
+<p>to assign the corresponding <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category">Tax Categories</a> to the products
+  and to assign the corresponding <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category">Business Partner Tax category</a> to the business partners of the organization, otherwise review the last step of scenario 3 below which describes how to create and set up the taxes.</p>
 <h3 id="scenario-3-localization-pack-and-generic-coa-do-not-installed">Scenario 3 - Localization Pack and Generic CoA do not installed</h3>
 <p>The enterprise in this scenario should follow below steps which implies an additional configuration effort:</p>
 <ul>
@@ -4330,14 +4330,14 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 <li>Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:</li>
 </ul>
 <p>the income statement as depreciation is an expense
-   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period</p>
+   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.</p>
 <h4 id="the-printing-of-the-preliminary-income-statement-and-balance-sheet">The printing of the preliminary Income Statement and Balance Sheet</h4>
 <p>Once configured, Etendo allows getting and printing the Income Statement and the Balance Sheet whenever it is required as the structure of these reports is based on the chart of accounts tree.</p>
 <p>It is very useful to print these financial reports prior to the closing of the year as it allows getting a sense of whether there are some missing adjustments required to be done prior to the closing of the year or not.</p>
 <p>During the accounting cycle there are other reports which can also be printed:</p>
 <ul>
 <li>the <a href="/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report">General Ledger Report</a> list all the debits entries and all the credits entries of every T-Account within a given period of time</li>
-<li>the <a href="/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report">Journal Entries Report</a> lists in a chronological order every journal entry posted in the ledger</li>
+<li>the <a href="/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report">Journal Entries Report</a> lists in a chronological order every journal entry posted in the ledger.</li>
 </ul>
 <h4 id="the-closing-of-the-fiscal-year">The closing of the fiscal year</h4>
 <p>Etendo allows to perform below detailed checks prior to the closing of the fiscal year:</p>
@@ -4345,7 +4345,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 <li>Run the <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#not-posted-transaction-report">Not Posted Transaction</a> report to verify that there are no transactions and/or documents in status <em>Complete</em> not posted yet.</li>
 <li>Check that there are no documents still having a <em>Draft</em> status, specially those which require to be <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#active-tables">accounted</a>.</li>
 <li>Unscheduled the <a href="/products/etendo-classic/user-guide/general-setup/process-scheduling/#process-request">Accounting Server Process</a> therefore an stable scene can be assured.</li>
-<li>Check the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account/s</a>current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="">how to transfer funds between financial accounts</a>.</li>
+<li>Check the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account/s</a> current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="">how to transfer funds between financial accounts</a>.</li>
 </ul>
 <p>Before running the close year process the accounting periods can be <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control">closed</a> not to allow any further posting within those periods, but the <em>13th period</em>.
 The <em>13th period</em> is an <em>adjustment period</em> which can be used to post the adjustments required to the ledger through <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal">G/L Journals</a> prior to closing the year.</p>
@@ -4392,8 +4392,10 @@ Etendo allows to get a two columns balance sheet:
 <li><a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</li>
 <li><a href="/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner">Business Partners</a> to use above configured Payment Methods and Financial Accounts.</li>
 </ul>
-<p>!!!note
-  It is not required to perform any additional setup for the Payables and Receivables Management business process if Food &amp; Beverage (F&amp;B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is not required to perform any additional setup for the Payables and Receivables Management business process if Food &amp; Beverage (F&amp;B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.</p>
+</div>
 <h3 id="execution_1">Execution</h3>
 <p>Overall the <em>Payables and Receivables Management</em> business process can be split into the following steps:</p>
 <ul>
