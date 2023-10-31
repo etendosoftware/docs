@@ -1,0 +1,5341 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.etendo.software/23.x/products/etendo-classic/user-guide/financial-management/accounting/transactions/">
+      
+      
+        <link rel="prev" href="../../receivables-and-payables/setup/">
+      
+      
+        <link rel="next" href="../analysis-tools/">
+      
+      <link rel="icon" href="../../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Accounting - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Accounting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../getting-started/overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../overview/" class="md-tabs__link md-tabs__link--active">
+        Products
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../whats-new/overview/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../developer-guide/overview/" class="md-tabs__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../../live-builds/overview/" class="md-tabs__link">
+      Live Builds
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../help-and-support/overview/" class="md-tabs__link">
+        Help and Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Products
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Products
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/clear-report-cache/" class="md-nav__link">
+        Clear Report Cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/attachments-configuration/" class="md-nav__link">
+        Attachments Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/application/" class="md-nav__link">
+        Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/crm-connector/" class="md-nav__link">
+        CRM Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/enterprise-model/" class="md-nav__link">
+        Enterprise Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general-setup/process-scheduling/" class="md-nav__link">
+        Process Scheduling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+          Master Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../master-data-management/master-data/" class="md-nav__link">
+        Master Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../master-data-management/business-partner-setup/" class="md-nav__link">
+        Business Partner Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../master-data-management/product-setup/" class="md-nav__link">
+        Product Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../master-data-management/pricing/" class="md-nav__link">
+        Pricing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+          Procurement Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../procurement-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../procurement-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
+          Warehouse Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Warehouse Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../warehouse-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../warehouse-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../warehouse-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../warehouse-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_5" id="__nav_3_2_1_5_label" tabindex="0">
+          Production Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Production Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../production-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../production-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../etendo-rx/" class="md-nav__link">
+        Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_7" id="__nav_3_2_1_7_label" tabindex="0">
+          Material Requirement Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Material Requirement Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material-requirement-planning/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material-requirement-planning/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8" id="__nav_3_2_1_8_label" tabindex="0">
+          Sales Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Sales Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sales-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sales-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sales-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sales-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9" id="__nav_3_2_1_9_label" tabindex="0">
+          Financial Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Financial Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_2" id="__nav_3_2_1_9_2_label" tabindex="0">
+          Receivables and Payables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Receivables and Payables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../receivables-and-payables/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../receivables-and-payables/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../receivables-and-payables/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_9_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_9_3" id="__nav_3_2_1_9_3_label" tabindex="0">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_9_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Transactions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Transactions
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-type-configuration" class="md-nav__link">
+    Financial Type Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Financial Type Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loan-leasing-or-renting-calculation-in-the-lines-tab" class="md-nav__link">
+    Loan, Leasing or Renting calculation in the lines tab
+  </a>
+  
+    <nav class="md-nav" aria-label="Loan, Leasing or Renting calculation in the lines tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loan" class="md-nav__link">
+    Loan:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing" class="md-nav__link">
+    Leasing:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renting" class="md-nav__link">
+    Renting
+  </a>
+  
+    <nav class="md-nav" aria-label="Renting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-payments-or-invoices" class="md-nav__link">
+    Generating payments or invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credit-account-and-credit-cards-reported-in-financial-accounts" class="md-nav__link">
+    Credit account and credit cards reported in financial accounts.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-gl-journal" class="md-nav__link">
+    Simple G/L Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple G/L Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-the-simple-gl-journal" class="md-nav__link">
+    Benefits of the Simple G/L Journal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_1" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_1" class="md-nav__link">
+    Lines
+  </a>
+  
+    <nav class="md-nav" aria-label="Lines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounting_1" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange-rates" class="md-nav__link">
+    Exchange Rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-reverse" class="md-nav__link">
+    GL Journal Reverse
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Journal Reverse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-gl-journal" class="md-nav__link">
+    Original GL journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-gl-journal" class="md-nav__link">
+    Reverse GL Journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-description-option-in-the-simple-gl-journal-window" class="md-nav__link">
+    Changing description option in the Simple GL Journal window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-journal" class="md-nav__link">
+    G/L Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="G/L Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    Batch
+  </a>
+  
+    <nav class="md-nav" aria-label="Batch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-set-up-as-template" class="md-nav__link">
+    G/L Journal set up as “Template”
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_2" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_2" class="md-nav__link">
+    Lines
+  </a>
+  
+    <nav class="md-nav" aria-label="Lines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounting_2" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deferred-gl-journal" class="md-nav__link">
+    Deferred GL Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="Deferred GL Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-journal-entries" class="md-nav__link">
+    Duplicate Journal Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-reverse_1" class="md-nav__link">
+    GL Journal Reverse
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Journal Reverse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-gl-journal_1" class="md-nav__link">
+    Original GL journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-gl-journal_1" class="md-nav__link">
+    Reverse GL Journal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting_1" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-year-close" class="md-nav__link">
+    End Year Close
+  </a>
+  
+    <nav class="md-nav" aria-label="End Year Close">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#end-year-close-process-example" class="md-nav__link">
+    End-year close process example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-yes" class="md-nav__link">
+    Reverse Permanent Account Balances set to "Yes"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-no" class="md-nav__link">
+    Reverse Permanent Account Balances set to "No"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-year-close_1" class="md-nav__link">
+    End Year Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-close-year" class="md-nav__link">
+    Undo Close Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting_3" class="md-nav__link">
+    Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-yes_1" class="md-nav__link">
+    Reverse Permanent Account Balances set to "Yes"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-no_1" class="md-nav__link">
+    Reverse Permanent Account Balances set to "No"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-posting-by-db-tables" class="md-nav__link">
+    GL Posting by DB Tables
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Posting by DB Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#budget" class="md-nav__link">
+    Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_3" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_3" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-budget-reports-in-excel" class="md-nav__link">
+    Create Budget Reports in Excel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-posted-transaction-report" class="md-nav__link">
+    Not Posted Transaction Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Not Posted Transaction Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-accounting" class="md-nav__link">
+    Reset Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/overview/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+          Supported Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
+        Tax Report Launcher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../etendo-copilot/getting-started/bastian/" class="md-nav__link">
+        Bastian
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          What's New
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          What's New
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.etendo.software" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1_3" id="__nav_4_4_1_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_2_1" id="__nav_4_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_1" id="__nav_5_2_1_1_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+        IntelliJ Code Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_2" id="__nav_5_2_1_2_label" tabindex="0">
+          Migration from Openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Migration from Openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+        Migrating to Etendo (from Openbravo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_1_3" id="__nav_5_2_1_3_label" tabindex="0">
+          Upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+        Core format migration (JAR- Sources)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+        Resolving Dependencies on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+        Etendo Jars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+        Naming Guideliness for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+        How to Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+        How to Create and Update Translation Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+        How to Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+        How to Create a Clone Hook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+        How to Use Advanced Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+        How to Create Scan Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+        How to Use Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+        How to Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+        How to Create a Module that Adds an Accounting Process
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+          Developer Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_5" id="__nav_5_2_5_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Etendo RX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo RX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+        Creating a New Microservice
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_3" id="__nav_5_3_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+        How to Filter any request for Active or all Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-copilot/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-copilot/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_2" id="__nav_5_5_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+        Create New Sub-application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../developer-guide/etendo-mobile/tutorials/create-example-subapplication-rx/" class="md-nav__link">
+        Create Example Subapplication with RX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../live-builds/overview/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Help and Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Help and Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/support-service/" class="md-nav__link">
+        Support Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to report bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-type-configuration" class="md-nav__link">
+    Financial Type Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Financial Type Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loan-leasing-or-renting-calculation-in-the-lines-tab" class="md-nav__link">
+    Loan, Leasing or Renting calculation in the lines tab
+  </a>
+  
+    <nav class="md-nav" aria-label="Loan, Leasing or Renting calculation in the lines tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loan" class="md-nav__link">
+    Loan:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leasing" class="md-nav__link">
+    Leasing:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renting" class="md-nav__link">
+    Renting
+  </a>
+  
+    <nav class="md-nav" aria-label="Renting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-payments-or-invoices" class="md-nav__link">
+    Generating payments or invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credit-account-and-credit-cards-reported-in-financial-accounts" class="md-nav__link">
+    Credit account and credit cards reported in financial accounts.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-gl-journal" class="md-nav__link">
+    Simple G/L Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple G/L Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-the-simple-gl-journal" class="md-nav__link">
+    Benefits of the Simple G/L Journal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_1" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_1" class="md-nav__link">
+    Lines
+  </a>
+  
+    <nav class="md-nav" aria-label="Lines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounting_1" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchange-rates" class="md-nav__link">
+    Exchange Rates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-reverse" class="md-nav__link">
+    GL Journal Reverse
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Journal Reverse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-gl-journal" class="md-nav__link">
+    Original GL journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-gl-journal" class="md-nav__link">
+    Reverse GL Journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-description-option-in-the-simple-gl-journal-window" class="md-nav__link">
+    Changing description option in the Simple GL Journal window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-journal" class="md-nav__link">
+    G/L Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="G/L Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    Batch
+  </a>
+  
+    <nav class="md-nav" aria-label="Batch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-set-up-as-template" class="md-nav__link">
+    G/L Journal set up as “Template”
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_2" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_2" class="md-nav__link">
+    Lines
+  </a>
+  
+    <nav class="md-nav" aria-label="Lines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accounting_2" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deferred-gl-journal" class="md-nav__link">
+    Deferred GL Journal
+  </a>
+  
+    <nav class="md-nav" aria-label="Deferred GL Journal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-journal-entries" class="md-nav__link">
+    Duplicate Journal Entries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gl-journal-reverse_1" class="md-nav__link">
+    GL Journal Reverse
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Journal Reverse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#original-gl-journal_1" class="md-nav__link">
+    Original GL journal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-gl-journal_1" class="md-nav__link">
+    Reverse GL Journal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-posting_1" class="md-nav__link">
+    Bulk Posting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-year-close" class="md-nav__link">
+    End Year Close
+  </a>
+  
+    <nav class="md-nav" aria-label="End Year Close">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#end-year-close-process-example" class="md-nav__link">
+    End-year close process example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-yes" class="md-nav__link">
+    Reverse Permanent Account Balances set to "Yes"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-no" class="md-nav__link">
+    Reverse Permanent Account Balances set to "No"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-year-close_1" class="md-nav__link">
+    End Year Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-close-year" class="md-nav__link">
+    Undo Close Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting_3" class="md-nav__link">
+    Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-yes_1" class="md-nav__link">
+    Reverse Permanent Account Balances set to "Yes"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-permanent-account-balances-set-to-no_1" class="md-nav__link">
+    Reverse Permanent Account Balances set to "No"
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-posting-by-db-tables" class="md-nav__link">
+    GL Posting by DB Tables
+  </a>
+  
+    <nav class="md-nav" aria-label="GL Posting by DB Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#budget" class="md-nav__link">
+    Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header_3" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines_3" class="md-nav__link">
+    Lines
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-budget-reports-in-excel" class="md-nav__link">
+    Create Budget Reports in Excel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-posted-transaction-report" class="md-nav__link">
+    Not Posted Transaction Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Not Posted Transaction Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-accounting" class="md-nav__link">
+    Reset Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+  <h1>Transactions</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:</p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#financial-type-configuration"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Financial Type Configuration</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#simple-gl-journal"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Simple G/L Journal</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> G/L Journal</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> End Year Close</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-posting-by-db-tables"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> GL Posting by DB Tables </a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#budget"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Budget</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#create-budget-reports-in-excel"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Create Budget Reports in Excel</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#not-posted-transaction-report"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Not Posted Transaction Report</a> <br></p>
+<p><a class="md-button md-button--primary" href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#reset-accounting"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8Z"/></svg></span> Reset Accounting</a> <br></p>
+<h2 id="financial-type-configuration">Financial Type Configuration</h2>
+<h3 id="introduction">Introduction</h3>
+<p>This feature allows entering in the system all the financings the company has. It is possible  to exploit the information through the bank pool report. 
+Depending on the financial product used in this new "Financing" window, Etendo generates financing plans automatically (Leasing, Renting and Loans) and also manages the invoices and payments from this same window. </p>
+<p>The usual financing products are: </p>
+<ul>
+<li>Invoice Advance</li>
+<li>Bank Guarantee </li>
+<li>Confirming</li>
+<li>Foreign Trade</li>
+<li>Credit Account</li>
+<li>Factoring</li>
+<li>Leasing</li>
+<li>Loans</li>
+<li>Renting </li>
+<li>Credit Cards. </li>
+</ul>
+<p>These financing methods are loaded into the system using a dataset.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#financial-type">Financial Type</a>.</p>
+</div>
+<h3 id="header">Header</h3>
+<p>The main header has the following fields:</p>
+<ul>
+<li><strong>Organization</strong>: drop-down list of organizations.    </li>
+<li><strong>Financial Type</strong>: drop-down list of methods  Invoice Advance, Bank Guarantee, Confirming, Foreign Trade, Credit Account, Factoring, Leasing, Loans, Renting and Credit Cards.   </li>
+<li><strong>Financial Bank/Entity</strong>: drop-down list of the business partner window.  </li>
+<li><strong>Financial Account</strong>: drop-down list of the Financial Account window.    </li>
+<li><strong>Payment Method</strong>: drop-down list of the payment methods indicated in the selected financial account.    </li>
+<li><strong>Name</strong>: free field to add information.  </li>
+<li><strong>Date</strong>: date field (contract signature date).   </li>
+<li><strong>Due Date</strong>: date field. </li>
+<li><strong>Lack (Month)</strong>: numeric field (Integers)    </li>
+<li><strong>Currency</strong>: drop-down list of the currency window.   </li>
+<li><strong>Amount Granted</strong>: numeric field with 2 decimals.    </li>
+<li><strong>Amount Drawn</strong>: numeric field with 2 decimals.  </li>
+<li><strong>Amount Available</strong>: numeric field with 2 decimals.  </li>
+<li><strong>Residual Value</strong>: numeric field with 2 decimals.    </li>
+<li><strong>Installment No</strong>: integer numeric field.    </li>
+<li><strong>% Annual Interest</strong>: % numeric field with 2 decimals.   </li>
+<li><strong>Periodic commission</strong>: numeric field with 2 decimals.   </li>
+<li><strong>Opening Financial Expenses</strong>: numeric field with 2 decimals.    </li>
+<li><strong>Frequency</strong>: drop-down list (Monthly, Bimonthly, Quarterly, Quarterly, Semiannual, Annual)  </li>
+<li><strong>Payment Date</strong>: numeric field. Integer (limit of 31)    </li>
+<li><strong>Purpose</strong>: free field to add information.   </li>
+<li><strong>Warranty</strong>: free field to add information.  </li>
+<li><strong>% Early Cancellation Fee</strong>: % numeric field with 2 decimals.    </li>
+<li><strong>% Early Amortization Commission</strong>: % numeric field with 2 decimals. </li>
+<li><strong>Ledger account at long term</strong>: informative field to indicate the accounting account of the  account tree.   </li>
+<li><strong>Ledger account at short term</strong>: informative field to indicate the accounting account of the account tree.   </li>
+<li><strong>Ledger account at purchase option</strong>: informative field to indicate the accounting account of the account tree.  </li>
+<li><strong>Project</strong>: drop-down list of the “Multiphase Project“ window.   </li>
+<li><strong>Cost Center</strong>: drop-down list of the “Cost Center” window.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png" /></a></p>
+<h3 id="lines">Lines</h3>
+<p>Lines contain the following fields:</p>
+<ul>
+<li><strong>Installment No</strong>: numeric field. Integer. </li>
+<li><strong>Amortization/ Expiration date</strong>: date field.</li>
+<li><strong>Installment</strong>: numeric field with 2 decimals.</li>
+<li><strong>Amortization/Renting</strong>: numeric field with 2 decimals.</li>
+<li><strong>Interest</strong>: numeric field with 2 decimals.</li>
+<li><strong>Commission</strong>: numeric field with 2 decimals.</li>
+<li><strong>Total Amortization</strong>: numeric field with 2 decimals.</li>
+<li><strong>Pending Amortization</strong>: numeric field with 2 decimals.</li>
+<li><strong>Invoice</strong>: the linkage to the generated invoice is shown (Leasing/Renting).</li>
+<li><strong>Payment</strong>: the linkage to the generated payment is shown (Loan). </li>
+<li><strong>Business Partner Finance</strong>: business partners ‘ drop-down list (this is used as an informative field to know about advance invoices, Confirming, Comex, how much has each been financed).</li>
+<li><strong>Date</strong>: date field. </li>
+<li><strong>Project:</strong> drop-down list of the “Multiphase Project“ window.</li>
+<li><strong>Cost Center</strong>: drop-down list of the “Cost Center” window.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png" /></a></p>
+<h3 id="accounting">Accounting</h3>
+<p>There are three sections: “Amortization/Renting”, “Interest” and “Commission”. There are six fields in total where three of them represent the product and the other three, the accounting concept. The 2 fields (product and accounting concept) cannot be filled in the same section. In each of these related fields, the product must be indicated from the "Products" window or "Accounting Concept" if the "Available in Financial Invoices" check box needed to assign to each column is activated. In the case of the type of financing "Loan", it is obligatory to fill in the part of accounting concepts.</p>
+<p><a class="glightbox" href="/assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png" /></a></p>
+<h3 id="loan-leasing-or-renting-calculation-in-the-lines-tab">Loan, Leasing or Renting calculation in the lines tab</h3>
+<p>Fill the necessary fields of the header according to the description of each of them indicated at the top of the document. Such information allows the automatic creation of the finance plan, which is created by clicking the “Update Finance plan” button at the upper right margin of the window.</p>
+<p><a class="glightbox" href="/assets/drive/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png" /></a></p>
+<h4 id="loan">Loan:</h4>
+<ul>
+<li><strong>Installment No</strong>: It starts with the installment number 0 and the “pending amortization” field has the value indicated in the “granted amount” field, and the “date” field has the indicated date in the header field “date”. The rest of the installments are correlative, adding 1 by 1.</li>
+<li><strong>Amortization/Expiration date</strong>: To see the date of the installment number 1 of the finance plan, it is indicated when clicking the new button “Create finance plan”. A pop up is shown to indicate the date. Click “OK”. The rest of the lines are created with the frequency indicated in the “Frequency” field, with the date of the last installment created and the date indicated in the “payment date” field. If lack is indicated, the indicated date when clicking “Create finance plan” is the first lack installment, the rest of the installments, lack and amortization ones, are created according to the indicated frequency. The lack installments are indicated with the installment number 0.</li>
+<li><strong>Installment</strong>: At first, the same installment is calculated for the entire loan. If the interest rate changes during the loan period, the installment is changed. To do this, change the 1% interest rate of the header and click the new button of the header “Update Finance Plan”. The information is updated from the following line to the last line with an associated payment.</li>
+<li><strong>Amortization/Renting</strong>: Redeemed amount in the installment.</li>
+<li><strong>Interest</strong>: Interest to pay in the installment.</li>
+<li><strong>Commission</strong>: filled with the information entered in the “Periodic Commission” field of the header, if any. If not, the value is 0.</li>
+<li><strong>Total Amortization</strong>: Addition of the values in the previous column “amortization/renting” and regarding the same calculated line. Read-only field.</li>
+<li><strong>Pending amortization</strong>: Difference between the “granted amount” indicated in the header and the “total amortization” of the same calculated line. Read-only field.</li>
+<li><strong>Payment</strong>: The related payment is shown.</li>
+<li><strong>Business Partner</strong>: If indicated in the header, the business partner is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Project</strong>: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Cost Center</strong>: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png" /></a></p>
+<p><a class="glightbox" href="/assets/drive/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png" /></a></p>
+<h4 id="leasing">Leasing:</h4>
+<ul>
+<li><strong>Installment No</strong>: It starts with the installment number 0 and the “pending amortization” field has the value indicated in the “granted amount” field, and the “date” field has the indicated date in the … The rest of the installments are correlative, adding 1 by 1.</li>
+<li><strong>Amortization/Expiration date</strong>: To see the date of the installment number 1 of the finance plan, it is indicated when clicking the new button “Create finance plan”. A pop up is shown to indicate the date. Click “OK”. The rest of the lines are created with the frequency indicated in the “Frequency” field, with the date of the last installment created and the date indicated in the “payment date” field. If lack is indicated, the indicated date when clicking “Create finance plan” is the first lack installment, the rest of the installments lack and amortization ones, are created according to the indicated frequency. The lack installments are indicated with the installment number 0.</li>
+<li><strong>Installment</strong>: At first, the same installment is calculated for the entire leasing. If the interest rate changes during the leasing period, the installment is changed. To do this, change the 1% interest rate of the header and click the new button of the header “Update Finance Plan”. The information is updated from the following line to the last line with an associated invoice. Lastly, one last line with the residual value is included, if any, in the same date of the last calculated line.</li>
+<li><strong>Amortization/Renting</strong>: Redeemed amount in the installment.</li>
+<li><strong>Interest</strong>: Interest to pay in the installment.</li>
+<li><strong>Commission</strong>: filled with the information entered in the “Periodic Commission” field of the header, if any. If not, the value is 0.</li>
+<li><strong>Total Amortization</strong>: Addition of the values in the previous column “amortization/renting” and regarding the same calculated line. Read-only field.</li>
+<li><strong>Pending amortization</strong>: Difference between the “granted amount” indicated in the header and the “total amortization” of the same calculated line. Read-only field.</li>
+<li><strong>Invoice</strong>: The related invoice is shown.</li>
+<li><strong>Payment</strong>: The related payment is shown.</li>
+<li><strong>Business Partner</strong>: If indicated in the header, the business partner is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Project</strong>: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Cost Center</strong>: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png" /></a></p>
+<p><a class="glightbox" href="/assets/drive/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png" /></a></p>
+<h4 id="renting">Renting</h4>
+<ul>
+<li><strong>Installment No</strong>: It starts with the installment number 0 and the rest of the installments are correlative, adding 1 by 1.</li>
+<li><strong>Amortization/Expiration date</strong>: To see the date of the installment number 1 of the finance plan, it is indicated when clicking the new button “Create finance plan”. A pop up is shown to indicate the date. Click “OK”. The rest of the lines are created with the frequency indicated in the “Frequency” field, with the date of the last installment created and the date indicated in the “payment date” field.</li>
+<li><strong>Installment</strong>: The result of the “Granted amount” divided the installments number.</li>
+<li><strong>Amortization/Renting</strong>: Redeemed amount in the installment.</li>
+<li><strong>Interest</strong>: Interest to pay in the installment.</li>
+<li><strong>Commission</strong>: filled with the information entered in the “Periodic Commission” field of the header, if any. If not, the value is 0.</li>
+<li><strong>Invoice</strong>: The related invoice is shown.</li>
+<li><strong>Business Partner</strong>: If indicated in the header, the business partner is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Project</strong>: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.</li>
+<li><strong>Cost Center</strong>: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png" /></a></p>
+<p><a class="glightbox" href="/assets/drive/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png" /></a></p>
+<h5 id="generating-payments-or-invoices">Generating payments or invoices</h5>
+<p>Once the amortization plan is created, payments (loans) and invoices (leasing and renting) for each line can be generated. This is possible individually (line by line) or in groups (3 lines can be selected and 3 different payments/invoices are generated).</p>
+<p>In order to do this, select the required line/s and click the “Create payment” (loans) or “Create invoice” (leasing or renting) buttons shown in the upper right margin of the window.</p>
+<p><strong>Loan</strong>:</p>
+<p><a class="glightbox" href="/assets/drive/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png" /></a></p>
+<p><strong>Leasing</strong>:</p>
+<p><a class="glightbox" href="/assets/drive/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png" /></a></p>
+<p><strong>Renting</strong>:</p>
+<p><a class="glightbox" href="/assets/drive/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png" /></a></p>
+<h5 id="credit-account-and-credit-cards-reported-in-financial-accounts">Credit account and credit cards reported in financial accounts.</h5>
+<p>The Credit account and Credit card information is automatically entered. To do this, create a new header and indicate the finance method, “Credit account” or “Credit card”. Then, the button “Add Financial Account” is enabled in the upper right margin. </p>
+<p><a class="glightbox" href="/assets/drive/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png" /></a></p>
+<p>When clicking the button, a pop up is shown and it is possible to select a financial account (only those with the “Add to bank pool” flag checked are shown).</p>
+<p><a class="glightbox" href="/assets/drive/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png" /></a></p>
+<p><a class="glightbox" href="/assets/drive/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png" /></a></p>
+<p>Once this credit account/credit card is created in the financings and its information has to be updated, click the “Update Financial Account” button in the upper right margin.</p>
+<p><a class="glightbox" href="/assets/drive/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png" /></a></p>
+<p>The fields to be copied from the account or credit card are the equivalent ones in the “Financial Account” field, the amount of residual value to be indicated in the “Amount Available” field and the “Credit Limit” amount to be indicated in the “Amount Granted” field. All other fields in the header are editable to include the rest of the information.</p>
+<h2 id="simple-gl-journal"><strong>Simple G/L Journal</strong></h2>
+<h3 id="introduction_1"><strong>Introduction</strong></h3>
+<p>In Etendo there is a GL Journal window that allows the user to manually enter GL journals in the system. This window has three tabs (Batch, Header and Lines) and in some cases this can be difficult for the user since it might be enough with just two levels (Header and lines). Another issue that this window has is that only accounting schemas can be selected, so when posting the GL journal there is only one entry in the fact_Acct table.</p>
+<h5 id="benefits-of-the-simple-gl-journal"><strong>Benefits of the Simple G/L Journal</strong></h5>
+<ul>
+<li>It is a simpler window since it is not necessary to enter a batch. There is one less level of data entry.</li>
+<li>It is simpler to search journal entries. Without the batch level, it is possible to directly search for specific journal entries.</li>
+<li>In this window, it is possible to see journal entries that have been created using the GL Journal window, so it is possible to search journal entries as well.</li>
+</ul>
+<h3 id="header_1"><strong>Header</strong></h3>
+<p>A G/L journal header can include journals which can contain several journal lines.</p>
+<p>Important field to note:</p>
+<ul>
+<li><em>Multi-general ledger</em>: A flag<ul>
+<li>If it is not marked, the General ledger field is shown from then on.</li>
+<li>If it is marked, the system will not show the General ledger field, and it will not be taken into account for next operations.</li>
+</ul>
+</li>
+</ul>
+<h3 id="lines_1"><strong>Lines</strong></h3>
+<p>The lines tab allows the user to enter the journal entries of a G/L journal as well as G/L item payment related information.</p>
+<p>One field to note:</p>
+<ul>
+<li>G/L Item: Combo where all G/L Items are shown. It has a logical display, and it is only shown when <strong>Multi-general ledger</strong> is flagged in the header.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If <strong>Multi-general ledger</strong> is not flagged, then the Account field is shown instead.</p>
+</div>
+<h4 id="accounting_1"><strong>Accounting</strong></h4>
+<p>Accounting information related to the GL Journal</p>
+<p>When Posting the Header:</p>
+<ul>
+<li>All accounting entries are created either with account combinations (Account) or GL item. There cannot be mixed lines.</li>
+<li>If <strong>Multi-General Ledger</strong> is:<ul>
+<li>Not marked: It can only select accounts that belong to just one accounting schema (defined in the header) so when posting the document there will be just one journal entry. This behaviour will not change. Posting process exactly as GL Journal window</li>
+<li>Marked: the user selects G/L Items and since it can have different valid combinations when posting the document, it will have as many entries as in different accounts it is defined the GL item and the organization defined in the header.</li>
+</ul>
+</li>
+</ul>
+<h4 id="exchange-rates"><strong>Exchange Rates</strong></h4>
+<p>The exchange rate tab allows the user to enter an exchange rate between the organization's general ledger currency and the currency of the G/L Journal to be used while posting the G/L Journal to the ledger.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This tab will only be displayed when Multi General Ledger is enabled.</p>
+</div>
+<h3 id="gl-journal-reverse">GL Journal Reverse</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.</p>
+<p>In order to use this functionality, in both “GL journal” and “Simple GL journal” windows, the user can click the button “Reverse Journal” in the toolbar when selecting an entry.</p>
+<p><a class="glightbox" href="/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png" /></a></p>
+<p>In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. </p>
+<blockquote></blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is important to note that, by default, the reverse document will be created as a draft. That is why Etendo shows the check “process document” when clicking the “Reverse Journal” button. In this way, the user can complete the document.</p>
+</div>
+<p>As seen below, Etendo shows a success notification in green with the new GL Journal number.</p>
+<p><a class="glightbox" href="/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png" /></a></p>
+<p>When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reversed.</p>
+<h5 id="original-gl-journal">Original GL journal</h5>
+<p><a class="glightbox" href="/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png" /></a></p>
+<h5 id="reverse-gl-journal">Reverse GL Journal</h5>
+<p><a class="glightbox" href="/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png" /></a></p>
+<h4 id="changing-description-option-in-the-simple-gl-journal-window">Changing description option in the Simple GL Journal window</h4>
+<p>If the GL Journal entry is created in the Simple GL Journal window, it is possible for the user to change the description of the GL journal, once it clicks on the “Reverse Journal” button, in the corresponding pop up window. </p>
+<p><a class="glightbox" href="/assets/drive/1Uec9_qgFGGKWDLNsWvN7CZDwuQXAjp0J.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Uec9_qgFGGKWDLNsWvN7CZDwuQXAjp0J.png" /></a></p>
+<p>This is useful to distinguish between the original GL journal and the reverse one. </p>
+<h3 id="bulk-posting">Bulk Posting</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
+<p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
+<blockquote></blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting">the Bulk Posting module user guide</a>.</p>
+</div>
+<h2 id="gl-journal"><strong>G/L Journal</strong></h2>
+<h3 id="introduction_2"><strong>Introduction</strong></h3>
+<p>A G/L (General Ledger) journal allows the user to post journal entries to the ledger and create G/L item payments.</p>
+<p>As already explained, most of the accounting entries are created while posting documents such as purchase invoices, sales invoices, etc.</p>
+<p>The accounting entries which do not match with an existing Document Type need to be posted to the ledger by using a G/L Journal.</p>
+<p>Besides, a G/L Journal can be used to create "<strong>G/L Item Payments</strong>" or payments not related to orders or invoices.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This feature is very useful while posting an employee payroll to the ledger as the payroll payment can be created at the same time.</p>
+</div>
+<p>Finally, a G/L Journal can also be configured as a <strong>template</strong>.</p>
+<p>This feature allows the user to create the same journal entries as the ones contained in the G/L Journal set as a template.</p>
+<p>This feature is also very useful while posting employee payroll, for instance.</p>
+<h4 id="batch"><strong>Batch</strong></h4>
+<p>A G/L journal batch allows the user to group G/L journals of similar characteristics which can all be processed at the same time.</p>
+<p><a class="glightbox" href="/assets/drive/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png" /></a></p>
+<p>As shown in the image above, a <em>G/L Journal batch</em> can contain below data:</p>
+<ul>
+<li>the <strong>accounting period</strong></li>
+<li>the <strong>accounting date</strong></li>
+<li>and the <strong>currency</strong></li>
+</ul>
+<p>None of the data above is mandatory at this point because a G/L journal can contain several journals having different accounting periods and accounting dates. The same applies to the currency as a G/L journal can contain several journals of different general ledger configurations.</p>
+<p>Once a batch is created and saved, it is possible to create as many G/L Journals as required, which once ready can be completed and processed at the same time as a "unique" batch.</p>
+<p>A G/L journal and therefore its content can be set up as "Template", that template can be later on used while creating a new G/L journal by using the process button "Copy Lines" as described in the next section.</p>
+<h5 id="gl-journal-set-up-as-template"><strong>G/L Journal set up as “Template”</strong></h5>
+<p>As already mentioned, a G/L Journal and therefore its content can be configured as a "Template". In order to do so,  it is required to follow the steps below:</p>
+<p><strong>1.</strong> <strong>create a G/L journal</strong> to account the employee payroll corresponding to the period of January 2022, for instance. That G/L Journal needs to be marked as "Template".</p>
+<p><strong>2.</strong> Create a <strong>new G/L journal</strong> to account the employee payroll corresponding to the period of January 2022. Enter an <strong>Accounting Date</strong>" and a "<strong>Period</strong>":</p>
+<p><a class="glightbox" href="/assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png" /></a></p>
+<p><strong>3.</strong> Press the <strong>Copy Details</strong> process button.</p>
+<p>A new window is shown containing all the templates available:</p>
+<p><a class="glightbox" href="/assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that it is possible to search for a template by using the G/L journal document number set as template and the description fields. </p>
+</div>
+<p><strong>4.</strong> <strong>Select a template and click OK</strong>. After that, Etendo populates the most recently created G/L Journal with the same journal entries, only the dates are different.</p>
+<p>It may be necessary to change the journal entries amounts. In order to do so, it is possible to edit the G/L Journal Lines and then change the amounts.</p>
+<p>The last step is to post the G/L Journal, therefore the corresponding journal entries are posted to the ledger.</p>
+<h3 id="header_2"><strong>Header</strong></h3>
+<p>A G/L journal header can include journals, which can contain several journal lines.</p>
+<p><a class="glightbox" href="/assets/drive/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png" /></a></p>
+<p>A G/L Journal header contains the following data:</p>
+<ul>
+<li>The organization and the organization's General Ledger configuration which once selected defaulted the field "<strong>Currency</strong>" to the one of the general ledger configuration, for instance USD. The currency can however be changed to EUR for instance. Etendo will apply the corresponding EUR -&gt; USD conversion rate as the posting to the ledger must be in USD.</li>
+<li>The <em>document date</em> which does not have to be the same as the accounting date.<br />
+    The document date is automatically populated with the current date by default, but can always be changed.</li>
+<li>The <em>accounting period</em> and the <em>accounting date</em> within that period. These dates can be automatically populated with the values entered in the Journal batch if any, however these dates can always be changed.</li>
+</ul>
+<p>There is a checkbox named "<em>Opening</em>" which can be flagged just to state that a journal contains <strong>opening balance accounts entries.</strong></p>
+<p>There is a <strong>list of actions</strong> which can be executed from the G/L Journal header:</p>
+<ul>
+<li>"<strong>Copy Details</strong>" button allows the user to copy the journal entries of a journal configured as a <em>"Template"</em> into the current journal</li>
+<li>"<strong>Complete</strong>" button allows the user to complete the G/L Journal once the corresponding journal lines have been entered whenever the total debit amount matches the total credit amount</li>
+<li>"<strong>Post/Unpost</strong>" button allows the user to Post/Unpost a G/L Journal once completed</li>
+<li>"<strong>Close</strong>" button allows the user to close a G/L Journal for which no other action needs to take place or to reactivate it if it is not already posted</li>
+<li>"<strong>Process Batch</strong>" button completes the G/L Journal/s of the batch</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that upon <strong>G/L Journal completion a "G/L Item" payment</strong> will be created for each journal line that has the "Open Items" checkbox selected as explained in the G/L Item payments creation section.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The Journal will be completed even if any of the Payment/s creation failed. In this case, an error message is shown indicating the Lines that tried to create a Payment but failed.</p>
+</div>
+<h3 id="lines_2"><strong>Lines</strong></h3>
+<p>The lines tab allows the user to enter the journal entries of a G/L journal as well as G/L item payment related information.</p>
+<h4 id="accounting_2">Accounting</h4>
+<p>Accounting information related to the GL Journal</p>
+<h3 id="deferred-gl-journal">Deferred GL Journal</h3>
+<h4 id="duplicate-journal-entries">Duplicate Journal Entries</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Starting from the second copy, the duplication will take place with the corresponding regularity.
+The process to create a journal entry from the beginning and duplicate it later is shown below.</p>
+<p>1- Enter the “G/L Journal” window and create a header:</p>
+<p><a class="glightbox" href="/assets/drive/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png" /></a></p>
+<p>2- Create a new record:</p>
+<p><a class="glightbox" href="/assets/drive/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png" /></a></p>
+<p>3- Create the lines (to be recorded) and complete the entry. Once these three steps are done, the “Create Deferred Plan” button will be shown in the upper right margin. </p>
+<p><a class="glightbox" href="/assets/drive/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png" /></a></p>
+<p>4 - Click the button and a pop-up with three fields will be shown:
+• Expense Plan Type: copies regularity.
+    • Period Number: required number of copies.
+    • Period: period in which the first copy will be made.</p>
+<p><a class="glightbox" href="/assets/drive/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png" /></a></p>
+<p>5 - Once this information is entered, click the “Done” button and as many records will be generated as the number of copies indicated.</p>
+<p><a class="glightbox" href="/assets/drive/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png" /></a></p>
+<p>By default, this functionality is only available for the “GL Journal” window, since the record copies are grouped under only one header. It is also possible to duplicate these entries in the “Simple GL Journal” only if there is a preference configured in the “Preference” window with the property “Display Create Deferred Plan Button” and the value “Y”.</p>
+<p><a class="glightbox" href="/assets/drive/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png" /></a></p>
+<p>Once this preference is configured, the button will be enabled in “Simple GL Journal”. The flow is the same but the duplicated copies will not be created under a header. That is, this information will not be shown in the “GL Journal” window, except the information to be copied is already in it, in which case it will be shown.</p>
+<p><a class="glightbox" href="/assets/drive/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png" /></a></p>
+<h3 id="gl-journal-reverse_1">GL Journal Reverse</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.</p>
+<p>In order to use this functionality, in both “GL journal” and “Simple GL journal” windows, the user can click the button “Reverse Journal” in the toolbar when selecting an entry.</p>
+<p><a class="glightbox" href="/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png" /></a></p>
+<p>In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. </p>
+<blockquote></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, the reverse document is created as a draft. That is why Etendo shows the check “process document” when clicking the “Reverse Journal” button. In this way, the user can complete the document.</p>
+</div>
+<p>As seen below, Etendo shows a success notification in green with the new GL Journal number.</p>
+<p><a class="glightbox" href="/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png" /></a></p>
+<p>When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reverse.</p>
+<h5 id="original-gl-journal_1">Original GL journal</h5>
+<p><a class="glightbox" href="/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png" /></a></p>
+<h5 id="reverse-gl-journal_1">Reverse GL Journal</h5>
+<p><a class="glightbox" href="/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png" /></a></p>
+<p>This is useful to distinguish between the original GL journal and the reverse one. </p>
+<h3 id="bulk-posting_1">Bulk Posting</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>.</p>
+</div>
+<p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
+<p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
+<blockquote></blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit <a href="/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting">the Bulk Posting module user guide</a>.</p>
+</div>
+<h2 id="end-year-close"><strong>End Year Close</strong></h2>
+<h3 id="introduction_3"><strong>Introduction</strong></h3>
+<p>The <strong>"Close Year"</strong> process allows the user to close a fiscal year. This process also permanently closes all the periods of the year (standard ones and adjustment ones).</p>
+<p>It is important to remark that it is not required to close the standard periods of a year prior to closing that year, however it can help to keep tracking of the periods of the year already reviewed and closed.</p>
+<p>The close year process requires that the next year is started, and its first period is opened.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Once a year is closed, the status of that year and all its periods can be reviewed in the Open/Close Period Control window.</p>
+</div>
+<p>As already mentioned, all the periods of the year are now shown as "Period Status"="Permanently Closed", that means that it is not possible to post any transaction within that year anymore, unless the <strong>Undo Close Year</strong> process is run for that year.</p>
+<p>"Close Year" process creates the following accounting entries:</p>
+<p>1. The <strong>"Profit and Loss Closing"</strong> entry.</p>
+<ul>
+<li>This accounting entry resets all "Revenue" and "Expense" Account Types and the difference is posted in the Income Summary account.<ul>
+<li>In other words, the "Expense" accounts are "Credited and the "Revenue" accounts are "Debited" and the difference, if any, is posted in the Income Summary account.<br />
+    Let us take an expense account with a debit balance of 500,00. The P&amp;L Closing entry creates a credit accounting entry of 500,00 in the Expense account of the example, therefore it gets a balance equal to zero.<br />
+    If the revenue accounts total balance is higher than the expense accounts total balance that difference is credited in the Income Summary account, that means a positive result or a profit.<br />
+    If the revenue accounts total balance is lower than the expense accounts total balance that difference is debited in the Income Summary account, that means a negative result or a loss.</li>
+</ul>
+</li>
+<li>This accounting entry is posted the last day of the last period of the year being closed, that is the "<strong>Adjustment Period</strong>" or "13th Period" of the year.</li>
+<li>Etendo does not create a G/L Journal for this accounting entry but just the accounting entry.</li>
+</ul>
+<p>2. The "Closing" entry or "<strong>Balance Sheet Closing</strong>" entry.</p>
+<ul>
+<li>This accounting entry credits all the accounts which have a debit balance and debits all the accounts which have a credit balance. The aim of this accounting entry is to get that Asset and Liability accounts get a zero balance.<ul>
+<li>In order words, let us take an Asset account with a debit balance of 8.000,00. The closing entry creates a credit accounting entry of 8.000,00 in the Asset account of the example.</li>
+</ul>
+</li>
+<li>This account entry is posted the last day of the last period of the year being closed, that is the "<strong>Adjustment Period</strong>" or "13th Period" of the year.</li>
+<li>Etendo does not create a G/L Journal for this accounting entry but just the accounting entry.</li>
+<li>This entry is created only if the Reverse Permanent Account Balances checkbox is set to yes.</li>
+</ul>
+<p>Finally, if a Retained Earnings account is specified for the general ledger configuration, an additional entry dated on the last day of the year is created.</p>
+<p>This entry moves the Income Summary account balance to the "Retained Earnings" account.</p>
+<p>3. And the "Opening" or "<strong>Balance Sheet Opening</strong>" entry.</p>
+<ul>
+<li>This accounting entry is the reversal entry of the closing entry.<ul>
+<li>Following the example of point 2 above, the opening entry creates a debit accounting entry of 8.000,000 in the Asset account of the example. That amount is the opening balance of the asset account for the new year.</li>
+</ul>
+</li>
+<li>This accounting entry is posted the first day of the first period of the next year.</li>
+<li>This entry is created only if the Reverse Permanent Account Balances checkbox is set to yes.</li>
+</ul>
+<h5 id="end-year-close-process-example"><strong>End-year close process example</strong></h5>
+<p>This example describes the "2019 end-year closing" process of a sample legal with an accounting organization.</p>
+<p>This article describes the end-year closing process intentionally keeping the organization's activity as simple as possible.</p>
+<p>The company in this example started its activity prior to 2019, therefore a G/L Journal set as "Opening" can be created to record the 2019 opening entry and get it posted to the ledger.</p>
+<p><a class="glightbox" href="/assets/drive/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png" /></a></p>
+<p>To make it simple, the company in this example executed detailed "regular" activities which created the corresponding "regular" journal entries in the general ledger:</p>
+<p><a class="glightbox" href="/assets/drive/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png" /></a></p>
+<p>Let us imagine that "F&amp;B España" closes the standard periods as soon as each period is over and that is done even for the last standard period which is "December 2019".</p>
+<p>The accountants can use the "13th Period" to post accounting adjustment to the ledger through the posting of G/L Journal/s, prior running the "Year Close" process.</p>
+<p>Once 2019 is over and ready to be closed, the company in this example can execute the 2019 "Close Year" process from the End Year Close window.</p>
+<p>The process button "Year Close" runs the end-year close process for this sample organization.</p>
+<p><a class="glightbox" href="/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png" /></a></p>
+<h5 id="reverse-permanent-account-balances-set-to-yes"><strong>Reverse Permanent Account Balances set to "Yes"</strong></h5>
+<p>Etendo creates "closing entries" detailed below if the "<strong>Reverse Permanent Account Balances</strong>" checkbox of the Organization's general ledger is set to "Yes" before running the "Close Year" process.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that below accounting entries can also be reviewed in the "<strong>End Year Close</strong>" window in the Accounting Tab.</p>
+</div>
+<ul>
+<li>Dated on the latest day of the year below <strong>P&amp;L Closing Entry</strong>.<br />
+    This entry resets all "Revenue" and "Expense" account which is posted in the account defined as Income Summary.<br />
+<a class="glightbox" href="/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png" /></a>
+ </li>
+<li>Dated on the latest day of the year below <strong>Closing Entry</strong>.
+    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
+    <a class="glightbox" href="/assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png" /></a>
+ </li>
+<li>Dated on the day of the following year (01-01-2022) below <strong>Opening Entry</strong>. This entry is the reversal entry of the above closing entry:
+    <a class="glightbox" href="/assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png" /></a>
+    The organization in this example can launch the 2020 Balance Sheet and the 2021 Profit and Loss reports from the Balance Sheet and P&amp;L structure window:</li>
+</ul>
+<p>2020 Balance Sheet:</p>
+<p><a class="glightbox" href="/assets/drive/1ttBuhupxE9YYwts1jvL2qSmu9tGwleUx.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1ttBuhupxE9YYwts1jvL2qSmu9tGwleUx.png" /></a></p>
+<p>2021 Profit and Loss:</p>
+<p><a class="glightbox" href="/assets/drive/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png" /></a></p>
+<h5 id="reverse-permanent-account-balances-set-to-no"><strong>Reverse Permanent Account Balances set to "No"</strong></h5>
+<p>Etendo creates below "closing" entries if the "<strong>Reverse Permanent Account Balances</strong>" checkbox of the Organization's general ledger is set to "No" before running the "Close Year" process.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Note that below accounting entries can also be reviewed in the "<strong>End Year Close</strong>" window in the Accounting Tab.</p>
+</div>
+<ul>
+<li>Dated on the latest day of the year (31-12-2019) below <strong>P&amp;L Closing Entry</strong>:
+ <a class="glightbox" href="/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png" /></a>
+     </li>
+<li>and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
+ <a class="glightbox" href="/assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png" /></a>
+     </li>
+</ul>
+<p>The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&amp;L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the "Reverse Permanent Account Balances set to "Yes" scenario.</p>
+<h4 id="end-year-close_1"><strong>End Year Close</strong></h4>
+<p>In the <strong>End Year Close</strong> window, all the Years previously created in the Fiscal Calendar window are shown. Those years can be closed in this window.</p>
+<p>The records shown in this window are filtered by their "Status" and the "Organization", by showing only the Years which are not closed yet and belongs to the Organization in which the User is logged. These filters can be removed by clicking in the funnel icon.</p>
+<p>This window shows two Tabs. The first Tab shows all the existing Years. Once selected a record in this Tab, the lower tab shows the related Accounting entries, meaning the closing entries generated by the Close Year process as well as the corresponding opening entries of the next year.</p>
+<p>This way, it is easier and quicker to see the Accounting generated when a Year is closed. More information can be found in the Accounting Tab below.</p>
+<p>The way to Close a Year is:</p>
+<ul>
+<li>Use the filters of the grid to show the Year to close.</li>
+<li>Select the Year.</li>
+<li>Click on the Year Close button and click OK.</li>
+</ul>
+<p>Once done, Etendo informs that the process has been completed successfully.</p>
+<p>All the Periods for that Year and that Organization will be permanently Closed. The way to Undo the Close of the Year is the same, but clicking Undo Close Year.</p>
+<p><a class="glightbox" href="/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png" /></a></p>
+<p>As shown in the image above, the main fields in this window are:</p>
+<ul>
+<li>Organization.</li>
+<li>Calendar.</li>
+<li>Year.</li>
+</ul>
+<h4 id="undo-close-year"><strong>Undo Close Year</strong></h4>
+<p>If a year (i.e 2019) is closed, it will not be possible to do any posting within that year unless the "Undo Close Year" process is run for that year.</p>
+<p>This process opens the year and all the periods of the year. It also reverts all the ledger entries posted by the end-year close process; therefore closing/opening entries are not shown in the Journal Entries Report anymore, unless the end-year close process is run once again for the year.</p>
+<ul>
+<li>Status: It can be <strong>Year Not Closed</strong> or <strong>Year Closed</strong></li>
+</ul>
+<h4 id="accounting_3"><strong>Accounting</strong></h4>
+<p>In the <strong>Accounting</strong> Tab of the End Year Close Window, all the Accounting entries generated when a Year is Closed or when it is Opened are shown, grouped by Account. This Account entries can be:</p>
+<ul>
+<li>Opening Entries</li>
+<li>Income Statements</li>
+<li>Closing Entries</li>
+<li>Regular Entries</li>
+<li>Divide Up</li>
+</ul>
+<p>This way, it is easier to review the Accounting entries made in the Closing Year Process.</p>
+<p><a class="glightbox" href="/assets/drive/1SEPkTkQEu25sszL7ZUxhOnI9HK3-d6ON.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1SEPkTkQEu25sszL7ZUxhOnI9HK3-d6ON.png" /></a></p>
+<p>As shown in the image above, the main fields in this window are:</p>
+<ul>
+<li>General Ledger.</li>
+<li>Type. It can be an Opening Entry, Closing Entry, Income Statement, Regular Entry or Divide Up.</li>
+<li>Account. Notice that <strong>the account entries are grouped by Account</strong>, showing only one record.</li>
+<li>Debit.</li>
+<li>Credit.</li>
+</ul>
+<p>For explaining this Tab, it is better to follow the same example as in the Introduction section and show how this Tab presents the results.</p>
+<h5 id="reverse-permanent-account-balances-set-to-yes_1"><strong>Reverse Permanent Account Balances set to "Yes"</strong></h5>
+<p>Etendo creates below "closing entries" if the "<strong>Reverse Permanent Account Balances</strong>" checkbox of the Organization's general ledger is set to "Yes":</p>
+<ul>
+<li>Dated on the latest day of the year (31-12-2019) below <strong>P&amp;L Closing Entry</strong>.<br />
+    This entry resets all "Revenue" and "Expense" accounts.</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png" /></a>
+     
+-   Dated on the latest day of the year (31-12-2019) below <strong>Closing Entry</strong>.<br />
+    This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.
+ <a class="glightbox" href="/assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png" /></a>
+     
+-   Dated on the day of the following year (01-01-2020) below <strong>Opening Entry</strong>.<br />
+    This entry is the reversal entry of the above closing entry:
+ <a class="glightbox" href="/assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png" /></a>
+     </p>
+<h5 id="reverse-permanent-account-balances-set-to-no_1"><strong>Reverse Permanent Account Balances set to "No"</strong></h5>
+<p>Etendo creates below "closing" entries if the "<strong>Reverse Permanent Account Balances</strong>" checkbox of the Organization's general ledger is set to "No":</p>
+<ul>
+<li>Dated on the latest day of the year (31-12-2019) below <strong>P&amp;L Closing Entry</strong>:
+ <a class="glightbox" href="/assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png" /></a>
+     </li>
+<li>and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
+ <a class="glightbox" href="/assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png" /></a></li>
+</ul>
+<h2 id="gl-posting-by-db-tables"><strong>GL Posting by DB Tables</strong></h2>
+<h3 id="introduction_4"><strong>Introduction</strong></h3>
+<p>The G/L Posting by DB Table allows the user to massively post the transactions related to a given transactional table or to all of them.</p>
+<p><a class="glightbox" href="/assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png" /></a></p>
+<p>As shown in the image above, the "G/L Posting by DB Tables" feature allows the user to:</p>
+<ul>
+<li>select an Organization or all of them if a particular organization is not selected</li>
+<li>select a Table or all of them if a particular table is not selected.</li>
+<li>and select a "From date" and "To date", if no dates are selected all the transactions available will be posted.</li>
+</ul>
+<p>After running the process, Etendo informs about the number of ledger entries posted to the ledger for each table in order to post once again the transactional table/s to the ledger.</p>
+<p><a class="glightbox" href="/assets/drive/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png" /></a></p>
+<p>This process can be launched whenever it is required:</p>
+<ul>
+<li>It can be run if there are pending transactions to be massively posted whenever the Accounting Sever Process is not enabled or if it is not enabled for a given set of tables.</li>
+<li>It can also be run after running the process Reset Accounting as a way of regenerate the ledger entries.</li>
+</ul>
+<h2 id="budget"><strong>Budget</strong></h2>
+<h3 id="introduction_5"><strong>Introduction</strong></h3>
+<p>Etendo creates and edits budgets to be used for informative purposes allowing the user to access the data about budget versus actual. </p>
+<h3 id="header_3"><strong>Header</strong></h3>
+<p>These are the actions which can be executed from the header in order to create budgets for a selected year to be used for informative purposes: </p>
+<p><strong>Export Budget to Excel:</strong>  exports budget to an Excel document.
+<strong>Copy Budget:</strong> copy budget already created. 
+<strong>Check Export Actual Data:</strong> when checked, actual quantities will be exported to Excel in addition to the budgeted quantities. </p>
+<p><a class="glightbox" href="/assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png" /></a></p>
+<h3 id="lines_3"><strong>Lines</strong></h3>
+<p>The user is able to add budget lines. Each line may refer to a specified period, business partner, product, etc.</p>
+<h2 id="create-budget-reports-in-excel">Create Budget Reports in Excel</h2>
+<p>By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  </p>
+<p><a class="glightbox" href="/assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png" /></a></p>
+<h2 id="not-posted-transaction-report"><strong>Not Posted Transaction Report</strong></h2>
+<h3 id="introduction_6"><strong>Introduction</strong></h3>
+<p>Not Posted Transaction Report lists the transactions and/or documents in status "Complete" which are not already posted.</p>
+<p>This report can be used to make sure that there are no documents pending to be post:</p>
+<ul>
+<li>while closing an accounting period or a fiscal year as once a period is closed it is not possible to post within that period</li>
+<li>while running financial reports, as not posted transaction or document will not be taken into account in the financial reports</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png" /></a></p>
+<p>Not posted transactions and/or documents shown are split by type, for instance:</p>
+<ul>
+<li>Journal</li>
+<li>Vendor Invoice</li>
+<li>Invoice or customer invoice</li>
+<li>Vendor Payment</li>
+<li>Financial Transaction</li>
+<li>Receipt or payment in</li>
+<li>etc</li>
+</ul>
+<p>and it is possible to navigate to the document not posted and therefore get it posted by clicking on the "Date" field next to the document or transaction.</p>
+<p>Finally, it is important to remark that:</p>
+<ul>
+<li>"<strong>Date From</strong>" and "<strong>Date To</strong>" filters allows the user to narrow down the not posted transactions to be shown in the report by taking into account their transaction or document date.</li>
+<li>It is not required to enter a "<strong>general ledger configuration</strong>" to narrow down the accounting information because:<ul>
+<li>if a document is not posted, it is not posted for any of the general ledgers for which it should be posted</li>
+<li>and if a document is posted, it is posted for all the general ledgers for which it should be posted.</li>
+</ul>
+</li>
+</ul>
+<h2 id="reset-accounting"><strong>Reset Accounting</strong></h2>
+<h3 id="introduction_7"><strong>Introduction</strong></h3>
+<p>The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. The manual changes done for the accounting entries description will obviously be lost after running this process.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/etendo.software/" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
