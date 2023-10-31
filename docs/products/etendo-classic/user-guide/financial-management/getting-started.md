@@ -96,7 +96,7 @@ Having said that, the accounting configuration detailed in this section is the o
 - and a Fiscal Calendar
 
 Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](/products/etendo-classic/user-guide/general-setup/enterprise-model/#initial-organization-setup) and in the [Organization](/products/etendo-classic/user-guide/general-setup/enterprise-model/#organization) articles.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](/products/etendo-classic/user-guide/general-setup/enterprise-model/#initial-organization-setup) and in the [Organization](/products/etendo-classic/user-guide/general-setup/enterprise-model/#organization) section.
 
 Very briefly:
 
@@ -145,8 +145,8 @@ It is important to remark that:
 
 If the Localization Pack includes the *in-country taxes* setup, the only configuration left to do is:
 
-  to assign the corresponding [Tax Categories](/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category)to the products
-  and to assign the corresponding [Business Partner Tax category](/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category) to the business partners of the Organization, otherwise review the last step of scenario 3 below which describes how to create and set up the taxes.
+  to assign the corresponding [Tax Categories](/products/etendo-classic/user-guide/financial-management/accounting/setup/#tax-category) to the products
+  and to assign the corresponding [Business Partner Tax category](/products/etendo-classic/user-guide/financial-management/accounting/setup/#business-partner-tax-category) to the business partners of the organization, otherwise review the last step of scenario 3 below which describes how to create and set up the taxes.
 
 ### Scenario 3 - Localization Pack and Generic CoA do not installed
 
@@ -295,7 +295,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 - Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:
 
    the income statement as depreciation is an expense
-   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period
+   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.
 
 #### The printing of the preliminary Income Statement and Balance Sheet
 
@@ -306,7 +306,7 @@ It is very useful to print these financial reports prior to the closing of the y
 During the accounting cycle there are other reports which can also be printed:
 
 - the [General Ledger Report](/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
-- the [Journal Entries Report](/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger
+- the [Journal Entries Report](/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
 
 #### The closing of the fiscal year
 
@@ -315,7 +315,7 @@ Etendo allows to perform below detailed checks prior to the closing of the fisca
 - Run the [Not Posted Transaction](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
 - Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](/products/etendo-classic/user-guide/financial-management/accounting/setup/#active-tables).
 - Unscheduled the [Accounting Server Process](/products/etendo-classic/user-guide/general-setup/process-scheduling/#process-request) therefore an stable scene can be assured.
-- Check the [Financial Account/s](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account)current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts]().
+- Check the [Financial Account/s](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts]().
 
 Before running the close year process the accounting periods can be [closed](/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
 The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal) prior to closing the year.
@@ -372,8 +372,8 @@ The following setup needs to be done before performing the process:
 - [Financial Accounts](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#financial-account).
 - [Business Partners](/products/etendo-classic/user-guide/master-data-management/master-data/#business-partner) to use above configured Payment Methods and Financial Accounts.
 
-  !!!note
-  It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
+!!!note
+    It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
 
 ### Execution
 

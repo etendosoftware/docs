@@ -190,5 +190,5 @@ Finance staff: To invoice these documents, go to the [Purchase invoice](/product
 Procurement Management has a relationship with other application areas: 
 
 - [Warehouse Management](/products/etendo-classic/user-guide/warehouse-management/getting-started/) as Goods Receipts changes items quantity on hand and its value.
-- [Financial Management]() in terms of managing account payable payments.
+- [Financial Management](/products/etendo-classic/user-guide/financial-management/getting-started/) in terms of managing account payable payments.
 - [MRP Management]() as purchase planning allows the creation of purchase orders based on material needs.
