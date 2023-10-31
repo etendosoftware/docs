@@ -17,7 +17,7 @@
         <link rel="next" href="../../../etendo-rx/getting-started/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3681,39 +3681,43 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Make sure you have python3 installed on your system. You can verify the installation by running</p>
+<p>Make sure you have at least python3.7 or above installed on your system. You can verify the installation by running</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>--version
 </span></code></pre></div>
 <p>If it is not installed, run </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3
 </span></code></pre></div>
+And then verify that the version is correct.</p>
 </li>
 <li>
 <p>It is highly likely that pip3 comes bundled with the installation of python3. Verify if it is installed by running </p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip3<span class="w"> </span>--version
 </span></code></pre></div>
+<p>Then ensure to have an updated version of it</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</span></code></pre></div>
 <p>If it is not installed, run</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
 </span></code></pre></div>
 </li>
 <li>
 <p>The user needs to install libpq-dev to ensure seamless communication and compatibility between our python script and the postgresql database.</p>
 <p>To install it, run 
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpq-dev
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpq-dev
 </span></code></pre></div></p>
 </li>
 <li>
 <p>The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>psycopg2
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>psycopg2-binary
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>pandas
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>pandas
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>requests
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>pip3<span class="w"> </span>install<span class="w"> </span>requests
 </span></code></pre></div>
 </li>
 </ol>
 <h3 id="etendo-bi-connector_1">Etendo BI Connector</h3>
-<p>In the filesystem, two new directories should be created. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).</p>
+<p>After the execution of the process, two new directories should be created in the filesystem. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).</p>
 <p>In this example, in the path where the script is allocated, a new directory named “Etendo” should be created. Inside it, there should be two folders for the organization that set the background process (F&amp;B US West Coast).</p>
 <p><code>drwxrwxr-x 1 &lt;user&gt; &lt;group&gt; 9,1K jun 8 16:52 ETPBIC_SyncScript.py</code></p>
 <p><code>drwxrwxr-x 4 &lt;user&gt; &lt;group&gt; 4,0K jun 8 17:39 Etendo/</code></p>
