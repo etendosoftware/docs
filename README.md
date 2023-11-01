@@ -7,6 +7,7 @@ pip install mkdocs-material
 pip install pillow cairosvg
 pip install mkdocs-glightbox
 pip install mike
+pip install mkdocs-rss-plugin
 ```
 
 # Run Etendo Documentation locally
