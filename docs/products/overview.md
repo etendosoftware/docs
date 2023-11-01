@@ -35,6 +35,6 @@ Whether you're looking to master the basics or explore advanced features, our gu
 <figure markdown>
 ![etendo-copilot.png](/assets/products/overview/etendo-copilot.png){align=right width=400}
 <br>
-### In this section you will find everything about our Copilot project. Currently you have information about Bastian, our artificial intelligence based chatbot that can answer you all about Etendo.
+### In this section, you will find everything about our Copilot project. Currently you have information about Bastian, our artificial intelligence based chatbot that can answer you all about Etendo.
 </figure>
 
