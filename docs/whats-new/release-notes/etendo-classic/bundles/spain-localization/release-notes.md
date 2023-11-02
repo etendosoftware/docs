@@ -13,7 +13,8 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#150) | 29/09/2023 | 22.4.3 | 23.3.x | CS | :white_check_mark:|
+| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#151) | 01/11/2023 | 22.4.3 | 23.3.x | CS | :white_check_mark:|
+| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.4.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
 | [1.4.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
 | [1.3.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
@@ -30,6 +31,10 @@ tags:
 
 ## Versiones Disponibles
 
+### 1.5.1
+- [EE-730](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/5){target="\_blank"} Se corrigió una traducción errónea en un campo de la ventana 'Producto'
+- [EE-729](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/4){target="\_blank"} Se añadió una traducción faltante para las opciones que aparecen al hacer click derecho sobre las columnas de una ventana
+- [EE-725](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/3){target="\_blank"} Se añadió una traducción faltante para la ventana 'Marca'
 ### 1.5.0
 - Se actualizó la compatibilidad de Core incluyendo hasta 23.3.x
 ### 1.4.1
