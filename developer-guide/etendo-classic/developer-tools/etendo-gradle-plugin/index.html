@@ -17,7 +17,7 @@
         <link rel="next" href="../etendo-backup-restore-tool/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -4148,22 +4148,22 @@ In the following sections, you can find all the flags or variables available to 
 <table>
 <thead>
 <tr>
-<th align="left">Command Line Parameters</th>
-<th align="left">Description</th>
+<th style="text-align: left;">Command Line Parameters</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>-Ppkg=&lt;packagename&gt;</code></td>
-<td align="left"><strong>Required</strong> The name of the module.</td>
+<td style="text-align: left;"><code>-Ppkg=&lt;packagename&gt;</code></td>
+<td style="text-align: left;"><strong>Required</strong> The name of the module.</td>
 </tr>
 <tr>
-<td align="left"><code>-Precursive=true</code></td>
-<td align="left">This trigger the republication of all the modules which depends on the module being published. By default false.</td>
+<td style="text-align: left;"><code>-Precursive=true</code></td>
+<td style="text-align: left;">This trigger the republication of all the modules which depends on the module being published. By default false.</td>
 </tr>
 <tr>
-<td align="left"><code>-PupdateLeaf=true</code></td>
-<td align="left">This updates automatically the version of the project beign published.By default false.</td>
+<td style="text-align: left;"><code>-PupdateLeaf=true</code></td>
+<td style="text-align: left;">This updates automatically the version of the project beign published.By default false.</td>
 </tr>
 </tbody>
 </table>
@@ -4518,17 +4518,22 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <p>Install Node.js version 16.10.0:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>nvm<span class="w"> </span>install<span class="w"> </span><span class="m">16</span>.10.0
 </span></code></pre></div></p>
+<p><strong>Note:</strong> If you encounter errors during the installation of Node.js with the <code>nvm install 16.10.0</code> command, it might be because <code>curl</code> isn't installed or is misconfigured on your system. In such cases, you can try running the following commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>curl
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl
+</span></code></pre></div>
+<p>After successfully configuring <code>curl</code> using this method, return to this guide and execute the steps above to install NVM and set up Node.js.</p>
 </li>
 <li>
 <p>Set Node.js version 16.10.0 as the default version:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>nvm<span class="w"> </span>use<span class="w"> </span><span class="m">16</span>.10.0
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>nvm<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>default<span class="w"> </span><span class="m">16</span>.10.0
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>nvm<span class="w"> </span>use<span class="w"> </span><span class="m">16</span>.10.0
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>nvm<span class="w"> </span><span class="nb">alias</span><span class="w"> </span>default<span class="w"> </span><span class="m">16</span>.10.0
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Verify the installation:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -4538,29 +4543,29 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>Install Homebrew by running the following command in the terminal:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </span></code></pre></div>
 <ul>
 <li>Once Homebrew is installed, verify it by checking its version:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>brew<span class="w"> </span>--version
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>brew<span class="w"> </span>--version
 </span></code></pre></div>
 <p><strong>Node.js &amp; npm Installation using Homebrew:</strong></p>
 <ol>
 <li>
 <p>Update Homebrew (ensuring you have the latest package definitions):
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>brew<span class="w"> </span>update
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>brew<span class="w"> </span>update
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Install Node.js and npm:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Verify the installation of Node.js and npm:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -4576,8 +4581,8 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 </li>
 <li>
 <p>After installation, open a command prompt or PowerShell and verify the installation:
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">node</span> <span class="n">-v</span>
-</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="n">npm</span> <span class="n">-v</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">node</span> <span class="n">-v</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="n">npm</span> <span class="n">-v</span>
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -4589,38 +4594,38 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>Install npm globally using the following command:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
 </span></code></pre></div>
 <ul>
 <li>Confirm the installation by checking the versions of node and npm:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>node<span class="w"> </span>-v
-</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>npm<span class="w"> </span>-v
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>node<span class="w"> </span>-v
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>npm<span class="w"> </span>-v
 </span></code></pre></div>
 <p><strong>Installing Sass (Syntactically Awesome Style Sheets)</strong></p>
 <p>If you have npm installed and need the Sass compiler, follow these instructions:</p>
 <ul>
 <li>Use npm to install Sass globally on your system:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>sass
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>sass
 </span></code></pre></div>
 <ul>
 <li>Confirm the Sass installation by running:</li>
 </ul>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>sass<span class="w"> </span>--version
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>sass<span class="w"> </span>--version
 </span></code></pre></div>
 <p>Seeing the Sass version number means that Sass has been installed correctly.</p>
 </details>
 <h3 id="execution">Execution</h3>
 <p>The <code>cssCompile</code> task in the Etendo Gradle configuration is specifically designed to convert <code>.scss</code> files into <code>.css</code> files. To customize the Etendo skin, you will need to work with <code>.scss</code> files. </p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>./gradlew<span class="w"> </span>cssCompile<span class="w"> </span>smartbuild
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>./gradlew<span class="w"> </span>cssCompile<span class="w"> </span>smartbuild
 </span></code></pre></div>
 <p>After executing the task, look for the following output to indicate a successful build:</p>
 <div class="admonition success">
 <p class="admonition-title">Successful Execution</p>
 <p>After executing the task, the following output indicates a successful build:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>&gt; Task :cssCompile
-</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>&gt; BUILD SUCCESSFUL
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>&gt; Task :cssCompile
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>&gt; BUILD SUCCESSFUL
 </span></code></pre></div>
 <p>This confirms the successful processing of the files.</p>
 </div>
@@ -4629,17 +4634,17 @@ Close and reopen your terminal to start using NVM, or execute the following comm
 <ul>
 <li>
 <p>Running the Copilot docker image locally.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>./gradlew<span class="w"> </span>copilot.start
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>./gradlew<span class="w"> </span>copilot.start
 </span></code></pre></div>
 </li>
 <li>
 <p>Stop the Copilot docker image.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>./gradlew<span class="w"> </span>copilot.stop
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>./gradlew<span class="w"> </span>copilot.stop
 </span></code></pre></div>
 </li>
 <li>
 <p>Execute Copilot translation Tool with Gradle.</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>./gradlew<span class="w"> </span>copilot.translate
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>./gradlew<span class="w"> </span>copilot.translate
 </span></code></pre></div>
 <table>
 <thead>
@@ -4736,8 +4741,29 @@ Close and reopen your terminal to start using NVM, or execute the following comm
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
+
       <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({
+        "notice_banner_type": "headline",
+        "consent_type": "express",
+        "palette": "light",
+        "language": "en",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+        "website_name": "etendo.software"
+    });
+});
+</script>
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
