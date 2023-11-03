@@ -3,8 +3,11 @@ title: Libro de facturas
 hide:
     - navigation
 ---
-## Javapakages 
-`org.openbravo.module.invoicesregisterbook.es_es`
+## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook
+
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.es_es
 
 ## **Introducción**
 

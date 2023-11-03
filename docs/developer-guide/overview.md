@@ -30,3 +30,18 @@ So, roll up your sleeves and ignite your creativity.
 </figure>
 
 ---
+
+<figure markdown>
+![etendo-mobile.png](/assets/products/overview/etendo-mobile.png){align=right width=400}
+<br><br>
+### You will find information on how to develop the Etendo mobile subapplications and Etendo RX based subapplications.
+</figure>
+
+
+---
+
+<figure markdown>
+![etendo-copilot.png](/assets/products/overview/etendo-copilot.png){align=left width=400}
+<br>
+### In this section, you will find everything about our Copilot project. Currently, you have getting started information as well as data about the XML Translator tool, and also, how to develop new copilot tools. 
+</figure>

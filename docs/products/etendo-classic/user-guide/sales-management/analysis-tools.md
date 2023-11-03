@@ -134,7 +134,7 @@ This section shows the lines of the pending orders with the actual stock of each
 
 Only Sales Orders with *Do Not Invoice* Invoice Term are not displayed in the report, but all other orders are present in the output, independently if the Invoice Term condition is met or not. For example, if **Invoice Term** is "After Delivery" and products are not shipped yet, Sales Order is displayed.
 
-![Graphic](/assets/drive/1f7xMOYxlO6q1ilvvHF0aOk3bHC6HEQbp.png)
+![Orders Awaiting Invoice Report](/assets/products/etendo-classic/user-guide/sales-management/analysis-tools/orders-awaiting-invoice-report.png)
 
 ### Parameters Window
 
@@ -163,7 +163,7 @@ All monetary values (like **Amount**, **Price**, **Base**) in the report are dis
 
 **Orders Awaiting Delivery Report** shows the information about the Sales Orders that are awaiting (pending) to be delivered (shipped).
 
-![](/assets/drive/1_yQ5WTBoehSRe5xzIUQwNzWAgk9Jkpzd.png)
+![](/assets/products/etendo-classic/user-guide/sales-management/analysis-tools/orders-awaiting-delivery-report-18.png)
 
 
 ### Parameters Window

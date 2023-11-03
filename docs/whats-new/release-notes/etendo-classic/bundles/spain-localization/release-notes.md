@@ -1,36 +1,52 @@
 ---
 title: Versiones Disponibles
+tags:
+  - Release Notes
+  - Localizacion Española
+  - Versiones
 ---
+:octicons-package-16: Javapackage: `com.etendoerp.localization.spain.extensions`
+
+:material-store: Etendo Marketplace:  [Bundle de Localizacion Española](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}
+
 ## Introducción
-
-En esta página se documentarán las versiones disponibles del paquete `com.etendoerp.localization.spain.extensions`
-
-## Versiones Disponibles
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| 1.4.0 | 27/06/2023 | 22.4.3 | 23.2.x | CS | :white_check_mark:|
-| 1.3.0 | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
-| 1.2.1 | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| 1.2.0 | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| 1.1.0 | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| 1.0.5 | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
-| 1.0.4 | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
+| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#151) | 01/11/2023 | 22.4.3 | 23.3.x | CS | :white_check_mark:|
+| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.4.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
+| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.0.5](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
+| [1.0.4](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
 | 1.0.3 | 06/10/2022 | 21.4.0 | 22.3.x | C  |                   |
-| 1.0.2 | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
-| 1.0.1 | 16/06/2022 | 21.4.0 | \*     | C  |                   |
+| [1.0.2](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
+| [1.0.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
 | 1.0.0 | 01/01/2022 | 21.4.0 | \*     | C  |                   |
 
 
-## Notas
-### Version 1.4.0
+## Versiones Disponibles
+
+### 1.5.1
+- [EE-730](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/5){target="\_blank"} Se corrigió una traducción errónea en un campo de la ventana 'Producto'
+- [EE-729](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/4){target="\_blank"} Se añadió una traducción faltante para las opciones que aparecen al hacer click derecho sobre las columnas de una ventana
+- [EE-725](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/3){target="\_blank"} Se añadió una traducción faltante para la ventana 'Marca'
+### 1.5.0
+- Se actualizó la compatibilidad de Core incluyendo hasta 23.3.x
+### 1.4.1
+- [EE-720](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/2){target="\_blank"} Se renombró a minúsculas el java package del modulo `org.openbravo.localization.spain.referencedata.translation.eses` 
+### 1.4.0
 - Se actualizó la compatibilidad de Core incluyendo hasta 23.2.x
-### Versión 1.3.0
+### 1.3.0
 - Se publicaron todos los paquetes en GitHub
-### Versión 1.2.1
+### 1.2.1
 - Se resolvió problemas funcionales de la localización española utilizando las dependencias en formato JAR.
 
-### Versión 1.2.0
+### 1.2.0
 - Se añadieron nuevos rangos de impuestos:
 	Adquisiciones IVA 0%
   Adquisiciones IVA 0+RE 0+0%
@@ -52,25 +68,25 @@ En esta página se documentarán las versiones disponibles del paquete `com.eten
 
 - Actualización del módulo "epígrafes"
 
-### Versión 1.1.0
+### 1.1.0
 - Se actualizó la compatibilidad de Core desde 22.4.3 a 22.4.x
 - Se añadió la dependencia de la traducción del módulo de Default Jobs
 
-### Version 1.0.5
+### 1.0.5
 - Se actualizó la compatibilidad de Core a 22.4.x
 - Se eliminó la dependencia de Cash VAT Management
 - Se eliminó la dependencia del modulo JAX-WS-JAVA API
 
-### Version 1.0.4
+### 1.0.4
 - Se eliminaron los módulos de Facturacion Electrónica
 - Se añadió la traducción de Libro de Facturas 
 
 
-### Versión 1.0.2
+### 1.0.2
 
 Version actualizada para ser compatible con Etendo 22Q2
 
-### Versión 1.0.1
+### 1.0.1
 
 ##### Errores Solucionados
 
