@@ -10,6 +10,8 @@ tags:
 
 ## Overview
 
+<iframe width="720" height="480" src="https://www.youtube.com/embed/l7RMb0Oz7Wo?si=ngxYnwDkiDqwRkLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 In Etendo, most of the warehouse movements are created automatically based on the transactions of [Sales](/products/etendo-classic/user-guide/sales-management/getting-started/) and [Procurement](/products/etendo-classic/user-guide/procurement-management/getting-started/) processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the Warehouse Management application area and are gathered in the Inventory Accuracy business flow which is described below.
 
 ## Inventory Accuracy
