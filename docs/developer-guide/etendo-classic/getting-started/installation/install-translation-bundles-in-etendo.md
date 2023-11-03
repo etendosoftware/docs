@@ -8,10 +8,31 @@ These bundles require the correct version of the ones they translate to be insta
 
 ## Installation steps
 
-To install a translation bundle, follow the documentation on
+To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/?h=install+mo#3-set-dependencies).
 
 !!! warning
-    Remember to add both the translation module and its compatible translated bundle as dependencies! Otherwise, the environment's compilation will fail
+    Remember to add both the translation module and its compatible translated bundle as dependencies! Otherwise, the environment's compilation will fail. For example:
+    
+        === "Sources"
+
+            ```groovy
+            dependencies {
+                // Add your dependency here
+                moduleDeps ('com.etendo:example.module:1.0.0@zip'){ transitive = true }
+                moduleDeps group: 'com.etendo', name: 'example.module', version:'[1.0.0,)', ext:'zip', transitive: true
+            }
+            ```
+
+        === "JARs"
+
+            ```groovy
+
+            dependencies {
+                // Add your dependency here
+                implementation ('com.etendo:example.module:1.0.0')
+                implementation group: 'com.etendo', name: 'example.module', version:'[1.0.0,)'
+            }
+            ```
 
 ## Bundle Compatibility
 
