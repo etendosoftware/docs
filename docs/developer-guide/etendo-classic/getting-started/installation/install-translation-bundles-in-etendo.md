@@ -11,28 +11,29 @@ These bundles require the correct version of the ones they translate to be insta
 To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/?h=install+mo#3-set-dependencies).
 
 !!! warning
-    Remember to add both the translation module and its compatible translated bundle as dependencies! Otherwise, the environment's compilation will fail. For example:
-    
-        === "Sources"
+    Remember to add both the translation bundle and the correct version of the bundle it translates as dependencies! Otherwise, the environment's compilation will fail. For example:
 
-            ```groovy
-            dependencies {
-                // Add your dependency here
-                moduleDeps ('com.etendo:example.module:1.0.0@zip'){ transitive = true }
-                moduleDeps group: 'com.etendo', name: 'example.module', version:'[1.0.0,)', ext:'zip', transitive: true
-            }
-            ```
 
-        === "JARs"
+    === ":material-language-java: JARs"
 
-            ```groovy
+        ```groovy
 
-            dependencies {
-                // Add your dependency here
-                implementation ('com.etendo:example.module:1.0.0')
-                implementation group: 'com.etendo', name: 'example.module', version:'[1.0.0,)'
-            }
-            ```
+        dependencies {
+            // Add your dependency here
+            implementation ('com.etendo:example.module:1.0.0')
+            implementation ('com.etendo:example.module.es_es:1.0.0')
+        }
+        ```
+
+    === ":octicons-package-16: Sources"
+
+        ```groovy
+        dependencies {
+            // Add your dependency here
+            moduleDeps ('com.etendo:example.module:1.0.0@zip'){ transitive = true }
+            moduleDeps ('com.etendo:example.module.es_es:1.0.0@zip'){ transitive = true }
+        }
+        ```
 
 ## Bundle Compatibility
 
