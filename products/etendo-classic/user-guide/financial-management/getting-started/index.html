@@ -2813,6 +2813,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
+        Install Translation Bundles
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4093,11 +4107,10 @@ In Etendo, most of the accounting entries are automatically created while postin
 <p>Accounting entries not directly related to <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#document-type">documents</a> managed within a given application area can be created and posted in a <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal">G/L Journal</a>. For instance a provision for stock depreciation accounting entry.</p>
 <p>There are three ways of accounting in Etendo:</p>
 <ul>
-<li>To manually post each document by using the process button <em>Post</em>.
-The process button <em>Post</em> can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the <a href="/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-invoice">Purchase Invoice window</a>.</li>
-</ul>
-<p>This button is shown for accounting users if the Attribute <em>ShowAcct</em> is visible for them. This configuration is enabled through a <a href="/products/etendo-classic/user-guide/general-setup/application/#preference">Preference</a>.</p>
-<ul>
+<li>
+<p>To manually post each document by using the process button <em>Post</em>.
+The process button <em>Post</em> can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the <a href="/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-invoice">Purchase Invoice window</a>. This button is shown for accounting users if the Attribute <em>ShowAcct</em> is visible for them. This configuration is enabled through a <a href="/products/etendo-classic/user-guide/general-setup/application/#preference">Preference</a>.</p>
+</li>
 <li>
 <p>To manually post all the documents/transactions related to a given database table for instance the table <em>Invoices</em>, by using the process <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-posting-by-db-tables">GL posting by DB Tables</a></p>
 </li>
@@ -4193,7 +4206,7 @@ A localization Pack which also includes the taxes setup for Spain.</p>
 <p>The basic accounting configuration is practically the same one for the three scenarios above but the level of defaulted configuration provided by Etendo. Obviously scenario 3 above requires an additional configuration effort.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>It is important to remark that the basic accounting configuration described here is obviously one part of the overall <a href="">Business setup</a> flow.</p>
+<p>It is important to remark that the basic accounting configuration described here is obviously one part of the overall Business setup flow.</p>
 </div>
 <h3 id="scenario-1-and-2-localization-pack-or-generic-coa-module-installed">Scenario 1 and 2 - Localization Pack or Generic CoA module installed</h3>
 <p>These two scenarios can be grouped as the basis of the accounting configuration required for both of them is the same.</p>
@@ -4349,7 +4362,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 </ul>
 <p>Before running the close year process the accounting periods can be <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control">closed</a> not to allow any further posting within those periods, but the <em>13th period</em>.
 The <em>13th period</em> is an <em>adjustment period</em> which can be used to post the adjustments required to the ledger through <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal">G/L Journals</a> prior to closing the year.</p>
-<p>The <em>Close Year</em> process can be executed from the <a href="products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close">End Year Close</a> window.</p>
+<p>The <em>Close Year</em> process can be executed from the <a href="/products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close">End Year Close</a> window.</p>
 <p>The end-year close process can be executed for <em>Legal with Accounting</em> organization types as that organization's type has a <em>Fiscal Calendar</em> and <em>General Ledger</em> configured.</p>
 <p>There is a check-box in the <a href="/products/etendo-classic/user-guide/financial-management/accounting/setup/#general-accounts">General Accounts</a> tab of the <em>General Ledger Configuration</em> window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
 That check-box is named <em>Reverse Permanent Account Balances</em>. </p>
@@ -4449,7 +4462,7 @@ Etendo allows to get a two columns balance sheet:
 </div>
 <ul>
 <li>
-<p>Using the Add <a href="/products/etendo-classic/user-guide/sales-management/transactions/#lines_5">Payment button</a> directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.</p>
+<p>Using the <a href="/products/etendo-classic/user-guide/sales-management/transactions/#lines_5">Add Payment button</a> directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.</p>
 </li>
 <li>
 <p>It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the <a href="/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-method">Payment Method</a>.</p>
@@ -4515,7 +4528,7 @@ This step in the process can also be completely automated through the configurat
 <li><a href="/products/etendo-classic/user-guide/procurement-management/getting-started/">Procurement Management</a> as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.</li>
 <li><a href="/products/etendo-classic/user-guide/sales-management/getting-started/">Sales Management</a> as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.</li>
 <li><a href="/products/etendo-classic/user-guide/warehouse-management/getting-started/">Warehouse Management</a> as Physical Inventory is posted there.</li>
-<li><a href="">Production Management</a> as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.</li>
+<li>Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.</li>
 </ul>
 
 
