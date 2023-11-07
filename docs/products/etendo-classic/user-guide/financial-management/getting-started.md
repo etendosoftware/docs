@@ -24,9 +24,7 @@ Accounting entries not directly related to [documents](/products/etendo-classic/
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
-The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-invoice).
-
-   This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](/products/etendo-classic/user-guide/general-setup/application/#preference).
+The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](/products/etendo-classic/user-guide/procurement-management/transactions/#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](/products/etendo-classic/user-guide/general-setup/application/#preference).
 
 - To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-posting-by-db-tables)
 
@@ -129,7 +127,7 @@ A localization Pack which also includes the taxes setup for Spain.
 The basic accounting configuration is practically the same one for the three scenarios above but the level of defaulted configuration provided by Etendo. Obviously scenario 3 above requires an additional configuration effort.
 
 !!!Info
-    It is important to remark that the basic accounting configuration described here is obviously one part of the overall [Business setup]() flow.
+    It is important to remark that the basic accounting configuration described here is obviously one part of the overall Business setup flow.
 
 ### Scenario 1 and 2 - Localization Pack or Generic CoA module installed
 
@@ -320,7 +318,7 @@ Etendo allows to perform below detailed checks prior to the closing of the fisca
 Before running the close year process the accounting periods can be [closed](/products/etendo-classic/user-guide/financial-management/accounting/setup/#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
 The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#gl-journal) prior to closing the year.
 
-The *Close Year* process can be executed from the [End Year Close](products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close) window.
+The *Close Year* process can be executed from the [End Year Close](/products/etendo-classic/user-guide/financial-management/accounting/transactions/#end-year-close) window.
 
 The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
 
@@ -432,7 +430,7 @@ When a Payment is Received the Finance staff can register it in different ways:
 !!!note
     Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
 
-- Using the Add [Payment button](/products/etendo-classic/user-guide/sales-management/transactions/#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
+- Using the [Add Payment button](/products/etendo-classic/user-guide/sales-management/transactions/#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
 
 - It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/#payment-method).
 
@@ -496,6 +494,6 @@ Financial Management has a connection with other application areas, as there are
 - [Procurement Management](/products/etendo-classic/user-guide/procurement-management/getting-started/) as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.
 - [Sales Management](/products/etendo-classic/user-guide/sales-management/getting-started/) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
 - [Warehouse Management](/products/etendo-classic/user-guide/warehouse-management/getting-started/) as Physical Inventory is posted there.
-- [Production Management]() as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
+- Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
 
 

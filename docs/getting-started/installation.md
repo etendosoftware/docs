@@ -111,7 +111,7 @@ In this section, you can read the [System Requirements](/getting-started/require
         ```
         ./gradlew setup
         ```
-    8. Installation
+    8. Installation 
         ```
         ./gradlew install smartbuild
         ```
