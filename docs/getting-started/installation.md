@@ -115,7 +115,12 @@ In this section, you can read the [System Requirements](/getting-started/require
         ```
         ./gradlew install smartbuild
         ```
-    9.  Start the Tomcat, in case of Linux you can run:
+    9. Make sure you have the following PostgreSQL settings in your postgresql.conf
+        ```
+        lc_numeric = 'en_US.UTF-8'
+        max_locks_per_transaction = 128
+        ```        
+    10. Start the Tomcat, in case of Linux you can run:
         ```
         sudo /etc/init.d/tomcat start
         ```
@@ -213,7 +218,12 @@ In this section, you can read the [System Requirements](/getting-started/require
         ```
         ./gradlew install smartbuild
         ```
-    9.  Start the Tomcat, in case of Linux you can run:
+    9. Make sure you have the following PostgreSQL settings in your postgresql.conf
+        ```
+        lc_numeric = 'en_US.UTF-8'
+        max_locks_per_transaction = 128
+        ```              
+    10.  Start the Tomcat, in case of Linux you can run:
         ```
         sudo /etc/init.d/tomcat start
         ```
@@ -221,7 +231,7 @@ In this section, you can read the [System Requirements](/getting-started/require
         !!! note
                 If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
                 
-    10. Open your browser in `https://<Public server IP>/<Context Name>`
+    11. Open your browser in `https://<Public server IP>/<Context Name>`
 
 
 
