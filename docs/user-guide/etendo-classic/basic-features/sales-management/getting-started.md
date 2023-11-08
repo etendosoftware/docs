@@ -179,5 +179,5 @@ Sales Management has a connection with other application areas:
 
 - [Warehouse Management](/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/) as shipment changes stock quantity and its value.
 - [Financial Management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/) in terms of managing payments.
-- [Material Requirement]() (MRP) because pending sales orders are one of the inputs for the prodReversal Sales Invoiceuction process.
+- [Material Requirement]() (MRP) because pending sales orders are one of the inputs for the production process.
 
