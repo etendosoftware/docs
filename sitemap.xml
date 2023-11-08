@@ -516,6 +516,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/</loc>
+         <lastmod>2023-11-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/</loc>
+         <lastmod>2023-11-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
