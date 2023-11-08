@@ -316,347 +316,347 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/etendo-rx/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/essentials-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/etendobi-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/assets/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/financial-extensions/intercompany/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/financial-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/platform-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/production-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/sales-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/intrastat/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/modelo-190/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/modelo-303/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/modelo-347/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/jobs/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/modelo-349/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/modelo-390/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/pricing/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/product-setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/bundles/warehouse-extensions/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/optional-features/supported-modules/tax-report-launcher/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/etendo-rx/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/getting-started/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/getting-started/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/accounting/analysis-tools/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/accounting/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/accounting/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/assets/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/project-and-services-management/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/receivables-and-payables/analysis-tools/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/receivables-and-payables/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/getting-started/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/financial-management/receivables-and-payables/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/application/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/attachments-configuration/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/clear-report-cache/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/client/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/crm-connector/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/enterprise-model/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/process-scheduling/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/general-setup/security/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/jobs/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/master-data-management/business-partner-setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/master-data-management/master-data/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/master-data-management/pricing/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/master-data-management/product-setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/material-requirement-planning/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/material-requirement-planning/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/procurement-management/analysis-tools/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/procurement-management/getting-started/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/procurement-management/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-espa%C3%B1a/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/production-management/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/production-management/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/project-and-services-management/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/sales-management/analysis-tools/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/sales-management/getting-started/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/sales-management/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/sales-management/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/warehouse-management/analysis-tools/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/warehouse-management/getting-started/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/warehouse-management/setup/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-classic/user-guide/warehouse-management/transactions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-copilot/getting-started/bastian/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-mobile/getting-started/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-mobile/getting-started/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/products/etendo-mobile/user-interface/user-interface/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-mobile/user-interface/user-interface/</loc>
          <lastmod>2023-11-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
