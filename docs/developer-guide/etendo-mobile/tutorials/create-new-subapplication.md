@@ -47,7 +47,7 @@ After save all the configuration, you have to export it. Open a terminal in the 
 ## Dynamic app window
 In the `Dynamic App` window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the subapplication is declared.
 
-After selecting this record in the `Dynamic App Version` tab we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the [Dynamic App](/products/etendo-classic/user-guide/general-setup/application/#dynamic-app){target="_blank"}.
+After selecting this record in the `Dynamic App Version` tab we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the [Dynamic App](/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app){target="_blank"}.
 
 | Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |

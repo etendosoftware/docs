@@ -18,7 +18,7 @@ On this page we will explain what are the requirements to create a subapplicatio
 
 ### Requirements
 - *Etendo*. If you don't have it, [install it here](/developer-guide/etendo-rx/getting-started/){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](/products/etendo-mobile/getting-started/){target="_blank"}.
+- *Etendo Mobile*. If you don't have it, [install it here](/user-guide/etendo-mobile/getting-started/){target="_blank"}.
 - *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
 

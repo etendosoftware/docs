@@ -71,7 +71,7 @@ There are two base reference implementations defined that you can use or extend:
 	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
 
 	!!! info
-		For more information about masking see [Sequences Masking user guide](/products/etendo-classic/user-guide/financial-management/accounting/setup/#sequence-masking).
+		For more information about masking see [Sequences Masking user guide](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
 
 	- **Table:** Defines the table in which the sequence type column is located.
 	- **Column:** The column where the sequence is defined.
