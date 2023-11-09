@@ -193,8 +193,9 @@ nav:
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
-        - How to manage deferred revenue and expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
-        - How to manage prepaid invoices in payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
+          - How to manage deferred revenue and expenses: user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md
+          - How to manage prepaid invoices in payables: user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md
+          - How to transfer funds between financial accounts: user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts.md
     - Etendo Mobile: 
       - Getting Started: user-guide/etendo-mobile/getting-started.md
       - User interface: user-guide/etendo-mobile/user-interface/user-interface.md
