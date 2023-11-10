@@ -3918,8 +3918,8 @@
 </p>
 </div>
 <h2 id="recommended-articles">Recommended articles</h2>
-<p>Managing prepaid invoices requires a clear understanding on how to create a Purchase Order and a Purchase Invoice as well as how to register a Vendor Payment.</p>
-<p>It is recommended as well to understand how to set up a Payment Term and how to launch the Payment Report.</p>
+<p>Managing prepaid invoices requires a clear understanding on how to create a <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a> and a <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice">Purchase Invoice</a> as well as how to register a <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out">Vendor Payment</a>.</p>
+<p>It is recommended as well to understand how to set up a <a href="/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term">Payment Term</a> and how to launch the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report">Payment Report</a>.</p>
 <h2 id="order-prepayment-execution-steps">Order prepayment: execution steps</h2>
 <p>In Etendo, the company in this example will have to acknowledge a specific payment term agreed with its vendor, create a Purchase Order and make a payment before the goods are delivered to it.</p>
 <h3 id="payment-term-configuration">Payment term configuration</h3>
@@ -3933,7 +3933,7 @@
 <li>in the header, the second part of this payment is configured; this time the "Overdue payment days rule" is 30 days for the amount remaining.</li>
 </ul>
 <h3 id="purchase-order-creation">Purchase Order creation</h3>
-<p>As already mentioned, the first step is to create a Purchase Order which contains the goods that the company needs.</p>
+<p>As already mentioned, the first step is to create a <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a> which contains the goods that the company needs.</p>
 <p>In this scenario, the parties have agreed a specific payment term which can be filled in the corresponding field of the purchase order header.</p>
 <p>Once every required data is filled in as appropriate, the Purchase Order needs to be booked as every time an order is completed a Payment Plan is created for that Order.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseorder2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseorder2.png" /></a></p>
@@ -3942,7 +3942,7 @@
 </p>
 </div>
 <h3 id="payment-creation-and-accounting">Payment creation and accounting</h3>
-<p>Payments made to a vendor are registered in the payment out window. Etendo allows to register vendor payments created against purchase orders and/or invoices.</p>
+<p>Payments made to a vendor are registered in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out">payment out</a> window. Etendo allows to register vendor payments created against purchase orders and/or invoices.</p>
 <p>The main fields to fill in the header section of the payment in window are:</p>
 <ul>
 <li>Business Partner, the vendor who the company is paying to</li>
@@ -3955,12 +3955,14 @@
 <p>The company in this example needs to choose "Orders" and then the order which is going to be partially paid.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/adddetails2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/adddetails2.png" /></a></p>
 <p>Once everything is filled in, press the button Process.</p>
-<p>The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the Financial Account window, in the "Transaction" tab.</p>
+<p>The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#transaction">Financial Account</a> window, in the "Transaction" tab.</p>
 <p>Just created payment can be posted in the Payment Out window by pressing the process button Post if:</p>
 <ul>
-<li>the "Payment Method" used has the proper configuration in the Payment Method tab of the financial account used to make the payment.
-the company in this example needs to set the field "Upon Payment Use" as "In Transit Payment Account"</li>
-<li>besides, there should be an "In Transit Payment Out Account" in the Accounting Configuration tab of the financial account used to make the payment.</li>
+<li>the "Payment Method" used has the proper configuration in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method">Payment Method</a> tab of the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account</a> used to make the payment.<ul>
+<li>the company in this example needs to set the field "Upon Payment Use" as "In Transit Payment Account"</li>
+</ul>
+</li>
+<li>besides, there should be an "In Transit Payment Out Account" in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Accounting Configuration</a> tab of the financial account used to make the payment.</li>
 </ul>
 <p>The posting will look like:</p>
 <table>
@@ -3973,12 +3975,12 @@ the company in this example needs to set the field "Upon Payment Use" as "In Tra
 </thead>
 <tbody>
 <tr>
-<td>Vendor Prepayment</td>
+<td><a href="user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting">Vendor Prepayment</a></td>
 <td>50</td>
 <td></td>
 </tr>
 <tr>
-<td>In Transit Payment Out Account</td>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">In Transit Payment Out Account</a></td>
 <td></td>
 <td>50</td>
 </tr>
@@ -3987,7 +3989,7 @@ the company in this example needs to set the field "Upon Payment Use" as "In Tra
 <p>It is possible to check once more the Payment Out Plan of the purchase order in this example.</p>
 <p>The purchase order payment plan includes the payment registered in the Payment Out Details tab.</p>
 <h3 id="payment-check">Payment check</h3>
-<p>Back to the Purchase Order, it is possible to check the recently created Payment Plan with its Payment Details.</p>
+<p>Back to the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a>, it is possible to check the recently created Payment Plan with its Payment Details.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png" /></a></p>
 <p>To summarize:</p>
 <ul>
@@ -4000,12 +4002,12 @@ the company in this example needs to set the field "Upon Payment Use" as "In Tra
 <li>and the Payment Details tab registers every payment made against the order.</li>
 </ul>
 <h3 id="pre-paid-invoice-management-and-accounting">Pre-Paid invoice management and accounting</h3>
-<p>The company in this example can register the Goods Receipt before registering the vendor invoice by using the process Pending Goods Receipts.</p>
+<p>The company in this example can register the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">Goods Receipt</a> before registering the vendor invoice by using the process <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#pending-goods-receipts">Pending Goods Receipts</a>.</p>
 <p>This process allows introducing the exact amount of goods received from the vendor against each purchase order line.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/pendinggoodsreceipts2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/pendinggoodsreceipts2.png" /></a></p>
 <p>Once processed, Etendo informs about the Goods Receipt number just registered.</p>
 <p>Next step is to enter the vendor invoice. There are several ways of entering a vendor invoice.</p>
-<p>The company in this example uses, for instance, the process "Create Lines From" which can be found in the Purchase Invoice window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.</p>
+<p>The company in this example uses, for instance, the process "Create Lines From" which can be found in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4">Purchase Invoice</a> window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png" /></a></p>
 <p>The invoice created once completed will inherit the payment plan of the order.</p>
 <p>In this example:</p>
@@ -4025,23 +4027,23 @@ the company in this example needs to set the field "Upon Payment Use" as "In Tra
 </thead>
 <tbody>
 <tr>
-<td>Product Expense</td>
+<td><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting">Product Expense</a></td>
 <td>110</td>
 <td></td>
 </tr>
 <tr>
-<td>Vendor Liability</td>
+<td><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting">Vendor Liability</a></td>
 <td></td>
 <td>60</td>
 </tr>
 <tr>
-<td>Vendor Prepayment</td>
+<td><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting">Vendor Prepayment</a></td>
 <td></td>
 <td>50</td>
 </tr>
 </tbody>
 </table>
-<p>There is a report named Payment Report which allows monitoring every payment received or made.</p>
+<p>There is a report named <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report">Payment Report</a> which allows monitoring every payment received or made.</p>
 <p>In this example, this report shows in an intuitive way:</p>
 <ul>
 <li>the status of the payment made against the order and later on inherited by the invoice as "Withdrawn not Cleared", that means that the payment has been withdrawn from a financial bank account but it is not reconcile yet</li>
