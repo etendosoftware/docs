@@ -111,7 +111,7 @@ In Etendo, in this situation, revenue is generated as part of the accounting of 
 In Etendo, in this situation, the revenue can be deferred until a given starting period and within a given number of periods by entering a revenue deferred plan in the [sales invoice lines](/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5).
 
 !!!info
-    For a full description of this functionality visit [How to manage deferred revenue and expenses]() article.
+    For a full description of this functionality visit [How to manage deferred revenue and expenses](/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses) article.
 
 
 Credit limit for business partner
@@ -122,7 +122,7 @@ Credit limit for business partner
 Finally, the finance staff is in charge of recording and managing the customer payments:
 
 - When a payment is received against an invoice it can be recorded in the Sales Invoice window by using the Add Payment button. It is also possible to receive a prepayment for the Sales Order. 
-For more information about payment management documentation visit the [Financial Management//Receivables&Payables]() and in the [How to manage prepaid invoices in receivables]() .
+For more information about payment management documentation visit the [Financial Management//Receivables&Payables]() and in the [How to manage prepaid invoices in receivables](/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables) .
 
 
 ## Customer Returns Business Flow

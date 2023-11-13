@@ -135,12 +135,12 @@ to distribute that expense over 12 months.
 In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4).
 
 !!!info
-    For a full description of this functionality, please visit the [How to manage deferred revenue and expenses]() section.
+    For a full description of this functionality, please visit the [How to manage deferred revenue and expenses](/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses) section.
 
 Finally, the finance staff is in charge of making and managing the supplier payments:
 
 - Supplier payments can be made in the Purchase Invoice window by using the Add Payment button. It is also possible to make a prepayment against a Purchase Order.
-Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the [How to manage prepaid invoices in payables]() section.
+Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the [How to manage prepaid invoices in payables](/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables) section.
 
 ## Supplier Returns Business Flow
 
