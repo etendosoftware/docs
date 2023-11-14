@@ -1853,6 +1853,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recomended-articles" class="md-nav__link">
+    Recomended articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-steps" class="md-nav__link">
+    Execution Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-item-creation" class="md-nav__link">
+    G/L Item creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-of-the-withdrawal-transaction" class="md-nav__link">
+    Creation of the withdrawal transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Creation of the withdrawal transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-the-bank-fee" class="md-nav__link">
+    Creation of the bank fee
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-of-the-deposit-transaction" class="md-nav__link">
+    Creation of the deposit transaction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-of-funds-between-cash-accounts" class="md-nav__link">
+    Transfer of funds between cash accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-of-funds-between-different-organizations" class="md-nav__link">
+    Transfer of funds between different organizations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3691,6 +3760,75 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#recomended-articles" class="md-nav__link">
+    Recomended articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-steps" class="md-nav__link">
+    Execution Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gl-item-creation" class="md-nav__link">
+    G/L Item creation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-of-the-withdrawal-transaction" class="md-nav__link">
+    Creation of the withdrawal transaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Creation of the withdrawal transaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-the-bank-fee" class="md-nav__link">
+    Creation of the bank fee
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creation-of-the-deposit-transaction" class="md-nav__link">
+    Creation of the deposit transaction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-of-funds-between-cash-accounts" class="md-nav__link">
+    Transfer of funds between cash accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-of-funds-between-different-organizations" class="md-nav__link">
+    Transfer of funds between different organizations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3715,14 +3853,225 @@
   <h1>How to transfer funds between financial accounts</h1>
 
 <h2 id="overview">Overview</h2>
-<p>There are many situations in which a company needs to transfer funds to modify or adjust bank and/or cash accounts balance:
-a check deposited in the wrong bank account
-a bank account out of funds...etc.
-In Etendo bank and cash accounts are represented as Financial Accounts.
-There are several kinds of funds transfers depending on the financial account type used and the organization for which the transfer of funds takes place:
-From a bank account to another bank account within the same organization.
-From an organization bank account to another organization bank account.
-Same applies to cash accounts.</p>
+<p>There are many situations in which a company needs to transfer funds to modify or adjust bank and/or cash accounts balance:</p>
+<ul>
+<li>a check deposited in the wrong bank account</li>
+<li>a bank account out of funds...etc.</li>
+</ul>
+<p>In Etendo bank and cash accounts are represented as <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</p>
+<p>There are several kinds of funds transfers depending on the financial account type used and the organization for which the transfer of funds takes place:</p>
+<ul>
+<li>From a bank account to another bank account within the same organization.</li>
+<li>From an organization bank account to another organization bank account.</li>
+<li>Same applies to cash accounts.</li>
+</ul>
+<h2 id="recomended-articles">Recomended articles</h2>
+<p>Transferring funds between financial accounts requires a clear understanding on how to create a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a>.</p>
+<p>It is highly recommended as well to understand how <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> and <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> work in Etendo.</p>
+<h2 id="execution-steps">Execution Steps</h2>
+<p>In Etendo, the company in the example will have to withdraw money from one bank or cash account and get it deposited into another bank or cash account.
+In other words, the company needs to alter either bank or cash accounts balance whenever it is required. That action could or could not have fees.
+Anyway, the steps to follow are:</p>
+<ul>
+<li>GL item creation
+        as it is necessary to keep somewhere the funds in-transit balance from the time it is withdrawn from one financial account until the time it is deposited in another financial account.</li>
+<li>Creation of a withdrawal transaction
+        in the bank account where funds are taken from.</li>
+<li>Creation of a deposit transaction
+        in the bank account where funds are going to be deposited.</li>
+</ul>
+<h2 id="gl-item-creation">G/L Item creation</h2>
+<p>A <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to to that is:</p>
+<ul>
+<li>Once the GL item has been created, click on the <em>Accounting tab</em> of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> window.</li>
+<li>Create a new record for each organization's general ledger and assign the same <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> for debit and credit.</li>
+</ul>
+<p>For instance, the sample account combinations which could be used are:</p>
+<ul>
+<li>US General Ledger configuration:
+        1140 Checking In-Transfer</li>
+<li>Spanish General Ledger configuration:
+        55500 - Partidas pendientes de aplicación</li>
+</ul>
+<h2 id="creation-of-the-withdrawal-transaction">Creation of the withdrawal transaction</h2>
+<p>A withdrawal transaction needs to be created in the Financial Account where the funds are going to be taken from. This step in the process could or could not have fees.</p>
+<p>The company in this example needs to:</p>
+<ul>
+<li>navigate to the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
+<li>select the bank to take the money from, for instance Bank A</li>
+<li>press the process button <em>Add Transaction</em></li>
+<li>once in that new window select the <em>Transaction Type</em> GL Item</li>
+<li>enter a <em>Transaction Date</em></li>
+<li>select the <em>GL Item</em> previously created</li>
+<li>and finally indicate the <em>Paid Out</em> amount, for instance 100,00 USD.</li>
+</ul>
+<p>This new transaction is then shown in the <em>Transaction tab</em> of the <em>Financial Account</em> window. Etendo clearly shows the Withdrawal Amount recorded.
+The next step is to post the withdrawal transaction. </p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
+</p>
+</div>
+<p>The posting will look like:</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
+<td>Paid Out Amount</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
+<td></td>
+<td>Paid Out Amount</td>
+</tr>
+</tbody>
+</table>
+<h3 id="creation-of-the-bank-fee">Creation of the bank fee</h3>
+<p>The company in this example needs to create the withdrawal transaction as described previously and an additional transaction to reflect the bank fee. The way to do that is:</p>
+<ul>
+<li>press once more the process button <em>Add Transaction</em></li>
+<li>select the <em>Transaction Type</em> Fee</li>
+<li>enter a <em>Transaction Date</em></li>
+<li>and finally indicate the <em>Paid Out</em> amount, for instance 1,00 USD.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info<p>A bank fee can also be registered in a financial account by using a previously created G/L Item named Bank Interest.Bank Interest accounting could be configured as '7010 Interest income' for credit and '7020 Interest expense' for debit.</p>
+</p>
+</div>
+<p>In this example, there will be two transactions created in the <em>Transaction</em> tab of the <em>Financial Account</em>, one for the withdrawal and one for the fee.
+Fee transactions can also be posted the same way as the withdrawal transaction.</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A -Bank Fee Account</a></td>
+<td>Paid Out Amount</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Payment Out-Withdrawal</a></td>
+<td></td>
+<td>Paid Out Amount</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creation-of-the-deposit-transaction">Creation of the deposit transaction</h2>
+<p>The final step is to create a deposit transaction in the Financial Account where the funds must be deposited.
+The company in this example needs to:</p>
+<ul>
+<li>navigate to the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
+<li>select the bank to deposit the money, for instance Bank B</li>
+<li>press the process button <em>Add Transaction</em></li>
+<li>once in that new window select the <em>Transaction Type</em> GL Item</li>
+<li>enter a <em>Transaction Date</em></li>
+<li>select the <em>GL Item</em> previously created</li>
+<li>and finally indicate the <em>Received In</em> amount, in this example 100,00 USD.</li>
+</ul>
+<p>This new transaction is then shown in the <em>Transaction</em> tab of the <em>Financial Account</em> window. Etendo clearly shows the Deposit Amount recorded.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button <em>Post</em> or it could be automatically posted if the Accounting Server Process is enabled in the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
+<p>The posting will look like:</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
+<td>Received In Amount</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
+<td></td>
+<td>Received In Amount</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transfer-of-funds-between-cash-accounts">Transfer of funds between cash accounts</h2>
+<p>The company in this example needs to follow exactly the same execution steps. The only difference is the <em>Financial Account Type</em> to use. This time a <em>Cash</em> financial account type will be used while creating the withdrawal transaction and the deposit transaction.
+Transfer of funds between different organizations</p>
+<h2 id="transfer-of-funds-between-different-organizations">Transfer of funds between different organizations</h2>
+<p>The company in this example needs to follow exactly the same execution steps. The only difference is the <em>Organization</em> to be used. This time:</p>
+<ul>
+<li>the <em>GL Item for the in-transit amount to be withdrawn</em> needs to be created in <em>Organization A</em></li>
+<li>the <em>withdrawal transaction</em> needs to be created in a <em>Financial Account</em> of <em>Organization A</em></li>
+<li>the <em>GL item for the in-transit amount to be deposited</em> needs to be created in <em>Organization B</em></li>
+<li>and finally, the <em>deposit transaction</em> needs to be created in a <em>Financial Account</em> of <em>Organization B</em></li>
+</ul>
+<p>Withdrawal transaction posting in Organization A will look like:</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
+<td>Paid Out Amount</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
+<td></td>
+<td>Paid Out Amount</td>
+</tr>
+</tbody>
+</table>
+<p>Deposit transaction posting in Organization B will look like:</p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Debit</th>
+<th>Credit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
+<td>Received In Amount</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
+<td></td>
+<td>Received In Amount</td>
+</tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<p>This completes the transfer of funds between financial accounts. As a result:</p>
+<ul>
+<li>Bank A balance is reduced in 101,00 USD</li>
+<li>Bank B balance is increased in 100,00 USD</li>
+</ul>
+<p>Above scenario is just a transfer of funds between financial accounts of the same organization.</p>
+<p>In the case of transfer of funds between financial accounts of different organizations:</p>
+<ul>
+<li>Bank A balance of the organization A is reduced in 101,00 USD</li>
+<li>Bank B balance of the organization B is increased in 100,00 USD</li>
+</ul>
+<p>Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.</p>
 
 
 

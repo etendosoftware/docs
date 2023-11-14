@@ -1390,27 +1390,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#scenario-1-and-2-localization-pack-or-generic-coa-module-installed" class="md-nav__link">
-    Scenario 1 and 2 - Localization Pack or Generic CoA module installed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-3-localization-pack-and-generic-coa-do-not-installed" class="md-nav__link">
-    Scenario 3 - Localization Pack and Generic CoA do not installed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-configuration" class="md-nav__link">
-    Advanced Configuration
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3941,27 +3920,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#scenario-1-and-2-localization-pack-or-generic-coa-module-installed" class="md-nav__link">
-    Scenario 1 and 2 - Localization Pack or Generic CoA module installed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scenario-3-localization-pack-and-generic-coa-do-not-installed" class="md-nav__link">
-    Scenario 3 - Localization Pack and Generic CoA do not installed
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-configuration" class="md-nav__link">
-    Advanced Configuration
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -4176,6 +4134,11 @@
         <span class="md-tag">accounting</span>
       
     
+      
+      
+        <span class="md-tag">assets</span>
+      
+    
   </nav>
 
 
@@ -4240,21 +4203,21 @@ Moreover Organizations of that Client can also have additional dimensions config
 <h3 id="basic-configuration">Basic Configuration</h3>
 <p>There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:</p>
 <ul>
-<li>Fiscal Calendar</li>
+<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a></li>
 </ul>
 <p>A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.</p>
 <ul>
-<li>Account Tree</li>
+<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree">Account Tree</a></li>
 </ul>
-<p>An account tree is the way Etendo captures the <em>Chart of Accounts</em> (CoA) of an Organization.
-The Chart of Accounts is a list of all the accounts used in an organization's general ledger.
-Accounts such as balance sheet accounts (assets, liabilities and owner's equity) and income statement accounts (revenues, expenses, gains and losses).</p>
+<p>An account tree is the way Etendo captures the <em>Chart of Accounts</em> (CoA) of an Organization.</p>
+<p>The Chart of Accounts is a list of all the accounts used in an organization's general ledger.</p>
+<p>Accounts such as balance sheet accounts (assets, liabilities and owner's equity) and income statement accounts (revenues, expenses, gains and losses).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.</p>
 </div>
 <ul>
-<li>General Ledger configuration</li>
+<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig">General Ledger configuration</a></li>
 </ul>
 <p>The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the <em>Currency</em> and the <em>Chart of Accounts</em> among others.</p>
 <p>Having said that, the accounting configuration detailed in this section is the one required for <em>legal entities with accounting</em>, including the business units, because these organization types are the only ones which can have assigned:</p>
@@ -4280,74 +4243,6 @@ It is recommended to start from a sample chart of accounts like the generic one 
 <p>In-country taxes setup is another key element of the basic accounting configuration.
 There can be Localization Packs which include the setup of the taxes for the country while there can be others which do not include the setup of the taxes for the country.
 The Generic CoA module does not include any taxes setup.</p>
-<p>Having said all of that, there are three possible <em>accounting</em> scenarios:</p>
-<ol>
-<li>
-<p>Etendo environments with a Localization Pack installed, for instance the Spanish Localization Pack.
-A localization Pack which also includes the taxes setup for Spain.</p>
-</li>
-<li>
-<p>Etendo environments with the Generic Chart of Accounts (CoA) installed, mainly in those countries where statutory CoA are not required.</p>
-</li>
-<li>
-<p>and Etendo environments which do not have a Localization Pack installed neither the Generic Chart of Accounts module installed.</p>
-</li>
-</ol>
-<p>The basic accounting configuration is practically the same one for the three scenarios above but the level of defaulted configuration provided by Etendo. Obviously scenario 3 above requires an additional configuration effort.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>It is important to remark that the basic accounting configuration described here is obviously one part of the overall Business setup flow.</p>
-</div>
-<h3 id="scenario-1-and-2-localization-pack-or-generic-coa-module-installed">Scenario 1 and 2 - Localization Pack or Generic CoA module installed</h3>
-<p>These two scenarios can be grouped as the basis of the accounting configuration required for both of them is the same.</p>
-<p>The configuration steps to follow are:</p>
-<ul>
-<li>To customize the defaulted <em>General Ledger configuration</em> as described in the  <a href="">General Ledger configuration maintenance</a> article of the General Setup section.</li>
-<li>To review and maintain the Chart of Accounts created by default as described also in the <a href="">Chart of Accounts Maintenance</a> article of the General Setup section.</li>
-<li>Finally, it is also required to set up the <em>Balance Sheet</em> and the <em>Income Statement</em> as described also in the <a href="">General Setup</a> section in Etendo documentation.</li>
-</ul>
-<p>It is important to remark that:</p>
-<p>If the Localization Pack includes the <em>in-country taxes</em> setup, the only configuration left to do is:</p>
-<p>to assign the corresponding <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category">Tax Categories</a> to the products
-  and to assign the corresponding <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category">Business Partner Tax category</a> to the business partners of the organization, otherwise review the last step of scenario 3 below which describes how to create and set up the taxes.</p>
-<h3 id="scenario-3-localization-pack-and-generic-coa-do-not-installed">Scenario 3 - Localization Pack and Generic CoA do not installed</h3>
-<p>The enterprise in this scenario should follow below steps which implies an additional configuration effort:</p>
-<ul>
-<li>The creation, setup and maintenance of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree">Account Tree</a>.</li>
-<li>The creation and setup of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig">General Ledger configuration</a>.</li>
-<li>The setup of the <em>Balance Sheet</em> and the <em>Income Statement</em> in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup">Balance Sheet and P&amp;L Structure Setup</a> window</li>
-<li>The creation and setup of the <em>Taxes</em>.</li>
-</ul>
-<p>This step implies to create and properly configure three taxes dimensions which are:</p>
-<p>The <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category">Tax Categories</a> are related to products. When you transact with a product, the tax category is used to determine the rate which gets applied.
-Once created need to be linked to the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Products</a>.</p>
-<p>The <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category">Business Partner Tax Categories</a> as there are some business partners who are treated differently from others according to established legal provisions. Business Partner Tax Categories are used to identify these business partners and to incorporate these differences into tax calculations.
-  Once created need to be linked to the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#customer">Customers</a> and <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendorcreditor">Vendors</a>. </p>
-<p>And finally the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-rate">Tax Rates</a> which are the applicable rates for a tax category within the context of a document and its elements (business partner, product, locations).</p>
-<p>This scenario is covered in the corresponding articles of the User Guide.
-Additionally, all of the three scenarios above require anyway below additional accounting configuration:</p>
-<ul>
-<li>The creation of a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a>. </li>
-<li>The creation of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#year">Years</a> of the calendar and the Periods of each year.
-The accounting periods of a year can follow the calendar year of January to December, or can differ.</li>
-<li>The opening of the accounting periods is the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control">Open/Close Period Control</a> window.
-Etendo  allows to open all the periods of a year at once or to open the first period of a year and later on the next/s, or even to open first a given set of periods.
-If a period is not open it is not possible to make any journal entry within that period and get it posted.</li>
-<li>To allow the accounting users to <em>Post</em>/<em>Unpost</em> transactions as well as to view and edit the ledger accounts contained in the <em>Accounting</em> tabs such as the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting">Accounting</a> tab in the product window.
-Above is configured by setting for those user/s the <a href="/user-guide/etendo-classic/basic-features/general-setup/application/#preference">Preference</a> <em>ShowAcct</em> to <em>Yes</em>.</li>
-<li>To schedule the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Accounting Server Process</a> in case it is desired that Etendo searches and posts the transactions in status <em>Complete</em> suitable to be posted.</li>
-</ul>
-<h3 id="advanced-configuration">Advanced Configuration</h3>
-<p>As already mentioned there is an additional accounting configuration which might be needed regardless of whether a localization pack is installed or not.</p>
-<ul>
-<li>The creation of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Items</a>.
-A G/L item is an <em>alias</em> used in place of a sub-account number. A G/L Item can be used to post transactions related to invoices and payments. G/L items are used to account for financial obligations that are not ordinarily invoiced and other special procurement items which are invoiced but for which no ordinary master data (such as a Product) are maintained.</li>
-</ul>
-<p>As a side note Etendo contains pre-seeded <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type">Document Types</a>:</p>
-<ul>
-<li>Each document type in Etendo refers to a business transaction such as a purchase invoice or a sales order.</li>
-<li>The document types allow you to create specific printed formats for business documents and allow you to define sequence numbers for their use.</li>
-</ul>
 <h2 id="execution">Execution</h2>
 <p>Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:</p>
 <ul>
@@ -4428,7 +4323,6 @@ Similarly, expenses are recognized as soon as the company receives goods or serv
 <li>Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
 This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">GL Journal</a>.</li>
 <li>Taxes such as the VAT needs to be settled periodically.
-The <a href="">How to Manage VAT settlement and payment</a> article explains how to do that in Etendo.
 It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.</li>
 <li>Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:</li>
 </ul>
@@ -4448,7 +4342,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 <li>Run the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report">Not Posted Transaction</a> report to verify that there are no transactions and/or documents in status <em>Complete</em> not posted yet.</li>
 <li>Check that there are no documents still having a <em>Draft</em> status, specially those which require to be <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#active-tables">accounted</a>.</li>
 <li>Unscheduled the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Accounting Server Process</a> therefore an stable scene can be assured.</li>
-<li>Check the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account/s</a> current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="">how to transfer funds between financial accounts</a>.</li>
+<li>Check the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account/s</a> current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/">how to transfer funds between financial accounts</a>.</li>
 </ul>
 <p>Before running the close year process the accounting periods can be <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control">closed</a> not to allow any further posting within those periods, but the <em>13th period</em>.
 The <em>13th period</em> is an <em>adjustment period</em> which can be used to post the adjustments required to the ledger through <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journals</a> prior to closing the year.</p>
