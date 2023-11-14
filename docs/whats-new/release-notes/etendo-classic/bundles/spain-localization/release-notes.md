@@ -33,7 +33,7 @@ tags:
 ## Versiones Disponibles
 
 ### 1.5.2
-- [EE-741](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/9) Se corrigió la traducción de la ventana 'Valued Stock Report' y uno de sus campos
+- [EE-741](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/9) Se añadió la traducción de la ventana 'Valued Stock Report'
 - [EE-728](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/8) Se agregó la traducción faltante para la ventana 'Pending Goods Receipts'
 - [EE-736](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/7) Se corrigió la validación 'Acogida al SII' de la configuración SII
 ### 1.5.1
