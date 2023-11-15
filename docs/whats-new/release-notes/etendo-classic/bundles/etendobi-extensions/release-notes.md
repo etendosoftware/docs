@@ -14,14 +14,17 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#120) | 29/09/2023 | 22.1.0 | 23.3.x | CS  | :white_check_mark:|
-| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark:|
+| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#121) | 15/11/2023 | 22.1.0 | 23.3.x | CS  | :white_check_mark:|
+| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
+| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
 | [1.1.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
 | [1.1.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
 | [1.0.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
 | [1.0.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
 
 ## Release Notes
+### 1.2.1
+- [EE-722](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/issues/2){target="\_blank"} The connector generates the csv file correctly but the power bi reports need the file to be separated by another symbol not by commas
 ### 1.2.0
 - Update Core compatibility until 23.3.x
 ### 1.1.2
