@@ -3,7 +3,7 @@
 This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.
 
 !!! info
-    Before starting this tutorial requires Etendo, Etendo Mobile, Ngrok and Node.js in the local environment. For more information check the [Getting Started in the Etendo Mobile section](/developer-guide/etendo-mobile/getting-started/){target="_blank"}.
+    Before starting this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information check the [Getting Started in the Etendo Mobile section](/developer-guide/etendo-mobile/getting-started/){target="_blank"}.
 
 ## Create a new Etendo Classic module
 
@@ -98,6 +98,7 @@ Etendo Mobile _sends_ the following params to the subapplication:
     - _token_: Token
     - _language_: Language
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
+    - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
 
 In this example, we will receive these params in App.tsx of the subapp:
 
@@ -201,11 +202,12 @@ _Storybook_ is a place where you can try and see all the components of the libra
 
 ## Development mode setup
 
-### Etendo Classic and Etendo Mobile
-
-1. Etendo Classic should be running.
-
-2. Open the Etendo Mobile application on a mobile device. You can use either an emulator or a physical device.
+1. [Etendo RX](/developer-guide/etendo-rx/getting-started/) should be running
+      ``` bash title="Terminal"
+      ./gradlew rx:rx
+      ```
+2. Etendo classic should be running.
+3. Open the [Etendo Mobile](/user-guide/etendo-mobile/getting-started/) application on a mobile device. You can use either an emulator or a physical device.
 
 ### Rollup
 [Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.
@@ -266,27 +268,21 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
     yarn build && yarn dev
     ```
 
-### Ngrok
-So that from Etendo Mobile we can access a subapplication in development mode we will use [Ngrok](https://ngrok.com/){target="_blank"} that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command.
-    ``` bash title="Terminal"
-    ngrok http 3000 
-    ```
-
- ![ngrok-terminal.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/ngrok-terminal.png)
 ### Etendo Mobile Setup
-1. First we need to configure the public URL that we have previously generated with Ngrok inside Etendo Mobile. To do this we must access the `System Administrator` role and set `set as default` to true, since when entering the Etendo Mobile application it will log in with the default role.
-    ![system-default.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/system-default.png)
-
-2. In Etendo Mobile, in the `Settings` window, save the Ngrok URL in the `Debug URL` field (you must be logged in with the `System Administrator` role for this field to appear).
-    ![debug-url.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/debug-url.png)
     
-3. Log out of Etendo Mobile and in Etendo Classic change the role to admin by default again.
-    ![admin-default.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/admin-default.png)
+1. In Etendo Moblile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be `http://<local-network-ip>:8096/` and the context path by default `/etendo` 
 
-4. In Etendo Mobile you will see the list of subapps. Clicking on `Subapp Example` will download the build previously generated and exposed in the Ngrok URL.
+!!! info
+    To find out your IP address on the local network you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
+  
+![ip-config](/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png)
+
+2. Login Etendo Mobile you will see the list of subapps. Clicking on `Subapp Example` will download the build previously generated and exposed in the environment URL.
     ![app-home.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png)
-5. Here is the subapplication.
+3. Here is the subapplication.
     ![sub-app.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
+
+
 ## Applying changes workflow
 1. Add any changes for example in `modules/<javapackage>/subapp/src/screens/home/index.tsx` to the prop typeStyle of the Button component change it to `secondary`.
 
