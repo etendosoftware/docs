@@ -17,7 +17,7 @@
         <link rel="next" href="../create-example-subapplication-rx/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3197,22 +3197,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#etendo-classic-and-etendo-mobile" class="md-nav__link">
-    Etendo Classic and Etendo Mobile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#rollup" class="md-nav__link">
     Rollup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ngrok" class="md-nav__link">
-    Ngrok
   </a>
   
 </li>
@@ -3912,22 +3898,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#etendo-classic-and-etendo-mobile" class="md-nav__link">
-    Etendo Classic and Etendo Mobile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#rollup" class="md-nav__link">
     Rollup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ngrok" class="md-nav__link">
-    Ngrok
   </a>
   
 </li>
@@ -3978,7 +3950,7 @@
 <p>This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Before starting this tutorial requires Etendo, Etendo Mobile, Ngrok and Node.js in the local environment. For more information check the <a href="/developer-guide/etendo-mobile/getting-started/" target="_blank">Getting Started in the Etendo Mobile section</a>.</p>
+<p>Before starting this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information check the <a href="/developer-guide/etendo-mobile/getting-started/" target="_blank">Getting Started in the Etendo Mobile section</a>.</p>
 </div>
 <h2 id="create-a-new-etendo-classic-module">Create a new Etendo Classic module</h2>
 <p>Once Loged in, go to the modules window, and create a new one as the image shows:</p>
@@ -4163,6 +4135,7 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <li><em>token</em>: Token</li>
 <li><em>language</em>: Language</li>
 <li><em>dataUser</em>: all data related to the user. It has a typed interface that can be found in the file <code>src/interfaces/index.ts</code></li>
+<li><em>isDev</em>: boolean that identifies whether the application is configured in development (true) or production (false) mode.</li>
 </ul>
 </div>
 <p>In this example, we will receive these params in App.tsx of the subapp:</p>
@@ -4249,86 +4222,73 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <p><em>Storybook</em> is a place where you can try and see all the components of the library. Also, you can see the code of each component and how to use it.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="storybook.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png" /></a></p>
 <h2 id="development-mode-setup">Development mode setup</h2>
-<h3 id="etendo-classic-and-etendo-mobile">Etendo Classic and Etendo Mobile</h3>
 <ol>
-<li>
-<p>Etendo Classic should be running.</p>
-</li>
-<li>
-<p>Open the Etendo Mobile application on a mobile device. You can use either an emulator or a physical device.</p>
-</li>
+<li><a href="/developer-guide/etendo-rx/getting-started/">Etendo RX</a> should be running
+      <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>rx:rx
+</span></code></pre></div></li>
+<li>Etendo classic should be running.</li>
+<li>Open the <a href="/user-guide/etendo-mobile/getting-started/">Etendo Mobile</a> application on a mobile device. You can use either an emulator or a physical device.</li>
 </ol>
 <h3 id="rollup">Rollup</h3>
 <p><a href="https://rollupjs.org/" target="_blank">Rollup</a> is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.</p>
 <p>Inside the project there is a file rollup.config.js where the path where the packaged file with .js extension will be generated is defined.</p>
 <p>It is necessary to modify this path adding the <code>javapackage</code> of the generated module.</p>
-<div class="language-groovy highlight"><span class="filename">rollup.config.js</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typescript</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@rollup/plugin-typescript&#39;</span><span class="o">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">peerDepsExternal</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;rollup-plugin-peer-deps-external&#39;</span><span class="o">;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@rollup/plugin-json&#39;</span><span class="o">;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">const</span><span class="w"> </span><span class="n">pkg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="n">require</span><span class="o">(</span><span class="s1">&#39;fs&#39;</span><span class="o">).</span><span class="na">readFileSync</span><span class="o">(</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">require</span><span class="o">(</span><span class="s1">&#39;path&#39;</span><span class="o">).</span><span class="na">resolve</span><span class="o">(</span><span class="s1">&#39;./package.json&#39;</span><span class="o">),</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="s1">&#39;utf-8&#39;</span><span class="o">,</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="o">),</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="o">);</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="kd">const</span><span class="w"> </span><span class="n">external</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Object</span><span class="o">.</span><span class="na">keys</span><span class="o">(</span><span class="n">pkg</span><span class="o">.</span><span class="na">dependencies</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{});</span>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">  </span><span class="nl">input:</span><span class="w"> </span><span class="s1">&#39;./App.tsx&#39;</span><span class="o">,</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">  </span><span class="nl">output:</span><span class="w"> </span><span class="o">[</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="o">{</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="c1">//Change the javapackge in the path where the application build will be generated. </span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">      </span><span class="nl">file:</span><span class="w"> </span><span class="s1">&#39;../web/&lt;javapackage&gt;/subappexample.js&#39;</span><span class="o">,</span><span class="w"> </span>
-</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">      </span><span class="nl">format:</span><span class="w"> </span><span class="s1">&#39;cjs&#39;</span><span class="o">,</span>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">      </span><span class="nl">exports:</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="o">,</span>
-</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">      </span><span class="nl">strict:</span><span class="w"> </span><span class="kc">false</span><span class="o">,</span>
-</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">      </span><span class="nl">sourcemap:</span><span class="w"> </span><span class="s1">&#39;inline&#39;</span><span class="o">,</span>
-</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="o">},</span>
-</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">  </span><span class="o">],</span>
-</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">  </span><span class="nl">plugins:</span><span class="w"> </span><span class="o">[</span><span class="n">peerDepsExternal</span><span class="o">(),</span><span class="w"> </span><span class="n">json</span><span class="o">({</span><span class="nl">compact:</span><span class="w"> </span><span class="kc">true</span><span class="o">}),</span><span class="w"> </span><span class="n">typescript</span><span class="o">()],</span>
-</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">  </span><span class="n">external</span><span class="o">,</span>
-</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="o">};</span>
+<div class="language-groovy highlight"><span class="filename">rollup.config.js</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typescript</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@rollup/plugin-typescript&#39;</span><span class="o">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">peerDepsExternal</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;rollup-plugin-peer-deps-external&#39;</span><span class="o">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@rollup/plugin-json&#39;</span><span class="o">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">const</span><span class="w"> </span><span class="n">pkg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="n">require</span><span class="o">(</span><span class="s1">&#39;fs&#39;</span><span class="o">).</span><span class="na">readFileSync</span><span class="o">(</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">require</span><span class="o">(</span><span class="s1">&#39;path&#39;</span><span class="o">).</span><span class="na">resolve</span><span class="o">(</span><span class="s1">&#39;./package.json&#39;</span><span class="o">),</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="s1">&#39;utf-8&#39;</span><span class="o">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="o">),</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="o">);</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="kd">const</span><span class="w"> </span><span class="n">external</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Object</span><span class="o">.</span><span class="na">keys</span><span class="o">(</span><span class="n">pkg</span><span class="o">.</span><span class="na">dependencies</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{});</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="nl">input:</span><span class="w"> </span><span class="s1">&#39;./App.tsx&#39;</span><span class="o">,</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="nl">output:</span><span class="w"> </span><span class="o">[</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="o">{</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="c1">//Change the javapackge in the path where the application build will be generated. </span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="nl">file:</span><span class="w"> </span><span class="s1">&#39;../web/&lt;javapackage&gt;/subappexample.js&#39;</span><span class="o">,</span><span class="w"> </span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">      </span><span class="nl">format:</span><span class="w"> </span><span class="s1">&#39;cjs&#39;</span><span class="o">,</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">      </span><span class="nl">exports:</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="o">,</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">      </span><span class="nl">strict:</span><span class="w"> </span><span class="kc">false</span><span class="o">,</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">      </span><span class="nl">sourcemap:</span><span class="w"> </span><span class="s1">&#39;inline&#39;</span><span class="o">,</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="o">},</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">  </span><span class="o">],</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">  </span><span class="nl">plugins:</span><span class="w"> </span><span class="o">[</span><span class="n">peerDepsExternal</span><span class="o">(),</span><span class="w"> </span><span class="n">json</span><span class="o">({</span><span class="nl">compact:</span><span class="w"> </span><span class="kc">true</span><span class="o">}),</span><span class="w"> </span><span class="n">typescript</span><span class="o">()],</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">  </span><span class="n">external</span><span class="o">,</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="o">};</span>
 </span></code></pre></div>
 <p>In the package.json you define the path where the local server will be raised with <a href="https://www.npmjs.com/package/http-server" target="_blank">Http-server</a> with the <code>yarn dev</code> command.
 This path must coincide with the path where the build of the application was generated. Also the local port to be exposed is defined here (in this case port 3000).</p>
-<div class="language-groovy highlight"><span class="filename">package.json</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="s2">&quot;android&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-android&quot;</span><span class="o">,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="s2">&quot;ios&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-ios&quot;</span><span class="o">,</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="s2">&quot;start&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native start&quot;</span><span class="o">,</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jest&quot;</span><span class="o">,</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="s2">&quot;lint&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;eslint .&quot;</span><span class="o">,</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="s2">&quot;build&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rollup -c&quot;</span><span class="o">,</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="s2">&quot;dev&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http-server -p 3000 ../web/&lt;javapackage&gt;/subapp&quot;</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="o">},</span>
+<div class="language-groovy highlight"><span class="filename">package.json</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="s2">&quot;android&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-android&quot;</span><span class="o">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="s2">&quot;ios&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-ios&quot;</span><span class="o">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="s2">&quot;start&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native start&quot;</span><span class="o">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="s2">&quot;test&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jest&quot;</span><span class="o">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="s2">&quot;lint&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;eslint .&quot;</span><span class="o">,</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="s2">&quot;build&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rollup -c&quot;</span><span class="o">,</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="s2">&quot;dev&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;http-server -p 3000 ../web/&lt;javapackage&gt;/subapp&quot;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="o">},</span>
 </span></code></pre></div>
 <p>In a terminal on path <code>modules/&lt;javapackage&gt;/subapp</code>, run the following commands to build the subapplication and deploy it to a local server.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>yarn<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>yarn<span class="w"> </span>dev
+    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>yarn<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>yarn<span class="w"> </span>dev
 </span></code></pre></div></p>
-<h3 id="ngrok">Ngrok</h3>
-<p>So that from Etendo Mobile we can access a subapplication in development mode we will use <a href="https://ngrok.com/" target="_blank">Ngrok</a> that exposes a local port in a public url. In this case we will expose port 3000 by executing the following command.
-    <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ngrok<span class="w"> </span>http<span class="w"> </span><span class="m">3000</span><span class="w"> </span>
-</span></code></pre></div></p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/ngrok-terminal.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ngrok-terminal.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/ngrok-terminal.png" /></a></p>
 <h3 id="etendo-mobile-setup">Etendo Mobile Setup</h3>
 <ol>
-<li>
-<p>First we need to configure the public URL that we have previously generated with Ngrok inside Etendo Mobile. To do this we must access the <code>System Administrator</code> role and set <code>set as default</code> to true, since when entering the Etendo Mobile application it will log in with the default role.
-    <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/system-default.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="system-default.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/system-default.png" /></a></p>
-</li>
-<li>
-<p>In Etendo Mobile, in the <code>Settings</code> window, save the Ngrok URL in the <code>Debug URL</code> field (you must be logged in with the <code>System Administrator</code> role for this field to appear).
-    <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/debug-url.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="debug-url.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/debug-url.png" /></a></p>
-</li>
-<li>
-<p>Log out of Etendo Mobile and in Etendo Classic change the role to admin by default again.
-    <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/admin-default.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="admin-default.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/admin-default.png" /></a></p>
-</li>
-<li>
-<p>In Etendo Mobile you will see the list of subapps. Clicking on <code>Subapp Example</code> will download the build previously generated and exposed in the Ngrok URL.
-    <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="app-home.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" /></a></p>
-</li>
+<li>In Etendo Moblile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be <code>http://&lt;local-network-ip&gt;:8096/</code> and the context path by default <code>/etendo</code> </li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To find out your IP address on the local network you can run the command <code>ifconfig</code> in a Mac or Linux terminal or <code>ipconfig</code> in Windows CMD.</p>
+</div>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ip-config" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png" /></a></p>
+<ol>
+<li>Login Etendo Mobile you will see the list of subapps. Clicking on <code>Subapp Example</code> will download the build previously generated and exposed in the environment URL.
+    <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="app-home.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" /></a></li>
 <li>Here is the subapplication.
     <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sub-app.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png" /></a></li>
 </ol>
