@@ -156,20 +156,14 @@ Next we will define a search method to be used later when we want to consume the
 | Field       | Value                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------ |
 | Method Name |`getFilteredProducts`                                                                             |
-|  Query      |`select e from Product e where e.active = true and e.name like :name or e.uPCEAN like :barcode`   |
+|  Query      |`SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc`   |
 
 
   ![search.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
 
 ### Creating a New Search Parameter
 
-  To define the parameters we defined in the previous query we need to create a new row in the Search Parameter tab and add the following records:
-
-| Field | Value         |
-| ----- | ------------- |
-| Line  |`20`           |
-| Name  |`barcode`      |
-| Type  |`String`       |
+  To define the parameter we defined in the previous query we need to create a new row in the Search Parameter tab and add the following record:
 
 | Field | Value         |
 | ----- | ------------- |
@@ -204,7 +198,7 @@ Before diving into the customization and programming of your sub-application, en
 3. **Migrate the 'lib' Directory:**
     After generating entities, it's crucial to relocate the `lib` directory to its designated location. Move the `lib` folder from:
 
-    `etendo/modules_rx/com.etendorx.subapp.product/lib` to `etendo/modules/com.etendoerp.subapp.product`. For it, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+    `modules_rx/com.etendorx.subapp.product/lib` to `modules/com.etendoerp.subapp.product`. For it, from the root of your Etendo environment, execute the following command to move the `lib` folder:
 
     ```bash title="Terminal"
     mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product
