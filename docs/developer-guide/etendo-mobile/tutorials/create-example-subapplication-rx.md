@@ -67,26 +67,6 @@ This section covers an overview about the product subapplication example screens
     When you create a new subapplication, you have to do the same. 
     The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
 
-### Setting up the Development Environment
-
-Before diving into the customization and programming of your sub-application, ensure your development environment is correctly set up:
-
-1. **Create a Java Package:** 
-   In the `modules_rx` directory of your Etendo environment, create a Java package specific to your sub-application. For instance, in the case of a product sub-application, you might create a package named `com.etendorx.subapp.product`. This package will house the custom codes and functionalities specific to your sub-application.
-
-2. **Generate Entities Using RX:**
-   After setting up your Java package, you need to generate entities which will form the foundation of your sub-application's data structure. Run the following command in the root of your Etendo environment:
-
-   ```bash
-   ./gradlew rx:generate.entities
-   ```
-
-   This command will initiate the Etendo RX's entity generation process. It will create essential directories and files such as `lib`, `src-db`, and `src-gen` within your Java package. These directories contain the libraries, database scripts, and generated source code crucial for your sub-application's operation.
-
-   ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
-
-   Ensure that this process completes successfully and that all necessary files and directories are correctly generated. Then, with your Java package set up and entities generated, you can now proceed to customize and program your sub-application as detailed in the subsequent sections.
-
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
   - The route to this screen is `src/screens/home/index.tsx`.
@@ -201,19 +181,51 @@ Next we will define a search method to be used later when we want to consume the
   ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
 
 
-  Finally, launch this command in the root of the environment to generate the entities: 
+### Setting up the Development Environment
 
-  ``` bash title="Terminal"
-  ./gradlew rx:generate.entities
-  ```
+Before diving into the customization and programming of your sub-application, ensure your development environment is correctly set up:
 
-  It should generate the following files:
+1. **Create a Java Package:** 
+   Within the `modules_rx` directory of your Etendo environment, establish a Java package tailored to your sub-application. This package should correspond to the Etendo RX Java package generated in the Etendo Classic for your specific sub-application. For example, if you're working on a product sub-application, you might create a package named `com.etendorx.subapp.product`. This package will be the repository for all the custom code and unique functionalities of your sub-application.
 
-  ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/generate-entities.png)
+2. **Generate Entities Using Etendo RX:**
+   After setting up your Java package, you need to generate entities which will form the foundation of your sub-application's data structure. Run the following command in the root of your Etendo environment:
 
-# Integrating RX with Etendo Sub-Application
+    ```bash title="Terminal"
+    ./gradlew rx:generate.entities
+    ```
 
-This section outlines the integration of RX-generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
+    This command will initiate the Etendo RX's entity generation process. It will create essential directories and files such as `lib`, `src-db`, and `src-gen` within your Java package. These directories contain the libraries, database scripts, and generated source code crucial for your sub-application's operation.
+
+    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
+
+    Verify the completion of this process and the accurate creation of all essential files and directories.
+
+3. **Migrate the 'lib' Directory:**
+    After generating entities, it's crucial to relocate the `lib` directory to its designated location. Move the `lib` folder from:
+
+    `etendo/modules_rx/com.etendorx.subapp.product/lib` to `etendo/modules/com.etendoerp.subapp.product`. For it, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+
+    ```bash title="Terminal"
+    mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product
+    ```
+
+    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
+
+    Completing this step ensures that the libraries are accurately placed within the Etendo file hierarchy, promoting efficient integration and smooth operation of your sub-application.
+
+  4. **Restart the Etendo RX Service:**
+    After successfully migrating the `lib` directory, the next crucial step is to restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
+
+    ```bash title="Terminal"
+    ./gradlew rx:rx --info
+    ```
+
+    Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
+
+# Integrating Etendo RX with Etendo Sub-Application
+
+This section outlines the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
 
 ### Custom Hooks in React Native
 
@@ -221,13 +233,13 @@ Custom hooks are a fundamental aspect of React Native, offering a modular approa
 
 #### Overview of Custom Hooks
 
-Custom hooks, such as `useProduct`, exemplify the integration between frontend components and backend services. These hooks simplify complex data operations like fetching, creating, and updating information. They effectively manage the application's state, ensuring dynamic interaction with backend systems.
+Custom hooks, such as `useProduct`, exemplify the integration between frontend components and backend services.
 
 ### Implementing Custom Hooks
 
 Here's an example of how custom hooks are utilized:
 
-```typescript
+```typescript title="useProduct.ts"
 // Example usage of a custom hook in a React Native component
 const [products, setProducts] = useProduct();
 
@@ -253,6 +265,63 @@ const handleUpdateProduct = async (product) => {
 };
 ```
 
-### Launching Your Sub-App into Action with RX Integration
+Now, to demonstrate the use of the `useProduct` custom hook in a React Native component like `home.tsx`, let's expand on the example with a practical implementation. This implementation will illustrate how the custom hook can be integrated into a component to manage product data effectively.
 
-Integrating RX with your Etendo Sub-Application involves leveraging custom hooks for efficient backend communication and user-centric component design. These practices ensure a dynamic, responsive, and well-structured application, aligning with modern development standards.
+```typescript title="Home.tsx"
+import React, { useEffect, useState } from 'react';
+import { View, Text } from 'react-native';
+import useProduct from '../../hooks/useProduct';
+
+const Home = () => {
+  // Use the custom hook to manage product data
+  const { getFilteredProducts, createProduct, updateProduct } = useProduct();
+  const [products, setProducts] = useState([]);
+
+  // Fetch products when the component mounts
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const fetchedProducts = await getFilteredProducts();
+      setProducts(fetchedProducts);
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Function to add a new product
+  const handleAddProduct = async (newProduct) => {
+    await createProduct(newProduct);
+    // Optionally refetch or update products list
+  };
+
+  // Function to update an existing product
+  const handleProductUpdate = async (updatedProduct) => {
+    await updateProduct(updatedProduct);
+    // Optionally refetch or update products list
+  };
+
+  // Render the component
+  return (
+    <View>
+      {/* Render products and other UI elements */}
+      {products.map(product => (
+        <Text key={product.id}>{product.name}</Text>
+      ))}
+      {/* Additional UI components for adding/updating products */}
+    </View>
+  );
+};
+
+export default Home;
+```
+
+### Conclusion
+
+The integration of Etendo RX with Etendo Sub-Applications, utilizing custom hooks like `useProduct`, is a testament to the power of modern application development. It exemplifies how efficiently backend services can be connected to a React Native frontend, enhancing both the development process and the user experience.
+
+The practical use of these hooks, as demonstrated in the `Home.tsx` component, showcases a dynamic, responsive, and user-friendly interface. This approach not only streamlines development but also ensures maintainable and readable code.
+
+A visual example, such as a screenshot of the Home screen displaying products from F&B International Group fetched via Etendo RX, would vividly demonstrate this successful integration, highlighting the seamless connection between backend and frontend in a real-world scenario.
+
+  ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
+
+In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
