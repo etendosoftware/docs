@@ -183,30 +183,30 @@ Before diving into the customization and programming of your sub-application, en
    Within the `modules_rx` directory of your Etendo environment, establish a Java package tailored to your sub-application. This package should correspond to the Etendo RX Java package generated in the Etendo Classic for your specific sub-application. For example, if you're working on a product sub-application, you might create a package named `com.etendorx.subapp.product`. This package will be the repository for all the custom code and unique functionalities of your sub-application.
 
 2. **Generate Entities Using Etendo RX:**
-   After setting up your Java package, you need to generate entities which will form the foundation of your sub-application's data structure. Run the following command in the root of your Etendo environment:
+   After setting up your Java package, you need to generate entities which will form the foundation of your sub-application's data structure. When we generate the entities, Etendo RX embarks on a comprehensive entity generation process. During this process, it produces React code, which is then utilized as a library. This library acts as a crucial link between the application's frontend and backend, facilitating seamless data exchange and interaction among various system components.
+   
+    Run the following command in the root of your Etendo environment:
 
     ```bash title="Terminal"
     ./gradlew rx:generate.entities
     ```
 
-    This command will initiate the Etendo RX's entity generation process. It will create essential directories and files such as `lib`, `src-db`, and `src-gen` within your Java package. These directories contain the libraries, database scripts, and generated source code crucial for your sub-application's operation.
+    In turn, this command will initiate the Etendo RX's entity generation process. It will create essential directories and files such as `lib`, `src-db`, and `src-gen` within your Java package. These directories contain the libraries, database scripts, and generated source code crucial for your sub-application's operation.
 
     ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
 
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
 3. **Migrate the 'lib' Directory:**
-    After generating entities, it's crucial to relocate the `lib` directory to its designated location. Move the `lib` folder from:
-
-    `modules_rx/com.etendorx.subapp.product/lib` to `modules/com.etendoerp.subapp.product`. For it, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+    After generating entities, it is crucial to relocate the `lib` directory inside the directory of the created sub-application. Move the `lib` folder from `modules_rx/<RXJavapackage>/lib` to `modules/<javapackage>`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
 
     ```bash title="Terminal"
-    mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product
+    mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product/subapp-product
     ```
 
     ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
 
-    Completing this step ensures that the libraries are accurately placed within the Etendo file hierarchy, promoting efficient integration and smooth operation of your sub-application.
+    Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
 
   4. **Restart the Etendo RX Service:**
     After successfully migrating the `lib` directory, the next crucial step is to restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
@@ -234,28 +234,62 @@ Custom hooks, such as `useProduct`, exemplify the integration between frontend c
 Here's an example of how custom hooks are utilized:
 
 ```typescript title="useProduct.ts"
-// Example usage of a custom hook in a React Native component
-const [products, setProducts] = useProduct();
+import { useState, useEffect } from 'react';
+import { Product } from '../../lib/data_gen/product.types';
+import ProductService from '../../lib/data_gen/productservice';
 
-// Fetching data
-useEffect(() => {
-  const fetchData = async () => {
-    const data = await getFilteredProducts();
-    setProducts(data);
+// Custom hook for managing products
+export const useProduct = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  // Fetching data
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await ProductService.BACK.getFilteredProducts();
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
+
+  // Function to handle product creation with default values
+  const handleCreateProduct = async (product?: Partial<Product>) => {
+    const defaultValues: Product = {
+      active: true,
+      description: 'default',
+      name: body.name,
+      organization: '/B843C30461EA4501935CB1D125C9C25A',
+      productCategory: '/DC7F246D248B4C54BFC5744D5C27704F',
+      productType: 'I',
+      productValue: 'default',
+      searchKey: `ES/00${generateRandomNumber()}`,
+      uPCEAN: body.uPCEAN,
+      taxCategory: '/E020A69A1E784DC39BE57C41D6D5DB4E',
+      uOM: '/100',
+    };
+
+    await ProductService.BACK.createProduct(defaultValues);
+    // Optionally, update the products state to include the new product
   };
-  fetchData();
-}, []);
 
-// Function to handle product creation
-const handleCreateProduct = async (product) => {
-  await createProduct(product);
-  // Update state accordingly
-};
+  // Function to handle product update
+  const handleUpdateProduct = async (updatedProduct: Product) => {
+    await ProductService.BACK.updateProduct(updatedProduct);
+    // Optionally, update the products state to reflect the changes
+  };
 
-// Function to handle product update
-const handleUpdateProduct = async (product) => {
-  await updateProduct(product);
-  // Update state accordingly
+  // Function to get filtered products (if needed)
+  const getFilteredProducts = async (filterCriteria: any) => {
+    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
+    setFilteredProducts(filtered);
+    return filteredProducts; // This line is optional, allowing the function to return the filtered products
+  };
+
+  return {
+    products,
+    handleCreateProduct,
+    handleUpdateProduct,
+    getFilteredProducts,
+  };
 };
 ```
 
@@ -296,10 +330,8 @@ const Home = () => {
   // Render the component
   return (
     <View>
-      {/* Render products and other UI elements */}
-      {products.map(product => (
-        <Text key={product.id}>{product.name}</Text>
-      ))}
+      {/* Render Table with products */}
+      <Table navigation={navigation} data={products} />
       {/* Additional UI components for adding/updating products */}
     </View>
   );
@@ -310,12 +342,14 @@ export default Home;
 
 ### Conclusion
 
-The integration of Etendo RX with Etendo Sub-Applications, utilizing custom hooks like `useProduct`, is a testament to the power of modern application development. It exemplifies how efficiently backend services can be connected to a React Native frontend, enhancing both the development process and the user experience.
+The integration of Etendo RX with Etendo Sub-Applications, leveraging custom hooks like `useProduct`, exemplifies the efficiency and power of modern application development. It showcases the seamless connection between backend services and a React Native frontend, significantly enhancing both the development process and the end-user experience.
 
-The practical use of these hooks, as demonstrated in the `Home.tsx` component, showcases a dynamic, responsive, and user-friendly interface. This approach not only streamlines development but also ensures maintainable and readable code.
+In the `Home.tsx` component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.
 
-A visual example, such as a screenshot of the Home screen displaying products from F&B International Group fetched via Etendo RX, would vividly demonstrate this successful integration, highlighting the seamless connection between backend and frontend in a real-world scenario.
+While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
 
-  ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
+A visual representation, such as a screenshot of the Home screen displaying products from F&B International Group fetched via Etendo RX, would vividly illustrate this successful integration. This would highlight the effective and seamless connection between backend and frontend operations in a real-world application scenario.
+
+![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
 
 In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
