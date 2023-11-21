@@ -198,7 +198,7 @@ Before diving into the customization and programming of your sub-application, en
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
 3. **Migrate the 'lib' Directory:**
-    After generating entities, it is crucial to relocate the `lib` directory inside the directory of the created sub-application. Move the `lib` folder from `modules_rx/<RXJavapackage>/lib` to `modules/<javapackage>`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+    After generating entities, it is crucial to relocate the `lib` directory inside the directory of the created sub-application. Move the `lib` folder from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
 
     ```bash title="Terminal"
     mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product/subapp-product
@@ -208,11 +208,14 @@ Before diving into the customization and programming of your sub-application, en
 
     Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
 
+    !!! warning "Important"
+        Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
+
   4. **Restart the Etendo RX Service:**
     After successfully migrating the `lib` directory, the next crucial step is to restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
 
     ```bash title="Terminal"
-    ./gradlew rx:rx --info
+    ./gradlew rx:rx
     ```
 
     Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
@@ -251,26 +254,6 @@ export const useProduct = () => {
     fetchData();
   }, []);
 
-  // Function to handle product creation with default values
-  const handleCreateProduct = async (product?: Partial<Product>) => {
-    const defaultValues: Product = {
-      active: true,
-      description: 'default',
-      name: body.name,
-      organization: '/B843C30461EA4501935CB1D125C9C25A',
-      productCategory: '/DC7F246D248B4C54BFC5744D5C27704F',
-      productType: 'I',
-      productValue: 'default',
-      searchKey: `ES/00${generateRandomNumber()}`,
-      uPCEAN: body.uPCEAN,
-      taxCategory: '/E020A69A1E784DC39BE57C41D6D5DB4E',
-      uOM: '/100',
-    };
-
-    await ProductService.BACK.createProduct(defaultValues);
-    // Optionally, update the products state to include the new product
-  };
-
   // Function to handle product update
   const handleUpdateProduct = async (updatedProduct: Product) => {
     await ProductService.BACK.updateProduct(updatedProduct);
@@ -286,7 +269,6 @@ export const useProduct = () => {
 
   return {
     products,
-    handleCreateProduct,
     handleUpdateProduct,
     getFilteredProducts,
   };
@@ -302,7 +284,7 @@ import useProduct from '../../hooks/useProduct';
 
 const Home = () => {
   // Use the custom hook to manage product data
-  const { getFilteredProducts, createProduct, updateProduct } = useProduct();
+  const { getFilteredProducts, updateProduct } = useProduct();
   const [products, setProducts] = useState([]);
 
   // Fetch products when the component mounts
@@ -314,12 +296,6 @@ const Home = () => {
 
     fetchProducts();
   }, []);
-
-  // Function to add a new product
-  const handleAddProduct = async (newProduct) => {
-    await createProduct(newProduct);
-    // Optionally refetch or update products list
-  };
 
   // Function to update an existing product
   const handleProductUpdate = async (updatedProduct) => {
@@ -348,7 +324,7 @@ In the `Home.tsx` component, we observed the practical application of these hook
 
 While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
 
-A visual representation, such as a screenshot of the Home screen displaying products from F&B International Group fetched via Etendo RX, would vividly illustrate this successful integration. This would highlight the effective and seamless connection between backend and frontend operations in a real-world application scenario.
+A visual representation, such as a screenshot of the Home screen displaying products from **F&B International Group** fetched via Etendo RX, would vividly illustrate this successful integration. This would highlight the effective and seamless connection between backend and frontend operations in a real-world application scenario.
 
 ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
 
