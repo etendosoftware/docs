@@ -324,7 +324,7 @@ In the `Home.tsx` component, we observed the practical application of these hook
 
 While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
 
-A visual representation, such as a screenshot of the Home screen displaying products from **F&B International Group** fetched via Etendo RX, would vividly illustrate this successful integration. This would highlight the effective and seamless connection between backend and frontend operations in a real-world application scenario.
+Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
 
 ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
 
