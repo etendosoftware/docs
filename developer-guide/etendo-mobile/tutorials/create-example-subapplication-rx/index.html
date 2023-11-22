@@ -3319,8 +3319,62 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the Development Environment
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-etendo-rx-with-etendo-sub-application" class="md-nav__link">
+    Integrating Etendo RX with Etendo Sub-Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Etendo RX with Etendo Sub-Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-hooks-in-react-native" class="md-nav__link">
+    Custom Hooks in React Native
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Hooks in React Native">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-custom-hooks" class="md-nav__link">
+    Overview of Custom Hooks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-custom-hooks" class="md-nav__link">
+    Implementing Custom Hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
   
 </li>
         
@@ -4051,8 +4105,62 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#setting-up-the-development-environment" class="md-nav__link">
+    Setting up the Development Environment
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-etendo-rx-with-etendo-sub-application" class="md-nav__link">
+    Integrating Etendo RX with Etendo Sub-Application
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrating Etendo RX with Etendo Sub-Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-hooks-in-react-native" class="md-nav__link">
+    Custom Hooks in React Native
+  </a>
+  
+    <nav class="md-nav" aria-label="Custom Hooks in React Native">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-custom-hooks" class="md-nav__link">
+    Overview of Custom Hooks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-custom-hooks" class="md-nav__link">
+    Implementing Custom Hooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
   
 </li>
         
@@ -4271,35 +4379,13 @@ For it in the Tables and columns window we look for the table M_Product and in t
 </tr>
 <tr>
 <td> Query</td>
-<td><code>select e from Product e where e.active = true and e.name like :name or e.uPCEAN like :barcode</code></td>
+<td><code>SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc</code></td>
 </tr>
 </tbody>
 </table>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="search.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png" /></a></p>
 <h3 id="creating-a-new-search-parameter">Creating a New Search Parameter</h3>
-<p>To define the parameters we defined in the previous query we need to create a new row in the Search Parameter tab and add the following records:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Line</td>
-<td><code>20</code></td>
-</tr>
-<tr>
-<td>Name</td>
-<td><code>barcode</code></td>
-</tr>
-<tr>
-<td>Type</td>
-<td><code>String</code></td>
-</tr>
-</tbody>
-</table>
+<p>To define the parameter we defined in the previous query we need to create a new row in the Search Parameter tab and add the following record:</p>
 <table>
 <thead>
 <tr>
@@ -4323,11 +4409,133 @@ For it in the Tables and columns window we look for the table M_Product and in t
 </tbody>
 </table>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="search-parameters.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png" /></a></p>
-<p>Finally, launch this command in the root of the environment to generate the entities: </p>
+<h3 id="setting-up-the-development-environment">Setting up the Development Environment</h3>
+<p>Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:</p>
+<ol>
+<li>
+<p><strong>Create a Java Package:</strong> 
+   Create a Java package in the <code>modules_rx</code> directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like <code>com.etendorx.subapp.product</code>.</p>
+</li>
+<li>
+<p><strong>Generate Entities Using Etendo RX:</strong>
+   Use Etendo RX to generate entities for your sub-application's data structure. Run the command <code>./gradlew rx:generate.entities</code> in the root of your Etendo environment. This generates essential directories and files like <code>lib</code>, <code>src-db</code>, and <code>src-gen</code> in your Java package.</p>
+<p>Run the following command in the root of your Etendo environment:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>rx:generate.entities
 </span></code></pre></div>
-<p>It should generate the following files:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/generate-entities.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="search-parameters.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/generate-entities.png" /></a></p>
+<p>In turn, this command will initiate the Etendo RX's entity generation process.</p>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="generate-entities.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png" /></a></p>
+<p>Verify the completion of this process and the accurate creation of all essential files and directories.</p>
+</li>
+<li>
+<p><strong>Migrate the 'lib' Directory:</strong>
+    Move the <code>lib</code> directory from <code>modules_rx/&lt;RXJavapackage&gt;/lib</code> to <code>modules/&lt;javapakage&gt;/&lt;subapp-name&gt;/lib</code>. In our particular example, from the root of your Etendo environment, execute the following command to move the <code>lib</code> folder:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mv<span class="w"> </span>modules_rx/com.etendorx.subapp.product/lib/<span class="w"> </span>modules/com.etendoerp.subapp.product/subapp-product/
+</span></code></pre></div>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="generate-entities.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png" /></a></p>
+<p>Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Consider moving the generated files and directories to the location described in the previous step after each execution of <code>./gradlew rx:generate.entities</code>. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.</p>
+</div>
+</li>
+<li>
+<p><strong>Restart the Etendo RX Service:</strong>
+    After successfully migrating the <code>lib</code> directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>rx:rx
+</span></code></pre></div>
+<p>Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.</p>
+</li>
+</ol>
+<h1 id="integrating-etendo-rx-with-etendo-sub-application">Integrating Etendo RX with Etendo Sub-Application</h1>
+<p>This section details the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.</p>
+<h3 id="custom-hooks-in-react-native">Custom Hooks in React Native</h3>
+<p>Custom hooks are a fundamental aspect of React Native, offering a modular approach to managing logic in applications. These hooks allow for creating, updating, and deleting functionalities, and are instrumental in abstracting complex interactions with the backend, thereby enhancing code maintainability and readability.</p>
+<h4 id="overview-of-custom-hooks">Overview of Custom Hooks</h4>
+<p>Custom hooks, such as <code>useProduct</code>, exemplify the integration between frontend components and backend services.</p>
+<h3 id="implementing-custom-hooks">Implementing Custom Hooks</h3>
+<p>Here's an example of how custom hooks are utilized:</p>
+<div class="language-typescript highlight"><span class="filename">useProduct.ts</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Product</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/product.types&#39;</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">ProductService</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../lib/data_gen/productservice&#39;</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">// Custom hook for managing products</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">products</span><span class="p">,</span><span class="w"> </span><span class="nx">setProducts</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="o">&lt;</span><span class="nx">Product</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">([]);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="c1">// Fetching data</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetchData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ProductService</span><span class="p">.</span><span class="nx">BACK</span><span class="p">.</span><span class="nx">getFilteredProducts</span><span class="p">();</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">      </span><span class="nx">setProducts</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nx">fetchData</span><span class="p">();</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="c1">// Function to handle product update</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleUpdateProduct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">updatedProduct</span><span class="o">:</span><span class="w"> </span><span class="kt">Product</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ProductService</span><span class="p">.</span><span class="nx">BACK</span><span class="p">.</span><span class="nx">updateProduct</span><span class="p">(</span><span class="nx">updatedProduct</span><span class="p">);</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="c1">// Optionally, update the products state to reflect the changes</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="c1">// Function to get filtered products (if needed)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">getFilteredProducts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">filterCriteria</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">filteredProducts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ProductService</span><span class="p">.</span><span class="nx">BACK</span><span class="p">.</span><span class="nx">getFilteredProducts</span><span class="p">(</span><span class="nx">filterCriteria</span><span class="p">);</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">    </span><span class="nx">setFilteredProducts</span><span class="p">(</span><span class="nx">filtered</span><span class="p">);</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">filteredProducts</span><span class="p">;</span><span class="w"> </span><span class="c1">// This line is optional, allowing the function to return the filtered products</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="nx">products</span><span class="p">,</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="nx">handleUpdateProduct</span><span class="p">,</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="nx">getFilteredProducts</span><span class="p">,</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="p">};</span>
+</span></code></pre></div>
+<p>Now, to demonstrate the use of the <code>useProduct</code> custom hook in a React Native component like <code>home.tsx</code>, let's expand on the example with a practical implementation. This implementation will illustrate how the custom hook can be integrated into a component to manage product data effectively.</p>
+<div class="language-typescript highlight"><span class="filename">Home.tsx</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">View</span><span class="p">,</span><span class="w"> </span><span class="nx">Text</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-native&#39;</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">useProduct</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../../hooks/useProduct&#39;</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="c1">// Use the custom hook to manage product data</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">getFilteredProducts</span><span class="p">,</span><span class="w"> </span><span class="nx">updateProduct</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useProduct</span><span class="p">();</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">products</span><span class="p">,</span><span class="w"> </span><span class="nx">setProducts</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">([]);</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="c1">// Fetch products when the component mounts</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetchProducts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetchedProducts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">getFilteredProducts</span><span class="p">();</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="nx">setProducts</span><span class="p">(</span><span class="nx">fetchedProducts</span><span class="p">);</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nx">fetchProducts</span><span class="p">();</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="c1">// Function to update an existing product</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">handleProductUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">updatedProduct</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">updateProduct</span><span class="p">(</span><span class="nx">updatedProduct</span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="c1">// Optionally refetch or update products list</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">  </span><span class="p">};</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">  </span><span class="c1">// Render the component</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">View</span><span class="o">&gt;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Render Table with products */</span><span class="p">}</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">      </span><span class="o">&lt;</span><span class="nx">Table</span><span class="w"> </span><span class="nx">navigation</span><span class="o">=</span><span class="p">{</span><span class="nx">navigation</span><span class="p">}</span><span class="w"> </span><span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">products</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">      </span><span class="p">{</span><span class="cm">/* Additional UI components for adding/updating products */</span><span class="p">}</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/View&gt;</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="p">};</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Home</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="conclusion">Conclusion</h3>
+<p>The integration of Etendo RX with Etendo Sub-Applications using custom hooks like <code>useProduct</code> enhances the development process and the user experience. It provides a seamless connection between backend services and a React Native frontend</p>
+<p>In the <code>Home.tsx</code> component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.</p>
+<p>While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include <strong>editing</strong>, <strong>adding</strong>, and <strong>deleting</strong> products, further demonstrating the versatility and comprehensive nature of the <code>useProduct</code> hook within the application.</p>
+<p>Attached below is an example of <strong>F&amp;B International Group's products</strong>, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.</p>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="generate-entities.png" src="/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png" /></a></p>
+<p>In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.</p>
 
 
 
