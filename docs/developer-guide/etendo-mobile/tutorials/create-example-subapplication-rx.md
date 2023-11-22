@@ -177,13 +177,13 @@ Next we will define a search method to be used later when we want to consume the
 
 ### Setting up the Development Environment
 
-Before diving into the customization and programming of your sub-application, ensure your development environment is correctly set up:
+Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
 
 1. **Create a Java Package:** 
-   Within the `modules_rx` directory of your Etendo environment, establish a Java package tailored to your sub-application. This package should correspond to the Etendo RX Java package generated in the Etendo Classic for your specific sub-application. For example, if you're working on a product sub-application, you might create a package named `com.etendorx.subapp.product`. This package will be the repository for all the custom code and unique functionalities of your sub-application.
+   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.
 
 2. **Generate Entities Using Etendo RX:**
-   After setting up your Java package, you need to generate entities which will form the foundation of your sub-application's data structure. When we generate the entities, Etendo RX embarks on a comprehensive entity generation process. During this process, it produces React code, which is then utilized as a library. This library acts as a crucial link between the application's frontend and backend, facilitating seamless data exchange and interaction among various system components.
+   Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
    
     Run the following command in the root of your Etendo environment:
 
@@ -191,17 +191,17 @@ Before diving into the customization and programming of your sub-application, en
     ./gradlew rx:generate.entities
     ```
 
-    In turn, this command will initiate the Etendo RX's entity generation process. It will create essential directories and files such as `lib`, `src-db`, and `src-gen` within your Java package. These directories contain the libraries, database scripts, and generated source code crucial for your sub-application's operation.
-
+    In turn, this command will initiate the Etendo RX's entity generation process.
+    
     ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
 
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
 3. **Migrate the 'lib' Directory:**
-    After generating entities, it is crucial to relocate the `lib` directory inside the directory of the created sub-application. Move the `lib` folder from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+    Move the `lib` directory from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
 
     ```bash title="Terminal"
-    mv modules_rx/com.etendorx.subapp.product/lib modules/com.etendoerp.subapp.product/subapp-product
+    mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
     ```
 
     ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
@@ -212,7 +212,7 @@ Before diving into the customization and programming of your sub-application, en
         Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
 
   4. **Restart the Etendo RX Service:**
-    After successfully migrating the `lib` directory, the next crucial step is to restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
+    After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
 
     ```bash title="Terminal"
     ./gradlew rx:rx
@@ -222,7 +222,7 @@ Before diving into the customization and programming of your sub-application, en
 
 # Integrating Etendo RX with Etendo Sub-Application
 
-This section outlines the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
+This section details the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
 
 ### Custom Hooks in React Native
 
@@ -318,7 +318,7 @@ export default Home;
 
 ### Conclusion
 
-The integration of Etendo RX with Etendo Sub-Applications, leveraging custom hooks like `useProduct`, exemplifies the efficiency and power of modern application development. It showcases the seamless connection between backend services and a React Native frontend, significantly enhancing both the development process and the end-user experience.
+The integration of Etendo RX with Etendo Sub-Applications using custom hooks like `useProduct` enhances the development process and the user experience. It provides a seamless connection between backend services and a React Native frontend
 
 In the `Home.tsx` component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.
 
