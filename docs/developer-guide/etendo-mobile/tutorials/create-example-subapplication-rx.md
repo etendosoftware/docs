@@ -67,7 +67,6 @@ This section covers an overview about the product subapplication example screens
     When you create a new subapplication, you have to do the same. 
     The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
 
-
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
   - The route to this screen is `src/screens/home/index.tsx`.
@@ -157,20 +156,14 @@ Next we will define a search method to be used later when we want to consume the
 | Field       | Value                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------ |
 | Method Name |`getFilteredProducts`                                                                             |
-|  Query      |`select e from Product e where e.active = true and e.name like :name or e.uPCEAN like :barcode`   |
+|  Query      |`SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc`   |
 
 
   ![search.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
 
 ### Creating a New Search Parameter
 
-  To define the parameters we defined in the previous query we need to create a new row in the Search Parameter tab and add the following records:
-
-| Field | Value         |
-| ----- | ------------- |
-| Line  |`20`           |
-| Name  |`barcode`      |
-| Type  |`String`       |
+  To define the parameter we defined in the previous query we need to create a new row in the Search Parameter tab and add the following record:
 
 | Field | Value         |
 | ----- | ------------- |
@@ -182,13 +175,157 @@ Next we will define a search method to be used later when we want to consume the
   ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
 
 
-  Finally, launch this command in the root of the environment to generate the entities: 
+### Setting up the Development Environment
 
-  ``` bash title="Terminal"
-  ./gradlew rx:generate.entities
-  ```
+Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
 
-  It should generate the following files:
+1. **Create a Java Package:** 
+   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.
 
-  ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/generate-entities.png)
+2. **Generate Entities Using Etendo RX:**
+   Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
+   
+    Run the following command in the root of your Etendo environment:
 
+    ```bash title="Terminal"
+    ./gradlew rx:generate.entities
+    ```
+
+    In turn, this command will initiate the Etendo RX's entity generation process.
+    
+    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
+
+    Verify the completion of this process and the accurate creation of all essential files and directories.
+
+3. **Migrate the 'lib' Directory:**
+    Move the `lib` directory from `modules_rx/<RXJavapackage>/lib` to `modules/<javapakage>/<subapp-name>/lib`. In our particular example, from the root of your Etendo environment, execute the following command to move the `lib` folder:
+
+    ```bash title="Terminal"
+    mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
+    ```
+
+    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
+
+    Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
+
+    !!! warning "Important"
+        Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
+
+  4. **Restart the Etendo RX Service:**
+    After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
+
+    ```bash title="Terminal"
+    ./gradlew rx:rx
+    ```
+
+    Executing this command will relaunch the Etendo RX service with the newly integrated libraries and configurations.
+
+# Integrating Etendo RX with Etendo Sub-Application
+
+This section details the integration of Etendo RX generated TypeScript entities with the Etendo Sub-Application, focusing on backend-frontend interactions.
+
+### Custom Hooks in React Native
+
+Custom hooks are a fundamental aspect of React Native, offering a modular approach to managing logic in applications. These hooks allow for creating, updating, and deleting functionalities, and are instrumental in abstracting complex interactions with the backend, thereby enhancing code maintainability and readability.
+
+#### Overview of Custom Hooks
+
+Custom hooks, such as `useProduct`, exemplify the integration between frontend components and backend services.
+
+### Implementing Custom Hooks
+
+Here's an example of how custom hooks are utilized:
+
+```typescript title="useProduct.ts"
+import { useState, useEffect } from 'react';
+import { Product } from '../../lib/data_gen/product.types';
+import ProductService from '../../lib/data_gen/productservice';
+
+// Custom hook for managing products
+export const useProduct = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  // Fetching data
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await ProductService.BACK.getFilteredProducts();
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
+
+  // Function to handle product update
+  const handleUpdateProduct = async (updatedProduct: Product) => {
+    await ProductService.BACK.updateProduct(updatedProduct);
+    // Optionally, update the products state to reflect the changes
+  };
+
+  // Function to get filtered products (if needed)
+  const getFilteredProducts = async (filterCriteria: any) => {
+    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
+    setFilteredProducts(filtered);
+    return filteredProducts; // This line is optional, allowing the function to return the filtered products
+  };
+
+  return {
+    products,
+    handleUpdateProduct,
+    getFilteredProducts,
+  };
+};
+```
+
+Now, to demonstrate the use of the `useProduct` custom hook in a React Native component like `home.tsx`, let's expand on the example with a practical implementation. This implementation will illustrate how the custom hook can be integrated into a component to manage product data effectively.
+
+```typescript title="Home.tsx"
+import React, { useEffect, useState } from 'react';
+import { View, Text } from 'react-native';
+import useProduct from '../../hooks/useProduct';
+
+const Home = () => {
+  // Use the custom hook to manage product data
+  const { getFilteredProducts, updateProduct } = useProduct();
+  const [products, setProducts] = useState([]);
+
+  // Fetch products when the component mounts
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const fetchedProducts = await getFilteredProducts();
+      setProducts(fetchedProducts);
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Function to update an existing product
+  const handleProductUpdate = async (updatedProduct) => {
+    await updateProduct(updatedProduct);
+    // Optionally refetch or update products list
+  };
+
+  // Render the component
+  return (
+    <View>
+      {/* Render Table with products */}
+      <Table navigation={navigation} data={products} />
+      {/* Additional UI components for adding/updating products */}
+    </View>
+  );
+};
+
+export default Home;
+```
+
+### Conclusion
+
+The integration of Etendo RX with Etendo Sub-Applications using custom hooks like `useProduct` enhances the development process and the user experience. It provides a seamless connection between backend services and a React Native frontend
+
+In the `Home.tsx` component, we observed the practical application of these hooks, which resulted in a dynamic, responsive, and user-friendly interface. This approach not only streamlines the development process but also ensures that the code remains maintainable and readable.
+
+While the example focused on listing products using a table, it's important to note that the distributed code includes additional functionalities. These include **editing**, **adding**, and **deleting** products, further demonstrating the versatility and comprehensive nature of the `useProduct` hook within the application.
+
+Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
+
+![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
+
+In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
