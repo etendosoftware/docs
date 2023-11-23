@@ -17,7 +17,7 @@
         <link rel="next" href="../create-example-subapplication-rx/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3995,13 +3995,13 @@
   <h1>Create New Subapplication</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.</p>
+<p>This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this, you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Before starting this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information check the <a href="/developer-guide/etendo-mobile/getting-started/" target="_blank">Getting Started in the Etendo Mobile section</a>.</p>
+<p>Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the <a href="/developer-guide/etendo-mobile/getting-started/" target="_blank">Getting Started in the Etendo Mobile section</a>.</p>
 </div>
 <h2 id="create-a-new-etendo-classic-module">Create a new Etendo Classic module</h2>
-<p>Once Loged in, go to the modules window, and create a new one as the image shows:</p>
+<p>Once Logged in, go to the modules window, and create a new one as the image shows:</p>
 <table>
 <thead>
 <tr>
@@ -4042,12 +4042,12 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>Notice that the name can be anything you want, but the type have to be setted as Module.</li>
+<li>Notice that the name can be anything you want, but the type has to be setted as Module.</li>
 <li>The description field is free and also required.</li>
 </ul>
 </div>
-<p>In this case we going to start from 1.0.0 version and set the DB prefix as ETAPP.</p>
-<p>After save all the configuration, you have to export it. Open a terminal in the root of your etendo classic and execute the following command:
+<p>In this case, we start from 1.0.0 version and set the DB prefix as ETAPP.</p>
+<p>After saving all the configuration, you have to export it. Open a terminal in the root of your etendo classic and execute the following command:
     <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>export.database
 </span></code></pre></div></p>
 <div class="admonition success">
@@ -4057,18 +4057,18 @@
 <h2 id="add-the-dummy-application">Add the dummy application</h2>
 <ol>
 <li>
-<p>To start you must download the latest version of the <a href="https://github.com/etendosoftware/subapp/releases" target="_blank">Dummy subapplication zip</a> file and unzip it inside the module just created in the <code>subapp</code> folder.
+<p>To start, you must download the latest version of the <a href="https://github.com/etendosoftware/subapp/releases" target="_blank">Dummy subapplication zip</a> file and unzip it inside the module just created in the <code>subapp</code> folder.
     <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="modules.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png" /></a></p>
 </li>
 <li>
-<p>In a terminal on path <code>modules/&lt;javapackage&gt;/subapp</code> install the depedencies declared in the package.json and for it the following command would be executed.
+<p>In a terminal on path <code>modules/&lt;javapackage&gt;/subapp</code> install the depedencies declared in the package.json and the following command would be executed.
     <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yarn<span class="w"> </span>install<span class="w"> </span>
 </span></code></pre></div></p>
 </li>
 </ol>
 <h2 id="dynamic-app-window">Dynamic app window</h2>
 <p>In the <code>Dynamic App</code> window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the subapplication is declared.</p>
-<p>After selecting this record in the <code>Dynamic App Version</code> tab we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information check the <a href="/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app" target="_blank">Dynamic App</a>.</p>
+<p>After selecting this record in the <code>Dynamic App Version</code> tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the <a href="/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app" target="_blank">Dynamic App</a>.</p>
 <table>
 <thead>
 <tr>
@@ -4168,9 +4168,9 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 </table>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="role-dynamicapp.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png" /></a></p>
 <h2 id="concepts">Concepts</h2>
-<p>In this section we will explain the main parts and files of the subapplication that we will use.</p>
+<p>In this section, we will explain the main parts and files of the subapplication that will be used.</p>
 <h4 id="apptsx">App.tsx</h4>
-<p>This file is located in the root of the subapplication and is the main file. In this file we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.</p>
+<p>This file is located in the root of the subapplication and it is the main file. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="path-to-app-file.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png" /></a></p>
 <h4 id="params-from-etendo-mobile">Params from Etendo Mobile</h4>
 <p>Etendo Mobile <em>sends</em> the following params to the subapplication:</p>
@@ -4196,7 +4196,7 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span><span class="nx">language</span><span class="p">,</span><span class="w"> </span><span class="nx">navigationContainer</span><span class="p">,</span><span class="w"> </span><span class="nx">dataUser</span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="nx">AppProps</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 </span></code></pre></div>
 <h4 id="language">Language</h4>
-<p>The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will utilize the <em>language parameter received as input</em> to initialize the remaining aspects of the application in the "App.tsx" file.</p>
+<p>The language is a string that serves as a representation of the user's selected language. This language setting is configurable within the Etendo Mobile application's settings and plays a crucial role in determining the language in which texts are presented within the subapplication. In this example, we will use the <em>language parameter received as input</em> to initialize the remaining aspects of the application in the "App.tsx" file.</p>
 <div class="language-typescript highlight"><span class="filename">App.tsx</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="nx">locale</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">locale</span><span class="p">.</span><span class="nx">setCurrentLanguage</span><span class="p">(</span><span class="nx">locale</span><span class="p">.</span><span class="nx">formatLanguageUnderscore</span><span class="p">(</span><span class="nx">language</span><span class="p">));</span>
 </span></code></pre></div>
@@ -4223,12 +4223,12 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <div class="admonition info">
 <p class="admonition-title">Functions</p>
 <ul>
-<li><em>t(key, params)</em>: this function receive a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based in <a href="https://github.com/fnando/i18n#readme" target="_blank">i18n</a> and the keys are defined in .json files in <code>subapp/src/lang</code>. </li>
+<li><em>t(key, params)</em>: this function receives a key (and other optional params) and returns the text translated to the language of the subapplication. This function is based on <a href="https://github.com/fnando/i18n#readme" target="_blank">i18n</a> and the keys are defined in .json files in <code>subapp/src/lang</code>. </li>
 <li><em>setCurrentLanguage(input)</em>: gets a language as a param and sets this language as default in the subapplication.</li>
 </ul>
 </div>
 <h4 id="navigation-stack">Navigation Stack</h4>
-<p>The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In this example we will use only one screen called Home which is the main screen of the subapplication (initialRouteName in stack).</p>
+<p>The navigation stack is a component in App.tsx that allows us to navigate between screens. It is a component provided by react-navigation. In this example, we will use only one screen called Home which is the main screen of the subapplication (initialRouteName in stack).</p>
 <div class="language-typescript highlight"><span class="filename">App.tsx</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./src/screens/home&#39;</span><span class="p">;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">createStackNavigator</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@react-navigation/stack&#39;</span><span class="p">;</span>
@@ -4266,8 +4266,8 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <p>Etendo UI is a <em>library of components</em> that will be used throughout the example subapplication. This library is based on React Native Elements and it is available on <a href="https://www.npmjs.com/package/etendo-ui-library" target="_blank">NPM</a>. You can use it in all of your subapplications.
   In this library we can find components like:  Button, Input, Navbar etc.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="etendo-ui-library-npm.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png" /></a></p>
-<p>You can find more information about in <a href="https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs" target="_blank">Etendo UI Library</a> </p>
-<p><em>Storybook</em> is a place where you can try and see all the components of the library. Also, you can see the code of each component and how to use it.</p>
+<p>For more information, visit <a href="https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs" target="_blank">Etendo UI Library</a> </p>
+<p><em>Storybook</em> is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="storybook.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png" /></a></p>
 <h2 id="development-mode-setup">Development mode setup</h2>
 <ol>
@@ -4279,7 +4279,7 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 </ol>
 <h3 id="rollup">Rollup</h3>
 <p><a href="https://rollupjs.org/" target="_blank">Rollup</a> is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.</p>
-<p>Inside the project there is a file rollup.config.js where the path where the packaged file with .js extension will be generated is defined.</p>
+<p>Inside the project, there is a file rollup.config.js where the path where the packaged file with .js extension will be generated is defined.</p>
 <p>It is necessary to modify this path adding the <code>javapackage</code> of the generated module.</p>
 <div class="language-groovy highlight"><span class="filename">rollup.config.js</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typescript</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@rollup/plugin-typescript&#39;</span><span class="o">;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">peerDepsExternal</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;rollup-plugin-peer-deps-external&#39;</span><span class="o">;</span>
@@ -4310,8 +4310,8 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 </span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">  </span><span class="n">external</span><span class="o">,</span>
 </span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="o">};</span>
 </span></code></pre></div>
-<p>In the package.json you define the path where the local server will be raised with <a href="https://www.npmjs.com/package/http-server" target="_blank">Http-server</a> with the <code>yarn dev</code> command.
-This path must coincide with the path where the build of the application was generated. Also the local port to be exposed is defined here (in this case port 3000).</p>
+<p>In the package.json, you define the path where the local server will be raised with <a href="https://www.npmjs.com/package/http-server" target="_blank">Http-server</a> with the <code>yarn dev</code> command.
+This path must coincide with the path where the building of the application was generated. Also the local port to be exposed is defined here (in this case, port 3000).</p>
 <div class="language-groovy highlight"><span class="filename">package.json</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="s2">&quot;scripts&quot;</span><span class="o">:</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="s2">&quot;android&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-android&quot;</span><span class="o">,</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="s2">&quot;ios&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;react-native run-ios&quot;</span><span class="o">,</span>
@@ -4327,15 +4327,15 @@ This path must coincide with the path where the build of the application was gen
 </span></code></pre></div></p>
 <h3 id="etendo-mobile-setup">Etendo Mobile Setup</h3>
 <ol>
-<li>In Etendo Moblile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be <code>http://&lt;local-network-ip&gt;:8096/</code> and the context path by default <code>/etendo</code> </li>
+<li>In Etendo Mobile setting up the Edge service URL (Edge is an Etendo RX service, which implements a Spring cloud-driven gateway), by default the environment url should be <code>http://&lt;local-network-ip&gt;:8096/</code> and the context path by default <code>/etendo</code> </li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To find out your IP address on the local network you can run the command <code>ifconfig</code> in a Mac or Linux terminal or <code>ipconfig</code> in Windows CMD.</p>
+<p>To find out your IP address on the local network, you can run the command <code>ifconfig</code> in a Mac or Linux terminal or <code>ipconfig</code> in Windows CMD.</p>
 </div>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ip-config" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png" /></a></p>
 <ol>
-<li>Login Etendo Mobile you will see the list of subapps. Clicking on <code>Subapp Example</code> will download the build previously generated and exposed in the environment URL.
+<li>Login Etendo Mobile and you will see the list of subapps. Clicking on <code>Subapp Example</code> will download the building previously generated and exposed in the environment URL.
     <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="app-home.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png" /></a></li>
 <li>Here is the subapplication.
     <a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="sub-app.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png" /></a></li>
