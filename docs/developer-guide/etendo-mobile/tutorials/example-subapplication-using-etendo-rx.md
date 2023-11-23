@@ -17,14 +17,17 @@ Below is a succinct representation of the required fields and expected values fo
 | Field                | Value                           |
 |----------------------|---------------------------------|
 | Java Package         | `com.etendoerp.subapp.product`  |
-| Description          | `Subapplication to manage products using Etendo RX` |
-| Version              | `1.0.0`                         |
 | Name                 | `Product Subapplication`        |
 | Type                 | `Module`                        |
+| Description          | `Subapplication to manage products using Etendo RX` |
+| Version              | `1.0.0`                         |
+| In Development       | `true`                          |
 | Is RX                | `true`                          |
-| Translation Required | `false`                         |
-| Has reference data   | `false`                         |
+| Is React             | `true`                          |
+| RX Java Package      | `com.etendoerx.subapp.product`  |
+| Translation Required | `true`                          |
 | License Type         | `Etendo Commercial License`     |
+| Commercial            | `true`                          |
 
 ![modules-creation.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
 
@@ -45,11 +48,10 @@ The dynamic app in Etendo must contain the following form fields and correspondi
 | Module              | `Product Subapplication - 1.0.0 - English (USA)` |
 | Name                | `Product Subapplication`          |
 | Directory Location  | `/`                               |
-| Active              | `true`                            |
-| Dynamic App Version | `1.0.0`                           |
+| Name                | `1.0.0`                           |
 | File Name           | `productSubapp.js`                |
+| Active              | `true`                            |
 | Is Development      | `true`                            |
-| RX Java Package     | `com.etendorx.subapp.product`     |
 
 ![dynamic-app-creation.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
 
@@ -59,7 +61,7 @@ The next table reflect the settings to be configured for the role in relation to
 
 | Field                 | Value                           |
 |-----------------------|---------------------------------|
-| Organization          | `F&B International Group`       |
+| Organization          | `*`       |
 | App                   | `Product Subapplication`        |
 | Version               | `1.0.0`                         |
 | Active                | `true`                          |
@@ -148,10 +150,10 @@ Next, navigate to the *Projections* tab and add a new projection with the follow
 
   | Field      | Value                                          |
   | ---------- | ---------------------------------------------- |
-  | Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
+  | Projection |`ProdSubApp - Subapp Product Module - 1.0.0` |
 
 
-  ![assign-projection.png](/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+  ![assign-projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/assign-projection.png)
 
 
 
@@ -160,7 +162,7 @@ Next, navigate to the *Projections* tab and add a new projection with the follow
 Once we have the projection, we must define which fields we want to retrieve.
 For it in the Tables and columns window we look for the table M_Product and in the Projection tab navigate to the Entity Field tab and add the following fields:
 
-|  Field Name         |  Property             |
+| Name                |  Property             |
 | ------------------- | --------------------- |
 | id                  |`id`                   |
 | name                |`name`                 |

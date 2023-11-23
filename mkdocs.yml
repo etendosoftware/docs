@@ -267,7 +267,7 @@ nav:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
-        - Guide to building and Integrating a Subapplication in Etendo Following an Example: developer-guide/etendo-mobile/tutorials/guide-to-building-and-integrating-a-subapplication-in-etendo-following-an-example.md
+        - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
       - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
 
   - What's New:
