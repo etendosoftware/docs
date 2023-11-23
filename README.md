@@ -23,6 +23,9 @@ mike serve
 ```bash
 source venv/bin/activate
 mkdocs gh-deploy 
+
+#After running `mkdocs gh-deploy`  make sure the action is finished in GitHub before running the following command: 
+
 mike deploy --push --update-aliases 23.x latest
 
 # mike set-default --push latest
