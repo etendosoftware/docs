@@ -292,7 +292,7 @@ Next we will define a search method to be used later when we want to consume the
   ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
 
 
-### Setting up the Development Environment
+## Setting up the Development Environment
 
 Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
 
