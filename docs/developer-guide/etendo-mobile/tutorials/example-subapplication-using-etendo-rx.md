@@ -104,6 +104,89 @@ This section covers an overview about the product subapplication example screens
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
   - The route to this screen is `src/screens/home/index.tsx`.
+
+**Key Components:**
+
+1. **Navbar**: Positioned at the top, it displays the application's title and user's name, offering navigation controls.
+
+2. **ButtonUI**: A customizable UI button from Etendo UI Library, used for actions like navigating to product details. It can be styled in terms of size, style, and includes icons.
+
+3. **Search Component**: Enables product search by name, allowing the product list to be updated based on the query.
+
+4. **Table Component**: Displays products in a table format, allowing interactions such as editing, deleting or viewing product details.
+
+5. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
+
+    ```typescript title="Home.tsx"
+    import React, {useEffect, useState} from 'react';
+    import {Text, View} from 'react-native';
+    import Navbar from '../../components/navbar';
+
+    import {Button as ButtonUI, MoreIcon} from 'etendo-ui-library';
+
+    import Search from '../../components/search';
+    import Table from '../../components/table';
+    import {styles} from './style';
+    import {NavigationProp} from '@react-navigation/native';
+    import {isTablet} from '../../utils';
+    import locale from '../../localization/locale';
+    import {INavigationContainerProps} from '../../interfaces';
+    import useProduct from '../../hooks/useProduct';
+    import {ProductList} from '../../../lib/data_gen/product.types';
+
+    interface HomeProps {
+      navigation: NavigationProp<any>;
+      route: any;
+      navigationContainer: INavigationContainerProps;
+    }
+
+    const Home = ({navigation, route, navigationContainer}: HomeProps) => {
+      const {getFilteredProducts} = useProduct();
+      const [products, setProducts] = useState<ProductList>([]);
+      const {dataUser} = route.params;
+
+      const handleData = async (nameFilter?: string) => {
+        const data = await getFilteredProducts(nameFilter);
+        setProducts(data);
+      };
+
+      useEffect(() => {
+        handleData();
+      }, []);
+
+      return (
+        <View style={styles.container}>
+          <Navbar
+            title={locale.t('Home.welcome')}
+            username={dataUser?.username}
+            onOptionSelected={() => {
+              navigationContainer.navigate('Home');
+            }}
+          />
+          <View style={styles.topView}>
+            <Text style={styles.title}>{locale.t('Home.productList')}</Text>
+            <View style={styles.buttonContainer}>
+              <ButtonUI
+                width={isTablet ? '100%' : '60%'}
+                height={50}
+                typeStyle="secondary"
+                onPress={() => {
+                  navigation.navigate('ProductDetail');
+                }}
+                text={locale.t('Home.newProduct')}
+                iconLeft={<MoreIcon style={styles.icon} />}
+              />
+            </View>
+          </View>
+          <Search onSubmit={handleData} />
+          {products.length > 0 && <Table navigation={navigation} data={products} />}
+        </View>
+      );
+    };
+
+    export default Home;
+    ```
+
     <figure markdown>
       ![home-screen.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
       ![remove-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
@@ -311,19 +394,7 @@ export const useProduct = () => {
 
 ## Implementing `useProduct` Hook in `Home` Component
 
-The `Home` component serves as the central hub for product management within our React Native application. It leverages the `useProduct` hook to interact with product data. This custom hook provides functions to retrieve and update products, which the `Home` component uses to maintain its state and UI.
-
 The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
-
-### Structure of `Home.tsx`
-
-- **Imports and State Initialization**: The component begins by importing necessary React hooks and the custom hook `useProduct`. It initializes the `products` state to an empty array to hold the product data.
-
-- **Data Fetching with useEffect**: Upon mounting, the `useEffect` hook calls `getFilteredProducts` to fetch product data from the backend and populate the `products` state.
-
-- **Product Update Function**: `handleProductUpdate` is an asynchronous function provided to update an existing product using `updateProduct` from the `useProduct` hook.
-
-- **User interface composition**: The component returns the user interface built using the `Etendo UI library`, which includes the `Table` component that displays the list of products.
 
 ### Example Usage
 
