@@ -17,7 +17,7 @@ tags:
 ## Overview
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
-| --- | --- | --- | :---: | :---: |
+| ---     |       ---        |                  ---                    | :----: | :----: |
 | 1.4.0 | 23/10/2023 | [1.0.0, latest] | CS | :white_check_mark: |
 
 ## Release Notes
