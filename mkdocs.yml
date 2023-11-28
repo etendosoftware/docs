@@ -256,7 +256,31 @@ nav:
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
-        - Create New Subapliction: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
+        - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
+        - Create Example Subapplication with RX: developer-guide/etendo-mobile/tutorials/create-example-subapplication-rx.md
+  - What's New:
+    - Overview: whats-new/overview.md
+    - Etendo Release Cycle: whats-new/etendo-release-cycle.md
+    - Roadmap: "https://www.etendo.software"
+    - Release Notes:
+      - Etendo Classic:
+        - Releases: whats-new/release-notes/etendo-classic/index.md
+        - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
+        - Bundles:
+          - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
+          - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
+          - Warehouse Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md
+          - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
+          - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
+          - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
+          - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
+          - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+        - Translation Bundles:
+          - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes.md
+        - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
+      - Etendo Mobile:
+        - Bundles:
+          - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
 
   - Live Builds: live-builds/overview.md
   - Help and Support:
