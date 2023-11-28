@@ -269,7 +269,6 @@ nav:
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
       - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
-
   - What's New:
     - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
@@ -287,6 +286,8 @@ nav:
           - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
           - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
           - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
+        - Translation Bundles:
+          - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
