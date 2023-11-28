@@ -36,7 +36,7 @@ There are two ways to search for and install modules on Etendo:
 
     First, you can search within the [Etendo Software organization packages](https://github.com/orgs/etendosoftware/packages){target="_blank"} section for the necessary javapackage. Or if it is your own repository, search for the packages associated with it.
 
-    Exploring the bundles and modules documentation, you find the javapackages of each one. E.g. [Banking Pool](/products/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool) documentation.
+    Exploring the bundles and modules documentation, you find the javapackages of each one. E.g. [Banking Pool](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool) documentation.
     
     ![search-packages.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png)
 

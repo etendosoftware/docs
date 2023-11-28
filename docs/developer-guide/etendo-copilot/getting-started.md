@@ -49,15 +49,26 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
   
 
-        
+4. In addition, there are other optional variables to configure certain aspects of the copilot. If not specified, default values are used.
+    
+    | **Environment Variable**    | **Options**  | **Default**  | **Info** |
+    | ----------------------------| -------------| -------------| -------- |
+    | SYSTEM_PROMPT  | `String` | `"You are a very powerful assistant with a set of tools, which you will try to use for the requests made to you."` | The prompt that will be used to make the request to the agent and that will condition the response and behavior of the copilot.|
+    | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | The name of the file that contains the configuration of the enabled tools. |
+    | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | The name of the file that contains the configuration of the dependencies of the tools. |
+    | COPILOT_IMAGE_TAG | `String` | `master` | The tag of the copilot docker image that will be used. |
+    | COPILOT_PULL_IMAGE | `Boolean` | `true` | If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
+    | COPILOT_DOCKER_CONTAINER_NAME | `String` | `etendo-default` | The name of the docker container that will be created to run the copilot docker image. |
 
-4. To download the latest copilot Docker image and run it:
+
+
+5. To download the latest copilot Docker image and run it:
 
     ``` bash title="Terminal"
     ./gradlew copilot.start
     ```
 
-5. When done using Etendo Copilot, run:
+6. When done using Etendo Copilot, run:
 
     ```bash
     ./gradlew copilot.stop
@@ -90,7 +101,7 @@ Translates the content of an XML file from one language to another, as specified
     | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
     | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
   
-3. Restart Doker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
 4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
 

@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
 | [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
 | [1.8.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
@@ -39,6 +40,9 @@ tags:
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
 ## Release Notes
+### 1.11.1
+- [EE-738](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/6){target="\_blank"} Additional accounting lines created from banking group
+- [EE-727](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/7){target="\_blank"} Error in translation of pop up window remittance
 ### 1.10.0 
 - Update Core compatibility until 23.3.x
 ### 1.9.1 

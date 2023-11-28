@@ -29,17 +29,20 @@ To report a bug, a standard structure is meant to be followed. This structure is
     If necessary, add more test cases.
  
  ```
-  ## Error's description
+  # Error's description
     
-  ## Steps to reproduce the error
+  # Steps to reproduce the error
+  1. <step>
+  2. <step>
+  ...
   
-  ## Expected behavior
+  # Expected behavior
   
-  ## Affected Version
+  # Affected Version
   
-  ## Solution Design (optional)
+  # Solution Design (optional)
   
-  ## Other test cases
+  # Other test cases
   **Given:**
   **When:**
   **Then:**

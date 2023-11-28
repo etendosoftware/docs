@@ -6,19 +6,19 @@ tags:
 ---
 ## Overview
 
-*Etendo Mobile* is a sub-application development platform that includes the possibility to log in to an *Etendo Classic* server and configure the available dynamic sub-applications there according to role. 
+*Etendo Mobile* is a subapplication development platform that includes the possibility to log in to an *Etendo Classic* server and configure the available dynamic subapplications there according to role. 
 
 A schematic of the infrastructure is shown here:
 
 ![etendo-mobile-infrastructure.png](/assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png)
 
-On this page we will explain what are the requirements to create a sub-application and how to install all the necessary tools to develop a new sub-application.
+On this page we will explain what are the requirements to create a subapplication and how to install all the necessary tools to develop a new subapplication.
 
 ## Environment Setup
 
 ### Requirements
 - *Etendo*. If you don't have it, [install it here](/developer-guide/etendo-rx/getting-started/){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](/products/etendo-mobile/getting-started/){target="_blank"}.
+- *Etendo Mobile*. If you don't have it, [install it here](/user-guide/etendo-mobile/getting-started/){target="_blank"}.
 - *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
 
@@ -57,7 +57,7 @@ On this page we will explain what are the requirements to create a sub-applicati
             At the command line, type the command below. If you want to check which are the current node versions, you can go to nodejs.org and see them all. We recommend you to use the one recommended for most users.  
 
             ``` bash title="Terminal"
-            nvm install 16.10.0
+            nvm install 16.20
             ``` 
 
         6.  Verify the node versions installed.
@@ -71,7 +71,7 @@ On this page we will explain what are the requirements to create a sub-applicati
             You can always use different versions of node and this command allows you to jump between all your installed versions.
 
             ``` bash title="Terminal"
-            nvm use 16.10.0
+            nvm use 16.20
             ``` 
     === ":simple-linux: Linux"
 
@@ -106,7 +106,7 @@ On this page we will explain what are the requirements to create a sub-applicati
             You can always use different versions of node and this command allows you to jump between all your installed versions.
 
             ``` bash title="Terminal"
-            nvm use 16.10.0
+            nvm use 16.20
             ``` 
         
     === ":material-math-cos: MacOS"
@@ -140,6 +140,6 @@ On this page we will explain what are the requirements to create a sub-applicati
             You can always use different versions of node and this command allows you to jump between all your installed versions.
 
             ``` bash title="Terminal"
-            nvm use 16.10.0
+            nvm use 16.20
             ``` 
-Then continue with the [Create New Subapliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
+Then continue with the [Create New Sub-appliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
