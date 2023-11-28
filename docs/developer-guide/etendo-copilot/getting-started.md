@@ -53,7 +53,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     
     | **Environment Variable**    | **Options**  | **Default**  | **Info** |
     | ----------------------------| -------------| -------------| -------- |
-    | SYSTEM_PROMPT  | `String` | `"You are very powerful assistant, but bad at calculating lengths of words."` | The prompt that will be used to make the request to OpenAI and that will condition the response and behavior of the copilot.|
+    | SYSTEM_PROMPT  | `String` | `"You are a very powerful assistant with a set of tools, which you will try to use for the requests made to you."` | The prompt that will be used to make the request to OpenAI and that will condition the response and behavior of the copilot.|
     | CONFIGURED_TOOLS_FILENAME | `JSON File name` | `tools_config.json` | The name of the file that contains the configuration of the enabled tools. |
     | DEPENDENCIES_TOOLS_FILENAME | `TOML File name` | `tools_deps.toml` | The name of the file that contains the configuration of the dependencies of the tools. |
     | COPILOT_IMAGE_TAG | `String` | `master` | The tag of the copilot docker image that will be used. |
