@@ -130,7 +130,8 @@ Etendo 22.1.0
 The main objective of this new solution is to complement the existing ERP: “Etendo Classic”, making usage of new technologies and applying proved patterns and good practices while maintaining the best features it has to create integrations with third-party applications by an easy way.
 Etendo has been integrated with Zapier as concept.
 Zapier is a tool that allows users to integrate programs and web applications, making it possible to move information between platforms and perform combined actions.
-To try it, you can read [Create a Zap using Etendo Integration](/legacy/end-user-documentation/integrations/zapier)
+
+To try it, you can read [Create a Zap using Etendo Integration](/developer-guide/etendo-rx/integrations/zapier/)
 
 ## EPL-218
 
@@ -208,7 +209,8 @@ Refactor the process 'Payment execution' to a process definition.
 
 **Solution Design**
 
-modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/ad_forms/BatchPaymentExecution.html
+- modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/
+ad_forms/BatchPaymentExecution.html
 
 **Use/Test Cases**
 

@@ -9,13 +9,13 @@ title: Details 22Q1.0
 This allows Etendo to be installed and deployed using compiled Java distributed in JAR format, without losing compatibility with the legacy source format. For this, we work on the tasks of publishing, compiling and deploying the code supported as a JAR.  
 If you work with Etendo in JAR format, you will only visualize some configuration and modules directories, all the rest is in build volatile folder.
 
-You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/install-modules-in-etendo) page.
+You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) page.
 
 You can read the [Publish modules to a Nexus repository](/legacy/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository) page to find out about the new way of publishing.
 
-We developed a tool that searches for JARs in the source code and verifies if it exists in maven central, after that, it generates a file in which it declares the dependencies found. You will be able to remove all these heavy dependencies and let Gradle do its job. Read more in [Search JARs Tool](/legacy/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/22q1/search-jars-tool)
+We developed a tool that searches for JARs in the source code and verifies if it exists in maven central, after that, it generates a file in which it declares the dependencies found. You will be able to remove all these heavy dependencies and let Gradle do its job. Read more in [Search JARs Tool](/developer-guide/etendo-classic/concepts/etendo-jars/).
 
-You can migrate the Core format from Source to JAR and the other way around. Read more information in \[Core format migration\][core-format-migration](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration)
+You can migrate the Core format from Source to JAR and the other way around. Read more information in [Core Format Migration](/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/).
 
 You can upgrade Etendo to new versions in only a few steps following the [Upgrade Etendo](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/upgrade) guide.
 
