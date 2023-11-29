@@ -272,7 +272,7 @@ nav:
   - What's New:
     - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
-    - Roadmap: "https://www.etendo.software"
+    - Roadmap: "https://etendo.software"
     - Release Notes:
       - Etendo Classic:
         - Releases: whats-new/release-notes/etendo-classic/index.md
