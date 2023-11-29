@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -4099,8 +4099,8 @@ Etendo 22.1.0</p>
 <h3 id="etendorx-integrations">EtendoRX - Integrations</h3>
 <p>The main objective of this new solution is to complement the existing ERP: “Etendo Classic”, making usage of new technologies and applying proved patterns and good practices while maintaining the best features it has to create integrations with third-party applications by an easy way.
 Etendo has been integrated with Zapier as concept.
-Zapier is a tool that allows users to integrate programs and web applications, making it possible to move information between platforms and perform combined actions.
-To try it, you can read <a href="/legacy/end-user-documentation/integrations/zapier">Create a Zap using Etendo Integration</a></p>
+Zapier is a tool that allows users to integrate programs and web applications, making it possible to move information between platforms and perform combined actions.</p>
+<p>To try it, you can read <a href="/developer-guide/etendo-rx/integrations/zapier/">Create a Zap using Etendo Integration</a></p>
 <h2 id="epl-218">EPL-218</h2>
 <h3 id="add-task-to-compile-style-changes">Add task to compile style changes</h3>
 <p><strong>Issue Description:</strong>
@@ -4163,7 +4163,10 @@ Then: The process should return the same result.</p>
 <p><strong>Issue Description</strong></p>
 <p>Refactor the process 'Payment execution' to a process definition.</p>
 <p><strong>Solution Design</strong></p>
-<p>modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/ad_forms/BatchPaymentExecution.html</p>
+<ul>
+<li>modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/
+ad_forms/BatchPaymentExecution.html</li>
+</ul>
 <p><strong>Use/Test Cases</strong></p>
 <p>Search the process with the ‘Payment execution’ name. This opens a window where the ‘Payments’ with status ‘RPAE’ (If you want to see some values set the payment status to RPAE in DB) can be filtered.</p>
 <p>To define a ‘process execution’ go to the financial account window and select a payment method in the ‘payment method’ tab. Set the payment execution type to Automatic and select a ‘execution process’.</p>
