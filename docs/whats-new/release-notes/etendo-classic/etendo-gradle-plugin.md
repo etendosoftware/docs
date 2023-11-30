@@ -23,10 +23,10 @@ tags:
 ## Release Notes
 
 ### 1.2.2
--  [EPL-1054](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/18) Bug Fix for copilot translation task. The copilot.translation task should require an -Parg  parameter instead of -Ppkg.
+-  [EPL-1054](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/18){target="\_blank"} Bug Fix for copilot translation task. The copilot.translation task should require an -Parg  parameter instead of -Ppkg.
 
 ### 1.2.1
--  [EPL-1047](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/16) Bug Fix for copilot translation task. When the copilot.translate task is executed and API fails, it ends with build successful.
+-  [EPL-1047](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/16){target="\_blank"} Bug Fix for copilot translation task. When the copilot.translate task is executed and API fails, it ends with build successful.
 
 ### 1.2.0
 -  Add copilot tasks in [Etendo Gradle Plugin](/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/#copilot)
