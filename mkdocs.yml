@@ -159,7 +159,6 @@ nav:
         - Production Management: 
           - Transactions:   user-guide/etendo-classic/basic-features/production-management/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/production-management/setup.md
-        - Etendo RX: user-guide/etendo-classic/basic-features/etendo-rx/index.md
         - Material Requirement Planning: 
           - Transactions: user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/material-requirement-planning/setup.md
