@@ -12,7 +12,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Financial Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0E104B3E36C84992BD7A6D941FBC7AB9){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Financial Extensions Bundle](whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md)
+:octicons-project-symlink-16: Original Bundle Release Notes: [Financial Extensions Bundle](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/)
 
 ## Overview
 
