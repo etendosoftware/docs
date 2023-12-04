@@ -17,7 +17,7 @@
         <link rel="next" href="../how-to-create-scan-process/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3980,6 +3980,10 @@
 <li>Transactional Sequences: These sequences lock the table in the database to guarantee  the generation of identifiers sequentially and avoid duplicates or gaps.</li>
 <li>Non-Transactional Sequences: In this case, the process to create sequences uses Database Sequences and should be used in cases where the gaps between numbers is not an issue.</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.</p>
+</div>
 <h3 id="quick-sequence-setup">Quick sequence setup</h3>
 <ol>
 <li>
@@ -3996,7 +4000,7 @@ See how to create a new reference in <a href="/developer-guide/etendo-classic/ho
 </figure>
 </li>
 <li>
-<p>Then, it is necessary to run a process in <code>Application</code> &gt; <code>General Setup</code>> <code>Application</code>> <code>Create Sequences</code> to generate the sequences, selecting the root Organization where they will be created.</p>
+<p>Then, it is necessary to run a process in <code>Application</code> &gt; <code>General Setup</code>&gt; <code>Application</code>&gt; <code>Create Sequences</code> to generate the sequences, selecting the root Organization where they will be created.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>To run this process, the user must be logged using the role which manages the sequence, not as system administrator.</p>
