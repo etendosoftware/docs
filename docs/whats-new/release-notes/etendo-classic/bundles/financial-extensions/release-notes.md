@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
 | [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
@@ -39,7 +40,18 @@ tags:
 | 1.0.100   | -          | 21.4.0 | 21.4.x | C  |                       |
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
+## Known Issues
+
+- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
+  
+    !!! warning "Attention"
+        The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
+
+
 ## Release Notes
+### 1.11.2
+- [EE-726](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/5){target="\_blank"} When you want to create a payment for a financing plan, the process does not end
+- [EE-744](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/9){target="\_blank"} Unable to generate credit from the "payment out" window
 ### 1.11.1
 - [EE-738](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/6){target="\_blank"} Additional accounting lines created from banking group
 - [EE-727](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/7){target="\_blank"} Error in translation of pop up window remittance
