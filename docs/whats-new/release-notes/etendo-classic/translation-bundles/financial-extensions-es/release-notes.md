@@ -18,9 +18,13 @@ tags:
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| 1.4.0 | 23/10/2023 | [1.0.0, latest] | CS | :white_check_mark: |
+| 1.4.1 | 06/12/2023 | [1.11.2, latest] | CS | :white_check_mark: |
+| 1.4.0 | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
 
 ## Release Notes
+
+### 1.4.1
+- [EE-724](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/6){target="\_blank"} 'Balance Sheet And P&L Structure Advanced' report's fields are not being translated when in Excel format
 
 ### 1.4.0
 - Remove all translation modules dependencies to translated modules
