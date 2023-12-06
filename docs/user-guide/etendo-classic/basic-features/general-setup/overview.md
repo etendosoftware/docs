@@ -118,3 +118,14 @@ There is a close relationship between the general setup which allows the creatio
     The Fiscal Calendar, once manually created, can be available to all the organizations within the client if it is created for the (\* (asterisk)) organization.
 
 A defaulted **General Ledger configuration** and the **Chart of Accounts** can be automatically created if an "**Accounting**" reference data such as a "**Localization Pack**" containing a Chart of Accounts module is installed and applied to the Organization. Moreover, in case there is no Localization Pack for your country, Etendo delivers a Generic Chart of Accounts module which, if installed and applied, creates a sample Chart of Accounts and a defaulted General Ledger configuration which can be later on customized to meet the needs of your organization.
+
+## Business setup diagram
+
+The diagram below shows the business setup flow.
+This business setup flow goes from the "Generic setup" and "Master Data" areas to the "Accounting" and "Warehouse" setup areas.
+
+![](/assets/user-guide/etendo-classic/basic-features/general-setup/overview/businesssetupdiagram.png)
+
+If you want to know more about the basic setup of the business configurations in Etendo, please review the different articles in the General Setup section.
+
+By following this setup flow you should be able to have your own version of Etendo ready to execute the basic Business Flows.
