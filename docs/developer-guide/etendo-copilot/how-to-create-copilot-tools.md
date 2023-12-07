@@ -19,7 +19,7 @@ Etendo Copilot module allows the creation of tools that add functionality to it.
 - Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API. [Installation](/developer-guide/etendo-copilot/installation/){target="_blank"}.
 
 ### Create a new tool
-For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `ping_tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
+For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
 
 !!! note "Create the classic module"
     
@@ -75,7 +75,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     !!! note "Enviroment variables"
         Automatically, Copilot reads the gradle.properties file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
          This allows us to use the environment variables in the tools. 
-        ```python
+        
 
 3. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows this format:
 
