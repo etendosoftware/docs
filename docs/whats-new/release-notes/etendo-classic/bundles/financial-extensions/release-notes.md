@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
@@ -49,6 +50,11 @@ tags:
 
 
 ## Release Notes
+### 1.11.3
+- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} The Payments void option is not available
+- [EE-754](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/15){target="\_blank"} Payment is not created when settling the processed remittance lines
+- [EE-759](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/19){target="\_blank"} No "payment in" is created from the "add payment" process of the sales invoice when the sales invoice is cancelled with another one
+
 ### 1.11.2
 - [EE-726](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/5){target="\_blank"} When you want to create a payment for a financing plan, the process does not end
 - [EE-744](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/9){target="\_blank"} Unable to generate credit from the "payment out" window
