@@ -24,10 +24,10 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     implementation('com.etendoerp:copilot:1.0.1')
     ```
 
-    ??? warning "Ensure you have 1.2.2 plugin version or greater:"
+    ??? warning "Ensure you have 1.3.0 plugin version or greater:"
         
         ```groovy
-        id 'com.etendoerp.gradleplugin' version '1.2.2'
+        id 'com.etendoerp.gradleplugin' version '1.3.0'
         ```
 
 2. In the terminal, execute:

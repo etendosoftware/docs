@@ -11,7 +11,8 @@ tags:
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| 1.2.2 | 20/10/2023 | CS |
+| 1.3.0 | 12/12/2023 | CS |
+| 1.2.2 | 20/10/2023 | C  |
 | 1.2.1 | 18/10/2023 | C  |
 | 1.2.0 | 17/10/2023 | C  |
 | 1.1.3 | 31/08/2023 | C  |
@@ -21,6 +22,12 @@ tags:
 | 1.0.7 | 05/04/2023 | C  |
 
 ## Release Notes
+
+### 1.3.0
+- Parametized the image tag, added parameter to avoid image pulling and container name parameter. Added reutilization of container name.
+- Added dynamic tool_deps.toml load.
+- add variables file replacing . with _ to use as environment variables-
+- Removed translation tool.
 
 ### 1.2.2
 -  [EPL-1054](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/18){target="\_blank"} Bug Fix for copilot translation task. The copilot.translation task should require an -Parg  parameter instead of -Ppkg.
