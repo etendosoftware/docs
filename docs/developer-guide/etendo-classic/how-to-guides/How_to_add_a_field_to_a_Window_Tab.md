@@ -1,0 +1,113 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to add a field to a Window Tab
+
+##  Objective
+
+The objective of this how-to is to show how you can add a new  field  to a
+tab  in Openbravo ERP.
+
+It is closely the related to the previous  How to add Columns to a Table
+HowTo which showed how to add new columns to a table.
+
+In that previous HowTo the following three new columns were added to the
+_ht_salary_ table.
+
+  1. _ValidTo_ , a simple date-field matching the ValidFrom date already present in this table 
+  2. _Payment Schedule_ , shown as a combobox to the user to be able to choose from three values defined in a list-reference. 
+    1. First day of the month 
+    2. Mid of the month 
+    3. Last day of the month 
+  3. _Payment Category_ , a link to another existing table which allows selecting among the values present in that table. 
+
+The task of adding those new columns to the existing _Employee Salary_ window
+which was create in  this  other HowTo is now faily simple as most of the work
+(like defining references, element) has been already done when adding the
+columns to the table.
+
+In this HowTo we will place the new fields in the module with dbprefix **HT2**
+which already contains the new columns.
+
+###  Add the fields to the window
+
+The process to add new fields to an existing window is the same like adding
+fields to a new (empty) window. Going to **Application Dictionary || Window,
+Tabs and Fields** we need to search for the _Employee Salary_ window. Then for
+that window mark its _Salary_ tab.
+
+Now we use the **Create Fields** process on this tab to let it add all columns
+of the underlying _ht_salary_ table to this tab if they've not been previously
+added.
+
+This will then add three new fields to the tab matching the three new columns
+and automatically place those three fields into the module with prefix **HT2**
+.
+
+The next step is to configure those new fields a bit to get a more pleasing
+layout:
+
+  * _EM_Ht2_ValidTo_ change **Sequence Number' _=_ ** _72_ , to place it right after the _ValidFrom_ field 
+  * _EM_Ht2_Payment_Schedule_ change **Sequence Number** = **76** and **Start in new Line Line** = **Yes** to place it into a new line after the ValidTo field 
+  * _EM_Ht2_C_Salary_Category_ID_ change **Sequence Number** = **78** to place it after the _Payment Schedule_ field 
+
+After this change the list of columns should look similar to the following
+screenshot:
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_field_to_a_Window_Tab-0.png){: .legacy-image-style}
+
+  
+As a last step the **Synchronize Terminology** process should be run to
+synchronize our newly added fields to the elements created for the columns
+they are based on so that the UI labels for the new fields get the names
+defined in those elements.
+
+If this window should also be used in _classic UI mode_ then now _ant
+smartbuild_ should be execute to compile the changed window.
+
+To see the changed in the new UI just switch role away from the _System
+Administrator_ role used for this HowTo and go to the changed window to see it
+having the new field like shown here:
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_field_to_a_Window_Tab-1.png){: .legacy-image-style}
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab  "
+
+This page has been accessed 26,345 times. This page was last modified on 11
+July 2011, at 14:28. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+
