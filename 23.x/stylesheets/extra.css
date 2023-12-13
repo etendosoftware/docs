@@ -1,0 +1,20 @@
+:root {
+  --md-primary-fg-color: #202452;
+  --md-primary-fg-color--light: #202452;
+  --md-primary-fg-color--dark: #ffffff;
+  --md-accent-fg-color: #7182ff;
+  --md-typeset-a-color: #7182ff;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #ffffff;
+  --md-accent-fg-color: #7182ff;
+}
+
+/* To add this style to an imagge add {.legacy-image-style} 
+*  E.g: ![cover-welcome-to-etendo.png](/assets/home/index/cover-welcome-to-etendo.png){.legacy-image-style} 
+*/
+
+.legacy-image-style {
+  filter: grayscale(100%)
+}
