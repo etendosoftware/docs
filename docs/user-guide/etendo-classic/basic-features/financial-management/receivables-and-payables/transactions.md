@@ -232,8 +232,7 @@ The aim of this functionality is to delete and reactivate payments in an agile a
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
-
-On the other hand, it is possible to reactivate payments from the same window. In this case, select the corresponding record and then click the Reactivate button. This will return the payment to “Awaiting Payment” status and new payment details can be added.
+On the other hand, it is possible to reactivate payments from the same window with the "Advanced Reactivation" button. This functionality allows the user to reactivate the payment without deleting manually its associated transactions, which is necessary if using the core button "Reactivate". This will return the payment to “Awaiting Payment” status and new payment details can be added.
 
 In both cases:
 
@@ -632,7 +631,7 @@ The aim of this functionality is to delete and reactivate payments in an agile a
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
-On the other hand, it is possible to reactivate payments from the same window. In this case, select the corresponding record and then click the Reactivate button. This will return the payment to “Awaiting Payment” status and new payment details can be added.
+On the other hand, it is possible to reactivate payments from the same window with the "Advanced Reactivation" button. This functionality allows the user to reactivate the payment without deleting manually its associated transactions, which is necessary if using the core button "Reactivate". This will return the payment to “Awaiting Payment” status and new payment details can be added.
 
 In both cases:
 
