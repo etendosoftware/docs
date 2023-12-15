@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.12.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
+| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
 | [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark:    |
@@ -51,6 +52,11 @@ tags:
 
 
 ## Release Notes
+### 1.12.1
+- [EE-745](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/10){target="\_blank"}  Errors during remittance processing when grouping by business partners
+- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
+- [EE-764](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/21){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
+
 ### 1.12.0
 - [EE-746](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/11){target="\_blank"} General Ledger Report Advanced does not print if Group By is added
 - [EE-751](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/12){target="\_blank"} Reverse pre-filtering in "select invoices and order" process in remittances
