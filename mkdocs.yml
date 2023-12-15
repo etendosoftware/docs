@@ -263,7 +263,7 @@ nav:
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Installation: developer-guide/etendo-copilot/installation.md
-      - Available Tools:
+      - Tools:
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
       - How to create Copilot tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
