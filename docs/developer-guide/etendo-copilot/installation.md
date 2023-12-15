@@ -49,7 +49,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
   
 
-4. In addition, there are other optional variables to configure certain aspects of the copilot. If not specified, default values are used.
+4. In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
     
     | **Environment Variable**    | **Options**  | **Default**  | **Info** |
     | ----------------------------| -------------| -------------| -------- |
