@@ -54,7 +54,7 @@ tags:
 ## Release Notes
 ### 1.12.1
 - [EE-745](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/10){target="\_blank"}  Errors during remittance processing when grouping by business partners
-- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
+- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} Multiselector of organizations of the general ledger report advanced report does not work
 - [EE-764](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/21){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
 
 ### 1.12.0
