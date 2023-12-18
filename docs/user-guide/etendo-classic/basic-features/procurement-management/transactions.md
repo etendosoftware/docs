@@ -304,7 +304,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](/assets/drive/1vTIb8zM4yW3ZXKULoxF96N8nbZdWB0dr.png)
+![](/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic2.png)
 
 ### Intercompany
 
@@ -648,7 +648,7 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](/assets/drive/1k1K_gD4JMVrUriXiCYzG_9RkYMwG8BZz.png)
+![](/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
 
 ### Intercompany
 

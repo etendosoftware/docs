@@ -243,7 +243,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](/assets/drive/1LQYSG9pRY0BisgiACaLpwwLYwF2yi9Ic.png)
+![](/assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic6.png)
 
 ### Bulk Posting
 
@@ -642,7 +642,7 @@ In both cases:
 !!! info
     If the payment is posted, the accounting entry will be deleted.
 
-![](/assets/drive/1fp6B7szNMnCpcjm0METXUE4ydrRM2ePo.png)
+![](/assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/PRpic5.png)
 
 ### Bulk Posting
 
