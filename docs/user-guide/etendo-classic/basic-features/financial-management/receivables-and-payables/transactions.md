@@ -6,7 +6,6 @@ title: Financial Management
 
 Financial Management functional documentation provides a detailed description of all windows of the Financial Management application area.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9Sfrl2RWbdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=true></iframe>
 
 ## **Purchase Invoice Payment Plan**
 

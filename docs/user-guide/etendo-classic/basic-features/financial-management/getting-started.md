@@ -57,13 +57,141 @@ Those dimensions are then available just for that Organization.
 
 This application area covers the [Period End Close to Financial Report](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) business flow.
 
+## Payables and Receivables Management
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DmeLeQkg-cg?si=See53a-gprwcumPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Payables and Receivables Management addresses customer collections and supplier payments as well as other payments not related to invoices but to orders (prepayments) or G/L Items.
+
+![payment-workflow.png](/assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
+
+### Configuration
+
+The following setup needs to be done before performing the process:
+
+- [Payables and Receivables Document Types](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type).
+- [Payment Methods](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+- [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+- [Business Partners](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) to use above configured Payment Methods and Financial Accounts.
+
+!!!note
+    It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
+
+### Execution
+
+Overall the *Payables and Receivables Management* business process can be split into the following steps:
+
+- the creation of the orders and invoices to be paid
+- the creation of payments do not related to orders/invoices
+- the review of the status of the pending payments
+- the receipt of the payments made by the customers
+- the payment of the supplier's invoices
+- the recording of the financial account transactions
+- and the reconciliation of the financial account transactions
+
+#### Creation of the orders/invoices to be paid
+
+In the [Procure to Pay](/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) and [Order to Cash](/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) business process we have seen how the orders and invoices have been generated.
+
+Every time that a Purchase or Sales Order is booked or a Purchase or Sales Invoice is completed a Payment Plan is created for that Order / Invoice.
+
+A payment plan contains the payment amount/s expected for the document and its fulfillment. At the same time the invoice  Payment Monitor section gets activated that allows tracking the invoice payment status directly from the invoice window.
+
+!!!note
+    The Payment Monitor section allows to track the purchase & sales invoice payment status directly from the invoice window. In this section it is possible to know whether an invoice is fully paid or not. If the invoice has not been fully paid then the Payment Monitor informs the user how much has been received, how much is pending, the due date of the next payment and the amount that is expected to be received on that date. The status is updated automatically when any payment action happens and by a background process. The date when the payment status was last time calculated is displayed in the form. Grid filtering allows to filter invoices based on fully paid or not criteria.
+
+#### Creation of payments do not related to orders/invoices
+
+In the [Period End Close to Financial Report](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) therefore it is not related to an order/invoice but to a G/L Item.
+
+A G/L Item payment created in a G/L Journals implies:
+
+- the creation of a [Payment Made](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) if the payment information is entered in the *Credit* line of the G/L Journal.
+
+The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
+
+- Or the creation of a [Payment Received](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) if the payment information is entered in the *Debit* line of the G/L Journal.
+
+The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
+
+#### Review of the status of the pending payments
+
+On a periodic basis the Finance Staff reviews the status of the payments pending to be collected / to be paid by looking:
+
+- At the [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
+
+     Overdue check-box allows to narrow down the search and to show only overdue payments.
+     Payment Type displays Receivables, Payables or both.
+
+- In addition to this Sales and Purchase Invoice windows in grid view are available to search open invoices by setting Payment Complete field to No.
+
+#### Receipt of the customer's payments
+
+When a Payment is Received the Finance staff can register it in different ways:
+
+- In the [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window by selecting the Sales Invoices and/or Orders payment is received against.
+
+!!!note
+    Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
+
+- Using the [Add Payment button](/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
+
+- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+
+If collection does not happen on time:
+
+- The Expected Date of the [Payment Plan](/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-plan_1) can be modified, preventing the debt from being overdue.
+
+- The Amount due of the Payment Plan can be:
+     split in two or more amounts due at a later expected date.
+    or grouped in just one amount due at a later expected date.
+
+- The outstanding balance for a customer can be totally or partially written off.
+
+
+#### Payment of the supplier's invoices
+
+There are 3 ways to pay vendor bills:
+
+- Using the Payment Proposal process. This process supports the automatic payment of a large number of invoices based on the due dates of the lines of the Payment Plan associated with the open Purchase Invoices. The finance staff can request a proposal of all invoices to be paid based on a number of criteria, review that proposal, and then automatically make the payment.
+
+- In the Payment Out window by selecting the Purchase Invoices and/or Orders payment is made against.
+
+!!!note
+    Many businesses do not have credit extended to them and may therefore be required to make a payment against a purchase order. In effect this is a prepayment of a purchase invoice. Later when an invoice is created from an order that already has a payment made against it the invoice automatically inherits the payment made against the order.
+  
+  
+
+- Using the Add Payment button directly within the corresponding Purchase Invoice. It can be when the user needs to make a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
+
+- It is also possible to automate making of a payment on completion of a Purchase Invoice through the configuration of the Payment Method.
+
+#### Recording of the financial account transactions
+
+Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window by pressing the Add Transaction button and selecting either the received or made payments.
+This step in the process can also be completely automated through the configuration of the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
+
+#### Reconciliation of the financial account transactions
+
+Finance Staff receives a bank statement (a paper or electronic bank statement) and reconciles the transactions in the Financial Account marked as Deposited / Withdrawn not Cleared with the actual transactions on the bank statement. This process can be done
+
+- Manually (one by one reconciling the transactions in the Etendo Financial Account with the bank statement lines) by using the Reconcile button of the Financial Account window.
+
+- Automatically by Importing Statement first and then Matching Statement using a matching algorithm.
+
+Additionally, any transactions (receipts and payments) shown on the bank statement and not reflected in the Financial Account should also be entered into Etendo to get them reconciled.
+
+Finally Finance Staff prints the Reconciliation reports (Reconciliation Details, Reconciliations Summary) that explain any difference in the end balance shown for the Financial Account in Etendo and the end balance shown on the bank statement.
+
 ## Period End Close to Financial Report
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8WAyKf16HmY?si=lHqZ4KLHM-9siwQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 *Period End Close to Financial Report* business flow manages the open and close of periods.
 
 ![periodendclose-tofinancialreport.png](/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
 
-## Configuration
+### Configuration
 
 This section details the basic and not that basic accounting configuration needed prior to the execution of the *Period End Close to Financial Report* business flow.
 
@@ -119,7 +247,7 @@ There can be Localization Packs which include the setup of the taxes for the cou
 The Generic CoA module does not include any taxes setup.
 
 
-## Execution 
+### Execution 
 
 Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:
 
@@ -137,7 +265,7 @@ Overall the Period End Close to Financial Report business flow can be split into
 
 This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
 
-- The ledger accounts balance can be initialized by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) set us *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
+- The ledger accounts balance can be initialized by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
 A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.
 - The financial accounts balance can be initialized in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
 
@@ -283,129 +411,6 @@ And besides:
     the closing balance entry
     and the P&L closing entry
 
-## Payables and Receivables Management
-
-Payables and Receivables Management addresses customer collections and supplier payments as well as other payments not related to invoices but to orders (prepayments) or G/L Items.
-
-![payment-workflow.png](/assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
-
-### Configuration
-
-The following setup needs to be done before performing the process:
-
-- [Payables and Receivables Document Types](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type).
-- [Payment Methods](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
-- [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
-- [Business Partners](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) to use above configured Payment Methods and Financial Accounts.
-
-!!!note
-    It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
-
-### Execution
-
-Overall the *Payables and Receivables Management* business process can be split into the following steps:
-
-- the creation of the orders and invoices to be paid
-- the creation of payments do not related to orders/invoices
-- the review of the status of the pending payments
-- the receipt of the payments made by the customers
-- the payment of the supplier's invoices
-- the recording of the financial account transactions
-- and the reconciliation of the financial account transactions
-
-#### Creation of the orders/invoices to be paid
-
-In the [Procure to Pay](/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) and [Order to Cash](/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) business process we have seen how the orders and invoices have been generated.
-
-Every time that a Purchase or Sales Order is booked or a Purchase or Sales Invoice is completed a Payment Plan is created for that Order / Invoice.
-
-A payment plan contains the payment amount/s expected for the document and its fulfillment. At the same time the invoice  Payment Monitor section gets activated that allows tracking the invoice payment status directly from the invoice window.
-
-!!!note
-    The Payment Monitor section allows to track the purchase & sales invoice payment status directly from the invoice window. In this section it is possible to know whether an invoice is fully paid or not. If the invoice has not been fully paid then the Payment Monitor informs the user how much has been received, how much is pending, the due date of the next payment and the amount that is expected to be received on that date. The status is updated automatically when any payment action happens and by a background process. The date when the payment status was last time calculated is displayed in the form. Grid filtering allows to filter invoices based on fully paid or not criteria.
-
-#### Creation of payments do not related to orders/invoices
-
-In the [Period End Close to Financial Report](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) therefore it is not related to an order/invoice but to a G/L Item.
-
-A G/L Item payment created in a G/L Journals implies:
-
-- the creation of a [Payment Made](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) if the payment information is entered in the *Credit* line of the G/L Journal.
-
-The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
-
-- Or the creation of a [Payment Received](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) if the payment information is entered in the *Debit* line of the G/L Journal.
-
-The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
-
-#### Review of the status of the pending payments
-
-On a periodic basis the Finance Staff reviews the status of the payments pending to be collected / to be paid by looking:
-
-- At the [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
-
-     Overdue check-box allows to narrow down the search and to show only overdue payments.
-     Payment Type displays Receivables, Payables or both.
-
-- In addition to this Sales and Purchase Invoice windows in grid view are available to search open invoices by setting Payment Complete field to No.
-
-#### Receipt of the customer's payments
-
-When a Payment is Received the Finance staff can register it in different ways:
-
-- In the [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window by selecting the Sales Invoices and/or Orders payment is received against.
-
-!!!note
-    Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
-
-- Using the [Add Payment button](/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
-
-- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
-
-If collection does not happen on time:
-
-- The Expected Date of the [Payment Plan](/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-plan_1) can be modified, preventing the debt from being overdue.
-
-- The Amount due of the Payment Plan can be:
-     split in two or more amounts due at a later expected date.
-    or grouped in just one amount due at a later expected date.
-
-- The outstanding balance for a customer can be totally or partially written off.
-
-
-#### Payment of the supplier's invoices
-
-There are 3 ways to pay vendor bills:
-
-- Using the Payment Proposal process. This process supports the automatic payment of a large number of invoices based on the due dates of the lines of the Payment Plan associated with the open Purchase Invoices. The finance staff can request a proposal of all invoices to be paid based on a number of criteria, review that proposal, and then automatically make the payment.
-
-- In the Payment Out window by selecting the Purchase Invoices and/or Orders payment is made against.
-
-!!!note
-    Many businesses do not have credit extended to them and may therefore be required to make a payment against a purchase order. In effect this is a prepayment of a purchase invoice. Later when an invoice is created from an order that already has a payment made against it the invoice automatically inherits the payment made against the order.
-  
-  
-
-- Using the Add Payment button directly within the corresponding Purchase Invoice. It can be when the user needs to make a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
-
-- It is also possible to automate making of a payment on completion of a Purchase Invoice through the configuration of the Payment Method.
-
-#### Recording of the financial account transactions
-
-Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window by pressing the Add Transaction button and selecting either the received or made payments.
-This step in the process can also be completely automated through the configuration of the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
-
-#### Reconciliation of the financial account transactions
-
-Finance Staff receives a bank statement (a paper or electronic bank statement) and reconciles the transactions in the Financial Account marked as Deposited / Withdrawn not Cleared with the actual transactions on the bank statement. This process can be done
-
-- Manually (one by one reconciling the transactions in the Etendo Financial Account with the bank statement lines) by using the Reconcile button of the Financial Account window.
-
-- Automatically by Importing Statement first and then Matching Statement using a matching algorithm.
-
-Additionally, any transactions (receipts and payments) shown on the bank statement and not reflected in the Financial Account should also be entered into Etendo to get them reconciled.
-
-Finally Finance Staff prints the Reconciliation reports (Reconciliation Details, Reconciliations Summary) that explain any difference in the end balance shown for the Financial Account in Etendo and the end balance shown on the bank statement.
 
 ## Asset Acquisition to Dispose
 
