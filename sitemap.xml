@@ -476,6 +476,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started/</loc>
+         <lastmod>2023-12-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup/</loc>
          <lastmod>2023-12-20</lastmod>
          <changefreq>daily</changefreq>
