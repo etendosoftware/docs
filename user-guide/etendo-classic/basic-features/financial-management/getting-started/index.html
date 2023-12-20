@@ -1437,6 +1437,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#period-end-close-to-financial-report" class="md-nav__link">
     Period End Close to Financial Report
   </a>
@@ -1526,6 +1534,11 @@
   <a href="#the-printing-of-the-final-income-statement-and-balance-sheet" class="md-nav__link">
     The printing of the final Income Statement and Balance Sheet
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4153,6 +4166,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+    <nav class="md-nav" aria-label="Accounting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#period-end-close-to-financial-report" class="md-nav__link">
     Period End Close to Financial Report
   </a>
@@ -4242,6 +4263,11 @@
   <a href="#the-printing-of-the-final-income-statement-and-balance-sheet" class="md-nav__link">
     The printing of the final Income Statement and Balance Sheet
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4494,14 +4520,15 @@ This step in the process can also be completely automated through the configurat
 </ul>
 <p>Additionally, any transactions (receipts and payments) shown on the bank statement and not reflected in the Financial Account should also be entered into Etendo to get them reconciled.</p>
 <p>Finally Finance Staff prints the Reconciliation reports (Reconciliation Details, Reconciliations Summary) that explain any difference in the end balance shown for the Financial Account in Etendo and the end balance shown on the bank statement.</p>
-<h2 id="period-end-close-to-financial-report">Period End Close to Financial Report</h2>
+<h2 id="accounting">Accounting</h2>
+<h3 id="period-end-close-to-financial-report">Period End Close to Financial Report</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8WAyKf16HmY?si=lHqZ4KLHM-9siwQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p><em>Period End Close to Financial Report</em> business flow manages the open and close of periods.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="periodendclose-tofinancialreport.png" src="/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png" /></a></p>
-<h3 id="configuration_1">Configuration</h3>
+<h4 id="configuration_1">Configuration</h4>
 <p>This section details the basic and not that basic accounting configuration needed prior to the execution of the <em>Period End Close to Financial Report</em> business flow.</p>
-<h3 id="basic-configuration">Basic Configuration</h3>
+<h4 id="basic-configuration">Basic Configuration</h4>
 <p>There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:</p>
 <ul>
 <li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a></li>
@@ -4544,7 +4571,7 @@ It is recommended to start from a sample chart of accounts like the generic one 
 <p>In-country taxes setup is another key element of the basic accounting configuration.
 There can be Localization Packs which include the setup of the taxes for the country while there can be others which do not include the setup of the taxes for the country.
 The Generic CoA module does not include any taxes setup.</p>
-<h3 id="execution_1">Execution</h3>
+<h4 id="execution_1">Execution</h4>
 <p>Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:</p>
 <ul>
 <li>the opening of the accounting</li>
@@ -4557,14 +4584,14 @@ The Generic CoA module does not include any taxes setup.</p>
 <li>the closing of the accounting year</li>
 <li>and the printing of the final Income Statement and Balance Sheet</li>
 </ul>
-<h4 id="opening-of-the-accounting">Opening of the accounting</h4>
+<h5 id="opening-of-the-accounting">Opening of the accounting</h5>
 <p>This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:</p>
 <ul>
 <li>The ledger accounts balance can be initialized by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journal</a> set as <em>Opening</em>, therefore that ledger entry is set as the <em>Opening Ledger Entry</em>.
 A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.</li>
 <li>The financial accounts balance can be initialized in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account</a> window, in the <em>Initial Balance</em> field, therefore the corresponding financial account/s or banks need to be previously created.</li>
 </ul>
-<h4 id="review-of-the-accounting-transactions">Review of the accounting transactions</h4>
+<h5 id="review-of-the-accounting-transactions">Review of the accounting transactions</h5>
 <p>As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
 For instance the accounting of a purchase invoice will take:</p>
 <ul>
@@ -4583,16 +4610,16 @@ The way to do that is:</p>
 <li>get the transactions posted once again by using the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables">GL Posting by DB Tables</a> feature.
 This feature performs a massive posting of all the accounting or just the accounting of a table for instance the <em>C_Invoice</em> table (Purchase Invoice and Sales Invoice table).</li>
 </ul>
-<h4 id="creation-of-accounting-transactions-and-gl-item-payments">Creation of accounting transactions and G/L item payments</h4>
+<h5 id="creation-of-accounting-transactions-and-gl-item-payments">Creation of accounting transactions and G/L item payments</h5>
 <p>As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journal</a>.
 A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
 G/L items payments are also managed within the <a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management">Payables and Receivables management</a> area.</p>
-<h4 id="printing-of-the-trial-balance-to-check-that-debitcredit">Printing of the Trial Balance to check that Debit=Credit</h4>
+<h5 id="printing-of-the-trial-balance-to-check-that-debitcredit">Printing of the Trial Balance to check that Debit=Credit</h5>
 <p>The <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance">Trial Balance</a> is a list indicating the balances of every single general ledger account at a given point in time.</p>
 <p>The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.</p>
 <p>Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. </p>
 <p>In these situations the difference is posted in a specific suspense account. <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts">Suspense</a> accounts are configured in the General Ledger configuration.</p>
-<h4 id="adjustments-required-prior-to-the-income-calculation">Adjustments required prior to the income calculation</h4>
+<h5 id="adjustments-required-prior-to-the-income-calculation">Adjustments required prior to the income calculation</h5>
 <p>An organization's income statement shows the organization's financial performance over a period of time (usually one year) as the difference between:</p>
 <ul>
 <li>the organization's revenue</li>
@@ -4618,7 +4645,7 @@ Similarly, expenses are recognized as soon as the company receives goods or serv
 <p>Finally an income statement can separate <em>Operating Expenses</em> such as salaries and rent from <em>Non-Operating Expenses</em> such as a lawsuit.</p>
 <p>Operating Expenses are the expenses related to the normal operation of the business and are likely to be incurred in future periods as well.</p>
 <p>This way allows the calculation of the <em>Operating Income</em> as the difference between the <em>Gross Profit</em> and the <em>Total Operating Expenses</em>.</p>
-<h4 id="adjustments-required-prior-to-the-closing-of-the-accounting-year">Adjustments required prior to the closing of the accounting year</h4>
+<h5 id="adjustments-required-prior-to-the-closing-of-the-accounting-year">Adjustments required prior to the closing of the accounting year</h5>
 <p>Other adjustments required can be:</p>
 <ul>
 <li>Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
@@ -4629,7 +4656,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 </ul>
 <p>the income statement as depreciation is an expense
    and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.</p>
-<h4 id="the-printing-of-the-preliminary-income-statement-and-balance-sheet">The printing of the preliminary Income Statement and Balance Sheet</h4>
+<h5 id="the-printing-of-the-preliminary-income-statement-and-balance-sheet">The printing of the preliminary Income Statement and Balance Sheet</h5>
 <p>Once configured, Etendo allows getting and printing the Income Statement and the Balance Sheet whenever it is required as the structure of these reports is based on the chart of accounts tree.</p>
 <p>It is very useful to print these financial reports prior to the closing of the year as it allows getting a sense of whether there are some missing adjustments required to be done prior to the closing of the year or not.</p>
 <p>During the accounting cycle there are other reports which can also be printed:</p>
@@ -4637,7 +4664,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 <li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report">General Ledger Report</a> list all the debits entries and all the credits entries of every T-Account within a given period of time</li>
 <li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report">Journal Entries Report</a> lists in a chronological order every journal entry posted in the ledger.</li>
 </ul>
-<h4 id="the-closing-of-the-fiscal-year">The closing of the fiscal year</h4>
+<h5 id="the-closing-of-the-fiscal-year">The closing of the fiscal year</h5>
 <p>Etendo allows to perform below detailed checks prior to the closing of the fiscal year:</p>
 <ul>
 <li>Run the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report">Not Posted Transaction</a> report to verify that there are no transactions and/or documents in status <em>Complete</em> not posted yet.</li>
@@ -4660,7 +4687,7 @@ That check-box is named <em>Reverse Permanent Account Balances</em>. </p>
 <p class="admonition-title">Info</p>
 <p>For more information, visit the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close">End Year Close</a> window.</p>
 </div>
-<h4 id="the-printing-of-the-final-income-statement-and-balance-sheet">The printing of the final Income Statement and Balance Sheet</h4>
+<h5 id="the-printing-of-the-final-income-statement-and-balance-sheet">The printing of the final Income Statement and Balance Sheet</h5>
 <p>Once a year has been closed every financial report contains the corresponding closing and opening transactions:</p>
 <ul>
 <li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure">Balance Sheet</a> will show the financial situation of the organization as of the end of the closed accounting period.
