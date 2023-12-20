@@ -183,7 +183,8 @@ Additionally, any transactions (receipts and payments) shown on the bank stateme
 
 Finally Finance Staff prints the Reconciliation reports (Reconciliation Details, Reconciliations Summary) that explain any difference in the end balance shown for the Financial Account in Etendo and the end balance shown on the bank statement.
 
-## Period End Close to Financial Report
+## Accounting
+### Period End Close to Financial Report
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8WAyKf16HmY?si=lHqZ4KLHM-9siwQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -191,11 +192,11 @@ Finally Finance Staff prints the Reconciliation reports (Reconciliation Details,
 
 ![periodendclose-tofinancialreport.png](/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
 
-### Configuration
+#### Configuration
 
 This section details the basic and not that basic accounting configuration needed prior to the execution of the *Period End Close to Financial Report* business flow.
 
-### Basic Configuration
+#### Basic Configuration
 
 There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:
 
@@ -247,7 +248,7 @@ There can be Localization Packs which include the setup of the taxes for the cou
 The Generic CoA module does not include any taxes setup.
 
 
-### Execution 
+#### Execution 
 
 Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:
 
@@ -261,7 +262,7 @@ Overall the Period End Close to Financial Report business flow can be split into
 - the closing of the accounting year
 - and the printing of the final Income Statement and Balance Sheet
 
-#### Opening of the accounting
+##### Opening of the accounting
 
 This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
 
@@ -270,7 +271,7 @@ A journal line can be created for each account and its opening balance, once don
 - The financial accounts balance can be initialized in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
 
 
-#### Review of the accounting transactions
+##### Review of the accounting transactions
 
 As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
 For instance the accounting of a purchase invoice will take:
@@ -293,13 +294,13 @@ The way to do that is:
 - get the transactions posted once again by using the [GL Posting by DB Tables](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables) feature.
 This feature performs a massive posting of all the accounting or just the accounting of a table for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
 
-#### Creation of accounting transactions and G/L item payments
+##### Creation of accounting transactions and G/L item payments
 
 As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
 A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
 G/L items payments are also managed within the [Payables and Receivables management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) area.
 
-#### Printing of the Trial Balance to check that Debit=Credit
+##### Printing of the Trial Balance to check that Debit=Credit
 
 The [Trial Balance](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
 
@@ -309,7 +310,7 @@ Etendo does not allow posting journal entries which do not balance. A G/L Journa
 
 In these situations the difference is posted in a specific suspense account. [Suspense](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) accounts are configured in the General Ledger configuration.
 
-#### Adjustments required prior to the income calculation
+##### Adjustments required prior to the income calculation
 
 An organization's income statement shows the organization's financial performance over a period of time (usually one year) as the difference between:
 
@@ -338,7 +339,7 @@ Operating Expenses are the expenses related to the normal operation of the busin
 
 This way allows the calculation of the *Operating Income* as the difference between the *Gross Profit* and the *Total Operating Expenses*.
 
-#### Adjustments required prior to the closing of the accounting year
+##### Adjustments required prior to the closing of the accounting year
 
 Other adjustments required can be:
 
@@ -351,7 +352,7 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
    the income statement as depreciation is an expense
    and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.
 
-#### The printing of the preliminary Income Statement and Balance Sheet
+##### The printing of the preliminary Income Statement and Balance Sheet
 
 Once configured, Etendo allows getting and printing the Income Statement and the Balance Sheet whenever it is required as the structure of these reports is based on the chart of accounts tree.
 
@@ -362,7 +363,7 @@ During the accounting cycle there are other reports which can also be printed:
 - the [General Ledger Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
 - the [Journal Entries Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
 
-#### The closing of the fiscal year
+##### The closing of the fiscal year
 
 Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
 
@@ -391,7 +392,7 @@ Etendo uses the adjustment period (i.e. December 31st) for accounting the closin
 
 
 
-#### The printing of the final Income Statement and Balance Sheet
+##### The printing of the final Income Statement and Balance Sheet
 
 Once a year has been closed every financial report contains the corresponding closing and opening transactions:
 
