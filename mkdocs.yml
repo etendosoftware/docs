@@ -156,7 +156,8 @@ nav:
           - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/warehouse-management/setup.md
-        - Production Management: 
+        - Production Management:
+          - Getting Started: user-guide/etendo-classic/basic-features/production-management/getting-started.md 
           - Transactions:   user-guide/etendo-classic/basic-features/production-management/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/production-management/setup.md
         - Material Requirement Planning: 
