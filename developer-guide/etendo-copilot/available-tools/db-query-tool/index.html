@@ -17,7 +17,7 @@
         <link rel="next" href="../../how-to-create-copilot-tools/">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -3086,8 +3086,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           DB Query Tool
@@ -3106,14 +3104,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       In This Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#functionality" class="md-nav__link">
@@ -3123,9 +3126,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-query-generation" class="md-nav__link">
+    SQL query generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-queries-for-data-retrieval" class="md-nav__link">
+    Natural language queries for data retrieval
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3874,14 +3897,19 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       In This Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#functionality" class="md-nav__link">
@@ -3891,9 +3919,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-query-generation" class="md-nav__link">
+    SQL query generation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-queries-for-data-retrieval" class="md-nav__link">
+    Natural language queries for data retrieval
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3942,10 +3990,12 @@
   
 
 
+  <h1>DB Query Tool</h1>
+
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: com.etendoerp.copilot.dbquerytool</p>
-<h1 id="overview">Overview</h1>
-<p>Generate SQL queries with Etendo's contextual knowledge from natural language.</p>
-<h3 id="functionality">Functionality</h3>
+<h2 id="overview">Overview</h2>
+<p>Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.</p>
+<h2 id="functionality">Functionality</h2>
 <ol>
 <li>
 <p>Add Copilot DB Query Tool dependency in the Etendo Classic project, In <code>build.gradle</code>, add:
@@ -3965,23 +4015,71 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 <ol>
 <li>The tool will execute an agent that will ask to the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.</li>
 </ol>
-<h3 id="example">Example</h3>
-<p>Having Copilot running, we can execute the following command:</p>
+<h2 id="examples">Examples</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide sufficient information in the prompt.
+Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where copilot.start is running. You will be able to see the tables involved, the query formed and its execution if necessary. </p>
+</div>
+<h3 id="sql-query-generation">SQL query generation</h3>
+<ol>
+<li>
 <p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Can you generate a query to know  the name of the best 5 customer of junuary 2021&quot;</span><span class="w"> </span>
 </span></code></pre></div>
 The tool will generate the following answer:</p>
-<p><strong><em>Here is the SQL query to get the names of the top 5 customers for January 2021:</em></strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">inv</span><span class="p">.</span><span class="n">grandtotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">c_invoice</span><span class="w"> </span><span class="n">inv</span><span class="w"> </span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="n">bp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">issotrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">isactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">docstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO&#39;</span><span class="w"> </span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">dateinvoiced</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2021-01-31&#39;</span><span class="w"> </span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="w"> </span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<p><em>Here is the SQL query to get the names of the top 5 customers for January 2021:</em></p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">inv</span><span class="p">.</span><span class="n">grandtotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">c_invoice</span><span class="w"> </span><span class="n">inv</span><span class="w"> </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="n">bp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">issotrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">isactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">docstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO&#39;</span><span class="w"> </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">dateinvoiced</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2021-01-31&#39;</span><span class="w"> </span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="w"> </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 </span></code></pre></div>
+2.
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span>
+</span></code></pre></div>
+The tool will generate the following answer:</p>
+<p><em>Here is the SQL query to get the names of the top 5 customers for January 2021:</em></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">inv</span><span class="p">.</span><span class="n">grandtotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">c_invoice</span><span class="w"> </span><span class="n">inv</span><span class="w"> </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="n">bp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">issotrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">isactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">docstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO&#39;</span><span class="w"> </span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">dateinvoiced</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2021-01-31&#39;</span><span class="w"> </span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="w"> </span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="natural-language-queries-for-data-retrieval">Natural language queries for data retrieval</h3>
+<ol>
+<li>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;What is the amount of the last F&amp;B España - Región Sur organization sales invoice??&quot;</span><span class="w"> </span>
+</span></code></pre></div>
+The tool will generate the following answer:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>🤖 👋 Hello Human!
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>🤖 I&#39;m working on your request: What is the amount of the last sales invoice?
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>🤖 The amount of the last sales invoice is $249.00.
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>🤖 Glad to help you! 😃
+</span></code></pre></div>
+</li>
+<li>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Which is the invoice with the highest registered amount?&quot;</span><span class="w">   </span>
+</span></code></pre></div>
+The tool will generate the following answer:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>🤖 👋 Hello Human!
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>🤖 I&#39;m working on your request: which is the invoice with the highest registered amount?
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>🤖 The invoice with the highest registered amount is invoice number 1000102 with a grand total of 17,440,824.40
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>🤖 Glad to help you! 😃
+</span></code></pre></div></p>
+</li>
+</ol>
 
 
 
