@@ -19,7 +19,7 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](/docs/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
+    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
 
 
 To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
