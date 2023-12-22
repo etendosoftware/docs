@@ -3999,8 +3999,13 @@
 <ol>
 <li>
 <p>Add Copilot DB Query Tool dependency in the Etendo Classic project, In <code>build.gradle</code>, add:
-    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot.dbquerytool:1.0.1&#39;</span><span class="o">)</span>
+    <div class="language-groovy highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp:copilot.dbquerytool:1.0.2&#39;</span><span class="o">)</span>
 </span></code></pre></div></p>
+</li>
+<li>
+<p>In <code>gradle.properties</code> file you must add <code>OPENAI_MODEL</code> environment variables. </p>
+<div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">OPENAI_MODEL</span><span class="o">=</span><span class="n">gpt</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">1106</span><span class="o">-</span><span class="n">preview</span>
+</span></code></pre></div>
 </li>
 <li>
 <p>Restart Docker image using <code>./gradlew copilot.stop</code> and <code>./gradlew copilot.start</code> tasks</p>
@@ -4009,7 +4014,7 @@
 <p>The tool can be executed with:</p>
 </li>
 </ol>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Query&#39;s description&quot;</span>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Query&#39;s description&quot;</span>
 </span></code></pre></div>
 Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the etendo classic database, but you can tell it in the prompt to access another database.</p>
 <ol>
@@ -4024,59 +4029,80 @@ Note that it is possible to see the log of the call chain made by dbquerytool fr
 <h3 id="sql-query-generation">SQL query generation</h3>
 <ol>
 <li>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Can you generate a query to know  the name of the best 5 customer of junuary 2021&quot;</span><span class="w"> </span>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;query to know the name of the best 5 customer of junuary 2021?&quot;</span><span class="w">  </span>
 </span></code></pre></div>
-The tool will generate the following answer:</p>
-<p><em>Here is the SQL query to get the names of the top 5 customers for January 2021:</em></p>
-<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">inv</span><span class="p">.</span><span class="n">grandtotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">c_invoice</span><span class="w"> </span><span class="n">inv</span><span class="w"> </span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="n">bp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">issotrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">isactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">docstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO&#39;</span><span class="w"> </span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">dateinvoiced</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2021-01-31&#39;</span><span class="w"> </span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="w"> </span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span></code></pre></div>
-2.
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span>
-</span></code></pre></div>
-The tool will generate the following answer:</p>
-<p><em>Here is the SQL query to get the names of the top 5 customers for January 2021:</em></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">inv</span><span class="p">.</span><span class="n">grandtotal</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">c_invoice</span><span class="w"> </span><span class="n">inv</span><span class="w"> </span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="n">bp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">c_bpartner_id</span><span class="w"> </span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">issotrx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">isactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span><span class="w"> </span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">docstatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;CO&#39;</span><span class="w"> </span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">inv</span><span class="p">.</span><span class="n">dateinvoiced</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="s1">&#39;2021-01-01&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="s1">&#39;2021-01-31&#39;</span><span class="w"> </span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">bp</span><span class="p">.</span><span class="n">name</span><span class="w"> </span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_sales</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
-</span></code></pre></div>
+The tool will generate the following answer:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>🤖 👋 Hello Human!
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>🤖 I&#39;m working on your request: query to know the name of the best 5 customer of junuary 2021?
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>🤖 The SQL query to retrieve the names of the top 5 customers based on purchase amount for January 2021 is:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>SELECT bp.name, SUM(inv.grandtotal) AS total_purchase_amount
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>FROM c_invoice inv
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>JOIN c_bpartner bp ON inv.c_bpartner_id = bp.c_bpartner_id
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>WHERE inv.issotrx = &#39;N&#39; AND inv.isactive = &#39;Y&#39;
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>AND inv.docstatus IN (&#39;CO&#39;, &#39;CL&#39;)
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>AND inv.dateinvoiced BETWEEN &#39;2021-01-01&#39; AND &#39;2021-01-31&#39;
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>GROUP BY bp.name
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>ORDER BY total_purchase_amount DESC
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>LIMIT 5;
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>This query will select the names of the business partners (`bp.name`) and the sum of their total purchase amounts (`total_purchase_amount`) from the invoices table (`c_invoice`) for the month of January 2021. It will group the results by the business partner&#39;s name and order them in descending order by the total purchase amount, limiting the results to the top 5 customers.
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>🤖 Glad to help you! 😃
+</span></code></pre></div></p>
+</li>
+<li>
+<div class="language-text highlight"><pre><span></span><code>``` bash title=&quot;Terminal&quot;    
+./gradlew copilot.do -Pprompt=&quot;Query to obtain which is the invoice with the highest registered amount?&quot; 
+```
+The tool will generate the following answer:
+```
+🤖 👋 Hello Human!
+🤖 I&#39;m working on your request: Query to obtain which is the invoice with the highest registered amount?
+🤖 The SQL query to find the invoice with the highest registered amount is:
+
+SELECT c_invoice_id, grandtotal FROM c_invoice WHERE isactive = &#39;Y&#39; ORDER BY grandtotal DESC LIMIT 1;
+
+This query selects the invoice ID and the grand total amount from the `c_invoice` table where the invoice is active (`isactive = &#39;Y&#39;`), orders the results by the grand total in descending order, and limits the results to only the top record.
+🤖 Glad to help you! 😃
+```
+</code></pre></div>
 </li>
 </ol>
 <h3 id="natural-language-queries-for-data-retrieval">Natural language queries for data retrieval</h3>
 <ol>
 <li>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;What is the amount of the last F&amp;B España - Región Sur organization sales invoice??&quot;</span><span class="w"> </span>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;What is the amount of the last F&amp;B España - Región Sur organization sales invoice?&quot;</span><span class="w"> </span>
 </span></code></pre></div>
 The tool will generate the following answer:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>🤖 👋 Hello Human!
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>🤖 I&#39;m working on your request: What is the amount of the last sales invoice?
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>🤖 The amount of the last sales invoice is $249.00.
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>🤖 Glad to help you! 😃
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>🤖 👋 Hello Human!
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>🤖 I&#39;m working on your request: What is the amount of the last sales invoice?
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>🤖 The amount of the last sales invoice is $249.00.
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>🤖 Glad to help you! 😃
 </span></code></pre></div>
 </li>
 <li>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Which is the invoice with the highest registered amount?&quot;</span><span class="w">   </span>
+<div class="language-text highlight"><pre><span></span><code>``` bash title=&quot;Terminal&quot;    
+./gradlew copilot.do -Pprompt=&quot;Can you execute which is the invoice (c_invoice) with the highest registered amount?&quot;
+
+```
+The tool will generate the following answer:
+```
+🤖 👋 Hello Human!
+🤖 I&#39;m working on your request: Can you execute which is the invoice (c_invoice) with the highest registered amount?
+🤖 The invoice with the highest registered amount in the `c_invoice`
+table has the ID &#39;2D6314F246FE4C21AAE57F12EFD341C5&#39; and the amount is 17,440,824.40.
+🤖 Glad to help you! 😃
+```
+</code></pre></div>
+</li>
+<li>
+<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;Can you execute the sum of the orders in the last month&quot;</span>
 </span></code></pre></div>
 The tool will generate the following answer:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>🤖 👋 Hello Human!
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>🤖 I&#39;m working on your request: which is the invoice with the highest registered amount?
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>🤖 The invoice with the highest registered amount is invoice number 1000102 with a grand total of 17,440,824.40
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>🤖 Glad to help you! 😃
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>🤖 👋 Hello Human!
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>🤖 I&#39;m working on your request: can you execute the sum of the orders in the last month
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>🤖 The sum of the orders in the last month is $7,063.59.
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>🤖 Glad to help you! 😃
 </span></code></pre></div></p>
 </li>
 </ol>
