@@ -13,7 +13,7 @@ tags:
 
 The Production Management module allows managing the standard productive process: production plan, work requirement, end products report and its direct and indirect costs. It is also possible to manage quality control and machine maintenance in production.
 
-### **Production Management**
+## Production Management
 
 The main documents to manage the production process are:
 
@@ -58,7 +58,7 @@ Work Efforts can be posted to the [_General Ledger Journal_](/user-guide/etendo-
 
 #### **Execution**
 
-Sales staff enter Sales Order for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced.
+Sales staff enters Sales Order for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced.
 
 Also, if the stock level is below the safety stock level, products have to be produced.
 
@@ -87,7 +87,7 @@ The staff responsible for executing the production can see on the Production Run
 
 At the end of each shift, the production managers enter the information of what is produced in the [_Production Run_](/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run_1) screen.
 
-### **Relationship with other areas**
+## Relationship with other areas
 
 Production Management interacts with the following modules:
 
