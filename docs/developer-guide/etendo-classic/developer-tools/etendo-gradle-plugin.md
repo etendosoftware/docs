@@ -690,9 +690,9 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
 
     ```
 
-    | Command line parameters                   | Description                                                                                           |
-    |  -------------------                      | ------------------------------------                                                                  |
-    | `-DclientId=<AD_Client_ID>`                | `AD_Client_ID` of `AD_Client` table to be used on this process to delete all information of this client.  |
+    | Command line parameters                   | Description                                                                                               |
+    |  -------------------                      | ------------------------------------                                                                      |
+    | `-DclientId=<AD_Client_ID>`               | `AD_Client_ID` of `AD_Client` table to be used on this process to delete all information of this client.  |
 
     !!!danger "Danger Process"
         This task execute the same legacy process that you can run in the application like as System Administrator role. It is a very sensitive task you must be very careful because this can lead to crashes in the system if used incorrectly.
