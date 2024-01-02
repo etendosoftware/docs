@@ -4,7 +4,7 @@ tags:
  - material requirement planning
  - process plan
  - product
- - work requirement
+ - requirement
 ---
 
 ![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
@@ -22,6 +22,10 @@ The Master Requirement Planning consists of two plans:
 
 *Planning Methods* are entered to define what supply components are taken into account with the calculations of these plans.
 
+![](/assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
+
+
+
 ### **Configuration**
 
 Apart from the set up screens in the MRP module that are configured, additional set ups are required.
@@ -29,7 +33,7 @@ For the products that are planned in the *Manufacturing Plan*, the following con
 
 - the [Process plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)  is set up for the product.
 - the production checkbox and the Process Plan name are selected in the [Product](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) screen.
-the [Manufacturing](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
+The [Manufacturing](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
 
 For the products that are planned in the *Purchasing Plan*, the following configurations are required:
 
@@ -43,7 +47,7 @@ For the products that are planned in the *Purchasing Plan*, the following config
         - Purchase Price List
         - PO Payment Method
         - PO Payment Terms
-    - [Location/Address](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendorcreditor) tab
+    - [Location/Address](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#locationaddress) tab
 
 - The [Manufacturing](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab in the Product screen is filled out with the *Planning Method* and *Planner* information.
 
@@ -54,8 +58,8 @@ In the created overview the material planner reviews and analyzes the lines. Bas
 
 - If required, adjustments to the set ups, for example the planning method, are done. The lines of the plan are recalculated by clicking the Recalculate Dates/Quantities button.
 - If required, manual changes to the created lines with regards to quantities and dates are made.
-- once the plan is correct, any suggested requisitions are created by clicking the Generate Material Requisitions button and any suggested Work Requirements are created by clicking the Generate Work Requirements button.
-- the material planner completes the created requisition(s) and processes the created Work Requirement(s).
+- Once the plan is correct, any suggested requisitions are created by clicking the Generate Material Requisitions button and any suggested Work Requirements are created by clicking the Generate Work Requirements button.
+- The material planner completes the created requisition(s) and processes the created Work Requirement(s).
 
 
 The material planner then enters a Purchasing Plan for a product for a certain time period and processes the plan.
@@ -63,8 +67,8 @@ In the created overview the material planner reviews and analyzes the lines. Bas
 
 - If required, adjustments to the set ups, for example the planning method, are done. The lines of the plan are deleted and the plan is reprocessed.
 - If required, manual changes to the created lines with regards to quantities and dates are made.
-- once the plan is correct, any suggested purchase orders are created by clicking the *Create Purchase Orders* button.
-- the material planner completes the created purchase order.
+- Once the plan is correct, any suggested purchase orders are created by clicking the *Create Purchase Orders* button.
+- The material planner completes the created purchase order.
 
 ## Relationship with other areas
 

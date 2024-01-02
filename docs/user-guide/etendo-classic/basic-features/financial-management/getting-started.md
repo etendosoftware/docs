@@ -413,7 +413,10 @@ And besides:
     and the P&L closing entry
 
 
-## Asset Acquisition to Dispose
+## Assets 
+### Asset Acquisition to Dispose
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_PhqumhZr8U?si=KKUCdccNMHP6f0SV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Manages global assets life cycle from acquisition to disposition, including depreciation and other write-downs.
 
