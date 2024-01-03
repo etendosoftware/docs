@@ -18,6 +18,52 @@ Clients are created by running the Initial Client setup process available for th
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
 
+## Initial Client Setup
+
+### Overview
+
+The Initial Client setup process allows creating a Client and a Client Admin role with no access restrictions.
+
+!!!warning
+    The initial client setup process is an automated process which can be run by logging in Etendo as System Administrator role.
+
+This process allows the user to:
+
+- enter the **name of the client**, the **client admin user name** and a **password**
+- enter the **base currency** of the client, that is going to be the currency of the Client regardless an Organization which belongs to it might have a different currency.
+- include **Accounting** for the client.
+There is a checkbox named *Include Accounting* which allows to select an accounting csv file in the field *Accounting File* or an accounting reference data within the section Reference Data.
+
+Etendo distributes accounting csv file as modules which can be applied as reference data. This kind of modules are part of the Etendo localization for a given country.
+If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
+
+   - a [Fiscal Calendar](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar) which can be shared by all the Legal with Accounting organizations types which belongs to that [Client](/user-guide/etendo-classic/basic-features/general-setup/client/)
+   - and an Account Tree or Chart of Accounts and a General Ledger configuration which is shared by all the organizations created within the Client.
+
+The General Ledger Configuration and the Chart of Accounts created by default can be later on customized as explained in the [Setup Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup) section of the Getting Started.
+
+The General Ledger Configuration is linked to the Account Tree as the Account is a mandatory [dimension](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#dimension) of the general ledger configuration.
+
+!!!info
+    It is possible to create a client without selecting the Include Accounting checkbox, in fact that is the recommended option. Accounting configuration will then rely on the organization type being created later on in the Client.
+
+!!!info
+    Read the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) documetation for more information.
+
+- finally it is possible to apply reference data such as:
+
+   - **Standard document types for orders, invoices, etc**, this one is selected by default as it is necessary for creating transactional data such as orders and invoices.
+   - **Document types and default algorithm for bank statements auto-matching**, this one is similar to the previous one but for specific financial flows such as [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out), [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) and [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+   - or reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension bundles.
+
+   Every new Client created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
+
+- Organization
+- Business Partner
+- and Product
+
+unless the *Central Maintenance* checkbox is unselected for the Client which would imply the configuration and management of all the accounting dimensions (mandatory and not mandatory) at organization level.
+
 ## Client
 
 The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.
@@ -77,7 +123,7 @@ It is always possible to customize the defaulted configuration, for instance:
     - check the checkbox "Show in Lines" for the Organization dimension
     - and delete or modify the records linked to the "Organization" accounting dimension in the Dimension tab as all those records are defaulted not to show Organization in any document category lines.
 
-## Information
+### Information
 
 Information tab allows the user to add, edit and maintain client generic information such as default units of measure and images.
 
@@ -102,7 +148,7 @@ Additional information allowed to be specified:
       - and _Company Documents_
 - _Allow Negative stock_ to do this, Etendo does not check stock if that is not required.
 
-## Email Configuration
+### Email Configuration
 
 Documents such as orders or invoices can be sent out by email. Email configuration tab allows the user to configure the email server, account and password, variables which require to be properly set up prior to sending documents by email.
 
@@ -136,7 +182,7 @@ In the provided screenshot, you can see a valid configuration for a gmail accoun
 - **SMTP Port**, 465
 - **SMTP Connection Timeout**, 600 (10 minutes)
 
-## Dimensions
+### Dimensions
 
 Dimensions tab allows the user to configure whether a given accounting dimension is going to be available in the header and/or in the lines of a given document category or not.
 
