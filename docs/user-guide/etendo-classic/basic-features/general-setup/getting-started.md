@@ -13,22 +13,21 @@ The first steps to follow to configure Etendo are:
 
 #### Installation of the Localization Bundle if available for the country
 
-
-A Localization Bundle can include at least:
-
--the complete **translation** for the official language(s) in the country.
-The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at [profile](/getting-started/user-interface/workspace#profile).
-
--the **chart of accounts** that defines the accounting structure if any to comply with the approved local practice and laws.
-The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
-
--and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
-
 !!!info
     Read the [Install Modules](/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) documentation to install the Localization bundle. 
 
-This can be considered the first basic step while setting Etendo instances as it is required to install first the localization packs if any, in order to apply the accounting reference data or Chart of Accounts while creating either the Client or the Organization later on.
+This can be considered the first basic step while setting Etendo instances as it is required to install first the localization bundle if any, in order to apply the accounting reference data or Chart of Accounts while creating either the Client or the Organization later on.
+
+A Localization Bundle can include at least:
+
+- the complete **translation** for the official language(s) in the country.
+The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at [profile](/getting-started/user-interface/workspace#profile).
+
+- the **chart of accounts** that defines the accounting structure if any to comply with the approved local practice and laws.
+The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
+
+- and the setup of the **taxes** which comply with the in-country tax authorities requirements.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
 
 #### Initial Client Setup
 
