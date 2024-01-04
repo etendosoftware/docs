@@ -86,13 +86,13 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 :octicons-package-16: Javapackage: com.etendoerp.payment.removal.template
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/e38GszuIF4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TLbjMLjGYwo?si=uGtWnNHNa7gV4_l5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 The payments to be deleted or reactivated can be found in different statuses: Awaiting execution, Payment made, Payment received, Withdrawn not cleared, Deposited not cleared, Payment cleared (provided that the payment has been reconciled by an automatic method and not by a manual method), Post and Unpost.
 
-The button Remove Payment is available in the Sales Order, Purchase Order, Sales Invoice, Purchase Invoice, Payment In y Payment Out windows.The Reactivate button is only available in the Payment In and Payment Out windows. Finally, the buttons Reactivate Transaction, Remove Transaction, Reactivate Reconciliation and Remove Reconciliation are available in the Financial Account window.
+The button Remove Payment is available in the Sales Order, Purchase Order, Sales Invoice, Purchase Invoice, Payment In y Payment Out windows.The Reactivate and the Advanced reactivation buttons are only available in the Payment In and Payment Out windows. Finally, the buttons Reactivate Transaction, Remove Transaction, Reactivate Reconciliation and Remove Reconciliation are available in the Financial Account window.
 
 
 !!! info

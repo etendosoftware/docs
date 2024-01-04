@@ -30,4 +30,3 @@ mike deploy --push --update-aliases 23.x latest
 
 # mike set-default --push latest
 ```
-x

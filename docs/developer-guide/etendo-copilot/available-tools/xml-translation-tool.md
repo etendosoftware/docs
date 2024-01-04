@@ -8,7 +8,7 @@ Translates the content of an XML file from one language to another, as specified
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot.xmltranslationtool:1.0.0')
+    implementation('com.etendoerp:copilot.xmltranslationtool:1.1.1')
     ```
 2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
 

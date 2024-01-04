@@ -57,233 +57,9 @@ Those dimensions are then available just for that Organization.
 
 This application area covers the [Period End Close to Financial Report](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) business flow.
 
-## Period End Close to Financial Report
-
-*Period End Close to Financial Report* business flow manages the open and close of periods.
-
-![periodendclose-tofinancialreport.png](/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
-
-## Configuration
-
-This section details the basic and not that basic accounting configuration needed prior to the execution of the *Period End Close to Financial Report* business flow.
-
-### Basic Configuration
-
-There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:
-
-- [Fiscal Calendar](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar)
-
-A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.
-
-- [Account Tree](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree)
-
-An account tree is the way Etendo captures the *Chart of Accounts* (CoA) of an Organization.
-
-The Chart of Accounts is a list of all the accounts used in an organization's general ledger.
-
-Accounts such as balance sheet accounts (assets, liabilities and owner's equity) and income statement accounts (revenues, expenses, gains and losses).
-
-!!!Note 
-    It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
-
-- [General Ledger configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig)
-
-The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
-
-Having said that, the accounting configuration detailed in this section is the one required for *legal entities with accounting*, including the business units, because these organization types are the only ones which can have assigned:
-
-- a Chart of Accounts
-- a General Ledger configuration
-- and a Fiscal Calendar
-
-Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) and in the [Organization](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization) section.
-
-Very briefly:
-
-- *Legal without accounting* organizations do not require accounting therefore do not require any basic nor advanced accounting configuration.
-- *Generic* organizations however can have their own General Ledger configuration and Chart of Accounts but the accounting periods can not be opened and closed independently at its level.
-This type of organization inherits the Fiscal Calendar of the *legal with accounting* organization they belong to.
-- and finally *Organization* ones can have as well a general ledger configuration and a Chart of Accounts but with the aim of being shared among all the organizations underneath.
-This organization type can not have a fiscal calendar assigned and besides the transactions within it are not allowed.
-
-Additionally, some countries such as Spain or France require that a specific *Chart of Accounts* is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the Income statement and in the Balance Sheet.
-
-On the other hand, there are countries such as the USA where a specific *Chart of Accounts* is not required.
-
-For those cases Etendo provides a Generic Chart of Accounts module which includes a sample Chart of Accounts which can be modified as required.
-It is recommended to start from a sample chart of accounts like the generic one and evolve it for the organization's needs rather than starting from scratch.
-
-In-country taxes setup is another key element of the basic accounting configuration.
-There can be Localization Packs which include the setup of the taxes for the country while there can be others which do not include the setup of the taxes for the country.
-The Generic CoA module does not include any taxes setup.
-
-
-## Execution 
-
-Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:
-
-- the opening of the accounting
-- the review of the accounting transactions
-- the creation of accounting transactions and G/L item payments
-- the printing of the Trial Balance
-- the adjustments required prior to the income calculation
-- the adjustments require prior to the closing of the accounting year
-- the printing of the preliminary Income Statement and Balance Sheet
-- the closing of the accounting year
-- and the printing of the final Income Statement and Balance Sheet
-
-#### Opening of the accounting
-
-This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
-
-- The ledger accounts balance can be initialized by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) set us *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
-A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.
-- The financial accounts balance can be initialized in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
-
-
-#### Review of the accounting transactions
-
-As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
-For instance the accounting of a purchase invoice will take:
-
-- the expense account setup for the product being purchased in the [Accounting](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting) tab of the *Product* window
-- the vendor liability account setup for the vendor in the [Vendor Accounting](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting) tab of the *Business Partner* window
-- and the tax credit account setup in the [Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting_1) tab of the *Tax Rate* window.
-
-Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.
-Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.
-
-
-Additionally, the [Accounting Transactions Details](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#accounting-transaction-details) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report shows the transactions which need to be accounted for but have not been accounted yet.
-
-Finally Etendo allows to massively fix accounting errors if any, for instance a vendor liability account wrongly assigned to a vendor or to a set of vendors.
-The way to do that is:
-
-- run the [Reset Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
-- correct the accounting configuration
-- get the transactions posted once again by using the [GL Posting by DB Tables](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables) feature.
-This feature performs a massive posting of all the accounting or just the accounting of a table for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
-
-#### Creation of accounting transactions and G/L item payments
-
-As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
-A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
-G/L items payments are also managed within the [Payables and Receivables management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) area.
-
-#### Printing of the Trial Balance to check that Debit=Credit
-
-The [Trial Balance](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
-
-The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.
-
-Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. 
-
-In these situations the difference is posted in a specific suspense account. [Suspense](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) accounts are configured in the General Ledger configuration.
-
-#### Adjustments required prior to the income calculation
-
-An organization's income statement shows the organization's financial performance over a period of time (usually one year) as the difference between:
-
-- the organization's revenue
-- and the organization's expenses
-
-In order to get an accurate income calculation, there are some adjustments required to be done first:
-
-- the organization needs to *review the revenues and the expenses* to be sure that the ones accounted within the period which are going to be closed are the ones which should be accounted regardless whether they are paid or not. This kind of adjustment is not required if the organization follows the accrual method of accounting that is Etendo method of accounting.
-Under the accrual method of accounting, revenue is recorded as soon as services are provided or goods are delivered and therefore invoiced, regardless of when cash is received.
-Similarly, expenses are recognized as soon as the company receives goods or services and therefore gets invoiced, regardless of when it actually pays for them.
-
-- the organization needs to calculate the *Cost of Goods Sold* (CoGS). The CoGS is the amount that the company paid for the goods that it sold over the course of the period. This calculation depends on the method of keeping track of inventory. There are two primary methods, the perpetual method and the periodic method:
-
-   the perpetual method is used by any business that keeps real-time information on inventory levels and that tracks inventory on an item-by-item basis.
-   This method allows very accurate recordkeeping as to the Cost of Goods Sold which is the sum of the cost of all the items sold over the period.
-
-   The periodic method is used by any business that counts inventory at regular intervals.
-   When using this method Cost of Goods Sold is calculated using the following equation:
-   (Beginning Inventory + Inventory purchases - Ending Inventory = Cost of Goods Sold)
-   Besides if a business is dealing with changing per-unit inventory costs, a specific method of calculating the CoGS needs to be used, that could either be FIFO, LIFO or Average Cost.
-
-Finally an income statement can separate *Operating Expenses* such as salaries and rent from *Non-Operating Expenses* such as a lawsuit.
-
-Operating Expenses are the expenses related to the normal operation of the business and are likely to be incurred in future periods as well.
-
-This way allows the calculation of the *Operating Income* as the difference between the *Gross Profit* and the *Total Operating Expenses*.
-
-#### Adjustments required prior to the closing of the accounting year
-
-Other adjustments required can be:
-
-- Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
-This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
-- Taxes such as the VAT needs to be settled periodically.
-It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.
-- Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:
-
-   the income statement as depreciation is an expense
-   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.
-
-#### The printing of the preliminary Income Statement and Balance Sheet
-
-Once configured, Etendo allows getting and printing the Income Statement and the Balance Sheet whenever it is required as the structure of these reports is based on the chart of accounts tree.
-
-It is very useful to print these financial reports prior to the closing of the year as it allows getting a sense of whether there are some missing adjustments required to be done prior to the closing of the year or not.
-
-During the accounting cycle there are other reports which can also be printed:
-
-- the [General Ledger Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
-- the [Journal Entries Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
-
-#### The closing of the fiscal year
-
-Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
-
-- Run the [Not Posted Transaction](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
-- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#active-tables).
-- Unscheduled the [Accounting Server Process](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) therefore an stable scene can be assured.
-- Check the [Financial Account/s](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/).
-
-Before running the close year process the accounting periods can be [closed](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
-The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) prior to closing the year.
-
-The *Close Year* process can be executed from the [End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
-
-The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
-
-There is a check-box in the [General Accounts](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
-That check-box is named *Reverse Permanent Account Balances*. 
-
-- If it is checked the closing of the year process includes an entry to reverse the balance sheet accounts besides the P&L closing entry.
-- If it does not check the closing of the year process includes just the P&L closing entry.
-
-Etendo uses the adjustment period (i.e. December 31st) for accounting the closing transactions if any, and the next period's first date (i.e. January 1st) for accounting the opening transactions if any.
-
-!!!info
-    For more information, visit the [End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
-
-
-
-#### The printing of the final Income Statement and Balance Sheet
-
-Once a year has been closed every financial report contains the corresponding closing and opening transactions:
-
-- the [Balance Sheet](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the financial situation of the organization as of the end of the closed accounting period.
-Etendo allows to get a two columns balance sheet:
-          One column shows the balances as of the end of the most recent accounting period
-          and the other column shows the balances as of the prior period end.
-
-This balance allows seeing how the financial position of the organization has changed over time.
-
-- the [Income Statement](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the organization performance over the year closed
-
-And besides: 
-
-- the [General ledger Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) allows to show for a given accounting period below entries posted by the Close Year process:
-    the opening balance entry
-    the closing balance entry
-    and the P&L closing entry
-
 ## Payables and Receivables Management
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DmeLeQkg-cg?si=See53a-gprwcumPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Payables and Receivables Management addresses customer collections and supplier payments as well as other payments not related to invoices but to orders (prepayments) or G/L Items.
 
@@ -407,7 +183,240 @@ Additionally, any transactions (receipts and payments) shown on the bank stateme
 
 Finally Finance Staff prints the Reconciliation reports (Reconciliation Details, Reconciliations Summary) that explain any difference in the end balance shown for the Financial Account in Etendo and the end balance shown on the bank statement.
 
-## Asset Acquisition to Dispose
+## Accounting
+### Period End Close to Financial Report
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8WAyKf16HmY?si=lHqZ4KLHM-9siwQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+*Period End Close to Financial Report* business flow manages the open and close of periods.
+
+![periodendclose-tofinancialreport.png](/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
+
+#### Configuration
+
+This section details the basic and not that basic accounting configuration needed prior to the execution of the *Period End Close to Financial Report* business flow.
+
+#### Basic Configuration
+
+There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:
+
+- [Fiscal Calendar](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar)
+
+A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.
+
+- [Account Tree](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree)
+
+An account tree is the way Etendo captures the *Chart of Accounts* (CoA) of an Organization.
+
+The Chart of Accounts is a list of all the accounts used in an organization's general ledger.
+
+Accounts such as balance sheet accounts (assets, liabilities and owner's equity) and income statement accounts (revenues, expenses, gains and losses).
+
+!!!Note 
+    It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
+
+- [General Ledger configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig)
+
+The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
+
+Having said that, the accounting configuration detailed in this section is the one required for *legal entities with accounting*, including the business units, because these organization types are the only ones which can have assigned:
+
+- a Chart of Accounts
+- a General Ledger configuration
+- and a Fiscal Calendar
+
+Obviously these organization types allow posting transactions to the ledger.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) and in the [Organization](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization) section.
+
+Very briefly:
+
+- *Legal without accounting* organizations do not require accounting therefore do not require any basic nor advanced accounting configuration.
+- *Generic* organizations however can have their own General Ledger configuration and Chart of Accounts but the accounting periods can not be opened and closed independently at its level.
+This type of organization inherits the Fiscal Calendar of the *legal with accounting* organization they belong to.
+- and finally *Organization* ones can have as well a general ledger configuration and a Chart of Accounts but with the aim of being shared among all the organizations underneath.
+This organization type can not have a fiscal calendar assigned and besides the transactions within it are not allowed.
+
+Additionally, some countries such as Spain or France require that a specific *Chart of Accounts* is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the Income statement and in the Balance Sheet.
+
+On the other hand, there are countries such as the USA where a specific *Chart of Accounts* is not required.
+
+For those cases Etendo provides a Generic Chart of Accounts module which includes a sample Chart of Accounts which can be modified as required.
+It is recommended to start from a sample chart of accounts like the generic one and evolve it for the organization's needs rather than starting from scratch.
+
+In-country taxes setup is another key element of the basic accounting configuration.
+There can be Localization Packs which include the setup of the taxes for the country while there can be others which do not include the setup of the taxes for the country.
+The Generic CoA module does not include any taxes setup.
+
+
+#### Execution 
+
+Overall the Period End Close to Financial Report business flow can be split into the following steps once the accounting period has been opened:
+
+- the opening of the accounting
+- the review of the accounting transactions
+- the creation of accounting transactions and G/L item payments
+- the printing of the Trial Balance
+- the adjustments required prior to the income calculation
+- the adjustments require prior to the closing of the accounting year
+- the printing of the preliminary Income Statement and Balance Sheet
+- the closing of the accounting year
+- and the printing of the final Income Statement and Balance Sheet
+
+##### Opening of the accounting
+
+This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
+
+- The ledger accounts balance can be initialized by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
+A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.
+- The financial accounts balance can be initialized in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
+
+
+##### Review of the accounting transactions
+
+As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
+For instance the accounting of a purchase invoice will take:
+
+- the expense account setup for the product being purchased in the [Accounting](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting) tab of the *Product* window
+- the vendor liability account setup for the vendor in the [Vendor Accounting](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting) tab of the *Business Partner* window
+- and the tax credit account setup in the [Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting_1) tab of the *Tax Rate* window.
+
+Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.
+Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.
+
+
+Additionally, the [Accounting Transactions Details](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#accounting-transaction-details) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report shows the transactions which need to be accounted for but have not been accounted yet.
+
+Finally Etendo allows to massively fix accounting errors if any, for instance a vendor liability account wrongly assigned to a vendor or to a set of vendors.
+The way to do that is:
+
+- run the [Reset Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
+- correct the accounting configuration
+- get the transactions posted once again by using the [GL Posting by DB Tables](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables) feature.
+This feature performs a massive posting of all the accounting or just the accounting of a table for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
+
+##### Creation of accounting transactions and G/L item payments
+
+As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
+A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
+G/L items payments are also managed within the [Payables and Receivables management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) area.
+
+##### Printing of the Trial Balance to check that Debit=Credit
+
+The [Trial Balance](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
+
+The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.
+
+Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. 
+
+In these situations the difference is posted in a specific suspense account. [Suspense](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) accounts are configured in the General Ledger configuration.
+
+##### Adjustments required prior to the income calculation
+
+An organization's income statement shows the organization's financial performance over a period of time (usually one year) as the difference between:
+
+- the organization's revenue
+- and the organization's expenses
+
+In order to get an accurate income calculation, there are some adjustments required to be done first:
+
+- the organization needs to *review the revenues and the expenses* to be sure that the ones accounted within the period which are going to be closed are the ones which should be accounted regardless whether they are paid or not. This kind of adjustment is not required if the organization follows the accrual method of accounting that is Etendo method of accounting.
+Under the accrual method of accounting, revenue is recorded as soon as services are provided or goods are delivered and therefore invoiced, regardless of when cash is received.
+Similarly, expenses are recognized as soon as the company receives goods or services and therefore gets invoiced, regardless of when it actually pays for them.
+
+- the organization needs to calculate the *Cost of Goods Sold* (CoGS). The CoGS is the amount that the company paid for the goods that it sold over the course of the period. This calculation depends on the method of keeping track of inventory. There are two primary methods, the perpetual method and the periodic method:
+
+   the perpetual method is used by any business that keeps real-time information on inventory levels and that tracks inventory on an item-by-item basis.
+   This method allows very accurate recordkeeping as to the Cost of Goods Sold which is the sum of the cost of all the items sold over the period.
+
+   The periodic method is used by any business that counts inventory at regular intervals.
+   When using this method Cost of Goods Sold is calculated using the following equation:
+   (Beginning Inventory + Inventory purchases - Ending Inventory = Cost of Goods Sold)
+   Besides if a business is dealing with changing per-unit inventory costs, a specific method of calculating the CoGS needs to be used, that could either be FIFO, LIFO or Average Cost.
+
+Finally an income statement can separate *Operating Expenses* such as salaries and rent from *Non-Operating Expenses* such as a lawsuit.
+
+Operating Expenses are the expenses related to the normal operation of the business and are likely to be incurred in future periods as well.
+
+This way allows the calculation of the *Operating Income* as the difference between the *Gross Profit* and the *Total Operating Expenses*.
+
+##### Adjustments required prior to the closing of the accounting year
+
+Other adjustments required can be:
+
+- Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
+This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
+- Taxes such as the VAT needs to be settled periodically.
+It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.
+- Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:
+
+   the income statement as depreciation is an expense
+   and the debit side of the balance sheet as assets will be decreased by the depreciation amount of the period.
+
+##### The printing of the preliminary Income Statement and Balance Sheet
+
+Once configured, Etendo allows getting and printing the Income Statement and the Balance Sheet whenever it is required as the structure of these reports is based on the chart of accounts tree.
+
+It is very useful to print these financial reports prior to the closing of the year as it allows getting a sense of whether there are some missing adjustments required to be done prior to the closing of the year or not.
+
+During the accounting cycle there are other reports which can also be printed:
+
+- the [General Ledger Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
+- the [Journal Entries Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
+
+##### The closing of the fiscal year
+
+Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
+
+- Run the [Not Posted Transaction](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
+- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#active-tables).
+- Unscheduled the [Accounting Server Process](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) therefore an stable scene can be assured.
+- Check the [Financial Account/s](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/).
+
+Before running the close year process the accounting periods can be [closed](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
+The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) prior to closing the year.
+
+The *Close Year* process can be executed from the [End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
+
+The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
+
+There is a check-box in the [General Accounts](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
+That check-box is named *Reverse Permanent Account Balances*. 
+
+- If it is checked the closing of the year process includes an entry to reverse the balance sheet accounts besides the P&L closing entry.
+- If it does not check the closing of the year process includes just the P&L closing entry.
+
+Etendo uses the adjustment period (i.e. December 31st) for accounting the closing transactions if any, and the next period's first date (i.e. January 1st) for accounting the opening transactions if any.
+
+!!!info
+    For more information, visit the [End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
+
+
+
+##### The printing of the final Income Statement and Balance Sheet
+
+Once a year has been closed every financial report contains the corresponding closing and opening transactions:
+
+- the [Balance Sheet](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the financial situation of the organization as of the end of the closed accounting period.
+Etendo allows to get a two columns balance sheet:
+          One column shows the balances as of the end of the most recent accounting period
+          and the other column shows the balances as of the prior period end.
+
+This balance allows seeing how the financial position of the organization has changed over time.
+
+- the [Income Statement](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the organization performance over the year closed
+
+And besides: 
+
+- the [General ledger Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) allows to show for a given accounting period below entries posted by the Close Year process:
+    the opening balance entry
+    the closing balance entry
+    and the P&L closing entry
+
+
+## Assets 
+### Asset Acquisition to Dispose
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_PhqumhZr8U?si=KKUCdccNMHP6f0SV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Manages global assets life cycle from acquisition to disposition, including depreciation and other write-downs.
 

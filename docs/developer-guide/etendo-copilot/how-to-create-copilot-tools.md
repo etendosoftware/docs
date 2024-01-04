@@ -103,7 +103,6 @@ For this example, we will create a tool that will allow us to make a ping to a h
     requests = "<2.26.0" # Less than a certain version
     requests = ">=2.26.0,<=2.26.1" # Using version ranges
     requests = "~=2.26.0" # Tilde operator (~) for installing compatible versions
-    requests = "^2.26.0" # Caret operator (^) for installing compatible versions
     
     ```
 

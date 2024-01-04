@@ -21,13 +21,13 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot:1.0.1')
+    implementation('com.etendoerp:copilot:1.2.2')
     ```
 
-    ??? warning "Ensure you have 1.3.0 plugin version or greater:"
+    ??? warning "Ensure you have 1.3.1 plugin version or greater:"
         
         ```groovy
-        id 'com.etendoerp.gradleplugin' version '1.3.0'
+        id 'com.etendoerp.gradleplugin' version '1.3.1'
         ```
 
 2. In the terminal, execute:
@@ -49,7 +49,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
   
 
-4. In addition, there are other optional variables to configure certain aspects of the copilot. If not specified, default values are used.
+4. In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
     
     | **Environment Variable**    | **Options**  | **Default**  | **Info** |
     | ----------------------------| -------------| -------------| -------- |

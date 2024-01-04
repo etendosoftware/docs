@@ -132,7 +132,7 @@ nav:
     - Etendo Classic:
       - Basic Features:
         - General Setup: 
-          - Overview: user-guide/etendo-classic/basic-features/general-setup/overview.md
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/general-setup/getting-started.md
           - Clear Report Cache: user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md
           - Attachments Configuration: user-guide/etendo-classic/basic-features/general-setup/attachments-configuration.md
           - Application: user-guide/etendo-classic/basic-features/general-setup/application.md
@@ -148,18 +148,20 @@ nav:
           - Product Setup: user-guide/etendo-classic/basic-features/master-data-management/product-setup.md
           - Pricing: user-guide/etendo-classic/basic-features/master-data-management/pricing.md
         - Procurement Management:
-          - Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/procurement-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/procurement-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md
         - Warehouse Management:
-          - Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md 
           - Transactions: user-guide/etendo-classic/basic-features/warehouse-management/transactions.md
           - Analysis Tools: user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md
           - Setup: user-guide/etendo-classic/basic-features/warehouse-management/setup.md
-        - Production Management: 
+        - Production Management:
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/production-management/getting-started.md 
           - Transactions:   user-guide/etendo-classic/basic-features/production-management/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/production-management/setup.md
         - Material Requirement Planning: 
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md
           - Transactions: user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md
           - Setup: user-guide/etendo-classic/basic-features/material-requirement-planning/setup.md
         - Sales Management: 
@@ -169,7 +171,7 @@ nav:
           - Setup: user-guide/etendo-classic/basic-features/sales-management/setup.md 
         # - Project & Service Management: user-guide/etendo-classic/basic-features/project-and-services-management/index.md
         - Financial Management: 
-          - Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
+          -  ✨Getting Started: user-guide/etendo-classic/basic-features/financial-management/getting-started.md
           - Receivables and Payables:
             - Transactions: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md
             - Analysis Tools: user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md
@@ -425,7 +427,7 @@ nav:
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Installation: developer-guide/etendo-copilot/installation.md
-      - Available Tools:
+      - Tools:
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
       - How to create Copilot tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
