@@ -1,0 +1,393 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How To Create and Package a Module
+
+**Languages:** |
+
+****English** ** |  Translate this article...  
+  
+---|---  
+  
+##  Contents
+
+  * 1  Objective 
+  * 2  Introduction to Modularity 
+  * 3  Creating a Module 
+  * 4  Develop your software artifacts 
+  * 5  Exporting a Module 
+  * 6  Creating a Source Directory 
+  * 7  Including Documentation 
+  * 8  Packaging a module 
+  * 9  Deploying/Compiling a module 
+  * 10  The Result 
+
+  
+---  
+  
+##  Objective
+
+Openbravo ERP 2.50 introduced the concept of Modularity. Modularity provides
+developers with the means to be able to develop, package and distribute their
+work in a structured and controlled manner. For users of Openbravo ERP,
+Modularity makes it possible to download, install and update custom
+developments.
+
+This how-to describes how to create and package a new module. It is of
+particular interest as it describes the first steps which should be followed
+in all of the other how-to in this developer's guide and in Openbravo ERP
+custom development in general.
+
+##  Introduction to Modularity
+
+The objectives of modularity are:
+
+  * To make it easier to contribute to Openbravo ERP by allowing distributed and decoupled development and maintenance of optional features. 
+  * To provide the community with a rich set of extensions to meet their unique business requirements without bloating the core product. 
+  * To shorten the implementation cycles by enabling system integrators to develop very specific functionality to meet the unique needs of a particular market. 
+
+A module is a piece of additional functionality that can be deployed
+optionally and independently on top of Openbravo ERP. Examples of modules are:
+additional reports, additional windows, connectors, content packs
+(translations, chart of accounts, list of tax codes, product categories, etc).
+
+For a detailed description on the Openbravo ERP modularity concept, see the
+Modularity Guide  .
+
+This how-to will explain only the standard module type, because that is most
+relevant for the other how-tos. The two other module types, Industry Templates
+and Packs, are not covered here.
+
+All new development should be done as a part of a module. Only modules which
+are marked as **In Development** can be used in the development process. A
+module can consist of the following software artifacts:
+
+  * Application dictionary components: all new application dictionary artifacts must be associated with a module. Application dictionary windows now have a field that enables you to link an application dictionary component to a module. 
+  * Software resources: these are artifacts not defined in Openbravo ERP itself but, for example, Java classes, libraries, web resources (images, etc.), configuration files, etc. To maintain the relationship with the module, software resources need to be located in the module's directory inside the Openbravo ERP development project. Each module has its own unique directory. 
+  * Reference data: modules can be distributed with their own set of reference business data, for example, product categories, tax code, etc. The reference data is defined in datasets which can be related to a module. 
+
+The process of developing a module has three main steps:
+
+  1. **Register** your module in the Application Dictionary and in the central repository. 
+  2. **Develop** the artifacts included in your module. Depending on the functional specification and technical design of your module it might include only one type of artifacts or a combination of them. In following sections each type of artifact is described in detail. 
+  3. **Extract** the .obx file of your Module and **publish** it in the central repository. 
+
+Steps 1 and 3 are common to all types of modules and straightforward. Step 2
+depends on the requirements of your module. It has not significantly changed
+from the way you have developed Openbravo ERP code in previous releases to
+2.50 but a few details that you need to know and that are described throughout
+later in this document. In particular the development tasks (create/update the
+database, build and compile the system, etc.) have been slightly modified to
+fit the modularity paradigm.
+
+From now on, every piece of Openbravo ERP code belongs to a module, including
+Openbravo ERP core itself. You should do all your new developments through
+modules, including customizations. You can still make changes directly in
+other modules -including Openbravo ERP core- but it is highly recommended not
+to do that. It makes it much easier to maintain Openbravo ERP if you restrict
+code changes to modules.
+
+A module can be distributed and downloaded by other Openbravo ERP users via
+the central repository.For more information about the central repository and
+distribution of modules, see the  Modularity Guide  .
+
+The following sections will discuss the main topic of this how-to: create and
+setup a module and package it for distribution.
+
+##  Creating a Module
+
+The first step in the development process is to create a new module. From the
+Application menu, select **Application Dictionary || Module** .
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-0.png){: .legacy-image-style}
+
+  
+Note the following important fields: (for more details see the  AD_Module
+table description):
+
+  * The format of the **Version** field is three numbers separated by two dots. 
+  * The **Java Package** is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _org.openbravo.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , etc. 
+  * The **In Development** option lets the system know that you are developing the module. Only modules in development are exported by development tools and the system will raise an error if you try to modify a component of a module that is not in development. 
+  * The **Default** field option for a module marks that module as the one which is selected by default when developing and when editing components in the Application Dictionary. You may be developing more than one module at any one time, and specifying a default enables the module you want to be selected by default. 
+  * Select the **Translation Required** option if your module contains UI artifacts (window, field) that have translatable elements. 
+
+The tabs at the bottom of the window enable you to define the module further:
+
+  * **Dependency:** defines the module's dependency on other modules. 
+  * **Include:** is used by industry templates/packs, and is not covered by this how-to. 
+  * **DB Prefix:** relates database schema artifacts to modules. 
+  * **Data Package:** allows you to groups tables together. Data packages are used to determine the Java package generated Java code (business objects). 
+  * **Naming Exceptions:** is used during upgrades of previous versions of Openbravo ERP. It should not be used for any other purpose. 
+  * **Merges:** If this module A does now include the content of another module B previously published independently (So module B was merged into module A. This concept is not covered by this how-to. 
+  * **Translation:** is used for supporting translations, and is not discussed further in this how-to. 
+
+  
+In this how-to, we will create an example module, called _Openbravo Howtos'_ .
+We will define the module using the following three tabs of the **Application
+Dictionary || Module** window:
+
+  * **Dependency**
+  * **DB Prefix**
+  * **Data Package**
+
+The result of this howto will be a module which can be used as the basis for
+all subsequent developments within the howto articles in the developers guide.
+
+**Dependency** : Openbravo ERP core functionality is in itself a module,
+called core. All modules have a dependency on User Interface Application and
+in turn, it has a dependency on Openbravo core. In the Dependency window,
+specify that the module is dependent on User Interface Application. (see also
+the  AD_Module_Dependency  description):
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-1.png){: .legacy-image-style}
+
+  
+**DB Prefix** :at least one db prefix is required when a module also contains
+database artifacts (table, column, constraints, etc.). Openbravo ERP
+determines the module of a database artifact by checking to see if its name
+starts with one of the defined db_prefixes. As other howto's in the developers
+guide will add database artifacts, let's specify at least one DB prefix.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  DB
+Prefix can only contain uppercase [A-Z0-9] and the first letter is required to
+be from [A-Z] only.  
+---|---  
+  
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-3.png){: .legacy-image-style}
+
+For more information see the  AD_Module_Dbprefix  table description.
+
+  
+**Data Package:** Tables are linked to a module through the Data Package. The
+generated business object for the new table will use the Java Package defined
+in the  Data Package  . Other howto's in the developers guide will add new
+tables so there is a need to specify a data package as illustrated in the
+image below.
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-4.png){: .legacy-image-style}
+
+  
+
+##  Develop your software artifacts
+
+At this point you are ready to develop the software artifacts required for the
+functionality of the module. While developing the relation to the module is
+maintained in different ways:
+
+  * Direct: for example a Window is directly related to a specific module. 
+  * Indirect: a table belongs to a data package which again belongs to a module. 
+  * By name: a new stored procedure is linked through a module by prefixing it with the _DB_Prefix_ of the module. 
+
+When you are ready with your custom development the next step is to export the
+module.
+
+  
+
+##  Exporting a Module
+
+Exporting a module creates a directory for your module under Openbravo ERP
+root directory and the appropriate XML files for inclusion in the finished
+module. Modules that are not flagged as being in development are not exported
+- remember that you must select the **In Development** checkbox when you
+define a new module, otherwise it will not be exported.
+
+When the development of the module is finished (or to deliver intermediate
+results), open a command window/shell and navigate to the Openbravo ERP
+development project execute the _ant export.database_ command.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+Export database task will export all and only the modules set as **in
+Development**  
+---|---  
+      
+    
+    ant export.database
+    
+
+Since we do not have any additional developments yet, only the corresponding
+folder structure and the module descriptor XML files have been created at this
+point.
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-6.png){: .legacy-image-style}
+
+  
+Openbravo ERP validates the database and module artifacts of a module when the
+module is exported and packaged. See  more information on the database
+validation step  .
+
+For a detailed description of this export.database task and other relevant
+Module related ant task see the  database ant tasks  and  module ant task
+descriptions.
+
+  
+
+##  Creating a Source Directory
+
+To develop manual Java code you need a _src_ directory inside of your specific
+module:
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-7.png){: .legacy-image-style}
+
+  
+The Java package in the source directory should start with the Java package of
+the module. So for this case _org.openbravo.howtos.test_ and
+_org.openbravo.howtos.app_ would both be valid packages.
+
+If using **Eclipse** , add the newly created module's src folder to the build
+path of the Eclipse project (Java Build Path):
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_To_Create_and_Package_a_Module-8.png){: .legacy-image-style}
+
+This makes it possible for Eclipse to build the code and have a full-
+functional Java editor when editing the source code of your module.
+
+##  Including Documentation
+
+Documentation for the module can be included within module's project in
+Openbravo Forge  . When setting up the project that will hold the module check
+"Wiki" as a service to be included in the project. Documentation can be
+written in that wiki. This information will be publicly available if the
+project is public, or restricted to the users which can access the project if
+it is private.
+
+Another way of attaching documentation to a module is by including it in the
+module itself. In this way documentation will be only available from Openbravo
+instances that have this module installed.
+
+This second option can be achieved by writing the documentation in files
+stored in the module's _web/org.openbravo.howtos/docs_ directory (or any
+subdirectory of it). Here can be placed any desired resource. It is also
+possible to include in this directory an _index.html_ HTML file with links to
+the rest of the documentation making in this way the information easier to be
+accessed by the user.
+
+In our case we would have the following file path
+_modules/org.openbravo.howtos/web/org.openbravo.howtos/docs/index.hml_ . After
+compiling and deploying the application these documents will be available from
+the browser in the following URL _
+http://yourserver/openbravocontext/web/org.openbravo.hotows/docs  _ where
+_yourserver_ is the server name where Openbravo is hosted and
+_openbravocontext_ the context name for Openbravo application.
+
+An example of an actual module including documentation in this way is _ User
+Interface Client Kernel  _ module. It includes documentation accessible from
+the  Forge  , as well as in the module  itself  .
+
+##  Packaging a module
+
+The last step in the process is to package the module and distribute it
+through the central repository or sending it to an interested party directly.
+
+To package a module, execute the command _ant package.module -Dmodule=
+<modulePackageName> _ . In the case of the howto module, the command would be:
+
+    
+    
+    ant package.module -Dmodule=org.openbravo.howtos
+    
+
+If you are using Windows, you could need to add quotes on when specifying the
+module: -Dmodule="org.openbravo.howtos"
+
+The output of the _package.module_ task would roughly look like this:
+
+    
+    
+    $ ant package.module -Dmodule=org.openbravo.howtos
+    Buildfile: build.xml
+    
+    package.module:
+         [echo] Validating Module...
+    [validateModules] 0    [main] WARN  SystemValidation  - Validation successfull no warnings or errors
+    
+    obx.export.database:
+    
+    obx.export.config.script:
+    
+    BUILD SUCCESSFUL
+    Total time: 48 seconds
+    
+
+As you can see in the output, the package step  validates the module
+definition  itself.
+
+If the packaging process was successful, a new obx file is created in the
+directory in which this ant task was executed. The name of the example module
+crated in this how-to is **org.openbravo.howtos-1.0.0.obx** . Note the obx
+file is in zip format so you can open it with any archive manager. (Perhaps by
+first renaming it to org.openbravo.howtos-1.0.0.zip)
+
+##  Deploying/Compiling a module
+
+Once you have created an .obx file, the final step is to compile and deploy
+it. Installing a module compiles the Java sources, copies relevant files to
+the web application directory (images, etc.) and also updates the database.
+
+You can install a module from within Openbravo ERP:
+
+  1. Log in as _System Administrator_ . 
+  2. From the Application menu, select **General Setup || Application || Module Management** . 
+  3. Select the module you want and click **Install Now** . 
+  4. Follow the on-screen instruction to rebuild the application and restart the Tomcat server. 
+
+You can also install a module from the command line, using the ant task
+
+    
+    
+    ant smartbuild -Dlocal=no
+    
+
+after manually unzipping the .obx file into the _OpenbravoERP/modules_ folder.
+
+##  The Result
+
+The result of this how-to is a correctly set up and packaged module which you
+can then use as the basis for the other how-tos in this Developers Guide.
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_To_Create_and_Package_a_Module  "
+
+This page has been accessed 55,255 times. This page was last modified on 1
+July 2012, at 12:13. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Categories  :  Templates  |  HowTo
+
+**
+

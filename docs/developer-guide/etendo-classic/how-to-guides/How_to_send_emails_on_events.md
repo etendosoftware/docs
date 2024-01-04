@@ -1,0 +1,155 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to send emails on events
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  The
+contents of this document are available from Openbravo ** 3.0MP22  **  
+---|---  
+  
+##  Introduction
+
+Openbravo provides a mechanism that allows to programmatically generate events
+to send emails. Event triggering and email implementation is decoupled, being
+possible to launch generic events, that are listened by other modules that
+implement the email contents.
+
+This how to explains both, how to trigger the events and how to listen to them
+to generate the event.
+
+Email server is  configured  at client level.
+
+##  Triggering email events
+
+An event is identified simply by a ` String ` .
+
+Events are triggered programmatically from any piece of code, such as
+Processes  or  Business Event Handlers  .
+
+To trigger an event you need to:
+
+Inject in your class a ` EmailEventManager `
+
+    
+    
+     
+      ...
+      @Inject
+      private EmailEventManager emailManager;
+      ...
+
+  
+Use this manager to create the events:
+
+    
+    
+     
+      try {
+        boolean sent = emailManager.sendEmail("EVT_NAME", "user1@test.abc; user2@test.abc", data);
+        if (sent) {
+          // email was sent
+        } else {
+          // email was not sent
+        }
+      } catch (EmailEventException e) {
+        // something went wrong...
+      }
+
+First parameter is the _event name_ that identifies the event. Second one is
+the list of recipients, semicolon (;) separated if more than one. And finally,
+any ` Object ` with the data that will be used to generate the event. Note
+even this data is something generic ( ` Object ` ), the actual type the
+listener will expect can vary depending on the event.
+
+##  Listening to email events
+
+Email events are listened by classes implementing ` EmailEventContentGenerator
+` .
+
+To listen to an event, you need to create a class of `
+EmailEventContentGenerator ` :
+
+    
+    
+     
+    public class MyEmailGenerator implements EmailEventContentGenerator {
+      @Override
+      public boolean isValidEvent(String event, Object data) {
+        return "EVT_NAME".equals(event);
+      }
+     
+      @Override
+      public String getSubject(Object data, String event) {
+        return "New email for you";
+      }
+     
+      @SuppressWarnings("unchecked")
+      @Override
+      public String getBody(Object data, String event) {
+        User usr = (User) data;
+        return "Hello " + usr.getFirstName;
+      }
+     
+      @Override
+      public String getContentType() {
+        return "text/plain; charset=utf-8";
+      }
+     
+      ...
+    }
+
+Let's explain the main methods to implement (there are some other ones
+explained in the javadoc):
+
+` isValidEvent `
+
+     Determines whether our class listens to the event. Internally, the emailManager iterates over all ` EmailEventContentGenerator ` classes executing this method, email is tried to be sent in case it returns ` true ` . Following our example, the name of the event we sent before was "EVT_NAME", so we return ` true ` for this event and ` false ` for any other one. Note that a single class could listen to several events. 
+
+` getSubject `
+
+     Returns an ` String ` with the subject of the email. It also receives the data, so this subject can be different based on it. 
+
+` getBody `
+
+     Returns an ` String ` with the body of the email. It also receives the data, so this subject can be different based on it. In this example, we expect data to be a User, so we can cast it to generate the body based on its attributes. 
+
+  
+More advanced bodies can be composed using freemarker templates, in this way
+it is possible to other module to override the template without needing to do
+any Java coding. In  this how to  , it is explained how templates can be
+created.
+
+Retrieved from "  http://wiki.openbravo.com/wiki/How_to_send_emails_on_events
+"
+
+This page has been accessed 8,740 times. This page was last modified on 5
+April 2013, at 12:51. Content is available under  Creative Commons
+Attribution-ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

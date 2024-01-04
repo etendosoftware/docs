@@ -1,0 +1,171 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  Category:Developers Guide
+
+Welcome to the Openbravo ERP developers guide! This developers guide contains
+a wealth of information on how to change, extend and build further on
+Openbravo ERP. The developers guide provides valuable information for
+consultants and developers from junior to expert levels.
+
+##  What's new in Openbravo 3.0
+
+Considering all the new features we deliver in the 3.0 release it seems better
+to ask what's not new in this radical new release of Openbravo!
+
+The most visible change: Openbravo 3.0 offers a completely new agile  user
+experience  on a new  platform  implementing a Rich Internet Application (RIA)
+architecture.
+
+With the new user interface, software developers have a much wider range of
+options to implement solutions. Functionality can be delivered on both the
+client and/or the server. The new architecture follows de-facto industry
+standards (  CDI  ,  JSON  ) and builds upon  professional  user interface
+technology.
+
+A distinctive benefit of the new architecture is that, in many cases,
+consultants can change the user interface without stopping or rebuilding the
+system. New windows/tabs/fields can be added to the system without an explicit
+rebuild step.
+
+On the server side we build further upon the successfull  Data_Access_Layer
+delivered in 2.50. In 3.00 we integrated a new server side component based on
+Weld  . With Weld, Openbravo supports  JSR-299  : Java Contexts and Dependency
+Injection for the Java EE platform (CDI). One of the great new features is the
+possibility for modules to register  business event handlers  which are called
+when entities are created, deleted or updated in the database.
+
+Many parts of the application are new and redesigned, still we maintained and
+kept classic parts of the system which are vital for delivering professional,
+complete and robust functionality. This means for example that even with the
+new user interface we are backward compatible with classic code. Software
+vendors and partners have the option to  gradually transfer  their existing
+modules to the new architecture.
+
+##  What's your focus?
+
+If your first focus is to get a **general understanding** of Openbravo
+technology then it is a good idea to start with the  Openbravo Concepts
+Overview  , it describes the main philosophies forming the foundation of
+Openbravo 3.0. For more details on Openbravo architecture take a look at the
+Openbravo architecture  page (front-end technology) and the  Data Access Layer
+wiki page (server side technology).
+
+When **starting development** with Openbravo be sure to visit the
+prerequisite knowledge  article and  How-to  sections, start out with  setting
+up Eclipse IDE  , understand  howto create and package a module  , learn more
+about the  Openbravo 3  architecture and then move on to one of the howtos to
+add new buttons to the  navigationbar  or  toolbar  ,  implement entity
+listeners  or build complete  new views  from scratch.
+
+As a **consultant** configuring and changing windows and tabs it is a good
+idea to understand the introductionary parts of the  Openbravo architecture  ,
+then move further on to  creating a table  ,  adding new windows  or  adapting
+a current window  .
+
+As an **integrator** you want to check out the support for REST webservices by
+Openbravo. Openbravo both supports  XML  and  JSON  REST webservices and there
+are  howto's  to help you to use existing and implement new webservices.
+
+When you are ready with your development and **ready to deliver** then
+Openbravo provides a great delivery platform:  modularity  and the  Openbravo
+Forge  . The  how-to  section contains several articles on  packaging  and
+delivering  your modules.
+
+We at Openbravo work with and develop in the Openbravo system continuously. We
+are **developers** and know that sometimes a specific tip or trick can make
+the difference. Therefore, we combined our experience and the experience of
+our users and collegeaus in the  Tips and Tricks  document. If you need more
+help then be sure to visit the  Openbravo Forums  .
+
+Finally as an **experienced developer** visit the  Reference  section. It will
+provide you with all the details to finetune and finalize your solution.
+
+##  Structure of this guide
+
+This guide consists of different categories.
+
+The  How-to  sections describe Openbravo development topics using a focused
+development goal. There are how-tos on modularity, extending the datamodel,
+adding windows and webservices, the data access layer and more.
+
+The  Concepts  section gives a detailed description of all relevant Openbravo
+ERP development concepts. The content ranges from common development topics
+(such as the project structure, build tasks) to modularity and the application
+dictionary. Each of the main layers of the application is discussed: database,
+middle-tier and web-tier with webservices.
+
+The  Reference  section consists of a detailed description of the data model
+from different points of view: the database model, the entity model, the
+hibernate mapping and the REST XML Schema. In addition javadoc and other
+reference-like topics are discussed in this section.
+
+The  Examples  section contains examples of existing code in the Openbravo ERP
+application. The purpose of this chapter is to give directions for the reader
+to study current Openbravo code and use that as the basis for own custom code
+
+Finally the  Tips and Tricks  section contains troubleshooting tips. The tips
+and tricks are based on experience and user questions and solutions in the
+forums.
+
+![DevGuide Wiki
+Categories.png](http://wiki.openbravo.com/w/images/thumb/2/2d/DevGuide_Wiki_Categories.png/640px-
+DevGuide_Wiki_Categories.png)
+
+##  Subcategories
+
+This category has the following 6 subcategories, out of 6 total.
+
+###  C
+
+  * [ **+** ]  Concepts  (46) 
+
+###  D
+
+  * [ **+** ]  Data Model  (502) 
+
+###  E
+
+  * [ **+** ]  Example  (4) 
+
+###  H
+
+  * [ **+** ]  HowTo  (103) 
+
+###  P
+
+  * [ **+** ]  Performance  (7) 
+
+###  R
+
+  * [ **+** ]  Reference  (4) 
+
+Retrieved from "  http://wiki.openbravo.com/wiki/Category:Developers_Guide  "
+
+This page has been accessed 152,981 times. This page was last modified on 7
+June 2012, at 13:27. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+****
+

@@ -1,0 +1,114 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  Deep Linking
+
+##  Contents
+
+  * 1  Overview 
+  * 2  Retrieving a direct/deep link 
+  * 3  Structure of the URL 
+  * 4  Notes 
+
+  
+---  
+  
+##  Overview
+
+According to Wikipedia "Deep linking, on the World Wide Web, is making a
+hyperlink that points to a specific page or image on a website, instead of
+that website's main or home page. Such links are called deep links"  [1]  , in
+the case of Openbravo ERP is the way to link with a URL directly to an
+specific functionality, e.g. a Window/Tab, a Manual Form, etc. This link can
+be built and attach it in a email, or copy/paste it in a IM window, etc.
+
+##  Retrieving a direct/deep link
+
+The Openbravo user interface makes it very easy to retrieve an url to a
+window, tab and specific record (in a child tab). See the icon in the top of
+the Openbravo window.
+
+  
+
+![](/assets/developer-guide/etendo-classic/concepts/Deep_Linking-0.png){: .legacy-image-style}
+
+  
+This icon can be clicked to create a direct link to a tab:
+
+  
+
+![](/assets/developer-guide/etendo-classic/concepts/Deep_Linking-1.png){: .legacy-image-style}
+
+  
+This example shows the direct link to the sales invoice header tab.
+
+##  Structure of the URL
+
+    
+    
+    http://server:port/obcontext/?params
+
+  * **http://** The protocol to access the application (can be https if is an SSL enabled instance) 
+  * **server** The name or IP address of the server 
+  * **port** The port to access (If configured with Apache Httpd in front of tomcat is not necessary) 
+  * **/obcontext** The name of the Openbravo context (required) 
+  * **?params** The list of parameters to access an specific window or form. 
+
+More information of the structure of an URL  [2]
+
+The following parameters are supported:
+
+  * **tabId** (mandatory) the id of the tab to which you want to link 
+  * **recordId** the id of the record to be shown in the tab 
+  * **command** the command parameter can be used to show the form in New mode, only one command is supported: NEW 
+
+Note:
+
+  * linking to a (grand-)child tab only makes sense when also a recordId (of the record to be shown in the child tab) is defined. This is needed to determine which parent record to load in the parent tab 
+  * when the recordId parameter is used, the tab will always open in form mode 
+
+Here are some examples of hyperlinks:
+
+  * http://localhost:8080/openbravo/?tabId=263  link to the sales invoice header 
+  * http://localhost:8080/openbravo/?tabId=263&recordId=FF808181304ACF4201304AE46E4B003E  link to a specific sales invoice 
+  * http://localhost:8080/openbravo/?tabId=270&recordId=00C1DB5F5AB241D2A574B8CEBF482F8F  link to a specific sales invoice line 
+  * http://localhost:8080/openbravo/?tabId=263&command=NEW  opens the sales invoice header window in NEW mode 
+
+##  Notes
+
+  1. ↑  http://en.wikipedia.org/wiki/Deep_linking 
+  2. ↑  http://www.skorks.com/2010/05/what-every-developer-should-know-about-urls/ 
+
+Retrieved from "  http://wiki.openbravo.com/wiki/Deep_Linking  "
+
+This page has been accessed 10,464 times. This page was last modified on 14
+June 2011, at 08:28. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  Concepts
+
+**
+

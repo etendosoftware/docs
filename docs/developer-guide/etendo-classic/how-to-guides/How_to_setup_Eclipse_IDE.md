@@ -1,0 +1,364 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to setup Eclipse IDE
+
+**Languages:** |
+
+****English** ** |  Translate this article...  
+  
+---|---  
+  
+##  Contents
+
+  * 1  Preparing development environment 
+  * 2  Download source code 
+  * 3  Openbravo installation 
+    * 3.1  Configure the properties 
+    * 3.2  Install from sources 
+    * 3.3  Problems running install.source 
+  * 4  Import into Eclipse IDE 
+  * 5  Create the Tomcat Server 
+    * 5.1  Change VM arguments settings 
+    * 5.2  Renaming server 
+    * 5.3  Serve modules without publishing option 
+  * 6  Import Preferences 
+  * 7  Configure the Logger 
+  * 8  Launch from Eclipse 
+  * 9  Upgrading old workspaces to >=PR17Q1 
+  * 10  Upgrading old workspaces to >=PR18Q4 
+  * 11  Upgrading old workspaces to >=PR19Q2 
+
+  
+---  
+  
+##  Preparing development environment
+
+First of all you need to install and configure different components of the
+Openbravo environment as it's described in  Custom Installation  guide. In
+order to comply to development requirements some of those components have to
+be additionally adjusted according to  Development Stack Setup  .
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+**Double check** that you have read and followed the  Development Stack Setup
+article  
+---|---  
+  
+After completing all of the steps in the aforementioned guides, please make
+sure that:
+
+  * Your OS user has read/write access to your tomcat installation home directory (CATALINA_BASE). 
+  * Environment variables (e.g. ANT_OPTS, CATALINA_OPTS, JAVA_HOME, ANT_OPTS, etc) are declared in the proper categories (i.e. System/User variables) (windows only) 
+  * You have downloaded the  latest **Eclipse IDE for Java EE Developers** release  . 
+
+##  Download source code
+
+The source code can be checked out using any **Mercurial** client. There is no
+any restrictions on the read access so you wouldn't need any credentials to
+access the repository. The detailed procedure of the source code check out is
+described in  Mercurial Manual for Openbravo Developers  . As it's explained
+in the guide it's normally considered as a good practice to have a _pristine_
+clone and _working_ one, so we would strongly encourage you to follow that
+'rule'. It is also highly advisable to clone the repository into a destination
+directory which is outside of Eclipse workspace.
+
+If you want to build the latest stable release:
+
+    
+    
+    $ hg clone https://code.openbravo.com/erp/devel/main openbravo
+    $ cd openbravo
+    $ hg up 3.0PR23Q4
+
+For Openbravo developers, you should work with the **pi** repository:
+
+    
+    
+    hg clone https://code.openbravo.com/erp/devel/pi
+    $ cd pi
+
+##  Openbravo installation
+
+The Openbravo installation is performed in several steps.
+
+###  Configure the properties
+
+So, first of all you have to configure the Openbravo by specifying some
+general properties, e.g. Tomcat installation directory, database connection
+details, etc. This can (and in fact **must** ) be done via a console
+application which has to be compile first. For that, go to the directory with
+the working clone of the repository and execute:
+
+    
+    
+    ant setup
+
+The invocation of this ant target will compile and execute automatically a
+console application.By going through the console application provide all
+requested information and at the end, select ` Accept ` to apply the changes
+and close the application.
+
+**Note:** More about setup ant task can be found at
+Openbravo.properties#Edition  .
+
+As a result of these actions a new file ` Openbravo.properties ` , containing
+specified settings, will be created in config subdirectory.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+While going through the console application, DO NOT change the _default
+context name_ which is openbravo. This guide assumes that it will be left this
+way.  
+---|---  
+  
+More about the properties can be found at  Openbravo.properties  . Now the
+Openbravo is ready to be installed.
+
+###  Install from sources
+
+In order to install the Openbravo three main procedures have to be
+accomplished:
+
+  * the Openbravo database has to be created and populated with some initial values 
+  * sources have to be generated 
+  * all sources have to compiled to binaries which later can be executed on a WEB server (Tomcat). 
+
+All this is done by invoking from the root of the working clone
+(XXX\opensource\openbravo\erp\devel\main\\).
+
+    
+    
+    ant install.source
+
+This process can take quite long time (up to 25 min) depending on hardware
+configuration. It's always a good idea to redirect the output of the task
+execution to a log file which then can be analyzed or sent to the support team
+in case of problems. After the task has completed the log **should not**
+contain any error or exception massages as well as it **should** have ` BUILD
+SUCCESSFUL ` message at the end of the file. (if you are under Linux use `
+grep ` command to check whether the file contains any exceptions). After
+successful installation the next step can be taken - importing to Eclipse IDE.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  You
+can save the install.source log using  tee  in Linux or  mtee  in Windows  
+---|---  
+  
+###  Problems running install.source
+
+If you find problems running install.source, check the
+Installation/Troubleshooting  article
+
+##  Import into Eclipse IDE
+
+Launch Eclipse.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+After Eclipse has started go to _Project_ menu and **disable** _Build
+Automatically_ option there.  
+---|---  
+  
+Now 4 projects need to be imported in the workspace (by menu _File_ =>
+_Import_ and then _General_ => _Existing Projects into Workspace_ ). Here they
+are:
+
+    
+    
+    openbravo        XXX\opensource\openbravo\erp\devel\main\
+    OpenbravoCore    XXX\opensource\openbravo\erp\devel\main\src-core
+    OpenbravoTrl     XXX\opensource\openbravo\erp\devel\main\src-trl
+    OpenbravoWAD     XXX\opensource\openbravo\erp\devel\main\src-wad
+    
+
+##  Create the Tomcat Server
+
+Then open _Servers_ view and create a new instance of Tomcat server:
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-4.png){: .legacy-image-style}
+
+While going through the wizard select ` openbravo ` and add it to ` configured
+` resources. Then click "Finish". The created instance should appear in the
+view. Double click on it to change its settings in the form depicted on the
+picture below:
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-5.png){: .legacy-image-style}
+
+  * In **Server options**
+    * check the **Serve modules without publishing** . See  here  for additional information. 
+  * In **Timeouts**
+    * set **Start** and **Stop** timeouts to 120 seconds 
+  * In the **Modules** tab 
+    * edit openbravo module and uncheck the "Auto reloading enabled" flag. 
+
+###  Change VM arguments settings
+
+  * In **General Information**
+    * click on **Open launch configuration** link 
+    * switch to **Arguments** tab 
+    * add the following line at the end of **VM arguments** input: 
+
+    
+    
+     -server -Djava.awt.headless=true -Xms384M -Xmx1536M -XX:MaxPermSize=256M 
+
+After changing all, save your server configuration (press Ctrl+S).
+
+###  Renaming server
+
+When creating a new server, by default is is named "Tomcat v7.0 Server at
+localhost". This name can be changed to something custom, both at creation
+time or later by editing it in server window.
+
+In this case, it is necessary to bind the Server Library with the actual
+server. To do so:
+
+  * In Project Explorer view, right click on openbravo project and select Properties. 
+  * Select Java Build Path left menu item. 
+  * Select Libraries tab, there you should see Server library is marked as unbound. 
+  * Click Edit button. 
+  * Select your server. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-6.png){: .legacy-image-style}
+
+###  Serve modules without publishing option
+
+This server option allows to serve web applications directly from the
+directory structure of the development workspace. This allows, among others,
+to deploy the application in Eclipse in a faster way.
+
+##  Import Preferences
+
+The next step is to set the standard preferences used in the development of
+Openbravo.
+
+  * The preference file is located in the ` openbravo/config/eclipse ` folder in the development project 
+  * Import workspace preferences clicking on _File > Import _ , then select _General > Preferences _ and click on _Next_ button. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-7.png){: .legacy-image-style}
+
+  * Browse to ` openbravo/config/eclipse/Openbravo-eclipse-prefs.epf ` file, select Import all radio button and click on **Finish** button. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-8.png){: .legacy-image-style}
+
+Once finished, select all the projects, refresh them, and rebuild them (right
+click on one or more projects and you will find the Refresh and the Rebuild
+options). You should not get warnings nor errors.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+When working with releases older than **3.0PR19Q2** , it is necessary to
+install  Eclipse Luna Formatter  in order to keep proper formatting.  
+---|---  
+  
+##  Configure the Logger
+
+In order to be able to see the logs in the console of the server, follow the
+next guide  How_To_Configure_Log
+
+##  Launch from Eclipse
+
+Now start the Tomcat server by right-clicking on the server instance in the
+_Servers_ view and choosing _Start_ option in the popup menu. Wait until the
+server is started (can take up to 2 minutes) and visit
+http://localhost:8080/openbravo/  in your internet browser. If everything was
+configured and installed properly you will get to the Openbravo ERP log in
+page. Use these credentials to log in:
+
+  * username - Openbravo 
+  * password - openbravo 
+
+both are **case sensitive** .
+
+That's it, the installation is over and you're ready to start developing.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  If
+your system has enough resources (memory/processor) then you can try enabling
+the _Build Automatically_ option in the _Project_ menu. Enabling it will give
+you direct feedback while developing.  
+---|---  
+  
+##  Upgrading old workspaces to >=PR17Q1
+
+Starting from  PR17Q1  , the minimum  System Requirements  for Openbravo were
+increased to Java 7 and Tomcat 7. For worskpaces created in older versions,
+some upgrade might be required.
+
+  * JDK >=7 and Tomcat >= 7 need to be installed in the system 
+  * Eclipse must be at least in  Indigo release  , though latest version is recommended 
+
+Once updated to a newer version on a recent stack, it will be automatically
+allowed to write Java 7 compliant code.
+
+If Tomcat 6 was used, the server needs to be removed and a new Tomcat >=7
+needs to be created, after it, a rebuild will be required, see  how here  .
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-11.png){: .legacy-image-style} |  If you are developing modules
+compatible with older Openbravo versions or creating code to be backported to
+those, the code needs to be still compatible with Java 6. In these cases it is
+recommended to use workspace with older (previous to 3.0PR17Q1) Openbravo
+sources.  
+---|---  
+  
+##  Upgrading old workspaces to >=PR18Q4
+
+Starting from  PR18Q4  , the minimum  JDK  required for Openbravo was
+increased to Java 8. For worskpaces created in older versions, some upgrade
+might be required.
+
+  * JDK >=8 need to be installed in the system 
+  * Eclipse must be at least in  Luna release  , though latest version is recommended 
+
+Once updated to a newer version on a recent stack, it will be automatically
+allowed to write Java 8 compliant code.
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_setup_Eclipse_IDE-12.png){: .legacy-image-style} |  If you are developing modules
+compatible with older Openbravo versions or creating code to be backported to
+those, the code needs to be still compatible with Java 7. In these cases it is
+recommended to use workspace with older (previous to 3.0PR18Q4) Openbravo
+sources.  
+---|---  
+  
+##  Upgrading old workspaces to >=PR19Q2
+
+Starting from  PR19Q2  sources formatting changed, check
+How_to_Migrate_Sources_Format  for more details.
+
+Retrieved from "  http://wiki.openbravo.com/wiki/How_to_setup_Eclipse_IDE  "
+
+This page has been accessed 135,559 times. This page was last modified on 8
+June 2021, at 14:31. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

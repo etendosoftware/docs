@@ -1,0 +1,145 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to Migrate Sources Format (since 3.0PR19Q1)
+
+##  Contents
+
+  * 1  Who should read this document 
+  * 2  Workspace migration 
+  * 3  Applying new format 
+    * 3.1  Java 
+  * 4  Sources migration 
+    * 4.1  Working with pi 
+    * 4.2  Backports 
+    * 4.3  Merges 
+    * 4.4  Modules 
+
+  
+---  
+  
+##  Who should read this document
+
+This document is important for **developers** that:
+
+  * Want to work with a pi repository (after changest  4590a05  introduced in 3.0PR19Q1). 
+  * Want to backport some code to a release previous to 3.0PR19Q1. 
+  * Want to merge a branch created before changest  4590a05  . 
+  * Want to update the format of a module to be adapted to the new formatting rules used in Openbravo. 
+
+Starting from 3.0PR19Q1, Openbravo sources are formatted differently than they
+were before.  Here  you can find why and what changed in Java sources.
+
+##  Workspace migration
+
+  1. If required update Eclipse. Minimum supported Eclipse version is Photon (4.8), although the  latest **Eclipse IDE for Java EE Developers** release  is recommended. 
+  2. Reimport preferences  . 
+  3. Open _Window > Preferences > Java > Code Style > Formatter _ and ensure that: 
+    1. _Active profile_ field is set to _Openbravo_ . 
+    2. _Formatter implementation_ field is set to _Eclipse [built-in]_ . Note this field only appear if you have installed  Luna Formatter plugin  , which is no longer required. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_Migrate_Sources_Format_since_3_0PR19Q1_-0.png){: .legacy-image-style}
+
+##  Applying new format
+
+###  Java
+
+From Eclipse (this is the recommended approach to format complete modules):
+
+  * Select the files/packages to apply the new format. 
+  * Select _Source > Clean Up... _ . 
+    * Check _Use custom profile_ . 
+    * _Configure..._ custom profile to have selected 
+      * Convert control statement bodies to block 
+      * Add missing '@Override' annotations 
+      * Add missing '@Override' annotations to implementations of interface methods 
+      * Add missing '@Deprecated' annotations 
+    * Click _Finish_ to execute. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_Migrate_Sources_Format_since_3_0PR19Q1_-1.png){: .legacy-image-style}
+
+  * Execute _Source > Format _ . 
+
+From command line (this is the recommended approach to format before
+backporting or merging):
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+Formatting from command line will not apply _Clean Up_ step defined above.
+This usually should not be a big problem for merges and backports; but if many
+conflicts appear due to the lack of that clean up, execute it first from
+Eclipse.  
+---|---  
+  
+  * Get preferences file: ` wget  https://raw.githubusercontent.com/alostale/ob-scripts/master/misc/OB-eclipse-format.prefs  `
+  * Apply format to desired files: ` **eclipse** -nosplash -verbose -data _[path_to_eclipse_workspace]_ -application org.eclipse.jdt.core.JavaCodeFormatter -config OB-eclipse-format.prefs _[files_to_format]_ ` . Where: 
+    * ` eclipse ` : is the eclipse binary. 
+    * ` [path_to_eclipse_workspace] ` : is the directory where the eclipse workspace is in (where ` .metadata ` is present). 
+    * ` [files_to_format] ` : when formatting for backports or merges, in order to reduce the changeset as much as possible, these files should be only the ones modified by the original patch or project. In case of merges, you can apply directly the mercurial command documented below as follows: ` **eclipse** -nosplash -verbose -data _[path_to_eclipse_workspace]_ -application org.eclipse.jdt.core.JavaCodeFormatter -config OB-eclipse-format.prefs **$(hg out ...)** `
+
+##  Sources migration
+
+###  Working with pi
+
+Just  migrate your workspace  , nothing else is required.
+
+###  Backports
+
+When backporting a changeset to an older release that has not been formatted
+with the new rules, it is generally easier to apply the new formatting first
+to do the backport later. In order to make the changesets more readable, this
+should be split into two commits: one for the reformatting and another one for
+the backport itself.
+
+###  Merges
+
+Before merging a branch that started in a changest where new formatting is not
+applied yet, it is highly recommendable to format before doing the merge, in
+this way, conflicts will be prevented.
+
+  * In your branch before merging, apply new formatting, you can apply it only to the files that have been modified in your branch. The list of modified files can be obtained as: 
+    * If you merged at pi to your repo at least once since the branch was created: ` hg log -r 'p2(last(merge())):.' -T '{files} ' | sed 's# #\n#g' | sort | uniq `
+    * If there are no merges: ` hg out -q -T '{files} ' | sed 's# #\n#g' | sort | uniq `
+  * Commit these changes. 
+  * Do the merge normally. 
+
+###  Modules
+
+It's decision of each module owner when to apply new formatting rules.
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_to_Migrate_Sources_Format_(since_3.0PR19Q1)
+"
+
+This page has been accessed 3,535 times. This page was last modified on 18
+February 2019, at 13:57. Content is available under  Creative Commons
+Attribution-ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

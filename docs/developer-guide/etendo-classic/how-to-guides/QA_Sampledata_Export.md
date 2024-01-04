@@ -1,0 +1,233 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  QA Sampledata Export
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-0.png){: .legacy-image-style} |  WARNING: The current article refers to a
+module which is currently under development, for now it does not exist in
+production.  
+---|---  
+  
+##  HOW TO OBTAIN POS2.SAMPLEDATA
+
+First step to obtain POS2 Sampledata is to download & copy the following 2
+files to your desktop:
+
+  * **sampleDataExtension.diff** patch which must be applied in the root of Openbravo, it's content must be: 
+
+    
+    
+    diff --git a/build.xml b/build.xml
+    index 3d88a14951..9c2d9d5260 100644
+    --- a/build.xml
+    +++ b/build.xml
+    @@ -646,7 +646,16 @@ export.database: exports database structure and data to xml files.
+       <target name="export.sample.data" depends="init, core.lib">
+         <ant dir="${base.db}" target="export.sample.data" inheritAll="true" inheritRefs="true" />
+       </target>
+    +	
+    +  <target name="export.sample.data.extension" depends="init, core.lib">
+    +    <ant dir="${base.db}" target="export.sample.data.extension" inheritAll="true" inheritRefs="true" />
+    +  </target>
+    +	
+    
+    +  <target name="export.reference.data" depends="init, core.lib">
+    +    <ant dir="${base.db}" target="export.reference.data" inheritAll="true" inheritRefs="true" />
+    +  </target>
+    +  
+       <target name="import.sample.data" depends="init, core.lib">
+         <ant dir="${base.db}" target="import.sample.data" inheritAll="true" inheritRefs="true" />
+       </target>
+    diff --git a/src-db/database/build.xml b/src-db/database/build.xml
+    index 8ecb3c8ae1..0a535e9d30 100644
+    --- a/src-db/database/build.xml
+    +++ b/src-db/database/build.xml
+    @@ -160,6 +160,28 @@ export.database.structure: Exports the database structure in the xml's files.
+           <sysproperty key="javax.xml.parsers.SAXParserFactory" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl" />
+         </java>
+       </target>
+    +	
+    +  <target name="export.sample.data.extension">
+    +  <java classname="org.openbravo.ddlutils.task.ExportSampledataExtension" failonerror="true" fork="true" maxmemory="${build.maxmemory}">
+    +      <arg value="${bbdd.driver}"/>
+    +      <arg value="${bbdd.owner.url}"/>
+    +      <arg value="${bbdd.user}"/>
+    +      <arg value="${bbdd.password}"/>
+    +      <arg value="${bbdd.rdbms}"/>
+    +      <arg value="${basedir}/../../"/>
+    +      <arg value="${client}"/>
+    +      <arg value="${module}"/>
+    +      <arg value="${exportFormat}"/>
+    +      <arg value="${max.threads}"/>
+    +      <arg value="${dataSetName}"/>
+    +      <classpath refid="runtime-classpath"/>
+    +      <syspropertyset>
+    +         <propertyref name="java.security.egd" />
+    +      </syspropertyset>
+    +      <sysproperty key="javax.xml.parsers.SAXParserFactory" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl" />
+    +    </java>
+    +  </target> 
+    +	
+    
+       <target name="import.sample.data">
+         <taskdef name="importsampledata" classname="org.openbravo.ddlutils.task.ImportSampledata">
+    
+
+  
+
+  * dbsourcemanager.jar (modified) 
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+This file version may be updated in core module in the future. For now, is not
+available as standard  
+---|---  
+  
+And  create a new POS2 environment  in order to avoid unnecessary data
+previously created.
+
+Once we have a clean environment, execute the following command in “openbravo”
+folder:
+
+    
+    
+    cp /home/openbravo/Desktop/dbsourcemanager.jar src-db/database/lib/dbsourcemanager.jar && patch -p1 < /home/openbravo/Desktop/sampleDataExtension.diff
+    
+
+The command will create the following files in your environment, that are
+strictly necessary to export the required sampledata:
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-2.png){: .legacy-image-style}
+
+  
+**OPTIONAL:** In order to ease which sampledata (XML Table) is the one we
+need, it is recommended to make an export with the clean environment first and
+commit the new files created.
+
+To do it, first create a branch for openbravo/modules/pos2.sampledata and
+switch to it, then return to openbravo folder and execute the following
+command:
+
+    
+    
+     ant export.sample.data.extension -DdataSetName="POS2 SampleData" -Dclient="The White Valley Group" -Dmodule=org.openbravo.pos2.sampledata
+    
+
+XML tables will be updated in “org,openbravo.pos2.sampledata” folder, add all
+changes and create a commit (DO NOT PUSH IT).
+
+  
+Now, it’s all ready to export sampledata BUT take in account that it can be 2
+possible scenarios:
+
+  * Table exists inside the pos2.sampledata dataset, this means that after the sampledata export the XML table will be created in the folder. 
+  * Table is NOT created inside the pos2.sampledata dataset 
+
+###  Table EXISTS in pos2.sampledata Dataset
+
+The easier scenario, in this case sampledata can be easily obtained following
+the next steps:
+
+  * Go to  http://localhost:8080/openbravo/  and apply the necessary changes. 
+  * Verify in POS2 if the necessary modifications have been implemented correctly. 
+  * Execute the following command: 
+
+    
+    
+    ant export.sample.data.extension -DdataSetName="POS2 SampleData" -Dclient="The White Valley Group" -Dmodule=org.openbravo.pos2.sampledata
+    
+
+XML tables will be updated in “org,openbravo.pos2.sampledata” folder, commit
+and push the required tables.
+
+###  Table DOES NOT exist in pos2.sampledata Dataset
+
+In this case, it will be necessary to create them following this steps:
+
+  * Go to  http://localhost:8080/openbravo/ 
+  * Change role to “System administrator” 
+  * Go to “Dataset Tab” 
+  * Filter by “Search Key”, search for “POS2Sampledata” & Select the row. 
+  * Select “Table” tab (lower tab) & Create a new record for “Table” 
+  * **IMPORTANT:** Module MUST be "In development". So, click the green arrow next to “Module”. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-3.png){: .legacy-image-style}
+
+  * Module tab will be opened. Go to grid, delete all the filters, search for “WebPOS2” and double click the row. 
+  * Check the "In development" option & Save. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-4.png){: .legacy-image-style}
+
+  * Go back to “Dataset” tab & Check that “Module” field contains “Openbravo WebPOS2 - 1.0.104 - English (USA)” 
+  * Click the green arrow next to “Table” field 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-5.png){: .legacy-image-style}
+
+  * “Tables and Columns” tab will be opened. Go to the grid, delete filters and search the table we want to add. For example, filter by names and search “OBPOS2_PickupP” and double click the row. 
+  * Change its “Data Access Level” to “System/Client” & Save. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/QA_Sampledata_Export-6.png){: .legacy-image-style}
+
+  * Go back to “Dataset” tab & Fill the field “Table” with the table that has been enabled. Following the example: Search for “OBPOS2_PickupP” and select it. 
+  * Fill the field “HQL/SQL Where clause” with the client id (for Vall Blanca client, the field must contain: **ad_client_id = '39363B0921BB4293B48383844325E84C'** ) & Save. 
+
+Now, the required tables will be exported in pos2.sampledata, but first it is
+necessary to go to the terminal, and in openbravo folder execute the following
+command:
+
+    
+    
+    ant export.database
+    
+
+Go to  http://localhost:8080/openbravo/  , apply the necessary changes and
+verify in POS2 if changes are the desired ones.
+
+Finally, execute the command to obtain the sampledata:
+
+    
+    
+    ant export.sample.data.extension -DdataSetName="POS2 SampleData" -Dclient="The White Valley Group" -Dmodule=org.openbravo.pos2.sampledata
+    
+
+XML tables will be updated in “org,openbravo.pos2.sampledata” folder, commit
+and push the required tables.
+
+Retrieved from "  http://wiki.openbravo.com/wiki/QA_Sampledata_Export  "
+
+This page has been accessed 718 times. This page was last modified on 27
+September 2023, at 15:43. Content is available under  Creative Commons
+Attribution-ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+
