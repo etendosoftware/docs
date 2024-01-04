@@ -11,7 +11,8 @@ tags:
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| 1.3.1 | 15/12/2023 | CS |
+| 1.3.2 | 04/01/2024 | CS |
+| 1.3.1 | 15/12/2023 | C  |
 | 1.3.0 | 12/12/2023 | C  |
 | 1.2.2 | 20/10/2023 | C  |
 | 1.2.1 | 18/10/2023 | C  |
@@ -23,6 +24,8 @@ tags:
 | 1.0.7 | 05/04/2023 | C  |
 
 ## Release Notes
+### 1.3.2
+-  [EML-428](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/32){target="\_blank"} Copilot fails when uses host.docker.internal in Linux Docker 
 
 ### 1.3.1
 -  [EML-421](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/29){target="\_blank"} Copilot dependencies load is fail in Jar format
