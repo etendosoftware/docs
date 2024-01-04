@@ -1224,33 +1224,6 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relationship-with-other-application-areas" class="md-nav__link">
-    Relationship with other application areas
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4020,33 +3993,6 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    Setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execution" class="md-nav__link">
-    Execution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#relationship-with-other-application-areas" class="md-nav__link">
-    Relationship with other application areas
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4175,75 +4121,7 @@
   <h1>Transactions</h1>
 
 <h2 id="overview">Overview</h2>
-<p>In Material Requirement Planning (MRP) the application is used to <strong>automatically review the demand and display suggestions concerning required supply</strong>. In the <strong>Manufacturing Plan</strong>, the application suggests required <strong>Work Requirements</strong> and <strong>Requisitions</strong>. In the <strong>Purchasing Plan</strong>, the application suggests required <strong>Purchase Orders</strong>.</p>
-<p>The Master Requirement Planning consists of two plans:</p>
-<ul>
-<li>Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement">Work Requirement</a> and the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition"><em>Requisition</em></a>.</li>
-<li>Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order"><em>Purchase Order</em></a>.</li>
-</ul>
-<p><strong>Planning Methods</strong> are entered to define what supply components are taken into account with the calculations of these plans.</p>
-<p><a class="glightbox" href="/assets/drive/1XDSnzN_2Jhj3RYWAJF3AHlHgLK81xqJA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/1XDSnzN_2Jhj3RYWAJF3AHlHgLK81xqJA.png" /></a></p>
-<h5 id="setup"><strong>Setup</strong></h5>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Apart from the setup screens in the <a href="/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/">Material Requirement Planning module</a>  that are configured, additional setups are required:</p>
-</div>
-<p>For the products that are planned in the <strong>Manufacturing Plan</strong>, the following configurations are required:</p>
-<ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process plan</em></a> is set up for the product.</li>
-<li>the <strong>production checkbox</strong> is selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Product</em></a> screen.</li>
-<li>the <strong>Purchasing tab</strong> in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.</li>
-</ul>
-<p>For the products that are planned in the <strong>Purchasing Plan</strong>, the following configurations are required:</p>
-<ul>
-<li>the purchase checkbox is selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Product</em></a> screen.</li>
-<li>the price of the product is defined for the price list of the vendor that is entered in the Purchasing tab.</li>
-<li>the Purchasing tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.</li>
-<li>the vendor that is reflected as the Business Partner in the above mentioned Purchasing tab is filled out in the Business Partner screen:<ul>
-<li><strong>Vendor/Creditor tab</strong> with at least the following fields filled out:<ul>
-<li>Purchase Pricelist</li>
-<li>PO Payment Method</li>
-<li>PO Payment Terms</li>
-</ul>
-</li>
-<li><strong>Location/Address tab</strong></li>
-</ul>
-</li>
-<li>The Purchasing tab in the Product screen is filled out with the <strong>Planning Method</strong> and <strong>Planner</strong> information.</li>
-</ul>
-<h5 id="execution"><strong>Execution</strong></h5>
-<p>The material planner enters a Manufacturing Plan for a product for a certain time period and processes the plan.</p>
-<p>In the created overview the <strong>material planner reviews and analyzes</strong> the lines. Based on the information that is processed by MRP, the <strong>plan suggests Work Requirements and Requisitions for certain quantities and certain dates</strong>.</p>
-<ul>
-<li>If required, <strong>adjustments to the set ups</strong>, for example the planning method, are done. The lines of the plan are recalculated by clicking the <strong>Recalculate Dates/Quantities</strong> button.</li>
-<li>If required, <strong>manual changes to the created lines</strong> with regards to quantities and dates are made.</li>
-<li>once the plan is correct, any suggested requisitions are created by clicking the <strong>Generate Material Requisitions</strong> button, and any suggested Work Requirements are created by clicking the <strong>Generate Work Requirements</strong> button.</li>
-<li>the material planner completes the created requisition(s) and processes the created Work Requirement(s).</li>
-</ul>
-<p>The material planner then enters a Purchasing Plan for a product for a certain time period and processes the plan.</p>
-<p>In the created overview the <strong>material planner reviews and analyzes</strong> the lines. Based on the information that is processed by MRP, the <strong>plan suggests Purchase Orders for certain quantities and certain dates</strong>.</p>
-<ul>
-<li>If required, <strong>adjustments to the set ups</strong>, for example the planning method, are done. The lines of the plan are deleted and the plan is reprocessed.</li>
-<li>If required, <strong>manual changes to the created lines</strong> with regards to quantities and dates are made.</li>
-<li>once the plan is correct, any suggested purchase orders are created by clicking the <strong>Create Purchase Orders</strong> button.</li>
-<li>the material planner completes the created purchase order.</li>
-</ul>
-<h4 id="relationship-with-other-application-areas"><strong>Relationship with other application areas</strong></h4>
-<p>The <strong>MRP</strong> interacts with the following modules:</p>
-<ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/"><em>Procurement Management</em></a>:<ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition"><em>Requisitions</em></a> are created from the Manufacturing Plan</li>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order"><em>Purchase Orders</em></a> are created from the Purchasing Plan</li>
-</ul>
-</li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/"><em>Sales Management</em></a>: sales orders are optionally taken into account in the calculations of both plans</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/"><em>Warehouse Management</em></a>: <a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-report"><em>Stock levels</em></a> are automatically taken into account in the calculations of both plans</li>
-<li><a href="/user-guide/etendo-classic/basic-features/production-management/transactions/"><em>Production Management</em></a>:<ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process Plan</em></a> is used for the calculation of the Manufacturing Plan</li>
-<li><a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement"><em>Work Requirements</em></a> are created from the Manufacturing Plan</li>
-</ul>
-</li>
-</ul>
+<p>Material Requirement Planning (MRP) deals with all activities related to the planning of a manufacturing and suggestions for the required supply. </p>
 <h2 id="manufacturing-plan"><strong>Manufacturing Plan</strong></h2>
 <h3 id="overview_1"><strong>Overview</strong></h3>
 <p>Create a comprehensive work requirement in order to request materials over a specified time period.</p>

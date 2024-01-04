@@ -4015,21 +4015,24 @@
 
 <p><a class="glightbox" href="/assets/getting-started/overview/cover-getting-started.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cover-getting-started.png" src="/assets/getting-started/overview/cover-getting-started.png" /></a></p>
 <h2 id="overview">Overview</h2>
-<p>In Material Requirement Planning the application is used to automatically review the demand and display suggestions concerning required supply. In the <em>Manufacturing Plan</em>, the application suggests required <em>Work Requirements</em> and <em>Requisitions</em>. In the <em>Purchasing Plan</em>, the application suggests required <em>Purchase Orders</em>.</p>
+<p>In Material Requirement Planning the application is used to <em>automatically review the demand and display suggestions concerning required supply</em>. In the <em>Manufacturing Plan</em>, the application suggests required <em>Work Requirements</em> and <em>Requisitions</em>. In the <em>Purchasing Plan</em>, the application suggests required <em>Purchase Orders</em>.</p>
 <h2 id="material-requirement-planning">Material Requirement Planning</h2>
 <p>The Master Requirement Planning consists of two plans:</p>
 <ul>
 <li>Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement">Work Requirement</a> and the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition">Requisition</a>.</li>
 <li>Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a>.</li>
 </ul>
-<p><em>Planning Methods</em> are entered to define what supply components are taken into account with the calculations of these plans.</p>
+<p><strong>Planning Methods</strong> are entered to define what supply components are taken into account with the calculations of these plans.</p>
 <p><a class="glightbox" href="/assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png" /></a></p>
 <h3 id="configuration"><strong>Configuration</strong></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>Apart from the set up screens in the MRP module that are configured, additional set ups are required.
 For the products that are planned in the <em>Manufacturing Plan</em>, the following configurations are required:</p>
+</div>
 <ul>
 <li>the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan">Process plan</a>  is set up for the product.</li>
-<li>the production checkbox and the Process Plan name are selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> screen.
+<li>the <em>production checkbox</em> and the Process Plan name are selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> screen.
 The <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing">Manufacturing</a> tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.</li>
 </ul>
 <p>For the products that are planned in the <em>Purchasing Plan</em>, the following configurations are required:</p>
@@ -4054,18 +4057,18 @@ The <a href="/user-guide/etendo-classic/basic-features/master-data-management/ma
 </li>
 </ul>
 <h3 id="execution"><strong>Execution</strong></h3>
-<p>The material planner enters a Manufacturing Plan for a product for a certain time period and processes the plan.
-In the created overview the material planner reviews and analyzes the lines. Based on the information that is processed by MRP, the plan suggests <em>Work Requirements</em> and <em>Requisitions</em> for certain quantities and certain dates.</p>
+<p>The material planner enters a Manufacturing Plan for a product for a certain time period and processes the plan.</p>
+<p>In the created overview the <em>material planner reviews and analyzes</em> the lines. Based on the information that is processed by MRP, the plan suggests <em>Work Requirements</em> and <em>Requisitions</em> for certain quantities and certain dates.</p>
 <ul>
-<li>If required, adjustments to the set ups, for example the planning method, are done. The lines of the plan are recalculated by clicking the Recalculate Dates/Quantities button.</li>
+<li>If required, adjustments to the set ups for example the planning method, are done. The lines of the plan are recalculated by clicking the <em>Recalculate Dates/Quantities</em> button.</li>
 <li>If required, manual changes to the created lines with regards to quantities and dates are made.</li>
-<li>Once the plan is correct, any suggested requisitions are created by clicking the Generate Material Requisitions button and any suggested Work Requirements are created by clicking the Generate Work Requirements button.</li>
+<li>Once the plan is correct, any suggested requisitions are created by clicking the <em>Generate Material Requisitions</em> button and any suggested Work Requirements are created by clicking the <em>Generate Work Requirements</em> button.</li>
 <li>The material planner completes the created requisition(s) and processes the created Work Requirement(s).</li>
 </ul>
 <p>The material planner then enters a Purchasing Plan for a product for a certain time period and processes the plan.
 In the created overview the material planner reviews and analyzes the lines. Based on the information that is processed by MRP, the plan suggests <em>Purchase Orders</em> for certain quantities and certain dates.</p>
 <ul>
-<li>If required, adjustments to the set ups, for example the planning method, are done. The lines of the plan are deleted and the plan is reprocessed.</li>
+<li>If required, adjustments to the set ups for example the planning method, are done. The lines of the plan are deleted and the plan is reprocessed.</li>
 <li>If required, manual changes to the created lines with regards to quantities and dates are made.</li>
 <li>Once the plan is correct, any suggested purchase orders are created by clicking the <em>Create Purchase Orders</em> button.</li>
 <li>The material planner completes the created purchase order.</li>
