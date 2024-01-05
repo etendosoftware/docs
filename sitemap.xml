@@ -151,7 +151,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/getting-started/</loc>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/how-to-create-copilot-tools/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/installation/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -161,17 +166,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/xml-translation-tool/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-mobile/getting-started/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-example-subapplication-rx/</loc>
+         <loc>https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication/</loc>
+         <loc>https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -222,6 +237,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-rx/mobilesync/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -321,11 +341,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/etendo-rx/</loc>
-         <lastmod>2024-01-05</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
@@ -396,7 +411,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/overview/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -436,6 +451,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
@@ -457,6 +477,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -522,6 +547,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -741,6 +771,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-0/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
@@ -947,6 +982,26 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-1/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-2/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-3/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-4/</loc>
+         <lastmod>2024-01-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-0/</loc>
          <lastmod>2024-01-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
