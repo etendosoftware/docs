@@ -1,0 +1,5035 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.etendo.software/23.x/user-guide/etendo-classic/basic-features/master-data-management/product-setup/">
+      
+      
+        <link rel="prev" href="../business-partner-setup/">
+      
+      
+        <link rel="next" href="../pricing/">
+      
+      <link rel="icon" href="../../../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Product Setup - Etendo Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#product-characteristic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Etendo Documentation" class="md-header__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Etendo Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Product Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="custom" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../getting-started/overview/" class="md-tabs__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../overview/" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../developer-guide/overview/" class="md-tabs__link">
+        Developer Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../whats-new/overview/" class="md-tabs__link">
+        What's New
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../../live-builds/overview/" class="md-tabs__link">
+      Live Builds
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../help-and-support/overview/" class="md-tabs__link">
+        Help and Support
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Etendo Documentation" class="md-nav__button md-logo" aria-label="Etendo Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Etendo Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/etendosoftware" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    etendosoftware
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          User interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          User interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/workspace/" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting-started/user-interface/grid-and-forms/" class="md-nav__link">
+        Grid and Forms
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+          Basic Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basic Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+          General Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          General Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/clear-report-cache/" class="md-nav__link">
+        Clear Report Cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/attachments-configuration/" class="md-nav__link">
+        Attachments Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/application/" class="md-nav__link">
+        Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/client/" class="md-nav__link">
+        Client
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/crm-connector/" class="md-nav__link">
+        CRM Connector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/enterprise-model/" class="md-nav__link">
+        Enterprise Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general-setup/process-scheduling/" class="md-nav__link">
+        Process Scheduling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+          Master Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../master-data/" class="md-nav__link">
+        Master Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business-partner-setup/" class="md-nav__link">
+        Business Partner Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Product Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Product Setup
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-characteristic" class="md-nav__link">
+    Product Characteristic
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Characteristic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristic" class="md-nav__link">
+    Characteristic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button-add-products" class="md-nav__link">
+    Button Add Products
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset" class="md-nav__link">
+    Subset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset-value" class="md-nav__link">
+    Subset Value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-product-selector" class="md-nav__link">
+    Improving product selector
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-product-characteristics-description" class="md-nav__link">
+    Update Product Characteristics Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Product Characteristics Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-of-measure" class="md-nav__link">
+    Unit of Measure
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit of Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-of-measure_1" class="md-nav__link">
+    Unit of Measure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    Conversion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-category" class="md-nav__link">
+    Product Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-category_1" class="md-nav__link">
+    Product Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigned-products" class="md-nav__link">
+    Assigned Products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_1" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    Attribute
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute_1" class="md-nav__link">
+    Attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-value" class="md-nav__link">
+    Attribute Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-set" class="md-nav__link">
+    Attribute Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-set_1" class="md-nav__link">
+    Attribute Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigned-attribute" class="md-nav__link">
+    Assigned Attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lot-number-sequence" class="md-nav__link">
+    Lot Number Sequence
+  </a>
+  
+    <nav class="md-nav" aria-label="Lot Number Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lot-control" class="md-nav__link">
+    Lot Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-number-sequence" class="md-nav__link">
+    Serial Number Sequence
+  </a>
+  
+    <nav class="md-nav" aria-label="Serial Number Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-control" class="md-nav__link">
+    Number Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brand" class="md-nav__link">
+    Brand
+  </a>
+  
+    <nav class="md-nav" aria-label="Brand">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_8" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pricing/" class="md-nav__link">
+        Pricing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+          Procurement Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Procurement Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../procurement-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_4" id="__nav_3_2_1_4_label" tabindex="0">
+          Warehouse Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Warehouse Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../warehouse-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_5" id="__nav_3_2_1_5_label" tabindex="0">
+          Production Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Production Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../production-management/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../production-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../production-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_6" id="__nav_3_2_1_6_label" tabindex="0">
+          Material Requirement Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Material Requirement Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material-requirement-planning/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material-requirement-planning/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material-requirement-planning/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_7" id="__nav_3_2_1_7_label" tabindex="0">
+          Sales Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Sales Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sales-management/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8" id="__nav_3_2_1_8_label" tabindex="0">
+          Financial Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Financial Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/getting-started/" class="md-nav__link">
+        ✨Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8_2" id="__nav_3_2_1_8_2_label" tabindex="0">
+          Receivables and Payables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_8_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8_2">
+          <span class="md-nav__icon md-icon"></span>
+          Receivables and Payables
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/receivables-and-payables/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_8_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1_8_3" id="__nav_3_2_1_8_3_label" tabindex="0">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_2_1_8_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_1_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/analysis-tools/" class="md-nav__link">
+        Analysis Tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/accounting/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../financial-management/assets/overview/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+          Optional Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Optional Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_1" id="__nav_3_2_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/essentials-extensions/overview/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/platform-extensions/overview/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/warehouse-extensions/overview/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/production-extensions/overview/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/sales-extensions/overview/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/financial-extensions/overview/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/spain-localization/overview/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/bundles/etendobi-extensions/overview/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+          Supported Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Supported Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../optional-features/supported-modules/tax-report-launcher/" class="md-nav__link">
+        Tax Report Launcher
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+          How to Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/" class="md-nav__link">
+        How to manage deferred revenue and expenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/" class="md-nav__link">
+        How to manage prepaid invoices in payables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-receivables/" class="md-nav__link">
+        How to manage prepaid invoices in receivables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/" class="md-nav__link">
+        How to transfer funds between financial accounts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/user-interface/user-interface/" class="md-nav__link">
+        User interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../etendo-copilot/getting-started/bastian/" class="md-nav__link">
+        Bastian
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1_1" id="__nav_4_2_1_1_label" tabindex="0">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/" class="md-nav__link">
+        Install Etendo Development Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting/" class="md-nav__link">
+        IntelliJ Code Formatting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/" class="md-nav__link">
+        Use of Repositories in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/" class="md-nav__link">
+        Install Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo/" class="md-nav__link">
+        Install Translation Bundles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1_2" id="__nav_4_2_1_2_label" tabindex="0">
+          Migration from Openbravo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Migration from Openbravo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/" class="md-nav__link">
+        Migrating to Etendo (from Openbravo)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2/" class="md-nav__link">
+        Upgrading to Openbravo 21Q3.2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1_3" id="__nav_4_2_1_3_label" tabindex="0">
+          Upgrade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Upgrade
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/" class="md-nav__link">
+        Upgrade Etendo to Any Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/" class="md-nav__link">
+        Core format migration (JAR- Sources)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github/" class="md-nav__link">
+        Resolving Dependencies on GitHub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/etendo-jars/" class="md-nav__link">
+        Etendo Jars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/inventory-status/" class="md-nav__link">
+        Inventory Status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/concepts/naming-guidelines-for-modules/" class="md-nav__link">
+        Naming Guideliness for Modules
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/" class="md-nav__link">
+        How to Publish Modules to a GitHub Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/" class="md-nav__link">
+        How to Create and Update Translation Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/" class="md-nav__link">
+        How to Create Jobs and Actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook/" class="md-nav__link">
+        How to Create a Clone Hook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
+        How to Use Advanced Sequences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process/" class="md-nav__link">
+        How to Create Scan Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/" class="md-nav__link">
+        How to Use Secure Webservices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/" class="md-nav__link">
+        How to Copy and Paste Images in Etendo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process/" class="md-nav__link">
+        How to Create a Module that Adds an Accounting Process
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+          Developer Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool/" class="md-nav__link">
+        Etendo Backup and Restore Plugin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/platform-extensions-bundle/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/financial-extensions-bundle/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Etendo RX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo RX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/concepts/projections/" class="md-nav__link">
+        Projections, Repository and Search
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_3" id="__nav_4_3_3_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/tutorials/creating-a-new-microservice/" class="md-nav__link">
+        Creating a New Microservice
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_4" id="__nav_4_3_4_label" tabindex="0">
+          How to guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          How to guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive/" class="md-nav__link">
+        How to Filter any request for Active or all Records
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Etendo Copilot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Copilot
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/available-tools/xml-translation-tool/" class="md-nav__link">
+        XML Translation Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/available-tools/db-query-tool/" class="md-nav__link">
+        DB Query Tool
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-copilot/how-to-create-copilot-tools/" class="md-nav__link">
+        How to create Copilot tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_2" id="__nav_4_5_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication/" class="md-nav__link">
+        Create New Subapplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx/" class="md-nav__link">
+        Example Subapplication Using Etendo RX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs" class="md-nav__link">
+        Etendo UI Library
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          What's New
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          What's New
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/etendo-release-cycle/" class="md-nav__link">
+        Etendo Release Cycle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://etendo.software" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Release Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_1" id="__nav_5_4_1_label" tabindex="0">
+          Etendo Classic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Classic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/etendo-gradle-plugin/" class="md-nav__link">
+        Etendo Gradle Plugin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_1_3" id="__nav_5_4_1_3_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/" class="md-nav__link">
+        Essentials Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/" class="md-nav__link">
+        Platform Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/" class="md-nav__link">
+        Warehouse Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/" class="md-nav__link">
+        Production Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/" class="md-nav__link">
+        Sales Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/" class="md-nav__link">
+        Spanish Localization Bundle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/" class="md-nav__link">
+        Etendo BI Bundle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_1_4" id="__nav_5_4_1_4_label" tabindex="0">
+          Translation Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Translation Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/" class="md-nav__link">
+        Financial Extensions Bundle ES
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/" class="md-nav__link">
+        Known Issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_2" id="__nav_5_4_2_label" tabindex="0">
+          Etendo Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Etendo Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_2_1" id="__nav_5_4_2_1_label" tabindex="0">
+          Bundles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bundles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/" class="md-nav__link">
+        Etendo Classic Subapp Extensions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../live-builds/overview/" class="md-nav__link">
+        Live Builds
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Help and Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Help and Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/support-service/" class="md-nav__link">
+        Support Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../help-and-support/how-to-report-bugs/" class="md-nav__link">
+        How to report bugs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-characteristic" class="md-nav__link">
+    Product Characteristic
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Characteristic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristic" class="md-nav__link">
+    Characteristic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#button-add-products" class="md-nav__link">
+    Button Add Products
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset" class="md-nav__link">
+    Subset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subset-value" class="md-nav__link">
+    Subset Value
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering" class="md-nav__link">
+    Filtering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-product-selector" class="md-nav__link">
+    Improving product selector
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-product-characteristics-description" class="md-nav__link">
+    Update Product Characteristics Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Product Characteristics Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-of-measure" class="md-nav__link">
+    Unit of Measure
+  </a>
+  
+    <nav class="md-nav" aria-label="Unit of Measure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_2" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-of-measure_1" class="md-nav__link">
+    Unit of Measure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    Conversion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-category" class="md-nav__link">
+    Product Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_3" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-category_1" class="md-nav__link">
+    Product Category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accounting" class="md-nav__link">
+    Accounting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigned-products" class="md-nav__link">
+    Assigned Products
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#translation_1" class="md-nav__link">
+    Translation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    Attribute
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_4" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute_1" class="md-nav__link">
+    Attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-value" class="md-nav__link">
+    Attribute Value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-set" class="md-nav__link">
+    Attribute Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_5" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-set_1" class="md-nav__link">
+    Attribute Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigned-attribute" class="md-nav__link">
+    Assigned Attribute
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lot-number-sequence" class="md-nav__link">
+    Lot Number Sequence
+  </a>
+  
+    <nav class="md-nav" aria-label="Lot Number Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_6" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lot-control" class="md-nav__link">
+    Lot Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serial-number-sequence" class="md-nav__link">
+    Serial Number Sequence
+  </a>
+  
+    <nav class="md-nav" aria-label="Serial Number Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_7" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-control" class="md-nav__link">
+    Number Control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brand" class="md-nav__link">
+    Brand
+  </a>
+  
+    <nav class="md-nav" aria-label="Brand">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_8" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    Header
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+  <h1>Product Setup</h1>
+
+<h2 id="product-characteristic"><strong>Product Characteristic</strong></h2>
+<h3 id="introduction"><strong>Introduction</strong></h3>
+<p>Product Characteristic can be defined to complete the definition of a product using variants.</p>
+<p><em>Product Characteristics</em> are attributes that can be added to the product definition to extend the description of each product. Examples of Characteristics are <em>Size</em>, <em>Color</em>, <em>Quality</em>, <em>Shape</em> or <em>Weight</em>. These characteristics can be used later to filter or search products.</p>
+<p>Once the definition of the characteristics is created, these can be assigned to a product and then create other products or SKU based on this <strong>Generic Product</strong> and its characteristics. This is a generic product where common attributes like tax or prices are defined. By default, products inherit all the attributes of the <em>Generic Product</em> such as taxes, prices, etc. They can be overridden on each product. Generic products cannot be purchased or sold or used in any document.</p>
+<p>For example, the Generic product <em>Shirts Summer Season 2013 by My Provider</em> implements the Characteristics <em>Size</em> and <em>Color</em> as variants. This <em>Generic Product</em> will have as Product Variant each combination of Color and Size.</p>
+<h3 id="characteristic"><strong>Characteristic</strong></h3>
+<p><strong>Characteristic Definition</strong></p>
+<p>Field to take into account:</p>
+<ul>
+<li><strong>Variant</strong>: When it is marked, it will explode/create combinations with its values. If it is not marked, it will not create combinations with other characteristics. For example:</li>
+<li>Characteristic Color: Variant marked with value Blue and White</li>
+<li>Characteristic Size: Variant marked with value M and L</li>
+<li>Characteristic Fashion line: Variant is not marked with value Sport, Classic, Vintage</li>
+<li><strong>Explode Configuration Tab</strong>: Flag available on Variant Characteristics. When it is checked, the values of the selected variant characteristic are automatically inserted in the <em>Characteristic Configuration</em> tab when the variant is assigned to a generic product. If it is not checked, the values must be added manually.</li>
+</ul>
+<p>These three characteristics are assigned to the product in this way:</p>
+<ul>
+<li>Color: Blue, White</li>
+<li>Size: M,L</li>
+<li>Fashion line: Sport</li>
+</ul>
+<p>It will create four variants/products and for all of them with the characteristic Sport. We can say that a characteristic that is not a variant is like a tag that is added to each new product.</p>
+<p><a class="glightbox" href="/assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/cdjlrR76mBK3wKqB3XQ6bNRK_KDGSQ0EVVtc3t_SAYwPU_JW9f9aTb3RyiWfBiICaOuta8k49CiQN8FZ0--XfpKZ22cROG1FySev_r2sTdzSxoo_aegpn6sseo2efzfQXglibd6WknWTX05Ymg.png" /></a></p>
+<h3 id="value"><strong>Value</strong></h3>
+<p>Each of the values of a characteristic.</p>
+<p><a class="glightbox" href="/assets/drive/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/T08VPSpQt04CjFcMqUGY5stqRukgrwkmbvB4vvZkbroD_H2vXSgKGlb5E8R8mFz7PPfOlxRatH0AQeNQ9iF0ciK6puVW5M7dn8PvXC25R8vcSfoxYDilZ3r8n985hnZN3evM1FuRxdMlUQdBpg.png" /></a></p>
+<p>Fields to be into account:</p>
+<ul>
+<li>Name: Value</li>
+<li>Code: To be used later when creating the variant. It will put in the <em>Search Key</em> field</li>
+<li>Summary level: It is allowed to create a tree structure. For example, if the characteristic is color and for the same value(i.e Green) there are different references depending on the supplier:</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/30qiD3TYly1aHtadA8da6N1on2NsS-24GPTMc4awiD1PJp8YlesaDaIZWxHD6GroXrmmQqlO009SZ21glwlNUwhVU3AWsNKyuyy-D-P0sypHrPr6pbXSI6Tzxn2WAF5dVFffLzWR_KFKSynaSA.png" /></a></p>
+<h4 id="button-add-products"><strong>Button Add Products</strong></h4>
+<p>The " Add Products" button is shown when a product characteristic value is NOT a "Variant", therefore it can be assigned to any product.</p>
+<p><a class="glightbox" href="/assets/drive/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/IzWGMoCZ3c1nUm2OmvW-MWssK6KzQ1vdmYkLEjwqtOs4aLa_KnRpnZy-kA9YruqEuqstoyo7te-LG9nF3DVjHt7G08DzacTuATqMXW9SeVJ94VywvnPyTEywXyS9h4OaYv2BCAVbb0jy5eCD4Q.png" /></a></p>
+<p>It does not update current values. That is why the button only shows products where the characteristic is not assigned to.</p>
+<ul>
+<li>Scenario 1:</li>
+<li>Product A has the characteristic Color (defined as variant) with values White, Pink, Blue and Black</li>
+<li>After creating the product variants, the user creates the non-variant characteristic Fashion line: Women, Men</li>
+<li>Non-variant characteristic can be assigned to the product in Product window by using Update Characteristics process button.</li>
+<li>Scenario 2:</li>
+<li>Not variant product characteristic is created in Product Characteristic window as "Variant" = No.</li>
+<li>Once a product characteristic has been entered in "Value" tab, a process button "Add Products" is shown.</li>
+<li>"Add Products" button opens a pick/execute window where any product or set of products can be related to that product characteristic value.</li>
+</ul>
+<h3 id="subset"><strong>Subset</strong></h3>
+<p>A subset is a collection of values of a Product Characteristic.</p>
+<p>Subset feature is a powerful functionality that allows the user to share the same characteristics for different purposes. For example, lots of colors and sizes can be created for different products:</p>
+<ul>
+<li>Color:</li>
+<li>Green</li>
+<li>Gray</li>
+<li>White</li>
+<li>Blue</li>
+<li>Yellow</li>
+<li>Red</li>
+<li>Orange</li>
+</ul>
+<p>But finally you have different products, for example t-shirts and pants:Subsets:</p>
+<ul>
+<li>Pants</li>
+<li>Green</li>
+<li>White</li>
+<li>Gray</li>
+<li>Blue</li>
+<li>T-shirts</li>
+<li>Green</li>
+<li>White</li>
+<li>Orange</li>
+<li>Blue</li>
+</ul>
+<p>The aim of this feature is to avoid having duplicate values (blue, blue, green, green) because of different purposes. With this subset when selecting a product that is a pant, for example, instead of selecting the characteristic <em>Color</em> you select the subset <em>Pants</em>. This way, instead of retrieving seven values, it will retrieve just four. Another advantage of doing this is when searching for variants instead of having blue two times (and you would not know if the blue is for pants or t-shirts), you will have blue one time. So when searching for variants which have the characteristics <em>Blue,</em> the system will retrieve pants and t-shirts.</p>
+<h3 id="subset-value"><strong>Subset Value</strong></h3>
+<p>Each of the values of the product characteristic assigned to the subset.</p>
+<p><a class="glightbox" href="/assets/drive/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/8qzF_YI5MuZAL78CRMbdJSNZ8du0swgIEukOgIlHQ_8LTQr1rvbhX2RtOoq9CkprpZaV-Y2nIJQZH40wX_ipyG5uIjKf7bGbA40ZwGQc_U2y1mUFllwYkid1BrbpCRn1ia5FpvwSSqGJCjI5nA.png" /></a></p>
+<ul>
+<li>Sequence number: To order the way of seeing the values</li>
+<li>Name: Value. Notice that only values from the characteristic can be selected.</li>
+<li>Code: If it is filled, it will overwrite the code setup in the characteristic</li>
+</ul>
+<h3 id="filtering"><strong>Filtering</strong></h3>
+<p>Fields based on columns whose reference is Product Characteristics can be filtered in grid assisted with a popup where the tree of available characteristics is displayed.</p>
+<p><a class="glightbox" href="/assets/drive/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/c1KyrMrnAS9Ci-UjCi9mCzmMjtHi1layEkYHZWFvgdMoGTGyDW73G28ts-enKErw0xV02TJilqP4GYtWnvWU2VTw1-3CaLmwK_MkXzZd0ECboTr-10RBLFqT4vz4IrFIWZjpvW4kySrV734lkQ.png" /></a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The characteristics available in this popup are limited to the ones applicable to data filtered in the grid where it is displayed with the current filtering criteria for the rest of the fields.</p>
+</div>
+<h3 id="configuration"><strong>Configuration</strong></h3>
+<p>Product Characteristics is ready to be used out of the box.</p>
+<p>Anyway, some new features can be displayed as well with some simple configuration options (these changes need to be exported to the template).</p>
+<h4 id="improving-product-selector"><strong>Improving product selector</strong></h4>
+<p>You can select between the different product characteristics using the product selector. There you have a column showing product characteristics description (See image).</p>
+<p><a class="glightbox" href="/assets/drive/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/HuSSbpe8wKiBb3z_zy1u3J3Vpade6eOyRQSP28xLwU7-oWoIvIj3RtRDxCG73vVdQMRuN6AaJx51b0AZxqTaO7fJrqFbhd9mdRlXX7W99lFC6ZAVVV6GaRLGesNJZ-6drk9EVJnsd3fqCtsmUQ.png" /></a></p>
+<p>That is not the case when selecting from the suggestion box. There, just product names are used. Taking into account that the product with the characteristics share the name, it becomes impossible to distinguish one from another (See image).</p>
+<p><a class="glightbox" href="/assets/drive/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/HpBpfokkfU8331lBrHV76V0Jx-n2fECiBH5Fi7-nTB8eghX3S9JBXgt7SNj3xbuJJJQ6pXfZ_k5nHqbcfAos8JUfAIDT-KcidMmxmYXh409vMtUHljjiqgokBwJwBLzJSYR0VposKg3MH2E9Iw.png" /></a></p>
+<p>User experience in this case would be completely different if products could be identified from the suggestion box (See image).</p>
+<p><a class="glightbox" href="/assets/drive/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/toMnI_Io2di0EJVl4hcg8FejMI1Mji4mE4WwDzzA6F1xQtwVYVnCfXq63Y_irQ-Kd3kL6oBVE9oQ9AYk6OQ3bPgbY3wOivZK6LMsMRCJfpkydJzFTYSvMZt2wLpp-NrFIovQM4NEX0T_T3Ki4Q.png" /></a></p>
+<p>This can be easily improved by enabling some options of the selector.</p>
+<p>Follow these simple steps to enable this configuration, and please do not forget to export those changes to your template.</p>
+<ul>
+<li>Log as System Administrator</li>
+<li>Go To Tables and Columns and select C_OrderLine</li>
+<li>Go to lines tab and select product (M_Product_ID)</li>
+<li>Navigate to selector (see image)</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/N1WJZnz1jvs6oMx3ujSTNn9w6CBuKf1fzCFDRc8f8utnUhODwr8DIg8sz4kePzN-GQEClRIVfmV976AfLmAdd4lgmTLnrOt17IsBXRVvUwzw3C8mKGtsK3shjz_WhIhUvDTyJ5nzzTQ9tXpmIQ.png" /></a></p>
+<ul>
+<li>Go to Defined Selector tab and then to Defined Selector field tab and select Characteristics Description field.</li>
+<li>Edit and flag "Search in suggestion box" and "Show in Picklist" check boxes (See image)</li>
+</ul>
+<p><a class="glightbox" href="/assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/VeWmotz-vCwIybOp0GCuBP7Bix5SLKwHh68bX2NpVZV1R4Co_k8pAfTI9dLENbG2XPf4RJ1RDg3cro74LxzywXIsLN8RkmjNvDXaDYrkXEazCJRZg3mkZt0oxNuBCGluasJb_00MRnN8KP-0ug.png" /></a></p>
+<ul>
+<li>Last point would be to export these changes to the template. This is really important to avoid problems in future update processes and to keep these changes after the update.</li>
+</ul>
+<h2 id="update-product-characteristics-description"><strong>Update Product Characteristics Description</strong></h2>
+<h3 id="introduction_1"><strong>Introduction</strong></h3>
+<p>Every variant has its product <em>Characteristic Description</em> and this field is calculated automatically when:</p>
+<ul>
+<li>Variants are created</li>
+<li>When the value of a characteristic is change, for example from <em>Blue</em> to <em>Hard Blue</em></li>
+</ul>
+<p>For example, if the characteristics of a variant are Color and Size and the values are Blue and XL the result of the description would be: <em>Color: Blue, Size: XL</em></p>
+<p>If later on you change Blue for Hard Blue, the new description would be <em>Color: Hard Blue, Size: XL</em></p>
+<p>In all of these scenarios, the <em>Characteristic Description</em> is updated without the need of coming to this process.</p>
+<p>This process should be used just in some special cases:</p>
+<ul>
+<li>When the name of the Characteristic is changed, for example from Color to Tint</li>
+<li>When through the database characteristics or values are changed</li>
+</ul>
+<h2 id="unit-of-measure"><strong>Unit of Measure</strong></h2>
+<h3 id="introduction_2"><strong>Introduction</strong></h3>
+<p>A unit of measure is a standard unit or combination of units to be used alongside the quantity of a product.</p>
+<p>There are many units of measure which can be used to count product quantity on hand, or to purchase or sell a product.</p>
+<p>Units of measure can also be used for measuring time. There are products such as services or resources which must be measured that way.</p>
+<p>Below, you can find a list of the unit of measure you could setup in Etendo:</p>
+<ul>
+<li><strong>Unit</strong></li>
+<li><strong>Box</strong></li>
+<li><strong>Hour</strong></li>
+<li><strong>Kilogram</strong></li>
+<li><strong>KWh</strong> (Kilowatt hour)</li>
+<li><strong>Litre</strong></li>
+<li><strong>Pallet</strong></li>
+<li><strong>Pack</strong></li>
+<li>etc.</li>
+</ul>
+<h3 id="unit-of-measure_1"><strong>Unit of Measure</strong></h3>
+<p>Products of any type are managed in non-monetary units of measure.</p>
+<p><a class="glightbox" href="/assets/drive/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/Iw-lfQm_nO_kWlUX4lMKyP1PLsGc2gK0pR-gdpvkELwuNVzmGdIs8uFhBLSMbGk9vlooN8WI_HV4cppv96lpvgGE6jy40utYqvHjJZI8RVyNSbAA0USOej4f1ZcyYslRe9mH3rMAwQhd31dvmw.png" /></a></p>
+<p>As shown in the image above, a non-monetary unit of measure can be created in Etendo by filling in below relevant data:</p>
+<ul>
+<li>the <strong>EDI Code</strong>, if any.</li>
+<li>the <strong>UOM Name</strong></li>
+<li>the <strong>Standard Precision</strong> to be used while rounding calculated quantities of the products having that unit of measure</li>
+<li>the <strong>Costing Precision</strong> to be used while rounding calculated cost of the products having that unit of measure.</li>
+<li>and the <strong>Symbol</strong> or commonly used unit of measure abbreviation</li>
+</ul>
+<h3 id="translation"><strong>Translation</strong></h3>
+<p>Units of Measure can be translated to any language required.</p>
+<p>The way to get that is as simple as:</p>
+<ul>
+<li>select first the language required</li>
+<li>and then enter the unit of measure translated into that language.</li>
+</ul>
+<h3 id="conversion"><strong>Conversion</strong></h3>
+<p>Edit the conversion rate of one unit of measure into another one.</p>
+<h2 id="product-category"><strong>Product Category</strong></h2>
+<h3 id="introduction_3"><strong>Introduction</strong></h3>
+<p>Similar products can be grouped into different categories, which must be created with the aim of helping their management and analysis.</p>
+<p>You may want to group similar products within the same category in order to get procurement and sales information summarized by each category. This is possible due to the fact that "Product Group" is one of the "Dimensions" of Purchase and Sales Reports.</p>
+<p>To learn more, visit Procurement Analysis Tools and Sales Analysis Tools.</p>
+<p>Besides, each product category allows the user to set up a different set of ledger accounts to be used while posting product related transactions such as purchase and sales invoices.</p>
+<h3 id="product-category_1"><strong>Product Category</strong></h3>
+<p>Product category window allows the user to create and configure every product group your company may need.</p>
+<p><a class="glightbox" href="/assets/drive/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/G_gS1HUEVZE4UMppe7SkmQXsZazw9xWDG8mQE-m9fmGzYn_Bwn8DdEE3m1I81RBebq9f7kD2NMrn6QhLMNAMNAu4_SAgrFv5Ag0h2bJLVb0K9ows2xpaDQLz3mtHsAceVkrMhPUcYBmNdZf_wg.png" /></a></p>
+<p>As shown in the image above, the creation of a product category requires entering below listed information for each category:</p>
+<ul>
+<li>a <strong>Search Key</strong> or short name which helps to easily find the category</li>
+<li>a <strong>Name</strong></li>
+<li>a <strong>Description</strong></li>
+<li>and the <strong>Summary Level</strong> flag which helps to arrange product categories into a hierarchical structure.</li>
+</ul>
+<p>Product categories can be arranged into a hierarchical structure, which can be later on exploited by other reports or processes. For more information about how to work with trees, visit the Tree structure section.</p>
+<h3 id="accounting"><strong>Accounting</strong></h3>
+<p>Each product category allows the user to configure a different set of ledger accounts.</p>
+<p><a class="glightbox" href="/assets/drive/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/Ueek0FRoMRRlbjH2kzHNqRc-x6COVWDiR7oOOvRG3Z5zpeDyPJ1qV_cTafjT_eENf56h-1M7L3L4RkifbsuhC9-MGUexELBuzvaQwZkcpsYVT8sKuJAbcA0z28vzDPj7Lz9JVBFoFNRCLwKe9g.png" /></a></p>
+<p>There is a set of product related accounts which needs to be properly set up for the organization's general ledger configuration.</p>
+<p>The "Copy Accounts" process of the Defaults tab of the General Ledger Configuration screen allows to automatically populate at least the mandatory ones shown in the image above.</p>
+<p>The accounts automatically defaulted by Etendo can always be changed if required.</p>
+<p>The whole list of product related accounts is:</p>
+<ul>
+<li><strong>Product Assets</strong>: this field stores the default account to be used to record inventory transactions such as:</li>
+<li>Inventory Counts</li>
+<li>Inventory Movements</li>
+<li>and Goods Receipt</li>
+</ul>
+<p>This account is typically an asset account.</p>
+<ul>
+<li><strong>Product Expense</strong>: this field stores the default account to be used to record product purchase expenses.<br />
+  This account is typically an expense account.</li>
+<li><strong>Product Deferred Expense</strong>: this field stores the default account to be used to record deferred expenses.<br />
+  This account is typically an asset account.</li>
+<li><strong>Product Revenue</strong>: this field stores the default account to be used to record product sales revenues.<br />
+  This account is typically a revenue account.</li>
+<li><strong>Product Deferred Revenue</strong>: this field stores the default account to be used to record deferred revenues.<br />
+  This account is typically a liability account.</li>
+<li><strong>Product COGS</strong>: this field stores the default account to be used to record the cost of the goods sold.<br />
+  This account is typically an expense account.</li>
+<li><strong>Product Revenue Return</strong>: this field stores the default account to be used to record sales returns.<br />
+  This account is typically a revenue account.</li>
+<li><strong>Product COGS Return</strong>: this field stores the default account to be used to record return material receipts.<br />
+  This account is typically an expense account.</li>
+<li><strong>Invoice Price Variance</strong>: this field stores the default account to be used to record price differences between posted Goods Receipts and booked Purchase Invoices.<br />
+  This account is typically an asset account.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The "Copy Accounts" action button allows the user to copy the accounts defaulted in this window to the Product Accounting tab.</p>
+</div>
+<h3 id="assigned-products"><strong>Assigned Products</strong></h3>
+<p>Assigned products is a view of all the products which belong to a product category.</p>
+<p>As a side note, not real products such as discount products should belong to a specific product group, named by example "Others", as a way of keeping them isolated from the real ones.</p>
+<p>To learn more about discount products, visit Discount.</p>
+<h3 id="translation_1"><strong>Translation</strong></h3>
+<p>It maintains translations of Product Categories to different languages.</p>
+<h2 id="attribute"><strong>Attribute</strong></h2>
+<h3 id="introduction_4"><strong>Introduction</strong></h3>
+<p>Products can have an attribute or a set of attributes which makes them different to the rest.</p>
+<p>An attribute is a feature of a product, such as color or size.</p>
+<p>The capacity for managing product attributes allows a proper definition of the products and besides assure compliance with the tracking requirements imposed by the majority of industries.</p>
+<p>Etendo allows managing product attributes by following below steps:</p>
+<ol>
+<li>Creation of every Product Attribute. An Attribute can be a unique identifier such as a Serial Number, or can have a predefined list of values such as blue, white and red colors.<br />
+    To learn more, keep reading this section.</li>
+<li>Creation of Attribute Set/s which can contain just one attribute or mix a set of attributes.<br />
+    To learn more, visit Attribute Set</li>
+<li>Set up the relationship between the product and the attribute set.<br />
+    To learn more, visit Product</li>
+</ol>
+<h3 id="attribute_1"><strong>Attribute</strong></h3>
+<p>Attribute window allows the user to create and edit attributes such as color or size to be assigned to attribute sets.</p>
+<p><a class="glightbox" href="/assets/drive/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/KgY7LbRbBSeTKiXl8B-P3rCchmCaJNIgLI3-PCgZZTgJrWVJdtXsYP7yRTR6tYNF3i_T6LtO8PMtzJ8FTiu1P5KtQvQD1SacDNeHwRbNWnGPzOPv9tZ56WT-Fo05Nkxt-unkwXF9BBe0ag8sbw.png" /></a></p>
+<p>As shown in the image above, an attribute can be easily defined by entering the relevant data below:</p>
+<ul>
+<li>the <strong>Name</strong> of the attribute</li>
+<li>a short <strong>Description</strong> if required</li>
+<li>If the attribute is unique for each instance of the product, for example a lot number or a serial number, select the <strong>Instance Attribute</strong> checkbox.</li>
+<li><strong>List</strong> flag allows the user to state that the attribute has a predefined list of values to be entered in the "Attribute Value" tab.<br />
+  To learn more, visit Attribute Value.</li>
+<li><strong>Mandatory</strong> flag defines the attribute as mandatory, therefore it must always be specified for the product.</li>
+</ul>
+<h3 id="attribute-value"><strong>Attribute Value</strong></h3>
+<p>An attribute can have several values or individual characteristics to be detailed for each attribute.</p>
+<p>Above applies to attributes such as color or size.</p>
+<p>Attribute Value tab allows the creation of as many attribute values as required for an attribute.</p>
+<h2 id="attribute-set"><strong>Attribute Set</strong></h2>
+<h3 id="introduction_5"><strong>Introduction</strong></h3>
+<p>An attribute set can be defined by a single attribute or by a set of attributes to apply to specific products.</p>
+<p>If <strong>an attribute set</strong> includes among others <strong>an attribute which is unique for each instance of the product</strong>, for example, a lot number or a serial number, this window is the place to define which <strong>Lot Number Sequence</strong> or <strong>Serial Number Sequence</strong> must apply to get that unique attribute.</p>
+<p>The steps to follow are:</p>
+<ul>
+<li><strong>Creation of the Lot Number Sequence/s</strong>. To learn how, visit Lot Number Sequence</li>
+<li><strong>Creation of the Serial Number Sequence/s</strong>. To learn how, visit Serial Number Sequence</li>
+<li><strong>Set up the relationship between</strong> the previously created <strong>Lot/Serial Number Sequence/s</strong> and the <strong>Attribute Set</strong>, in the Attribute Set window.<br />
+  To learn how, keep reading this section.</li>
+</ul>
+<h3 id="attribute-set_1"><strong>Attribute Set</strong></h3>
+<p>Attribute Set window allows creating as many combinations of attributes as required to define products with few or multiple characteristics.</p>
+<p><a class="glightbox" href="/assets/drive/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/eFfHmZoippBAg2UAyKfVODqUewZCKUFQwC-0lr71L_P1uTZIN8khQzaIzN7cPdDoP7ZrlW7RkGUjq24Y2SB3vwd4_zYLHPYxEDxttakbcdEVhUm_oIMyzQeLAByyByHFmOZYit4L2GHp0fHJgg.png" /></a></p>
+<p>As shown in the image above, an attribute set to be assigned to a specific product/s can contain:</p>
+<ul>
+<li>a <strong>Name</strong> of the attribute Set</li>
+<li>a brief <strong>Description</strong> if needed</li>
+<li>a <strong>Lot</strong> or unique identifier given to a particular quantity of that product.<br />
+  If <strong>Lot flag is checked,</strong> a new field named "<strong>Lot Control</strong>" is shown for you to select the Lot Number Sequence to follow by the products linked to that particular attribute set.</li>
+<li>a <strong>Serial No</strong> or a unique identifier given to each unit of the product.<br />
+  If <strong>Serial No flag is checked,</strong> a new field named "<strong>Serial No Control</strong>" is shown for you to select the Serial Number Sequence to follow by the products linked to that particular attribute set.</li>
+<li>an <strong>Expiration Date</strong> or date upon which product quality is guaranteed.<br />
+  If <strong>Expiration Date flag is checked,</strong> a new field named "<strong>Guaranteed Days</strong>" is shown for you to enter the number of days a product can be guaranteed.</li>
+<li>finally, the flag "<strong>Require At Least One Value</strong>" implies that at least one attribute set value will be required in product related transactions.</li>
+</ul>
+<h3 id="assigned-attribute"><strong>Assigned Attribute</strong></h3>
+<p>An attribute set can have a single or a set of attributes assigned.</p>
+<p><a class="glightbox" href="/assets/drive/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/JKPixcSV3hgLjW-UlwcYfpGHyrKD1pT39o4XAyHeltD26-0fx1Kn5wXESm5DPoJtrVMistsa0OaXEZKaYLcxAfOG--fJgVgcXZzDWVGvU5xemPX_SiOMMirw-aIuq17LxKfgKlQ0Q3w4q7N3nA.png" /></a></p>
+<p>As shown in the image above, an attribute set can have only one attribute, for example Color or as many attributes as required, for example Size, Lot Number and Serial Number.</p>
+<p>The way to get that is just to select the previously created attributes in this tab.</p>
+<p>You should take into account that:</p>
+<ul>
+<li>if one of the selected attributes is a "Lot" or a "Serial N?" type attribute, the corresponding Number Sequence must have been properly set up in the Attribute Set window.</li>
+</ul>
+<h2 id="lot-number-sequence"><strong>Lot Number Sequence</strong></h2>
+<h3 id="introduction_6"><strong>Introduction</strong></h3>
+<p>A product attribute can be a Lot Number.</p>
+<p>Some products require lot numbering to assure compliance with the tracking requirements imposed by the majority of industries, which implies that a given quantity of a product has always to be linked to a unique lot number.</p>
+<h3 id="lot-control"><strong>Lot Control</strong></h3>
+<p>A Lot Number is a unique number given to a particular quantity of a product, which can be defined to have a prefix or a suffix among other characteristics.</p>
+<p><a class="glightbox" href="/assets/drive/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/zxXMUjr6dqf-ED398clHXDSahfNlz0oql8RmrUh4LopzsnqQ-wFiN-dP8Ss4YSbnYNA5k8UA1wdTE8uYU0SflUrJjuxkcBqgLrjxAb2yVTvglixLgh4gLQpu4gu9dASMfFCVavnkQldZGOvGGQ.png" /></a></p>
+<p>A Lot Number Sequence can be setup:</p>
+<ul>
+<li>by defining the first number or <strong>Starting Number</strong> that will be used as Lot Number</li>
+<li>by specifying the value by which the Lot Number will be <strong>incremented by</strong></li>
+<li>by defining which is the <strong>Next Assigned Number</strong> that will be used. Etendo updates the next assigned number value as the Lot Numbers are assigned.</li>
+<li>by entering a <strong>Prefix</strong> such as <strong>Lot N?/</strong> which easily helps to understand that the number in question is a lot number.</li>
+<li>by entering a <strong>Suffix</strong> such as <strong>/2011</strong> which helps to provide additional information if needed.</li>
+</ul>
+<h2 id="serial-number-sequence"><strong>Serial Number Sequence</strong></h2>
+<h3 id="introduction_7"><strong>Introduction</strong></h3>
+<p>A product attribute can be a serial number.</p>
+<p>Some products require serial numbering to assure compliance with the tracking requirements imposed by the majority of industries which implies that:</p>
+<ul>
+<li>each unit of a product has always to be linked to a unique serial number.</li>
+</ul>
+<h3 id="number-control"><strong>Number Control</strong></h3>
+<p>A Serial Number is a unique number given to each unit of a product/item which can be defined to have a prefix or a suffix among other characteristics.</p>
+<p><a class="glightbox" href="/assets/drive/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/_I2P7xT_wcIiLPx2GnSTR3Ne4sqAemn-eWLFVQ1NKaTt_qHVVuQwKso1kczmCmlG6a3AyZeKI8iwolANuoRbYSd3RE0Fg5lmAIWc0kdvdjvPtgtD7cokdzHpLZ2yn3vrm9JM4nRAxYppGdOm8w.png" /></a></p>
+<p>A Serial Number Sequence can be setup:</p>
+<ul>
+<li>by defining the first number or <strong>Starting Number</strong> that will be used as Serial Number</li>
+<li>by specifying the value by which the Serial Number will be <strong>incremented by</strong>.<br />
+  In the case of Serial Numbers it will always be "1".</li>
+<li>by defining which is the <strong>Next Assigned Number</strong> that will be used. Etendo updates the next assigned number value as the Serial Numbers are assigned.</li>
+<li>by entering a <strong>Prefix</strong> such as <strong>Serial N?/</strong> which easily helps to understand that the number in question is a serial number.</li>
+<li>by entering a <strong>Suffix</strong> such as <strong>/2011</strong> which helps to provide additional information if needed.</li>
+</ul>
+<h2 id="brand"><strong>Brand</strong></h2>
+<h3 id="introduction_8">Introduction</h3>
+<p>This window allows the user to enter brands associated with one product.
+The brands are manufacturers or commercial names used by manufacturers to identify a product line.</p>
+<h3 id="header">Header</h3>
+<p>To use this functionality, select an organization and add a new brand in the corresponding fields. It is also possible to enter a description when necessary.</p>
+<p><a class="glightbox" href="/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png" /></a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 - 2023 Etendo Software
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/etendosoftware" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/company/etendo-software/" target="_blank" rel="noopener" title="Linkedin" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.instagram.com/etendo.software/" target="_blank" rel="noopener" title="Instagram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.instant", "navigation.path", "navigation.sections", "navigation.top", "toc.follow", "search.suggest", "search.share", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+
+      <script src="../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({
+        "notice_banner_type": "headline",
+        "consent_type": "express",
+        "palette": "light",
+        "language": "en",
+        "page_load_consent_levels": ["strictly-necessary"],
+        "notice_banner_reject_button_hide": false,
+        "preferences_center_close_button_hide": false,
+        "page_refresh_confirmation_buttons": false,
+        "website_name": "etendo.software"
+    });
+});
+</script>
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
