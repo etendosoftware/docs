@@ -250,6 +250,7 @@ nav:
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
+        - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
