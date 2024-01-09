@@ -2,7 +2,7 @@
 
 The Etendo RX Config Server is a crucial component in a distributed system, providing both server-side and client-side support for managing externalized configurations. This centralized solution allows for efficient and consistent management of application properties across various environments, from development to production. Seamlessly integrating with the Spring Environment and PropertySource abstractions, the Config Server is not only compatible with RX applications but also adaptable to a wide range of applications in different programming languages. This flexibility ensures that as applications progress through deployment stages, they consistently receive the necessary configurations to function optimally.
 
-For detailed guidance on advanced usage, refer to the Spring Cloud Config documentation: Spring Cloud Config Documentation.
+For detailed guidance on advanced usage, refer to the Spring Cloud Config documentation: [Spring Cloud Config Documentation](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/).
 
 ### Default configuration
 
