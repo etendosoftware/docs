@@ -1,5 +1,3 @@
-## Technical Guide for Public Access to Etendo RX Edge Service with Apache2 SSL Proxy
-
 This guide offers a comprehensive approach to making the Etendo RX Edge Service publicly accessible while ensuring secure communication through SSL encryption. The process involves using Apache2, a popular web server software, as a reverse proxy. This setup not only facilitates public access but also adds an extra layer of security by encrypting data transfer between clients and the server.
 
 ### Prerequisites
