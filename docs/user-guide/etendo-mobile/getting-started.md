@@ -14,11 +14,9 @@ Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fa
 
 === ":simple-appstore: App Store "
 
-    It is not available App Store yet, but it is in TestFlight and the download site can be accessed through [_Download the App here._](https://testflight.apple.com/join/MWqctJS2){target=_blank}
+    The app it is available in App Store and the download site can be accessed through [_Download the App here._](https://apps.apple.com/us/app/etendo/id6451114033){target=_blank}
 
-    For this, first you need to download TestFlight, next you must search fot Etendo App and download.
-
-    <a href="https://testflight.apple.com/join/MWqctJS2" target="_blank"><img src="/assets/user-guide/etendo-mobile/user-interface/TestflightEtendo.png" alt="TestflightEtendo.png"></a>
+    <a href="https://apps.apple.com/us/app/etendo/id6451114033" target="_blank"><img src="/assets/user-guide/etendo-mobile/user-interface/EtendoAppStore.png" alt="EtendoAppStore.png"></a>
     
 
 ## Initial Configuration

@@ -8,9 +8,13 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q3.1](/whats-new/release-notes/etendo-classic/versions/23Q3-1) | 01/11/2023 | 23.3.1 | QAA	| | :white_check_mark:|
+| [23Q4.0](/whats-new/release-notes/etendo-classic/versions/23Q4-0) | 28/12/2023 | 23.4.0 | QAA	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso)| :white_check_mark:|
+| [23Q3.4](/whats-new/release-notes/etendo-classic/versions/23Q3-4) | 05/12/2023 | 23.3.4 | CS	| | :white_check_mark:|
+| [23Q3.3](/whats-new/release-notes/etendo-classic/versions/23Q3-3) | 30/11/2023 | 23.3.3 | C   | | :white_check_mark:|
+| [23Q3.2](/whats-new/release-notes/etendo-classic/versions/23Q3-2) | 10/11/2023 | 23.3.2 | C	| | :white_check_mark:|
+| [23Q3.1](/whats-new/release-notes/etendo-classic/versions/23Q3-1) | 01/11/2023 | 23.3.1 | C	| | :white_check_mark:|
 | [23Q3.0](/whats-new/release-notes/etendo-classic/versions/23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso)| :white_check_mark:|
-| [23Q2.8](/whats-new/release-notes/etendo-classic/versions/23Q2-8) | 14/09/2023 | 23.2.8 | CS	| | :white_check_mark:|
+| [23Q2.8](/whats-new/release-notes/etendo-classic/versions/23Q2-8) | 14/09/2023 | 23.2.8 | C	| | :white_check_mark:|
 | [23Q2.7](/whats-new/release-notes/etendo-classic/versions/23Q2-7) | 05/09/2023 | 23.2.7 | C	| | :white_check_mark:|
 | [23Q2.6](/whats-new/release-notes/etendo-classic/versions/23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
 | [23Q2.5](/whats-new/release-notes/etendo-classic/versions/23Q2-5) | 17/08/2023 | 23.2.5 | C	| | :white_check_mark:|

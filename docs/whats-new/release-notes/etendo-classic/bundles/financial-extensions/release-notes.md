@@ -14,17 +14,23 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | CS | :white_check_mark:    |
-| [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
-| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
-| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark:    |
-| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#171)    | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark:    |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark:    |
+| [1.13.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.12.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
 | [1.3.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
 | [1.2.4](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
-| [1.2.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#123)    | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
-| [1.2.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#122)    | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
+| [1.2.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
+| [1.2.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
 | [1.2.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
 | 1.1.4     | 11/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
 | [1.1.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
@@ -38,7 +44,39 @@ tags:
 | 1.0.100   | -          | 21.4.0 | 21.4.x | C  |                       |
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
+## Known Issues
+
+- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
+  
+    !!! warning "Attention"
+        The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
+
+
 ## Release Notes
+
+### 1.13.0
+- Update Core compatibility until 23.4.x
+
+### 1.12.1
+- [EE-745](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/10){target="\_blank"}  Errors during remittance processing when grouping by business partners
+- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} Multiselector of organizations of the general ledger report advanced report does not work
+- [EE-764](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/21){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
+
+### 1.12.0
+- [EE-746](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/11){target="\_blank"} General Ledger Report Advanced does not print if Group By is added
+- [EE-751](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/12){target="\_blank"} Reverse pre-filtering in "select invoices and order" process in remittances
+ 
+### 1.11.3
+- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} The Payments void option is not available
+- [EE-754](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/15){target="\_blank"} Payment is not created when settling the processed remittance lines
+- [EE-759](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/19){target="\_blank"} No "payment in" is created from the "add payment" process of the sales invoice when the sales invoice is cancelled with another one
+
+### 1.11.2
+- [EE-726](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/5){target="\_blank"} When you want to create a payment for a financing plan, the process does not end
+- [EE-744](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/9){target="\_blank"} Unable to generate credit from the "payment out" window
+### 1.11.1
+- [EE-738](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/6){target="\_blank"} Additional accounting lines created from banking group
+- [EE-727](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/7){target="\_blank"} Error in translation of pop up window remittance
 ### 1.10.0 
 - Update Core compatibility until 23.3.x
 ### 1.9.1 

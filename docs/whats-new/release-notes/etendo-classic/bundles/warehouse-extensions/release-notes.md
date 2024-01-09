@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | --- | :---: |
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#140) | 27/06/2023 | 21.4.0 | 23.3.x | CS | :white_check_mark:	|
+| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#150) | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark:	|
+| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#140) | 29/09/2023 | 21.4.0 | 23.3.x | C  | :white_check_mark:	|
 | [1.3.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#130) | 27/06/2023 | 21.4.0 | 23.2.8 | C  | :white_check_mark:	|
 | [1.2.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#120) | 17/05/2023 | 21.4.0 | 23.1.5 | C  | :white_check_mark:	|
 | [1.1.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#120) | 06/04/2023 | 21.4.0 | 23.1.5 | C  |					|
@@ -25,6 +26,8 @@ tags:
 
 ## Release Notes
 
+### 1.5.0
+- Update Core compatibility until 23.4.x
 ### 1.4.0
 - Update Core compatibility until 23.3.x
 ### 1.3.0

@@ -1,70 +1,3 @@
----
-title: Getting Started
-tags:
-    - Copilot
-    - IA
-    - Machine Learning
----
-## Overview
-
-The getting started guide for the Copilot API is a tool that allows interaction with a bot that selects the appropriate tool to answer a query.
-
-## Etendo Copilot
-:octicons-package-16: Javapackage: `com.etendoerp.copilot`
-
-### Requirements
-- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
-- *Python* version ^3.10, to install it follow [The Official Installation Guide](https://www.python.org/downloads/){target="_blank"}.
-- *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/engine/install/)
-
-### Run copilot locally
-
-1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot:1.0.1')
-    ```
-
-    ??? warning "Ensure you have 1.2.2 plugin version or greater:"
-        
-        ```groovy
-        id 'com.etendoerp.gradleplugin' version '1.2.2'
-        ```
-
-2. In the terminal, execute:
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
-    ```
-
-3. In `gradle.properties` file is necessary to add some environment variables as a mandatory requirement
-
-
-    ```groovy title="gradle.properties"
-    COPILOT_PORT=5000
-    OPENAI_API_KEY= ****
-    ```
-
-    | **Environment Variable**   | **Options**  | **Info** |
-    | -------------------------- | -------------| -------- |
-    | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
-    | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
-  
-
-        
-
-4. To download the latest copilot Docker image and run it:
-
-    ``` bash title="Terminal"
-    ./gradlew copilot.start
-    ```
-
-5. When done using Etendo Copilot, run:
-
-    ```bash
-    ./gradlew copilot.stop
-    ```
-
-    This command will stop the Docker container running Copilot.
-
 ## Translation Tool: XMLTranslatorTool
 :octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
 
@@ -75,7 +8,7 @@ Translates the content of an XML file from one language to another, as specified
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot.xmltranslationtool:1.0.0')
+    implementation('com.etendoerp:copilot.xmltranslationtool:1.1.1')
     ```
 2. In `gradle.properties` file you can add some environment variables. If they are not set, the default values will be used.
 
@@ -90,7 +23,7 @@ Translates the content of an XML file from one language to another, as specified
     | OPENAI_MODE            | `gpt-4`, `gpt-3.5-turbo-16k` , `gpt-3.5-turbo` |`gpt-3.5-turbo` | Among others that have the same number of requests per minute                                        |
     | BUSINESS_TOPIC         | `ERP` , `Human Resorces`, `Finance`, `Other`  | `ERP` | This parameter indicates the category to which the translations will be focused.                     |
   
-3. Restart Doker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
 4. The tool will translate the XML files to the language indicated when the XML file to be translated is generated, for example if the first line of the file is:
 

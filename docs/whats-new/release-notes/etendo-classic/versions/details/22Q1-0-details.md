@@ -9,15 +9,14 @@ title: Details 22Q1.0
 This allows Etendo to be installed and deployed using compiled Java distributed in JAR format, without losing compatibility with the legacy source format. For this, we work on the tasks of publishing, compiling and deploying the code supported as a JAR.  
 If you work with Etendo in JAR format, you will only visualize some configuration and modules directories, all the rest is in build volatile folder.
 
-You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/modules/22q1/install-modules-in-etendo) page.
+You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) page.
 
-You can read the [Publish modules to a Nexus repository](/legacy/technical-documentation/etendo-environment/platform/22q1/publish-modules-to-a-nexus-repository) page to find out about the new way of publishing.
+You can read the [How to publish modules to a GitHub Repository](/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) page to find out about the new way of publishing.
 
-We developed a tool that searches for JARs in the source code and verifies if it exists in maven central, after that, it generates a file in which it declares the dependencies found. You will be able to remove all these heavy dependencies and let Gradle do its job. Read more in [Search JARs Tool](/legacy/technical-documentation/etendo-environment/requirements-and-tools/developer-tools/22q1/search-jars-tool)
 
-You can migrate the Core format from Source to JAR and the other way around. Read more information in \[Core format migration\][core-format-migration](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/installation/22q1/core-format-migration)
+You can migrate the Core format from Source to JAR and the other way around. Read more information in [Core Format Migration](/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/).
 
-You can upgrade Etendo to new versions in only a few steps following the [Upgrade Etendo](/legacy/technical-documentation/etendo-environment/setup-and-upgrade/upgrade) guide.
+You can upgrade Etendo to new versions in only a few steps following the [Upgrade Etendo](/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/) guide.
 
 ## EPL-50
 
@@ -284,11 +283,11 @@ Allow download the pdf from balance sheet and profit & loss in landscape mode.
 **Solution Design**
 
 - Add a new check for select if the report should be downloaded in landscape or not.
--
+
 - Create a new jrxml in landscape mode for balance sheet report
--
+
 - Create a new jrxml in landscape mode for profit & loss report
--
+
 - Modify the java implementation for print one jrxml or jrxml in landscape depending the new check created previously
 
 **Use/Test Cases**

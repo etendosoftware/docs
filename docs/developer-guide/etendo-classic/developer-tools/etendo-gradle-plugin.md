@@ -245,7 +245,6 @@ etendo {
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
 
-
 ## Submodules
 
 - Creates the `build.gradle` file with all the necessary information to publish.
@@ -681,6 +680,23 @@ After executing the task, look for the following output to indicate a successful
     This confirms the successful processing of the files.
 
 Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly deployed.
+
+## Delete Client Process
+
+- The `delete.client` task allow runs Delete Client Process directly from gradlew, also this task allows runs this process with Tomcat service down to avoid database locks.
+
+    ``` bash title="Terminal"
+    ./gradlew delete.client
+
+    ```
+
+    | Command line parameters                   | Description                                                                                               |
+    |  -------------------                      | ------------------------------------                                                                      |
+    | `-DclientId=<AD_Client_ID>`               | `AD_Client_ID` of `AD_Client` table to be used on this process to delete all information of this client.  |
+
+    !!!danger "Danger Process"
+        This task execute the same legacy process that you can run in the application like as System Administrator role. It is a very sensitive task you must be very careful because this can lead to crashes in the system if used incorrectly.
+        <br>**A backup previous to executing the task is recommended.**
 
 ## Copilot
 

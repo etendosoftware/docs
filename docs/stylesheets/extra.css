@@ -10,3 +10,11 @@
   --md-typeset-a-color: #ffffff;
   --md-accent-fg-color: #7182ff;
 }
+
+/* To add this style to an imagge add {.legacy-image-style} 
+*  E.g: ![cover-welcome-to-etendo.png](/assets/home/index/cover-welcome-to-etendo.png){.legacy-image-style} 
+*/
+
+.legacy-image-style {
+  filter: grayscale(100%)
+}
