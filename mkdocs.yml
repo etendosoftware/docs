@@ -265,6 +265,7 @@ nav:
       #   - Etendo RX Authentication Keys: developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys.md
       #   - Zapier Integrations: developer-guide/etendo-rx/integrations/zapier-integrations.md
       #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
+        - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx.md
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Installation: developer-guide/etendo-copilot/installation.md
