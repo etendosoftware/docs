@@ -257,7 +257,7 @@ nav:
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-        - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service.md
+        - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
       #   - How to Format dates in a request:  developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
       # - Developer Tools:
       #   - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
