@@ -40,13 +40,13 @@ This guide offers a comprehensive approach to making the Etendo RX Edge Service 
    sudo systemctl restart apache2
    ```
 
-### Step 3: Verify Configuration
+### Step 2: Verify Configuration
 
 1. **Browser Test**: Open a web browser and navigate to `https://yourdomain.com`. You should see the Etendo RX Edge Service interface, securely served over HTTPS.
 
 2. **Check SSL Configuration**: Use an SSL checker tool online to verify that your SSL certificate is correctly installed and valid.
 
-### Step 4: Firewall Configuration (Optional)
+### Step 3: Firewall Configuration (Optional)
 
 If your server is protected by a firewall, ensure that port 443 (HTTPS) is open for incoming connections.
 
