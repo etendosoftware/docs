@@ -207,7 +207,7 @@ This section covers an overview about the product subapplication example screens
 
 # Projections, Repository and Search
 !!! info
-    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit [Projections, Repository And Search](/developer-guide/etendo-rx/concepts/projections){target="_blank"}  official documentation. 
+    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit Projections, Repository And Search official documentation. 
 
 ## Create a projection
 
@@ -225,34 +225,156 @@ To do this we will go to the `Projections` window and create a projection with t
   ![projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
 
 
-### Adding the projection to a table
+### Adding the projection & mapping
 
-As we have created the projection, we now have to assign it to a table from which we want to extract data. To do this, we open the Tables and Columns window and look for the `M_Product` table.
+As we have already created the projection, we now have to assign it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
 
-Next, navigate to the *Projections* tab and add a new projection with the following value:
+Next, add a new record with the following values:
 
-  | Field      | Value                                          |
-  | ---------- | ---------------------------------------------- |
-  | Projection |`ProdSubApp - Subapp Product Module - 1.0.0` |
+  | Field        | Value                                            |
+  | ----------   | -------------------------------------------------|
+  | Organization | `*`                                              |
+  | Module       | `Product Subapplication - 1.0.0 - English (USA)` |
+  | Name         | `prodsubapp`                                     |
+  | GRPC         | `false`                                          |
+  | description  | `-`                                              |
+  | active       | `false`                                          |
 
 
-  ![assign-projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/assign-projection.png)
+  ![assign-projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
 
 
 
-### Adding entity fields
+### Adding projected entities
 
-Once we have the projection, we must define which fields we want to retrieve.
-For it in the Tables and columns window we look for the table M_Product and in the Projection tab navigate to the Entity Field tab and add the following fields:
+Now with the projection selected we will create in the Projected Entities tab a "Read" and a "Write" to which we can specify which values can be written and read on the M_Product table.
+ 
 
-| Name                |  Property             |
-| ------------------- | --------------------- |
-| id                  |`id`                   |
-| name                |`name`                 |
-| productCategory     |`productCategory`      |
-| uPCEAN              |`uPCEAN`               |
+=== "Read"
+    
+    | Name                |  Property                   |
+    | ------------------- | ----------------------------|
+    | Organization        |`*`                          |
+    | Name                |`PRODSUBAPP - Product - Read`|
+    | Table               |`M_Product`                  |
+    | Identity            |`false`                      |
+    | Mapping Type        |`Etendo to external system`  |
+    | Is Rest Endopoint   |`true`                       |
+    | External_Name       |`Product`                    |
+    | Active              |`true`                       |
 
-  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/entity-field.png)
+=== "Write"
+  
+    | Name                |  Property                    |
+    | ------------------- | -----------------------------|
+    | Organization        |`*`                           |
+    | Name                |`PRODSUBAPP - Product - Write`|
+    | Table               |`M_Product`                   |
+    | Identity            |`false`                       |
+    | Mapping Type        |`External system to Etendo`   |
+    | Is Rest Endopoint   |`true`                        |
+    | External_Name       |`Product`                     |
+    | Active              |`true`                        |
+
+  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
+
+Now we define which fields we want to retrieve in the Entity Field tab and we add the following fields:
+
+This is the read fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "uPCEAN"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`30`                                             |
+    | Property                     |`uPCEAN`                                         |
+    | Name                         |`uPCEAN`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the write fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "uPCEAN"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`30`                                             |
+    | Property                     |`uPCEAN`                                         |
+    | Name                         |`uPCEAN`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entitiy-field-read.png)
 
 
 ## Create a New Repository
@@ -365,7 +487,7 @@ export const useProduct = () => {
   // Fetching data
   useEffect(() => {
     const fetchData = async () => {
-      const data = await ProductService.BACK.getFilteredProducts();
+      const data = await ProductService.BACK.getFilteredProducts(); 
       setProducts(data);
     };
     fetchData();
