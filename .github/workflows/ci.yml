@@ -1,50 +1,39 @@
 name: ci
+
 on:
   push:
     branches:
-      - master
       - main
+
 permissions:
   contents: write
+
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Setup github config
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: pip install mike
-      - run: pip install mkdocs-glightbox
-      - run: mkdocs gh-deploy
+      - name: Setup Docs
+        uses: ./.github/actions/setup-docs
+      - name: Deploy Docs
+        run: mkdocs gh-deploy
+
   deploy-versioning:
     needs: deploy-docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Setup github config
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - uses: actions/cache@v2
-        with:
-          key: ${{ github.ref }}
-          path: .cache
+      - name: Setup Docs
+        uses: ./.github/actions/setup-docs
       - name: Setup Github Config
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: pip install mike
-      - run: pip install mkdocs-glightbox
-      - run: mike deploy --push --update-aliases ${{ secrets.DOCS_VERSION }} latest
+          git config --local user.name "${{ secrets.ETENDOBOT_NAME}}"
+          git config --local user.email "${{ secrets.ETENDOBOT_EMAIL}}"
+      - name: Deploy Versioning
+        run: mike deploy --push --update-aliases ${{ secrets.DOCS_VERSION }} latest
