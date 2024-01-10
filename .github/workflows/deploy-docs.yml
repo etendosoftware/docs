@@ -1,0 +1,22 @@
+name: deploy-docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup github config
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Docs
+        uses: ./.github/actions/setup-docs
+      - name: Deploy Docs
+        run: mkdocs gh-deploy
