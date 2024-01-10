@@ -250,11 +250,14 @@ nav:
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
+        - Config Server: developer-guide/etendo-rx/concepts/config-server.md
+        - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
         - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
+        - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
       #   - How to Format dates in a request:  developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
       # - Developer Tools:
       #   - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
@@ -262,6 +265,7 @@ nav:
       #   - Etendo RX Authentication Keys: developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys.md
       #   - Zapier Integrations: developer-guide/etendo-rx/integrations/zapier-integrations.md
       #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
+        - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
       - Overview: developer-guide/etendo-copilot/overview.md
       - Installation: developer-guide/etendo-copilot/installation.md
