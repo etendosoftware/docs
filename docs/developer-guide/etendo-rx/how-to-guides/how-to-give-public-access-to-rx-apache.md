@@ -8,6 +8,15 @@ This guide offers a comprehensive approach to making the Etendo RX Edge Service 
 - A valid SSL configuration
 - Root or sudo access to the server.
 
+### Disclaimer
+
+This guide for setting up public access to the Etendo RX Edge Service using Apache2 SSL Proxy covers complex topics that may extend beyond its scope, requiring extra knowledge or expertise:
+
+* Apache2 Web Server Configuration: Requires foundational web server management skills, including setting up virtual hosts and configuring SSL.
+* SSL Certificates and Encryption: Assumes knowledge of obtaining, renewing, and installing SSL certificates.
+* Network Security and Firewalls: Involves adjusting firewall settings for HTTPS traffic.
+* Reverse Proxy Setup: Understanding the functioning and configuration of reverse proxies.
+
 ### Step 1: Configure Apache2 as a Reverse Proxy
 
 1. **Enable Proxy Modules**: Enable the necessary proxy modules in Apache2.
@@ -52,22 +61,3 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
 
-### Disclaimer
-
-This guide to configuring public access to the Etendo RX Edge Service with Apache2 SSL Proxy involves several advanced concepts and procedures that may require knowledge or skills beyond the scope of this document. The following areas are particularly complex and might necessitate additional research or expertise:
-
-1. **Apache2 Web Server Configuration**: Understanding the intricacies of Apache2, including virtual host setup, module activation, and SSL configuration, requires a foundational knowledge of web server management. Users unfamiliar with Apache2 might need to consult additional resources or seek expert assistance.
-
-2. **SSL Certificates and Encryption**: The guide assumes familiarity with SSL certificates, including acquisition, renewal, and installation processes. Users should have a basic understanding of how SSL/TLS encryption works and its importance in securing web communications.
-
-3. **Network Security and Firewalls**: Adjusting firewall settings to allow HTTPS traffic involves a fundamental understanding of network security. Users should be cautious and aware of the implications of modifying firewall rules, especially in a production environment.
-
-4. **Reverse Proxy Setup**: The concept of a reverse proxy and its role in forwarding requests from a public-facing server to a backend service can be complex. Understanding how a reverse proxy works and its configuration nuances is crucial for successful implementation.
-
-5. **YAML Syntax and Configuration**: The guide touches upon YAML file configuration for the Etendo RX Edge Service. A solid grasp of YAML syntax and its role in configuration management is necessary for modifying service settings.
-
-6. **Server and Domain Management**: The guide assumes that the user has control over a domain and understands the process of pointing a domain to a server, along with managing domain-related settings.
-
-7. **Linux/Unix Command Line Proficiency**: Executing commands in a Linux/Unix environment, as suggested in the guide, requires basic to intermediate command-line skills.
-
-This guide is intended for users with an intermediate level of technical expertise in these areas. Those with limited experience may need to seek additional resources or professional guidance to fully comprehend and safely implement the steps outlined in the guide.
