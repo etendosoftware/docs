@@ -1,0 +1,29 @@
+name: compile docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+    compile-docs:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Setup github config
+            uses: actions/checkout@v3
+            with:
+              fetch-depth: 0
+    
+          - name: Run Script
+            run: python compile_docs.py
+    
+          - name: Commit Changes
+            run: |
+              git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
+              git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
+              git add compiled_docs.md
+              git commit -m "Update compiled docs file :page_facing_up:" || echo "No changes to commit"
+              git push origin main
