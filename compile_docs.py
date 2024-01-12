@@ -80,7 +80,7 @@ def get_file_content(value, level):
             ## add the source link, this links is for check the same info in the online
             # Wiki of etendo
             content += "\n"
-            content += "Source: [https://docs.etendo.software/" + value_without_extension + "](https://docs.etendo.software/" + value_without_extension + ")"
+            content += "Source: [https://docs.etendo.software/" + value_without_extension + "](https://docs.etendo.software/" + value_without_extension + ")" + "{target='_blank'}"
             content += "\n---\n" * 2
     else:  # link to an url
         content = "Source: [" + value + "](" + value + ")"
