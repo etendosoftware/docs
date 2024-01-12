@@ -54,6 +54,7 @@ def run():
         content = get_content(json_hierarchy)
         # Write the content to a file
         with open("compiled_docs.md", "w") as f:
+            f.write("---\n")
             f.write(content)
             f.close()
 
@@ -73,12 +74,14 @@ def get_file_content(value, level):
                         content += "#" * level + line.lstrip()
                     else:
                         content += line
+            
+            value_without_extension = value[:-3] if value.endswith('.md') else value
 
             ## add the source link, this links is for check the same info in the online
             # Wiki of etendo
             content += "\n"
-            content += "Source: [https://docs.etendo.software/" + value + "](https://docs.etendo.software/" + value + ")"
-            content += "\n"
+            content += "Source: [https://docs.etendo.software/" + value_without_extension + "](https://docs.etendo.software/" + value_without_extension + ")"
+            content += "\n---\n" * 2
     else:  # link to an url
         content = "Source: [" + value + "](" + value + ")"
         content += "\n"
