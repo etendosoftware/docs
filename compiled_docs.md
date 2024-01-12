@@ -3,7 +3,7 @@
 ## 
 Etendo is a highly adaptable and scalable ERP software designed for non-retail businesses. Our product is tailored to suit the needs of different companies, providing a flexible and modern solution. Etendo combines a web platform with a user-friendly interface and a mobile application, allowing you to manage your business efficiently from anywhere. We are committed to using cutting-edge technologies and continuously improving our product to meet your evolving business needs.
 
-Source: [https://docs.etendo.software/index](https://docs.etendo.software/index)
+Source: [https://docs.etendo.software/index](https://docs.etendo.software/index){target='_blank'}
 ---
 
 ---
@@ -22,7 +22,7 @@ To expedite and streamline your workflow, we've thoughtfully provided convenient
 
 
 
-Source: [https://docs.etendo.software/getting-started/overview](https://docs.etendo.software/getting-started/overview)
+Source: [https://docs.etendo.software/getting-started/overview](https://docs.etendo.software/getting-started/overview){target='_blank'}
 ---
 
 ---
@@ -74,7 +74,7 @@ Either PostgreSQL should also be supported by your target system
 | :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x |
 | :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x |
 | :simple-oracle:  Oracle | 19c (LTS) | 19c (LTS) |
-Source: [https://docs.etendo.software/getting-started/requirements](https://docs.etendo.software/getting-started/requirements)
+Source: [https://docs.etendo.software/getting-started/requirements](https://docs.etendo.software/getting-started/requirements){target='_blank'}
 ---
 
 ---
@@ -329,7 +329,7 @@ In this section, you can read the [System Requirements](/getting-started/require
 
 
 
-Source: [https://docs.etendo.software/getting-started/installation](https://docs.etendo.software/getting-started/installation)
+Source: [https://docs.etendo.software/getting-started/installation](https://docs.etendo.software/getting-started/installation){target='_blank'}
 ---
 
 ---
@@ -461,7 +461,7 @@ In this section, the user is able to change the password through this tab by wri
 ---
 This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 
-Source: [https://docs.etendo.software/getting-started/user-interface/workspace](https://docs.etendo.software/getting-started/user-interface/workspace)
+Source: [https://docs.etendo.software/getting-started/user-interface/workspace](https://docs.etendo.software/getting-started/user-interface/workspace){target='_blank'}
 ---
 
 ---
@@ -535,7 +535,7 @@ The action buttons perform the following actions: 
 
 ---
 This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
-Source: [https://docs.etendo.software/getting-started/user-interface/navigation](https://docs.etendo.software/getting-started/user-interface/navigation)
+Source: [https://docs.etendo.software/getting-started/user-interface/navigation](https://docs.etendo.software/getting-started/user-interface/navigation){target='_blank'}
 ---
 
 ---
@@ -738,7 +738,7 @@ In case of tab overflow, when the total width of the tabs exceeds the available 
   
 ---
 This work is a derivative of ["User Interface Introduction"](http://wiki.openbravo.com/wiki/User_Interface_Introduction){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
-Source: [https://docs.etendo.software/getting-started/user-interface/grid-and-forms](https://docs.etendo.software/getting-started/user-interface/grid-and-forms)
+Source: [https://docs.etendo.software/getting-started/user-interface/grid-and-forms](https://docs.etendo.software/getting-started/user-interface/grid-and-forms){target='_blank'}
 ---
 
 ---
@@ -780,7 +780,7 @@ Whether you're looking to master the basics or explore advanced features, our gu
 </figure>
 
 
-Source: [https://docs.etendo.software/user-guide/overview](https://docs.etendo.software/user-guide/overview)
+Source: [https://docs.etendo.software/user-guide/overview](https://docs.etendo.software/user-guide/overview){target='_blank'}
 ---
 
 ---
@@ -915,13 +915,13 @@ This business setup flow goes from the Generic setup and Master Data areas to th
 If you want to know more about the basic setup of the business configurations in Etendo, please review the different articles in the General Setup section.
 
 By following this setup flow you should be able to have your own version of Etendo ready to execute the basic Business Flows.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started){target='_blank'}
 ---
 
 ---
 ##### Clear Report Cache
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache){target='_blank'}
 ---
 
 ---
@@ -933,7 +933,7 @@ Client configuration of the Attachment Method to be used. Each attachment method
 ######### Header
 
 Shows all configuration related to the attachment method used to save attachments. Each Attachment Method can include its own specific configuration fields like: server URL, user, password, language, etc.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration){target='_blank'}
 ---
 
 ---
@@ -1461,7 +1461,7 @@ Etendo supports alerts notification to user or roles by email:
 Alert tab list the events happening which generate the corresponding alert.
 
 ![](/assets/drive/qRqaP9bx7a04XzXIrzdpZZ3eS3OaglF9SMM3xvRYaL3Vrkhcxz_EI5BxPbtrnQoW_DXad8d-_oQBJntpSgZdchM9RtWisxif2I3GWPM2Yda4XlbPG_kkWIqlvgDl5cvOObV43F4W.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application){target='_blank'}
 ---
 
 ---
@@ -1657,7 +1657,7 @@ For example, if a client needs to display project dimension in the header and li
 ![](/assets/drive/Z99sk_o2Vu9v8vGHzhGXw0tmp5rkwyxGAKUAdt-1-ve8kenhAGjDhIvu3Ixf8rRRk4pc5hoN8msS1KUk5WTs0z0JUd4D8LxV1ItpgEEXu2OActIg73-ikeOb9k7mKGTi1btTJety.png)
 
 The configuration in dimensions tab is populated by the configuration that exists in the Dimension Mapping window.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client){target='_blank'}
 ---
 
 ---
@@ -1685,7 +1685,7 @@ It allows the user to define options accepted by the parent filter.
 ######## Address Mapping
 
 In this tab, the user can define addresses and determine the properties that should be used for each location column mapping.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/crm-connector){target='_blank'}
 ---
 
 ---
@@ -2091,7 +2091,7 @@ Relation of prioritized on-hand warehouses of the Organization.
 In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.
 
 It is possible to define the priority of each organization's warehouse/s therefore Etendo proposes first the goods of the warehouse with a higher priority.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model){target='_blank'}
 ---
 
 ---
@@ -2592,7 +2592,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 
 !!! info
     For more information, visit the [Etendo Advanced Security module User Guide](/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/security){target='_blank'}
 ---
 
 ---
@@ -2858,7 +2858,7 @@ Prevent executions of single processes and group processes will co-exist. Which 
 Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
 
 ![](/assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/process-scheduling){target='_blank'}
 ---
 
 ---
@@ -3995,7 +3995,7 @@ Fields to note:
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data){target='_blank'}
 ---
 
 ---
@@ -4476,7 +4476,7 @@ When selecting the option “only those defined” in the fields “include prod
 >
 !!! warning
     -When selecting the option “All excluding defined” in the “Include product categories” field and the option “Only those defined” in the “include products” field, if in the “product category” tab the user selects “water”, and in the “product” tab the user selects “sparkling water”, the rappel will not include the product “sparkling water” despite what is defined in the “product” tab, since the priority is in the defined “product category”.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup){target='_blank'}
 ---
 
 ---
@@ -4930,7 +4930,7 @@ The brands are manufacturers or commercial names used by manufacturers to identi
 To use this functionality, select an organization and add a new brand in the corresponding fields. It is also possible to enter a description when necessary.
 
 ![](/assets/drive/aZfc6Qanmv-C8prh4FgF0KT-ykE3xADBzz57qx01JIBzwouPawsewFcMRjpJ5sN5_kT2VTxnNlwcTCnEYDNswMyijThPC8K634MtikPrLKcmBqYSQ08OH6ZYPedFBlir-8rueg7FQgv1ykKgekY.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/product-setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/product-setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/product-setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/product-setup){target='_blank'}
 ---
 
 ---
@@ -5347,7 +5347,7 @@ In this tab, different Ranges can be created based on the amount of the related 
     - **After Discounts**: If selected, the percentage will be applied after adding the discounts to the ticket.
   - **Fixed Price**: If selected, a field ‘Price List’ will be displayed.
     - **Price List**: Price List from which the price of the service will be obtained.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/pricing](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/pricing)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/pricing](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/pricing){target='_blank'}
 ---
 
 ---
@@ -5539,7 +5539,7 @@ Procurement Management has a relationship with other application areas:
 - [Financial Management](/user-guide/etendo-classic/basic-features/financial-management/getting-started/) in terms of managing account payable payments.
 - [MRP Management]() as purchase planning allows the creation of purchase orders based on material needs.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/getting-started){target='_blank'}
 ---
 
 ---
@@ -6719,7 +6719,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 This work is a derivative of ["Procurement Management"](http://wiki.openbravo.com/wiki/Procurement_Management){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions){target='_blank'}
 ---
 
 ---
@@ -6861,7 +6861,7 @@ Field to note:
 ######## Sample Report Output
 
 ![](/assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools){target='_blank'}
 ---
 
 ---
@@ -6950,7 +6950,7 @@ Warehouse Management has a connection with other application areas:
 - [Sales Management](/user-guide/etendo-classic/basic-features/sales-management/getting-started/) as shipment changes stock quantity and its value.
 - *Production Management* because raw materials are taken out of warehouse and produced goods are sent back to the stock during production process.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/getting-started){target='_blank'}
 ---
 
 ---
@@ -8005,7 +8005,7 @@ Shows any unbox transaction executed in the past for this referenced inventory.
 
 This kind of transactions are actually Goods Movements created on the fly when confirming the unboxing, where the user can browse to at any time to see the details.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions){target='_blank'}
 ---
 
 ---
@@ -8220,7 +8220,7 @@ Additionally, the user can include or exclude these documents:
 
 ![Product Movements Report](/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools){target='_blank'}
 ---
 
 ---
@@ -8652,7 +8652,7 @@ These last 4 options show the Entity Field therefore by selecting one of these 4
 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/setup){target='_blank'}
 ---
 
 ---
@@ -8748,7 +8748,7 @@ Production Management interacts with the following modules:
 - [_MRP_](/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/): Work Requirements can be a result of MRP
 - [_Financial Management_](/user-guide/etendo-classic/basic-features/financial-management/getting-started): Cost related to Production is calculated for finance.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/getting-started){target='_blank'}
 ---
 
 ---
@@ -9324,7 +9324,7 @@ The outcome of the calculation appears in the tabs of the Process Plan:
 
 In the Employee, Machine and Indirect Cost tabs, the result of the costs are automatically populated.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions){target='_blank'}
 ---
 
 ---
@@ -9936,7 +9936,7 @@ All maintenance tasks that are scheduled for the machines in production are ente
 ![](/assets/drive/YtlJL911EsQf5c-i8qMbFGpGQQFQHr1qO_V-VuJ1MByU4_t0QH3qhOFPgsZWLSareLUEaU7DvfLB8wHCb_ftn4_eDL28TUcbiGExcqGb6fYropD0oB6PVqqrn5jtPdZ7uSeiCA3AS8FUbkiVADrH9Q29ErN4lAKd-cHGjIzocw0nku0vkHPF60nbyKKZPg.png)
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/setup){target='_blank'}
 ---
 
 ---
@@ -10025,7 +10025,7 @@ The MRP interacts with the following modules:
 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started){target='_blank'}
 ---
 
 ---
@@ -10237,7 +10237,7 @@ Add products to be included in your MRP forecast. Each product is added by creat
 -   Planned Date: the date that is taken into account for the demand on the Manufacturing Plan and Purchasing Plan as Planned Order Date.
 -   Product: the product that is planned on a Manufacturing Plan or Purchasing Plan.
 -   Quantity: the amount of the product that is required by the planned date.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions){target='_blank'}
 ---
 
 ---
@@ -10315,7 +10315,7 @@ An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is
 Define the planner in charge of managing the purchase or production of specific products.
 
 ![](/assets/drive/2IK-YKaAHZYtnh4V1r_P9QgY4oU3-wDlu73TD8YZffxiibZ-JWkhjD_fCnJLzntBSgBhJSLbMx3IOsYOPFoDahYodIPGEq1P8LytGAg9aCEylB2iknxNfhnwCH8MgxgF1F6CYXVQxBPfF7KuArrucc4.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/material-requirement-planning/setup){target='_blank'}
 ---
 
 ---
@@ -10496,7 +10496,7 @@ Sales Management has a connection with other application areas:
 - [Material Requirement]() (MRP) because pending sales orders are one of the inputs for the production process.
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/getting-started){target='_blank'}
 ---
 
 ---
@@ -11923,7 +11923,7 @@ Fields to note:
 
 This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions){target='_blank'}
 ---
 
 ---
@@ -12182,7 +12182,7 @@ Also, this report now shows the total of cost, profit, margin-% and quantity.
 
 At the end of the report, there is a new table showing the number of documents per document type.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/analysis-tools)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/analysis-tools){target='_blank'}
 ---
 
 ---
@@ -12302,7 +12302,7 @@ In this window, the user defines the reasons to reject quotations. These values 
 
 ---
 This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/setup){target='_blank'}
 ---
 
 ---
@@ -12735,7 +12735,7 @@ Financial Management has a connection with other application areas, as there are
 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/getting-started){target='_blank'}
 ---
 
 ---
@@ -14766,7 +14766,7 @@ In this tab, the previously selected records are shown. Afterwards, it will be n
 
 This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions){target='_blank'}
 ---
 
 ---
@@ -15093,7 +15093,7 @@ An Execution Process can have a set of parameters defined.
 For instance, the "Print Check simple process" execution process delivered by Etendo only requires the check number upon execution of the payment.
 
 ![](/assets/drive/14j20K8igu1aLPxaZLE1jDu_9jG-ydeaj.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools){target='_blank'}
 ---
 
 ---
@@ -15631,7 +15631,7 @@ Fields to note:
 
 ---
 This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup){target='_blank'}
 ---
 
 ---
@@ -16443,7 +16443,7 @@ Finally, it is important to remark that:
 ######### **Introduction**
 
 The reset accounting process allows the user to totally or partially remove the ledger entries of an organization. The ledger entries can be massively re-created again by using the "Accounting Server Process" or the "G/L Posting by DB Tables" process. The manual changes done for the accounting entries description will obviously be lost after running this process.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions){target='_blank'}
 ---
 
 ---
@@ -16950,7 +16950,7 @@ This window allows to print Reports previously defined by the user. In order to 
 Once these fields have been introduced, it will be possible to print the Report that will show the amount during those dates.
 
 ![](/assets/drive/1eqmh8_yS9iZrrp0PpT70hpDlT5MhrACN.png)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools){target='_blank'}
 ---
 
 ---
@@ -18923,7 +18923,7 @@ An example for a Profit and Loss report would be:
 Above node must be an Account Tree element properly configured.
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup){target='_blank'}
 ---
 
 ---
@@ -19131,7 +19131,7 @@ For example: Period date filtered 01-01-2022 and 31-12-2022
 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/assets/overview](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/assets/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/assets/overview](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/assets/overview){target='_blank'}
 ---
 
 ---
@@ -19157,7 +19157,7 @@ The “Advanced Business Partner” module allows the user to have a general vie
 
 !!! info
     For more information, visit [the Advanced Business Partner module user guide](/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -19262,7 +19262,7 @@ EAN 128 allows to use bar code in your application
 
 This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
  by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -19316,7 +19316,7 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -19341,7 +19341,7 @@ This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
     For more information, visit the [Advanced Work Effort user guide](/user-guide/etendo-classic/basic-features/production-management/transactions/#how-to-reactivate-work-efforts).
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -19386,7 +19386,7 @@ This functionality allows the user to configure and grant rappels to business pa
 !!! info
         For more information, visit the [Advanced Rappels user guide](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration).
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -19584,7 +19584,7 @@ This functionality allows the user to create settlements for invoices, both sale
     - [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
     - [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
     - [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -20004,7 +20004,7 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 :octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/overview){target='_blank'}
 ---
 
 ---
@@ -20043,7 +20043,7 @@ A background process must be set which creates CSV files that will be uploaded t
 ######## Base Queries for Etendo BI 
 
 :octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview){target='_blank'}
 ---
 
 ---
@@ -20664,7 +20664,7 @@ Once there, the information which Peter will have to enter as input parameters i
 - and *.txt file name for example as an Input Parameter
 Once the above is filled-in Peter can press "Generate Electronic file" to generate the *.txt file.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher](https://docs.etendo.software/user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher](https://docs.etendo.software/user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher){target='_blank'}
 ---
 
 ---
@@ -20854,7 +20854,7 @@ Regardless of how the invoice is created - manually or automatically - when it i
 
 - The first accounting entry, dated on the accounting date of the invoice, debits deferred expenses and credits account payables.
 - For each period, an additional accounting entry is created debiting the product expense account and crediting the deferred expense account.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses){target='_blank'}
 ---
 
 ---
@@ -21072,7 +21072,7 @@ This completes the creation and processing of:
 
 - a partially prepaid order in Etendo. As a result, an invoice has been partially paid after registering a prepayment against the corresponding order.
 - a prepaid invoice in Etendo. As a result, the vendor liability is canceled at the time of registering and posting the invoice prepayment.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables){target='_blank'}
 ---
 
 ---
@@ -21284,7 +21284,7 @@ This completes the creation and processing of:
 
 - a partially prepaid order in Etendo. As a result, an invoice has been partially paid after registering a prepayment against the corresponding order.
 - a prepaid invoice in Etendo. As a result, the customer receivables are canceled at the time of registering and posting the invoice prepayment.
-Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables){target='_blank'}
 ---
 
 ---
@@ -21461,7 +21461,7 @@ In the case of transfer of funds between financial accounts of different organiz
 
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
 
-Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts](https://docs.etendo.software/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts){target='_blank'}
 ---
 
 ---
@@ -21512,7 +21512,7 @@ Etendo Mobile offers the possibility to connect to a demo server to test the app
 
 The gear icon shown in the welcome window allows the user to enter the configuration window. (See Settings window).
 
-Source: [https://docs.etendo.software/user-guide/etendo-mobile/getting-started](https://docs.etendo.software/user-guide/etendo-mobile/getting-started)
+Source: [https://docs.etendo.software/user-guide/etendo-mobile/getting-started](https://docs.etendo.software/user-guide/etendo-mobile/getting-started){target='_blank'}
 ---
 
 ---
@@ -21571,7 +21571,7 @@ As regards the role, it can only be modified from the app, so each user will ent
 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-mobile/user-interface/user-interface](https://docs.etendo.software/user-guide/etendo-mobile/user-interface/user-interface)
+Source: [https://docs.etendo.software/user-guide/etendo-mobile/user-interface/user-interface](https://docs.etendo.software/user-guide/etendo-mobile/user-interface/user-interface){target='_blank'}
 ---
 
 ---
@@ -21771,7 +21771,7 @@ We will also notice that the Product's Stock has been updated in the indicated s
  ![](/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
 
 
-Source: [https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions](https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions)
+Source: [https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions](https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions){target='_blank'}
 ---
 
 ---
@@ -21936,7 +21936,7 @@ This feedback system is designed to be intuitive, allowing users to quickly and 
 At the core of **Bastian's mission,** there is a commitment to providing a seamless and intuitive user experience for Etendo, transforming the information research process into an engaging and enriching interaction. Whether it's complex queries or simply a leisurely conversation, Bastian is your Etendo assistant, ready to facilitate and enhance your communication.
 
 Get ready for an exciting experience with Bastian! A chatbot that represents the future of digital communication.
-Source: [https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian](https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian)
+Source: [https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian](https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian){target='_blank'}
 ---
 
 ---
@@ -21985,7 +21985,7 @@ So, roll up your sleeves and ignite your creativity.
 ##### In this section, you will find everything about our Copilot project. Currently, you have getting started information as well as data about the XML Translator tool, and also, how to develop new copilot tools. 
 </figure>
 
-Source: [https://docs.etendo.software/developer-guide/overview](https://docs.etendo.software/developer-guide/overview)
+Source: [https://docs.etendo.software/developer-guide/overview](https://docs.etendo.software/developer-guide/overview){target='_blank'}
 ---
 
 ---
@@ -22100,7 +22100,7 @@ To install Etendo in a development environment, follow the same steps as describ
     ``` bash title="Terminal"
         ./gradlew smartbuild --info 
     ```
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment){target='_blank'}
 ---
 
 ---
@@ -22119,7 +22119,7 @@ This document covers how IntelliJ IDEA  is capable of importing code formatter s
     ![code-style-java](/assets/developer-guide/etendo-classic/getting-started/instalation/code-formatting-style-in-intellij/code-style-java.png)
 
 5. Select the file downloaded first and import the schema.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/intellij-code-formatting){target='_blank'}
 ---
 
 ---
@@ -22202,7 +22202,7 @@ If you no longer need a personal access token or believe it has been compromised
 5. Confirm that you want to revoke the token.
 
 Your token will be immediately invalidated and will no longer work.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo){target='_blank'}
 ---
 
 ---
@@ -22405,7 +22405,7 @@ Another option to force the installation of all the translation modules is to ad
 ./gradlew setup
 ./gradlew update.database smartbuild
 ```
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo){target='_blank'}
 ---
 
 ---
@@ -22451,7 +22451,7 @@ For information on what bundle version is compatible with which translation bund
 
 - **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](/getting-started/installation/) for more information.
 - **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for a list of the compatible bundle versions.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-translation-bundles-in-etendo){target='_blank'}
 ---
 
 ---
@@ -22837,7 +22837,7 @@ You may change the current user from Openbravo to Etendo, if you want. This guid
 
 !!! info
     With these steps, you should have successfully migrated your Openbravo data to Etendo either on a Linux system or on a Windows system. If you encounter any problems during the process, please reach out to the [Etendo support team](https://etendoproject.atlassian.net/servicedesk/customer/portals){target="_blank"} for assistance.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo){target='_blank'}
 ---
 
 ---
@@ -22908,7 +22908,7 @@ This guide explains how to upgrade your current Openbravo environment to version
     Your environment is ready to be migrated to Etendo.
 
     Check the [Migration Tool’s guide](/developer-guide/etendo-classic/getting-started/migration-from-openbravo/migrating-to-etendo-from-openbravo/).
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2){target='_blank'}
 ---
 
 ---
@@ -23046,7 +23046,7 @@ To work with the plugin you need to specify in the root project from where the p
     !!! success
         Your Etendo environment is now updated!
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version){target='_blank'}
 ---
 
 ---
@@ -23121,7 +23121,7 @@ Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-sta
         ./gradlew update.database
         ```
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration){target='_blank'}
 ---
 
 ---
@@ -23433,7 +23433,7 @@ This affects the current environments, to fix this we have to:
 If you encounter any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/resolving-dependencies-on-github){target='_blank'}
 ---
 
 ---
@@ -23570,7 +23570,7 @@ All the Etendo development tasks used with the core in sources should still be w
 
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars](https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars](https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars){target='_blank'}
 ---
 
 ---
@@ -23649,7 +23649,7 @@ Examples of inventory status values:
 !!! info
     The inventory status does not have an effect on the inventory value.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status](https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status](https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status){target='_blank'}
 ---
 
 ---
@@ -23792,7 +23792,7 @@ org.openbravo.functionalcategory.modulename
 Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with CUST. Modules with these kind of DBPrefixes cannot be registered in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use CUST and do not register it.
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules](https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules](https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules){target='_blank'}
 ---
 
 ---
@@ -23966,7 +23966,7 @@ Add to the **beans.xml**
 !!! success
     Once Gradle finishes the deployment, your module is ready to be used as a dependency.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository){target='_blank'}
 ---
 
 ---
@@ -24232,7 +24232,7 @@ src/org/openbravo/erpCommon/ad_callouts/SE_Order_BPartner.java:      message.ap
 ```
 
 Now, we know it is used in a callout, so it is just necessary to find in the Application Dictionary the places where this callout is used, using the Linked Items feature mentioned before.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules){target='_blank'}
 ---
 
 ---
@@ -24473,7 +24473,7 @@ public static void executeProcessOrderAction(Order order) {
 It is necessary to implement a method that gets and executes the current action, in our example we implement `executeProcessOrderAction(Order order)` which dynamically gets an instance of the `ExtendProcessOrder` class and executes it.
 It is also possible to add validations and override the original methods.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions){target='_blank'}
 ---
 
 ---
@@ -24550,7 +24550,7 @@ To create a Clone Hook, you only have to follow a few steps:
 
     Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
     The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook){target='_blank'}
 ---
 
 ---
@@ -24822,7 +24822,7 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
 }
 ```
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences){target='_blank'}
 ---
 
 ---
@@ -24894,7 +24894,7 @@ Optional:
     When the process is executed from the mobile application, a Json will be sent to the backend with all the scanned information. This data must be processed from the Java class defined in the handler and the expected functionality must be performed.
     An Example of this Java class is `InventoryScan`, which can be found in the `com.smf.mobile.scan` module.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process){target='_blank'}
 ---
 
 ---
@@ -24911,7 +24911,7 @@ Besides the new authentication implementation, the module includes utilities for
 !!! info
     For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices){target='_blank'}
 ---
 
 ---
@@ -24948,7 +24948,7 @@ Finally, it is necessary to compile executing:
 ![](/assets/drive/zd0NYsbcmx0ehnHRsCxb21zazxL6sYuBxqjAOoH74QmK1CTccI-dDyqzmMrTiJDrusrcdifTRiiCPPomRAdduh1LipsA2FHTP84kstjAI8SwL3a7-DkSSmCqbVYsyXF_d1El8Z9QqPqphc4oqIB-wFYadh3OODSzp8QCHSyGBAGZSX8OczGKNApmreM8eg.png)
 
 As seen in the image above, the “image” field was created, in which it is possible to paste content to store in base64 format in the database. In this way, this information is available for later.
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo){target='_blank'}
 ---
 
 ---
@@ -25013,7 +25013,7 @@ The dataset definition is ready, so the user just needs to export it to a file p
   
 !!! info
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process){target='_blank'}
 ---
 
 ---
@@ -25737,7 +25737,7 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
     |  -------------------                   | ------------------------------------                         |
     | `-Parg=<package name>`                 | **Required** Module Javapackage to be translated             |
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin](https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin](https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin){target='_blank'}
 ---
 
 ---
@@ -25904,7 +25904,7 @@ In the end, a message will be shown with the properties which the database will 
 
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool](https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool](https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool){target='_blank'}
 ---
 
 ---
@@ -26168,7 +26168,7 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 **Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle){target='_blank'}
 ---
 
 ---
@@ -26234,7 +26234,7 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the module by the way corresponding to the installation method (Sources/JARs)
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle){target='_blank'}
 ---
 
 ---
@@ -26682,7 +26682,7 @@ public class UndoOrderImpl implements UndoCloseOrderHook {
 ```
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/financial-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/financial-extensions-bundle)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/financial-extensions-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/financial-extensions-bundle){target='_blank'}
 ---
 
 ---
@@ -26797,7 +26797,7 @@ On the other hand, this is the content of FULL\_Example.csv:
 !!! warning
     Make sure to have the corresponding permissions to connect to Files, since an incorrect configuration can lead to an error.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/etendo-bi-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/etendo-bi-bundle)
+Source: [https://docs.etendo.software/developer-guide/etendo-classic/bundles/etendo-bi-bundle](https://docs.etendo.software/developer-guide/etendo-classic/bundles/etendo-bi-bundle){target='_blank'}
 ---
 
 ---
@@ -26952,7 +26952,7 @@ By default, the following services should be up and running:
 
 !!! success
     You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](/developer-guide/etendo-rx/tutorials/creating-a-new-microservice).
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/getting-started](https://docs.etendo.software/developer-guide/etendo-rx/getting-started)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/getting-started](https://docs.etendo.software/developer-guide/etendo-rx/getting-started){target='_blank'}
 ---
 
 ---
@@ -27041,7 +27041,7 @@ This response indicates the configuration for the das service. The propertySourc
 
 To modify a property, locate and edit the corresponding service configuration file. The Config Server dynamically updates to reflect the latest file content. However, client services load configurations at startup. Therefore, to apply new configurations, stop the running service using the rx command and then restart it.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/config-server](https://docs.etendo.software/developer-guide/etendo-rx/concepts/config-server)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/config-server](https://docs.etendo.software/developer-guide/etendo-rx/concepts/config-server){target='_blank'}
 ---
 
 ---
@@ -27141,7 +27141,7 @@ To integrate a new service, add a routing configuration in `spring.cloud.gateway
     - RewritePath=/<<path_segment_to_remove>>/(?<segment>.*), /$\{segment}
 ```
 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/edge-server](https://docs.etendo.software/developer-guide/etendo-rx/concepts/edge-server)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/edge-server](https://docs.etendo.software/developer-guide/etendo-rx/concepts/edge-server){target='_blank'}
 ---
 
 ---
@@ -27253,7 +27253,7 @@ In our case, we will filter depending on the Document Type of the orders.
 
 ------------------------------------------------------------------
 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections](https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections](https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections){target='_blank'}
 ---
 
 ---
@@ -27763,7 +27763,7 @@ Open your browser and you can view the generated page with the following URL: [*
 
 !!! success
     You have successfully created a fully working RX service.
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice](https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice](https://docs.etendo.software/developer-guide/etendo-rx/tutorials/creating-a-new-microservice){target='_blank'}
 ---
 
 ---
@@ -27805,7 +27805,7 @@ Open Postman and we will make a get request.
 
 Another way to get active rows is to remove the parameter `_noActiveFilter parameter` , because by default the active row always applies the active row filter.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive){target='_blank'}
 ---
 
 ---
@@ -27878,7 +27878,7 @@ java -jar modules_core/com.etendorx.edge/build/libs/com.etendorx.edge-1.1.0.jar
 ####### Disclaimer: Advanced Knowledge Required
 
 This guide assumes a fundamental understanding of Java development environments, including familiarity with Gradle build commands and Java application deployment. It is intended for users with intermediate to advanced technical skills in software development and system administration. New users or those unfamiliar with the concepts discussed may need additional resources or assistance. 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code){target='_blank'}
 ---
 
 ---
@@ -27945,7 +27945,7 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache)
+Source: [https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache](https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache){target='_blank'}
 ---
 
 ---
@@ -27986,7 +27986,7 @@ Etendo Copilot is not just another tool; it is a revolution in how you approach 
 
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-copilot/overview](https://docs.etendo.software/developer-guide/etendo-copilot/overview)
+Source: [https://docs.etendo.software/developer-guide/etendo-copilot/overview](https://docs.etendo.software/developer-guide/etendo-copilot/overview){target='_blank'}
 ---
 
 ---
@@ -28085,7 +28085,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     This command will stop the Docker container running Copilot.
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-copilot/installation](https://docs.etendo.software/developer-guide/etendo-copilot/installation)
+Source: [https://docs.etendo.software/developer-guide/etendo-copilot/installation](https://docs.etendo.software/developer-guide/etendo-copilot/installation){target='_blank'}
 ---
 
 ---
@@ -28152,7 +28152,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
     ![](/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
-Source: [https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/xml-translation-tool](https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/xml-translation-tool)
+Source: [https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/xml-translation-tool](https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/xml-translation-tool){target='_blank'}
 ---
 
 ---
@@ -28284,7 +28284,7 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
    
 
 
-Source: [https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool](https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool)
+Source: [https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool](https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool){target='_blank'}
 ---
 
 ---
@@ -28405,7 +28405,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 5. Finally, we have to start Copilot and check that the tool and it dependencies are installed correctly. After starting Copilot, we can try to call the tool asking Copilot to execute it or, for example, list us which tools are available.
 
-Source: [https://docs.etendo.software/developer-guide/etendo-copilot/how-to-create-copilot-tools](https://docs.etendo.software/developer-guide/etendo-copilot/how-to-create-copilot-tools)
+Source: [https://docs.etendo.software/developer-guide/etendo-copilot/how-to-create-copilot-tools](https://docs.etendo.software/developer-guide/etendo-copilot/how-to-create-copilot-tools){target='_blank'}
 ---
 
 ---
@@ -28550,7 +28550,7 @@ On this page we will explain what are the requirements to create a subapplicatio
             nvm use 16.20
             ``` 
 Then continue with the [Create New Sub-appliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
-Source: [https://docs.etendo.software/developer-guide/etendo-mobile/getting-started](https://docs.etendo.software/developer-guide/etendo-mobile/getting-started)
+Source: [https://docs.etendo.software/developer-guide/etendo-mobile/getting-started](https://docs.etendo.software/developer-guide/etendo-mobile/getting-started){target='_blank'}
 ---
 
 ---
@@ -28883,7 +28883,7 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
     ```
 3.  Exit and re-enter the subapplication to visualize the changes.(No need to log out).
      ![app-test.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)
-Source: [https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication)
+Source: [https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target='_blank'}
 ---
 
 ---
@@ -29330,7 +29330,7 @@ Attached below is an example of **F&B International Group's products**, obtained
 ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
 
 In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.
-Source: [https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx)
+Source: [https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx){target='_blank'}
 ---
 
 ---
@@ -29373,7 +29373,7 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 </figure>
 
 
-Source: [https://docs.etendo.software/whats-new/overview](https://docs.etendo.software/whats-new/overview)
+Source: [https://docs.etendo.software/whats-new/overview](https://docs.etendo.software/whats-new/overview){target='_blank'}
 ---
 
 ---
@@ -29504,7 +29504,7 @@ New versions of Etendo can include:
 - fixes of the issues reported by Etendo partners, fixed by Etendo according to the corresponding Etendo partner’s services level agreement,
 - and extensions, modules which extend the functionality of Etendo.
 
-Source: [https://docs.etendo.software/whats-new/etendo-release-cycle](https://docs.etendo.software/whats-new/etendo-release-cycle)
+Source: [https://docs.etendo.software/whats-new/etendo-release-cycle](https://docs.etendo.software/whats-new/etendo-release-cycle){target='_blank'}
 ---
 
 ---
@@ -29514,7 +29514,7 @@ Source: [https://etendo.software](https://etendo.software)
 ### Etendo Classic
 #### Releases
 
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/index](https://docs.etendo.software/whats-new/release-notes/etendo-classic/index)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/index](https://docs.etendo.software/whats-new/release-notes/etendo-classic/index){target='_blank'}
 ---
 
 ---
@@ -29572,7 +29572,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/ind
  
 ####### 1.0.7
 - EPL-574: Upgrade Gradle to version 7.3.2 :zap:
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin](https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin](https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin){target='_blank'}
 ---
 
 ---
@@ -29600,7 +29600,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/ete
 
 ######## 1.0.0
 - Add Advanced Business Partner module
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29652,7 +29652,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ######## 1.1.3 
 - Move Amortization Report module (Platform Bundle) to Financial Extension (Financial Bundle)
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29689,7 +29689,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 - Add Reactivate Warehouse Documents
 ######## 1.0.0
 - Add Stock History module
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29720,7 +29720,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ######## 1.0.0
 - Add Advanced Work Effort module
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29763,7 +29763,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 - All packages have been published on GitHub.
 
 
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29876,7 +29876,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ######## 1.1.2
 - Financial Reports Advanced module 1.0.0 version added.
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -29988,7 +29988,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 -   En Castellano: *"El valor del campo CIF/NIF se encuentra vacío para el tercero con Identificador ..."*
 
 
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes){target='_blank'}
 ---
 
 ---
@@ -30028,7 +30028,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 ######## 1.0.0
 - Add EtendoBI Inclusion/Exclusion module
 
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -30055,7 +30055,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ######## 1.4.0
 - Remove all translation modules dependencies to translated modules
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes){target='_blank'}
 ---
 
 ---
@@ -30091,7 +30091,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 
     The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
   
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues](https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues](https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues){target='_blank'}
 ---
 
 ---
@@ -30116,7 +30116,7 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/kno
 - Add  `com.smf.mobile.scan` module
 ######## 1.0.0
 - Add Etendo Classic Subapp module
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes)
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes){target='_blank'}
 ---
 
 ---
@@ -30144,7 +30144,7 @@ This page holds live testing instances. These live builds are updated and reset 
       **Username:** admin <br>
       **Password:** admin <br>
 
-Source: [https://docs.etendo.software/live-builds/overview](https://docs.etendo.software/live-builds/overview)
+Source: [https://docs.etendo.software/live-builds/overview](https://docs.etendo.software/live-builds/overview){target='_blank'}
 ---
 
 ---
@@ -30160,7 +30160,7 @@ You also have a standard structure for you to report bugs if needed.
 [:material-headphones-settings: Support Service](/help-and-support/support-service){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 [:fontawesome-solid-bug: How to Report Bugs](/help-and-support/how-to-report-bugs){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 
-Source: [https://docs.etendo.software/help-and-support/overview](https://docs.etendo.software/help-and-support/overview)
+Source: [https://docs.etendo.software/help-and-support/overview](https://docs.etendo.software/help-and-support/overview){target='_blank'}
 ---
 
 ---
@@ -30186,7 +30186,7 @@ Here, the user can ask questions or send information in these sections:
         For commercial information, visit the [Get in Touch section](https://etendo.software/get-in-touch/){target="_blank"} in the Etendo website.
 
 
-Source: [https://docs.etendo.software/help-and-support/support-service](https://docs.etendo.software/help-and-support/support-service)
+Source: [https://docs.etendo.software/help-and-support/support-service](https://docs.etendo.software/help-and-support/support-service){target='_blank'}
 ---
 
 ---
@@ -30239,7 +30239,7 @@ To report a bug, a standard structure is meant to be followed. This structure is
  
 
  ```
-Source: [https://docs.etendo.software/help-and-support/how-to-report-bugs](https://docs.etendo.software/help-and-support/how-to-report-bugs)
+Source: [https://docs.etendo.software/help-and-support/how-to-report-bugs](https://docs.etendo.software/help-and-support/how-to-report-bugs){target='_blank'}
 ---
 
 ---
