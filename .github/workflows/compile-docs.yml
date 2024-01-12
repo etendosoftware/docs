@@ -22,7 +22,7 @@ jobs:
     
           - name: Commit Changes
             env:
-              GITHUB_TOKEN: ${{ secrets.ETENDOBOT_TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.ETENDO_BOT_KEY }}
             run: |
               git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
               git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
