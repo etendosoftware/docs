@@ -29772,7 +29772,8 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.12.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
 | [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
 | [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
@@ -29811,6 +29812,9 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 
 ####### Release Notes
+
+######## 1.13.1
+- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Unnecessary "Header" tab in the in the ABC Activity window
 
 ######## 1.13.0
 - Update Core compatibility until 23.4.x
@@ -30034,11 +30038,15 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.4.2](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#142) | 07/12/2023 | [1.11.3, latest] | CS | :white_check_mark: |
+| [1.4.3](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.4.2](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
 | [1.4.1](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
 | [1.4.0](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
 
 ####### Release Notes
+######## 1.4.3
+- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
+  
 ######## 1.4.2
 - [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} Modified translation of the Reactivate Payments buttons of the Payment Removal module
 
