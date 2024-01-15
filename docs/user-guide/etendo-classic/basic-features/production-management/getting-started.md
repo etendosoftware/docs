@@ -11,6 +11,8 @@ tags:
 
 ## Overview
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LujFoXYv-XA?si=i8cKV41eHUdipMHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 The Production Management module allows managing the standard productive process: production plan, work requirement, end products report and its direct and indirect costs. It is also possible to manage quality control and machine maintenance in production.
 
 ## Production Management
