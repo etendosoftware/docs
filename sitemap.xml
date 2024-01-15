@@ -736,17 +736,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/</loc>
-         <lastmod>2024-01-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/</loc>
          <lastmod>2024-01-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues/</loc>
+         <lastmod>2024-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/overview/</loc>
          <lastmod>2024-01-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1022,26 +1022,6 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-0/</loc>
-         <lastmod>2024-01-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/details/22Q1-0-details/</loc>
-         <lastmod>2024-01-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/details/22Q2-0-details/</loc>
-         <lastmod>2024-01-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/details/23Q1-0-details/</loc>
-         <lastmod>2024-01-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/details/23Q2-0-details/</loc>
          <lastmod>2024-01-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
