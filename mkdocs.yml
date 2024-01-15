@@ -285,7 +285,54 @@ nav:
     - Roadmap: "https://etendo.software"
     - Release Notes:
       - Etendo Classic:
-        - Releases: whats-new/release-notes/etendo-classic/index.md
+        - Releases:
+          - Overview: whats-new/release-notes/etendo-classic/overview.md
+          - 23Q4.0: whats-new/release-notes/etendo-classic/versions/23Q4-0.md
+          - 23Q3.4: whats-new/release-notes/etendo-classic/versions/23Q3-4.md
+          - 23Q3.3: whats-new/release-notes/etendo-classic/versions/23Q3-3.md
+          - 23Q3.2: whats-new/release-notes/etendo-classic/versions/23Q3-2.md
+          - 23Q3.1: whats-new/release-notes/etendo-classic/versions/23Q3-1.md
+          - 23Q3.0: whats-new/release-notes/etendo-classic/versions/23Q3-0.md
+          - 23Q2.8: whats-new/release-notes/etendo-classic/versions/23Q2-8.md
+          - 23Q2.7: whats-new/release-notes/etendo-classic/versions/23Q2-7.md
+          - 23Q2.6: whats-new/release-notes/etendo-classic/versions/23Q2-6.md
+          - 23Q2.5: whats-new/release-notes/etendo-classic/versions/23Q2-5.md
+          - 23Q2.4: whats-new/release-notes/etendo-classic/versions/23Q2-4.md
+          - 23Q2.3: whats-new/release-notes/etendo-classic/versions/23Q2-3.md
+          - 23Q2.2: whats-new/release-notes/etendo-classic/versions/23Q2-2.md
+          - 23Q2.1: whats-new/release-notes/etendo-classic/versions/23Q2-1.md
+          - 23Q2.0: whats-new/release-notes/etendo-classic/versions/23Q2-0.md
+          - 23Q1.5: whats-new/release-notes/etendo-classic/versions/23Q1-5.md
+          - 23Q1.4: whats-new/release-notes/etendo-classic/versions/23Q1-4.md
+          - 23Q1.3: whats-new/release-notes/etendo-classic/versions/23Q1-3.md
+          - 23Q1.2: whats-new/release-notes/etendo-classic/versions/23Q1-2.md
+          - 23Q1.1: whats-new/release-notes/etendo-classic/versions/23Q1-1.md
+          - 23Q1.0: whats-new/release-notes/etendo-classic/versions/23Q1-0.md
+          - 22Q4.6: whats-new/release-notes/etendo-classic/versions/22Q4-6.md
+          - 22Q4.5: whats-new/release-notes/etendo-classic/versions/22Q4-5.md
+          - 22Q4.4: whats-new/release-notes/etendo-classic/versions/22Q4-4.md
+          - 22Q4.3: whats-new/release-notes/etendo-classic/versions/22Q4-3.md
+          - 22Q4.2: whats-new/release-notes/etendo-classic/versions/22Q4-2.md
+          - 22Q4.1: whats-new/release-notes/etendo-classic/versions/22Q4-1.md
+          - 22Q4.0: whats-new/release-notes/etendo-classic/versions/22Q4-0.md
+          - 22Q3.0: whats-new/release-notes/etendo-classic/versions/22Q3-0.md
+          - 22Q2.2: whats-new/release-notes/etendo-classic/versions/22Q2-2.md
+          - 22Q2.1: whats-new/release-notes/etendo-classic/versions/22Q2-1.md
+          - 22Q2.0: whats-new/release-notes/etendo-classic/versions/22Q2-0.md
+          - 22Q1.3: whats-new/release-notes/etendo-classic/versions/22Q1-3.md
+          - 22Q1.2: whats-new/release-notes/etendo-classic/versions/22Q1-2.md
+          - 22Q1.1: whats-new/release-notes/etendo-classic/versions/22Q1-1.md
+          - 22Q1.0: whats-new/release-notes/etendo-classic/versions/22Q1-0.md
+          - 21Q4.9: whats-new/release-notes/etendo-classic/versions/21Q4-9.md
+          - 21Q4.8: whats-new/release-notes/etendo-classic/versions/21Q4-8.md
+          - 21Q4.7: whats-new/release-notes/etendo-classic/versions/21Q4-7.md
+          - 21Q4.6: whats-new/release-notes/etendo-classic/versions/21Q4-6.md
+          - 21Q4.5: whats-new/release-notes/etendo-classic/versions/21Q4-5.md
+          - 21Q4.4: whats-new/release-notes/etendo-classic/versions/21Q4-4.md
+          - 21Q4.3: whats-new/release-notes/etendo-classic/versions/21Q4-3.md
+          - 21Q4.2: whats-new/release-notes/etendo-classic/versions/21Q4-2.md
+          - 21Q4.1: whats-new/release-notes/etendo-classic/versions/21Q4-1.md
+          - 21Q4.0: whats-new/release-notes/etendo-classic/versions/21Q4-0.md
         - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
