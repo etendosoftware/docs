@@ -16,7 +16,7 @@ Having a single repository of data avoids data duplication, provides a unique wa
 ## Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
@@ -313,7 +313,7 @@ The *bank account* related data you can enter is:
 #### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
@@ -398,7 +398,7 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ### Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.

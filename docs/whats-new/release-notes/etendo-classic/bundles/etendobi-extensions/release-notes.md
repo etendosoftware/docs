@@ -14,14 +14,14 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
-| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
+| [1.2.1](#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
+| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
+| [1.1.2](#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.1.1](#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.1.0](#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.0.1](#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.0.0](#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
 
 ## Release Notes
 ### 1.3.0
