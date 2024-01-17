@@ -36,8 +36,8 @@ This section explains the stack of tools and requirements to install Etendo.
 |     |     |     |     |
 | --- | --- | --- | --- |
 | **Web browser** |     | **Minimum required** | **Recommended version** |
-| ![Chrome logo.png](/assets/drive/mOCl2euDZU8wO2MedNIrplZBmdiqguZm86ab6e3RVnKM4B4uX3s0UMMf0FVPIYLYeHmFy8FHPMNsJ9nOX6rXZAo76IzmQSSPrrN2DgNiD3DrJIG2j25JRJvASy7yiBGzsJBRp2Cg.png) | **Google Chrome** | 95  | **97 or higher** |
-| ![Safari icon large.png](/assets/drive/JVloGgFusza-4BFZ30Gjra-m_4Aknv5c3Y5vJEoYZ4B4HiEV09e6bMcnSfyImo7D7TJbgPRsIIUScqqatrJBW8SoMV7HmSe3q12JLmaEp7AIYT2FSuLrjcz2mnT3fQ6NCMWg0zAu.png) | **Apple Safari** | 12  | **14 or higher** |
+| ![Chrome logo.png](../assets/drive/mOCl2euDZU8wO2MedNIrplZBmdiqguZm86ab6e3RVnKM4B4uX3s0UMMf0FVPIYLYeHmFy8FHPMNsJ9nOX6rXZAo76IzmQSSPrrN2DgNiD3DrJIG2j25JRJvASy7yiBGzsJBRp2Cg.png) | **Google Chrome** | 95  | **97 or higher** |
+| ![Safari icon large.png](../assets/drive/JVloGgFusza-4BFZ30Gjra-m_4Aknv5c3Y5vJEoYZ4B4HiEV09e6bMcnSfyImo7D7TJbgPRsIIUScqqatrJBW8SoMV7HmSe3q12JLmaEp7AIYT2FSuLrjcz2mnT3fQ6NCMWg0zAu.png) | **Apple Safari** | 12  | **14 or higher** |
 | ![Firefox logo 2017.png](/assets/drive/p3EzTz7im_NXkvyXHa5aIk29Va-vEN-96NUPsPr1BLqnWL7AA6CuewRnASM9EfEyMxRmaGmq3pNHPbAqNy2ZJL6xAuEUtM5q10QXfcadnvVJwW7-ISmAZ9xNgbOSs3XwSDsppY1P.png) | **Mozilla Firefox ESR** | 78  | **90 or higher** |
 | ![Microsoft Edge logo.png](/assets/drive/acUA_bLGo6j1tRenMx_zSRQddDaf2N86N0iL2cT5o5Om5Gc96_YzQ0HOZ_CdZAitgs1m6M24Nbk5cbs1Et2I0MrUPB1a5sapBINQg_4Jzg8C_aoCmS3-CaKmn8BItB4O25SvFpy6.png) | **Microsoft Edge (Chromium based)** | 95  | **97 or higher** |
 
@@ -2091,6 +2091,98 @@ Relation of prioritized on-hand warehouses of the Organization.
 In this tab, it is possible to define the organization's warehouse/s, that way the quantity on hand of an organization is the sum of the available stock of its warehouse/s.
 
 It is possible to define the priority of each organization's warehouse/s therefore Etendo proposes first the goods of the warehouse with a higher priority.
+
+####### Intercompany
+
+######## Introduction
+
+This section describes the Intercompany module included in the Etendo Financial Extensions bundle.
+
+######## Description 
+
+In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document. 
+
+For example, if Organization A makes a sales transaction to organization B, once the sales invoice is manually created by Organization A, this functionality will automatically create a purchase invoice for Organization B.
+
+######## Installation
+
+To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Financial Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558).
+
+######## Set Up
+
+######## Organization Window
+
+It is required for each organization using this module to have one business partner assigned.
+
+![](/assets/drive/PlutLfL7AlJBR18T2om4NqgG3qgdPhgtV7vE876GFmU80QIrKOSgJX2AScc0eWEB2TBUAOdVRFIdaOoMIiVZ3FM2IbIHsHSURbzG6sWX0BHArpvjqEk68iMCrwqirI3OD8I2PH3UnFQWiCYW3t5bDK5G8vtpRioFkYRiBab_zup8KCnjTzk6WAUwHw.png)
+
+######### Business Partner Window
+
+!!! info
+    When configuring a new Business Partner, take into account that this business partner should be visible in the inverse organization. 
+
+
+The Business Partner has to be configured as both vendor and customer, using the corresponding checkboxes.
+
+![](/assets/drive/7bSIJF7R9TzP-VYXO5gkqySKt7G-7YEM5ZRdplKDfRLtoEfc0FUlhr-JctNSn3vItINYI7hiRVZX1l7BV2yoOydAPlu7K4lTb3oKuPdI-k6X5-4JKmDT-q24OQYAHo3FYxFMoB57JitDmgZ3w9Krhf9sXSkXevDHLO00EHXHOjC_zMSY3mgEse7YyA.png)
+
+![](/assets/drive/_S08VOtX0-6seijELCJ5kmLXfIJ93cNS9rIryuyqFFqOMeEC2Uq6zb_HCWjaeg8N-LtXuMRX074PBOERYCsZyV1xibJMiuZe4mde_uyxgvQJjPV9BdEsJK-w8YEeORUaQPXcPebVv3r4QhqCD-3D06jGhZM__U36rx0V2wYbN37w9fHG8o2NRrdYgw.png)
+
+In the Intercompany Documents tab, it is necessary to select the required document types for this business partner.
+
+!!! info
+    It is not mandatory to create new document types, but it is recommended.
+
+![](/assets/drive/VT8AxdS0bU_4bD7b8fEIrQF-HK9e2ngLCS5TFjlUBl9ee8W1sysEH9un6GgYTL418D4rvxpIuNOt5JUxLlT2KlJ2UgbXjAZVg4mx6-VexJIx9pwA7yFoY4P0YH1RRd2-hWgMEAnGjZnn9NX53631-9T7MBsxg_RCQP4g1dvj6HqAWMbaECgUfTDT1w.png)
+
+!!! info
+    Note: The information in both the source business partner and the target business partner should be the same.
+
+######### Invoices and Orders
+
+!!! info
+    The following information can be applied not only to sales and purchase invoices, but also to sales and purchase orders.
+
+########## Header
+
+The relevant fields are described below:
+
+-   Organization: it is necessary to select an organization configured to work as an intercompany organization (In the following example, the organization “F&B US East Coast”).
+-   Business Partner: it is necessary to select a business partner configured to work as an intercompany business partner (In the following example, “Be Soft Drinker, Inc.”).
+-   Transaction document: it is necessary to select the document type defined in the intercompany document tab of the business partner (In the following example, the document type “AR Invoice Intercompany”).
+
+![](/assets/drive/CBJAHylu5avoOLB0cuF8RTZZUJFtzQYm24KaV3eRWOB_6H7njxPoJ4ujK_0ZcvPokD8O3q3NZ2B3P4rEASGLEjM9Dadp9YnTsO1hSFBzAMdea3A_OfAUO-T0-BxhX2zqRF_Mh0UsY9ujTx2Pbrjy1TOxp5kpd4QC8fklcmTtfsJMnfrVwUvT7CexMA.png)
+
+########## Lines
+
+The relevant fields are described below:
+
+-   Product: The product must be visible for both organizations (In the following example, “Lemonade”). 
+-   G/L items: The necessary G/L items must be visible for both organizations.
+
+![](/assets/drive/Q8Xn1rgR7uOHOSOr_h_l0ITlepOcHfRklfLTj8awb46t_jUCBKoV3-91JsVU5eGDQY2std_xbpvz0b-APJI11e2o9W4epq9rzioSoPB4XdWsnUpZhnCO2jkLmRinTSv4sPHUM3aODSmHiXfyQL320QR_lE8xpOD3whK6lYeLaMCafXC0G9UrVzZakA.png)
+
+########## Product Window
+
+The relevant fields are described below:
+
+-   Price: The price must be equivalent and available in every price list. 
+-   Currency: The currency must be the same for both organizations.
+-   Tax: The tax in each organization must be equivalent.
+
+########## Complete or book documents
+
+When you complete invoices or book orders, these processes generate the corresponding inverse document and complete or book both the source and the target documents.
+
+![](/assets/drive/op4ZxMClAuIecT10AFiO_n2ecoldgryLCVCYAnyWtjFgkDTaghYPrLdZ6bnDxWnykm_HGTLSmG6SkKQOtp45GnOVk3AgLm2Tbud2Lf1zR0Hsie0HE74sD93Rvl1GDfnFOWEWQVKEAfiuVZzja68OrmqgedNsOCsQ2TbrxzB41wmakZZvGBAscWqiEA.png)
+
+########## Reactivate documents
+
+To reactivate intercompany documents, both documents should not have an associated payment.
+
+!!! info
+    Note: This process is only allowed for source documents.
+
 Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model){target='_blank'}
 ---
 
@@ -2878,7 +2970,7 @@ Having a single repository of data avoids data duplication, provides a unique wa
 ####### Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
@@ -3175,7 +3267,7 @@ The *bank account* related data you can enter is:
 ######### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
@@ -3260,7 +3352,7 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ######## Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target=*\_blank*}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
@@ -18924,7 +19016,58 @@ An example for a Profit and Loss report would be:
 
 Above node must be an Account Tree element properly configured.
 
+######## Bulk Posting
 
+######### **Introduction**
+
+This section describes the Bulk Posting module included in the Etendo Financial Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}.
+
+!!! warning
+    Before using this functionality, remember that this module's background process can affect the performance of the system.
+
+The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
+
+This functionality is available in the following windows:
+
+- [Amortization](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#bulk-posting)
+- [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_1)
+- [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
+- [Matched Invoices](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_2)
+- [Cost Adjustment](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_3)
+- [Bill of Materials Production](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_2)
+- [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting_1)
+- [Doubtful Debt](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_3)
+- [Landed Cost](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_4)
+- [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting_1)
+- [Simple G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting)
+- [Work Effort](/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting)
+- [Goods Receipt](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting)
+- [Goods Shipment](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting)
+- [Return Material Receipt](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_1)
+- [Return to Vendor Shipment](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_3)
+- [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_2)
+- [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_1)
+- [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_1)
+- [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting)
+- [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting)
+
+
+########## Accounting Status
+
+All the records existing previously to the installation of this new functionality have a default “pending refresh” value in the column Accounting Status. To set the correct value for this column, it is necessary to configure the following preference to indicate the amount of days to be considered by the process to set the correct values of the previous records.
+
+########### Preference Configuration
+
+To configure the preference, go to the “Preference” window and create a new record with the property “Days Back to Refresh Accounting” and the default value “90”. If necessary, it is possible to create another preference by entering a new value and checking the “selected” box.
+
+########### Background Process
+
+It is necessary to run the “Refresh Accounting Status” background process to update the accounting status column.
+
+![](/assets/drive/17KafE0qvtuAe21aVvs7mDN58V_BCDScO.png)
 Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup){target='_blank'}
 ---
 
@@ -19140,14 +19283,15 @@ Source: [https://docs.etendo.software/user-guide/etendo-classic/basic-features/f
 ### Optional Features
 #### Bundles
 ##### Essentials Extensions Bundle
-####### Overview 
+###### Overview
+######## Overview 
 This bundle includes fundamental modules that affect most areas in Etendo.
 
-####### Translations
+######## Translations
 
-####### Modules
+######## Modules
 
-######## Advanced Business Partner
+######### Advanced Business Partner
 
 :octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner
 
@@ -19163,15 +19307,150 @@ Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-feature
 ---
 
 ---
+###### Advanced Business Partner
+######### **Introduction**
+
+This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
+
+- Password Security
+- Password History
+- User Lockout
+- Multiple Session Verification
+- Changing Password after Login
+- Expiration Time (Autolock Password)
+
+!!! info
+    For more information about the module configuration visit the [Developer Guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+
+######### **Password Security**
+
+This functionality is executed when the password is changed, either because the user needs to change it or because the system requires it. The process can be done from the **Change Password** field in the navigation bar and/or from the **User** window.
+
+From the **Change Password** process, Etendo will ask for the current password and the new one to make the change. After clicking on **Apply,** a series of checks will be verified to finally execute the corresponding changes.
+
+![](/assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png)
+
+!!! info
+    The password must be no less than 8 characters long and its structure must contain at least three of the following characters: letters, uppercase letters, lowercase letters, numbers and symbols.
+
+If the new password does not comply with the above mentioned conditions, a popup appears with an error message indicating the conditions to be fulfilled.
+
+![](/assets/drive/shTQdtbDJq_FrCieCra0q6YLlv5akL6vFAS2Xr9sogzi6IMddd-qi9HJDwKKhxY0fCqpUfcFa-l0agc03ypnwtH_eFpDR6SLWNPVi4edc--fKnZsuzeFwnNC_ITWGd5q07zMCr1ImePmG5cOLmSH_rQ.png)
+
+This process can also be executed from the **User** window by applying the same password requirements mentioned above.
+
+![](/assets/drive/JNG3VeVWDWewBfz_iijE7kUBTZBV-8DUBQAWaiEa1uyxhOxYZxmbC_bavwTW85z0LJ_S9ibzN1XVz8pGIZQZz675KBO8H8vaO1LJ8BXxO3Sl5AOqOvOV2hgDKjMObk6CWCpmB8ChETBvqkEICBJ0SI4.png)
+
+**Etendo Advanced Security** verifies the changes, and if the new password does not fulfill the required conditions, Etendo shows an error message at the moment of registering the changes.
+
+![](/assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
+
+######### **Password History**
+
+When changing the password, one of the conditions to be fulfilled is that the new password cannot be the same as a previously used one. Etendo creates records of the previously used passwords so, if the user enters a previously used one, the system informs with an **error message.**
+
+This security feature can be configured only with **System Administrator permissions**. To do this, go to the **System Info** window, within the group field **Password Security**, and check the field called **Enable Password History**, according to your preference.
+
+![](/assets/drive/s0Xj63FWSlAuip3ZzJB0OWyHiF-cM8zs8EruyfZEM7qA3Pt1hvcNZkRDHWzSb9t3GkzqrqbRwIuP5hghTfyal4441tIbtMQrNyu1CPQmhLOwJkM1EcQ85tEz5TDRbOQazN15k5hzX-b6NyleAak3u1s.png)
+
+When the configuration of the feature **Password Security** is active and the user **changes the password** to a previously used one, Etendo will show an **error message** explaining the failure in saving the password.
+
+![](/assets/drive/x4qql4v3biKPnkWDrD86UUS4mJkw0HuajIK5AmXZKT0OKjP5LdGjzhtd6L8BkkPsR-a9duOtg9uK6OHWjJbig-vSHrltxOd2TfjU5-_lwfH74sKnuekNk4A-heIRIniDxvEb5F45Ms0SxKbRQdy-ztg.png)
+
+The following example shows the same error message when changing the password from the **Change Password** process.
+
+![](/assets/drive/1VTtHPNlLr0N3fvL1vVQ7FO2lzWcQti5I.png)
+
+!!! info
+    Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
+
+######### **User Lockout** 
+
+Another feature of this module is the **blocking** of the user after N number of **unsuccessful login attempts**. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.
+
+In this example, the system shows that there is one attempt left.
+
+![](/assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png)
+
+Even if in the next attempt the user is not able to log in correctly, Etendo leaves another message indicating that the user has been blocked.
+
+![](/assets/drive/e_vXv3RF7iceBBddpDNUMwewnLYcr5W7LzjhyzrUMPnGe6oT9v9TeXiGc-8MLQpF_Xv1POEZdvMmIRL5bwfai6-hfaEirW4IKlsrBVzcLndzbtRTYeO0_fwou-fTO00rxDtw2lJJi7LY5LoW7vWPEb8.png)
+
+!!! info
+    By default, Etendo configures five attempts to enter the right password. 
+
+To configure the number of unsuccessful login attempts, it is necessary to create a preference from the **Preference** window. In the **Value** field, add the desired number of login attempts, and also select the preference **Maximum number of password attempts** from the **Property** field.
+
+![](/assets/drive/5nXDi_OVP9kEESFxQsu1DJywuIEhpJfGl7UvWYPV4UO1CkEhcs2aXMQQIt51lJrww8TfMAUWMfjky2zRtpqhzzdsYygdDt8VhJAe0HNHAWpFbbTbX7c0khUaD9Dn9so89idLPpfmVAqR9bVfS4h4IAU.png)
+
+!!! warning
+    It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
+
+######### **Multiple Session Verification**  
+
+Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.
+
+From the **User** window, within the **More Information** field, it is possible to configure the check that allows having several sessions active at the same time. The check is called **Allow multiple sessions**.
+
+![](/assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png)
+
+In case the user just wants one session allowed to be activated, uncheck the **Allow multiple sessions** checkbox from the **User** window and, **only with System Administrator permissions**, check the **Enable single session verification** field in the **Session Security** field from the **System Info** window.
+
+![](/assets/drive/Prfolo_qyMafrXpr9dUe_ASCkalv-LjArCWEcMCPSWWi2IzyypsQytDTUlSeMgq_mSbgCYKtebK9aawUzMNotE2V25Lg-RrJ2f21l6m75dS4Z11d76gidgZfFrxy1BQgjVl7EvJg2xQISvt1efahvCc.png)
+
+This way, when trying to log in, the system verifies that an active session already exists informing the user.
+
+![](/assets/drive/IkC8pMQVLKRCkr3SI1oYDJsaSirmOHxS31Z5ZmwhCzOnMnwXW88ZFHcyTCnp0Vpm9BxY_RJbpWIdrQG0g5DhURD1RSzW2nexd9hGTeCxTNWhaAWaopvCG-r7JieCNHkLjpCb7HW3v3JXDjofFCHEyAU.png)
+
+!!! info
+    By default, Etendo with this module installed, only allows to have one session active. 
+
+######### **Changing Password after Login**
+
+After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
+
+![](/assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png)
+
+Once the change has been made, the user is redirected to the main interface of the application.
+
+######### **Expiration Time (Autolock Password)**
+
+As part of the security management, Etendo also allows the management of the days for the **password expiration time**.
+
+From the **Preferences** window, it is possible to adjust the period of time required for the user to be obliged to change the password. Do it by adding the desired amount of days for the password expiration in the **Value** field.
+
+![](/assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png)
+
+!!! info
+    Consider that by default, Etendo configures 30 days for the password expiration time. 
+
+After the number of days established for the password expiration, when trying to log in, a message is displayed explaining the need to be redirected to the **login to change the password**, i.e. the user is marked as **password expired**.
+
+Besides, Etendo notifies the user with a message announcing the amount of **remaining days** for the password expiration. In this example, the user has two days left.
+
+![](/assets/drive/0g12hmyWCTy2ecyVLmptMQSLE6ocCBLGSJLJlYa3EqwCNE-NyYSxy-aO9jg88OWefWDsRso8RDce3Zas0q5Q29fUdcrtSeZ-nA13uwNokmr2vnlKM4HabnGCzy5r3stbAmsCoEgMhzno5T6LLr4tyYM.png)
+
+!!! info
+    By default, the system activates this message when there are **seven days** left to change the password.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security){target='_blank'}
+---
+
+---
 ##### Platform Extensions Bundle
-####### Overview
+###### Overview
+######## Overview
 This bundle includes enhancements for Platform functionalities in Etendo.
 
-####### Translations
+######## Translations
 -  :material-translate: Spanish: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
-####### Modules
-######## Print Document Web Service
+######## Modules
+######### Print Document Web Service
 
 :octicons-package-16: Javapackage: com.etendoerp.printdocumentws
 
@@ -19184,7 +19463,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 
 
-######## Number To Word (English)
+######### Number To Word (English)
 
 :octicons-package-16: Javapackage: org.openbravo.numbertoword_en
 
@@ -19196,7 +19475,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
         For more information, visit [Number To Word Converter user guide](/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
 
 
-######## Javax XML SOAP API
+######### Javax XML SOAP API
 
 :octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
 
@@ -19206,7 +19485,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
         For more information, visit the [Javax XML SOAP API developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
 
 
-######## Report Cache Management
+######### Report Cache Management
 
 :octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
 
@@ -19215,7 +19494,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 !!! info
         For more information, visit [Clear Report Cache user guide](/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
 
-######## Etendo Advanced Security
+######### Etendo Advanced Security
 
 :octicons-package-16: Javapackage: com.etendoerp.advanced.security
 
@@ -19226,7 +19505,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 !!! info
         For more information, visit the [Etendo Advanced Security user guide](/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
-######## Dynamic App 
+######### Dynamic App 
 
 :octicons-package-16: Javapackage: com.etendoerp.dynamic.app
 
@@ -19235,7 +19514,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 !!! info
         For more information, visit the [Dynamic App user guide](/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
         
-######## EAN 128
+######### EAN 128
 
 :octicons-package-16: Javapackage: com.smf.ean128
 
@@ -19244,19 +19523,19 @@ EAN 128 allows to use bar code in your application
 !!! info
         For more information, visit the [EAN 128 developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
 
-######## Etendo RX
+######### Etendo RX
 
 :octicons-package-16: Javapackage: com.etendoerp.etendorx
 
-######## Etendo Reactor
+######### Etendo Reactor
 
 :octicons-package-16: Javapackage: com.etendoerp.reactor
 
-######## Webhook Events
+######### Webhook Events
 
 :octicons-package-16: Javapackage: com.etendoerp.webhookevents
 
-######## Etendo Async Processes
+######### Etendo Async Processes
 
 :octicons-package-16: Javapackage: com.etendoerp.asyncprocess
 
@@ -19265,6 +19544,140 @@ EAN 128 allows to use bar code in your application
 This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
  by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview){target='_blank'}
+---
+
+---
+###### Etendo Advanced Security
+######### **Introduction**
+
+This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
+
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+
+The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
+
+- Password Security
+- Password History
+- User Lockout
+- Multiple Session Verification
+- Changing Password after Login
+- Expiration Time (Autolock Password)
+
+!!! info
+    For more information about the module configuration visit the [Developer Guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+
+######### **Password Security**
+
+This functionality is executed when the password is changed, either because the user needs to change it or because the system requires it. The process can be done from the **Change Password** field in the navigation bar and/or from the **User** window.
+
+From the **Change Password** process, Etendo will ask for the current password and the new one to make the change. After clicking on **Apply,** a series of checks will be verified to finally execute the corresponding changes.
+
+![](/assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png)
+
+!!! info
+    The password must be no less than 8 characters long and its structure must contain at least three of the following characters: letters, uppercase letters, lowercase letters, numbers and symbols.
+
+If the new password does not comply with the above mentioned conditions, a popup appears with an error message indicating the conditions to be fulfilled.
+
+![](/assets/drive/shTQdtbDJq_FrCieCra0q6YLlv5akL6vFAS2Xr9sogzi6IMddd-qi9HJDwKKhxY0fCqpUfcFa-l0agc03ypnwtH_eFpDR6SLWNPVi4edc--fKnZsuzeFwnNC_ITWGd5q07zMCr1ImePmG5cOLmSH_rQ.png)
+
+This process can also be executed from the **User** window by applying the same password requirements mentioned above.
+
+![](/assets/drive/JNG3VeVWDWewBfz_iijE7kUBTZBV-8DUBQAWaiEa1uyxhOxYZxmbC_bavwTW85z0LJ_S9ibzN1XVz8pGIZQZz675KBO8H8vaO1LJ8BXxO3Sl5AOqOvOV2hgDKjMObk6CWCpmB8ChETBvqkEICBJ0SI4.png)
+
+**Etendo Advanced Security** verifies the changes, and if the new password does not fulfill the required conditions, Etendo shows an error message at the moment of registering the changes.
+
+![](/assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
+
+######### **Password History**
+
+When changing the password, one of the conditions to be fulfilled is that the new password cannot be the same as a previously used one. Etendo creates records of the previously used passwords so, if the user enters a previously used one, the system informs with an **error message.**
+
+This security feature can be configured only with **System Administrator permissions**. To do this, go to the **System Info** window, within the group field **Password Security**, and check the field called **Enable Password History**, according to your preference.
+
+![](/assets/drive/s0Xj63FWSlAuip3ZzJB0OWyHiF-cM8zs8EruyfZEM7qA3Pt1hvcNZkRDHWzSb9t3GkzqrqbRwIuP5hghTfyal4441tIbtMQrNyu1CPQmhLOwJkM1EcQ85tEz5TDRbOQazN15k5hzX-b6NyleAak3u1s.png)
+
+When the configuration of the feature **Password Security** is active and the user **changes the password** to a previously used one, Etendo will show an **error message** explaining the failure in saving the password.
+
+![](/assets/drive/x4qql4v3biKPnkWDrD86UUS4mJkw0HuajIK5AmXZKT0OKjP5LdGjzhtd6L8BkkPsR-a9duOtg9uK6OHWjJbig-vSHrltxOd2TfjU5-_lwfH74sKnuekNk4A-heIRIniDxvEb5F45Ms0SxKbRQdy-ztg.png)
+
+The following example shows the same error message when changing the password from the **Change Password** process.
+
+![](/assets/drive/1VTtHPNlLr0N3fvL1vVQ7FO2lzWcQti5I.png)
+
+!!! info
+    Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
+
+######### **User Lockout** 
+
+Another feature of this module is the **blocking** of the user after N number of **unsuccessful login attempts**. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.
+
+In this example, the system shows that there is one attempt left.
+
+![](/assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png)
+
+Even if in the next attempt the user is not able to log in correctly, Etendo leaves another message indicating that the user has been blocked.
+
+![](/assets/drive/e_vXv3RF7iceBBddpDNUMwewnLYcr5W7LzjhyzrUMPnGe6oT9v9TeXiGc-8MLQpF_Xv1POEZdvMmIRL5bwfai6-hfaEirW4IKlsrBVzcLndzbtRTYeO0_fwou-fTO00rxDtw2lJJi7LY5LoW7vWPEb8.png)
+
+!!! info
+    By default, Etendo configures five attempts to enter the right password. 
+
+To configure the number of unsuccessful login attempts, it is necessary to create a preference from the **Preference** window. In the **Value** field, add the desired number of login attempts, and also select the preference **Maximum number of password attempts** from the **Property** field.
+
+![](/assets/drive/5nXDi_OVP9kEESFxQsu1DJywuIEhpJfGl7UvWYPV4UO1CkEhcs2aXMQQIt51lJrww8TfMAUWMfjky2zRtpqhzzdsYygdDt8VhJAe0HNHAWpFbbTbX7c0khUaD9Dn9so89idLPpfmVAqR9bVfS4h4IAU.png)
+
+!!! warning
+    It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
+
+######### **Multiple Session Verification**  
+
+Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.
+
+From the **User** window, within the **More Information** field, it is possible to configure the check that allows having several sessions active at the same time. The check is called **Allow multiple sessions**.
+
+![](/assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png)
+
+In case the user just wants one session allowed to be activated, uncheck the **Allow multiple sessions** checkbox from the **User** window and, **only with System Administrator permissions**, check the **Enable single session verification** field in the **Session Security** field from the **System Info** window.
+
+![](/assets/drive/Prfolo_qyMafrXpr9dUe_ASCkalv-LjArCWEcMCPSWWi2IzyypsQytDTUlSeMgq_mSbgCYKtebK9aawUzMNotE2V25Lg-RrJ2f21l6m75dS4Z11d76gidgZfFrxy1BQgjVl7EvJg2xQISvt1efahvCc.png)
+
+This way, when trying to log in, the system verifies that an active session already exists informing the user.
+
+![](/assets/drive/IkC8pMQVLKRCkr3SI1oYDJsaSirmOHxS31Z5ZmwhCzOnMnwXW88ZFHcyTCnp0Vpm9BxY_RJbpWIdrQG0g5DhURD1RSzW2nexd9hGTeCxTNWhaAWaopvCG-r7JieCNHkLjpCb7HW3v3JXDjofFCHEyAU.png)
+
+!!! info
+    By default, Etendo with this module installed, only allows to have one session active. 
+
+######### **Changing Password after Login**
+
+After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
+
+![](/assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png)
+
+Once the change has been made, the user is redirected to the main interface of the application.
+
+######### **Expiration Time (Autolock Password)**
+
+As part of the security management, Etendo also allows the management of the days for the **password expiration time**.
+
+From the **Preferences** window, it is possible to adjust the period of time required for the user to be obliged to change the password. Do it by adding the desired amount of days for the password expiration in the **Value** field.
+
+![](/assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png)
+
+!!! info
+    Consider that by default, Etendo configures 30 days for the password expiration time. 
+
+After the number of days established for the password expiration, when trying to log in, a message is displayed explaining the need to be redirected to the **login to change the password**, i.e. the user is marked as **password expired**.
+
+Besides, Etendo notifies the user with a message announcing the amount of **remaining days** for the password expiration. In this example, the user has two days left.
+
+![](/assets/drive/0g12hmyWCTy2ecyVLmptMQSLE6ocCBLGSJLJlYa3EqwCNE-NyYSxy-aO9jg88OWefWDsRso8RDce3Zas0q5Q29fUdcrtSeZ-nA13uwNokmr2vnlKM4HabnGCzy5r3stbAmsCoEgMhzno5T6LLr4tyYM.png)
+
+!!! info
+    By default, the system activates this message when there are **seven days** left to change the password.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security){target='_blank'}
 ---
 
 ---
@@ -19517,7 +19930,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany Module user guide](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#intercompany).
 
 ######## Reverse GL Journal
 
@@ -19570,7 +19983,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting Module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting Module user guide](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#bulk-posting).
 
 ######## Advanced Business Partner Settlement
 
@@ -19591,10 +20004,11 @@ Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-feature
 
 ---
 ##### Spanish Localization Bundle
-####### Descripción
+###### Overview
+######## Descripción
 El bundle de Localización Española contiene los módulos que añaden funcionalidades a Etendo para ajustar Etendo Classic a los requerimientos legales y/o fiscales españoles.
 
-####### Módulos
+######## Módulos
 
 - [Spain SII](/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
 - [Tax Report: Modelo 303 (Spain)](/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
@@ -19652,7 +20066,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 - Integration with Google APIs Translation Spanish Spain
 - Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
-####### Incoterms
+######## Incoterms
 
 :octicons-package-16: Javapackage: org.openbravo.module.incoterms
 
@@ -19660,19 +20074,19 @@ Este módulo añade el listado de Incoterms a Etendo Classic.
 
 Los Incoterms or International Commercial Terms son una serie de términos de venta internacionales, publicados por la Cámara Internacional de Comercio y ampliamente utilizados en transacciones comerciales internacionales. Son utilizados para dividir costos de transacción y responsabilidades entre compradores y vendedores.
 
-####### European Union Countries
+######## European Union Countries
 
 :octicons-package-16: Javapackage: org.openbravo.module.eucountries
 
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
-####### Provincias de España
+######## Provincias de España
 
 :octicons-package-16: Javapackage: org.openbravo.spain.regions
 
 Este módulo añade el listado de provincias españolas a Etendo Classic.
 
-####### Legal Representative of the Organization
+######## Legal Representative of the Organization
 
 :octicons-package-16: Javapackage: org.openbravo.module.organization.representative.es
 
@@ -19680,7 +20094,7 @@ Este módulo añade a la ventana de la Organización una pestaña que permite co
 
 La pestaña “Representante Legal” que se añade a la ventana de Organización permite configurar el Representante Legal de la organización, dato que es obligatorio para el Modelo 390.
 
-####### I.A.E. Epigraphs (Epígrafes del I.A.E.)
+######## I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
 :octicons-package-16: Javapackage: org.openbravo.module.epigrafes.iae.es
 
@@ -19690,7 +20104,7 @@ El tipo de información agregada por este módulo se requiere en determinados mo
 
 En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea incluir un epígrafe que pertenezca a cualquier otra clave, se debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa “Actividades del IAE” de la ventana de Organización.
 
-####### CIF and NIF validator
+######## CIF and NIF validator
 
 :octicons-package-16: Javapackage: org.openbravo.module.cifnifvalidator
 
@@ -19700,13 +20114,13 @@ Este módulo implementa un callout que comprueba si se ha introducido un Número
 
 El Número de Identificación Fiscal (NIF) permite identificar de forma inequívoca a personas físicas o jurídicas.
 
-####### Validador de número de cuenta financiera
+######## Validador de número de cuenta financiera
 
 :octicons-package-16: Javapackage: org.openbravo.module.finactvalidator.es
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
-####### Check Printing
+######## Check Printing
 
 :octicons-package-16: Javapackage: org.openbravo.finance.checkprinting
 
@@ -19716,14 +20130,14 @@ Este módulo permite la impresión de cheques desde Etendo. Además, provee un s
 
 Este módulo incluye el dataset "Check Printing Infraestructure" que crea un formato de impresión llamado "Standard Format", un método de pago denominado “Check" y un proceso de ejecución llamado "Check Printing".
 
-######## Ejecutar pago
+######### Ejecutar pago
 
 Después de crear un pago, permanecerá en “Awaiting Execution”. Se necesita un paso adicional para ejecutarlo y proveer el primer número para la secuencia de los cheques, esto puede hacerse a través del formulario de “Payment Execution”.
 
 Para seleccionar los pagos que serán impresos, tras hacer click en “Process” aparece un pop up que requiere un número para el cheque. Este número es opcional.
 El sistema creará automáticamente las entradas en la ventana “Check Printing” en estado “Not Printed”. Además, el sistema asociará automáticamente el tipo de documento “Check” y el número de secuencia.
 
-######## Imprimir cheques
+######### Imprimir cheques
 
 Se genera una nueva ventana para imprimir cheques. Esta puede encontrarse en _Gestión Financiera > Gestión de cobros y pagos > Transacciones > Impresión de cheques_. La información de esta ventana será automáticamente completada cuando se ejecuten transacciones payment out que están usando el método de pago “Check”.
 
@@ -19731,19 +20145,19 @@ La ventana aplica un primer filtro para mostrar solamente los cheques que están
 
 Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón “Imprimir”.
 
-####### Tipo de Número de Identificación de Tercero
+######## Tipo de Número de Identificación de Tercero
 
 :octicons-package-16: Javapackage: org.openbravo.module.bptaxidkey
 
 Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
-####### Professional Localization pack Spain (España) Datasets
+######## Professional Localization pack Spain (España) Datasets
 
 :octicons-package-16: Javapackage: org.openbravo.proflocalization.spain.dataset
 
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
-####### Multidimensional Tax Report
+######## Multidimensional Tax Report
 
 :octicons-package-16: Javapackage: org.openbravo.module.invoicetaxreportenhanced30
 
@@ -19755,19 +20169,19 @@ El módulo permite obtener los datos necesarios para cumplimentar modelos de la 
 
 La información obtenida mediante este módulo es útil para que las empresas puedan completar manualmente y enviar los informes requeridos por las autoridades. Se le brinda al usuario final información fiscal relevante, que luego puede ser clasificada según las necesidades.
 
-####### Cuaderno 43
+######## Cuaderno 43
 
 :octicons-package-16: Javapackage: org.openbravo.module.cuaderno43.es
 
 Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
-####### 3 digits ISO country codes
+######## 3 digits ISO country codes
 
 :octicons-package-16: Javapackage: org.openbravo.module.countryisocode
 
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
-####### Métodos de Pago
+######## Métodos de Pago
 
 :octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentmethods
 
@@ -19775,7 +20189,7 @@ Este módulo contiene las formas de pago más utilizadas en España, las cuales 
 
 El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las empresas, por ejemplo contado o tarjeta de crédito. Etendo define un flujo de pagos basado en la configuración de Métodos de Pago.
 
-####### Tax Report Launcher
+######## Tax Report Launcher
 
 :octicons-package-16: Javapackage: org.openbravo.module.taxreportlauncher
 
@@ -19786,7 +20200,7 @@ Este módulo consiste en un launcher de impuestos que permite la definición de 
 Este módulo permite crear y enviar formularios de informe de impuestos desde Etendo. Es posible ingresar los datos requeridos en un formulario en particular y generar un fichero que luego puede ser enviado a las autoridades.
 Los impuestos para una localización determinada se instalan con módulos que extienden de este.
 
-######## Configuración de declaraciones de impuestos
+######### Configuración de declaraciones de impuestos
 
 Para habilitar el uso del launcher de declaraciones de impuestos, se deben descargar e instalar los siguientes módulos:
 
@@ -19796,15 +20210,15 @@ Para habilitar el uso del launcher de declaraciones de impuestos, se deben desca
 
 Cuando estos módulos están instalados, es necesario asociar los rangos de impuestos con los parámetros de las declaraciones de impuestos.
 
-######### Códigos de transacción
+########## Códigos de transacción
 
 Los códigos de transacción representan transacciones en las que se paga IVA. Por ejemplo, una compra de bienes. Hay dos códigos de transacción predeterminados en Etendo: E para transacciones de venta y A para transacciones de compra. Los códigos de transacción están en un módulo que se puede descargar y aplicar.
 
-######### Claves y subclaves de impuestos
+########## Claves y subclaves de impuestos
 
 El sistema fiscal español designa un conjunto específico de letras para cada tipo de ingreso (por ejemplo, la P representa la renta de una propiedad alquilada). Las claves y subclaves de impuestos están en un módulo que se puede descargar y aplicar.
 
-######### Asociar un rango de impuestos con un parámetro de impuestos
+########## Asociar un rango de impuestos con un parámetro de impuestos
 
 - Se realiza a partir de la ruta _Gestión Financiera > Contabilidad > Configuración > Rango Impuesto._
 - En la vista de cuadrícula, se selecciona la tasa de impuestos que se desea asociar con un parámetro de impuestos.
@@ -19812,7 +20226,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - En la lista de Parámetros del informe de impuestos, se debe seleccionar el parámetro que se desea asociar con la tasa de impuestos.
 - Clic en “Guardar”.
 
-######### Usar el Generador de Declaraciones de Impuestos para generar un informe
+########## Usar el Generador de Declaraciones de Impuestos para generar un informe
 
 - Ruta: _Gestión Financiera > Contabilidad > Herramientas de análisis > Generador de declaraciones de impuestos_.
 - Seleccionar de la lista de “Declaración de impuestos” cuál es el informe requerido.
@@ -19827,7 +20241,7 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 - Aparece un mensaje que pregunta si desea ver o guardar el archivo. Tras seleccionar la opción “Guardar”, se debe especificar una ubicación de archivo.
 
 
-####### Spanish Tax Module Improvements
+######## Spanish Tax Module Improvements
 
 :octicons-package-16: Javapackage: org.openbravo.module.taximprovements.es
 
@@ -19840,17 +20254,17 @@ Este módulo añade campos en la ventana de “Rango de impuestos” para mejora
 - Recargo de equivalencia ("Equivalent Charge"): El usuario puede seleccionar este check para indicar que un rango de impuesto es un recargo de equivalencia.
 - Impuesto Intracomunitario ("Intra Community Tax"): El usuario puede seleccionar este check para indicar que un rango de impuesto es intracomunitario.
 
-####### Nueva versión del módulo de Impuestos de España
+######## Nueva versión del módulo de Impuestos de España
 
 Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplicable en Ceuta y Melilla.
 
-####### Condiciones de pago
+######## Condiciones de pago
 
 :octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentterms
 
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
-####### Chart of accounts: PGC 2007 General
+######## Chart of accounts: PGC 2007 General
 
 :octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts
 
@@ -19878,7 +20292,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 - La moneda funcional es distinta del euro.
 - Se trata de una entidad financiera que capta fondos del público, asumiendo obligaciones respecto a los mismos.
 
-####### Chart of accounts: PGC 2007 PYMEs
+######## Chart of accounts: PGC 2007 PYMEs
 
 :octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts.pymes
 
@@ -19896,37 +20310,37 @@ El Plan de Cuentas que añade este módulo es el utilizado por las pequeñas y m
 - Cuadro de cuentas
 - Definiciones y relaciones contables
 
-####### Professional Localization pack Spain (España)
+######## Professional Localization pack Spain (España)
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz. Incluye una gestión avanzada de cuentas a cobrar y a pagar.
 
-####### Localization pack Spain (España)
+######## Localization pack Spain (España)
 
 :octicons-package-16: Javapackage: org.openbravo.localization.spain30
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
 
-####### Traducción al español del módulo 'Default Jobs'
+######## Traducción al español del módulo 'Default Jobs'
 
 :octicons-package-16: Javapackage: com.smf.jobs.defaults.es_es
 
-####### JSON Datasource Translation: Spanish Spain (es_ES)
+######## JSON Datasource Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.service.datasource.es_es
 
-####### Workspace & Widgets Translation: Spanish Spain (es_ES)
+######## Workspace & Widgets Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.myob.es_es
 
-####### User Interface Selector Translation: Spanish Spain (es_ES)
+######## User Interface Selector Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.userinterface.selector.es_es
 
-####### Traducción al Español del módulo Payment Report
+######## Traducción al Español del módulo Payment Report
 
 :octicons-package-16: Javapackage: org.openbravo.financial.paymentreport.es_es
 
-####### Number To Word
+######## Number To Word
 
 :octicons-package-16: Javapackage: org.openbravo.numbertoword
 
@@ -19934,75 +20348,75 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 :octicons-package-16: Javapackage: org.openbravo.numbertoword.es_es
 
-####### User Interface Client Kernel Translation Spanish Spain(esES)
+######## User Interface Client Kernel Translation Spanish Spain(esES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.kernel.es_es
 
-####### Translation: Spanish-Spain (es_ES) español-España
+######## Translation: Spanish-Spain (es_ES) español-España
 
 :octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.translation.esES
 
-####### Openbravo Multi Business Partner Selector
+######## Openbravo Multi Business Partner Selector
 
 :octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector
 
 :octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector.es_es
 
-####### Orders Awaiting Delivery Spanish (Spain) Translation
+######## Orders Awaiting Delivery Spanish (Spain) Translation
 
 :octicons-package-16: Javapackage: org.openbravo.reports.ordersawaitingdelivery.es_es
 
-####### Smartclient Translation: Spanish Spain (es_ES)
+######## Smartclient Translation: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.userinterface.smartclient.es_es
 
-####### Query/List Widget Translation Spanish Spain (es_ES)
+######## Query/List Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.querylist.es_es
 
-####### Widgets Collection Translation Spanish Spain (es_ES)
+######## Widgets Collection Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.widgets.es_es
 
-####### Advanced Payables and Receivables - Spanish Translation
+######## Advanced Payables and Receivables - Spanish Translation
 
 :octicons-package-16: Javapackage: org.openbravo.advpaymentmngt.es_es
 
-####### User Interface Application Translation Spanish Spain (es_ES)
+######## User Interface Application Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.application.es_es
 
-####### Alerts: Accounting
+######## Alerts: Accounting
 
 :octicons-package-16: Javapackage: org.openbravo.alerts.accounting30
 
 :octicons-package-16: Javapackage: org.openbravo.alerts.accounting30.es_es
 
-####### SOAP with Attachments API for Java Implementation
+######## SOAP with Attachments API for Java Implementation
 
 :octicons-package-16: Javapackage: org.openbravo.util.saaj.impl
 
-####### Payment Method Type
+######## Payment Method Type
 
 :octicons-package-16: Javapackage: org.openbravo.module.paymentmethod.type
 
-####### Javax XML SOAP API
+######## Javax XML SOAP API
 
 :octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
 
-####### HTML Widget Translation Spanish Spain (es_ES)
+######## HTML Widget Translation Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.client.htmlwidget.es_es
 
-####### OpenID Service Integration Translation Spanish Spain
+######## OpenID Service Integration Translation Spanish Spain
 
 :octicons-package-16: Javapackage: org.openbravo.service.integration.openid.es_es
 
-####### Integration with Google APIs Translation Spanish Spain
+######## Integration with Google APIs Translation Spanish Spain
 
 :octicons-package-16: Javapackage: org.openbravo.service.integration.google.es_es
 
-####### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
+######## Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
 
@@ -20010,15 +20424,4875 @@ Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-feature
 ---
 
 ---
+###### SII para IVA
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.sii
+
+:octicons-package-16: Javapackage: org.openbravo.module.sii.es_es
+
+:octicons-package-16: Javapackage: org.openbravo.module.sii.template
+
+######## **Introducción**
+
+Esta sección explica el contenido del nuevo módulo comercial de Etendo, "**Spain AEAT SII template**", compatible con Etendo 21Q4 y posteriores, bajo licencia comercial "**Etendo Commercial License**".
+
+Este módulo forma parte del bundle (paquete) de Localización para España en su versión para Etendo.
+
+######## **Descripción del Módulo**
+
+El módulo  "Spain AEAT SII template" permite que las organizaciones puedan gestionar el Impuesto sobre el Valor Añadido y el Impuesto General Indirecto Canario de forma telemática, dentro del marco del proyecto "Suministro Inmediato de Información" (SII).
+
+Este proyecto consiste en la gestión de los Libros registro de IVA a través de la Sede Electrónica de la Agencia Estatal de Administración Tributaria (AEAT), mediante el suministro casi inmediato de los registros de facturación. También se lleva la gestión de IGIC a través de la sede electrónica de la Agencia Tributaria Canaria.
+
+El objetivo final de este trámite online del IVA es proporcionar a las empresas información contrastada sobre su liquidación del IVA, esto es un "borrador" de su declaración del IVA, siempre que los clientes/proveedores de dichas empresas se encuentren también acogidos al SII.
+
+Existen dos posibilidades de envío o alta/modificación de los registros de facturas a SII:
+
+1.  por **vía telemática mediante Servicios Web** basados en el intercambio de mensajes XML
+2.  a través del Formulario de alta web, que la AEAT pone a disposición de los contribuyentes.  
+    En este portal se pueden consultar, modificar o dar de baja facturas ya enviadas.
+
+![](/assets/drive/NcapLkTK0dSBkBKnjlIi4vrC9hJzMZL9ZBod26PJNUbKwihAng4l6CYr99qkDa4oF13Qu117ZzDoaMx3Fxlo1K9Xv65A3akDmFWkF0WYKZlNNU-SN0z9vcHkE8a_dZGxs05lrXEjgsv8EVRPzAQ.png)
+
+Desde Etendo es posible enviar (dar de alta o modificar) los registros de facturas por vía telemática, opción 1 anterior, lo cual se traduce en la generación de un fichero XML con el siguiente contenido por cada envío a SII:
+
+- una **cabecera común** con la información del titular de cada libro, así como la información del ejercicio y periodo en que se registran dichas operaciones
+- un **bloque con el contenido de las facturas**.
+
+En definitiva, desde Etendo vamos a poder:
+
+- enviar fácilmente y de forma automática o manual, estos ficheros XML a la AEAT con la información requerida, tanto para el "alta" como para la "modificación" de los registros de facturas.
+- recibir los XML de respuesta de la AEAT, respecto de cada tipo de comunicación (alta/modificación)
+- consultar en qué estado se encuentra la información ya suministrada a la AEAT, dentro del proceso de contrastación.
+
+Con carácter obligatorio, SII afecta a :
+
+- Inscritos en REDEME (Registro de Devolución Mensual del IVA), salvo renuncia antes de junio de 2017
+- Grandes empresas con una facturación superior a 6.101.121,04 €
+- Grupos de IVA
+- Empresarios o profesionales no establecidos que tengan condición de sujetos pasivos con un periodo de liquidación mensual
+- Resto de sujetos pasivos establecidos o no, que voluntariamente quieran acogerse, a través del Modelo 036 de Declaración Censal, que implica autoliquidar el IVA mensualmente, y permanecer el año natural por el que se opte
+
+El nuevo SII conlleva para el contribuyente, entre otras, las siguientes ventajas:
+
+- Reducción de las obligaciones formales, suprimiendo la obligación de presentación de los modelos 347, 340 y 390. Es decir, sólo se tendrá que presentar el Modelo 303 de autoliquidación de IVA
+- Obtención de “Datos Fiscales”, ya que en la Sede electrónica dispondrá de un Libro Registro “declarado” y “contrastado” con la información de contraste procedente de terceros que pertenezcan al colectivo de este sistema.  
+  Estos datos fiscales serán una útil herramienta de asistencia en la elaboración de la declaración, reduciendo errores y permitiendo una simplificación y una mayor seguridad jurídica.
+- Ampliación en diez días del plazo de presentación de las autoliquidaciones periódicas (Modelo 303).
+
+A partir del 1 de julio de 2017 comienza la fase obligatoria de aplicación de este sistema.
+
+Los sujetos pasivos que apliquen el SII desde el 1 de julio de 2017 están obligados a remitir los registros de facturación del primer semestre de 2017 en el periodo desde el 1 de julio al 31 de diciembre de 2017; excepto sujetos en REDEME.
+
+Las facturas de fecha del 1er semestre de 2017 se envían (alta en SII) a través de ficheros XML con un contenido sin las validaciones aplicables a las facturas de fecha desde 1 de julio de 2017.
+
+La AEAT pone a disposición del contribuyente las siguientes URLs que entendemos son de gran utilidad:
+
+- Proyecto SII, en el que se puede encontrar toda la información sobre SII
+- Herramienta de cálculo de plazos para la remisión de registros de facturas a SII, que permite calcular la "fecha fin de plazo", el "periodo", y el "ejercicio" para cada tipo de factura en función de su fecha de devengo/recepción y fecha de expedición/registro contable.
+
+######## **Contenido del Módulo**
+
+Al instalar este módulo, el usuario podrá comprobar que:
+
+1.  Se crea un **nuevo menú** dentro de "Gestión Financiera", denominado "**AEAT SII**". Este nuevo menú contiene las siguientes pantallas:
+    1.  **Configuración SII**, en la que se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a SII.
+    2.  **Consulta Facturas SII**, en esta pantalla el usuario tendrá información sobre el estado de cuadre de las facturas enviadas a SII, estado de cuadre recibido de la AEAT.
+    3.  **Descripciones SII**, en esta pantalla se pueden dar de alta descripciones tipo para las operaciones de compra y venta que realice la organización acogida a SII.
+    4.  **Conexiones a SII**, nos muestra el estado de todas las conexiones online con la AEAT referenciadas al Código CSV (Código Seguro de Verificación), proporcionado por la AEAT en cada conexión.  
+        La AEAT responde con un CSV para cada factura enviada. Si se envía un fichero XML con varias facturas, en el XML de respuesta aparecerá un CSV para cada una de ellas.
+    5.  **Monitor SII**, desde la que se puede gestionar el estado de las facturas, en relación con su envío a SII, así como realizar envíos de las mismas, según su estado.
+2.  Se crean **nuevos campos y pestañas relativos a SII** en las ventanas de "**Pedidos y Facturas**", tanto de compra como de venta, con el fin de añadir la información requerida por parte de SII, respecto del "Alta"/"Modificación" del registro de las facturas.
+3.  Se genera un nuevo campo en la cabecera de las facturas denominado "**Modificada por error registral**", que permite modificar una factura dada ya de alta en SII.
+4.  Se crea un nuevo campo en la cabecera de las facturas de compra, ventana "Factura (Proveedor)", que permite recoger la "**fecha de registro contable**" al registrar las facturas recibidas.
+5.  Igualmente, se añaden dos botones en las ventanas de Facturas, tanto de compra como de venta, con el fin de dar de alta (**Alta en SII**) y, si fuera necesario, modificar (**Modificación en SII**) el registro de las facturas.
+6.  Se generan dos nuevos procesos en la ventana "Procesamiento de Peticiones", denominados "**Proceso de alta en SII**" y "**Proceso de Modificación en SII por error registral**", configurables para cada Organización o "Entidad Legal".  
+    Estos nuevos procesos permitirán el alta/modificación masiva de facturas en SII con la cadencia de envío configurada.
+
+######## **Configuración**
+
+Para conseguir un correcto uso del módulo SII es muy importante revisar la configuración de "Terceros", "Productos" e "Impuestos".
+
+Los productos/servicios tienen que tener correctamente configurado su "Grupo/Categoría de Impuestos" (de producto o servicio).
+
+Los terceros (cliente/proveedores) tienen que tener correctamente configurada su "Categoría de impuestos de Tercero", si aplica, así como su "CIF/NIF" o "Clave NIF País Residencia".
+
+Además, los impuestos tienen que estar configurados correctamente, tal y como se explica en el siguiente apartado.
+
+######### **Configuración de impuestos**
+
+El proyecto SII amplía el contenido de los libros registro de facturas, tal y como se describe a continuación:
+
+- al enviar el registro de una factura emitida a SII, debemos indicar si esa factura está "Sujeta" a IVA, o, por el contrario, se trata de una operación no sujeta a IVA. Igualmente, las operaciones sujetas a IVA, se deben diferenciar entre "Exentas" y "No Exentas".
+- al enviar el registro de una factura recibida a SII, debemos indicar si esa factura es de "Inversión de Sujeto Pasivo" o se trata de una "Adquisición Intracomunitaria de Bienes y/o Servicios", por ejemplo.
+
+!!! info
+    La utilización del módulo "Spain AEAT SII", requiere de la versión 1.2.204500 o posterior del módulo de impuestos para España, versión que ya incluye toda la configuración de impuestos requerida para el correcto funcionamiento de envío de registros de factura a SII (alta/modificación).
+
+######### **Configuración de terceros**
+
+Todos los terceros, ya sean del tipo "Cliente" o "Proveedor/Acreedor", deben configurarse en la ventana "Terceros".
+
+Es muy importante indicar para cada tercero:
+
+- sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos
+- su "Clave NIF País" Residencia:
+  - 1 - NIF
+  - 2 - NOI
+  - 3 - Pasaporte
+  - 4 - Documento oficial de identificación expedido por el país
+  - 5 - Certificado de residencia fiscal
+  - 6 - Otro documento probatorio
+  - 7 - No censado
+- su número de Identificación fiscal, en el caso del NOI se debería incluir el código ISO de país (por ejemplo DE en el caso de Alemania o FR en el caso de Francia).
+- la categoría de impuestos de tercero (por ejemplo: Servicios Profesionales Normal, Servicios Profesional Reducido, Autónomo, Recargo de Equivalencia, Revendedores, Régimen Agrario...)
+- su localización (País, provincia, dirección).
+
+**Tercero con NIF no censado**
+
+Se ha creado una nueva "Clave NIF País de Residencia", de valor 7 - No Censado.
+
+Un NIF no censado es un NIF que se ha dado de baja.
+
+Esta nueva clave habrá que configurarla para aquellos terceros con un NIF español válido pero no censado, respecto de los que sea necesario emitir facturas de venta o recibir facturas de compra.
+
+![](/assets/drive/x32lggVwaGGuN2LEHAcmdiTxQkiGQmJy-C-c1aJE_PtbYs-wEPOGsmF60MeJ-dy-mCyeV5bMha-AGazmPGsm8zJNwXbnA03--9vbE9SM3kBh1NFa23UUVAm58gGNEmODILze76yjrlb8PoaCM2Q.png)
+
+Las facturas con un NIF no censado que se den de alta en SII, quedarán en un estado "Aceptado con errores".
+
+Es muy importante recalcar que la AEAT comprueba en los envíos a SII que el NIF español introducido se corresponda con el nombre/apellidos del tercero persona física (cliente/proveedor).
+
+Si damos de alta un tercero (persona física) con su nombre y un solo apellido, por ejemplo, o con un apellido correcto y el otro no, al enviar la factura de dicho tercero a SII obtendremos un error del tipo: "NIF no identificado".
+
+Puede comprobar los NIF de sus terceros en la siguiente URL de la AEAT: [Comprobación NIF terceros a efectos censales](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-030/comprobacion-nif-terceros-efectos-censales.html){target="_blank"}.
+
+Respecto de las personas jurídicas o empresas, parece no se está realizando dicha comprobación (correspondencia Empresa-NIF), pero aun así recomendamos que se revise que los terceros estén configurados correctamente.
+
+**Gastos de empleado no declarables**.
+
+Los empleados de la organización que incurran en gastos a reembolsar, deben darse de alta como Terceros de tipo Empleado en la ventana "Terceros". Se les debe asociar la categoría de impuestos de tercero “No declarable SII”, con el fin de que las facturas de gasto registradas para el reembolso de los gastos, no se incluyan en SII.
+
+######### **Configuración del Local Arrendado**
+
+Los locales arrendados sujetos a IVA se deben configurar en la ventana de "Producto", con al menos los siguientes datos:
+
+- **Grupo de Impuestos** = IVA Normal
+- **Local arrendado**, este campo se debe seleccionar
+- **Situación del inmueble**, en este campo se debe seleccionar la opción que corresponda:
+  - Locales en el extranjero
+  - Referencia catastral válida en el País Vasco o en Navarra
+  - Referencia catastral válida, excepto de País Vasco o Navarra
+  - Sin referencia catastral
+- **Referencia catastral**, en este se informa de la referencia catastral del local arrendado.
+
+Dependiendo de si el Tercero se configura con la categoría de impuestos de Tercero "Arrendamiento con retención" o "Arrendamientos sin retención", el arrendamiento del local de negocio estará o no sujeto a retención.
+
+######### **Configuración Transmisión de Bienes Inmuebles**
+
+Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la categoría de impuestos "IVA Normal B. Inmuebles", por ejemplo.
+
+######### **Configuración SII**
+
+En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
+
+![](/assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png)
+
+Tal y como se muestra en la imagen anterior, los parámetros de configuración de SII son los siguientes:
+
+- **Organización**: organización (entidad legal) para la que se configura el envío de registros a SII.  
+  Seleccionada una entidad legal (con o sin contabilidad), todas sus organizaciones "hijas" quedarán igualmente acogidas a SII.
+- **Fecha acogida a SII**: check que permite configurar que la organización seleccionada se acoja al SII, esto es, que los registros de sus facturas se envíen (alta/modificación) a la AEAT a través de ficheros XML.  
+  Una vez seleccionado, se muestra el resto de parámetros de configuración de SII.  
+  El usuario lo puede desmarcar con posterioridad, en el caso en que la organización ya no esté acogida a SII.  
+  Si se desmarca este check, todos los demás campos aparecerán como no editables y la organización ya no estará acogida a SII, es decir, ya no será necesario ni se podrá enviar el registro de sus facturas a SII (alta/modificación).
+- **Fecha acogida a SII**: campo de fecha en el que se puede indicar la fecha en la que la organización se acoge a SII. En general, esta fecha es el 01-07-2017.
+- **Ruta de ubicación del certificado electrónico** : el usuario debe especificar la ruta en la que se encuentra el certificado de la AEAT válido para dicha organización.
+- **Contraseña certificada**: una vez informado el campo anterior, el usuario debe indicar la contraseña de dicho certificado. El contenido se guardará como texto cifrado.
+- **Plazo límite de alta en SII**: campo "informativo" que por defecto mostrará 8 días como plazo límite de alta en SII, ya que para 2017 y para este tipo de comunicación Alta (A0) ese es el plazo límite.  
+  El usuario tendrá que modificarlo a 4 días o al número de días que indique la AEAT para el alta de registros de factura a realizar a partir del 1 de enero de 2018.
+- **Cadencia Proceso Alta Facturas Venta a SII**: en este campo, el usuario puede configurar el número de días naturales de margen que necesita para revisar/modificar las facturas de venta, antes de que estas se envíe de forma automática por el Proceso de "alta"en SII, proceso que se recomienda programar para que sea ejecutado diariamente. Además, se recomienda que el número de días introducido en este campo no supere el **plazo límite de alta en SII**, que en el caso de las facturas de venta es de 8 días (sin contar sábados, domingos y festivos nacionales) desde la fecha de "expedición" de la factura (fecha factura).  
+  En todo caso, las facturas expedidas se tienen que dar de alta en SII antes del día 16 del mes siguiente al que se produjo el devengo de la operación.  
+  En concreto:
+  - Una factura con fecha de operación 10-07-2017 (devengo) y fecha de expedición 14-07-2017 (fecha factura), tendría que darse de "alta" en SII antes del día 25-07-2017.  
+    Si introducimos una cadencia de 8 días, tendremos 8 días de margen para su revisión/modificación, ya que dicha factura se enviará a SII de forma automática el día 22-07-2017.  
+    Es decir, el proceso automático de "alta" que se ejecute el día 22 de julio, enviará todas las facturas de venta con fecha factura 14 de julio (22 de julio - 8 días).
+  - Una factura con fecha de operación 10-06-2017 (devengo) y fecha de expedición 14-07-2017 (fecha factura), tendrá que darse de "alta" en SII antes del día 16-07-2017.  
+    Es decir, el proceso automático de "alta" que se ejecute el día 14 de julio, ya enviará dicha factura, sin tener en cuenta el número de días introducido en el campo de cadencia.
+- **Cadencia Proceso Alta Facturas Compra a SII**: en este campo el usuario puede configurar el número de días de margen que necesita para revisar/modificar las facturas de compra, antes de que éstas se envíen de forma automática por el Proceso de "alta"en SII, proceso que se recomienda programar para que sea ejecutado "diariamente". Además, se recomienda que el número de días introducido en este campo, no supere el **plazo límite de alta en SII**, que en el caso de las facturas de compra es de 8 días (sin contar sábados, domingos y festivos nacionales) desde la fecha "contable" de la factura.  
+  En todo caso, las facturas de compra se tienen que dar de alta en SII antes del día 16 del mes siguiente al que se liquidó la operación a efectos de IVA.  
+  En concreto:
+  - Una factura con fecha de operación 10-07-2017 y fecha factura/fecha contable 14-07-2017, tendría que darse de "alta" en SII antes del día 25-07-2017.  
+    Si introducimos una cadencia de 8 días, tendremos 8 días de margen para su revisión/modificación, ya que dicha factura se enviará a SII de forma automática el día 22-07-2017.  
+    Es decir, el proceso automático de "alta" que se ejecute el día 22 de julio, enviará todas las facturas de compra con fecha contable 14 de julio (22 de julio - 8 días).
+  - Una factura con fecha de operación 10-06-2017, que se quiera liquidar en la declaración de junio y con fecha contable 14-07-2017, tendrá que darse de "alta" en SII antes del día 16-07-2017.  
+    Es decir, el proceso automático de "alta" que se ejecute el día 14 de julio, ya enviará dicha factura, sin tener en cuenta el número de días introducido en el campo de cadencia.
+- **Entorno de producción SII**: este entorno tiene que estar seleccionado para aquellos entornos productivos de organizaciones cuyos registros de factura se tienen que enviar al entorno productivo (final) de SII de la AEAT.  
+  Por defecto se muestra como seleccionado, en cuyo caso las facturas se enviarán al entorno de producción de la AEAT.  
+  Si el usuario quiere realizar pruebas de envío, siempre desde un entorno en test o entidad/organización de pruebas, deberá desmarcarlo.
+- **Adjuntar archivos XML**: este campo permite indicar si los ficheros XML enviados a la AEAT y los recibidos como respuesta por parte de la AEAT se deben guardar como ficheros adjuntos en la factura correspondiente.
+- **Enviar desde 1 de enero 2017** - este campo permite que el proceso automático de alta en SII considere o no las facturas de fecha desde 01-01-2017 hasta 30-06-2017.  
+  Este proceso considera en todo caso las facturas de fecha desde la fecha acogida a SII configurada (01-07-2017).
+  - Si está seleccionado, las facturas de fecha desde 01-01-2017 hasta el 30-06-2017, serán también incluidas en el proceso automático de Alta en SII.
+  - Si no está seleccionado, las facturas de fecha desde 01-01-2017 hasta el 30-06-2017, no serán incluidas en el proceso de alta automático y, por tanto, habrá que enviarlas de forma manual o a través de Monitor SII, o no enviarlas como es el caso para los sujetos acogidos a REDEME.
+- **Afectada RECC**, este parámetro permite configurar el que para una Organización no acogida al "Régimen Especial del Criterio de Caja" (RECC), pero si afectada por recibir facturas de proveedores acogidos, se muestre o no la pestaña de "Cobros/ Pagos Criterio Caja" dentro de la pantalla "Monitor SII".  
+  Si la organización, llegado un punto, no se viera ya afectada por dicho régimen, podría desactivar este campo, y la pestaña "Cobros/ Pagos Criterio Caja" se dejaría de mostrar en el monitor SII.
+- **Sujeto inscrito en REDEME**, si se selecciona este campo, se está indicando que la organización es un sujeto pasivo inscrito en REDEME que, por tanto, no tiene obligación de enviar las facturas del primer semestre de 2017 a SII.  
+  Con este campo se controla que las facturas del primer semestre de este tipo de sujetos pasivo no se puedan dar de alta en SII de forma manual, esto es, desde la venta de factura.
+- **Fecha desde visualización "Monitor SII"**, en este campo podemos introducir la fecha desde la cual se visualizarán las facturas de compra/venta y los cobros/pagos en RECC en la ventana "Monitor SII" para su alta en SII. Por ejemplo:
+  - si una organización se acoge al SII el 01-07-2017 y no está inscrita en REDEME, la fecha a introducir en este campo será el 01-01-2017
+  - si una organización se acoge al SII el 01-07-2017 y está inscrita en REDEME, la fecha a introducir en este campo será el 01-07-2017.
+
+######### **Descripciones SII**
+
+En esta ventana es posible introducir descripciones tipo para las operaciones de compra/venta que la Organización acogida a SII realiza.
+
+Las descripciones introducidas en esta pantalla:
+
+- sólo se podrán seleccionar en las facturas de compra, si la descripción está configurada como "**Descripción factura de compra**"
+- sólo se podrán seleccionar en las facturas de venta, si la descripción está configurada como "**Descripción factura de venta**"
+- se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks "**Descripción factura de compra**" y "**Descripción factura de venta**", están seleccionados.
+- será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check "**Por defecto**".
+
+![](/assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png)
+
+Además, en las ventanas de
+
+- Pedido de Venta
+- Pedido de Compra
+- Factura de Venta
+- Factura de Compra
+
+existe otro campo de texto libre que se denomina "**Descripción SII**" que siempre se puede utilizar.
+
+Si en una factura seleccionamos una descripción en el campo "Descripción maestro SII", el campo "Descripción SII" heredará esa descripción para que para esa operación en concreto podamos modificar/completar dicha descripción.
+
+Si una factura tiene ambas descripciones "Descripción SII" y "Descripción maestro SII", siempre prevalece la primera, es decir, será la "Descripción SII" la que se incluya en el fichero XML de "alta" / "modificación" en SII.
+
+Si en un pedido se informa de la "Descripción SII" y la correspondiente factura se crea desde dicho pedido, la descripción introducida en el campo "Descripción SII" del pedido, se rellenará de forma automática en el campo "Descripción SII" de la factura.
+
+Si se copiara desde más de un pedido, solo se trasladaría la primera descripción.
+
+######### **Configuración de la Organización en RECC**
+
+Si una organización se acoge al régimen del IVA de Caja, deberán seleccionarse el campo "IVA de Caja" y el campo "Criterio de caja doble" en la ventana "Organización", pestaña "Información".
+
+En este caso, tanto las facturas de compra como de venta nacionales estarán sujetas al RECC y tendrán que darse de alta como tales en SII.
+
+!!! info
+    La clave de "RÉGIMEN ESPECIAL / IDENTIFICACIÓN OPERACIONES CON TRASCENDENCIA TRIBUTARIA" del RECC es la "07". Esta clave prevalece sobre las demás.
+
+Esto significa que las operaciones de arrendamiento con RECC no se informarán con la clave propia de los arrendamientos sino con la de RECC que es la 07.
+
+######### **Configuración de proveedores en RECC**
+
+Si una organización no se acoge al régimen del IVA de Caja, pero recibe facturas de proveedores acogidos al RECC, tendrá que configurar dichos proveedores como Acogidos al RECC en la ventana "Terceros", pestaña "Proveedor/Acreedor", campo "IVA de Caja.
+
+######### **Configuración de los métodos de pago**
+
+Los cobros/pagos de facturas en RECC (IVA de Caja), tienen que darse de alta en SII.
+
+Al dar de alta este tipo de cobros/pagos tenemos que informar del **importe**, la **fecha** de cobro/pago y el **medio** de cobro/pago utilizado, conforme a una definición propia de la AEAT:
+
+- Transferencia "01"
+- Cheque "02"
+- Otros "04"
+
+Es por ello que en la ventana "**Método de Pago**" tendremos que configurar el tipo de método de pago, tal y como se explica a continuación:
+
+- los métodos de pago que configuremos con el tipo "Bank Account", serán del tipo 01 = Transferencia
+- los métodos de Pago que configuremos con el tipo "Check", serán del tipo 02 = Cheque
+- y los métodos de Pago que configuremos con el tipo "Others", serán del tipo 04 = Otros.
+
+![](/assets/drive/6RIBz5XNdlOJZfAYW9noDPVGUdVjzgJ-odzlxR_I1kl4zuYXuKJeVqJ-oFz2l39Lk3LFBcIOpFh-JT6v4sa4TseyUaT6AXWHwV7_uD-XTTRasQSsjYBhZUzzVR12IJXodchVfGWSmlPZRVFQ8Zs.png)
+
+######### **Causas de exención**
+
+Tratándose de una operación de venta exenta, la AEAT permite consignar la causa de exención dentro del bloque “Desglose Factura” como “Sujeta” y “Exenta”, utilizando una de las siguientes claves:
+
+“E1: exenta por el artículo 20”
+
+“E2: exenta por el artículo 21”
+
+“E3: exenta por el artículo 22”
+
+“E4: exenta por los artículos 23 y 24”
+
+“E5: exenta por el artículo 25”
+
+“E6: exenta por otros”
+
+En Etendo existen dos opciones para indicar la causa de exención junto con la base imponible:
+
+- En la **ventana Factura (Cliente)**, dentro del grupo de campos AEAT SII, se cumplimentará la causa de exención relacionada con las bases exentas de la factura. El usuario tendrá que asignar un valor del desplegable de forma manual que trasladará al XML la clave que hace referencia a la base imponible exenta en factura.
+- En la **ventana "Causa de exención"** existe la opción de establecer una clave por defecto que se asignará en factura cuando se incorporen líneas que utilicen un impuesto configurado como exento. Es decir, cuando en una factura de venta se introduzca una línea exenta, automáticamente en la cabecera se seleccionará la causa asignada por defecto, siendo modificable si el usuario quisiera elegir otra.
+
+![](/assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png)
+
+######### **Configuración alta de factura de compra sólo tras su contabilización**
+
+Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check "Alta en SII facturas de compra tras su contabilización" ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.
+
+![](/assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png)
+
+!!! info
+    Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
+
+######### Configuración de rangos de impuestos - Prorrata SII
+
+Los rangos de impuestos para la prorrata se tendrán que crear siempre de manera manual
+(tanto el rango “padre” como los rangos “hijos” necesarios). Esto es debido a que el
+porcentaje de deducción varía año a año al no ser un porcentaje fijo.
+
+En la ventana “Rango impuesto” se ha creado un nuevo check denominado “Is prorate”:
+
+![screenhunter_01_sep._01_11.08.gif](/assets/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
+
+Al tener activo este check, se mostrará un segundo check nuevo, dentro de la cabecera en
+el detalle de “More Information” que se llamará “Prorrata SII - XML” que estará marcado por
+defecto como “Si”:
+![screenhunter_02_sep._01_11.09.gif](/assets/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
+
+Estos check permitirán, con la configuración correcta que realicemos, enviar al SII
+información sobre facturas de compra afectadas por la prorrata del IVA.
+
+A continuación, utilizaremos como ejemplo el iva del 10%, para mostrar la configuración que
+debe realizarse para que la información se envíe de forma correcta al SII:
+
+![unnamed.gif](/assets/legacy/enduserdocumentation/unnamed.gif)
+
+1 – Crear un rango padre “Prorrata Gener.22 (77%) IVA 10%”:
+Lo haremos con la misma configuración que puede tener cualquier rango nacional de la
+misma categoría, por ejemplo “Prestación servicios nacional 10%“. Las únicas
+particularidades que debemos tener en cuenta serán las de indicar en el campo “Indice” el
+valor total del impuesto (en los rangos “padres” estándar es un campo en el que se indica 0)
+y activar el check “Is Prorate”. En nuestro ejemplo indicaremos en el campo “Indice” el valor
+10 y posteriormente marcaremos el check de “Nivel de agrupación”.
+
+![screenhunter_04_sep._01_11.16.gif](/assets/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
+
+![screenhunter_05_sep._01_11.16.gif](/assets/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
+
+2 – Crear un rango hijo deducible “Prorrata Gener.22 (77%) IVA 10% (+77%)”:
+Al igual que en el punto anterior, crearemos un rango “hijo” con la misma configuración que
+puede tener cualquier rango nacional de la misma categoría, por ejemplo “Prestación
+servicios nacional 10%“ e indicaremos cual es el rango “padre” (el creado en el punto 1).
+Las únicas particularidades que debemos tener en cuenta serán las de indicar en el campo
+“Indice” el valor del porcentaje de impuesto deducible (según nuestro ejemplo indicaremos
+7,7) y activar el check “Is Prorate”:
+
+![screenhunter_06_sep._01_11.17.gif](/assets/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
+
+3 – Crear un rango hijo no deducible “Prorrata Gener.22 (77%) IVA 10% (-23%)”:
+Crearemos el segundo rango “hijo” de la misma manera que el anterior. Además de indicar
+en el campo “Indice” el valor del porcentaje de impuesto no deducible (según nuestro
+
+ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marcar el check de
+“Impuesto no deducible” que se encuentra dentro del detalle “More Information”:
+![screenhunter_07_sep._01_11.18.gif](/assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
+![screenhunter_08_sep._01_11.19.gif](/assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
+
+######## **Envío de registros de facturas a SII**
+
+Una vez configurados todos los parámetros de envío a SII, ya es posible dar de alta/modificar los registros de facturas emitidas/recibidas en SII.
+
+Desde Etendo podremos enviar estos registros (alta/modificación) de forma manual o automática conforme a los requerimientos de la AEAT, según se explica a continuación.
+
+######### **Envío Manual**
+
+**Alta en SII**
+
+########### **Facturas de Venta**
+
+Desde la ventana "Factura (Cliente)" se crea una nueva factura de venta, tal y como se crean las facturas de venta en Etendo.
+
+Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/9JpfQqGKF7-_z1OT14yslxXsujho_F52LKKra1oEchhjCvNqSuKeeAFl-I_8R9ZLicY5kC7xFZWE0pKjKoL37cWY460b3-oxGq8rCAF0jeNDnY9zW-1kx3JeANgejmqgjvbjC3dOTHStPYt8ag8.png)
+
+- la "**Fecha Operación**" que por defecto se informa con la misma fecha que la "Fecha de la factura", si bien el usuario la puede modificar.
+- la **Clave Tipo Factura**, que por defecto se informará con el valor "**Factura**", clave tipo factura "F1".  
+   Otros valores posibles son: - "**Factura simplificada**", clave tipo de factura "F2", respecto de las facturas simplificadas creadas desde cada ticket/pedido registrado. - "**Factura rectificativa**", clave tipo de factura "R1 a R5", según el "Motivo de la rectificación" seleccionada. - "**Asiento resumen facturas simplificadas**", clave tipo de factura "F4", respecto de facturas simplificadas que agrupan tickets/pedidos registrados.
+
+
+!!! info
+    No es posible informar este campo de forma automática como "Factura Rectificativa" al crear facturas del tipo "Reverse Sales Invoice", debido a que es posible la creación de Facturas Rectificativas por "Sustitución" como "AR Invoice" (no Reverse).
+ 
+
+Se validará que al crear una factura de tipo "Factura Rectificativa" "Por Diferencias", el documento de la transacción sea del tipo "Reverse".
+
+- La **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
+- O bien introducimos directamente una descripción de la operación en el campo de texto libre "**Descripción SII**".  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+
+Es importante recalcar que en el caso de las facturas de venta, debemos considerar dos fechas para el envío (alta) en SII:
+
+- **la fecha factura**, ya que ésta es la fecha a partir de la cual se debe contar el plazo de alta en SII, que en 2017 es de 8 días (sin incluir sábados, domingos ni festivos nacionales).
+- la **fecha de la operación**, ya que ésta es la fecha a considerar como fecha de devengo del impuesto correspondiente a la operación que se registra.
+
+Las facturas expedidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha de expedición de la factura y, en todo caso, antes del día 16 del mes siguiente a aquel en el que se hubiera producido el devengo del impuesto correspondiente a la operación que se registra.
+
+Por ejemplo, un empresario A presta un servicio a otro empresario el 2 de agosto de 2017 (fecha de operación), expidiendo la correspondiente factura el 13 de septiembre de 2017 (fecha de factura). El plazo para expedir la factura y remitir el registro de esta factura a través del SII finaliza el 15 de septiembre.
+
+En este ejemplo, el periodo será agosto (fecha de operación) y el ejercicio 2017.
+
+Una vez introducida esta información, podemos completar y contabilizar la factura, o sólo completarla.
+
+En este momento el botón "**Alta en SII**" se muestra habilitado.
+
+![](/assets/drive/7cFVkpUUzmAnQ82GFakllefI21kNGCJOtphTnAVpQM-249bn8AgShm_73EiSU6YnkQ2Th2bfw7xfX36ohWf7LMrZP_CbAAjUv8E3Sns6qsP5BZXOzjP-wQ9TsS_Fu_ncK0Gfg1pFoOW_Pdu4yUU.png)
+
+Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
+
+Etendo nos muestra un mensaje indicando que:
+
+"_Esta acción no reversible (salvo error en la comunicación o error registral) genera el "alta" de la factura en la sede electrónica de la AEAT. Una vez dada de alta sólo será posible "Contabilizar" y "Descontabilizar" la factura, sin permitirse más cambios que las cuentas contables a tener en cuenta en la contabilización, y la fecha contable sólo en el caso de las facturas emitidas. Una vez dada de "alta" en SII de forma correcta, será posible "modificar" la factura en caso de error registral si se habilita el campo de la factura "modificada por error registral". En ese caso ya sólo será posible el envío a SII del registro de "modificación" de la factura"_.
+
+Es decir, siempre es posible contabilizar/descontabilizar la factura después de darla de alta en SII, pero sólo será posible reactivarla en los siguientes casos:
+
+- **Error en la comunicación** - el alta en SII ha resultado "Incorrecta" debido a algún error aceptado o debido a error de conexión. En ese caso será posible reactivar la factura para subsanar dicho error y volver a dar de "alta en SII".
+- **Error registral** - el estado del alta en SII de la factura es "Correcto", sin embargo se produjo un error registral que se debe subsanar. En ese caso será posible reactivar la factura, seleccionando el campo "Modificada error registral", realizar los cambios oportunos y enviar la "modificación" del registro de la factura. Ver sección: Modificación en SII.
+
+En la pestaña "Datos SII" de la factura, tendremos acceso a los siguientes datos:
+
+- "**Tipo de Comunicación**", con el valor "Alta".
+- número de "**Conexión SII**" que también quedará reflejada en la ventana "Conexiones SII".
+- el "**Código CSV**" o código seguro de verificación que la AEAT nos ha indicado relacionado con el alta de esta factura en SII.  
+  La AEAT responde con un CSV para cada factura enviada. Si se envía un fichero XML con varias facturas, en el XML de respuesta aparecerá un CSV para cada una de ellas.
+- el "**Estado registro SII**", que en este punto puede ser:
+  - "**Correcto**" - la factura se ha registrado de forma satisfactoria en la sede electrónica de la AEAT.
+  - "**Incorrecto**" - la factura se ha rechazado totalmente y, por tanto, no está registrada. En este caso, la AEAT nos informará de los datos erróneos. Debemos subsanarlos y volver a enviar la factura.
+  - "**Aceptado con errores**" - la factura se ha registrado pero contiene errores que debemos subsanar y volver a enviar. Igualmente, la AEAT nos indicará los errores que se deben subsanar.
+  - "**Error al enviar**" - la factura no está registrada, ya que se ha producido un error en la conexión online con la AEAT. Debemos volver a enviar la factura.
+  - "**Anulado**" - se trata de un estado que podemos obtener en las respuestas recibidas al hacer una "Consulta a SII". Se ha añadido este estado para poder "gestionarlo" igualmente.
+
+**Para la AEAT los errores "Admisibles"** son aquellos que serán admitidos por la AEAT.
+
+Se corresponden con errores derivados de las validaciones de negocio de facturas o registros.
+
+Estos errores deberán ser corregidos a través de una nueva petición correcta de modificación sobre aquellas facturas o registros aceptados con errores.
+
+**Para la AEAT los errores "No Admisibles"** son aquellos errores que en ningún caso podrán ser admitidos por la Agencia en la presentación de facturas o registros de cada libro de registro.
+
+Se corresponden con los errores provocados al no superar las validaciones estructurales y sintácticas del envío y con errores ya tipificados por la AEAT.
+
+Estos errores deberán ser corregidos a través de una nueva petición correcta de envío de las facturas o registros incorrectos.
+
+- **Motivo error SII**, comunicado por la AEAT
+
+Esta pestaña también incluye información sobre el "cuadre" de la factura, enviado por la AEAT tras realizar la correspondiente "Consulta". Los campos de cuadre son:
+
+- **Estado cuadre SII**
+- y **Fecha de cuadre**
+
+Y, en el grupo de campos "**Archivos Adjuntos**", podremos encontrar los ficheros XML de alta y respuesta de la AEAT, si hemos configurado la organización para que se guarden estos ficheros.
+
+Finalmente, en la cabecera de la factura de venta enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
+
+![](/assets/drive/g2N7zkHFiQI0VRRrWd1wUiRbD_YMkUTZbPjj55rc-J27t0yuKU8a53rk49H79ww5LD3qEXTg6YF5TReKkRhcxZYX4ZN2e7_G_LsptRjA5Wm5jDmezbpqjEJXtxGIFho5QDNvJEKSpLX4FNfcO5Q.png)
+
+########### **Facturas Rectificativas de Venta**
+
+Es posible rectificar una factura de venta dada de alta en SII de forma correcta, si se produce una devolución de mercancía, descuentos posteriores a la venta (Rappels de venta) o situaciones de deuda incobrable o concurso.
+
+La rectificación de facturas de venta se deben gestionar y dar de alta en SII bien sea "Por Diferencias" o "Por Sustitución", tal y como se explica a continuación:
+
+**Por Diferencias**, en este caso se registra una factura de tipo "Reverse" por el importe negativo correspondiente.
+
+Sería el caso en el que se realizó una venta por valor de 1527.77 € que se dio de alta en SII de forma correcta y, con posterioridad, se devuelve mercancía por parte del cliente por un valor de -27.77 € (15 unidades de producto).
+
+En este caso, al registrar la factura rectificativa por diferencias, dentro del grupo de campos "AEAT SII" deberemos indicar la siguiente información:
+
+- **Clave tipo factura** = Factura Rectificativa
+- **Tipo Rectificativa** = Por Diferencias
+- **Motivo de la rectificación** = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
+
+Este tipo de facturas rectificativas se deben crear con documentos del tipo "Reverse" (por ejemplo: "Reverse Sales Invoice"), e importes negativos, tal y como se muestra en la pantalla. Etendo mostrará un error en caso contrario.
+
+![](/assets/drive/vTuKPdCz4_8FyY4_zSO6LA157zXc_9Nr_D8zgcKv0O4rP5aKXnKOTp6T4ga6SwbHN29oEgD3MZBP_lEyZ4uTmZY43pXsiFapBmKqvowAp_z9xCeRLmituMo4UW7FG0zv2wbDhZuUvIiRR2diRP0.png)
+
+Al dar de Alta esa factura en SII, el fichero XML registrará de forma automática la siguiente información:
+
+- Tipo Factura = R1
+- Tipo Rectificativa = I
+- Importe total = -27.77
+
+![](/assets/drive/SeBxMk8qhA3rmNFmPr8rDLDp0Te2HvbQ6RS9HV_BlXMUelz5MFQEFTIvC_pg7HDHeh4joNbWJekXn4gGPcPBVhqE4JWeIrEuGE-vXyWDbF0EYfTQVeXUS_9SIqTt-hIk5IGmO4BKrjnfCwV7cVs.png)
+
+**Por Sustitución**, en este caso se produce una anulación de la factura original (ya dada de alta en SII) y la creación de una nueva factura con los importes correctos.
+
+La anulación de la factura original se puede realizar a través de la opción "**Reactivar-Anular**" de Etendo. Esta acción creará una factura del tipo "Reverse" con los siguientes datos:
+
+- **Tipo de documento** = Reverse Sales Invoice
+- **Fecha de operación** = fecha de operación de la factura original
+- **Clave tipo factura** = Factura
+
+Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
+
+- Tipo Factura = F1
+- Importe total = -185.13
+
+Posteriormente, se crea la nueva factura con los importes correctos y con los siguientes datos:
+
+- **Tipo de documento** = AR Invoice (no reverse)
+- **Clave tipo factura** = Factura Rectificativa
+- **Tipo Rectificativa** = Por Sustitución
+- **Motivo de la rectificación** = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
+- **Fecha de operación** = fecha de operación de la factura original
+
+![](/assets/drive/rdC0SMKqwDEIs85X9vxqT-gH-nz2YhzthhfKlLB_r9C21y2DwmdHFH5IAjvQSuPjMhDh68W3XBvEA1suciw55sUz01nQtcCjXQLCPLy4GM79hmE-0TnTPJWtlT9wqsIQiSjLi7NSbJQYNjLoePI.png)
+
+Al dar de Alta esta factura rectificativa por sustitución en SII, el fichero XML registrará de forma automática la siguiente información:
+
+- Tipo Factura = R1
+- Tipo Rectificativa = S
+- Importe total = 92.57
+
+![](/assets/drive/lnYFE3_FU4bzz-1q2uHRiBxo8WEjg6PJjEZxg7iqFzPwM5kUFVzoXW7eGuF7vCCciW59Ls5jRsSI6vksPNZ6nvMYFB2yBLMgqjW6oausvB8IvBPlj3mVYTv9qAbRfhLQaTat-jaFOxSIpzrRrPw.png)
+
+Tanto en facturas rectificativas de venta por diferencias como por sustitución, el usuario deberá asignar la fecha de operación correspondiente a la factura original (devengo de la operación). Sin embargo, **en facturas rectificativas el periodo de alta en SII será el correspondiente a la fecha factura**, incorporándose a la declaración de IVA en dicho mes.
+
+########### **Facturas de Compra**
+
+El proceso de registro y alta en SII de este tipo de facturas es muy similar al de las facturas de venta.
+
+La información del alta del registro de la factura de compra en SII se recogerá de la ventana "Factura(Proveedor)", una vez que la factura de compra correspondiente esté en estado "Completado".
+
+Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/cqDeUP_hKuC8VbLZevAo4OeHT3UwNZ3jdR2d30gp4MCdn2Gt3BmAwtXG_808xBrfS_VOHrta0oBdhRVjlUlB959b2ZuhfP4oPjpw1tL_d1VyK6m-0V7YwTkcq7Y_UvYuDQCGARgGz0hkuCdYgA0.png)
+
+- la "**Fecha Operación**", que por defecto se informa con la misma fecha que la "Fecha de la factura", fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
+- la "**Fecha registro contable**", que por defecto y para las facturas que se crean de forma manual se informa con la fecha actual, o fecha de creación de la factura en Etendo y, por tanto, registro de la factura recibida en Etendo.  
+  Esta fecha de registro contable no tiene por qué coincidir con la fecha contable de la factura de compra.
+- la **Clave Tipo Factura**, que se debe puede informar con los siguientes valores:
+  - "**Factura**", que se corresponde con una clave de tipo de Factura "F1"
+  - "**Importación (DUA)**", que se corresponde con una clave de tipo de Factura "F5"
+  - "**Liquidación Complementaria Aduana IVA a la importación**", que se corresponde con una clave de tipo de Factura "LC"
+  - "**Justificante contable**", que se corresponde con una clave de tipo de Factura "F6"
+
+En el caso de las facturas de compra no es necesario indicar si se trata o no de una factura rectificativa.
+
+- La **Descripción maestro SII** de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso, seleccionamos una descripción del maestro.
+- O bien introducimos directamente una descripción de la operación en el campo de texto libre "**Descripción SII**".  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+
+Y además, debemos reflejar el número de factura del proveedor en el campo **"Referencia del Proveedor"**.
+
+Las facturas recibidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha del registro contable de la factura y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado).
+
+Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha de registro contable** de la factura como fecha a tener en cuenta respecto del alta en SII.
+
+Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
+
+- la **fecha de operación** de la factura
+- la **fecha del registro contable de la factura**
+- y la **fecha de alta en SII** de la factura.
+
+De modo que:
+
+- si la fecha de operación se encuentra en el mismo mes (por ejemplo, julio) que la fecha de registro contable y alta en SII, el periodo reflejado en el XML será ese mismo (julio, en nuestro ejemplo)
+- si la fecha de operación se encuentra en el mes de junio, la fecha de registro contable en julio y la fecha de alta en SII es anterior al 16 de julio, el periodo reflejado en el XML será junio.
+- Si, por el contrario, y con las mismas fechas anteriores, la fecha de alta en SII es posterior al 15 de julio, el periodo reflejado en el XML será julio.
+
+Por ejemplo:
+
+Un empresario A vende mercancía a otro empresario B el 03 de julio de 2022. El empresario A expide la factura el 04 de julio. El empresario B recibe la factura el 30 de julio y efectúa su registro contable el 10 de octubre.
+
+Caben dos posibilidades:
+
+- El empresario B remite los registros de la factura el 15 de octubre consignando en el Libro Registro de facturas recibidas, Ejercicio: 2022, Período: 09.
+- El empresario B remite los registros de la factura el 16 de octubre consignando en el Libro Registro de facturas recibidas, Ejercicio: 2022, Período: 10.
+
+Una vez introducida esta información, podemos completar y contabilizar la factura, o sólo completarla.
+
+En este momento el botón "**Alta en SII**" se muestra habilitado.
+
+![](/assets/drive/W1rkgnVrH0mKDQ0NA-IAK1sLYniuAWMvnbMWL0uzeVoFAitGq8m9p_nu1zpcBthrvEmYnuJpHAvGF1iK6xfsCBwukRa6Si97mEssOkn6thGnWEhTyPyopkGdd-5pEsKpggQZEd4BjTqOFxy_LLY.png)
+
+Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
+
+Etendo nos muestra un mensaje indicando que:
+
+"_Esta acción no reversible (salvo error en la comunicación o error registral) genera el "alta" de la factura en la sede electrónica de la AEAT. Una vez dada de alta sólo será posible "Contabilizar" y "Descontabilizar" la factura, sin permitirse más cambios que las cuentas contables a tener en cuenta en la contabilización, y la fecha contable sólo en el caso de las facturas emitidas. Una vez dada de "alta" en SII de forma correcta, será posible "modificar" la factura en caso de error registral si se habilita el campo de la factura "modificada por error registral". En ese caso ya sólo será posible el envío a SII del registro de "modificación" de la factura"_.
+
+Es decir, siempre es posible contabilizar/descontabilizar la factura después de darla de alta en SII, pero sólo será posible reactivarla en caso de error en la comunicación o error registral, tal y como se explicó para las facturas de venta.
+
+!!! info
+    En el caso de las facturas de compra, no será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
+
+Finalmente, en la cabecera de la factura de compra enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
+
+![](/assets/drive/Qj4R1IM6iiRpAwD5W06pJn2eqh9uR_mlF5dhG82eF3WkUc7_9mVb9jrw8EinOCeDZJL2U1kSXGoHnWZQ7vTV-ykEAu_PUGcAfengKKCFtGrRR89qnQGMNryBR9kWqseAky2pyK-f5XwISH1dPl4.png)
+
+########### **Facturas de Importación (DUA)**
+
+Las **importaciones con DUA** se deben anotar en el Libro Registro de Facturas Recibidas con la clave tipo de factura “F5”.
+
+Deberán consignarse, como número de factura y fecha de expedición, el número de referencia que figura en el propio DUA y la fecha de su admisión por la Administración Aduanera respectivamente.
+
+En los datos identificativos correspondientes al proveedor se consignarán los del importador y titular del libro registro, esto es la organización de Etendo.
+
+Finalmente, y respecto de la **factura del transitario,** se consignará únicamente la prestación de servicios sujeta y no exenta, con clave de tipo de factura "**F1**".
+
+Para registrar en Etendo este tipo de operaciones "Importaciones con DUA" debemos seguir los pasos siguientes en la ventana "Factura (Proveedor)":
+
+- Crear una nueva factura para el tercero "Transitario" con su número de factura o "Referencia del Proveedor", con la siguiente información en el grupo de campos "AEAT SII" e "Import (DUA):
+  - Clave tipo factura: Importación (DUA)
+  - DUA: número de referencia que figura en el propio DUA
+  - Fecha DUA: fecha de la admisión del DUA por la Administración Aduanera respectivamente
+- en la pestaña "Líneas" introducir los datos de la factura del transitario, incluida su prestación de servicios sujeta y no exenta.
+- en la pestaña "Impuestos" incluir de forma manual una nueva línea de impuestos para impuestos del tipo "Importaciones 21%", que incluya la base imponible de importación y su correspondiente cuota.
+
+Una vez completada y dada de alta en SII, obtendremos un XML con la información requerida por parte de la AEAT.
+
+En los casos en que una operación de "Importación (DUA)", se **relacione con más de un DUA** será posible seleccionar el check "**Multiple DUA**".
+
+Al seleccionar esta opción:
+
+- los campos "**DUA**" y "**Fecha DUA**" de la cabecera de la factura no se muestran ya que dichos campos **se tienen que informar en la pestaña "Impuestos"**, con el fin de relacionar el DUA y su fecha, con la base imponible de importación correspondiente, tal y como se muestra en la siguiente imagen.
+
+![](/assets/drive/lFZBqb1lzXOH1Y1FtRibpnZJ3Rh9aXTirC2xlThC9N6okNSa2pFWBQa0582MMpvssLILoOwm27vTXyXK4Vxi0qIAN537ODDJZ8GuVDik669avGDaIn2K3ShmyjKRcwSBXiGJ6Hz_YNCazPDxOh8.png)
+
+########### **Facturas de Compra (alta tras la contabilización)**
+
+Aquellas organizaciones que activen el check "Alta en SII facturas de compra tras su contabilización" en la ventana Configuración SII, podrán enviar sus facturas de compra a SII tras su contabilización.
+
+El proceso de registro y alta en SII de este tipo de facturas es muy similar al resto de facturas de compra.
+
+La información del alta en SII del registro de la factura de compra se recogerá de la ventana "Factura(Proveedor)", una vez que la factura de compra correspondiente esté en estado **"Completado"** y **"Contabilizado"**.
+
+Dentro del grupo de campos "AEAT SII" estarán informados los campos:
+
+- la _"Fecha Operación"_, que por defecto se informa con la misma fecha que la "Fecha de la factura", fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
+- la "**Fecha registro contable**", que por defecto se consignará en blanco hasta el momento en que la factura sea contabilizada con la fecha en la que se ha realizado el asiento, independientemente de la fecha en la que se hayan imputado los apuntes contables en el libro diario. El botón de Alta en SII permanecerá deshabilitado hasta que se produzca la contabilización del documento. Si la factura se descontabiliza antes de suministrarla a SII, la fecha registro contable eliminará su contenido. En caso de que se hubiera producido ya el alta, y fuera necesaria realizar una Modificación por error registral, la fecha registro contable no cambiará al descontabilizar y reactivar la factura.
+- la _Clave Tipo Factura_, que se debe puede informar con los siguientes valores:
+  - "_Factura_", que se corresponde con una clave de tipo de Factura "F1"
+  - "_Importación (DUA)_", que se corresponde con una clave de tipo de Factura "F5"
+  - "_Liquidación Complementaria Aduana IVA a la importación_", que se corresponde con una clave de tipo de Factura "LC"
+  - "_Justificante contable_", que se corresponde con una clave de tipo de Factura "F6"
+
+En el caso de las facturas de compra no es necesario indicar si se trata o no de una factura rectificativa.
+
+- la _Descripción maestro SII_ de la operación, ya que en los ficheros XML no incluiremos información sobre las líneas de factura. En este caso seleccionamos una descripción del maestro.
+- o bien introducimos directamente una descripción de la operación en el campo de texto libre "_Descripción SII_".  
+  Si seleccionamos una descripción del maestro, ésta se muestra en el campo "Descripción SII" por defecto para que se pueda modificar/completar para esa operación/factura.
+  - Si la factura se crea desde un pedido y ese pedido incluía una "Descripción SII", dicha descripción se incorporará de forma automática en la factura, siempre que el campo "Descripción SII" de la factura esté vacío.
+  - Si la factura se crea desde varios pedidos, y en todos ellos hay una "Descripción SII", sólo se incorporará en la factura la del primer pedido seleccionado.
+
+Y además, debemos reflejar el número de factura del proveedor en el campo _"Referencia del Proveedor"_.
+
+Las facturas recibidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha del registro contable de la factura y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado).
+
+Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha de registro contable** de la factura como fecha a tener en cuenta respecto del alta en SII.
+
+Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
+
+- la _fecha de operación_ de la factura
+- la _fecha del registro contable de la factura_
+- y la _fecha de alta en SII_ de la factura.
+
+De modo que:
+
+- Sólo se dará de alta en SII una factura que se encuentre en estado "Completado" y "Contabilizado".
+- Cuando el usuario contabilice la factura, el campo Fecha registro contable se rellenará automáticamente con la fecha del día en que se registra el asiento en contabilidad.
+- Si el documento es descontabilizado antes de realizar el alta el campo Fecha registro contable eliminará su contenido.
+- Si el documento es descontabilizado tras realizar el alta para proceder a una modificación por error registral, el campo fecha registro contable mantendrá su contenido y la fecha registro contable continuará siendo la misma que se informó en la comunicación de alta.
+
+Por ejemplo:
+
+Un empresario A vende mercancía a otro empresario B el 26 de abril de 2022. El empresario A expide la factura el 27 de abril. El empresario B recibe la factura el 30 de abril y efectúa su registro contable el 01 de mayo remitiendo los registros de la factura el 12 de julio, por lo que el periodo asignado será 07, ejercicio 2022.
+
+Una vez introducida esta información, podemos completar y contabilizar la factura.
+
+Tras la contabilización del documento, el botón "**Alta en SII**" se muestra habilitado.
+
+![](/assets/drive/1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv.png)
+
+Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
+
+Etendo nos muestra un mensaje indicando que:
+
+"_Esta acción no reversible (salvo error en la comunicación o error registral) genera el "alta" de la factura en la sede electrónica de la AEAT. Una vez dada de "alta" en SII de forma correcta, será posible "modificar" la factura en caso de error registral si se habilita el campo de la factura "modificada por error registral". En ese caso ya sólo será posible el envío a SII del registro de "modificación" de la factura"_.
+
+Siempre es posible contabilizar/descontabilizar la factura después de darla de alta en SII, pero sólo será posible reactivarla en caso de error en la comunicación o error registral.
+
+El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento de introducir el precio del producto en la línea de la factura, por lo que es necesario realizar una modificación por error registral (Tipo de comunicación A1). El proceso a seguir es "Descontabilizar", activar el check "Modificar por error registral" y "Reactivar" el documento. Tras hacer la modificación correspondiente, de nuevo se completa y contabiliza el documento antes de pulsar el botón "Modificación en SII", manteniéndose la fecha registro contable que inicialmente se informó en SII.
+
+![](/assets/drive/1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA.png)
+
+En el caso de las facturas de compra, tampoco será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
+
+!!! info
+    Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
+
+########## **Modificación en SII**
+
+Este tipo de comunicación implica la modificación de los registros de factura ya dados de alta en SII por errores registrales que no afecten a:
+
+- el "emisor de la factura", esto es la organización o entidad legal que emite/recibe la factura
+- la "fecha de factura", esto es la fecha factura (expedición) de las facturas de venta, fecha factura en las de compra
+- y el "número de factura", o "referencia proveedor" en las facturas de compra que en ningún caso podrán modificarse.
+
+Por ejemplo, nos damos cuenta de un error en el rango de impuesto seleccionado en una factura que ya está dada de alta en SII.
+
+En esos casos tendremos que modificar la factura y enviarla de nuevo a SII, con un tipo de comunicación diferente que es A1 "Modificación (Corrección por errores registrales).
+
+Se ha creado un nuevo campo en la cabecera de las facturas (tanto de compra como de venta), sección "AEAT SII" denominado, "**Modificada por error registral**". Este nuevo campo sólo se habilita si:
+
+- la factura está en estado "Completado"
+- y, además, está dada de alta en SII (Alta en SII= Si) correctamente, "Estado Registro SII" = Correcto.
+
+Al seleccionar este nuevo campo, es posible descontabilizar y reactivar la factura, modificar el error cometido, para finalmente volver a completar la factura.
+
+En ningún caso será posible modificar:
+
+- el emisor de la factura (Organización)
+- la fecha de factura (fecha de expedición en las facturas de venta/fecha factura en las facturas de compra)
+- el número de factura (Nº documento en las facturas de venta/Referencia del proveedor en las facturas de compra)
+
+El botón "**Modificación en SII**" nos permitirá enviar la modificación del registro de la factura a SII, tal y como se muestra en la pantalla siguiente:
+
+![](/assets/drive/662noKMIVCrzTjC2DZyK9mKmy-suka3TFRNe707uHDJqd_LF2rhWbpV50_BnPRTsYT1cWx7KZ6JPOvO5IKs4A1KJpQLlBeYg0587HHMHVgh0zBRf-1NT1VWvysRKzeD-_Owkm-sYIYPiv8VkOAM.png)
+
+El suministro de este tipo de registros de "modificación" deberá realizarse antes del día 16 del mes siguiente al periodo al que se refiera la declaración en la que deba tenerse en cuenta dicha modificación.
+
+######### **Envío Automático**
+
+Dentro de la venta "Procesamiento de Peticiones" se han creado dos nuevos procesos "Proceso de alta en SII" y "Proceso de modificación en SII por error registral", que pueden configurarse para cada organización o entidad legal.
+
+Tal y como sucede con otros procesos de Etendo, éstos podrán configurarse para ser ejecutados de forma inmediata, planificada o programada con una cierta frecuencia.
+
+Se recomienda que este proceso se programe con una frecuencia "diaria", ya que tal y como se explica a continuación, este proceso tendrá en cuenta el número de días de cadencia configurados tanto para el alta en SII de las facturas de compra como de las facturas de venta, para la organización.
+
+Sería posible también que la opción diaria sólo incluyera los días de la semana y, por lo tanto, no se tuvieran en cuenta para su ejecución ni los fines de semana.
+
+########## **Alta en SII**
+
+Este proceso permite el "alta" masiva (tipo de comunicación A0) en SII de todas las facturas de compra y venta en estado "completado".
+
+![](/assets/drive/w1ekffFhD9rdzVfeuBL6r7EuYU8QgRufj8cyg-0mKZNIEPgr69BvsDWLgP6xvlBCiwe1yYbGt3ROyHqcfeOqH4aDs_2TsY2Mfxb7cOtY_pbzlL_nGXeqptJosBJWmGXWUDZ0jVARQj6PlmMA7OI.png)
+
+En el caso de las **facturas de venta**, este proceso tendrá en cuenta:
+
+- la "fecha de operación" y la "fecha de expedición" de las facturas
+- y la "cadencia del proceso de alta en SII", establecido para las facturas de venta en la ventana "Configuración SII", para cada Organización
+
+Por ejemplo, en el escenario siguiente:
+
+- factura de venta con fecha de operación 01-07-2022
+- fecha de expedición 05-07-2022
+- cadencia de envío establecida en 8 días
+
+aunque, programemos el proceso de alta en SII con una frecuencia diaria, esta factura sólo se dará de alta en SII de forma automática, a través de este proceso, el día 13-07-2022.
+
+Dicho de otro modo, el día 13-07-2022 se enviarán las facturas con fecha de expedición 05-07-2022 (13-07-2022- 8 días).
+
+El plazo límite de alta en SII de esta factura para 2022 sería el 17-07-2022, ya que en este cómputo no se deben tener en cuenta los sábados, domingos ni festivos nacionales.
+
+En el escenario siguiente:
+
+- factura de venta con fecha de operación 20-06-2022
+- fecha de expedición 13-07-2022
+- cadencia de envío establecida en 8 días
+
+aunque, programemos el proceso de alta en SII con una frecuencia diaria, esta factura se dará de alta en SII de forma automática, el mismo día de su expedición, ya que la fecha de la operación y la fecha de factura se encuentran en periodos diferentes.
+
+El plazo límite de alta en SII de esta factura para 2022 sería el 15-07-2022
+
+En el caso de las **facturas de compra**, este proceso tendrá en cuenta:
+
+- la fecha contable y la fecha de registro contable de la factura
+- y la "cadencia del proceso de alta en SII", establecido para las facturas de venta en la ventana "Configuración SII", para cada Organización
+
+Por ejemplo, en el escenario siguiente:
+
+- factura de compra con fecha contable 05-07-2022
+- fecha de registro contable 14-07-2022 (ya que la empresa decide deducir el IVA en julio)
+- cadencia de envío establecida en 8 días
+
+aunque programemos el proceso de alta en SII con una frecuencia diaria, esta factura sólo se dará de alta en SII de forma automática, a través de este proceso, el día 22-07-2022.
+
+Dicho de otro modo, el día 22-07-2022 se enviarán las facturas con fecha de registro contable 14-07-2022 (22-07-2022 - 8 días).
+
+El plazo límite de alta en SII para esta factura sería el 26-07-2022.
+
+En el escenario siguiente:
+
+- factura de compra con fecha contable 20-06-2022
+- fecha de registro contable 13-07-2022
+- cadencia de envío establecida en 8 días
+
+aunque, programemos el proceso de alta en SII con una frecuencia diaria, esta factura se dará de alta en SII de forma automática, el mismo día de su fecha de registro contable, ya que la fecha contable y la fecha de registro contable se encuentran en periodos diferentes.
+
+El plazo límite de alta en SII de esta factura sería el 15-07-2022.
+
+######## **Gestión y envío de registros desde el "Monitor SII"**
+
+Desde la ventana "Monitor SII" podemos realizar gestionar y realizar envíos masivos de facturas emitidas/recibidas a SII, así como de los cobros/pagos de facturas en RECC y los cobros en metálico, esta última información a enviar de forma anual.
+
+Tal y como se muestra en la siguiente pantalla, filtramos por:
+
+- Alta en SII = No
+- Estado doc = Completado
+- Tercero = Cliente España
+
+seleccionamos varias facturas y procedemos a su Alta en SII.
+
+![](/assets/drive/OOCosDIgqaozTNviBVAylAHt_OtM1Xs1MCqkHr8ZwFcnzZ365gqZH7PMx4QVCXEjC6AHI7FYUQlG_HLFCToPyy4es_b5DUxJMU03G2dnnNWgmhz2LQ6lZnC_f-QSZsbRwH2h6vUZCeRfp71BG-XyKpg.png)
+
+Lo mismo aplica para el envío masivo de modificaciones de facturas emitidas/recibidas. En ese caso, dichas facturas deberán encontrarse marcadas como "Modificada por error registral" = SI.
+
+Tal y como se muestra en la siguiente pantalla, filtramos por:
+
+- Alta en SII = SI
+- Estado registro = Correcto
+- Tercero = Cliente España
+
+seleccionamos varias facturas y procedemos a su Modificación en SII.
+
+![](/assets/drive/GDKayCFFhT9bAkhr68IiFXboS51M5wwZQs89d7pc9uW3Uo1dXDTlfMgSrfBQZl6ZjHmIuJlSSTiXfOP_MdskUK7Rhbqw6l3RWQ506xpkixCHok3iH0RJ4-bd3RtElOGY0LlpuPEWUzEfAljwwuUNf4U.png)
+
+######## **Creación automática de facturas de venta**
+
+######### **Generar facturas (manualmente)**
+
+El proceso "Generar facturas (manualmente)” permite crear facturas de venta del tipo "AR Invoice" en estado completado.
+
+Debido a eso, en los pedidos de venta se han creado dos nuevos campos dentro del grupo de campos "AEAT SII", con el fin de indicar en cada pedido de venta:
+
+- la "**Fecha de operación**", si ésta es conocida
+- y la "**Descripción SII**" de la operación.
+
+En ningún caso es posible enviar pedidos de venta a SII (alta/modificación).
+
+Tal y como se muestra en la pantalla, es posible seleccionar los pedidos a factura, e indicar una fecha de factura:
+
+![](/assets/drive/Ew-3GmSHo4SC8MYPB1b_faB3t50XX3uNoBlp8hK4o8NQ_NNQGk0Rlfkgjxvmvp7QJn-acYuicdRzLB8eZ_EgDfvgBKxcOSoolmbX-kn6oROckmVoCBYZKrtoA55jIXX51NQ1-wp7DLVY5ETVjxvHSdk.png)
+
+Al procesar, Etendo nos informa de que se han creado las facturas correspondientes, que tendrán ya un estado de "Completado".
+
+!!! info
+    Cada una de estas facturas heredará la fecha de operación y la descripción SII introducidas en el pedido. Es importante recalcar que el usuario siempre las puede modificar, si es necesario, antes de dar de alta en SII dicha factura.
+
+!!! info
+    La clave de tipo factura no se informa por defecto, por tanto el usuario, antes de dar de alta en SII, tendrá que seleccionar el valor "Factura".
+
+![](/assets/drive/aMgaLXe4tY4nipPDVT33nXXZCbiZiuddcE0lErcIFB-8SKN3BRIzIRw88im-00dJUrIlUoROIE7koQT9TfNhz81rTmkaR1EoLZZ_B53WfMtum0QRsdwvaxFUT3ruMFTNiMGL-m6NJVySFnQTXvyxn30.png)
+
+Si el pedido de venta o los pedidos de venta fueran negativos, este proceso generaría facturas de tipo "AR Invoice" que tendremos que reactivar y modificar antes de dar de alta en SII:
+
+- El tipo de documento debe cambiar a un tipo "reverse" como "Reverse Sales Invoice".
+- La clave de tipo factura se debe seleccionar como "Factura Rectificativa", e introducir:
+  - el tipo de rectificativa
+  - y el motivo de la rectificación.
+
+![](/assets/drive/pwCBP_ahyxDvNz_-q3IcT0IJBo4B1r05w3AhJLrmfTGMoX9-BFL41vf4-CH6DMC_RN-pZBjBp0LlOigea-baElLEvjiaMlZt52aVaw7SmLR6EW5QwzM86iNtmfaQcygSC21OipvaKGRLLiK4v2w1YeU.png)
+
+######### **Crear Líneas de** 
+
+**Pedidos**
+
+Las facturas de compra/venta pueden crearse desde pedidos con la opción "**Crear Lineas de**". Varios pedidos pueden seleccionarse para ser incluidos en una factura.
+
+Respecto de la información de SII, tenemos que tener en cuenta que:
+
+- Si la factura de venta/compra que se está creando **no tiene información en el campo "Descripción SII"**, se tomará la "Descripción SII" introducida en el primer pedido seleccionado de venta/compra.
+- La fecha **de operación** de la factura será por defecto la fecha de la factura y no se modificará al copiar los pedidos. El usuario tendrá que modificarla de forma manual si es diferente a la fecha de factura.
+- Si el **primer pedido que se copia es negativo** (en el caso de las facturas de venta), la factura de venta correspondiente se creará como "Factura Rectificativa", "Por diferencias", con el "Motivo de rectificación" R1, pudiendo el usuario cambiar esa información si fuera necesario, al añadir líneas de pedido adicionales positivas o negativas.
+- Las **facturas de compra creadas desde pedidos positivos**, se crearán con clave tipo factura "**Factura**", con tipo de documento "AP Invoice".
+- Las **facturas de compra creadas desde pedidos negativos**, se crearán con clave tipo factura "**Factura**", y el usuario debería crearlas con un tipo de documento reverse "Reverse Purchase Invoice", ya que en el caso de las facturas recibidas  
+  no es obligatorio informar de si una factura es rectificativa o no, sea positiva o negativa.
+
+**Albaranes** (Albarán (Cliente)/Recibo devolución de material o Albarán (Proveedor)/Devolución a albarán de Proveedor)
+
+Las facturas de compra/venta pueden crearse desde albaranes/devoluciones con la opción "**Crear Lineas de**". Varios albaranes/devoluciones pueden seleccionarse para ser incluidos en una factura.
+
+Respecto de la información de SII, tenemos que tener en cuenta que:
+
+- Estos **albaranes y devoluciones no incorporan información de SII**, por tanto, la información de SII de la cabecera de las facturas deberá ser rellenada por el usuario, tanto la fecha de operación, como la clave de tipo factura y la descripción SII.
+
+######## **Casos de uso**
+
+Dentro de este apartado se describen diferentes casos de uso tanto para las facturas de venta (LRFE) como de compra (LRFR), y su registro de "Alta" en SII.
+
+!!! info
+    Es importante recalcar que las fechas de operación que se muestran en los XML no coinciden con las fechas descritas en los casos de uso, ya que a fecha de junio no es posible enviar facturas con fechas de julio (fechas ejemplo).
+
+######### **Libro de Facturas Emitidas**
+
+La información del registro de alta/modificación de las facturas de venta se obtiene de la ventana "Factura (Cliente)", que como ya se ha explicado se ha modificado para incluir información requerida por SII (fecha operación, clave tipo factura, descripción SII, etc).
+
+El registro de alta/modificación en SII de las facturas de venta varía en función de las siguientes variables:
+
+- la **localización del "Tercero"** (Cliente), ya sea éste extranjero, intracomunitario o nacional, que conlleva la sujeción o no al IVA y dentro de la sujeción, su exención.
+- el **tipo de factura emitida**, esto es "Factura"(F1), "Factura Rectificativa"(RX), "Factura Simplificada" (F2) o "Asiento Resumen de Factura Simplificada" (F4).
+- **la sujeción al RECC** de la organización
+- la venta a minoristas en las que se incluye "**Recargo de Equivalencia**"
+- la venta a revendedores en **Inversión del Sujeto Pasivo**
+
+y en función de que la factura emitida incluya:
+
+- **el arrendamiento de local de negocio** sujeto o no a retención
+- **una operación sujeta a IPSI/IGIC**
+- o una **transmisión de un bien inmueble** sujeta a IVA
+
+así como que la factura emitida
+
+- se liquide con un **cobro en metálico superior a 6000.00€**
+- o tenga una **fecha de factura** (expedición) **anterior al día 1 de julio de 2017.**
+
+En los apartados siguientes se analiza la información que debemos recoger en las facturas de venta de Etendo para cada caso de uso, así como la información relevante que el XML de alta/modificación del registro de dichas facturas debe incluir.
+
+La principal diferencia entre los XML de alta/modificación de los registros de facturas de venta de cualquier tipo es que:
+
+- Los XML de alta incluirán un tipo de comunicación
+  \<sii:TipoComunicacion\>A0</sii:TipoComunicacion>
+- Los XML de modificación incluirán un tipo de comunicación
+  \<sii:TipoComunicacion>A1</sii:TipoComunicacion>, junto con los datos de la factura correcta a modificar.
+
+########### **Tercero (Cliente) Nacional**
+
+Factura emitida con IVA Nacional por entrega de bienes y prestación de servicios.
+
+La organización F&B España presta un servicio a su cliente "Alimentos y Supermercados", identificado con un NIF válido de España.
+
+La operación se realiza el 2 de agosto de 2017. F&B España emite la correspondiente factura de venta con fecha 7 de agosto de 2017.
+
+En este caso, y dado que el IVA se ha devengado en el periodo de agosto (fecha operación 2 de agosto), el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de septiembre.
+
+Al expedirse la factura con fecha 7 de agosto, se está en plazo. Dicha factura se tendrá que dar de alta en SII antes del día 18 de agosto de 2017 (aplica cómputo 8 días, sin incluir sábados, domingos ni festivos nacionales).
+
+Al expedir esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Entregas IVA 10%
+- Prestación servicios nacional 21%
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "01" (Régimen General)
+- Sujeta No Exenta "S1"
+- con desglose por detalle de IVA.
+
+![](/assets/drive/CDES62-nQ75UdtctVvQydN6-vDcqgQcFcdf3rRCeadKiYdCTTh4dXbX70wFVbxAC4sAuX10W_4MWkj7T-Z8xzuenunrPQ3FfIy6iHs7SvZOcX7eLi5RNKQdU8g0nhLtcG-RtZCWsFxP2sPRRW-x9TnE.png)
+
+Es importante recalcar que:
+
+- si la factura de venta nacional incluye más de un bien/servicio al mismo tipo impositivo, en el XML la información se mostrará agrupada por dicho tipo impositivo (por ejemplo 21%)
+- si la factura de venta incluye más de un bien/servicio con distintos tipos impositivos, en el XML la información se mostrará desglosada por "Detalle de IVA" o tipo impositivo.
+
+########## **Tercero (Cliente) extranjero**
+
+Factura emitida por la exportación de bienes y prestación de servicios en el extranjero.
+
+La organización F&B España emite el 13 de septiembre de 2017 una factura a la Empresa Z situada en Marruecos por la venta de un equipo y el servicio de instalación. La operación se produjo el día 29 de agosto. Este tercero debe identificarse en Etendo con un "Clave NIF País Residencia", distinta de 1 (NIF) y 2 (NOI).
+
+En este caso, y dado que el IVA se ha devengado en el periodo de agosto (fecha operación 29 de agosto), el plazo límite de expedición de la factura de venta y su alta en SII sería el 13 de septiembre.
+
+Al expedirse la factura con fecha 13 de septiembre, opera ficha límite, es decir, esta factura tendrá que enviarse a SII antes del día 15 de septiembre.
+
+Al expedir esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Exportaciones (%N=>0%)
+- Servicios prestados internacional (%N=>0%)
+
+La entrega del bien es una operación sujeta pero exenta de IVA.
+
+La prestación del servicio es una operación no sujeta por reglas de localización
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "02" (Exportación)
+- con desglose por tipo de Operación
+- prestación del servicio "No sujeto por reglas de localización"
+- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación).
+
+![](/assets/drive/5zXCAlCIBhJiUvUE2u4IPU47L16nNpn96Y-FbZ5SXgiiHoocMWiyDbeUoVD8UY7LVRTxk75wW3hqZnOjC0rDk2OSh5zZgWu07ggeMiRrDfJVAY01TQ-e8SaS2IdbuHMtJ8DQPAA-1n1f9fBVVFuwepE.png)
+
+Es importante recalcar que:
+
+- si la factura incluye una entrega de un bien a Canarias (tipo impositivo "Entregas a Canarias,Ceuta y Melilla (%N=>0%)")
+- y una prestación de servicios que se localiza en Canarias (tipo impositivo "Servicios a Canarias, Ceuta y Melilla (%N=>0%)")
+
+el XML generado incluye igualmente:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "02" (Exportación)
+- con desglose por tipo de Operación
+- prestación del servicio "No sujeto por reglas de localización"
+- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
+
+![](/assets/drive/BnMTWAUJv3Itf0gbWYlfNV0RuyNPonFy4GFIpV9Ahh81Y2KK9JiI1p7dVLY79EidOqX8eOuGrGYYwN6Y6cVERAU_iNjULVsQUU_FKxk30SLRq1Nz-WDyW2SCC_YKC1gDqGXGt87ofjEjs9ka8oiiiQY.png)
+
+########## **Tercero (Cliente) Intracomunitario**
+
+Factura emitida con IVA Intracomunitario por entrega de bienes y prestación de servicios.
+
+La organización F&B España emite el día 18 de agosto de 2017 una factura por la entrega de hardware (por importe de 1000.00 €) y su instalación (por importe de 800.00 €) a un cliente localizado en Francia. La operación se realiza el día 10 de agosto de 2017.
+
+Este cliente localizado en Francia, debe estar identificado en Etendo con una "Clave NIF País Residencia" de tipo 2 = NOI.
+
+En este caso, y dado que el IVA se ha devengado en el periodo de agosto (fecha operación 10 de agosto), el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de septiembre.
+
+Al expedirse la factura con fecha 18 de agosto, se está en plazo. Dicha factura se tendrá que dar de alta en SII antes del día 30 de agosto de 2017 (aplica cómputo 8 días, sin incluir sábados, domingos ni festivos nacionales).
+
+Al expedir esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Entregas intracomunitarias (%N=>0%)
+- Servicios prestados UE (%N=>0%)
+
+La entrega del bien es una operación sujeta pero exenta de IVA.
+
+La prestación del servicio es una operación no sujeta por reglas de localización.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "01" (Régimen General)
+- con desglose por tipo de Operación
+- prestación del servicio "No sujeto por reglas de localización"
+- exportación del bien "Sujeta y Exenta", con clave de causa de exención "E5" (Entrega intracomunitaria). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
+
+![](/assets/drive/luCZJQdNJOYe_30B8lauePugxFfIgv8TCOATfe2t1uFBz-FVINtxs0KooEAXdaTMGE9o44PXUQF4lS5hwGljNUQU-1G_x5GqakdHzFPBerOuzHQr3am409yP-YwDbE1YEknU8jFIatjxrkzkuUEiCHY.png)
+
+Es importante recalcar que:
+
+- si la factura de venta intracomunitaria incluye más de un bien al mismo/distinto tipo impositivo, en el XML la información se mostrará agrupada, dentro del nodo "Entrega/Sujeta/Exenta".
+- si la factura de venta intracomunitaria incluye más de un servicio al mismo o distinto tipo impositivo, en el XML la información se mostrará agrupada por operación no sujeta por reglas de localización, dentro del nodo "PrestaciónServicios/NoSujeta"
+
+########## **Organización acogida al RECC**
+
+F&B España se encuentra acogida al régimen especial de criterio de caja.
+
+Ésta organización vende bienes y un servicio a un cliente español el día 6 de julio de 2017, expidiendo la correspondiente factura ese mismo día.
+
+Al registrar esta factura de venta en Etendo, los tipos de impuestos que se selecciona por defecto serán del tipo:
+
+- Entregas IVA 10% IVA de Caja.
+- Prestación servicios nacional 21% IVA de Caja.
+
+La información de estas operaciones se suministrará en los plazos generales como si a las mismas no les hubiera sido de aplicación el régimen especial, por tanto y, en este caso, al emitirse la factura en el mismo periodo en el que se produce el devengo de la operación (Julio), el plazo límite de alta en SII para la factura sería el 18 de julio de 2017.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "07" (Regimen especial del criterio de caja)
+- Sujeta No Exenta "S1"
+- con desglose por detalle de IVA.
+
+![](/assets/drive/-vN1cdTs45fGesRdAFTV6SOW8rbFfLo_9e32RSYXjKQkjKOCm4htirPAxfxUPkJZiu595v01C7vEC0iKxCiz7QDmp_ihz41rxp_O563v357xtRFwjToD69L_nGu6_B_e2bX_anYMqi0WCy-w3Cce6Wg.png)
+
+########## **Cobros de facturas en Régimen Especial de Criterio de Caja (RECC)**
+
+Los cobros totales o parciales de facturas en RECC deben darse de alta en SII en el momento de producirse.
+
+Desde la ventana "Monitor SII" podemos filtrar por el número de cobro y proceder a su envío a SII.
+
+Una vez dado de alta en SII, el XML generado informa de los siguientes datos del cobro, referenciados al número de la factura de venta:
+
+- **Fecha**
+- **Importe**
+- **Medio**
+
+![](/assets/drive/zNO7__LCn0RS6lT_b-IqOr-5UI7FWlcdIhnJAiPhseee-s6Wc1FTV4EtmD9Ujp_R_Q7WEKcPY-LBi9xWWe_hj2Q28fkR-JnyV3NVvoPKGxhptTlVq6VOhKpIVhfkkUsi6H_Dj1eCS8kcA2T6YgkonZg.png)
+
+El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
+
+**Anulación de cobros**
+
+En el caso de los libros registro de cobros en RECC, no se utilizará el tipo de comunicación A1 de "Modificación de facturas/registros por error registral".
+
+La modificación de un cobro en RECC ya dado de alta en SII se efectuará enviando el cobro que se pretende anular en negativo.
+
+Lo anterior implica que en Etendo, no podremos reactivar un cobro en RECC ya dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago" que se muestra en la siguiente imagen:
+
+![](/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
+
+Al revertir el cobro, Etendo genera un nuevo cobro por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD.png)
+
+El XML generado contendrá la siguiente información:
+
+- el importe del cobro en negativo
+- referido a la factura
+
+![](/assets/drive/pi-8xhxVCAgUYqm35_0jxct9_B8i6lAHxBLIJ0rCGmfu44v4C47P8iWd02KZ7XTF2kwbYe8F2FvU9YelFpyCORry5_1vIHqvwjuDNFIE09Ns1bA9myQEb0Ar5j01RihIO-Wk_AoTlNOxPl4tODJwAMo.png)
+
+**Facturas en RECC no cobradas en el año natural** (en desarrollo).
+
+Como parte de la funcionalidad del RECC, Etendo permite la "liquidación manual del IVA de Caja" para aquellas facturas en RECC que no fuesen cobradas total o parcialmente antes del 31 de diciembre del año posterior al año de su expedición, produciéndose así el devengo del impuesto.
+
+Por tanto, las facturas en RECC de fecha 2017 que no estén cobradas a 31-12-2018, tendrán que enviarse a SII en dicha fecha, y con la siguiente información:
+
+- **Fecha** (de cobro) = 31-12-2018 (fecha de la liquidación manual del IVA)
+- **Importe** = importe pendiente de cobro de la factura
+- **Medio** = 03 (No se cobra/No se paga)
+
+Desde la ventana de "Liquidación manual del IVA de Caja" será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
+
+########## **Ventas con recargo de equivalencia**
+
+F&B España realiza una venta a un cliente acogido al recargo de equivalencia.
+
+Al expedir la factura por la entrega correspondiente el tipo impositivo seleccionado será del tipo “Entregas IVA+RE 21+5.2%.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave regimen especial "01" (Régimen General)
+- Sujeta No Exenta "S1"
+- con desglose por detalle de IVA de haber más de un tipo impositivo diferente
+- con información en los nodos:
+  - tipo recargo de equivalencia
+  - cuota del recargo de equivalencia
+
+![](/assets/drive/T3uUXF3GgSV_UnjkKYJeJT1TvMTg-mly1C1HdKbirdRo3sdYKRAU_-hTXitit3t6jnZoEeMHJ98cgMIHKA4u4u0wJ-eZipjPEFC6vpd89qTTwDpBcOSwNsL350kqL3WZMpUsXmeVxA3o42FhhrZJAZM.png)
+
+########## **Operaciones de venta con ISP**
+
+En el caso de producirse una venta por parte de F&B España a un cliente revendedor español, el tipo impositivo utilizado será:
+
+- Entregas sin IVA por ISP
+
+es decir:
+
+- el vendedor emitirá la factura de venta sin aplicar el IVA
+- El comprador que recibe la factura sin IVA declarará este IVA como una Inversión del Sujeto Pasivo. Ver escenario de compra Inversión del Sujeto Pasivo.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "01" (Operación de régimen general.)
+- y la operación dentro del bloque funcional ”Desglose factura”, "Sujeta - No Exenta – Con Inversión sujeto pasivo” (S2).
+- Los campos “tipo impositivo” “cuota repercutida” se informarán con importe cero
+
+![](/assets/drive/ZEqqB3TgdDl7PnFVsTpM5FtOKACsXZ1wU2VmDKspeWJQCkSuqpJCREyAK2NtnDT9QweIYdz-H89Bh74hcqr1ATWVgxjZm15zPTXzGRBLkZvGnq0uFrFAJIp1HochquU5YMhUpboj3HTmXg1eJe7beRo.png)
+
+########## **Arrendamiento de local de negocio**
+
+F&B España emite el día 1 de septiembre de 2017 una factura por el arrendamiento de un local de negocio con una base imponible de 850 €
+
+F&B España emite una factura con los siguientes datos:
+
+- **Fecha de expedición de la factura** (fecha factura): 1 de septiembre de 2017
+- **Fecha de operación** : 30 de Agosto de 2017 (cubriendo el alquiler del mes de Agosto).
+
+En este caso, tenemos hasta el 13 de septiembre para dar de alta la factura emitida en SII, contando 8 días naturales desde la fecha de expedición de la factura.
+
+En este caso, la fecha límite de expedición de la factura y de envío a SII, sería antes del día 16 del mes siguiente a aquel en que se hubiera producido el devengo de la operación, esto es el 15-09-2017.
+
+Al registrar esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Arrendamiento 21% (cobros)
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave regimen especial "12" (Operaciones de arrendamiento de local de negocio no sujetos a retención)
+- Sujeta No Exenta "S1"
+- con el detalle del Inmueble, que se obtiene de la configuración realizada para el "local arrendado" en la ventana "Producto" :
+  - Situación del inmueble
+  - Referencia catastral
+
+![](/assets/drive/mtf9dUeo9KXFMRhgM2rj868eBLugn6FjnystCp18gska41BDKkO60I5tH3m99sf-T4l0Hmo2_9-ZJvMPMvpCXSmqnSEZ5TIVEQ1CshWlVxKkItpZ_renVXmVhQIJVbdLrOOKP67AH_txpy4JoY8dKn0.png)
+
+En el caso de que el arrendamiento incluya retención, el tipo impositivo a utilizar sería del tipo "Arrendamientos 21% -19%R (cobros)" y la información del XML la siguiente:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "11" (Operaciones de arrendamiento de local de negocio sujetas a retención)
+- Sujeta No Exenta "S1"
+
+![](/assets/drive/u3q1KqomFK1gk_RK0zXOfJ0_Rzk3WlN5GkS0mr7t0UfP_Wza_qXiAf6FXXatfzGxod5gHiJNkirgqTm8URkstrpTCBGd-TBL0O9CuYm5Jq4_s2nQd8tl_iCpOrrRtNgd1guBelPfd-kcdMXzl7yqBj8.png)
+
+En el caso de locales arrendados sujetos a retención, no es necesario especificar la información del inmueble, por incluirse ésta en el modelo de retenciones (Modelo 180) correspondiente.
+
+Por último recalcar que:
+
+- Si una misma factura incluye más de un arrendamiento con y sin retención, se dará de alta en SII con la clave "13" e información (referencia catastral/situación del inmueble) del local(es) que no estén sujetos a retención.
+- Si una factura de arrendamiento está sujeta al régimen especial del criterio de caja, prevalecerá la clave 07 de Operación Sujeta a RECC.
+
+########## **Operación de venta sujeta a IPSI/IGIC**
+
+F&B España con domicilio fiscal en Madrid, adquiere una máquina en Canarias y la vende en dicho territorio junto con un servicio de instalación de la misma, que también adquiere/presta en Canarias.
+
+La operación se realiza el 29 de agosto. F&B España emite la factura el día 13 de septiembre.
+
+En este caso y dado que el IVA se ha devengado en agosto, el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de septiembre (opera fecha límite).
+
+Al registrar esta factura en Etendo, los tipos de impuestos que se deben seleccionar son del tipo:
+
+- Entregas IGIC 13,5%
+- Servicios Prestados en Canarias 13.5%
+
+Tanto la entrega de bienes como la prestación del servicio se adquieren y localizan en Canarias, por lo que no es aplicable ningún tipo de IVA.
+
+Esta operación está sujeta a IGIC y por tanto, debe registrarse en SII como una operación no sujeta por reglas de localización (tanto en lo relativo a bienes como servicios).
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "08" (Operaciones sujetas a IPSI/IGIC)
+- y todo el importe de la operación (bases imponibles) tanto de bienes como servicios, en el nodo "Operación no sujeta por reglas de localización"
+
+![](/assets/drive/MvYNDpfiSbbn9wkjDb_pvc0rMIlv0l1_DQuAarhiNZfGz3apN6HhQaeSl_MGMhkmhXW2wMj2MimCCnviAA5U9rxNuVFcK4fG_jGtfzqLGAzJPFyfudlMA3yKBMqFMO_KIpL_Yje6DeDTIpQkN3RCWSw.png)
+
+########## **Transmisión de bienes inmuebles**
+
+F&B España expide el día 1 de septiembre de 2017 una factura por la venta de un bien inmueble en Madrid por 150.000 €
+
+La operación se realiza el 1 de septiembre, expidiendo factura el día 5 de septiembre.
+
+En este caso, la fecha límite de alta en SII sería de 8 días (hábiles) contando desde la fecha de expedición de la factura, esto es el 15 de septiembre de 2017.
+
+Al registrar esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Transmisión de bienes inmuebles 21%
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con un importe por transmisión de bienes inmuebles de
+
+![](/assets/drive/YvejK7Py-383mQDuU6vqd4psPpJzCR5oLQ3vMFcCHWdEVw33FtvP_yX8ZzHiiROQ9sQmQNYMZTaJ1E_2J9mtdaa5cIpHIYXkUY2vLnjeB9uB5FSKrfi91Qt-2onjt5AP-aSWZMI7eIOOlHFhuQKhUeU.png)
+
+########## **Cobros en metálico**
+
+La información correspondiente a los importes superiores a 6.000 euros percibidos en metálico durante el ejercicio de una misma persona o entidad, deberá suministrarse con carácter anual, durante los primeros 30 días del mes de enero siguiente al ejercicio al que se refieran.
+
+En Etendo se ha creado una nueva ventana denominada "SII Cobros en metálico" que permite gestionar la generación de dichos cobros y su posterior "alta" o "Modificación" en SII.
+
+**Alta Cobros en Metálico**
+
+En la ventana "SII Cobros en metálico" se puede introducir la "Organización" y el Ejercicio (por ejemplo 2021), para el cual se necesita suministrar este tipo de información de carácter anual.
+
+Una vez introducida dicha información, el botón "**Actualizar Cobros Metálicos SII**" lanza un proceso que tiene en cuenta:
+
+- todas las transacciones del tipo **“BP Deposit”** o **“Cobro”** con estado **"Cobro depositado"** o **"Conciliado"**, realizadas en cuentas bancarias de tipo **“Caja”** con **"fecha de transacción”** durante el año natural especificado (Ejercicio).
+- respecto de operaciones/transacciones bancarias relacionadas con **Facturas y Conceptos Contables**, asociadas a un “Tercero” identificado con un **Tax ID** (por ejemplo NIF)
+- y que, **agrupadas por dicho tercero**, superen el importe de 6.000,00 €
+
+![](/assets/drive/1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt.png)
+
+Una vez generado el cobro/cobros, se puede realizar su "**Alta en SII**". Una vez dado de alta en SII, los campos "Alta en SII", "Estado registro SII", "Importe", "Importe enviado" e "Importe enviado" se actualizarán.
+
+Si se produjera un error al dar de alta en SII, se mostraría el código de error y el mensaje del error para su subsanación.
+
+**Modificación Cobros en Metálico**
+
+La ventana "SII Cobros metálico" permite además, controlar incidencias que se podrían producir con posterioridad al alta del cobro(s). Incidencias que puedan deberse a la incorporación de nuevos cobros, modificación/eliminación de cobros existentes para un tercero.
+
+Para ello, se diferencian los siguientes campos:
+
+- **Importe**: corresponde a la suma total de los cobros depositados en una cuenta financiera de tipo caja, que supere la cantidad de 6.000,00 €, respecto de un tercero
+- **Importe enviado** a SII
+- **Importe pendiente** de envío a SII
+- **Totalmente enviado**: tomará los valores, "Sí" cuando no existan diferencias entre el campo "importe" e "importe enviado"; "No" cuando un aumento/disminución del importe provoque una diferencia al ya enviado.
+
+Por ejemplo para un tercero determinado se realizaron varias facturas durante el año 2021 que se cobran en metálico. El importe total de dichas facturas y, por tanto, el importe recibido en metálico de este tercero asciende a 151,000.00. Tanto las facturas como el cobro en metálico se han dado de alta en SII.
+
+![](/assets/drive/1u1oUThSf80IxxOdRGouxAHwQraXG2w1o.png)
+
+Con posterioridad se realiza una nueva factura por importe de 1,800.00 €, que también se cobra en efectivo, y que por tanto debe darse de alta en SII.
+
+En la ventana "SII Cobros en Metálico", tendremos que:
+
+- actualizar la información para que se refleje el nuevo cobro creado como "Importe pendiente" de alta en SII, tal y como se muestra en la imagen siguiente:
+
+![](/assets/drive/1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF.png)
+
+- y activar el check "**Modificada error registral**" en el cobro.
+
+Una vez hecho esto se podrá proceder a la modificación en SII de dicho cobro para el tercero, a través del botón "**Modificación en SII**".
+
+![](/assets/drive/1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF.png)
+
+Es importante recalcar que si de un tercero se recibiera un cobro en metálico con fecha del ejercicio a declarar (por ejemplo 2017), respecto de una factura de fecha anterior (por ejemplo 2016), dicho cobro también se incluirá en la selección, para su alta en SII, siempre que el importe total recibido/cobrado de ese tercero supere los 6000.00 €.
+
+########## **Factura emitida con fecha de expedición anterior al 01-07-2017**
+
+Respecto de las facturas emitidas con fecha de expedición anterior al 01-01-2017, existe también la obligación de su alta en SII, pero con un esquema XML con las siguientes particularidades:
+
+- **Clave de régimen especial** = 16 (Primer semestre 2017).
+- **Descripción de la operación**: “Registro del Primer semestre 2017”.
+
+Y, en el caso de las facturas emitidas, con independencia de su calificación cuando son "No Exentas", se informarán bajo la siguiente clave:
+
+- **Tipo no exenta: S1**.
+
+Lo anterior aplica excepto para sujetos pasivos en REDEME que ya las habrán enviado en el Modelo 340 correspondiente.
+
+En Etendo, al dar de alta en SII una factura con fecha anterior al 01-07-2017, comprobaremos que el esquema XML es del tipo siguiente:
+
+![](/assets/drive/4o687WK4KAze5LKKh6DcmXN0Jqu4THxG1BB-V_FpI_5XiZa81XzP251gWHKh-Cz0-rrVi4psJ8-QAlLPOpukxkxn-QYlxf1DdNzAycfo9bYHX1PIZGe6BVaO93zMFRtbn5h7BjemISBttCGvqH8s9bU.png)
+
+En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
+
+Este proceso se denomina "**Proceso de adaptación a SII de Facturas de Venta del primer semestre de 2017**" y configura las facturas de venta del primer semestre, de la siguiente forma:
+
+- como "**Factura**", es decir, con la **"Clave de tipo Factura" = F1**.
+  - las facturas de venta positivas, con/sin pedido relacionado, y tercero con NIF.
+- como "**Factura Rectificativa por Diferencias y error fundado"**, es decir, con la "**Clave de tipo Factura" = R1**
+  - las facturas de venta negativas, con/sin pedido relacionado, y tercero con NIF.
+- como "**Factura Simplificada**", es decir, con "**Clave tipo Factura" = F2**
+  - las facturas positivas o negativas sin/con un ticket/pedido relacionado y tercero sin NIF.
+- como "**Asiento Resumen de Factura Simplificada**", es decir, con "**Clave tipo Factura" = F4**
+  - las facturas positivas o negativas con más de un ticket/pedido relacionado, y tercero sin NIF.
+- añade la descripción tipo "**Registro del Primer semestre**"
+- e indica como "**Fecha de operación**" la fecha de la factura tal y como requiere la AEAT.
+
+!!! info
+    El usuario siempre podrá revisar la configuración otorgada a dichas facturas antes de darlas de alta en SII.
+
+La ventana "**Monitor SII**" incluye también una pestaña "**Facturas de Venta Primer Semestre 2017**" desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
+
+########## **Factura emitidas rectificativa fuera de plazo**
+
+Factura emitida rectificativa por sustitución en un periodo posterior al de presentación de la declaración de IVA - Modelo 303, de la factura original.
+
+La organización F&B España realiza una entrega de bienes por valor de 2420 € (IVA incluido) La operación se realiza el 2 de enero de 2018. F&B España emite la correspondiente factura de venta con fecha 2 de enero de 2022.
+
+En este caso, y dado que el IVA se ha devengado en el periodo de enero (fecha operación 2 de enero), el plazo límite de expedición de la factura de venta y su alta en SII sería el 15 de febrero.
+
+Una vez completada la factura, se procede a su Alta en SII el día 2 de enero.
+
+El XML de alta en SII contendrá la siguiente información:
+
+Clave tipo factura = F1-Factura
+
+Importe total = 2420
+
+Fecha Factura: 02-01-2022
+
+Fecha Contable: 02-01-2022
+
+**Fecha de Operación: 02-01-2022**
+
+**Periodo SII: 01 - Enero**
+
+**Ejercicio SII: 2022**
+
+![](/assets/drive/HJdwEipVS4djsZugPA3zso45tgrG6enxXhlP_KOSpe4a9r2v8EcytimONV_AMoVyaMIE8oJ3f4oLSpzObpdoRRgJ3HsTjWRAijIB94bZdAt45OvJPcGz-rwKdw2x1ykj9oX6_eoMKw02eqNaAk01Tjs.png)
+
+El día 1 de marzo, se produce una devolución por mal estado del 20% de la mercancía con un valor de 484 € (IVA incluido) por lo que F&B España procede a la anulación de la factura original y emisión de una nueva con el importe final correcto.
+
+Se produce una anulación de la factura original (ya dada de alta en SII e incorporada a la declaración de IVA del mes de enero) a través de la opción "Reactivar-Anular" de Etendo. Esta acción creará una factura del tipo "Reverse" con los siguientes datos:
+
+Clave Tipo Factura = F1-Factura
+
+Importe total = -2420
+
+Tipo de documento = Reverse Sales Invoice
+
+Fecha Factura: 01-03-2018
+
+Fecha Contable: 01-03-2018
+
+**Fecha de Operación: 02-01-2018** (fecha de operación de la factura original)
+
+![](/assets/drive/fetQO0nNF-Q3kkLURvyOFzQ46wSUEIIjymSsJCfk9GkiUMInhKjnvjWnmvgsZdi2_oM-dpdLGenWjw9a1h6OFBxj7CUAfQBzNLrTT64XL0pA6zhIrcE8hJxoOFD-KP6Uywr6ZuOKqbzsVSUCIt3J2EE.png)
+
+Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
+
+**Periodo SII: 07 - Julio**
+
+**Ejercicio SII: 2022**
+
+El periodo asignado en SII no se corresponde con la fecha de operación, si no con la Fecha Factura (julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
+
+![](/assets/drive/qPqZ-pAmr6pO6ALY0z4_PrmOrkEnqWO5b-YqmEbVPZX3DSUQUEd36VwA5LmUZciyEqR4l70kFCR9QIv0u2VgUf-HJEWUEDJcp9mCuBe5J_sW6o8wC5PSAesUXAsH3e_0cOVbsnHg4LmSx3XFpJIQtfs.png)
+
+Posteriormente, se crea la nueva factura con los importes correctos y con los siguientes datos:
+
+Tipo de documento = AR Invoice (no reverse)
+
+Clave tipo factura = Factura Rectificativa
+
+Tipo Rectificativa = Por Sustitución
+
+Motivo de la rectificación = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
+
+Fecha Factura: 01-03-2018
+
+Fecha Contable: 01-03-2018
+
+**Fecha de Operación: 02-01-2018** (fecha de operación de la factura original que tendrá que seleccionar el usuario de forma manual)
+
+![](/assets/drive/Ln5HvZyVHOBK-JEMdCGGj7N__H5Bzn8mAm3xqW2jRUNOpDdeOdBXNWaa6F-0lWrHDbXbVFXclkYHFqsQ5e-IJWVuo_o8871Y0TTpk7apWwr7W6lwixlux5lbKxTfBsJBHP1o1RsigQrozwyHTJSuGPk.png)
+
+Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
+
+**Periodo SII: 07 - Julio**
+
+**Ejercicio SII: 2022**
+
+![](/assets/drive/WmCrqgr1mzfFPN73yfGGt5a6jseoeH0wUEAWYyzaOROUsZtcVEtmljTWDUh_CT6KpHmza0a2Oc6P1ZqnczOZF8COnXiEXg2_W2FiQU8vz_fgIINsqydZnwSpojBEjhBGMcJgJXFss9Ihy4eIjKWzgPo.png)
+
+Al igual que la anterior factura que anula el importe de la original, el periodo asignado en SII, no se corresponde con la fecha de operación si no con la Fecha Factura (Julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
+
+Si la emisión de una factura rectificativa, ya sea por diferencias o por sustitución, se produce en el mismo período del devengo de la operación. Es decir, la emisión de las distintas facturas (Factura original, anulación y rectificativa con motivos R1,R2,R3 Y R4) se emiten en un mismo mes, podrán liquidarse en la declaración del impuesto del mismo periodo.
+
+En el resto de casos en los que la fecha de operación de la factura original sea distinta a la emisión de las facturas correctivas posteriores, el periodo de liquidación será distinto.
+
+######### **Libro de Facturas Recibidas**
+
+La información del registro de alta de las facturas de compra se obtiene de la ventana "Factura (Proveedor)".
+
+En todo caso, será obligatorio introducir el número de factura del proveedor en el campo "Referencia del Proveedor", con el fin de identificar y cruzar la información de las facturas.
+
+El registro de alta en SII de las facturas de compra varían en función de las siguientes variables:
+
+- la **localización del "Tercero"** (Proveedor), ya sea éste extranjero, intracomunitario o nacional
+- el **tipo de factura recibida**, esto es "Factura", "Factura de Importación (con DUA)", "Justificante Contable".
+- **la sujeción al RECC** de la operación reflejada en la factura de compra
+- **la sujeción al RECC** de la organización que recibe (registra) la factura de compra.
+- que la factura de compra incluya operaciones por las que los empresarios satisfacen compensaciones en las adquisiciones a **personas acogidas al REAGYP**.
+
+y en función de que la factura recibida incluya:
+
+- **una operación sujeta a IPSI/IGIC**
+- **un arrendamiento de local de negocio** sujeta a IVA
+- o **gastos de personal** que son en todo caso no declarables y, por tanto, no deben darse de alta en SII
+
+así como que la factura recibida refleje:
+
+- una "**Inversión del Sujeto Pasivo**"
+- o su **fecha contable sea anterior al 1 de Julio de 2017**
+
+########## **Tercero (Proveedor) Nacional**
+
+Factura recibida con IVA Nacional por la adquisición de un bien y la prestación de un servicio.
+
+La organización F&B España recibe una factura de un proveedor nacional, que incluye tanto bienes como servicios.
+
+La operación se realiza el 2 de agosto de 2017 y la factura se expide con fecha 7 de agosto de 2017.
+
+F&B España recibe la factura el día 9 de agosto de 2017 y decide consignar y deducir la cuota soportada en el modelo 303 del mes de agosto, procediendo a su registro contable el 13 de septiembre.
+
+El plazo para remitir el registro de esa factura a través del SII finaliza el 15 de septiembre, en este caso (antes del día 16 del mes siguiente al que se devenga la operación).
+
+Al registrar esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Adquisiciones IVA 21%
+- Prestación servicios nacional 21%
+
+Es importante registrar:
+
+- como fecha de factura de compra, la fecha de expedición de la factura de venta
+- como referencia de proveedor, el número de factura de la factura de venta
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave regimen especial "01" (Régimen General)
+- con información sobre la cuota deducible y la fecha contable.
+- con desglose factura y detalle de IVA, de existir tipos de IVA diferentes.
+
+Después de su alta en SII, es posible contabilizar y descontabilizar la factura de compra, si fuera necesario, pero no será posible cambiar la fecha contable de la factura por ser este campo obligatorio respecto de las facturas de compra.
+
+![](/assets/drive/AH_zdSOXyQVvw8Vxt60YW-gZbSimeZlJnn0v0oX2nrUZSpfkNn1B_sf8RCGyM5a1GP-thIUBE0HVOVI5rR_59xkcn4dWgR6JmeeqGbuG4fHFz5fPoKe_Gdg-izeDXm0f1yLl_YBFcSN7ce6s42Oto-g.png)
+
+Es importante recalcar que:
+
+- si la factura de compra nacional incluye más de un bien/servicio al mismo/distinto tipo impositivo, en el XML la información se mostrará agrupada por tipo impositivo, dentro del nodo "DesgloseIVA/DetalleIVA"
+
+########## **Tercero (Proveedor) extranjero**
+
+########### **Caso 1 - Factura recibida de un proveedor extranjero (antes del DUA)**
+
+F&B España recibe una factura de compra de un proveedor extranjero, localizado en USA, por la adquisición de unos bienes. Todavía no se ha recibido el DUA ni la factura del transitario que realizará la importación de los bienes.
+
+En este caso, la factura del proveedor extranjero se debe registrar con la siguiente información dentro del grupo de campos "AEAT SII":
+
+- **Fecha de la operación** si es diferente a la fecha de la factura
+- **Clave tipo factura** como "Justificante Contable" (F6)
+- **Descripción SII** que corresponda
+
+Al registrar esta factura, el impuesto seleccionado será del tipo:
+
+- Importaciones 21%=0%
+
+Podemos indicar el tipo de cambio de la divisa (USD) a EUR en la factura, pestaña "Tipo de cambio", ya que todas las operaciones que se registren en SII deberán estar en euros. De no indicarse tipo de cambio en esta pestaña se tomará el tipo de cambio configurado en la ventana "Rangos de conversión" para la fecha de la factura.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F6"
+- con clave régimen especial "13" (Factura correspondiente a una importación (informada sin asociar a un DUA).)
+- e información en euros de la base imponible de la factura del proveedor extranjero.
+
+![](/assets/drive/yv6n8NS37hU1NicRu2Rw0r0TtaClew1amM4KkLpPf2jCiX6AbV1oE2XVroCIIsOOvMZRfE1phnO6hcgL_CPUyyq8bn2gUpowhkQ2WOaCotbfNO-CeFwKXv1QR-GrBsvGJctagqLNNobK8eDZMyVaQLg.png)
+
+Es importante recalcar que habiendo registrado un DUA (Caso 3 siguiente) no es necesario registrar la factura del proveedor extranjero.
+
+########### **Caso 2 - Factura de transitario (un DUA)**
+
+F&B España recibe una factura de transitario, junto con el correspondiente DUA, y referenciada a la aduana de destino de la mercancía, con posterioridad recibe la factura del proveedor extranjero.
+
+La forma de registrar en Etendo la factura de transitario que incluye el IVA de importación será la siguiente:
+
+- en la ventana "**Factura (Proveedor)**" creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo "Tercero".  
+  Introducimos en el campo "Referencia del Proveedor", el número de factura del transitario.
+- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+  - **fecha de operación**, si es distinta de la fecha factura del transitario
+  - **clave tipo factura** como "**Importación (DUA)**" (F5)
+  - seleccionamos la "**Descripción SII**" correspondiente
+- en el grupo de campos "**Import (DUA)**" introducimos:
+  - el **número de DUA**
+  - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino"
+- en la pestaña "**Líneas**" introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 500 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
+- en la pestaña "**Impuestos**" creamos una nueva línea de impuestos con el tipo de impuesto "Importaciones 21%". En el campo "Base Imponible" introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
+
+![](/assets/drive/vQSib6h0rlB988u0S84IkPdDUQWZOVwPLTHBjgTRPXDjrmWMLf4Ix0K901j0Cw-5coy52rLVU5M-Bzki63aleZoqmv2BtYqrKxpQe7qms2C8DNJLn77KoQZpoUnBBnfLrx83uf6_HzeGpa68qGnIerU.png)
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- el alta/registro del DUA con
+  - la clave tipo de factura "F5"
+  - el número de DUA que se verá reflejado en la etiqueta del XML \<sii:NumSerieFacturaEmisor>
+  - la fecha de admisión del DUA como fecha de registro contable, que se verá reflejado en la etiqueta del XML \<sii:FechaExpedicionFacturaEmisor>
+  - F&B España como "contraparte" de la operación (Importador)
+  - la clave de régimen especial 01 (Régimen General)
+  - y los importes correspondientes a la base imponible, tipo y cuota del impuesto (cuota deducible) en euros
+
+![](/assets/drive/ZJPF4ktKtyLgWY4KCQFHWYC_C5ZQJEg0t000RLzZGUTlFRCBJFL1THMSRDs_bJADn_rImCucvOFJpYvR75hrwmrNdg77Phspx5yAfSb_skBHnDhkxueRi7cUrz5nPdqn2MaBrF2_vAPkarH6n8BYtko.png)
+
+- el alta/registro de la factura del proveedor (Transitario) con
+  - la clave tipo de factura "F1"
+  - el número de referencia/factura del transitario
+  - la fecha contable de la factura del transitario como fecha de registro contable
+  - el "Transitario" como contrapartida de la operación
+  - la clave de régimen especial 01 (Régimen General)
+  - y los importes correspondientes a la base imponible, tipo y cuota del impuesto (cuota deducible) en euros, por la prestación de servicios sujeta y no exenta.
+
+![](/assets/drive/4pMaJ6g3yMj7fZotizXLbgwfpFLPziqoQOUdxahcLyupnKiZgG-VwpIhhDTTzXoSxbsx4-5NKG7CtYwDIDaVGWm_Hts8AiKdQQ4Vlv3zF4rFnWMwLJLZoPbkRCSnCa7K9gmxiqUCuO_RU1L9xcZHM8w.png)
+
+Respecto de la factura del proveedor extranjero, ésta se deberá registrar también en la ventana "Factura Proveedor", en la divisa que corresponda y, con la clave de tipo de factura "Factura" (F1).
+
+Al registrar este tipo de facturas en Etendo, el rango de impuestos utilizado será del tipo "Importaciones 21%=>0%", dado que dichas facturas de proveedor extranjero no incluyen IVA.
+
+La AEAT no obliga a dar de alta en SII este tipo de facturas de proveedor extranjero, siempre que se reciban con posterioridad al DUA correspondiente, pero es posible enviarlas, en cuyo caso se darán de alta con la siguiente información:
+
+- clave tipo de factura "F1"
+
+########### **Caso 3 - Factura de transitario (Varios DUAS)**
+
+F&B España recibe una factura de transitario, acompañada de tres DUAS que corresponden a diferentes partidas de mercancía importadas. Con posterioridad, recibe la factura del proveedor extranjero.
+
+La forma de registrar en Etendo la factura de transitario que incluye varios documentos referentes al IVA liquidado en la aduana de destino es la siguiente:
+
+- en la ventana "**Factura (Proveedor)**" creamos una nueva factura de compra, y seleccionamos el "Transitario" en el campo "Tercero".  
+  Introducimos en el campo "Referencia del Proveedor", el número de factura del transitario.
+- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+  - **fecha de operación**, si es distinta de la fecha factura del transitario
+  - **clave tipo factura** como "**Importación (DUA)**" (F5)
+  - seleccionamos la "**Descripción SII**" correspondiente
+- en este escenario no rellenamos los campos "**Import (DUA)**" de la cabecera, ya que los datos **número de DUA** y **fecha de admisión del DUA** los vamos a asociar a la línea de impuesto correspondiente al IVA liquidado en aduana.  
+  Para ello activamos el check "**Múltiple DUA**" que va a permitir introducir líneas sin haber informado los campos anteriores.
+- en la pestaña "**Lineas**" introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 700 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
+- en la pestaña "**Impuestos**" creamos tantas líneas de impuestos como DUAS, con el tipo de impuesto "Importaciones 21%" o "Importaciones 10%" con la siguiente información:
+  - en el campo "Base Imponible" introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
+  - el **número de DUA**
+  - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino"
+
+########### **Caso 4 - IVA de importación Diferido (sólo un DUA)**
+
+El diferimiento del IVA de importación permite que las empresas importadoras puedan incluir las cuotas de IVA devengadas en las importaciones en el Modelo 303 mensual de autoliquidación del IVA, como un parámetro de entrada, sin necesidad de anticipar el ingreso de dicho IVA en la aduana. La cuota de IVA se liquida en la aduana pero su pago se pospone al momento de liquidar el impuesto.
+
+Hacienda pone a disposición de las empresas importadoras un servicio de [_Agencia Tributaria: Cómo consultar el IVA importación con diferimiento de pago_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/consulta-iva-importacion.html){target="_blank"} para su liquidación en el Modelo 303 mensual correspondiente.
+
+En estos casos, no se registra factura de transitario, pero si DUA y, por tanto, el DUA, esto es la deducibilidad del IVA de importación soportado, debe registrarse en Etendo junto a la factura del proveedor extranjero de la siguiente forma:
+
+- en el grupo de campos "**AEAT SII**" introducimos la siguiente información:
+  - **fecha de operación**, si es distinta de la fecha factura del transitario
+  - **clave tipo factura** como "**Importación (DUA)**" (F5)
+  - seleccionamos la "**Descripción maestro SII**" correspondiente
+- en el grupo de campos "**Import (DUA)**" introducimos:
+  - el **número de DUA**
+  - la **fecha de admisión del DUA**, que aparece en el DUA en la sección "Control por la aduana de destino".
+- en la pestaña "**Líneas**" introducimos en euros los conceptos incluidos en la factura del proveedor extranjero relacionados con tipos impositivos del tipo "Importaciones 21%=0%".
+
+Finalmente, el usuario de forma manual, deberá realizar los cambios que se indican a continuación, en la pestaña "Impuestos":
+
+- creación de una nueva línea relacionada con el impuesto "**Importaciones 21%**", con el fin de reflejar la base imponible (casilla 47 del DUA) y, por tanto, el IVA de importación correspondiente.
+- creación de una nueva línea relacionada con el impuesto "**Importaciones 21%=0%**", con una base imponible y cuota negativa del mismo importe que la anterior, para evitar duplicar la base imponible.
+
+Hay que tener en cuenta que el importe del DUA vendrá indicado en euros. No es posible mezclar líneas en diferentes divisas en la misma factura, por lo que al introducir la factura de proveedor extranjero junto al DUA deberá existir una única divisa en euros.
+
+![](/assets/drive/hQRaZcDRImXLJ1uxBUsDD45E2fdO1ljdl_vdmoJYdQ3zxWNLNCDwiU6Nl2mXF2XA92JGyxnwkfXlOuiK9uIEv0pjGxeQF1d_jzYdZTsoreulXX2HU3ExUFsjQQE7l2td1kyuZEfOZ5LLB7nOblD44Fg.png)
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá únicamente la información de la parte correspondiente al DUA con la siguiente estructura:
+
+![](/assets/drive/41ktdG4IiR4yFuhrvP8jBdJPBedtzT2ibeHHHiiznkxlcR7S9cV2ZEqEbz42RLvmRO7QUkOKEJSz2D0QBGGdR_DAAwX4DtZUateDK6RV-PUIn_kcGyfdlI9t6m2jQsbfXcF0KOHytWPSLapBl_-yh_E.png)
+
+_Al introducir la línea de impuestos del tipo "Importaciones 21" referido al IVA de importación soportado, no hay que volver a introducir esta línea en la factura del transitario si en su caso la hubiera._
+
+_En tal caso, al registrar la factura del transitario independientemente sólo habría que indicar las líneas correspondientes a dicha factura indicando como Clave tipo factura = Factura (F1)_
+
+########## **Tercero (Proveedor) Intracomunitario**
+
+Factura recibida por una adquisición intracomunitaria de bienes y servicios.
+
+La empresa F&B España compra una partida de mercancía de un país comunitario.
+
+Dicha compra incluye también la prestación de un servicio que presta el mismo proveedor intracomunitario. Dicho servicio se localiza en TAI (Territorio de aplicación del impuesto).
+
+La empresa F&B España recibe la factura de fecha 27-11-2017, con fecha 30-11-2017, registrando dicha operación contablemente ese mismo día. La operación se realizó con fecha 15-10-2017.
+
+En este caso al ser la fecha contable de la factura posterior al 16-11-2017, habiéndose realizado ésta en octubre, se incluirá en el Modelo 303 de noviembre.
+
+La fecha límite de registro y envío al SII es el 14 de diciembre, contando a partir del registro contable de la factura (30-11-2017) y teniendo en cuenta los festivos nacionales (6 y 8 de diciembre).
+
+Al registrar esta factura en Etendo, los tipos de impuestos que se seleccionan por defecto serán del tipo:
+
+- Adquisiciones intracomunitarias 21% (para la adquisición de la mercancía)
+- Inversión Sujeto Pasivo UE 21% (para la prestación del servicio y localización del mismo en España).
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "09" (Adquisiciones Intracomunitarias de bienes y prestaciones de servicios)
+
+![](/assets/drive/mMuCVKFYyjCifvhuXcjK52_gRt7sDUvQu_W3ZOzNLJ_zm12hQcpGkPR4j1PSFUkeZiGGL2YdbtiiGZHYX-g63Wa8O0w275WkSQaoHvu5nt3ykRCXDw876iQBgNdTCtMJulXfB2J3WrmNFsuck8I74UI.png)
+
+Es importante recalcar que:
+
+- si la factura de compra intracomunitaria incluye más de un bien al mismo/distinto tipo impositivo, en el XML la información se mostrará agrupada por tipo impositivo, dentro del nodo "DesgloseIVA/DetalleIVA"
+- si la factura de compra intracomunitaria incluye más de un servicio al mismo/distingo tipo impositivo, en el XML la información se mostrará agrupada por tipo impositivo, dentro del nodo "InversiónSujetoPasivo/DetalleIVA"
+
+########## **Organización/Operación acogida al RECC**
+
+F&B España se encuentra acogida al régimen especial de criterio de caja, o bien se ve afectada por este régimen al recibir facturas de compra de algún proveedor nacional acogido al criterio de caja.
+
+Al registrar este tipo de factura de compra en Etendo, los tipos de impuestos que se selecciona por defecto serán del tipo:
+
+- Adquisiciones IVA 10% IVA de Caja.
+- Prestación servicios nacional 21% IVA de Caja.
+
+Al igual que en las facturas de venta con IVA de Caja, la información de estas operaciones se suministrará en los plazos generales como si a las mismas no les hubiera sido de aplicación el régimen especial.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "07" (Régimen especial del criterio de caja)
+
+![](/assets/drive/mO8mH-cFpIjIEhf7x8OIEFtgg6cbSDoi6Bma3vizcThfAP1A4BFdemNNaydfBiIG2WQkpsNn83DjhVPR5bqoAsDkk0sG6fqOpuvGn3KMcgyvVjq_DtdjZVdVOxAuWLzq3UfxQbIy794DJKj219pOy6M.png)
+
+Es importante recalcar que:
+
+- si la factura de compra nacional incluye más de un bien/servicio al mismo/distinto tipo impositivo de IVA de Caja, en el XML la información se mostrará agrupada por tipo impositivo, dentro del nodo "DesgloseIVA/DetalleIVA"
+
+########## **Pagos de facturas en RECC**
+
+Los pagos totales o parciales de facturas en RECC deben darse de alta en SII en el momento de producirse.
+
+Desde la ventana "Monitor SII" podemos filtrar por el número de pago y proceder a su envío a SII.
+
+Una vez dado de alta en SII, el XML generado informa de los siguientes datos del pago, referenciados al número de la factura de compra:
+
+- **Fecha**
+- **Importe**
+- **Medio**
+
+![](/assets/drive/pTf6aP4P4yYSU7eESj_WiuFr1XYE_4hk8WEz5XcZ6g8pe7TApPwnYGTNX201Hfibrhyjd09RryZ8HEAJp0kROlrZP-88pas8JvfcfbY6wHWI-I8H0gOWndeLzJf9r23nigKinsyKyPNVnc3ew_RAUyA.png)
+
+El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
+
+**Anulación de pagos**
+
+En el caso de los libros registro de pagos en RECC no se utilizará el tipo de comunicación A1 de "Modificación de facturas/registros por error registral".
+
+La modificación de un pago en RECC ya dado de alta en SII se efectuará enviando el pago que se pretende anular en negativo.
+
+Lo anterior implica que en Etendo, al igual que se ha explicado para los cobros en RECC, no podremos reactivar un pago en RECC dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago".
+
+Al revertir el pago, Etendo genera un nuevo pago por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
+
+El XML generado contendrá la siguiente información:
+
+- el importe de pago negativo
+- referencia a la factura original del proveedor.
+
+![](/assets/drive/y6EpMi-6Kruil15GnhETYhDk_slSzWNJ9PON68Q7NnT5k1DkUiqK7izhcAOMC7Hrg5bpI3V2elPMiHTUhsCNIYVca7tBMjhr6Uytqd_Bt9Wa6_JEtOfigV6nZjbIU4rknuZoYjqOXuk1Bg_X0RSSioI.png)
+
+**Facturas en RECC no pagadas en el año natural** (en desarrollo).
+
+Como parte de la funcionalidad del RECC, Etendo permite la "liquidación manual del IVA de Caja" para aquellas facturas en RECC que no fuesen pagadas total o parcialmente antes del 31 de diciembre del año posterior al año de su expedición, produciéndose así el devengo del impuesto.
+
+Por tanto, las facturas en RECC de fecha 2017 que no estén pagadas a 31-12-2018, tendrán que enviarse a SII en dicha fecha, y con la siguiente información:
+
+- **Fecha** (de pago) = 31-12-2018 (fecha de la liquidación manual del IVA)
+- **Importe** = importe pendiente de pago de la factura
+- **Medio** = 03 (No se cobra/No se paga)
+
+Desde la ventana de "Liquidación manual del IVA de Caja" será posible enviar estas liquidaciones manuales a SII, con fecha 31 de diciembre del año posterior al año de su expedición (devengo del impuesto).
+
+########## **Compensaciones en las adquisiciones a personas acogidas al REAGYP**
+
+Cuando se realicen operaciones por las que se satisfacen compensaciones agrarias del REAGYP se utilizarán impuestos específicos que por su naturaleza estarán configurados como REAGYP = SI.
+
+Este tipo de impuestos de compensación agraria, están relacionados con las siguientes categorías de impuestos de terceros:
+
+- Régimen Especial Agrario sobre "bruto" (IVA Incl.) (12%)
+- Régimen Especial Agrario sobre base imponible (12%)
+- Régimen Especial Agrario sobre base imponible (10,5%)
+
+Al registrar este tipo de factura de compra en Etendo, en función del Tercero (Proveedor) seleccionado y su categoría de impuestos de tercero, los tipos de impuestos aplicables serán los siguientes:
+
+- "Compensación REAGYP 12% -2%R (sobre bruto) SR", al calcularse el importe de la retención en el importe bruto, incluida la compensación.
+- "Compensación REAGYP 12% -2%R (sobre BI) SR", al calcularse el importe de la retención directamente sobre la base imponible
+- "Compensación REAGYP 10.5% -2%R (sobre BI) SR", al calcularse el importe de la retención directamente sobre la base imponible
+
+F&B España S.A. compra una partida de mercancía a un proveedor nacional con un porcentaje de compensación del 12%. La compra se efectúa el 4 de septiembre, fecha en la que se expide la factura, recibiendo la misma cuatro días más tarde, el día 8. La empresa procede a su registro contable el día 11 de septiembre.
+
+- Fecha de Operación: 4 de septiembre de 2017
+- Fecha expedición de factura de venta: 4 de septiembre de 2017
+- Fecha factura de compra: 4 de septiembre de 2017
+- Fecha registro contable: 11 de septiembre
+- Fecha límite de alta en SII: El plazo para emitir el registro es el 21 de septiembre, 8 días naturales desde la fecha del registro contable.
+
+Además, este tipo de operación debe marcarse como una factura Tipo Justificante contable "F6".
+
+Una vez completada la factura, se procede a su Alta en SII, de forma manual o automática.
+
+![](/assets/drive/wud2a7NpPuk_Q-UxAlIHJUjblYTHj5NyUT8K2j5mhNIWHEbsLzYEK98yd8peDWvhmzXgTRss4hXNpJqe3TcWWx0MySWmd2M6VcZMcCioQnWVYOUrVQyNGuLTtm0fPBa9dJ9nalvW2oBwWPH6CEbYT38.png)
+
+El XML de alta en SII contiene la siguiente información específica de este tipo de operación:
+
+- Tipo de Factura "F6" (Justificante contable)
+- Clave régimen especial "02" (Operaciones sujetas a REAGYP)
+- Porcentaje Compensación REAGYP
+- Importe compensación REAGYP
+
+Consignará como **Base Imponible** la base sobre la que se calcula la compensación; como **Importe total** de la factura asignará el importe total de la contraprestación.
+
+Al no ser un impuesto de IVA, los campos _tipo impositivo_ y _cuota soportada_ no se informarán.
+
+![](/assets/drive/Aq-l5YH6S7ULiAFSK3xuSLR-ILBVh9mf-5nulQEGy7OQ9eAsi33K7Op31vjxp_QgXSe-zzjJkqVpWTslEHmMwTioPISRFsNrGcMRQUS4PKGUdr6Or8EcKZ30aavNtKW6BvRk3ncCf6BTZ2p_A7DdUaA.png)
+
+En este régimen, podría producirse "autofacturación", es decir el receptor de la operación realiza la emisión de la factura en nombre del proveedor.
+
+Para esos casos se ha creado el check "**Autofactura**" en el grupo de campos "AEAT SII" de la cabecera de las facturas de compra, que permite que el "Nº de Documento" de factura de Etendo se traslade al campo "Referencia de proveedor", tal y como se muestra en la imagen adjunta:
+
+![](/assets/drive/kVdQsySjrBFfrCYtwfJcPCfQMeNJBmZnZJTnnuVdNPZbq5xZ1_7wpSwMcu8xqeJUCs6ctB1MmFhRPWVpZQwxA2C53rni_TYzg8NvsYv_CvI9C4mS0Ie17IGB8YIn5EPls_HN11zCuvtSDvfvlKTIVEs.png)
+
+########## **Operación de compra sujeta a IPSI/IGIC**
+
+F&B España S.A. compra una partida de mercancía en Canarias a un proveedor localizado en Canarias:
+
+- La mercancía no se transporta a TAI, se queda en Canarias
+- además la operación de compra incluye la prestación de un servicio que se localiza en Canarias y que por tanto también está sujeta a IGIC.
+
+La compra y prestación del servicio se efectúa el día 15 de julio, con esa misma fecha se expide la factura, recibiendo la factura el día 26 de julio. La empresa procede a su registro contable el día 2 de agosto.
+
+- Fecha de Operación: 15 de julio de 2017
+- Fecha expedición de la factura de venta: 15 de julio de 2017
+- Fecha factura de compra : 15 de julio de 2017
+- Fecha Contable: 2 de agosto de 2017
+- Fecha límite de alta en SII: El plazo para emitir el registro es el 14 de agosto, contando 8 días naturales desde la fecha del registro contable.
+
+Al registrar este tipo de factura de compra en Etendo, los tipos de impuestos que se deberán seleccionar serán del tipo:
+
+- Adquisiciones IGIC 9.5%
+- Prestación servicios en Canarias 9.5%
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave régimen especial "08" (Operaciones sujetas al IPSI / IGIC)
+
+![](/assets/drive/4Uai4_Y5oJDKR3tpXAPMEsJbk-D7Dd7z6tNf8OppThhAN-RpmxWBPqy24eVOrsRymKC-gG7dqkPr9Q7L0BlLiCvUvxuqRR-aqNVdGrtcg4ZXmCb4W-GTLLiLbLeaASfDoYu8DpMGkP44lSGmPTT7KPY.png)
+
+Es importante recalcar que:
+
+- si la factura de compra incluye más de un bien/servicio al mismo/distinto tipo de IGIC, en el XML la información se mostrará agrupada por tipo impositivo, dentro del nodo "DesgloseIVA/DetalleIVA"
+
+########## **Arrendamiento de local de negocio**
+
+El arrendatario del local de negocio se limitará a registrar la factura recibida por el arrendamiento en Etendo.
+
+Incluya o no retención el arrendamiento, la factura se deberá dar de alta con la clave de régimen especial 12.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave 12 (Operaciones de arrendamiento de local de negocio.)
+
+![](/assets/drive/qTvK0Nls1j9WXhnmg_GjDdVSJ3f1SoSM2ZQ4HDVfH2PJxTHz1RbsB1-SVuGGtT7lsMY0uYAwxZwqYl4TXTpqYE-JqZp8YVnZRpp4i2wH39PvRWoCi5OvgM9XfH7jHAis1XGEejjA7EqIwaNeZG30-zI.png)
+
+!!! info
+    Si una factura de arrendamiento está sujeta al régimen especial del criterio de caja, prevalecerá la clave 07 de Operación Sujeta a RECC.
+
+########## **Gastos de personal no declarables**
+
+En el caso del registro de facturas de compra a empleados de la organización, por gastos de personal tales como dietas, se debe tener en cuenta lo siguiente:
+
+- los empleados de la organización que incurran en gastos a reembolsar, tienen que tener la categoría de impuestos de tercero “No declarable SII” asociada.
+- los gastos (productos de tipo “Gasto”) tienen que estar relacionados con el grupo de impuesto “No Sujeto Servicios”
+
+en ese caso, las facturas de compra creadas en la organización para el reembolso de gastos a dichos empleados, se crearán con el rango de impuesto “No declarable gastos de empleado".
+
+El registro de estas facturas de compra no se enviarán a SII, en ningún caso.
+
+Una vez completada, si intenta enviar dichas facturas a SII se obtendrá el siguiente error:
+
+![](/assets/drive/_50ZEl68hydwoSJZ27J5MrhxojDwPXnaTWRNM9OWNzJmoTTVcZBYBS70S5U82w9QE3Ln8r9EGQ_WXOeyV1mNNwRXp0Ym2gZIsgph7RVck2vAedl5DiyWn826OZtexzPRKEErqUuE6jwnd0x54Ybc604.png)
+
+########## **Inversión del Sujeto Pasivo**
+
+**Caso 1 = Inversión Sujeto Pasivo - Proveedor Extranjero**
+
+La empresa F&B España adquiere de un proveedor extranjero una prestación de servicios que se localiza en TAI. Este proveedor se encuentra localizado en USA y tiene asociada una tarifa de precios en dólares.
+
+Al registrar esta factura de compra los impuestos utilizados serán del tipo:
+
+- Inversión Sujeto Pasivo no UE 21%.
+
+El importe de la operación en dólares es de 500.00 USD, con un contravalor en EUR de 446.62, ya que:
+
+- será posible utilizar el tipo de conversión según la fecha de factura configurado a nivel de sistema en la ventana "Rangos de conversión"
+- o bien, el "Tipo de cambio" introducido en la propia factura de compra.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave regimen especial "01" (Régimen General)
+- con información en "EUR" de la base imponible, tipo impositivo y cuota del impuesto dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
+
+![](/assets/drive/hrEpwYN4FiCksO7FAiQzwIZ39yOlBukNGoPtMKYvmdpGF5IXO1D_urMrMfXKD0t8aCcJlw8KCHM5J6q1gV3Ug9Y0L_e5M16s2AVszoG0iK1jOvBmI29xB45RE56Ce3d-LIK9NwdVgQT9WAoH6AxssRE.png)
+
+Es importante recalcar que si este tipo de facturas incluyen más de un tipo impositivo igual/diferente respecto de la prestación del servicio, se agrupará por tipo impositivo dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
+
+**Caso 2 = Inversión Sujeto Pasivo - Proveedor Nacional**
+
+F&B España recibe una factura de otro empresario que emite su factura sin IVA por producirse dicha operación bajo la figura fiscal de "Inversión del Sujeto Pasivo", de modo que F&B España registra dicha operación a través de una factura de compra con Inversión del Sujeto Pasivo.
+
+Al registrar esta factura de compra los impuestos utilizados serán del tipo:
+
+- Inversión Sujeto Pasivo nacional 21%.
+
+Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
+
+El XML de alta en SII contendrá la siguiente información:
+
+- un tipo de Factura "F1"
+- con clave regimen especial "01" (Régimen General)
+- con información de la base imponible, tipo impositivo y cuota del impuesto dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
+
+![](/assets/drive/3da4kENkcjtstpllmIbdw0WajedAkdQIXOaDaagog0swox0L6wRRShSz49ALoQUizqHVOHueaLugaUmJMsC0uIrFnHxVM4uKal40DBmzs143qQSoZ0iiWf-6KfE8-68P6bM1u2P9K07zORWCNzsUwxA.png)
+
+########## **Factura recibida con fecha contable anterior al 01-07-2017**
+
+Respecto de las facturas recibidas antes del día 01-07-2017, existe también la obligación de su alta en SII, pero con un esquema XML con las siguientes particularidades:
+
+- **Clave de régimen especial** = 14 (Primer semestre 2017).
+- **Descripción de la operación**: “Registro del Primer semestre 2017”.
+
+Y, en el caso de las facturas recibidas:
+
+- la "**Fecha registro contable**" será la fecha del envío o alta en SII
+- y la "**Cuota deducible**" se fija a 0.00
+
+Lo anterior aplica excepto para sujetos pasivos en REDEME que ya las habrán enviado en el Modelo 340 correspondiente.
+
+En Etendo, al dar de alta en SII una factura recibida con fecha anterior al 01-07-2017, comprobaremos que el esquema XML es del tipo siguiente:
+
+![](/assets/drive/zt8vxem5cYRQdfY3JQx8syUeoOnxML5LP-obvW0mPL9cfBSER1CL7cMmMUwuWdC33x9F4qsfeI56hCUmnkXN0Y2q-N-tDqAFQD8kp-6U5EVa3vhdokk9P9cckJmUv2D9STo_Orr-eejl2_5Yb8ZcViw.png)
+
+En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
+
+Este proceso se denomina "**Proceso de adaptación a SII de Facturas de Compra del primer semestre de 2017**" y configura dichas facturas con:
+
+- la clave tipo factura **"Factura" = "F1"**, en el caso de facturas de compra positivas y negativas
+- o **"Importación (DUA)" = "F5"**, en el caso de facturas de compra que incluyan un impuesto del tipo "Importaciones", en la pestaña "Impuestos".  
+  En estos casos el usuario final tendrá que informar los campos "**DUA**" y "**Fecha DUA**", antes de dar de alta en SII dichas facturas.
+- añade la descripción tipo "**Registro del Primer semestre**"
+- e indica como "**Fecha de operación**" la fecha de la factura tal y como requiere la AEAT.  
+  El usuario siempre podrá revisar la configuración otorgada a dichas facturas antes de darlas de alta en SII
+
+Al dar de alta en SII la factura de compra del primer semestre ya adaptada por el proceso, se informará el campo "**Fecha registro contable**" con la fecha de alta en SII.
+
+La ventana "Monitor SII" incluye también una pestaña "Facturas de Compra Primer Semestre 2017" desde dónde se pueden gestionar estás facturas, una vez configuradas de forma correcta por el proceso.
+
+########## **Factura recibida con IVA soportado no deducible**
+
+Etendo permite la configuración de impuestos de compra no deducibles, tal y como se muestra en la siguiente imagen.
+
+![](/assets/drive/Qu8LkkDz0cuEFwv-abefDr6gMz7pBewViFk3FdE9eOSzKvZAwucoYjgDvD4zckjxG--t75cmEUxloTFi8SDuureO55V5W1XY9Xbdc3EE0TKG4LW87ZOM3DZ_Rzq7ZJXozBXIRVNwNyBAL8la_J4LTJU.png)
+
+Las facturas de compra que incluyan ese tipo de impuestos, tendrán que darse de alta en SII, tal y como se describe a continuación:
+
+- en la etiqueta "Cuota Soportada", se refleja la cuota soportada
+- y en la etiqueta "Cuota Deducible'', se refleja un "0".
+
+![](/assets/drive/gpb9xZr8kbpoaTim4gGCbBGzKjz393sov8TOW8yBBqIMYfJ-4-vO9ZjaIBP6PDtFc5YiYJd8sDYupg4PeWM0dHltwqIczfMO_XxzbsCPXD-IJLEYZPyN850pc7lbBaeFBGnfZgtGEtysZ28nPehDpt8.png)
+
+En el caso de impuestos que incluyan parte deducible y parte no deducible, la información a enviar será tal y como se muestra en la siguiente imagen:
+
+- en la etiqueta "Cuota Soportada", se refleja la cuota soportada
+- y en la etiqueta "Cuota Deducible'', se refleja el importe de esa cuota que sea deducible.
+
+![](/assets/drive/itUfZLKo8uBuD5Cv1_2yx5gKK7-0cSLb0MbxoEccSV_OAov_gQtTJL7Q69Inaw8SJm-moaZwoa-N2nqPwxe4SHtAQyEGu4rT5eQbemFSyUzWWYNEMzkDxRzD-nGiBFw0dhNQB1sSZKAPYyShYSA1a1k.png)
+
+######### **Informes de comprobación SII (Consultas)**
+
+Desde la ventana “**Consulta Facturas SII**” es posible establecer una comunicación inmediata con la AEAT. En esta comunicación, la AEAT proporciona un listado informativo de las facturas emitidas y recibidas en SII con estado “Correcto”.
+
+Esta información es básica para poder conocer el proceso de contraste de los LFRE y LFRR.
+
+![](/assets/drive/7ntfirTf-NO6P8Tp-1jGiD2XKOkzSe-CanqYwZTIHgjMZ_d4oROIuvLTrf6suQ3pF50VOpJjyJoDs1Mpwxty4lBUkRL7F80m9ilSnh_Axoiv744HoOe-H2_4K7U9PenR41VVk0X-SdFZ5_a06wb7M70.png)
+
+Seleccionando la organización que va a ser objeto de consulta, accedemos a través de “Nueva Consulta Facturas a SII” a una ventana emergente en la que filtraremos por diferentes criterios para obtener la correspondiente relación de facturas.
+
+Los diferentes criterios que se pueden aplicar para seleccionar la información a consultar a la AEAT, son los siguientes:
+
+- **Libro de facturas**
+  - Emitidas
+  - Recibidas
+- **Ejercicio**: carácter anual.
+- **Periodo**: carácter mensual.  
+  Este periodo se refiere a la fecha de emisión de la factura.
+- **Fecha presentación (desde)**
+- **Fecha presentación (hasta)**
+- **Estado de cuadre SII**: Una vez validado el envío de facturas presentado, de forma casi inmediata se procede a ejecutar el proceso de contraste, cuyo primer paso es tipificar la factura como contrastable o no:
+  - **No contrastable**: implica que nunca va a ser contrastada. Esta circunstancia se va a producir cuando el emisor o receptor no está en el sistema SII. En estos supuestos no se va a disponer en el sistema de posibilidad de contrastar esa información. Si la factura no resulta contrastable, la factura permanece en el estado “No contrastable” y no se intenta su cuadre. Ejemplos: las facturas simplificadas o las facturas cuya contraparte no aplica el SII.
+  - **Contrastable**: comprobada la posibilidad de efectuar el contraste, se procede a determinar si esa información de registro remitida por una parte ha sido remitida por la contraparte. Los estados resultantes pueden ser:
+  - **No contrastada**: No está la factura de la contraparte dada de alta en SII.
+
+Si no se localiza la factura queda en estado de **no contrastada.**
+
+Si la factura se localiza en el sistema, se ejecuta un proceso adicional para contrastar la información contenida en ambos registros remitidos por las partes:
+
+- Si coinciden los criterios de contraste que se determinen, se considera **Contrastada**.
+- Si no coinciden todos ellos será **parcialmente contrastada**. En este último caso, se proporcionará al contribuyente los resultados de contraste no coincidentes para su revisión.
+
+Para poder efectuar la consulta, será obligatorio completar los campos: _Libro de facturas, ejercicio y periodo_.
+
+Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana "Consultas Facturas SII"
+
+![](/assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
+
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva){target='_blank'}
+---
+
+---
+###### Modelo 303
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat303.es <br>
+
+######## **Introducción**
+
+El presente manual de usuario explica el contenido y funcionamiento del nuevo módulo comercial de Etendo, **"Modelo AEAT303"**, compatible con Etendo 21.4 o versiones posteriores. Este módulo forma parte del bundle de Localización española, al igual que todas las dependencias relacionadas.
+
+######## **Descripción del Módulo**
+
+El módulo Modelo AEAT303 - Impuesto sobre el Valor Añadido - Autoliquidación, permite a las empresas cumplir con sus obligaciones fiscales de "Autoliquidación de IVA" como diferencia entre el IVA Devengado y el IVA Deducible, a través de la presentación del Modelo 303 como un fichero de texto válido conforme a los requerimientos establecidos por la Agencia Tributaria española (Orden EHA/3786/2008).
+
+La estructura válida del fichero se puede encontrar en el siguiente link de la AEAT: [](http://www.aeat.es/AEAT/Contenidos_Comunes/La_Agencia_Tributaria/Ayuda/Disenyos_de_registro/Ayudas/Trimestrales_Mensuales/303_2009.pdf)[_Modelo 303 - Fichero_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-303/presentacion-electronica-modelo-303-fichero.html){target="_blank"}.
+
+El fichero del modelo 303 contiene la siguiente información:
+
+-   **Información genérica**
+    -   NIF
+    -   Apellidos o Razón Social - Nombre
+    -   Ejercicio
+    -   Periodo
+-   **IVA devengado** (IVA repercutido en ventas), incluyendo:
+    -   IVA devengado conforme al régimen general - Base, Cuota y Tipo
+    -   IVA devengado conforme al régimen especial de recargo de equivalencia, especificado por tipo de IVA - Base, Cuota y Tipo
+    -   IVA devengado en las adquisiciones intracomunitarias de bienes- Base y Cuota
+-   **IVA Deducible** (IVA soportado en compras), incluyendo:
+    -   operaciones interiores de bienes y servicios - Base y Cuota
+    -   operaciones interiores de bienes de inversión - Base y Cuota
+    -   importaciones de bienes - Base y Cuota
+    -   importaciones de bienes de inversión - Base y Cuota
+    -   adquisiciones intracomunitarias de bienes - Base y Cuota
+    -   adquisiciones intracomunitarias de bienes de inversión - Base y Cuota
+    -   regularizaciones
+-   **Diferencia** - Resultado de la liquidación como diferencia del IVA devengado - IVA soportado deducible, incluyendo otras operaciones tales como:
+    -   entregas intracomunitarias de bienes - Base
+    -   exportaciones - Base
+    -   operaciones no sujetas o de inversión de sujeto pasivo - Base
+-   **Datos bancarios y otros.**
+
+Dicho fichero se genera en Etendo desde el Generador de declaraciones de impuestos que se encuentra en la ruta de aplicación: "Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos"
+
+El fichero se puede:
+
+1.  **pre-validar** en la pagina wed de la AEAT, en el siguiente link: [**_Formulario del 303 para su presentación (predeclaración)_**](https://www2.agenciatributaria.gob.es/es13/h/ie93030b.html){target="_blank"}.
+2.  y, posteriormente **presentar** en el siguiente link de la AEAT: [**_Presentación del Modelo_**_._](https://www2.agenciatributaria.gob.es/es13/h/ie93030a.html){target="_blank"}.
+
+La autoliquidación de IVA puede ser:
+
+-   "**A ingresar**" (casilla 48>0), en el caso de que el IVA Devengado > IVA deducible. El IVA a ingresar se reflejará en la casilla \[I\], posición 860.
+-   "**A compensar**" (casilla 48<0), en el caso de que el IVA Devengado < IVA deducible. El IVA a compensar se reflejará en la casilla \[49\], posición 804.
+-   "**A devolver**" (casilla 48<0 e inscripción en el Registro de devolución mensual), en el caso de que el IVA Devengado < IVA deducible. El IVA a devolver se reflejará en la casilla \[50\], posición 822.
+-   "**Cero**" o "**Sin actividad**" (casilla 48=0).
+
+######## **Presentación del Modelo 303**
+
+Los obligados a presentar el modelo 303 son:
+
+-   Los sujetos pasivos que realicen actividades a las que aplique el Régimen General del Impuesto (IVA) o cualquier otro de los regímenes del mismo, a excepción del Régimen especial de agricultura, ganadería y pesca, del Régimen de recargo de equivalencia y del Régimen Simplificado.
+
+La presentación del modelo 303 puede ser Mensual o Trimestral.
+
+La presentación será obligatoria por vía telemática (fichero de texto válido) para los sujetos pasivos que:
+
+-   tengan forma jurídica de sociedad anónima o sociedad de responsabilidad limitada
+-   y/o estén inscritos en el "Régimen de devolución mensual".
+
+######### **Novedades a partir del 1 de julio de 2010**
+
+**MODIFICACIÓN TIPOS IMPOSITIVOS IVA**
+
+La Ley 26/2009 de Presupuestos Generales del Estado para 2010, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de julio, de forma que el tipo general pasa del 16% al 18% y el tipo reducido pasa del 7% al 8%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4% y con los tipos del recargo de equivalencia.
+
+**Cumplimentación de declaraciones**
+
+En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde julio de 2010 (correspondientes al mes 07 ó al 3T) , se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos (18%, 8%) junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de junio (7% ó 16%).
+
+En estos supuestos deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
+
+En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
+
+En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2010 o a los meses 01 a 06 de 2010 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos del 18% ó 8%.
+
+!!! info
+    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+
+
+######### **Novedades a partir del 1 de septiembre de 2012**
+
+**MODIFICACIÓN TIPOS IMPOSITIVOS IVA Y RECARGO DE EQUIVALENCIA**
+
+El Real Decreto Ley 20/2012 de medidas para garantizar la estabilidad presupuestaria y de fomento de la competitividad, modificó los tipos general y reducido del Impuesto sobre el Valor Añadido con efectos a partir del 1 de septiembre, de forma que el tipo general pasa del 18% al 21% y el tipo reducido pasa del 8% al 10%, sin que se haya producido alteración alguna en relación con el tipo superreducido del 4%. Igualmente, los tipos de recargo de equivalencia pasan del 4% al 5,2% y del 1% al 1,4%.
+
+**Cumplimentación de declaraciones**
+
+En las autoliquidaciones de IVA, modelo 303, correspondientes a los períodos iniciados desde septiembre de 2012 (correspondientes al mes 09 ó al 3T), se puede dar la situación de que en un mismo período de liquidación hayan de reflejarse operaciones gravadas según los nuevos tipos impositivos junto con otras devengadas en períodos anteriores y a las que les sean de aplicación los tipos vigentes hasta el 30 de agosto.
+
+En estos supuestos, deberá consignarse en las casillas correspondientes la suma algebraica de las bases imponibles. De igual forma se procederá con las casillas correspondientes a las cuotas devengadas.
+
+En cuanto a las casillas relativas a los tipos impositivos, se consignará el tipo resultante del cociente entre la cuota y la base imponible declarada, cualquiera que sea el resultado y si este cociente no da un número entero, se hará constar los dos primeros decimales del número resultante.
+
+En las autoliquidaciones modelo 303 correspondientes al 1T ó 2T de 2012 o a los meses 01 a 08 de 2012 no se puedan consignar bases ni cuotas a los nuevos tipos impositivos.
+
+!!! info
+    Los cambios expuestos en esta sección, implican una modificación del contenido de los datos de referencia del módulo.
+
+
+######## **Instalación y aplicación del módulo**
+
+######### **Instalación**
+
+!!! info
+    Para la instalación del módulo **“AEAT - Modelo 303”** visite [Marketpace](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+
+######### **Aplicación del módulo**
+
+El módulo del Modelo 303 incluye unos datos de referencia que relaciona los tipos/rangos de impuestos para España con los parámetros del 303, por tanto:
+
+-   Una vez insalado el módulo, los datos de referencia deben aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación: Configuración General || Organización || Gestión del módulo de Empresa.
+
+![](/assets/drive/EhxTBUvs6RBHj5qryz08lOpzAmCekUOmboNjz-E3OUuIK92wRMMzhOul3GuQ1hHMAutQbKIBKSi4NRQ0lPVDxWALgH4Fzsmc47MYlVJZZAOHS5giW468E6SMHsBjt2vqa8pn93TEZUBvHqiUId8oegI.png)
+
+######## **Contenido del módulo**
+
+Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
+
+-   Se han creado dos nuevos informes, el modelo 303 mensual y el trimestral para la organización/es en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](/assets/drive/MAZZa2VuPorWEk1BAyrZHON1lh2tNqdkQna7BJhsI0E5g4R9ML0BrK9Xvpicq7ZG4xqlzAMn_0JEJBOskqgZvemex1fqHA8u9dvn6XT1190PDLTHuuzsunhwnbZ9PeooUmrqd6oiKCt-fI-J7ONuNsU.png)
+
+-   La pestaña "Sección de Impuestos" contiene la definición de toda la información que se va a incluir en el modelo 303 y, por tanto, en el fichero del 303 que se generará desde la ventana "Generador de Declaraciones de Impuestos". De todas estas secciones cabe destacar las secciones "IVA Devengado", "IVA Deducible" y "Diferencia".  
+    Por ejemplo, la sección "IVA Devengado" incluye los parámetros siguientes en la pestaña "Parámetro de declaración":
+    -   IVA Devengado - Régimen Ordinario
+    -   IVA Devengado - Recargo de Equivalencia
+    -   IVA Devengado - Adquisiciones Intracomunitarias
+
+Estos parámetros se ligan a los tipos de impuestos en función de que las operaciones ligadas a ellos deban declararse, por ejemplo, como parte del IVA Devengado en Régimen Ordinario o bien como parte del IVA Devengado por Recargo de Equivalencia.
+
+![](/assets/drive/zC4megIrlvdoyIVRkdw2ET8DrB6IV8rIcxQMRlZH4qJAHIO8TFlmif7eUuqb6NRoM6vvzm1mP5BLwsBOKFLQhDOLPbloFfYy6AVDe9p820rJKJem-Jy9UIlCzCafEWf15srFfJUOfrBR9fm5GSiUVsg.png)
+
+-   Por tanto, los rangos de impuestos se han asociado al correspondiente parámetro del 303, con el fin de que las transacciones completadas y contabilizadas ligadas a dichos impuestos, se tenga en cuenta en una u otra casilla/posición del fichero.  
+     
+
+![](/assets/drive/Vxz9LkuESteDKaeIzQmhO9gu10wFqL8QU579ZxLacwnA5WlhWtA-wkXgQvBfe7ZJCX6ksbd4XfoRk4U7sKTbnAQAWBbTgFBYJau2aJstONlCeoFElqPArRuDIf_dGIaD50o6yGJkxowqixFQAJ18Beo.png)
+
+-   Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 303, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](/assets/drive/612TP0yYxrPiuET6z7IkyF40fr5KGP6XC5cxCTbrK5eg6K1Im1xh_XYc3PzLVeMApJERGkm_9QHTuvuTl4slrb_t8TktOSrtNeisdNQcSpzodyq9c8wptIpFshledbtdup6U7-Kmw5FiEvBYOvfqsDI.png)
+
+######## **Configuración**
+
+######### **Configuración de impuestos / IVA**
+
+El usuario deberá navegar a la ruta de aplicación: "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado:
+
+-   primero el módulo de impuestos si no está aplicado previamente y a nivel (\*)
+-   y después el módulo del 303 a nivel Organización Legal con contabilidad
+
+######### **Configuración del modelo 303**
+
+La configuración del modelo 303 se instala por defecto y se puede comprobar en la ruta de aplicación: Gestión Financiera//Contabilidad//Configuración//Declaración de Impuestos.
+
+Tanto para el modelo 303 mensual como trimestral en la pestaña "Sección de declaración" se han creado 11 secciones, una por cada grupo de información a incluir a la hora de generar el fichero del Modelo 303:
+
+![](/assets/drive/5e_DW0KWWXZ8E1fET-mk_Y2oq6YGls8fZL-zmAGlO8wzUqgFH0zKq0ir2QP6CK-SOWttp263yE5VKCjPLKuz5ubn63i8nzztWYzLioqT1Ar_RTn9zlNOCtG9T5CRG2wD0fzJpACMuAA7-vycnuQo390.png)
+
+-   **Fichero**
+    -   Esta sección contiene un parámetro de tipo "Entrada", para que el usuario pueda introducir el nombre del fichero 303 al generarlo.
+-   **Tipo de declaración**
+    -   Esta sección contiene a 8 parámetros de tipo "Entrada", uno por cada tipo de declaración, para que el usuario pueda marcar el correspondiente al generar el fichero.
+        -   Compensación
+        -   Devolución
+        -   Ingreso
+        -   Resultado cero
+        -   Ingreso domiciliación bancaria
+        -   Ingreso cuenta corriente tributaria
+        -   Devolución cuenta corriente tributaria
+        -   Devolución por transferencia al extranjero
+-   **Sin Actividad**
+    -   Esta sección contiene 1 parámetro de tipo "Entrada" para que el usuario pueda marcar una liquidación de IVA como "Sin Actividad".
+-   **Constantes**
+    -   Esta sección incluye todos los valores constantes que requiere el 303, tales como:
+        -   Modelo = 303
+        -   Página = 01
+        -   Identificador de fin de registro = </T30301>
+-   **Identificación**
+    -   Esta sección incluye 4 parámetros de "Salida" que se corresponden con datos de identificación de la organización para la cual se genera el fichero y 1 parámetro de "Entrada" de tipo "checkbox" que es "Inscrito en el Registro de devolución mensual" que podría configurarse como constante.
+-   **IVA Devengado**
+    -   Esta sección incluye 3 parámetros de tipo "Salida", uno por cada tipo de IVA devengado.
+        -   "IVA Devengado - Régimen General" de IVA. Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen general, por ejemplo, las entregas de bienes y servicios dentro del territorio de aplicación del impuesto.
+        -   "IVA Devengado - Recargo de Equivalencia". Este parámetro está ligado a los rangos de impuestos cuyas operaciones tributan en régimen de recargo de equivalencia, por ejemplo, las entregas de bienes a minoristas dentro del territorio de aplicación del impuesto.
+        -   "IVA Devengado - Adquisiciones Intracomunitarias”. Este parámetro está ligado a los rangos de impuestos de adquisiciones intracomunitarias de bienes
+
+El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+
+-   **IVA Deducible**
+    -   Esta sección incluye un total de 12 parámetros, 6 parámetros de tipo "Salida" y otros 6 de tipo "Entrada".  
+        Los parámetros de tipo "Salida" se corresponden con el tipo de IVA Deducible del que se puede sacar información de Etendo, por ejemplo "IVA Deducible por cuotas soportadas en operaciones interiores corrientes".  
+        Los parámetros de tipo "Entrada" se corresponden con tipos de IVA Deducible para los que no se puede sacar información de Etendo, por ejemplo "IVA Deducible por compensación Régimen Esp. A.G y P.(cuota)
+
+El listado completo de los rangos de impuesto ligados a cada uno de estos parámetros se puede consultar en el anexo al final de este documento.
+
+-   **Diferencia**
+    -   Esta sección incluye 4 parámetros de tipo "Entrada" para que el usuario pueda introducir la siguiente información a la hora de generar el fichero:
+        -   % Atribuible a la Administración del Estado %.  
+            Los sujetos pasivos que tributen conjuntamente en la Administración del Estado y en las Diputaciones del País Vasco o a la Comunidad Foral de Navarra, deben hacer constar el % del volumen de operaciones en territorio común y que, por tanto, deben tributar en la Administración del Estado; el resto de sujetos pasivos harán costar un 100%.  
+            Este dato podría configurarse como constante.
+        -   Cuotas a compensar de periodos anteriores. Los sujetos pasivos deben hacer constar, cuando sea aplicable, las cuotas positivas a compensar procedentes de periodos anteriores.
+        -   Resultado de la regularización anual. En la última liquidación del año se hará constar el resultado de la regularización anual por inversiones
+        -   A deducir (autoliquidación complementaria), exclusivamente en el caso de declaración complementaria se hará constar el resultado de la última declaración presentada por el mismo concepto, correspondiente al mismo ejercicio y periodo.
+    -   Y, además, 3 parámetros de salida correspondientes a operaciones no sujetas que originan derecho a deducción:
+        -   Entregas Intracomunitarias de bienes. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+            -   Entregas intracomunitarias (%N=>0%)
+            -   Entregas intracomunitarias (%R=>0%)
+            -   Entregas intracomunitarias (%SR=>0%)
+            -   Entregas intracomunitarias Bienes Inversión (%N=>0%)
+        -   Exportaciones y Operaciones asimiladas. Este parámetro está ligado a los rangos de impuestos que se listan a continuación:
+            -   Entregas a Canarias,Ceuta y Melilla (%N=>0%)
+            -   Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
+            -   Entregas a Canarias,Ceuta y Melilla (%R=>0%)
+            -   Exportaciones (%N=>0%)
+            -   Exportaciones (%R=>0%)
+            -   Exportaciones (%SR=>0%)
+            -   Exportaciones Bienes Inversión (%N=>0%)
+        -   Operaciones no sujetas o con inversión del sujeto pasivo. Este parámetro está ligado a losrangos de impuestos que se listan a continuación:
+            -   Servicios a Canarias, Ceuta y Melilla (%N=>0%)
+            -   Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
+            -   Servicios a Canarias, Ceuta y Melilla (%R=>0%)
+            -   Servicios prestados internacional (%N=>0%)
+            -   Servicios prestados internacional (%R=>0%)
+            -   Servicios prestados UE (%N=>0%)
+            -   Servicios prestados UE (%R=>0%)
+-   **Devolución**
+    -   Esta sección incluye un parámetro de tipo "Entrada" que es la cuenta bancaria a utilizar en caso de declaración a devolver. Este dato podría configurarse como constante.
+-   **Ingreso**
+    -   Esta sección incluye 5 parámetros de tipo "Entrada" relativos a declaraciones "A ingresar":
+        -   la cuenta bancaria a utilizar en caso de declaración a ingresar. Este dato podría configurarse como constante.
+        -   No consta
+        -   Efectivo
+        -   Adeudo en cuenta
+        -   Domiciliación
+-   **Complementaria**
+    -   Esta sección incluye 2 parámetros de tipo entrada:
+        -   Declaración complementaria, como un checkbox (si/no)
+        -   Nº Justificate, de la declaración anterior que se complementa.
+
+######### **Tipos de documento y fecha**
+
+A la hora de generar el fichero de texto válido para declarar el Modelo 303 de liquidación de IVA, se tiene en cuenta:
+
+-   El IVA (soportado) deducible registrado y contabilizado en las Facturas/Abonos de Compra, que el usuario puede registrar en la ruta de aplicación: Gestión de Compras || Transacciones || Factura (Proveedor), para los siguientes tipos de documento:
+    -   AP Invoice (Factura de compra)
+    -   AP Invoice negativa (Abono de compra)
+    -   AP Credit Memo (Abono de compra)
+-   El IVA devengado registrado y contabilizado en las Facturas/Abonos de Venta que el usuario puede emitir en la ruta de aplicación:    Gestión de Ventas || Transacciones || Factura (Cliente), para los siguientes tipos de documento:
+    -   AR Invoice (Factura de venta)
+    -   AR Invoice negativa (Abono de venta)
+    -   AR Credit Memo (Abono de venta)
+
+La actual versión del módulo no tiene en cuenta los tipos de documento de Etendo sin APRM que se enumeran a continuación, y que podrían estar ligados a un rango de impuesto, por considerarse que no se deberían utilizar para la contabilización de facturas que incluyan IVA:
+
+-   Extracto bancario
+-   Diario de Caja
+-   Liquidaciones y asientos manuales
+
+**La fecha que se tiene en cuenta** para la inclusión de las facturas de compra/venta en la declaración/fichero del 303 es la **fecha de contabilización**, lo cual que implica que:
+
+-   Las facturas de compra/venta con fecha de contabilización desde el 01 de junio del 2010 hasta 30 de junio del 2010, se incluirán en la declaración Mensual correspondiente al mes de junio del 2010; en caso de tipo de declaración mensual, a presentar antes del 20 de agosto del 2010.
+-   Las facturas de compra/venta con fecha de contabilización desde el 01 de abril del 2010 hasta el 30 de junio del 2010, se incluirán en la declaración trimestral correspondiente al segundo trimestre del año; en caso de tipo de declaración trimestral, a presentar antes del 20 de agosto del 2010.
+
+######## **Caso de Usuario**
+
+######### **IVA Devengado - escenarios**
+
+Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas puedan autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+
+El fichero del 303 recoge desde la posición 72 a la 357, la base imponible, tipo y cuota del IVA devengado en las operaciones de venta bajo el régimen general, especificando por tipo de IVA (16%/18%, 7%/8% y 4%), régimen de recargo de equivalencia especificado por tipo de IVA (4%, 1% y 0,5%) así como la base y cuota del IVA devengado en las adquisiciones intracomunitarias.
+
+########## **IVA devengado - régimen general**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas tanto por la entrega de bienes como por la prestación de servicios dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos emitidas por la venta de productos o por la prestación de servicios, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las líneas de impuesto manualmente introducidas por el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
+
+El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes o la prestación del servicio lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+
+Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super reducido
+-   IVA Normal Servicios
+-   IVA Reducido Servicios
+-   IVA Super Reducido Servicios
+-   IVA Normal B. Inmuebles
+-   IVA Reducido B. Inmuebles
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Régimen General".
+
+########## **IVA devengado - régimen de recargo de equivalencia**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario contabilizará en Etendo las facturas/abonos de venta emitidas por la entrega de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares) a terceros minoristas que se encuentren en régimen de recargo de equivalencia.
+
+En estos casos, el emisor de la factura incluye, además del IVA, el tipo (%) de recargo correspondiente.
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos emitidas por la venta de productos, contabilizadas en la ruta de aplicación "Gestión de Ventas || Transacciones || Factura (Cliente)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente)", marcados como "Factura Financiera" a nivel de línea de factura de venta, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las lineas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Ventas || Transacciones || Factura (Cliente) - Cabecera - Impuestos"
+
+El fichero del 303 recogerá dichas transacciones dentro del mes/trimestre correspondiente, teniendo en cuenta la fecha de contabilización de dichas facturas, ya que el IVA se devenga cuando se realiza la puesta a disposición de los bienes, lo cual conlleva la facturación correspondiente, facturas que deben contabilizarse para tenerse en cuenta.
+
+Los productos/servicios/conceptos contables tiene que estar ligados a una de las siguientes categorías de impuestos:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Recargo de Equivalencia".
+
+########## **IVA devengado - Adquisiciones intracomunitarias**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares).
+
+Se tendrán en cuenta:
+
+1.  las facturas/abonos registradas en el sistema por la compra de productos, contabilizadas en la ruta de aplicación "Gestión de Compras || Transacciones || Factura (Proveedor)"
+2.  las facturas/abonos financieros emitidos desde la ruta de aplicación: ""Gestión de Compras || Transacciones || Factura (Proveedor)", marcados como "Factura Financiera" a nivel de línea de factura de compra, ligadas a un concepto contable previamente creado y asignado a una categoría de impuesto.
+3.  las líneas de impuesto manualmente introducidas en el usuario en la ruta de aplicación: "Gestión de Compras || Transacciones || Factura (Proveedor) - Cabecera - Impuestos"
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Devengado - Adquisiciones Intracomunitarias".
+
+Es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+
+-   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
+-   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+
+El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+
+######### **IVA Deducible - escenarios**
+
+Tal y como se ha explicado con anterioridad, el principal objetivo del modelo 303 es que las empresas españolas pueda autoliquidar el IVA regularmente como diferencia entre el IVA Devengado en facturas emitidas de Venta y el IVA soportado deducible.
+
+El fichero del 303 recoge desde la posición 357 a la 612, la base imponible y cuota, en la mayoría de los casos, del IVA soportado que es deducible en operaciones interiores, importaciones y adquisiciones intracomunitarias de bienes corrientes (bienes y servicios) y de bienes de inversión.
+
+########## **IVA deducible - cuotas soportadas en operaciones interiores corrientes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes como por los servicios prestados a la Empresa dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+-   IVA Normal Servicios
+-   IVA Reducido Servicios
+-   IVA Super Reducido Servicios
+-   IVA Normal B. Inmuebles
+-   IVA Reducido B. Inmuebles
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes".
+
+########## **IVA deducible - operaciones interiores bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores tanto por la compra de bienes de inversión (se consideran bienes de inversión los bienes con un valor superior a 3.000,00 €) dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/servicios/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Operaciones interiores bienes de inversión".
+
+########## **IVA deducible - por cuotas devengadas en importaciones de bienes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes".
+
+########## **IVA deducible - importaciones bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto), por la importación de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - Importaciones bienes de inversión".
+
+########## **IVA deducible - adquisiciones intracomunitarias de bienes**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal
+-   IVA Reducido
+-   IVA Super Reducido
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes corrientes".
+
+Tal y como ya se ha mencionado, es importante recalcar que el caso de las adquisiciones intracomunitarias se considerarán realizadas en el territorio de aplicación del impuesto cuando:
+
+-   se encuentre en este territorio el lugar de la llegada de la expedición o transporte con destino al adquirente.
+-   y cuando el adquirente haya comunicado al vendedor el número de identificación a efectos del impuesto sobre el Valor Añadido atribuido por la Administración española.
+
+Este régimen se caracteriza por el gravamen en destino de las entregas intracomunitarias realizadas entre empresas. Esto significa que se aplique una exención en el país de origen y que se considere realizado el hecho imponible en el de destino, con motivo de la adquisición. A esto se le denomina adquisición intracomunitaria de bienes, y se altera de esta manera la regla general del impuesto, al ser el sujeto pasivo del impuesto el que compra y no el que vende.
+
+El sujeto pasivo/adquiriente es, por tanto, quien debe liquidar el IVA y, por tanto, deberá autorrepercutirse el IVA y a su vez deducírselo, si aplica. Es por ello que este tipo de operaciones, como las operaciones de Inversión de Sujeto Pasivo aparecen tanto en la sección de IVA devengado como en la sección de IVA deducible.
+
+########## **IVA deducible - adquisiciones intracomunitarias de bienes de inversión**
+
+Durante el periodo correspondiente (mes/trimestre), el usuario registrará y contabilizará en Etendo las facturas/abonos de compra recibidos de sus proveedores/acreedores (no residentes en territorio de aplicación del impuesto, pero residentes en la Unión Europea que son operadores intracomunitarios), por la adquisición de bienes de inversión dentro del territorio de aplicación del impuesto/IVA (Península y Baleares), así como las facturas financieras.
+
+Los productos/conceptos contables tienen que estar relacionados con una de las siguientes categorías de impuesto:
+
+-   IVA Normal Bienes Inversión
+
+Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "IVA Deducible - adquisiciones intracomunitarias de bienes de inversión".
+
+######### **Diferencia - escenarios**
+
+El fichero del 303 recoge desde la posición 629 a la 804, los datos relativos a la diferencia entre el IVA Devengado y el Deducible, junto con otro tipo de información adicional necesaria para el cálculo del resultado final casilla \[48\]
+
+Desde Etendo, el usuario puede obtener la diferencia entre IVA Devengado y Deducible, así como parte de la información adicional necesaria para el cálculo del resultado final, el resto debe introducirse por parte del usuario como "parámetros de entrada" a la hora de generar el fichero.
+
+La información que el usuario puede obtener desde el sistema es las bases imponibles para un periodo determinado (mes/trimestre) respecto de las operaciones que a continuación se detallan:
+
+-   **Entregas intracomunitarias** - en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta a clientes no residentes en territorio de aplicación del impuesto pero residentes en la Unión Europea, emitidos y contabilizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Entregas Intracomunitarias".
+-   **Exportaciones y operaciones asimiladas** - lo mismo aplica a las exportaciones, en este caso el sistema tiene en cuenta las facturas/abonos/facturas financieras de venta emitidas y contabilizas, a clientes extranjeros, emitidos y contablizados, por la entrega exenta de IVA de bienes fuera del territorio de aplicación del impuesto/IVA (Península y Baleares).  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Exportaciones y Operaciones Asimiladas".
+-   **Operaciones no sujetas o con inversión del sujeto pasivo** que origina derecho a deducción - este caso aplica a facturas/abonos/facturas financieras de venta emitidos y contabilizados, por la prestación de servicios de la Empresa fuera del territorio de aplicación del impuesto, servicios exentos pero que originan derecho a deducción.  
+    Las líneas de facturas tienen que tener un rango de impuesto asociado a uno de los parámetros del 303 de la sección "Diferencia - Operaciones no sujetas o con inversión del sujeto pasivo".
+
+El resto de datos deben ser introducidos manualmente por el usuario a la hora de generar el modelo 303 desde la ventana "Generador de declaraciones de impuestos", tal y como se muestra en la pantalla siguiente:
+
+![](/assets/drive/1aOcwK47kn7zNbQB4UYWQgR7MrNA0sPoc7gech6cMPSdUr6ozKUpHPmXThitLJ-cH-J1CGwfirc3uiEWM5eWv4b_uTTVtgibwWIKX_45wOoSiXPSsu6KqC7-Uqbpf806myQtrgX_zTtxob5SkKC21jY.png)
+
+######### **Devoluciones - escenarios**
+
+########## **Devoluciones - Devolución/Devolución cuenta corriente tributaria**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios:
+
+- IBAN
+- Marca SEPA
+
+########## **Devoluciones - Devolución por transferencia al extranjero**
+
+Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de devolución mensual' esté marcado, los siguientes campos son obligatorios: 
+
+- Domiciliación/Devolución - IBAN (cuenta bancaria)
+- Devolución - Banco/Bank name
+- Devolución - Dirección del Banco/ Bank address
+- Devolución - Ciudad/City
+- Devolución - Código País/Country code
+- Devolución - Marca SEPA
+
+######### **Generación del modelo 303**
+
+Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
+
+Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo":
+
+![](/assets/drive/dNa0Xp7cP15EVu-NquNiO27FfKbbDTYXfLQ5Wm4I8LxL3ah4xw4_v3_PB6zShaBBNuFB1dwW9O15LSxabPohtRNc3xjWGMrgxQzdvqRagqs2C0A6Pwq3DJ5-FVhdBE-RMxe09uIGBEXM5YE7NQ3KRWg.png)
+
+se pueden introducir los parámetros de entrada, o datos que no pueden obtenerse de Etendo a través de botón de proceso "Parámetros de entrada".
+
+!!! info
+    Es importante recalcar que algunos de los parámetros de entrada que se introducen a continuación, como por ejemplo "Inscrito en el Registro Devolución Mensual", pueden configurarse como parámetros "Constantes" con el fin de no tener que introducirlos cada vez que se genera el fichero del 303.
+
+
+La forma de hacerlo es:
+
+-   buscar el parámetro de entrada del 303 en la ventana "Declaración de Impuestos", pestaña "Sección de declaración". Por ejemplo, el parámetro de entrada "Inscrito en el Registro de devolución mensual" que se encuentra en la Sección de declaración "Identificación"
+-   cambiar el parámetro de tipo "Entrada" a "Constante". En el campo "Constant Value" añadir "1", en caso de inscripción en el registro de devolución mensual, o bien añadir "2", en caso de que el sujeto pasivo no esté inscrito en el registro de devolución mensual.
+
+Es importante recalcar que si se produce una actualización de los datos de referencia de este módulo, los cambios de parámetros de entrada a constante se sobreescribirán, por lo que será necesario el volver a configurarlos.
+
+Las secciones de la nueva ventana que se muestra se corresponden con las secciones definidas para el Modelo 303:
+
+Secciones: "**Fichero**", "**Tipo de declaración**" y "**Sin actividad**":
+
+![](/assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303/seccion-fichero-tipo-dec-sin-act.png)
+
+Secciones: "**IVA deducible**", **"Liquidación-resultado"** y **"Banco"**:
+
+![](/assets/drive/TmR4r-g0sbW3iYqVXO4M4IvKdyIKxp9t7FxwjL1i2srAJVnSK7obME0S7xZnd6ZBOMGwzsfbYZJ3BTDwjwzwSbpLmbioI49r1hX4YpyFrXeUYauG-D8tNEiGXqROzpI6RWJlewDrm-lQspoLPFfMR9M.png)
+
+Secciones:  **"Complementaria", “Tributación por razón de territorio” y “Additional Information”**
+
+![](/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
+
+Una vez que el fichero se ha generado, tendrá este aspecto:
+
+![Fichero.png](/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
+
+######### **Pre-validación del modelo 303**
+
+El fichero generado en Etendo se puede pre-validar en el siguiente link de la AEAT:
+
+[_Formulario del modelo 303 para su presentación (predeclaración) ejercicio 2014 y siguientes (Régimen General)_](https://www2.agenciatributaria.gob.es/es13/h/ie43030b.html){target="_blank"}.
+
+Una vez en dicho link el usuario podrá importar el fichero en la opción "Optativo: Importar datos de fichero", los datos obtenidos del fichero se mostrarán para su validación.
+
+Una vez validados los datos, el modelo 303 se puede presentar en el siguiente link, para lo cual se requiere un certificado válido: [_Presentación ejercicio 2014 y siguientes (Régimen General)_](https://www.agenciatributaria.gob.es/AEAT.sede/procedimientoini/G414.shtml){target="_blank"}, para lo que se necesita certificado electrónico de identificación o DNI electrónico.
+
+######## **Anexo**
+
+Este anexo incluye el listado completo de los rangos de impuestos asociados a los parámetros del modelo 303 de las secciones "IVA Devengado" e "IVA Deducible" sólo para los tipos de IVA vigentes en la actualidad (2012):
+
+######### **IVA Devengado**
+
+########## **IVA Devengado - Régimen General**
+
+-   Arrendamiento 18% (cobros)
+-   Arrendamientos 18% -21%R (cobros) (+18%)
+-   Arrendamiento 21% (cobros)
+-   Arrendamientos 21% -21%R (cobros) (+21%)
+-   Entregas Bienes Inversión 18%
+-   Entregas Bienes Inversión 21%
+-   Entregas IVA 18%
+-   Entregas IVA 8%
+-   Entregas IVA 21%
+-   Entregas IVA 10%
+-   Entregas IVA 4%
+-   Entregas IVA+RE 18+4% (+18%)
+-   Entregas IVA+RE 8+1% (+8%)
+-   Entregas IVA+RE 21+5.2% (+21%)
+-   Entregas IVA+RE 10+1.4% (+10%)
+-   Entregas IVA+RE 4+0.5% (+4%)
+-   Inversión Sujeto Pasivo no UE 18% (-18%)
+-   Inversión Sujeto Pasivo no UE 8% (-8%)
+-   Inversión Sujeto Pasivo no UE 21% (-21%)
+-   Inversión Sujeto Pasivo no UE 10% (-10%)
+-   Inversión Sujeto Pasivo UE 18% (-18%)
+-   Inversión Sujeto Pasivo UE 8% (-8%)
+-   Inversión Sujeto Pasivo UE 21% (-21%)
+-   Inversión Sujeto Pasivo UE 10% (-10%)
+-   Servicios prestados nacional 18%
+-   Servicios prestados nacional 21%
+-   Servicios prestados nacional 18% -15%R (+18%)
+-   Servicios prestados nacional 18% -7%R (+18%)
+-   Servicios prestados nacional 21% -21%R (+21%)
+-   Servicios prestados nacional 21% -9%R (+21%)
+-   Servicios prestados nacional 8%
+-   Servicios prestados nacional 10%
+-   Servicios prestados nacional 4%
+-   Transmisión B.Inmuebles 18%
+-   Transmisión B.Inmuebles 8%
+-   Transmisión B.Inmuebles 21%
+-   Transmisión B.Inmuebles 10%
+
+########## **IVA Devengado - Recargo de equivalencia**
+
+-   Entregas IVA+RE 18+4% (+4%)
+-   Entregas IVA+RE 8+1% (+1%)
+-   Entregas IVA+RE 21+5.2% (+5.2%)
+-   Entregas IVA+RE 10+1.4% (+1.4%)
+-   Entregas IVA+RE 4+0.5% (+0.5%)
+
+########## **IVA Devengado - Adquisiciones Intracomunitarias**
+
+-   Adquisiciones intracomunitarias 18% (-18%)
+-   Adquisiciones intracomunitarias 8% (-8%)
+-   Adquisiciones intracomunitarias 21% (-21%)
+-   Adquisiciones intracomunitarias 10% (-10%)
+-   Adquisiciones intracomunitarias 4% (-4%)
+-   Adquisiciones intracomunitarias Bienes Inversión 18% (-18%)
+-   Adquisiciones intracomunitarias Bienes Inversión 21% (-21%)
+
+######### **IVA Deducible**
+
+########## **IVA Deducible - Por cuotas soportadas en operaciones interiores corrientes**
+
+-   Adquisición B.Inmuebles 18%
+-   Adquisición B.Inmuebles 8%
+-   Adquisición B.Inmuebles 21%
+-   Adquisición B.Inmuebles 10%
+-   Adquisiciones IVA 18%
+-   Adquisiciones IVA 8%
+-   Adquisiciones IVA 21%
+-   Adquisiciones IVA 10%
+-   Adquisiciones IVA 4%
+-   Arrendamiento 18% (pagos)
+-   Arrendamiento 21% (pagos)
+-   Arrendamientos 18% -21%R (pagos) (+18%)
+-   Arrendamientos 21% -21%R (pagos) (+21%)
+-   Inversión Sujeto Pasivo no UE 18% (+18%)
+-   Inversión Sujeto Pasivo no UE 8% (+8%)
+-   Inversión Sujeto Pasivo no UE 21% (+21%)
+-   Inversión Sujeto Pasivo no UE 10% (+10%)
+-   Inversión Sujeto Pasivo UE 18% (+18%)
+-   Inversión Sujeto Pasivo UE 8% (+8%)
+-   Inversión Sujeto Pasivo UE 21% (+21%)
+-   Inversión Sujeto Pasivo UE 10% (+10%)
+-   Prestación servicios nacional 18%
+-   Prestación servicios nacional 21%
+-   Prestación servicios nacional 18% -15%R (+18%)
+-   Prestación servicios nacional 18% -1%R (18%)
+-   Prestación servicios nacional 18% -7%R (+18%)
+-   Prestación servicios nacional 21% -21%R (+21%)
+-   Prestación servicios nacional 21% -1%R (+21%)
+-   Prestación servicios nacional 21% -9%R (+21%)
+-   Prestación servicios nacional 8%
+-   Prestación servicios nacional 10%
+-   Prestación servicios nacional 4%
+
+########## **IVA Deducible - Operaciones interiores bienes de inversión**
+
+-   Adquisición Bienes Inversión18%
+-   Adquisición Bienes Inversión 21%
+
+########## **IVA Deducible - Por cuotas devengadas en las importaciones de bienes corrientes**
+
+-   Adquisiciones a Canarias,Ceuta y Melilla 18%
+-   Adquisiciones a Canarias,Ceuta y Melilla 8%
+-   Adquisiciones a Canarias,Ceuta y Melilla 21%
+-   Adquisiciones a Canarias,Ceuta y Melilla 10%
+-   Adquisiciones a Canarias,Ceuta y Melilla 4%
+-   Importaciones 18%
+-   Importaciones 8%
+-   Importaciones 21%
+-   Importaciones 10%
+-   Importaciones 4%
+
+########## **IVA Deducible - Importaciones bienes de inversión**
+
+-   Importaciones Bienes Inversión 18%
+-   Importaciones Bienes Inversión 21%
+
+########## **IVA Deducible - En adquisiciones intracomunitarias de bienes de corrientes**
+
+-   Adquisiciones intracomunitarias 18% (+18%)
+-   Adquisiciones intracomunitarias 8% (+8%)
+-   Adquisiciones intracomunitarias 21% (+21%)
+-   Adquisiciones intracomunitarias 10% (+10%)
+-   Adquisiciones intracomunitarias 4% (+4%)
+
+########## **IVA Deducible - Adq. Intracomunitarias bienes de inversión**
+
+-   Adquisiciones intracomunitarias Bienes Inversión 18% (+18%)
+-   Adquisiciones intracomunitarias Bienes Inversión 21% (+21%)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303){target='_blank'}
+---
+
+---
+###### Modelo 190
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat190.es
+
+######## **Introducción**
+
+Esta sección explica el contenido y funcionamiento del módulo **"Modelo 190"**, incluído dentro del bundle de Localización Española para Etendo.
+
+**Descripción del Modelo**
+
+El módulo **Modelo 190** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar las retenciones e ingresos a cuenta sobre rendimientos del trabajo y de actividades económicas, premios y determinadas ganancias patrimoniales e imputaciones de renta.
+
+La presentación del Modelo 190 por vía telemática deberá efectuarse en el plazo comprendido entre los días 1 y 31 de enero de cada año, en relación con las cantidades retenidas y los ingresos a cuenta efectuados correspondientes al año natural inmediato anterior.
+
+Con este módulo, el Modelo 190 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
+
+######## **Contenido del fichero Modelo 190**
+
+El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene:
+
+-   Una primera sección, llamada *registro tipo 1*, con información relativa a la empresa que presenta el informe, CIF, nombre de la empresa, persona de contacto y resumen de los detalles presentados.
+-   Una segunda sección, llamada *registros tipo 2*, con la información relativa a la retención e ingresos a cuenta practicada a la empresa agrupada por tercero y año.
+
+De esta forma, el informe puede contar con un único registro de tipo 1 y cero o varios registros de tipo 2.
+
+Si el usuario abre el fichero generado con un editor de texto plano, verá una sucesión de números y letras prácticamente ilegibles para el ser humano. Si desea comprobar el contenido del fichero e incluso modificarlo antes de ser enviado a la Agencia Tributaria, puede importar dicho fichero en la AEAT (Ver abajo).
+
+######## **Instalación y aplicación del módulo**
+
+######### **Instalación**
+
+Para su instalación del Modelo 190 de Etendo, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+######### **Aplicación del módulo**
+
+El módulo del Modelo AEAT 190 incluye el correspondiente "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos (retenciones, en este caso) para España con los parámetros del 190, por tanto:
+
+-   Una vez instalado el módulo, la "configuración del Modelo 190" debe aplicarse a la **Entidad legal con Contabilidad** que corresponda, en la ruta de aplicación: Configuración General || Organización || **Gestión del módulo de Empresa.**
+-   Importante, antes de aplicar esta configuración es importante haber aplicado previamente la configuración del módulo de impuestos, puesto que el Modelo 190 depende de éste.
+
+![](/assets/drive/NPmuokqQMPVWHGO_5axvvqS3kqWJ7TUYhtrgII9Adx2R4lsxQxCOECCclQxInjaTso4hIHruR7f8UNtrSAMuTvupjpsmZW-osW83k_TFV3UE_QFFP8igDGJf6ctmSmSFP5WLMyHfV8lI19X_wgXEO24.png)
+
+Al instalar y aplicar este nuevo módulo, el usuario podrá comprobar que:
+
+-   se han creado un nuevo informe, el modelo 190 anual que se encuentra en la ruta de aplicación: Gestión Financiera || Contabilidad || Configuración || Declaración de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](/assets/drive/0DGnsbvGSRglnOfedtcm1BRq0hExCnVLCnWNfG9twk0cA9ktqHih10dD1ufrzq3uGu1oafipUnxtCc7W08aw753gYX3AzuoAMZ6ZAyknSHIwLa9eAw-kajDMk6DOjGpTM5IOKb0pxrmcm5Dj31wI2ZM.png)
+
+-   los rangos de impuestos se han asociado al correspondiente Parámetro del informe 190, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/posición del fichero, tal y como se muestra en la siguiente imagen:  
+     
+
+![](/assets/drive/jH29-HkAFNLN3w0RKpitrmjGJ918EMfwdfbMQmfE7qEeFhSAB-tRR9z-pNWDz34lm9xlhMN1ADfKDKwicm4h6282rQATMsMggwZUCfu4ZX6aBmki3PF1g8O_dzJVRa7i55QIMWkesDoXacrd4Rb9_RQ.png)
+
+-   y, por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación de la declaración-liquidación del modelo 190, desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos, tal y como se muestra en la siguiente imagen:  
+     
+
+![](/assets/drive/duCdxzeDZl6Ym8W_h-APG_n78tbJ09PZ9MLqx11_Q2x96V2K1-TrVAh5I-apRPNWffmsIybEKB06xmRie5bzRHyi9Ljf70g6ekwyusOk8ZR5lg9_7cllbMklo9vRjRB73JbKdW4q8XxdL9CwrMW3eZE.png)
+
+######## **¿Qué se incluye en el Modelo 190 generado por Etendo?**
+
+El informe generado por Etendo incluye únicamente las retenciones referentes a actividades económicas, puesto que es la información que el ERP maneja actualmente.
+
+El resto de información que se incluye en el Modelo 190, como retenciones e ingresos a cuenta por rendimientos del trabajo, determinadas ganancias patrimoniales o premios, no está registrada en el ERP y, por lo tanto, no se puede incluir en el informe.
+
+Sin embargo, si usted desea incluir esta información en su declaración, tan sólo debe importar el fichero generado por Etendo como se indica en [_Modelo 190_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/declaraciones-informativas-ayuda-tecnica/modelos-190-198/modelo-190-formulario.html){target="_blank"}.
+
+######### **Tipos de documentos y retenciones que se incluyen en el informe**
+
+El modelo 190 es un informe de retenciones, así que sólo se tendrán en cuenta facturas de compra con retenciones a terceros ubicados en España que estén contabilizadas y pagadas (parcialmente o completamente).
+
+Dentro de las facturas de compra, se soportan todo el rango disponible actualmente:
+
+-   Facturas de compra (AP Invoice)
+-   Facturas de abono de compra (AP Credit Memo)
+-   Facturas de compra negativas (AP Invoice negativas)
+-   Facturas de tipo "Reversal" (Reversed Purchase Invoice)
+
+######### **Retenciones asociadas a parámetros del informe**
+
+Las retenciones que vienen asociadas a los parámetros del modelo 190 son:
+
+-   Details-Withholding\_G\_01, Clave tributaria G - subclave 01:
+    -   Prestación servicios nacional 0% -15%R (-15%)
+    -   Prestación servicios nacional 16% -15%R (-15%)
+    -   Prestación servicios nacional 18% -15%R (-15%)
+-   Details-Withholding\_G\_03, Clave tributaria G - subclave 03:
+    -   Prestación servicios nacional 0% -7%R (-7%)
+    -   Prestación servicios nacional 16% -7%R (-7%)
+    -   Prestación servicios nacional 18% -7%R (-7%)
+-   Details-Withholding\_H\_04, Clave tributaria H - subclave 04:
+    -   Prestación servicios nacional 18% -1%R (-1%)
+
+######### **Retención proporcional al pago**
+
+La retención a incluir en el fichero del modelo 190 es proporcional a la percepción íntegra efectivamente satisfecha durante el ejercicio correspondiente:
+
+-   por ejemplo, si tenemos una factura contabilizada pero pagada en un 50% en 2011, el informe del 190 del 2011 incluirá la parte proporcional de la retención práctica en la factura, esto es, el 50%.
+
+Además, si durante un ejercicio se han satisfecho facturas correspondientes a ejercicios anteriores, el fichero del modelo 190 incluirá una línea por cada uno de los pagos efectuados durante dicho ejercicio, correspondientes a facturas devengadas en años anteriores, indicando, por tanto, el año de devengo.
+
+######### **Cantidades indebidas o excesivamente percibidas en ejercicios anteriores**
+
+El fichero del modelo 190 tiene en cuenta los datos relativos a cantidades reintegradas por sus perceptores en el ejercicio, como consecuencia de haber sido indebida o excesivamente percibidas en ejercicios anteriores, en estos supuestos:
+
+-   cada reintegro se relaciona bajo la misma clave y, en su caso, subclave de percepción bajo la cual se incluyeron en su día las cantidades indebidas o excesivamente satisfechas
+-   se refleja su importe en el campo "Percepción íntegra"
+-   el campo "Signo de la percepción íntegra" se cumplimenta con la letra "N" (importe negativo)
+-   y se consigna el valor (0) en el campo "Retenciones practicadas"
+-   finalmente, se hace constar en el campo "Ejercicio devengo" el año en el que se devengaron originariamente las percepciones reintegradas.
+
+!!! info
+    Cuando se hayan producido reintegros procedentes de una misma persona o entidad que correspondan a percepciones originariamente devengadas en varios ejercicios, su importe se desglosa en varios apuntes o registros, de forma que cada uno de ellos refleje exclusivamente reintegros de percepciones correspondientes a un mismo ejercicio.
+
+
+######## **Generación del modelo 190**
+
+Tal y como ya se ha explicado, el modelo 190, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: **Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos**
+
+Una vez que el usuario ha introducido los datos genéricos, tales como "organización", "ejercicio", "periodo" y otros, puede introducir los parámetros de entrada propios del 190:
+
+![](/assets/drive/Jbjc9g-xJ_iZ2B6_xDHfLV9umzxu0_R-HS5ss8jpczAYl654wdnKknjU_i6b8wqIRhiWQbeArp2hMAGaZTsj5_zoOHLAIEq-s8BhhTEbnFmoHYcfRaLoVcxI1TlCjyjuUQeXbM7ZN7AZAuBE9Z4YjXg.png)
+
+En este caso, se puede especificar el nombre del fichero (si no queremos el que el sistema da por defecto), y la información necesaria en caso de generar una declaración sustitutiva.
+
+######## **Importación del modelo 190 en AEAT**
+
+Una vez generado el fichero, el mismo tendrá que cargarse en la AEAT en la página correspondiente de [Agencia Tributaria](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI10.shtml){target="_blank"}.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190){target='_blank'}
+---
+
+---
+###### Modelo 347
+######## **Introducción**
+
+Esta sección describe la generación de la declaración: “**Modelo AEAT 347 - Declaración Anual de Operaciones con Terceros**” como un fichero de texto ("\*.txt") válido conforme a los requerimientos de la Hacienda Pública española, es por ello que se publicará una nueva versión de este módulo cuando dichos requerimientos cambien.
+
+El fichero del 347 se genera desde el "**Generador de Declaraciones de Impuesto**" que se encuentra en la ruta de aplicación: "Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos".
+
+El Modelo/Declaración 347 es parte del módulo de Localización Española de Etendo.
+
+######## **Descripción del módulo**
+
+######### **Obligados a presentar la declaración**
+
+De acuerdo con la normativa de la Hacienda Española, están obligados a presentar el modelo 347:
+
+Todas aquellas personas físicas o jurídicas, de naturaleza pública o privada que desarrollen actividades empresariales o profesionales, siempre y cuando hayan realizado operaciones que, en su conjunto, respecto de otra persona o Entidad, cualquiera que sea su naturaleza o carácter, hayan superado la cifra de 3.005,06€ durante el año natural al que se refiere la declaración. Para el cálculo de la cifra de 3.005,06 € se computan de forma separada las entregas de bienes y servicios y las adquisiciones de los mismos.
+
+De acuerdo con la normativa, no están obligados a presentar el modelo 347:
+
+-   Quienes realicen en España actividades empresariales o profesionales sin tener en territorio español la sede de su actividad, un establecimiento permanente o su domicilio fiscal.
+-   Las personas físicas y entidades en atribución de rentas en el Impuesto sobre la Renta de las Personas Físicas, por las actividades que tributen en dicho impuesto por el método de estimación objetiva y, simultáneamente, en el Impuesto sobre el Valor Añadido por los regímenes especiales simplificado o de la agricultura, ganadería y pesca o del recargo de equivalencia, salvo por las operaciones por las que emitan factura.
+-   Los obligados tributarios que no hayan realizado operaciones que en su conjunto superen la cifra de 3.005,06€
+-   Los obligados tributarios que hayan realizado exclusivamente operaciones no declarables.
+-   Los obligados tributarios que deban informar sobre las operaciones incluidas en los libros registro de IVA (modelo 340) salvo que realicen operaciones que expresamente deban incluirse en el modelo 347.
+
+######### **Operaciones declarables**
+
+Las operaciones declarables y que, por tanto, se incluyen en el modelo 347 son las que se detallan a continuación:
+
+1.  Tanto las entregas de bienes y prestaciones de servicios realizadas por el declarante como sus adquisiciones de bienes y servicios incluyéndose, en ambos casos, tanto las operaciones típicas y habituales como las ocasionales e incluso las operaciones inmobiliarias. Debe tenerse en cuenta que dichas operaciones se incluirán estén o no sujetas al IVA y, en el primer caso, también las exentas de dicho impuesto.
+
+Además, se incluyen de forma específica y aparte:
+
+-   los Arrendamientos de locales de negocios
+-   los importes superiores a 6.000,00€ percibidos en metálico de cada una de las personas o entidades relacionadas en la declaración
+-   las cantidades que se perciban en contraprestación por transmisiones de bienes inmuebles que constituyan entregas sujetas a IVA
+-   y las prestaciones de servicios de/a no residentes (incluyendo Canarias, Baleares, Ceuta y Melilla) que no estén sujetos a retención.
+
+Los importes que se incluyen en el modelo 347 son los “importes totales” de la contraprestación en euros (€). En los supuestos de operaciones sujetas y no exentas de IVA se añaden, por tanto, a la base imponible, las cuotas del impuesto y recargos de equivalencia repercutidos. Los importes además se declaran netos de las devoluciones o descuentos y bonificaciones concedidos.
+
+Las operaciones que se incluyen en el modelo 347 son las realizadas por el declarante en el año natural a que se refiere la declaración y la fecha que se tiene en cuenta para su inclusión en el 347 es la fecha contable de la factura.
+
+Las operaciones que en ningún caso se incluirán en el 347 por ser no declarables son las que se detallan a continuación:
+
+-   aquellas que hayan supuesto entregas de bienes o prestaciones de servicios por las que los obligados tributarios no debieron expedir y entregar factura o documento equivalente
+-   aquellas operaciones realizadas al margen de la actividad empresarial o profesional
+-   aquellas efectuadas a título gratuito
+-   los arrendamientos de bienes exentos de IVA
+-   las importaciones y exportaciones de mercancías, así como las entregas y adquisiciones de bienes que supongan envíos entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla.
+-   Todas aquellas que se incluyan en otros modelos de la Administración Tributaria como por ejemplo aquellas cuya contraprestación haya sido objeto de retención o ingreso a cuenta; las operaciones intracomunitarias de bienes y servicios que se declaran en el modelo 349 o las operaciones incluidas en los libros registro que deben incluirse en el modelo 340.
+
+El nuevo módulo de generación del Modelo 347 no incluye las operaciones que se describe a continuación y que deberían incluirse en el modelo 347, por ser relativas a Administraciones Públicas, Entidades aseguradoras y Colegios Profesionales:
+
+-   las subvenciones, auxilios o ayudas satisfechas por las entidades integradas en las distintas Administraciones Públicas
+-   las operaciones de seguros realizadas por las entidades aseguradoras
+-   las prestaciones de servicios realizadas por las agencias de viajes
+-   los cobros por cuenta de terceros de honorarios profesionales o de derechos derivados de la propiedad intelectual, industrial, de autor u otros por cuenta de sus socios, asociados o colegiados efectuados por sociedades, asociaciones, colegios profesionales u otras entidades que, entre sus funciones, realicen las del cobro
+-   las operaciones sujetas al impuesto sobre la producción, los servicios y la importación en las ciudades de Ceuta y Melilla.
+
+Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse sólo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento "Declaración Complementaria".
+
+######## **Instalación del módulo**
+
+Para la instalación del módulo **“Modelo AEAT 347 - Declaración de operaciones con terceros”**” (Spain AEAT Modelo 347 for APR),el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Es importante recalcar que el módulo del Modelo AEAT 347 incluye el correspondiente conjunto de datos (dataset) que relaciona los rangos de impuestos de España con los parámetros del 347, este conjunto de datos se debe aplicar a la Organización para la cual se necesita obtener el 347 tal y como se explica en el siguiente apartado.
+
+######### **Aplicación del Módulo**
+
+Una vez instalado el módulo del 347 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el conjunto de datos o dataset del módulo 347 a la organización legal con contabilidad que corresponda, desde la ventana "Gestión del Módulo de Empresa".
+
+El módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo 347, y debe estar instalado previamente.
+
+!!! info
+    Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) o bien a la organización legal para la que se quiera obtener el 347.
+
+
+######## **Configuración del módulo**
+
+######### **Configuración del modelo 347**
+
+Una vez aplicado el conjunto de datos del Modelo 347, puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos que el modelo 347 del periodo correspondiente está creado como informe anual de impuestos.
+
+![](/assets/drive/2u88N7Cgi-SP2bdf8o4omVD0u1Up3nn33id19ei0bDPUxydw-cF9LLBl-YAE_5CNlQR7_9-rgia_VhhUwgW6QTKQgrHCC1qu4jTyfflLyVH9uDdav7NQWS47_h1ntt7M7800npJGiAbWAqRnzHfhIQ.png)
+
+En la pestaña “Secciones de la declaración” se han creado 3 grupos para el modelo 347:
+
+-   Nombre del Fichero del 347. Esta sección contiene:
+    -   un parámetro de tipo “entrada” que se mostrará en el momento de generar el 347 con el fin de que el usuario introduzca manualmente el “Nombre del fichero txt del 347” que se va a generar.
+-   Identificación y Totales. Esta sección contiene:
+    -   2 parámetros de tipo “constante” que el sistema tendrá en cuenta a la hora de incluir las operaciones, ya que solo incluirá las que superen las cifras límite que se detallan a continuación:  
+          
+        -   Cifra límite de inclusión de operaciones con terceros = 3.005,06€
+        -   Cifra límite para cobros percibidos en efectivo = 6.000,00€
+    -   y 5 parámetros de tipo “entrada” que se mostrarán en el momento de generar el 347 con el fin de que el usuario los introduzca manualmente y que son:  
+          
+        -   Nombre y apellidos de la persona de contacto: Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Nº Teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Declaración substitutiva (si/no)
+        -   Nº de la declaración a sustituir
+        -   NIF del representante legal
+-   **Operaciones con terceros**. Esta sección contiene:
+    -   5 parámetros de tipo “salida” ligados a la clave tributaria correspondiente, que asociados a los tipos impositivos del módulo de impuestos para España, incluirán las operaciones de compra/venta en el 347:
+        -   Adquisiciones de bienes - Clave A
+        -   Entregas de bienes - Clave B
+        -   Prestación de servicios - Clave A
+        -   Servicios prestados - Clave B
+        -   Transmisiones de inmuebles - Clave B
+
+En la ruta Gestión Financiera / Contabilidad / Configuración / AEAT347 Tipo de documento, el usuario puede especificar los tipos de documentos que el 347 debe tener en cuenta. El funcionamiento de esta pantalla de parametrización es que si no se especifica ningún tipo de documento, Etendo tendrá en cuenta todos los tipos de documentos de tipo factura que se pueden contabilizar.
+
+Si el usuario introduce algún tipo de documento, solo esos serán los que se tengan en cuenta.
+
+![](/assets/drive/OkdImkuzASfTUs2ne-BnPzKROain8Y-Z59B-4m3DX8xAjhoK-wvSJEmH6P1OBX-eIC9AGQXKGViX6K-0zMZHeGnfVD3v-eKgTvojkYKe-vEXykDdGYstwWmsUW4vRRjUAreAq7ndNhtf8zVm3rwbug.png)
+
+######### **Configuración de impuestos**
+
+Este módulo de generación del modelo 347 se basa en el módulo de impuestos para España, ya que utiliza los rangos de impuesto que incluye dicho módulo. Además, incluye un juego de datos que liga los rangos de impuesto del módulo de impuestos para España con los parámetros del 347 que se listan a continuación, en función de la operación de que se trate:
+
+-   **Adquisiciones de bienes – Adquisición “A”**
+-   **Entregas de bienes – Entregas “B”**
+-   **Prestación de servicios– Adquisición “A”**
+-   **Servicios prestados– Entregas “B”**
+-   **Transmisiones de inmuebles – Entregas “B”**
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 347 se han asociado al correspondiente parámetro de impuesto del 347:
+
+-   Los tipos de IVA de compras/adquisiciones (nacional) incluyendo las adquisiciones de bienes inmuebles y bienes de inversión, se han asociado con el parámetro “Adquisiciones de bienes” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de ventas/entregas (nacional) (incluyendo Recargo de Equivalencia) se han asociado con el parámetro “Entregas de bienes” que corresponden con la clave de operación del 347 => “B”
+-   Los tipos de IVA de “inversión del sujeto pasivo NO UE” (en los casos de prestación de servicios NO intracomunitarios) se han asociado con el parámetro “Prestación de servicios” que se corresponden con la clave de operación del 347 => “A”
+-   Los tipos de IVA de entregas de bienes inmuebles (nacional) se han asociado con el parámetro “Transmisiones de inmuebles” que se corresponden con la clave de operación del 347 => “B”; ya que tiene que declararse dos veces como operación de venta y consignarse a parte el importe de la transmisión del bien inmueble.
+-   Se han creado los tipos de IVA específicos para prestaciones de servicios (nacional e internacional), asociados a categorías de impuestos específicas para los servicios, que se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa declarante reciba o preste los servicios.
+-   Los tipos de IVA de servicios desde/a Canarias, Baleares, Ceuta y Melilla se han asociado bien con el parámetro “Prestaciones de servicios” clave de operación del 347 => “B” o bien con el parámetro “Operaciones de servicios (Adquisición) clave de operación del 347 => “A”, respectivamente, ya que sólo se incluyen en el 347 las operaciones de servicios y no las de bienes que supongan envíos de bienes entre el territorio peninsular español o las islas Baleares y las islas Canarias, Ceuta y Melilla
+-   Y por último se han creado tipos de IVA específicos para alquileres (con y sin retenciones asociados a 2 tipos de BP tax category, respectivamente). Los tipos de IVA de alquiler sin retenciones se han asociado con los parámetros del 347 “Prestación de servicios – clave de operación A” o “Servicios prestados – clave de operación B” en función de que la empresa sea arrendatario o arrendador del local u oficina arrendado y sujeto a IVA.
+
+######### **Configuración de los locales de negocio**
+
+En el modelo 347 se deben incluir los arrendamientos de locales de negocios, es por ello que en la ruta de aplicación: Gestión de Datos Maestros / Producto se ha creado un nuevo parámetro “Local arrendado”.
+
+De ser así, el usuario debe introducir en el sistema la información que se detalla a continuación, ya que es necesario incluirla en el modelo 347:
+
+-   **Situación**. El usuario debe elegir entre una de las siguientes opciones:
+    -   Locales en el extranjero
+    -   Referencia catastral válida en País Vasco o en Navarra
+    -   Referencia catastral válida excepto en País Vasco o Navarra
+    -   Sin referencia catastral
+-   **Referencia catastral.** Campo de texto libre.
+-   **Tipo de vía.** El usuario debe elegir el tipo de vía de una lista normalizada según el INE español.
+-   **Nombre de la vía pública**. Campo de texto libre.
+-   **Tipo de numeración**. El usuario debe elegir el tipo de numeración de una lista normalizada.
+-   **Número**. Campo de texto libre.
+-   **Calificación del número**. Campo de texto libre.
+-   **Bloque**. Campo de texto libre.
+-   **Portal**. Campo de texto libre.
+-   **Escalera**. Campo de texto libre.
+-   **Planta o piso**. Campo de texto libre.
+-   **Puerta**. Campo de texto libre.
+-   **Complemento**. Datos complementarios del domicilio si los hubiera.
+-   **Localidad o Población**. Campo de texto libre.
+-   **Municipio**.
+-   **Código de municipio**. El usuario debe elegir el código del municipio de una lista normalizada según el INE español.
+-   **Código de provincia.** El usuario debe elegir el código de provincia de una lista de códigos de provincia de dos dígitos numéricos.
+-   **Código postal**. El usuario debe elegir el código postal.
+
+En el caso de "Locales en el extranjero" los datos a incluir son:
+
+-   **Tipo de vía.**
+-   **Nombre de la vía pública**.
+
+El 347 refleja este tipo de operaciones de forma separada tal y como se explica en el correspondiente caso de usuario.
+
+######## **Generación del modelo 347**
+
+El modelo 347 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos.
+
+![](/assets/drive/I8vKXFszVIXPVZhyPNt7q1dl52OyNIGw-JWKniQBLnKUq21l25J9MbdniTdtPtnNIB1Q3aKoP3thNPaSWwmlwa3xdcBYC6jQWnQUxks9w9nH2cMZEKWtJMgTrWme0TlsVbG5dqhEh14CHBKAqglBiA.png)
+
+El usuario deberá introducir los siguientes datos para generar el modelo 347:
+
+-   **Organización** para la cual quiere generar el Modelo 347. El sistema mostrará el calendario asociado a la organización en un campo no editable.
+-   **Esquema contable**
+-   **Declaración**. El usuario debería seleccionar aquí el modelo 347 del periodo impositivo que corresponda.
+-   **Ejercicio**. El usuario puede introducir el año natural para el cual quiere generar el modelo 347
+-   **Periodo**. El valor “Anual” debería mostrarse por defecto.
+
+Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 347 en el botón de proceso “Parámetros de entrada”
+
+![](/assets/drive/BTVvmrL7eUYl5NhX1-PKOO_Aa_50C1NZd8bWXZAiD4oQsYc32KxEQKKhjq1bzpwL084nWtTneQN0cn2Fd9zQVoUqkGtIrzR8LnkUklnypDnn9CSFjpknNIHs5c6lV8fV4nsqaxBlFplBnEuRQ2_8pA.png)
+
+y una vez introducidos los parámetros de entrada, como por ejemplo el "Nombre del Fichero" o la "Persona/Teléfono de contacto", el usuario puede generar el fichero del Modelo 347 a través del botón de proceso “Generar fichero”.
+
+Es entonces cuando se genera el fichero de texto ("\*.txt") del Modelo 347 conforme a los requerimientos de la AEAT, que puede presentarse directamente en la web de la AEAT.
+
+En el módulo [](http://centralrepository.openbravo.com/openbravo/org.openbravo.forge.ui/sso/ForgeModuleDetail/Spain-AEAT-Modelo-347-For-APR)"Spain AEAT Modelo 347 for APR", se genera un fichero zip que contiene tres ficheros:
+
+-   el fichero "txt" ya mencionado de igual formato y, por tanto, igualmente válido para la presentación del Modelo 347 a partir de 2014
+-   un fichero denominado "Facturas.csv"
+-   y un fichero denominado "Metalico.csv"
+
+*Los dos ficheros adicionales de formato \*.csv sólo se generan si la declaración del 347 tiene contenido*.
+
+El fichero "Facturas.csv":
+
+-   contiene un listado con información del tipo "Tercero", "Fecha Contable", "Impuesto", "Base Imponible", "Cuota", "Total" etc, de todas las facturas susceptibles de incluirse en el fichero txt.
+
+El fichero "Metalico.csv":
+
+-   contiene un listado con información del tipo "Cuenta Financiera", "Identificación de Transacción", "Tercero", "Fecha Contable", "Importe" y "Ejercicio (de devengo)" de todos los cobros en efectivo susceptibles de incluirse en el fichero txt.
+
+######## **Casos de usuario**
+
+######### **Operaciones de compra y venta**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta, a través de la ventana correspondiente.
+
+El modelo 347 recogerá agrupando por "tercero" y "clave \[A (compras) o B (ventas)\]", las siguientes operaciones de compra/venta que superen la cifra de 3.005,06 euros:
+
+-   compra/venta de bienes/servicios (no sujetos a retención) dentro del territorio de aplicación del impuesto (IVA), España y Baleares
+-   compra/venta de servicios desde/hacia resto del mundo, incluyendo Canarias, Ceuta y Melilla.
+
+No se van a tener en cuenta:
+
+-   operaciones de compra/venta de bienes/servicios intracomunitarias, por reflejarse en otro modelo de hacienda, el Modelo 349, excepto las operaciones que no se incluyen en el Modelo 349.
+-   importaciones/exportaciones de bienes.
+
+########## **Operaciones de compra y venta acogidas a RECC**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta acogidas al RECC (Régimen Especial de Critero de Caja).
+
+Para ello:
+
+-   la "Organización" debe estar acogida a este Régimen
+-   o bien no acogida pero si alguno de los proveedores de los cuales recibe facturas de compra.
+
+Estas organizaciones deben tener aplicado el juego de datos del módulo "Spain AEAT Modelo 347 Cash VAT compatible.
+
+Este módulo incluye un juego de datos que relaciona los impuestos de IVA de Caja con los parámetros correspondientes del Modelo 347.
+
+Las transacciones de compra/venta se recogen en el Modelo 347 de forma anual conforme al criterio de devengo general de IVA y marcadas como "Operación de IVA de Caja". Además, se incluye la parte correspondiente anual devengada conforme al criterio de IVA de Caja en otro campo.
+
+**Transmisión de Inmuebles**
+
+Etendo permite la introducción y contabilización de transmisiones (ventas) de bienes inmuebles sujetas a IVA.
+
+Este tipo de operaciones se recogen de forma separada en el modelo 347.
+
+Es por ello que se ha creado en el módulo de impuestos para España:
+
+-   categorías de impuestos específicas para los B. Inmuebles (IVA Normal B.Inmuebles e IVA Reducido B.Inmuebles)
+-   rangos de impuestos (IVA) de compra/venta de Bienes Inmuebles
+
+y en el conjunto de datos del 347:
+
+-   un parámetro específico denominado "Transmisiones de Inmuebles" ligado a los impuestos de venta de bienes inmuebles.
+
+########## **Transmisión de Inmuebles sujetas a RECC**
+
+Este tipo de transacciones también se incluyen en el Modelo 347 de forma separada, en computo anual, y marcadas como "Operación IVA Caja".
+
+######### **Arrendamientos**
+
+Etendo permite la introducción y contabilización de facturas de compra y de venta que incluyan arrendamiento de locales de negocio sujetos a IVA.
+
+Solo en el caso de arrendamientos de locales de negocio por parte del propietario de dicho local, se deberá además incluir información adicional sobre dicho inmueble/local, en un registro de tipo Inmueble específico. Para ello, aquellos locales que se den de alta en el maestro de productos susceptibles de ser alquilados deberán configurarse como tales tras activar el nuevo parámetro "Local arrendado".
+
+Esto implica rellenar datos como los que se muestran en la siguiente imagen:
+
+![](/assets/drive/dE833IZAyk5YYiQiYB9eDDk6wxK_0btiWm0ZxEGjetv8EO6eEVaFX1l49jftJWX3Kzpsjf7CYhV2xKGpTzoPPIHnWOtBreM6VjXKc9pppnC3uX0Da8TQSwz_CSSxFmBEVhREbwCzxTxCExDC9scqtRA.png)
+
+Este tipo de operaciones tienen que reportarse de forma separada en el 347 tal y como se muestra en la siguiente imagen:
+
+![Arrendamiento fichero.png](/assets/drive/jbFjoMyVVnHbJWnBIr3G76slsiwl0sB1cuiVHPyZU3Fxi0xayrKTqa6KnmpwSN6pZAUm3FPIwxGY8b7sfijsMd2dXLmxmn4WI85_Pr8_F41aL7Y3GQUXNZYqaM4uvGleErZpzWqX3KiMv6ElEGHuxt8.png)
+
+La transacción de venta (B) con el cliente "Cliente Arrendamiento" por un importe anual de 30.310,50, incluye además el arrendamiento de un inmueble por un importe de 13.370.50.
+
+########## **Arrendamientos en RECC**
+
+Estas operaciones se reflejan de forma anual en el modelo 347,marcadas como tal, incluyéndose también la información referente al registro del inmueble arrendado por el declarado. 
+
+######### **Cobros en Efectivo**
+
+Etendo permite la introducción y contabilización de facturas de venta y sus correspondientes cobros en efectivo depositados y contabilizados en Etendo a través de cuentas financieras del tipo "Caja".
+
+  
+Se recomienda configurar el método de pago "Contado" asociado a la cuenta financiera "Caja" como se detalla a continuación:
+
+-   Permitido para Cobro
+-   Depósito automático en cuenta
+-   Cuenta de depósito = Cuenta contable para depósito.
+-   los cobros que para un tercero (cliente) y para un periodo, por ejemplo 2014, que lógicamente será el periodo/año para el cual generamos el 347, superen el umbral de 6.000,00 €
+    -   Dicho cobro puede referirse a operaciones incluidas en facturas de venta contabilizadas en 2014 o años anteriores.
+
+![Cobro Efectivo 2.png](/assets/drive/rQsEfez1_-0gnYadOcq2Dp9ptPt-fpXnvDJr-dZQKfhGd4CbMhpIZl8--qafNSbneZvk0iTvjQdOyesMqfRe8UKT1l8bwOYiPd4PojgZsEHUXOjQ5o5TiOrFYFxOVfBKW4hIp9qC0W8mkxbVsM54wz4.png)
+
+![Cobro Efectivo 1.png](/assets/drive/Lxv-BIcYyAGs73YiuQW3z8G7HaswKFky4KLo0tygiKNTTsVyOQuux39shCmeBOucaw5We-Pq56fRIDdRr4VeMlWN2ffdh1Pw-u931b7tv1Ejq87qM-waVMN6DMHFg4VKOpgsvPeTu6Qwfx0BT3Rf_3k.png)
+
+En el fichero ejemplo anterior se puede comprobar que:
+
+-   los cobros en efectivo tanto del "Cliente Efectivo" (por importe de 18.000,00) como del "Cliente Efectivo Varios" (por importe de 6.560,00) se especifican de forma separada en las posiciones (101-115). La diferencia entre estos cobros es:
+    -   para el "Cliente Efectivo Varios", la operación que generó el cobro en efectivo en el año 2014 se devengo y se declaró en el año 2013.  
+        Esa es la razón por la cual no aparece importe de operación alguno en las posiciones 83-98 y el año de devengo de la operación es 2013.
+    -   para el "Cliente efectivo B", la operación que generó el cobro en efectivo se devenga y se cobra en el año 2014, y forma parte del total de operaciones por importe de 81.675,00.
+
+Faltaría un último caso:
+
+El caso en el que un cobro/s del año en curso (2014), sea un cobro/s de transacciones devengadas en un periodo/año anterior y, por tanto, ya declaradas, y transacciones devengadas en el periodo/año en curso y, por tanto, no declaradas, tal y como se muestra en la siguiente imagen:
+
+![Efectivo C 1.png](/assets/drive/UNvoZgjSZH4I3jP_aiFtWoh588bAF9cXNFgxPj9QwdIVRaSs2LQPqaO0OfaumKmjQOuONVkzQGnDksNIoLc7WsaMn_lM2LfMrDdYTlFaM7rQA2UzZu06m4Yujf8I4zN_3XE-sPOl7SnRi8i7pXJkujA.png)
+
+![Efectivo C 2.png](/assets/drive/fUbrPtlbC-3LRPMGAoFSLSg5WJL9aJnB-ArVFC3JAq-ED3T3EyPf4rNPjlEEPdIhSqX31YFcp95zSSdXDdxNAwR0Jj6APn121ZA20w1dwxW571BuD2nXIjhchVDKE4BEHosSqTq9cd39qycG3KI9u5M.png)
+
+En la imagen anterior, se ha producido un cobro en el año 2014 por importe de 48.188,25; de los cuales 7.350,75 son por operaciones realizadas y declaradas en el año 2014 y el resto 40.837,50 por operaciones realizadas y declaradas en un ejercicio anterior (2013).
+
+########## **Cobros en Efectivo en RECC**
+
+Todo lo dicho en este apartado aplica igualmente a las operaciones de venta en IVA de Caja que se cobran en efectivo, salvo que en este caso no aplicaría un "Ejercicio" de devengo anterior a 2014, ya que el periodo de validez de este régimen comenzó el 1 de enero de 2014.
+
+Además del importe anual de las operaciones y el importe anual devengado en criterio de IVA de Caja, debe añadirse el importe percibido en metálico, junto con el ejercicio de devengo de dichas operaciones.
+
+######### **Presentación del modelo 347 en formato electrónico**
+
+La presentación telemática del modelo 347 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
+
+La presentación telemática puede realizarse a través de la página web de la [Hacienda Pública española](https://sede.agenciatributaria.gob.es/Sede/procedimientoini/GI27.shtml){target="_blank"}.
+
+########## **Datos en los ficheros csv**
+
+Tal y como ya se ha mencionado, con módulo "Spain AEAT Modelo 347 for APR" se generan, además del fichero "txt" del Modelo 347, dos ficheros adicionales "\*.csv", un fichero denominado "Facturas.csv" y otro fichero denominado "Metalico.csv".
+
+El fichero csv "XXXFacturas.csv" incluye las siguientes columnas:
+
+-   "**Tipo de documento**".  
+    Estos son las facturas estándar (AP/AR Invoice, AP/AR Credit Memo..etc) de Etendo
+-   "**Número de documento**"  
+    O número de factura/abono.
+-   "**Tercero**"  
+    Cliente o proveedor.
+-   "**NIF/CIF**" del tercero.
+-   "**Fecha Factura**"
+-   "**Fecha Contable**"  
+    Fecha contable de la factura.
+-   "**Impuesto**"  
+    Impuestos del dataset de impuestos para España ligados al parámetro del Modelo 347 correspondiente.
+-   "**IVA de Caja**"  
+    Esta columna nos indica si la factura está o no sujeta a IVA de Caja.
+-   "**Cuota**"  
+    Cuota ligada al tipo de impuesto incluido en la factura
+-   "**Base Imponible**"  
+    Base imponible ligada al impuesto incluido en la factura.
+-   "**Total**"  
+    Suma de la base imponible y la cuota. Este valor es el que hay que tener en cuenta ya que el 347 incluye importes totales, incluído el IVA, al ser una declaración de operaciones con Terceros y no una liquidación de IVA.
+-   "**Tipo de Línea**"  
+    Dado que en el 347 se tiene que incluir de forma separada tanto los arrendamientos como las transmisiones de bienes inmuebles y operaciones de inversión del sujeto pasivo, por tanto, en este campo las opciones que hay son "vacío" para operaciones de compra/venta normales, "Arrendamientos", "Transmisión B. Inmuebles" e "Inversión Sujeto Pasivo".
+
+El fichero csv "XXXMetálico.csv" incluye las siguientes columnas:
+
+-   "**Cuenta Financiera**"  
+    Cuentas financieras de tipo "Caja" de Etendo.
+-   "**Línea de Transacción**"  
+    Número de línea de la transacción en la pestaña "**Transacción**" de la cuenta Financiera.
+-   "**Identificador de Transacción**"  
+    Identificador formado por la cuenta financiera, la divisa, el número de cobro, la fecha del cobro, el tercero y el importe del depósito/cobro.
+-   "**Tercero**"
+-   "**NIF/CIF**" del tercero.
+-   "**Fecha Contable**"  
+    Fecha contable del cobro.
+-   "**Ejercicio**"  
+    Ejercicio en el cual se devengó la operación o factura que se cobra. Este ejercicio puede ser 2014 o anterior para declaraciones del ejercicio 2014.
+-   "**Importe transacción**"  
+    Importe del cobro en metálico.
+
+Estos ficheros csv nos van a permitir saber por ejemplo:
+
+-   que tercero se debe incluir en la declaración y con qué importes por haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   que tercero no se debe incluir en la declaración por no haberse superado el límite de 3.005,06 € en el volumen anual de operaciones realizadas con él.
+-   cuales son las facturas de compra cuya suma equivale al "Importe Anual/Trimestral de Operaciones" realizadas con un proveedor en concreto
+-   o bien cuales son los cobros en efectivo cuya suma equivale al "Importe percibido en metálico" de un cliente en concreto, incluido en la declaración.
+
+########## **Presentación de declaraciones sustitutivas**
+
+Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
+
+Para ello, el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar la declaración 347 como fichero indicando:
+
+-   que la declaración es sustitutiva
+-   el número de la declaración original que se sustituye
+
+![](/assets/drive/beimgAXSJ1DvjNuJHa1G2tIQaIYdpHt769PulMwVmx7Y7bT0NJvb08DTbx5rt5GTBVuWu7XxfJ5ZTGw7iyFufV-kRKiw2OCLzoNH17Ul6h3y5ajyc1CcVbAr-XqjfQKBAnUFcjLZ7g1n27uXFZtbX5c.png)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347){target='_blank'}
+---
+
+---
+###### Modelo 349
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat349.es <br>
+
+######## **Introducción**
+
+Esta sección aplica al módulo “**Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”** incluído en el módulo de Localización Española de Etendo.
+
+######### **Descripción del módulo**
+
+El nuevo módulo de generación del Modelo 349 como un fichero “.txt” válido de acuerdo a los requisitos establecidos por la Hacienda Española (Orden HAC/360/2002 de 19 de febrero y modificada en última instancia por la Orden HAC/174/2020 de 28 de diciembre) permitirá a las empresas españolas cumplir con sus obligaciones fiscales de presentación de la declaración recapitulativa de las entregas y adquisiciones intracomunitarias de bienes que realicen.
+
+De acuerdo con el reglamento del IVA, están obligados a presentar el modelo 349, los sujetos pasivos del Impuesto que realicen cualquiera de las siguientes operaciones:
+
+-   Las entregas de bienes destinados a otro Estado miembro, entregas de bienes exentas del impuesto.
+-   Las adquisiciones intracomunitarias de bienes sujetas al impuesto.
+-   Las adquisiciones intracomunitarias de bienes y entregas subsiguientes exentas conocidas como “Operaciones Triangulares”
+
+El contenido de la declaración recapitulativa de operaciones Intracomunitarias es:
+
+-   Las operaciones citadas en el párrafo anterior, así como las rectificaciones a cualquiera de las operaciones anteriores ya incluidas en la correspondiente declaración recapitulativa.
+-   Los datos de identificación de los proveedores y adquirientes
+-   así como la base imponible en euros de las operaciones intracomunitarias de bienes declaradas.
+
+En general, la declaración recapitulativa deberá presentarse por cada mes natural durante los veinte primeros días naturales del mes inmediato siguiente, salvo la correspondiente al mes de julio, que podrá presentarse durante el mes de agosto y los veinte primeros días naturales del mes de septiembre y la correspondiente al último período del año, que deberá presentarse durante los 30 primeros días naturales del mes de enero.
+
+Cuando ni durante el trimestre de referencia ni en cada uno de los cuatro trimestres naturales anteriores el importe total de las entregas de bienes y prestaciones de servicios que deban consignarse en la declaración recapitulativa sea superior a 50.000 euros, excluido el Impuesto sobre el Valor Añadido, la declaración recapitulativa deberá presentarse durante los veinte primeros días naturales del mes inmediato siguiente al correspondiente período trimestral.
+
+Si al final de cualquiera de los meses que componen cada trimestre natural se superará el importe mencionado en el párrafo anterior, deberá presentarse una declaración recapitulativa para el mes o los meses transcurridos desde el comienzo de dicho trimestre natural durante los veinte primeros días naturales inmediatos siguientes.
+
+!!! info
+    Desde 2020 se suprime el período anual de declaración.
+
+Las operaciones se entenderán realizadas el día en que se expida la factura o documento equivalente que sirva de justificante de las mismas.
+
+Debido a que en el modelo 349 se deben diferenciar aquellas notas de abono que son rectificación a facturas incluidas en modelos del 349 ya enviados a Hacienda y las notas de abono que no lo son, ha sido necesario crear una funcionalidad que relaciona las notas de abono con las facturas que están siendo abonadas o rectificadas, tal y como se explica en este documento en la sección “Casos de usuario. Operaciones rectificativas del 349”
+
+!!! info
+    El módulo de generación del Modelo 349 no incluye las operaciones triangulares, puesto que dichas operaciones no se gestionan en Etendo. 
+
+Este módulo no tiene en cuenta las transacciones correspondientes al tipo de documento de Etendo “AP/AR credit memo” como facturas de abono, ya que dicho tipo de transacciones no reflejan devoluciones de mercancía, es por ello que el módulo 349 tendrá en cuenta los tipos de documento AP/AR invoice (como facturas de compra y venta) y los tipos de documento AP/AR invoice negativos (como notas de abono o facturas rectificativas).
+
+Además, no se incluye en el módulo de funcionalidad el supuesto de Declaración Complementaria para aquellos casos en que deban incluirse solo las operaciones que, debiendo haber sido declaradas en otra declaración del mismo ejercicio presentada con anterioridad, no se incluyeron. Estas operaciones deberán ser incluidas por el usuario manualmente, a través de la página de la AEAT tal y como se explica en la sección de este documento “Declaración Complementaria”.
+
+######## **Instalación del módulo**
+
+Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+Es importante recalcar que:
+
+-   El módulo del Modelo AEAT 349 incluye el correspondiente conjunto de datos que relaciona los tipos/rangos de impuestos con los parámetros del 349.
+-   Una vez instalado el módulo, éste se debe aplicar a la Organización para la cual se requiere obtener el modelo 349, tal y como se describe en el apartado siguiente.
+
+######### **Aplicación del Módulo**
+
+Una vez instalado el módulo del 349, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
+
+Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización (\*) y, por tanto, a la organización legal para que se quiera obtener el 349, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado previamente.
+
+El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos, si no está aplicado previamente, y después el módulo del 349).
+
+######### **Configuración del módulo para la organización con contabilidad**
+
+Una vez instalado el módulo del 349 por cualquiera de los procedimientos anteriores, el usuario debe aplicar el módulo del 349 a la organización legal con contabilidad que corresponda.
+
+Es fundamental recalcar que el usuario debe tener el módulo de impuestos para España instalado y aplicado a la organización legal con contabilidad previamente, dicho módulo de impuestos para España es válido para todos los modelos de declaración de impuestos, en este caso el modelo de declaración del 349, y debe estar instalado y aplicado a la organización previamente.
+
+El usuario deberá navegar a "Configuración General / Gestión del módulo de Empresa", seleccionar la organización legal con contabilidad y aplicar los módulos en el orden especificado (primero el módulo de impuestos si no está aplicado previamente y después el módulo del 349).
+
+######## **Configuración del módulo**
+
+######### **Configuración del modelo 349**
+
+Este módulo de generación del modelo 349 como un fichero de texto (“\*.txt”) válido conforme a los requerimientos de la Hacienda Pública Española, se basa en la funcionalidad del “Generador de declaraciones de impuestos”.
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Declaración de Impuestos, que el modelo 349 está creado como informe anual, trimestral o mensual de impuestos, todos con la misma configuración:
+
+![](/assets/drive/H0HWfOy7IdB5yLwjirTyqV4jjt9pCbVBTk0lZlXCnufLFyy1zAos1vJiKc0Wgsydgfs3H5RtRsFpPg7UcQXvX924p8_3Taq958X892bGQbJCsMqKjxmenrRR7j3NPFZTcbTE9oQgv9zdWwU9-ngWWh1cIdzW-78QmhNv6SBuuTAUSn_h_N9dotFwXQ.png)
+
+En la pestaña “Secciones de la declaración” se han creado 4 secciones:
+
+![](/assets/drive/vgoWI1diiY_P5qHvQxVKR-bl45Z8XjklTv3NmDsdvGUs47FO_5rOG-1iHbXUXJvJgbMrIVFi4o6K2uExaU-quP9Dhj8z5E4T5bLhOaC-UfkPdriINML5ZQldERE6KkGqjl3A1-eqqIrcqJmCxujcgbe6loYARcfVDZWZVLggYf9-f7LUz3gdGa5IxQ.png)
+
+-   **Fichero** esta primera sección contiene un parámetro de tipo entrada para que el usuario pueda introducir el nombre del fichero del 349 como parámetro de entrada a la hora de generar el fichero.
+-   **Identificación y Totales** esta segunda sección tiene:
+    -   **4 parámetros de tipo “entrada”** que se mostrarán en el momento de generar el 349 con el fin de que el usuario los introduzca manualmente:
+        -   Persona de contacto: Apellidos y nombre de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el nombre de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Teléfono de contacto: Número de teléfono de la persona de contacto. Este parámetro de tipo entrada podría ser modificado a tipo constante y, por tanto, se debería especificar el valor de dicha constante que en este caso sería el teléfono de la persona de contacto, para los escenarios en que la misma persona presenta la declaración. De ser así, este parámetro no tendría que informarse cada vez que se genera la declaración.
+        -   Declaración sustitutiva (si/no)
+        -   Identificador declaración anterior: Número de la declaración a sustituir.
+    -   **3 parámetros de tipo “salida”** que el sistema recogerá de la base de datos:
+        -   Año
+        -   Nombre de la organización
+        -   NIF/CIF de la organización
+-   **Operaciones** esta tercera sección tiene 2 parámetros de tipo “salida” que asociados a los tipos impositivos correspondientes incluirán las operaciones en el 349:
+    -   Entregas intracomunitarias de bienes – Clave tributaria E
+    -   Adquisiciones intracomunitarias de bienes – Clave tributaria A
+-   **Constantes** esta cuarta sección tiene 11 parámetros de tipo “constante”:
+    -   Constante en caso de informe anual (0A)
+    -   Constante para el primer trimestre (1T)
+    -   Constante para el segundo trimestre (2T)
+    -   Constante para el tercer trimestre (3T)
+    -   Constante para el cuarto trimestre (4T)
+    -   Número de declaración del 349 (349 se reemplaza al remitir el fichero)
+    -   Tipo de declaración (349)
+    -   Línea tipo 1 (1)
+    -   Línea tipo 2 operaciones (2)
+    -   Línea tipo 2 correcciones (2)
+    -   Presentación (T)
+
+######### **Configuración de impuestos**
+
+Este nuevo módulo de generación del modelo 349 se basa en el módulo de impuestos para España y en uno específico para el 349.
+
+El usuario puede comprobar en la ruta de aplicación: Gestión Financiera / Contabilidad / Configuración / Rango impuesto - pestaña Parámetro de Impuesto que los “tipos impositivos/impuestos” que deben incluirse en el 349 se han asociado al correspondiente parámetro de impuesto del 349:
+
+-   Los tipos de IVA de adquisiciones intracomunitarias se han asociado con el parámetro “Adquisiciones intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “A”
+
+![](/assets/drive/KfmRrt9yoEP7_JdY9pGj74eYjDSqeyfBKSdPOhVonW4dkyhp_ooo6fq_VvIR-JcZsvSLAqbAMCowQduY6t-bMNJ_XJCHhqpkFCqo9Fkddj0GPykc5YhEp8TZKoOmZTXyWLYNY2PgG-JTVAdV2I6h_gZLLB-n48YQGkJdC5M8_iKRF7lv0W6I93sY6w.png)
+
+-   Los tipos de IVA de entregas intracomunitarias se han asociado con el parámetro “Entregas intracomunitarias de bienes” que se corresponde con la clave de operación del 349: “E”
+
+![](/assets/drive/M9IdlZd-5bo-JKwXpqzeEiWsaa3ONYSfKXANXvyS8TFgbYrOUVg4LjLNidbkGB9lpDkSyNFJQeaV3JpBU_U6IFw2deN8Hi7v5zQhzvAuZNHfE4C2cXoxZu6orkao7wqoXLbdfN40AkRo2obRJexQcI_PQAlOY85AwyUL_-pfUnFrUBHBkhkiMN8Odg.png)
+
+######## **Generación del modelo 349**
+
+El modelo 349 se genera desde la ruta de aplicación: Gestión Financiera / Contabilidad / Herramientas de análisis / Generador de declaraciones de impuestos. El usuario puede generar el modelo 349 para cualquier mes natural, trimestre natural o bien para el año que desea, tal y como se muestra en las pantallas siguientes:
+
+![](/assets/drive/ajXlOv6TaSCfuNPH4ti4kb0oWm2V4BommSomzro0ZtwUi9P_MqK2QydL8RjnbP9dZ0jdU_iXnYr958xhg5mmGYK1msnKIQqnGKVrNVT6EqQYsqK4hGfKR7VV21YB2EvluSKzXnC4AWnPo2ZLENR5mSWIlsKMKbGdPJ2kZn8VilJkc7KVL20L9bW8pg.png)
+
+![](/assets/drive/bexJeVp33GqVPTWs2j-Z5_3gP2ywX0ej3VPCpQBrbBBkogNFQZ02p_hkUr2y9GipS0Z8uZ8zIj_zFIli04pNqqzK4FGSbPFiFgPlYShPVMCcvSuBIGxAZhBT2gbMtxm2nV_omJ3BguAthe6i320j95im5TmxSCsnmech5ZFWUyUhhks4MFsTvxIVqw.png)
+
+![](/assets/drive/lj6JxfJvSCO3n4p3kIK_SIXgIbUVY0Oqt4iJJMZPJGYy-JhM3rp6C96LMeAGmK5p33pacEBtCOb0Llmm1G4IoWG6KiEpvPY_IQjyDXZ2lf5uqZBt2_geN7M-aG-97lFUFC16BLcCK6XAB5hC-e18eBunH1RQfRX2_tOwNBJEFVgVwOkf5POwOFWRuw.png)
+
+En la ventana de generación de informes, el usuario deberá introducir los siguientes datos para generar el modelo 349:
+
+**Organización** para la cual quiere generar el Modelo 349. El sistema mostrará el calendario asociado a la organización en un campo no editable.
+
+**Esquema contable**
+
+**Declaración de impuestos**. El usuario debería seleccionar aquí el modelo 349 mensual, trimestral o anual.
+
+**Ejercicio**. El usuario puede seleccionar el año para el cual quiere obtener el 349.
+
+**Periodo**. Si el usuario ha seleccionado el modelo 349 mensual, podrá seleccionar aquí el período (por ejemplo, enero 22), si ha seleccionado el modelo 349 trimestral, podrá seleccionar aquí el período (por ejemplo, enero 22 – marzo 22) y si ha seleccionado el modelo 349 anual, este campo mostrará, como valor por defecto, “Anual”.
+
+Una vez introducidos los datos anteriores, el usuario puede introducir los parámetros de entrada del 349 en el botón de proceso “Parámetros de entrada”
+
+![](/assets/drive/5i9PO0yuY0M54bcqQ5wMi6y9VjSP18KJBqhgyUFL5pfn5NST30ZaM-zOyqWJZ4KfkX_0m7B_jNUUfhUKNDOI5iNYxD6xlx0b54ajbT0_26cnQGYRKIBLdzoDcCEiYz-08U-TOsJ9Q8vKm_XeSi7AChRNm-sSwhL8zmq99ULTHXlMTXTTXGuM1kZP.png)
+
+y una vez introducidos los parámetros de entrada, el usuario puede generar el 349 a través del botón de proceso “Generar fichero”.
+
+######### Navarra y Guipúzcoa
+
+Se incluyen 2 nuevos check que permiten generar el fichero con la parametrización correcta para poder realizar su presentación en Hacienda Navarra y Hacienda Guipúzcoa:
+
+![](/assets/drive/yM3HJ5ASqiH4Qs-ZgFfKANQSIVTin-DqGq0zKSmvduihJS7WOddNRd448Wv5eni03bNiwWYjVCVtZU47t4sUIyIfF18hUY-JL-oA2B_0374_CXHpXvsPICoc0TtxcvEnrrJ_ZK6ezf1gUzdsvhxXdr8.png)
+
+Anteriormente, el fichero generado del modelo 349 sólo se podía presentar en AEAT. Con esta mejora, se permite la presentación tanto en Navarra como en Guipúzcoa en función del check que marquemos (si no se marca ninguno, el fichero se genera con la parametrización para la AEAT).
+
+######## **Casos de usuario**
+
+######### **Generación del modelo 349 como un fichero de texto válido**
+
+Esta funcionalidad permitirá a las empresas españolas generar el modelo 349 como un fichero de texto conforme a los requisitos establecidos por la normativa española, para un periodo determinado.
+
+Durante el año/trimestre/mes natural, el usuario registrará en Etendo las transacciones de compra y/o devolución con sus proveedores de la Unión Europea así como las transacciones de venta y/o devoluciones de ventas con sus clientes de la unión europea.
+
+Las transacciones de compra y venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y factura de compra =AP invoice) y de venta (albarán de venta y factura de venta =AR invoice), respectivamente.
+
+Las transacciones de devolución, tanto de compra como de venta, se deberán introducir en el sistema normalmente a través de los tipos de documento de compra (albarán de compra y abono de compra =AP invoice Negativa) y de venta (albarán de venta y abono de venta=AR invoice Negativa).
+
+Además, deberá asegurarse de que todos los productos tienen la parametrización adecuada en relación con las categorías de impuestos que tienen asociadas (21%-10%-4%).
+
+Una vez que todas las operaciones se han registrado en el sistema, el usuario podrá generar el fichero del modelo 349 tal y como se explicó en la sección de este documento “Generación del Modelo 349”. El fichero txt del 349 tiene la siguiente estructura:
+
+![349 4T.png](/assets/drive/4_Ps-YvMKdQKgeHJ_8HkhOwYAerhc8oX6OB58UG1NX5nSoSPBvgsR6vpY2MjmJk1pOhsFk4SmLv_ETEI4Fm4ZBDkWuxdFH4ZcDSJ83NIb3m9QNrqqWssPrfkpRjovNPC2MpEfj9CTun2h_BQgo0TNyAt5gyqhJFR6Qr5dt5T91F5tH-HCYkaJABLfw.png)
+
+######### **Tipo registro 1 – Registro de declarante:**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 1) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-57** | Apellidos y nombre o razón social del declarante |
+| **58** | Blanco |
+| **59-107** | Persona con quién relacionarse: Teléfono / Apellidos y nombre |
+| **108-120** | Número identificativo de la declaración |
+| **121-122** | Declaración complementaria o substitutiva |
+| **123-135** | Número identificativo de la declaración anterior |
+| **136-137** | Periodo (predeterminado = 1T,2T,3T,4T,0A,01,02,03,04,05,06,07,08,09,10,11,12) |
+| **138-146** | Número total de operadores intracomunitarios |
+| **147-161** | Importe de las operaciones intracomunitarias |
+| **162-170** | Número total de operadores intracomunitarios con rectificaciones |
+| **171-185** | Importe de las rectificaciones |
+| **186** | Indicador cambio periodicidad en la obligación de declarar |
+| **187- 390** | Blancos |
+| **391 - 399** | NIF del representante legal |
+| **400 - 500** | Blancos |
+
+######### **Tipo de Registro 2 – Registro de operador intracomunitario**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 2) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-75** | Blancos |
+| **76-92** | NIF del operador comunitario |
+| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+| **134-146** | Base Imponible o Importe |
+| **147-178** | Blancos |
+| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+| **236- 500** | Blancos |
+
+######### **Tipo de Registro 2 – Registro de rectificaciones**
+
+|     |     |
+| --- | --- |
+| **Posiciones** | **Descripción** |
+| **1** | Tipo de Registro (constante = 2) |
+| **2-4** | Modelo Declaración (constante = 349) |
+| **5-8** | Ejercicio |
+| **9-17** | NIF del declarante |
+| **18-75** | Blancos |
+| **76-92** | NIF del operador comunitario |
+| **93-132** | Apellidos y nombre o razón social del operador intracomunitario |
+| **133** | Clave de operación (E, M, H, A, T, S, I, R, D o C) |
+| **134-146** | Blancos |
+| **147-178** | Rectificaciones   <br>  <br>\- 147-150 ejercicio (de la declaración que se corrige)   <br>\- 151-152 periodo (de la declaración que se corrige)   <br>\- 153-165 base imponible (para el tercero y el periodo) rectificada   <br>\- 166-178 base imponible (para el tercero y el periodo) declarada anteriormente |
+| **179- 195** | NIF Empresario o Profesional Destinatario final sustituto |
+| **196- 235** | Apellidos y Nombre o Razón social del sujeto pasivo sustituto |
+| **236- 500** | Blancos |
+
+######### **Operaciones rectificativas del 349**
+
+En el modelo/fichero del 349 hay que diferenciar de forma específica en el registro tipo 2 de "Rectificaciones aquellas notas de abono a facturas que ya fueron incluidas en una declaración 349 para un periodo anterior al corriente, por ejemplo:
+
+-   **Declaración 349 Mensual** = Una nota de abono de fecha agosto del 2022 que abona una factura de fecha julio del 2022 que ya fue incluída en la declaración del 349 del mes de julio del 2022. La nota de abono de fecha agosto debe incluirse en la declaración del mes de agosto como rectificativa a la declaración del mes de julio para el proveedor/cliente que aplique, indicando además el importe total (base imponible) de compra/venta que se incluyó en la declaración de julio para ese cliente/proveedor.
+-   **Declaración 349 Trimestral** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres.
+-   **Declaración 349 Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma anual, lo único que varía en este escenario es que en vez de tener en cuenta meses/trimestres se tendrán en cuenta el año natural.
+
+Y las que no y deben acumularse para el periodo, por ejemplo:
+
+-   **Declaración 349 Mensual** = Una nota de abono de fecha de agosto 2022 que abona una factura de fecha de agosto 2022 que todavía no ha sido incluida en la Declaración del 349 para el mes de agosto del 2022, se incluirá en la declaración de agosto como un menor valor del importe de compra/venta con el correspondiente proveedor/cliente.
+-   **Declaración 349 Trimestral o Anual** = Lo mismo aplica en el caso de presentación de la declaración del 349 de forma trimestral o Anual, lo único que varía en este escenario es que en vez de tener en cuenta meses se tendrán en cuenta trimestres o el año natural.
+
+Es por ello que se ha introducido en el sistema una funcionalidad que permite al usuario, a la hora de crear una nota de abono o devolución, indicar si dicha nota de abono/devolución es una “rectificativa del 349” o no, es decir, si rectifica a una factura (factura rectificada) de un año/mes/trimestre natural anterior y que, por tanto, ya se incluyó en una declaración del 349 anterior.
+
+Para introducir esta información, el usuario deberá navegar a Gestión de compras o Ventas / Transacciones / Factura (Proveedor) o Factura (Cliente), crear una nueva factura como:
+
+-   una AP/AR invoice negativa (devolución de mercancía al proveedor/cliente)
+-   una AP/AR credit Memo
+-   una Reversed Purchase/Sales Invoice
+-   o incluso la anulación total de una factura de compra/venta;
+
+e introducir los datos relativos al abono y devolución de mercancía y, en la pestaña “Factura Rectificativa”, crear un nuevo registro con el fin de:
+
+-   seleccionar la factura (original) que esta abonándose o rectificándose - esa selección ya vendŕa dada en caso de anulación total de una factura.
+-   y además seleccionar el nuevo campo “Rectificativa del 349”, con el fin de indicar además:
+    -   el Año de la factura original que se rectifica
+    -   el Periodo de la factura original y, por tanto, el periodo en el cual dicha factura original se incluyó en un 349
+    -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
+    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios Clave I en compras, Clave S en ventas)
+
+![](/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
+
+Tal y como se muestra en la pantalla anterior, esta funcionalidad requiere mostrar en Etendo las columnas que se detallan a continuación:
+
+-   Correctiva del 349
+-   Año
+-   Periodo
+-   Base Imponible del 349 Productos
+-   Business Partner
+-   Base Imponible del 349 Servicios
+
+!!! info
+    No todas las notas de abono o devoluciones de mercancía serán rectificativas del 349, sólo aquellas que así se configuren por el usuario. 
+
+En caso de que la nota de abono o devolución de mercancía y la factura original pertenezcan al mismo periodo, por ejemplo al 1er mes del año 2022 (Enero 2022, en caso de declaración del 349 mensual), al 1er periodo del año 2022 (Enero 2022 a Marzo 2022, en caso de declaración del 349 trimestral) o al mismo mes (Enero 2022, en el caso de declaración del 349 mensual), tan sólo será necesario relacionar ambos documentos en la nueva pestaña “Factura Rectificativa” sin tener que seleccionar el parámetro “Rectificativa del 349”.
+
+En este último escenario, el sistema, para un mismo proveedor o cliente y periodo, acumulará las facturas positivas y los abonos con el fin de generar el computo global del importe de las transacciones de compra/venta efectuadas con dicho proveedor/cliente (operador intracomunitario) que debe incluirse en la declaración del 349 para un periodo determinado.
+
+######### **Presentación del modelo 349 en formato electrónico**
+
+La presentación telemática del modelo 349 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
+
+La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”\]
+
+!!! info
+    Existe una “Guía de presentación telemática” en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [*aquí*](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
+
+
+######### **Presentación de declaraciones sustitutivas**
+
+Es necesario presentar una declaración sustitutiva cuando dicha declaración tenga por objeto anular y sustituir completamente a otra declaración anterior para el mismo periodo ya enviada a Hacienda, en la cual se hubieran incluido datos inexactos o erróneos.
+
+Para ello el usuario deberá realizar en la aplicación los cambios en los datos/transacciones pertinentes y volver a generar una nueva declaración 349 como fichero indicando en este caso que la nueva declaración que se presenta es sustitutiva de una anterior, e indicando además el número de la declaración original a la que sustituye, tal y como se muestra en la siguiente pantalla:
+
+![](/assets/drive/iSU9FGfN3pSTIsHPTAKpZsKZsCB7C0BhZa1RBDpzcJQ8uaOHAUmMPFuYQkhQbrQ2izd9kDfZ0TCiEHdGvHIE7iHOc-uDNoBEhDS5cF9x__Bf2rQgvz47h3U88ViVeZimkAUXctFTFhF9gZYbywo3Nb23iqRQ0Tfq03VSTqcEOcsQQnYJVi6MGxDajA.png)
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349){target='_blank'}
+---
+
+---
+###### Impuestos para España
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.taxes
+
+######## **Introducción**
+
+El módulo de impuestos para España es un conjunto de datos que contiene:
+
+-   "Categorías de Impuestos" para IVA, IGIC e IPSI
+-   "Categorías de Impuestos de Terceros"
+-   "Rangos de Impuestos"
+
+configurados con el objetivo de que los usuarios de Etendo puedan gestionar:
+
+-   el IVA Nacional
+-   el IVA Intracomunitario
+-   el IVA de Importación/Exportación
+-   las retenciones de IRPF, "Impuesto sobre la Renta de las Personas Físicas" más comúnmente utilizados en el España
+-   así como el IGIC, "Impuesto General Indirecto Canario" de aplicación en Canarias y el IPSI, "Impuesto sobre la Producción, los Servicios y la Importación" de aplicación en Ceuta y Melilla.
+
+Es importante tener en cuenta que en el caso del:
+
+-   **IVA Nacional**, los rangos de impuestos están asociados a España como país de origen y destino, España inlcuye "Península y Baleares".
+-   **IVA Intracomunitario**:
+    -   los rangos de impuestos de venta o entregas intracomunitarias exentas, están asociados a España como país de origen y países de la UE como país de destino.
+    -   los rangos de impuestos de compra o adquisiciones intracomunitarias, están asociados a países de la UE como país de origen y España como país de destino.
+-   **IVA de Importación/Exportación**:
+    -   los rangos de impuestos de venta o exportaciones exentas, están asociados a España como país de origen y terceros países como país de destino.
+    -   los rangos de impuestos de importaciones, están asociados a terceros países como país de origen y España como país de destino.
+-   **IGIC**, los rangos de impuestos están asociados a Canarias como región de origen/destino según aplique.
+-   **IPSI**, los rangos de impuestos están asociados a Ceuta y Melilla como región de origen/destino según aplique.
+
+Por tanto:
+
+-   Si su organización se localiza en Península y Baleares, sus productos/servicios tiene que estar asociados a las categorías de impuesto de IVA
+-   Si su organización se localiza en Canarias, Ceuta o Melilla, sus productos/servicios tienen que estar asociados a las categorías de impuesto de IGIC o IPSI
+
+Es importante recalcar que la configuración de impuestos para España, no incluye impuestos de "IVA Nacional" de otros países miembros de la UE como "IVA Nacional de Italia" o "Francia", para las ventas que excediendo el límite requerido deban liquidarse en el país de Europa que aplique.
+
+######## **Instalación del Módulo**
+
+Para la instalación del módulo de Impuestos para España, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+######## **Aplicación del Módulo**
+
+Es importante recalcar que una vez instalado el módulo de impuestos, los "Datos de referencia" que incluye deben aplicarse en la ruta de aplicación "Gestión del Módulo de Empresa".
+
+Los datos se pueden aplicar:
+
+-   a nivel de organización (\*) si se quiere conseguir que todas las organizaciones del cliente utilicen el mismo conjunto de datos o tipos impositivos
+-   o bien se pueden aplicar a una organización en concreto o a varias.
+
+######## **Impuestos para España**
+
+A continuación, se encuentran los impuestos disponibles en el conjunto de datos de este módulo.
+
+
+- Adquisiciones IVA 0%
+- Adquisiciones IVA 0+RE 0+0%
+- Adquisiciones IVA+RE 21+1.75%
+- Adquisiciones IVA+RE 5+0.62%
+- Adquisiciones intracomunitarias 5%
+- Entregas IVA 0%
+- Entregas IVA 0+RE 0+0%
+- Entregas IVA 5%
+- Entregas IVA+RE 21+1.75%
+- Entregas IVA+RE 5+0.62% 
+- Servicios prestados 0%
+- Prestación servicios nacional 5%
+- Servicios prestados nacional 5%
+- Adquisiciones IGIC 15%
+- Adquisiciones IGIC 7%
+- Adquisiciones IGIC Implícito 70% s15%
+- Adquisiciones IGIC Implícito 70% s7%
+- Arrendamientos en Canarias 7%
+- Arrendamientos en Canarias 7% -19%R (pagos)
+- Arrendamientos en Canarias 7% -21%R (pagos)
+- Entregas IGIC 15%
+- Entregas IGIC 7%
+- Prestación servicios en Canarias 15%
+- Prestación servicios en Canarias 7%
+- Prestación servicios en Canarias 7% -15%R
+- Prestación servicios en Canarias 7% -19%R
+- Prestación servicios en Canarias 7% -21%R
+- Servicios prestados en Canarias 15%
+- Servicios prestados en Canarias 7%
+- Adquisiciones IGIC 6.5%
+- Adquisiciones IGIC Implícito 70% s6.5%
+- Arrendamientos en Canarias 6.5%
+- Arrendamientos en Canarias 6.5% -19%R (pagos)
+- Arrendamientos en Canarias 6.5% -21%R (pagos)
+- Entregas IGIC 6.5%
+- Prestación servicios en Canarias 6.5%
+- Prestación servicios en Canarias 6.5% -15%R
+- Prestación servicios en Canarias 6.5% -19%R
+- Prestación servicios en Canarias 6.5% -21%R
+- Servicios prestados en Canarias 6.5%
+- Adquisiciones IGIC Implícito 70% s13.5%
+- Adquisiciones IGIC Implícito 70% s3%
+- Adquisiciones IGIC Implícito 70% s9.5%
+- Entregas IGIC Exentas
+- Entregas IGIC Tipo 0%
+- No declarable gastos de empleado
+- Adquisiciones REBU Exentas
+- Arrendamientos 0% - 19%R (cobros)
+- Arrendamientos 0% - 19%R (pagos)
+- Arrendamientos 21% -19%R (cobros)
+- Arrendamientos 21% -19%R (pagos)
+- Arrendamientos en Guipúzcoa 21% - 19%R (pagos)
+- Arrendamientos en Navarra 21% - 19%R (pagos)
+- Compensación REAGYP 10.5% -2%R (sobre BI) SR
+- Compensación REAGYP 12% -2%R (sobre BI) SR
+- Compensación REAGYP 12% -2%R (sobre bruto) SR
+- Intereses 0% -19%R
+- Prestación servicios agencias publicidad 21% -24%R
+- Prestación servicios en Canarias 0%
+- Prestación servicios en Canarias 0% -7%R
+- Prestación servicios nacional 0% -24%R
+- Prestación servicios nacional 21% -24%R
+- Prestación servicios no residente 0% -19%R
+- Servicios prestados nacional 21%-24%R
+- Arrendamientos 0% -19,5%R (cobros)
+- Arrendamientos 0% -19,5%R (pagos)
+- Arrendamientos 21% -19,5%R (cobros)
+- Arrendamientos 21% -19,5%R (pagos)
+- Prestación servicios Bienes Inversión 21% -15%R
+- Prestación servicios Bienes Inversión 21%-7%R
+- Prestación servicios en Canarias 0% -15%R
+- Prestación servicios en Ceuta/Melilla 0%-7.5%R
+- Prestación servicios en Ceuta/Melilla 4% -3,5%R
+- Prestación servicios en Ceuta/Melilla 4% -7,5%R
+- Prestación servicios nacional 0% -7%R
+- Prestación servicios nacional 10% -15%R
+- Prestación servicios nacional 10% -7%R
+- Prestación servicios nacional 21% -15%R
+- Prestación servicios nacional 21% -7%R
+- Prestación servicios profesionales nacional 0% -15%R
+- Servicios prestados nacional 21% -15%R
+- Servicios prestados nacional 21% -7%R
+- Entregas a Canarias, Ceuta y Melilla (%N=>0%) ISP
+- Entregas sin IVA por ISP
+- Entregas sin IVA por ISP con RE
+- Inversión Sujeto Pasivo Nacional 21%
+- Arrendamientos 0% -20%R (cobros)
+- Arrendamientos 0% -20%R (pagos)
+- Arrendamientos 21% -20%R (cobros)
+- Arrendamientos 21% -20%R (pagos)
+- Inversión Sujeto Pasivo no UE 21% -24%R
+- Inversión Sujeto Pasivo no UE 21% -7%R
+- Prestación servicios divulgación nacional 0% -15%R
+- Prestación servicios en Ceuta/Melilla 0% -9.5%R
+- Prestación servicios en Ceuta/Melilla 4% -9,5%R
+- Prestación servicios nacional 0% -19%R
+- Prestación servicios nacional 21% -19%R
+- Servicios prestados nacional 21% -19%R
+- Prestación servicios nacional 21% -15%R RDL
+- Exenciones relativas a regímenes aduaneros y fiscales
+- No declarable devoluciones de cliente
+- Adquisiciones IVA 10%
+- Adquisiciones IVA 10% -2%R
+- Adquisiciones IVA 21%
+- Adquisiciones IVA 4% -2%R
+- Adquisiciones IVA+RE 10+1.4% 
+- Adquisiciones IVA+RE 21+5.2%
+- Adquisiciones Intracomunitarias 21% ISP
+- Adquisiciones a Canarias,Ceuta y Melilla 10%
+- Adquisiciones a Canarias,Ceuta y Melilla 21%
+- Adquisiciones bienes inversión 10%
+- Adquisiciones intracomunitarias 10%
+- Adquisiciones intracomunitarias 21%
+- Adquisiciones intracomunitarias Bienes Inversión 21%
+- Adquisiciones intracomunitarias exentas
+- Adquisición B.Inmuebles 10%
+- Adquisición B.Inmuebles 21%
+- Adquisición Bienes Inversión 21%
+- Adquisición Bienes Inversión 21% -1%R
+- Arrendamiento 21% (cobros)
+- Arrendamiento 21% (pagos)
+- Arrendamientos 0% -21%R (cobros)
+- Arrendamientos 0% -21%R (pagos)
+- Arrendamientos 21% -21%R (cobros)
+- Arrendamientos 21% -21%R (pagos)
+- Arrendamientos 21% -24%R (pagos). No Residentes
+- Arrendamientos en Guipúzcoa 21%-10%R (pagos)
+- Arrendamientos en Navarra 21% -20%R (pagos)
+- Entregas Bienes Inversión 21%
+- Entregas IVA 10%
+- Entregas IVA 10% Revendedores
+- Entregas IVA 21%
+- Entregas IVA 21% ISP
+- Entregas IVA 21% Revendedores
+- Entregas IVA+RE 10+1.4% 
+- Entregas IVA+RE 21+5.2% 
+- Entregas IVA+RE 21+5.2% ISP
+- Entregas IVA+RE 21+5.2% IVA Normal ISP
+- Importaciones 10%
+- Importaciones 10%=0%
+- Importaciones 21%
+- Importaciones 21% ISP
+- Importaciones 21%=0%
+- Importaciones 21%=0% ISP
+- Importaciones Bienes Inversión 21%
+- Importaciones Bienes Inversión 21%=0%
+- Inversión Sujeto Pasivo UE 10%
+- Inversión Sujeto Pasivo UE 21%
+- Inversión Sujeto Pasivo UE exento
+- Inversión Sujeto Pasivo no UE 10%
+- Inversión Sujeto Pasivo no UE 21%
+- Inversión Sujeto Pasivo no UE 21% -24.75%R
+- Inversión Sujeto Pasivo no UE exento
+- Prestación servicios nacional 0% -21%R
+- Prestación servicios nacional 0% -9%R
+- Prestación servicios nacional 10% 
+- Prestación servicios nacional 10% -9%R
+- Prestación servicios nacional 21% 
+- Prestación servicios nacional 21% -1%R
+- Prestación servicios nacional 21% -21%R
+- Prestación servicios nacional 21% -9%R
+- Prestación servicios nacional 4% - 9%R
+- Servicios prestados nacional 10%
+- Servicios prestados nacional 21%
+- Servicios prestados nacional 21% -21%R
+- Servicios prestados nacional 21% -9%R
+- Transmisión B.Inmuebles 10%
+- Transmisión B.Inmuebles 21%
+- Adquisiciones IGIC 0%
+- Adquisiciones IGIC 13.5%
+- Adquisiciones IGIC 3%
+- Adquisiciones IGIC 9.5%
+- Adquisiciones IPSI 10%
+- Adquisiciones IPSI 4%
+- Entregas IGIC 13.5%
+- Entregas IGIC 3%
+- Entregas IGIC 9.5%
+- Entregas IPSI 10%
+- Entregas IPSI 4%
+- Prestación servicios en Canarias 13.5%
+- Prestación servicios en Canarias 3%
+- Prestación servicios en Canarias 3% -21%R
+- Prestación servicios en Canarias 9.5%
+- Prestación servicios en Ceuta/Melilla 0%
+- Prestación servicios en Ceuta/Melilla 10%
+- Prestación servicios en Ceuta/Melilla 4%
+- Prestación servicios en Ceuta/Melilla 4% -10,5%R
+- Prestación servicios en Ceuta/Melilla 4% -4,5%R
+- Prestación servicios exenta por suplido
+- Servicios prestados en Canarias 13.5%
+- Servicios prestados en Canarias 3%
+- Servicios prestados en Canarias 9.5%
+- Servicios prestados en Ceuta/Melilla 10%
+- Servicios prestados en Ceuta/Melilla 4%
+- Arrendamientos 18% -21%R (cobros)
+- Arrendamientos 18% -21%R (pagos)
+- Adquisiciones IVA 18%
+- Adquisiciones IVA 8%
+- Adquisiciones IVA+RE 18+4%
+- Adquisiciones IVA+RE 8+1% 
+- Adquisiciones a Canarias,Ceuta y Melilla 18%
+- Adquisiciones a Canarias,Ceuta y Melilla 8%
+- Adquisiciones intracomunitarias 18%
+- Adquisiciones intracomunitarias 8%
+- Adquisiciones intracomunitarias Bienes Inversión 18%
+- Adquisición B.Inmuebles 18%
+- Adquisición B.Inmuebles 8%
+- Adquisición Bienes Inversión 18%
+- Arrendamiento 18% (cobros)
+- Arrendamiento 18% (pagos)
+- Arrendamientos 18% -19%R (cobros)
+- Arrendamientos 18% -19%R (pagos)
+- Entregas Bienes Inversión 18%
+- Entregas IVA 18%
+- Entregas IVA 8%
+- Entregas IVA+RE 18+4% 
+- Entregas IVA+RE 8+1% 
+- Entregas intracomunitarias Bienes Inversión (%N=>0%)
+- Exportaciones Bienes Inversión (%N=>0%)
+- Importaciones 18%
+- Importaciones 18%=0%
+- Importaciones 8%
+- Importaciones 8%=0%
+- Importaciones Bienes Inversión 18%
+- Importaciones Bienes Inversión 18%=0%
+- Inversión Sujeto Pasivo UE 18%
+- Inversión Sujeto Pasivo UE 8%
+- Inversión Sujeto Pasivo no UE 18%
+- Inversión Sujeto Pasivo no UE 8%
+- Prestación servicios nacional 18% 
+- Prestación servicios nacional 18% -1%R
+- Prestación servicios nacional 18% -15%R
+- Prestación servicios nacional 18% -7%R
+- Prestación servicios nacional 8% 
+- Servicios prestados nacional 18%
+- Servicios prestados nacional 18% -15%R
+- Servicios prestados nacional 18% -7%R
+- Servicios prestados nacional 8%
+- Transmisión B.Inmuebles 18%
+- Transmisión B.Inmuebles 8%
+- Arrendamientos 16% -19%R (cobros)
+- Arrendamientos 16% -19%R (pagos)
+- Inversión Sujeto Pasivo no UE 16%
+- Prestación servicios en Canarias 5%
+- Adquisiciones intracomunitarias 7%
+- Adquisiciones a Canarias,Ceuta y Melilla 16%
+- Adquisiciones a Canarias,Ceuta y Melilla 4%
+- Adquisiciones a Canarias,Ceuta y Melilla 7%
+- Adquisiciones interiores exentas (art 22)
+- Adquisiciones no sujetas
+- Adquisición B.Inmuebles 16%
+- Adquisición B.Inmuebles 7%
+- Arrendamiento 16% (cobros)
+- Arrendamiento 16% (pagos)
+- Arrendamientos 16% -18%R (cobros)
+- Arrendamientos 16% -18%R (pagos)
+- Entregas a Canarias,Ceuta y Melilla (%N=>0%)
+- Entregas a Canarias,Ceuta y Melilla (%R=>0%)
+- Entregas a Canarias,Ceuta y Melilla (%SR=>0%)
+- Entregas no sujetas con dcho deducción
+- Importaciones 16%
+- Importaciones 16%=0%
+- Importaciones 4%
+- Importaciones 4%=0%
+- Importaciones 7%
+- Importaciones 7%=0%
+- Importaciones exentas
+- Inversión Sujeto Pasivo UE 16%
+- Inversión Sujeto Pasivo UE 7%
+- Inversión Sujeto Pasivo no UE 7% 
+- Prestación servicios interiores exentos (art 20)
+- Prestación servicios interiores exentos (art 22)
+- Prestación servicios nacional 16% 
+- Prestación servicios nacional 16% -15%R
+- Prestación servicios nacional 16% -7%R
+- Prestación servicios nacional 4%
+- Prestación servicios nacional 7%
+- Servicios prestados UE (%N=>0%)
+- Servicios prestados UE (%R=>0%)
+- Servicios prestados exentos sin derecho a deducción
+- Servicios prestados internacional (%N=>0%)
+- Servicios prestados internacional (%R=>0%)
+- Servicios prestados nacional 16%
+- Servicios prestados nacional 16% -15%R
+- Servicios prestados nacional 16% -7%R
+- Servicios prestados nacional 4%
+- Servicios prestados nacional 7%
+- Servicios prestados no sujetos con dcho deducción
+- Transmisión B.Inmuebles 16%
+- Transmisión B.Inmuebles 7%
+- Adquisiciones IVA 16%
+- Adquisiciones IVA 4%
+- Adquisiciones IVA 7% 
+- Adquisiciones IVA+RE 16+4%
+- Adquisiciones IVA+RE 4+0,5% 
+- Adquisiciones IVA+RE 7+1% 
+- Adquisiciones interiores exentas (art 20)
+- Adquisiciones intracomunitarias 16%
+- Adquisiciones intracomunitarias 4%
+- Entregas Exentas
+- Entregas IVA 16%
+- Entregas IVA 4%
+- Entregas IVA 4% Revendedores
+- Entregas IVA 7% 
+- Entregas IVA+RE 16+4% 
+- Entregas IVA+RE 4+0,5% 
+- Entregas IVA+RE 7+1% 
+- Entregas intracomunitarias (%N=>0%)
+- Entregas intracomunitarias (%N=>0%) ISP
+- Entregas intracomunitarias (%R=>0%)
+- Entregas intracomunitarias (%SR=>0%)
+- Exportaciones (%N=>0%)
+- Exportaciones (%N=>0%) ISP
+- Exportaciones (%R=>0%)
+- Exportaciones (%SR=>0%)
+- Prestación servicios no sujetas
+- Servicios a Canarias, Ceuta y Melilla (%N=>0%)
+- Servicios a Canarias, Ceuta y Melilla (%R=>0%)
+- Servicios a Canarias, Ceuta y Melilla (%SR=>0%)
+- Servicios prestados exentos con derecho a deducción
+
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa){target='_blank'}
+---
+
+---
+###### Intrastat
+######## Javapackages
+
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.spain <br>
+:octicons-package-16: Javapackage: org.openbravo.module.intrastat.es.es
+
+######## Introducción
+
+Esta sección describe el módulo disponible de Etendo para la generación y presentación del informe oficial de Intrastat.
+
+El informe Intrastat se debe presentar a las autoridades mensualmente, dentro de los 12 días posteriores al mes en el que se realizaron las transacciones.
+
+La declaración de Intrastat se debe enviar telemáticamente (a través Internet) en un fichero válido con un determinado formato específico de cada país.
+
+######## Descripción de los Módulos
+
+A continuación, se listan los diferentes **módulos** sobre los que se desarrolla la funcionalidad de Intrastat:
+
+-   **Intrastat.** Este módulo proporciona la infraestructura necesaria que permite la configuración, ejecución y generación del fichero de Intrastat. Si sólo instala este módulo, Etendo será capaz de reconocer todas las transacciones que formarán parte del fichero de Intrastat.
+
+Éste es un módulo del que dependen el resto de módulos de Intrastat, proporciona la funcionalidad genérica para los países de la Unión Europea. Sin embargo, tenga en cuenta que cada país de la UE tiene sus propias peculiaridades, y este módulo es incapaz de conocerlas y manejarlas él sólo. Por este motivo, es posible que necesite instalar además el módulo de Intrastat concreto para su país, que será el que proporcione las peculiaridades propias de su país.
+
+-   **Intrastat for Spain (Intrastat para España).** Este módulo complementa al módulo anterior y proporciona las características específicas para España, como por ejemplo:
+    -   Excluye las transacciones que tienen como origen o destino las Islas Canarias (como requiere la ley)
+    -   Genera un fichero de Intrastat con el formato oficial listo para ser enviado mensualmente a las Autoridades.
+-   **Intrastat – Spanish Translation (Intrastat - Traducción al español).** Añade la traducción al español (España) del módulo Intrastat.
+
+Además de los módulos anteriores, necesitará instalar las siguientes dependencias obligatorias:
+
+-   **Incoterms.** Añade la lista de Incoterms oficiales (Condiciones de Entrega) a su instalación de Etendo
+-   **European Union Countries.** Añade la lista de países miembros de la Unión Europea a su instalación de Etendo
+-   **Provincias de España.** Añade la lista de provincias españolas a su instalación de Etendo
+
+Todas estas dependencias se instalarán automáticamente al instalar los módulos de Intrastat, por lo que no tendrá que hacerse manualmente.
+
+######## **Instalación de los módulos**
+
+Para la instalación del módulo “Modelo AEAT 349 - Declaración recapitulativa de operaciones intracomunitarias”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [*Marketplace*](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+!!! info
+    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo *“Intrastat”* no se tendrán en cuenta a la hora de generar las declaraciones de Intrastat.
+
+
+Tenga en cuenta que, como es lógico, el sistema solo es capaz de reconocer las transacciones a incluir en el informe de Intrastat desde el momento que se instala y configura dicha funcionalidad en Etendo.
+
+######### **Aplicación de los Datasets (Conjuntos de datos)**
+
+Una vez instalado el módulo, se deberán aplicar los datasets incluidos a su instalación.
+
+Si está realizando la configuración inicial de Etendo, puede utilizar el proceso “Crear Organización” para aplicar estos datos.
+
+Si, por el contrario, está instalando estos módulos en un sistema en productivo, deberá aplicar los datasets desde la ventana Configuración General | Organización | Gestión del módulo de Empresa  |  Gestión del módulo de Empresa:
+
+![](/assets/drive/9E8pdSDAB1cQjG039Rhp_c3Z-XDg2LC-1tnuokHzaQ6MVZ1TTuM5YTyX1q0-wYHGGRAH0OtCyMQ6uICIwQHcHfwz7sBTqVtvAKlc6SSyZGiCuCAJhZ8bsQt9m3qLT4Eiw3mR4XSTNY01hZtqqw9IwQKG9zaQzBnRd89An6VyGUsO7DNXkQl1Q19l9A.png)
+
+Seleccione los datos de referencia “Incoterms” e “Intrastat for Spain” y aplíquelos a su organización de nivel de agrupación o a su entidad legal dependiendo de su árbol de organizaciones.
+
+Si el proceso se ha ejecutado correctamente, el sistema debería mostrar la siguiente información:
+
+![](/assets/drive/WFgwGX-k5cQwljyb0pvetphDd1B4qebt3L2mRNX9o2MhfjH5nTqVpG9O4TUCMwn6NJ1cK1bfQhtosDVfnjno3suZce-SgBk9JC9aZgaRntutQfEf7cc5GLPaBmCSu_L29LYfA3n-g6DMfo8M-NnfKSZnQ8TDR6o3VoM1Y9W75yEjs4v_2POlWyUEpA.png)
+
+######## **Interfaz de Usuario**
+
+El módulo “Intrastat” proporciona campos, ventanas y solapas necesarios para la configuración y generación de la declaración de Intrastat.
+
+A continuación se muestran unas capturas de pantalla de estos elementos junto a una breve descripción de cada uno de ellos.
+
+############ **Gestión de Datos Maestros | Producto  |  Producto  >>  Intrastat**
+
+![](/assets/drive/G5Llm2flNrOzJt-k1_SvtgklRXnnQtgz0wyBL4ouCXVxOoe30GaKqSgN5KgrXlgH21xq0_T0EUyZlwpaGQgjhcLP8cpt1HqqiAK9EGzkjzgcObg1bTkeIMUdoTtcM7WbTd0oTcgVEi4iAQdWhJ76AyrmUSnh2bw8Zo0tU15gL3AYtIFQr1wMBybNXA.png)
+
+Las transacciones entre países de la UE que incluyan productos de tipo Artículo se deben registrar en la declaración de Intrastat. Cada uno de los productos tiene asociado un código de mercancía obligatorio y una masa neta en Kg (por unidad de facturación). Opcionalmente, y siempre dependiendo del producto, se puede configurar una unidad de medida suplementaria junto a su correspondiente conversión.
+
+En esta solapa, el usuario debe configurar los datos particulares de cada producto.
+
+############ **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente  >>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  | Terceros  >>  Proveedor/Acreedor  >>  Adquisiciones de Intrastat**
+
+![](/assets/drive/7azhjfSW95mKDO_Umt-b50nUiixohLlwZ1zx_oZKMbNAO7R79nOk7oMsT2Rq-iOC-rY16uPaSnyHXz5_5bwULKS1eSqn7bmhL85Um2Qs-f_RNafxL9RFYkcEXvV_l-7QVXpWVGjPDbIghA2hw-mXyPncKMBU1GIqXCrUt8KkoklL6WlVFouQKsXX8A.png)
+
+Cada tercero con el que trabaje, ya sea cliente o proveedor, tendrá su propia configuración para Intrastat por defecto. Por ejemplo, es posible que su proveedor siempre le envíe la mercancía mediante un medio de transporte determinado.
+
+Desde esta solapa el usuario tiene la oportunidad de configurar esos valores por defecto de cada tercero. El sistema siempre recuperará la información configurada aquí y la utilizará para generar la declaración de Intrastat.
+
+Sin embargo, es posible que en alguna transacción en particular, la modalidad de transporte varíe de la que tiene configurada por defecto en esta ventana. Si éste es el caso, el usuario siempre tiene la oportunidad de cambiar manualmente esta información a nivel de transacción o de declaración de Intrastat como veremos más adelante en este manual.
+
+############ **Gestión de Datos Maestros | Terceros  |  Terceros  >>  Cliente y Gestión de Datos Maestros | Terceros  |  Terceros  >>  Proveedor/Acreedor, campo Incoterms**
+
+![](/assets/drive/FxL2ss3KNP9of-xib9m4PqSBvMrXhhFCKBFlFLq06LGNxkxNzb2A0R55NPFpGogVFQ6Zc9ztwL-EjSxQYPAZTkDgpbCN-Unh4iJGItzb1np0W0YBfO6_PiM-PSbp20vpW5T38UEp2vXdogNtyh-osvVMoIUHGJDlSf4HDqNXCsD2YbFUGULEr1gW0A.png)
+
+El campo Incoterms permite definir el Incoterm (Condición de Entrega) por defecto para el tercero. Es importante tener en cuenta que se pueden configurar dos Incoterms para el tercero, uno cuando el tercero es cliente y otro cuando es proveedor.
+
+!!! info
+    El campo "Incoterms" del Tercero, es un campo de Etendo que no se muestra por defecto, pero si se utiliza en los módulos de Intrastat. Recuerde mostrarlo si lo va a utilizar.
+
+
+############ **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento**
+
+![](/assets/drive/IoUclg9rhO_Gqhw_0FuLoJa54gQjUysOPDNlGgbwsbczidBrKgSlXDVgV06YLVDXTwMPbgeJ041zklsHvsDQKu0lhSTvKh3uI3TPmCeYv4qY466B-at_lMNxdR24jh40VhYtkBzLxGKGPkQIFVHGJSLZfwjDeImzQu1key6CJmHNBTfZEDth6QQCeg.png)
+
+Los campos *Tipo de Transacción* y *Regimén estadístico* van asociados al tipo de documento (facturas). En esta ventana puede definir los valores por defecto que, al igual que sucedía con los valores de Intrastat para Producto o Tercero, pueden ser sobrescritos para transacciones o declaraciones de Intrastat en concreto.
+
+############ **Configuración General | Organización | Organización | Organización, campo Calendario de Intrastat**
+
+![](/assets/drive/mVJ1pyaJF0A0_AhDbNggeRZnZvxKq2pl9cs7i7n-0TuQfxS-sucLH8Dj83qvRSIDnttYFzgSMZK5LRnWS5n5Wp6liQUUZnaOeJfKjfHFFm7q5eFQ68kpmuLi_V-SI8N2d28S3lOfQfGwc6Rhq-U_RROZKyUL9fmjd9LM_xCuM2H3pzd__651wvaibg.png)
+
+El campo *Calendario de Intrastat* define el calendario de declaraciones de Intrastat. En España, el Intrastat se debe presentar mensualmente, por lo que el calendario de Intrastat seleccionado debe tener doce periodos que coincidan con los dos meses naturales de un año. Si su calendario fiscal cumple esas condiciones, puede usarlo también como calendario de Intrastat sin necesidad de crear uno nuevo.
+
+En este nuevo campo, sólo aparecerán los calendarios que estén marcados como *“Calendario de Intrastat”* en la configuración del calendario:
+
+![](/assets/drive/bO3u93UFfmKU1W9mLFKYj-ZbmYv8cKLtPjLvC-yacQkkRXAfcnGz3HeIrfsjW08XXL8iBOP656gydvYIYVKSIthvyYK8IEsipoh7XADziIBF77qqffJlwOH11cgdPlb0tWT9wCtR11_P3CSWWbkOUracp5Ui3Ul0irS50FTaDLewU1rdVdJ1TEVmMg.png)
+
+############ **Configuración General | Organización | Organización  |  Organización  >>  Intrastat**
+
+![](/assets/drive/C03LX7XPMO-rvqovv8Gtmu6l-HoRmUqQPf0Q321iltU61rfVQyiGCo1dsu6oQ_oFXHLbF0528kEHLoOx8qWAmbJx0NcgwVmw_Iy-lNzSCRXYB4jO9P0zcaOAU44PXqja7AgrdctRRSNeYtErmY50OYAT0RKfFXgrX6lTf20j5WzMnDQexGT1AqaK0g.png)
+
+En esta solapa se introduce la información de Intrastat relativa a la organización (sólo entidades legales).
+
+Cada año se debe introducir un registro en esta solapa para configurar los siguientes datos:
+
+-   *Formato de Fichero*: Cada país tiene su propio formato de Intrastat. En este campo seleccionamos el formato de fichero concreto que queremos que cree el sistema. En el caso de España, el módulo “Intrastat for Spain” es el encargado de generar el fichero con formato para España.
+-   *Ejercicio*: Año de la declaración
+-   *Declaración de Intrastat*: Adquisiciones o Entregas
+-   *Importe Límite*: Cada año las Autoridades suelen modificar el importe que delimita la obligatoriedad de presentar o no la declaración de Intrastat. En este campo el usuario debe indicar el importe límite de cada año.
+-   *Importe Acumulado del año*: Cada vez que se presente una declaración mensual, el sistema irá actualizando automáticamente el valor de este campo con el importe acumulado. Si el año anterior se generó la declaración de Intrastat fuera de Etendo, o desea empezar a generar la declaración una vez empezado el año, puede configurar aquí el importe que declaró en su momento.
+-   *Valores por Defecto (Incoterms, Tipo de transacción, Modalidad de transporte, Régimen estadístico, Valor estadístico)*: Como ha visto anteriormente, en las ventanas de *Tercero* o *Tipo de documento* se pueden definir todos estos valores. Sin embargo, definir la misma *Modalidad de transporte* (por ejemplo) para todos los terceros puede resultar un poco molesto. Así que, si lo desea, puede definir la configuración global de estos valores en esta solapa. De esta forma, si por ejemplo no especifica nada en la *Modalidad de Transporte* de un Tercero, el sistema utilizará por defecto la configurada en esta solapa. Podrá modificar manualmente esta configuración siempre que lo desee en cada transacción o declaración de Intrastat.
+
+############ **Solapa Intrastat en Línea de Pedido, Albarán y Factura (compra o venta)**
+
+![](/assets/drive/MPXVxD2cgEZhT-sITSN4LLZJV59vTsxYwzj5fC8IKyIZuUjHq8BWShP7aSB5M5vue9kXWhNUL54W0Q7vNGkN1OJvPXInGUWRPOhsSix8csKzNIAYHwIxwxany7JR3xAeifSGeUfUOLCeOoxyR55QMrajFQjcsrPYt5AnOUALpnHeh82pH3O9mGbIKg.png)
+
+A nivel de línea de Pedido, Albarán y Factura, tanto de compra como de venta, se ha creado una nueva solapa que contiene toda la información de Intrastat relativa a esa transacción en concreto.
+
+Cada vez que se introduce una nueva línea de pedido, albarán o factura, el sistema comprueba si esa transacción se debe incluir en el informe de Intrastat (por ejemplo, si se trata de una compra/venta intracomunitaria) y, en caso afirmativo, genera un registro en la pestaña Intrastat con toda la información de Intrastat que se ha configurado por defecto. El usuario puede modificar manualmente cada uno de esos campos antes de completar el documento.
+
+La razón por la que se ha añadido una solapa de Intrastat tanto en las líneas de pedido como de albarán (teniendo en cuenta que estos documentos no se incluyen en el Intrastat, sino sólo las facturas contabilizadas) es que las facturas en Etendo pueden crearse desde los pedidos y/o los albaranes. Es por ello que si la información relativa a Intrastat se introduce en la línea de un pedido, esa información se trasladará a la correspondiente línea de factura si la factura se genera copiando del pedido.
+
+############ **Intrastat | Herramientas de análisis | Generador de Intrastat**
+
+![](/assets/drive/XxYQ02-DL0rr3DGMZ_FUOn2gVmqY34Iko4NBU_Wr7JXNbchAgTSr_BaLU_6bf9giEwaUVf8c2b2pvk2dc2U6NwRsa7CX8uFXET_eiMgxybpB8swm-0wSw9ln1r_FcRFaFlYvumc30KMLbEhCxNLFPy7NfCiPVYvY41yrCbbhVWZ75HgRrxwNyEYkdg.png)
+
+Una vez finalizado el mes, se debe generar la declaración de Intrastat de ese mes. Desde esta ventana podremos hacerlo. Para ello seleccionamos la Organización (sólo entidades legales), Ejercicio, Periodo, Adquisiciones o Entregas y Tipo de declaración (Normal o Anulativa).
+
+El sistema generará automáticamente una cabecera de declaración junto a sus líneas, accesible desde Intrastat | Herramientas de análisis | Declaración de Intrastat.
+
+############ **Intrastat | Herramientas de análisis | Declaración de Intrastat**
+
+![](/assets/drive/er07E5V7YGKLkaVl1A9lUzWMFj3FREeBMgFaqnjtq6fB2w7ek7q6ztujPw2KNRxtVq45PS7SU6MzaKmrNSdDnNXw6nkGRo0s_Y1aY0KKEyigXKHj9w8_RqGCSKo-Hj3AiqoUKo2sNu19GNJ6xTBoUMHzLYDpfMVL8JcyS1evqol-e3m-weEBCbbB5Q.png)
+
+Al generar una declaración de Intrastat, el sistema crea automáticamente una nueva cabecera (sólo lectura) junto con sus líneas. En este momento la declaración se encuentra en estado borrador, y se permiten modificaciones en las líneas de la declaración. Veamos un ejemplo de la información que contiene una línea:
+
+![](/assets/drive/04R4qED5tjzLbOS_oOdZGSssalCSrO5HjgBFbLPHotJgoHxVqKwB7MzSAGUN9sqiJdzB78R9LBKGA0J8pTtaXgOGJBcI3BzfQoyEXdg3dwLXaDTNG7aqfe6JSU_KAgeVjCkHNZO5kvKhJ5DzooSFsIYSd-hZs3KfJMCSH54KXzVfiXilrW02m280dQ.png)
+
+El sistema ha recuperado toda la información de Intrastat desde las líneas de factura. Si ha configurado toda la información relativa al Tercero, Producto y tipo de documento, Etendo Classic habrá rellenado automáticamente todos estos valores en las líneas de la declaración.
+
+Si por el contrario le falta algún dato, si desea modificar alguno, o incluso si quiere añadir manualmente nuevas líneas o excluir alguna de ellas, puede hacerlo mientras la declaración esté en estado borrador.
+
+En la solapa de líneas de declaración de Intrastat, al margen de los campos relativos a la información de Intrastat, aparecen dos campos de especial importancia para el usuario: el campo *“Incluir”* y el campo *“Modificado Manualmente”:*
+
+-   *Incluir*: Por defecto, todas las líneas de la declaración de Intrastat se incluirán a la hora de generar el fichero de Intrastat. Sin embargo, si desmarca esta casilla, la línea en cuestión se excluirá de la declaración.
+-   *Modificado Manualmente*: Cada vez que se modifique un dato de una línea de declaración de Intrastat o añada manualmente una nueva línea, el sistema marcará automáticamente esta casilla.
+
+Mientras la declaración está en estado borrador, la declaración de Intrastat se puede relanzar todo lo necesario. Cuando se haga, el sistema volverá a recalcular de nuevo la declaración, conservando intactas todas las líneas que tengan marcado el campo de *Modificado Manualmente.*
+
+######## **Manual de Instrucciones**
+
+Una vez que conoce las ventanas más importantes que proporcionan la funcionalidad de Intrastat en Etendo, es hora de conocer el flujo de trabajo para usar correctamente dicha funcionalidad.
+
+######### **Configuración General**
+
+Toda la lógica detrás de la funcionalidad de Intrastat en Etendo se basa en la ubicación física de su organización y de sus terceros. Por ese motivo es fundamental que especifique la dirección completa de cada uno de ellos. Si la dirección es de España, deberá indicar también la Provincia en la que se ubica.
+
+########## **Configuración de Intrastat**
+
+Como habrá podido observar, la configuración para Intrastat se realiza principalmente en los siguientes lugares:
+
+-   **Configuración General | Organización | Organización**. Para cada entidad legal, deberá seleccionar un calendario válido para Intrastat (que tenga ejercicios con 12 periodos que coincidan con los meses naturales). Recuerde marcar la casilla “Calendario de Intrastat” cuando configure su calendario (*Gestión Financiera | Contabilidad | Configuración | Calendario anual y periodos*) para que éste aparezca en el campo de *Calendario de Intrastat* de la ventana de Organización.
+-   **Configuración General | Organización | Organización  |**  Organización  **\>>  Intrastat**. Recuerde que en esta solapa se configuran:
+-   Los importes y tipos de declaraciones que desea generar para cada entidad legal
+-   Los valores por defecto globales que se utilizarán en caso de que no se definan concretamente donde corresponda (*Tercero* o *Tipo de documento*)
+
+El sistema necesita saber cuánto se declaró el año anterior. Para proporcionar esta información, se debe crear un nuevo registro en esta solapa. Solamente a modo de ejemplo, en *2021* para la organización *España*, declaramos un Intrastat de *adquisiciones* por un importe de *0.00* Euros:
+
+![](/assets/drive/9X5udGu8RP0DTGJquv2Li6dXdSXPxg03D1QBGQ6qnrs6VxCayvbcoqtu-IyOzhhT5L2lb7CWeHMST-gvve1CpWU8RyBTrUcgu-CIGup0h6kG9MrY0-DbIZ-LQIrMrLttuy0FAM3Ax2-CPquZMG8IOmqkZGLr6bl1mhCpSe2_IErNZTQfX5RfnIIrfg.png)
+
+!!! info
+    Nota: Si su calendario de Intrastat no tiene creado el año 2021, deberá crearlo (junto a sus respectivos periodos) antes de poder introducir este registro.
+
+
+Ahora repita ese proceso para el año presente. Si ya ha empezado el año y se han realizado transacciones intracomunitarias de bienes (presentando o no la declaración de Intrastat), deberá indicar el importe acumulado de este año. De esta forma, el sistema podrá saber si debe presentar la declaración de Intrastat o no a lo largo del presente año.
+
+También existe la opción de configurar los valores globales por defecto, lo que es especialmente útil si, por ejemplo, casi todos sus Terceros comparten el mismo Incoterm. Posteriormente, a nivel de tercero, se podrá especificar la configuración concreta para cada uno de ellos.
+
+![](/assets/drive/oVnu7ahLXMceKTVmUBhewKFKYODlv-fRnLLXvLdTrg6rsJdYzXk9_nRSj9_6COfueYVEub-2ISJZV49Abl1WRLhdVqzJ5DCV5n0d3vMDePDlcYKGY6pUDeQSSSrpRz6k--F-438sLk7NF_QCydiwA2C2X6nWOSbZ5u0D0Zn7UyfdJsZm1IRoRMPjAQ.png)
+
+-   **Gestión de Datos Maestros | Producto  |**  Producto  **\>>  Intrastat** Como ya vió en el apartado Interface de Usuario, debe definir la información de Intrastat para los productos de tipo *Artículo.*
+-   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Cliente y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>  Proveedor/Acreedor, campo Incoterms.** Como ya se vió en el apartado Interfaz de Usuario, se puede definir el Incoterm de cada Tercero.
+-   **Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Cliente  **\>>  Envíos de Intrastat y Gestión de Datos Maestros | Terceros  |**  Terceros  **\>>**  Proveedor/Acreedor  **\>>  Adquisiciones de Intrastat .** Como ya se vió en el apartado Interfaz de Usuario, se puede definir la información de Intrastat de cada Tercero.
+-   **Gestión Financiera | Contabilidad | Configuración | Tipo de documento  |  Definición de documento.** Como ya se vió en el apartado Interfaz de Usuario, puede definir el *Tipo de Transacción* y *Régimen estadístico* para sus documentos de tipo Factura.
+
+######### **Creación de transacciones**
+
+Una vez que nuestros datos están perfectamente configurados, es el momento de empezar a crear las transacciones que posteriormente se incluirán en la declaración de Intrastat.
+
+Como ya se ha visto en apartados anteriores, su instalación cuenta con una nueva solapa, llamada *“Intrastat”*, a nivel de línea de pedido, albarán y factura que contiene toda la información relativa al Intrastat. Si se han introducido todos los datos de configuración necesarios anteriormente, se utilizará esta información automáticamente para rellenar esa solapa. Si, por el contrario, no se ha configurado toda esta información, o desea modificar algún dato en concreto, podrá hacerlo de forma manual.
+
+Cada vez que se introduce una línea de pedido, albarán o factura, el sistema comprueba si se cumplen todas estas condiciones:
+
+1.  La organización y el tercero del documento se encuentran en países distintos de la Unión Europea
+2.  Todas las direcciones incluidas en la cabecera del documento, que están relacionadas con el tercero, están ubicadas en la UE. Si al menos una de las direcciones no pertenece a la UE, no se generará información de Intrastat
+3.  El producto incluido en la línea es un artículo
+4.  Si se ha instalado el módulo de *“Intrastat for Spain”*, el sistema también comprobará que tercero y organización no se encuentren ubicados en las Islas Canarias, ya que en este caso las transacciones se deben excluir del Intrastat.
+
+Si todas esas condiciones se cumplen, cada vez que inserte una línea de documento, el sistema creará automáticamente la información en la pestaña de Intrastat.
+
+El sistema recupera los valores por defecto que haya configurado a nivel de tercero, producto, tipo de documento y organización (este último si no encuentra los valores correspondientes anteriormente). Pero recuerde que, independientemente de los valores configurados, el usuario tiene la libertad de modificarlos para cada línea en concreto mientras el documento no se haya completado.
+
+########## **Creación de transacciones desde otras transacciones**
+
+En Etendo existe la posibilidad de crear albaranes desde pedidos; en este caso, el sistema recuperará la información de Intrastat introducida a nivel de pedido y la copiará al albarán.
+
+Imagine que ha creado un pedido y que ha cambiado el Incoterm por defecto. Cuando se cree un albarán desde ese pedido, el Incoterm que se incluirá en la línea de Intrastat del albarán será el que se haya redefinido en el pedido, y no el que estuviera configurado en el sistema por defecto.
+
+Lo mismo sucede para las facturas. En Etendo se pueden crear facturas desde albaranes o pedidos. En este caso, el sistema siempre intentará recuperar la información de Intrastat del albarán o del pedido. Si la factura se crea sin albarán o pedido asociado, Etendo recuperará la configuración del sistema para rellenar la solapa del Intrastat.
+
+######### **Generación de declaraciones de Intrastat**
+
+Una vez finalizado el mes natural, llega el momento de generar la declaración de Intrastat. Para hacerlo debemos ir a la ventana Intrastat | Herramientas de análisis | Generador de Intrastat. Seleccionaremos la entidad legal, año, periodo y tipo de declaración.
+
+![](/assets/drive/-xOOy1tCY12Yc8KLtr_QEIiGwyUIQ8O9dXuGoMTnHHhDwYTKty5cP1dog-im2f-iHQoE-UEbMJcoseuQvPEnMqTTwZvEEwMyHin7jQyDByPcGvhswO9pAz2e07LqRCkFPWXTXlMJEwr09pCoiupjWHCQLHRcPRdjgZhysMOmd4ZvJbmmRELeLdO7gg.png)
+
+Actualmente, Etendo soporta dos tipos de declaraciones: *Normales* y *Anulativas*, estas últimas anulan las declaraciones normales procesadas en el periodo seleccionado y generan una nueva declaración normal.
+
+Tenga en cuenta que un mismo periodo sólo puede tener como máximo una declaración normal para adquisiciones y otra para entregas.
+
+Mientras la declaración normal para un periodo se encuentre en estado borrador, el usuario puede lanzar la generación de la declaración tantas veces como quiera. El sistema actualizará todas las líneas de la declaración, conservando todos los cambios manuales realizados por el usuario.
+
+Como veremos más adelante, cuando se procese una declaración ya no se podrá realizar más cambios sobre ella. Sin embargo, el usuario siempre puede anular la declaración procesada para volver a generar una nueva declaración normal para ese periodo.
+
+!!! info
+    **Nota importante:** Etendo recomienda cerrar el periodo contable antes de generar la declaración de Intrastat.
+
+
+########## **Revisión, Modificación y Procesado de la declaración de Intrastat**
+
+Una vez generada la declaración, podemos examinarla antes de procesarla. Para ello utilizaremos la ventana Intrastat | Herramientas de análisis | Declaración de Intrastat. La cabecera de la declaración se encuentra por defecto en estado borrador, con todos los campos de solo lectura.
+
+Si navegamos a las líneas, podemos comprobar los datos que se incluirán en la declaración. Mientras la declaración esté en borrador, podremos modificar datos de las líneas, incluir manualmente nuevas líneas (para transacciones al margen de Etendo), o excluir líneas (mediante el campo *Incluir*) que no queramos que aparezcan en el fichero de Intrastat.
+
+
+Cuando estemos seguros de que la declaración es correcta, navegaremos a la cabecera y pulsaremos el botón *“Procesar Declaración”.* Este proceso comprobará que todos los datos necesarios para generar el fichero de Intrastat están en el sistema y nos mostrará un error detallado en caso de que encuentre algún fallo. Ejemplo:
+
+![](/assets/drive/YmqOUWlEagUpEcF7v1V8AbomnzuIy8PSzX0CHXiNQTThWHi821JdV-yVpHHydVZOZbxkF1ybQSff-K0KbKoaGSgYekcjm2ofbGreyprdx482TGdM8m4S-076wHnQt16isDz4Vn-gSMkN2Q5qEft7hRWTILjXA2NWVp2G7bVxcmzeCxVVxcfB7Bal7Q.png)
+
+Una vez procesada la declaración, el campo *“Importe Acumulado del año”* a nivel de organización se actualizará automáticamente, sumando el importe de esta declaración a lo acumulado en el año. Si posteriormente anula esta declaración, el sistema restará el importe de la declaración anulada al acumulado del año.
+
+######### **Generación del fichero de Intrastat**
+
+Al procesar la declaración, aparece automáticamente el botón de “Generar fichero”.
+
+![](/assets/drive/qZnZAQ6qT2iKqwv_ZgjHxgD_ytT0UxvLoevWs3yIh-DMPFriliEcja2bxMfH3znnY9CkX0Dvzw80Z99vu-3jyD_vSjaqb8Hds-METiaoAqj7KWg5WzgJq2u8FJ5qg2yBrBTlM20qrC_8jDo03XDeametjvbJwchZo4gBISB7-1D6NEtn8k3cp4hVDA.png)
+
+Cuando lo pulsemos, el sistema comprobará si estamos obligados a presentar la declaración para este periodo o no. Para llevar a cabo esta operación, el sistema comprueba el importe declarado el año anterior y el acumulado de este año, por ese motivo es muy importante que configure correctamente estos valores en la ventana Intrastat a nivel de Organización.
+
+
+Si durante el año anterior superamos el límite de declaración de Intrastat, o lo hemos superado a lo largo del presente año, Etendo nos generará el fichero de Intrastat con el formato apropiado para ser enviado telemáticamente (a través de Internet) a las Autoridades. Ejemplo:
+
+FR;31;FOB;11;3;;85182190;CN;1;115;162;15,37;15,37
+
+DE;28;CIF;11;1;0811;85182190;US;1;2459;1982;4589,46;4589,46
+
+IT;12;FOB;11;3;;02012030;;1;800;;987,00;890,45
+!!! info
+    Si las líneas de la declaración sobre la que vamos a generar el fichero son superiores a 1000, generará un fichero zip con tantos txt como sean necesarios, ya que cada archivo podrá contener un máximo de 1000 líneas.
+
+!!! info
+    Este fichero se puede importar en el enlace web de la AEAT - Cumplimentación en Línea con Importación de Fichero. Para más información, consulte este [*enlace*](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/procedimiento-presentacion-declaraciones-intrastat.html){target="_blank"}.
+
+
+!!! info
+    Es importante recalcar que superado el umbral de presentación en caso de que en un periodo (mes) no se realicen transacciones de intercambio de bienes intracomunitarias, habrá que presentar la correspondiente declaración sin transacciones. 
+
+
+
+########## **Finalizar el año. Copia de configuración al siguiente año**
+
+Una vez que hemos generado todas las declaraciones del año, es momento de configurar el sistema para el próximo año. Lo único que debe hacer es ir a la configuración del presente año en Configuración General | Organización | Organización  |  Organización\]  >>  Intrastat y presionar el botón *“Copiar al año siguiente”.* En la ventana emergente aparecerá un campo numérico para que introduzca el nuevo importe límite del siguiente año.
+
+![](/assets/drive/QeFYekMn3a3rRGcEFIkw2MgQ2UNf5EfrCuJM8iaLCP6WqeyL6-0HRqUgzimJiyEkn-vT6XRvDUsNkw2VhlJYRdoo5kgTPOdCa5r1EnNBj8k6CQ45xq-7R2LS4b0Yn8MwpQ2cgLoWrgeZYvCn9NhJNoIFNt6ZuzvNE82NJDn7JL4TtbIoU-OuQWHm4Q.png)
+
+El proceso comprobará que haya procesado todas las declaraciones del presente año y, en ese caso, creará un nuevo registro copiando toda la información de configuración del presente año junto al nuevo importe límite de declaración de Intrastat.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat){target='_blank'}
+---
+
+---
+###### Modelo 390
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
+
+######## **Introducción**
+
+El presente manual de usuario explica el contenido y funcionamiento del módulo comercial de Etendo, “**Modelo 390**”. 
+
+######## **Descripción del Modelo** 
+
+El módulo **Modelo 390** permite a las empresas cumplir con sus obligaciones fiscales relativas a la obligatoriedad de declarar un resumen anual de la liquidación del IVA durante el ejercicio fiscal.
+
+Esta declaración se debe enviar a la AEAT como un fichero XML de acuerdo con la normativa vigente.
+
+El Modelo 390 se debe presentar cada año durante los primeros 30 días del mes de enero del año siguiente, junto con la autoliquidación del IVA Modelo 303 correspondiente al último periodo del año.
+
+La liquidación anual del IVA permite al usuario calcular el importe anual que debe pagar a, o ser devuelto por Hacienda como la diferencia entre el IVA devengado y el soportado deducible.
+
+Con este nuevo módulo comercial, el Modelo 390 se puede presentar a Hacienda como un fichero de texto válido, obtenido a través del "Generador de Declaraciones de Impuestos".
+
+######## **Contenido del fichero Modelo 390**
+
+El fichero generado por Etendo, que cumple con el formato requerido por la Agencia Tributaria, contiene una estructura en formato XML con las siguientes secciones:
+
+-   Sujeto Pasivo y devengo
+-   Datos Estadísticos
+    -   Actividad
+    -   Clave
+    -   Epígrafe
+-   Datos del Representante
+    -   Personas Físicas
+    -   Personas Jurídicas
+-   Operaciones realizadas en régimen general (IVA Devengado)
+-   Operaciones realizadas en régimen general (IVA Deducible)
+-   Resultado liquidación anual
+-   Tributación por razón de territorio
+-   Resultado de las liquidaciones
+    -   Periodos que no tributan en Régimen especial del grupo de entidades
+-   Volumen de operaciones
+    -   Operaciones en Régimen General
+    -   Operaciones en RECC
+    -   Entregas Intracomunitarias Exentas
+    -   Operaciones exentas sin derecho a deducción
+    -   Exportaciones y otras operaciones exentas con derecho a deducción
+    -   Operaciones no sujetas por reglas de localización o con inversión del sujeto pasivo
+    -   Entregas de bienes inmuebles y operaciones financieras no habituales
+    -   Entregas de bienes de inversión
+-   Operaciones específicas - Operaciones realizadas en el ejercicio
+    -   Adquisiciones interiores exentas
+    -   Adquisiciones intracomunitarias exentas
+    -   Servicios localizados en el territorio de aplicación del impuesto por inversión del sujeto pasivo
+    -   Entregas de bienes y prestación de servicios en RECC, criterio devengo art 75 LIVA
+    -   Adquisiciones de bienes y servicios en RECC, criterio devengo art 75 LIVA
+
+Al contrario de otros modelos tributarios, este fichero XML no se puede importar en ningún software de la AEAT para su previsualización y edición.
+
+Sin embargo, debido a su estructura XML, este fichero se puede abrir directamente con cualquier editor de texto plano y su contenido es fácilmente entendible.
+
+A continuación se muestra como ejemplo un fragmento de dicho fichero:
+
+![](/assets/drive/3QJUPmIRRgydZM5-NvNgNFFdnM3pL6nmrrOkKyK9954vq1uCkiyLLrpxXy6BYWDfqGCWGU-syZWT6e4-ELClbkW_zjf3sssmTsohd-XoHntzYFwUzQiw5aqWybMwI6NLu1zTGp7b_Kz_h4xexbEYQdvwGquwY_AUWxwg_7dXC0byB3bmWGfcgfGke70i5w.png)
+
+Para facilitar el estudio y la comprensión de las cifras obtenidas y, debido al gran número de transacciones y tipos de impuestos que pueden incluirse en este modelo, el módulo del Modelo 390 de Etendo genera un fichero .csv que puede abrirse con cualquier software de Hoja de Cálculo. 
+
+Este fichero .csv lista todas las transacciones incluidas en el fichero XML, el impuesto relacionado, el importe de base imponible y cuota junto a la casilla del Modelo 390 oficial en la que se ha incluido dicha transacción.
+
+######## **Instalación y configuración del módulo**
+
+######### **Instalación**
+
+El soporte para el Modelo 390 en Etendo se distribuye en un único módulo. Este módulo tiene un gran número de dependencias, que serán instaladas automáticamente al instalar el 390. Entre estas dependencias destacan:
+
+-   Taxes: configuration for Spain (Impuestos para España)
+-   Tax Report Launcher
+-   Provincias de España
+-   Epígrafes del I.A.E.
+-   Legal Representative of the Organization (representante legal de la organización)
+
+Para su instalación el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible del paquete profesional de Etendo Classic para España
+-   o la instalación del módulo(s) de forma separada.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Adicionalmente, el Modelo 390 se distribuye en otro módulo compatible con el "Régimen Especial de Criterio de Caja" (RECC). Este módulo sólo contiene el juego de datos que relaciona los impuestos de IVA de Caja con los parámetros de declaración del Modelo 390 correspondientes. Si su organización está sujeta a este régimen o es destinataria de operaciones sujetas a este régimen, deberá instalar además este módulo.
+
+######### **Aplicación del módulo**
+
+Los módulos del Modelo AEAT 390 incluye un "conjunto de datos" o "configuración" que relaciona los tipos/rangos de impuestos para España, incluidos los de IVA de Caja, con los parámetros de declaración del 390.
+
+Es por ello que, una vez instalado el módulo, la "configuración del Modelo 390" debe aplicarse a la Entidad legal con Contabilidad que corresponda, en la ruta de aplicación:
+
+Configuración General | Organización | Gestión del módulo de Empresa.
+
+![](/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
+
+!!! info
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+
+
+Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
+
+1\. Se crea una nueva declaración del Modelo 390 anual, en la ruta de aplicación: Gestión Financiera | Contabilidad | Configuración | Declaración de impuestos, tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/4BgnIDpX0cT7z8sdAmqlsUOCEhMfGXzimfarXhM-6aAtY-vxDeu4a0q1LLa0gTlFWHmCJ-Nh7EDdmXBayEKkvrlJDz9kcAYIz9WKT4yBnln5-07j5T_s1GfJH7e8bwdG21GolrQaugGdBd1__hUTp-MoV9YpEgqghU5gOByi2XLwTUshfN9Gs24Y3qhZtg.png)
+
+De ser necesario, para cada año fiscal se publica una nueva versión del Modelo 390 con los cambios tanto de diseño como de datos correspondientes. La última versión disponible es la relativa al periodo fiscal 2021.
+
+2\. Cada rango de impuestos del módulo de impuestos para España se asocian con el parámetro de declaración del Modelo 390 correspondiente, con el fin de que las transacciones ligadas a dichos impuestos completadas y contabilizadas en el sistema, se tenga en cuenta en una u otra casilla/nodo del fichero XML, tal y como se muestra en la siguiente imagen: 
+
+![](/assets/drive/xl0hUWgK97dvKk9LYorJ4vXXpltQStE57Zd_QmJ7BMlmTgWxmNBDiWnjz8FznBhE39VtlzT8WOd5sVjWVsnzgDa3mRuXsc-IU0e8M9O2CDxE6f1Zs9tSjwMZsJPIXGhgy_hzwe4Rlpszp9GHu0Wd4WocXCEHmOoukjpUTjGKM2Hy2kQzd3Wz9Q_dYJMhJQ.png)
+
+En la imagen del ejemplo se muestra como las bases imponibles/cuotas ligadas al rango de impuesto "Entregas IVA 21%" se reflejarán en las casillas correspondientes del 390 relacionadas con:
+
+-   IVA devengado - Operaciones en Régimen General
+-   IVA devengado - Modificación de bases y cuotas (en el caso de abonos o facturas rectificativas)
+-   IVA devengado - Total Bases y Cuotas IVA
+-   Volumen de operaciones - Operaciones en Régimen General
+
+3\. Por último, el generador de declaraciones de impuestos permite la generación del fichero para la presentación del modelo 390 del período fiscal que corresponda, desde la ruta de aplicación:
+
+Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos.
+
+######### **Tipos de documentos soportados por el módulo**
+
+El informe se genera teniendo en cuenta la información disponible en las facturas de compra y venta contabilizadas que incluyan alguno de los impuestos declarados en la configuración del informe.
+
+Más concretamente, los tipos de factura soportados son:
+
+-   Facturas de venta tipo AR Invoice positivas
+-   Facturas de venta tipo AR Invoice negativas
+-   Facturas de venta de tipo Reversal negativas
+-   Abonos de venta (Credit Memo) positivos
+-   Facturas de compra tipo AR Invoice positivas
+-   Facturas de compra tipo AR Invoice negativas
+-   Facturas de compra de tipo Reversal negativas
+-   Abonos de compra (Credit Memo) positivos
+
+######### Configuración previa antes de generar el informe
+
+########## **Impuestos**
+
+!!! info
+    No es necesario realizar ninguna configuración adicional si tiene aplicado y utiliza el Módulo de Impuestos para España y el Módulo de Impuestos para España de IVA de Caja. 
+
+Es por ello que se recomienda utilizar estos módulos de impuestos para España.
+
+Las transacciones relacionadas con impuestos creados manualmente sólo se incluirán en el Modelo 390 si se relacionan correctamente con el/los parámetros del 390 que corresponda:
+
+-   si, por ejemplo, se crea un nuevo tipo de IVA de compras nacionales de bienes al 21%, dicho impuesto debería estar relacionado con los parámetros:  
+    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Operaciones Interiores Corrientes - IVA Deducible en operaciones interiores de bienes y servicios corrientes."  
+    "Modelo 390 v 2021 - Declaración Anual de IVA - IVA Deducible - Rectificación de deducciones."
+
+Recuerde que Etendo en la actualidad no contempla que un rango de impuesto de compras pueda definirse como parcialmente deducible.
+
+Configuraciones del tipo:
+
+-   Impuesto padre "Adquisiciones IVA 21% (no 100% deducible)"
+    -   Impuesto hijo "Adquisiciones IVA 21% (50% deducible)" con un índice 10.50, marcado como "Impuesto Deducible".
+    -   Impuesto hijo "Adquisiciones IVA 21% (50% no deducible)" con un índice 10.50, marcado como "Impuesto No deducible"
+
+no permitirán la generación del Modelo 390 ya que el índice 10.50% no es un índice o tipo que reconozca el fichero del 390.
+
+Estos impuestos no deberán estar ligados a parámetros del 390 y sus importes (base y cuota) deberán reflejarse en el programa "IVA 2021" o el que corresponda de forma manual.
+
+########## **Actividades del I.A.E.**
+
+En el Modelo 390 se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 390, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 390 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+########## **Representante Legal de la Organización**
+
+Si su organización tiene uno o varios representantes legales debe declararlos en la solapa correspondiente de la ventana Organización, que está disponible al instalar el módulo Legal Representative of the Organization (representante legal de la organización).
+
+![](/assets/drive/yXySL0UNxH9GjB2DhIDbmoLdXxISY9aj4zmmZbU-1Y2usima7UM_5a7yLx09zNDmAgbtkf_SSCNZPcb2urJ_3ePFmHFQnqtaVN4QDfNI2dRxwgdtOuMWhOx_gnpMfrN6STY5jh9ZswHTceH1gUWu-mnwenFo-yKbOn0DMs-0_eGv1QK2lsOEkuDf9vppNQ.png)
+
+######### **Generación del modelo 390**
+
+Tal y como ya se ha explicado, el modelo 390, se genera como un fichero XML válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera | Contabilidad | Herramientas de análisis | Generador de declaraciones de impuestos | Generador de declaraciones de impuestos
+
+Una vez que el usuario ha introducido los datos genéricos, tales como la "organización", el "ejercicio" y "periodo", así como la "Declaración de Impuestos'', puede introducir los parámetros de entrada propios del Modelo 390 para posteriormente generar el fichero.
+
+La ventana de "parámetros de entrada" del 390 se muestra en la siguiente imagen:
+
+![](/assets/drive/8E1H3y4j_5fmJ2K87L8xc2v10m8UvRU-ub-M3flFlZbORFRpy9LDEs80TBAteUllGVPdzAJ6dCOeiVtQkk5506tixB29SWgte_QF8PKQPl7Kq_UKT8BWu8snG4dOTY_X6bKiaEol3NwlDrO6uvf-GGVmylSiX-3cejwlHi577Y1eKobtQFLwJBq1haz17A.png)
+
+Los parámetros de entrada tienen que ver con datos que no pueden extraerse directamente desde Etendo. Datos como:
+
+-   check para indicar si se está "**Inscrito en el registro de devolución mensual**"
+-   campo de texto para introducir un **Nombre del fichero** del 390
+-   check para indicar si "**Ha sido declarado en concurso de acreedores en el ejercicio**"
+-   check para indicar si "**las autoliquidaciones del último periodo de liquidación del ejercicio corresponden a declaraciones concursales**"
+-   check para indicar si se trata de una "**Declaración Sustitutiva**"
+-   check para indicar si se trata de una "**Declaración sustitutiva por rectificación de cuotas**"
+-   campo de texto para introducir el "**Número identificativo de la declaración anterior**" que se sustituye o rectifica
+-   campo de texto para introducir si aplica la cuota a "**compensar del ejercicio anterior**" 
+-   campos de texto para introducir los "**% de tributación por razón de territorio**", en los casos en que no hay una tributación al 100% al territorio común.
+    -   Si se introduce un valor aquí (p.ej 50% territorio común, 50% Navarra) el resultado de la liquidación anual se borra y pasa a la casilla Resultado de la liquidación anual atribuible a territorio común.
+-   campo de texto para introducir la cuota a **Compensar atribuible a territorio común** 
+-   campos de texto para introducir los **resultados a ingresar en las autoliquidaciones de IVA del ejercicio**, si aplica.
+-   campos de texto para introducir el **total de devoluciones mensuales/trimestrales de IVA** (Modelo 303 en los casos de inscripción en el registro de devolución mensual
+-   campo de texto para introducir el **Resultado de la autoliquidación del último período a compensar**
+-   campo de texto para introducir "las cuotas pendientes de compensación al término del ejercicio" 
+
+
+
+
+########## **Transformación de parámetros de entrada en constantes**
+
+Como se puede observar, el número de parámetros de entrada es muy elevado. Para evitar tener que introducir todos estos datos cada vez que se genera el informe, el módulo del 390 permite definir como constantes cada uno de los parámetros de entrada. Para ello sólo tiene que encontrar el parámetro de entrada en la definición del informe (ventana Declaración de impuestos), cambiarle el tipo de parámetro a constante y definir el valor de dicha constante.
+
+Por ejemplo, en nuestra organización el porcentaje de tributación en Territorio Común es el 50% por lo que cambiamos ese parámetro a tipo constante con un valor de 50
+
+![](/assets/drive/oPL91YrGG3zCsXi6j_4OtAmkDz1BaSshkNuh7EHEaKaA0GRfAULiEa-FMJ9FAIvUYC0bmbd1opqeGAbrOyYqaqa1DuTCQEsBwYKu_1KYlCgVmXMg7MC1GIHOjh4m6DpDIQPYe7-l1rzoLdb6b_O58kAj31JExjZ7q4SUVrl_-2rNyDH59cMTDK7wJKkBdg.png)
+
+A partir de ahora, cada vez que generemos el informe de nuevo no será necesario introducir este parámetro, ya que ni siquiera aparecerá de nuevo en la ventana de parámetros de entrada del 390.
+
+######## **Resultado del Modelo 390**
+
+Una vez que el proceso de generación del informe ha finalizado, el sistema nos devolverá un fichero comprimido ZIP. Si lo descomprimimos, en su interior encontraremos dos ficheros:
+
+######### **Fichero XML**
+
+Este fichero XML es compatible con el formato oficial publicado en el BOE para el modelo 390 listo para ser enviado a la AEAT. Este fichero se puede abrir con cualquier editor de texto plano para examinar o editar su contenido
+
+![](/assets/drive/EUtcF7232b2XmCvVtzha9eEJfC7WDVPvbaKUX_WHEWEgiDANwi84Wd7cEUbO_NegLTIbeX80wxazDMZo4HlUKhCBOJqxBmM_KzHycha0gqHfpCaW4VjQaAZy_MYjcVCNb2cq_YfXnO_tBliBrdhmD-hN-4qUQjAjz5yzUJGD23C10KUBdY9ZVWR4q0On4g.png)
+
+######### **Fichero CSV**
+
+Un fichero CSV con la lista de facturas e importes que se han utilizado para generar el informe. Este archivo se puede importar en cualquier software de Hoja de Cálculo. 
+
+A la hora de importar el fichero es importante que defina los siguientes filtros:
+
+-   Juego de caracteres: **UTF-8**
+-   Separador: **punto y coma**, es decir **;**
+-   Delimitador de texto: **comilla doble**, es decir **“**
+
+![Aeat390 import.png](/assets/drive/Fc1f4L1omag1JBtJviufoH3pfPYmhHhmEJQERSVywOgU-cFo61aeNpvBArNzHKqy8DZ3VYBrSGj2X61-lKXWeTMjuj3_2yzAH31aWmLXYUl3B7yu3XXn44ckoTvoIjc87sdMmULxPgqrgTNEr1bJ953euAb0AXns7Byum7nttim66d8Foevat49TzZB-1g.png)
+
+Este es el aspecto del fichero una vez importado como hoja de cálculo:
+
+![390 FicheroCSV.png](/assets/drive/Gu3UCsXhF30LRTvr-afGt4BYargy1tzXgHIqBJgj6zBW-wYVgdriORZwzLc0tOxdOn_nNmnf43GaZj4MmVQY5YC6oyYYXlBnMm4zAVDOqYx6pVXDpIbCitc6K2NqxuKyfdrmsc2_7-fatxQprZvMwurwj-7bGWzwEmF7CYEvIRbNONDMupNEC-LPk60JMQ.png)
+
+La hoja nos muestra las facturas que se han tenido en cuenta para generar el 390, el impuesto (porcentaje, cuota y base imponible en Euros) de cada factura y el grupo de casillas correspondientes del 390 en las que se ha incluido dicho importe.
+
+La columna *Casilla 390* representa la casilla o grupo de casillas en las que se ha incluido dicho importe. Esas casillas se corresponden con nodos del fichero XML generado desde Etendo.
+
+Por ejemplo, en la fila número 2 del ejemplo anterior vemos que esa transacción se incluye en el grupo de casillas *01 02 03 04 05 06*, que se corresponden con los siguientes nodos del fichero XML:
+
+<RegGeneral>
+
+<BaseImponibleyCuota>
+
+<RegOrdinario>
+
+<Tipo4>
+
+Si buscamos estas casillas en el modelo 390 oficial, veremos que corresponden al Régimen ordinario del IVA devengado, por lo que esta transacción en concreto deberá reflejarse en las casillas *01* y *02* (IVA Devengado - Régimen Ordinario *4%*)
+
+![390 RegimenOrdinario.png](/assets/drive/MIkgy9VbltH8VQNF1UrsspqDDWjP3Y8swgINiFHl8IuTC7lKcmgofIqY_C6uW6laaZPMi5AgeymL10lbz8YeiOdBPd9xInFqOWCxo64IzsRtA2gVw8Y6AW7FPzlj-eg8s1QkHIWOg2DPaJh0_73wOqcdmYbnyITCZK3hJsLZMmaVieULukdFPGrfgFonyw.png)
+
+!!! warning
+    *Es importante tener en cuenta que las casillas correspondientes a subtotales de los grupos de IVA deducible (por ejemplo casillas 48 y 49) no se incluyen en el fichero CSV pero sí se incluyen en el archivo XML que contiene el informe oficial. Estas casillas se autogeneran como el sumatorio de las bases imponibles y cuotas de las casillas correspondientes de su grupo (por ejemplo casillas 190 a 606) que sí se incluyen en el CSV. Esta es una limitación del fichero CSV que no afecta en absoluto al informe oficial generado.*
+
+
+########## **Ventajas**
+
+El tener todos los datos en la hoja de cálculo nos permite examinar la información con detalle. Por ejemplo:
+
+-   se puede definir un filtro automático en la primera fila que nos permita filtrar por cualquiera de las columnas. De esta forma responderemos a preguntas del estilo: ¿la factura 1000013 en qué casillas del 390 se ha incluido? ¿Qué facturas se han incluido en un determinado grupo de casillas del 390?, etc.
+-   también se puede realizar sumatorios sobre las columnas de cuota y base imponible para asegurarnos de que el importe incluido en el 390 es el correcto.
+-   Otra ventaja de tener la información tan detallada es que nos puede servir para rellenar manualmente el modelo 390 en el programa de ayuda “IVA 2016”. Esto puede ser útil en caso de que queramos añadir información adicional no disponible en nuestra instancia de Etendo.
+
+######## **Presentación telemática del Modelo 390**
+
+Una vez que ha comprobado que las cifras incluidas en el Modelo 390 generado por Etendo son correctas, puede presentar el fichero XML en el siguiente enlace [_Presentación Modelo 390_](https://sede.agenciatributaria.gob.es/Sede/ayuda/consultas-informaticas/presentacion-declaraciones-ayuda-tecnica/modelo-390/modelo-390-presentacion-mediante-fichero.html){target="_blank"} para lo cual se requiere un certificado válido.
+
+
+Se mostrarán los siguientes datos:
+
+-   Total de cuotas de IVA y RE (IVA Devengado) 
+-   Suma de deducciones (IVA Deducible) 
+-   Resultado Régimen General (Resultado Anual) 
+-   Resultado de la liquidación, como resultado de la suma de:
+    -   resultados Régimen General y Simplificado 
+    -   menos la compensación de cuotas ejercicio anterior 
+-   Resultado de la liquidación anual atribuible a territorio común 
+-   Total volumen de operaciones 
+
+Es importante recordar que el resultado de la liquidación anual del 390 tiene que coincidir con los resultados de las liquidaciones periódicas del Modelo 303.
+
+Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introducir al lanzar el Modelo 390 desde Etendo, como "Parámetros de Entrada":
+
+-   "Total resultados a ingresar en las autoliquidaciones de IVA del ejercicio"
+-   o bien, "Total devoluciones mensuales de IVA"
+-   o bien, "Resultado de la autoliquidación el último período a compensar".
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390){target='_blank'}
+---
+
+---
+###### Libro de Facturas
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook
+
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.es_es
+
+######## **Introducción**
+
+Este módulo de funcionalidad española se denomina “Libros Registro de IVA” o “Libros Registro de Facturas emitidas/recibidas”.
+
+######## **Descripción del módulo**
+
+Este módulo de los libros registro de IVA permite a las empresas españolas generar los libros registro de IVA, tanto los libros de facturas recibidas (IVA soportado) como los libros de facturas emitidas (IVA repercutido). Las empresas españolas tienen que guardar registro de cada una de las facturas recibidas y emitidas con el fin de poder determinar el importe total de IVA a liquidar con la Hacienda Pública para un periodo de tiempo determinado, como diferencia entre el IVA repercutido y el IVA soportado deducible.
+
+El contenido de los libros de facturas se ajusta a los requerimientos de la Hacienda Pública española. Los libros de facturas contienen información sobre:
+
+-   Número de registro
+    -   este número será generado automáticamente por el sistema una vez que el correspondiente libro se marque como "Final"
+-   Número de factura emitida/recibida
+    -   este número tanto en el caso de facturas recibidas como emitidas se corresponde con el campo "Nº documento"
+    -   en el caso de las facturas recibidas dicho campo no debería llevar secuencia numérica asociada con el fin de que el usuario final pueda introducir el número de factura del proveedor.
+-   Fecha factura emitida/recibida o fecha de expedición/recepción de los bienes/servicio, en caso de ser diferentes
+-   Nombre y breve descripción del cliente/proveedor
+-   NIF del cliente/proveedor
+-   Base imponible
+-   Tipo impositivo de IVA
+-   Cuota de IVA repercutido/soportado
+-   Cuota de IVA soportado deducible
+-   Tipo impositivo de recargo de equivalencia
+-   Cuota de recargo de equivalencia
+-   Importe total de la factura
+
+!!! info
+    Los importes deben consignarse en Euros.
+
+
+El tipo de cambio que se utiliza en las transacciones que deban incluirse en los libros cuyos importes no sean en Euros, es el definido para un rango de fecha determinado en la ventana "Rangos de Conversión".
+
+Este módulo de funcionalidad incluye además las claves de libro correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro
+
+-   “E”= en el caso del libro de facturas emitidas  
+      
+-   “R”= en el caso del libro de facturas recibidas  
+
+y también las claves de operación correspondientes al modelo tributario español 340 de declaración informativa de operaciones incluidas en los libros registro:
+
+-   “ “= en el caso de operación habitual de compra/venta  
+      
+     
+-   “C”= en el caso de factura de compra o venta con varios tipos impositivos  
+      
+     
+-   “D”= en el caso de factura de compra o venta rectificativa o nota de abono  
+      
+     
+-   “I”= en el caso de inversión de sujeto pasivo  
+      
+     
+-   “R” = en caso de facturas de arrendamiento de local de negocio (nueva clave para 2012)
+
+En los libros registro de IVA se consideran las siguientes operaciones de compra relacionadas con los tipos de documento de Etendo que se listan a continuación:
+
+-   Facturas de compra (Tipo de documento = “AP invoice” )
+-   Facturas de compra negativas (Tipo de documento = “AP invoice”) o abonos (Tipo de documento = "Reverse Purchase Invoice"). Ambos tipos implican una nota de abono en negativo.
+-   Notas de abono de compra (Tipo de documento = “AP CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso, hay que tener en cuenta que el libro de IVA de facturas recibidas marcará este tipo de operaciones como “D” con importes en positivo, aunque impliquen un IVA soportado negativo y, por tanto, menor IVA soportado/soportado deducible.
+
+En los libros registro de IVA se consideran las siguientes operaciones de venta relacionadas con los tipos de documento de Etendo que se listan a continuación:
+
+-   Facturas de venta (Tipo de documento = “AR invoice” )
+-   Facturas de venta negativas (Tipo de documento = “AR invoice”) o abonos (Tio de documento="Reverse Sales Invoice"). Ambos tipos implican una nota de abono en negativo.
+-   Notas de abono de venta (Tipo de documento = “AR CreditMemo”), lo cual implicaría una factura rectificativa o nota de abono en positivo. En este caso hay que tener en cuenta que el libro de IVA de facturas emitidas listará este tipo de operaciones en positivo, aunque impliquen un IVA repercutido negativo y, por tanto, menor IVA repercutido.
+
+No se consideran los libros registro de IVA del tipo:
+
+-   Libro registro de ciertas operaciones Intracomunitarias
+-   Libro registro de bienes de Inversión
+
+así como las:
+
+-   Operaciones de nota de abono de compra/venta negativas (Tipo de documento = “AP/AR CreditMemo”), lo cual implicaría una factura de compra/venta.
+
+######## **Instalación del módulo**
+
+Para la instalación del módulo “Libro de facturas”, el usuario debe seguir los pasos que se describen a continuación en función de la situación de partida:
+
+-   Instalación de la última versión disponible de Etendo 
+-   o la instalación del módulo de Localización Española.
+
+!!! info
+    Para la instalación del módulo de Localización Española, visite [_Marketplace_](https://marketplace.etendo.cloud/#/product-details?module=003B475055DD421B9483B5BE15AA48C5){target="_blank"}. 
+
+
+Este módulo de funcionalidad requiere el módulo de Impuestos para España de Etendo. Es importante tener en cuenta que a la hora de instalar el módulo del libro de facturas, los módulos dependientes se instalarán automáticamente.
+> 
+!!! info
+    **Nota importante**: Las transacciones realizadas con anterioridad a la instalación del módulo de libro registro de facturas aparecerán en el correspondiente libro de facturas pero sin la clave de operación. Hay que tener en cuenta que la clave de operación solamente es necesaria en el modelo tributario 340. Para generar la clave de operación, las transacciones deberán completarse de nuevo.
+
+######## **Interfaz de usuario**
+
+Tal y como se ha explicado en la sección “*Instalación del Módulo*”, los “Libros registro de IVA” requieren del módulo de impuestos para España mejorado que incluye 3 campos que permiten:
+
+1.- la identificación de los importes de **recargo de equivalencia** tanto en el libro de facturas recibidas como emitidas de forma separada a los importes de IVA, si bien hay que tener en cuenta que los rangos de impuestos de recargo de equivalencia tienen que ir referidos al régimen del cliente/proveedor como una categoría de impuestos del cliente/proveedor.
+
+2.- la identificación de las operaciones de **inversión de sujeto pasivo** para los casos de operaciones de servicios suministrados por parte de proveedores europeos/extranjeros a empresas españolas.
+
+3.- la selección del **tipo de libro** aplicable a cada impuesto, debido a que por la configuración actual de los tipos impositivos se darán casos de impuestos de tipo compra que se deben incluir en el libro de facturas emitidas como IVA repercutido/venta. Un ejemplo es el IVA Intracomunitario de compras. El IVA Intracomunitario de compras implica un apunte al debe (como IVA repercutido) y otro al haber (como IVA soportado).
+
+Estos 3 nuevos campos se encuentran en la ruta de aplicación “**Gestión Financiera / Contabilidad / Configuración / Rango impuesto”**.
+
+!!! info
+    **Nota importante:** En caso de que no se utilice el módulo de impuestos para España proporcionado por Etendo, el usuario debe tener en cuenta que necesita configurar de forma adecuada y manualmente los 3 parámetros básicos del libro de facturas explicados en esta sección. 
+
+Además este módulo cuenta con dos ventanas para la configuración de los libros registro de IVA y la generación de los mismos, tal y como se muestra a continuación:
+
+**Configuración de los libros de IVA**
+
+Ruta: Gestión Financiera / Contabilidad / Configuración / Configuración de Libro de Facturas
+
+![](/assets/drive/GrG6D0PyhdbT_TLRpP-ucIUxQWXB195QfgnnOoCooFMRK3_UdE3CVkl5e-u4JKIm9XaZa5jlgs3MKgRXNtxUWKv5ZUSPy8jn96u3UzeFgFAM9xK1K3iQaadEg4m-4tJzEekLb2QEmIUReL3FFSu2T3GhAwhqXYbEUj2bWFTahFcOb_5QbJBoJUODVWN_CA.png)
+
+**Generación de los libros de IVA**
+
+Ruta: Gestión Financiera / Contabilidad / Herramientas de análisis/ Libro de facturas
+
+![](/assets/drive/loPMP2zWkOWGQYfmN6LTMPKteM1c0FpDnobtXCpuevnoP_ymLRTTP17h6YhVPEbK0Jxvi_Er9fhCfcGHAmifvo__4Oa0B4iLGjknSLMFgaC8T1GUkaqyKv_b7axuA6vYViAQYr5AAnnCRI9cQes9jvV-QT48duPSsMzBwN9QADTKJZsyqGc7LmNQOZiFyw.png)
+
+######## **Casos de usuario**
+
+Esta funcionalidad permitirá a las empresas españolas llevar a cabo los escenarios que se explican a continuación una vez que las correspondientes facturas/abonos de compra y venta se han completado/contabilizado en Etendo para un determinado año/periodo, por ejemplo 2021/Enero/Febrero.
+
+######### **Configuración y creación de los libros**
+
+Es necesario crear y configurar los libros de facturas recibidas y emitidas, para ello deberá seguir los pasos que se detallan a continuación o bien instalar y aplicar a la entidad legal con contabilidad el módulo de configuración de los libros de facturas.
+
+El módulo de configuración de los libros:
+
+-   crea los libros tanto de facturas recibidas como emitidas
+-   y los configura añadiendo todos los impuestos por tipo de documento a tener en cuenta a la hora de generar los libros de facturas.
+
+Es importante recalcar que el usuario puede crear los libros de facturas para un determinado periodo de tiempo tantas veces como sea necesario con tan solo volver a presionar el botón de proceso “Crear” para el correspondiente Libro, de esta forma se incluirán en el libro nuevas facturas o abonos que no se tuvieron en cuenta al crear el libro.
+
+########## **Libro de Facturas Recibidas**
+
+########### **Configuración**
+
+Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
+
+Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
+
+
+Campos a tener en cuenta:
+
+-   **Nombre** : Libro de Facturas Recibidas 2021
+-   **Descripción** : Libro de Facturas Recibidas 2021
+-   **Activo** : Sí
+-   **Tipo**: R – Recibidas
+-   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignarles un número de registro correlativo. El primer número asignado por defecto será el 1.
+
+![](/assets/drive/IXk_LbHGPAuvnqJO0OgUVrfZ-SOpTuzA9Wdl-wKAtmqZyaLqjv5om5qoPtpYl-508VUqsTJWgPPhnbLlYh1P9-drRWRiE3ZgN58uiycr6MdIYXayaz1hfLWPS0lJYV4ktVApRw9gKP7nbn5ezHlyCPRoO9D1tqo5W1e2DednQyS0Krh4qpRfakqWFyT8PA.png)
+
+*Nota:* El usuario puede definir el **Número de Documento** que aparecerá en cada una de las líneas del libro, pudiendo ser: 
+-   El Nº Factura (campo "Nº documento" de la factura de compra)
+-   o el Nº Documento Proveedor (campo "Referencia del Proveedor" de la factura de compra) 
+
+En la pestaña "**Impuestos**" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas recibidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
+
+########### **Creación**
+
+La **creación del libro de facturas recibidas** se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
+
+-   **Nombre** : Libro de Facturas Recibidas Enero 2021
+-   **Descripción** : Libro de Facturas Recibidas Enero 2021
+-   **Activo** : Sí
+-   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas ya configurado, por ejemplo "Libro de Facturas Recibidas 2021".
+-   **Ejercicio**: el usuario debe introducir el año (en el ejemplo, 2021)
+-   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha desde el 1 de enero 2021.
+-   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo enero 2021. El sistema incluirá las facturas con fecha hasta el 31 de enero 2021.
+
+Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Líneas”.
+
+![](/assets/drive/GvTXD6nqhWoDk09XBU4LNxXPn81wG8PznqfHtMS3lI4NuiNwNZc1ogkyhqki6kcJnPsjkefAdwu2hyX7kqcvtxqwwLZ5m7q_U_93v-tu-TYnHSsn3-yP0Umnd-GvwqcUgJ280R80kJtIO9aCko3KN7HnJlw8ePE7avYq3kvhTfXn8ZFZsO4YzsvruBWF.png)
+
+La información contenida en las líneas del libro es la que se muestra a continuación:
+
+![](/assets/drive/qk68QXzdYHjO1yKVcIG-WHMqCFoX0pJN8oCzkZP5CSVgReXjk0C43dB4ucckSUhXzLwG09yagjJvl14pAbhdBM1G_c6Y_enkOgCxfnSEPdrRGK6zUVxoIaTaoP6TOw3ejSKC4OrdJ740nB8ev0mERhCCHkhoIuT8dkk6g6tqayPEbcAgnsDde48ZxtUv.png)
+
+########## **Libro de Facturas Emitidas**
+
+########### **Configuración**
+
+Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
+
+Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
+
+Campos a tener en cuenta:
+
+-   **Nombre** : Libro de Facturas Emitidas 2021
+-   **Descripción** : Libro de Facturas Emitidas 2021
+-   **Activo** : Sí
+-   **Tipo**: E – Emitidas
+-   **Nº inicial**: Este número se tendrá en cuenta al crear el libro como final, ya que a todas las transacciones o facturas incluidas en el libro habrá que asignares un número de registro correlativo.
+
+![](/assets/drive/U7zyB9bCxJ53qXJTCwT0NxvIDJ4gMZ3c5G9QLmsMWGRYYV1mKdK90kPhbtf9l8Ee7hhsNZApVcmY-2fnalHXgl8xf3BcPEDM3VNbqspYjkVZyysWBhR_QXGJA0-vnGn_20c8luy3ZIeqVbnyJ8pghgvC7dfkSuO9AmajeRFq-uqqHy8o9IoMQFu0azbj.png)
+
+En la pestaña "Impuestos" el usuario puede comprobar el listado de todos los impuestos por tipo de documento que se han incluido en la configuración del libro de facturas emitidas y que, por tanto, se tendrán en cuenta a la hora de crear el libro.
+
+########### **Creación**
+
+La creación del libro de facturas emitidas se debe llevar a cabo desde la ruta de aplicación Gestión Financiera – Contabilidad – Herramientas de Análisis – Libro de facturas. El usuario debe crear un nuevo registro e introducir la siguiente información para el correspondiente Cliente/Organización:
+
+-   **Nombre** : Libro de Facturas Emitidas Febrero 2021
+-   **Descripción** : Libro de Facturas Emitidas Febrero 2021
+-   **Activo** : Sí
+-   **Libro de Facturas** : el usuario debe seleccionar el libro de facturas emitidas ya configurado que quiere crear, por ejemplo "Libro de Facturas Emitidas 2021".
+-   **Ejercicio**: el usuario debe introducir el año (2021)
+-   **Desde Periodo** : el usuario debe introducir el periodo para el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha desde 1 febrero 2012.
+-   **Hasta Periodo** : el usuario debe introducir el periodo hasta el cual quiere que la fecha de las facturas se tenga en cuenta al lanzar el libro de facturas, por ejemplo febrero 2012. El sistema incluirá las facturas con fecha hasta el 28 de febrero de 2012.
+
+Una vez introducida la información anterior, el usuario puede crear el libro mediante el botón de proceso “Crear” y comprobar las transacciones generadas en la pestaña “Lineas”.
+
+![](/assets/drive/4PIfpdoRUi3Yr61UjSdmHK4-wjU2TnkBEFbFqev8C0CbUrrIxM5c_gpKnY8zz2RyzNa2TvRTXEmgQzB_-tXJKUc11kRLCv-pHzX00pJhI_NAIzDlmTRxWw3R4xXZI2A4Ns87C9tAa9P6icxTDkN8yyHo4SXbOXGJbx620JaN4BUNPYFsRzr_ZTwgIksZtg.png)
+
+La información contenida en las líneas del libro es la que se muestra a continuación:
+
+![](/assets/drive/7fv5JlzALOzMrSXXDvFubccNZBrZwSJm1VSNpczqK4u03ULPED0uOMR_TbM-q3uEwc0W_J9fqUZAdHFvaWt8K9G3zTL0vXz-N7nXENJdFG7-PuBSMVa0PiF1uTWabKTHJToOaoiJX8y9A7KUN7bUEvUKPXZz0BkBg6daCzUA7tze8XfVeFtaVw_cisfZEw.png)
+
+######### **Inclusión manual de transacciones**
+
+El usuario puede añadir manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no estén registrados en Etendo, pero que deban ser incluidos en el libro correspondiente. Para ello el usuario deberá seguir los pasos que a continuación se detallan:
+
+En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede crear un nuevo /s registro/s e introducir facturas o abonos tanto emitidos como recibidos de sus proveedores, en el libro correspondiente, con tal solo presionar el botón de menú “Nuevo”.
+
+En ese caso, el usuario deberá introducir la información que se lista a continuación para cada nuevo registro creado manualmente:
+
+-   Nº de documento (obligatorio)
+-   Tercero (obligatorio)
+-   Clave de operación
+-   Base imponible (obligatorio)
+-   Tipo impositivo (obligatorio)
+-   Tipo de Recargo de equivalencia
+-   Fecha documento
+-   NIF del tercero (no editable, debe rellenarse al seleccionar el tercero)
+-   Cuota del impuesto (obligatorio)
+-   Cuota recargo de equivalencia (obligatorio). En caso de que no aplique el recargo de equivalencia se debe rellenar como 0,00
+-   Importe total de la factura (obligatorio)
+
+######### **No inclusión de transacciones**
+
+El usuario puede marcar manualmente facturas/abonos tanto emitidos como recibidos que por cualquier motivo no deban ser incluidos en el correspondiente libro y que estén registrados en Etendo, para ello el usuario deberá seguir los pasos que a continuación se detallan:
+
+En la ruta Gestión Financiera / Contabilidad / Herramientas de Análisis / Libro de Facturas / Cabecera >> Líneas, el usuario puede “desmarcar” cualquier transacción que esté marcada por la aplicación como “Incluida”, dichas transacciones no se incluirán al crear el correspondiente libro como Final (documento impreso en formato \*.pdf).
+
+######### **Libros de facturas marcados como "Final"**
+
+El usuario puede procesar los libros de facturas como “Finales”, una vez que se asegure de que las transacciones incluidas en el libro son las correctas, dicho proceso implicará la numeración correlativa de las facturas incluidas en dicho libro, siempre que el periodo o periodos a los que se refieren las facturas incluidas en el libro estén cerrados, al menos temporalmente.
+
+Desde “Gestión Financiera / Contabilidad / Transacciones – Abrir/Cerrar Periodos”, el usuario debe cerrar temporalmente aquellos periodos para los que no se van a introducir nuevas facturas ni transacciones y que, por tanto, pueden cerrarse.
+
+Una vez cerrados los periodos desde “Gestión Financiera / Herramientas de Análisis / Libro de Facturas”, el usuario puede "Crear y Marcar como Final" el correspondiente libro, con lo que el sistema dará opción a partir de ese momento tan solo de “Desprocesar”.
+
+El usuario puede imprimir el libro mediante el botón de la barra de herramientas “Imprimir”.
+
+El libro impreso (\*.pdf) de facturas recibidas incluye la siguiente información:
+
+-   Número registro
+-   Número factura
+-   Nº Doc / Ref. Prov - esta columna relaciona ambos números de documento, el número de Etendo y el número o referencia del proveedor.
+-   Fecha operación
+-   Tercero
+-   NIF
+-   Clave
+-   Base imponible
+-   Tipo impositivo
+-   Cuota impuesto
+-   Cuota deducible
+-   Importe factura
+-   Fecha de pago
+-   Cuenta Financiera
+-   Método de Pago
+-   Importe de Pago
+
+El libro impreso (\*.pdf) de facturas emitidas incluye la siguiente información:
+
+-   Número registro
+-   Número factura
+-   Fecha factura
+-   Fecha operación
+-   Tercero
+-   NIF
+-   Clave
+-   Base imponible
+-   Tipo impositivo
+-   Cuota del impuesto
+-   Recargo
+-   Cuota RE
+-   Importe factura
+-   Fecha de cobro
+-   Cuenta Financiera
+-   Método de Pago
+-   Importe de cobro
+
+En caso de error u omisión en los libros, el usuario deberá desprocesar el correspondiente libro, reabrir el periodo/periodos, añadir o modificar la/las facturas emitidas o recibidas y volver a empezar el proceso de creación y procesamiento como final del correspondiente libro, teniendo en cuenta el/los periodos de facturación debido a que la numeración de registro debe ser correlativa en función de las fechas de factura.
+
+Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado y generado como finales los libros de abril y mayo, deberá desprocesar los libros de mayo, abril y marzo; reabrir los periodos de mayo, abril y marzo; contabilizar la factura con fecha de marzo y finalmente, crear el libro de marzo para comprobar que la nueva factura se ha incluido en el libro de marzo, cerrar los periodos y crear y marcar como finales los libros de marzo, abril y mayo por ese orden.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas){target='_blank'}
+---
+
+---
+###### Configuración de Impuestos para Libro de Facturas
+######## Javapackages 
+
+:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.estaxes
+
+######## **Introducción**
+
+Esta sección contiene información sobre la configuración de impuestos de los libros de facturas que forman parte del bundle de Localización española de Etendo.
+
+######## **Instalación**
+
+El usuario debe instalar este módulo y posteriormente aplicar el conjunto de datos o "Datos de Referencia" en la ruta de aplicación: Configuración General / Organización/ Gestión del Módulo de Empresa a la organización que corresponda.
+
+![](/assets/drive/gGO4D4W1ZWtJV0sluU-2ESwmVQA8_vykqX_CABOqxU9WSAqeKQS42g46yOcZnVDpMG4qUHJO0XGnn1zvcHzKOVcgHMDFEXB3MwaBeyDOPZTwYEH1wdYWTPub9sLhcOcrko6PuYvIyNryJYZoi2dUxKIV9hFEXNlZ5DYtYyYTJ1663ViYtA-aKGEy9XXLYg.png)
+
+Una vez instalado y aplicado este módulo, se puede comprobar la configuración de los libros en la ruta de aplicación: Gestión financiera/ Contabilidad/ Configuración/ Configuración de Libros de Facturas, tal y como se muestra en la siguiente imagen:
+
+![](/assets/drive/jKTQzqVFoz7dxq2qJS-Q2ECPksUf8UxYrLmeKDGG4NFGeQSxG96b-vbxqpaQb71UWuFBFscdPLSXXjD6dIqHoBB-3mCoOypQBeADb8AONAYOjD5Lu-MGfk1njsbQMJ2C3Cp-V18LcZpTZIpJTBZQ4X9b2dEEj-9nzmnM3FceUIHW3hdlgfFtLRx_S-4hYg.png)
+
+Es importante recalcar, que la configuración que se incluye en este dataset, relaciona tipos/rangos de impuesto con el tipo de documento estándar de Etendo (AP Invoice, AR Invoice, etc) a incluir en el correspondiente libro (facturas recibidas o facturas emitidas).
+
+Si se crean nuevos tipos de documento de factura de compra o venta, tendrá que incluirse de forma manual en la configuración de cada libro, relacionados con los impuestos de compra o venta correspondientes.
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas){target='_blank'}
+---
+
+---
 ##### Etendo BI Bundle
-####### Overview
+###### Overview
+######## Overview
 The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 
-####### Translations
+######## Translations
 
-####### Modules
+######## Modules
 
-######## Etendo BI Inclusion / Exclusion Module
+######### Etendo BI Inclusion / Exclusion Module
 
 :octicons-package-16: Javapackage: com.etendoerp.powerbi.inclusion.exclusion
 
@@ -20029,7 +25303,7 @@ This module allows users to customize and configure the information and filters 
 !!! info
     For more information, visit [Etendo BI Inclusion/Exclusion Configuration user guide](/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration).
 
-######## Etendo BI Connector Module
+######### Etendo BI Connector Module
 
 :octicons-package-16: Javapackage: com.etendoerp.integration.powerbi
 
@@ -20042,10 +25316,364 @@ A background process must be set which creates CSV files that will be uploaded t
 !!! info
     For more information, visit the [Etendo BI Connector Module user guide](/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector) and the [Etendo BI Connector Module developer guide](/developer-guide/etendo-classic/bundles/etendo-bi-bundle#etendo-bi-connector).
 
-######## Base Queries for Etendo BI 
+######### Base Queries for Etendo BI 
 
 :octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
 Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview){target='_blank'}
+---
+
+---
+###### Etendo BI Inclusion/Exclusion Module Configuration
+######## Overview
+
+!!! info
+    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
+
+In order to allow users to customize and configure the information and filters in PowerBI reports, a new module has been developed that allows the creation of different configurations that facilitate the selection and exclusion of specific entities within reports.
+
+A detailed description of the configuration window and its components is provided below.
+
+######## **Etendo BI Inclusion/Exclusion Configuration** Window:
+
+The window consists of two main tabs: "Header" and "Lines". These tabs are used to define and adjust the filters of PowerBI reports according to the user's specific requirements.
+
+######### _Header_
+
+![](/assets/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/header-bi.png)
+
+**Name and Description**: Text fields that allow the user to easily identify the configuration and understand its purpose.
+
+**Type:** It indicates the type of entity to be included or excluded according to the configuration. This field provides additional information to understand the context of the configuration.  
+The options are:
+
+- Business Partner Category
+- GL Item
+- Product
+- Product Category
+- Document Type
+- Account: If it is necessary to enter accounts, selecting this type enables an Element Level, Account Type and Account Tree selector (required)
+- Business Partner
+- Sales Representative
+
+!!! note
+    If the "Type" field is left empty, it is assumed that the line information is given by one of the auxiliary data (number, string or Yes/No fields). Moreover, in the lines tab, it is possible to combine all the options mentioned above to be included or excluded.
+
+**From and To Date:** date fields to define the duration of the created configuration. If specified in the header, the lines acquire that defined period. If you want the lines to have different periods, set these dates in the corresponding lines.
+
+**Has Number, Has String, Has Boolean:** These checkboxes allow the user to enable additional number, string, or yes/no value fields in the configuration lines. These auxiliary fields are used as needed in reports.
+
+######### _Lines tab_
+
+This tab contains the configuration lines associated with the header. Each line represents an element that can be used to include or exclude entities in reports. The fields in the lines are described below:
+
+**Line No.:** Number of the line within the configuration. This number provides a reference to identify and order the lines.
+
+**Document Type:** If the configuration is "Document Type", it allows selecting a specific document type. This field is only displayed if the entity type is "Document Type".
+
+**Business Partner:** If the configuration is "Business Partner", it allows selecting a business partner. This field is only displayed if the entity type is "Business Partner".
+
+**Business Partner Category:** If the configuration is "Business Partner Category", it allows selecting a business partner category. This field is only displayed if the entity type is "Business Partner Category".
+
+**Sales Representative:** If the configuration is "Sales Representative", it allows selecting a sales representative. This field is only displayed if the entity type is "Sales Representative".
+
+**Account**: If the configuration is  "Account", it allows selecting an account, pre-filtered by the related fields in the header. This field is only shown if the entity type is "Account".
+
+**Product Category:** If the configuration is "Product Category", it allows selecting a product category. This field is only displayed if the entity type is "Product Category".
+
+**Product:** If the configuration is "Product", it allows selecting a specific product. This field is only displayed if the entity type is "Product".
+
+**G/L Item**: If the configuration is "GL Item", it allows selecting an accounting concept. This field is only shown if the entity type is "GL Item".
+
+**Number:** Auxiliary field for entering an additional number. This field is only shown if the "Has Number" box is checked.
+
+**String:** Auxiliary text string. It is shown only if the "Has String" check in the header is checked.
+
+**Yes/No:** Auxiliary Yes/No check. Displayed only if the "Has Yes/No" check in the header is checked.
+
+######## **Examples**
+
+Etendo accounts settings to take the balances and reflect them in the financial reports in BI:
+
+######### _Configuration in Etendo_
+
+Main categories for account configuration:
+
+- Cash
+- Banks
+- Customers
+- Suppliers
+- Sales
+- Sales Costs
+
+########## Configuration of cash accounts:
+
+![cash.png](/assets/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration/cashpng.png)
+
+########## Configuration of bank accounts:
+
+![bank.png](/assets/legacy/bank.png)
+
+########## Configuration of customer accounts:
+
+![customers.png](/assets/legacy/customers.png)
+
+########## Configuration of supplier accounts:
+
+![suppliers.png](/assets/legacy/suppliers.png)
+
+########## Configuration of sales accounts:
+
+![sales.png](/assets/legacy/sales.png)
+
+########## Configuration of sales costs accounts:
+
+![sales_cost.png](/assets/legacy/sales_cost.png)
+
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration){target='_blank'}
+---
+
+---
+###### Etendo BI Connector Module
+######## Overview
+
+!!! info
+    To be able to include this functionality, the Etendo BI Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/?#/product-details?module=11372FBD87F34F80AAADBE1C9369CF83){target="_blank"}.
+
+In Etendo, it is possible to create base queries and to customize them when needed. This will provide information which can be used by Power BI.
+
+For this process, a background setting is required in order to create CSV files that will be uploaded to a server. The files will use information from the pre-established base queries and their customazation in case there are any. 
+
+The following documentation is about the steps to consider when configuring this funtionality to create the CSV files, since it is necessary to execute the process in Etendo from different windows:
+
+######## Etendo BI Connector Module Configuration
+
+
+First, make the proper configurations from the **Webhooks window**. This will later allow BI Logs to be sent to the **BI Logs Monitor window**.
+
+######### Webhooks window
+From the webhooks window, it is necessary to create a new record and complete the required fields as follows: 
+
+• **Module**: Base Queries for EtendoBI 
+
+• **Name**: EtendoBI Logger
+
+• **Description**: Fill EtendoBI Log window
+
+• **Event Class**: Java
+
+• **Java\_Class**: com.etendoerp.integration.powerbi.processes.FillLogWindow
+
+!!! info
+    It is highly recommended to have just one Webhook for this module to work properly, as its functionality will not vary. That’s why, it is better to use the organization \* in order to cover all child organizations.
+
+
+In the **Params tab**, four records must be created under the names:
+
+• **description**
+
+**• logtype**
+
+**• organization**
+
+**• rule**
+
+
+![](/assets/drive/1J07aRNJeYl5QsU0z6Q95m2lT-hAp6FrC.png)
+
+
+!!! info
+    For more information about Webhooks, visit Webhooks Events.
+
+######### User API Token window 
+
+Then, make the proper configurations from the **User API Token window**. Here, it is necessary to grant access to a **user role**, so a token in this window needs to be created.
+
+![](/assets/drive/Bl15uB38OKLSH0-MZwACXtCP4Jzz7uvYLqwRMJVv_Fc5n9aknGQN7SoMEDwGvo-nZ56ShJxB3gJ6xT_4CGpVNMdlph3rSUB1z6J7tpYmVBF5T7xHqo9VBdNrR8OGLrzR4nJU0ob85tLZcdINBrPF2Ek.png)
+
+Then, go back to the **Webhooks window**, and create a record in the **Access tab** in order to add the previously generated token. 
+
+![](/assets/drive/901aflhvMb72shBzBttOe-B3AyBS5CPEWWJhojALTB79N_ODpPAo9ZUeRazDPmgmB9ukpw8b2OpPKUzQZOJ_jui58NOVewSkgQ2Mj78vXTJ1zkvsza7Z9qWGsWAFWqHAVnagb_7PrGeNr3IkQYyMF9o.png)
+
+
+!!! success 
+    This way the Webhook is configured. Now, it is necessary to configure the EtendoBI Connector module.
+
+
+######### Etendo BI Connector Module Window
+
+In the **BI Connection window**, It is necessary to create a record to specify the path to the CSVs creation script and the Webhook to use. If the **EtendoBI bundle** is installed and the script path was not changed, the user should use the default value of ‘repository path’ field. Otherwise, the corresponding path should be specified. 
+
+!!! info
+    It is important to note that the **'Repository path'** will search for the corresponding path INSIDE the WebContent folder of the project. 
+
+
+
+![](/assets/drive/1ayeGDCTnguR7Bio_pBs2KBxYfcwn1rwv.png)
+
+
+In the **Data Destination** tab, the file name of the script needs to be specified. 
+
+![](/assets/drive/KWkJfoJfr0eGo-zdI470rUUEMpGo9Hc2ABpO5qpPUUQ-4kH2-aswwkYHGLJpVVl7Hie77xW16UfNcqD-fyP4wO6_DqNLYkA1H9CfI2T1XWYsnZmt64yLcTA_326PqQmRkDpMUz7C69Js6vGrSGKmH_A.png)
+
+Finally, in the **Execution variables** tab, some records must be created being the ‘Variable’ field:
+
+- **ip**: ip of the server where the files will be uploaded **(mandatory)**
+
+-   **client**: the name of our client **(mandatory)**
+-   **user**: the user used to connect to the server. **(mandatory)**
+
+- **application_url**: url of our application. e.g. "https://my-domain.cloud/etendo" **(mandatory)**
+
+- **port**: port of the server where the user is  connecting to **(default: 22)** 
+
+- **path**: path of the server where the files will be sent **(default: /)**
+
+- **private-key-path**: path of the private key used for the connection to the server
+
+- **bbdd\_user**: username of a read only user to access the database
+
+- **bbdd\_password**: password of the read only user
+
+- **csv_separator**: delimiter to use in the final csv files (default: |)
+
+**“private-key-path”** is the path of the private key used for the connection to the server. If this variable is not specified, the script will try to connect without specifying a private key.
+In the **“bbdd\_user” and “bbdd\_password” variables**, enter the **username** and **password** of a user with read-only permissions to the database. If either of these two variables is not found, the process will use the credentials of the database superuser.
+
+!!! info
+    However, it is **highly recommended** to use a user with read only permissions as it is a great security measure.
+
+
+As an example, let’s use the following values:
+
+![](/assets/drive/YFy5yV9lx64qO3638txrEGkKRxBY0fZqu7ep6YSJ7Ef8E0SsPZ1tywDDifwDL8JeJ-vO8GU3ViTdF6MkHH32PG55y9a7y7AyCTfD0tCMSV0WU1P8GvXWn7LPq083UDuD-zq2M0A6NwZgAqH8KJJ-eR8.png)
+
+!!! info
+    It is important to respect the specified names for the “Variable” field.
+
+
+Also, it is important to note that the script is going to create a folder named as the value of the **“Client” variable**, and it will contain folders for each organization that executes the background process. Therefore, if there are **two BI Connections** with the same **“Client” value**, the last execution of the process will overwrite the folder.  
+  
+ 
+
+For example, let's say there is  Organization A, which has Organizations B and C as its child organizations. If the user needs to have the same configuration for both, we can create a BI Connection using Organization A and set up two background processes that run the "EtendoBI Process," one for Organization B and the other for Organization C.
+
+When the script is executed, a folder will be created with the value of the "Client" variable in the BI Connection window as its name. Within that folder, subfolders will be created for each organization (in this case, A\_logs and A\_output for Organization A, and B\_logs and B\_output for Organization B).
+
+######### Enterprise Module Management window
+
+To load the Etendo base queries, go to the **Enterprise Module Management window**, and select Base Queries for EtendoBI and then click the **OK button**.
+
+![](/assets/drive/gjw0zq66nVJjH1vlMJ_u7gHGlpIpB4L13owW4LNmd7XsB6kz1YjIS_9DEQI_4mNtovBk8xjus3gMwqGvNhGMTHPs-CgWOmdkkEEYXSO6Rr8_D2dkHg9BD1VTBP1wrf_uP9nHVGE6I3p_LM6sReNwAQA.png)
+
+######### BI Query window 
+
+After that, Etendo base queries should be successfully loaded in the **BI Query window**.
+
+![](/assets/drive/zED4oSr1NOEXkhP-gZkR3br6-vi_piTylQGfK-QFfkscUWKIOEqAaIX_KU1y8D15iXh1aPwJUtyTJnM0mnS3Jyd2O6njJTmL1PJlMPlNoNfv4f7s9hva8Kmpmoo7rHcTdBOfKZMz67kHhq3VdsiAs90.png)
+
+There are several points to consider when handling queries in this module.
+
+• **Primary Key Requirement**: Every base query must have its primary key as the first column. This is crucial  since in the script it is assumed that the first column is the identifier. 
+
+!!! warning
+    A failure to adhere to this can result in incorrect output, duplicated records, and an immense number of rows.
+
+
+
+• **Client column on base query**: Every base query must include ad\_client\_id column, with the alias “ClientID”
+
+• **Organization column on base query**: Every base query must include ad\_org\_id column, with the alias “OrgID”
+
+• **Custom Query Customization**: The customization of the query must also include the primary key (which is the same as the base query since customization is performed on the same table) with the SAME ALIAS as the base query. 
+
+!!! warning
+    Failing to respect this can lead to improper mapping between the results of the base query and its customization, resulting in incorrect output.
+
+
+
+Let’s see an example of a correct base query and customization.
+
+![](/assets/drive/1UIyNY8fo3FhcRDzjs_OPjcJYvFIc5oHZ.png)
+
+
+
+In this case, as a base query there are three columns. In its customization, there is a new column “name”. 
+
+!!! info
+    Note that there are three mandatory columns in the base query, with the correct alias for column **ad\_client\_id and ad\_org\_id**. It is important to make sure that **“ClientID”** and **“OrgID”** aliases are being set WITHOUT double quotes. Also, **there should not be** more than one space between the “as” keyword. 
+
+… ad_client_id as “ClientID”, …    **INCORRECT**
+… ad_client_id as ClientID, …       **CORRECT**
+
+
+
+
+In the customization query, despite the requirement to have the primary key with the same alias as the base query, it is not necessary for it to be the first column. In this case, if instead of having:
+
+- SELECT m\_warehouse\_id as WarehouseID, name as "Warehouse Name" FROM m\_warehouse
+
+We have:
+
+- SELECT name as "Warehouse Name", m\_warehouse\_id as WarehouseID FROM m\_warehouse
+
+The result will be exactly the same.
+
+The script executes the base query, and then merges the customization, using both primary keys for mapping the rows.
+
+If a base query has a **customization**, the script creates **three different CSVs**.
+
+- A CSV file that contains the **result of the base query**. This CSV file has the prefix “EBI\_” if it is an Etendo base query. If it is a client base query, it has the **first three letters** of the value of the “Client” variable that was set earlier as a prefix.
+
+- A CSV file with the prefix “BASE\_”, which contains the **columns from the base query**, but if the customization overrides any of these values, they will be overwritten with the values from the customization. In this case, the “BASE\_” CSV file will be the same as the base query since the **customization does not override** any values from the base query columns.
+
+- A CSV file with the prefix “FULL\_”, which includes b**oth the columns from the base query and any additional columns added in the customization**. In the given example, the “FULL\_” CSV file will contain the additional column “Warehouse Name”. 
+
+Later, at the end of the configuration,  this example query will be executed to analyze the **generated CSV files**.
+
+!!! info
+    It is important to note that there should be only one customization per base query. It should also be made clear that it is not possible to add constraints to the customization to remove rows from the base query. Instead, the customization allows adding or overwriting columns in the original query, using the primary key to map the records.
+
+
+Base queries must all contain the **ad\_client\_id** and **ad\_org\_id columns**, with alias **“ClientID”** and **“OrgID”** (case insensitive). 
+!!! warning
+    If a query does not have these columns with their alias, it will produce an error and be ignored.
+
+######### Process Request window
+
+Once the query configuration is done, go to the **Process Request window**, create a new record, select the **“EtendoBI Process”** from the process field and schedule it.
+
+![](/assets/drive/5ud_n--k9OgupQZYlbOPy2MAQQfzmCyAETSNt5gOV5ZIYhH0Yq7RsCnDx9bkgsQCF9XBvVILtwMui-iNVXDHIeC1P04UfVxjomlQahtvx4ws-LelIg6XLvvxkeRzZc6iQcEZrdipa_2ylO87WoWwlU0.png)
+
+The scope of the data collection performed by the queries is based on the **organization** that configured the **background process**. In other words, all the obtained data is  filtered by the **client** and the **organization** that configured the **background process**, and **NOT** by the organization used in the **BI Connection window**. If the organization does not have a configuration in the **BI Connection**, Etendo will search for the **configuration** in one of its **parent organizations**, but the data scope will remain the same (itself and its child organizations).
+
+!!! info
+    If the organization that configured the background process does not have a BI Connection and there is no BI Connection found for its parent organizations either, the **process will not be executed**. 
+
+
+The process will never search for a BI Connection in the child organizations of the one which was set on the background process.
+
+
+![](/assets/drive/AK3H85SVLjjFxSk-2mMbDlcGyBK1gMAWsi-bATJTtsVIV8VJPj3QuxscOqkcZphInHViVUfSCJLj9jEB0LyDX73D5qIsMtn4A9Z5o4IrQ5tC2mzfSnpvfB2X5qJyb-Cwz7Uvgl3DWa75iXgQIDGEgBk.png)
+
+In the **Process Monitor** tab, the status of **“Success”** is shown in the new record that appears when the process is executed. It is good to know that this process executes our python script, so if there were no issues up until the execution of the python script, it will return to success status regardless of whether the python script fails.
+
+######### BI Logs Monitor window 
+
+The execution process can be checked in the **BI Logs Monitor** window.
+
+
+
+
+![](/assets/drive/ldN9QIT1oj9bKdnQhcBW8x70touvdAarz4qdtHI37RpnDEjY7jV77RkGSmYb7fvwIQqwB-T8uKtbGdg31b7PuSvwisFQPYCCRFQuDQxXW3kggv8UZRWFnh7dXR3hhN7ntv30Hxzk63m5Vieci2tUmQY.png)
+
+In this example image, the information about the script execution can be seen.
+
+If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
+
+!!! info
+    To do that, visit the [Etendo BI Bundle developer guide](/developer-guide/etendo-classic/bundles/etendo-bi-bundle). 
+
+Source: [https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector){target='_blank'}
 ---
 
 ---
@@ -21560,7 +27188,7 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
-![](/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
+![](../../../assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
 
 ###### Profile Screen
 In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.
@@ -21599,11 +27227,11 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
 To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
 
-![](/assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
+![](../../../../assets/drive/WgAVMD7_UawKp1eedwjq260FyWU41AFdrcP_bK3sS3mm1aM6ZVT7oCnfTd8eiydWSDKpSRQf9eAspqn0PCCNK2sLLd9i_77-LObYTJmA3QbSXK5I4hKxhqT-9Ux788FRmZRdBaZQ.png)
 
 ####### Welcome Window
 
-![](/assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
+![](../../../../assets/user-guide//etendo-mobile/user-interface/HomeSubApp.png){ width="300"}
 
 In the Welcome window, the user can enter Profile, Settings and Navigation Menu.
 
@@ -21613,7 +27241,7 @@ In the Home option, the user can find an option menu from which they can access 
 
 - Go back (Option to Go back to Etendo Mobile)
 
-![](/assets/user-guide/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
+![](../../../../assets/user-guide/etendo-mobile/user-interface/DrawerSubApp.png){ width="300" }
 
 In the top section of the menu, the name and the user picture will be shown.
 
@@ -21629,25 +27257,25 @@ The same field present in the preview, will be the criteria by which you can fil
 
 Considering as an example the Sales Invoice window, the preview of each record provides information regarding the document number and invoice date.
 
-![](/assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ width="300" }
+![](../../../../assets/drive/XZFZ8AALW9g42_1StbQnRpAvIszHoPZrp6QoLw1XUQ68kz4iU5nBYCR6XVwC0k4bGJjZFRbjaGMKfOA7lUVXCtz7At6Tt5p8sJtlYHNny4Z6yn_jfHrthRnxym2n_M0GhXLWDR2p.png){ width="300" }
 
 By clicking any of those boxes, detailed information about the records will be displayed.
 
 The fields will be displayed one below the other. Those with this symbol  “(\*)” in their title are mandatory and those with a pencil icon are editable.
 
-![](/assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
+![](../../../../assets/drive/PY4-klREGqUyi4CtP-0Pp3gn95-eE8hr2lCDLVA4uiYTTYNTnx3exMDsx-LHTSXK5NQBo0z0Xy4sxXera3xgCpISdVbxwMzB3QjurnDInYR5oSvUqfBYDtvbElXXneXCZi8AzJmA.png){ width="300" }
 
 ######## Folders button 
 
 By selecting the Folders button, the user can access the different tabs of the window with information about the records being browsed.
 
-![](/assets/drive/Q0C8H4uO8zHgfmSaWfGMKR5tKMbWlVLOUwUMYG-_qpJBj471MxMFwx0is-MGR0WqleOE4QcqHhWhIhTfeo2xwIX-ftECC3QyeKdI-ygG7o2kGhHJ4CgAoWEgfc1KZnEHHXpaegHG.png){ width="300" }
+![](../../../../assets/drive/Q0C8H4uO8zHgfmSaWfGMKR5tKMbWlVLOUwUMYG-_qpJBj471MxMFwx0is-MGR0WqleOE4QcqHhWhIhTfeo2xwIX-ftECC3QyeKdI-ygG7o2kGhHJ4CgAoWEgfc1KZnEHHXpaegHG.png){ width="300" }
 
 When entering any of the tabs, the view will be the same as in the parent window, e.i., the records will be displayed in small boxes and, when entering these, the fields will be displayed one below the other.
 
-![](/assets/drive/XKeIfzzgutwdnJr5kmBVSifBZ1luxaWe3mqYM_U3uHurbAe_0TXkpjjvF5x0RWpIKXRsqYcEifdxpVeNHZjgHZ5-s6uGm8FjIf9RGIfAZoHXZAxlCqzC5H00RUmPBX01SvFgW8v2.png){ width="300" }
+![](../../../../assets/drive/XKeIfzzgutwdnJr5kmBVSifBZ1luxaWe3mqYM_U3uHurbAe_0TXkpjjvF5x0RWpIKXRsqYcEifdxpVeNHZjgHZ5-s6uGm8FjIf9RGIfAZoHXZAxlCqzC5H00RUmPBX01SvFgW8v2.png){ width="300" }
 
-![](/assets/drive/PAfojHNtSzl7SKh6VFDroECbrO7Y0ZSYSnyvDieVQxBZkvATVhtJtNPm6PTpeuLOjzdIB-PIRR-wD1SGCZrHJLdKnhnacGsFhWDSyuOUWlhlMnJ74guN7EsUE2sshKzFyoHn2tiT.png){ width="300" }
+![](../../../../assets/drive/PAfojHNtSzl7SKh6VFDroECbrO7Y0ZSYSnyvDieVQxBZkvATVhtJtNPm6PTpeuLOjzdIB-PIRR-wD1SGCZrHJLdKnhnacGsFhWDSyuOUWlhlMnJ74guN7EsUE2sshKzFyoHn2tiT.png){ width="300" }
 
 To navigate in different levels, the user can resort to the system buttons (Android) or the arrow in the upper left corner or gesture (both systems).
 
@@ -21669,11 +27297,11 @@ To create a new record, the user must click the icon with the symbol “+” and
 
 To edit a field, the user must click the pencil icon. If the field is a list field, click the search icon to display possible options. After selecting the correct data, press the button “Done”.
 
-![](/assets/drive/3tj34fwiEnwX6YiWsfv8x8ApOWqEjbtQDFERLIEqZJ6LZsXwvlkJffOm-UYEhS1y0onXLf3rtWKy75WpIqy_pn8KSITpMqW6Olqx5CNaGo5vGpex61Tj7WuCy0NxSAjdGUM0hqyt.png){ width="300" }
+![](../../../../assets/drive/3tj34fwiEnwX6YiWsfv8x8ApOWqEjbtQDFERLIEqZJ6LZsXwvlkJffOm-UYEhS1y0onXLf3rtWKy75WpIqy_pn8KSITpMqW6Olqx5CNaGo5vGpex61Tj7WuCy0NxSAjdGUM0hqyt.png){ width="300" }
 
 If the field is a date type, when selecting the search icon a calendar to select the desired date will be displayed.
 
-![](/assets/drive/pJrdHx58VtWi5NCkN446WAu-Fjg1rHgWe5JJLKGFn7DJxasB8uXnXAtSPrI6gAD_Oe_3ZwkK0Pw9JYVPY6GX0R1a2-mUuYESxwzPpWOf02V0T1jskkbxUy5IddR1m2glXXbcBpJd.png){ width="300" }
+![](../../../../assets/drive/pJrdHx58VtWi5NCkN446WAu-Fjg1rHgWe5JJLKGFn7DJxasB8uXnXAtSPrI6gAD_Oe_3ZwkK0Pw9JYVPY6GX0R1a2-mUuYESxwzPpWOf02V0T1jskkbxUy5IddR1m2glXXbcBpJd.png){ width="300" }
 
 Free text fields are edited by selecting the field and entering the desired value.
 
@@ -21691,7 +27319,7 @@ To delete a record, press it and drag it to the left or hold it, select all the 
 
 Each time a record is deleted in the App, the same record will be deleted in the Etendo Classic as well.
 
-![](/assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
+![](../../../../assets/drive/dGqkvbLqxGUxpuU75pgKmYjRffl9bHRLmydMSokrcPVdjhBcnIrUNzxvHzGCvCD_2QDmdE2NlAmc0FuXi11ZeNoUPvwhavOdv1jvTD1IyRgA4MKF9mhD6nCmIU-xV7mEV8DrFnb7.png){ width="300" }
 
 ####### Edit a record
 
@@ -21711,7 +27339,7 @@ In case the user needs to add more filters or to remove some of them, customizat
 
 Continuing with the example of the Sales Invoice window, the available filters are the document number, which will be entered in the search bar together with the invoice date.
 
-![](/assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
+![](../../../../assets/drive/akwqHJKCawDOW20SxB5sxjm_wPN2hW8PfKsU8wAgfYqebtFGAbyTib-mQcX_fUuRhCz9RTDX0Utt1pY0GUF1HuzfwGig3LaOdFdHHLMK2p0DjLUWcvxxYW2agJCmHTx_JRB-8sgp.png){ width="300" }
 
 ###### Mobile App Scanning Helpers
 
@@ -21730,47 +27358,47 @@ Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware
 
  When you enter the Physical inventory window and select a record, you will see the "Actions" button.
 
- ![](/assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/PhysicalInventoryActions.jpeg)
 
 In this button, you can see the process it incorporates, called Inventory Scan.
 
- ![](/assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/ActionsInventoryScan.png)
 
  When you press this action it performs the scanning functions to be able to modify values of the physical inventory item that has been selected.
  
- ![](/assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/CameraScanner.png) 
 
 When the arrow to continue is selected, the code of the storage bin in which the product is located must be entered manually or scanned.
 
- ![](/assets/developer-guide/etendo-classic/bundles/StorageBinBarCode.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/StorageBinBarCode.png) 
 
  After selecting the storage bin, the product to be modified must be scanned or selected.
 
- ![](/assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductBarcode.jpg) 
 
  Finally, enter the amount you want to add of that product, press Done and Save.
 
- ![](/assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductQuantity.png) 
 
  In the meantime, on Etendo Classic, a line will be added in the "Scan" tab of the physical inventory line, about the scan and the amount that has been set.
 
- ![](/assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityCount.png) 
 
 In the physical inventory header, by selecting a scan line, you can run the Process Inventory Count. This takes care of adding to the stock the quantity that has been set on the scanned product.
 
- ![](/assets/developer-guide/etendo-classic/bundles/Process.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/Process.png) 
 
 And here we will observe the quantities before the process:
 
- ![](/assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityBefore.png) 
 
  And after:
 
- ![](/assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/QuantityAfter.png) 
 
 We will also notice that the Product's Stock has been updated in the indicated storage bin with the quantity of the product:
 
- ![](/assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
+ ![](../../../../assets/developer-guide/etendo-classic/bundles/ProductStockAfterProcess.png) 
 
 
 Source: [https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions](https://docs.etendo.software/user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions){target='_blank'}
@@ -29350,7 +34978,7 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![release-cycle.png](/assets/whats-new/overview/release-cycle.png){align=right width=400}
+![release-cycle.png](../assets/whats-new/overview/release-cycle.png){align=right width=400}
 <br><br>
 ##### In this section you can learn about Etendo's life cycle, when updates are released and valuable information to keep you up to date with our news.
 </figure>
@@ -29359,7 +34987,7 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![roadmap.png](/assets/whats-new/overview/roadmap.png){align=left width=400}
+![roadmap.png](../assets/whats-new/overview/roadmap.png){align=left width=400}
 <br><br>
 ##### Get to know about our current projects, their  status and future ideas and projects.                                            
 </figure>
@@ -29367,14 +34995,12 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![release-notes.png](/assets/whats-new/overview/release-notes.png){align=right width=400}
+![release-notes.png](../assets/whats-new/overview/release-notes.png){align=right width=400}
 <br><br>
 
 ##### In this section, you will find a concise summary of the latest updates and improvements, bug fixes and news introduced in our latest releases for each of our products
 
 </figure>
-
-
 Source: [https://docs.etendo.software/whats-new/overview](https://docs.etendo.software/whats-new/overview){target='_blank'}
 ---
 
@@ -29515,8 +35141,2519 @@ Source: [https://etendo.software](https://etendo.software)
 ## Release Notes
 ### Etendo Classic
 #### Releases
+##### Overview
+####### Release Notes Etendo Classic
 
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/index](https://docs.etendo.software/whats-new/release-notes/etendo-classic/index){target='_blank'}
+| Release notes | Publication date | Version | Status | ISO Image | GitHub |
+| ---           | ---              | ---     | ---    | ---       | :---:  |
+| [23Q4.0](../23Q4-0) | 28/12/2023 | 23.4.0 | QAA	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso)| :white_check_mark:|
+| [23Q3.4](../23Q3-4) | 05/12/2023 | 23.3.4 | CS	| | :white_check_mark:|
+| [23Q3.3](../23Q3-3) | 30/11/2023 | 23.3.3 | C   | | :white_check_mark:|
+| [23Q3.2](../23Q3-2) | 10/11/2023 | 23.3.2 | C	| | :white_check_mark:|
+| [23Q3.1](../23Q3-1) | 01/11/2023 | 23.3.1 | C	| | :white_check_mark:|
+| [23Q3.0](../23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso)| :white_check_mark:|
+| [23Q2.8](../23Q2-8) | 14/09/2023 | 23.2.8 | C	| | :white_check_mark:|
+| [23Q2.7](../23Q2-7) | 05/09/2023 | 23.2.7 | C	| | :white_check_mark:|
+| [23Q2.6](../23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
+| [23Q2.5](../23Q2-5) | 17/08/2023 | 23.2.5 | C	| | :white_check_mark:|
+| [23Q2.4](../23Q2-4) | 16/08/2023 | 23.2.4 | C	| | :white_check_mark:|
+| [23Q2.3](../23Q2-3) | 04/08/2023 | 23.2.3 | C	| | :white_check_mark:|
+| [23Q2.2](../23Q2-2) | 26/07/2023 | 23.2.2 | C	| | :white_check_mark:|
+| [23Q2.1](../23Q2-1) | 17/07/2023 | 23.2.1 | C  	| | :white_check_mark:|
+| [23Q2.0](../23Q2-0) | 27/06/2023 | 23.2.0 | C	| [23Q2-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso)| :white_check_mark:|
+| [23Q1.5](../23Q1-5) | 29/05/2023 | 23.1.5 | C 	| | :white_check_mark:|
+| [23Q1.4](../23Q1-4) | 19/05/2023 | 23.1.4 | C 	| | :white_check_mark:|
+| [23Q1.3](../23Q1-3) | 02/05/2023 | 23.1.3 | C 	| | :white_check_mark:|
+| [23Q1.2](../23Q1-2) | 19/04/2023 | 23.1.2 | C	| | :white_check_mark:|
+| [23Q1.1](../23Q1-1) | 11/04/2023 | 23.1.1 | C  	| | :white_check_mark:|
+| [23Q1.0](../23Q1-0) | 31/03/2023 | 23.1.0 | C  	| [23Q1-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) | :white_check_mark:| 
+| [22Q4.6](../22Q4-6) | 17/08/2023 | 22.4.6 | CS  | | |
+| [22Q4.5](../22Q4-5) | 16/03/2023 | 22.4.5 | C  | [22Q4-5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso)| |
+| [22Q4.4](../22Q4-4) | 16/02/2023 | 22.4.4 | C   | | |
+| [22Q4.3](../22Q4-3) | 03/02/2023 | 22.4.3 | C   | | |
+| [22Q4.2](../22Q4-2) | 25/01/2023 | 22.4.2 | C   | | |
+| [22Q4.1](../22Q4-1) | 13/01/2023 | 22.4.1 | C   | | |
+| [22Q4.0](../22Q4-0) | 04/01/2023 | 22.4.0 | C   | | |
+| [22Q3.0](../22Q3-0) | 05/10/2022 | 22.3.0 | C   | | |
+| [22Q2.2](../22Q2-2) | 12/08/2022 | 22.2.2 | C   | | |
+| [22Q2.1](../22Q2-1) | 05/08/2022 | 22.2.1 | C   | | |
+| [22Q2.0](../22Q2-0) | 06/07/2022 | 22.2.0 | C   | | |
+| [22Q1.3](../22Q1-3) | 21/06/2022 | 22.1.3 | C   | | |
+| [22Q1.2](../22Q1-2) | 25/05/2022 | 22.1.2 | C   | | |
+| [22Q1.1](../22Q1-1) | 11/05/2022 | 22.1.1 | C   | | |
+| [22Q1.0](../22Q1-0) | 01/03/2022 | 22.1.0 | C   | | |
+| [21Q4.9](../21Q4-9) | 04/01/2023 | 21.4.9 | C   | | |
+| [21Q4.8](../21Q4-8) | 12/08/2022 | 21.4.8 | C   | | |
+| [21Q4.7](../21Q4-7) | 05/08/2022 | 21.4.7 | C   | | |
+| [21Q4.6](../21Q4-6) | 21/06/2022 | 21.4.6 | C   | | |
+| [21Q4.5](../21Q4-5) | 27/05/2022 | 21.4.5 | C   | | |
+| [21Q4.4](../21Q4-4) | 25/05/2022 | 21.4.4 | C   | | |
+| [21Q4.3](../21Q4-3) | 11/05/2022 | 21.4.3 | C   | | |
+| [21Q4.2](../21Q4-2) | 10/03/2022 | 21.4.2 | C   | | |
+| [21Q4.1](../21Q4-1) | 17/12/2021 | 21.4.1 | C   | | |
+| [21Q4.0](../21Q4-0) | 13/12/2021 | 21.4.0 | C   | | |
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/overview](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/overview){target='_blank'}
+---
+
+---
+##### 23Q4.0
+####### New Platform Features
+
+- [Issue-199](https://github.com/etendosoftware/etendo_core/pull/228){target="\_blank"} Upgrade prettier from 2.8.8 to 3.0.3
+- [Issue-200](https://github.com/etendosoftware/etendo_core/pull/229){target="\_blank"} Upgrade eslint-plugin-prettier from 4.2.1 to 5.0.0
+- [Issue-201](https://github.com/etendosoftware/etendo_core/pull/230){target="\_blank"} Upgrade eslint-plugin-prettier from 3.3.1 to 4.2.1
+
+####### Fixed Issues
+
+- [EPL-1069](https://github.com/etendosoftware/etendo_core/issues/245){target="\_blank"} Invoice line with 0 amount remains without taxes
+- [EPL-1146](https://github.com/etendosoftware/etendo_core/issues/264){target="\_blank"} Delete client process not finished normally when database has idle in transaction queries
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to version 23.2.0 or later, you must run:
+    `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-0){target='_blank'}
+---
+
+---
+##### 23Q3.4
+####### Fixed Issues
+
+- [EPL-549](https://github.com/etendosoftware/etendo_core/issues/144){target="\_blank"} The method "getProductPrice" generates a NPE.
+- [EPL-553](https://github.com/etendosoftware/etendo_core/issues/148){target="\_blank"} Manual reconciliation's error message does not show correctly.
+- [EPL-571](https://github.com/etendosoftware/etendo_core/issues/260){target="\_blank"} Error is not displayed correctly when deleting a business partner and throwing an exception.
+- [EPL-750](https://github.com/etendosoftware/etendo_core/issues/192){target="\_blank"} Error when creating a background process with "Standard" UI Pattern.
+- [EPL-1066](https://github.com/etendosoftware/etendo_core/issues/232){target="\_blank"} Error when build validations tries to insert alert rule.
+
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-4](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-4){target='_blank'}
+---
+
+---
+##### 23Q3.3
+####### Fixed Issues
+
+- [EPL-1111](https://github.com/etendosoftware/etendo_core/issues/251){target="\_blank"} Duplication of discount on sales orders
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-3){target='_blank'}
+---
+
+---
+##### 23Q3.2
+####### Fixed Issues
+
+- [EPL-929](https://github.com/etendosoftware/etendo_core/issues/241){target="\_blank"} Decimal place validation error sends to Openbravo wiki instead of Etendo wiki
+- [EPL-962](https://github.com/etendosoftware/etendo_core/issues/227){target="\_blank"} Error when trying to delete an ad_client from 'Delete Client' process
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-2){target='_blank'}
+---
+
+---
+##### 23Q3.1
+####### Fixed Issues
+
+- [EPL-1085](https://github.com/etendosoftware/etendo_core/issues/236){target="\_blank"} Right click window function 'Configure Sort' cannot be translated
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-1){target='_blank'}
+---
+
+---
+##### 23Q3.0
+####### New Platform Features
+
+- [ETO-248](https://github.com/etendosoftware/etendo_core/pull/226){target="\_blank"} Update Wiki URLs
+- [Issue-199](https://github.com/etendosoftware/etendo_core/pull/199){target="\_blank"} Upgrade prettier from 1.18.2 to 2.8.8
+- [Issue-200](https://github.com/etendosoftware/etendo_core/pull/200){target="\_blank"} Upgrade eslint-config-prettier from 7.1.0 to 8.8.0
+- [Issue-201](https://github.com/etendosoftware/etendo_core/pull/201){target="\_blank"} Upgrade eslint-plugin-prettier from 3.3.1 to 4.2.1
+
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-0){target='_blank'}
+---
+
+---
+##### 23Q2.8
+####### Fixed issues
+
+- [EPL-895](https://github.com/etendosoftware/etendo_core/issues/224){target="\_blank"} Error adding line in sales order
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-8](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-8){target='_blank'}
+---
+
+---
+##### 23Q2.7
+####### Fixed issues
+
+- [EPL-860](https://github.com/etendosoftware/etendo_core/issues/222){target="\_blank"} Modified CompileSqlc task,included class.path.full
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-7](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-7){target='_blank'}
+---
+
+---
+##### 23Q2.6
+####### Fixed issues
+
+- [EPL-596](https://github.com/etendosoftware/etendo_core/issues/166){target="\_blank"}  Error when changing currency type for business partner with unused credits
+
+- [EPL-615](https://github.com/etendosoftware/etendo_core/issues/219){target="\_blank"}  Sales invoice dimensional report in excel format does not work in Firefox
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-6](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-6){target='_blank'}
+---
+
+---
+##### 23Q2.5
+####### Fixed issues
+
+[EPL-856](https://github.com/etendosoftware/etendo_core/issues/217){target="\_blank"}  Windows-Ant limitation: The file name or extension is too long
+
+####### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-5](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-5){target='_blank'}
+---
+
+---
+##### 23Q2.4
+####### Fixed issues
+
+[EPL-830](https://github.com/etendosoftware/etendo_core/issues/215){target="\_blank"}  Discounts applied from the Discounts and Promotions window are not reflected in the "Discounts" field of the order lines
+
+####### Installation and Updates
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-4](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-4){target='_blank'}
+---
+
+---
+##### 23Q2.3
+####### Fixed issues
+
+[EPL-512](https://github.com/etendosoftware/etendo_core/issues/121){target="\_blank"}  Discounts applied from the Discounts and Promotions window are not reflected in the "Discounts" field of the order lines
+
+[EPL-592](https://github.com/etendosoftware/etendo_core/issues/165){target="\_blank"}  The validation rule in the tab "Machine station" of the window "Work center" is wrong
+
+[EPL-748](https://github.com/etendosoftware/etendo_core/issues/191){target="\_blank"}  Reset accounts - does not take into account the indicated dates
+
+####### Installation and Updates
+
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-3){target='_blank'}
+---
+
+---
+##### 23Q2.2
+####### Fixed issues
+
+[EPL-543](https://github.com/etendosoftware/etendo_core/issues/204){target="\_blank"}  Business Partner's balance sheet does not match reality
+
+####### Installation and Updates
+
+!!! warning
+        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-2){target='_blank'}
+---
+
+---
+##### 23Q2.1
+####### Fixed issues
+
+[EPL-594](https://github.com/etendosoftware/etendo_core/issues/197){target="\_blank"} MaterialReceiptPending.processPurchaseOrder causes idle in transactions to be left (in some cases)
+
+####### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-1){target='_blank'}
+---
+
+---
+##### 23Q2.0
+####### New Platform Features
+
+[EPL-493](#epl-493) Make authentication classes extensible by implementing hooks
+
+####### Installation and Updates
+
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+
+####### Details
+
+######## EPL-493
+######### Make authentication classes extensible by implementing hooks
+
+**Issue Description**
+Make authentication classes `(UserInfoWidgetActionHandler, LoginHandler)` extensible by implementing hooks order to extend and enhance the security functionality
+
+**Solution Design**
+Create `UserInfoWidgetHook` and `LoginHandlerHook` for code injection into `UserInfoWidgetActionHandler` and `LoginHandler`.
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-0){target='_blank'}
+---
+
+---
+##### 23Q1.5
+####### Fixed issues
+
+[EPL-474](https://github.com/etendosoftware/etendo_core/issues/105){target="\_blank"} Error logging in when user password has expired
+
+####### Installation and Updates
+
+!!! warning
+    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-5](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-5){target='_blank'}
+---
+
+---
+##### 23Q1.4
+####### Fixed issues
+
+[EPL-639](https://github.com/etendosoftware/etendo_core/issues/183){target="\_blank"} Error when displaying a message in an action, it is displayed in the window and not in the popup
+
+####### Installation and Updates
+
+!!! warning
+    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-4](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-4){target='_blank'}
+---
+
+---
+##### 23Q1.3
+####### Fixed issues
+
+[EPL-591](https://github.com/etendosoftware/etendo_core/issues/173){target="\_blank"} Error in the sequence generation process
+
+####### Installation and Updates
+
+!!! warning    
+    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-3){target='_blank'}
+---
+
+---
+##### 23Q1.2
+####### Fixed issues
+
+[EPL-603](https://github.com/etendosoftware/etendo_core/issues/168){target="\_blank"} Error when adding payment from financial account
+
+####### Installation and Updates
+
+!!! warning
+    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-2){target='_blank'}
+---
+
+---
+##### 23Q1.1
+####### Fixed issues
+[EPL-573](https://github.com/etendosoftware/etendo_core/issues/159){target="\_blank"} Add Payment button error in the Sales Invoice window [Oracle]
+
+
+
+####### Installation and Updates
+
+!!! warning
+    If you upgrade an existing Etendo environment to 23.1.1 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-1){target='_blank'}
+---
+
+---
+##### 23Q1.0
+####### New Platform Features
+
+- [EPL-574](#epl-574) Upgrade Gradle Version to 7.3.2
+- [EPL-531](#epl-531) Undo post/unpost button
+- [EPL-535](#epl-535) Move Process / Reactivate Payment to Action
+- [EPL-537](#epl-537) Add hooks in the AddPaymentActionHandler
+- [EPL-529](#epl-529) Add hooks in the process shipments
+
+
+####### Installation and Updates
+
+!!! warning
+
+    If you upgrade an existing Etendo environment to 23.1.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
+    Please check it in the `build.gradle` file.
+    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
+
+
+####### Details
+
+######## EPL-574
+######### Upgrade Gradle Version to 7.3.2
+
+**Issue Description**
+The current version of Gradle used in the koodu_software/int_etendo_base, GitHub - etendosoftware/etendo_core: Etendo Classic source code  and koodu_software/etendo_gradle_plugin  needs to be updated to version 7.3.2 to take advantage of its improved performance and features. However, manual upgrades may not be feasible in all environments, and some systems may need to be updated manually to support the new version of Gradle. Furthermore, the upgrade may introduce changes to the project's behavior, and it is essential to test these changes thoroughly to minimize the risk of unexpected issues in production.
+
+  
+######## EPL-531
+######### Undo post/unpost button
+
+**Issue Description**
+Delete Post/Unpost button and undo changes on accounting status column  from Goods Receipt, Goods Shipments, Physical Inventory, Transaction Tab from Financial Account, Payment In, Payment Out, Purchase Invoice and Sales Invoice windows from Core  Module.
+
+**Solution Design**
+- Activate the Core module.
+- Then export the changes that always brings the module and create a patch with the diff that we obtained.
+- Perform the following steps for each of the windows implicit in the description
+- Copy the Display logic of the Post/Unpost button in Post.
+- Delete the Post/Unpost button.
+- Change in Post the display length, the description and the Help/Comment, uncheck Read Only, Show in grid view and Show in status bar.
+- In the Column change the Reference to Button and the Reference Search Key to All_Posted Status, the Application Element to Posted-Posted, the description, the Help/Comment and the Length in some cases.
+- Activate the Synchronize Terminology.
+
+######## EPL-535
+######### Add hooks in the AddPaymentActionHandler
+
+**Issue Description**
+
+Move the process payment that is process definition to action in order to be able to concatenate actions in the future. 
+
+**Solution Design**
+
+- Move to action
+- Check that the behavior of the process has not been modified.
+- Check if you can discriminate by window to allow multiple payments by WS
+- Allow multiple selection when calling the process from a WS with the corresponding flag processByWebService
+- Add the pre and post hooks that were implemented in the feature/EPL-537 branch
+
+- Change the class that extends the process to Action, implement the action method, make some superior methods to transform the data and call the original method for the cases of 1 single payment either from the windows or by WS, I will also add a validation so that it is not allowed to call the process with more than one record selected unless it has the flag mentioned above to call by ws and process multiple payments.By WS only multiple payments will be able to be processed, the payments will have to be created previously with their respective details, etc.By WS you can create and process a payment passing the correct json.
+
+    URL:`http://localhost:8080/etendo/sws/com.smf.securewebservices.kernel/org.openbravo.client.kernel?processId=9BED7889E1034FE68BD85D5D16857320&_action=org.openbravo.advpaymentmngt.actionHandler.`
+
+    ``` title="AddPaymentActionHandler"
+    {"recordIds":["69A235939B474190B9559A31933A303C"],
+      "_params":{
+        "fin_payment_id":"69A235939B474190B9559A31933A303C",
+        "ad_org_id":"E443A31992CB4635AFCAEABE7183CE85",
+        "issotrx":false,
+        "document_action":"25889363327D44FC851D97EA78F6BCFC",
+        "c_currency_id":"102",
+        "received_from":"858B90C7AF0A4533863EEC65437382BF",
+        "actual_payment":"100",
+        "payment_date":"2023-01-10",
+        "difference":null,
+        "conversion_rate":null,
+        "converted_amount":null,
+        "reference_no":"",
+        "credit_to_use":{"_selection":[]},
+        "order_invoice":{"_selection":[]},
+        "glitem":{"_allRows":[]}
+      },
+    "_entityName":"FIN_Payment"
+    }
+
+    To process multiple payments, you should send the following json
+
+    {"recordIds":["69A235939B474190B9559A31933A303C","123E1CF82DA4443EBE34F858409CDC0B"],
+
+    "document_action":"25889363327D44FC851D97EA78F6BCFC",
+    "processByWebService":true,
+    "_entityName": "FIN_Payment"
+    }
+    ```
+
+- If the payment is not well created, it will give error.
+- Also modify the message capture to process multiple payments, and a commit will be made for each payment so that in case one payment fails it will not rollback all the payments.
+
+######## EPL-537
+######### Add hooks in the AddPaymentActionHandler
+**Issue Description**
+Create a possibility to implement hooks of pre and post payment to add validation or any develop before payment start the processing and after finish the process payment
+
+**Solution Design**
+- Create a interface called PaymentProcessHook with two methods called preProcess and posProcess this methods will have a JSONObjets as a parameter and return the same type
+- Create an abstract class called PaymentProcessOrderHook with a method called getPriority and return an int
+- Modify the class AddPaymentActionHandler and add the execution of this hooks when start the process and when finish the process
+
+######## EPL-529
+######### Add hooks in the process shipments
+**Issue Description**
+Allow hook of pre and post shipments, This functionanily add a hooks to implement for partners o customer
+
+**Solution Design**
+- Create a new interface called ProcessShipmentHook in org.openbravo.advpaymentmngt module
+- Create a util called ProcessShipmentUtil copy from ProcessOrderUtil and do all necessary changes
+- Change the method processShipment in ProcessShiment java and call to ProcessShipmentUtil to process the shipment.
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-0){target='_blank'}
+---
+
+---
+##### 22Q4.6
+####### Fixed issues
+
+[EPL-856](https://github.com/etendosoftware/etendo_core/issues/217){target="\_blank"}  Windows-Ant limitation: The file name or extension is too long
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-6](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-6){target='_blank'}
+---
+
+---
+##### 22Q4.5
+####### Fixed issues
+
+[EPL-554](https://github.com/etendosoftware/etendo_core/issues/150){target="\_blank"} Vulnerability found in Postgresql JDBC JAR
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-5](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-5){target='_blank'}
+---
+
+---
+##### 22Q4.4
+####### Fixed issues
+
+[EPL-550](https://github.com/etendosoftware/etendo_core/issues/145){target="\_blank"} Error accessing Goods Shipments window after clearing cache
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-4](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-4){target='_blank'}
+---
+
+---
+##### 22Q4.3
+####### Fixed issues
+
+[EPL-540](https://github.com/etendosoftware/etendo_core/issues/139){target="\_blank"} Mark missing modules_core as 'Translation required'
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-3){target='_blank'}
+---
+
+---
+##### 22Q4.2
+####### Fixed issues
+
+[EPL-523](https://github.com/etendosoftware/etendo_core/issues/128){target="\_blank"} Modify the c_order_post this not delete the basic discounts
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-2){target='_blank'}
+---
+
+---
+##### 22Q4.1
+####### Fixed issues
+
+[EPL-501](https://github.com/etendosoftware/etendo_core/issues/115){target="\_blank"} When close an invoice is showing the close button but with empty options
+
+[EPL-510](https://github.com/etendosoftware/etendo_core/issues/116){target="\_blank"} When close an order is showing the close button but with empty options
+
+[EPL-521](https://github.com/etendosoftware/etendo_core/issues/125){target="\_blank"} Update ojdbc version and fix processHasOrgParam query
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-1){target='_blank'}
+---
+
+---
+##### 22Q4.0
+####### Fixed issues
+
+ [EPL-51](https://github.com/etendosoftware/etendo_core/issues/110){target="\_blank"} Sequence references to do not have a UI Definition.
+
+[EPL-371](https://github.com/etendosoftware/etendo_core/issues/54){target="\_blank"} Blank line when a GL Item is removed.
+
+[EPL-426](https://github.com/etendosoftware/etendo_core/issues/87){target="\_blank"} General Ledger not exporting long Excel files
+
+[EPL-455](https://github.com/etendosoftware/etendo_core/issues/97){target="\_blank"} Rounded amounts in the 'Create Invoices From Orders' window.
+
+[EPL-456](https://github.com/etendosoftware/etendo_core/issues/98){target="\_blank"} Error in first time execution of an scheduled process
+
+[EPL-473](https://github.com/etendosoftware/etendo_core/issues/103){target="\_blank"} Error when attaching documents in a window.
+
+[EPL-407](https://github.com/etendosoftware/etendo_core/issues/80){target="\_blank"} Oracle bug.
+
+[EPL-486](https://github.com/etendosoftware/etendo_core/issues/113){target="\_blank"} Error downloading reports with Google Chrome 108.0.5359.94
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-0){target='_blank'}
+---
+
+---
+##### 22Q3.0
+####### Fixed issues
+
+[EPL-383](https://github.com/etendosoftware/etendo_core/issues/70){target="\_blank"} Error when post good movement "NoFactAct"
+
+[EPL-372](https://github.com/etendosoftware/etendo_core/issues/55){target="\_blank"} Manual report does not load properly when an invalid date is entered
+
+[EPL-370](https://github.com/etendosoftware/etendo_core/issues/52){target="\_blank"} Updating attribute value doesn't update attribute set instance correctly
+
+[EPL-181](https://github.com/etendosoftware/etendo_core/issues/92){target="\_blank"} When information is accessed from APIRest and sending for parameter an ID return all records and not apply the filter
+
+[EPL-117](https://github.com/etendosoftware/etendo_core/issues/91){target="\_blank"} Error in export.database with a table in DB without key column
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q3-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q3-0){target='_blank'}
+---
+
+---
+##### 22Q2.2
+####### Fixed issues
+
+######### Bug
+
+- [EPL-359](https://github.com/etendosoftware/etendo_core/issues/44){target="\_blank"} Multirecord processes cause loss of focus on records
+- [EPL-275](https://github.com/etendosoftware/etendo_core/issues/23){target="\_blank"} Error when posting document with product with no cost defined
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-2){target='_blank'}
+---
+
+---
+##### 22Q2.1
+####### Fixed issues
+
+- [EPL-230](https://github.com/etendosoftware/etendo_core/issues/51){target="\_blank"} Duplicate foreign keys in 'JOBS_JOB_RESULT.xml' and ojdbc8
+- [EPL-338](https://github.com/etendosoftware/etendo_core/issues/20){target="\_blank"} Customize Field Skin in read-only
+- [EPL-347](https://github.com/etendosoftware/etendo_core/issues/22){target="\_blank"} Error when post/unpost transactions from financial account
+- [EPL-351](https://github.com/etendosoftware/etendo_core/issues/32){target="\_blank"} Process buttons in form mode that are disabled are visible
+- [EPL-353](https://github.com/etendosoftware/etendo_core/issues/33){target="\_blank"} When clicking on "Complete" a Goods Shipment the "Document Action" field has no default value.
+- [EPL-356](https://github.com/etendosoftware/etendo_core/issues/36){target="\_blank"} The background process monitor does not work properly when it ends with an error
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-1){target='_blank'}
+---
+
+---
+##### 22Q2.0
+####### New Platform Features
+
+- [EPL-112](#epl-112) EtendoRX - Integrations
+- [EPL-218](#epl-218) Add task to compile style changes.
+- [EPL-203](#epl-203) Refactor the Offer Pick Action handlers to jobs.
+- [EPL-201](#epl-201) Move Valued Stock Report to a process definition and it will only be able download report in pdf and excel format.
+- [EPL-199](#epl-199) Refactor the process 'Payment execution' to a process definition.
+
+####### Fixed issues
+
+- [EPL-57](#epl-52) Posting a goods shipment with non accounting / error message displayed.
+- [EPL-61](#epl-61) Errors in "Add details" process displayed columns.
+- [EPL-194](#EPL-194) Remove "External Point of Sales" view and its documentation.
+- [EPL-228](#epl-228) The system loses the selection order when adding lines to a new order.
+- [EPL-237](#epl-237) Accounting templates defined for the m_costadjustment table are not executed.
+- [EPL-263](#epl-263) Error ocurred in payments in and payments out when payment date is null.
+
+####### Details 
+
+######## EPL-57
+
+######### Posting a goods shipment with non accounting / error message displayed.
+
+**Error's description**
+When posting a goods shipment with non accounting, even though this functionality works well, an error message is shown with the correct text.
+
+**Steps to reproduce the error**
+Post a goods shipment that does not generate accounting.
+
+**Expected result**
+A success message in green is shown.
+
+**Environment**
+Etendo 21.4.0
+
+######## EPL-61
+
+######### Errors in "Add details" process displayed columns
+
+**Error's description**
+When you want to Add Details in a ‘Payment In', in the grid:
+
+1. The column ‘c_ob_selected’ does not have label.
+2. The columns Creation Date and Created By are empty.
+
+**Steps to reproduce the error**
+
+- Go to 'Payment In'
+- Select record in status 'Awaiting Payment'
+- Click on 'Add Details'
+- Click right on columns
+- View that column ‘c_ob_selected’ doesn’t have label
+- Check columns ‘Creation Date' and 'Created By’
+- View in grid that the columns are empty
+
+**Expected Result:**
+
+- The column 'c_ob_selected' has label
+- The columns ‘Creation Date’ and ‘Created By’ are not empty
+
+**Environmnet**
+Etendo 21.4.0
+
+######## EPL-194
+
+######### Remove "External Point of Sales" view and its documentation
+
+**Error's description:**
+Showing the external point of sales window, but this window belongs to integration with POS.
+
+**Steps to reproduce**
+Search the external point of sales windows or go to Application -> Sales Management -> Setup -> External point of sales.
+
+**Expected behavior**
+Do not show External point of sales windows.
+
+**Affected Version**
+Etendo 21Q4.1
+
+######## EPL-228
+
+######### The system loses the selection order when adding lines to a new order
+
+**Error's description**
+The error occurs in windows such as the order window. Sometimes, when saving the header of a new order and want to add a line, the toolbar buttons are disabled.
+
+**Steps to reproduce the error**
+
+- Go to 'Sales Order' windows
+- Clear filters
+- Create a new sales order
+- Save header
+- Click on lines
+- See that the toolbar buttons are disabled and it is not possible to add lines.
+
+**Expected behaviour**
+It should be possible to click the button to add a new line.
+
+**Affected version**
+Etendo 21.4.2
+Etendo 22.1.0
+
+######## EPL-237
+
+######### Accounting templates defined for the m_costadjustment table are not executed
+
+**Error's description**
+In case a new accounting template is defined in the m_costadjustment table, it is never executed, and only the core one is executed.
+
+**Steps to reproduce the error**
+
+- Define a new accounting template for the m_costadjustment table.
+- Execute the process.
+- Verify in debug mode that the defined template is set but not executed. The defined for core is executed.
+
+**Expected behavior**
+The new accounting template defined must be executed.
+
+**Affected Version**
+Etendo 22.1.0
+
+######## EPL-263
+
+######### Error ocurred in payments in and payments out when payment date is null
+
+**Error's description**
+A pop up with error when pressing “Add Details“ in payment in or payment out
+
+**Steps to reproduce the error**
+
+- Create a payment in or payment out, remove the payment date and press the button “Add Details“.
+- See a pop up with the following error.
+
+**Expected behavior**
+Show a pop up with invoices and orders.
+Disappear the pop up with the error.
+
+**Affected Version**
+Etendo 22.1.0
+
+######## EPL-112
+
+######### EtendoRX - Integrations
+
+The main objective of this new solution is to complement the existing ERP: “Etendo Classic”, making usage of new technologies and applying proved patterns and good practices while maintaining the best features it has to create integrations with third-party applications by an easy way.
+Etendo has been integrated with Zapier as concept.
+Zapier is a tool that allows users to integrate programs and web applications, making it possible to move information between platforms and perform combined actions.
+
+To try it, you can read [Create a Zap using Etendo Integration](/developer-guide/etendo-rx/integrations/zapier/)
+
+######## EPL-218
+
+######### Add task to compile style changes
+
+**Issue Description:**
+For a partner to be able to make modifications to the styles, it is necessary to add a gradle task that compiles the .scss files.
+In addition, problems with the kubernetes plugin need to be solved. When running a smartbuild on a server the antWar and deployK8s tasks are not running.
+
+**Solution Design:**
+
+- In web/skins/Default/Openbravo_ERP_250.scss in line 20 change /modules/ to /modules_core/.
+- Add to the build.gradle the task cssCompile in etendo_gradle_plugin
+
+######## EPL-203
+
+######### Refactor the Offer Pick Action handlers to jobs
+
+**Issue Description**
+Refactor the Offer Pick Action handlers to jobs
+
+**Solution Design**
+
+Convert to jobs the following classes:
+OfferPickOrgActionHandler.java
+OfferPickProductCategoryActionHandler.java
+OfferPickAndExecBaseActionHandler.java
+OfferPickProductActionHandler.java
+
+**Use/Test Cases**
+
+- Case 1
+  Given: a discount and promotion
+  When: you execute the button Add organization
+  Then: this allows adding multiple organizations implemented by jobs
+
+- Case 2
+  Given: a discount and promotion
+  When: the button Add Product Category is executed
+  Then: this allows adding multiple Product Category implemented by jobs
+
+- Case 3
+  Given: a discount and promotion
+  When: the button Add Product is executed
+  Then: this allows adding multiples Product implemented by jobs
+
+######## EPL-201
+
+######### Move "Valued Stock Report" to a process definition, the report only can be downloaded in Exel and PDF formatts
+
+**Issue Description**
+
+- Refactor "Valued Stock Report" to a process definition maintaining the functionality.
+- The report only can be downloaded in Exel and PDF formatts.
+
+**Solution Design**
+
+For the report valuation stock, move to process definition and remove the possibility that export in html
+remove the menu and form, and the following files
+src/org/openbravo/erpCommon/ad_reports/ReportValuationStock2.xml
+src/org/openbravo/erpCommon/ad_reports/ReportValuationStock2.html
+
+**Use/Test Cases**
+Given: Etendo environment.
+When: Execute the report valuation stock.
+Then: The process should return the same result.
+
+######## EPL-199
+
+######### Refactor the process 'Payment execution' to a process definition
+
+**Issue Description**
+
+Refactor the process 'Payment execution' to a process definition.
+
+**Solution Design**
+
+- modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/
+ad_forms/BatchPaymentExecution.html
+
+**Use/Test Cases**
+
+Search the process with the ‘Payment execution’ name. This opens a window where the ‘Payments’ with status ‘RPAE’ (If you want to see some values set the payment status to RPAE in DB) can be filtered.
+
+To define a ‘process execution’ go to the financial account window and select a payment method in the ‘payment method’ tab. Set the payment execution type to Automatic and select a ‘execution process’.
+
+**Automatic tests definition**
+
+**Refresh grid test**
+
+Given: A user sending a request with the search button value.
+when: The user sends the request to the process handler.
+then: The response should contain the retry execution.
+and: The response actions should contain the refresh grid values.
+
+**Lines not selected test**
+
+given: A user sending the a request with the process button value.
+when: The user sends the request to the process handler without selected lines.
+then: The response should contain a error for the missing lines.
+
+**Execution process not found test**
+
+given: "A user sending a request with a selected payment".
+when: "The user send the request to the process handler".
+then: "The response should contain a error for the missing 'execution process'".
+
+**Generate popup and execute the process for a custom payment**
+
+given: The user wanting to run the execution process for a payment with automatic execution type.
+when: The user sends the request to the process handler.
+then: The response should contain the information of the popup.
+
+when: The user sends the execution command for the process to be run
+then: The process will execute successfully
+and: The message will show the documentNo of the processed payment
+and: The payment status will be diferent of 'RPAE'.
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-0){target='_blank'}
+---
+
+---
+##### 22Q1.3
+####### Fixed issues
+
+
+######## EPL-53
+######### No valid open periods when document is posted but don't have any lines in fact acct
+**Issue Description**
+When you post a document that it don't create any line in fact acct, this document change the status to posted but when you unpost the document with the period closed the class ResetAccounting don't valid if the period is open or not
+
+**Solution Design**
+In the class ResetAccounting validate if the period is open before change the status for the document to set unposted
+
+I included a patch that catch an exception and put this for show a pretty message when a trigger throw an exception, but the finish solution is valid the period and this catch
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-191
+######### Button panel menu is not visible when you move the mouse over it
+**Issue Description**
+What is happening is that when selecting any drop-down menu from the toolbar, the color of the highlight is the same as the color of the font, preventing this from being able to properly display the text.
+
+**Steps to reproduce the error**
+1. Go to https://demo.etendo.cloud/etendo/security/Login and log in.
+2. After that enter to the Invoice (Customer) window, position on an invoice and press from the toolbar the option "Save view" it will open a menu and you can see that the highlight color is the same as the font color and you cannot read the text.
+
+**Expected behavior**
+You should be able to read the text of each menu option.
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-304
+######### Scroll bar with dropdown fields bug
+**Issue Description**
+In form mode using Chrome or Firefox, there is a scrollbar and you have to use it if the fourth field in the row is a dropdown 
+
+**Steps to reproduce the error**
+1. Enter a window where the fourth field of form view is a dropdown list.
+2. The scroll bar appears beneath the form
+
+**Expected behavior**
+No scroll bar should appear
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-306
+######### Problem with the skin of process definition buttons
+**Issue Description**
+In definition processes accessed from the menu, the buttons at the top right are not visible. While the mandatory fields are not filled in, they appear blank and the text is not visible and when the mandatory fields are filled in, only the text appears and the background of the button is not visible 
+
+**Steps to reproduce the error**
+1. Enter from the menu to a process definition window. 
+2. Notice that the process buttons are white
+3. Fill in the required fields and notice that the process buttons are left without the background color 
+
+**Expected behavior**
+The buttons must appear with the corresponding Skin 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-307
+######### Difficulty to see the gray letters in the grid and the letters of the tabs are not active
+**Issue Description**
+Texts on unselected tabs are not as legible due to the color. In addition, it could be analyzed to darken the lettering of the records in grid mode to improve the display.
+
+**Steps to reproduce the error**
+1. Go to Sales Invoice window
+2. See that the names of the tabs TAX, BASIC DISCOUNTS, PAYMENT PLAN, ETC do not contrast well because of their color. Also, note that in grid mode the letter of the existing records could be displayed better.
+
+**Expected behavior**
+It is expected that these letters will be of a contrasting color to enhance contrast and improve visualization. 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-308
+######### The height of the toolbar is reduced when the side scroll bar appears
+**Issue Description**
+In the toolbar, when the side scrollbar is needed, the vertical scrollbar also appears.
+
+**Steps to reproduce the error**
+1. Go to Sales Invoices window
+2. Select a record in grid
+3. Minimize navigator size
+4. Check that two scrollbars appear in the toolbar
+
+**Expected behavior**
+The vertical scroll bar should not appear 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-318
+######### Difficulty in realizing that a record is selected in grid mode
+**Issue Description**
+The colour with which a selected record is shaded in grid mode is very light and often it is not possible to distinguish which one is selected.
+
+**Steps to reproduce the error**
+1. Go to Sales Order window.
+2. Select a record.
+3. Check that the selected record is not very well distinguished.
+
+**Expected behavior**
+Improve shading contrast 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-3){target='_blank'}
+---
+
+---
+##### 22Q1.2
+####### Fixed issues
+
+######## EPL-309
+######### No sequences are obtained from the parent organization if the organization does not have one configured
+
+**Error's description**
+When generating a new document to obtain the sequence, the context organization is used and in case there is not one, the sequence of the parent organization should be used.
+
+**Steps to reproduce the error**
+1. Login as F&B International Group Admin (Organization: F&B España, Region Norte)
+2. Go to Document Sequences window
+3. Filter for (F&B España - Region Norte, Order-Document No., Standard Order) and delete records.
+4. Filter for (F&B España S.A., Order-Document No., Standard Order) and delete records.
+5. Go to Sales Order and create a new record.
+6. Check that no header field is rendered
+
+**Expected behavior**
+In the DocumentNo. field, you should set the sequence corresponding to F&B International Group Admin
+
+**Affected Version**
+Etendo 21.4.3
+Etendo 22.1.1
+
+######## EPL-118
+######### Filter nexus credentials in Setup task and only declare nexus credentials in gradle.properties
+
+**Error's description**
+When the setup task is executed and the credentials are configured in the gradle.properties, they are copied to the Openbravo.properties.
+Also, refactor the code to only use nexusUser and nexusPassword.
+
+**Steps to reproduce the error**
+Add nexus credentials in build.gradle  and execute ./gradlew setup task.
+
+**Expected behavior**
+The credentials must not  be added  in Openbravo properties file
+
+**Affected Version**
+22Q1.1  >> Plugin 1.0.0
+
+**Solution Design (optional)**
+Create a filter in the plugin to avoid copying the credentials.
+
+######## EPL-242
+######### Modify the folder where the war is created if the core is in Jars.
+
+**Error's description**
+ If the core is in JAR, generate the “etendo.war” file in build/etendo/libs instead of  libs/
+
+**Steps to reproduce the error**
+- In a Etendo base, add the Core jar dependency in the ‘build.gradle': 
+
+```
+dependencies {
+    implementation 'com.etendoerp.platform:etendo-core:22.1.1'
+}
+```
+
+- Verify that the Core in jars is resolved correctly (build/etendo dir)
+- Configure your credentials and run the ./gradlew setup
+- Install the environment ./gradlew install
+- run the antWar task: ./gradlew antWar
+- The ant war file should be created in the lib dir of the root project
+
+**Expected behavior**
+The etendo.war file should be in libs/ insted of build/etendo/libs 
+
+**Affected Version**
+22Q1.1 >> Plugin 1.0.0
+
+**Solution Design (optional)**
+Change the build.xml files to point to the lib root project depending on if the core is in JARs or SOURCES.
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-2){target='_blank'}
+---
+
+---
+##### 22Q1.1
+####### New features
+######## EE-134
+######### Set the xsql as public access
+**Issue Description**
+Set public access DocInvoice_data.xsql DocLineInvoice_data.xsql to use it in custom modules.
+
+
+####### Fixed issues
+
+######## EPL-227
+######### Error when saving and printing reports
+**Error's description**
+
+When trying to save and print a report (for example: an invoice) an empty error window is launched and the action is not executed.
+The log shows the following error:
+
+```
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.65]
+at java.lang.Thread.run(Thread.java:829) [?:?]
+2022-03-18 19:02:18,587 [http-nio-8080-exec-57] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
+2022-03-18 19:04:51,571 [http-nio-8080-exec-58] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
+2022-03-18 19:05:53,897 [http-nio-8080-exec-41] INFO org.openbravo.service.datasource.DefaultDataSourceService - Couldn't find property from additional property product$productName in entity InvoiceLine
+2022-03-18 19:06:13,094 [http-nio-8080-exec-49] ERROR org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices - Error captured:
+java.lang.NullPointerException: null
+at org.openbravo.erpCommon.utility.reporting.printing.PrintController.buildReport(PrintController.java:654) ~[classes/:?]
+at org.openbravo.erpCommon.utility.reporting.printing.PrintController.post(PrintController.java:269) [classes/:?]
+at org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices.doPost(PrintInvoices.java:57) [classes/:?]
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [servlet-api.jar:?]
+at org.openbravo.base.HttpBaseServlet.serviceInitialized(HttpBaseServlet.java:200) [openbravo-core.jar:?]
+at org.openbravo.base.secureApp.HttpSecureAppServlet.service(HttpSecureAppServlet.java:459) [classes/:?]
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [servlet-api.jar:?]
+...
+```
+
+This error occurs on a server but does not occur in a local environment.
+
+**Steps to reproduce the error**
+1. Go to a Sales Invoice
+2. Select an existing document
+3. Click on 'Print'
+4. Select 'Yes' option
+5. View the error window
+
+**Expected behaviour**
+The option to save the report must be given.
+
+**Affected Version**
+Etendo 21Q4.2
+
+######## EPL-251
+######### Logs are not displayed when the Acct Server Process is executed
+**Error's description**
+When the accounting process is executed, it is not possible to see the log of this process, although it is executed correctly.
+
+**Steps to reproduce the error**
+1. Go to 'Process Request' window 
+2. Select 'Acct Server Process' record 
+3. Go to 'Process Monitor' tab
+4. Verify that 'Process Log' column is empty
+
+**Expected behavior**
+In 'Process Log' column you should see the process log
+
+**Affected Version**
+Etendo 21.4.2
+Etendo 22.1.0
+
+######## EPL-262
+######### No grouped processes are executed
+**Error's description**
+When a process group is scheduling in process request window, this process never finish
+
+**Steps to reproduce the error**
+- Go to process group window
+- Create a process group with name Test
+- Add “Alert Process” in Process Group List tab
+- Add “Costing Background process” in Process Group List tab
+- Go to Process Request window
+- Create a new record
+- Check the field called Group
+- In the process group field, set the process created called Test
+- Set the timing as Run Immediately
+- Press the button Schedule process.
+- See that process schedule not finish
+
+**Expected behavior**
+- The process group should be finish when all of process configured finish
+- In process Monitor, the end time should not be null and the status should be Success.
+- Check exists data in Process Request → Process Monitor → Processes in Group tab.
+
+**Affected Version**
+Etendo 21.4.2
+Etendo 22.1.0
+
+
+
+
+
+
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-1){target='_blank'}
+---
+
+---
+##### 22Q1.0
+####### New platform features
+
+Now you can see the details, scope and documentation in the link below.
+
+- [EPL-3](#epl-3) JARs format supported in Core and Modules.
+- [EPL-195](#epl-195) Landscape balance sheet and profit & loss and only with headings.
+
+####### Fixed issues
+
+- [EPL-50](#epl-50) Property Fields are executing callouts when they should not.
+- [EPL-56](#epl-56) Error when trying to unpost a document with no accounting lines.
+- [EPL-72](#epl-72) Some configuration files are overwritten after expanding Core Version.
+- [EPL-73](#epl-73) Old sequences are used instead of the new ones generated.
+- [EPL-91](#epl-91) Transactionality is not guaranteed when modifying the document type.
+- [EPL-94](#epl-94) The sequence preview is not masked correctly.
+- [EPL-97](#epl-97) Post button gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
+- [EPL-98](#epl-98) Unexpected error with the Etendo logo and Etendo favicon.
+- [EPL-109](#epl-109) When a translation version module is updated, the changes are not applied.
+- [EPL-118](#epl-118) Filter nexus credentials in Setup task.
+- [EPL-119](#epl-119) Delete ad_error_log from the compilation tasks.
+- [EPL-192](#epl-192) Accounting status field is editable
+- [EPL-193](#epl-193) The 'Posted' column has no default value.
+- [EPL-220](#epl-220) buildValidations and moduleScript classes missing in modules_core
+
+
+####### Details
+
+######## EPL-3
+
+######### JARs format supported in Core and Modules.
+
+This allows Etendo to be installed and deployed using compiled Java distributed in JAR format, without losing compatibility with the legacy source format. For this, we work on the tasks of publishing, compiling and deploying the code supported as a JAR.  
+If you work with Etendo in JAR format, you will only visualize some configuration and modules directories, all the rest is in build volatile folder.
+
+You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) page.
+
+You can read the [How to publish modules to a GitHub Repository](/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) page to find out about the new way of publishing.
+
+
+You can migrate the Core format from Source to JAR and the other way around. Read more information in [Core Format Migration](/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/).
+
+You can upgrade Etendo to new versions in only a few steps following the [Upgrade Etendo](/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/) guide.
+
+######## EPL-50
+
+######### Property Fields are executing callouts when they should not
+
+**Issue Description**
+When there is a property field defined for certain window, the callout of the referenced field gets executed. This is wrong.
+For example, defining a property field in the Sales Invoice window referencing a field of the Sales Order window, will execute a Sales Order callout, an it will likely fail with an exception.
+
+**Solution Design**
+FormInitializationComponent should be making a special consideration when determining which fields have a callout, by checking if the current field is a property field or not.
+
+######## EPL-56
+
+######### Error when trying to unpost a document without accounting lines
+
+**Error's description**  
+When trying to unpost a document that did not generate any accounting lines (fact_acct records), an error is raised.  
+An example of a document that does not have any accounting lines after being posted is a Goods Shipment without price (in its related Sales Order).
+
+**Solution Design**  
+The root issue is a null pointer exception in the ResetAccounting class. The Posted class will try to select the organization and client of the accounting records, and given that there are none, the values are sorted as empty strings. This leads to the NullPointerException down the line.
+
+Either class should check their input so that the exception is not raised, but the document should also be left as Posted = 'N' without errors facing the user.
+
+**Affected Version**  
+21Q4
+
+######## EPL-72
+
+######### Some configuration files are overwritten after expanding Core Version
+
+**Error description: **
+After doing a version update of Etendo core the Openbravo.properties configuration file is completely overwritten by modifying the following points:
+
+- attach.path
+- context.name
+- source.path
+- bbdd.url
+- bbdd.sid
+- allow.root
+
+The Format.xml file was also modified, probably for the same as point 1).
+
+**Steps to reproduce the error:**
+./gradlew expandCore (in the main directory of the ERP)
+
+**Expected result:**
+A clean update with no overwritten settings.
+
+**Affected Version:**
+Specifically snapshot 20.2.1.1636372732–20211108.135711–2
+
+######## EPL-73
+
+######### Old sequences are used instead of the new ones generated
+
+**Error's description**  
+When the sequence defined with the new process is used and the mask to include dates or some prefix is changed, the old sequence is called and generates a wrong result.
+
+**Steps to reproduce the error**
+
+- Log-in as system administrator.
+- Go to tables and columns and search ‘c_invoice' table and modify 'DocumentNo’ record:
+- Reference: Transactional Sequence.
+- Run './gradlew martbuild'
+- Change role to 'QA Testing'
+- Go to General Setup || Application || Create Sequences
+- Select '\*' organization and click 'Done' (Execute the process which creates the sequences).
+- Go to Financial Management || Accounting || Setup || Document Sequence
+- pen as form the register (Spain, Invoice-Document No., AR Invoice).
+- Change the mask: Mask: y-###-##### and Save.
+- Create a new sales invoice register
+
+**Expected result**  
+The documentNo record should show a preview like “2021-100-0001“
+
+**Affected Version**  
+Etendo 21Q4
+
+######## EPL-91
+
+######### Transactionality is not guaranteed when modifying the document type
+
+**Error's description**  
+When a document is saved and the sequence is generated, if the document type is changed, the callout changes the documentNo and the transactionality is broken
+
+**Steps to reproduce the error**  
+-Create a new invoice and save it
+
+-Change the document type and save again
+
+**Expected result**  
+An error message should be shown
+
+**Solution Design**  
+Auto generate event observers in the compilation time (like the contributors generation) and throw an exception in case of updating the transactional sequence field.
+
+**Affected Version**  
+21Q4
+
+######## EPL-94
+
+######### The sequence preview is not masked correctly
+
+**Error's description**
+When a new document is created, the preview in the documentNo field only shows the next number but not masked (because a legacy callout is called)
+
+**Steps to reproduce the error**
+Create a new invoice
+
+**Expected result**
+The documentNo field preview shows the same sequence as when the document is saved
+
+**Solution Design**
+Modify the legacy callout to identify if the field is a transactional sequence reference and avoid to execute the logic.
+
+**Affected Version:**
+21Q4
+
+######## EPL-97
+
+######### Post button gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
+
+**Error's description:**
+When trying to post a Collection, being disabled for accounting the table fin_payment, it remains in 'Error', when it should be in 'Document disabled'
+According to the log, the error is in the module com.smf.jobs
+
+**Steps to reproduce the error:**
+
+1. Disable accounting for the Fin_Payment table
+2. Create a payment in/payment out, complete it and then post it.
+
+**Expected behaviour**:
+When accounting is not enabled for that window in the posting button, after an attempt is made to post it, it should be shown as "Document Disabled".
+
+**Affected Version:**
+Etendo 21Q3 - 21Q4
+
+######## EPL-98
+
+######### Unexpected error with the Etendo logo and Etendo favicon.
+
+**Error's description:**
+
+1\. The Openbravo logo is shown when the system does not find the page you try to visit.
+
+2\. The Openbravo favicon is shown when the system does not find the page you are trying to visit, but if the page is found, the Etendo favicon is not shown and it remains blank.
+
+3\. The Etendo logo is not shown in the login page.
+
+**Affected Version:**  
+Etendo  21Q4
+
+######## EPL-109
+
+######### When a translation version module is updated, the changes are not applied
+
+**Error's description**
+If changes were made to an installed module, these changes are not applied when an update.database is run.
+
+**Steps to reproduce the error**
+
+- Install a translation module, e.g. moduleDeps ('com.etendoerp:quotation.es_ES:latest.release@zip')
+- Make a change in this module and change the version in AD_MODULE.xml
+- Run ./gradlew update.database smartbuild
+- Verify the change is not applied
+
+**Expected behaviour**  
+The change has been applied
+
+**Affected Version**  
+Etendo 21Q4.1
+
+######## EPL-118
+
+######### Filter nexus credentials in Setup task
+
+**Error's description**  
+When the setup task is executed and the credentials are configured in the gradle.properties, they are copied to the Openbravo.properties.
+
+**Steps to reproduce the error**  
+Add nexus credentials in build.gradle and execute ./gradlew setup task.
+
+**Expected behaviour**  
+The credentials must not be added in Openbravo properties file
+
+**Affected Version**  
+21Q4.1 >> Plugin 1.0.0
+
+######## EPL-119
+
+######### Delete ad_error_log from the compilation tasks
+
+**Error's description**  
+\[ant:sql\] Failed to execute: DELETE FROM ad_error_log where system_status=(select system_status from ad_system_info)\[ant:sql\] org.postgresql.util.PSQLException: ERROR: relation "ad_error_log" does not exist
+
+**Steps to reproduce the error**  
+When compilation tasks are executed, this error is shown, because this relation was deleted.
+
+**Expected behaviour**  
+Description of the expected behaviour without the bug.
+
+**Affected Version**  
+Develop - 22Q1
+
+**Solution Design**  
+Find the task that executes this sql and delete it.
+
+######## EPL-192
+
+######### Accounting status field is editable
+
+**Error's description:**
+Etendo has the new functionality of the 'Accounting Status' field which details the accounting status of the records. Currently, it is editable by the user and should be in read-only mode.It is visible in the c_invoice, m_inout, fin_payment, m_inventory and fin_finacc_transaction tables.
+
+**Steps to reproduce the error**
+
+- Go to 'Sales Invoice' window
+- Open a record in form mode
+- Verify that 'Accounting Status' is editable
+
+**Expected behavior**
+The 'Accounting status' field must be read-only.
+
+**Affected Version**
+Etendo 21Q4.1
+
+######## EPL-193
+
+######### The 'Posted' column has no default value
+
+**Error's description:**
+In the ‘M_Inventory’ and ‘M_InOut’ tables, the 'Posted' column has no default value set.
+
+**Steps to reproduce the error**
+
+- Login as ‘System administrator’
+- Go to 'Tables and Columns'
+- Select 'M_InOut' table
+- Verify that 'Posted' column has not defaulted value
+- Go to 'Reference'
+- Open 'ALL_ACCOUNTING STATUS'
+- Sort 'LIST REFERENCE' alphabetically
+- Verify that the first value is 'Cost Not Calculated'
+- Login as 'F&B International Group Admin'
+- Go to 'Goods Shipment'
+- Create a new Good Shipment
+- Verify that the value of the 'Accounting Status' field is 'Cost Not Calculated'.
+
+**Expected behavior**
+The 'Accounting Status' field must have a default value.
+
+**Affected Version**
+Etendo 21Q4.1
+
+######## EPL-195
+
+######### Landscape balance sheet and profit & loss and only with headings
+
+**Issue Description**
+Allow download the pdf from balance sheet and profit & loss in landscape mode.
+
+**Solution Design**
+
+- Add a new check for select if the report should be downloaded in landscape or not.
+
+- Create a new jrxml in landscape mode for balance sheet report
+
+- Create a new jrxml in landscape mode for profit & loss report
+
+- Modify the java implementation for print one jrxml or jrxml in landscape depending the new check created previously
+
+**Use/Test Cases**
+
+- Given: “Balance Sheet AND P&L Structure Process“
+- When: Generate the pdf to print the balance sheet report or profit & loss report and select the check for print in landscape in true
+- Then: Generate the pdf to print the balance sheet report or profit & loss report and select the check for print in landscape in true And you should see the pdf downloaded are in landscape with the new jrxml created
+
+######## EPL-220
+
+######### buildValidations and moduleScript classes missing in modules_core
+
+**Error description **
+The buildValidation and modulesScript of the modules_core are not being distributed in the core.
+
+**Steps to reproduce the error**
+Run update.database
+
+**Expected behaviour**
+The buildValidationsand modulesScript cases are found in the project and executed.
+
+**Affected version**
+21Q4
+
+**Solution design**
+Compile the buildValidations and mosduleScript and add them to the core repository.
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-0){target='_blank'}
+---
+
+---
+##### 21Q4.9
+####### Fixed issues
+
+######### Bug
+
+- [EPL-486](https://github.com/etendosoftware/etendo_core/issues/113){target="\_blank"} Error downloading reports with Google Chrome
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-9](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-9){target='_blank'}
+---
+
+---
+##### 21Q4.8
+####### Fixed issues
+
+######### Bug
+
+- [EPL-359](https://github.com/etendosoftware/etendo_core/issues/44){target="\_blank"} Multirecord processes cause loss of focus on records
+- [EPL-351](https://github.com/etendosoftware/etendo_core/issues/32){target="\_blank"} Process buttons in form mode that are disabled are visible
+- [EPL-275](https://github.com/etendosoftware/etendo_core/issues/23){target="\_blank"} Error when posting document with product with no cost defined
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-8](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-8){target='_blank'}
+---
+
+---
+##### 21Q4.7
+####### Fixed issues
+
+- [EPL-230](https://github.com/etendosoftware/etendo_core/issues/51){target="\_blank"} Duplicate foreign keys in 'JOBS_JOB_RESULT.xml' and ojdbc8
+- [EPL-338](https://github.com/etendosoftware/etendo_core/issues/20){target="\_blank"} Customize Field Skin in read-only
+- [EPL-353](https://github.com/etendosoftware/etendo_core/issues/33){target="\_blank"} When clicking on "Complete" a Goods Shipment the "Document Action" field has no default value.
+- [EPL-356](https://github.com/etendosoftware/etendo_core/issues/36){target="\_blank"} The background process monitor does not work properly when it ends with an error
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-7](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-7){target='_blank'}
+---
+
+---
+##### 21Q4.6
+####### Fixed issues
+
+
+######## EPL-191
+######### Button panel menu is not visible when you move the mouse over it
+**Issue Description**
+What is happening is that when selecting any drop-down menu from the toolbar, the color of the highlight is the same as the color of the font, preventing this from being able to properly display the text.
+
+**Steps to reproduce the error**
+1. Go to https://demo.etendo.cloud/etendo/security/Login and log in.
+2. After that enter to the "Invoice (Customer)" window, position on an invoice and press from the toolbar the option "Save view" it will open a menu and you can see that the highlight color is the same as the font color and you cannot read the text.
+
+**Expected behavior**
+You should be able to read the text of each menu option.
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-304
+######### Scroll bar with dropdown fields bug
+**Issue Description**
+In form mode using Chrome or Firefox, there is a scrollbar and you have to use it if the fourth field in the row is a dropdown 
+
+**Steps to reproduce the error**
+1. Enter a window where the fourth field of form view is a dropdown list.
+2. The scroll bar appears beneath the form
+
+**Expected behavior**
+No scroll bar should appear
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-306
+######### Problem with the skin of process definition buttons
+**Issue Description**
+In definition processes accessed from the menu, the buttons at the top right are not visible. While the mandatory fields are not filled in, they appear blank and the text is not visible and when the mandatory fields are filled in, only the text appears and the background of the button is not visible 
+
+**Steps to reproduce the error**
+1. Enter from the menu to a process definition window. 
+2. Notice that the process buttons are white
+3. Fill in the required fields and notice that the process buttons are left without the background color 
+
+**Expected behavior**
+The buttons must appear with the corresponding Skin 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-307
+######### Difficulty to see the gray letters in the grid and the letters of the tabs are not active
+**Issue Description**
+Texts on unselected tabs are not as legible due to the color. In addition, it could be analyzed to darken the lettering of the records in grid mode to improve the display.
+
+**Steps to reproduce the error**
+1. Go to Sales Invoice window
+2. See that the names of the tabs TAX, BASIC DISCOUNTS, PAYMENT PLAN, ETC do not contrast well because of their color. Also, note that in grid mode the letter of the existing records could be displayed better.
+
+**Expected behavior**
+It is expected that these letters will be of a contrasting color to enhance contrast and improve visualization. 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-308
+######### The height of the toolbar is reduced when the side scroll bar appears
+**Issue Description**
+In the toolbar, when the side scrollbar is needed, the vertical scrollbar also appears.
+
+**Steps to reproduce the error**
+1. Go to Sales Invoices window
+2. Select a record in grid
+3. Minimize navigator size
+4. Check that two scrollbars appear in the toolbar
+
+**Expected behavior**
+The vertical scroll bar should not appear 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+######## EPL-318
+######### Difficulty in realizing that a record is selected in grid mode
+**Issue Description**
+The colour with which a selected record is shaded in grid mode is very light and often it is not possible to distinguish which one is selected.
+
+**Steps to reproduce the error**
+1. Go to Sales Order window.
+2. Select a record.
+3. Check that the selected record is not very well distinguished.
+
+**Expected behavior**
+Improve shading contrast 
+
+**Affected Version**
+Etendo 21.4.5
+Etendo 22.1.2
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-6](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-6){target='_blank'}
+---
+
+---
+##### 21Q4.5
+####### Fixed issues
+
+
+######## EPL-50 
+######### Property Field are executing callouts when they should not
+**Issue Description**
+When there is a property field defined for certain window, the callout of the referenced field gets executed. This is wrong.
+For example, defining a property field in the Sales Invoice window referencing a field of the Sales Order window, will execute a Sales Order callout, an it will likely fail with an exception.
+
+**Solution Design**
+Apply the attached patch.
+FormInitializationComponent should be making a special consideration when determining which fields have a callout, by checking if the current field is a property field or not.
+
+######## EPL-56 
+######### Error when trying to unpost a document with no accounting lines
+**Issue Description**
+When trying to unpost a document that did not generate any accounting lines (fact_acct records), an error is raised.
+
+An example of a document that does not have any accounting lines after being posted, is of a Goods Shipment without price (in its related Sales Order).
+
+**Solution Design**
+
+The root issue is a null pointer exception in the ResetAccounting class. The Posted class will try to select the organization and client of the accounting records, and given that there are none, the values are sorted as empty strings. This leads to the NullPointerException down the line.
+
+Either class should check their input so that the exception is not raised, but the document should also be left as Posted = 'N' without errors facing the user.
+
+######## EPL-97 
+######### Accounting status column gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
+
+**Error's description:**
+When trying to post a Collection, being disabled for accounting the table fin_payment, it remains in 'Error', when it should be in 'Document disabled' (image albastar error).
+According to the log, the error is in the module com.smf.jobs (log image is attached).
+
+**Steps to reproduce the error:**
+1. Disable accounting for the Fin_Payment table
+2. Create a payment in/payment out, complete it and then post it.
+
+**Expected behaviour:**
+When accounting is not enabled for that window in the posting button, after an attempt is made to post it should show as "Document Disabled".
+
+**Affected Version:**
+Etendo 21Q4
+
+######## EPL-109 
+######### When update a translation version module, the changes aren't applied
+**Error's description**
+If changes were made to an installed module, these changes are not applied when an update.database is run.
+
+**Steps to reproduce the error**
+1. Install a translation module,  e.g. 
+
+```
+moduleDeps ('com.etendoerp:quotation.es_ES:latest.release@zip'){ transitive = true}
+```
+
+2. Make a some change in this module and change the version in AD_MODULE.xml
+
+3. Run ./gradlew update.database smartbuild
+
+4. Verify that change are not applied
+
+**Expected behaviour**
+The change has been applied
+
+**Affected Version**
+Etendo 21Q4.1
+
+
+######## EPL-220 
+######### buildValidations and moduleScript classes missing in modules_core
+**Description of the error**
+The buildValidation and modulesScript of the modules_core are not being distributed in the core.
+
+**Steps to reproduce the error**
+Run update.database
+
+**Expected behaviour**
+The buildValidationsand modulesScript cases are found in the project and executed.
+
+**Affected version**
+Etendo 21Q4
+
+**Solution design**
+Compile the buildValidations and mosduleScript and add them to the core repository.
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-5](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-5){target='_blank'}
+---
+
+---
+##### 21Q4.4
+####### Fixed issues
+
+######## EPL-94
+######### The sequence preview is not masked correctly
+
+**Error's description**
+When  a new document is created, the preview in the documentNo field  only show the next number but not masked (because a legacy callout is called)
+
+**Steps to reproduce the error**
+Create a new invoice
+
+**Expected result**
+The documentNo field preview show the same sequence as when save the document
+
+**Solution Design**
+Modify the legacy callout to identify if the field is an transactional sequence reference and avoid to execute the logic. 
+
+**Environment**
+21Q4.3
+
+######## EPL-309
+######### No sequences are obtained from the parent organization if the organization does not have one configured
+
+**Error's description**
+When generating a new document to obtain the sequence, the context organization is used and in case there is not one, the sequence of the parent organization should be used.
+
+**Steps to reproduce the error**
+1. Login as F&B International Group Admin (Organization: F&B España, Region Norte)
+2. Go to Document Sequences window
+3. Filter for (F&B España - Region Norte, Order-Document No., Standard Order) and delete records.
+4. Filter for (F&B España S.A., Order-Document No., Standard Order) and delete records.
+5. Go to Sales Order and create a new record.
+6. Check that no header field is rendered
+
+**Expected behavior**
+In the DocumentNo. field, you should set the sequence corresponding to F&B International Group Admin
+
+**Affected Version**
+Etendo 21.4.3
+Etendo 22.1.1
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-4](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-4){target='_blank'}
+---
+
+---
+##### 21Q4.3
+####### Fixed issues
+
+######## EPL-227
+######### Error when saving and printing reports
+
+**Error's description**
+When trying to save and print a report (for example: an invoice) an empty error window is launched and the action is not executed.
+The log shows the following error:
+
+```
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.65]
+at java.lang.Thread.run(Thread.java:829) [?:?]
+2022-03-18 19:02:18,587 [http-nio-8080-exec-57] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
+2022-03-18 19:04:51,571 [http-nio-8080-exec-58] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
+2022-03-18 19:05:53,897 [http-nio-8080-exec-41] INFO org.openbravo.service.datasource.DefaultDataSourceService - Couldn't find property from additional property product$productName in entity InvoiceLine
+2022-03-18 19:06:13,094 [http-nio-8080-exec-49] ERROR org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices - Error captured:
+java.lang.NullPointerException: null
+at org.openbravo.erpCommon.utility.reporting.printing.PrintController.buildReport(PrintController.java:654) ~[classes/:?]
+at org.openbravo.erpCommon.utility.reporting.printing.PrintController.post(PrintController.java:269) [classes/:?]
+at org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices.doPost(PrintInvoices.java:57) [classes/:?]
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [servlet-api.jar:?]
+at org.openbravo.base.HttpBaseServlet.serviceInitialized(HttpBaseServlet.java:200) [openbravo-core.jar:?]
+at org.openbravo.base.secureApp.HttpSecureAppServlet.service(HttpSecureAppServlet.java:459) [classes/:?]
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [servlet-api.jar:?]
+...
+```
+
+This error occurs on a server but does not occur in a local environment.
+
+**Steps to reproduce the error**
+1. Go to a Sales Invoice
+2. Select an existing document
+3. Click on 'Print'
+4. Select 'Yes' option
+5. View the error window
+
+**Expected behaviour**
+The option to save the report must be given.
+
+**Affected Version**
+Etendo 21Q4.2
+
+######## EPL-251
+######### Logs are not displayed when the Acct Server Process is executed
+
+**Error's description**
+When the accounting process is executed, it is not possible to see the log of this process, although it is executed correctly.
+
+**Steps to reproduce the error**
+1. Go to 'Process Request' window 
+2. Select 'Acct Server Process' record 
+3. Go to 'Process Monitor' tab
+4. Verify that 'Process Log' column is empty
+
+**Expected behavior**
+In 'Process Log' column you should see the process log
+
+**Affected Version**
+Etendo 21.4.2
+Etendo 22.1.0
+
+######## EPL-262
+######### No grouped processes are executed
+
+**Error's description**
+When a process group is scheduling in process request window, this process never finish
+
+**Steps to reproduce the error**
+- Go to process group window
+- Create a process group with name Test
+- Add “Alert Process” in Process Group List tab
+- Add “Costing Background process” in Process Group List tab
+- Go to Process Request window
+- Create a new record
+- Check the field called Group
+- In the process group field, set the process created called Test
+- Set the timing as Run Immediately
+- Press the button Schedule process.
+- See that process schedule not finish
+
+**Expected behavior**
+- The process group should be finish when all of process configured finish
+- In process Monitor, the end time should not be null and the status should be Success.
+- Check exists data in Process Request → Process Monitor → Processes in Group tab
+
+**Affected Version**
+Etendo 21.4.2
+Etendo 22.1.0
+
+
+
+
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-3](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-3){target='_blank'}
+---
+
+---
+##### 21Q4.2
+####### Fixed issues
+
+######## EPL-192
+
+######### Accounting status field is editable
+
+**Error's description:**
+Etendo has the new functionality of the 'Accounting Status' field which details the accounting status of the records. Currently, it is editable by the user and should be in read-only mode. It is visible in the c_invoice, m_inout, fin_payment, m_inventory and fin_finacc_transaction tables.
+
+**Steps to reproduce the error**
+
+Go to 'Sales Invoice' window
+Open a record in form mode
+Verify that 'Accounting Status' is editable
+Expected behavior
+The 'Accounting status' field must be read-only.
+
+**Affected Version**
+Etendo 21Q4.1
+
+######## EPL-193
+
+######### The 'Posted' column has no default value
+
+**Error's description:**
+In the ‘M_Inventory’ and ‘M_InOut’ tables, the 'Posted' column has no default value set.
+
+**Steps to reproduce the error**
+
+Login as ‘System administrator’
+Go to 'Tables and Columns'
+Select 'M_InOut' table
+Verify that 'Posted' column has not defaulted value
+Go to 'Reference'
+Open 'ALL_ACCOUNTING STATUS'
+Sort 'LIST REFERENCE' alphabetically
+Verify that the first value is 'Cost Not Calculated'
+Login as 'F&B International Group Admin'
+Go to 'Goods Shipment'
+Create a new Good Shipment
+Verify that the value of the 'Accounting Status' field is 'Cost Not Calculated'.
+Expected behavior
+The 'Accounting Status' field must have a default value.
+
+**Affected Version**
+Etendo 21Q4.1
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-2](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-2){target='_blank'}
+---
+
+---
+##### 21Q4.1
+####### Fixed issues
+
+######## EPL-103
+
+######### Upgrade of log4j to version 2.16 to fix vulnerabilities
+
+**Error's description**
+In response to the recent security vulnerabilities identified in the Log4j project, an extra recommended action is now advised for users. The primary reasons for this recommendation are as follows:
+
+* **Upgrade to Log4j 2.16**: The Log4j project security team now strongly recommends updating to version 2.16 for enhanced protection. This version disables the risky "JNDI Lookups" feature, significantly bolstering security. This proactive step provides an additional layer of defense against any potential future vulnerabilities discovered in this area.
+
+* **CVE-2021-45046**: A new security vulnerability, identified as CVE-2021-45046, has been reported recently. This vulnerability was not covered by the existing recommendations, creating a potential security gap.
+
+For detailed technical information and instructions, please refer to the following resources:
+
+* [Apache Log4j security information (for 2.16)](https://logging.apache.org/log4j/2.x/security.html){target="\_blank"}
+* [CVE-2021-45046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046){target="\_blank"}
+* [External Analysis and Mitigation Guidance](https://www.lunasec.io/docs/blog/log4j-zero-day-mitigation-guide/){target="\_blank"}
+* [Updates on CVE-2021-45046](https://www.lunasec.io/docs/blog/log4j-zero-day-update-on-cve-2021-45046/){target="\_blank"}
+
+**Affected Version**
+Etendo 21Q4
+
+
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-1](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-1){target='_blank'}
+---
+
+---
+##### 21Q4.0
+####### New functionalities
+
+[ERP-635] Fix AllQuickAntTaskTests test suite
+
+[ERP-576] Define initializator for database acces for Spock Test
+
+[ERP-574] Transactional Sequencte Tests implementation
+
+[ERP-557] Develop the  process to create sequences
+
+[ERP-520] Proof of concept legacy code injection
+
+[ERP-500] New Sequence Implementation Tests
+
+[ERP-497] DB Sequences must be exportables and  being able to install when installing a module
+
+[ERP-496] Implement Masking and regex logic
+
+[ERP-495] Non Transactional Sequence Implementation
+
+[ERP-494] Transactional Sequence Implementation
+
+[ERP-493] Check new sequence generation performance
+
+[ERP-490] Ensure new sequence is compatible with the current AD\_SEQUENCE approach
+
+[ERP-489]Implement Sequence Reference in Application Dictionary
+
+[ERP-488] Implement new sequences architecture in Java
+
+[ERP-471] Define a new mechanism to handle sequenced columns
+
+[ERP-461] HBM files creation on compile time
+
+[ERP-447] Create role for k8s with limited resources
+
+[ERP-431] Implement tests infrastructure for gradle plugin tasks
+
+[ERP-424] Cluster-aware process execution
+
+[ERP-422] Create Task in gradle to generate Nexus users from csv file.
+
+[ERP-408] Gradle task for change deployment from mvn to gradle
+
+[ERP-369] Massive post/unpost docs
+
+[ERP-367] Use Tomcat redis  instead of  local cache
+
+[ERP-366] Fix login cloud instances in cluster implementations
+
+[ERP-364]Implement health checks \(kubernete\)
+
+[ERP-362] Add parameters for core and plugin version in etendo docker images for testing
+
+[ERP-345] Create task in gradle  to check that all basic compile files are available
+
+[ERP-338] expandCore/expandModules reset flag
+
+[ERP-314] Etendo legacy skin
+
+[ERP-277]Kubernetes Ready
+
+[ERP-274]Test if skin modules are compatible with default changed ui
+
+[ERP-266] Refactor jobs separating functionality and architecture in different modules
+
+[ERP-249] Modules directory: modules\_core, modules \(custom\)
+
+[ERP-235] Update license restrictions file with new signature
+
+[ERP-228] Update Jenkins deployment pipeline to support deploying modules via Gradle
+
+[ERP-226] Migrate Core repository to Gradle based deployment
+
+[ERP-225] Support core version change from user's build.gradle when using etendo.gradle plugin
+
+[ERP-223] New skin design 
+
+[ERP-212] Gradle tomcat deployment
+
+[ERP-210] Mechanism to use public jars rather than local jars \(For new libs dependencies\)
+
+[ERP-181] Replace all references of Openbravo keywords
+
+[ERP-143] support ant log level in gradle \(etendo core\)
+
+[ERP-138] Verify Gradle dependency resolution and module expansion
+
+[ERP-121] Alert to send Host and instance purpose when sending e-mail
+
+[ERP-114] Apply patches with improvements to core
+
+[ERP-84] Massive SI Creation
+
+[ERP-83] Massive SO Send
+
+[ERP-82] Massive PO Closing
+
+[ERP-64] Introduce gitflow to repository
+
+[ERP-54] Test infrastructure
+
+[ERP-29] Process Invoice Action
+
+[ERP-27] Massive record cloning
+
+[ERP-26] Grid summary functions dynamically calculated when selecting records
+
+[ERP-21] CI and demo environment
+
+[ERP-10] General Backend \(Entities, classes, API\)
+
+######### Sub Tasks
+
+[ERP-252] Publish jar task
+
+[ERP-234] Task declareModule
+
+[ERP-231] New default skin
+
+[ERP-229] Login HTML page should have CSS and Fonts as local resources
+
+[ERP-224] New login page
+
+[ERP-221] remove modules to normalize
+
+[ERP-220] Modify dependencies in build.gradle
+
+[ERP-216] Credits Section in Login Page
+
+[ERP-215] Gradle request to nexus  to check if the module exist in own repository
+
+[ERP-213] Remove mvn requirement to publish modules
+
+[ERP-208] Check API to see if the module already exists
+
+[ERP-207] Ask for Nexus credentials
+
+[ERP-201] Deploy in nexus
+
+[ERP-198] Check if pom.xml and assembly.xml files exist in a module directory
+
+[ERP-183] Add a mechanism to download the latest compiled version
+
+[ERP-182] Replace all logos and images with Etendo logos and new placeholders
+
+[ERP-175] Update server build.gradle
+
+[ERP-172] Create etendo gradle plugin
+
+[ERP-170] Set configuration parameters from original Openbravo.properties file.
+
+[ERP-169] Nexus security - gradle interaction
+
+[ERP-160] Gradle read dependencies from external file
+
+[ERP-150] Synchronize module list between service
+
+[ERP-149] Metadata analyze and decide  what to do in client and server.
+
+[ERP-141] Show Etendo logo in login page
+
+[ERP-118] Upgrade core to 20Q2
+
+
+[ERP-117] Deploy modules to nexus
+
+[ERP-110] Deploy modules to nexus repository
+
+[ERP-109] Upgrade modules to a 20Q1 compatible version
+
+[ERP-105] Configure Nexus Repo
+
+[ERP-88] Permissions
+
+[ERP-86] Fix Legacy Test failures
+
+[ERP-85] Killable Implementation
+
+[ERP-71] Manual Testing
+
+[ERP-66] Test definition
+
+[ERP-52] Test and fixes
+
+[ERP-51] Expo Eject
+
+[ERP-50] Functional Documentation
+
+[ERP-49] Technical Documentation
+
+[ERP-48] User Manual
+
+[ERP-43] Set up ERP server with the stack
+
+[ERP-41] Main implementation
+
+[ERP-40] Implement Tests
+
+
+####### Fixed issues
+
+######### Bugs
+
+[ERP-601] Gradle freeze on intellij on windows
+
+[ERP-562] The accounting process of goods shipment does not use the custom class of the project, but the etendo class.
+
+[ERP-561] Error in displaying error message in the accounting process in the goods shipment window
+
+[ERP-487] AttachImplementationManager process fails to update/save metadata of type OBUISEL\_Selector
+
+[ERP-473] Process Orders pop up fails when record is opened from the "Recent Documents" menu
+
+[ERP-455] Wrong gradle settings
+
+[ERP-444] Change URL / Link on Etendo Logo
+
+[ERP-440] Mixed request content broke manual windows
+
+[ERP-405] Complete/Reactivate process does not show result message when being executed from a child tab.
+
+[ERP-404] Improve Address handling when creating an Invoice from a Goods Shipment
+
+[ERP-385] export.config.script does not include modules\_core
+
+[ERP-378] Sales Quotation has no document action when status is under evaluation
+
+[ERP-370] XSS Attack
+
+[ERP-281] Wrong translation in Show grid \+ form tooltip
+
+[ERP-204] Checkbox need 2 clicks to be checked or unchecked
+
+[ERP-200] Sales Order Default action is not correct
+
+[ERP-87] Fix Menu Tree not available
+
+######### Internal Bug
+
+[ERP-556] Mask Formatter truncates input when it overflows the mask
+
+[ERP-486] Rich field text area error
+
+[ERP-436] registerModule task does not use credentials when stored in gradle.properties
+
+[ERP-428] Set correct core version in AD\_MODULE.XML
+
+[ERP-423] Gradle setup task does not replace settings
+
+[ERP-376] registerModule Task: Return an OK status when nexus privilege already exists
+
+[ERP-344] ERP Change favicon with the one in the web
+
+[ERP-315] javascript error when login after merged massive jobs refactor
+
+[ERP-269] CI / CD Jenkins automation - Dockerize core
+
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-0](https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-0){target='_blank'}
 ---
 
 ---
@@ -29584,10 +37721,10 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/ete
 
 | Version | Publication Date | From Core | To Core| Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  |  :white_check_mark:|
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   |  :white_check_mark:|
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/#110) | 27/06/2023 | 22.1.0 | 23.2.8 | C   |  :white_check_mark:|
-| [1.0.0](/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/#100) | 10/05/2023 | 22.1.0 | 23.1.5 | C   |  :white_check_mark:|
+| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  |  :white_check_mark:|
+| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   |  :white_check_mark:|
+| [1.1.0](#110) | 27/06/2023 | 22.1.0 | 23.2.8 | C   |  :white_check_mark:|
+| [1.0.0](#100) | 10/05/2023 | 22.1.0 | 23.1.5 | C   |  :white_check_mark:|
 
 ####### Release Notes
 
@@ -29611,17 +37748,17 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#1200) | 29/12/2023 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
-| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#171)   | 17/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#160)   | 29/06/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#150)   | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#140)   | 17/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#130)   | 06/04/2023 | 22.1.0 | 23.1.5 | C  |                    |
+| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
+| [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.7.1](#171)   | 17/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.6.0](#160)   | 29/06/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.5.0](#150)   | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.4.0](#140)   | 17/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
+| [1.3.0](#130)   | 06/04/2023 | 22.1.0 | 23.1.5 | C  |                    |
 | 1.2.0 	|06/04/2023	| 22.1.0 | 23.1.5	| C  	|                       |
-| [1.1.3](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
+| [1.1.3](#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
 | 1.1.2 	|06/10/2022	| 22.1.0 | 22.3.0	| C  	|                       |
 | 1.1.1		|19/07/2022	| 22.1.0 | 22.2.2	| C  	|                       |
 | 1.1.0		|08/07/2022	| 22.1.0 | 22.2.2   | C  	|                       |
@@ -29663,15 +37800,15 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | --- | :---: |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#150) | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark:	|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#140) | 29/09/2023 | 21.4.0 | 23.3.x | C  | :white_check_mark:	|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#130) | 27/06/2023 | 21.4.0 | 23.2.8 | C  | :white_check_mark:	|
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#120) | 17/05/2023 | 21.4.0 | 23.1.5 | C  | :white_check_mark:	|
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#120) | 06/04/2023 | 21.4.0 | 23.1.5 | C  |					|
-| [1.0.3](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#103) | 06/02/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.2](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#102) | 25/01/2023 | 21.4.0 | 22.4.6 | C  |					|
+| [1.5.0](#150) | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark:	|
+| [1.4.0](#140) | 29/09/2023 | 21.4.0 | 23.3.x | C  | :white_check_mark:	|
+| [1.3.0](#130) | 27/06/2023 | 21.4.0 | 23.2.8 | C  | :white_check_mark:	|
+| [1.2.0](#120) | 17/05/2023 | 21.4.0 | 23.1.5 | C  | :white_check_mark:	|
+| [1.1.0](#120) | 06/04/2023 | 21.4.0 | 23.1.5 | C  |					|
+| [1.0.3](#103) | 06/02/2023 | 21.4.0 | 22.4.6 | C  |					|
+| [1.0.2](#102) | 25/01/2023 | 21.4.0 | 22.4.6 | C  |					|
 | 1.0.1 | 06/01/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.0](/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/#100) | 30/09/2022 | 21.4.0 | 22.3.0 | C  |					|
+| [1.0.0](#100) | 30/09/2022 | 21.4.0 | 22.3.0 | C  |					|
 
 ####### Release Notes
 
@@ -29700,12 +37837,12 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/#150) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:	|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/#140) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:	|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/#130) | 27/06/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:	|
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/#120) | 17/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:	|
+| [1.5.0](#150) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:	|
+| [1.4.0](#140) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:	|
+| [1.3.0](#130) | 27/06/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:	|
+| [1.2.0](#120) | 17/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:	|
 | 1.1.0 | 06/04/2023 | 22.1.0 | 23.1.5 | C   | 						|
-| [1.0.0](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/#100) | 06/03/2023 | 22.1.0 | 22.4.5 | C   | 						|
+| [1.0.0](#100) | 06/03/2023 | 22.1.0 | 22.4.5 | C   | 						|
 
 ####### Release Notes
 
@@ -29731,13 +37868,13 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version   | Publication Date 	| From Core | To Core| Status | GitHub|
 | --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
-| [1.5.2](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
+| [1.7.0](#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
+| [1.6.0](#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
+| [1.5.2](#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.5.1](#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.5.0](#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.4.0](#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.3.0](#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
 | 1.2.0 	| 05/04/2023 	| 22.1.0 | 23.1.5 | C	|                   |
 | 1.1.2 	| 06/01/2023 	| 22.1.0 | 22.4.5 | C 	|                   |
 | 1.1.1 	| 05/10/2022 	| 22.1.0 | 22.3.0 | C 	|                   |
@@ -29774,28 +37911,28 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
-| [1.13.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
-| [1.12.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
-| [1.2.4](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
-| [1.2.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
-| [1.2.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
+| [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
+| [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.12.0](#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.3](#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.2](#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.1](#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.10.0](#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.9.1](#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.9.0](#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.8.0](#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.7.1](#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.7.0](#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.5.0](#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
+| [1.3.0](#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
+| [1.2.4](#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
+| [1.2.3](#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
+| [1.2.2](#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
+| [1.2.0](#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
 | 1.1.4     | 11/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C  |                       |
+| [1.1.3](#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
+| [1.1.2](#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C  |                       |
 | 1.1.1     | 10/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
 | 1.1.0     | 08/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
 | 1.0.500   | -          | 22.1.0 | 22.1.3 | C  |                       |
@@ -29887,21 +38024,21 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
-| [1.5.2](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.4.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
-| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.0.5](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
-| [1.0.4](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
+| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.4.1](#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
+| [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.2.0](#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
+| [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
 | 1.0.3 | 06/10/2022 | 21.4.0 | 22.3.x | C  |                   |
-| [1.0.2](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
-| [1.0.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
+| [1.0.2](#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
+| [1.0.1](#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
 | 1.0.0 | 01/01/2022 | 21.4.0 | \*     | C  |                   |
 
 
@@ -29999,14 +38136,14 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
-| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.1](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.0](/whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes/#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
+| [1.2.1](#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
+| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
+| [1.1.2](#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.1.1](#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.1.0](#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.0.1](#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
+| [1.0.0](#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
 
 ####### Release Notes
 ######## 1.3.0
@@ -30040,10 +38177,10 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 | Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.4.3](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
-| [1.4.2](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
-| [1.4.1](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
-| [1.4.0](/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes/#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
+| [1.4.3](#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.4.2](#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
+| [1.4.1](#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
+| [1.4.0](#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
 
 ####### Release Notes
 ######## 1.4.3
@@ -30058,6 +38195,20 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 ######## 1.4.0
 - Remove all translation modules dependencies to translated modules
 Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes){target='_blank'}
+---
+
+---
+##### Platform Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.9.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.2.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes){target='_blank'}
 ---
 
 ---
@@ -30104,10 +38255,10 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/kno
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/#130)  | 04/01/2024 | 23.2.0 | 23.4.x | CS  | :white_check_mark:|
-| [1.2.0](/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/#120)  | 29/09/2023 | 23.2.0 | 23.3.x | C   | :white_check_mark:|
-| [1.1.0](/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/#110)  | 11/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark:|
-| [1.0.0](/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/#100) | 11/09/2023 | 23.2.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.3.0](#130)  | 04/01/2024 | 23.2.0 | 23.4.x | CS  | :white_check_mark:|
+| [1.2.0](#120)  | 29/09/2023 | 23.2.0 | 23.3.x | C   | :white_check_mark:|
+| [1.1.0](#110)  | 11/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark:|
+| [1.0.0](#100) | 11/09/2023 | 23.2.0 | 23.2.8 | C   | :white_check_mark:|
 
 ####### Release Notes
 ######## 1.3.0
