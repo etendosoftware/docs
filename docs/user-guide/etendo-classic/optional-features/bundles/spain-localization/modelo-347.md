@@ -1,7 +1,5 @@
 ---
 title: Modelo 347
-hide:
-    - navigation
 ---
 
 :octicons-package-16: Javapackage: org.openbravo.module.aeat347apr.es

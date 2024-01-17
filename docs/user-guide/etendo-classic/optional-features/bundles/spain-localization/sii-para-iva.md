@@ -1,7 +1,5 @@
 ---
 title: Spain SII
-hide:
-    - navigation
 ---
 ## Javapackages 
 
