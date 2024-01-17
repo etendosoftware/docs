@@ -27188,7 +27188,7 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
-![](/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
+![](../../../assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
 
 ###### Profile Screen
 In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.
@@ -34978,7 +34978,7 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![release-cycle.png](/assets/whats-new/overview/release-cycle.png){align=right width=400}
+![release-cycle.png](../assets/whats-new/overview/release-cycle.png){align=right width=400}
 <br><br>
 ##### In this section you can learn about Etendo's life cycle, when updates are released and valuable information to keep you up to date with our news.
 </figure>
@@ -34987,7 +34987,7 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![roadmap.png](/assets/whats-new/overview/roadmap.png){align=left width=400}
+![roadmap.png](../assets/whats-new/overview/roadmap.png){align=left width=400}
 <br><br>
 ##### Get to know about our current projects, their  status and future ideas and projects.                                            
 </figure>
@@ -34995,14 +34995,12 @@ Stay informed and empowered as we walk you through each new iteration, showcasin
 ---
 
 <figure markdown>
-![release-notes.png](/assets/whats-new/overview/release-notes.png){align=right width=400}
+![release-notes.png](../assets/whats-new/overview/release-notes.png){align=right width=400}
 <br><br>
 
 ##### In this section, you will find a concise summary of the latest updates and improvements, bug fixes and news introduced in our latest releases for each of our products
 
 </figure>
-
-
 Source: [https://docs.etendo.software/whats-new/overview](https://docs.etendo.software/whats-new/overview){target='_blank'}
 ---
 
