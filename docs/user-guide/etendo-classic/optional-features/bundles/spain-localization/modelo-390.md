@@ -1,7 +1,5 @@
 ---
 title: Modelo 390
-hide:
-    - navigation
 ---
 
 ## Javapackages 

@@ -1,7 +1,5 @@
 ---
 title: Taxes:configuration for Spain (Impuestos para España)
-hide:
-    - navigation
 ---
 
 ## Javapackages 

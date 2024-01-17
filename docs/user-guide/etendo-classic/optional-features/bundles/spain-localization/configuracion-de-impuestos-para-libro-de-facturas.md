@@ -1,7 +1,5 @@
 ---
 title: Configuración de impuestos para libro de facturas
-hide:
-    - navigation
 ---
 ## Javapackages 
 
