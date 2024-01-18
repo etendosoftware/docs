@@ -27,6 +27,7 @@ jobs:
             run: |
               git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
               git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
+              git pull origin main
               git add compiled_docs.md
               git commit -m "Update 'compiled_docs' file :page_facing_up:" || echo "No changes to commit"
               git push origin main
