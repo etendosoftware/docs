@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: compile-docs
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -17,17 +21,27 @@ jobs:
             with:
               fetch-depth: 0
               token: ${{ secrets.ETENDO_BOT_KEY }}
+
+          - name: Check commit message format
+            id: commit-check
+            run: |
+              commit_message=$(git log -1 --pretty=%B)
+              if [[ "$commit_message" =~ ^Update\ \'compiled_docs\'\ file\ :page_facing_up:$ ]]; then
+                echo "Skipping steps"
+                echo "::set-output name=skip_steps::true"
+              fi
     
           - name: Run Script
+            if: steps.commit-check.outputs.skip_steps != 'true'
             run: python compile_docs.py
     
           - name: Commit Changes
+            if: steps.commit-check.outputs.skip_steps != 'true'
             env:
               GITHUB_TOKEN: ${{ secrets.ETENDO_BOT_KEY }}
             run: |
               git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
               git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
-              git pull origin main
               git add compiled_docs.md
               git commit -m "Update 'compiled_docs' file :page_facing_up:" || echo "No changes to commit"
               git push origin main
