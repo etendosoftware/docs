@@ -42,7 +42,7 @@ If the drawer is displayed, you can navigate to Home and also to the sub applica
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
     For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
 
-![](/assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
+![](../../../assets/user-guide/etendo-mobile/user-interface/Drawer.png){ width="300" }
 
 ### Profile Screen
 In this section, the user can see the information of the logged in person: Name, Role, Organization, Client and Warehouse.

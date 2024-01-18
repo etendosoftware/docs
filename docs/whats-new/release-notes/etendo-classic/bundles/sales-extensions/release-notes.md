@@ -14,13 +14,13 @@ tags:
 
 | Version   | Publication Date 	| From Core | To Core| Status | GitHub|
 | --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
-| [1.5.2](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
+| [1.7.0](#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
+| [1.6.0](#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
+| [1.5.2](#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
+| [1.5.1](#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.5.0](#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.4.0](#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
+| [1.3.0](#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
 | 1.2.0 	| 05/04/2023 	| 22.1.0 | 23.1.5 | C	|                   |
 | 1.1.2 	| 06/01/2023 	| 22.1.0 | 22.4.5 | C 	|                   |
 | 1.1.1 	| 05/10/2022 	| 22.1.0 | 22.3.0 | C 	|                   |
