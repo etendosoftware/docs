@@ -67,10 +67,10 @@ The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows yo
 - *App Type:* Langchain Agent or Open AI Assistant
 
 *Open AI Assistant*
-    These applications harness OpenAI technology to offer assistance in a variety of tasks, from natural language processing to complex calculations.
+    These applications leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
 
 *Langchain Agent*
-    These applications can perform specific tasks in natural language and provide contextualized responses, allowing the implementation of multiple AI models, use of a proprietary vector database and internal memory management.
+    These applications can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc.
 
 In case of defining an `Open AI Assistant` type app, the following fields will be enabled: 
 
@@ -120,18 +120,32 @@ In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you
 
 ## Copilot File Example
 
-Here is an example of a Copilot File configuration, a file used as a knowledge base for the assistants:
+- Here is an example of a Remote File configuration, a file used as a knowledge base for the assistants:
 
-| **Field**   | **Value**   |
-| ----------- | ----------- |
-| Name        | Etendo Wiki | 
-| Type        | Remote File |
-| URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
+    | **Field**   | **Value**   |
+    | ----------- | ----------- |
+    | Name        | Etendo Wiki | 
+    | Type        | Remote File |
+    | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
 
-<figure markdown>
-  ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
-  <figcaption> Example of file configuration</figcaption>
-</figure>
+    <figure markdown>
+    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
+    <figcaption> Example of remote file configuration</figcaption>
+    </figure>
+
+- Here is an example of a Attachment File configuration, a file used as a knowledge base for the assistants:
+
+    | **Field**   | **Value**   |
+    | ----------- | ----------- |
+    | Name        | Etendo Wiki | 
+    | Type        | Attachment File |
+
+    Attach a file in the `Attachments` section
+
+    <figure markdown>
+    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
+    <figcaption> Example of attached file configuration</figcaption>
+    </figure>
 
 
 ### Role Window
