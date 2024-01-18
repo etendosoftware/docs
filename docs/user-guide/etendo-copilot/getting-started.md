@@ -124,7 +124,7 @@ Here is an example of a Copilot File configuration, a file used as a knowledge b
 
 | **Field**   | **Value**   |
 | ----------- | ----------- |
-| Name        | Bastian     | 
+| Name        | Etendo Wiki | 
 | Type        | Remote File |
 | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
 
