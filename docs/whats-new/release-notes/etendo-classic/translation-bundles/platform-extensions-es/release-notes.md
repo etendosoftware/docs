@@ -16,9 +16,9 @@ tags:
 
 ## Overview
 
-| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.9.0, latest] | CS | :white_check_mark: |
+| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
 
 ## Release Notes
 ### 1.2.0
