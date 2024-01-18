@@ -225,11 +225,11 @@ To do this we will go to the `Projections` window and create a projection with t
   ![projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
 
 
-### Adding the projection & mapping
+### Adding the projection and mapping
 
-As we have already created the projection, we now have to assign it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
+Having created the projection, we now need to map it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
 
-Next, add a new record with the following values:
+Next, we add a new record with the following values:
 
   | Field        | Value                                            |
   | ----------   | -------------------------------------------------|
@@ -241,16 +241,15 @@ Next, add a new record with the following values:
   | active       | `false`                                          |
 
 
-  ![assign-projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
+  ![projection-mapping.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
 
 
 
 ### Adding projected entities
 
-Now with the projection selected we will create in the Projected Entities tab a "Read" and a "Write" to which we can specify which values can be written and read on the M_Product table.
- 
+Now with the projection selected add in the Projected Entities tab the write and read projections of Product and Product_Category in which we can specify the required values from the M_Product table.
 
-=== "Read"
+=== "Product - Read"
     
     | Name                |  Property                   |
     | ------------------- | ----------------------------|
@@ -263,7 +262,7 @@ Now with the projection selected we will create in the Projected Entities tab a 
     | External_Name       |`Product`                    |
     | Active              |`true`                       |
 
-=== "Write"
+=== "Product - Write"
   
     | Name                |  Property                    |
     | ------------------- | -----------------------------|
@@ -276,11 +275,115 @@ Now with the projection selected we will create in the Projected Entities tab a 
     | External_Name       |`Product`                     |
     | Active              |`true`                        |
 
-  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
+=== "Product_Category - Read"
+    
+    | Name                |  Property                              |
+    | ------------------- | ---------------------------------------|
+    | Organization        |`*`                                     |
+    | Name                |`PRODSUBAPP - M_Product_Category - Read`|
+    | Table               |`M_Product_Category`                    |
+    | Identity            |`false`                                 |
+    | Mapping Type        |`Etendo to external system`             |
+    | Is Rest Endopoint   |`true`                                  |
+    | External_Name       |`M_Product_Category`                    |
+    | Active              |`true`                                  |
 
-Now we define which fields we want to retrieve in the Entity Field tab and we add the following fields:
+=== "Product_Category - Write"
+  
+    | Name                |  Property                               |
+    | ------------------- | ----------------------------------------|
+    | Organization        |`*`                                      |
+    | Name                |`PRODSUBAPP - M_Product_Category - Write`|
+    | Table               |`M_Product`                              |
+    | Identity            |`false`                                  |
+    | Mapping Type        |`External system to Etendo`              |
+    | Is Rest Endopoint   |`true`                                   |
+    | External_Name       |`Product`                                |
+    | Active              |`true`                                   |
 
-This is the read fields.
+  ![projected-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
+
+Now we define which fields we want to retrieve in the Entity Field tab by adding the following fields:
+
+This is the M_Product - Read fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "productCategory"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`30`                                             |
+    | Property                     |`productCategory`                                |
+    | Name                         |`productCategory`                                |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Entity Mapping`                                 |
+    | Related Projection Entity    |`PRODSUBAPP - M_Product_Category - Read`         | 
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "uPCEAN"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`40`                                             |
+    | Property                     |`uPCEAN`                                         |
+    | Name                         |`uPCEAN`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "active"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`50`                                             |
+    | Property                     |`active`                                         |
+    | Name                         |`active`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the M_Product - Write fields.
 
 === "id"
 
@@ -327,7 +430,38 @@ This is the read fields.
     | Constant Value               |`-`                                              |
     | Active                       |`true`                                           |
 
-This is the write fields.
+=== "searchKey"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`40`                                             |
+    | Property                     |`searchKey`                                      |
+    | Name                         |`searchKey`                                      |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Java Mapping`                                   |
+    | Java Mapping                 |`PRODSUBAPPProductValueWrite`                    |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "active"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`50`                                             |
+    | Property                     |`active`                                         |
+    | Name                         |`active`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the M_Product_Category - Read fields.
 
 === "id"
 
@@ -359,23 +493,196 @@ This is the write fields.
     | Constant Value               |`-`                                              |
     | Active                       |`true`                                           |
 
-=== "uPCEAN"
+This is the M_Product_Category - Write fields.
+
+=== "id"
 
     | Name                         |  Property                                       |
     | -----------------------------| ------------------------------------------------|
     | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
     | Organization                 |`*`                                              |
-    | Line                         |`30`                                             |
-    | Property                     |`uPCEAN`                                         |
-    | Name                         |`uPCEAN`                                         |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
     | Is Mandatory                 |`false`                                          |
-    | Identifies Record Univocally |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
     | Field Mapping                |`Direct mapping`                                 |
     | Constant Value               |`-`                                              |
     | Active                       |`true`                                           |
 
-  ![entity-fields.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entitiy-field-read.png)
 
+
+  ![entity-fields-read.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
+
+  Using the following command generates the module `com.etendoerx.subapp.product` inside `modules_rx` in which the java mapping class must be added.
+
+  ``` bash title="Terminal"
+  ./gradlew rx:rx
+  ```
+
+  Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the ProductValue.java mapping java class. 
+   
+  ```
+  modules-rx
+  └── com.etendoerx.subapp.product
+      ├── build 
+      ├── lib
+      ├── src
+      │   └── main
+      │       └── java
+      │           └── com
+      │               └── etendorx
+      │                   └── subapp
+      |                       └── product
+      |                           └── javamap
+      |                               └── ProductValue.java
+      ├── src-gen
+      └── build.gradle
+  ```
+
+  ```java title="ProductValue.java"
+  package com.etendorx.subapp.product.javamap;
+
+  import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
+  import com.etendorx.entities.jparepo.OrganizationRepository;
+  import com.etendorx.entities.jparepo.ProductCategoryRepository;
+  import com.etendorx.entities.jparepo.UOMRepository;
+  import com.etendorx.entities.mapper.lib.DTOWriteMapping;
+  import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
+  import org.apache.commons.lang3.StringUtils;
+  import org.openbravo.model.common.plm.Product;
+  import org.springframework.stereotype.Component;
+
+  @Component("PRODSUBAPPProductValueWrite")
+  public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
+
+    private final OrganizationRepository organizationRepository;
+    private final ProductCategoryRepository productCategoryRepository;
+    private final UOMRepository uomRepository;
+    private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
+
+    public ProductValue(OrganizationRepository organizationRepository,
+        ProductCategoryRepository productCategoryRepository,
+        FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
+        UOMRepository uomRepository) {
+      this.organizationRepository = organizationRepository;
+      this.productCategoryRepository = productCategoryRepository;
+      this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
+      this.uomRepository = uomRepository;
+    }
+
+    @Override
+    public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
+      if (StringUtils.isEmpty(entity.getSearchKey())) {
+        entity.setSearchKey("TEST " + Math.random());
+      }
+      if (StringUtils.isEmpty(entity.getDescription())) {
+        entity.setDescription("default");
+      }
+      if (entity.getOrganization() == null) {
+        entity.setOrganization(
+            organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
+      }
+      if (entity.getProductCategory() == null) {
+        entity.setProductCategory(
+            productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
+      }
+      if (StringUtils.isEmpty(entity.getProductType())) {
+        entity.setProductType("I");
+      }
+      if (entity.getTaxCategory() == null) {
+        entity.setTaxCategory(
+            financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
+                .orElse(null));
+      }
+      if (entity.getUOM() == null) {
+        entity.setUOM(uomRepository.findById("100").orElse(null));
+      }
+    }
+  }
+
+  ```
+
+  ``` groovy title="build.gradle"
+  plugins {
+    id 'java'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+  }
+
+  group = 'com.etendorx.subapp'
+  version = "1.0.0"
+  sourceCompatibility = JavaVersion.VERSION_17
+
+  java {
+    sourceCompatibility = '17'
+  }
+
+  ext {
+      includeInDasDependencies = true
+  }
+
+  repositories {
+    mavenCentral()
+    maven {
+      url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
+      credentials {
+        username = "${githubUser}"
+        password = "${githubToken}"
+      }
+    }
+    maven {
+      url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
+      credentials {
+        username = "${nexusUser}"
+        password = "${nexusPassword}"
+      }
+    }
+  }
+
+  ext {
+    set('springCloudVersion', "2022.0.4")
+    includeInDasDependencies = true
+  }
+
+  dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    implementation project(path: ':com.etendorx.entities')
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    implementation "com.etendorx:das_core:" + findProperty("rx.version")
+    implementation project(path: ':com.etendorx.entities')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.testcontainers:postgresql:1.17.3'
+    testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
+    testImplementation ('com.etendorx:das') {
+      transitive = false
+      exclude group: 'com.etendorx.test.grpc'
+    }
+    testImplementation (':com.etendorx.utils:auth') {
+      exclude group: 'org.slf4j', module: '*'
+    }
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+  }
+
+  dependencyManagement {
+    imports {
+      mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+  }
+
+  tasks.named('test') {
+    useJUnitPlatform()
+  }
+
+  ```
 
 ## Create a New Repository
 
@@ -432,7 +739,7 @@ Before customizing and programming your sub-application, ensure your development
 
     In turn, this command will initiate the Etendo RX's entity generation process.
     
-    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
+    ![modules-rx.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
 
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
@@ -443,7 +750,7 @@ Before customizing and programming your sub-application, ensure your development
     mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
     ```
 
-    ![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
+    ![inside-modules.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
 
     Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
 
