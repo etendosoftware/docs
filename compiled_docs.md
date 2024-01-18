@@ -38198,6 +38198,20 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
+##### Essentials Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.1.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes){target='_blank'}
+---
+
+---
 ##### Platform Extensions Bundle ES
 ####### Overview
 
