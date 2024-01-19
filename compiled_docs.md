@@ -38486,6 +38486,20 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
+##### Sales Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.6.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes){target='_blank'}
+---
+
+---
 #### Known Issues
 ####### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
 ??? example "Workaround"
