@@ -34970,7 +34970,7 @@ Source: [https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/ex
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started in the Etendo Mobile section](/developer-guide/etendo-mobile/getting-started/){target="_blank"}. 
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started]](/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
 
 ###### Setup
 
