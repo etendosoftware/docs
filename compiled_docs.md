@@ -38432,6 +38432,62 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ---
 #### Translation Bundles
+##### Essentials Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.1.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes){target='_blank'}
+---
+
+---
+##### Platform Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.2.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes){target='_blank'}
+---
+
+---
+##### Production Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.2.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes){target='_blank'}
+---
+
+---
+##### Sales Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.6.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes){target='_blank'}
+---
+
+---
 ##### Financial Extensions Bundle ES
 ####### Overview
 
@@ -38458,31 +38514,18 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
-##### Essentials Extensions Bundle ES
+##### Etendo BI Bundle ES
 ####### Overview
 
-| Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
+| Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+| [1.1.0](#110) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 
 ####### Release Notes
 ######## 1.1.0
 - Remove all translation modules dependencies to translated modules
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes){target='_blank'}
----
-
----
-##### Platform Extensions Bundle ES
-####### Overview
-
-| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
-
-####### Release Notes
-######## 1.2.0
-- Remove all translation modules dependencies to translated modules
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes){target='_blank'}
+- Add integration powerBi translation to Etendo BI bundle ES
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes){target='_blank'}
 ---
 
 ---
