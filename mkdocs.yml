@@ -266,7 +266,11 @@ nav:
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
     - Etendo RX:
-      - Getting Started: developer-guide/etendo-rx/getting-started.md 
+      - Getting Started: 
+        - Overview: developer-guide/etendo-rx/getting-started/overview.md
+        - Requirements: developer-guide/etendo-rx/getting-started/requirements.md
+        - Architecture: developer-guide/etendo-rx/getting-started/architecture.md
+        - Installation: developer-guide/etendo-rx/getting-started/installation.md 
       - Concepts: 
         - Config Server: developer-guide/etendo-rx/concepts/config-server.md
         - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
