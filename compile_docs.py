@@ -51,20 +51,34 @@ def run():
         # advance to nav section
         json_hierarchy = mkdocs_nav_to_json(lines)
         # get the content of the files
-        content = get_content(json_hierarchy)
+        content = get_content(json_hierarchy, path='', title='', content='')
         # Write the content to a file
-        with open("compiled_docs.md", "w") as f:
-            f.write("---\n")
+        with open("compiled_docsTEMP.md", "w") as f:
             f.write(content)
             f.close()
+        # Clean the file, removing lines with only #, ##, ###, ####, #####, ######, #######, ######## and no text
+        with open("compiled_docsTEMP.md", "r") as f2:
+            lines = f2.readlines()
+            with open("compiled_docs.md", "w") as f:
+                for line in lines:
+                    if line.strip() != "#" and line.strip() != "##" and line.strip() != "###" and line.strip() != "####" and line.strip() != "#####" and line.strip() != "######" and line.strip() != "#######" and line.strip() != "########":
+                        f.write(line)
+                f.close()
+            f2.close()
+        # Remove the temporary file
+        import os
+        os.remove("compiled_docsTEMP.md")
 
 
 def get_file_content(value, level):
+    content = ""
     if value.endswith(".md"):
+        value_without_extension = value[:-3] if value.endswith('.md') else value
+        content += "## Article URL: \n https://docs.etendo.software/" + value_without_extension + "\n"
+        content += "## Article Content: \n"
         with (open("docs/" + value, "r") as f):
             lines = f.readlines()
 
-            content = ""
             start = False
             for line in lines:
                 if line.startswith("#"):
@@ -74,32 +88,40 @@ def get_file_content(value, level):
                         content += "#" * level + line.lstrip()
                     else:
                         content += line
-            
-            value_without_extension = value[:-3] if value.endswith('.md') else value
+
 
             ## add the source link, this links is for check the same info in the online
             # Wiki of etendo
             content += "\n"
-            content += "Source: [https://docs.etendo.software/" + value_without_extension + "](https://docs.etendo.software/" + value_without_extension + ")" + "{target='_blank'}"
-            content += "\n---\n" * 2
+
     else:  # link to an url
-        content = "Source: [" + value + "](" + value + ")"
+        content = "Article URL: " + value + "\n"
         content += "\n"
+    content += "==ARTICLE_END==\n"
+    # Clean the relative links
+    prefix_for_relative_links = "https://docs.etendo.software/"
+    while content.find("](../../") != -1:  # first reduce the ../../ or bigger to ../
+        content = content.replace("](../../", "](../")
+    while content.find("](../") != -1:  # then reduce the ../ to /
+        content = content.replace("](../", "](/")
+    while content.find("](/") != -1:  # then add the prefix
+        content = content.replace("](/", "](" + prefix_for_relative_links)
+
     return content
 
 
-
-
-def get_content(json_hier, level=1):
+def get_content(json_hier, path, title='', content=''):
     content = ""
     for element in json_hier:
         for key, value in element.items():
+            path_r = path + "/" + key
             if isinstance(value, list):
-                content += "#" * level + " " + key + "\n"
-                content += get_content(value, level + 1)
+                content += get_content(value, path_r, title=key, content='')
             else:
-                content += "#" * level + " " + key + "\n"
-                content += get_file_content(value, level)
+                content += "==ARTICLE_START==\n"
+                content += "# Article Title: " + key + "\n"
+                content += "## Article Path: " + path_r + "\n"
+                content += get_file_content(value, level=2)
     return content
 
 
