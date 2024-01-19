@@ -38432,32 +38432,6 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/bun
 
 ---
 #### Translation Bundles
-##### Financial Extensions Bundle ES
-####### Overview
-
-| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.4.3](#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
-| [1.4.2](#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
-| [1.4.1](#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
-| [1.4.0](#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
-
-####### Release Notes
-######## 1.4.3
-- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
-  
-######## 1.4.2
-- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} Modified translation of the Reactivate Payments buttons of the Payment Removal module
-
-######## 1.4.1
-- [EE-724](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/6){target="\_blank"} 'Balance Sheet And P&L Structure Advanced' report's fields are not being translated when in Excel format
-
-######## 1.4.0
-- Remove all translation modules dependencies to translated modules
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes){target='_blank'}
----
-
----
 ##### Essentials Extensions Bundle ES
 ####### Overview
 
@@ -38486,6 +38460,20 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
+##### Production Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.2.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes){target='_blank'}
+---
+
+---
 ##### Sales Extensions Bundle ES
 ####### Overview
 
@@ -38497,6 +38485,32 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ######## 1.6.0
 - Remove all translation modules dependencies to translated modules
 Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes){target='_blank'}
+---
+
+---
+##### Financial Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.4.3](#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.4.2](#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
+| [1.4.1](#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
+| [1.4.0](#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
+
+####### Release Notes
+######## 1.4.3
+- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
+  
+######## 1.4.2
+- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} Modified translation of the Reactivate Payments buttons of the Payment Removal module
+
+######## 1.4.1
+- [EE-724](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/6){target="\_blank"} 'Balance Sheet And P&L Structure Advanced' report's fields are not being translated when in Excel format
+
+######## 1.4.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes){target='_blank'}
 ---
 
 ---
