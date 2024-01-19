@@ -38514,6 +38514,21 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
+##### Etendo BI Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.1.0](#110) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.1.0
+- Remove all translation modules dependencies to translated modules
+- Add integration powerBi translation to Etendo BI bundle ES
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes){target='_blank'}
+---
+
+---
 #### Known Issues
 ####### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
 ??? example "Workaround"
