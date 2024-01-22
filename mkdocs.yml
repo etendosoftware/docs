@@ -185,7 +185,7 @@ nav:
         - Bundles:
           - Essentials Extensions Bundle: 
             - Overview: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-            - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
+            - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
           - Platform Extensions Bundle:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
@@ -274,13 +274,7 @@ nav:
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
         - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
-      #   - How to Format dates in a request:  developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
-      # - Developer Tools:
-      #   - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
-      # - Integrations:
-      #   - Etendo RX Authentication Keys: developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys.md
-      #   - Zapier Integrations: developer-guide/etendo-rx/integrations/zapier-integrations.md
-      #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
+        - How to change date format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
