@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-rx/etendorx-config-server/">
+        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-rx/setup-etendorx-authentication-keys/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>EtendoRX config server - Etendo Documentation</title>
+        <title>Setup Etendo Rx Authentication keys - Etendo Documentation</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#etendorx-config-server" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EtendoRX config server
+              Setup Etendo Rx Authentication keys
             
           </span>
         </div>
@@ -1615,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/" class="md-nav__link">
+      <a href="../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/" class="md-nav__link">
         Advanced Business Partner
       </a>
     </li>
@@ -3310,6 +3310,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-guides/how-to-change-date-format/" class="md-nav__link">
+        How to change date format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-guides/how-to-give-public-access-to-rx-apache/" class="md-nav__link">
         How to give public access to RX with Apache2
       </a>
@@ -4950,8 +4964,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#etendorx-config-server" class="md-nav__link">
-    EtendoRX config server
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-etendo-rx-authentication-keys" class="md-nav__link">
+    Setup Etendo Rx authentication keys
   </a>
   
 </li>
@@ -4977,10 +4998,64 @@
   
 
 
-  <h1>EtendoRX config server</h1>
+  <h1>Setup Etendo Rx Authentication keys</h1>
 
-<h2 id="etendorx-config-server">EtendoRX config server</h2>
-<p>Work in progress</p>
+<h2 id="overview">Overview</h2>
+<p>This page explain how to update the public and private key needed for Etendo RX to authenticate conections.</p>
+<h2 id="setup-etendo-rx-authentication-keys">Setup Etendo Rx authentication keys</h2>
+<ol>
+<li>Open a terminal in  <code>etendo_rx_compose</code> directory.</li>
+<li>Generate the public and private keys that will be used in the Auth and Edge services:</li>
+</ol>
+<p>Private key generation</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  openssl genrsa -out main/resources/private.pem 2048
+</span></code></pre></div>
+<p>Public key generation</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  openssl rsa -in main/resources/private.pem -pubout -outform PEM -out main/resources/public_key.pem
+</span></code></pre></div>
+<p>Private key generation with PCKS8 format</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> openssl pkcs8 -topk8 -inform PEM -in main/resources/private.pem -out main/resources/private_key.pem -nocrypt
+</span></code></pre></div>
+<ol>
+<li>Update the content of <code>main/rxconfig/application.yaml</code> copyng the key content of <code>main/resources/public_key.pem</code> file.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>Keep the tabulation</p>
+<p>Example file: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>spring:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  output:
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ansi:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      enabled: ## Shows console output with colors
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        ALWAYS
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>public-key: &gt;
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  -----BEGIN PUBLIC KEY-----
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAocs6752BX8E9sUSkP0nn
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  Qlp9QNtTsBHB/jFZOro2ayCf203u3DHCPrLpLDZyrqAasIRRxKAAMNfmhl7/Hgg5
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  FKeLp8rKEavlDTblVfVLvBmYpoJMxE2RumW4SdyP56LNnSlY49srflyiJyd9w+m0
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  vVxMpXPT1RWTv+FJibVB8asqyUWW5sJgQ8Cr3PLI8KDCcwSpjlkkack3vB2ZiFtZ
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  VPntj4C6+/o5hcPgUeLVOFjH1H9zJP/ELLcueZtSbRo4J1CJsLUyY3ZCIk84wZwf
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>  ielygT6Yl3tNqGGnxm7moXO8+y5uJZymoMqEhV5OnlolpAb/VuGZviv932fWzEMR
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>  jwIDAQAB
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  -----END PUBLIC KEY-----
+</span></code></pre></div>
+4. Update the content of <code>main/rxconfig/auth.yaml</code> copyng the key content of <code>main/resources/private.pem</code> file. Keep the tabulation.</p>
+<ol>
+<li>
+<p>Create a local commit and config server will be updated wen restart Etendo Rx services.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cd /main/rxconfig
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git add .
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git commit -m &quot;Public and private keys locally updated&quot;
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Restart Etendo RX:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker-compose -p rx -f main/docker-compose.yaml restart
+</span></code></pre></div></p>
+</li>
+</ol>
 
 
 

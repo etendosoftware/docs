@@ -191,32 +191,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-platform/concepts/what-is-etendo-platform/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/EtendoRx/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/async-processes/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/debezium-configuration/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/etendorx-advanced-options/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/etendorx-config-server/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -236,7 +216,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/mobilesync/</loc>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/setup-etendorx-authentication-keys/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -252,11 +232,6 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/concepts/projections/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/developer-tools/etendorx-plugin/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -277,26 +252,6 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/integrations/zapier-integrations/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/integrations/zapier/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-rx/reference/file-gradle-properties/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -446,11 +401,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/23.x/user-guide/etendo-classic/basic-features/jobs/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/23.x/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
@@ -512,11 +462,6 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/user-guide/etendo-classic/basic-features/production-management/transactions/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/user-guide/etendo-classic/basic-features/project-and-services-management/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
