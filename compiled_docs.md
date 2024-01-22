@@ -27524,169 +27524,177 @@ We will also notice that the Product's Stock has been updated in the indicated s
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Bastian
-## Article Path: /User Guide/Etendo Copilot/Getting Started/Bastian
+# Article Title: ✨Getting Started
+## Article Path: /User Guide/Etendo Copilot/✨Getting Started
 ## Article URL: 
- https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian
+ https://docs.etendo.software/user-guide/etendo-copilot/getting-started
 ## Article Content: 
-#### Welcome to Bastian: Your Etendo Intelligent Companion
+#### Etendo Copilot: Integrated Assistant
 
-##### Introduction
+##### Overview
 
-**Bastian** is an advanced, friendly, and intelligent _chatbot_ built to enhance your interactions, which offers a user-friendly environment that's as easy to navigate as a conversation with a friend. He is here to accompany you, guide you, and provide you with an unparalleled conversational experience.
+Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
 
-This chatbot is designed to provide quick and accurate answers about Etendo. Thanks to its advanced algorithms and natural language processing capabilities, it is equipped to understand your needs and provide you with insightful, relevant, and engaging interactions.
+!!! info
+    To install Etendo copilot you can read the [Copilot Instalation](https://docs.etendo.software/developer-guide/etendo-copilot/installation/) guide in the developer's guide section.
 
-Enjoy the adventure!
+##### What is Etendo Copilot?
 
-##### Getting Started
+![Copilot Chat](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
-**Requirements**
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
-Bastian works perfectly on any web browser, with no need for additional software or specific operating systems.
 
-**Accessing Bastian**
+##### Agent: Your Assistant
 
-To start your adventure with Bastian, simply visit [**https://bastian.etendo.cloud**](https://bastian.etendo.cloud) in your web browser.
+The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
-**Communicating with Bastian**
+##### Tools: Your Specialized Partners
 
-**Starting a Conversation**
+Each Tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of Tools work in harmony to deliver unparalleled support.
 
-To start a conversation with Bastian, just follow these steps:
+#####  Key Features:
 
-1.  **Start with a Question or Statement:** Think of a topic or query you would like to discuss with Bastian. For example, you can start by asking "How to create a callout?" or make a statement such as "I need to set up the Etendo database".
-2.  **Type your Message:** Locate the text box at the bottom of the chat interface. Click on it and type your question or statement. Then, click “enter”.
-3.  **Participate in Bastian's Response:** After you submit your question or statement, Bastian will process it and provide you with a typed response. If you have follow-up questions or wish to go deeper into the topic, feel free to continue the conversation by typing your next message and pressing Enter.
+![Copilot Chat2](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
-**Continuing a Conversation**
 
-Bastian possesses a remarkable memory! It diligently keeps track of your ongoing conversation, allowing you to delve deeper into topics or smoothly change the subject. Whether you want to explore a related question, seek further clarification, or shift the focus of the discussion, he is ready to adapt and engage with you.
+- **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
 
-To continue the conversation with Bastian, follow these steps:
+- **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
 
-1.  **Delve Deeper or Change the Subject**:  Once Bastian has responded to your previous question or statement, take a moment to absorb the information provided. If you wish to explore the topic further, go ahead and formulate your next query. Alternatively, if you would like to shift the conversation to a different subject, feel free to do so.
-2.  **Type your Next Message**: Locate the text box at the bottom of the chat interface. Click on it and type your follow-up question, statement, or topic of discussion. Remember, there are no limitations – Bastian is here to engage with you and provide valuable insights.
-3.  **Press Enter**: Once you have composed your message, press the Enter key on your keyboard to send it to Bastian. This action signals your readiness to receive Bastian's response and continue the conversation.
+- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution at your fingertips.
 
-##### Features
+- **Open AI Assistants**: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  
 
-**Responsive and Accurate**
+##### Copilot Chat
 
-Bastian is your quick-witted companion, engineered to provide swift and accurate responses to your queries. It leverages a unique vector database to comprehend the context and substance of your questions, enabling it to deliver relevant replies.
+In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
-**Multilingual Support**
+![Copilot Navbar](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Bastian is a worldly chatbot! It's capable of understanding and responding in multiple languages. If you wish to communicate in a different language, simply start typing in that language. Currently, it is only available in English. It is expected the user interface to be available in many more languages in the future.
+Here, you can select an Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
 
-**User-Friendly Interface**
+##### Copilot App Window
 
-The chat interface is designed to be intuitive and effortless to use, so you can focus on your conversation without worrying about the mechanics of the chatbot.
+The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows you to define and configure applications:
 
-##### Troubleshooting
+<figure markdown>
+  ![Copilot App](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
+  <figcaption> Open AI assistant type example</figcaption>
+</figure>
 
-Encountered a problem? Follow these steps:
 
-1.  **Refresh the page:** Most issues can be resolved by giving your browser page a quick refresh.
-2.  **Check your internet connection:** Bastian requires a reliable internet connection to function.
+- *Name:* Copilot app name
+- *Description:* Copilot app description
+- *App Type:* Langchain Agent or Open AI Assistant
 
-#### Exploring Bastian
+*Open AI Assistant*
+    These applications leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
 
-In this section, we'll guide you through the process of logging in to **Bastian** and exploring its chat interface.
+*Langchain Agent*
+    These applications can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc.
 
-##### Logging In to Bastian
+In case of defining an `Open AI Assistant` type app, the following fields will be enabled: 
 
-Before starting to use it, you need to log in. Here's a **step-by-step guide**:
+- *Open AI Assistand Id:* Read-only field in which the ID of the assistant once created is displayed.
+- *Prompt:* Specific instructions of the assistant 
+- *Open AI Model:* Dropdown with the Open AI models available.
+- *Code interpreter:* Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs. Learn more.
 
-- **Navigate to the Login Page**: Go to [`https://bastian.etendo.cloud/login`](https://bastian.etendo.cloud/login). Here, you will find the following page:
+##### Copilot File Tab
 
-![bastian1.png](https://docs.etendo.software/assets/legacy/bastian1.png)
+In this tab you can define the files that will be uploaded to the assistant and used as knowledge base. 
+To load new files, you must do it from the [Copilot File window](#copilot-file-window).
 
-As you can see, it is possible to log in with Bastian, Google or Bitbucket accounts. If you choose to enter with your Bastian credentials:
+##### Copilot App Example
 
-1.  **Enter Your Username**: Click on the "Username" field and enter your username, if you don't have one, ask for your username at info@etendo.software.
-2.  **Enter Your Password**: Next, click on the "Password" field and type in your password. For your security, the password will appear as dots or asterisks as you type.
-3.  **Log In**: Once you've entered your username and password, hit the "Login" button to start your journey with Bastian. If your credentials are correct, you'll be taken directly to the heart of the action - the chat interface.
+Here is an example configuration of Bastian, an assistant trained with the Etendo documentation:
 
-Upon successful login, you will be redirected to [`https://bastian.etendo.cloud/chat`](https://bastian.etendo.cloud/chat), where you can immerse yourself in conversations with Bastian.
+| **Field**   | **Value**  |
+| ----------- | ---------- |
+| Name        | Bastian    | 
+| Description | Bastian is an artificial intelligence assistant that provides accurate answers on Etendo Documentation.  It prioritizes accuracy, avoids assumptions and seeks clarity in ambiguous queries. It includes links to valid sources when available. |
+| App Type  |  Open AI Assistant |
+| Prompt  | Bastian prompt below  |
+| Open AI Model |  gpt-4-1106-preview |
+| Code interpreter |  False |
 
-##### Navigating the Chat Page
+``` title="Bastian Prompt"
+You are "Bastian" an AI Assistant is designed to provide precise and authoritative responses, drawing from its extensive knowledge base about Etendo. It specializes in delivering clear, direct answers, ensuring every response is rooted firmly in the knowledge base. The assistant is committed to accuracy, avoiding assumptions or extrapolations beyond the available information.The knowledge base is divided by articles, with the following structure
+==ARTICLE_START==
+### Article Title: Title
+#### Article Path: /Path/of/Sections/Title
+#### Article URL: Link_to_the_article
+#### Article Content: Content of the article.
 
-The chat page is the command center of your Bastian journey. Let's see the main components:
 
-![bastian2.png](https://docs.etendo.software/assets/legacy/bastian2.png)
+==ARTICLE_END==
 
-**User Navbar**
+- The answers must be formulated taking into account the content of the whole article. It is important to know that each article is delimited by separators, when you read an article, you must continue until you find "==ARTICLE_END==". 
+- At the beginning of the answer always add "The following information is taken from the article <Article URL>
+- If you don't know something, just respond, "Sorry, but I don't know right now about this. For more information, visit docs.etendo.software".
+- Format the response in Markdown, adding valid code examples, images and Youtube videos
+```
 
-The User Navbar is your personal dashboard located at the top of the page. It houses controls and information.
 
-1.  **Profile Picture**: This displays your current profile picture. Clicking on the profile picture, a menu with additional user options unfolds.
-2.  **Username**: This exhibits the username of the currently logged-in user.
-3.  **Logout Button**: Click this button to log out of Bastian.
+##### Sync Open AI Assistant Button
 
-![bastian3.png](https://docs.etendo.software/assets/legacy/bastian3.png)
+This process is only available when the application type is `Open AI Assistant` and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the wizard based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base. 
 
-**Sidebar**
+##### Copilot File Window
 
-The **sidebar**, located on the left side of the page, is the main section of the chat history. Its main sections are:
+In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
 
-1.  **Filter Chats:** This feature allows you to customize your chat experience by applying specific criteria to filter your chats. With this functionality, you can easily narrow down your list of chats to focus on specific topics, participants, or any other relevant factor. By filtering your chats, you can efficiently manage and navigate through your conversations, finding the information you need with ease.
-2.  **Chat List:** This section of the sidebar allows you to quickly and conveniently access your historical conversations you have had with Bastian. It serves as a centralized hub where you can effortlessly view and manage your current and past chats. This functionality allows you to stay organized, easily find specific conversations, and move seamlessly from one conversation to another. Whether you need to pick up on an important conversation or catch up on recent exchanges, the Chat List in the sidebar gives you a complete overview of your chat history.
-3.  **Delete all conversations:** This section is used to delete the chat history. It is also possible to delete one specific conversation by using the bin logo next to its title.
+- *Name:* File Name.
+- *Description:* File description.
+- *Type:*
+    - *Attachment File* 
+    This allows you to upload files directly into Copilot for later use during interactions with the assistants.
+    - *Remote File* 
+    You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access documents and external resources.
+- *Open AI File ID:* Read-only field showing the Open AI ID of the file once it is created.
+- *Last Synchronization:* Read-only field displaying the date of the last update with OpenAI.
+- *File name:* Name of the remote file in case you want to modify it.
+- *URL:* Source file URL
 
-With these functions, you have the tools you need to optimize your chat experience. Whether it's tailoring the chat view to focus on specific conversations or efficiently navigating through your chat history, the sidebar allows you to get the most out of your interactions with Bastian.
+#### Copilot File Example
 
-**Chat Section**
+- Here is an example of a Remote File configuration, a file used as a knowledge base for the assistants:
 
-The chat interface provides a dynamic and intuitive platform for communication. Located in the center of the page, it offers a range of features and functionalities that enhance your chat experience.
+    | **Field**   | **Value**   |
+    | ----------- | ----------- |
+    | Name        | Etendo Wiki | 
+    | Type        | Remote File |
+    | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
 
-1.  **Chat History**: In this area is where your conversations with Bastian come to life. It displays a comprehensive record of the messages exchanged between you and the chatbot, allowing you to revisit previous interactions and review important information. By having access to your chat history, you can easily track the progress of your conversations, refer back to specific details, and maintain continuity in your discussions with Bastian. The Chat History not only serves as a log of your past interactions but also provides a valuable resource for learning and knowledge retention. You can leverage this feature to retrieve important insights, recall past recommendations or instructions, and build upon previous discussions.
-2.  **Input Field**: Type your message into this field and press Enter to send it to Bastian.This interactive text field allows you to compose and send messages to the chatbot effortlessly. Simply type your message in the Input Field and hit Enter to transmit it to Bastian for processing. The Input Field supports various types of input, including questions, commands, or any other form of text-based communication.
+    <figure markdown>
+    ![Copilot File](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
+    <figcaption> Example of remote file configuration</figcaption>
+    </figure>
 
-![bastian4.png](https://docs.etendo.software/assets/legacy/bastian4.png)
+- Here is an example of a Attachment File configuration, a file used as a knowledge base for the assistants:
 
-**Chat Interactions**
+    | **Field**   | **Value**   |
+    | ----------- | ----------- |
+    | Name        | Etendo Wiki | 
+    | Type        | Attachment File |
 
-The chat interface incorporates a range of features and interactions to enhance your engagement with **Bastian** when you are interacting with him:
+    Attach a file in the `Attachments` section
 
-- **Message Display**: Messages exchanged between you and Bastian are displayed in a visually appealing and organized manner, allowing for easy readability and comprehension. Each message is attributed to the respective sender, distinguishing between user messages and responses from Bastian.
-- **Typing Indicators**: When Bastian is processing your message or formulating a response, a typing indicator may be displayed to indicate that the chatbot is actively engaged. This feature provides feedback to let you know that Bastian is working on your request and encourages a sense of responsiveness.
-- **Instant Feedback**: As you send messages to Bastian, the chat interface provides immediate feedback by displaying your message in the chat window. This instant feedback reinforces a sense of engagement and responsiveness, allowing you to see your input in context alongside the chatbot's responses.
+    <figure markdown>
+    ![Copilot File](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
+    <figcaption> Example of attached file configuration</figcaption>
+    </figure>
 
-![bastian5.png](https://docs.etendo.software/assets/legacy/bastian5.png)
 
-!!!warning "Important"
-    In order to obtain more accurate answers when using Bastian, remember to:<br>
-            - Give as much context to the question/sentence as possible<br>
-            - Use Etendo specific vocabulary, that is, use the terms typically used in Etendo and not synonyms, for example.
+##### Role Window
 
-**User Feedback**
+In the Role window `Application`>`General Setup`>`Security`>`Role`, you can configure access roles for each Copilot App. This means you can control who has permission to interact with each application. This feature is useful for ensuring that users only have access to applications and functions relevant to their responsibilities.
 
-**User Feedback Feature Overview**
+In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
 
-The Bastian chatbot provides users with the opportunity to give feedback on its responses. Below each response, there's a prompt asking **_"Was this answer helpful?"_** accompanied by two emojis representing positive (😊) and negative (😞) feedback. Clicking on either of these emojis will open a popup where users can provide more detailed feedback.
+![Copilot Role](https://docs.etendo.software/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
 
-![bastian6.png](https://docs.etendo.software/assets/legacy/bastian6.png)
-
-**Interactive Emojis**
-
-The happy (😊) and sad (😞) face emojis serve as interactive buttons for users to rate the helpfulness of the chatbot's response.
-
-When a user clicks on either emoji, the corresponding feedback popup is displayed.
-
-**Feedback Popup**
-
-The feedback popup is an essential part of the user feedback feature. It appears over the chat interface and provides a space for users to give more detailed feedback.
-
-This feedback system is designed to be intuitive, allowing users to quickly and easily share their thoughts on the chatbot's performance. The collected feedback is invaluable for improving the chatbot's accuracy and user experience.
-
-![bastian7.png](https://docs.etendo.software/assets/legacy/bastian7.png)
-
-#### Conclusion
-
-At the core of **Bastian's mission,** there is a commitment to providing a seamless and intuitive user experience for Etendo, transforming the information research process into an engaging and enriching interaction. Whether it's complex queries or simply a leisurely conversation, Bastian is your Etendo assistant, ready to facilitate and enhance your communication.
-
-Get ready for an exciting experience with Bastian! A chatbot that represents the future of digital communication.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -33757,50 +33765,8 @@ Your Etendo RX Edge Service is now accessible publicly with SSL security provide
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Overview
-## Article Path: /Developer Guide/Etendo Copilot/Overview
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-copilot/overview
-## Article Content: 
-#### Etendo Copilot: Empowering Your Development Workflow
-
-Etendo Copilot is an innovative project designed to streamline your development journey by harnessing the power of intelligent automation. 
-
-#### What is Etendo Copilot?
-
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
-
-##### Agent: Your Assistant
-
-The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
-
-##### Tools: Your Specialized Partners
-
-Each Tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of Tools work in harmony to deliver unparalleled support.
-
-####  Key Features:
-
-- **Effortless Integration**: Etendo Copilot seamlessly integrates into your development environment, adding an extra layer of intelligence to your workflow.
-
-- **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
-
-- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution at your fingertips.
-
-- **Developer-Centric**: Etendo Copilot is tailor-made for developers by developers. We understand your needs and strive to make your coding journey smoother than ever.
-
-
-#### Join the Future of Development
-
-Etendo Copilot is not just another tool; it is a revolution in how you approach development challenges. Say goodbye to tedious searches and hello to a streamlined, dynamic development experience. Join us on this exciting journey as we redefine the way you interact with your tools.
-
-
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Installation
-## Article Path: /Developer Guide/Etendo Copilot/Installation
+# Article Title: Copilot Installation
+## Article Path: /Developer Guide/Etendo Copilot/Copilot Installation
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-copilot/installation
 ## Article Content: 
