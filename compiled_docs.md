@@ -38741,6 +38741,86 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Essentials Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Essentials Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.1.0
+- Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Platform Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Platform Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.2.0
+- Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Warehouse Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Warehouse Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.3.0](#130) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.3.0
+- Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Production Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Production Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.2.0
+- Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Sales Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Sales Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.6.0
+- Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Financial Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Financial Extensions Bundle ES
 ## Article URL: 
@@ -38767,12 +38847,14 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ##### 1.4.0
 - Remove all translation modules dependencies to translated modules
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes){target='_blank'}
----
-
----
-##### Etendo BI Bundle ES
-####### Overview
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo BI Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes
+## Article Content: 
+#### Overview
 
 | Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
@@ -38782,12 +38864,14 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ##### 1.1.0
 - Remove all translation modules dependencies to translated modules
 - Add integration powerBi translation to Etendo BI bundle ES
-Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes){target='_blank'}
----
-
----
-#### Known Issues
-####### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Known Issues
+## Article Path: /What's New/Release Notes/Etendo Classic/Known Issues
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues
+## Article Content: 
+##### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
 ??? example "Workaround"
 
 
