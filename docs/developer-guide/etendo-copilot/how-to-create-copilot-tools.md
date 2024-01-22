@@ -67,7 +67,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
         def run(self, host: str, *args, **kwargs): # The run method is the one that will be executed when the tool is executed. The inputs of the method are the inputs of the tool.
             import requests # Import the necessary libraries to execute the tool. It is recommended to import the libraries inside the run method to avoid conflicts with other tools.
-            response = requests.get(host)response = requests.get(host)
+            response = requests.get(host)
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ``` 
     **Note**: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
