@@ -21,4 +21,5 @@ runs:
         pip install pillow cairosvg
         pip install mike
         pip install mkdocs-glightbox
+        pip install mkdocs-rss-plugin
       shell: bash
