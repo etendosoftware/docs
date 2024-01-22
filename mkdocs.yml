@@ -222,8 +222,7 @@ nav:
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot: 
-      - Getting Started:
-        - Bastian: user-guide/etendo-copilot/getting-started/bastian.md
+      - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -256,7 +255,6 @@ nav:
         - How to Use Secure Webservices: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
-        ### COPILOT_TOOL
       - Developer Tools:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
@@ -285,8 +283,7 @@ nav:
       #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
-      - Overview: developer-guide/etendo-copilot/overview.md
-      - Installation: developer-guide/etendo-copilot/installation.md
+      - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Tools:
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
