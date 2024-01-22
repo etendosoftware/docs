@@ -18,14 +18,8 @@ mike serve
 # mkdocs serve
 ```
 
-# Publish new version
 
-```bash
-source venv/bin/activate
-mike deploy --push --update-aliases 23.x latest
-```
-
-## When new version is depoy
+## When a new version of mike is released, it is necessary to update the latest reference manually.
 ```bash
 mike set-default --push latest
 ```
