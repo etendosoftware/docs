@@ -38460,6 +38460,20 @@ Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/tra
 ---
 
 ---
+##### Warehouse Extensions Bundle ES
+####### Overview
+
+| Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
+| ---     |       ---        |                  ---                    | :----: | :----: |
+| [1.3.0](#130) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+####### Release Notes
+######## 1.3.0
+- Remove all translation modules dependencies to translated modules
+Source: [https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes){target='_blank'}
+---
+
+---
 ##### Production Extensions Bundle ES
 ####### Overview
 
