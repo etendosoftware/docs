@@ -57,7 +57,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 2. Create the file `PingTool.py` in the `tools` folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:
 
-    ```python
+    ```python title="PingTool.py"
     import os
     from copilot.core.tool_wrapper import ToolWrapper # Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.
 
@@ -74,7 +74,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
 
-    ```python
+    ```python title="PingTool.py"
     import os
     from typing import Type, Dict
 
