@@ -161,11 +161,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/developer-guide/etendo-copilot/overview/</loc>
-         <lastmod>2024-01-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/db-query-tool/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
@@ -701,7 +696,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/user-guide/etendo-copilot/getting-started/bastian/</loc>
+         <loc>https://docs.etendo.software/user-guide/etendo-copilot/getting-started/</loc>
          <lastmod>2024-01-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
