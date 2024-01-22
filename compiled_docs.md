@@ -19378,137 +19378,62 @@ The “Advanced Business Partner” module allows the user to have a general vie
 # Article Title: Advanced Business Partner
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Essentials Extensions Bundle/Advanced Business Partner
 ## Article URL: 
- https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner
 ## Article Content: 
-##### **Introduction**
+#### **Introduction**
 
-This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
 
-!!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+This section describes the Advanced Business Partner module included in the Etendo Essentials Extensions bundle.
 
-The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
-
-- Password Security
-- Password History
-- User Lockout
-- Multiple Session Verification
-- Changing Password after Login
-- Expiration Time (Autolock Password)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
-    For more information about the module configuration visit the [Developer Guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    To be able to include this functionality, the Essentials Bundle must be installed. To do that, follow the instructions from the [Marketplace](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}.
 
-##### **Password Security**
+The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
-This functionality is executed when the password is changed, either because the user needs to change it or because the system requires it. The process can be done from the **Change Password** field in the navigation bar and/or from the **User** window.
+###### Business Partner General View
 
-From the **Change Password** process, Etendo will ask for the current password and the new one to make the change. After clicking on **Apply,** a series of checks will be verified to finally execute the corresponding changes.
+In this window, it is possible to see all the business partner information of each record, grouped in the customer, vendor/creditor and employee sections of the header. In the original window “Business Partner”, this information is found in different tabs.
 
-![](https://docs.etendo.software/assets/drive/sQNqx26cwCGfPld7D47SHw_QnmdO5-zHlJ41yN28V3yKv95xq6PMGqHobkKuh8rQa11RNvI6bMpkWMk9k0H6P_n8DilZ0NfQ56yjBZYaP85WyQWXC7shoMt7zU6nxO-3-JMUXzwRJ2ASii0YDJpUN6s.png)
+![image_3.png](https://docs.etendo.software/assets/legacy/image_3.png)
 
-!!! info
-    The password must be no less than 8 characters long and its structure must contain at least three of the following characters: letters, uppercase letters, lowercase letters, numbers and symbols.
+This change implies, in grid view, the user is able to create, modify and filter business partner information according to their needs.
 
-If the new password does not comply with the above mentioned conditions, a popup appears with an error message indicating the conditions to be fulfilled.
+![image_4.png](https://docs.etendo.software/assets/legacy/image_4.png)
 
-![](https://docs.etendo.software/assets/drive/shTQdtbDJq_FrCieCra0q6YLlv5akL6vFAS2Xr9sogzi6IMddd-qi9HJDwKKhxY0fCqpUfcFa-l0agc03ypnwtH_eFpDR6SLWNPVi4edc--fKnZsuzeFwnNC_ITWGd5q07zMCr1ImePmG5cOLmSH_rQ.png)
+###### Sequence Number by Business Partner Category
 
-This process can also be executed from the **User** window by applying the same password requirements mentioned above.
+In this window, it is also possible to create a sequence number for each business partner based on its category. This sequence number can be found in the Document No. field.
 
-![](https://docs.etendo.software/assets/drive/JNG3VeVWDWewBfz_iijE7kUBTZBV-8DUBQAWaiEa1uyxhOxYZxmbC_bavwTW85z0LJ_S9ibzN1XVz8pGIZQZz675KBO8H8vaO1LJ8BXxO3Sl5AOqOvOV2hgDKjMObk6CWCpmB8ChETBvqkEICBJ0SI4.png)
+![image_5.png](https://docs.etendo.software/assets/legacy/image_5.png)
 
-**Etendo Advanced Security** verifies the changes, and if the new password does not fulfill the required conditions, Etendo shows an error message at the moment of registering the changes.
+For this, you have to set some preferences and configure the sequence number first, as explained below.
 
-![](https://docs.etendo.software/assets/drive/jUjckeZt5RPHdHYZcD0xN9BXUkKoNLOYPrkLIkG4pyqPJBYvFFtkWWKBzgy3pZ2Qr1M-kGZPzd2YXiNxOuOlNdVj26PDen8jOxw-44zBzZsX1G3eNTiIzIHidjO8eiDmrY-uU-XhkUxG2RiUbahRbbQ.png)
+###### Preferences
 
-##### **Password History**
+To be able to configure a business partner sequence number, two preferences are set by default. These can be found in the “Preference” window.
 
-When changing the password, one of the conditions to be fulfilled is that the new password cannot be the same as a previously used one. Etendo creates records of the previously used passwords so, if the user enters a previously used one, the system informs with an **error message.**
+####### Auto Business Partner Document No
 
-This security feature can be configured only with **System Administrator permissions**. To do this, go to the **System Info** window, within the group field **Password Security**, and check the field called **Enable Password History**, according to your preference.
+![image_6.png](https://docs.etendo.software/assets/legacy/image_6.png)
 
-![](https://docs.etendo.software/assets/drive/s0Xj63FWSlAuip3ZzJB0OWyHiF-cM8zs8EruyfZEM7qA3Pt1hvcNZkRDHWzSb9t3GkzqrqbRwIuP5hghTfyal4441tIbtMQrNyu1CPQmhLOwJkM1EcQ85tEz5TDRbOQazN15k5hzX-b6NyleAak3u1s.png)
+This property allows the automatic generation of sequence numbers for business partners. The default value is Y and, in case it is necessary to disable this automatic generation, a new preference must be created, but with the value N and the option “Selected” checked. In this case, the Document No field will be left blank.
 
-When the configuration of the feature **Password Security** is active and the user **changes the password** to a previously used one, Etendo will show an **error message** explaining the failure in saving the password.
+####### Allow Jumps in Business Partner Document No
 
-![](https://docs.etendo.software/assets/drive/x4qql4v3biKPnkWDrD86UUS4mJkw0HuajIK5AmXZKT0OKjP5LdGjzhtd6L8BkkPsR-a9duOtg9uK6OHWjJbig-vSHrltxOd2TfjU5-_lwfH74sKnuekNk4A-heIRIniDxvEb5F45Ms0SxKbRQdy-ztg.png)
+![image_1.png](https://docs.etendo.software/assets/legacy/image_1.png)
 
-The following example shows the same error message when changing the password from the **Change Password** process.
+This property allows jumping among the different document numbers. The default value is N, so, it is not allowed to remove business partners or change business partner categories. However, it is possible to create a new preference with value Y to enable this option. When the business partner category is changed, the document number is also changed according to the corresponding document sequence.
 
-![](https://docs.etendo.software/assets/drive/1VTtHPNlLr0N3fvL1vVQ7FO2lzWcQti5I.png)
+###### How to Configure Sequences Number
 
-!!! info
-    Etendo also allows entering the same password an indefinite number of times. In case the user wishes to maintain the same password, just keep the field **Enable Password History** from the System Info window **unchecked**. 
+To configure the Sequence Number, go to the “Document Sequence” window, create a new record for each organization and category, set the corresponding table, column and business partner category, and save the record. The table and column fields must be filled with the options seen below.
 
-##### **User Lockout** 
-
-Another feature of this module is the **blocking** of the user after N number of **unsuccessful login attempts**. When entering a wrong password, Etendo shows an error message indicating the number of attempts left.
-
-In this example, the system shows that there is one attempt left.
-
-![](https://docs.etendo.software/assets/drive/C-pmD7RKuMzM6e1fSFHSwLWAusC2cL1U9gKlvxWxe7VRa64uuLwaQ7dm4Cmi_Z773XQsfFzfSPrdfMGDNdnNgKPuWobU4xTlxFtOirr34LPiLMT9bI3LONLsmydtloKyd48GYi_1hRnovcHduVsDwGE.png)
-
-Even if in the next attempt the user is not able to log in correctly, Etendo leaves another message indicating that the user has been blocked.
-
-![](https://docs.etendo.software/assets/drive/e_vXv3RF7iceBBddpDNUMwewnLYcr5W7LzjhyzrUMPnGe6oT9v9TeXiGc-8MLQpF_Xv1POEZdvMmIRL5bwfai6-hfaEirW4IKlsrBVzcLndzbtRTYeO0_fwou-fTO00rxDtw2lJJi7LY5LoW7vWPEb8.png)
+![image_2.png](https://docs.etendo.software/assets/legacy/image_2.png)
 
 !!! info
-    By default, Etendo configures five attempts to enter the right password. 
-
-To configure the number of unsuccessful login attempts, it is necessary to create a preference from the **Preference** window. In the **Value** field, add the desired number of login attempts, and also select the preference **Maximum number of password attempts** from the **Property** field.
-
-![](https://docs.etendo.software/assets/drive/5nXDi_OVP9kEESFxQsu1DJywuIEhpJfGl7UvWYPV4UO1CkEhcs2aXMQQIt51lJrww8TfMAUWMfjky2zRtpqhzzdsYygdDt8VhJAe0HNHAWpFbbTbX7c0khUaD9Dn9so89idLPpfmVAqR9bVfS4h4IAU.png)
-
-!!! warning
-    It is important to note that once the new password has been entered, if the user enters again a wrong password, the system will automatically block the login at the first try. 
-
-##### **Multiple Session Verification**  
-
-Another functional innovation that facilitates this module is the ability to allow or block to have multiple sessions opened from another browser.
-
-From the **User** window, within the **More Information** field, it is possible to configure the check that allows having several sessions active at the same time. The check is called **Allow multiple sessions**.
-
-![](https://docs.etendo.software/assets/drive/vcMT58GIgiB2QsZcR-bt5xyajWgf9isk7sxrFJuwkUW27BKnmLIjcb2YZIEJUB-YE-scGv_n3rZ1jTwKGKwLumx4KAIjSp0SsN1jK4saZNChsH8q2JRn5RS3Q6TkXVdVLa1r7C5wXTPmrfVkJyChjRA.png)
-
-In case the user just wants one session allowed to be activated, uncheck the **Allow multiple sessions** checkbox from the **User** window and, **only with System Administrator permissions**, check the **Enable single session verification** field in the **Session Security** field from the **System Info** window.
-
-![](https://docs.etendo.software/assets/drive/Prfolo_qyMafrXpr9dUe_ASCkalv-LjArCWEcMCPSWWi2IzyypsQytDTUlSeMgq_mSbgCYKtebK9aawUzMNotE2V25Lg-RrJ2f21l6m75dS4Z11d76gidgZfFrxy1BQgjVl7EvJg2xQISvt1efahvCc.png)
-
-This way, when trying to log in, the system verifies that an active session already exists informing the user.
-
-![](https://docs.etendo.software/assets/drive/IkC8pMQVLKRCkr3SI1oYDJsaSirmOHxS31Z5ZmwhCzOnMnwXW88ZFHcyTCnp0Vpm9BxY_RJbpWIdrQG0g5DhURD1RSzW2nexd9hGTeCxTNWhaAWaopvCG-r7JieCNHkLjpCb7HW3v3JXDjofFCHEyAU.png)
-
-!!! info
-    By default, Etendo with this module installed, only allows to have one session active. 
-
-##### **Changing Password after Login**
-
-After logging in for the **first time** with a user, Etendo asks to **change the password**. When trying to log in, the system mentions that the password has expired and that the user needs to change it to a new one to be able to log in.
-
-![](https://docs.etendo.software/assets/drive/aJIN1JP1Oau9HSzi_O2NF-rcQBAdE58v59GVg5NoLiQvgTobqai4mOU07aw0D786KJfL0EBJ_rcaQ86-vf8FmZo3gKZnhLaE_yE3Ynzk46CQkhg0abwcMPLKPw2OjUlvFa75h5zkhSW4i97OviTl8mo.png)
-
-Once the change has been made, the user is redirected to the main interface of the application.
-
-##### **Expiration Time (Autolock Password)**
-
-As part of the security management, Etendo also allows the management of the days for the **password expiration time**.
-
-From the **Preferences** window, it is possible to adjust the period of time required for the user to be obliged to change the password. Do it by adding the desired amount of days for the password expiration in the **Value** field.
-
-![](https://docs.etendo.software/assets/drive/4o5-tsn6u1mWXedVD-rp5GQNpc6RZ6cAroo-BrZc6xPUevOI0COBerM1NnEmySSSMLMBicOBI1Gidh-4D3QkOMPvJI72977qKSYFHtFJ0UtZnChiIcSYi0Nz3Uu_9H5k39FZ7ozJjeyUbxifnWGamz0.png)
-
-!!! info
-    Consider that by default, Etendo configures 30 days for the password expiration time. 
-
-After the number of days established for the password expiration, when trying to log in, a message is displayed explaining the need to be redirected to the **login to change the password**, i.e. the user is marked as **password expired**.
-
-Besides, Etendo notifies the user with a message announcing the amount of **remaining days** for the password expiration. In this example, the user has two days left.
-
-![](https://docs.etendo.software/assets/drive/0g12hmyWCTy2ecyVLmptMQSLE6ocCBLGSJLJlYa3EqwCNE-NyYSxy-aO9jg88OWefWDsRso8RDce3Zas0q5Q29fUdcrtSeZ-nA13uwNokmr2vnlKM4HabnGCzy5r3stbAmsCoEgMhzno5T6LLr4tyYM.png)
-
-!!! info
-    By default, the system activates this message when there are **seven days** left to change the password.
+    For more information, visit [Sequences](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -33694,6 +33619,50 @@ java -jar modules_core/com.etendorx.edge/build/libs/com.etendorx.edge-1.1.0.jar
 ##### Disclaimer: Advanced Knowledge Required
 
 This guide assumes a fundamental understanding of Java development environments, including familiarity with Gradle build commands and Java application deployment. It is intended for users with intermediate to advanced technical skills in software development and system administration. New users or those unfamiliar with the concepts discussed may need additional resources or assistance. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to change date format
+## Article Path: /Developer Guide/Etendo RX/How to guides/How to change date format
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-rx/how-to-guides/how-to-change-date-format
+## Article Content: 
+### Changing Date Format and Time Zone in a Request
+
+#### Overview
+
+This document outlines the steps for developers to change the date format and time zone when making an HTTP request to the application. These features are useful for ensuring that date and time values are interpreted correctly based on the user's locale or specific requirements.
+
+#### Prerequisites
+
+- Familiarity with HTTP requests and RESTful APIs.
+- Access to the application's API documentation for endpoint details.
+
+#### Adding Date Format and Time Zone Parameters
+
+##### Date Format
+
+To specify a custom date format, add a `_dateFormat` parameter to your HTTP request. The value should be a string that represents the desired date format, following the Java `SimpleDateFormat` conventions.
+
+**Example:**
+
+```http
+GET /OBMAPBusinessPartner/2C4C71BC828B47A0AF2A79855FD3BA7A?_dateFormat=yyyy-MM-dd
+```
+
+In this example, the date format is set to `"yyyy-MM-dd"`, which will format dates as `"2023-08-29"`.
+
+##### Time Zone
+
+To specify a custom time zone, add a `_timeZone` parameter to your HTTP request. The value should be a string that represents the desired time zone, following the Java `TimeZone` conventions. This parameter, requires to have a `_dateFormat`, cannot be used as single parameter.
+
+**Example:**
+
+```http
+GET /OBMAPBusinessPartner/2C4C71BC828B47A0AF2A79855FD3BA7A?_dateFormat=yyyy-MM-dd&_timeZone=America/New_York
+```
+
+In this example, the date format is set to `"yyyy-MM-dd"` and the time zone is set to `"America/New_York"`.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to give public access to RX with Apache2
