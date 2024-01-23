@@ -16,7 +16,7 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
 
 1. Add Copilot DB Query Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot.dbquerytool:1.0.2')
+    implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
     ```
 
 2. In `gradle.properties` file you must add `OPENAI_MODEL` environment variables. 
