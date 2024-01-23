@@ -20878,6 +20878,7 @@ En la pestaña "Datos SII" de la factura, tendremos acceso a los siguientes dato
   - "**Aceptado con errores**" - la factura se ha registrado pero contiene errores que debemos subsanar y volver a enviar. Igualmente, la AEAT nos indicará los errores que se deben subsanar.
   - "**Error al enviar**" - la factura no está registrada, ya que se ha producido un error en la conexión online con la AEAT. Debemos volver a enviar la factura.
   - "**Anulado**" - se trata de un estado que podemos obtener en las respuestas recibidas al hacer una "Consulta a SII". Se ha añadido este estado para poder "gestionarlo" igualmente.
+  - "**No Declarable en SII**" - la factura no está registrada, ya que todas sus líneas están asociadas a un impuesto configurado como "No Declarable en SII"
 
 **Para la AEAT los errores "Admisibles"** son aquellos que serán admitidos por la AEAT.
 
