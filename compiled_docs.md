@@ -33756,13 +33756,13 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot:1.2.2')
+    implementation('com.etendoerp:copilot:1.2.3')
     ```
 
-    ??? warning "Ensure you have 1.3.1 plugin version or greater:"
+    ??? warning "Ensure you have 1.3.2 plugin version or greater:"
         
         ```groovy
-        id 'com.etendoerp.gradleplugin' version '1.3.1'
+        id 'com.etendoerp.gradleplugin' version '1.3.2'
         ```
 
 2. In the terminal, execute:
@@ -33917,7 +33917,7 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
 
 1. Add Copilot DB Query Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot.dbquerytool:1.0.2')
+    implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
     ```
 
 2. In `gradle.properties` file you must add `OPENAI_MODEL` environment variables. 
