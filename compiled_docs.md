@@ -33756,7 +33756,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot:1.2.3')
+    implementation('com.etendoerp:copilot:1.2.4')
     ```
 
     ??? warning "Ensure you have 1.3.2 plugin version or greater:"
