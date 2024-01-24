@@ -38809,14 +38809,20 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.4.3](#142) | 12/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
-| [1.4.2](#142) | 07/12/2023 | [1.11.3, 1.13.0] | C  | :white_check_mark: |
-| [1.4.1](#141) | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
-| [1.4.0](#140) | 23/10/2023 | [1.0.0, 1.11.1]  | C  | :white_check_mark: |
+|	 Version	| Publication Date | Compatibility With Financial Extensions | Status |		   GitHub		 |
+|	   ---		|		---		   |				   ---					 | :----: |		   :----:		 |
+| [1.5.0](#150) |	 23/01/2024	   |			 [1.13.1, latest]			 |	 CS	  |  :white_check_mark:  |
+| [1.4.3](#143) |	 12/01/2024    |			 [1.13.1, latest]			 |	 C	  |  :white_check_mark:  |
+| [1.4.2](#142) |	 07/12/2023    |			 [1.11.3, 1.13.0]			 |	 C	  |  :white_check_mark:  |
+| [1.4.1](#141) |	 06/12/2023    |			 [1.11.2, 1.11.2]			 |	 C	  |  :white_check_mark:  |
+| [1.4.0](#140) |	 23/10/2023    |			 [1.0.0, 1.11.1]			 |	 C	  |  :white_check_mark:  |
+
 
 #### Release Notes
+##### 1.5.0
+- [EE-749](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/5){target="\_blank"} Create Translation Module for GL Journal Reverse
+- [EE-748](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/4){target="\_blank"} Add com.smf.asset.amortization.report.es_es module into com.etendoerp.financial.extensions.es_es Bundle
+
 ##### 1.4.3
 - [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
   
