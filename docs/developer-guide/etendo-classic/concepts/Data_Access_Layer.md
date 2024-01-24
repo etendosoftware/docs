@@ -1,93 +1,21 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags: 
+  - Data Access Layer
+  - Etendo
+  - Etendo Classic
+  - Business Logic
+  - Hibernate
+  - Database
+  - Business Object
+  - Development
+  - Architecture
+---
 
 #  Data Access Layer
-
-##  Contents
-
-  * 1  Overview 
-  * 2  A 'Hello World' Example 
-  * 3  DAL Architecture 
-  * 4  Business Object 
-  * 5  DAL Main Interfaces 
-    * 5.1  OBDal 
-    * 5.2  OBCriteria 
-    * 5.3  OBQuery 
-    * 5.4  OBProvider 
-  * 6  Openbravo Business Objects 
-    * 6.1  BaseOBObject 
-    * 6.2  Generated Business Object Classes 
-    * 6.3  Entity, Property and Column Naming 
-      * 6.3.1  Entity Naming 
-      * 6.3.2  Property Naming 
-      * 6.3.3  Property Naming and Supported interfaces 
-    * 6.4  Important Interfaces 
-    * 6.5  Client and organization and Audit information 
-    * 6.6  Creating a new instance of a Business Object 
-  * 7  User Context 
-    * 7.1  User Context in a running Openbravo Instance 
-    * 7.2  User Context in a Test environment 
-    * 7.3  User Context in a Standalone situation 
-    * 7.4  Administrator Mode 
-      * 7.4.1  Cross Organization Reference Administrator Mode 
-  * 8  Transaction and Session 
-  * 9  Security and Validation 
-    * 9.1  Write Access 
-    * 9.2  Read Access 
-    * 9.3  Delete Check 
-    * 9.4  Table Access Validation 
-    * 9.5  Validation 
-    * 9.6  Entity Organization Validation 
-      * 9.6.1  Cross Organization References 
-        * 9.6.1.1  Cross Organization references in UI 
-  * 10  DAL support for Database Views 
-  * 11  SQL Functions in HQL 
-  * 12  Executing Native SQL Queries 
-  * 13  Runtime Model and the Dynamic API 
-  * 14  Testing 
-  * 15  Test your HQL: the HQL Query Tool 
-  * 16  Calling Processes/Stored Procedures from the DAL 
-  * 17  The DalConnectionProvider 
-  * 18  Using the Data Access Layer in an Ant task 
-  * 19  Some things to be aware of... 
-    * 19.1  Hibernate Proxies 
-    * 19.2  Performance: getting the id of a BaseOBObject 
-    * 19.3  Hibernate inner workings 
-    * 19.4  Classloading 
-    * 19.5  Creating a new business object with a specific id 
-  * 20  Coding Practices when using/extending the DAL 
-    * 20.1  Exception Structure 
-    * 20.2  Runtime Invariants: The Check class 
-    * 20.3  Code Formatting 
-  * 21  Tips & Tricks and Troubleshooting 
-
-  
----  
   
 ##  Overview
 
-The Openbravo Data Access Layer (DAL) is a new development in Openbravo ERP
-2.50. The goal of the DAL development is to strengthen the middle-tier in the
+The goal of the Etendo Data Access Layer (DAL) development is to strengthen the middle-tier in the
 application, i.e. to implement business logic in Java. The DAL provides the
 application developer with the following functionality:
 
@@ -106,10 +34,8 @@ functionality such as security and validation.
 
 ##  A 'Hello World' Example
 
-As a first simple example let's create a new business partner group and store
+As a first simple example, let's create a new business partner group and store
 it in the database:
-
-    
     
      
      // create the object through the factory
@@ -127,17 +53,17 @@ it in the database:
 
 There are a number of things which are important to note:
 
-  * The above code does not set an explicit ** user context  ** . The user context is set automatically when running the above code in Openbravo ERP. However in other environments it has to be set explicitly, see  here  for more information. 
+  * The above code does not set an explicit user context. The user context is set automatically when running the above code in Etendo Classic. However, in other environments, it has to be set explicitly, see  here  for more information. 
   * There is a BPGroup class which models the data of the _c_bp_group_ table. This class has type safe getters and setters for all the data in this table. 
-  * A factory (the OBProvider) is used to create an instance of the BPGroup class. 
-  * The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. 
+  * A factory (the Etendo Provider) is used to create an instance of the BPGroup class. 
+  * The Etendo DAL service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The Etendo DAL API is discussed in more detail below. 
 
 The code snippet above also shows that you don't need to work with SQL or JDBC
-to work with the data from the database anymore. As a developer you work
+to work with the data from the database. As a developer, you work
 directly with objects and the available data is directly visible through the
 getters and setters.
 
-As a next step, lets query for the business partner group, and change its
+As a next step, let's query for the business partner group, and change its
 description:
 
     
@@ -157,19 +83,19 @@ description:
 
 This code snippet introduced a number of new concepts:
 
-  * The OBDal service is used to create an OBCriteria object. 
-  * The OBCriteria object represents the query, implements the Hibernate Criteria interface and can be used as a standard Hibernate Criteria object. The OBCriteria object also supports sorting and paging parameters. The OBCriteria API is discussed in more detail below. 
-  * The OBCriteria list method performs the actual query, it returns a type safe list of the requested objects. 
-  * After changing the name of the business partner group you don't need to do an explicit save. At commit time Hibernate will automatically detect _dirty_ objects and save those. 
+  * The Etendo DAL service is used to create an Etendo Criteria object. 
+  * The Etendo Criteria object represents the query, implements the Hibernate Criteria interface and can be used as a standard Hibernate Criteria object. The Etendo Criteria object also supports sorting and paging parameters. The Etendo Criteria API is discussed in more detail below. 
+  * The Etendo Criteria list method performs the actual query, it returns a type safe list of the requested objects. 
+  * After changing the name of the business partner group, you don't need to do an explicit save. At commit time Hibernate will automatically detect _dirty_ objects and save those. 
 
 This was a short introduction which shows how the DAL can be used to create,
-store and retrieve one (simple) business object. The rest of this document
+store and retrieve one (simple) business object. The rest of this section
 will describe the Data Access Layer functionality in more detail.
 
 ##  DAL Architecture
 
 The image below shows the envisioned architecture for the data access layer in
-this and following releases of Openbravo ERP.
+Etendo Classic.
 
   
 ![](/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png){: .legacy-image-style}
@@ -196,46 +122,38 @@ currency which just has basic primitive fields. On the other hand it can also
 be a structure of entities, for example an order header with its order line.
 
 A business object structure always has one business object which is the owner
-of all the business objects in that structure, for example for a sales order
+of all the business objects in that structure, for example, for a sales order
 the sales order header business object is the owner of the complete structure
-(i.e. of the sales order lines. Another way of describing this is that the
+(i.e. of the sales order lines). Another way of describing this is that the
 sales order lines depend on the sales order header, a sales order line can not
 exist without its sales order header and when a sales order header is removed
 also its sales order lines should be removed.
 
 The DAL uses the foreign keys from the child to parent to create the parent-
-child association in Java and Hibernate. **More specifically: the foreign key
+child association in Java and Hibernate. More specifically: the foreign key
 columns which have the field isParent set to yes (checked/true) define the
-business object parent-child relations** , other foreign key columns define
+business object parent-child relations, other foreign key columns define
 standard many-to-one associations. For example the foreign key field
 _c_order_id_ in _c_order_line_ is used to create the one-to-many association
 (in the in-memory runtime model) from _c_order_ to _c_order_line_ . This one-
 to-many association is then used to generate a List<OrderLine> member in the
 Java Order class and a one-to-many mapping in Hibernate.
 
-For a reference of all business object structures see the entity model  here
-.
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR19Q3  ** .  
----|---  
+For a reference of all business object structures see the entity model here.
   
-It is possible not to generate those on-to-many associations in the parent
+It is possible not to generate those one-to-many associations in the parent
 entity can be avoided by setting "Child Property in Parent Entity" field to
-false in Column tab. Note generated on-to-many properties in the parent
+false in Column tab. Note generated one-to-many properties in the parent
 entity, load all children in memory when invoked, so they should be only
-generated when the expected amount of child records is low, other ways it
-might cause an ` OutOfMemoryError ` .
+generated when the expected amount of child records is low, otherwise it
+might cause an `OutOfMemoryError`.
 
-In order to keep a backward compatible API, `
-hb.generate.all.parent.child.properties=true ` preference can be set in
-Openbravo.propeties, in this way all foreign key columns will generate a one-
-to-many property in the parent entity, as it was done before 3.0PR19Q3.
+In order to keep a backward compatible API, `hb.generate.all.parent.child.properties=true` preference can be set in etendo.propeties, in this way all foreign key columns will generate a one-
+to-many property in the parent entity.
 
 ##  DAL Main Interfaces
 
-The DAL offers three main services to instantiate, create and query Openbravo
-ERP business objects: OBDal, OBCriteria and OBProvider. The service classes
+The DAL offers three main services to instantiate, create and query Etendo Classic business objects: OBDal, OBCriteria and OBProvider. The service classes
 can all be found in the _org.openbravo.dal.service_ package.
 
 ###  OBDal
@@ -244,11 +162,11 @@ The  OBDal  instance (available through _OBDal.getInstance()_ ) is the main
 entrance point for retrieving and storing business objects in the database in
 a validated and secure way. It provides the following functions:
 
-  * save: stores a new business object in the database or an existing business object is updated. For existing business object it is not required to call this method as Hibernate does automatic _dirty_ checking. 
-  * get: retrieves a single business object using its id. There are two versions: one using the class name (of the generated business object) and one using the entity name. 
+  * save: stores a new business object in the database or an existing business object is updated. For existing business objects, it is not required to call this method as Hibernate does automatic _dirty_ checking. 
+  * get: retrieves a single business object using its ID. There are two versions: one using the class name (of the generated business object) and one using the entity name. 
   * remove: delete a business object from the database, the actual database delete is done at commit time. 
   * create OBCriteria:  OBCriteria  objects are used for querying. 
-  * commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally this is done by the environment (Openbravo web container or Openbravo test). 
+  * commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally, this is done by the environment (Openbravo web container or Openbravo test). 
 
 The OBDal API makes extensive use of the  OBCriteria  and  OBQuery  classes to
 support querying.
@@ -1277,19 +1195,8 @@ Openbravo development project.
 
 ##  Tips & Tricks and Troubleshooting
 
-For tips and tricks and common issues (and solutions) which you may encounter
-please visit the  trouble shooting  section.
+For tips and tricks and common issues (and solutions) you may find, please visit the troubleshooting section.
 
-Retrieved from "  http://wiki.openbravo.com/wiki/Data_Access_Layer  "
+---
 
-This page has been accessed 58,687 times. This page was last modified on 10
-May 2019, at 10:19. Content is available under  Creative Commons Attribution-
-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  Concepts
-
-**
-
+This work is a derivative of ["Data Access Layer"](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
