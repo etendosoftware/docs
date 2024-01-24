@@ -38575,7 +38575,8 @@ Etendo 21Q4
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
@@ -38583,7 +38584,7 @@ Etendo 21Q4
 | [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
 | [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
 | [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.2.0](#120) | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
 | [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
 | [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
 | [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
@@ -38595,6 +38596,11 @@ Etendo 21Q4
 
 #### Versiones Disponibles
 
+##### 1.7.0
+- [EE-301](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/18) Se agregó un nuevo estado 'No Declarable en SII' para facturas de venta que tengan todos sus productos relacionados a impuestos configurados como 'No Declarables en SII'.
+- [EE-796](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/19) Se corrigió el error en el que la página T303DID00 no se genera de forma correcta para el 303 del último periodo.
+- Se añadió el nuevo diseño de registro para el Modelo de Declaración de Impuestos 190, versión 2023.
+- Se añadió la oficina impositiva de Bizkaia en la configuración del SII para facturas recibidas.
 ##### 1.6.0
 - Se actualizó la compatibilidad de Core incluyendo hasta 23.4.x
 - [EE-779](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/16){target="\_blank"} Se corrigió error al crear un libro de facturas simplificado con un socio comercial sin CIF
