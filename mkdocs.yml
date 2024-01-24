@@ -183,14 +183,32 @@ nav:
           - Assets: user-guide/etendo-classic/basic-features/financial-management/assets/overview.md
       - Optional Features:
         - Bundles:
-          - Essentials Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
-          - Platform Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+          - Essentials Extensions Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/overview.md
+            - Advanced Business Partner: user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md
+          - Platform Extensions Bundle:
+            - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
+            - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
           - Warehouse Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
-          - Spanish Localization Bundle: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
-          - Etendo BI Bundle: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+          - Spanish Localization Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/spain-localization/overview.md
+            - SII para IVA: user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md
+            - Modelo 303: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md
+            - Modelo 190: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md
+            - Modelo 347: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md
+            - Modelo 349: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md
+            - Impuestos para España: user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md
+            - Intrastat: user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md
+            - Modelo 390: user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md
+            - Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md
+            - Configuración de Impuestos para Libro de Facturas: user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md
+          - Etendo BI Bundle: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
+            - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
+            - Etendo BI Connector Module: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
@@ -204,8 +222,7 @@ nav:
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot: 
-      - Getting Started:
-        - Bastian: user-guide/etendo-copilot/getting-started/bastian.md
+      - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -288,6 +305,7 @@ nav:
         - How to Use Secure Webservices: developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices.md
         - How to Copy and Paste Images in Etendo: developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
+<<<<<<< HEAD
         ### COPILOT_TOOL
         - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
         - Categories: developer-guide/etendo-classic/how-to-guides/Categories.md
@@ -401,6 +419,8 @@ nav:
         - How to create testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md
         - How to setup Eclipse IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Eclipse_IDE.md
         - How To Create and Package a Module: developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md
+=======
+>>>>>>> main
       - Developer Tools:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
@@ -412,21 +432,18 @@ nav:
     - Etendo RX:
       - Getting Started: developer-guide/etendo-rx/getting-started.md 
       - Concepts: 
+        - Config Server: developer-guide/etendo-rx/concepts/config-server.md
+        - Edge Server: developer-guide/etendo-rx/concepts/edge-server.md
         - Projections, Repository and Search: developer-guide/etendo-rx/concepts/projections.md
       - Tutorials:    
         - Creating a New Microservice: developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md
       - How to guides:
         - How to Filter any request for Active or all Records:  developer-guide/etendo-rx/how-to-guides/how-to-filter-for-active-or-inactive.md
-      #   - How to Format dates in a request:  developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
-      # - Developer Tools:
-      #   - Etendo RX Plugin: developer-guide/etendo-rx/developer-tools/etendorx-plugin.md
-      # - Integrations:
-      #   - Etendo RX Authentication Keys: developer-guide/etendo-rx/integrations/setup-etendorx-authentication-keys.md
-      #   - Zapier Integrations: developer-guide/etendo-rx/integrations/zapier-integrations.md
-      #   - Zapier: developer-guide/etendo-rx/integrations/zapier.md
+        - How to start RX as service: developer-guide/etendo-rx/how-to-guides/hot-to-start-rx-as-service-source-code.md
+        - How to change date format: developer-guide/etendo-rx/how-to-guides/how-to-change-date-format.md
+        - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
-      - Overview: developer-guide/etendo-copilot/overview.md
-      - Installation: developer-guide/etendo-copilot/installation.md
+      - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Tools:
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
@@ -436,6 +453,7 @@ nav:
       - Tutorials: 
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
+        - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
       - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
   - What's New:
     - Overview: whats-new/overview.md
@@ -443,7 +461,54 @@ nav:
     - Roadmap: "https://etendo.software"
     - Release Notes:
       - Etendo Classic:
-        - Releases: whats-new/release-notes/etendo-classic/index.md
+        - Releases:
+          - Overview: whats-new/release-notes/etendo-classic/versions/overview.md
+          - 23Q4.0: whats-new/release-notes/etendo-classic/versions/23Q4-0.md
+          - 23Q3.4: whats-new/release-notes/etendo-classic/versions/23Q3-4.md
+          - 23Q3.3: whats-new/release-notes/etendo-classic/versions/23Q3-3.md
+          - 23Q3.2: whats-new/release-notes/etendo-classic/versions/23Q3-2.md
+          - 23Q3.1: whats-new/release-notes/etendo-classic/versions/23Q3-1.md
+          - 23Q3.0: whats-new/release-notes/etendo-classic/versions/23Q3-0.md
+          - 23Q2.8: whats-new/release-notes/etendo-classic/versions/23Q2-8.md
+          - 23Q2.7: whats-new/release-notes/etendo-classic/versions/23Q2-7.md
+          - 23Q2.6: whats-new/release-notes/etendo-classic/versions/23Q2-6.md
+          - 23Q2.5: whats-new/release-notes/etendo-classic/versions/23Q2-5.md
+          - 23Q2.4: whats-new/release-notes/etendo-classic/versions/23Q2-4.md
+          - 23Q2.3: whats-new/release-notes/etendo-classic/versions/23Q2-3.md
+          - 23Q2.2: whats-new/release-notes/etendo-classic/versions/23Q2-2.md
+          - 23Q2.1: whats-new/release-notes/etendo-classic/versions/23Q2-1.md
+          - 23Q2.0: whats-new/release-notes/etendo-classic/versions/23Q2-0.md
+          - 23Q1.5: whats-new/release-notes/etendo-classic/versions/23Q1-5.md
+          - 23Q1.4: whats-new/release-notes/etendo-classic/versions/23Q1-4.md
+          - 23Q1.3: whats-new/release-notes/etendo-classic/versions/23Q1-3.md
+          - 23Q1.2: whats-new/release-notes/etendo-classic/versions/23Q1-2.md
+          - 23Q1.1: whats-new/release-notes/etendo-classic/versions/23Q1-1.md
+          - 23Q1.0: whats-new/release-notes/etendo-classic/versions/23Q1-0.md
+          - 22Q4.6: whats-new/release-notes/etendo-classic/versions/22Q4-6.md
+          - 22Q4.5: whats-new/release-notes/etendo-classic/versions/22Q4-5.md
+          - 22Q4.4: whats-new/release-notes/etendo-classic/versions/22Q4-4.md
+          - 22Q4.3: whats-new/release-notes/etendo-classic/versions/22Q4-3.md
+          - 22Q4.2: whats-new/release-notes/etendo-classic/versions/22Q4-2.md
+          - 22Q4.1: whats-new/release-notes/etendo-classic/versions/22Q4-1.md
+          - 22Q4.0: whats-new/release-notes/etendo-classic/versions/22Q4-0.md
+          - 22Q3.0: whats-new/release-notes/etendo-classic/versions/22Q3-0.md
+          - 22Q2.2: whats-new/release-notes/etendo-classic/versions/22Q2-2.md
+          - 22Q2.1: whats-new/release-notes/etendo-classic/versions/22Q2-1.md
+          - 22Q2.0: whats-new/release-notes/etendo-classic/versions/22Q2-0.md
+          - 22Q1.3: whats-new/release-notes/etendo-classic/versions/22Q1-3.md
+          - 22Q1.2: whats-new/release-notes/etendo-classic/versions/22Q1-2.md
+          - 22Q1.1: whats-new/release-notes/etendo-classic/versions/22Q1-1.md
+          - 22Q1.0: whats-new/release-notes/etendo-classic/versions/22Q1-0.md
+          - 21Q4.9: whats-new/release-notes/etendo-classic/versions/21Q4-9.md
+          - 21Q4.8: whats-new/release-notes/etendo-classic/versions/21Q4-8.md
+          - 21Q4.7: whats-new/release-notes/etendo-classic/versions/21Q4-7.md
+          - 21Q4.6: whats-new/release-notes/etendo-classic/versions/21Q4-6.md
+          - 21Q4.5: whats-new/release-notes/etendo-classic/versions/21Q4-5.md
+          - 21Q4.4: whats-new/release-notes/etendo-classic/versions/21Q4-4.md
+          - 21Q4.3: whats-new/release-notes/etendo-classic/versions/21Q4-3.md
+          - 21Q4.2: whats-new/release-notes/etendo-classic/versions/21Q4-2.md
+          - 21Q4.1: whats-new/release-notes/etendo-classic/versions/21Q4-1.md
+          - 21Q4.0: whats-new/release-notes/etendo-classic/versions/21Q4-0.md
         - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
@@ -452,10 +517,16 @@ nav:
           - Production Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md
           - Sales Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md
           - Financial Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md
-          - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md
+          - Spanish Localization Bundle: whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes.md 
           - Etendo BI Bundle: whats-new/release-notes/etendo-classic/bundles/etendobi-extensions/release-notes.md
         - Translation Bundles:
+          - Essentials Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes.md
+          - Platform Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes.md
+          - Warehouse Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes.md
+          - Production Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes.md
+          - Sales Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes.md
           - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes.md
+          - Etendo BI Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:

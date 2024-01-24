@@ -16,7 +16,7 @@ Having a single repository of data avoids data duplication, provides a unique wa
 ## Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
@@ -49,11 +49,11 @@ Etendo allows the user to enter business partner master data information wheneve
 
 There are many business partner types such as customers, suppliers and employees you can define and configure.
 
-There is one key field in the business partner header window, which is the "Business Partner Category".
+There is one key field in the business partner header window, which is the *Business Partner Category*.
 
 The user should select a category which the business partner is going to belong to.
 
-To learn more about "Business Partner Category", visit the Business Partner Category section.
+To learn more about *Business Partner Category*, visit the Business Partner Category section.
 
 ![](/assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
 
@@ -61,17 +61,17 @@ The rest of fields at header level are common fields which require to enter basi
 
 - the **Search Key** or short name which will help you to identify and search a given business partner
 - the **Commercial Name**
-- the **Fiscal Name,** if known. If it is known, it is the one used in "official" documents such as invoices and tax reports, otherwise the commercial name will be used instead.
+- the **Fiscal Name,** if known. If it is known, it is the one used in *official* documents such as invoices and tax reports, otherwise the commercial name will be used instead.
 - a brief **Description,** if needed
 - the business partner **URL,** if known
 - a **Reference No** which can be used as an additional way to identify a business partner
-- the **Consumption Days** information, which will be used while creating sales or purchase orders for that particular business partner, by using a process named "Copy Lines".  
+- the **Consumption Days** information, which will be used while creating sales or purchase orders for that particular business partner, by using a process named *Copy Lines*.  
   To learn more about that process, visit Sales Order and Purchase Order sections.
-- and finally "**Credit Line Limit**". Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
+- and finally ***Credit Line Limit***. Etendo will inform whenever the credit limit entered in this field for the business partner is over while booking sales invoices.
 
 A new check named Consent for Customer Data Processing has been created in the business partner data model, to reflect whether a given contact consents or not that their data can be used by the organization.
 
-It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why "Business Partner" window has three main tabs and therefore sub-tabs which allow you to set up each main business partner type separately:
+It is not the same to enter and configure a customer than a supplier/creditor or an employee, that is the reason why *Business Partner* window has three main tabs and therefore sub-tabs which allow you to set up each main business partner type separately:
 
 - **Customer** tab
   - **Customer Accounting** sub-tab
@@ -84,16 +84,16 @@ The tabs and sub-tabs mentioned above are described in the next chapters of this
 
 Finally, it is very important to remark that there could be other types of business partners which require to be set up as business partners in this window; business partners which have nothing to do with either a customer, or a supplier/creditor or an employee.
 
-That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that "Bank" type business partners are needed in the "Remittance" financial workflow.
+That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
 
 !!! info
     To learn more about this workflow, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
 
 #### **Set New Currency**
 
-"Set New Currency" process allows the user to change business' partner currency.
+*Set New Currency* process allows the user to change business' partner currency.
 
-Business partner currency is automatically filled in with the currency of the "Price List" assigned to the business partner. Once filled in, it can be changed if required by running "Set New Currency" process.
+Business partner currency is automatically filled in with the currency of the *Price List* assigned to the business partner. Once filled in, it can be changed if required by running *Set New Currency* process.
 
 Normally, business partner currency is the same as the currency of the price list assigned to it. However, it can happen that a business partner having, for instance, an EUR price list assigned, might have USD as its by default currency.
 
@@ -106,13 +106,13 @@ Set New Currency process allows defining:
 
 ![](/assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
-At first, the currency shown in the "Set New Currency" window is business partner price list currency, in our example "USD".
+At first, the currency shown in the *Set New Currency* window is business partner price list currency, in our example *USD*.
 
-Business partner's new currency can be entered in the field "Currency", for instance "EUR".
+Business partner's new currency can be entered in the field *Currency*, for instance *EUR*.
 
-Checkbox "Use default conversion rate" uses the conversion rate defined in Conversion Rates window, to recalculate business partner balance from USD to EUR, in our case.
+Checkbox *Use default conversion rate* uses the conversion rate defined in Conversion Rates window, to recalculate business partner balance from USD to EUR, in our case.
 
-If this check is not selected, a new field "Rate" is shown to allow entering a specific conversion rate.
+If this check is not selected, a new field *Rate* is shown to allow entering a specific conversion rate.
 
 Additionally, a business partner might have available credit in a given currency.
 
@@ -122,16 +122,16 @@ If that is the case, Etendo informs the user because business partner available 
 
 This process automatically creates three new payments, in case business partner has available credit:
 
-- a _GL Item payment_ in EUR, that moves credit amount to the ledger account defined in the selected "G/L Item", in the CREDIT.
+- a _GL Item payment_ in EUR, that moves credit amount to the ledger account defined in the selected *G/L Item*, in the CREDIT.
 - a _refunded payment_ in EUR, that moves credit amount to a prepayment account in the DEBIT
-- and a "Zero" amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the CREDIT.
+- and a *Zero* amount payment that is a credit payment in USD (new currency). This credit payment moves the credit amount to a prepayment account in the CREDIT.
 
 Let us take as an example a business partner having a price list in EUR.
 
 - This business partner has a current balance of 306.00 EUR and a generated credit of 100.00 EUR, which decreases its balance to 206.00 EUR.
-- After that, "Set New Currency" process is run for this business partner, because its currency needs to change to USD
-- "Set New Currency" process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
-- Once "Set New Currency" process ends, business partner:
+- After that, *Set New Currency* process is run for this business partner, because its currency needs to change to USD
+- *Set New Currency* process informs us that there is available credit for the business partner in the old currency (EUR). That available credit needs to be exchanged to the new currency (USD), therefore a conversion rate needs to be used. In this example, system conversion rate is used, that is 1.13 EUR to USD.
+- Once *Set New Currency* process ends, business partner:
 
     - current balance shown changes to 232.78 USD (206.00 EUR \* 1.13 EUR/USD).
     - currency shown is USD.
@@ -146,25 +146,25 @@ Let us take as an example a business partner having a price list in EUR.
 ### **Customer**
 
 !!! info
-    Customer related data can be entered and configured once the "Customer" checkbox is enabled.
+    Customer related data can be entered and configured once the *Customer* checkbox is enabled.
 
 ![](/assets/drive/1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr.png)
 
 As shown in the image above, there is a list of relevant data to be entered for customers together with current _customer balance_ information:
 
-You could either select any data such as "Price List" from a previously created list of values, or create it "ad hoc" by navigating to the corresponding window, and then select it.
+You could either select any data such as *Price List* from a previously created list of values, or create it *ad hoc* by navigating to the corresponding window, and then select it.
 
 - **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
   To learn more, visit [Price List](/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).  
   Price lists are defined in a given currency, which could be the same as customer currency or not.  
-  In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process "**Set New Currency**" which can be run to change the currency of a business partner.
+  In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process ***Set New Currency*** which can be run to change the currency of a business partner.
 - **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
   If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
   To learn more, visit [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
   To learn more, visit [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
 - **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
-  To learn more about "Financial Account", visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more about *Financial Account*, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
 - **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
   To learn more, visit [Generate Invoices](/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices).
   - **After Order Delivered** - the invoice could be automatically generated once all the goods of the sales order have been shipped
@@ -172,12 +172,12 @@ You could either select any data such as "Price List" from a previously created 
   - **Do not invoice** - no invoice will be generated automatically
   - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
   - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
-    If this is the option selected, a new field named "Invoice Schedule" is automatically displayed for you to select the corresponding "Invoice Schedule" or calendar.  
+    If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.  
     To learn more, visit [Invoice Schedule](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#invoice-schedule)
 - **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
-- A customer can be defined as "Tax Exempt" whenever applicable, therefore only those Tax rates also defined as exempt apply.
+- A customer can be defined as *Tax Exempt* whenever applicable, therefore only those Tax rates also defined as exempt apply.
 - **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
-- **SO BP Tax Category** - this field can be found under the "More Information" section.  
+- **SO BP Tax Category** - this field can be found under the *More Information* section.  
   You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
   To learn more, visit [Business Partner Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category)
 - **On Hold** - this checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
@@ -207,7 +207,7 @@ Besides, it is important to remark that it is possible to configure the creation
 
 ### **Vendor/Creditor**
 
-Vendor or Creditor related data can be entered and configured once the "Vendor" checkbox is enabled.
+Vendor or Creditor related data can be entered and configured once the *Vendor* checkbox is enabled.
 
 ![](/assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
 
@@ -240,7 +240,7 @@ Above defaulted configuration means that it is not possible to complete either a
 
 As already mentioned if a business partner of any type is blocked it is not possible to Complete (or book) some document types however it is always possible to Void them.
 
-You will realize that Etendo shows an error message stating that it is not possible to complete a document for a business partner set as "on hold".
+You will realize that Etendo shows an error message stating that it is not possible to complete a document for a business partner set as *on hold*.
 
 #### **Vendor Accounting**
 
@@ -261,11 +261,11 @@ Besides, it is important to remark that it is possible to configure the creation
 
 ### **Employee**
 
-A business partner can be set up as employee once the checkbox "Employee" is enabled.
+A business partner can be set up as employee once the checkbox *Employee* is enabled.
 
 ![](/assets/drive/lK2uSNpu3BHtkn7SCCaLztxheUiyHyDOjL26IGC2vvpvkmfMuvGZ7mC6_L3smeTuyRm5utpzQTNkFhutczZfjAzkauQbxrw9h_6kWjS08dkDYHBP3qiHznt9ybDDoy5YB9dheypb-Gtt_O9y-Xgr-w.png)
 
-Employee tab allows the user to set which of your business partners are "Employees".
+Employee tab allows the user to set which of your business partners are *Employees*.
 
 An employee can be:
 
@@ -285,7 +285,7 @@ The ledger accounts to be used while posting employee related transactions such 
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
-Anyway, this is the place where "Human Resources" related modules or features should point to while defining the accounts to be used in any employee transaction susceptible of being posted.
+Anyway, this is the place where *Human Resources* related modules or features should point to while defining the accounts to be used in any employee transaction susceptible of being posted.
 
 ### **Bank Account**
 
@@ -297,10 +297,10 @@ Therefore, we strongly recommend the user to properly set up bank accounts as th
 
 ![](/assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
 
-The "bank account" related data you can enter is:
+The *bank account* related data you can enter is:
 
 - the **Bank Name**
-- **Active** flag - We recommend you to set as "Active" only one bank account, if possible, in order to avoid errors; otherwise you should keep an eye on the right bank account used.
+- **Active** flag - We recommend you to set as *Active* only one bank account, if possible, in order to avoid errors; otherwise you should keep an eye on the right bank account used.
 - **Country** - you can select a country from the list to specify if the bank account is a domestic bank account or a foreign bank account.
 - **User/Contact** - in case you want to associate a contact for this bank account
 - **Bank Account Format** - List that contains all the possible values for generating the Displayed Account Number, which will be later on used by other reports or processes to get the account identifier. Possible values are: _Use Generic Account No._, _Use IBAN_ or _Use SWIFT + Generic Account No._ Note: _Other options can be added by other modules that extend the supported Bank Account Format_.
@@ -313,7 +313,7 @@ The "bank account" related data you can enter is:
 #### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
@@ -329,7 +329,7 @@ If the Remittance module is installed, in this tab, the user can find a “defau
 
 Business partner locations and full address details can be set up in this tab.
 
-Business partners might have different address details depending on location/address used for either "Goods Receipts/Shipments" purposes or location/address used for "Invoices" purposes.
+Business partners might have different address details depending on location/address used for either *Goods Receipts/Shipments* purposes or location/address used for *Invoices* purposes.
 
 ![](/assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
 
@@ -342,7 +342,7 @@ Etendo allows the user to define any type of business partner address, by fillin
   - the **City**
   - the **Country** - you can select one from the list, if any
   - the **Region** - once the country is selected, you can select one region of the country selected, from the list, if any.
-    - Once the location entered is saved, it's listed in the "Location" window. To learn more, visit Location
+    - Once the location entered is saved, it's listed in the *Location* window. To learn more, visit Location
 - the **Phone** number
 - an **Alternative Phone** number, if any
 - the address **Name** - this field is automatically filled in by Etendo, once the location / Address information has been configured. The user could change it as needed.
@@ -356,7 +356,7 @@ Contact tab allows the user to add and configure the business partner contacts y
 
 ![](/assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
 
-As you can see in the image above, basic "Contact" data such as:
+As you can see in the image above, basic *Contact* data such as:
 
 - **First and Last Name** of the contact
 - as well as his/her **Position** in the business partner
@@ -372,8 +372,8 @@ Basic Discount tab allows the user to add and configure business partner Basic D
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
 - the **Discount** to be applied while creating sales / purchase transactions for that business partner can be selected from the list (if any) or created by navigating to the **Discount** window.
-- **Customer:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as "Customer"
-- **Vendor:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as "Vendor"
+- **Customer:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Customer*
+- **Vendor:** this checkbox must be selected if the discount is going to be applied to a Business Partner set as *Vendor*
 - **Apply in Order:** this check box must be selected in case the discount can be applied in sales or purchase orders as applicable.
 - **Cascade** calculation of the discount. For instance, if first discount is 10% and second one is 5%, a cascade calculation of the total discount won’t be 15% but 14.5%
 
@@ -398,7 +398,7 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ### Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
@@ -412,7 +412,7 @@ To be able to do this, it is necessary to configure certain aspects in the “Ra
 
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
-To create a new rappel, the user must select one of the available configurations in this tab and click the **"Create Rebate"** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the "date from" and the "date to" information.
+To create a new rappel, the user must select one of the available configurations in this tab and click the ***Create Rebate*** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
 ![bp_pop_up_new.png](/assets/legacy/bp_pop_up_new.png)
 
@@ -477,9 +477,9 @@ The information required to create a Product in Etendo is determined by the natu
 
 There are four product types available:
 
-- **Item**. The most frequently used product type is "Item". Inventory held for resale, materials that are placed into a production process, and semifinished or finished goods created through production are examples of products defined using the product type "Item".
-  - An item should be flagged as "**Stocked**", if quantity tracking is required for the item, otherwise there is no need to flag the item as "Stocked".
-  - An item should be flagged as "**Production**", if the item is used in manufacturing.
+- **Item**. The most frequently used product type is *Item*. Inventory held for resale, materials that are placed into a production process, and semifinished or finished goods created through production are examples of products defined using the product type *Item*.
+  - An item should be flagged as ***Stocked***, if quantity tracking is required for the item, otherwise there is no need to flag the item as *Stocked*.
+  - An item should be flagged as ***Production***, if the item is used in manufacturing.
   - If an item is an intermediate or finished good, its bill of material (BOM) should be detailed on the Bill of Materials tab.
 - **Service**. This product type is used to identify such provisions as professional services, transportation, telephony, and other items which do not correspond with material goods.
   - Therefore, a Service is not stockable but can be purchased or sold.
@@ -496,7 +496,7 @@ All of them use the ledger accounts defined in the Accounting tab of the Product
 
 Additional key data to fill in are:
 
-- **UOM**, that is the unit of measure to be used while purchasing, storing and selling a product, for instance "Units".  
+- **UOM**, that is the unit of measure to be used while purchasing, storing and selling a product, for instance *Units*.  
   A product can also have alternative UOM besides product's UOM.
 - **Product Category**, it is mandatory to select a product category to which the product is going to belong to.  
   To learn more, visit Product Category
@@ -507,12 +507,12 @@ Additional key data to fill in are:
 - **Sales** checkbox can be selected to indicate that the product is sold or can be sold to an external parties or customers. This checkbox is an informative one, as it does not add any business logic behind.
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
-- **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a "Process Plan".  
+- **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
   To learn more, visit [Process Plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)
-- **Attribute Set**, a product can have a group of features or an attribute set, such as "**Color and Size**", to take into account while ordering or storing the product.
-  - If an Attribute Set is selected here, Etendo displays a new field named "Attribute Set Value".  
+- **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
+  - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
     To learn more, visit Attribute Set
-- **Attribute Set Value**, if an Attribute Set value such as "Blue and Large" is selected, Etendo displays a new field named "Use Attribute Set Value As".
+- **Attribute Set Value**, if an Attribute Set value such as *Blue and Large* is selected, Etendo displays a new field named *Use Attribute Set Value As*.
 - **Attribute Set Value As**, once an attribute set has been selected, that one could be used as described below depending on the criteria selected in this field:
   - **Default**: This means that the attribute set value defined will be defaulted in each of the transactions, but it is allowed to be changed.  
     In other words, the user will not have to care about setting it each time when creating transactions such as goods receipts and shipments.
@@ -549,7 +549,7 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 
 - **Book Using Purchase Order Price**: This flag is used when posting a Goods Receipt or a Matched Invoice document to the ledger.  
   Normally, the product cost is used while posting those transactions, however this checkbox allows using the product purchase price instead.  
-  This feature only works for "Expense" product type not having the "Sales" checkbox selected.
+  This feature only works for *Expense* product type not having the *Sales* checkbox selected.
 
 !!! info
     Notice that in this case a Purchase Order needs to be related to the Goods Receipt, otherwise an error message will be shown as the purchase product price is required.
@@ -616,7 +616,7 @@ Press the button ![](/assets/drive/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfg
 
 There is a preference **Show Product Characteristics Parents**: Values can be 1,2,3,4, etc. The number means how many levels in the hierarchy tree the user wants to show in form view in the Product window. For example, if the tree is: Color->Green->Green light->0034
 
-New values of an existing characteristic can be added. For example, colour red when already having Blue and White. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the button "Manage Characteristics"
+New values of an existing characteristic can be added. For example, colour red when already having Blue and White. When it happens, this new value is automatically added to all generic products that already have the characteristic Color. This new value will be present in the configuration tab but deactivated. If the user wants to use it in a specific product in order to create new variants he can just activate the value and use the button *Manage Characteristics*
 
 ##### **Modify Tax**
 
@@ -646,10 +646,10 @@ A product can be part of many Price List Versions which are valid for a given ti
 
 There are two ways in which the user can get a product to be part of a Price List:
 
-1.  by **selecting the Price List/s** and entering both the "Net Unit Price" and the "Net List Price" values in the Price List tab, while creating the product.  
+1.  by **selecting the Price List/s** and entering both the *Net Unit Price* and the *Net List Price* values in the Price List tab, while creating the product.  
     As a consequence of that, the product being created will also be part of the Price List selected.
-2.  by **selecting the product** and entering both the "Net Unit Price" and the "Net List Price" values, while creating the "Price List".  
-    As a consequence of that, the Price List as well as both "Net Unit Price" and "Net List Price" values will be automatically shown in the "Price List" tab of the product.  
+2.  by **selecting the product** and entering both the *Net Unit Price* and the *Net List Price* values, while creating the *Price List*.  
+    As a consequence of that, the Price List as well as both *Net Unit Price* and *Net List Price* values will be automatically shown in the *Price List* tab of the product.  
     To learn more, visit Price List.
 
 #### **Price Rule Version**
@@ -684,15 +684,15 @@ As shown in the screen above, you can configure for each product and general led
 This account is typically an asset account.
 
 - **Product Expense**: this field stores the default account to be used to record product's purchases:
-  - Normally, this account can be configured as an "Expense" account type in case of not managing "Perpetual Inventory".  
+  - Normally, this account can be configured as an *Expense* account type in case of not managing *Perpetual Inventory*.  
     In that case, the expense is accounted at the time the goods are purchased at the purchase price.  
     The revenue is accounted at the time the goods are sold at the sales price.  
-    Not managing "Perpetual Inventory" implies the need of manually adjusting the inventory value at the end of the year.  
-    That inventory adjustment implies calculating the difference between the "Final Inventory Value" and the "Initial Inventory Value".
-  - However, this account can also be configured as an "Asset" account in case of "Perpetual Inventory" management.  
-    In that case, the expense needs to be accounted when the product is sold to the customer as "Cost of the Goods Sold" at the product cost.  
+    Not managing *Perpetual Inventory* implies the need of manually adjusting the inventory value at the end of the year.  
+    That inventory adjustment implies calculating the difference between the *Final Inventory Value* and the *Initial Inventory Value*.
+  - However, this account can also be configured as an *Asset* account in case of *Perpetual Inventory* management.  
+    In that case, the expense needs to be accounted when the product is sold to the customer as *Cost of the Goods Sold* at the product cost.  
     In Etendo, the revenue is accounted at the time the goods are sold at the sales price and the cost of the goods sold is accounted at the time of shipping the goods at the product cost.  
-    Managing "Perpetual Inventory" does not imply the need of adjusting the inventory value at the end of the year.
+    Managing *Perpetual Inventory* does not imply the need of adjusting the inventory value at the end of the year.
 - **Product Deferred Expense**: this field stores the default account to be used to record deferred expenses.  
   This account is typically an asset account.
 - **Product Revenue**: this field stores the default account to be used to record product sales revenues.  
@@ -729,7 +729,7 @@ If the product Tax_Category is flagged as **As per BOM**, this tab also provides
 
 Costing rule tab allows the user to review the costing rules that apply to the product within a given date range.
 
-Costing Rules apply to products set as "Item" type flagged as Stocked.
+Costing Rules apply to products set as *Item* type flagged as Stocked.
 
 This tab provides information about the validated costing rule(s) which applies on a given date range to the product, as well as the Costing Algorithm defined for that rule.
 
@@ -754,24 +754,24 @@ Overall, this tab allows to:
 - **define the Cost** of stockable products, that cost can either be a standard cost or an average cost.
 - **define the Cost** of non stockable products, that needs to be a standard cost.
 
-In the same way, either a "Standard" or an "Average" Costing Rule needs also to be defined for the Organization as the way to calculate the cost of the products' transactions within that organization.
+In the same way, either a *Standard* or an *Average* Costing Rule needs also to be defined for the Organization as the way to calculate the cost of the products' transactions within that organization.
 
-- **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an "Average" Costing Algorithm.
+- **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an *Average* Costing Algorithm.
 
-Note that when using a "Standard" costing algorithm the cost of every product transaction is the "default standard cost" entered in this tab.  
+Note that when using a *Standard* costing algorithm the cost of every product transaction is the *default standard cost* entered in this tab.  
 !!! info
-    The "default standard cost" can be used by the Default Cost method whenever it is not possible to get the price of a transaction for which its cost needs to be calculated.
+    The *default standard cost* can be used by the Default Cost method whenever it is not possible to get the price of a transaction for which its cost needs to be calculated.
 
-Average algorithms override the behavior of the "Default Cost" method prioritizing the use of the current "Average Cost" if any.
+Average algorithms override the behavior of the *Default Cost* method prioritizing the use of the current *Average Cost* if any.
 
 - and finally to have a view of all the input transactions of the product which have impacted on product cost calculation.
-  - Input transactions such as vendor receipts are the ones which impact on product cost calculation, therefore the "Inventory Transaction" field clearly reflects those one by one.
-  - Similarly, a "permanent" manual cost adjustment executed in an output transaction, such as a "Goods Movement From" (M-) impacts on product cost calculation, therefore the "Inventory Transaction" field clearly reflects these type of output transactions.
+  - Input transactions such as vendor receipts are the ones which impact on product cost calculation, therefore the *Inventory Transaction* field clearly reflects those one by one.
+  - Similarly, a *permanent* manual cost adjustment executed in an output transaction, such as a *Goods Movement From* (M-) impacts on product cost calculation, therefore the *Inventory Transaction* field clearly reflects these type of output transactions.
   - The very last transaction informs about:
     - the last cost, valid until a given ending date
     - and the total amount of units of that product which are valued at that cost.
 
-Here, the costs calculated by the "legacy" engine are also visible.
+Here, the costs calculated by the *legacy* engine are also visible.
 
 It is possible to recognize them by their cost type:
 
@@ -853,25 +853,25 @@ Costing status of a transaction can be any of the ones listed below and has a lo
 - **Cost Calculated**. This status means that the costing background process has already taken the transaction and its cost has been calculated.
 - **Pending**. This status has been implemented to get that the costing background process does not throw an error whenever it is not possible to calculate the cost of a transaction.  
   This status is not used by the Costing Algorithms currently implemented in Etendo but can be used by other costing algorithms such as FIFO for those cases where a product output transaction is booked without booking its corresponding product input transaction.
-- **Skip**. This status has been implemented to make the costing background process not taking into account the transactions set as "Skip" while calculating costs.  
+- **Skip**. This status has been implemented to make the costing background process not taking into account the transactions set as *Skip* while calculating costs.  
   This status is not used by the Costing Algorithms currently implemented in Etendo but could be used by other costing algorithms.
 
-2\. and **whether the cost of a transaction has been calculated or not**.
+2\. and whether the cost of a transaction has been calculated or not.
 
-As soon as a product transaction gets its cost calculated by the Costing Background Process the field "Is Cost Calculated" gets the value "Yes".
+As soon as a product transaction gets its cost calculated by the Costing Background Process the field *Is Cost Calculated* gets the value *Yes*.
 
 Once the cost of a transaction is calculated you can also view the:
 
 - **Trx Original Cost**, that is the original cost of the transaction
 - **Total Cost**, that is the sum of the original cost of the transaction and all adjustment costs of any type.
-- **Unit Cost**, that is the sum of the original cost and all the "unit cost" type adjustments.
+- **Unit Cost**, that is the sum of the original cost and all the *unit cost* type adjustments.
 - **Currency** used for the calculations.
 
-Additionally, "**Is Cost Permanent**" field informs whether the cost of a transaction is permanent or not. In case it is permanent, it will not be changed anymore.
+Additionally, ***Is Cost Permanent*** field informs whether the cost of a transaction is permanent or not. In case it is permanent, it will not be changed anymore.
 
-Finally, it is important to remark that in the case of "Average" cost algorithm, the "average" cost of a product is calculated as "Moving Average".
+Finally, it is important to remark that in the case of *Average* cost algorithm, the *average* cost of a product is calculated as *Moving Average*.
 
-The average cost of a product is calculated based on the product's transaction flow, therefore it is the sum or subtraction of the "Total Cost" of the transactions listed for the product, divided by the sum of the "Total Movement Quantity" of the transactions.
+The average cost of a product is calculated based on the product's transaction flow, therefore it is the sum or subtraction of the *Total Cost* of the transactions listed for the product, divided by the sum of the *Total Movement Quantity* of the transactions.
 
 For instance the average cost of a product which transactions are listed below is equal to 23.33 = (2000.00-1000.00+2500.00)/(100-50+100):
 
@@ -890,15 +890,15 @@ This pop-up allows entering below detailed data:
 - **Total Cost Amount**: that is the new total cost of the product transaction
 - **Accounting Date**: that is the date when this manual change which will imply a cost adjustment is going to be post to the ledger
 - **Incremental**:
-  - if not checked, the amount entered in the total cost amount field is the new Total Cost of the transaction which, besides that, will be set as a "Permanent" cost which cannot be adjusted anymore.
-  - if checked, the amount entered in the total cost amount field is going to be added to the current total cost, besides "Unit Cost" checkbox is shown.
-- **Unit Cost**: This checkbox is shown only if "Incremental" checkbox is selected.
-  - if not checked, the incremental amount entered in the field total cost amount is not going to be considered part of the transaction unit cost but total cost. This is like entering an "extra" cost such as "Landed Cost", which does not change the unit cost of that transaction but the total cost.
+  - if not checked, the amount entered in the total cost amount field is the new Total Cost of the transaction which, besides that, will be set as a *Permanent* cost which cannot be adjusted anymore.
+  - if checked, the amount entered in the total cost amount field is going to be added to the current total cost, besides *Unit Cost* checkbox is shown.
+- **Unit Cost**: This checkbox is shown only if *Incremental* checkbox is selected.
+  - if not checked, the incremental amount entered in the field total cost amount is not going to be considered part of the transaction unit cost but total cost. This is like entering an *extra* cost such as *Landed Cost*, which does not change the unit cost of that transaction but the total cost.
   - if checked, the incremental amount entered in the field total cost amount is going to be considered part of the unit cost of the transaction.
 
 For additional information about which cost adjustment is, or it is not unit cost, please review the section Cost Adjustments - Introduction.
 
-Once done, a "manual cost correction" cost adjustment will be created.
+Once done, a *manual cost correction* cost adjustment will be created.
 
 This cost adjustment can be reviewed and posted to the ledger in the Cost Adjustment window.
 
@@ -910,7 +910,7 @@ Transaction Costs records are automatically created by the Costing Background Pr
 
 As soon as a product transaction gets its cost calculated, a new record is created in this tab.
 
-As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a "Cost Adjustment Line".
+As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a *Cost Adjustment Line*.
 
 ![](/assets/drive/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2Pp1HhXd6jUX03CePAe2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew.png)
 
@@ -954,8 +954,8 @@ Also, the Requisition process uses the Business Partner information for the auto
 - **Vendor Category**: information-only field to add vendor category information.
 - **Discontinued**: information-only field to indicate that this product is no longer used. The Purchasing Plan does not take this set up into account when generating the plan and when creating Purchase Orders. When selected, the field Discontinued by date to indicate when the product is discontinued. For information-only purposes.
 - **Quantity Type**:
-  - **Exact**: each suggested purchase order is for the exact required quantity. For example, if the demand is for 85 units, the quantity for the suggested purchase order is 85 units.
-  - **Multiple**: the quantity that appears as the quantity for the suggested purchase order is a multiple of the standard quantity (as defined on this screen). For example, if the standard quantity is 20 units and the demand is for 85 units, the quantity for the suggested purchase order is 100.
+    - **Exact**: each suggested purchase order is for the exact required quantity. For example, if the demand is for 85 units, the quantity for the suggested purchase order is 85 units.
+    - **Multiple**: the quantity that appears as the quantity for the suggested purchase order is a multiple of the standard quantity (as defined on this screen). For example, if the standard quantity is 20 units and the demand is for 85 units, the quantity for the suggested purchase order is 100.
 - **Manufacturer**: information-only field to indicate the manufacturer of the product.
 - **Standard Quantity**: quantity that is taken into account in combination with the Quantity Type for the quantity value for the suggested purchase order.
 - **Capacity**: quantity per day the vendor is able to supply. Based on this field and the lead time, the purchase order date is calculated. The number of days is calculated as the max value of the lead time and the required quantity / capacity.
@@ -967,12 +967,13 @@ Manufacturing tab is used for products that are planned by the manufacturing pla
 The information in this tab is mainly used by MRP to process the Manufacturing Plan and Purchasing Plan. The storage bin field is filled out for products in production to indicate the default storage bin the product will be stored in when coming out of production.
 
 - **Storage Bin**: default location in the warehouse of the product.
-- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the Planning Method section.
-- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the planner section.
+- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planning-method) section.
+- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planner) section.
 - **Capacity**: production capacity per day for the product.
 - **Min. Quantity:** minimum quantity to be entered on a work requirement.
-  - **Exact**: each suggested work requirement is for the standard quantity (as defined on this screen). Multiple suggested work requirements appear for the total demand. For example, if the standard quantity is 20 units and the demand is for 85 units, 5 lines of suggested work requirements with quantity 20 appear.
-  - **Multiple**: the quantity that appears as the quantity for the suggested work requirement is a multiple of the standard quantity (as defined on this screen). For example, if the standard quantity is 20 units and the demand is for 85 units, the quantity for the suggested work requirement is 100.
+- **Quantity Type**:
+    - **Exact**: each suggested work requirement is for the standard quantity (as defined on this screen). Multiple suggested work requirements appear for the total demand. For example, if the standard quantity is 20 units and the demand is for 85 units, 5 lines of suggested work requirements with quantity 20 appear.
+    - **Multiple**: the quantity that appears as the quantity for the suggested work requirement is a multiple of the standard quantity (as defined on this screen). For example, if the standard quantity is 20 units and the demand is for 85 units, the quantity for the suggested work requirement is 100.
 - **Standard Quantity**: quantity that is taken into account in combination with the Quantity Type for the quantity value for the suggested work requirement.
 - **Minimum Lead Time**: manufacturing lead time of the product.
 - **Safety Stock**: the minimum level of stock that has to always be in the warehouse. For example, if there is a safety stock for 1000 units and stock is 900 units, a work requirement (Manufacturing Plan) or purchase order (Purchasing Plan) is suggested for 100 units. Typically, low cost products or products with a very long lead time are set up with a safety stock level.
@@ -1043,20 +1044,20 @@ For each not empty storage bin, it also shows information about the:
 
 ### **Unit Cost**
 
-Unit Cost Tab displays information about the actual "Unitary Cost" (Unit Cost) of the product.
+Unit Cost Tab displays information about the actual *Unitary Cost* (Unit Cost) of the product.
 
-The "Unitary Cost" of a Product is the value of each stocked unit of the product no matter the costing algorithm used to calculate the cost of that product.
+The *Unitary Cost* of a Product is the value of each stocked unit of the product no matter the costing algorithm used to calculate the cost of that product.
 
-This cost is calculated using the "Total Stock" of a product and the "Total Value" of the stock of the product, as per formula below:
+This cost is calculated using the *Total Stock* of a product and the *Total Value* of the stock of the product, as per formula below:
 
 - Unit Cost = Total Stock Value / Total Stock
 
-This way, the unitary cost calculated is independent of the "Costing Algorithm" used to calculate the cost of each transaction and product, therefore this unitary cost is compatible with all "Costing Algorithms" (Average, Standard, FIFO, ...)
+This way, the unitary cost calculated is independent of the *Costing Algorithm* used to calculate the cost of each transaction and product, therefore this unitary cost is compatible with all *Costing Algorithms* (Average, Standard, FIFO, ...)
 
 In this Tab, there is going to be a record for:
 
 - each Organization that is a Legal Entity that has a Costing Rule defined
-- or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the "Legal Entity".
+- or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the *Legal Entity*.
 
 ![](/assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
@@ -1112,20 +1113,20 @@ This tab is not editable, it is not possible to add records manually or edit the
 
 Fields to note:
 
-- **UOM**, that is the alternative unit of measure of the product, for instance "Pallet".  
+- **UOM**, that is the alternative unit of measure of the product, for instance *Pallet*.  
   It is important to remark that any unit of measure needs to be created and configured in Unit of Measure window.
 - **Conversion Rate**, that is the conversion between product's alternative unit of measure (AUM) to product's unit of measure.  
   For instance, if product's AUM conversion to product's UOM is 50; that means that 1 Pallet represents 50 Units.
-- **Gtin**, that is the "Global Trade Item Number" for the product defined in the corresponding AUM
+- **Gtin**, that is the *Global Trade Item Number* for the product defined in the corresponding AUM
 - **Sales**, **Purchase** and **Logistics**, those fields allow defining the use of product's AUM within Sales, Purchase and Inventory flows.  
   Values allowed are:
   - **Primary**: Product's AUM defined in this tab is used as default unit of measure in the selected flow (Sales or Purchase), when creating a sales or purchase document such as an order or receipt/shipment.  
     Only one Primary AUM can be defined per Product and flow.  
-    For instance, if "Pallet" is the primary AUM defined for a product within Purchase flow, that means that every time that a purchase document is created, "Pallet" will be the default unit of measure shown.
+    For instance, if *Pallet* is the primary AUM defined for a product within Purchase flow, that means that every time that a purchase document is created, *Pallet* will be the default unit of measure shown.
   - **Secondary**. Product's AUM defined in this tab can be selected for the selected flow when creating a Document.  
-    For instance, if "Pallet" is the secondary AUM defined for a product within Sales flow, while "Pack" is primary one; that means that every time that a sales document is created, "Pack" will be the default unit of measure shown, but end-user can change it to "Pallet".
+    For instance, if *Pallet* is the secondary AUM defined for a product within Sales flow, while *Pack* is primary one; that means that every time that a sales document is created, *Pack* will be the default unit of measure shown, but end-user can change it to *Pallet*.
   - **Not Applicable**. The AUM defined in this tab for the product will not be available for selection when creating Documents for the selected flow.  
-    That is the option to select for "Logistics" as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
+    That is the option to select for *Logistics* as the use of alternative units of measure is currently implemented just for sales and purchase. Inventory transactions/documents always refer to the product's unit of measure.
 
 #### **Modify Taxes Categories**
 

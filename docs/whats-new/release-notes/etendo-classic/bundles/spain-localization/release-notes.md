@@ -13,21 +13,21 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
-| [1.5.2](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.4.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
-| [1.2.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.1.0](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.0.5](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
-| [1.0.4](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
+| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
+| [1.4.1](#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
+| [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
+| [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.2.0](#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
+| [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
 | 1.0.3 | 06/10/2022 | 21.4.0 | 22.3.x | C  |                   |
-| [1.0.2](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
-| [1.0.1](/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes/#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
+| [1.0.2](#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
+| [1.0.1](#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
 | 1.0.0 | 01/01/2022 | 21.4.0 | \*     | C  |                   |
 
 

@@ -1,7 +1,5 @@
 ---
 title: Intrastat
-hide:
-    - navigation
 ---
 
 ## Javapackages
