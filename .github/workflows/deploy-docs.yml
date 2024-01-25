@@ -16,11 +16,23 @@ jobs:
               uses: actions/checkout@v3
               with: 
                 fetch-depth: 0
+            - name: Check commit message format
+              id: commit-check
+              run: |
+                commit_message=$(git log -1 --pretty=%B)
+                if [[ "$commit_message" =~ ^Update\ \'compiled_docs\'\ file\ :page_facing_up:$ ]]; then
+                  echo "Skipping steps"
+                  echo "::set-output name=skip_steps::true"
+                fi
+                
             - name: Setup docs
+              if: steps.commit-check.outputs.skip_steps != 'true'
               uses: ./.github/actions/setup-docs
             - name: Config user credentials
+              if: steps.commit-check.outputs.skip_steps != 'true'
               run: |
                 git config --local user.email "${{ secrets.ETENDOBOT_EMAIL }}"
                 git config --local user.name "${{ secrets.ETENDOBOT_NAME }}"
             - name: Deploy docs
+              if: steps.commit-check.outputs.skip_steps != 'true'
               run: mike deploy --push --update-aliases ${{ secrets.DOCS_VERSION }} latest
