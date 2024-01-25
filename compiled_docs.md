@@ -38569,7 +38569,7 @@ Etendo 21Q4
 # Article Title: Spanish Localization Bundle
 ## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Spanish Localization Bundle
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes
 ## Article Content: 
 #### Introducción
 
@@ -38731,7 +38731,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Essentials Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Essentials Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38747,7 +38747,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Platform Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Platform Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38763,7 +38763,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Warehouse Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Warehouse Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38779,7 +38779,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Production Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Production Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38795,7 +38795,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Sales Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Sales Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38811,7 +38811,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Financial Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Financial Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38845,7 +38845,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Etendo BI Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
