@@ -13,7 +13,8 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
@@ -34,6 +35,13 @@ tags:
 
 ## Versiones Disponibles
 
+### 1.8.0
+- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 \
+Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
+    - Recargo de equivalencia - Tipo 0% - Base imponible [663]
+    - Recargo de equivalencia - Tipo 0% - Cuota [664]
+    - Recargo de equivalencia - Tipo 0,62% - Base imponible [665]
+    - Recargo de equivalencia - Tipo 0,62% - Cuota [666]
 ### 1.7.0
 - [EE-301](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/18) Se agregó un nuevo estado 'No Declarable en SII' para facturas de venta que tengan todos sus productos relacionados a impuestos configurados como 'No Declarables en SII'.
 - [EE-796](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/19) Se corrigió el error en el que la página T303DID00 no se genera de forma correcta para el 303 del último periodo.
