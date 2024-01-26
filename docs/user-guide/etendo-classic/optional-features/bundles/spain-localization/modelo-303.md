@@ -532,7 +532,6 @@ Secciones:  **"Complementaria", “Tributación por razón de territorio” y �
 
 ![](/assets/drive/SZHf8tnfL96mKnbhdEg4Oev3PSB8moMCC7k5MqXfkkR5aY3E9FR_QjNwZ5xOFytKPdafxQv5QLaccO557RenGMZlkPMDoskLe9TXqfiVJ4s1Fi1wPM32-UMQMA7MFoExjgiZlbR9y1EhG_2uz3_Fd9E.png)
 
-
 Una vez que el fichero se ha generado, tendrá este aspecto:
 
 ![Fichero.png](/assets/drive/7TUbkV18JCkTIs6aoBVNgXYoCr6vvEfFk1_kWdHjMi8-VjOMmEIsWBEWeRgj8AJ8VsbXNifrzXOGd6u19snnZEyhWLrsUty88vVrYwvnAU3FRzuTZRvteHfLFXle7Ajk4deKF124p9-bySu6AweMwpk.png)
@@ -640,9 +639,7 @@ Este anexo incluye el listado completo de los rangos de impuestos asociados a lo
 -   Prestación servicios nacional 21%
 -   Prestación servicios nacional 18% -15%R (+18%)
 -   Prestación servicios nacional 18% -1%R (18%)
--   Prestación servicios nacional 18% -7%R (+18%)modificamos el diseño de registro para el 303 de 2023 y sig segun requerimientos de la agencia tributaria
-devoluciones al extrnajero
-solo aclarar que se hicieron cambios para cumplimentar la normativa en las release notesd
+-   Prestación servicios nacional 18% -7%R (+18%)
 -   Prestación servicios nacional 21% -21%R (+21%)
 -   Prestación servicios nacional 21% -1%R (+21%)
 -   Prestación servicios nacional 21% -9%R (+21%)
