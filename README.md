@@ -7,6 +7,7 @@ pip install mkdocs-material
 pip install pillow cairosvg
 pip install mkdocs-glightbox
 pip install mike
+pip install mkdocs-rss-plugin
 ```
 
 # Run Etendo Documentation locally
@@ -17,13 +18,8 @@ mike serve
 # mkdocs serve
 ```
 
-# Publish new version
 
+## When a new version of mike is released, it is necessary to update the latest reference manually.
 ```bash
-source venv/bin/activate
-mkdocs gh-deploy 
-mike deploy --push --update-aliases 23.x latest
-
-# mike set-default --push latest
+mike set-default --push latest
 ```
-x

@@ -86,28 +86,31 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 6. Move the existing modules from `Openbravo/modules` folder to the `EtendoERP/modules` folder, except for the following ones:
 
     !!! warning
-        org.openbravo.advpaymentmngt
-        org.openbravo.apachejdbcconnectionpool 
-        org.openbravo.base.weld
-        org.openbravo.client.application 
-        org.openbravo.client.htmlwidget
-        org.openbravo.client.kernel
-        org.openbravo.client.myob
-        org.openbravo.client.querylist
-        org.openbravo.client.widgets
-        org.openbravo.financial.paymentreport
-        org.openbravo.reports.ordersawaitingdelivery
-        org.openbravo.service.datasource
-        org.openbravo.service.integration.google
-        org.openbravo.service.integration.openid
-        org.openbravo.service.json
-        org.openbravo.userinterface.selector
-        org.openbravo.userinterface.skin.250to300Comp
-        org.openbravo.userinterface.smartclient
-        org.openbravo.utility.cleanup.log
-        org.openbravo.v3
-        org.openbravo.v3.datasets
-        org.openbravo.v3.framework
+        com.smf.securewebservices<br>
+        com.smf.smartclient.boostedui<br>
+        com.smf.smartclient.debugtools<br>
+        org.openbravo.advpaymentmngt<br>
+        org.openbravo.apachejdbcconnectionpool<br>
+        org.openbravo.base.weld<br>
+        org.openbravo.client.application<br>
+        org.openbravo.client.htmlwidget<br>
+        org.openbravo.client.kernel<br>
+        org.openbravo.client.myob<br>
+        org.openbravo.client.querylist<br>
+        org.openbravo.client.widgets<br>
+        org.openbravo.financial.paymentreport<br>
+        org.openbravo.reports.ordersawaitingdelivery<br>
+        org.openbravo.service.datasource<br>
+        org.openbravo.service.integration.google<br>
+        org.openbravo.service.integration.openid<br>
+        org.openbravo.service.json<br>
+        org.openbravo.userinterface.selector<br>
+        org.openbravo.userinterface.skin.250to300Comp<br>
+        org.openbravo.userinterface.smartclient<br>
+        org.openbravo.utility.cleanup.log<br>
+        org.openbravo.v3<br>
+        org.openbravo.v3.datasets<br>
+        org.openbravo.v3.framework<br>
 
         
         These modules will already be in the `EtendoERP/modules_core` folder since they are core modules in Etendo. 

@@ -13,6 +13,10 @@ There are two base reference implementations defined that you can use or extend:
 - Transactional Sequences: These sequences lock the table in the database to guarantee  the generation of identifiers sequentially and avoid duplicates or gaps.
 - Non-Transactional Sequences: In this case, the process to create sequences uses Database Sequences and should be used in cases where the gaps between numbers is not an issue.
 
+!!! warning "Important"
+	Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.
+
+
 ### Quick sequence setup
 
 1. First, log-in as “System administrator”. Open the `Application` > `Application Dictionary ` >`Tables and Columns` Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.
@@ -71,7 +75,7 @@ There are two base reference implementations defined that you can use or extend:
 	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
 
 	!!! info
-		For more information about masking see [Sequences Masking user guide](/products/etendo-classic/user-guide/financial-management/accounting/setup/#sequence-masking).
+		For more information about masking see [Sequences Masking user guide](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
 
 	- **Table:** Defines the table in which the sequence type column is located.
 	- **Column:** The column where the sequence is defined.

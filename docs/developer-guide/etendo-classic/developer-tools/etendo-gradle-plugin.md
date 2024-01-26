@@ -51,7 +51,7 @@ Add in the `build.gradle` file the plugin version available in [Gradle Plugin Re
 
 ```groovy title="build.gradle"
 plugins {
-    id 'com.etendoerp.gradleplugin' version 'lastest.release'
+    id 'com.etendoerp.gradleplugin' version '1.2.2'
 }
 ```
 
@@ -244,7 +244,6 @@ etendo {
     | Command line parameter    | Description                                                        |  
     |  -------------------       | ------------------------------------                                                                                                  |
     | `-Ppkg=<package name>`     | The name of the module to be *re expanded* in case that it is already in sources. This will *OVERWRITE* all the changes in the module.|
-
 
 ## Submodules
 
@@ -553,6 +552,15 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
         ```bash
         nvm install 16.10.0
         ```
+
+            **Note:** If you encounter errors during the installation of Node.js with the `nvm install 16.10.0` command, it might be because `curl` isn't installed or is misconfigured on your system. In such cases, you can try running the following commands:
+
+            ```bash
+            sudo snap remove curl
+            sudo apt install curl
+            ```
+
+            After successfully configuring `curl` using this method, return to this guide and execute the steps above to install NVM and set up Node.js.
         
         3. Set Node.js version 16.10.0 as the default version:
         ```bash
@@ -565,6 +573,7 @@ You can force the compilation tasks by adding to the Etendo plugin extension the
         node -v
         npm -v
         ```
+
 
     === ":simple-macos: Mac OS"
 
@@ -672,6 +681,23 @@ After executing the task, look for the following output to indicate a successful
 
 Finally, restart Tomcat to apply the changes and ensure the updated `.css` files are properly deployed.
 
+## Delete Client Process
+
+- The `delete.client` task allow runs Delete Client Process directly from gradlew, also this task allows runs this process with Tomcat service down to avoid database locks.
+
+    ``` bash title="Terminal"
+    ./gradlew delete.client
+
+    ```
+
+    | Command line parameters                   | Description                                                                                               |
+    |  -------------------                      | ------------------------------------                                                                      |
+    | `-DclientId=<AD_Client_ID>`               | `AD_Client_ID` of `AD_Client` table to be used on this process to delete all information of this client.  |
+
+    !!!danger "Danger Process"
+        This task execute the same legacy process that you can run in the application like as System Administrator role. It is a very sensitive task you must be very careful because this can lead to crashes in the system if used incorrectly.
+        <br>**A backup previous to executing the task is recommended.**
+
 ## Copilot
 
 - Running the Copilot docker image locally.
@@ -697,4 +723,4 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
 
     | Command line parameter                  | Description                                                 |                       
     |  -------------------                   | ------------------------------------                         |
-    | `-Ppkg=<package name>`                 | **Required** Module Javapackage to be translated             |
+    | `-Parg=<package name>`                 | **Required** Module Javapackage to be translated             |

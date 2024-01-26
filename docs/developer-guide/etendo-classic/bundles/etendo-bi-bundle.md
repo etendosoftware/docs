@@ -24,7 +24,7 @@ To ensure proper functioning of the script, follow the steps below:
     ```
 
 
-2. Make sure you have python3 installed on your system. You can verify the installation by running
+2. Make sure you have at least python3.7 or above installed on your system. You can verify the installation by running
 
     ``` bash title="Terminal"
     python3 --version
@@ -35,11 +35,18 @@ To ensure proper functioning of the script, follow the steps below:
     ``` bash title="Terminal"
     sudo apt update && sudo apt install python3
     ```
+    And then verify that the version is correct.
 
 3. It is highly likely that pip3 comes bundled with the installation of python3. Verify if it is installed by running 
 
     ``` bash title="Terminal"
     pip3 --version
+    ```
+
+    Then ensure to have an updated version of it
+
+    ``` bash title="Terminal"
+    sudo pip3 install --upgrade pip
     ```
 
     If it is not installed, run
@@ -58,7 +65,7 @@ To ensure proper functioning of the script, follow the steps below:
 5. The following libraries need to be installed using pip3 for them to work: psycopg2, pandas and requests. You can install them by running:
 
     ``` bash title="Terminal"
-    pip3 install psycopg2
+    pip3 install psycopg2-binary
     ```
 
     ``` bash title="Terminal"
@@ -71,7 +78,7 @@ To ensure proper functioning of the script, follow the steps below:
 
 ### Etendo BI Connector
 
-In the filesystem, two new directories should be created. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).
+After the execution of the process, two new directories should be created in the filesystem. One will contain the logs files, one for the rsync execution that will contain information about the file upload to the server; another file called syncScript.log.{datetime}, that will contain information about the script execution (most of this information can be seen in the Logs Monitor window, but if for any reason the window cannot receive this information, it should be able to be seen using this .log file).
 
 In this example, in the path where the script is allocated, a new directory named “Etendo” should be created. Inside it, there should be two folders for the organization that set the background process (F&B US West Coast).
 

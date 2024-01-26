@@ -14,16 +14,17 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#1100) |29/09/2023	| 23.2.0 | 23.3.x   | CS    | :white_check_mark:    |
-| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#190) 	|14/09/2023	| 23.2.0 | 23.2.8   | C     | :white_check_mark:    |
-| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#180) 	|28/08/2023	| 23.2.0 | 23.2.8   | C     | :white_check_mark:    |
-| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#171)	|17/08/2023	| 23.2.0 | 23.2.8   | C     | :white_check_mark:    |
-| [1.6.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#160) 	|29/06/2023	| 23.2.0 | 23.2.8   | C     | :white_check_mark:    |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#150) 	|27/06/2023	| 22.1.0 | 23.2.8	| C 	| :white_check_mark:    |
-| [1.4.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#140) 	|17/05/2023	| 22.1.0 | 23.1.5	| C 	| :white_check_mark:    |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#130) 	|06/04/2023	| 22.1.0 | 23.1.5	| C  	|                       |
+| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
+| [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.7.1](#171)   | 17/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.6.0](#160)   | 29/06/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.5.0](#150)   | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
+| [1.4.0](#140)   | 17/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
+| [1.3.0](#130)   | 06/04/2023 | 22.1.0 | 23.1.5 | C  |                    |
 | 1.2.0 	|06/04/2023	| 22.1.0 | 23.1.5	| C  	|                       |
-| [1.1.3](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
+| [1.1.3](#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
 | 1.1.2 	|06/10/2022	| 22.1.0 | 22.3.0	| C  	|                       |
 | 1.1.1		|19/07/2022	| 22.1.0 | 22.2.2	| C  	|                       |
 | 1.1.0		|08/07/2022	| 22.1.0 | 22.2.2   | C  	|                       |
@@ -32,6 +33,9 @@ tags:
 | 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
 
 ## Release Notes
+### 1.12.0
+- Update Core compatibility until 23.4.x
+- [EE-658](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/2){target="\_blank"} Warning: Non-varargs Call to Varargs Method in com.etendoerp.webhookevents Module
 ### 1.10.0
 - Update Core compatibility until 23.3.x
 ### 1.9.0
