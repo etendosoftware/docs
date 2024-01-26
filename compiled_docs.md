@@ -34084,27 +34084,28 @@ For this example, we will create a tool that will allow us to make a ping to a h
     └── com.etendoerp.copilot.pingtool
         ├── src-db 
         │   └── database
-        │       ├── sourcedata
-        │       ├── AD_MODULE.xml
-        │       ├── AD_MODULE_DBPREFIX.xml
-        │       └── AD_MODULE_DEPENDENCY.xml
+        │       └── sourcedata
+        │           ├── AD_MODULE.xml
+        │           ├── AD_MODULE_DBPREFIX.xml
+        │           ├── AD_MODULE_DEPENDENCY.xml
+        │           └── ETCOP_TOOL.xml
         ├── tools 
         │   └── PingTool.py
         ├── .gitignore
         ├── build.gradle
         └── tools_deps.toml
     ```
-    **src-db**: Contains the database structure of the module. This folder is created automatically when creating and exporting the module from Etendo Classic.
+    *src-db*: Contains the database structure of the module. This folder is created automatically when creating and exporting the module from Etendo Classic.
    
-    **tools**: Contains the tools of the module. Can contain one or more tools.
+    *tools*: Contains the tools of the module. Can contain one or more tools.
     
-    **.gitignore**: Contains the files that will be ignored by git.
+    *.gitignore*: Contains the files that will be ignored by git.
    
-    **build.gradle**: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
+    *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
     [How to publish modules to GitHub repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
     
    
-    **tools_deps.toml**: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
+    *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
 
 
 2. Create the file `PingTool.py` in the `tools` folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:
@@ -34122,7 +34123,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
             response = requests.get(host)
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ``` 
-    **Note**: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
+    *Note*: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
 3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
 
@@ -34216,7 +34217,33 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Finally, we have to start Copilot and check that the tool and it dependencies are installed correctly. After starting Copilot, we can try to call the tool asking Copilot to execute it or, for example, list us which tools are available.
+5. Additionaly, we to open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+
+    - *Search key*: The search key of the tool. The same name as the tool class must be used.
+    - *Name*: The name of the tool. Its the name that will be shown in the Copilot UI.
+    - *Description*: The description of the tool. Its a description of what the tool does. The same description must be used as for the tool class.
+    - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step.
+
+    ![how-to-create-copilot-tools.png](https://docs.etendo.software//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+
+    After creating the record, we have to export the module to persist the changes in the database:
+    ```bash title="Terminal"
+    ./gradlew export.database
+    ```
+    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+
+    ![how-to-create-copilot-tools-2.png](https://docs.etendo.software//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+
+    !!! note "OpenAI Assistants tools"
+        Remember excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+
+6. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
+To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
+
+    ``` bash title="Terminal"
+    ./gradlew copilot.do -Pprompt="What tools do you have available?"
+    ```
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
