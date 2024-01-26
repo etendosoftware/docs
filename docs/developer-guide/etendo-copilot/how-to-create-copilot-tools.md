@@ -32,10 +32,11 @@ For this example, we will create a tool that will allow us to make a ping to a h
     └── com.etendoerp.copilot.pingtool
         ├── src-db 
         │   └── database
-        │       ├── sourcedata
-        │       ├── AD_MODULE.xml
-        │       ├── AD_MODULE_DBPREFIX.xml
-        │       └── AD_MODULE_DEPENDENCY.xml
+        │       └── sourcedata
+        │           ├── AD_MODULE.xml
+        │           ├── AD_MODULE_DBPREFIX.xml
+        │           ├── AD_MODULE_DEPENDENCY.xml
+        │           └── ETCOP_TOOL.xml
         ├── tools 
         │   └── PingTool.py
         ├── .gitignore
@@ -164,4 +165,23 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Finally, we have to start Copilot and check that the tool and it dependencies are installed correctly. After starting Copilot, we can try to call the tool asking Copilot to execute it or, for example, list us which tools are available.
+5. Additionaly, we to open the "Copilot Tool" window as System Administrator. In this window we will create a new record, with the following information:
+
+    - **Search key**: The search key of the tool. Its highly recommended to use the same name as the name of the tool class.
+    - **Name**: The name of the tool. Its the name that will be shown in the Copilot UI.
+    - **Description**: The description of the tool. Its a description of what the tool does. Its highly recommended to use the same description as the description of the tool class.
+    - **Module**: The module where the tool is located. This field is a reference to the module that we have created in the first step.
+
+    ![how-to-create-copilot-tools.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+
+    After creating the record, we have to export the module to persist the changes in the database:
+    ```bash
+    ./gradlew export.database
+    ```
+This record will allow us to enable or disable the tool in a 
+Copilot App. This can be done in the "Copilot App" window linking the tool with the "Tools" tab. 
+![how-to-create-copilot-tools-2.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+6. Finally, we have to start Copilot and check that the tool and it dependencies are installed correctly. After starting Copilot, we can try to call the tool asking Copilot to execute it or, for example, list us which tools are available.
+
+!!! note OpenAI Assistants tools
+    If the app is an OpenAI Assistant, remember Re-Sync the App after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
