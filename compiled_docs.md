@@ -22915,6 +22915,20 @@ Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de
 - Devolución - Código País/Country code
 - Devolución - Marca SEPA
 
+##### Configuración previa antes de generar el Informe
+
+###### **Actividades del I.A.E.**
+
+En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](https://docs.etendo.software/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
+
 ##### **Generación del modelo 303**
 
 Tal y como ya se ha explicado, el modelo 303 de autoliquidación de IVA, se genera como un fichero de texto válido conforme a los requerimientos de la AEAT desde la ruta de aplicación: Gestión Financiera || Contabilidad || Herramientas de análisis || Generador de declaraciones de impuestos || Generador de declaraciones de impuestos
@@ -33756,7 +33770,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 1. Add copilot dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
-    implementation('com.etendoerp:copilot:1.2.3')
+    implementation('com.etendoerp:copilot:1.2.4')
     ```
 
     ??? warning "Ensure you have 1.3.2 plugin version or greater:"
@@ -34070,27 +34084,28 @@ For this example, we will create a tool that will allow us to make a ping to a h
     └── com.etendoerp.copilot.pingtool
         ├── src-db 
         │   └── database
-        │       ├── sourcedata
-        │       ├── AD_MODULE.xml
-        │       ├── AD_MODULE_DBPREFIX.xml
-        │       └── AD_MODULE_DEPENDENCY.xml
+        │       └── sourcedata
+        │           ├── AD_MODULE.xml
+        │           ├── AD_MODULE_DBPREFIX.xml
+        │           ├── AD_MODULE_DEPENDENCY.xml
+        │           └── ETCOP_TOOL.xml
         ├── tools 
         │   └── PingTool.py
         ├── .gitignore
         ├── build.gradle
         └── tools_deps.toml
     ```
-    **src-db**: Contains the database structure of the module. This folder is created automatically when creating and exporting the module from Etendo Classic.
+    *src-db*: Contains the database structure of the module. This folder is created automatically when creating and exporting the module from Etendo Classic.
    
-    **tools**: Contains the tools of the module. Can contain one or more tools.
+    *tools*: Contains the tools of the module. Can contain one or more tools.
     
-    **.gitignore**: Contains the files that will be ignored by git.
+    *.gitignore*: Contains the files that will be ignored by git.
    
-    **build.gradle**: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
+    *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
     [How to publish modules to GitHub repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
     
    
-    **tools_deps.toml**: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
+    *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
 
 
 2. Create the file `PingTool.py` in the `tools` folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:
@@ -34108,7 +34123,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
             response = requests.get(host)
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ``` 
-    **Note**: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
+    *Note*: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
 3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
 
@@ -34202,7 +34217,33 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Finally, we have to start Copilot and check that the tool and it dependencies are installed correctly. After starting Copilot, we can try to call the tool asking Copilot to execute it or, for example, list us which tools are available.
+5. Additionaly, we to open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+
+    - *Search key*: The search key of the tool. The same name as the tool class must be used.
+    - *Name*: The name of the tool. Its the name that will be shown in the Copilot UI.
+    - *Description*: The description of the tool. Its a description of what the tool does. The same description must be used as for the tool class.
+    - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step.
+
+    ![how-to-create-copilot-tools.png](https://docs.etendo.software//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+
+    After creating the record, we have to export the module to persist the changes in the database:
+    ```bash title="Terminal"
+    ./gradlew export.database
+    ```
+    Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
+
+    ![how-to-create-copilot-tools-2.png](https://docs.etendo.software//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+
+    !!! note "OpenAI Assistants tools"
+        Remember excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+
+6. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
+To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.
+
+    ``` bash title="Terminal"
+    ./gradlew copilot.do -Pprompt="What tools do you have available?"
+    ```
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -38569,13 +38610,15 @@ Etendo 21Q4
 # Article Title: Spanish Localization Bundle
 ## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Spanish Localization Bundle
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/spain-localization/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/localization-spain-extensions/release-notes
 ## Article Content: 
 #### Introducción
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
+| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
 | [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
@@ -38583,7 +38626,7 @@ Etendo 21Q4
 | [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
 | [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
 | [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](#120)| 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
+| [1.2.0](#120) | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
 | [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
 | [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
 | [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
@@ -38595,6 +38638,18 @@ Etendo 21Q4
 
 #### Versiones Disponibles
 
+##### 1.8.0
+- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 \
+Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
+    - Recargo de equivalencia - Tipo 0% - Base imponible [663]
+    - Recargo de equivalencia - Tipo 0% - Cuota [664]
+    - Recargo de equivalencia - Tipo 0,62% - Base imponible [665]
+    - Recargo de equivalencia - Tipo 0,62% - Cuota [666]
+##### 1.7.0
+- [EE-301](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/18) Se agregó un nuevo estado 'No Declarable en SII' para facturas de venta que tengan todos sus productos relacionados a impuestos configurados como 'No Declarables en SII'.
+- [EE-796](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/19) Se corrigió el error en el que la página T303DID00 no se genera de forma correcta para el 303 del último periodo.
+- Se añadió el nuevo diseño de registro para el Modelo de Declaración de Impuestos 190, versión 2023.
+- Se añadió la oficina impositiva de Bizkaia en la configuración del SII para facturas recibidas.
 ##### 1.6.0
 - Se actualizó la compatibilidad de Core incluyendo hasta 23.4.x
 - [EE-779](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/16){target="\_blank"} Se corrigió error al crear un libro de facturas simplificado con un socio comercial sin CIF
@@ -38725,7 +38780,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Essentials Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Essentials Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/essentials-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38741,7 +38796,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Platform Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Platform Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/platform-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38757,7 +38812,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Warehouse Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Warehouse Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/warehouse-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38773,7 +38828,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Production Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Production Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/production-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38789,7 +38844,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Sales Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Sales Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/sales-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38805,7 +38860,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Financial Extensions Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Financial Extensions Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
@@ -38839,7 +38894,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 # Article Title: Etendo BI Bundle ES
 ## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Etendo BI Bundle ES
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es/release-notes
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes
 ## Article Content: 
 #### Overview
 
