@@ -53,7 +53,7 @@ it in the database:
 
 There are a number of things which are important to note:
 
-  * The above code does not set an explicit user context. The user context is set automatically when running the above code in Etendo Classic. However, in other environments, it has to be set explicitly, see  here  for more information. 
+  * The above code does not set an explicit user context. The user context is set automatically when running the above code in Etendo Classic. However, in other environments, it has to be set explicitly, see [here](#user-context) for more information. 
   * There is a BPGroup class which models the data of the _c_bp_group_ table. This class has type safe getters and setters for all the data in this table. 
   * A factory (the OBProvider) is used to create an instance of the BPGroup class. 
   * The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. 
@@ -101,15 +101,14 @@ Etendo Classic.
 ![](/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png){: .legacy-image-style}
 
   
-This architecture is partially implemented in 3.00 and will be extended and
-completed in following releases:
+This architecture is implemented:
 
-  * Runtime model (from 2.50): the runtime model is the main driver for generating the business objects and the Hibernate mapping. It's also used extensively in security, export/import and in webservices implementations. 
-  * Hibernate Mapping (from 2.50): from the runtime model the DAL (during initialization) generates a Hibernate mapping. This Hibernate mapping is used to initialize Hibernate. 
-  * Database Schema: the runtime model (actually the application dictionary) can be used to update the database schema. In 2.50 this is not available as part of the DAL but as part of the DBSourceManager product. 
-  * Data Access Layer (from 2.50): the Data Access Layer (DAL) provides an API to store, query and remove business objects from the database. 
-  * Business Model/Logic Layer (some examples in 2.50): the business model/logic layer contains the implementation of the business processes. 
-  * Business Services (not in 3.00, except for REST webservice): the service layer exposes the business logic to the outside world. In 2.50 this layer contains the REST Webservice provided by the DAL. 
+  * Runtime model: the runtime model is the main driver for generating the business objects and the Hibernate mapping. It's also used extensively in security, export/import and in webservices implementations. 
+  * Hibernate Mapping: from the runtime model the DAL (during initialization) generates a Hibernate mapping. This Hibernate mapping is used to initialize Hibernate. 
+  * Database Schema: the runtime model (actually the application dictionary) can be used to update the database schema. This is not available as part of the DAL but as part of the DBSourceManager product. 
+  * Data Access Layer: the Data Access Layer (DAL) provides an API to store, query and remove business objects from the database. 
+  * Business Model/Logic Layer : the business model/logic layer contains the implementation of the business processes. 
+  * Business Services: the service layer exposes the business logic to the outside world. I
 
 The complete architecture runs inside of a context which provides security and
 transaction handling.
@@ -138,15 +137,16 @@ _c_order_id_ in _c_order_line_ is used to create the one-to-many association
 (in the in-memory runtime model) from _c_order_ to _c_order_line_ . This one-
 to-many association is then used to generate a List<OrderLine> member in the
 Java Order class and a one-to-many mapping in Hibernate.
-
-For a reference of all business object structures see the entity model here.
   
 It is possible not to generate those one-to-many associations in the parent
-entity can be avoided by setting "Child Property in Parent Entity" field to
-false in Column tab. Note generated one-to-many properties in the parent
-entity, load all children in memory when invoked, so they should be only
-generated when the expected amount of child records is low, otherwise it
-might cause an `OutOfMemoryError`.
+entity. This can be avoided by setting "Child Property in Parent Entity" field to
+false in Column tab. 
+
+!!!note
+    Generated one-to-many properties in the parent
+    entity, load all children in memory when invoked, so they should be only
+    generated when the expected amount of child records is low, otherwise it
+    might cause an `OutOfMemoryError`.
 
 In order to keep a backward compatible API, `hb.generate.all.parent.child.properties=true` preference can be set in etendo.propeties, in this way all foreign key columns will generate a one-
 to-many property in the parent entity.
@@ -168,18 +168,14 @@ a validated and secure way. It provides the following functions:
   * create OBCriteria:  OBCriteria  objects are used for querying. 
   * commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally, this is done by the environment (Openbravo web container or Openbravo test). 
 
-The OBDal API makes extensive use of the  OBCriteria  and  Etendo Query  classes to
+The OBDal API makes extensive use of the  OBCriteria  and  OBQuery  classes to
 support querying.
   
-The OBDal class allows accessing to the  **read-only** database (pool). In
+The OBDal class allows accessing to the  read-only database (pool). In
 this case, the instance must be retrieved with the
 _OBDal.getReadOnlyInstance()_ method. It is important to note that if the
 read-only pool is not configured, this method will use the standard pool to
 get the database connections.
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR18Q3  ** .  
----|---  
   
 Once the read-only pool is configured, there are two ways to override
 _OBDal.getReadOnlyInstance()_ behavior:
@@ -187,14 +183,11 @@ _OBDal.getReadOnlyInstance()_ behavior:
   * Creating a record in _Data Pool Selection_ , which associates a database pool with a particular report. 
   * Using the _Default DB Pool used by reports_ Preference, which defines the default pool returned by _OBDal.getReadOnlyInstance()_ if no entry in Data Pool Selection is made for the current Process. 
 
-See  Read-Only Pool  for more information about the configuration of this
-pool.
-
 ###  OBCriteria
 
-The  OBCriteria  class implements the  Hibernate Criteria  interface. It
+The  OBCriteria  class implements the  [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} interface. It
 extends the standard Hibernate Criteria functionality for filtering on active,
-client and organization. In addition it offers convenience methods to set
+client and organization. In addition, it offers convenience methods to set
 orderby and to perform count actions.
 
 Summarizing, the OBCriteria object supports all Hibernate Criteria features:
@@ -205,7 +198,7 @@ Summarizing, the OBCriteria object supports all Hibernate Criteria features:
   * Specifying joins for performance reasons. 
   * Performing counts, average etc. 
 
-For more information, see the  Hibernate Manual  on Criteria queries.
+For more information, see the [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} on Criteria queries.
 
 The functionality of OBCriteria is illustrated with a number of code snippets:
 
@@ -283,7 +276,7 @@ Get a specific currency:
 
 ###  OBQuery
 
-The  OBQuery  class is an extension of the  Hibernate Query  object. It
+The  OBQuery  class is an extension of the  [Hibernate Query](https://docs.jboss.org/hibernate/orm/3.5/reference/en/html/queryhql.html){target="\_blank"} object. It
 extends the standard Hibernate Query functionality for filtering on active,
 client and organization.
 
@@ -314,7 +307,7 @@ In code:
 
 ###  OBProvider
 
-Openbravo business objects should **not** be instantiated directly using the
+Etendo business objects should not be instantiated directly using the
 new operator. Instead the  OBProvider  class should be used to create an
 instance of the required business object. The OBProvider is located in the
 _org.openbravo.base.provider_ package and can be retrieved using the method
@@ -329,14 +322,14 @@ class name or using an entity name. Some code examples:
      // The ENTITYNAME constant is created by the business object generation logic
      final BPGroup bpg = (BPGroup)OBProvider.getInstance().get(BPGroup.ENTITYNAME);
 
-##  Openbravo Business Objects
+##  Etendo Business Objects
 
-The DAL generates, instantiates and uses Openbravo ERP business objects. This
+The DAL generates, instantiates and uses Etendo business objects. This
 part of the development manual describes their structure and main interfaces.
 
 ###  BaseOBObject
 
-All Openbravo ERP business object inherit from the  BaseOBObject  class. This
+All Etendo Classic business objects inherit from the  BaseOBObject  class. This
 class is located in the _org.openbravo.base.structure_ package.
 
 The BaseOBObject class offers the following functionality:
@@ -344,24 +337,24 @@ The BaseOBObject class offers the following functionality:
   * Direct access (called the dynamic API) to all the properties and values of the data within the business object through the get(String propertyName) and set((String propertyName, Object value) methods. These methods are particularly useful when working with generic functions such as security and logging. 
   * Access to the Entity describing the type and properties of the business object. 
   * Security and validation checks when getting and setting values. 
-  * Access to the id of the object through the getId method. 
+  * Access to the ID of the object through the getId method. 
   * Access to the identifier of the object: the getIdentifier method of the BaseOBObject uses the identifier properties of the object to create a displayable title for that object. 
 
 The section on runtime model and dynamic API below, gives an example on how
 the dynamic API and the runtime model can be used.
 
-As all Openbravo ERP business objects should extend this class, it is safe to
+As all Etendo Classic business objects should extend this class, it is safe to
 cast an object to this class when required.
 
 ###  Generated Business Object Classes
 
-At development time the DAL will generate business object classes for each
+At development time, the DAL will generate business object classes for each
 table defined in the application dictionary. This is done as part of the
 compile.complete ant tasks or can be done separately through the
 generate.entities ant task. These generated classes are the classes which are
 normally used by a developer because they offer compile-time-checked typed
 access to properties. The generated classes are created in the _src-gen_
-folder in the Openbravo ERP development project and are part of the
+folder in the Etendo Classic development project and are part of the
 _org.openbravo.base.model_ package and its subpackages.
 
 The generated classes extend the BaseOBObject and offer typed wrapper getters
@@ -379,84 +372,102 @@ class:
       set("record", record);
      }
 
-In addition the generated Java classes set default values (in the constructor)
+In addition, the generated Java classes set default values (in the constructor)
 and have a static ENTITYNAME variable which must be used when it is required
 to refer directly to an entity name of an entity.
 
 ###  Entity, Property and Column Naming
 
-The data access layer uses names defined in the Application Dictionary for
+The Data Access Layer uses names defined in the Application Dictionary for
 different purposes:
 
   * xml tag names in REST web services and import export 
   * class names of generated Entity classes 
   * member names of members of generated Entity classes 
-  * to detect that a certain Entity implements/supports a certain interface (see  here  ) 
+  * to detect that a certain Entity implements/supports a certain interface (see [here](#important-interfaces)) 
 
 The application dictionary historically allows many different types of names
-(also ones that are illegal for xml/java). Therefore the data access layer
+(also ones that are illegal for xml/java). Therefore, the data access layer
 applies specific conversion logic to always ensure that names are allowed and
 unique for xml/Java.
 
-For a full listing of all entity and property names see the  Data Model
-Reference  chapters.
+For a full listing of all entity and property names, see the [Data Model
+Reference](/developer-guide/etendo-classic/concepts/Data_Model) section.
 
 ####  Entity Naming
 
-An entity (corresponds to a table in Openbravo ERP) has different names,
+An entity (corresponds to a table in Etendo Classic) has different names,
 relevant for different situations:
 
   * A table name (stored in _AD_Table.tablename_ ) which is the database table name in the physical database. 
-  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is for example used in  REST webservices  and client export/import. 
+  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](/developer-guide/etendo-classic/concepts/XML_REST_Web_Services) and client export/import. 
   * A Java class name (stored in _AD_Table.classname_ ), the classname is used when generating the Java business object. It is unique within the data package of the table. 
 
-Each table (i.e. entity) in Openbravo ERP belongs to a data package. A data
+Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
 package has a Java package field which defines the Java package in which the
 entity Java class is generated.
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |
-AD_Table.name shouldn't contain blank spaces. If the name of the table
-contains spaces, the process of building the entity name will remove those
-spaces, e.g. 'My Table' will be converted to 'MyTable'.  
----|---  
+!!!warning
+    AD_Table.name shouldn't contain blank spaces. If the name of the table
+    contains spaces, the process of building the entity name will remove those
+    spaces, e.g. 'My Table' will be converted to 'MyTable'.  
   
 ####  Property Naming
 
-For property naming the logic is slightly different. The property naming logic
-has two distinct steps: 1) first determine an initial property name, and 2)
-correct/convert this property name.
+For property naming, the logic is slightly different. The property naming logic
+has two distinct steps: 
+
+  1) first determine an initial property name, and
+
+  2) correct/convert this property name.
 
 The initial property name is determined as follows:
 
   * Properties for standard primitive type (varchar, numeric, etc.) and foreign key columns: for these properties the value in _AD_Column.name_ is used as the start of the property name calculation. 
-  * Properties which model a list of child entities: the so-called one-to-many or list properties. For example the Order class has a property _OrderLineList_ . The initial name of this property is set as follows: 
-    * (common case) if the column name on the other side (from the child to the parent) is the same as the primary key column name of the parent then use the entity name of the child plus the suffix 'List'. For example the c_orderline table has a foreign key c_order_id to the c_order table. This results in a property orderLineList in the Order entity. 
-    * (non-common case) if the column name, which points from the child to the parent, is different than the primary key column name of the parent then the following naming rule is used: target entity name + "_" + referenced property name + "List". For example, if the c_orderLine table has a column: c_orderheader_id with property name orderHeader then the resulting list property in the Order would be: OrderLine_orderHeaderList. 
+  * Properties which model a list of child entities: the so-called one-to-many or list properties. For example, the Order class has a property _OrderLineList_ . The initial name of this property is set as follows: 
+    * (common case) if the column name on the other side (from the child to the parent) is the same as the primary key column name of the parent, then use the entity name of the child plus the suffix 'List'. For example, the c_orderline table has a foreign key c_order_id to the c_order table. This results in a property orderLineList in the Order entity. 
+    * (non-common case) if the column name, which points from the child to the parent, is different than the primary key column name of the parent, then the following naming rule is used: target entity name + "_" + referenced property name + "List". For example, if the c_orderLine table has a column: c_orderheader_id with property name orderHeader then the resulting list property in the Order would be: OrderLine_orderHeaderList. 
 
-Then next the property name generation performs the following steps:
+Next, the property name generation performs the following steps:
 
   * Spaces are removed and used to camelcase, for example the name 'Enable in Cash' is converted to: EnableInCash (note the uppercased I). 
   * Underscores are removed and used to camelcase: for example the name 'C_Poc_email_ID' is translated to CPocEmailID. 
   * 'illegal' characters are removed: only characters from a to z and A to Z and numbers (not as prefix) are maintained, so 'G/L Item' will be translated to 'GLItem'. 
   * The first character is lowercased: AccountingFact is converted to accountingFact. 
 
-####  Property Naming and Supported interfaces
+####  Property Naming and Supported Interfaces
 
 The data access layer automatically detects that an entity supports a certain
-interface by analyzing the name of the properties of that entity. **It is
-therefore very important to be precise in naming of properties** . The naming
+interface by analyzing the name of the properties of that entity. It is
+therefore very important to be precise in naming of properties. The naming
 of properties and the interfaces supported by specific properties are
-discussed in the next section (  Important Interfaces  ).
+discussed in the following section.
 
 ###  Important Interfaces
 
 The generated classes implement a set of interfaces which can be used to check
 if a certain instance of a class has specific functionality available:
 
-  * ClientEnabled  : flags an object as having a getClient/setClient method and as an object which is stored by Client. **Note** : Openbravo automatically detects that a table (==Entity) implements this interface if it has a column with the name: client (defined in the ad_column.name field). When this interface is implemented/detected then the client property is used to automatically filter objects (on the readable clients) when querying and to do security checks when persisting an object. 
-  * OrganizationEnabled  : an object implementing this interface has getOrganization/setOrganization methods. **Note** : Openbravo automatically detects that a table (==Entity) implements this interface if it has a column with the name: organization (defined in the ad_column.name field). When this interface is implemented/detected then the organization property is used to automatically filter objects (on the readable organizations) when querying and to do security checks when persisting an object. 
-  * ActiveEnabled  : an object implementing this interface has an active flag (boolean) which can be reached through the isActive/setActive methods. **Note** : Openbravo automatically detects that a table (==Entity) implements this interface if it has a column with the name: active (defined in the ad_column.name field). When this interface is detected/implemented then the active field is used in automatic filtering of objects when querying through the data access layer. 
-  * Traceable  : a Traceable object has audit information: created and updated (date fields), and createdby and updatedby (contain a User). This audit information is reachable through corresponding accessors. **Note** : Openbravo automatically detects that a table (==Entity) implements this interface if it has the following columns (all are required): creationDate, created, updated, updatedBy (set in the ad_column.name field). **See specifically the name of the date of creation property, it should be: creationDate** . When this interface is implemented/detected then the data access layer will automatically set audit fields when an object is persisted. 
+* ClientEnabled  : flags an object as having a getClient/setClient method and as an object which is stored by Client.
+
+!!! note 
+    Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: client (defined in the ad_column.name field). When this interface is implemented/detected then the client property is used to automatically filter objects (on the readable clients) when querying and to do security checks when persisting an object.
+
+
+* OrganizationEnabled  : an object implementing this interface has getOrganization/setOrganization methods. 
+
+!!!note
+    Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: organization (defined in the ad_column.name field). When this interface is implemented/detected, then the organization property is used to automatically filter objects (on the readable organizations) when querying and to do security checks when persisting an object. 
+
+* ActiveEnabled  : an object implementing this interface has an active flag (boolean) which can be reached through the isActive/setActive methods. 
+
+!!!note
+    Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: active (defined in the ad_column.name field). When this interface is detected/implemented then the active field is used in automatic filtering of objects when querying through the data access layer. 
+
+* Traceable  : a Traceable object has audit information: created and updated (date fields), and createdby and updatedby (contain a User). This audit information is reachable through corresponding accessors. 
+
+!!!note
+    Etendo automatically detects that a table (==Entity) implements this interface if it has the following columns (all are required): creationDate, created, updated, updatedBy (set in the ad_column.name field). See specifically the name of the date of creation property, it should be: creationDate. When this interface is implemented/detected then the data access layer will automatically set audit fields when an object is persisted. 
 
 ###  Client and organization and Audit information
 
@@ -465,12 +476,13 @@ time or updated in the database:
 
   * a ClientEnabled object for which the Client is not set will get the current Client of the user (present in the user context). 
   * an OrganizationEnabled object for which the Organization is not set will get the current Organization of the user (present in the user context). 
-  * a Traceable object: when saved for the first time the created, createdby, updated and updatedby are set. When an object is updated then the updated and updatedby are set. 
+  * a Traceable object: when saved for the first time, the created, createdby, updated and updatedby are set. When an object is updated, then the updated and updatedby are set. 
 
 So, a developer does not need to explicitly set this information in a new or
-existing object. Note for the data access layer to detect that a table
-supports the above interfaces, the column names (AD_Column.name) need to
-adhere to specific standards, see  here  for more information.
+existing object. 
+
+!!!note 
+    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](/developer-guide/etendo-classic/concepts/Data_Access_Layer/#property-naming-and-supported-interfaces) for more information.
 
 ###  Creating a new instance of a Business Object
 
@@ -485,10 +497,10 @@ business objects should be created using the  OBProvider  factory class:
 
 Hibernate will detect that a business object is new when:
 
-  * the id of the business object is not set 
+  * the ID of the business object is not set 
   * when the flag newOBObject is set to true explicitly 
 
-So if you want to create a new business object with a specific id (by calling
+So, if you want to create a new business object with a specific ID (by calling
 setId(...)) then you explicitly need to call
 businessObject.setNewOBObject(true). Otherwise, Hibernate will throw an
 exception ('count of batch update operation....').
@@ -497,25 +509,25 @@ exception ('count of batch update operation....').
 
 The DAL operates within a user context. The user context is implemented in the
 OBContext  class in the _org.openbravo.dal.core_ . The OBContext is
-initialized using a userId. On the basis of this userId the OBContext computes
+initialized using a userId. On the basis of this userId, the OBContext computes
 the role, clients, organizations and accessible entities. This information is
 used by the DAL for security checking and automatic filtering on client and
 organization.
 
 The OBContext is stored as a ThreadLocal variable and the DAL always assumes
 that there is one available. The OBContext can be retrieved using the call
-_OBContext.getOBContext()_ .
+_OBContext.getOBContext()_.
 
 Normally a developer can assume that there is always a user context available.
-The following sections discuss this in more detail.
+The following sections discuss this in detail.
 
-###  User Context in a running Openbravo Instance
+###  User Context in a running Etendo Classic Instance
 
-When the code runs inside of an Openbravo ERP web application then the user
+When the code runs inside of an Etendo Classic application then the user
 context is always set. This is done through a request filter (the
 _DalRequestFilter_ in the _org.openbravo.dal.core_ package). This request
 filter ensures that the OBContext ThreadLocal is set to the current user (of
-Openbravo), puts the OBContext in the http session and cleans up the OBContext
+Etendo), puts the OBContext in the http session and cleans up the OBContext
 when the thread ends (as the thread may be reused by another user).
 
 ###  User Context in a Test environment
@@ -535,7 +547,7 @@ DAL.
 
 As was just mentioned, DAL operates within a user context, and provides
 automatic security checking mechanisms to prevent the user from accessing data
-which according to the Openbravo Security Model he shouldn't have access to.
+which according to the Etendo Security Model shouldn't be accessed.
 
 However, in most cases, the piece of code developed is contained within an
 object which in itself automatically provides part of the security checking,
@@ -547,13 +559,13 @@ only be fired if the user is already in the window).
 
 The OBContext provides an Administrator Mode which can be used to perform
 administrative actions even if the user does not have enough privileges. This
-mode bypasses the Entity Access checking, and it also doesn't filter by Client
+mode bypasses the Entity Access checking, and it doesn't filter by Client
 or Organization.
 
 An additional Administrator Mode is provided, which bypasses the Entity Access
-checking, but it does filter by Client Organization. **It is encouraged to use
+checking, but it does filter by Client Organization. It is encouraged to use
 this restricted Administrator Mode, as it conveniently filters by Client and
-Organization, something that is usually needed on Business Logic code** .
+Organization, something that is usually needed on Business Logic code.
 
 The syntax to activate the restricted Admin Mode:
 
@@ -571,20 +583,16 @@ The syntax to activate the restricted Admin Mode:
 In some cases, it is necessary, though, to prevent also client/organization
 check, this can be done using ` OBContext.setAdminMode(false) ` .
 
-Note that the calls to setAdminMode/restorePreviousMode are balanced, meaning
-that for each call to setAdminMode there is also exactly one call to
-restorePreviousMode. If in one request the number of calls to setAdminMode is
-unequal to the number of calls to restorePreviousMode then a warning is
-displayed: _Unbalanced calls to enableAsAdminContext and resetAsAdminContext_
-.
+!!!note 
+    The calls to setAdminMode/restorePreviousMode are balanced, meaning
+    that for each call to setAdminMode there is also exactly one call to
+    restorePreviousMode. If in one request the number of calls to setAdminMode is
+    unequal to the number of calls to restorePreviousMode then a warning is
+    displayed: _Unbalanced calls to enableAsAdminContext and resetAsAdminContext_.
 
 ####  Cross Organization Reference Administrator Mode
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  Contents
-of this section are available starting from **3.0PR16Q3**  
----|---  
   
-Validation for referenced object's organization in columns  supporting it  can
+Validation for referenced object's organization in columns [supporting it](/developer-guide/etendo-classic/concepts/Data_Access_Layer/#cross-organization-references) can
 be bypassed by using a special Administrator mode: `
 setCrossOrgReferenceAdminMode ` . Restoring previous mode is done by `
 restorePreviousCrossOrgReferenceMode ` . Similarly to standard admin mode,
@@ -604,7 +612,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 
 ##  Transaction and Session
 
-Openbravo DAL implements the so-called  open-session-view  pattern. With a
+Etendo DAL implements the so-called  open-session-view  pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -612,28 +620,29 @@ are placed in a ThreadLocal and re-used for subsequent data access actions in
 the same thread.
 
 An important thing to be aware of is that normally all database actions are
-flushed to the database when the session is committed. In a web environment
-this is at the end of the http request. To perform flush on demand call the
+flushed to the database when the session is committed. In a web environment,
+this is at the end of the http request. To perform flush on demand, call the
 _OBDal.getInstance().flush()_ method.
 
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Openbravo ERP: the  open-session-view  pattern is used, when running the code in the Openbravo ERP web application, the transaction commit and session close takes place at the end of the http request (see the  DalRequestFilter  ). If an exception occurs then a rollback is performed. 
-  * In the Openbravo ERP test environment: The DAL base test class (  OBBaseTest  ) takes care of committing or rollingback transactions. 
-  * Standalone: if the code is running standalone then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
+  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the  DalRequestFilter  ). If an exception occurs, then a rollback is performed. 
+  * In the Etendo Classic test environment: The DAL base test class (  OBBaseTest  ) takes care of committing or rollingback transactions. 
+  * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
-**SQLC and DAL - Beware** : the standard Openbravo ERP database access
-(through windows) works outside of the DAL (in 2.50 release). This means that,
-database access uses a different connection than the DAL. If both connections
-update the database then it is possible that a deadlock situations happens.
-So, when working/updating through both the DAL and SQLC one should always
-first commit/close the connection of the DAL explicitly before continuing with
-SQLC or the other way around.
+!!!warning
+    SQLC and DAL: The standard Etendo Classic database access
+    (through Windows) works outside of the DAL. This means that,
+    database access uses a different connection than the DAL. If both connections
+    update the database, then it is possible that a deadlock situations happens.
+    So, when working/updating through both the DAL and SQLC one should always
+    first commit/close the connection of the DAL explicitly before continuing with
+    SQLC or the other way around.
 
 ##  Security and Validation
 
-The DAL performs many different security and validation checks. In both read
+The DAL performs many different security and validation checks, in both read
 and write mode. A security violation results in a  _SecurityException_ , a
 validation error in a  _ValidationException_ . Different exceptions are thrown
 at different points: some Security Exceptions are thrown when reading a
@@ -642,8 +651,8 @@ session commits or flushes (write security violations) or when a setter is
 called (ValidationException).
 
 If you need to work without this security checks, you should use the
-Administrator Mode, or in MP22 and later, the restricted Administrator Mode.
-You can find more information about them  Administrator Mode
+Administrator Mode, or the restricted Administrator Mode.
+You can find more information about them in Administrator Mode.
 
 ###  Write Access
 
@@ -652,21 +661,21 @@ or when a business object is saved by hibernate (at flush/commit). For write
 access the following checks are performed:
 
   * The user must have access to a window/tab which displays the entity. See the  AD_Window_Access  table. 
-  * The organisation of the business object must be in the list of writable organisations of that user. Writable organisations are organisations directly linked to the role of the user. 
+  * The organization of the business object must be in the list of writable organizations of that user. Writable organizations are organizations directly linked to the role of the user. 
   * The client of the business object must be in the list of writable clients of that user. 
 
-If any of the above checks fails then a _SecurityException_ is thrown.
+If any of the above checks fails, then a _SecurityException_ is thrown.
 
 ###  Read Access
 
-A user can only view information from his/her own clients and accessible
-organisations. This is ensured by the DAL by automatically adding filter
+A user can only view information from their own clients and accessible
+organizations. This is ensured by the DAL by automatically adding filter
 criteria in the OBCriteria object.
 
 Read access is checked for both direct read access and derived read access.
 Direct read access allows a user to see all the information of a certain
 entity. With derived read access only the active property, audit info and the
-id and identifier may be read by a user.
+ID and identifier may be read by a user.
 
 Direct read access is based on the window access tables, i.e. a user can read
 all the information of a certain entity if the user has access to a window
@@ -677,7 +686,7 @@ _org.openbravo.dal.security_ package.
 
 Derived read access is computed as follows: For each directly readable entity
 it is determined to which other entities it refers. These other entities are
-derived read accessible. For example if a user may directly read an invoice
+derived read accessible. For example, if a user may directly read an invoice
 entity, and an invoice refers to a currency then the user has derived read
 access to a currency. The derived readable entities are also computed in the
 EntityAccessChecker.
@@ -691,7 +700,7 @@ Direct and derived read access are checked at different points:
 
 A user may delete a business object if:
 
-  * He/she has write access to the entity of the business object. 
+  * They have write access to the entity of the business object. 
   * The entity is not set as not-deletable, this is defined in the _ad_table_ . 
 
 Both security checks are done when the session is committed or flushed. See
@@ -699,11 +708,11 @@ the  OBInterceptor  class for more details.
 
 ###  Table Access Validation
 
-Different tables in Openbravo ERP have different access levels. Some tables
-only allow information from client 0 and organisation *. Other tables allow
-objects from any organisation.
+Different tables in Etendo Classic have different access levels. Some tables
+only allow information from client 0 and organization *. Other tables allow
+objects from any organization.
 
-When a business object is saved a check is done if the client and organisation
+When a business object is saved, a check is done if the client and organization
 of that business object are valid for the table access level of the table. The
 check has been implemented in the  AccessLevelChecker  in
 _org.openbravo.base.validation_ . This check is performed when the session
@@ -715,9 +724,9 @@ Property values are validated when the setter is called or the generic set
 method on the BaseOBObject is called. The following checks are performed:
 
   * a check is done if the instance of the value is valid for that property 
-  * for String values a check is done on length or on the allowed String values (list/enumerate values) 
-  * for numeric values the min and max are checked 
-  * for mandatory values a check is done if the value is unequal to null 
+  * for String values, a check is done on length or on the allowed String values (list/enumerate values) 
+  * for numeric values, the min and max are checked 
+  * for mandatory values, a check is done if the value is unequal to null 
 
 The property validation is performed by the classes in
 org.openbravo.base.validation  . The validation structure is initialized when
@@ -732,10 +741,6 @@ natural tree of the organization of the business object. This validation is
 done when a business object is saved (i.e. when the session commits/flushes).
 
 ####  Cross Organization References
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR16Q3  ** .  
----|---  
   
 Entity Organization validation can be bypassed if the following conditions are
 all fulfilled:
@@ -745,17 +750,11 @@ all fulfilled:
 
 #####  Cross Organization references in UI
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR17Q3  ** .  
----|---  
-  
-Starting from 3.0PR17Q3 columns allowing cross organization references allow
-users to select records from organizations not included in the tree of the
-record they are referenced from.
+Columns allowing cross organization references allow users to select records from organizations not included in the tree of the record they are referenced from.
 
 ##  DAL support for Database Views
 
-From  MP23  , the DAL supports views in practically the same way as normal
+The DAL supports views in practically the same way as normal
 tables defined in the application dictionary. This means that:
 
   * database views are considered as normal business objects 
@@ -767,16 +766,17 @@ There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
 queried but not inserted or updated.
 
-Note that for the DAL to consider a view as a business object it needs to have
-a primary key column defined in the application dictionary. This column does
-not need to be a real primary key in the database but it must hold unique
-values for each record of the view.
+!!!note
+    For the DAL to consider a view as a business object it needs to have
+    a primary key column defined in the application dictionary. This column does
+    not need to be a real primary key in the database but it must hold unique
+    values for each record of the view.
 
-The changeset for supporting views is linked to  this issue  .
+The changeset for supporting views is linked to  this issue.
 
 ##  SQL Functions in HQL
 
-To use SQL Functions in HQL you first must make sure that Hibernate knows
+To use SQL Functions in HQL, you first must make sure that Hibernate knows
 about your function. So in your java code you have to register the function.
 This is done by creating a class that implements the **SQLFunctionRegister**
 interface and annotated as _@ApplicationScoped_ .
@@ -802,12 +802,6 @@ layer initialization in order to perform the registration automatically.
 
 Please note that there are several SQL functions being already registered by
 default in core. See  here  and  here  .
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  The
-SQLFunctionRegister interface is available starting from **3.0PR18Q3**
-version. See below to check how SQL functions were being registered in older
-releases.  
----|---  
   
 After registering the function you can use it directly in an HQL like this:
 
@@ -816,24 +810,6 @@ After registering the function you can use it directly in an HQL like this:
     final Session session = OBDal.getInstance().getSession();
     final String qryStr = "select bc.id, ad_column_identifier_std('C_BP_Group', bc.id) from " + Category.ENTITY_NAME + " bc";
     final Query qry = session.createQuery(qryStr);
-
-**Before PR18Q3** : if you are still on an earlier version of PR18Q3, this
-code snippet shows how to register SQL functions in Hibernate:
-
-    
-    
-    OBDal.getInstance().registerSQLFunction("ad_column_identifier_std",
-            new StandardSQLFunction("ad_column_identifier_std", StandardBasicTypes.STRING));
-
-**Openbravo 2.50** : for Openbravo 2.50 the following workaround can be used
-to register functions:
-
-    
-    
-    final Dialect dialect = ((SessionFactoryImpl) ((SessionImpl) OBDal.getInstance().getSession()).getSessionFactory()).getDialect();
-    dialect.getFunctions().put("get_uuid", new StandardSQLFunction("get_uuid", new StringType()));
-
-You can do this once before executing the HQL in the Hibernate session.
 
 ##  Executing Native SQL Queries
 
@@ -856,11 +832,10 @@ The DAL also allows the execution of native SQL queries:
             .setParameter("id", orgId)
             .list();
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  Note
-that the _createNativeQuery_ method accepts a second argument where the
-returning result type may be specified. But this is **NOT** supported due to a
-bug  in Hibernate.  
----|---  
+!!!note
+    The _createNativeQuery_ method accepts a second argument where the
+    returning result type may be specified. But this is NOT supported due to a
+    bug  in Hibernate. 
   
 ##  Runtime Model and the Dynamic API
 
@@ -870,7 +845,7 @@ as import and export and security and validation.
 
 The runtime model consists of two main concepts:
 
-  * Entity  : an entity models a database table and its associations to and from other tables (i.e. entities). An entity has an _Entityname_ which is globally unique. In addition an entity has a runtime Java class which is used for the runtime Java representation. The entity class has methods to retrieve the full list of properties, the id properties or the identifier properties. 
+  * Entity  : an entity models a database table and its associations to and from other tables (i.e. entities). An entity has an _Entityname_ which is globally unique. In addition, an entity has a runtime Java class which is used for the runtime Java representation. The entity class has methods to retrieve the full list of properties, the ID properties or the identifier properties. 
   * Property  : a property corresponds to a column in the database. Some property specifics: 
     * A property can be a primitive property (String, Date, numeric) or a reference to another entity (which can be retrieved through the _getTargetEntity_ method). 
     * A property can be part of the primary key ( _isId() == true_ ). 
@@ -883,13 +858,13 @@ retrieve Entities from the in-memory model (the full list, by entity name or
 by Java class).
 
 The runtime model makes it possible to use model-driven development techniques
-also at runtime. For example the runtime model together with the dynamic API
+also at runtime. For example, the runtime model together with the dynamic API
 offered by the BaseOBObject makes it possible to iterate through all
 properties (and their values) of a business object without knowing the exact
 type of the business objects.
 
 The example below illustrates how to do this. This method below will translate
-any Openbravo ERP business entity into a simple XML document using the runtime
+any Etendo Classic business entity into a simple XML document using the runtime
 model and the dynamic API:
 
     
@@ -941,11 +916,11 @@ This example executes the following steps:
 
   * Get the _entityname_ from the object and retrieve the Entity from the runtime model through the ModelProvider instance. 
   * Create an opening tag and iterate through all properties of the entity (i.e. all columns of the table). 
-  * For each property do the following: 
+  * For each property, do the following: 
     1. Get the value for the property from the business object through the dynamic API. 
     2. Handle null values and check if the property is a primitive type or not. 
-    3. For a primitive type just print the value. 
-    4. For a reference type, cast the value to a BaseOBObject and print the id of the referenced object. 
+    3. For a primitive type, just print the value. 
+    4. For a reference type, cast the value to a BaseOBObject and print the ID of the referenced object. 
 
 The above method will print the following output for a business partner group
 like the one stored in the hello world example above:
@@ -968,11 +943,8 @@ like the one stored in the hello world example above:
     	 <id>ff8081811cc769b4011cc769e49b0002</id>
     </CoreBPGroup>
 
-This example gives a feel for how to use the runtime model.
-
-In general when you are working with very generic code (cross-cutting
-concerns) which applies to all business objects then it can make sense to
-consider using the runtime model.
+In general, when you are working with very generic code (cross-cutting
+concerns) which applies to all business objects, then using the runtime model can be considered.
 
 ##  Testing
 
@@ -980,9 +952,9 @@ It is of vital importance to follow a test-driven development approach for
 every development project. This applies especially to backend process
 development (a little less for UI development which is more difficult to test
 automatically). The Data Access Layer is tested using many JUnit test cases.
-These can be found in the _src-test_ folder in the Openbravo ERP project.
+These can be found in the _src-test_ folder in the Etendo Classic project.
 
-As a developer you can make use of the same test infrastructure as the Data
+As a developer, you can make use of the same test infrastructure as the Data
 Access Layer test cases. The only thing you need to do is to let your test
 class inherit from the  OBBaseTest  class. The OBBaseTest class takes care of
 managing transactions, the context and initializing the DAL.
@@ -999,19 +971,19 @@ the OBBaseTest class for more information.
         // do your test here
       }
 
-For more information on how-to develop test cases see this  how-to  .
+For more information, visit How to develop test cases. 
 
 ##  Test your HQL: the HQL Query Tool
 
-There is a Openbravo HQL Query Tool which allows you to try a HQL query
-directly in the Openbravo web interface. The module can be found in the
+There is an Etendo HQL Query Tool which allows you to try a HQL query
+directly in the Etendo Classic interface. The module can be found in the
 central repository or in the forge  here  . The user manual of the HQL Query
 Tool can be found  here  .
 
 ##  Calling Processes/Stored Procedures from the DAL
 
-Sometimes it makes sense to call a stored procedure from the DAL using the
-same db connection as it is being by the DAL. For this purpose the DAL
+Sometimes, it makes sense to call a stored procedure from the DAL using the
+same db connection as it is being used by the DAL. For this purpose, the DAL
 includes two utility classes which make it easier to call processes and stored
 procedures through the DAL:
 
@@ -1019,24 +991,24 @@ procedures through the DAL:
   * Call Stored Procedure 
 
 These classes make use of the same database connection as the DAL, in addition
-instead of working with String parameters you can work with the java
+instead of working with String parameters, you can work with the java
 (primitive) objects directly.
 
 Both classes contain javadoc with a detailed description on how to use the
 class.
 
 Another interesting part when working with direct database updates (outside of
-Hibernate) is the following section in the trouble shooting guide:  changes
-not visible in the DAL after calling stored procedure  .
+Hibernate) is the following section in the trouble shooting guide: changes
+not visible in the DAL after calling stored procedure.
 
 ##  The DalConnectionProvider
 
-To access and make use of classic Openbravo code it is often needed to have a
+To access and make use of classic Etendo code, it is often needed to have a
 ConnectionProvider object available. When combining DAL actions with classic
-Openbravo operations it makes sense to use one overall database connection and
+Etendo operations, it makes sense to use one overall database connection and
 commit all actions in one step.
 
-To support this the DAL provides a special ConnectionProvider implementation
+To support this, the DAL provides a special ConnectionProvider implementation
 which makes use of the DAL database connection: the  DalConnectionProvider  .
 This class is simple to use, check out the javadoc for more information. The
 class can simply be used by instantiating it:
@@ -1047,12 +1019,6 @@ class can simply be used by instantiating it:
     ConnectionProvider cp = DalConnectionProvider();
 
 No additional information is needed for it to work properly.
-
-  
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR17Q2  ** .  
----|---  
   
 For those queries that want to use the read-only pool, the connection provider
 must be defined as follows:
@@ -1066,10 +1032,10 @@ must be defined as follows:
 
 To ease the use of the DAL in Ant, a base Ant task class is offered by the
 DAL: the DalInitializingTask in the _org.openbravo.dal.core_ package. This
-class takes care of initializing the DAL layer and other details (i.e. using
+class is in charge of of initializing the DAL layer and other details (i.e. using
 the correct classloader).
 
-To make use of this class the following changes need to be made to the Ant
+To make use of this class, the following changes need to be made to the Ant
 task and the custom Java Ant task implementation:
 
   * The custom Ant task Java class should inherit from the _DalInitializatingTask_ . 
@@ -1082,7 +1048,7 @@ The first property configures the location where the _Openbravo.properties_
 file can be found. The second property sets the user under which the task is
 performed.
 
-##  Some things to be aware of...
+##  Important Information
 
 ###  Hibernate Proxies
 
@@ -1097,15 +1063,15 @@ However, the Hibernate proxy is very visible when a developer debugs through
 an application because the instance of an object at runtime will not be the
 exact class (for example BPGroup) but an instance of a Hibernate proxy class.
 
-To understand what the consequence of using Hibernate proxies it is essential
+To understand what the consequence of using Hibernate proxies, it is essential
 that a developer using the DAL reads this part of the Hibernate manual:  [1]
 .
 
-###  Performance: getting the id of a BaseOBObject
+###  Performance: getting the ID of a BaseOBObject
 
 The previous section discussed the Hibernate proxy concept. A Hibernate proxy
 will load its wrapped business object when one of the methods on the business
-object is called. In many cases a developer just wants access to the id or
+object is called. In many cases, a developer just wants access to the ID or
 entityname of an object. To prevent loading of the business object when
 retrieving just this information, the DalUtil class in
 _org.openbravo.dal.core_ offers a _getId_ method and a _getEntityName_ method.
@@ -1114,25 +1080,25 @@ underlying business object.
 
 ###  Hibernate inner workings
 
-To understand how Hibernate operates internally it is strongly encouraged to
-read chapter 21 of the Hibernate manual:  Improving Performance  .
+To understand how Hibernate operates internally, it is strongly encouraged to
+read chapter 21 of the Hibernate manual:  Improving Performance.
 
 ###  Classloading
 
 The DAL loads classes when initializing the DAL. The DAL as a default uses the
-context class loader of the thread. In some cases this does not work correctly
+context class loader of the thread. In some cases, this does not work correctly
 (for example when using the DAL in Ant). The DAL uses the OBClassLoader class
 to make the classloader configurable. By calling _OBClassLoader.setInstance_
-with your own OBClassLoader you can control the class loader used by the DAL.
+with your own OBClassLoader, you can control the class loader used by the DAL.
 
-###  Creating a new business object with a specific id
+###  Creating a new business object with a specific ID
 
 Hibernate will detect that a business object is new when:
 
-  * the id of the business object is not set 
+  * the ID of the business object is not set 
   * when the flag newOBObject is set to true explicitly 
 
-So if you want to create a new business object with a specific id (by calling
+So if you want to create a new business object with a specific ID (by calling
 setId(...)) then you explicitly need to call
 businessObject.setNewOBObject(true). Otherwise, Hibernate will not detect the
 business object as being new and throw an exception ('count of batch update
@@ -1151,14 +1117,14 @@ are required.
 
 The OBException class takes care of logging the exception in a correct way.
 
-When creating your own exception class it is best to extend OBException so
+When creating your own exception class, it is best to extend OBException so
 that you can make use of the standard logging capabilities in the OBException
 (the logging capabilities will be extended over time).
 
 ###  Runtime Invariants: The Check class
 
 The Data Access Layer in various locations performs assertions or runtime
-invariant checks. For example to check if arguments are not null or that a
+invariant checks. For example, to check if arguments are not null or that a
 certain condition is met. Implementing these type of checks helps to make your
 system much more robust. To make implementing these type of checks more
 convenient the Data Access Layer uses the Check class which is located in the
@@ -1171,23 +1137,23 @@ checking).
 
 ###  Code Formatting
 
-The source code which is part of the Data Access Layer is formatted using one
+The source code, which is part of the Data Access Layer, is formatted using one
 formatting template (in Eclipse). It is essential that when developing code in
 or using the Data Access Layer that this same code format template is used.
 
 A common code format has the following benefits:
 
-  * All Openbravo ERP code gets a uniform look and feel, looks cleaner/tidier and therefore look (and is) more professional. 
+  * All Etendo Classic code gets a uniform look and feel, looks cleaner/tidier and, therefore, is more professional. 
   * The code will be easier to understand, less mistakes will be made. 
   * It is possible to do diff's on different versions of the code in mercurial (through your IDE), it is easier to understand changes over time. 
   * Solving mercurial conflicts is easier. 
 
-In Eclipse it is possible to automatically apply code formatting when saving a
+In Eclipse, it is possible to automatically apply code formatting when saving a
 source file. This can be set in the _Window > Preferences > Java > Editor >
 Save Actions _ .
 
 The code format template can be found in the config/eclipse folder in the
-Openbravo development project.
+Etendo development project.
 
 ##  Tips & Tricks and Troubleshooting
 
