@@ -3393,7 +3393,7 @@ To be able to do this, it is necessary to configure certain aspects in the “Ra
 
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
-To create a new rappel, the user must select one of the available configurations in this tab and click the ***Create Rebate*** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
+To create a new rappel, the user must select one of the available configurations in this tab and click the ***Create Rappel*** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
 ![bp_pop_up_new.png](https://docs.etendo.software/assets/legacy/bp_pop_up_new.png)
 
