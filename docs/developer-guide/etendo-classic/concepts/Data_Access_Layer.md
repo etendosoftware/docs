@@ -55,8 +55,8 @@ There are a number of things which are important to note:
 
   * The above code does not set an explicit user context. The user context is set automatically when running the above code in Etendo Classic. However, in other environments, it has to be set explicitly, see  here  for more information. 
   * There is a BPGroup class which models the data of the _c_bp_group_ table. This class has type safe getters and setters for all the data in this table. 
-  * A factory (the Etendo Provider) is used to create an instance of the BPGroup class. 
-  * The Etendo DAL service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The Etendo DAL API is discussed in more detail below. 
+  * A factory (the OBProvider) is used to create an instance of the BPGroup class. 
+  * The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. 
 
 The code snippet above also shows that you don't need to work with SQL or JDBC
 to work with the data from the database. As a developer, you work
@@ -83,9 +83,9 @@ description:
 
 This code snippet introduced a number of new concepts:
 
-  * The Etendo DAL service is used to create an Etendo Criteria object. 
-  * The Etendo Criteria object represents the query, implements the Hibernate Criteria interface and can be used as a standard Hibernate Criteria object. The Etendo Criteria object also supports sorting and paging parameters. The Etendo Criteria API is discussed in more detail below. 
-  * The Etendo Criteria list method performs the actual query, it returns a type safe list of the requested objects. 
+  * The OBDal service is used to create an OBCriteria object. 
+  * The OBCriteria object represents the query, implements the Hibernate Criteria interface and can be used as a standard Hibernate Criteria object. The OBCriteria object also supports sorting and paging parameters. The OBCriteria API is discussed in more detail below. 
+  * The OBCriteria list method performs the actual query, it returns a type safe list of the requested objects. 
   * After changing the name of the business partner group, you don't need to do an explicit save. At commit time Hibernate will automatically detect _dirty_ objects and save those. 
 
 This was a short introduction which shows how the DAL can be used to create,
@@ -168,14 +168,10 @@ a validated and secure way. It provides the following functions:
   * create OBCriteria:  OBCriteria  objects are used for querying. 
   * commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally, this is done by the environment (Openbravo web container or Openbravo test). 
 
-The OBDal API makes extensive use of the  OBCriteria  and  OBQuery  classes to
+The OBDal API makes extensive use of the  OBCriteria  and  Etendo Query  classes to
 support querying.
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  This
-feature is available starting from ** 3.0PR17Q2  ** .  
----|---  
   
-The OBDal class allows to access to the  **read-only** database (pool). In
+The OBDal class allows accessing to the  **read-only** database (pool). In
 this case, the instance must be retrieved with the
 _OBDal.getReadOnlyInstance()_ method. It is important to note that if the
 read-only pool is not configured, this method will use the standard pool to
