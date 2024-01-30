@@ -13,17 +13,17 @@ This article explains how to create a new tool for Copilot.
 Etendo Copilot module allows the creation of tools that add functionality to it. These tools are developed in Python and run in the Docker container where Copilot runs. Next, we explain how to create a new tool for Copilot, in a new module. But you can also add a new tool in an existing module and it can contain several tools.
 
 !!! note "Etendo Copilot is based on Langchain"
-    The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/) for more information.
+    The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
 
 ### Requirements
-- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API. [Installation](/developer-guide/etendo-copilot/installation/){target="_blank"}.
+- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](/developer-guide/etendo-copilot/installation/){target="_blank"}.
 
 ### Create a new tool
 For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
 
 !!! note "Create the classic module"
     
-    Copilot tools are created within an etendo classic module. So the first thing we have to do is create an etendo classic module. 
+    Copilot tools are created within an Etendo Classic module. So the first thing we have to do is create an Etendo Classic module. 
 
 1. The structure of the module will be as follows:
 
@@ -71,7 +71,8 @@ For this example, we will create a tool that will allow us to make a ping to a h
             response = requests.get(host)
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ``` 
-    *Note*: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
+    !!!Note 
+        The name of the tool must be the same as the name of the class that extends the ToolWrapper class.
 
 3. In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:
 
@@ -123,7 +124,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
          This allows us to use the environment variables in the tools. 
         
 
-4. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows this format:
+4. Create the file `tools_deps.toml` in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:
 
     ``` toml
     [ToolName]
@@ -165,11 +166,11 @@ For this example, we will create a tool that will allow us to make a ping to a h
         "pyscopg2-binary|psycopg2" = "*"   # First name is the name of the dependency that is installed, second name is the name of the dependency that is imported. In the tool code, we will do import psycopg2
         ```
 
-5. Additionaly, we to open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
+5. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
 
     - *Search key*: The search key of the tool. The same name as the tool class must be used.
-    - *Name*: The name of the tool. Its the name that will be shown in the Copilot UI.
-    - *Description*: The description of the tool. Its a description of what the tool does. The same description must be used as for the tool class.
+    - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
+    - *Description*: The description of the tool. It is a description of what the tool does. The same description must be used as for the tool class.
     - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step.
 
     ![how-to-create-copilot-tools.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
@@ -183,7 +184,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     ![how-to-create-copilot-tools-2.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
-        Remember excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
+        Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
 
 6. Finally, restart the Copilot service and check that the tool and its dependencies have been installed correctly. 
 To test the developed Tool, you can ask Copilot to run it or, for example, to list which tools are available.

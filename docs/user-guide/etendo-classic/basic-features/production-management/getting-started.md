@@ -8,6 +8,7 @@ tags:
 ---
 
 ![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+#
 
 ## Overview
 

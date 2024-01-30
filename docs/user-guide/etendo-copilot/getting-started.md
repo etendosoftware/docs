@@ -1,11 +1,13 @@
 ---
-title: Etendo Copilot
-tag: 
-    - Copilot
-    - Bastian
-    - AI
-    - AI Tools
+tags: 
+ - copilot
+ - bastian
+ - ai
+ - ai tools
 ---
+
+![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+#
 
 ## Etendo Copilot: Integrated Assistant
 
@@ -75,14 +77,16 @@ The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows yo
 In case of defining an `Open AI Assistant` type app, the following fields will be enabled: 
 
 - *Open AI Assistand Id:* Read-only field in which the ID of the assistant once created is displayed.
-- *Prompt:* Specific instructions of the assistant 
+- *Prompt:* Specific instructions of the assistant. 
 - *Open AI Model:* Dropdown with the Open AI models available.
 - *Code interpreter:* Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs. Learn more.
 
 ### Copilot File Tab
 
 In this tab you can define the files that will be uploaded to the assistant and used as knowledge base. 
-To load new files, you must do it from the [Copilot File window](#copilot-file-window).
+
+!!!info
+    To load new files, you must do it from the [Copilot File window](#copilot-file-window).
 
 ### Copilot App Example
 

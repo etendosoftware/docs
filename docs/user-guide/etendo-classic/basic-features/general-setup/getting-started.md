@@ -1,8 +1,16 @@
 ---
-title: General Setup
+tags: 
+ - getting started
+ - installations
+ - client
+ - organization
+ - setup
 ---
 
-### Overview
+![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+#
+
+## Overview
 
 This section describes the steps that need to be performed first to configure Etendo.
 Etendo installations require at least a [Client](/user-guide/etendo-classic/basic-features/general-setup/client/) and an [Organization](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization). Client and Organization are the two key concepts within the General Setup.
