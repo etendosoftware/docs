@@ -1647,7 +1647,7 @@
         
   
   <span class="md-ellipsis">
-    Getting Started
+    ✨Getting Started
   </span>
   
 
@@ -7141,17 +7141,17 @@
 <p>Etendo Copilot module allows the creation of tools that add functionality to it. These tools are developed in Python and run in the Docker container where Copilot runs. Next, we explain how to create a new tool for Copilot, in a new module. But you can also add a new tool in an existing module and it can contain several tools.</p>
 <div class="admonition note">
 <p class="admonition-title">Etendo Copilot is based on Langchain</p>
-<p>The Langchain libraries are available by default in Copilot. You can use them in your tools. See <a href="https://python.langchain.com/">Langchain documentation</a> for more information.</p>
+<p>The Langchain libraries are available by default in Copilot. You can use them in your tools. See <a href="https://python.langchain.com/" target="_blank">Langchain documentation</a> for more information.</p>
 </div>
 <h3 id="requirements">Requirements</h3>
 <ul>
-<li>Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API. <a href="/developer-guide/etendo-copilot/installation/" target="_blank">Installation</a>.</li>
+<li>Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API <a href="/developer-guide/etendo-copilot/installation/" target="_blank">Installation</a>.</li>
 </ul>
 <h3 id="create-a-new-tool">Create a new tool</h3>
 <p>For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called <code>Ping Tool</code> and will be located in the <code>com.etendoerp.copilot.pingtool</code> package.</p>
 <div class="admonition note">
 <p class="admonition-title">Create the classic module</p>
-<p>Copilot tools are created within an etendo classic module. So the first thing we have to do is create an etendo classic module. </p>
+<p>Copilot tools are created within an Etendo Classic module. So the first thing we have to do is create an Etendo Classic module. </p>
 </div>
 <ol>
 <li>
@@ -7180,7 +7180,7 @@
 </li>
 <li>
 <p>Create the file <code>PingTool.py</code> in the <code>tools</code> folder. This file will contain the code of the tool. The code of the tool will be as follows, the comments explain the code:</p>
-<p><div class="language-python highlight"><span class="filename">PingTool.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
+<div class="language-python highlight"><span class="filename">PingTool.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">os</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">copilot.core.tool_wrapper</span> <span class="kn">import</span> <span class="n">ToolWrapper</span> <span class="c1"># Import the ToolWrapper class from the copilot.core.tool_wrapper module. This class is the one that must be extended to create a new tool.</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">class</span> <span class="nc">PingTool</span> <span class="p">(</span><span class="n">ToolWrapper</span><span class="p">):</span>
@@ -7192,7 +7192,10 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">}</span>  <span class="c1"># The run method must return a dictionary with the outputs of the tool.</span>
 </span></code></pre></div>
-<em>Note</em>: The name of the tool must be the same as the name of the class that extends the ToolWrapper class.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name of the tool must be the same as the name of the class that extends the ToolWrapper class.</p>
+</div>
 </li>
 <li>
 <p>In case the tool needs more than one input, its necessary to use a Dict as input. In order to do that, we have to create a new class that defines the inputs of the tool using pydantic. Here is an example of a tool that receives a Dict as input, with the structure of the Dict defined in a class:</p>
@@ -7245,7 +7248,7 @@
 </div>
 </li>
 <li>
-<p>Create the file <code>tools_deps.toml</code> in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows this format:</p>
+<p>Create the file <code>tools_deps.toml</code> in the root folder of the module. This file will contain the dependencies of the tools of the module. The content of the file follows the TOML format. The content of the file will be as follows:</p>
 <p><div class="language-toml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[ToolName]</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">dependency_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dependency_version&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">dependency_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dependency_version&quot;</span>
@@ -7278,11 +7281,11 @@ The name of the tool must be the same as the name of the class that extends the 
 </div>
 </li>
 <li>
-<p>Additionaly, we to open the <em>Copilot Tool</em> window as <em>System Administrator</em> role. In this window we will create a new record, with the following information:</p>
+<p>Additionaly, open the <em>Copilot Tool</em> window as <em>System Administrator</em> role. In this window we will create a new record, with the following information:</p>
 <ul>
 <li><em>Search key</em>: The search key of the tool. The same name as the tool class must be used.</li>
-<li><em>Name</em>: The name of the tool. Its the name that will be shown in the Copilot UI.</li>
-<li><em>Description</em>: The description of the tool. Its a description of what the tool does. The same description must be used as for the tool class.</li>
+<li><em>Name</em>: The name of the tool. It is the name that will be shown in the Copilot UI.</li>
+<li><em>Description</em>: The description of the tool. It is a description of what the tool does. The same description must be used as for the tool class.</li>
 <li><em>Module</em>: The module where the tool is located. This field is a reference to the module that we have created in the first step.</li>
 </ul>
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="how-to-create-copilot-tools.png" src="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" /></a></p>
@@ -7293,7 +7296,7 @@ Once the <em>Copilot Tool</em> is defined, this tool must be associated to the c
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="how-to-create-copilot-tools-2.png" src="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">OpenAI Assistants tools</p>
-<p>Remember excecute <code>Sync OpenAI Assistant</code> process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.</p>
+<p>Remember to excecute <code>Sync OpenAI Assistant</code> process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.</p>
 </div>
 </li>
 <li>
