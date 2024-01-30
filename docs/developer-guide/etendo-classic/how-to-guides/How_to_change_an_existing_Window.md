@@ -1,50 +1,26 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags: 
+  - Application Dictionary (AD)
+  - UI Customization
+  - Iterative Development
+  - Module Development
+---
 
 #  How to change an existing Window
 
-##  Contents
-
-  * 1  Introduction 
-  * 2  Objective 
-  * 3  Changing the window 
-  * 4  Exporting the changes 
-
   
----  
-  
-##  Introduction
+##  Overview
 
-Application elements (  windows  ,  tabs  and  fields  ) are liable to change
+Application elements (windows, tabs and fields) are liable to change
 repeatedly during the development or maintenance phases of a project.
-Openbravo ERP is able to cope with these changes because its architecture is
+Etendo is able to cope with these changes because its architecture is
 suited to iterative development. The definitions of all generated Windows,
 tabs and fields are stored as metadata in the Application Dictionary (AD).
 
 Changing the window of an existing application is a simple process of changing
 the AD definition.
 
-When using the Openbravo 3 UI this is all that is needed, the changes can be
+When using the Etendo UI this is all that is needed, the changes can be
 seem immediately when switching role and then opening the changed window
 again.
 
@@ -82,11 +58,11 @@ guides/How_to_change_an_existing_Window-0.png){: .legacy-image-style}
 
   
 To customize these window in a Modularity Context a new module of Type
-**Template** / **Industry Template** is needed.
+*Template* / *Industry Template* is needed.
 
-If these changes are just planned as local customization then there's an easy
-way of creating such a module. Navigating to **General Setup || Application ||
-System Info _and marking the_ ** _Customization Allowed'_ CheckBox
+If these changes are just planned as local customization then there is an easy
+way of creating such a module. Navigating to *General Setup || Application ||
+System Info _and marking the_ * _Customization Allowed'_ CheckBox
 automatically creates a new module of type Template which can be used
 directly.
 
@@ -130,9 +106,11 @@ which will recompile all changed windows and deploy the changes.
 ##  Exporting the changes
 
 The final step is to export the changes into the module so they are persisted.
-When exporting changes into a template is it **very important** that **only**
-the **template is in development** and the module which contains the changed
-object (i.e. window) is not.
+
+!!!note
+    When exporting changes into a template, it is important that only
+    the *template is in development* and the module which contains the changed
+    object (i.e. window) is not.
 
 After ensuring that the export of the changes consists of the following two
 steps:
@@ -140,20 +118,8 @@ steps:
   1. _ant export.database_ , same steps as for any other module 
   2. _ant export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
 
-This concludes this HowTo. Further technical information on _Template_ and the
-_Configuration Script_ they contain can be found in  this  document.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window  "
 
-This page has been accessed 14,859 times. This page was last modified on 13
-July 2011, at 15:13. Content is available under  Creative Commons Attribution-
-ShareAlike 2.5 Spain License  .
+This work is a derivative of ["How to change an existing window"](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
 
-  
-**
-
-Category  :  HowTo
-
-**
 

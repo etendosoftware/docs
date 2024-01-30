@@ -36,7 +36,8 @@ module directory and packaged with the module.
 
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
-A step by step on How to add a Constraint can be found [here](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint)
+!!!info
+    For more information, read [How to add a Constraint](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint)
 
 ###  Messages
 
@@ -195,7 +196,8 @@ Besides, this feature allows defining a [function based index](#Function_based_i
 
 ##  Triggers
 
-A step by step on How to add a Trigger can be found [here](/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger).
+!!!info
+    For more information, read [How to add a Trigger](/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger).
 
 ###  Syntax
 
@@ -214,7 +216,7 @@ transaction), the back-end captures that exception in order to show a proper
 message. 
 
 !!!info
-    For more information, read in the [Message](/developer-guide/etendo-classic/concepts/Messages#checks)documentation how to do it.
+    For more information, read the [Message](/developer-guide/etendo-classic/concepts/Messages#checks) documentation how to do it.
 
 ####  Oracle's laziness
 
