@@ -4,13 +4,14 @@ The Etendo RX Edge Service is designed to simplify API routing and provide essen
 
 ### Key Features
 
-- **Spring Framework Base**: Utilizes the robustness of Spring Framework and Spring Boot.
-- **Flexible Route Matching**: Capable of matching routes based on various request attributes.
-- **Customizable Predicates and Filters**: Offers the ability to tailor predicates and filters for specific routes.
-- **User-Friendly Configuration**: Predicates and filters are straightforward to configure.
-- **Path Rewriting Capability**: Allows for the modification of request paths as needed.
+- Spring Framework Base: Utilizes the robustness of Spring Framework and Spring Boot.
+- Flexible Route Matching: Capable of matching routes based on various request attributes.
+- Customizable Predicates and Filters: Offers the ability to tailor predicates and filters for specific routes.
+- User-Friendly Configuration: Predicates and filters are straightforward to configure.
+- Path Rewriting Capability: Allows for the modification of request paths as needed.
 
-For more advanced configurations and features, consult the [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/reference/index.html).
+!!!info
+    For more advanced configurations and features, visit the [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/reference/index.html){target="\_blank"}.
 
 ### Operational Dynamics
 
@@ -24,9 +25,9 @@ To launch the Edge Service, execute `./gradlew rx:rx` (or `./gradlew :rx` for in
 
 Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](/developer-guide/etendo-rx/concepts/config-server/) in the rxconfig directory.
 
-Below is a basic overview of the default edge configuration:
+The following is a basic overview of the default edge configuration:
 
-```yaml
+```yaml title="edge.yaml"
 # Global settings
 etendorx:
   auth:
@@ -72,17 +73,17 @@ spring:
 
 ### Understanding the Configuration
 
-1. **Global Variables**: Define URLs for different services like authentication, classic app, and sub-applications.
-2. **Routing Configurations**:
-   - **Login Authentication Route**: Routes `/login` requests to the authentication service.
-   - **Classic Application Path Route**: Handles various HTTP methods for paths starting with `/etendo/`.
-   - **DAS Path Route**: Manages requests to the DAS service with paths starting with `/das/`.
+1. Global Variables: Define URLs for different services like authentication, classic app, and sub-applications.
+2. Routing Configurations:
+   - Login Authentication Route: Routes `/login` requests to the authentication service.
+   - Classic Application Path Route: Handles various HTTP methods for paths starting with `/etendo/`.
+   - DAS Path Route: Manages requests to the DAS service with paths starting with `/das/`.
 
 ### Adding Custom Services
 
 To integrate a new service, add a routing configuration in `spring.cloud.gateway.routes`. Follow the existing structure:
 
-```yaml
+```yaml title="YAML example"
 # Example of adding a custom service route
 - id: <<custom_service_identifier>>
   uri: <<Internal_url_accessible_by_edge_service>>
