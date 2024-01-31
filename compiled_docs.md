@@ -32716,24 +32716,25 @@ By default, the following services should be up and running:
 
 The Etendo RX Config Server is a crucial component in a distributed system, providing both server-side and client-side support for managing externalized configurations. This centralized solution allows for efficient and consistent management of application properties across various environments, from development to production. Seamlessly integrating with the Spring Environment and PropertySource abstractions, the Config Server is not only compatible with RX applications but also adaptable to a wide range of applications in different programming languages. This flexibility ensures that as applications progress through deployment stages, they consistently receive the necessary configurations to function optimally.
 
-For detailed guidance on advanced usage, refer to the Spring Cloud Config documentation: [Spring Cloud Config Documentation](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/).
+!!!info
+      For detailed guidance on advanced usage, visit the [Spring Cloud Config Documentation](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/){target="\_blank"}.
 
 ##### Default configuration
 
-The Config Server, by default, sources its configuration from the ./src-rc/rxconfig directory. For those utilizing Etendo via source code, the configurations are located in the ./rxconfig directory. To set up the basic configuration, run the command ./gradlew setup. This will create the following files in the specified directory:
+The Config Server, by default, sources its configuration from the `./src-rc/rxconfig` directory. For those utilizing Etendo via source code, the configurations are located in the `./rxconfig` directory. To set up the basic configuration, run the command `./gradlew setup`. This will create the following files in the specified directory:
 
-* application.yaml
-* das.yaml
-* auth.yaml
-* edge.yaml
+* `application.yaml`
+* `das.yaml`
+* `auth.yaml`
+* `edge.yaml`
 
 Each of these YAML files is structured to include the necessary properties for various applications.
 
-##### yaml structure
+##### YAML structure
 
-YAML files are used to define properties required by different applications in a simple, readable format. The syntax of YAML is based on key-value pairs, where indentation (spaces, not tabs) is used to signify hierarchy. Here's an example:
+YAML files are used to define properties required by different applications in a simple, readable format. The syntax of YAML is based on key-value pairs, where indentation (spaces, not tabs) is used to show hierarchy. Here's an example:
 
-```yaml
+```yaml title="YAML example"
 classic:
   url: http://localhost:8080/etendo
 
@@ -32742,20 +32743,20 @@ das:
   label: Example text
 ```
 
-In this example, properties like classic.url, das.url, and das.label are defined. Applications will refer to these properties using their respective keys.
+In this example, properties like `classic.url`, `das.url`, and `das.label` are defined. Applications will refer to these properties using their respective keys.
 
 ##### Properties access
 
-Applications within Etendo RX, such as das, auth, edge, etc., each have a dedicated YAML file for their specific configurations. The application.yaml file is reserved for configurations that are shared across all services. For instance, by setting das.url in application.yaml, all applications can access this data. Properties defined in a service-specific file are exclusive to that service.
+Applications within Etendo RX, such as das, auth, edge, etc., each have a dedicated YAML file for their specific configurations. The application.yaml file is reserved for configurations that are shared across all services. For instance, by setting `das.url` in `application.yaml`, all applications can access this data. Properties defined in a service-specific file are exclusive to that service.
 
 ##### Running config service
 
-To launch the Config Service, execute the command ./gradlew rx:rx (or ./gradlew rx for source code installations). This action enables each service to access its configuration. For example, accessing http://localhost:8888/das/default yields a JSON response like the following:
+To launch the Config Service, execute the command `./gradlew rx:rx` (or `./gradlew rx` for source code installations). This action enables each service to access its configuration. For example, accessing `http://localhost:8888/das/default` yields a JSON response like the following:
 
-For example if you access to http://localhost:8888/das/default
+For example, if you access `http://localhost:8888/das/default`
 You will have something similar to:
 
-```json
+```json title="Query response"
 {
    "name":"das",
    "profiles":[
@@ -32808,13 +32809,14 @@ The Etendo RX Edge Service is designed to simplify API routing and provide essen
 
 ##### Key Features
 
-- **Spring Framework Base**: Utilizes the robustness of Spring Framework and Spring Boot.
-- **Flexible Route Matching**: Capable of matching routes based on various request attributes.
-- **Customizable Predicates and Filters**: Offers the ability to tailor predicates and filters for specific routes.
-- **User-Friendly Configuration**: Predicates and filters are straightforward to configure.
-- **Path Rewriting Capability**: Allows for the modification of request paths as needed.
+- Spring Framework Base: Utilizes the robustness of Spring Framework and Spring Boot.
+- Flexible Route Matching: Capable of matching routes based on various request attributes.
+- Customizable Predicates and Filters: Offers the ability to tailor predicates and filters for specific routes.
+- User-Friendly Configuration: Predicates and filters are straightforward to configure.
+- Path Rewriting Capability: Allows for the modification of request paths as needed.
 
-For more advanced configurations and features, consult the [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/reference/index.html).
+!!!info
+    For more advanced configurations and features, visit the [Spring Cloud Gateway Documentation](https://docs.spring.io/spring-cloud-gateway/reference/index.html){target="\_blank"}.
 
 ##### Operational Dynamics
 
@@ -32828,9 +32830,9 @@ To launch the Edge Service, execute `./gradlew rx:rx` (or `./gradlew :rx` for in
 
 Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](https://docs.etendo.software/developer-guide/etendo-rx/concepts/config-server/) in the rxconfig directory.
 
-Below is a basic overview of the default edge configuration:
+The following is a basic overview of the default edge configuration:
 
-```yaml
+```yaml title="edge.yaml"
 ### Global settings
 etendorx:
   auth:
@@ -32876,17 +32878,17 @@ spring:
 
 ##### Understanding the Configuration
 
-1. **Global Variables**: Define URLs for different services like authentication, classic app, and sub-applications.
-2. **Routing Configurations**:
-   - **Login Authentication Route**: Routes `/login` requests to the authentication service.
-   - **Classic Application Path Route**: Handles various HTTP methods for paths starting with `/etendo/`.
-   - **DAS Path Route**: Manages requests to the DAS service with paths starting with `/das/`.
+1. Global Variables: Define URLs for different services like authentication, classic app, and sub-applications.
+2. Routing Configurations:
+   - Login Authentication Route: Routes `/login` requests to the authentication service.
+   - Classic Application Path Route: Handles various HTTP methods for paths starting with `/etendo/`.
+   - DAS Path Route: Manages requests to the DAS service with paths starting with `/das/`.
 
 ##### Adding Custom Services
 
 To integrate a new service, add a routing configuration in `spring.cloud.gateway.routes`. Follow the existing structure:
 
-```yaml
+```yaml title="YAML example"
 ### Example of adding a custom service route
 - id: <<custom_service_identifier>>
   uri: <<Internal_url_accessible_by_edge_service>>
