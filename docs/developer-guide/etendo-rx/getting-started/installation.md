@@ -29,7 +29,7 @@ cp src-rx/gradle.properties.template src-rx/gradle.properties
 
 Now, you can edit both `gradle.properties` files updating the variables, or simply use their default values.
 
-- gradle.properties
+- `gradle.properties`
 
 !!! note
     The GitHub credentials are required.
@@ -46,7 +46,7 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 | `bbdd.user`             | Database user                                                    | tad                |
 | `bbdd.password`         | Database password                                                | tad                |
 
-- src-rx/gradle.properties
+- `src-rx/gradle.properties`
 
 | Variable      | Description                          | Default Value      |
 | ------------- | ------------------------------------ | ------------------ |
@@ -97,7 +97,7 @@ After the database creation, compile the project and deploy Etendo Classic to To
 
 This task deploys the `webContent` folder into the `tomcat/webapps` directory. Make sure to set `$CATALINA_HOME` to the correct path.
 
-Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo Classic.
+Run Tomcat and navigate to [http://localhost:8080/etendo](http://localhost:8080/etendo) to access the Etendo Classic.
 
 !!!note
     If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).
@@ -120,9 +120,9 @@ The first time you run the command above, you need to provide an access token fo
 
 ### Configure auth project
 
-After executing the rx:rx task, it starts setting up the services.
+After executing the `rx:rx` task, it starts setting up the services.
 It starts with the configuration service and when it starts to try with the auth service, it will fail because of the missing token.
-To extract the token check Auth log file in `src-rx/logs/auth.log`
+To extract the token, check Auth log file in `src-rx/logs/auth.log`
 
 You will find something similar to:
 
@@ -139,7 +139,7 @@ Replace default empty token value with log content
  token: eyJhbGciOiJSUzI1NiJ9... (truncated)
 ```
 
-Now that you fill the token value, run rx:rx task again and all the microservices will be up and running.
+Now that you fill the token value, run `rx:rx` task again and all the microservices will be up and running.
 
 By default, the following services should be up and running:
 
