@@ -1,75 +1,45 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags:
+  - Etendo
+  - Canvas Field
+  - Form Customization
+  - Grid Customization
+  - JavaScript Development
+  - UI Components
+  - JavaScripts Events
+---
 
 #  How to add a canvas field to a Form or Grid
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Example Module 
-  * 3  Main development steps for creating a new canvas field 
-    * 3.1  Implementing your canvas in javascript 
-    * 3.2  Defining the canvas in the Tab-Field (ADField) 
-    * 3.3  The result 
-  * 4  Javascript events passed to the canvas 
-  * 5  Adding server side actions 
-
-  
----  
   
 ##  Introduction
 
-A canvas field allows you to add any visual component to a form or a row in a
+A canvas field allows the user to add any visual component to a form or a row in a
 grid. This concept can be used to add a calculated field to a form and grid.
 Visual components which can be added are for example buttons, links and
 (computed) labels.
 
-In this howto we will be adding a button and a calculated field to the form
-and to every row in the grid. The howto will illustrate how information from
+In this section, we will be adding a button and a calculated field to the form
+and to every row in the grid. We will illustrate how information from
 the record and form can be used to get dynamic information from the Form/Grid.
 
 The implementation of canvas fields requires javascript development
 experience. See the following concept pages for background information on
 javascript development:
 
-  * Client_Side_Development_and_API 
-  * JavaScript_Coding_Conventions 
+  * [Client_Side_Development_and_API](/developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API) 
+  * [JavaScript_Coding_Conventions](/developer-guide/etendo-classic/concepts/JavaScript_Coding_Conventions) 
 
 It also makes sense to study the following page:  Openbravo_3_Architecture  .
-
-Note: this functionality is available in Openbravo 3.0 from MP6 and later.
-
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png){: .legacy-image-style}
 
 ##  Example Module
 
-This howto is supported by an example module which shows examples of the code
+This section is supported by an example module which shows examples of the code
 shown and discussed.
 
-The code of the example module can be downloaded from this mercurial
+The code of the example module can be downloaded from this
 repository:
 https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
 
@@ -86,17 +56,14 @@ The development consists of 2 steps:
 
 ###  Implementing your canvas in javascript
 
-The first step is to implement your canvas class in javascript. This is done
-in 2 steps:
+The first step is to implement your canvas class in javascript. This is done in 2 steps:
 
   * Create a  javascript  file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
-  * Register the javascript file (and other static resources such as css files) in Openbravo using a  ComponentProvider 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a ComponentProvider 
 
-The example module implements a button and a calculated field in the  example-
-canvas-field.js  file.
+The example module implements a button and a calculated field in the  `example-canvas-field.js`  file.
 
-The first example in the file implements a button which shows the identifier
-of the current record:
+The first example in the file implements a button which shows the identifier of the current record:
 
     
     
@@ -116,10 +83,7 @@ of the current record:
       }
     });
 
-The second example shows a calculated field which divides 2 values from the
-current record and displays the result in a formatted way. It also illustrates
-several methods which are called when the context/environment changes (for
-example when a value on the form changes):
+The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
 
     
     
@@ -170,8 +134,7 @@ example when a value on the form changes):
       }
     });
 
-The javascript file is registered in the example modules'  ComponentProvider
-like this:
+The javascript file is registered in the example modules' ComponentProvider like this:
 
     
     
@@ -185,15 +148,12 @@ like this:
 ###  Defining the canvas in the Tab-Field (ADField)
 
 The next step is to create a new field in the tab, and set its client class
-field:
-
-  
+field:  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png){: .legacy-image-style}
 
-Since 3.0MP20 it is also possible to add in-line properties in the
-"Clientclass" field, for example, 'OBEXAPP_SalesOrderActionButton {"title":
+It is also possible to add in-line properties in the "Clientclass" field, for example, 'OBEXAPP_SalesOrderActionButton {"title":
 "My Action Button"}'
 
 ###  The result
@@ -212,7 +172,7 @@ guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png){: .legacy-image-style}
 
 ##  Javascript events passed to the canvas
 
-When implementing your canvas you should take into account that the canvas is
+When implementing your canvas, you should take into account that the canvas is
 used in 3 different situations:
 
   * when displaying a row in the grid 
@@ -229,9 +189,9 @@ In grid-display mode the following applies:
     * record: the record for which the canvas is used 
     * colNum: the column in which the canvas is shown 
     * field: (since 3.0MP20) the field where the canvas is used 
-  * a canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. When a canvas is used for a record then the setRecord method on it is called (if the canvas has this method). 
+  * a canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
 
-In form-edit or grid-edit mode the following applies:
+In form-edit or grid-edit mode, the following applies:
 
   * the canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
   * this.canvasItem.form: the form instance 
@@ -243,20 +203,8 @@ In form-edit or grid-edit mode the following applies:
 
 ##  Adding server side actions
 
-The button implementation can easily be extended with a server side action.
-Openbravo supports the  action handler concept  for this purpose.
+The button implementation can easily be extended with a server side action. Etendo Classic supports the action handler concept for this purpose.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid  "
+---
 
-This page has been accessed 15,511 times. This page was last modified on 31
-January 2013, at 22:54. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of ["How to add a canvas field to a form or grid"](http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 

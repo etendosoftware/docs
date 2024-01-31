@@ -627,7 +627,7 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the  DalRequestFilter  ). If an exception occurs, then a rollback is performed. 
+  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the DalRequestFilter). If an exception occurs, then a rollback is performed. 
   * In the Etendo Classic test environment: The DAL base test class (  OBBaseTest  ) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
@@ -635,7 +635,7 @@ or Transaction:
     SQLC and DAL: The standard Etendo Classic database access
     (through Windows) works outside of the DAL. This means that,
     database access uses a different connection than the DAL. If both connections
-    update the database, then it is possible that a deadlock situations happens.
+    update the database, then it is possible that a deadlock situation happens.
     So, when working/updating through both the DAL and SQLC one should always
     first commit/close the connection of the DAL explicitly before continuing with
     SQLC or the other way around.
@@ -652,13 +652,13 @@ called (ValidationException).
 
 If you need to work without this security checks, you should use the
 Administrator Mode, or the restricted Administrator Mode.
-You can find more information about them in Administrator Mode.
+You can find more information about them in [Administrator Mode](#administrator-mode).
 
 ###  Write Access
 
 Write access checks are done when the OBDal save or remove methods are called
 or when a business object is saved by hibernate (at flush/commit). For write
-access the following checks are performed:
+access, the following checks are performed:
 
   * The user must have access to a window/tab which displays the entity. See the  AD_Window_Access  table. 
   * The organization of the business object must be in the list of writable organizations of that user. Writable organizations are organizations directly linked to the role of the user. 
@@ -682,7 +682,7 @@ all the information of a certain entity if the user has access to a window
 displaying that entity. The read access for a certain table/entity can be
 overridden using the ad_table_access table. The set of directly readable
 entities is computed by the  EntityAccessChecker  in the
-_org.openbravo.dal.security_ package.
+`org.openbravo.dal.security` package.
 
 Derived read access is computed as follows: For each directly readable entity
 it is determined to which other entities it refers. These other entities are
@@ -715,7 +715,7 @@ objects from any organization.
 When a business object is saved, a check is done if the client and organization
 of that business object are valid for the table access level of the table. The
 check has been implemented in the  AccessLevelChecker  in
-_org.openbravo.base.validation_ . This check is performed when the session
+`org.openbravo.base.validation` . This check is performed when the session
 commits or is flushed.
 
 ###  Validation
@@ -729,7 +729,7 @@ method on the BaseOBObject is called. The following checks are performed:
   * for mandatory values, a check is done if the value is unequal to null 
 
 The property validation is performed by the classes in
-org.openbravo.base.validation  . The validation structure is initialized when
+`org.openbravo.base.validation`  . The validation structure is initialized when
 the runtime model is created. For each property a corresponding
 PropertyValidator is created. Different types of properties have different
 types of PropertyValidators.
@@ -745,8 +745,8 @@ done when a business object is saved (i.e. when the session commits/flushes).
 Entity Organization validation can be bypassed if the following conditions are
 all fulfilled:
 
-  * The foreign key column that references to the other object is marked as _Allow Cross Organization Reference_ . This can be set in _Tables and Columns > Column _ tab. 
-  * Context is in  Cross Organization Reference Administrator Mode  . 
+  * The foreign key column that references to the other object is marked as _Allow Cross Organization Reference_ . This can be set in Tables and Columns > Column tab. 
+  * Context is in [Cross Organization Reference Administrator Mode](#cross-organization-reference-administrator-mode). 
 
 #####  Cross Organization references in UI
 
@@ -760,7 +760,7 @@ tables defined in the application dictionary. This means that:
   * database views are considered as normal business objects 
   * entities are generated for database views 
   * database views can be queried using HQL and the DAL query apis 
-  * database views can be accessed through the  XML  and  JSON  REST web service apis 
+  * database views can be accessed through the  [XML](/developer-guide/etendo-classic/concepts/XML_REST_Web_Services)  and  [JSON](/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services) REST web service apis 
 
 There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
@@ -772,7 +772,7 @@ queried but not inserted or updated.
     not need to be a real primary key in the database but it must hold unique
     values for each record of the view.
 
-The changeset for supporting views is linked to  this issue.
+The changeset for supporting views is linked to this issue.
 
 ##  SQL Functions in HQL
 
@@ -971,14 +971,14 @@ the OBBaseTest class for more information.
         // do your test here
       }
 
-For more information, visit How to develop test cases. 
+For more information, visit [How to develop test cases](/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases). 
 
 ##  Test your HQL: the HQL Query Tool
 
-There is an Etendo HQL Query Tool which allows you to try a HQL query
+There is an Etendo HQL Query Tool which allows you to try an HQL query
 directly in the Etendo Classic interface. The module can be found in the
-central repository or in the forge  here  . The user manual of the HQL Query
-Tool can be found  here  .
+central repository or in the forge  here. The user manual of the HQL Query
+Tool can be found  here.
 
 ##  Calling Processes/Stored Procedures from the DAL
 
@@ -998,8 +998,8 @@ Both classes contain javadoc with a detailed description on how to use the
 class.
 
 Another interesting part when working with direct database updates (outside of
-Hibernate) is the following section in the trouble shooting guide: changes
-not visible in the DAL after calling stored procedure.
+Hibernate) is the following section in the trouble shooting guide: [changes
+not visible in the DAL after calling stored procedure](/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#dal-queries-do-not-return-or-do-not-see-changes-in-the-database).
 
 ##  The DalConnectionProvider
 
@@ -1064,8 +1064,7 @@ an application because the instance of an object at runtime will not be the
 exact class (for example BPGroup) but an instance of a Hibernate proxy class.
 
 To understand what the consequence of using Hibernate proxies, it is essential
-that a developer using the DAL reads this part of the Hibernate manual:  [1]
-.
+that a developer using the DAL reads [this part](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html#performance-fetching-proxies){target="\_blank"} of the Hibernate manual.
 
 ###  Performance: getting the ID of a BaseOBObject
 
@@ -1081,7 +1080,7 @@ underlying business object.
 ###  Hibernate inner workings
 
 To understand how Hibernate operates internally, it is strongly encouraged to
-read chapter 21 of the Hibernate manual:  Improving Performance.
+read chapter 21 of the Hibernate manual:  [Improving Performance](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
 
 ###  Classloading
 
@@ -1157,7 +1156,7 @@ Etendo development project.
 
 ##  Tips & Tricks and Troubleshooting
 
-For tips and tricks and common issues (and solutions) you may find, please visit the troubleshooting section.
+For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer) section.
 
 ---
 

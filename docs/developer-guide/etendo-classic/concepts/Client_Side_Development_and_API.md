@@ -36,7 +36,7 @@
     * 5.2  Finding Global and Smartclient Components 
     * 5.3  Finding javascript errors in your own code, stopping on exceptions 
   * 6  Analyzing Client-Server Requests 
-  * 7  Adding javascript to Openbravo 
+  * 7  Adding javascript to Etendo 
   * 8  Unit Testing Javascript code 
   * 9  Implementing global-singleton javascript objects 
   * 10  Openbravo Client Side Components - Javascript API 
@@ -262,7 +262,7 @@ A summary:
 
 You can see the returned content by clicking the content tab.
 
-##  Adding javascript to Openbravo
+##  Adding javascript to Etendo 
 
 In the Openbravo 3 architecture a significant part of the logic is implemented
 in (generated) javascript. Solution providers implementing new functionality
