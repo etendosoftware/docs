@@ -7172,21 +7172,24 @@
 <p>The Etendo RX Edge Service is designed to simplify API routing and provide essential services like security, monitoring, metrics, and resilience. It is a versatile tool that integrates seamlessly into your API infrastructure.</p>
 <h3 id="key-features">Key Features</h3>
 <ul>
-<li><strong>Spring Framework Base</strong>: Utilizes the robustness of Spring Framework and Spring Boot.</li>
-<li><strong>Flexible Route Matching</strong>: Capable of matching routes based on various request attributes.</li>
-<li><strong>Customizable Predicates and Filters</strong>: Offers the ability to tailor predicates and filters for specific routes.</li>
-<li><strong>User-Friendly Configuration</strong>: Predicates and filters are straightforward to configure.</li>
-<li><strong>Path Rewriting Capability</strong>: Allows for the modification of request paths as needed.</li>
+<li>Spring Framework Base: Utilizes the robustness of Spring Framework and Spring Boot.</li>
+<li>Flexible Route Matching: Capable of matching routes based on various request attributes.</li>
+<li>Customizable Predicates and Filters: Offers the ability to tailor predicates and filters for specific routes.</li>
+<li>User-Friendly Configuration: Predicates and filters are straightforward to configure.</li>
+<li>Path Rewriting Capability: Allows for the modification of request paths as needed.</li>
 </ul>
-<p>For more advanced configurations and features, consult the <a href="https://docs.spring.io/spring-cloud-gateway/reference/index.html">Spring Cloud Gateway Documentation</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more advanced configurations and features, visit the <a href="https://docs.spring.io/spring-cloud-gateway/reference/index.html" target="_blank">Spring Cloud Gateway Documentation</a>.</p>
+</div>
 <h3 id="operational-dynamics">Operational Dynamics</h3>
 <p>The Edge Service functions as a gateway, handling client requests. When a request is made to the Edge Server Gateway, the Gateway Handler Mapping assesses whether the request corresponds to an established route. If it does, the Gateway Web Handler processes the request, applying a set of route-specific filters.</p>
 <h3 id="running-the-service">Running the Service</h3>
 <p>To launch the Edge Service, execute <code>./gradlew rx:rx</code> (or <code>./gradlew :rx</code> for installations from the source code). The service can be accessed at its default URL: <code>http://localhost:8096</code>.</p>
 <h3 id="configuration-guidelines">Configuration Guidelines</h3>
 <p>Configuration adjustments can be made in the <code>edge.yaml</code> file. For further information on configuration settings, please refer to the <a href="/developer-guide/etendo-rx/concepts/config-server/">Config Server Documentation</a> in the rxconfig directory.</p>
-<p>Below is a basic overview of the default edge configuration:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Global settings</span>
+<p>The following is a basic overview of the default edge configuration:</p>
+<div class="language-yaml highlight"><span class="filename">edge.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Global settings</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">etendorx</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">auth</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:8094</span>
@@ -7230,15 +7233,15 @@
 </span></code></pre></div>
 <h3 id="understanding-the-configuration">Understanding the Configuration</h3>
 <ol>
-<li><strong>Global Variables</strong>: Define URLs for different services like authentication, classic app, and sub-applications.</li>
-<li><strong>Routing Configurations</strong>:</li>
-<li><strong>Login Authentication Route</strong>: Routes <code>/login</code> requests to the authentication service.</li>
-<li><strong>Classic Application Path Route</strong>: Handles various HTTP methods for paths starting with <code>/etendo/</code>.</li>
-<li><strong>DAS Path Route</strong>: Manages requests to the DAS service with paths starting with <code>/das/</code>.</li>
+<li>Global Variables: Define URLs for different services like authentication, classic app, and sub-applications.</li>
+<li>Routing Configurations:</li>
+<li>Login Authentication Route: Routes <code>/login</code> requests to the authentication service.</li>
+<li>Classic Application Path Route: Handles various HTTP methods for paths starting with <code>/etendo/</code>.</li>
+<li>DAS Path Route: Manages requests to the DAS service with paths starting with <code>/das/</code>.</li>
 </ol>
 <h3 id="adding-custom-services">Adding Custom Services</h3>
 <p>To integrate a new service, add a routing configuration in <code>spring.cloud.gateway.routes</code>. Follow the existing structure:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Example of adding a custom service route</span>
+<div class="language-yaml highlight"><span class="filename">YAML example</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Example of adding a custom service route</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;custom_service_identifier&gt;&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;Internal_url_accessible_by_edge_service&gt;&gt;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">predicates</span><span class="p">:</span>
