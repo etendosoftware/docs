@@ -7283,11 +7283,17 @@ The name of the tool must be the same as the name of the class that extends the 
 <li>
 <p>Additionaly, open the <em>Copilot Tool</em> window as <em>System Administrator</em> role. In this window we will create a new record, with the following information:</p>
 <ul>
-<li><em>Search key</em>: The search key of the tool. The same name as the tool class must be used.</li>
+<li><em>Search key</em>: The tool search key. The same name as the tool class must be used, this field is mandatory to find the tool in the <code>Sync Tool Structure</code> process. </li>
 <li><em>Name</em>: The name of the tool. It is the name that will be shown in the Copilot UI.</li>
-<li><em>Description</em>: The description of the tool. It is a description of what the tool does. The same description must be used as for the tool class.</li>
-<li><em>Module</em>: The module where the tool is located. This field is a reference to the module that we have created in the first step.</li>
+<li><em>Description</em>: This is a description of what the tool does. This field is automatically populated when the tool is synchronized.</li>
+<li><em>Module</em>: The module where the tool is located. This field is a reference to the module that we have created in the first step, and where these configurations will be exported.</li>
+<li><em>JSON Info</em>: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. </li>
 </ul>
+<p>The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button <code>Sync Tool Structure</code> in the <code>Copilot Tool</code> window. This process will load the <em>Description</em> and the <em>JSON Info</em> fields of the tool. This data is get from the tool class.</p>
+<div class="admonition warning before sync tool structure">
+<p class="admonition-title">Warning</p>
+<p>Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.</p>
+</div>
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="how-to-create-copilot-tools.png" src="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" /></a></p>
 <p>After creating the record, we have to export the module to persist the changes in the database:
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>export.database
