@@ -1,69 +1,32 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  Alerts
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Alert Rules 
-  * 3  Data Driven 
-    * 3.1  Definition 
-    * 3.2  Performance 
-  * 4  External 
-  * 5  Alert Recipient 
-
-  
----  
+---
+title: Alerts
+---
   
 ##  Introduction
 
-Alerts are the way Openbravo ERP can inform users about virtually any event
-that happens in the system (if an appropriate alertrule is created). The
-System Administrator defines when an alert should be prompted. This
-notifications are shown in the top bar, just beside the Application menu.
+Alerts are the way Etendo Classic can inform users about virtually any event
+that happens in the system (if an appropriate alertrule is created). It can be
+defined by the System Administrator (and exported to a module) or by a Client/Organization Administrator.
+ This notifications are shown in the top bar, just beside the Application menu.
 
 ![](/assets/developer-guide/etendo-classic/concepts/Alerts-0.png){: .legacy-image-style}
 
 ##  Alert Rules
 
 The definition of the _Alert Rules_ is made in the _Alert_ window ( _General
-Setup || Application || Alert_ ). There are two types of Alert Rules: Data
-Driven or External
+Setup || Application || Alert_ ).
 
 ##  Data Driven
 
-With this type of Alert Rules the System Administrator can define a query to
-test a particular scenario, e.g. Products without defined price, Products
-under stock, Customers with exceeded credit, etc.
+The Administrator can define a query to test a particular scenario, e.g. Products without defined price, Products under stock, Customers with exceeded credit, etc.
 
 The flow for data driven alerts is as follows:
 
-  * The System Administrator creates **alert rules** , which include a SQL clause defining the event that is going to be monitored and the **recipients** for the alerts. 
+  * The Administrator creates **alert rules** , which include a SQL clause defining the event that is going to be monitored and the **recipients** for the alerts. 
   * A **background process** is permanently checking if the condition defined in each of the active alert rules return any record, in this case a new **alert instance** will be created for each one of the returned record. 
   * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
 
-You can find more information about how to define Alerts in  this document  .
+You can find more information about how to define Alerts in  this document.
 
 ###  Definition
 
@@ -71,7 +34,7 @@ You can find more information about how to define Alerts in  this document  .
 
     
     
-     
+  ```sql
     SELECT m_product_id AS referencekey_id,
            p.name AS record_id,
            '0' AS ad_role_id,
@@ -117,6 +80,7 @@ You can find more information about how to define Alerts in  this document  .
                       AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
                       AND pv.m_pricelist_id = pl.m_pricelist_id
                       AND issopricelist='Y')
+  ```
 
   * The SQL query must have the following columns: 
     * referencekey_id 
@@ -144,29 +108,11 @@ efficient.
 
 If they are not, they will slow down your system noticeably.
 
-##  External
 
-There are other external ways to create alerts in Openbravo. The background
-process checks if a new instance was created and notifies the recipients. An
-example of this type is 'Updates Available'. The Heartbeat process creates new
-alert instance when it receives updates from the Heartbeat server.
 
 ##  Alert Recipient
 
 The Alert Recipient tab handles the alert recipients management. You can
 define the Role whom will be notified, or an specific user. Also you can
 define if the user(s) should be notified by email.
-
-Retrieved from "  http://wiki.openbravo.com/wiki/Alerts  "
-
-This page has been accessed 8,819 times. This page was last modified on 8 July
-2011, at 10:43. Content is available under  Creative Commons Attribution-
-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  Concepts
-
-**
 
