@@ -34228,10 +34228,17 @@ For this example, we will create a tool that will allow us to make a ping to a h
 
 5. Additionaly, open the *Copilot Tool* window as *System Administrator* role. In this window we will create a new record, with the following information:
 
-    - *Search key*: The search key of the tool. The same name as the tool class must be used.
+    - *Search key*: The tool search key. The same name as the tool class must be used, this field is mandatory to find the tool in the `Sync Tool Structure` process. 
     - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
-    - *Description*: The description of the tool. It is a description of what the tool does. The same description must be used as for the tool class.
-    - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step.
+    - *Description*: This is a description of what the tool does. This field is automatically populated when the tool is synchronized.
+    - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step, and where these configurations will be exported.
+    - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
+ 
+
+    The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is get from the tool class.
+
+    !!! Warning Before Sync Tool Structure
+        Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
     ![how-to-create-copilot-tools.png](https://docs.etendo.software//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
 
