@@ -11,7 +11,7 @@ tags:
   
 ##  Overview
 
-This Howto section explains how to add a rich text field and column to the Etendo
+This How-to section explains how to add a rich text field and column to the Etendo
 system.
 
 The steps to get a rich text field in your window consists of two steps: 
@@ -20,12 +20,12 @@ The steps to get a rich text field in your window consists of two steps:
 - add a field to a tab.
 
 You can also create a new table and a new window/tab. These two steps
-described in detail in the following howtos:
+described in detail in the following how-tos:
 
   * Add a new column to a table in the system 
   * Define and add a new field to a tab 
 
-This howto will only focus on the specific part of a rich text field.
+This how-to will only focus on the specific part of a rich text field.
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 Rich text fields are available in MP20 and later MPs.  
@@ -33,24 +33,24 @@ Rich text fields are available in MP20 and later MPs.
   
 ##  Example Module
 
-This howto is supported by an example module which shows example of the code
-shown and discussed in this howto.
+This how-to is supported by an example module which shows example of the code
+shown and discussed in this how-to.
 
 The example module adds a rich text field to the sales order header window.
 Please use an example module version of a release/implementation date of 23rd
 of January or later.
 
-The code of the example module can be downloaded from this mercurial
-repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+!!!info
+    The code of the example module can be downloaded from this: [mercurial repository](https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/).
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  The
-example module also contains implementations of other howtos.  
----|---  
+
+!!!note
+    The example module also contains implementations of other how-tos.  
+
   
 ##  Adding a column
 
-First, you have to  add a new column to the existing table  .
+First, you have to add a new column to the existing table.
 
 !!!note
     As rich text is stored as HTML inside the database, the varchar column type

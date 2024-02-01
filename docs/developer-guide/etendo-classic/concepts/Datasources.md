@@ -210,7 +210,7 @@ Then, when defining datasources, the custom template can be selected.
 The datasource source code contains 2 examples of a datasource implementation:
 
   * DefaultDataSourceService: this is a complete implementation of the  DataSourceService  interface. It supports fetching with querying and paging and update, add and delete operations. This datasource is used extensively in the Etendo Classic user interface. 
-  * ModelDataSourceService  : is an in-memory datasource which provides access to the properties of a model using a dot-path syntax. It only implements the fetch method. It is used in the  Selector  to provide access to the model. 
+  * ModelDataSourceService  : is an in-memory datasource which provides access to the properties of a model using a dot-path syntax. It only implements the fetch method. It is used in the  [Selector](/developer-guide/etendo-classic/concepts/Selectors/#property-paths-showing-linked-information)  to provide access to the model. 
 
   
 
