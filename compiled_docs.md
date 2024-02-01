@@ -34505,7 +34505,7 @@ In this section, we will explain the main parts and files of the subapplication 
 ![path-to-app-file.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
 
 ###### Params from Etendo Mobile
-Etendo Mobile _sends_ the following params to the subapplication:
+Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
 
 !!! abstract "Params"
     - _ _id_: id of the subapplication
@@ -34515,6 +34515,7 @@ Etendo Mobile _sends_ the following params to the subapplication:
     - _language_: Language
     - _dataUser_: all data related to the user. It has a typed interface that can be found in the file `src/interfaces/index.ts`
     - _isDev_: boolean that identifies whether the application is configured in development (true) or production (false) mode.
+    - _Camera_: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component boasts a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.
 
 In this example, we will receive these params in App.tsx of the subapp:
 
