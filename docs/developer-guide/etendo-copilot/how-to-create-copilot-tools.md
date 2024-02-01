@@ -172,6 +172,13 @@ For this example, we will create a tool that will allow us to make a ping to a h
     - *Name*: The name of the tool. It is the name that will be shown in the Copilot UI.
     - *Description*: The description of the tool. It is a description of what the tool does. The same description must be used as for the tool class.
     - *Module*: The module where the tool is located. This field is a reference to the module that we have created in the first step.
+    - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
+ 
+
+    The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the App. To do so, we have to execute the button "Sync Tool Structure" in the *Copilot Tool* window. This process will load the description and the "JSON Info" fields of the tool. This data is get from the tool class.
+
+    !!! Warning Before Sync Tool Structure
+        Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
     ![how-to-create-copilot-tools.png](../..//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
 
