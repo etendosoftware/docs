@@ -7515,7 +7515,7 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <p>This file is located in the root of the subapplication and it is the main file. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.</p>
 <p><a class="glightbox" href="/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="path-to-app-file.png" src="/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png" /></a></p>
 <h4 id="params-from-etendo-mobile">Params from Etendo Mobile</h4>
-<p>Etendo Mobile <em>sends</em> the following params to the subapplication:</p>
+<p>Etendo Mobile <em>sends</em> params to the subapplication and all of them are ready to use, they are:</p>
 <div class="admonition abstract">
 <p class="admonition-title">Params</p>
 <ul>
@@ -7526,6 +7526,7 @@ From the <code>Role</code> window, look for the name Admin and in the <code>DYNA
 <li><em>language</em>: Language</li>
 <li><em>dataUser</em>: all data related to the user. It has a typed interface that can be found in the file <code>src/interfaces/index.ts</code></li>
 <li><em>isDev</em>: boolean that identifies whether the application is configured in development (true) or production (false) mode.</li>
+<li><em>Camera</em>: a component previously integrated into Etendo Mobile has now been seamlessly transferred to the subapps. This particular component boasts a remarkable QR code scanning capability, enhancing the overall functionality of the subapps.</li>
 </ul>
 </div>
 <p>In this example, we will receive these params in App.tsx of the subapp:</p>
