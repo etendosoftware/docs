@@ -12,12 +12,13 @@ tags:
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.0](../23Q4-0) | 28/12/2023 | 23.4.0 | QAA	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso)| :white_check_mark:|
-| [23Q3.4](../23Q3-4) | 05/12/2023 | 23.3.4 | CS	| | :white_check_mark:|
-| [23Q3.3](../23Q3-3) | 30/11/2023 | 23.3.3 | C   | | :white_check_mark:|
+| [23Q4.1](../23Q4-1) | 02/02/2023 | 23.4.1 | QAA	| | :white_check_mark:|
+| [23Q4.0](../23Q4-0) | 28/12/2023 | 23.4.0 | CS	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark:|
+| [23Q3.4](../23Q3-4) | 05/12/2023 | 23.3.4 | C | | :white_check_mark:|
+| [23Q3.3](../23Q3-3) | 30/11/2023 | 23.3.3 | C | | :white_check_mark:|
 | [23Q3.2](../23Q3-2) | 10/11/2023 | 23.3.2 | C	| | :white_check_mark:|
 | [23Q3.1](../23Q3-1) | 01/11/2023 | 23.3.1 | C	| | :white_check_mark:|
-| [23Q3.0](../23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso)| :white_check_mark:|
+| [23Q3.0](../23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) | :white_check_mark:|
 | [23Q2.8](../23Q2-8) | 14/09/2023 | 23.2.8 | C	| | :white_check_mark:|
 | [23Q2.7](../23Q2-7) | 05/09/2023 | 23.2.7 | C	| | :white_check_mark:|
 | [23Q2.6](../23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
