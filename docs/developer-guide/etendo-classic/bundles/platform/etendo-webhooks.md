@@ -8,19 +8,40 @@ title: Etendo Webhooks | Technical Documentation
 
 This documentation will guide you through the process of setting up and using webhooks in Etendo Classic. Webhooks allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
+## Description of Webhook header fields
+
+| Variable        | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Name            | Webhook name                                               |
+| Description     | Webhook description                                        |
+| Event Class     | Event class in which the webhook service was created       |
+| Java Class      | Class in which the webhook service was created             |
+| Module          | Module in which the webhook will be created                |
+| Organization    | The client’s organizational entity.                        |
+| Active          | Webhook status (Active by default)                         |
+
 ## Setting up Webhooks
 
 1. Navigate to the new menu option: `Application → General Setup → Application → Webhook Events → Webhooks`
 2. Create a new webhook by filling in the required fields:
-    - Name: `Alert`
-    - Description: `Create alert with custom message`
-    - Event Class: `Java`
-    - Java_Class: `com.etendoerp.webhookevents.ad_alert.AdAlertWebhookService`
-    - Params: `description` (required), `rule` (required)
-        
+
+    | Variable        | Value                                                      |
+    |-----------------|------------------------------------------------------------|
+    | Name            | Alert                                                      |
+    | Description     | Create alert with custom message                           |
+    | Event Class     | Java                                                       |
+    | Java Class      | com.etendoerp.webhookevents.ad_alert.AdAlertWebhookService |
+            
     ![Webhook Alert](/assets/developer-guide/etendo-classic/bundles/WebhookAlert.png)
+
+3. Focus on "Params" tab and create the following params:
+
+    | Variable        | Value                    |  Is required       |
+    |-----------------|--------------------------|--------------------|
+    | Name            | description              | :white_check_mark: |
+    | Name            | rule                     | :white_check_mark: | 
         
-    ![Webhook Params](/assets/developer-guide/etendo-classic/bundles/WebhookParams.png)
+![Webhook Params](/assets/developer-guide/etendo-classic/bundles/WebhookParams.png)
         
 
 ## API Key Generation
@@ -61,7 +82,16 @@ Example URL:
 http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>9&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
-The response will return the alert ID. This webhook creates an alert, and you can visualize it in the "Alert Management" window.
+!!! success
+    This webhook creates an alert, and you can visualize it in the "Alert Management" window.
+
+    The response will return a status code 200 and the alert ID, for example: 
+    ```
+    {
+      "created": "91FEABC1604E404CB565FC79435C4344"
+    }
+    ```
+
 
 ## Example code usage
 
@@ -90,14 +120,29 @@ public class AdAlertWebhookService extends BaseWebhookService {
 
 ### Tokens Visibility
 
-- Users can visualize tokens of their current profile.
-- Other users cannot access another user's token. The API Token Window and webhook access tab will be empty.
+!!! note
+    :eye: Users can visualize tokens of their current profile.
+
+!!! warning
+    :warning: Other users cannot access another user's token. The API Token Window and webhook access tab will be empty.
 
 ### Error Handling
 
-- If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a 401 response and a message.
-- If a user calls a webhook with an incorrect webhook name, the backend will respond with a 404 response and a message.
-- If a user calls a webhook without access, the backend will respond with a 401 response and a message.
-- If a user calls a webhook with a missing required parameter, the backend will respond with a 500 response and a message.
-- If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a 500 response and a message.
-- If a user calls a webhook with revoked access, the backend will respond with a 401 response and a message.
+!!! failure
+    If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a 401 response and a message.
+
+!!! failure
+    If a user calls a webhook with an incorrect webhook name, the backend will respond with a 404 response and a message.
+
+!!! failure
+    If a user calls a webhook without access, the backend will respond with a 401 response and a message.
+
+
+!!! failure
+    If a user calls a webhook with a missing required parameter, the backend will respond with a 500 response and a message.
+
+!!! failure
+    If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a 500 response and a message.
+
+!!! failure
+    If a user calls a webhook with revoked access, the backend will respond with a 401 response and a message.

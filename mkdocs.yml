@@ -260,7 +260,7 @@ nav:
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
       - Bundles:
         - Platform Extensions Bundle:
-          - Platform Extensions Bundle: developer-guide/etendo-classic/bundles/platform/platform-extensions-bundle.md
+          - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
