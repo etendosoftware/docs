@@ -35648,12 +35648,13 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.0](https://docs.etendo.software/23Q4-0) | 28/12/2023 | 23.4.0 | QAA	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso)| :white_check_mark:|
-| [23Q3.4](https://docs.etendo.software/23Q3-4) | 05/12/2023 | 23.3.4 | CS	| | :white_check_mark:|
-| [23Q3.3](https://docs.etendo.software/23Q3-3) | 30/11/2023 | 23.3.3 | C   | | :white_check_mark:|
+| [23Q4.1](https://docs.etendo.software/23Q4-1) | 02/02/2023 | 23.4.1 | QAA	| | :white_check_mark:|
+| [23Q4.0](https://docs.etendo.software/23Q4-0) | 28/12/2023 | 23.4.0 | CS	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark:|
+| [23Q3.4](https://docs.etendo.software/23Q3-4) | 05/12/2023 | 23.3.4 | C | | :white_check_mark:|
+| [23Q3.3](https://docs.etendo.software/23Q3-3) | 30/11/2023 | 23.3.3 | C | | :white_check_mark:|
 | [23Q3.2](https://docs.etendo.software/23Q3-2) | 10/11/2023 | 23.3.2 | C	| | :white_check_mark:|
 | [23Q3.1](https://docs.etendo.software/23Q3-1) | 01/11/2023 | 23.3.1 | C	| | :white_check_mark:|
-| [23Q3.0](https://docs.etendo.software/23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso)| :white_check_mark:|
+| [23Q3.0](https://docs.etendo.software/23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) | :white_check_mark:|
 | [23Q2.8](https://docs.etendo.software/23Q2-8) | 14/09/2023 | 23.2.8 | C	| | :white_check_mark:|
 | [23Q2.7](https://docs.etendo.software/23Q2-7) | 05/09/2023 | 23.2.7 | C	| | :white_check_mark:|
 | [23Q2.6](https://docs.etendo.software/23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
@@ -35694,6 +35695,49 @@ Article URL: https://etendo.software
 | [21Q4.2](https://docs.etendo.software/21Q4-2) | 10/03/2022 | 21.4.2 | C   | | |
 | [21Q4.1](https://docs.etendo.software/21Q4-1) | 17/12/2021 | 21.4.1 | C   | | |
 | [21Q4.0](https://docs.etendo.software/21Q4-0) | 13/12/2021 | 21.4.0 | C   | | |
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: 23Q4.1
+## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q4.1
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-1
+## Article Content: 
+#### Fixed Issues
+
+- [EPL-1196](https://github.com/etendosoftware/etendo_core/issues/281){target="\_blank"} AverageAlgorithm class can be improved by showing the product.getName() on the OBException.
+- [EPL-1197](https://github.com/etendosoftware/etendo_core/issues/282){target="\_blank"} Problem when creating a "payment in" or "payment out" from the creation of a transaction line in the financial account window.
+- [EPL-1214](https://github.com/etendosoftware/etendo_core/issues/290){target="\_blank"} Reference type error in the 'Description' field of the sales order window (c_order).
+
+
+#### Known Issues 
+
+- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
+??? example "Workaround"
+
+
+    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
+
+    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
+
+    ``` groovy title="build.gradlew" 
+    etendo {
+        ignoreCoreJarDependency = true
+    }
+    ```
+
+    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
+
+    Now we need to execute the command that will download the source code:
+
+    ```bash title='terminal'
+    ./gradlew clean
+    ./gradlew expandCore 
+    ```
+    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
+
+#### Installation and Updates
+!!! warning
+    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: 23Q4.0
