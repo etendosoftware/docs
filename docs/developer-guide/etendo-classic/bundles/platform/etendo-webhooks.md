@@ -79,13 +79,13 @@ RULE=649BBFA37BA74FA59AEBE7F28524B0C8
 Example URL:
 
 ```
-http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>9&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
 !!! success
     This webhook creates an alert, and you can visualize it in the "Alert Management" window.
 
-    The response will return a status code 200 and the alert ID, for example: 
+    The response will return a status code **200** and the **alert ID**, for example: 
     ```
     {
       "created": "91FEABC1604E404CB565FC79435C4344"
@@ -129,20 +129,20 @@ public class AdAlertWebhookService extends BaseWebhookService {
 ### Error Handling
 
 !!! failure
-    If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a 401 response and a message.
+    If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a **401** response and a message.
 
 !!! failure
-    If a user calls a webhook with an incorrect webhook name, the backend will respond with a 404 response and a message.
+    If a user calls a webhook with an incorrect webhook name, the backend will respond with a **404** response and a message.
 
 !!! failure
-    If a user calls a webhook without access, the backend will respond with a 401 response and a message.
+    If a user calls a webhook without access, the backend will respond with a **401** response and a message.
 
 
 !!! failure
-    If a user calls a webhook with a missing required parameter, the backend will respond with a 500 response and a message.
+    If a user calls a webhook with a missing required parameter, the backend will respond with a **500** response and a message.
 
 !!! failure
-    If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a 500 response and a message.
+    If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a **500** response and a message.
 
 !!! failure
-    If a user calls a webhook with revoked access, the backend will respond with a 401 response and a message.
+    If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
