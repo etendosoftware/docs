@@ -1,59 +1,20 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  Widgets
-
-![](/assets/developer-guide/etendo-classic/concepts/Widgets-0.png){: .legacy-image-style} |  This
-document is still a work in progress. It may contain inaccuracies or errors.  
----|---  
-  
-##  Contents
-
-  * 1  Introduction 
-  * 2  Widget class & Widget Instance 
-  * 3  Defining a new widget class 
-    * 3.1  Extending a existing widget class 
-    * 3.2  Defining widget parameters 
-  * 4  Available Widget Superclasses 
-  * 5  Defining a widget for use in a generated window 
-    * 5.1  Use of current record in parameters 
-
-  
----  
+---
+title: "Widgets"
+tags:
+    - widgets
+    - window
+    - tab
+---
   
 ##  Introduction
 
-In Openbravo 3 Widgets are UI elements which can be either placed in a Users'
+There are UI elements which can be either placed in a Users'
 Workspace tab or be part of a generated window. They can be used to display a
 wide range of different information ranging from static content, over dynamic
 database data in list form, custom html content, or complete external URL's.
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  Placing
-Widget in a generated window is only available from version 3.0MP2 or later  
----|---  
+ 
   
-The following images show two example widgets which are provided by the Widget
-Collection module provided with the Openbravo 3 distribution.
+The following images show two example widgets.
 
 The first one shows a list of invoices ready to be collected with live data
 from the Openbravo database. The second example shows an interactive motion
@@ -115,17 +76,3 @@ parameter value.
 Note: If there is no current value (i.e. the form displayed in _New_ mode)
 then the expression string is send as is to the widget. The widget
 implementation is expected to handle such a case.
-
-Retrieved from "  http://wiki.openbravo.com/wiki/Widgets  "
-
-This page has been accessed 15,790 times. This page was last modified on 23
-November 2011, at 17:41. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Categories  :  WorkInProgress  |  Concepts
-
-**
-
