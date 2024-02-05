@@ -158,18 +158,17 @@ can all be found in the _org.openbravo.dal.service_ package.
 
 ###  OBDal
 
-The  OBDal  instance (available through _OBDal.getInstance()_ ) is the main
+The  [OBDal](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBDal.java){target="\_blank"}  instance (available through _OBDal.getInstance()_ ) is the main
 entrance point for retrieving and storing business objects in the database in
 a validated and secure way. It provides the following functions:
 
   * save: stores a new business object in the database or an existing business object is updated. For existing business objects, it is not required to call this method as Hibernate does automatic _dirty_ checking. 
   * get: retrieves a single business object using its ID. There are two versions: one using the class name (of the generated business object) and one using the entity name. 
   * remove: delete a business object from the database, the actual database delete is done at commit time. 
-  * create OBCriteria:  OBCriteria  objects are used for querying. 
+  * create OBCriteria: [OBCriteria](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java){target="\_blank"} objects are used for querying. 
   * commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally, this is done by the environment (Openbravo web container or Openbravo test). 
 
-The OBDal API makes extensive use of the  OBCriteria  and  OBQuery  classes to
-support querying.
+The OBDal API makes extensive use of the  [OBCriteria](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java){target="\_blank"}  and  [OBQuery](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java){target="\_blank"}  classes to support querying.
   
 The OBDal class allows accessing to the  read-only database (pool). In
 this case, the instance must be retrieved with the
@@ -276,7 +275,7 @@ Get a specific currency:
 
 ###  OBQuery
 
-The  OBQuery  class is an extension of the  [Hibernate Query](https://docs.jboss.org/hibernate/orm/3.5/reference/en/html/queryhql.html){target="\_blank"} object. It
+The [OBQuery](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java){target="\_blank"}  class is an extension of the  [Hibernate Query](https://docs.jboss.org/hibernate/orm/3.5/reference/en/html/queryhql.html){target="\_blank"} object. It
 extends the standard Hibernate Query functionality for filtering on active,
 client and organization.
 
@@ -308,7 +307,7 @@ In code:
 ###  OBProvider
 
 Etendo business objects should not be instantiated directly using the
-new operator. Instead the  OBProvider  class should be used to create an
+new operator. Instead the  [OBProvider](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java){target="\_blank"}  class should be used to create an
 instance of the required business object. The OBProvider is located in the
 _org.openbravo.base.provider_ package and can be retrieved using the method
 OBProvider.getInstance(). The OBProvider offers methods to instantiate using a
@@ -329,7 +328,7 @@ part of the development manual describes their structure and main interfaces.
 
 ###  BaseOBObject
 
-All Etendo Classic business objects inherit from the  BaseOBObject  class. This
+All Etendo Classic business objects inherit from the [BaseOBObject](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/BaseOBObject.java){target="\_blank"}  class. This
 class is located in the _org.openbravo.base.structure_ package.
 
 The BaseOBObject class offers the following functionality:
@@ -448,23 +447,23 @@ discussed in the following section.
 The generated classes implement a set of interfaces which can be used to check
 if a certain instance of a class has specific functionality available:
 
-* ClientEnabled  : flags an object as having a getClient/setClient method and as an object which is stored by Client.
+* [ClientEnabled](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/ClientEnabled.java){target="\_blank"}  : flags an object as having a getClient/setClient method and as an object which is stored by Client.
 
 !!! note 
     Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: client (defined in the ad_column.name field). When this interface is implemented/detected then the client property is used to automatically filter objects (on the readable clients) when querying and to do security checks when persisting an object.
 
 
-* OrganizationEnabled  : an object implementing this interface has getOrganization/setOrganization methods. 
+* [OrganizationEnabled](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/OrganizationEnabled.java){target="\_blank"}: an object implementing this interface has getOrganization/setOrganization methods. 
 
 !!!note
     Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: organization (defined in the ad_column.name field). When this interface is implemented/detected, then the organization property is used to automatically filter objects (on the readable organizations) when querying and to do security checks when persisting an object. 
 
-* ActiveEnabled  : an object implementing this interface has an active flag (boolean) which can be reached through the isActive/setActive methods. 
+* [ActiveEnabled](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/ActiveEnabled.java){target="\_blank"}: an object implementing this interface has an active flag (boolean) which can be reached through the isActive/setActive methods. 
 
 !!!note
     Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: active (defined in the ad_column.name field). When this interface is detected/implemented then the active field is used in automatic filtering of objects when querying through the data access layer. 
 
-* Traceable  : a Traceable object has audit information: created and updated (date fields), and createdby and updatedby (contain a User). This audit information is reachable through corresponding accessors. 
+* [Traceable](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/Traceable.java){target="\_blank"}: a Traceable object has audit information: created and updated (date fields), and createdby and updatedby (contain a User). This audit information is reachable through corresponding accessors. 
 
 !!!note
     Etendo automatically detects that a table (==Entity) implements this interface if it has the following columns (all are required): creationDate, created, updated, updatedBy (set in the ad_column.name field). See specifically the name of the date of creation property, it should be: creationDate. When this interface is implemented/detected then the data access layer will automatically set audit fields when an object is persisted. 
@@ -486,8 +485,7 @@ existing object.
 
 ###  Creating a new instance of a Business Object
 
-A business object may never be created using the Java new operator. All
-business objects should be created using the  OBProvider  factory class:
+A business object may never be created using the Java new operator. All business objects should be created using the  [OBProvider](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java){target="\_blank"}  factory class:
 
     
     
@@ -508,7 +506,7 @@ exception ('count of batch update operation....').
 ##  User Context
 
 The DAL operates within a user context. The user context is implemented in the
-OBContext  class in the _org.openbravo.dal.core_ . The OBContext is
+[OBContext](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/OBContext.java){target="\_blank"}  class in the _org.openbravo.dal.core_ . The OBContext is
 initialized using a userId. On the basis of this userId, the OBContext computes
 the role, clients, organizations and accessible entities. This information is
 used by the DAL for security checking and automatic filtering on client and
@@ -627,8 +625,8 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the DalRequestFilter). If an exception occurs, then a rollback is performed. 
-  * In the Etendo Classic test environment: The DAL base test class (  OBBaseTest  ) takes care of committing or rollingback transactions. 
+  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
+  * In the Etendo Classic test environment: The DAL base test class ([OBBaseTest](https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java){target="\_blank"}) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
 !!!warning
@@ -643,12 +641,8 @@ or Transaction:
 ##  Security and Validation
 
 The DAL performs many different security and validation checks, in both read
-and write mode. A security violation results in a  _SecurityException_ , a
-validation error in a  _ValidationException_ . Different exceptions are thrown
-at different points: some Security Exceptions are thrown when reading a
-business object (e.g. read security violations), others are thrown when the
-session commits or flushes (write security violations) or when a setter is
-called (ValidationException).
+and write mode. A security violation results in a  [_SecurityException_](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/exception/OBSecurityException.java){target="\_blank"} , a
+validation error in a  [_ValidationException_](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/validation/ValidationException.java){target="\_blank"}. Different exceptions are thrown at different points: some Security Exceptions are thrown when reading a business object (e.g. read security violations), others are thrown when the session commits or flushes (write security violations) or when a setter is called (ValidationException).
 
 If you need to work without this security checks, you should use the
 Administrator Mode, or the restricted Administrator Mode.

@@ -42,10 +42,9 @@ The Datasource implementation consists of two parts:
 
 ##  Datasource API
 
-The Datasource API is defined by the DataSourceService interface. This
+The Datasource API is defined by the [DataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java){target="\_blank"} interface. This
 interface defines methods which are required for correct server side
-operation. It is best to extend the BaseDataSourceService class which takes
-care of implementing most methods.
+operation. It is best to extend the [BaseDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/BaseDataSourceService.java){target="\_blank"} class which takes care of implementing most methods.
 
 After extending the BaseDataSourceService class, the following methods need to
 be implemented:
@@ -139,7 +138,7 @@ A description of the fields in the datasource definition:
   * Module: choose the module which delivers this datasource 
   * Name/Description: a relevant and descripting name and description 
   * Table and Whereclause: these can be used to define a datasource, reading directly from a table. 
-  * Java class name: the class name of the class implementing the datasource. This field can be empty. In which case the table field must be set. If no java class name is specified, then the  DefaultDataSourceService class is used. This class fully implements the Datasource interface (full CRUD support through webservices and client-side representation of the datasource). 
+  * Java class name: the class name of the class implementing the datasource. This field can be empty. In which case the table field must be set. If no java class name is specified, then the  [DefaultDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DefaultDataSourceService.java){target="\_blank"} class is used. This class fully implements the Datasource interface (full CRUD support through webservices and client-side representation of the datasource). 
   * Template: the template is responsible for generating the client-side datasource in javascript. See the next section on how to implement a custom client-side datasource for more information on the meaning of this field. In general, the only option to select is template (the default one). 
 
 If a table is specified and the DefaultDataSourceService is used (java class
@@ -209,7 +208,7 @@ Then, when defining datasources, the custom template can be selected.
 
 The datasource source code contains 2 examples of a datasource implementation:
 
-  * DefaultDataSourceService: this is a complete implementation of the  DataSourceService  interface. It supports fetching with querying and paging and update, add and delete operations. This datasource is used extensively in the Etendo Classic user interface. 
+  * [DefaultDataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DefaultDataSourceService.java){target="\_blank"}: this is a complete implementation of the  [DataSourceService](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.service.datasource/src/org/openbravo/service/datasource/DataSourceService.java){target="\_blank"}  interface. It supports fetching with querying and paging and update, add and delete operations. This datasource is used extensively in the Etendo Classic user interface. 
   * ModelDataSourceService  : is an in-memory datasource which provides access to the properties of a model using a dot-path syntax. It only implements the fetch method. It is used in the  [Selector](/developer-guide/etendo-classic/concepts/Selectors/#property-paths-showing-linked-information)  to provide access to the model. 
 
   
