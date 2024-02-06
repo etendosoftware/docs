@@ -30,8 +30,10 @@ during the Openbravo 2.50 cycle.
 This How-To explains how to modify existing elements of a window. If only new
 elements (like new fields) should be added to a window the use of a Template
 (as explained here) is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on *How to add a
-field to a Window Tab*.
+added using a normal module as explained in the other How-To on
+[How to add a field to a window Tab](/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window/). 
+ 
+
 
 ##  Objective
 
