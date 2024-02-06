@@ -17,7 +17,7 @@ messages can be used to understand different issues in the backend code, such
 as errors, performance problems, etc.
 
 !!!note
-    Etendo uses  log4j  to log.
+    Etendo uses  [log4j](https://logging.apache.org/log4j/1.2/){target="_blank"} to log.
 
 ##  Configuration
 

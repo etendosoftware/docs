@@ -12,7 +12,7 @@ tags:
 
 ##  Overview
 
-Background Processes are  Processes  that are executed without the direct
+Background Processes are [Processes](/developer-guide/etendo-classic/concepts/Processes/) that are executed without the direct
 action of the user. There can be set different rules to schedule when the
 process is executed.
 
@@ -28,6 +28,8 @@ the process to execute and in the *Timing* field, when it will be executed.
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Background_Process-0.png){: .legacy-image-style}
 
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_ Process-0.png)
 Depending on the *Timing* selected, it is needed to define more fields to
 define this timing:
 
@@ -48,7 +50,7 @@ This option is similar to the previous option. In this case, the Background
 Process will be executed only one time in one moment in the future.
 
 The moment when the Background Process will be executed is defined in the
-fields *Start Date* and *End Date*
+fields *Start Date* and *End Date*.
 
 ###  Schedule
 
@@ -79,6 +81,8 @@ All the executions of Background Processes can be monitored in *General Setup
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Background_Process-1.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Background_Process-1.png)
 
 In this window, there is one entry for each Background Process execution and
 the information of each execution. The most important fields are:

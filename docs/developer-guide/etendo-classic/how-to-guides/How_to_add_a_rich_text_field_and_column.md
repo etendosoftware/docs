@@ -27,9 +27,6 @@ described in detail in the following how-tos:
 
 This how-to will only focus on the specific part of a rich text field.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-Rich text fields are available in MP20 and later MPs.  
----|---  
   
 ##  Example Module
 
@@ -66,6 +63,8 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_add_a_rich_text_field_and_column-3.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
 
 ##  Create a field - set col and rowspan
 

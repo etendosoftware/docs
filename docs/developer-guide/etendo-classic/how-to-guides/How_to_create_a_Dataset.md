@@ -48,8 +48,9 @@ In Etendo, the concept of reference data is generalized and any data
 in the instance can be exported in a module and imported when installing /
 applying the module.
 
-You can find the _Has reference data_ field / option at the time of module
-creation.
+!!!info
+    You can find the _Has reference data_ field / option at the time of module
+    creation.
 
 ##  Data structure to define Dataset
 
@@ -65,6 +66,8 @@ and DataAccessLevel_
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Dataset-2.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_creatre_a_Dataset-2png)
 
     
     
@@ -83,7 +86,7 @@ expression)_
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Dataset-3.png){: .legacy-image-style}
 
-    
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
     
 !!!note 
     If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
@@ -437,7 +440,7 @@ On successful execution of the above task an .obx file has been generated.
 #### How to Install - System Only Access Level Reference Data
 
 To install the new module into the running Etendo ERP then need handle the
-steps carefully. In this example we have selected the access level as
+steps carefully. In this example, we have selected the access level as
 *Organization* then the installation would be done using *Enterprise Module
 Management* find below the steps.
 

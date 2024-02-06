@@ -11,8 +11,7 @@ tags:
   
 ##  Overview
 
-Application elements (windows, tabs and fields) are liable to change
-repeatedly during the development or maintenance phases of a project.
+Application elements (windows, [tabs](/getting-started/user-interface/grid-and-forms/#tabs) and fields) are liable to change repeatedly during the development or maintenance phases of a project.
 Etendo is able to cope with these changes because its architecture is
 suited to iterative development. The definitions of all generated Windows,
 tabs and fields are stored as metadata in the Application Dictionary (AD).
@@ -20,18 +19,15 @@ tabs and fields are stored as metadata in the Application Dictionary (AD).
 Changing the window of an existing application is a simple process of changing
 the AD definition.
 
-When using the Etendo UI this is all that is needed, the changes can be
-seem immediately when switching role and then by opening the changed window
-again.
+When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.
 
-When using classic Window additionally a compile step is needed as it was
-during the Openbravo 2.50 cycle.
+When using classic Window a compile step is needed.  
 
 This How-To explains how to modify existing elements of a window. If only new
 elements (like new fields) should be added to a window the use of a Template
 (as explained here) is not needed. Instead, those new elements can just be
 added using a normal module as explained in the other How-To on
-[How to add a field to a window Tab](/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window/). 
+[How to add a field to a window Tab](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/). 
  
 
 
@@ -44,7 +40,7 @@ example is the Physical Inventory window and the changes illustrated will be:
   * Hide a field 
   * Re-sequence the layout 
 
-Physical Inventory is a window that belongs to Etendo Classic.
+[Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) is a window that belongs to Etendo Classic.
 It comprises of:
 
   * 1 Window - Physical Inventory. 
@@ -58,7 +54,7 @@ Before any changes the header tab has the following appearance:
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_change_an_existing_Window-0.png){: .legacy-image-style}
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-0.png)
 To customize these window in a Modularity Context a new module of Type
 *Template* / *Industry Template* is needed.
 
@@ -72,7 +68,7 @@ If the changes are planned to be published then a new module needs to be
 created and its _Type_ set to _Template_ . This new template needs to have
 dependency added to it on all other modules which contain elements which are
 to be customized. In this How-To this is only a dependency on the _Core_ module
-as the _Physical Inventory_ window is defined there.
+as the [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) window is defined there.
 
 ##  Changing the window
 
@@ -87,7 +83,7 @@ wanted:
 
   
 For testing the changed layout, switch away from the _System Administrator_
-role to i.e. the _F &B International Group Admin _ role and open the _Physical
+role to e.g. the _F &B International Group Admin _ role and open the _Physical
 Inventory_ window again. As the instance contains our module marked as
 _InDevelopment_ the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:
