@@ -25,11 +25,7 @@ Background Processes are defined in the window *General Setup || Process
 Scheduling || Process Request* . First in the field *Process* select
 the process to execute and in the *Timing* field, when it will be executed.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Background_Process-0.png){: .legacy-image-style}
-
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_ Process-0.png)
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png)
 Depending on the *Timing* selected, it is needed to define more fields to
 define this timing:
 
@@ -79,10 +75,8 @@ Process* .
 All the executions of Background Processes can be monitored in *General Setup
 || Process Scheduling || Process Monitor*.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Background_Process-1.png){: .legacy-image-style}
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Background_Process-1.png)
+![](/assets/developer-guide/etendo-classic/How-to-guides/how_to_create_a_Background_Process-1.png)
 
 In this window, there is one entry for each Background Process execution and
 the information of each execution. The most important fields are:
