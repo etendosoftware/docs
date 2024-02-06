@@ -28,21 +28,10 @@ described in detail in the following how-tos:
 This how-to will only focus on the specific part of a rich text field.
 
   
-##  Example Module
+##  Example 
 
-This how-to is supported by an example module which shows example of the code
-shown and discussed in this how-to.
+For this how-to, we will use the redefine the "description" field in the sales order window. So, you may need to do a "smartbuild" after the changes to see the result.
 
-The example module adds a rich text field to the sales order header window.
-Please use an example module version of a release/implementation date of 23rd
-of January or later.
-
-!!!info
-    The code of the example module can be downloaded from this: [mercurial repository](https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/).
-
-
-!!!note
-    The example module also contains implementations of other how-tos.  
 
   
 ##  Adding a column
@@ -61,8 +50,6 @@ First, you have to add a new column to the existing table.
 When introducing the new column to the application dictionary, the correct
 reference must be selected, i.e. the new _Rich Text_ reference:
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_rich_text_field_and_column-3.png){: .legacy-image-style}
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
 
@@ -74,8 +61,7 @@ column is defined as rich text):
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_rich_text_field_and_column-4.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-2.png)
 
 ##  The result
 
@@ -84,7 +70,7 @@ The result is visualized as a rich text editor in form view:
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_rich_text_field_and_column-5.png){: .legacy-image-style}
+guides/How_to_add_a_rich_text_field_and_column-3.png)
   
 
 !!!info
