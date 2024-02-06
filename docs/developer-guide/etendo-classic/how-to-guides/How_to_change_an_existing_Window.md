@@ -49,26 +49,12 @@ It comprises of:
 
 Before any changes the header tab has the following appearance:
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-1.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_change_an_existing_Window-0.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-0.png)
 To customize these window in a Modularity Context a new module of Type
-*Template* / *Industry Template* is needed.
+*Template* is needed.
 
-If these changes are just planned as local customization then there is an easy
-way of creating such a module. Navigating to General Setup || Application ||
-System Info _and marking the_  _Customization Allowed_ CheckBox
-automatically creates a new module of type Template which can be used
-directly.
 
-If the changes are planned to be published then a new module needs to be
-created and its _Type_ set to _Template_ . This new template needs to have
-dependency added to it on all other modules which contain elements which are
-to be customized. In this How-To this is only a dependency on the _Core_ module
-as the [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) window is defined there.
 
 ##  Changing the window
 
@@ -79,7 +65,7 @@ In the _Fields_ tab we can now make the changes needed to adapt the layout as
 wanted:
 
   * _Description_ field, unmark the _Displayed_ checkbox to hide the field from the tab. 
-  * _Organization_ field, change sequence number to _45_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
+  * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
 
   
 For testing the changed layout, switch away from the _System Administrator_
@@ -90,8 +76,7 @@ we can see the changed layout immediate as seen below:
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_change_an_existing_Window-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-2.png)
 
   
 To apply the same layout changes to the window in _classic UI mode_, the
@@ -113,8 +98,8 @@ The final step is to export the changes into the module so they are persisted.
 After ensuring that the export of the changes consists of the following two
 steps:
 
-  1. _ant export.database_ , same steps as for any other module 
-  2. _ant export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+  1. _./gradlew export.database_ , same steps as for any other module 
+  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
 
 
 
