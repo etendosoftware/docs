@@ -64,10 +64,7 @@ and DataAccessLevel_
   * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
   * A data set is owned by a module in the same way that all Application Dictionary components. 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Dataset-2.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_creatre_a_Dataset-2png)
+![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_creatre_a_Dataset-2.png)
 
     
     
@@ -82,9 +79,6 @@ expression)_
   * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the includeAllColumns check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
   * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
   * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the excludeAuditInfo column. 
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Dataset-3.png){: .legacy-image-style}
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
     
@@ -107,15 +101,12 @@ guides/How_to_create_a_Dataset-3.png){: .legacy-image-style}
   * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
   * They can exclude columns using the isExcluded check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Dataset-5.png){: .legacy-image-style}
-
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
 
 ###  Data Access Level
 
 The Data Access Level is used to define how to import / install the module at
-various level like System level, Client level, Organization level, etc. This
+various levels, like System level, Client level, Organization level, etc. This
 access level value is available at Dataset table. 
 
 This is a detailed explanation at each access level.
@@ -124,6 +115,17 @@ This is a detailed explanation at each access level.
   * _Client:_ data will be imported at Initial Client Setup if the user chooses the module where the DataSet is included. 
   * _Organization:_ data will be imported at Initial Organization Setup if the user chooses the module where the DataSet is included. 
   * _Client/Organization:_ data will be imported at Initial Client Setup or Initial Organization Setup if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. 
+    
+!!!info
+    - The relationship between each entry data imported, the DataSet where it came 
+    from, and the original ID it has in the DataSet's XML can be found in 
+    the `AD_Ref_Data_Loaded` table.
+    - Data from a DataSet being imported for the first time will be created 
+    **with the ID set in its XML file**. A new ID will be created 
+    for each entry from then on.
+    - The `AD_Orginfo` table has information on which DataSet has ben imported 
+    for which client and/or organization
+
 
 ##  Exporting Module
 
@@ -147,7 +149,7 @@ and navigate to the Etendo development project, execute the `export.database com
 The last step in the process is to package the module and distribute across to
 the end user.
 
-To package a module, execute the command `ant package.module-Dmodule=modulelename` , where modulename is the Java package name of the module.
+To package a module, execute the command `ant package.module -Dmodule=modulename` , where modulename is the Java package name of the module.
 
 So in the case of the how-to module, the command would be:
 
