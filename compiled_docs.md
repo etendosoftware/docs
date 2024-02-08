@@ -34167,7 +34167,8 @@ For this example, we will create a tool that will allow us to make a ping to a h
             '''This tool receives a hostname and returns the ping result.''')
         args_schema: Type[
             BaseModel] = PingToolInput  # The args_schema attribute must be a Pydantic model that defines the inputs of the tool.
-        return_direct = True
+        
+        #return_direct = True  # If return_direct is True, the tool will return the result directly, without execute any other tool. If return_direct is not defined, the tool output can be used as input of another tool. This is only available for tools in the Langchain agent. In the OpenAI agent, the return_direct attribute is taken into account, and the tool output can be used as input of another tool.
 
         def run(self, input_params: Dict, *args,
                 **kwargs):  # The run method is the one that will be executed when the tool is executed.
