@@ -103,7 +103,7 @@ This section covers an overview about the product subapplication example screens
 
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
-  - The route to this screen is `src/screens/home/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/home/index.tsx).
+  - The route to this screen is `src/screens/home/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/home/index.tsx){target="_blank"}.
 
 **Key Components:**
 
@@ -130,7 +130,7 @@ This section covers an overview about the product subapplication example screens
 #### ProductDetail
   - This screen will show the detail of a product. Also, it will allow us to edit the product.
   - It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
-  - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx).
+  - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx){target="_blank"}.
     <figure markdown>
       ![add-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
       ![edit-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
@@ -284,7 +284,7 @@ Custom hooks, such as `useProduct`, exemplify the integration between frontend c
 
 ### Implementing Custom Hooks
 
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The [useProduct](https://github.com/etendosoftware/subapp-product/blob/develop/src/hooks/useProduct.ts) custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
+The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The [useProduct](https://github.com/etendosoftware/subapp-product/blob/develop/src/hooks/useProduct.ts){target="_blank"} custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
 
 ### Example Usage
 
