@@ -11,7 +11,7 @@ tags:
   
 ##  Overview
 
-Application elements (windows, [tabs](/getting-started/user-interface/grid-and-forms/#tabs) and fields) are liable to change repeatedly during the development or maintenance phases of a project.
+Application elements ([windows, tabs and fields](/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields)) are liable to change repeatedly during the development or maintenance phases of a project.
 Etendo is able to cope with these changes because its architecture is
 suited to iterative development. The definitions of all generated Windows,
 tabs and fields are stored as metadata in the Application Dictionary (AD).
@@ -49,10 +49,13 @@ It comprises of:
 
 Before any changes the header tab has the following appearance:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-1.png)
 
-To customize these window in a Modularity Context a new module of Type
-*Template* is needed.
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-1.png)
+
+
+!!!info
+    To customize these window in a Modularity Context a new module of Type
+    *Template* is needed.
 
 
 
@@ -74,9 +77,8 @@ Inventory_ window again. As the instance contains our module marked as
 _InDevelopment_ the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_change_an_existing_Window-2.png)
 
   
 To apply the same layout changes to the window in _classic UI mode_, the
@@ -103,6 +105,6 @@ steps:
 
 
 
-This work is a derivative of ["How to change an existing window"](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
+This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
 
 

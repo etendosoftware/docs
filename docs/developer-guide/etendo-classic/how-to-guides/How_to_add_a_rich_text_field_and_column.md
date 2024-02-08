@@ -16,8 +16,8 @@ system.
 
 The steps to get a rich text field in your window consists of two steps: 
 
-- add a column to a table, and 
-- add a field to a tab.
+- [add a column to a table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/), and 
+- add [a field to a tab](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) a field to a tab.
 
 You can also create a new table and a new window/tab. These two steps
 described in detail in the following how-tos:
@@ -30,13 +30,13 @@ This how-to will only focus on the specific part of a rich text field.
   
 ##  Example 
 
-For this how-to, we will use the redefine the "description" field in the sales order window. So, you may need to do a "smartbuild" after the changes to see the result.
+For this how-to, we will use the redefine the description field in the sales order window. So, you may need to do a *smartbuild* after the changes to see the result.
 
 
   
 ##  Adding a column
 
-First, you have to add a new column to the existing table.
+First, you have to [add a column to the existing table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/).
 
 !!!note
     As rich text is stored as HTML inside the database, the varchar column type
@@ -55,22 +55,19 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 ##  Create a field - set col and rowspan
 
-Then  create a field  within the tab/window. For a rich text field you can
+Then [create a field](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
 also set the col and rowspan (these are only shown when the corresponding
 column is defined as rich text):
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-2.png)
 
 ##  The result
 
 The result is visualized as a rich text editor in form view:
 
-  
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_rich_text_field_and_column-3.png)
   
 
 !!!info

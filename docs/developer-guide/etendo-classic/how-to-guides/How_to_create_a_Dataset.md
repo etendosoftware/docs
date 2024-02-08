@@ -16,11 +16,7 @@ This how-to will focus on creating a dataset in Etendo Classic and also will giv
 
 ###  Introduction to Dataset Concept
 
-For detailed theoretical concepts on datasets please have a look at:
 
-  1. Modularity Project 
-  2. Developer's guide 
- 
   
 First of all we need to understand the dataset concept, which allows to export
 the sets of data from different tables in one step. This is especially useful
@@ -48,10 +44,13 @@ In Etendo, the concept of reference data is generalized and any data
 in the instance can be exported in a module and imported when installing /
 applying the module.
 
-!!!info
+!!!note
     You can find the _Has reference data_ field / option at the time of module
     creation.
 
+!!!info
+    For detailed theoretical concepts on datasets please have a look at [Datasets](/developer-guide/etendo-classic/concepts/Datasets/). 
+ 
 ##  Data structure to define Dataset
 
 There are mainly three tables referred to as data structure to define datasets. They
@@ -64,11 +63,12 @@ and DataAccessLevel_
   * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
   * A data set is owned by a module in the same way that all Application Dictionary components. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_creatre_a_Dataset-2.png)
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
 
     
-    
-    If the export allowed column is flagged then an **Export Reference Data** button is displayed. 
+
+!!!note
+    If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
     
 
 2\. *DataSet_Table* with the following columns: _DataSet, Table,
@@ -436,7 +436,8 @@ packaging the module:
     ant package.module -Dmodule="org.openbravo.indianstates"
     
 
-On successful execution of the above task an .obx file has been generated.
+!!!success
+    On successful execution of the above task, an .obx file has been generated.
 
   
 #### How to Install - System Only Access Level Reference Data

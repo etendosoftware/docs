@@ -37,7 +37,7 @@ module directory and packaged with the module.
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
 !!!info
-    For more information, read [How to add a Constraint](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint)
+    For more information, read [How to add a Constraint](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint).
 
 ###  Messages
 
@@ -184,7 +184,7 @@ In PostgresSQL we can define a contains search index as follows:
     the indexed column. Both elements are available thanks to the  ` pg_trgm `
     extension which is included in Etendo distribution by default.
 
-Besides, this feature allows defining a [function based index](#Function_based_indexes) to improve icontains (case-insensitive) searching:
+Besides, this feature allows defining a [function based index](/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/#function-based-indexes) to improve icontains (case-insensitive) searching:
 
     
 ```sql
@@ -267,4 +267,4 @@ line of the trigger function must be something like:
 
 ---
 
-This work is a derivative of ["Constraints_and_Triggers"](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 

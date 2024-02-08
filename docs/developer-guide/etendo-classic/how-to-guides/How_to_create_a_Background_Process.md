@@ -1,7 +1,7 @@
 ---
 tags: 
   - background process
-  - Process Scheduling
+  - process scheduling
   - RunLater
   - unschedule
   - Etendo Infrastructure
@@ -76,7 +76,7 @@ All the executions of Background Processes can be monitored in *General Setup
 || Process Scheduling || Process Monitor*.
 
 
-![](/assets/developer-guide/etendo-classic/How-to-guides/how_to_create_a_Background_Process-1.png)
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png)
 
 In this window, there is one entry for each Background Process execution and
 the information of each execution. The most important fields are:
