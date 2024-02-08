@@ -29521,6 +29521,273 @@ Usually customization modules are not intended to be published in Central Reposi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Constraints and Triggers
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints and Triggers
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers
+## Article Content: 
+#### Overview
+
+Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for triggers and constraints but just the particularities Etendo Classic has in their usage.
+
+####  Naming
+
+When adding a check constraint, triggers and indexes modularity naming rules have to be taken into account. This is necessary because triggers and indexes are global objects for a database. 
+
+The modularity naming rule is as follows: 
+the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. 
+
+For instance,`_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+
+In the case of indexes and constraints, if the index/constraint is added to a
+table of another module then an additional `_EM__ prefix` is required:
+
+`_EM_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+
+By following this naming rule, the index/trigger/constraint is exported to the
+module directory and packaged with the module.
+
+!!!info
+    The name of the constraints and triggers must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
+
+####  Constraints
+
+Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
+
+!!!info
+    For more information, read [How to add a Constraint](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint).
+
+#####  Messages
+
+It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
+
+!!!info
+    How to do that is explained in the [Messages](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation.
+
+#####  Backwards compatibility
+
+Modules should allow compatibility for other ones built on top of them at least between minor versions, additionally there could be user data already in the application if it is in a productive environment. 
+This means that user data or other module's could rely on the current database model and in case a new constraint is added or an existent one is modified to be more restrictive
+than it was, backwards compatibility could be broken. Therefore, it should be avoided to add new constraints or to modify existent ones to make them more restrictive during between versions.
+
+####  Indexes
+
+#####  Operator Classes
+
+  
+In `PostgreSQL  Operator Classes`  certain operator classes (`text_pattern_ops`,
+`varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
+involving pattern matching expressions. For instance, the following query:
+
+    
+```sql   
+    SELECT name
+    FROM c_bpartner
+    WHERE name LIKE 'John%'
+```
+would not use an index created like this:
+
+    
+```sql   
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (name COLLATE pg_catalog."default");
+```
+
+but would use an index defined with an operator class:
+
+    
+```sql 
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (name COLLATE pg_catalog."default" varchar_pattern_ops);
+```
+
+Operator Classes are not needed in Oracle to use an index in the previously defined query, in that case if the index column defines an operator class, the operator class will have no effect.
+
+#####  Function based indexes
+
+  
+Etendo  supports the use of functions in indexes. For instance, this along with the use of an operator class, would enable the use of indexes in case insensitive queries that use the iStartsWith operator, like this one:
+
+    
+```sql
+    SELECT name
+    FROM c_bpartner
+    WHERE UPPER(name) LIKE 'JOHN%'
+```
+
+The following index could be used by the previous query:
+
+    
+```sql
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (upper(name) COLLATE pg_catalog."default" varchar_pattern_ops);
+```
+
+Any function can be used in the indexes, as long as it is deterministic. Even
+needed functions are supported:
+
+    
+```sql 
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (UPPER(REPLACE(name, 'a', 'b')));
+```
+The following index can also be used.
+
+    
+```sql
+    CREATE INDEX c_bpartner_name_id
+      ON c_bpartner
+      USING btree
+      (UPPER(REPLACE(name, 'a', 'b')),
+       UPPER(c_bpartner_id));
+```
+
+!!!info
+    Functions used in indexes must be immutable. It is
+    possible to define [custom immutable functions](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure#volatility), previously only built-in immutable functions could be used in indexes.  
+  
+#####  Partial indexes
+  
+`PostgreSQL` supports the definition of [partial indexes](https://www.postgresql.org/docs/9.3/indexes-partial.html){target="\_blank"}. A partial index is an index where it is possible to specify the rows that are indexed. This kind of indexes are useful for commonly used _WHERE_ conditions that use constant values.
+
+Thus, with a partial index it is possible to index just the table data that is most commonly used, helping to reduce the amount of disk space used by the index.
+
+A partial index can be created as follows:
+
+    
+```sql
+    CREATE INDEX a_amortization_active 
+      ON a_amortization (isactive)
+      WHERE isactive = 'Y';
+```
+
+Oracle does not support the creation of partial indexes in an explicit way yet. For this reason, if a partial index is found in the Etendo XML model when using an Oracle database, the partial index definition is not taken into account and it is created as a regular index.
+  
+######  Not Null Partial Indexes On Nullable Columns
+
+In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.
+
+This is not the behavior in PostgresSQL databases, where we will need to define the index as partial to get the same behavior. For example:
+
+    
+```sql 
+    CREATE INDEX c_order_return_reason 
+      ON c_order (c_return_reason_id)
+      WHERE c_return_reason_id IS NOT NULL;
+```
+
+#####  Indexes for Contains Search
+
+  
+The indexes for _contains_ search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
+
+In PostgresSQL we can define a contains search index as follows:
+
+    
+```sql
+    CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (value gin_trgm_ops);
+```
+
+!!!note
+    To define this kind of indexes, we have to make use of the **` gin `
+    ** access method together with the **` gin_trgm_ops ` ** operator class for
+    the indexed column. Both elements are available thanks to the  ` pg_trgm `
+    extension which is included in Etendo distribution by default.
+
+Besides, this feature allows defining a [function based index](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/#function-based-indexes) to improve icontains (case-insensitive) searching:
+
+    
+```sql
+    `CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (UPPER(value) gin_trgm_ops);`
+```
+
+!!!info
+    This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
+
+####  Triggers
+
+!!!info
+    For more information, read [How to add a Trigger](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger).
+
+#####  Syntax
+
+Triggers, as the rest of `PL code` in Etendo Classic, should be written following
+some restrictions in order to make them compatible between `PostgreSQL` and
+Oracle and to make it possible to correctly export and import them using
+`DBSourceManager`. These rules are detailed in the `PL-SQL` code rules
+document.
+
+#####  Etendo Conventions
+
+######  Exceptions and messages
+
+Triggers can raise exceptions (it is the common practice to abort a
+transaction), the back-end captures that exception in order to show a proper
+message. 
+
+!!!info
+    For more information, read the [Message](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation how to do it.
+
+######  Oracle's laziness
+
+Whereas oracle evaluates expressions in a lazy manner, `PostgreSQL` does not do
+so. This is specially important for triggers that are for `_insert_ and _delete_`
+since in the first case there are new variables and in the second one there
+are old ones, so when writing if clauses (even in Oracle, if we want to do
+compatible code), this must be taken into account writing two clauses instead
+of just one.
+
+######  Soft disabling
+
+All triggers in Etendo Classic must be able to be disabled softly. This means
+not disabling it in database but just in a logic way. 
+
+This is used by DAL when it is importing data: triggers must be disabled in order to allow data
+importation without triggering them, but that only should affect the session
+that is executing the importation. To add this capability to triggers, the
+first lines of each of them should look like:
+
+In Oracle    
+    
+```sql
+        IF AD_isTriggerEnabled()='N' THEN 
+          RETURN;
+        END IF;
+```
+
+In PostgreSQL
+    
+```sql
+         IF AD_isTriggerEnabled()='N' THEN
+            IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;
+         END IF;
+```
+
+######  Object returning
+
+`PostgreSQL` trigger function must explicitly focus on returning the trigger
+object, also depending on the type of the trigger. This means that the last
+line of the trigger function must be something like:
+
+    
+    
+     
+         `IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;`
+
+
+---
+
+This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Publish Modules to a GitHub Repository
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Publish Modules to a GitHub Repository
 ## Article URL: 
@@ -30757,6 +31024,743 @@ The dataset definition is ready, so the user just needs to export it to a file p
   
 !!! info
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to create a Dataset
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Dataset
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
+## Article Content: 
+###  How to create a Dataset
+
+  
+####  Overview
+
+This how-to will focus on creating a dataset in Etendo Classic and also will give some examples in detail under  Examples  section. Dataset will export both reference data as well as default data.
+
+#####  Introduction to Dataset Concept
+
+
+  
+First of all we need to understand the dataset concept, which allows to export
+the sets of data from different tables in one step. This is especially useful
+to manage and distribute the module along with _reference data_ , for instance
+tax rates, regions or _default data_ in a new table(s) added by a module.
+
+A dataset is defined by its Dataset Tables and Dataset Columns. This detailed
+configuration leads to which tables to be exported, and which columns of each
+table are executed and exported.
+
+  
+There are some important things to note:
+
+  * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
+  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set (see  _Data Access Level_ section for more information). 
+
+  
+  
+#####  Reference Data
+
+The reference data is packaged, distributed and installed together with the
+program code implementation of the module.
+
+In Etendo, the concept of reference data is generalized and any data
+in the instance can be exported in a module and imported when installing /
+applying the module.
+
+!!!note
+    You can find the _Has reference data_ field / option at the time of module
+    creation.
+
+!!!info
+    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets/). 
+ 
+####  Data structure to define Dataset
+
+There are mainly three tables referred to as data structure to define datasets. They
+are:
+
+1\. *DataSet* with the following columns: _Value, Name, Description, Module
+and DataAccessLevel_
+
+  * Data sets have a name and a description to describe the content of the data set. 
+  * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
+  * A data set is owned by a module in the same way that all Application Dictionary components. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
+
+    
+
+!!!note
+    If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
+    
+
+2\. *DataSet_Table* with the following columns: _DataSet, Table,
+fullBusinessObjec, includeAllColumns, excludeAuditInfo and whereClause (HQL
+expression)_
+
+  * A data set can have one or many tables from the ones registered in the AD_Table. For each of them developers can decide to include only records in that table or export the full business object using the check fullBusinessObject. 
+  * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the includeAllColumns check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
+  * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
+  * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the excludeAuditInfo column. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
+    
+!!!note 
+    If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
+    For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
+    
+
+  
+!!!info
+    A full business object is a record including all its one-to-many relationships
+    as defined in the AD through the isParent attribute of a column. An example of
+    a full business object is a product with its vendors, prices, etc. A complete
+    description of business objects is provided in the DAL project.
+
+  
+  
+3\. *Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression)*.
+
+  * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
+  * They can exclude columns using the isExcluded check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
+
+#####  Data Access Level
+
+The Data Access Level is used to define how to import / install the module at
+various levels, like System level, Client level, Organization level, etc. This
+access level value is available at Dataset table. 
+
+This is a detailed explanation at each access level.
+
+  * _System Only:_ data will be imported at module installation time at System level without any user interaction. 
+  * _Client:_ data will be imported at Initial Client Setup if the user chooses the module where the DataSet is included. 
+  * _Organization:_ data will be imported at Initial Organization Setup if the user chooses the module where the DataSet is included. 
+  * _Client/Organization:_ data will be imported at Initial Client Setup or Initial Organization Setup if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. 
+    
+!!!info
+    - The relationship between each entry data imported, the DataSet where it came 
+    from, and the original ID it has in the DataSet's XML can be found in 
+    the `AD_Ref_Data_Loaded` table.
+    - Data from a DataSet being imported for the first time will be created 
+    **with the ID set in its XML file**. A new ID will be created 
+    for each entry from then on.
+    - The `AD_Orginfo` table has information on which DataSet has ben imported 
+    for which client and/or organization
+
+
+####  Exporting Module
+
+Before packaging, we need to export the module which creates a directory in the
+module under Etendo Classic root directory and the appropriate XML files for
+inclusion in the finished module. 
+
+!!!note
+    Modules that are not flagged as being in development are not exported, so remember that you must select the InDevelopment checkbox when you define a new module.
+
+When the development of the module is finished, open a command window/shell
+and navigate to the Etendo development project, execute the `export.database command`.
+
+    
+    
+    ant export.database
+    
+
+####  Packaging a Module
+
+The last step in the process is to package the module and distribute across to
+the end user.
+
+To package a module, execute the command `ant package.module -Dmodule=modulename` , where modulename is the Java package name of the module.
+
+So in the case of the how-to module, the command would be:
+
+    
+    
+    ant package.module -Dmodule=org.openbravo.howto
+    
+
+  
+
+####  Examples
+
+Please find below the examples to know how to create a dataset and to export
+it along with the reference data.
+
+#####  Dataset of roles and accesses
+
+In this section you can find the example of a dataset of roles and access. It
+basically covers the definition of the role in the organization and the
+privileges they require.
+
+**Create a Role and Assign Privileges**
+
+  * Change to the admin role of your client. 
+  * Click on General Setup and Navigate to Security > Role. 
+  * Create a new record. Fill up the mandatory fields that required for this record. They are: 
+    * Name = the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. 
+    * Active = Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. 
+    * User Level = This controls which organizations the role has access to. There are four options, the most common are: 
+      * Organization - the role only has access to organization specific data. 
+      * Client and Organization - the role has access to organization specific data and client shared data. 
+    * Manual = The controls if all existing privileges are automatically given to the role or if they are manually associated on a peer need basis. Selecting this option for manual control is recommended. 
+  * Save the record. 
+  * Now you need to assign some privileges by clicking on Grant Access button. 
+  * select the module and access type to assign the privileges to the newly created role. 
+
+###### Create a User and assign the user to the Role
+
+  * Now click on General Setup and navigate to Security > User. 
+  * Create a new record. The Client field will show the name of your client by default. 
+  * Select the Organization (This can be for access to one or all organizations in a client). 
+    * First Name. 
+    * Last Name. 
+    * Name (Default). 
+    * Select Active (Default). 
+    * Username (The default is a concatenation of first and last name). 
+    * Enter the user Password (Remember this). 
+  * Save the record. 
+
+  * Staying in the User window: 
+  * Select the 'User Roles' tab. 
+  * Create a new record and select a role. 
+  * Save the record. 
+  * Add all roles this new user will be able to have/use (one line for each role). 
+  * Logout from the current role. 
+
+###### Create a new module
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Click on Module menu from the Application Dictionary. 
+  * From the Module Type list, select Module. 
+  * In the Name field, type the java package name of the module(proper naming convention). 
+  * Complete the Description and Help fields. Supply the information about chart of accounts. 
+  * Select the Has reference data option. 
+  * Clear the Has chart of accounts, Translation required and Is translation module options. 
+  * Select the In development option. Remember that you cannot work on a module unless the In development option is selected. 
+  * On the Dependencies tab, select Core. 
+  * Save the module 
+
+###### Create a Dataset of roles and access
+
+  1. From the Application menu, select Application Dictionary > Dataset 
+  2. Click New. 
+  3. From the Module list, select the module above created. 
+  4. Specify a search key, name and description. 
+  5. From the Data Access Level list, select the Data access level as *Organization*. 
+  6. Select the Export allowed option. 
+  7. Select the Table Tab.
+  8. From the Table list, select the table whose content you want to include in the module. For example, ad_role_org_access, ad_role, ad_user_roles. 
+  9. In the SQL where clause field, specify the SQL "WHERE" statement that will identify the set of rows to be exported, in DAL notation. For example, adrole.id='2EA831D59184490E9BA858E9745EF89F' 
+  10. Select the Include All Columns option. 
+  11. Select isBusinessObject option.
+  12. Click Save. 
+  13. Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module. 
+
+###### Exporting and Packaging Module
+
+After completing all the steps successfully. Run the below ant task to export
+the module:
+
+    
+    
+    ant export.database -Dmodule="org.openbravo.rolesandaccess"
+    
+
+package the module:
+
+    
+    
+    ant package.module -Dmodule="org.openbravo.rolesandaccess"
+    
+
+On successful execution of the above task an .obx file has been generated.
+
+  
+###### How to Install - Organization Access Level Reference Data
+
+To install the new module into the running Etendo ERP then, need handle the
+steps carefully. In this example we have selected the access level as
+*Organization*, then the installation would be done using *Enterprise Module
+Management*. Find the steps below:
+
+  * Log into Etendo ERP as System Administrator. 
+  * Install the OBX using Module Management under General Setup and rebuild the system. 
+  * But the reference data will not be installed. 
+  * Change the login as *Etendo Admin*.
+  * Click on General Setup and navigate to Enterprise > Enterprise module Management. 
+  * Select the Organization type then select the appropriate module and click Ok to install the reference data. 
+
+#####  Dataset of taxes or alerts
+
+In this section you can find the example on dataset of taxes or alerts. The
+process for creating a standard reference data module for taxes and alerts,
+you have set up Etendo ERP in a particular way to meet local requirements,
+you can export this data and convert it to a module, so that you can share it
+with other users.
+
+###### Registering a data module for taxes and alerts:
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Click on Module menu from the Application Dictionary. 
+  * From the Module Type list, select Module. 
+  * In the Name field, type the java package name of the module(proper naming convention). 
+  * Complete the Description and Help fields. Supply the information about chart of accounts. 
+  * Select the Has reference data option. 
+  * Clear the Has chart of accounts, Translation required and Is translation module options. 
+  * Select the In development option. Remember that you cannot work on a module unless the In development option is selected. 
+  * On the Dependencies tab, select Core. 
+  * Save the module.
+
+###### Defining and exporting the dataset
+
+  1. From the Application menu, select Application Dictionary > Dataset 
+  2. Click New. 
+  3. From the Module list, select the module above created. 
+  4. Specify a search key, name and description. 
+  5. From the Data Access Level list, select the Data access level as System only. 
+  6. Select the Export allowed option. 
+  7. Select the Table Tab.
+  8. From the Table list, select the table whose content you want to include in the module. 
+  9. In the SQL where clause field, specify the SQL WHERE statement that will identify the set of rows to be exported, in DAL notation. For example, client.id='1000001' 
+  10. To export all columns, select the Include All Columns option. To include only the columns you specify, select the Columns tab and create a new record for each column you want to export. 
+  11. To include the security audit columns (created, createdby, updated and updatedby) in the export, clear the Exclude Audit Info checkbox. 
+  12. Clear the Is Business Object option. 
+  13. Click Save.
+  14. Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module.
+
+  
+###### Exporting and Packaging Module
+
+After completing all the steps successfully. Run the below ant task to export
+the module:
+
+    
+    
+    ant export.database -Dmodule="org.openbravo.taxesandalerts"
+    
+
+packaging the module:
+
+    
+    
+    ant package.module -Dmodule="org.openbravo.taxesandalerts"
+    
+
+On successful execution of the above task, an .obx file has been generated.
+
+  
+###### How to Install - System/Client Access Level Reference Data
+
+To install the new module into the running Etendo ERP, then need to handle the
+steps carefully. In this example, we have selected the access level as
+*Organization* then, the installation would be done using *Enterprise Module
+Management* find below the steps.
+
+  * Log into Etendo ERP as System Administrator. 
+  * Install the OBX using Module Management under General Setup and rebuild the system. 
+  * But the reference data will not be installed. 
+  * Click on General Setup and navigate to Client > Initial Client Setup. 
+  * Fill up all the mandatory fields and then select the appropriate module. 
+  * Finally click Ok to install the reference data. 
+
+#####  Dataset of regions
+
+In this section you can export the reference data with the examples on
+regions. Find below the steps to create the Dataset for this module:
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Create a new module called for the this example. 
+  * Make sure that you have selected or flagged for the field *Has Reference Data*. 
+  * Now expand the *Application Dictionary* menu. 
+  * Click on *Dataset* menu and create a new record for the for this module. 
+  * For example, here I have given the Name as *Indian States*. You can give a name as you wish to select the region. 
+  * Fill up the Dataset form using the below mentioned values. 
+    * Field  |  value for the field   
+---|---  
+Client  |  :  |  System  
+Organization  |  :  |  *  
+Active  |  :  |  make it flagged/put a tick mark  
+Module  |  :  |  select the value from the drop down _Indian States - 1.0.0_  
+Search Key  |  :  |  Indian States  
+Name  |  :  |  Indian States  
+Data Access Level  |  :  |  System Only  
+  * Before assigning the tables to Dataset. Please execute the below query in sqldeveloper or postgres IDE to find the C_country_Id for INDIA. After executing the below query the result of c_country_id would be 208 for the below query. 
+
+    
+    
+    select * from c_country where countrycode like 'IN%';
+
+  * Navigate to *Table Tab* and create 2 new records for the dataset. 
+  * One table called *C_Country* and another table called *C_Region* it look likes as given below. 
+    * Fill up the form by using below values for the Table Name: C_Country
+    * Field  |  value for the field   
+---|---  
+Dataset  |  :  |  Indian States  
+Table  |  :  |  C_Country  
+Active  |  :  |  Default it is flagged. Leave as it is  
+Module  |  :  |  Indian States -1.0.0  
+SQL Where Clause  |  :  |  id='208'  
+Include All Columns  |  :  |  Remove the flag or tick mark (Note: Need to add
+the individual columns for this table using _Column Tab_ )  
+Exclude Audit Info  |  :  |  Mark it as flagged or put tick mark for this
+check box  
+  * Fill up the form by using below values for the Table Name: C_Region
+    * Field  |  value for the field   
+---|---  
+Dataset  |  :  |  Indian States  
+Table  |  :  |  C_Region  
+Active  |  :  |  Default it is flagged. Leave as it is  
+Module  |  :  |  Indian States -1.0.0  
+SQL Where Clause  |  :  |  country.id='208'  
+Include All Columns  |  :  |  Mark it as flagged or put tick mark for this
+check box  
+Exclude Audit Info  |  :  |  Mark it as flagged or put tick mark for this
+check box  
+    * Select the "C_Country" table from the table grid view and navigate to *Column Tab*. 
+    * Click on create a new record button for the above table. You need to select three columns for this table. 
+    * Those columns are:(1)Name, (2)CountryCode, and (3)HasRegion 
+    * Fill up the following values in the form. 
+      * Field  |  value for the field   
+---|---  
+**Column 1:**  
+Dataset Table  |  :  |  C_Country  
+Column  |  :  |  Name  
+Active  |  :  |  It has benn flagged. Leave as it is  
+Module  |  :  |  Indian States - 1.0.0  
+**Column 2:**  
+Dataset Table  |  :  |  C_Country  
+Column  |  :  |  CountryCode  
+Active  |  :  |  It has benn flagged. Leave as it is  
+Module  |  :  |  Indian States - 1.0.0  
+**Column 3:**  
+Dataset Table  |  :  |  C_Country  
+Column  |  :  |  HasRegion  
+Active  |  :  |  It has benn flagged. Leave as it is  
+Module  |  :  |  Indian States - 1.0.0  
+  * Finally navigate to *Dataset Tab* of Indian States and Click on *Export Reference Data* button to export the data. 
+
+  
+###### Exporting and Packaging Module
+
+After completing all the steps successfully, run the below ant task to export
+the module:
+
+    
+    
+    ant export.database -Dmodule="org.openbravo.indianstates"
+    
+
+packaging the module:
+
+    
+    
+    ant package.module -Dmodule="org.openbravo.indianstates"
+    
+
+!!!success
+    On successful execution of the above task, an .obx file has been generated.
+
+  
+###### How to Install - System Only Access Level Reference Data
+
+To install the new module into the running Etendo ERP then need handle the
+steps carefully. In this example, we have selected the access level as
+*Organization* then the installation would be done using *Enterprise Module
+Management* find below the steps.
+
+  * Log into Etendo ERP as System Administrator. 
+  * Install the OBX using Module Management under General Setup and rebuild the system. 
+  * It will install along with the reference data. 
+
+
+
+This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com/wiki/How_to_create_a_Dataset){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to create a Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Background Process
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
+## Article Content: 
+###  How to create a Background Process
+
+####  Overview
+
+Background Processes are [Processes](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes/) that are executed without the direct
+action of the user. There can be set different rules to schedule when the
+process is executed.
+
+This document discusses about the Etendo infrastructure for Background
+Processes. How to define, schedule and monitorize Background Processes.
+
+####  Defining a Background Process
+
+Background Processes are defined in the window *General Setup || Process
+Scheduling || Process Request* . First in the field *Process* select
+the process to execute and in the *Timing* field, when it will be executed.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png)
+Depending on the *Timing* selected, it is needed to define more fields to
+define this timing:
+
+#####  Run Immediately
+
+This timing option will execute the Background Process only once at the moment
+the button to schedule the process is pressed. After being scheduled, it
+can be rescheduled as many times as needed.
+
+This option is very similar to executing a process from a menu option. The
+difference is that when scheduling a _Run Immediately_ Background Process,
+there will not be any pop-up that indicates when the execution finished and
+instead, its execution  will be registered in the *Process Monitor*.
+
+##### Run Later
+
+This option is similar to the previous option. In this case, the Background
+Process will be executed only one time in one moment in the future.
+
+The moment when the Background Process will be executed is defined in the
+fields *Start Date* and *End Date*.
+
+#####  Schedule
+
+This is the most versatile option that allows to execute a Background Process
+periodically. These are the fields used to define the schedule plan of a
+Background Process:
+
+  * *Start Date* and *Start Time*: Defines the moment when the schedule plan for this Background Process will start. 
+  * *Frequency*: Defines the frequency to execute the Background Process. It can be *Every n seconds* , *Every n minutes* , *Hourly* , *Daily* , *Weekly* , *Monthly* , or *Cron expression*. Depending on the option selected you can define the specific details for each frequency option. 
+  * *Finish Date* and *Finish Time*: These fields can be defined only when the option *Finished* is selected. And it defines when to stop the schedule plan for this Background Process. 
+
+#####  Schedule and Unschedule a Background Process
+
+After the Background Process has been completely defined it can be scheduled
+pressing the button *Schedule Process*. When a process is scheduled, it
+will be executed according the *Timing* options selected, and every
+execution will be registered in the Process Monitor.
+
+To stop future executions of an Background Process just press the button
+*Unschedule Process*. After a Background Process has been unscheduled it
+can be scheduled again in any moment pressing the button *Reschedule
+Process* .
+
+#####  Monitoring executions of Background Processes
+
+All the executions of Background Processes can be monitored in *General Setup
+|| Process Scheduling || Process Monitor*.
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png)
+
+In this window, there is one entry for each Background Process execution and
+the information of each execution. The most important fields are:
+
+  * *Process*: The Process executed. 
+  * *Start Time* , *End Time* and *Duration*: When the execution started, when finished and the time it took to complete. 
+  * *Status*: The final result of the execution of the Process. 
+  * *Process Log*: The information logged during the execution of the Process. For example if the *Status* of the execution is _Error_ here in the *Process Log* the reason of the error can be detected. 
+
+
+This work is a derivative of [How to Create a Background Process](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a rich text field and column
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a rich text field and column
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
+## Article Content: 
+###  How to add a rich text field and column
+ 
+  
+####  Overview
+
+This How-to section explains how to add a rich text field and column to the Etendo
+system.
+
+The steps to get a rich text field in your window consists of two steps: 
+
+- [add a column to a table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/), and 
+- add [a field to a tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) a field to a tab.
+
+You can also create a new table and a new window/tab. These two steps
+described in detail in the following how-tos:
+
+  * Add a new column to a table in the system 
+  * Define and add a new field to a tab 
+
+This how-to will only focus on the specific part of a rich text field.
+
+  
+####  Example 
+
+For this how-to, we will use the redefine the description field in the sales order window. So, you may need to do a *smartbuild* after the changes to see the result.
+
+
+  
+####  Adding a column
+
+First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/).
+
+!!!note
+    As rich text is stored as HTML inside the database, the varchar column type
+    should be used. What is more, the developer needs to keep in mind that 100
+    characters of rich text requires more that 100 chars of storage inside the
+    database due to html markup. Usually, a factor of 2 will suffice, for example,
+    if one wants to allow the user to enter 1000 characters of rich formatted
+    text, the database column should have a type of varchar(2000).  
+
+  
+When introducing the new column to the application dictionary, the correct
+reference must be selected, i.e. the new _Rich Text_ reference:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
+
+####  Create a field - set col and rowspan
+
+Then [create a field](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
+also set the col and rowspan (these are only shown when the corresponding
+column is defined as rich text):
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
+
+
+####  The result
+
+The result is visualized as a rich text editor in form view:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
+
+  
+
+!!!info
+    Rich text fields can not be edited in grid mode (a hoover shows the
+    content). They are always displayed as read-only fields.  
+
+  
+
+
+This work is a derivative of ["How to add a rich text field and column"](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to change an existing Window
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to change an existing Window
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
+## Article Content: 
+###  How to change an existing Window
+
+  
+####  Overview
+
+Application elements ([windows, tabs and fields](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields)) are liable to change repeatedly during the development or maintenance phases of a project.
+Etendo is able to cope with these changes because its architecture is
+suited to iterative development. The definitions of all generated Windows,
+tabs and fields are stored as metadata in the Application Dictionary (AD).
+
+Changing the window of an existing application is a simple process of changing
+the AD definition.
+
+When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.
+
+When using classic Window a compile step is needed.  
+
+This How-To explains how to modify existing elements of a window. If only new
+elements (like new fields) should be added to a window the use of a Template
+(as explained here) is not needed. Instead, those new elements can just be
+added using a normal module as explained in the other How-To on
+[How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/). 
+ 
+
+
+####  Objective
+
+The objective of this how-to is to illustrate how to make changes to existing
+generated windows in terms of appearance and behavior. The window used in the
+example is the Physical Inventory window and the changes illustrated will be:
+
+  * Hide a field 
+  * Re-sequence the layout 
+
+[Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) is a window that belongs to Etendo Classic.
+It comprises of:
+
+  * 1 Window - Physical Inventory. 
+  * 2 Tabs - Header and Lines. 
+  * A Header Tab has 19 Fields 10 of which are displayed (A few are displayed conditionally).
+
+Before any changes the header tab has the following appearance:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-1.png)
+
+
+!!!info
+    To customize these window in a Modularity Context a new module of Type
+    *Template* is needed.
+
+
+
+####  Changing the window
+
+Navigate to the _Application Dictionary || Windows, Tabs and Fields_ window
+and select the record for _Physical Inventory_ .
+
+In the _Fields_ tab we can now make the changes needed to adapt the layout as
+wanted:
+
+  * _Description_ field, unmark the _Displayed_ checkbox to hide the field from the tab. 
+  * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
+
+  
+For testing the changed layout, switch away from the _System Administrator_
+role to e.g. the _F &B International Group Admin _ role and open the _Physical
+Inventory_ window again. As the instance contains our module marked as
+_InDevelopment_ the window layout is reloaded each time the window is opened, so
+we can see the changed layout immediate as seen below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
+
+
+  
+To apply the same layout changes to the window in _classic UI mode_, the
+windows need to be recompiled, the changes deployed to tomcat and tomcat
+restarted. The compile & deploy step can be done by using _ant smartbuild_
+which will recompile all changed windows and deploy the changes.
+
+  
+
+####  Exporting the changes
+
+The final step is to export the changes into the module so they are persisted.
+
+!!!note
+    When exporting changes into a template, it is important that only
+    the *template is in development* and the module which contains the changed
+    object (i.e. window) is not.
+
+After ensuring that the export of the changes consists of the following two
+steps:
+
+  1. _./gradlew export.database_ , same steps as for any other module 
+  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+
+
+
+This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
+
+
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Gradle Plugin
