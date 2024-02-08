@@ -284,73 +284,36 @@ Custom hooks, such as `useProduct`, exemplify the integration between frontend c
 
 ### Implementing Custom Hooks
 
-Here's an example of how custom hooks are utilized:
-
-```typescript title="useProduct.ts"
-import { useState, useEffect } from 'react';
-import { Product } from '../../lib/data_gen/product.types';
-import ProductService from '../../lib/data_gen/productservice';
-
-// Custom hook for managing products
-export const useProduct = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  // Fetching data
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await ProductService.BACK.getFilteredProducts();
-      setProducts(data);
-    };
-    fetchData();
-  }, []);
-
-  // Function to handle product update
-  const handleUpdateProduct = async (updatedProduct: Product) => {
-    await ProductService.BACK.updateProduct(updatedProduct);
-    // Optionally, update the products state to reflect the changes
-  };
-
-  // Function to get filtered products (if needed)
-  const getFilteredProducts = async (filterCriteria: any) => {
-    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
-    setFilteredProducts(filtered);
-    return filteredProducts; // This line is optional, allowing the function to return the filtered products
-  };
-
-  return {
-    products,
-    handleUpdateProduct,
-    getFilteredProducts,
-  };
-};
-```
-
-## Implementing `useProduct` Hook in `Home` Component
-
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
+The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The [useProduct](https://github.com/etendosoftware/subapp-product/blob/develop/src/hooks/useProduct.ts) custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
 
 ### Example Usage
+
+Using the Table component from [Etendo UI Library](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}, the `Home` component lists the products, displaying a loading spinner while the data is being fetched. The `useProduct` hook is used to manage the data and loading state, ensuring that the component remains responsive and user-friendly.
 
 ```typescript title="Home.tsx"
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import useProduct from '../../hooks/useProduct';
-import Table from '../../components/Table';
+import { Table } from 'etendo-ui-library';
 
 const Home = () => {
-  const { getFilteredProducts, updateProduct } = useProduct();
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const fetchedProducts = await getFilteredProducts();
-      setProducts(fetchedProducts);
-    })();
-  }, []);
-
+  // data is the list of products, as a result of a RX consult in useProduct
+  // loading is a boolean that indicates if the data is being loaded
+  const { data, loading } = useProduct();
+  ...
   return (
     <View>
-      <Table data={products} />
+    ...
+      <TableUI
+        columns={dataColumns}
+        data={data} // here is used to list the products
+        isLoading={loading} // here is used to show a loading spinner
+        onLoadMoreData={onLoadMoreData}
+        commentEmptyTable={locale.t('Table.textEmptyTable')}
+        textEmptyTable={locale.t('Table.commentEmptyTable')}
+        pageSize={PAGE_SIZE}
+      />
+      ...
     </View>
   );
 };
