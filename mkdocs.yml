@@ -45,6 +45,8 @@ theme:
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
+exclude_docs: |
+  .*
 
 
 markdown_extensions:
