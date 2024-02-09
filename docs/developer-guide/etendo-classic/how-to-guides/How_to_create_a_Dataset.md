@@ -37,7 +37,7 @@ There are some important things to note:
   
 ###  Reference Data
 
-The reference data is packaged, distributed and installed together with the
+The reference data is published, distributed and installed together with the
 program code implementation of the module.
 
 In Etendo, the concept of reference data is generalized and any data
@@ -63,7 +63,7 @@ and DataAccessLevel_
   * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
   * A data set is owned by a module in the same way that all Application Dictionary components. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
 
     
 
@@ -80,7 +80,7 @@ expression)_
   * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
   * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the excludeAuditInfo column. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
     
 !!!note 
     If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
@@ -101,7 +101,7 @@ expression)_
   * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
   * They can exclude columns using the isExcluded check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
 
 ###  Data Access Level
 
@@ -129,7 +129,7 @@ This is a detailed explanation at each access level.
 
 ##  Exporting Module
 
-Before packaging, we need to export the module which creates a directory in the
+Before publishing, we need to export the module which creates a directory in the
 module under Etendo Classic root directory and the appropriate XML files for
 inclusion in the finished module. 
 
@@ -141,24 +141,16 @@ and navigate to the Etendo development project, execute the `export.database com
 
     
     
-    ant export.database
+    ./gradlew export.database
     
 
-##  Packaging a Module
+##  Publishing a Module
 
-The last step in the process is to package the module and distribute across to
+The last step in the process is to publish the module and distribute across to
 the end user.
 
-To package a module, execute the command `ant package.module -Dmodule=modulename` , where modulename is the Java package name of the module.
+For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md)
 
-So in the case of the how-to module, the command would be:
-
-    
-    
-    ant package.module -Dmodule=org.openbravo.howto
-    
-
-  
 
 ##  Examples
 
@@ -235,21 +227,17 @@ privileges they require.
   12. Click Save. 
   13. Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module. 
 
-#### Exporting and Packaging Module
+#### Exporting and Publishing Module
 
-After completing all the steps successfully. Run the below ant task to export
+After completing all the steps successfully. Run the below gradle task to export
 the module:
 
     
     
-    ant export.database -Dmodule="org.openbravo.rolesandaccess"
+    ./gradlew export.database -Dmodule="org.openbravo.rolesandaccess"
     
 
-package the module:
-
-    
-    
-    ant package.module -Dmodule="org.openbravo.rolesandaccess"
+publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
     
 
 On successful execution of the above task an .obx file has been generated.
@@ -308,21 +296,17 @@ with other users.
   14. Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module.
 
   
-#### Exporting and Packaging Module
+#### Exporting and Publishing Module
 
-After completing all the steps successfully. Run the below ant task to export
+After completing all the steps successfully. Run the below gradle task to export
 the module:
 
     
     
-    ant export.database -Dmodule="org.openbravo.taxesandalerts"
+    ./gradlew export.database -Dmodule="org.openbravo.taxesandalerts"
     
 
-packaging the module:
-
-    
-    
-    ant package.module -Dmodule="org.openbravo.taxesandalerts"
+publishing the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
     
 
 On successful execution of the above task, an .obx file has been generated.
@@ -419,21 +403,17 @@ Module  |  :  |  Indian States - 1.0.0
   * Finally navigate to *Dataset Tab* of Indian States and Click on *Export Reference Data* button to export the data. 
 
   
-#### Exporting and Packaging Module
+#### Exporting and Publishing Module
 
-After completing all the steps successfully, run the below ant task to export
+After completing all the steps successfully, run the below gradle task to export
 the module:
 
     
     
-    ant export.database -Dmodule="org.openbravo.indianstates"
+    ./gradlew export.database -Dmodule="org.openbravo.indianstates"
     
 
-packaging the module:
-
-    
-    
-    ant package.module -Dmodule="org.openbravo.indianstates"
+Publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
     
 
 !!!success

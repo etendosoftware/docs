@@ -14,7 +14,7 @@ tags:
 
 The Dataset concept allows you to define sets of data from different tables and export this data in one step. Datasets are especially useful for managing
 reference data for a module, for example tax rates or default data in new
-tables added by a module. The reference data is packaged, distributed and
+tables added by a module. The reference data is published, distributed and
 installed together with the program code implementing the module.
 
 The content of a Dataset is defined by its Dataset Tables and Dataset Columns.
@@ -42,9 +42,7 @@ A Dataset is a grouping of different tables (entities) which are exported
 together. Datasets are defined through the Dataset menu in the Application
 Dictionary. Below there is an example of a Dataset.
 
-![](/assets/developer-guide/etendo-classic/concepts/datasets-0.png)
-
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/datasets-0.png)
 
   
 Some important things to note:
@@ -59,9 +57,14 @@ If the export allowed column is flagged, then an export button is displayed.
 When clicking this button the data is exported to the modules directory of the
 module to which the Dataset belongs:
 
-  
-
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-1.png){: .legacy-image-style}
+```
+modules
+└── org.openbravo.localization.spain.referencedata.taxes
+    └── referencedata 
+        └── standard
+            ├── Impuestos_ES.xml
+            └── Spanish_Tax_Alerts.xml
+```
 
 ###  DatasetTable
 
@@ -71,11 +74,9 @@ both the records (through a where clause) and the columns per record.
 !!!note
     A Dataset should have one or more Dataset Tables, a Dataset Table always belongs to exactly one Dataset.
 
-![](/assets/developer-guide/etendo-classic/concepts/dataset-2.png)
+![](../../../assets/developer-guide/etendo-classic/concepts/dataset-2.png)
 
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-2.png){: .legacy-image-style}
 
-  
 Some important aspects:
 
   * A Dataset Table has a module, so you can add a new Dataset Table to an existing Dataset (of another module). 
@@ -121,9 +122,7 @@ The Dataset Column concept can be used in two ways:
   * check the 'Include all columns' in the Dataset Table and define exclusions in the Dataset Column 
   * do not check the 'Include All Columns' in the Dataset Table and define the exact Columns to export in the Dataset Column 
 
-![](/assets/developer-guide/etendo-classic/concepts/dataset-3.png)  
-
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/dataset-3.png)
 
   
 The main fields:
@@ -138,9 +137,9 @@ The main purpose of Datasets is to define reference data for modules.
 To export a dataset, it is very important to follow these steps:
 
   * First click on the *Export Reference Data* button in the Dataset window. This will export the dataset contents to an xml file, and will also generate the checksum of this dataset. 
-  * Then, execute `ant export.database` to export the checksum information to the module source data. 
+  * Then, execute `./gradlew export.database` to export the checksum information to the module source data. 
 
-After this, you can do `ant package.module -Dmodule={module java package}` to package your module, which now will include the contents of the dataset.
+After this, you can [publish your module](../how-to-guides/how-to-publish-modules-to-github-repository.md) your module, which now will include the contents of the dataset.
 
 !!!note
     The reference data is inserted when a module is applied (build and installed). Or can be imported separately.
@@ -162,20 +161,18 @@ The module reference data can be imported into an organization using the *Enterp
 General Setup > Enterprise > Enterprise module management > Enterprise module
 management.
 
-  
+![](../../../assets/developer-guide/etendo-classic/concepts/datasets-4.png)
 
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-4.png){: .legacy-image-style}
 
 In this list, only the relevant modules containing datasets will be shown.
 This means that if a dataset has not changed from the last time it was applied to the selected organization, it will not be shown.
 
   
-Select the organization and the module from which to import the reference data into the organization. Then press ok. After a while the result page is
-displayed:
+Select the organization and the module from which to import the reference data into the organization. Then press ok. After a while the result page is displayed:
 
-  
 
-![](/assets/developer-guide/etendo-classic/concepts/Datasets-5.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/datasets-5.png)
+
 
 !!!note
     If a dataset is defined as Organization/Client level, then it can also be imported when using the Initial Client Setup utility to create a new client.
