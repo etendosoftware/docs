@@ -285,12 +285,12 @@ nav:
 #        - Multi-Client and Multi-Org: developer-guide/etendo-classic/concepts/Multi_Client_and_Multi_Org.md
 #        - Data Model: developer-guide/etendo-classic/concepts/Data_Model.md
 #        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
-#       - Client Side Development and API: developer-guide/etendo-classic/concepts/Client_Side_Development_and_API.md
+#        - Client Side Development and API: developer-guide/etendo-classic/concepts/Client_Side_Development_and_API.md
 #        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/Cluster_Development_Guidelines.md
 #        - Development Build Tasks: developer-guide/etendo-classic/concepts/Development_Build_Tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
 #        - Modularity Concepts: developer-guide/etendo-classic/concepts/Modularity_Concepts.md
-#        - Openbravo 3 Architecture: developer-guide/etendo-classic/concepts/Openbravo_3_Architecture.md
+#        - Etendo Architecture: developer-guide/etendo-classic/concepts/Etendo_Architecture.md
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
 #        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/JavaScript_Coding_Conventions.md
