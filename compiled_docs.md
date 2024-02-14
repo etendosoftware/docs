@@ -39465,7 +39465,8 @@ Etendo 21Q4
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
 | [1.12.0](#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
@@ -39505,6 +39506,10 @@ Etendo 21Q4
 
 
 #### Release Notes
+
+##### 1.13.2
+- [EE-786](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/20){target="\_blank"} Functionality to select orders or invoices in remittances does not work well total
+- [EE-723](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/30){target="\_blank"} Incomplete titles when exporting Balance Sheet And P&L Structure Advanced Report with templates to Excel
 
 ##### 1.13.1
 - [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Unnecessary "Header" tab in the in the ABC Activity window
