@@ -39580,7 +39580,8 @@ Etendo 21Q4
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
@@ -39602,6 +39603,22 @@ Etendo 21Q4
 
 #### Versiones Disponibles
 
+##### 1.9.0
+- Parámetros modelo 347 - Rangos nuevos 2023 \
+Se asociaron nuevos parámetros de impuestos a los siguientes rangos:
+  - Adquisiciones IVA 0% 
+  - Entregas IVA 0%  
+  - Entregas IVA 0+RE 0+0% 
+  - Entregas IVA 0+RE 0+0% (+0% IVA) 
+  - Entregas IVA 0+RE 0+0% (+0% RE) 
+  - Entregas IVA 5% 
+  - Entregas IVA+RE 21+1.75% 
+  - Entregas IVA+RE 21+1.75% (+1.75%) 
+  - Entregas IVA+RE 21+1.75% (+21%) 
+  - Entregas IVA+RE 5+0.62% 
+  - Entregas IVA+RE 5+0.62% (+0.62%) 
+  - Entregas IVA+RE 5+0.62% (+5%) 
+  - Servicios Prestados 0% 
 ##### 1.8.0
 - Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 \
 Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
