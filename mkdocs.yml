@@ -116,6 +116,9 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/etendo.software/
       name: Instagram
+  analytics:
+    provider: google
+    property: G-VB6Z77ZMPT
 
 copyright: Copyright &copy; 2021 - 2023 Etendo Software
 
