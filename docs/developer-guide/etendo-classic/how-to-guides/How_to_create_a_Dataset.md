@@ -234,7 +234,7 @@ After completing all the steps successfully. Run the below gradle task to export
     ./gradlew export.database
     
 
-publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
 
   
 #### How to Install - Organization Access Level Reference Data
@@ -292,7 +292,7 @@ the module:
     ./gradlew export.database
     
 
-publishing the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
 
   
 #### How to Install - System/Client Access Level Reference Data
@@ -388,7 +388,7 @@ the module:
     ./gradlew export.database
     
 
-Publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
 
   
 #### How to Install - System Only Access Level Reference Data
