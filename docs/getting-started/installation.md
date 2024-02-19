@@ -18,6 +18,9 @@ This section explains how to install a new Etendo environment. It includes:
 ### Requirements 
 In this section, you can read the [System Requirements](/getting-started/requirements).
 
+## Check PostgreSQL Configuration
+Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
+
 ### Install Etendo 
 === ":material-language-java: JAR Format"
 
@@ -49,9 +52,9 @@ In this section, you can read the [System Requirements](/getting-started/require
         bbdd.sid=etendo
         bbdd.port=5432
         bbdd.systemUser=postgres
-        bbdd.systemPassword=syspass
-        bbdd.user=tad
-        bbdd.password=tad
+        bbdd.systemPassword=system_user_password
+        bbdd.user=etendo_user
+        bbdd.password=etenso_user_password
 
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
         ```
@@ -115,16 +118,7 @@ In this section, you can read the [System Requirements](/getting-started/require
         ```
         ./gradlew install smartbuild
         ```
-    9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
-        lc_numeric = 'en_US.UTF-8'
-        max_locks_per_transaction = 128
-        ```        
-
-        !!! note
-            After modifying the file restart postgresql
-
-    10. Start the Tomcat, in case of Linux you can run:
+    9. Start the Tomcat, in case of Linux you can run:
         ```
         sudo /etc/init.d/tomcat start
         ```
@@ -132,7 +126,7 @@ In this section, you can read the [System Requirements](/getting-started/require
         !!! note
             If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
 
-    11. Open your browser in `https://<Public server IP>/<Context Name>`
+    10. Open your browser in `https://<Public server IP>/<Context Name>`
 
 === ":octicons-file-zip-24: Source Format"
 
