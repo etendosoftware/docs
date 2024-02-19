@@ -31701,20 +31701,14 @@ This work is a derivative of [How to Create a Background Process](http://wiki.op
   
 ####  Overview
 
-This How-to section explains how to add a rich text field and column to the Etendo
-system.
+This How-to section explains how to add a rich text field and column to the Etendo Classic.
 
 The steps to get a rich text field in your window consists of two steps: 
 
-- [add a column to a table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/), and 
-- add [a field to a tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) a field to a tab.
+- [Add a column to a table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/)
+- [Add a field to a tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/)
 
-You can also create a new table and a new window/tab. These two steps
-described in detail in the following how-tos:
-
-  * Add a new column to a table in the system 
-  * Define and add a new field to a tab 
-
+You can also create a new table and a new window/tab ofcourse.
 This how-to will only focus on the specific part of a rich text field.
 
   
@@ -31724,7 +31718,7 @@ For this how-to, we will use the redefine the description field in the sales ord
 
 
   
-####  Adding a column
+#####  Adding a column
 
 First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/).
 
@@ -31743,7 +31737,7 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
 
-####  Create a field - set col and rowspan
+#####  Create a field - set col and rowspan
 
 Then [create a field](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
 also set the col and rowspan (these are only shown when the corresponding
@@ -31752,7 +31746,7 @@ column is defined as rich text):
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
 
-####  The result
+#####  The result
 
 The result is visualized as a rich text editor in form view:
 
