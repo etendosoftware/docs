@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -3913,6 +3913,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/Datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4273,9 +4294,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#packaging-a-module" class="md-nav__link">
+  <a href="#publishing-a-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Packaging a Module
+      Publishing a Module
     </span>
   </a>
   
@@ -4329,9 +4350,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module" class="md-nav__link">
+  <a href="#exporting-and-publishing-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -4380,9 +4401,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module_1" class="md-nav__link">
+  <a href="#exporting-and-publishing-module_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -4413,9 +4434,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module_2" class="md-nav__link">
+  <a href="#exporting-and-publishing-module_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -7585,9 +7606,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#packaging-a-module" class="md-nav__link">
+  <a href="#publishing-a-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Packaging a Module
+      Publishing a Module
     </span>
   </a>
   
@@ -7641,9 +7662,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module" class="md-nav__link">
+  <a href="#exporting-and-publishing-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -7692,9 +7713,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module_1" class="md-nav__link">
+  <a href="#exporting-and-publishing-module_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -7725,9 +7746,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exporting-and-packaging-module_2" class="md-nav__link">
+  <a href="#exporting-and-publishing-module_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Exporting and Packaging Module
+      Exporting and Publishing Module
     </span>
   </a>
   
@@ -7807,7 +7828,7 @@
 
 <h1 id="how-to-create-a-dataset">How to create a Dataset</h1>
 <h2 id="overview">Overview</h2>
-<p>This how-to will focus on creating a dataset in Etendo Classic and also will give some examples in detail under  Examples  section. Dataset will export both reference data as well as default data.</p>
+<p>This how-to will focus on creating a dataset in Etendo Classic and also will give some examples in detail under Examples section. Dataset will export both reference data as well as default data.</p>
 <h3 id="introduction-to-dataset-concept">Introduction to Dataset Concept</h3>
 <p>First of all we need to understand the dataset concept, which allows to export
 the sets of data from different tables in one step. This is especially useful
@@ -7819,10 +7840,10 @@ table are executed and exported.</p>
 <p>There are some important things to note:</p>
 <ul>
 <li>A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. </li>
-<li>Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set (see  <em>Data Access Level</em> section for more information). </li>
+<li>Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. </li>
 </ul>
 <h3 id="reference-data">Reference Data</h3>
-<p>The reference data is packaged, distributed and installed together with the
+<p>The reference data is published, distributed and installed together with the
 program code implementation of the module.</p>
 <p>In Etendo, the concept of reference data is generalized and any data
 in the instance can be exported in a module and imported when installing /
@@ -7846,21 +7867,21 @@ and DataAccessLevel</em></p>
 <li>The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). </li>
 <li>A data set is owned by a module in the same way that all Application Dictionary components. </li>
 </ul>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the export allowed column is flagged, then an <strong>Export Reference Data</strong> button is displayed. </p>
 </div>
 <p>2. <em>DataSet_Table</em> with the following columns: <em>DataSet, Table,
-fullBusinessObjec, includeAllColumns, excludeAuditInfo and whereClause (HQL
+fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQL
 expression)</em></p>
 <ul>
-<li>A data set can have one or many tables from the ones registered in the AD_Table. For each of them developers can decide to include only records in that table or export the full business object using the check fullBusinessObject. </li>
-<li>Developers can also define for each table the columns that are included in the dataset. They can include all columns using the includeAllColumns check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. </li>
+<li>A data set can have one or many tables from the ones registered in the <code>AD_Table</code>. For each of them developers can decide to include only records in that table or export the full business object using the check <code>fullBusinessObject</code>. </li>
+<li>Developers can also define for each table the columns that are included in the dataset. They can include all columns using the <code>includeAllColumns</code> check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. </li>
 <li>The whereClause is a <em>HQL expression</em> to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. </li>
-<li>Developers can exclude the audit information column like <em>created, createdby, updated, etc.</em> by checking the excludeAuditInfo column. </li>
+<li>Developers can exclude the audit information column like <em>created, createdby, updated, etc.</em> by checking the <code>excludeAuditInfo</code> column. </li>
 </ul>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png" /></a>  </p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png" /></a>  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If IsBusinessObject field is flagged then the <code>child-records</code> of the table are exported.
@@ -7876,19 +7897,19 @@ description of business objects is provided in the DAL project.</p>
 <p>3. <em>Dataset_column</em> with the following columns: <em>DataSet_Table, Column, isExcluded and conditionClause(Java expression)</em>.</p>
 <ul>
 <li>For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. </li>
-<li>They can exclude columns using the isExcluded check if they have marked the table as <em>Include all columns</em> . Typically audit info will be removed from the dataset. </li>
+<li>They can exclude columns using the <code>isExcluded</code> check if they have marked the table as <em>Include all columns</em> . Typically audit info will be removed from the dataset. </li>
 </ul>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png" /></a>   </p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png" /></a>   </p>
 <h3 id="data-access-level">Data Access Level</h3>
 <p>The Data Access Level is used to define how to import / install the module at
 various levels, like System level, Client level, Organization level, etc. This
-access level value is available at Dataset table. </p>
+access level value is available at <code>Dataset</code> table. </p>
 <p>This is a detailed explanation at each access level.</p>
 <ul>
 <li><em>System Only:</em> data will be imported at module installation time at System level without any user interaction. </li>
-<li><em>Client:</em> data will be imported at Initial Client Setup if the user chooses the module where the DataSet is included. </li>
-<li><em>Organization:</em> data will be imported at Initial Organization Setup if the user chooses the module where the DataSet is included. </li>
-<li><em>Client/Organization:</em> data will be imported at Initial Client Setup or Initial Organization Setup if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. </li>
+<li><em>Client:</em> data will be imported at <code>Initial Client Setup</code> if the user chooses the module where the DataSet is included. </li>
+<li><em>Organization:</em> data will be imported at <code>Initial Organization Setup</code> if the user chooses the module where the DataSet is included. </li>
+<li><em>Client/Organization:</em> data will be imported at <code>Initial Client Setup</code> or <code>Initial Organization Setup</code> if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. </li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -7904,7 +7925,7 @@ for which client and/or organization</li>
 </ul>
 </div>
 <h2 id="exporting-module">Exporting Module</h2>
-<p>Before packaging, we need to export the module which creates a directory in the
+<p>Before publishing, we need to export the module which creates a directory in the
 module under Etendo Classic root directory and the appropriate XML files for
 inclusion in the finished module. </p>
 <div class="admonition note">
@@ -7912,16 +7933,13 @@ inclusion in the finished module. </p>
 <p>Modules that are not flagged as being in development are not exported, so remember that you must select the InDevelopment checkbox when you define a new module.</p>
 </div>
 <p>When the development of the module is finished, open a command window/shell
-and navigate to the Etendo development project, execute the <code>export.database command</code>.</p>
-<div class="language-text highlight"><pre><span></span><code>ant export.database
-</code></pre></div>
-<h2 id="packaging-a-module">Packaging a Module</h2>
-<p>The last step in the process is to package the module and distribute across to
+and navigate to the Etendo development project, execute the <code>export.database</code> command.</p>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>export.database
+</span></code></pre></div>
+<h2 id="publishing-a-module">Publishing a Module</h2>
+<p>The last step in the process is to publish the module and distribute across to
 the end user.</p>
-<p>To package a module, execute the command <code>ant package.module -Dmodule=modulename</code> , where modulename is the Java package name of the module.</p>
-<p>So in the case of the how-to module, the command would be:</p>
-<div class="language-text highlight"><pre><span></span><code>ant package.module -Dmodule=org.openbravo.howto
-</code></pre></div>
+<p>For a detailed guide on how to do so, visit <a href="../how-to-publish-modules-to-github-repository/">How to Publish Modules to a GitHub Repository</a></p>
 <h2 id="examples">Examples</h2>
 <p>Please find below the examples to know how to create a dataset and to export
 it along with the reference data.</p>
@@ -7932,24 +7950,26 @@ privileges they require.</p>
 <p><strong>Create a Role and Assign Privileges</strong></p>
 <ul>
 <li>Change to the admin role of your client. </li>
-<li>Click on General Setup and Navigate to Security &gt; Role. </li>
+<li>Click on <code>General Setup</code> and Navigate to <code>Security</code> &gt; <code>Role</code>. </li>
 <li>Create a new record. Fill up the mandatory fields that required for this record. They are: <ul>
-<li>Name = the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. </li>
-<li>Active = Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. </li>
-<li>User Level = This controls which organizations the role has access to. There are four options, the most common are: </li>
-<li>Organization - the role only has access to organization specific data. </li>
-<li>Client and Organization - the role has access to organization specific data and client shared data. </li>
-<li>Manual = The controls if all existing privileges are automatically given to the role or if they are manually associated on a peer need basis. Selecting this option for manual control is recommended. </li>
+<li><code>Name</code>: the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. </li>
+<li><code>Active</code>: Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. </li>
+<li><code>User Level</code>: This controls which organizations the role has access to. There are four options, the most common are: <ul>
+<li><code>Organization</code>: the role only has access to organization specific data. </li>
+<li><code>Client and Organization</code>: the role has access to organization specific data and client shared data. </li>
+</ul>
+</li>
+<li><code>Manual</code>: The controls if all existing privileges are automatically given to the role or if they are manually associated on a peer need basis. Selecting this option for manual control is recommended. </li>
 </ul>
 </li>
 <li>Save the record. </li>
-<li>Now you need to assign some privileges by clicking on Grant Access button. </li>
+<li>Now you need to assign some privileges by clicking on <code>Grant Access</code> button. </li>
 <li>select the module and access type to assign the privileges to the newly created role. </li>
 </ul>
 <h4 id="create-a-user-and-assign-the-user-to-the-role">Create a User and assign the user to the Role</h4>
 <ul>
-<li>Now click on General Setup and navigate to Security &gt; User. </li>
-<li>Create a new record. The Client field will show the name of your client by default. </li>
+<li>Click on <code>General Setup</code> and navigate to <code>Security</code> &gt; <code>User</code>. </li>
+<li>Create a new record. The <code>Client</code> field will show the name of your client by default. </li>
 <li>Select the Organization (This can be for access to one or all organizations in a client). <ul>
 <li>First Name. </li>
 <li>Last Name. </li>
@@ -7963,9 +7983,9 @@ privileges they require.</p>
 <p>Save the record. </p>
 </li>
 <li>
-<p>Staying in the User window: </p>
+<p>Focus in the <code>User</code> window again</p>
 </li>
-<li>Select the 'User Roles' tab. </li>
+<li>Select the <code>User Roles</code> tab. </li>
 <li>Create a new record and select a role. </li>
 <li>Save the record. </li>
 <li>Add all roles this new user will be able to have/use (one line for each role). </li>
@@ -7974,53 +7994,44 @@ privileges they require.</p>
 <h4 id="create-a-new-module">Create a new module</h4>
 <ul>
 <li>Log into Etendo ERP as a System Administrator. </li>
-<li>Click on Module menu from the Application Dictionary. </li>
-<li>From the Module Type list, select Module. </li>
-<li>In the Name field, type the java package name of the module(proper naming convention). </li>
-<li>Complete the Description and Help fields. Supply the information about chart of accounts. </li>
-<li>Select the Has reference data option. </li>
-<li>Clear the Has chart of accounts, Translation required and Is translation module options. </li>
-<li>Select the In development option. Remember that you cannot work on a module unless the In development option is selected. </li>
-<li>On the Dependencies tab, select Core. </li>
+<li>Click on <code>Module</code> menu from the Application Dictionary. </li>
+<li>From the <code>Module Type</code> list, select Module. </li>
+<li>In the <code>Name</code> field, type the java package name of the module(proper naming convention). </li>
+<li>Complete the <code>Description</code> and <code>Help</code> fields. Supply the information about chart of accounts. </li>
+<li>Select the <code>Has reference data</code> option. </li>
+<li>Clear the <code>Has chart of accounts</code>, <code>Translation required</code> and <code>Is translation module</code> options. </li>
+<li>Select the In development option. Remember that you cannot work on a module unless the <code>In development</code> option is selected. </li>
+<li>On the <code>Dependencies</code> tab, select Core. </li>
 <li>Save the module </li>
 </ul>
 <h4 id="create-a-dataset-of-roles-and-access">Create a Dataset of roles and access</h4>
 <ol>
-<li>From the Application menu, select Application Dictionary &gt; Dataset </li>
+<li>From the Application menu, select <code>Application Dictionary</code> &gt; <code>Dataset</code> </li>
 <li>Click New. </li>
-<li>From the Module list, select the module above created. </li>
+<li>From the <code>Module</code> list, select the module above created. </li>
 <li>Specify a search key, name and description. </li>
-<li>From the Data Access Level list, select the Data access level as <em>Organization</em>. </li>
-<li>Select the Export allowed option. </li>
-<li>Select the Table Tab.</li>
-<li>From the Table list, select the table whose content you want to include in the module. For example, ad_role_org_access, ad_role, ad_user_roles. </li>
+<li>From the <code>Data Access Level</code> list, select the Data access level as <em>Organization</em>. </li>
+<li>Select the <code>Export allowed</code> option. </li>
+<li>Select the <code>Table</code> Tab.</li>
+<li>From the <code>Table</code> list, select the table whose content you want to include in the module. For example, ad_role_org_access, ad_role, ad_user_roles. </li>
 <li>In the SQL where clause field, specify the SQL "WHERE" statement that will identify the set of rows to be exported, in DAL notation. For example, adrole.id='2EA831D59184490E9BA858E9745EF89F' </li>
-<li>Select the Include All Columns option. </li>
-<li>Select isBusinessObject option.</li>
+<li>Select the <code>Include All Columns</code> option. </li>
+<li>Select <code>isBusinessObject</code> option.</li>
 <li>Click Save. </li>
-<li>Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module. </li>
+<li>Click the <code>Export Reference Data</code> button to export the reference data to an .xml file that you can include in the module. </li>
 </ol>
-<h4 id="exporting-and-packaging-module">Exporting and Packaging Module</h4>
-<p>After completing all the steps successfully. Run the below ant task to export
-the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant export.database -Dmodule=&quot;org.openbravo.rolesandaccess&quot;
+<h4 id="exporting-and-publishing-module">Exporting and Publishing Module</h4>
+<p>After completing all the steps successfully. Run the below gradle task to export the module:</p>
+<div class="language-text highlight"><pre><span></span><code>./gradlew export.database
 </code></pre></div>
-<p>package the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant package.module -Dmodule=&quot;org.openbravo.rolesandaccess&quot;
-</code></pre></div>
-<p>On successful execution of the above task an .obx file has been generated.</p>
+<p>And publish the module (<a href="../how-to-publish-modules-to-github-repository/">How to Publish Modules to a GitHub Repository</a>)</p>
 <h4 id="how-to-install-organization-access-level-reference-data">How to Install - Organization Access Level Reference Data</h4>
-<p>To install the new module into the running Etendo ERP then, need handle the
-steps carefully. In this example we have selected the access level as
-<em>Organization</em>, then the installation would be done using <em>Enterprise Module
-Management</em>. Find the steps below:</p>
 <ul>
-<li>Log into Etendo ERP as System Administrator. </li>
-<li>Install the OBX using Module Management under General Setup and rebuild the system. </li>
-<li>But the reference data will not be installed. </li>
-<li>Change the login as <em>Etendo Admin</em>.</li>
-<li>Click on General Setup and navigate to Enterprise &gt; Enterprise module Management. </li>
-<li>Select the Organization type then select the appropriate module and click Ok to install the reference data. </li>
+<li>Install the module following the <a href="../../getting-started/installation/install-modules-in-etendo/">Install Modules in Etendo</a> guide.</li>
+<li>At this point the reference data will not be installed. </li>
+<li>Log into the ERP as admin.</li>
+<li>Click on <code>General Setup</code> and navigate to <code>Enterprise</code> &gt; <code>Enterprise module Management</code>. </li>
+<li>Select the <code>Organization type</code> then select the appropriate module and click Ok to install the reference data. </li>
 </ul>
 <h3 id="dataset-of-taxes-or-alerts">Dataset of taxes or alerts</h3>
 <p>In this section you can find the example on dataset of taxes or alerts. The
@@ -8031,52 +8042,45 @@ with other users.</p>
 <h4 id="registering-a-data-module-for-taxes-and-alerts">Registering a data module for taxes and alerts:</h4>
 <ul>
 <li>Log into Etendo ERP as a System Administrator. </li>
-<li>Click on Module menu from the Application Dictionary. </li>
-<li>From the Module Type list, select Module. </li>
-<li>In the Name field, type the java package name of the module(proper naming convention). </li>
-<li>Complete the Description and Help fields. Supply the information about chart of accounts. </li>
-<li>Select the Has reference data option. </li>
-<li>Clear the Has chart of accounts, Translation required and Is translation module options. </li>
-<li>Select the In development option. Remember that you cannot work on a module unless the In development option is selected. </li>
-<li>On the Dependencies tab, select Core. </li>
+<li>Click on <code>Module</code> menu from the Application Dictionary. </li>
+<li>From the <code>Module Type</code> list, select Module. </li>
+<li>In the <code>Name</code> field, type the java package name of the module(proper naming convention). </li>
+<li>Complete the <code>Description</code> and <code>Help</code> fields. Supply the information about chart of accounts. </li>
+<li>Select the <code>Has reference data</code> option. </li>
+<li>Clear the <code>Has chart of accounts</code>, <code>Translation required</code> and <code>Is translation module</code> options. </li>
+<li>Select the <code>In development</code> option. Remember that you cannot work on a module unless the <code>In development</code> option is selected. </li>
+<li>On the <code>Dependencies</code> tab, select Core. </li>
 <li>Save the module.</li>
 </ul>
 <h4 id="defining-and-exporting-the-dataset">Defining and exporting the dataset</h4>
 <ol>
-<li>From the Application menu, select Application Dictionary &gt; Dataset </li>
+<li>From the Application menu, select <code>Application Dictionary</code> &gt; <code>Dataset</code> </li>
 <li>Click New. </li>
-<li>From the Module list, select the module above created. </li>
-<li>Specify a search key, name and description. </li>
-<li>From the Data Access Level list, select the Data access level as System only. </li>
-<li>Select the Export allowed option. </li>
-<li>Select the Table Tab.</li>
-<li>From the Table list, select the table whose content you want to include in the module. </li>
-<li>In the SQL where clause field, specify the SQL WHERE statement that will identify the set of rows to be exported, in DAL notation. For example, client.id='1000001' </li>
-<li>To export all columns, select the Include All Columns option. To include only the columns you specify, select the Columns tab and create a new record for each column you want to export. </li>
-<li>To include the security audit columns (created, createdby, updated and updatedby) in the export, clear the Exclude Audit Info checkbox. </li>
-<li>Clear the Is Business Object option. </li>
+<li>From the <code>Module</code> list, select the module above created. </li>
+<li>Specify a <code>search key</code>, <code>name</code> and <code>description</code>. </li>
+<li>From the <code>Data Access Level</code> list, select the Data access level as System only. </li>
+<li>Select the <code>Export allowed</code> option. </li>
+<li>Select the <code>Table</code> Tab.</li>
+<li>From the <code>Table</code> list, select the table whose content you want to include in the module. </li>
+<li>In the <code>SQL where clause</code> field, specify the SQL WHERE statement that will identify the set of rows to be exported, in DAL notation. For example, client.id='1000001' </li>
+<li>To export all columns, select the <code>Include All Columns</code> option. To include only the columns you specify, select the <code>Columns</code> tab and create a new record for each column you want to export. </li>
+<li>To include the security audit columns (created, createdby, updated and updatedby) in the export, clear the <code>Exclude Audit Info</code> checkbox. </li>
+<li>Clear the <code>Is Business Object</code> option. </li>
 <li>Click Save.</li>
-<li>Click the Export Reference Data button to export the reference data to an .xml file that you can include in the module.</li>
+<li>Click the <code>Export Reference Data</code> button to export the reference data to an .xml file that you can include in the module.</li>
 </ol>
-<h4 id="exporting-and-packaging-module_1">Exporting and Packaging Module</h4>
-<p>After completing all the steps successfully. Run the below ant task to export
+<h4 id="exporting-and-publishing-module_1">Exporting and Publishing Module</h4>
+<p>After completing all the steps successfully. Run the below gradle task to export
 the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant export.database -Dmodule=&quot;org.openbravo.taxesandalerts&quot;
+<div class="language-text highlight"><pre><span></span><code>./gradlew export.database
 </code></pre></div>
-<p>packaging the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant package.module -Dmodule=&quot;org.openbravo.taxesandalerts&quot;
-</code></pre></div>
-<p>On successful execution of the above task, an .obx file has been generated.</p>
+<p>And publish the module (<a href="../how-to-publish-modules-to-github-repository/">How to Publish Modules to a GitHub Repository</a>)</p>
 <h4 id="how-to-install-systemclient-access-level-reference-data">How to Install - System/Client Access Level Reference Data</h4>
-<p>To install the new module into the running Etendo ERP, then need to handle the
-steps carefully. In this example, we have selected the access level as
-<em>Organization</em> then, the installation would be done using <em>Enterprise Module
-Management</em> find below the steps.</p>
 <ul>
-<li>Log into Etendo ERP as System Administrator. </li>
-<li>Install the OBX using Module Management under General Setup and rebuild the system. </li>
-<li>But the reference data will not be installed. </li>
-<li>Click on General Setup and navigate to Client &gt; Initial Client Setup. </li>
+<li>Install the module following the <a href="../../getting-started/installation/install-modules-in-etendo/">Install Modules in Etendo</a> guide.</li>
+<li>At this point the reference data will not be installed. </li>
+<li>Log into the ERP as admin.</li>
+<li>Click on <code>General Setup</code> and navigate to <code>Client</code> &gt; <code>Initial Client Setup</code>.</li>
 <li>Fill up all the mandatory fields and then select the appropriate module. </li>
 <li>Finally click Ok to install the reference data. </li>
 </ul>
@@ -8085,60 +8089,13 @@ Management</em> find below the steps.</p>
 regions. Find below the steps to create the Dataset for this module:</p>
 <ul>
 <li>Log into Etendo ERP as a System Administrator. </li>
-<li>Create a new module called for the this example. </li>
-<li>Make sure that you have selected or flagged for the field <em>Has Reference Data</em>. </li>
-<li>Now expand the <em>Application Dictionary</em> menu. </li>
-<li>Click on <em>Dataset</em> menu and create a new record for the for this module. </li>
-<li>For example, here I have given the Name as <em>Indian States</em>. You can give a name as you wish to select the region. </li>
-<li>Fill up the Dataset form using the below mentioned values. <table>
-<thead>
-<tr>
-<th>* Field</th>
-<th>value for the field</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Client</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Organization</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Active</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Module</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Search Key</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Name</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Data Access Level</td>
-<td>:</td>
-</tr>
-</tbody>
-</table>
-</li>
+<li>Create a new module called <em>Indian States</em> for this example. </li>
+<li>Make sure that you have selected or flagged for the field <code>Has Reference Data</code>. </li>
+<li>Now expand the <code>Application Dictionary</code> menu. </li>
+<li>Click on <code>Dataset</code> menu and create a new record for the for this module. </li>
+<li>For example, here the Name <code>Indian States</code> has been given. You can give a name as you wish to select the region. </li>
 <li>
-<p>Before assigning the tables to Dataset. Please execute the below query in sqldeveloper or postgres IDE to find the C_country_Id for INDIA. After executing the below query the result of c_country_id would be 208 for the below query. </p>
-<p>select * from c_country where countrycode like 'IN%';</p>
-</li>
-<li>
-<p>Navigate to <em>Table Tab</em> and create 2 new records for the dataset. </p>
-</li>
-<li>One table called <em>C_Country</em> and another table called <em>C_Region</em> it look likes as given below. <ul>
-<li>Fill up the form by using below values for the Table Name: C_Country</li>
-<li>
+<p>Fill up the Dataset form using the below mentioned values. </p>
 <table>
 <thead>
 <tr>
@@ -8148,199 +8105,194 @@ regions. Find below the steps to create the Dataset for this module:</p>
 </thead>
 <tbody>
 <tr>
-<td>Dataset</td>
-<td>:</td>
-</tr>
-<tr>
-<td>Table</td>
-<td>:</td>
-</tr>
-<tr>
 <td>Active</td>
-<td>:</td>
+<td>make it flagged/put a tick mark</td>
 </tr>
 <tr>
 <td>Module</td>
-<td>:</td>
+<td>select the value from the drop down <em>Indian States - 1.0.0</em></td>
 </tr>
 <tr>
-<td>SQL Where Clause</td>
-<td>:</td>
+<td>Search Key</td>
+<td>Indian States</td>
 </tr>
 <tr>
-<td>Include All Columns</td>
-<td>:</td>
+<td>Name</td>
+<td>Indian States</td>
 </tr>
 <tr>
-<td>the individual columns for this table using <em>Column Tab</em> )</td>
-<td></td>
-</tr>
-<tr>
-<td>Exclude Audit Info</td>
-<td>:</td>
-</tr>
-<tr>
-<td>check box</td>
-<td></td>
+<td>Data Access Level</td>
+<td>System Only</td>
 </tr>
 </tbody>
 </table>
 </li>
-</ul>
+<li>
+<p>Before assigning the tables to Dataset. Please execute the below query in sqldeveloper or postgres IDE to find the <code>C_country_Id</code> for INDIA. After executing the below query the result of <code>c_country_id</code> would be 208 for the below query. </p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">c_country</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">countrycode</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;IN%&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 </li>
-<li>Fill up the form by using below values for the Table Name: C_Region<table>
+<li>
+<p>Navigate to <code>Table</code> Tab and create 2 new records for the dataset. </p>
+</li>
+<li>
+<p>Fill up the form by using the values below for the following Table: <code>C_Country</code></p>
+<table>
 <thead>
 <tr>
-<th>* Field</th>
+<th>Field</th>
 <th>value for the field</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dataset</td>
-<td>:</td>
-</tr>
-<tr>
 <td>Table</td>
-<td>:</td>
+<td><code>C_Country</code></td>
 </tr>
 <tr>
 <td>Active</td>
-<td>:</td>
+<td>Default it is flagged. Leave as it is</td>
 </tr>
 <tr>
 <td>Module</td>
-<td>:</td>
+<td>Indian States - 1.0.0</td>
 </tr>
 <tr>
 <td>SQL Where Clause</td>
-<td>:</td>
+<td>id='208'</td>
 </tr>
 <tr>
 <td>Include All Columns</td>
-<td>:</td>
-</tr>
-<tr>
-<td>check box</td>
-<td></td>
+<td>Remove the flag or tick mark (Individual columns will be added in later steps)</td>
 </tr>
 <tr>
 <td>Exclude Audit Info</td>
-<td>:</td>
+<td>Mark it as flagged or put tick mark for this check box</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Fill up the form by using the values below for the following Table: <code>C_Region</code></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>value for the field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table</td>
+<td><code>C_Region</code></td>
 </tr>
 <tr>
-<td>check box</td>
-<td></td>
+<td>Active</td>
+<td>Default it is flagged. Leave as it is</td>
 </tr>
 <tr>
-<td>* Select the "C_Country" table from the table grid view and navigate to <em>Column Tab</em>.</td>
-<td></td>
+<td>Module</td>
+<td>Indian States - 1.0.0</td>
 </tr>
 <tr>
-<td>* Click on create a new record button for the above table. You need to select three columns for this table.</td>
-<td></td>
+<td>SQL Where Clause</td>
+<td>country.id='208'</td>
 </tr>
 <tr>
-<td>* Those columns are:(1)Name, (2)CountryCode, and (3)HasRegion</td>
-<td></td>
+<td>Include All Columns</td>
+<td>Mark it as flagged or put tick mark for this check box</td>
 </tr>
 <tr>
-<td>* Fill up the following values in the form.</td>
-<td></td>
+<td>Exclude Audit Info</td>
+<td>Mark it as flagged or put tick mark for this check box</td>
 </tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Select the <code>C_Country</code> table from the table grid view and navigate to <code>Column</code> Tab. </p>
+</li>
+<li>Click on create a new record button for the above table. You need to select three columns for this table. </li>
+<li>Those columns are:<ul>
+<li>Name</li>
+<li>CountryCode</li>
+<li>HasRegion </li>
+</ul>
+</li>
+<li>
+<p>Fill up the following values in the form. </p>
+<table>
+<thead>
 <tr>
-<td>* Field</td>
-<td>value for the field</td>
+<th>Field</th>
+<th>value for the field</th>
 </tr>
-<tr>
-<td>---</td>
-<td>---</td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td><strong>Column 1:</strong></td>
 <td></td>
 </tr>
 <tr>
-<td>Dataset Table</td>
-<td>:</td>
-</tr>
-<tr>
 <td>Column</td>
-<td>:</td>
+<td>Name</td>
 </tr>
 <tr>
 <td>Active</td>
-<td>:</td>
+<td>It has benn flagged. Leave as it is</td>
 </tr>
 <tr>
 <td>Module</td>
-<td>:</td>
+<td>Indian States - 1.0.0</td>
 </tr>
 <tr>
 <td><strong>Column 2:</strong></td>
 <td></td>
 </tr>
 <tr>
-<td>Dataset Table</td>
-<td>:</td>
-</tr>
-<tr>
 <td>Column</td>
-<td>:</td>
+<td>CountryCode</td>
 </tr>
 <tr>
 <td>Active</td>
-<td>:</td>
+<td>It has benn flagged. Leave as it is</td>
 </tr>
 <tr>
 <td>Module</td>
-<td>:</td>
+<td>Indian States - 1.0.0</td>
 </tr>
 <tr>
 <td><strong>Column 3:</strong></td>
 <td></td>
 </tr>
 <tr>
-<td>Dataset Table</td>
-<td>:</td>
-</tr>
-<tr>
 <td>Column</td>
-<td>:</td>
+<td>HasRegion</td>
 </tr>
 <tr>
 <td>Active</td>
-<td>:</td>
+<td>It has benn flagged. Leave as it is</td>
 </tr>
 <tr>
 <td>Module</td>
-<td>:</td>
+<td>Indian States - 1.0.0</td>
 </tr>
 </tbody>
 </table>
 </li>
-<li>Finally navigate to <em>Dataset Tab</em> of Indian States and Click on <em>Export Reference Data</em> button to export the data. </li>
+<li>
+<p>Finally navigate to <code>Dataset Tab</code> of Indian States and Click on <code>Export Reference Data</code> button to export the data. </p>
+</li>
 </ul>
-<h4 id="exporting-and-packaging-module_2">Exporting and Packaging Module</h4>
-<p>After completing all the steps successfully, run the below ant task to export
+<h4 id="exporting-and-publishing-module_2">Exporting and Publishing Module</h4>
+<p>After completing all the steps successfully, run the below gradle task to export
 the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant export.database -Dmodule=&quot;org.openbravo.indianstates&quot;
+<div class="language-text highlight"><pre><span></span><code>./gradlew export.database
 </code></pre></div>
-<p>packaging the module:</p>
-<div class="language-text highlight"><pre><span></span><code>ant package.module -Dmodule=&quot;org.openbravo.indianstates&quot;
-</code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>On successful execution of the above task, an .obx file has been generated.</p>
-</div>
+<p>And publish the module (<a href="../how-to-publish-modules-to-github-repository/">How to Publish Modules to a GitHub Repository</a>)</p>
 <h4 id="how-to-install-system-only-access-level-reference-data">How to Install - System Only Access Level Reference Data</h4>
-<p>To install the new module into the running Etendo ERP then need handle the
-steps carefully. In this example, we have selected the access level as
-<em>Organization</em> then the installation would be done using <em>Enterprise Module
-Management</em> find below the steps.</p>
 <ul>
-<li>Log into Etendo ERP as System Administrator. </li>
-<li>Install the OBX using Module Management under General Setup and rebuild the system. </li>
+<li>Install the module following the <a href="../../getting-started/installation/install-modules-in-etendo/">Install Modules in Etendo</a> guide.</li>
 <li>It will install along with the reference data. </li>
 </ul>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Dataset" target="_blank">How to Create a Dataset</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
