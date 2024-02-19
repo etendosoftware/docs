@@ -31,7 +31,7 @@ table are executed and exported.
 There are some important things to note:
 
   * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
-  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set (see  _Data Access Level_ section for more information). 
+  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. 
 
   
   
@@ -140,9 +140,9 @@ When the development of the module is finished, open a command window/shell
 and navigate to the Etendo development project, execute the `export.database` command.
 
     
-    
-    ./gradlew export.database
-    
+```bash title="Terminal"   
+./gradlew export.database
+```  
 
 ##  Publishing a Module
 
@@ -166,7 +166,7 @@ privileges they require.
 **Create a Role and Assign Privileges**
 
   * Change to the admin role of your client. 
-  * Click on `General Setup` and Navigate to `Security > Role`. 
+  * Click on `General Setup` and Navigate to `Security` > `Role`. 
   * Create a new record. Fill up the mandatory fields that required for this record. They are: 
     * `Name`: the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. 
     * `Active`: Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. 
@@ -180,7 +180,7 @@ privileges they require.
 
 #### Create a User and assign the user to the Role
 
-  * Click on `General Setup` and navigate to `Security > User`. 
+  * Click on `General Setup` and navigate to `Security` > `User`. 
   * Create a new record. The `Client` field will show the name of your client by default. 
   * Select the Organization (This can be for access to one or all organizations in a client). 
     - First Name. 
@@ -213,7 +213,7 @@ privileges they require.
 
 #### Create a Dataset of roles and access
 
-  1. From the Application menu, select `Application Dictionary > Dataset` 
+  1. From the Application menu, select `Application Dictionary` > `Dataset` 
   2. Click New. 
   3. From the `Module` list, select the module above created. 
   4. Specify a search key, name and description. 
@@ -242,7 +242,7 @@ And publish the module ([How to Publish Modules to a GitHub Repository](how-to-p
   * Install the module following the [Install Modules in Etendo](../getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
-  * Click on `General Setup` and navigate to `Enterprise > Enterprise module Management`. 
+  * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
   * Select the `Organization type` then select the appropriate module and click Ok to install the reference data. 
 
 ###  Dataset of taxes or alerts
@@ -268,7 +268,7 @@ with other users.
 
 #### Defining and exporting the dataset
 
-  1. From the Application menu, select `Application Dictionary > Dataset` 
+  1. From the Application menu, select `Application Dictionary` > `Dataset` 
   2. Click New. 
   3. From the `Module` list, select the module above created. 
   4. Specify a `search key`, `name` and `description`. 
@@ -300,7 +300,7 @@ And publish the module ([How to Publish Modules to a GitHub Repository](how-to-p
   * Install the module following the [Install Modules in Etendo](../getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
-  * Click on `General Setup` and navigate to `Client > Initial Client Setup`. 
+  * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
   * Fill up all the mandatory fields and then select the appropriate module. 
   * Finally click Ok to install the reference data. 
 
