@@ -9,23 +9,18 @@ This section explains how to install a new Etendo environment. It includes:
 
 ## Tutorial
 
-###
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-## Etendo Installation
-
-### Requirements 
+## Requirements 
 In this section, you can read the [System Requirements](/getting-started/requirements).
 
-## Check PostgreSQL Configuration
+## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
-Note, that we will then do a _./gradlew install_, which will create the Etendo user automatically, so the title "Etendo Classic User configuration", should be ignored. 
 
-### Install Etendo 
+## Install Etendo 
 === ":material-language-java: JAR Format"
 
-    ## Steps to Install Etendo in JAR Format
+    **Steps to Install Etendo in JAR Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -131,7 +126,7 @@ Note, that we will then do a _./gradlew install_, which will create the Etendo u
 
 === ":octicons-file-zip-24: Source Format"
 
-    ##Steps to Install Etendo in Sources Format
+    **Steps to Install Etendo in Sources Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
