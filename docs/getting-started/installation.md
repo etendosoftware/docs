@@ -20,6 +20,7 @@ In this section, you can read the [System Requirements](/getting-started/require
 
 ## Check PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
+Note, that we will then do a _./gradlew install_, which will create the Etendo user automatically, so the title "Etendo Classic User configuration", should be ignored. 
 
 ### Install Etendo 
 === ":material-language-java: JAR Format"
@@ -52,9 +53,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.sid=etendo
         bbdd.port=5432
         bbdd.systemUser=postgres
-        bbdd.systemPassword=system_user_password
-        bbdd.user=etendo_user
-        bbdd.password=etenso_user_password
+        bbdd.systemPassword=syspass
+        bbdd.user=tad
+        bbdd.password=tad
 
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
         ```

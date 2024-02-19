@@ -21,6 +21,9 @@ ALTER USER postgres PASSWORD 'system_user_password';
     Make sure to remember the password you set up for the `postgres` user, you will need it later for the gradle configuration
 
 ## Etendo Classic User configuration
+!!! warning
+    If you will do a _./gradlew install_, this is not necessary as the installation process creates the "etendo" user automatically.
+
 Additionaly, you need to create a user for the etendo classic application, you can do it by running the following command
 ```bash
 PGPASSWORD=system_user_password psql -U postgres -d postgres -h localhost
@@ -31,7 +34,7 @@ And you will inmediatly enter the postgresql shell, then you can create the user
 CREATE ROLE etendo_user LOGIN PASSWORD 'etendo_user_password'  CREATEDB CREATEROLE VALID UNTIL 'infinity';
 ```
 !!! note
-    Make sure to remember the password you set up for the `etendo_user` user, you will need it later for the gradle configuration
+    Make sure to remember the password you set up for the `etendo_user` user, you will need it later for the gradle configuration.
 
 ## Required Configuration
 Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
