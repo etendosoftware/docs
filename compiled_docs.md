@@ -73,11 +73,11 @@ Either PostgreSQL should also be supported by your target system
 
 #### Server: software stack
 
-| Stack component | Supported versions | Recommended version |
-| :--- | :--- | :--- |
-| :fontawesome-brands-java:  Java SE | 11  | Latest 11.x |
-| :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x |
-| :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x |
+| Stack component | Supported versions | Recommended version | Instalation Guide |
+| :--- | :--- | :--- | :--- |
+| :fontawesome-brands-java:  Java SE | 11  | Latest 11.x | [Java Instalation Guide](https://www.java.com/en/download/manual.jsp){target="_blank"} |
+| :simple-postgresql:  PostgreSQL | 10.x, 11.x, 12.x, 13.x, Amazon RDS | Latest 14.x | [Postgres Instalation Guide ](https://www.postgresql.org/download/){target="_blank"} |
+| :simple-apachetomcat:  Apache Tomcat | 8.5.x (x >= 24) | Latest 8.5.x | [Tomcat Instalation Guide](https://tomcat.apache.org/download-80.cgi){target="_blank"} |
 | :simple-oracle:  Oracle | 19c (LTS) | 19c (LTS) |
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -96,16 +96,16 @@ This section explains how to install a new Etendo environment. It includes:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-#### Etendo Installation
-
-##### Requirements 
+#### Requirements 
 In this section, you can read the [System Requirements](https://docs.etendo.software/getting-started/requirements).
 
-##### Install Etendo 
+#### PostgreSQL Configuration
+Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
+
+#### Install Etendo 
 === ":material-language-java: JAR Format"
 
-    ## Steps to Install Etendo in JAR Format
+    **Steps to Install Etendo in JAR Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -199,16 +199,7 @@ In this section, you can read the [System Requirements](https://docs.etendo.soft
         ```
         ./gradlew install smartbuild
         ```
-    9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
-        lc_numeric = 'en_US.UTF-8'
-        max_locks_per_transaction = 128
-        ```        
-
-        !!! note
-            After modifying the file restart postgresql
-
-    10. Start the Tomcat, in case of Linux you can run:
+    9. Start the Tomcat, in case of Linux you can run:
         ```
         sudo /etc/init.d/tomcat start
         ```
@@ -216,11 +207,11 @@ In this section, you can read the [System Requirements](https://docs.etendo.soft
         !!! note
             If you want to run Etendo locally, go to [Run Etendo Development Environment](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
 
-    11. Open your browser in `https://<Public server IP>/<Context Name>`
+    10. Open your browser in `https://<Public server IP>/<Context Name>`
 
 === ":octicons-file-zip-24: Source Format"
 
-    ##Steps to Install Etendo in Sources Format
+    **Steps to Install Etendo in Sources Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -28165,6 +28156,64 @@ For information on what bundle version is compatible with which translation bund
 
 - **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](https://docs.etendo.software/getting-started/installation/) for more information.
 - **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for a list of the compatible bundle versions.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: PostgreSQL Configuration
+## Article Path: /Developer Guide/Etendo Classic/Getting Started/Installation/PostgreSQL Configuration
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration
+## Article Content: 
+#### Overview
+
+This section explains how to set up postgres to work properly with Etendo Classic, once you have installed postgres, you need to make sure that the configuration is set up properly.
+
+#### System User configuration
+When you [install postgres](https://www.postgresql.org/download/){target="_blank"}, it creates a system user called `postgres`, if you not set up a password for this user, you can do it by running the following command
+
+```bash title="Terminal"
+sudo -u postgres psql
+```
+You will inmediatly enter the postgresql shell, then you can set up the password by running the following example:
+
+``` sql title="Postgresql Shell"
+ALTER USER postgres PASSWORD 'syspass';
+```
+
+!!! info
+    Etendo Classic has `syspass` preconfigured as the default password for the postgres user. In case of changing the system password, this configuration variable should be changed by following the Etendo Classic [installation guide](https://docs.etendo.software/getting-started/installation.md).
+
+#### Etendo Classic User configuration
+
+!!! warning
+    In case of installing Etendo from scratch by executing the command `./gradlew install`, the installation process creates the default user and password `tad` automatically, and they are already includes preconfigured. In case you do not need to change the `tad` user, you can skip this section.
+
+If you need to create a Postgres user and password for the Etendo application, you can do it by running the following command
+
+```bash title="Terminal"
+PGPASSWORD=system_password psql -U postgres -d postgres -h localhost
+```
+
+You will inmediatly enter the postgresql shell, then you can create the user by running the following example:
+
+``` sql title="Postgresql Shell"
+CREATE ROLE tad LOGIN PASSWORD 'tad'  CREATEDB CREATEROLE VALID UNTIL 'infinity';
+```
+
+!!! note
+    The user and password created can be configured in the `gradle.properties` file, as can be seen in the Etendo Classic [installation guide](https://docs.etendo.software/getting-started/installation.md#install-etendo).
+
+
+#### Required Configuration
+Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
+
+``` title="postgresql.conf"
+lc_numeric = 'en_US.UTF-8'
+max_locks_per_transaction = 128
+```        
+
+!!! note
+    After modifying the file restart postgresql service
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Migrating to Etendo (from Openbravo)
