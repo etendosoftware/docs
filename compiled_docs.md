@@ -30123,7 +30123,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 
 ####  Transaction and Session
 
-The DAL implements the so-called  open-session-view  pattern. With a
+The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -30138,7 +30138,7 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
+  * Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
   * In the Etendo Classic test environment: The DAL base test class ([OBBaseTest](https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java){target="\_blank"}) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
@@ -30278,8 +30278,6 @@ queried but not inserted or updated.
     a primary key column defined in the application dictionary. This column does
     not need to be a real primary key in the database but it must hold unique
     values for each record of the view.
-
-The changeset for supporting views is linked to this issue.
 
 ####  SQL Functions in HQL
 
@@ -30465,9 +30463,8 @@ For more information, visit [How to develop test cases](https://docs.etendo.soft
 
 ####  Test your HQL: the HQL Query Tool
 
-There is an Etendo HQL Query Tool which allows you to try an HQL query
-directly in the Etendo Classic interface. The module can be found in the
-central repository or in the forge [here](){target="\_blank"}. The user manual of the HQL Query Tool can be found here.
+There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool). 
+This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.
 
 ####  Calling Processes/Stored Procedures from the DAL
 
@@ -32718,7 +32715,7 @@ This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com
 
 ####  Overview
 
-Background Processes are [Processes](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes/) that are executed without the direct
+Background Processes are [Processes](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes.md) that are executed without the direct
 action of the user. There can be set different rules to schedule when the
 process is executed.
 
@@ -32826,7 +32823,8 @@ For this how-to, we will use the redefine the description field in the sales ord
   
 #####  Adding a column
 
-First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/).
+First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md).
+
 
 !!!note
     As rich text is stored as HTML inside the database, the varchar column type
@@ -32882,7 +32880,7 @@ This work is a derivative of [How to add a rich text field and column](http://wi
   
 ####  Overview
 
-Application elements ([windows, tabs and fields](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields)) are liable to change repeatedly during the development or maintenance phases of a project.
+Application elements ([windows, tabs and fields](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
 Etendo is able to cope with these changes because its architecture is
 suited to iterative development. The definitions of all generated Windows,
 tabs and fields are stored as metadata in the Application Dictionary (AD).
@@ -32898,7 +32896,7 @@ This How-To explains how to modify existing elements of a window. If only new
 elements (like new fields) should be added to a window the use of a Template
 (as explained here) is not needed. Instead, those new elements can just be
 added using a normal module as explained in the other How-To on
-[How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/). 
+[How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
  
 
 
@@ -32911,7 +32909,7 @@ example is the Physical Inventory window and the changes illustrated will be:
   * Hide a field 
   * Re-sequence the layout 
 
-[Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) is a window that belongs to Etendo Classic.
+[Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) is a window that belongs to Etendo Classic.
 It comprises of:
 
   * 1 Window - Physical Inventory. 
@@ -32932,7 +32930,7 @@ Before any changes the header tab has the following appearance:
 
 ####  Changing the window
 
-Navigate to the _Application Dictionary || Windows, Tabs and Fields_ window
+Navigate to the `Application Dictionary` > `Windows, Tabs and Fields` window
 and select the record for _Physical Inventory_ .
 
 In the _Fields_ tab we can now make the changes needed to adapt the layout as
