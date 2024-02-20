@@ -29629,7 +29629,7 @@ There are a number of things which are important to note:
   * A factory (the OBProvider) is used to create an instance of the BPGroup class. 
   * The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. 
 
-The code snippet above also shows that you don't need to work with SQL or JDBC
+The code snippet above also shows that you do not need to work with SQL or JDBC
 to work with the data from the database. As a developer, you work
 directly with objects and the available data is directly visible through the
 getters and setters.
@@ -29707,7 +29707,7 @@ to-many association is then used to generate a List<OrderLine> member in the
 Java Order class and a one-to-many mapping in Hibernate.
   
 It is possible not to generate those one-to-many associations in the parent
-entity. This can be avoided by setting "Child Property in Parent Entity" field to
+entity. This can be avoided by setting *Child Property in Parent Entity* field to
 false in Column tab. 
 
 !!!note
@@ -29752,7 +29752,7 @@ _OBDal.getReadOnlyInstance()_ behavior:
 
 #####  OBCriteria
 
-The  OBCriteria  class implements the  [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} interface. It
+The  OBCriteria  class implements the [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} interface. It
 extends the standard Hibernate Criteria functionality for filtering on active,
 client and organization. In addition, it offers convenience methods to set
 orderby and to perform count actions.
@@ -29926,7 +29926,7 @@ An entity (corresponds to a table in Etendo Classic) has different names,
 relevant for different situations:
 
   * A table name (stored in _AD_Table.tablename_ ) which is the database table name in the physical database. 
-  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services) and client export/import. 
+  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md) and client export/import. 
   * A Java class name (stored in _AD_Table.classname_ ), the classname is used when generating the Java business object. It is unique within the data package of the table. 
 
 Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
@@ -30008,7 +30008,7 @@ So, a developer does not need to explicitly set this information in a new or
 existing object. 
 
 !!!note 
-    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#property-naming-and-supported-interfaces) for more information.
+    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) for more information.
 
 #####  Creating a new instance of a Business Object
 
@@ -30069,7 +30069,7 @@ DAL.
 
 As was just mentioned, DAL operates within a user context, and provides
 automatic security checking mechanisms to prevent the user from accessing data
-which according to the Etendo Security Model shouldn't be accessed.
+which according to the Etendo Security Model should not be accessed.
 
 However, in most cases, the piece of code developed is contained within an
 object which in itself automatically provides part of the security checking,
@@ -30081,7 +30081,7 @@ only be fired if the user is already in the window).
 
 The OBContext provides an Administrator Mode which can be used to perform
 administrative actions even if the user does not have enough privileges. This
-mode bypasses the Entity Access checking, and it doesn't filter by Client
+mode bypasses the Entity Access checking, and it does not filter by Client
 or Organization.
 
 An additional Administrator Mode is provided, which bypasses the Entity Access
@@ -30113,7 +30113,7 @@ check, this can be done using ` OBContext.setAdminMode(false) ` .
 
 ######  Cross Organization Reference Administrator Mode
   
-Validation for referenced object's organization in columns [supporting it](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#cross-organization-references) can
+Validation for referenced object's organization in columns [supporting it](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references) can
 be bypassed by using a special Administrator mode: `
 setCrossOrgReferenceAdminMode ` . Restoring previous mode is done by `
 restorePreviousCrossOrgReferenceMode ` . Similarly to standard admin mode,
@@ -30131,7 +30131,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 
 ####  Transaction and Session
 
-The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
+The DAL implements the so-called open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -30146,7 +30146,7 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
+  * Within Etendo Classic: the open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
   * In the Etendo Classic test environment: The DAL base test class ([OBBaseTest](https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java){target="\_blank"}) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
@@ -30275,7 +30275,7 @@ tables defined in the application dictionary. This means that:
   * database views are considered as normal business objects 
   * entities are generated for database views 
   * database views can be queried using HQL and the DAL query apis 
-  * database views can be accessed through the  [XML](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services)  and  [JSON](https://docs.etendo.software/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services) REST web service apis 
+  * database views can be accessed through the  [XML](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md)  and  [JSON](https://docs.etendo.software/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md) REST web service apis 
 
 There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
@@ -30467,11 +30467,12 @@ the OBBaseTest class for more information.
         // do your test here
       }
 ```
-For more information, visit [How to develop test cases](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases). 
+For more information, visit [How to develop test cases](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md). 
 
 ####  Test your HQL: the HQL Query Tool
 
-There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool). 
+There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool){target="\_blank"}. 
+
 This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.
 
 ####  Calling Processes/Stored Procedures from the DAL
@@ -30529,12 +30530,12 @@ task and the custom Java Ant task implementation:
   * The custom Ant task Java class should inherit from the _DalInitializatingTask_ . 
   * The custom Ant task Java class should implement a _doExecute_ method instead of the execute method in the custom Ant Java class (renaming the execute method to _doExecute_ is enough). 
   * Two additional properties are required in the ant task definition (in the build.xml): 
-    * propertiesFile="${base.config}/Openbravo.properties". 
+    * propertiesFile= `${base.config}/Openbravo.properties`. 
     * userId="100". 
 
 The first property configures the location where the _Openbravo.properties_
 file can be found. The second property sets the user under which the task is
-performed.
+performed.  
 
 ####  Important Information
 
@@ -30568,7 +30569,7 @@ underlying business object.
 #####  Hibernate inner workings
 
 To understand how Hibernate operates internally, it is strongly encouraged to
-read chapter 21 of the Hibernate manual:  [Improving Performance](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
+read chapter 21 of the Hibernate manual: [Improving Performance](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
 
 #####  Classloading
 
@@ -30626,11 +30627,12 @@ The code formatting template and his configuration can be found in the following
 
 ####  Tips & Tricks and Troubleshooting
 
-For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer) section.
+!!!info
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md) section.
 
 ---
 
-This work is a derivative of ["Data Access Layer"](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [Data Access Layer](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -30983,7 +30985,7 @@ Some important aspects:
   * `IsBusinessObject`: if flagged then also the 'child-records' of the table are exported, for example if the Dataset Table is defined for the `C_Order` table and this field is flagged then also the related `C_OrderLines` are exported. 
   
 !!!info
-    For more information read how [Business Object](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#etendo-business-objects) structures are defined. 
+    For more information read how [Business Object](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#etendo-business-objects) structures are defined. 
 
 ######  DatasetTable where clause
 
@@ -31036,7 +31038,7 @@ To export a dataset, it is very important to follow these steps:
   * First click on the `Export Reference Data` button in the `Dataset` window. This will export the dataset contents to an xml file, and will also generate the checksum of this dataset. 
   * Then, execute `./gradlew export.database` to export the checksum information to the module source data. 
 
-After this, you can [publish your module](https://docs.etendo.software/how-to-guides/how-to-publish-modules-to-github-repository.md) your module, which now will include the contents of the dataset.
+After this, you can [publish your module](https://docs.etendo.software/how-to-guides/how-to-publish-modules-to-github-repository.md), which now will include the contents of the dataset. 
 
 !!!note
     The reference data is inserted when a module is applied (built and installed). Or can be imported separately.
@@ -32361,7 +32363,7 @@ applying the module.
     creation.
 
 !!!info
-    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets/). 
+    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets.md). 
  
 ####  Data structure to define Dataset
 
@@ -32461,7 +32463,8 @@ and navigate to the Etendo development project, execute the `export.database` co
 The last step in the process is to publish the module and distribute across to
 the end user.
 
-For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md)
+!!!info
+    For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
 
 
 ####  Examples
@@ -32546,12 +32549,15 @@ After completing all the steps successfully. Run the below gradle task to export
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
   
 ###### How to Install - Organization Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
@@ -32604,12 +32610,16 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module. 
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+
 
   
 ###### How to Install - System/Client Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
@@ -32700,12 +32710,14 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
 
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md). 
   
 ###### How to Install - System Only Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * It will install along with the reference data. 
 
 
@@ -32901,8 +32913,7 @@ When using the Etendo UI, the changes can be seem immediately when switching rol
 When using classic Window a compile step is needed.  
 
 This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template
-(as explained here) is not needed. Instead, those new elements can just be
+elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
 added using a normal module as explained in the other How-To on
 [How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
  
@@ -32948,19 +32959,19 @@ wanted:
   * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
 
   
-For testing the changed layout, switch away from the _System Administrator_
-role to e.g. the _F &B International Group Admin _ role and open the _Physical
-Inventory_ window again. As the instance contains our module marked as
-_InDevelopment_ the window layout is reloaded each time the window is opened, so
+For testing the changed layout, switch away from the *System Administrator*
+role to e.g. the *F &B International Group Admin* role and open the *Physical
+Inventory* window again. As the instance contains our module marked as
+*InDevelopment* the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:
 
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
 
 
   
-To apply the same layout changes to the window in _classic UI mode_, the
+To apply the same layout changes to the window in *classic UI mode*, the
 windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile & deploy step can be done by using _ant smartbuild_
+restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
 which will recompile all changed windows and deploy the changes.
 
   
@@ -32974,12 +32985,16 @@ The final step is to export the changes into the module so they are persisted.
     the *template is in development* and the module which contains the changed
     object (i.e. window) is not.
 
-After ensuring that the export of the changes consists of the following two
+After ensuring that, the export of the changes consists of the following two
 steps:
 
+``` bash title="Terminal"
   1. _./gradlew export.database_ , same steps as for any other module 
-  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+```
 
+``` bash title="Terminal"
+  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+```
 
 
 This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
