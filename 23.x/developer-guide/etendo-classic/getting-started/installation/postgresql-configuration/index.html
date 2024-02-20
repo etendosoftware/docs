@@ -3660,6 +3660,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Required Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-postgresql-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required PostgreSQL extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7413,6 +7428,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Required Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-postgresql-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required PostgreSQL extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -7468,6 +7498,11 @@ You will inmediatly enter the postgresql shell, then you can set up the password
 <div class="language-text highlight"><span class="filename">postgresql.conf</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>lc_numeric = &#39;en_US.UTF-8&#39;
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>max_locks_per_transaction = 128
 </span></code></pre></div>
+<h3 id="required-postgresql-extensions">Required PostgreSQL extensions</h3>
+<p>Etendo Classic currently requires two PostgreSQL extensions to be available:</p>
+<p><strong>uuid-ossp</strong> to generate UUID's
+<strong>pg_trgm</strong> to have index support for fast contains search</p>
+<p><strong>Since version 10 those are part of the normal PostgreSQL server installation.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>After modifying the file restart postgresql service</p>
