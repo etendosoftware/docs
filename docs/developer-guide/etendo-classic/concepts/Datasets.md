@@ -48,9 +48,7 @@ Some important things to note:
 
   * A Dataset belongs to a module, so modules can add new datasets to an Etendo instance. 
   * Data Access Level: filter the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.
-
-!!!info 
-    For more information read more about [data access level](). 
+ 
 
 If the `export allowed` column is flagged, then an `export` button is displayed.
 When clicking this button the data is exported to the modules directory of the
