@@ -85,7 +85,7 @@ Some important aspects:
   * `IsBusinessObject`: if flagged then also the 'child-records' of the table are exported, for example if the Dataset Table is defined for the `C_Order` table and this field is flagged then also the related `C_OrderLines` are exported. 
   
 !!!info
-    For more information read how [Business Object](/developer-guide/etendo-classic/concepts/Data_Access_Layer/#etendo-business-objects) structures are defined. 
+    For more information read how [Business Object](../../../developer-guide/etendo-classic/concepts/Data_Access_Layer.md#etendo-business-objects) structures are defined. 
 
 ####  DatasetTable where clause
 
@@ -138,7 +138,7 @@ To export a dataset, it is very important to follow these steps:
   * First click on the `Export Reference Data` button in the `Dataset` window. This will export the dataset contents to an xml file, and will also generate the checksum of this dataset. 
   * Then, execute `./gradlew export.database` to export the checksum information to the module source data. 
 
-After this, you can [publish your module](../how-to-guides/how-to-publish-modules-to-github-repository.md) your module, which now will include the contents of the dataset.
+After this, you can [publish your module](../../../how-to-guides/how-to-publish-modules-to-github-repository.md), which now will include the contents of the dataset. 
 
 !!!note
     The reference data is inserted when a module is applied (built and installed). Or can be imported separately.

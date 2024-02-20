@@ -49,7 +49,7 @@ applying the module.
     creation.
 
 !!!info
-    For detailed theoretical concepts on datasets please have a look at [Datasets](/developer-guide/etendo-classic/concepts/Datasets/). 
+    For detailed theoretical concepts on datasets please have a look at [Datasets](../../../developer-guide/etendo-classic/concepts/Datasets.md). 
  
 ##  Data structure to define Dataset
 
@@ -149,7 +149,8 @@ and navigate to the Etendo development project, execute the `export.database` co
 The last step in the process is to publish the module and distribute across to
 the end user.
 
-For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md)
+!!!info
+    For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
 
 
 ##  Examples
@@ -234,12 +235,15 @@ After completing all the steps successfully. Run the below gradle task to export
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
   
 #### How to Install - Organization Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](../getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
@@ -292,12 +296,16 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module. 
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+
 
   
 #### How to Install - System/Client Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](../getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
@@ -388,12 +396,14 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
 
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md). 
   
 #### How to Install - System Only Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](../getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * It will install along with the reference data. 
 
 
