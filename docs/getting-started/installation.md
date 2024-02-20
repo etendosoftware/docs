@@ -9,22 +9,18 @@ This section explains how to install a new Etendo environment. It includes:
 
 ## Tutorial
 
-###
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-## Etendo Installation
-
-### Requirements 
+## Requirements 
 In this section, you can read the [System Requirements](/getting-started/requirements).
 
-## Check PostgreSQL Configuration
+## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
 
-### Install Etendo 
+## Install Etendo 
 === ":material-language-java: JAR Format"
 
-    ## Steps to Install Etendo in JAR Format
+    **Steps to Install Etendo in JAR Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -52,9 +48,9 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         bbdd.sid=etendo
         bbdd.port=5432
         bbdd.systemUser=postgres
-        bbdd.systemPassword=system_user_password
-        bbdd.user=etendo_user
-        bbdd.password=etenso_user_password
+        bbdd.systemPassword=syspass
+        bbdd.user=tad
+        bbdd.password=tad
 
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
         ```
@@ -130,7 +126,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-file-zip-24: Source Format"
 
-    ##Steps to Install Etendo in Sources Format
+    **Steps to Install Etendo in Sources Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
