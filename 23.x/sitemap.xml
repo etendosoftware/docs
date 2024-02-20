@@ -96,6 +96,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
