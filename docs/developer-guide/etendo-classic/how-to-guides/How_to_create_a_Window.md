@@ -1,4 +1,5 @@
 ---
+title: How to Create a Window
 tags: 
   - window creation
   - module development
@@ -6,8 +7,6 @@ tags:
   - UI design
   - Database table creation
 ---
-
-#  How to Create a Window
 
   
 ##  Overview
@@ -25,7 +24,7 @@ have a Valid From Date field that indicates when a particular salary came into
 being. The record belonging to a particular employee with the latest Valid
 From Date is the salary that is valid today. Note that employees are already
 inside the system contained in the C_BPARTNER database table and indicated by
-the `C_BPARTNER.ISMEPLOYEE` column. Therefore, we only need to create a database
+the `C_BPARTNER.ISEMPLOYEE` column. Therefore, we only need to create a database
 table that will hold the actual salaries.
 
 ##  Module & Table
@@ -33,7 +32,7 @@ table that will hold the actual salaries.
 As mentioned above, this tutorial is based on two previous tutorials
 and assumes that the following objectives have been already completed:
 
-  * Creation of a new module with _dbprefix _HT_
+  * Creation of a new module with _dbprefix_ _HT_
   * Creation + Registration in the AD of a new table _ht_salary_
 
 ##  Creating the New Window
@@ -41,10 +40,8 @@ and assumes that the following objectives have been already completed:
 Using the *System Administrator* role navigate to `Application Dictionary` > `Windows, Tabs and Fields `. 
 Create a new record as indicated by the screenshot below:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-0.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_0.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-0.png){: .legacy-image-style}
 
 The main fields of this window are:
 (for more information see the  AD_Window  table
@@ -64,10 +61,8 @@ description)
 Save this record and move to *Tab* tab. Create a new record as shown
 below, creating the first tab to show the employee information:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-1.png)  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png)  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-1.png){: .legacy-image-style}
 
 Main fields of this window are (for more information see the  AD_Tab  table
 description):
@@ -89,18 +84,14 @@ fields from the existing main tab of the Business Partner window into our new
 one. Select the *Business Partner-Business Partner* Tab - Window combination
 and confirm the dialog with OK.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-2.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-2.png){: .legacy-image-style}
 
   
 Move to *Field* tab to see the created fields.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-3.png)  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-3.png){: .legacy-image-style}
 
   
 If required, changes to these fields could be made or new ones could be added manually. 
@@ -117,10 +108,8 @@ If required, changes to these fields could be made or new ones could be added ma
 Now, go back to *Tab* tab and create a new record that will represent the
 child tab of the Employee tab where salaries will be managed:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-4.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-4.png){: .legacy-image-style}
 
   
 Most importantly, make sure you select:
@@ -142,10 +131,8 @@ To arrange the columns according to common look and feel of other windows, we no
   * Reorder fields (using sequence), to have _isactive_ after all other fields 
   * Mark _amount_ and _isactive_ as *Start in new line*
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_window-5.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_5.png) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-5.png){: .legacy-image-style}
 
   
 For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides. In our case, the *Employee Salary* window is used to manage the content of the *HT_Salary* database table. Hence, all salary records need to be shown within that window. 
@@ -153,20 +140,15 @@ For Etendo, to create links (labels that appear blue) to table elements, the sys
 To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find our HT_Salary table and set the *Window* as indicated below:
 
   
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-6.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-6.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
 
 ##  Creating the Menu Item
 
 A menu item is required for the user to be able to call up the new window we developed. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
 
   
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_window-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-7.png){: .legacy-image-style}
 
   
 Main fields of this window are (for more information see the  AD_Menu  table
@@ -182,7 +164,7 @@ description):
   * *Report*: If _Action_ is _Report_ , defines the report to be linked. 
   * *Window*: If _Action_ is _Window_ , defines the window to be linked. 
 
-Save this record then click on _Tree_ icon ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_window-8.png)
+Save this record then click on _Tree_ icon ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_8.png)
 
 
 Here you can drag and drop the new Employee Salary menu item to any of the
@@ -190,9 +172,7 @@ other menu groups.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-9.png){: .legacy-image-style}
-
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
 ##  Compiling the Application with the New Window
 
 Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. If using Eclipse, use the
@@ -217,8 +197,7 @@ Notice the new window and the two tabs hierarchically positioned one above anoth
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-10.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png){: .legacy-image-style}
 
   
 By double clicking Juan Lopez , details of this employee appear, however in a read-only mode (notice all fields are gray).
@@ -227,8 +206,7 @@ By clicking 'New in form' while having the _Salary_ tab in focus a salary record
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_Create_a_Window-11.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_11.png)
 
   
 !!!success
