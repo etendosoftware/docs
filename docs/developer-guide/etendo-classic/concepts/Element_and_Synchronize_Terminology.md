@@ -1,40 +1,6 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  Element and Synchronize Terminology
-
-##  Contents
-
-  * 1  Element 
-    * 1.1  Element maintenance 
-    * 1.2  Synchronize Terminology 
-      * 1.2.1  In detail 
-    * 1.3  Central Maintenance for fields 
-    * 1.4  Translations 
-    * 1.5  Purchase entries 
-
-  
----  
+---
+title: Element and Synchronize Terminology
+---
   
 ##  Element
 
@@ -71,16 +37,9 @@ is defined in the same module as the column's one or in another one dependent
 from the column's module. It also copies the text in the elements to the
 fields that represent the columns for those elements.
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  When
-creating/editing fields is worthless to write a good text for name,
-description and help fields since they will be overwritten with the ones in
-the element when the this process is run, so just leave them empty (or with
-some letters for mandatory ones). On the other hand, when creating a new
-column, if it is created a new element from this column the element will have
-the contents of those fields in the column, note that once the element is
-created the changes in the column fields will also be overwritten in this
-process.  
----|---  
+!!! note  
+    When creating/editing fields is worthless to write a good text for name, description and help fields since they will be overwritten with the ones in the element when the this process is run, so just leave them empty (or with some letters for mandatory ones). On the other hand, when creating a new column, if it is created a new element from this column the element will have the contents of those fields in the column, note that once the element is created the changes in the column fields will also be overwritten in this process.  
+
   
 ####  In detail
 
@@ -130,7 +89,7 @@ If you look the fields in the **Application Dictionary || Setup || Element**
 you will notice there are standard fields (name, help...) and the sames ones
 but for purchases.
 
-In Openbravo ERP there are some tables that are used for sales and purchases
+In Etendo Classic there are some tables that are used for sales and purchases
 transactions, for example _C_Invoice_ table contains both sales and purchases
 invoices. This means that _Purchase Invoice || Header_ and _Sales Invoice ||
 Header_ tabs use the same table. But it is very usual to label fields for the
@@ -143,15 +102,4 @@ in the **Application Dictionary || Windows, Tabs, and Fields || Window** tab.
 
 Retrieved from "
 http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology  "
-
-This page has been accessed 5,474 times. This page was last modified on 12
-July 2011, at 08:12. Content is available under  Creative Commons Attribution-
-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  Concepts
-
-**
 
