@@ -175,19 +175,11 @@ other menu groups.
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
 ##  Compiling the Application with the New Window
 
-Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. If using Eclipse, use the
-`eclipse.compile` ant task, choose `eclipse.compile` as Ant Configuration
-and enter 'Employee Salary' into the dialog that pops up. If manually
-compiling Etendo, use the `ant compile.development -Dtab=Employee
-Salary`. 
+Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. 
 
-!!!note
-    Once the compilation has finished, *restart Apache
-    Tomcat server* . In Windows, it is best to stop the Tomcat before running the build task and start it again afterwards since Windows locks certain files. The `compile.development` build task might not be able to copy over.  
-  
----  
-  
-See more on  Build Tasks  .
+```bash
+./gradlew smartbuild
+```
 
 ##  The Result
 
@@ -197,7 +189,7 @@ Notice the new window and the two tabs hierarchically positioned one above anoth
 
   
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png)
 
   
 By double clicking Juan Lopez , details of this employee appear, however in a read-only mode (notice all fields are gray).
