@@ -35,8 +35,7 @@ functionality such as security and validation.
 
 As a first simple example, let's create a new business partner group and store
 it in the database:
-    
-     
+``` java
      // create the object through the factory
       final Category bpg = OBProvider.getInstance().get(Category.class); 
      
@@ -49,6 +48,7 @@ it in the database:
      
      // store it in the database
      OBDal.getInstance().save(bpg);
+```
 
 There are a number of things which are important to note:
 
@@ -64,10 +64,7 @@ getters and setters.
 
 As a next step, let's query for the business partner group, and change its
 description:
-
-    
-    
-     
+```java
      // create an OBCriteria object and add a filter
      final OBCriteria<Category> obCriteria = OBDal.getInstance().createCriteria(Category.class);
      obCriteria.add(Restrictions.eq("name", "hello world"));
@@ -79,7 +76,7 @@ description:
      // and set a new name
      cat.setName("another hello world");
      OBDal.getInstance().save(cat);
-
+```
 This code snippet introduced a number of new concepts:
 
   * The OBDal service is used to create an OBCriteria object. 
@@ -97,7 +94,7 @@ The image below shows the envisioned architecture for the data access layer in
 Etendo Classic.
 
   
-![](/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png)
 
   
 This architecture is implemented:
@@ -201,77 +198,50 @@ For more information, see the [Hibernate Criteria](https://docs.jboss.org/hibern
 The functionality of OBCriteria is illustrated with a number of code snippets:
 
 An OBCriteria instance is created as follows:
-
-    
-    
-     
-     final OBCriteria obc = OBDal.getInstance().createCriteria(Currency.class);
-
+``` java
+final OBCriteria obc = OBDal.getInstance().createCriteria(Currency.class);
+```
 Query on the name property:
-
-    
-    
-     
-     obc.add(Restrictions.eq("name", "testname"));
-
+```java
+obc.add(Restrictions.eq("name", "testname"));
+```
 Restrictions.eq is an instance of the Hibernate Criterion class. The Hibernate
 Criterion concept is an expression language coded in Java supporting most
 commonly used expressions (and, or, equal, not-equal, in, between, etc.).
 
 Setting a descending order by on the name property:
-
-    
-    
-     
-     obc.addOrderBy("name", false);
-
+``` java
+obc.addOrderBy("name", false);
+```
 Or another one: order by the name property of a referenced business object
 product:
-
-    
-    
-     
-     obc.addOrderBy("product.name", false);
-
+``` java
+obc.addOrderBy("product.name", false);
+```
 Set some paging parameters, return 10 objects, beginning with the 100th:
-
-    
-    
-     
+``` java
      obc.setFirstResult(100);
      obc.setMaxResults(10);
-
+```
 Also return inactive objects (as a default only active objects are returned):
-
-    
-    
-     
-     obc.setFilterOnActive(false);
-
+``` java
+obc.setFilterOnActive(false);
+```
 Count the number of Currency objects in the database:
-
-    
-    
-     
-     final int bpGroupCount = obc.count();
-
+``` java
+final int bpGroupCount = obc.count();
+```
 Retrieve the list of Business Objects:
-
-    
-    
-     
+``` java
      final List<BPGroup> bpgs = obc.list();
-
+```
 Get a specific currency:
-
-    
-    
-     
+``` java
      final OBCriteria<Currency> obc = OBDal.getInstance().createCriteria(Currency.class);
      obc.add(Restrictions.eq("isoCode", "USD"));
      final List<Currency> cs = obc.list();
      final Currency c = cs.get(0);
-
+```
 ###  OBQuery
 
 The [OBQuery](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java){target="\_blank"}  class is an extension of the  [Hibernate Query](https://docs.jboss.org/hibernate/orm/3.5/reference/en/html/queryhql.html){target="\_blank"} object. It
@@ -281,28 +251,20 @@ client and organization.
 The OBQuery object is created through the _OBDal.createQuery_ method. The
 first argument of the createQuery is a class or an entity name, the second
 argument is the where-clause. The where-clause can be a simple one:
-
-    
-    
+``` sql
     name='test'
-    
+```
 
 or one which also declares an alias:
-
-    
-    
+``` sql 
     as ol where ol.order.id='abc'
-    
+```
 
 In code:
-
-    
-    
-     
-        final OBQuery<Category> obQuery = OBDal.getInstance().createQuery(Category.class,
-            "name='testname' or searchKey='testvalue'");
-        final List<Category> bpgs = obQuery.list();
-
+``` java
+final OBQuery<Category> obQuery = OBDal.getInstance().createQuery(Category.class,"name='testname' or searchKey='testvalue'");
+final List<Category> bpgs = obQuery.list();
+```
 ###  OBProvider
 
 Etendo business objects should not be instantiated directly using the
@@ -311,15 +273,12 @@ instance of the required business object. The OBProvider is located in the
 _org.openbravo.base.provider_ package and can be retrieved using the method
 OBProvider.getInstance(). The OBProvider offers methods to instantiate using a
 class name or using an entity name. Some code examples:
-
-    
-    
-     
+``` java
       final Category bpg = OBProvider.getInstance().get(Category.class); 
      
      // The ENTITYNAME constant is created by the business object generation logic
      final BPGroup bpg = (BPGroup)OBProvider.getInstance().get(BPGroup.ENTITYNAME);
-
+```
 ##  Etendo Business Objects
 
 The DAL generates, instantiates and uses Etendo business objects. This
@@ -358,10 +317,7 @@ _org.openbravo.base.model_ package and its subpackages.
 The generated classes extend the BaseOBObject and offer typed wrapper getters
 and setters around the generic set and get method of the parent BaseOBObject
 class:
-
-    
-    
-     
+``` java
      public String getRecord() {
       return (String) get("record");
      }
@@ -369,7 +325,7 @@ class:
      public void setRecord(String record) {
       set("record", record);
      }
-
+```
 In addition, the generated Java classes set default values (in the constructor)
 and have a static ENTITYNAME variable which must be used when it is required
 to refer directly to an entity name of an entity.
@@ -485,13 +441,10 @@ existing object.
 ###  Creating a new instance of a Business Object
 
 A business object may never be created using the Java new operator. All business objects should be created using the  [OBProvider](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java){target="\_blank"}  factory class:
-
-    
-    
-     
+``` java
      // create the object through the factory
       final Category bpg = OBProvider.getInstance().get(Category.class);
-
+```
 Hibernate will detect that a business object is new when:
 
   * the ID of the business object is not set 
@@ -565,9 +518,7 @@ this restricted Administrator Mode, as it conveniently filters by Client and
 Organization, something that is usually needed on Business Logic code.
 
 The syntax to activate the restricted Admin Mode:
-
-    
-    
+``` java
     try {
       OBContext.setAdminMode(true);
      
@@ -576,6 +527,7 @@ The syntax to activate the restricted Admin Mode:
     } finally {
       OBContext.restorePreviousMode();
     }
+```
 
 In some cases, it is necessary, though, to prevent also client/organization
 check, this can be done using ` OBContext.setAdminMode(false) ` .
@@ -594,10 +546,7 @@ be bypassed by using a special Administrator mode: `
 setCrossOrgReferenceAdminMode ` . Restoring previous mode is done by `
 restorePreviousCrossOrgReferenceMode ` . Similarly to standard admin mode,
 calls must be balanced for this mode, independently from standard admin mode.
-
-    
-    
-     
+``` java
       OBContext.setCrossOrgReferenceAdminMode();
       try {
      
@@ -606,6 +555,7 @@ calls must be balanced for this mode, independently from standard admin mode.
       } finally {
         OBContext.restorePreviousCrossOrgReferenceMode();
       }
+```
 
 ##  Transaction and Session
 
@@ -773,10 +723,7 @@ To use SQL Functions in HQL, you first must make sure that Hibernate knows
 about your function. So in your java code you have to register the function.
 This is done by creating a class that implements the **SQLFunctionRegister**
 interface and annotated as _@ApplicationScoped_ .
-
-    
-    
-     
+``` java
     @ApplicationScoped
     public class ExampleSQLFunctionRegister implements SQLFunctionRegister {
       @Override
@@ -788,29 +735,24 @@ interface and annotated as _@ApplicationScoped_ .
         return sqlFunctions;
       }
     }
+```
 
 The _getSQLFunctions()_ method should be implemented providing a map with the
 SQL functions to be registered. This map will be retrieved during the DAL
 layer initialization in order to perform the registration automatically.
 
-Please note that there are several SQL functions being already registered by
-default in core. See  [here](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/KernelSQLFunctionRegister.java){target="\_blank"}  and  [here](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/utility/APRMSQLFunctionRegister.java){target="\_blank"}.
+Please note that there are several SQL functions being already registered by default in core. See  [here](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/KernelSQLFunctionRegister.java){target="\_blank"}  and  [here](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/utility/APRMSQLFunctionRegister.java){target="\_blank"}.
   
 After registering the function you can use it directly in an HQL like this:
-
-    
-    
+``` java
     final Session session = OBDal.getInstance().getSession();
     final String qryStr = "select bc.id, ad_column_identifier_std('C_BP_Group', bc.id) from " + Category.ENTITY_NAME + " bc";
     final Query qry = session.createQuery(qryStr);
-
+```
 ##  Executing Native SQL Queries
 
 The DAL also allows the execution of native SQL queries:
-
-    
-    
-     
+``` java
       String documentNo = (String) OBDal.getInstance().getSession()
             .createNativeQuery("SELECT documentNo FROM c_order WHERE c_order_id = :id")
             .setParameter("id", orderId)
@@ -824,7 +766,7 @@ The DAL also allows the execution of native SQL queries:
             .createNativeQuery("SELECT name, value FROM m_warehouse WHERE ad_org_id = :id")
             .setParameter("id", orgId)
             .list();
-
+```
 !!!note
     The _createNativeQuery_ method accepts a second argument where the
     returning result type may be specified. But this is NOT supported due to a
@@ -859,10 +801,7 @@ type of the business objects.
 The example below illustrates how to do this. This method below will translate
 any Etendo Classic business entity into a simple XML document using the runtime
 model and the dynamic API:
-
-    
-    
-     
+``` java
       private void printXML(BaseOBObject bob) {
         // used to print a bit nicer xml
         final String indent = "\t ";
@@ -904,7 +843,7 @@ model and the dynamic API:
         // and the closing tag
         System.err.println("</" + e.getName() + ">");
       }
-
+```
 This example executes the following steps:
 
   * Get the _entityname_ from the object and retrieve the Entity from the runtime model through the ModelProvider instance. 
@@ -917,10 +856,7 @@ This example executes the following steps:
 
 The above method will print the following output for a business partner group
 like the one stored in the hello world example above:
-
-    
-    
-     
+``` xml
     <CoreBPGroup>
     	 <deflt>true</deflt>
     	 <description>hello world</description>
@@ -935,7 +871,7 @@ like the one stored in the hello world example above:
     	 <client>1000000</client>
     	 <id>ff8081811cc769b4011cc769e49b0002</id>
     </CoreBPGroup>
-
+```
 In general, when you are working with very generic code (cross-cutting
 concerns) which applies to all business objects, then using the runtime model can be considered.
 
@@ -954,16 +890,13 @@ managing transactions, the context and initializing the DAL.
 
 You can choose to run the test cases for specific users, see the methods in
 the OBBaseTest class for more information.
-
-    
-    
-     
+``` java
       public void testMyStuff() {
        setTestUserContext();
      
         // do your test here
       }
-
+```
 For more information, visit [How to develop test cases](/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases). 
 
 ##  Test your HQL: the HQL Query Tool
@@ -1004,22 +937,16 @@ To support this, the DAL provides a special ConnectionProvider implementation
 which makes use of the DAL database connection: the [DalConnectionProvider](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/service/db/DalConnectionProvider.java){target="\_blank"}.
 This class is simple to use, check out the javadoc for more information. The
 class can simply be used by instantiating it:
-
-    
-    
-     
+``` java
     ConnectionProvider cp = DalConnectionProvider();
-
+```
 No additional information is needed for it to work properly.
   
 For those queries that want to use the read-only pool, the connection provider
 must be defined as follows:
-
-    
-    
-     
+``` java 
     ConnectionProvider cp = DalConnectionProvider.getReadOnlyConnectionProvider();
-
+```
 ##  Using the Data Access Layer in an Ant task
 
 To ease the use of the DAL in Ant, a base Ant task class is offered by the
@@ -1089,11 +1016,8 @@ Hibernate will detect that a business object is new when:
   * the ID of the business object is not set 
   * when the flag newOBObject is set to true explicitly 
 
-So if you want to create a new business object with a specific ID (by calling
-setId(...)) then you explicitly need to call
-businessObject.setNewOBObject(true). Otherwise, Hibernate will not detect the
-business object as being new and throw an exception ('count of batch update
-operation....').
+So if you want to create a new business object with a specific ID (by calling _setId(...)_) then you explicitly need to call
+_businessObject.setNewOBObject(true)_. Otherwise, Hibernate will not detect the business object as being new and throw an exception ('count of batch update operation....').
 
 ##  Coding Practices when using/extending the DAL
 
@@ -1114,23 +1038,13 @@ that you can make use of the standard logging capabilities in the OBException
 
 ###  Runtime Invariants: The Check class
 
-The Data Access Layer in various locations performs assertions or runtime
-invariant checks. For example, to check if arguments are not null or that a
-certain condition is met. Implementing these type of checks helps to make your
-system much more robust. To make implementing these type of checks more
-convenient the Data Access Layer uses the Check class which is located in the
-_org.openbravo.base.util_ package. The Check class offers methods to check for
-_instanceof_ , _isNull_ , _isNotNull_ , etc.
+The Data Access Layer in various locations performs assertions or runtime invariant checks. For example, to check if arguments are not null or that a certain condition is met. Implementing these type of checks helps to make your system much more robust. To make implementing these type of checks more convenient the Data Access Layer uses the Check class which is located in the _org.openbravo.base.util_ package. The Check class offers methods to check for _instanceof_ , _isNull_ , _isNotNull_ , etc.
 
-Using a common class for assertions throughout your code makes your code more
-readable and easier to understand (compared to implementing your own assertion
-checking).
+Using a common class for assertions throughout your code makes your code more readable and easier to understand (compared to implementing your own assertion checking).
 
 ###  Code Formatting
 
-The source code, which is part of the Data Access Layer, is formatted using one
-formatting template (in Eclipse). It is essential that when developing code in
-or using the Data Access Layer that this same code format template is used.
+The source code, which is part of the Data Access Layer, is formatted using one formatting template. It is essential that when developing code in or using the Data Access Layer that this same code format template is used.
 
 A common code format has the following benefits:
 
@@ -1139,12 +1053,7 @@ A common code format has the following benefits:
   * It is possible to do diff's on different versions of the code in mercurial (through your IDE), it is easier to understand changes over time. 
   * Solving mercurial conflicts is easier. 
 
-In Eclipse, it is possible to automatically apply code formatting when saving a
-source file. This can be set in the _Window > Preferences > Java > Editor >
-Save Actions _ .
-
-The code format template can be found in the config/eclipse folder in the
-Etendo development project.
+The code formatting template and his configuration can be found in the following article: [IntelliJ Code Formatting](../../etendo-classic/getting-started/installation/intellij-code-formatting.md).
 
 ##  Tips & Tricks and Troubleshooting
 
