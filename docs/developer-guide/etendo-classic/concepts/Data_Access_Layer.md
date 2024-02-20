@@ -559,7 +559,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 
 ##  Transaction and Session
 
-The DAL implements the so-called  open-session-view  pattern. With a
+The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -574,7 +574,7 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
+  * Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
   * In the Etendo Classic test environment: The DAL base test class ([OBBaseTest](https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java){target="\_blank"}) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
@@ -714,8 +714,6 @@ queried but not inserted or updated.
     a primary key column defined in the application dictionary. This column does
     not need to be a real primary key in the database but it must hold unique
     values for each record of the view.
-
-The changeset for supporting views is linked to this issue.
 
 ##  SQL Functions in HQL
 
@@ -901,9 +899,8 @@ For more information, visit [How to develop test cases](/developer-guide/etendo-
 
 ##  Test your HQL: the HQL Query Tool
 
-There is an Etendo HQL Query Tool which allows you to try an HQL query
-directly in the Etendo Classic interface. The module can be found in the
-central repository or in the forge [here](){target="\_blank"}. The user manual of the HQL Query Tool can be found here.
+There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool). 
+This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.
 
 ##  Calling Processes/Stored Procedures from the DAL
 
