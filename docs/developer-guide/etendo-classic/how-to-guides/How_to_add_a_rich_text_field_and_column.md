@@ -30,7 +30,8 @@ For this how-to, we will use the redefine the description field in the sales ord
   
 ###  Adding a column
 
-First, you have to [add a column to the existing table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/).
+First, you have to [add a column to the existing table](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md).
+
 
 !!!note
     As rich text is stored as HTML inside the database, the varchar column type
@@ -45,7 +46,7 @@ When introducing the new column to the application dictionary, the correct
 reference must be selected, i.e. the new _Rich Text_ reference:
 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
 
 ###  Create a field - set col and rowspan
 
@@ -53,14 +54,14 @@ Then [create a field](/developer-guide/etendo-classic/how-to-guides/How_to_add_a
 also set the col and rowspan (these are only shown when the corresponding
 column is defined as rich text):
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
 
 ###  The result
 
 The result is visualized as a rich text editor in form view:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
 
   
 

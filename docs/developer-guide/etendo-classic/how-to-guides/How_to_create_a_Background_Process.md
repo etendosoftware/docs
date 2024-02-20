@@ -12,7 +12,7 @@ tags:
 
 ##  Overview
 
-Background Processes are [Processes](/developer-guide/etendo-classic/concepts/Processes/) that are executed without the direct
+Background Processes are [Processes](../../../developer-guide/etendo-classic/concepts/Processes.md) that are executed without the direct
 action of the user. There can be set different rules to schedule when the
 process is executed.
 
