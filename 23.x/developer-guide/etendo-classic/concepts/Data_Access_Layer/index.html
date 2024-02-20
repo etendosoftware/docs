@@ -8994,7 +8994,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">      </span><span class="p">}</span>
 </span></code></pre></div></p>
 <h2 id="transaction-and-session">Transaction and Session</h2>
-<p>The DAL implements the so-called  open-session-view  pattern. With a
+<p>The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -9007,7 +9007,7 @@ this is at the end of the http request. To perform flush on demand, call the
 <p>Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:</p>
 <ul>
-<li>Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java" target="_blank">DalRequestFilter</a>). If an exception occurs, then a rollback is performed. </li>
+<li>Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java" target="_blank">DalRequestFilter</a>). If an exception occurs, then a rollback is performed. </li>
 <li>In the Etendo Classic test environment: The DAL base test class (<a href="https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java" target="_blank">OBBaseTest</a>) takes care of committing or rollingback transactions. </li>
 <li>Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: <em>OBDal.getInstance().commitAndClose()</em> or <em>OBDal.getInstance().rollbackAndClose())</em> . </li>
 </ul>
@@ -9126,7 +9126,6 @@ a primary key column defined in the application dictionary. This column does
 not need to be a real primary key in the database but it must hold unique
 values for each record of the view.</p>
 </div>
-<p>The changeset for supporting views is linked to this issue.</p>
 <h2 id="sql-functions-in-hql">SQL Functions in HQL</h2>
 <p>To use SQL Functions in HQL, you first must make sure that Hibernate knows
 about your function. So in your java code you have to register the function.
@@ -9295,9 +9294,8 @@ the OBBaseTest class for more information.
 </span></code></pre></div>
 For more information, visit <a href="/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases">How to develop test cases</a>. </p>
 <h2 id="test-your-hql-the-hql-query-tool">Test your HQL: the HQL Query Tool</h2>
-<p>There is an Etendo HQL Query Tool which allows you to try an HQL query
-directly in the Etendo Classic interface. The module can be found in the
-central repository or in the forge <a href="" target="_blank">here</a>. The user manual of the HQL Query Tool can be found here.</p>
+<p>There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the <a href="https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool">Github repository</a>. 
+This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.</p>
 <h2 id="calling-processesstored-procedures-from-the-dal">Calling Processes/Stored Procedures from the DAL</h2>
 <p>Sometimes, it makes sense to call a stored procedure from the DAL using the
 same db connection as it is being used by the DAL. For this purpose, the DAL
