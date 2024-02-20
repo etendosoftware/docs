@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/inventory-status/">
+        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Data_Access_Layer/">
       
       
-        <link rel="prev" href="../etendo-jars/">
+        <link rel="prev" href="../naming-guidelines-for-modules/">
       
       
-        <link rel="next" href="../naming-guidelines-for-modules/">
+        <link rel="next" href="../Constraints_and_Triggers/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Inventory Status - Etendo Documentation</title>
+        <title>Data Access Layer - Etendo Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#data-access-layer" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inventory Status
+              Data Access Layer
             
           </span>
         </div>
@@ -3856,28 +3856,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Inventory Status
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../inventory-status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3886,77 +3868,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Functionality
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Functionality">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inventory-status-change" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inventory Status Change
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3987,10 +3898,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Data_Access_Layer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Access Layer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3999,6 +3930,583 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-hello-world-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      A 'Hello World' Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dal-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dal-main-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL Main Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAL Main Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obdal" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBDal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obcriteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBCriteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBQuery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBProvider
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etendo-business-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etendo Business Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etendo Business Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseobobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseOBObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generated-business-object-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generated Business Object Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-property-and-column-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity, Property and Column Naming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity, Property and Column Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Naming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Naming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-naming-and-supported-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Naming and Supported Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-and-organization-and-audit-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client and organization and Audit information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-instance-of-a-business-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a new instance of a Business Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-running-etendo-classic-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a running Etendo Classic Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-test-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a Test environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-standalone-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a Standalone situation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrator-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrator Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administrator Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-reference-administrator-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization Reference Administrator Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-and-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction and Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security and Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-access-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Access Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-organization-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Organization Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Organization Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross Organization References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-references-in-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization references in UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dal-support-for-database-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL support for Database Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-functions-in-hql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Functions in HQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-native-sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing Native SQL Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-model-and-the-dynamic-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Model and the Dynamic API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-hql-the-hql-query-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test your HQL: the HQL Query Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-processesstored-procedures-from-the-dal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calling Processes/Stored Procedures from the DAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dalconnectionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DalConnectionProvider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-data-access-layer-in-an-ant-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Data Access Layer in an Ant task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibernate-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hibernate Proxies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-getting-the-id-of-a-baseobobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance: getting the ID of a BaseOBObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hibernate-inner-workings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hibernate inner workings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classloading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-business-object-with-a-specific-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a new business object with a specific ID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-practices-when-usingextending-the-dal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding Practices when using/extending the DAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coding Practices when using/extending the DAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exception Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-invariants-the-check-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Invariants: The Check class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Formatting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips &amp; Tricks and Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7364,6 +7872,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7381,37 +7891,73 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#a-hello-world-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      A 'Hello World' Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#functionality" class="md-nav__link">
+  <a href="#dal-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Functionality
+      DAL Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functionality">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dal-main-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL Main Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAL Main Interfaces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inventory-status-change" class="md-nav__link">
+  <a href="#obdal" class="md-nav__link">
     <span class="md-ellipsis">
-      Inventory Status Change
+      OBDal
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#obcriteria" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      OBCriteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBQuery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      OBProvider
     </span>
   </a>
   
@@ -7419,6 +7965,474 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etendo-business-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etendo Business Objects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etendo Business Objects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseobobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaseOBObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generated-business-object-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generated Business Object Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-property-and-column-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity, Property and Column Naming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity, Property and Column Naming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Naming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Naming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-naming-and-supported-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Naming and Supported Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-and-organization-and-audit-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client and organization and Audit information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-instance-of-a-business-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a new instance of a Business Object
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-running-etendo-classic-instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a running Etendo Classic Instance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-test-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a Test environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-context-in-a-standalone-situation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Context in a Standalone situation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrator-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrator Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administrator Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-reference-administrator-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization Reference Administrator Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-and-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction and Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security and Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security and Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-access-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table Access Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-organization-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entity Organization Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Organization Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cross Organization References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-organization-references-in-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross Organization references in UI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dal-support-for-database-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL support for Database Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-functions-in-hql" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Functions in HQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-native-sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing Native SQL Queries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-model-and-the-dynamic-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Model and the Dynamic API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-hql-the-hql-query-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test your HQL: the HQL Query Tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-processesstored-procedures-from-the-dal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calling Processes/Stored Procedures from the DAL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-dalconnectionprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DalConnectionProvider
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-data-access-layer-in-an-ant-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Data Access Layer in an Ant task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Information
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hibernate-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hibernate Proxies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-getting-the-id-of-a-baseobobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance: getting the ID of a BaseOBObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hibernate-inner-workings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hibernate inner workings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classloading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classloading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-business-object-with-a-specific-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a new business object with a specific ID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coding-practices-when-usingextending-the-dal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coding Practices when using/extending the DAL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coding Practices when using/extending the DAL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exception-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exception Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-invariants-the-check-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Invariants: The Check class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Formatting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips &amp; Tricks and Troubleshooting
+    </span>
+  </a>
   
 </li>
       
@@ -7435,78 +8449,953 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Data Access Layer</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Etendo</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Etendo Classic</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Business Logic</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Hibernate</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Database</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Business Object</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Development</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Architecture</span>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>Inventory Status</h1>
-
+<h1 id="data-access-layer">Data Access Layer</h1>
 <h2 id="overview">Overview</h2>
-<p>This section explains the Inventory Status concept that is part of Etendo.</p>
-<h2 id="configuration">Configuration</h2>
-<p>The Inventory Status will be available and configured as part of Etendo.</p>
-<p>By default, all the Bins will be in an undefined Inventory Status. There are two possibilities:</p>
+<p>The goal of the Etendo Data Access Layer (DAL) development is to strengthen the middle-tier in the application, i.e. to implement business logic in Java. The DAL provides the
+application developer with the following functionality:</p>
 <ul>
-<li><strong>Undefined</strong>. Available and Nettable, but not possible to go to Over Issue.</li>
-<li><strong>Undefined OverIssue</strong>. Available and Nettable and possible to go to Over Issue.</li>
+<li>Type safe querying and retrieval of business objects from the database. </li>
+<li>A convenient API to update or create new data in the database. </li>
+<li>A type safe interface to update information of a business object, increased productivity by making the properties of a business object directly visible through getters and setters (in the IDE). </li>
+<li>Transaction and context handling. </li>
+<li>Security and validation checking. </li>
+<li>Automatically maps new entries in the Application Dictionary to database tables and columns. </li>
+<li>Generates Java class business objects (and their associations) on the basis of the Application Dictionary model. </li>
 </ul>
-<p>The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<div class="language-text highlight"><pre><span></span><code>For more information, visit the [Allow Negative Stock user guide](/user-guide/etendo-classic/basic-features/general-setup/client/).
-</code></pre></div>
-</div>
-<h2 id="functionality">Functionality</h2>
-<p>The Inventory Status concept is part of the inventory management of Etendo and includes the dimensions for Available, Nettable, and OverIssue to the storage bin and all stock in this bin has the same Inventory Status. The semantics of the Inventory Status refers to the condition of a specific inventory and can be configured. See examples at the end of this section.</p>
-<p>The master data for inventory status is maintained on system-level and the most typical values come predefined with the Etendo dataset. It is possible to add new and/or translate existing inventory status.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To have access to this window, it is necessary to log in as system administrator.</p>
-</div>
-<p><a class="glightbox" href="/assets/drive/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg.png" /></a></p>
-<p>In the image above, the various Inventory Status values that are supplied with the installation of the software are shown.</p>
-<p>The inventory status allows or disallows certain business processes.</p>
+<p>The DAL consists of a development-time and runtime part. The development-time
+part takes care of generating Java business object classes. The runtime part
+takes care of mapping Java classes to the database and supporting
+functionality such as security and validation.</p>
+<h2 id="a-hello-world-example">A 'Hello World' Example</h2>
+<p>As a first simple example, let's create a new business partner group and store
+it in the database:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">     </span><span class="c1">// create the object through the factory</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="n">bpg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Category</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="c1">// set some values</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">     </span><span class="n">bpg</span><span class="p">.</span><span class="na">setDefault</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">     </span><span class="n">bpg</span><span class="p">.</span><span class="na">setDescription</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">     </span><span class="n">bpg</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">     </span><span class="n">bpg</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">     </span><span class="n">bpg</span><span class="p">.</span><span class="na">setActive</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">     </span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">     </span><span class="c1">// store it in the database</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">     </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">save</span><span class="p">(</span><span class="n">bpg</span><span class="p">);</span>
+</span></code></pre></div></p>
+<p>There are a number of things which are important to note:</p>
 <ul>
-<li>Ability to create/modify/delete Inventory Status with the following attributes:<ul>
-<li><strong>Available</strong>: Inventory that is available for reservations and picking.</li>
-<li><strong>Nettable</strong>: Inventory that is available for planning of future supply (MRP).</li>
-<li><strong>OverIssue</strong>: Inventory that is allowed to go negative during the Issue of stock (not during the picking).<ul>
-<li>Note: It is not possible to go to negative if there are reservations against a particular stock. The reservation is always respected, regardless of the inventory status.</li>
+<li>The above code does not set an explicit user context. The user context is set automatically when running the above code in Etendo Classic. However, in other environments, it has to be set explicitly, see <a href="#user-context">here</a> for more information. </li>
+<li>There is a BPGroup class which models the data of the <em>c_bp_group</em> table. This class has type safe getters and setters for all the data in this table. </li>
+<li>A factory (the OBProvider) is used to create an instance of the BPGroup class. </li>
+<li>The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. </li>
+</ul>
+<p>The code snippet above also shows that you don't need to work with SQL or JDBC
+to work with the data from the database. As a developer, you work
+directly with objects and the available data is directly visible through the
+getters and setters.</p>
+<p>As a next step, let's query for the business partner group, and change its
+description:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">     </span><span class="c1">// create an OBCriteria object and add a filter</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">OBCriteria</span><span class="o">&lt;</span><span class="n">Category</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createCriteria</span><span class="p">(</span><span class="n">Category</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">     </span><span class="n">obCriteria</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">));</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">     </span><span class="c1">// perform the actual query returning a typed list</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Category</span><span class="o">&gt;</span><span class="w"> </span><span class="n">categories</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obCriteria</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">categories</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">     </span><span class="c1">// and set a new name</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">     </span><span class="n">cat</span><span class="p">.</span><span class="na">setName</span><span class="p">(</span><span class="s">&quot;another hello world&quot;</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">     </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">save</span><span class="p">(</span><span class="n">cat</span><span class="p">);</span>
+</span></code></pre></div>
+This code snippet introduced a number of new concepts:</p>
+<ul>
+<li>The OBDal service is used to create an OBCriteria object. </li>
+<li>The OBCriteria object represents the query, implements the Hibernate Criteria interface and can be used as a standard Hibernate Criteria object. The OBCriteria object also supports sorting and paging parameters. The OBCriteria API is discussed in more detail below. </li>
+<li>The OBCriteria list method performs the actual query, it returns a type safe list of the requested objects. </li>
+<li>After changing the name of the business partner group, you don't need to do an explicit save. At commit time Hibernate will automatically detect <em>dirty</em> objects and save those. </li>
+</ul>
+<p>This was a short introduction which shows how the DAL can be used to create,
+store and retrieve one (simple) business object. The rest of this section
+will describe the Data Access Layer functionality in more detail.</p>
+<h2 id="dal-architecture">DAL Architecture</h2>
+<p>The image below shows the envisioned architecture for the data access layer in
+Etendo Classic.</p>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" /></a></p>
+<p>This architecture is implemented:</p>
+<ul>
+<li>Runtime model: the runtime model is the main driver for generating the business objects and the Hibernate mapping. It's also used extensively in security, export/import and in webservices implementations. </li>
+<li>Hibernate Mapping: from the runtime model the DAL (during initialization) generates a Hibernate mapping. This Hibernate mapping is used to initialize Hibernate. </li>
+<li>Database Schema: the runtime model (actually the application dictionary) can be used to update the database schema. This is not available as part of the DAL but as part of the DBSourceManager product. </li>
+<li>Data Access Layer: the Data Access Layer (DAL) provides an API to store, query and remove business objects from the database. </li>
+<li>Business Model/Logic Layer : the business model/logic layer contains the implementation of the business processes. </li>
+<li>Business Services: the service layer exposes the business logic to the outside world. I</li>
+</ul>
+<p>The complete architecture runs inside of a context which provides security and
+transaction handling.</p>
+<h2 id="business-object">Business Object</h2>
+<p>This document uses the term business object to denote an entity and its
+dependent information. A business object can be a simple entity such as a
+currency which just has basic primitive fields. On the other hand it can also
+be a structure of entities, for example an order header with its order line.</p>
+<p>A business object structure always has one business object which is the owner
+of all the business objects in that structure, for example, for a sales order
+the sales order header business object is the owner of the complete structure
+(i.e. of the sales order lines). Another way of describing this is that the
+sales order lines depend on the sales order header, a sales order line can not
+exist without its sales order header and when a sales order header is removed
+also its sales order lines should be removed.</p>
+<p>The DAL uses the foreign keys from the child to parent to create the parent-
+child association in Java and Hibernate. More specifically: the foreign key
+columns which have the field isParent set to yes (checked/true) define the
+business object parent-child relations, other foreign key columns define
+standard many-to-one associations. For example the foreign key field
+<em>c_order_id</em> in <em>c_order_line</em> is used to create the one-to-many association
+(in the in-memory runtime model) from <em>c_order</em> to <em>c_order_line</em> . This one-
+to-many association is then used to generate a List<OrderLine> member in the
+Java Order class and a one-to-many mapping in Hibernate.</p>
+<p>It is possible not to generate those one-to-many associations in the parent
+entity. This can be avoided by setting "Child Property in Parent Entity" field to
+false in Column tab. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Generated one-to-many properties in the parent
+entity, load all children in memory when invoked, so they should be only
+generated when the expected amount of child records is low, otherwise it
+might cause an <code>OutOfMemoryError</code>.</p>
+</div>
+<p>In order to keep a backward compatible API, <code>hb.generate.all.parent.child.properties=true</code> preference can be set in etendo.propeties, in this way all foreign key columns will generate a one-
+to-many property in the parent entity.</p>
+<h2 id="dal-main-interfaces">DAL Main Interfaces</h2>
+<p>The DAL offers three main services to instantiate, create and query Etendo Classic business objects: OBDal, OBCriteria and OBProvider. The service classes
+can all be found in the <em>org.openbravo.dal.service</em> package.</p>
+<h3 id="obdal">OBDal</h3>
+<p>The  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBDal.java" target="_blank">OBDal</a>  instance (available through <em>OBDal.getInstance()</em> ) is the main
+entrance point for retrieving and storing business objects in the database in
+a validated and secure way. It provides the following functions:</p>
+<ul>
+<li>save: stores a new business object in the database or an existing business object is updated. For existing business objects, it is not required to call this method as Hibernate does automatic <em>dirty</em> checking. </li>
+<li>get: retrieves a single business object using its ID. There are two versions: one using the class name (of the generated business object) and one using the entity name. </li>
+<li>remove: delete a business object from the database, the actual database delete is done at commit time. </li>
+<li>create OBCriteria: <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java" target="_blank">OBCriteria</a> objects are used for querying. </li>
+<li>commitAndClose and rollbackAndClose: these methods can be used to implement custom transaction handling. Normally, this is done by the environment (Etendo web container or Etendo test). </li>
+</ul>
+<p>The OBDal API makes extensive use of the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBCriteria.java" target="_blank">OBCriteria</a>  and  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java" target="_blank">OBQuery</a>  classes to support querying.</p>
+<p>The OBDal class allows accessing to the  read-only database (pool). In
+this case, the instance must be retrieved with the
+<em>OBDal.getReadOnlyInstance()</em> method. It is important to note that if the
+read-only pool is not configured, this method will use the standard pool to
+get the database connections.</p>
+<p>Once the read-only pool is configured, there are two ways to override
+<em>OBDal.getReadOnlyInstance()</em> behavior:</p>
+<ul>
+<li>Creating a record in <em>Data Pool Selection</em> , which associates a database pool with a particular report. </li>
+<li>Using the <em>Default DB Pool used by reports</em> Preference, which defines the default pool returned by <em>OBDal.getReadOnlyInstance()</em> if no entry in Data Pool Selection is made for the current Process. </li>
+</ul>
+<h3 id="obcriteria">OBCriteria</h3>
+<p>The  OBCriteria  class implements the  <a href="https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html" target="_blank">Hibernate Criteria</a> interface. It
+extends the standard Hibernate Criteria functionality for filtering on active,
+client and organization. In addition, it offers convenience methods to set
+orderby and to perform count actions.</p>
+<p>Summarizing, the OBCriteria object supports all Hibernate Criteria features:</p>
+<ul>
+<li>Setting the where-clause of a filter using the Hibernate Criterion concept. </li>
+<li>Setting paging parameters such as first row and maximum number of results. </li>
+<li>Setting order by on the query. </li>
+<li>Specifying joins for performance reasons. </li>
+<li>Performing counts, average etc. </li>
+</ul>
+<p>For more information, see the <a href="https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html" target="_blank">Hibernate Criteria</a> on Criteria queries.</p>
+<p>The functionality of OBCriteria is illustrated with a number of code snippets:</p>
+<p>An OBCriteria instance is created as follows:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">OBCriteria</span><span class="w"> </span><span class="n">obc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createCriteria</span><span class="p">(</span><span class="n">Currency</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span></code></pre></div>
+Query on the name property:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">obc</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;testname&quot;</span><span class="p">));</span>
+</span></code></pre></div>
+Restrictions.eq is an instance of the Hibernate Criterion class. The Hibernate
+Criterion concept is an expression language coded in Java supporting most
+commonly used expressions (and, or, equal, not-equal, in, between, etc.).</p>
+<p>Setting a descending order by on the name property:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">obc</span><span class="p">.</span><span class="na">addOrderBy</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</span></code></pre></div>
+Or another one: order by the name property of a referenced business object
+product:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">obc</span><span class="p">.</span><span class="na">addOrderBy</span><span class="p">(</span><span class="s">&quot;product.name&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</span></code></pre></div>
+Set some paging parameters, return 10 objects, beginning with the 100th:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">     </span><span class="n">obc</span><span class="p">.</span><span class="na">setFirstResult</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">     </span><span class="n">obc</span><span class="p">.</span><span class="na">setMaxResults</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></code></pre></div>
+Also return inactive objects (as a default only active objects are returned):
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">obc</span><span class="p">.</span><span class="na">setFilterOnActive</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></code></pre></div>
+Count the number of Currency objects in the database:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">bpGroupCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obc</span><span class="p">.</span><span class="na">count</span><span class="p">();</span>
+</span></code></pre></div>
+Retrieve the list of Business Objects:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">BPGroup</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bpgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obc</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span></code></pre></div>
+Get a specific currency:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">OBCriteria</span><span class="o">&lt;</span><span class="n">Currency</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createCriteria</span><span class="p">(</span><span class="n">Currency</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">     </span><span class="n">obc</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Restrictions</span><span class="p">.</span><span class="na">eq</span><span class="p">(</span><span class="s">&quot;isoCode&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USD&quot;</span><span class="p">));</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Currency</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obc</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">Currency</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h3 id="obquery">OBQuery</h3>
+<p>The <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/service/OBQuery.java" target="_blank">OBQuery</a>  class is an extension of the  <a href="https://docs.jboss.org/hibernate/orm/3.5/reference/en/html/queryhql.html" target="_blank">Hibernate Query</a> object. It
+extends the standard Hibernate Query functionality for filtering on active,
+client and organization.</p>
+<p>The OBQuery object is created through the <em>OBDal.createQuery</em> method. The
+first argument of the createQuery is a class or an entity name, the second
+argument is the where-clause. The where-clause can be a simple one:
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;test&#39;</span>
+</span></code></pre></div></p>
+<p>or one which also declares an alias:
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="k">as</span><span class="w"> </span><span class="n">ol</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">ol</span><span class="p">.</span><span class="k">order</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="s1">&#39;abc&#39;</span>
+</span></code></pre></div></p>
+<p>In code:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">OBQuery</span><span class="o">&lt;</span><span class="n">Category</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createQuery</span><span class="p">(</span><span class="n">Category</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="s">&quot;name=&#39;testname&#39; or searchKey=&#39;testvalue&#39;&quot;</span><span class="p">);</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Category</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bpgs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obQuery</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span></code></pre></div></p>
+<h3 id="obprovider">OBProvider</h3>
+<p>Etendo business objects should not be instantiated directly using the
+new operator. Instead the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java" target="_blank">OBProvider</a>  class should be used to create an
+instance of the required business object. The OBProvider is located in the
+<em>org.openbravo.base.provider</em> package and can be retrieved using the method
+OBProvider.getInstance(). The OBProvider offers methods to instantiate using a
+class name or using an entity name. Some code examples:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="n">bpg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Category</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">     </span><span class="c1">// The ENTITYNAME constant is created by the business object generation logic</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">     </span><span class="kd">final</span><span class="w"> </span><span class="n">BPGroup</span><span class="w"> </span><span class="n">bpg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">BPGroup</span><span class="p">)</span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">BPGroup</span><span class="p">.</span><span class="na">ENTITYNAME</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h2 id="etendo-business-objects">Etendo Business Objects</h2>
+<p>The DAL generates, instantiates and uses Etendo business objects. This
+part of the development manual describes their structure and main interfaces.</p>
+<h3 id="baseobobject">BaseOBObject</h3>
+<p>All Etendo Classic business objects inherit from the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/BaseOBObject.java" target="_blank">BaseOBObject</a>  class. This
+class is located in the <em>org.openbravo.base.structure</em> package.</p>
+<p>The BaseOBObject class offers the following functionality:</p>
+<ul>
+<li>Direct access (called the dynamic API) to all the properties and values of the data within the business object through the get(String propertyName) and set((String propertyName, Object value) methods. These methods are particularly useful when working with generic functions such as security and logging. </li>
+<li>Access to the Entity describing the type and properties of the business object. </li>
+<li>Security and validation checks when getting and setting values. </li>
+<li>Access to the ID of the object through the getId method. </li>
+<li>Access to the identifier of the object: the getIdentifier method of the BaseOBObject uses the identifier properties of the object to create a displayable title for that object. </li>
+</ul>
+<p>The section on runtime model and dynamic API below, gives an example on how
+the dynamic API and the runtime model can be used.</p>
+<p>As all Etendo Classic business objects should extend this class, it is safe to
+cast an object to this class when required.</p>
+<h3 id="generated-business-object-classes">Generated Business Object Classes</h3>
+<p>At development time, the DAL will generate business object classes for each
+table defined in the application dictionary. This is done as part of the
+compile.complete ant tasks or can be done separately through the
+generate.entities ant task. These generated classes are the classes which are
+normally used by a developer because they offer compile-time-checked typed
+access to properties. The generated classes are created in the <em>src-gen</em>
+folder in the Etendo Classic development project and are part of the
+<em>org.openbravo.base.model</em> package and its subpackages.</p>
+<p>The generated classes extend the BaseOBObject and offer typed wrapper getters
+and setters around the generic set and get method of the parent BaseOBObject
+class:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getRecord</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">get</span><span class="p">(</span><span class="s">&quot;record&quot;</span><span class="p">);</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">     </span><span class="p">}</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setRecord</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">      </span><span class="n">set</span><span class="p">(</span><span class="s">&quot;record&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">record</span><span class="p">);</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">     </span><span class="p">}</span>
+</span></code></pre></div>
+In addition, the generated Java classes set default values (in the constructor)
+and have a static ENTITYNAME variable which must be used when it is required
+to refer directly to an entity name of an entity.</p>
+<h3 id="entity-property-and-column-naming">Entity, Property and Column Naming</h3>
+<p>The Data Access Layer uses names defined in the Application Dictionary for
+different purposes:</p>
+<ul>
+<li>xml tag names in REST web services and import export </li>
+<li>class names of generated Entity classes </li>
+<li>member names of members of generated Entity classes </li>
+<li>to detect that a certain Entity implements/supports a certain interface (see <a href="#important-interfaces">here</a>) </li>
+</ul>
+<p>The application dictionary historically allows many different types of names
+(also ones that are illegal for xml/java). Therefore, the data access layer
+applies specific conversion logic to always ensure that names are allowed and
+unique for xml/Java.</p>
+<p>For a full listing of all entity and property names, see the <a href="/developer-guide/etendo-classic/concepts/Data_Model">Data Model
+Reference</a> section.</p>
+<h4 id="entity-naming">Entity Naming</h4>
+<p>An entity (corresponds to a table in Etendo Classic) has different names,
+relevant for different situations:</p>
+<ul>
+<li>A table name (stored in <em>AD_Table.tablename</em> ) which is the database table name in the physical database. </li>
+<li>An entity name (present in <em>AD_Table.name</em> ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in <a href="/developer-guide/etendo-classic/concepts/XML_REST_Web_Services">REST webservices</a> and client export/import. </li>
+<li>A Java class name (stored in <em>AD_Table.classname</em> ), the classname is used when generating the Java business object. It is unique within the data package of the table. </li>
+</ul>
+<p>Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
+package has a Java package field which defines the Java package in which the
+entity Java class is generated.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>AD_Table.name shouldn't contain blank spaces. If the name of the table
+contains spaces, the process of building the entity name will remove those
+spaces, e.g. 'My Table' will be converted to 'MyTable'.  </p>
+</div>
+<h4 id="property-naming">Property Naming</h4>
+<p>For property naming, the logic is slightly different. The property naming logic
+has two distinct steps: </p>
+<p>1) first determine an initial property name, and</p>
+<p>2) correct/convert this property name.</p>
+<p>The initial property name is determined as follows:</p>
+<ul>
+<li>Properties for standard primitive type (varchar, numeric, etc.) and foreign key columns: for these properties the value in <em>AD_Column.name</em> is used as the start of the property name calculation. </li>
+<li>Properties which model a list of child entities: the so-called one-to-many or list properties. For example, the Order class has a property <em>OrderLineList</em> . The initial name of this property is set as follows: <ul>
+<li>(common case) if the column name on the other side (from the child to the parent) is the same as the primary key column name of the parent, then use the entity name of the child plus the suffix 'List'. For example, the c_orderline table has a foreign key c_order_id to the c_order table. This results in a property orderLineList in the Order entity. </li>
+<li>(non-common case) if the column name, which points from the child to the parent, is different than the primary key column name of the parent, then the following naming rule is used: target entity name + "_" + referenced property name + "List". For example, if the c_orderLine table has a column: c_orderheader_id with property name orderHeader then the resulting list property in the Order would be: OrderLine_orderHeaderList. </li>
 </ul>
 </li>
 </ul>
-</li>
-<li>Add an Inventory Status value to each location or bin record.</li>
-<li>Add the possibility to manually update the Inventory Status of a Storage Detail by moving it to a virtual, AdHoc created, bin.</li>
-<li>A new process that identifies affected reservations when a change of the inventory status reduces/increases the quantity available. (Once identified, the relevant users could receive an alert about the consequence of the change in availability).</li>
-</ul>
-<h3 id="inventory-status-change">Inventory Status Change</h3>
-<p>In the Warehouse and Storage Bins window, It is possible to check the Inventory Status of a Storage Bin and also to modify it.</p>
-<p>By selecting a Storage Bin in this window, it is possible to check its current Inventory Status.</p>
-<p><a class="glightbox" href="/assets/drive/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ.png" /></a></p>
-<p>Also, by selecting a Storage Bin, a button named Change Status appears. By clicking it, it is possible to select a different Inventory Status for the selected Storage Bin.</p>
-<p>There are some restrictions:</p>
+<p>Next, the property name generation performs the following steps:</p>
 <ul>
-<li>If there are existing Reservations against the Stock of the Storage Bin, this Storage Bin can not be changed to an Inventory Status that does not have the Available flag checked</li>
-<li>If there is negative stock in the Storage Bin, it is not possible to change the Inventory Status to one that does not have the Over Issue flag checked</li>
+<li>Spaces are removed and used to camelcase, for example the name 'Enable in Cash' is converted to: EnableInCash (note the uppercased I). </li>
+<li>Underscores are removed and used to camelcase: for example the name 'C_Poc_email_ID' is translated to CPocEmailID. </li>
+<li>'illegal' characters are removed: only characters from a to z and A to Z and numbers (not as prefix) are maintained, so 'G/L Item' will be translated to 'GLItem'. </li>
+<li>The first character is lowercased: AccountingFact is converted to accountingFact. </li>
 </ul>
-<p><a class="glightbox" href="/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png" /></a></p>
-<h3 id="examples">Examples</h3>
-<p>Examples of inventory status values:</p>
+<h4 id="property-naming-and-supported-interfaces">Property Naming and Supported Interfaces</h4>
+<p>The data access layer automatically detects that an entity supports a certain
+interface by analyzing the name of the properties of that entity. It is
+therefore very important to be precise in naming of properties. The naming
+of properties and the interfaces supported by specific properties are
+discussed in the following section.</p>
+<h3 id="important-interfaces">Important Interfaces</h3>
+<p>The generated classes implement a set of interfaces which can be used to check
+if a certain instance of a class has specific functionality available:</p>
 <ul>
-<li><strong>Available</strong> (YYN -&gt; Available, Nettable, Not OverIssue, Owned/Not-Owned) can be set for all inventory that is free to be picked, for sales, production or any other purpose.</li>
-<li><strong>In Transit</strong> (NYN) is not free to be sold or shipped but is expected within a limited time and for that, we will take it into account for planning.</li>
-<li><strong>Quarantine or Blocked</strong> (NNN) is not available nor nettable since we expect a larger duration of this status.</li>
-<li><strong>Inspect</strong> (NYN) is also not available but is expected to be freed in a limited time and for that reason visible for planning/MRP.</li>
-<li><strong>BackFlush</strong> (YYY) will allow going negative due to unexpected waste in manufacturing environments.</li>
-<li><strong>Public</strong> (YYY) will allow going negative due to unexpected stock in public picking areas.<blockquote></blockquote>
-</li>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/ClientEnabled.java" target="_blank">ClientEnabled</a>  : flags an object as having a getClient/setClient method and as an object which is stored by Client.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The inventory status does not have an effect on the inventory value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: client (defined in the ad_column.name field). When this interface is implemented/detected then the client property is used to automatically filter objects (on the readable clients) when querying and to do security checks when persisting an object.</p>
 </div>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/OrganizationEnabled.java" target="_blank">OrganizationEnabled</a>: an object implementing this interface has getOrganization/setOrganization methods. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: organization (defined in the ad_column.name field). When this interface is implemented/detected, then the organization property is used to automatically filter objects (on the readable organizations) when querying and to do security checks when persisting an object. </p>
+</div>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/ActiveEnabled.java" target="_blank">ActiveEnabled</a>: an object implementing this interface has an active flag (boolean) which can be reached through the isActive/setActive methods. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo automatically detects that a table (==Entity) implements this interface if it has a column with the name: active (defined in the ad_column.name field). When this interface is detected/implemented then the active field is used in automatic filtering of objects when querying through the data access layer. </p>
+</div>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/structure/Traceable.java" target="_blank">Traceable</a>: a Traceable object has audit information: created and updated (date fields), and createdby and updatedby (contain a User). This audit information is reachable through corresponding accessors. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Etendo automatically detects that a table (==Entity) implements this interface if it has the following columns (all are required): creationDate, created, updated, updatedBy (set in the ad_column.name field). See specifically the name of the date of creation property, it should be: creationDate. When this interface is implemented/detected then the data access layer will automatically set audit fields when an object is persisted. </p>
+</div>
+<h3 id="client-and-organization-and-audit-information">Client and organization and Audit information</h3>
+<p>The above interfaces are used by the DAL when an object is saved for the first
+time or updated in the database:</p>
+<ul>
+<li>a ClientEnabled object for which the Client is not set will get the current Client of the user (present in the user context). </li>
+<li>an OrganizationEnabled object for which the Organization is not set will get the current Organization of the user (present in the user context). </li>
+<li>a Traceable object: when saved for the first time, the created, createdby, updated and updatedby are set. When an object is updated, then the updated and updatedby are set. </li>
+</ul>
+<p>So, a developer does not need to explicitly set this information in a new or
+existing object. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see <a href="/developer-guide/etendo-classic/concepts/Data_Access_Layer/#property-naming-and-supported-interfaces">here</a> for more information.</p>
+</div>
+<h3 id="creating-a-new-instance-of-a-business-object">Creating a new instance of a Business Object</h3>
+<p>A business object may never be created using the Java new operator. All business objects should be created using the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java" target="_blank">OBProvider</a>  factory class:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">     </span><span class="c1">// create the object through the factory</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">Category</span><span class="w"> </span><span class="n">bpg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Category</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span></code></pre></div>
+Hibernate will detect that a business object is new when:</p>
+<ul>
+<li>the ID of the business object is not set </li>
+<li>when the flag newOBObject is set to true explicitly </li>
+</ul>
+<p>So, if you want to create a new business object with a specific ID (by calling
+setId(...)) then you explicitly need to call
+businessObject.setNewOBObject(true). Otherwise, Hibernate will throw an
+exception ('count of batch update operation....').</p>
+<h2 id="user-context">User Context</h2>
+<p>The DAL operates within a user context. The user context is implemented in the
+<a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/OBContext.java" target="_blank">OBContext</a>  class in the <em>org.openbravo.dal.core</em> . The OBContext is
+initialized using a userId. On the basis of this userId, the OBContext computes
+the role, clients, organizations and accessible entities. This information is
+used by the DAL for security checking and automatic filtering on client and
+organization.</p>
+<p>The OBContext is stored as a ThreadLocal variable and the DAL always assumes
+that there is one available. The OBContext can be retrieved using the call
+<em>OBContext.getOBContext()</em>.</p>
+<p>Normally a developer can assume that there is always a user context available.
+The following sections discuss this in detail.</p>
+<h3 id="user-context-in-a-running-etendo-classic-instance">User Context in a running Etendo Classic Instance</h3>
+<p>When the code runs inside of an Etendo Classic application then the user
+context is always set. This is done through a request filter (the
+<em>DalRequestFilter</em> in the <em>org.openbravo.dal.core</em> package). This request
+filter ensures that the OBContext ThreadLocal is set to the current user (of
+Etendo), puts the OBContext in the http session and cleans up the OBContext
+when the thread ends (as the thread may be reused by another user).</p>
+<h3 id="user-context-in-a-test-environment">User Context in a Test environment</h3>
+<p>The DAL uses a base class for its test cases (see topic Testing further
+below). This base class takes care of setting the user context when running
+tests.</p>
+<h3 id="user-context-in-a-standalone-situation">User Context in a Standalone situation</h3>
+<p>The user context can also be set by calling <em>OBContext.setOBContext(userId)</em>
+with a userId which exists in the ad_user table. This will setup a user
+context and place it in the OBContext ThreadLocal member to be used by the
+DAL.</p>
+<h3 id="administrator-mode">Administrator Mode</h3>
+<p>As was just mentioned, DAL operates within a user context, and provides
+automatic security checking mechanisms to prevent the user from accessing data
+which according to the Etendo Security Model shouldn't be accessed.</p>
+<p>However, in most cases, the piece of code developed is contained within an
+object which in itself automatically provides part of the security checking,
+in particular the entity access. For example, if the piece of code is part of
+a process which is called from a button, the user will only be able to click
+that button if he is already in the window (and therefore, has access to that
+entity). The same happens when the code is part of a callout (the callout will
+only be fired if the user is already in the window).</p>
+<p>The OBContext provides an Administrator Mode which can be used to perform
+administrative actions even if the user does not have enough privileges. This
+mode bypasses the Entity Access checking, and it doesn't filter by Client
+or Organization.</p>
+<p>An additional Administrator Mode is provided, which bypasses the Entity Access
+checking, but it does filter by Client Organization. It is encouraged to use
+this restricted Administrator Mode, as it conveniently filters by Client and
+Organization, something that is usually needed on Business Logic code.</p>
+<p>The syntax to activate the restricted Admin Mode:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setAdminMode</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">     </span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">      </span><span class="c1">// do administrative things here</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">     </span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">restorePreviousMode</span><span class="p">();</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div></p>
+<p>In some cases, it is necessary, though, to prevent also client/organization
+check, this can be done using <code>OBContext.setAdminMode(false)</code> .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The calls to setAdminMode/restorePreviousMode are balanced, meaning
+that for each call to setAdminMode there is also exactly one call to
+restorePreviousMode. If in one request the number of calls to setAdminMode is
+unequal to the number of calls to restorePreviousMode then a warning is
+displayed: <em>Unbalanced calls to enableAsAdminContext and resetAsAdminContext</em>.</p>
+</div>
+<h4 id="cross-organization-reference-administrator-mode">Cross Organization Reference Administrator Mode</h4>
+<p>Validation for referenced object's organization in columns <a href="/developer-guide/etendo-classic/concepts/Data_Access_Layer/#cross-organization-references">supporting it</a> can
+be bypassed by using a special Administrator mode: <code>setCrossOrgReferenceAdminMode</code> . Restoring previous mode is done by <code>restorePreviousCrossOrgReferenceMode</code> . Similarly to standard admin mode,
+calls must be balanced for this mode, independently from standard admin mode.
+<div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setCrossOrgReferenceAdminMode</span><span class="p">();</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">     </span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">        </span><span class="c1">// cross organization references are allowed here</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">     </span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">restorePreviousCrossOrgReferenceMode</span><span class="p">();</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">      </span><span class="p">}</span>
+</span></code></pre></div></p>
+<h2 id="transaction-and-session">Transaction and Session</h2>
+<p>The DAL implements the so-called  open-session-view  pattern. With a
+slight variation that the DAL will automatically create a Hibernate Session
+and start a transaction when the first data access takes place (if none
+existed). So not when the HTTP requests begins. The Session and Transaction
+are placed in a ThreadLocal and re-used for subsequent data access actions in
+the same thread.</p>
+<p>An important thing to be aware of is that normally all database actions are
+flushed to the database when the session is committed. In a web environment,
+this is at the end of the http request. To perform flush on demand, call the
+<em>OBDal.getInstance().flush()</em> method.</p>
+<p>Normally a developer does not need to explicitly commit or rollback a Session
+or Transaction:</p>
+<ul>
+<li>Within Etendo Classic: the  open-session-view  pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java" target="_blank">DalRequestFilter</a>). If an exception occurs, then a rollback is performed. </li>
+<li>In the Etendo Classic test environment: The DAL base test class (<a href="https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java" target="_blank">OBBaseTest</a>) takes care of committing or rollingback transactions. </li>
+<li>Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: <em>OBDal.getInstance().commitAndClose()</em> or <em>OBDal.getInstance().rollbackAndClose())</em> . </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>SQLC and DAL: The standard Etendo Classic database access
+(through Windows) works outside of the DAL. This means that,
+database access uses a different connection than the DAL. If both connections
+update the database, then it is possible that a deadlock situation happens.
+So, when working/updating through both the DAL and SQLC one should always
+first commit/close the connection of the DAL explicitly before continuing with
+SQLC or the other way around.</p>
+</div>
+<h2 id="security-and-validation">Security and Validation</h2>
+<p>The DAL performs many different security and validation checks, in both read
+and write mode. A security violation results in a  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/exception/OBSecurityException.java" target="_blank"><em>SecurityException</em></a> , a
+validation error in a  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/validation/ValidationException.java" target="_blank"><em>ValidationException</em></a>. Different exceptions are thrown at different points: some Security Exceptions are thrown when reading a business object (e.g. read security violations), others are thrown when the session commits or flushes (write security violations) or when a setter is called (ValidationException).</p>
+<p>If you need to work without this security checks, you should use the
+Administrator Mode, or the restricted Administrator Mode.
+You can find more information about them in <a href="#administrator-mode">Administrator Mode</a>.</p>
+<h3 id="write-access">Write Access</h3>
+<p>Write access checks are done when the OBDal save or remove methods are called
+or when a business object is saved by hibernate (at flush/commit). For write
+access, the following checks are performed:</p>
+<ul>
+<li>The user must have access to a window/tab which displays the entity. See the  AD_Window_Access  table. </li>
+<li>The organization of the business object must be in the list of writable organizations of that user. Writable organizations are organizations directly linked to the role of the user. </li>
+<li>The client of the business object must be in the list of writable clients of that user. </li>
+</ul>
+<p>If any of the above checks fails, then a <em>SecurityException</em> is thrown.</p>
+<h3 id="read-access">Read Access</h3>
+<p>A user can only view information from their own clients and accessible
+organizations. This is ensured by the DAL by automatically adding filter
+criteria in the OBCriteria object.</p>
+<p>Read access is checked for both direct read access and derived read access.
+Direct read access allows a user to see all the information of a certain
+entity. With derived read access only the active property, audit info and the
+ID and identifier may be read by a user.</p>
+<p>Direct read access is based on the window access tables, i.e. a user can read
+all the information of a certain entity if the user has access to a window
+displaying that entity. The read access for a certain table/entity can be
+overridden using the ad_table_access table. The set of directly readable
+entities is computed by the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/security/EntityAccessChecker.java" target="_blank">EntityAccessChecker</a>  in the
+<code>org.openbravo.dal.security</code> package.</p>
+<p>Derived read access is computed as follows: For each directly readable entity
+it is determined to which other entities it refers. These other entities are
+derived read accessible. For example, if a user may directly read an invoice
+entity, and an invoice refers to a currency then the user has derived read
+access to a currency. The derived readable entities are also computed in the
+EntityAccessChecker.</p>
+<p>Direct and derived read access are checked at different points:</p>
+<ul>
+<li>Direct read access is checked when a method on the OBDal instance is called. </li>
+<li>Derived read access is checked when a getter is invoked or the generic get method is called. </li>
+</ul>
+<h3 id="delete-check">Delete Check</h3>
+<p>A user may delete a business object if:</p>
+<ul>
+<li>They have write access to the entity of the business object. </li>
+<li>The entity is not set as not-deletable, this is defined in the <em>ad_table</em> . </li>
+</ul>
+<p>Both security checks are done when the session is committed or flushed. See
+the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/OBInterceptor.java" target="_blank">OBInterceptor</a> class for more details.</p>
+<h3 id="table-access-validation">Table Access Validation</h3>
+<p>Different tables in Etendo Classic have different access levels. Some tables
+only allow information from client 0 and organization *. Other tables allow
+objects from any organization.</p>
+<p>When a business object is saved, a check is done if the client and organization
+of that business object are valid for the table access level of the table. The
+check has been implemented in the  AccessLevelChecker  in
+<code>org.openbravo.base.validation</code> . This check is performed when the session
+commits or is flushed.</p>
+<h3 id="validation">Validation</h3>
+<p>Property values are validated when the setter is called or the generic set
+method on the BaseOBObject is called. The following checks are performed:</p>
+<ul>
+<li>a check is done if the instance of the value is valid for that property </li>
+<li>for String values, a check is done on length or on the allowed String values (list/enumerate values) </li>
+<li>for numeric values, the min and max are checked </li>
+<li>for mandatory values, a check is done if the value is unequal to null </li>
+</ul>
+<p>The property validation is performed by the classes in
+<code>org.openbravo.base.validation</code>  . The validation structure is initialized when
+the runtime model is created. For each property a corresponding
+PropertyValidator is created. Different types of properties have different
+types of PropertyValidators.</p>
+<h3 id="entity-organization-validation">Entity Organization Validation</h3>
+<p>A business object may only refer to other business objects which belong to the
+natural tree of the organization of the business object. This validation is
+done when a business object is saved (i.e. when the session commits/flushes).</p>
+<h4 id="cross-organization-references">Cross Organization References</h4>
+<p>Entity Organization validation can be bypassed if the following conditions are
+all fulfilled:</p>
+<ul>
+<li>The foreign key column that references to the other object is marked as <em>Allow Cross Organization Reference</em> . This can be set in Tables and Columns &gt; Column tab. </li>
+<li>Context is in <a href="#cross-organization-reference-administrator-mode">Cross Organization Reference Administrator Mode</a>. </li>
+</ul>
+<h5 id="cross-organization-references-in-ui">Cross Organization references in UI</h5>
+<p>Columns allowing cross organization references allow users to select records from organizations not included in the tree of the record they are referenced from.</p>
+<h2 id="dal-support-for-database-views">DAL support for Database Views</h2>
+<p>The DAL supports views in practically the same way as normal
+tables defined in the application dictionary. This means that:</p>
+<ul>
+<li>database views are considered as normal business objects </li>
+<li>entities are generated for database views </li>
+<li>database views can be queried using HQL and the DAL query apis </li>
+<li>database views can be accessed through the  <a href="/developer-guide/etendo-classic/concepts/XML_REST_Web_Services">XML</a>  and  <a href="/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services">JSON</a> REST web service apis </li>
+</ul>
+<p>There is one difference between a database view and a database table: the DAL
+does not support updates on views, view business objects can be read and
+queried but not inserted or updated.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the DAL to consider a view as a business object it needs to have
+a primary key column defined in the application dictionary. This column does
+not need to be a real primary key in the database but it must hold unique
+values for each record of the view.</p>
+</div>
+<p>The changeset for supporting views is linked to this issue.</p>
+<h2 id="sql-functions-in-hql">SQL Functions in HQL</h2>
+<p>To use SQL Functions in HQL, you first must make sure that Hibernate knows
+about your function. So in your java code you have to register the function.
+This is done by creating a class that implements the <strong>SQLFunctionRegister</strong>
+interface and annotated as <em>@ApplicationScoped</em> .
+<div class="language-java highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">    </span><span class="nd">@ApplicationScoped</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleSQLFunctionRegister</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">SQLFunctionRegister</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">      </span><span class="nd">@Override</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">      </span><span class="kd">public</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">SQLFunction</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getSQLFunctions</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">SQLFunction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sqlFunctions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">        </span><span class="n">sqlFunctions</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;ad_column_identifier_std&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StandardSQLFunction</span><span class="p">(</span><span class="s">&quot;ad_column_identifier_std&quot;</span><span class="p">,</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">            </span><span class="n">StandardBasicTypes</span><span class="p">.</span><span class="na">STRING</span><span class="p">));</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">        </span><span class="n">sqlFunctions</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;now&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StandardSQLFunction</span><span class="p">(</span><span class="s">&quot;now&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">StandardBasicTypes</span><span class="p">.</span><span class="na">DATE</span><span class="p">));</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sqlFunctions</span><span class="p">;</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div></p>
+<p>The <em>getSQLFunctions()</em> method should be implemented providing a map with the
+SQL functions to be registered. This map will be retrieved during the DAL
+layer initialization in order to perform the registration automatically.</p>
+<p>Please note that there are several SQL functions being already registered by default in core. See  <a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/KernelSQLFunctionRegister.java" target="_blank">here</a>  and  <a href="https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/utility/APRMSQLFunctionRegister.java" target="_blank">here</a>.</p>
+<p>After registering the function you can use it directly in an HQL like this:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">Session</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getSession</span><span class="p">();</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">qryStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;select bc.id, ad_column_identifier_std(&#39;C_BP_Group&#39;, bc.id) from &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Category</span><span class="p">.</span><span class="na">ENTITY_NAME</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; bc&quot;</span><span class="p">;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">Query</span><span class="w"> </span><span class="n">qry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="n">qryStr</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h2 id="executing-native-sql-queries">Executing Native SQL Queries</h2>
+<p>The DAL also allows the execution of native SQL queries:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">documentNo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getSession</span><span class="p">()</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">            </span><span class="p">.</span><span class="na">createNativeQuery</span><span class="p">(</span><span class="s">&quot;SELECT documentNo FROM c_order WHERE c_order_id = :id&quot;</span><span class="p">)</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">            </span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orderId</span><span class="p">)</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">            </span><span class="p">.</span><span class="na">uniqueResult</span><span class="p">();</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">     </span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">      </span><span class="c1">// retrieving several records with multiple columns</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">      </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unchecked&quot;</span><span class="p">)</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">      </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">[]&gt;</span><span class="w"> </span><span class="n">warehouseInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getSession</span><span class="p">()</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">            </span><span class="p">.</span><span class="na">createNativeQuery</span><span class="p">(</span><span class="s">&quot;SELECT name, value FROM m_warehouse WHERE ad_org_id = :id&quot;</span><span class="p">)</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">            </span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">orgId</span><span class="p">)</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">            </span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span></code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>createNativeQuery</em> method accepts a second argument where the
+returning result type may be specified. But this is NOT supported due to a
+bug  in Hibernate. </p>
+</div>
+<h2 id="runtime-model-and-the-dynamic-api">Runtime Model and the Dynamic API</h2>
+<p>The DAL makes the model (defined in the Application Dictionary) available at
+runtime. The runtime model is especially useful in generic functionality such
+as import and export and security and validation.</p>
+<p>The runtime model consists of two main concepts:</p>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/model/Entity.java" target="_blank">Entity</a>: an entity models a database table and its associations to and from other tables (i.e. entities). An entity has an <em>Entityname</em> which is globally unique. In addition, an entity has a runtime Java class which is used for the runtime Java representation. The entity class has methods to retrieve the full list of properties, the ID properties or the identifier properties. </li>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/model/Property.java" target="_blank">Property</a>: a property corresponds to a column in the database. Some property specifics: <ul>
+<li>A property can be a primitive property (String, Date, numeric) or a reference to another entity (which can be retrieved through the <em>getTargetEntity</em> method). </li>
+<li>A property can be part of the primary key ( <em>isId() == true</em> ). </li>
+<li>A property can be part of the identifier of an entity ( <em>isIdentifier() == true</em> ). </li>
+</ul>
+</li>
+</ul>
+<p>The runtime model is available through the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/model/ModelProvider.java" target="_blank">ModelProvider</a>  class (in
+<em>org.openbravo.base.model</em> ) which can be retrieved by calling
+<em>ModelProvider.getInstance()</em> . The ModelProvider offers several methods to
+retrieve Entities from the in-memory model (the full list, by entity name or
+by Java class).</p>
+<p>The runtime model makes it possible to use model-driven development techniques
+also at runtime. For example, the runtime model together with the dynamic API
+offered by the BaseOBObject makes it possible to iterate through all
+properties (and their values) of a business object without knowing the exact
+type of the business objects.</p>
+<p>The example below illustrates how to do this. This method below will translate
+any Etendo Classic business entity into a simple XML document using the runtime
+model and the dynamic API:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w">      </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printXML</span><span class="p">(</span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">bob</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">        </span><span class="c1">// used to print a bit nicer xml</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">indent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;\t &quot;</span><span class="p">;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">        </span><span class="c1">// get the entity from the runtime model using the entity name of the object</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">entityName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="na">getEntityName</span><span class="p">();</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">Entity</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ModelProvider</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">getEntity</span><span class="p">(</span><span class="n">entityName</span><span class="p">);</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">        </span><span class="c1">// Note: bob.getEntity() also gives the entity of the object</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">     </span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">        </span><span class="c1">// print the opening tag</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">        </span><span class="c1">// iterate through the properties of the entity</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Property</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getProperties</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="w">          </span><span class="c1">// and get the value through the dynamic api offered by the BaseOBObject</span>
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w">          </span><span class="kd">final</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a>
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">          </span><span class="c1">// handle null, just create an empty tag for that</span>
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-22"><a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">indent</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-22-23"><a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-22-24"><a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-22-25"><a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a>
+</span><span id="__span-22-26"><a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a><span class="w">          </span><span class="c1">// make a difference between a primitive and a reference type</span>
+</span><span id="__span-22-27"><a id="__codelineno-22-27" name="__codelineno-22-27" href="#__codelineno-22-27"></a><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">isPrimitive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-28"><a id="__codelineno-22-28" name="__codelineno-22-28" href="#__codelineno-22-28"></a><span class="w">            </span><span class="c1">// in reality some form of xml conversion/encoding should take place...</span>
+</span><span id="__span-22-29"><a id="__codelineno-22-29" name="__codelineno-22-29" href="#__codelineno-22-29"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">indent</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-22-30"><a id="__codelineno-22-30" name="__codelineno-22-30" href="#__codelineno-22-30"></a><span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-31"><a id="__codelineno-22-31" name="__codelineno-22-31" href="#__codelineno-22-31"></a><span class="w">            </span><span class="c1">// cast to the parent of all openbravo objects</span>
+</span><span id="__span-22-32"><a id="__codelineno-22-32" name="__codelineno-22-32" href="#__codelineno-22-32"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">BaseOBObject</span><span class="w"> </span><span class="n">referencedObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">BaseOBObject</span><span class="p">)</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</span><span id="__span-22-33"><a id="__codelineno-22-33" name="__codelineno-22-33" href="#__codelineno-22-33"></a><span class="w">            </span><span class="c1">// assumes that the id is always a primitive type</span>
+</span><span id="__span-22-34"><a id="__codelineno-22-34" name="__codelineno-22-34" href="#__codelineno-22-34"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">indent</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">referencedObject</span><span class="p">.</span><span class="na">getId</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+</span><span id="__span-22-35"><a id="__codelineno-22-35" name="__codelineno-22-35" href="#__codelineno-22-35"></a><span class="w">            </span><span class="s">&quot;&lt;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-22-36"><a id="__codelineno-22-36" name="__codelineno-22-36" href="#__codelineno-22-36"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-22-37"><a id="__codelineno-22-37" name="__codelineno-22-37" href="#__codelineno-22-37"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-22-38"><a id="__codelineno-22-38" name="__codelineno-22-38" href="#__codelineno-22-38"></a>
+</span><span id="__span-22-39"><a id="__codelineno-22-39" name="__codelineno-22-39" href="#__codelineno-22-39"></a><span class="w">        </span><span class="c1">// and the closing tag</span>
+</span><span id="__span-22-40"><a id="__codelineno-22-40" name="__codelineno-22-40" href="#__codelineno-22-40"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&gt;&quot;</span><span class="p">);</span>
+</span><span id="__span-22-41"><a id="__codelineno-22-41" name="__codelineno-22-41" href="#__codelineno-22-41"></a><span class="w">      </span><span class="p">}</span>
+</span></code></pre></div>
+This example executes the following steps:</p>
+<ul>
+<li>Get the <em>entityname</em> from the object and retrieve the Entity from the runtime model through the ModelProvider instance. </li>
+<li>Create an opening tag and iterate through all properties of the entity (i.e. all columns of the table). </li>
+<li>For each property, do the following: <ol>
+<li>Get the value for the property from the business object through the dynamic API. </li>
+<li>Handle null values and check if the property is a primitive type or not. </li>
+<li>For a primitive type, just print the value. </li>
+<li>For a reference type, cast the value to a BaseOBObject and print the ID of the referenced object. </li>
+</ol>
+</li>
+</ul>
+<p>The above method will print the following output for a business partner group
+like the one stored in the hello world example above:
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">    </span><span class="nt">&lt;CoreBPGroup&gt;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">         </span><span class="nt">&lt;deflt&gt;</span>true<span class="nt">&lt;/deflt&gt;</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">         </span><span class="nt">&lt;description&gt;</span>hello<span class="w"> </span>world<span class="nt">&lt;/description&gt;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">         </span><span class="nt">&lt;name&gt;</span>hello<span class="w"> </span>world<span class="nt">&lt;/name&gt;</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">         </span><span class="nt">&lt;value&gt;</span>hello<span class="w"> </span>world<span class="nt">&lt;/value&gt;</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">         </span><span class="nt">&lt;updatedby&gt;</span>1000001<span class="nt">&lt;/updatedby&gt;</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">         </span><span class="nt">&lt;updated&gt;</span>Sat<span class="w"> </span>Oct<span class="w"> </span>04<span class="w"> </span>12:31:57<span class="w"> </span>CEST<span class="w"> </span>2008<span class="nt">&lt;/updated&gt;</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">         </span><span class="nt">&lt;createdby&gt;</span>1000001<span class="nt">&lt;/createdby&gt;</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">         </span><span class="nt">&lt;created&gt;</span>Sat<span class="w"> </span>Oct<span class="w"> </span>04<span class="w"> </span>12:31:57<span class="w"> </span>CEST<span class="w"> </span>2008<span class="nt">&lt;/created&gt;</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">         </span><span class="nt">&lt;active&gt;</span>true<span class="nt">&lt;/active&gt;</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">         </span><span class="nt">&lt;org&gt;</span>1000000<span class="nt">&lt;/org&gt;</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">         </span><span class="nt">&lt;client&gt;</span>1000000<span class="nt">&lt;/client&gt;</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">         </span><span class="nt">&lt;id&gt;</span>ff8081811cc769b4011cc769e49b0002<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">    </span><span class="nt">&lt;/CoreBPGroup&gt;</span>
+</span></code></pre></div>
+In general, when you are working with very generic code (cross-cutting
+concerns) which applies to all business objects, then using the runtime model can be considered.</p>
+<h2 id="testing">Testing</h2>
+<p>It is of vital importance to follow a test-driven development approach for
+every development project. This applies especially to backend process
+development (a little less for UI development which is more difficult to test
+automatically). The Data Access Layer is tested using many JUnit test cases.
+These can be found in the <em>src-test</em> folder in the Etendo Classic project.</p>
+<p>As a developer, you can make use of the same test infrastructure as the Data
+Access Layer test cases. The only thing you need to do is to let your test
+class inherit from the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java" target="_blank">OBBaseTest</a>  class. The OBBaseTest class takes care of
+managing transactions, the context and initializing the DAL.</p>
+<p>You can choose to run the test cases for specific users, see the methods in
+the OBBaseTest class for more information.
+<div class="language-java highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w">      </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testMyStuff</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">       </span><span class="n">setTestUserContext</span><span class="p">();</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">     </span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="c1">// do your test here</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">      </span><span class="p">}</span>
+</span></code></pre></div>
+For more information, visit <a href="/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases">How to develop test cases</a>. </p>
+<h2 id="test-your-hql-the-hql-query-tool">Test your HQL: the HQL Query Tool</h2>
+<p>There is an Etendo HQL Query Tool which allows you to try an HQL query
+directly in the Etendo Classic interface. The module can be found in the
+central repository or in the forge <a href="" target="_blank">here</a>. The user manual of the HQL Query Tool can be found here.</p>
+<h2 id="calling-processesstored-procedures-from-the-dal">Calling Processes/Stored Procedures from the DAL</h2>
+<p>Sometimes, it makes sense to call a stored procedure from the DAL using the
+same db connection as it is being used by the DAL. For this purpose, the DAL
+includes two utility classes which make it easier to call processes and stored
+procedures through the DAL:</p>
+<ul>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/service/db/CallProcess.java" target="_blank">CallProcess</a> </li>
+<li><a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/service/db/CallStoredProcedure.java" target="_blank">Call Stored Procedure</a></li>
+</ul>
+<p>These classes make use of the same database connection as the DAL, in addition
+instead of working with String parameters, you can work with the java
+(primitive) objects directly.</p>
+<p>Both classes contain javadoc with a detailed description on how to use the
+class.</p>
+<p>Another interesting part when working with direct database updates (outside of
+Hibernate) is the following section in the trouble shooting guide: <a href="/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#dal-queries-do-not-return-or-do-not-see-changes-in-the-database">changes
+not visible in the DAL after calling stored procedure</a>.</p>
+<h2 id="the-dalconnectionprovider">The DalConnectionProvider</h2>
+<p>To access and make use of classic Etendo code, it is often needed to have a
+ConnectionProvider object available. When combining DAL actions with classic
+Etendo operations, it makes sense to use one overall database connection and
+commit all actions in one step.</p>
+<p>To support this, the DAL provides a special ConnectionProvider implementation
+which makes use of the DAL database connection: the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/service/db/DalConnectionProvider.java" target="_blank">DalConnectionProvider</a>.
+This class is simple to use, check out the javadoc for more information. The
+class can simply be used by instantiating it:
+<div class="language-java highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w">    </span><span class="n">ConnectionProvider</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DalConnectionProvider</span><span class="p">();</span>
+</span></code></pre></div>
+No additional information is needed for it to work properly.</p>
+<p>For those queries that want to use the read-only pool, the connection provider
+must be defined as follows:
+<code>java 
+    ConnectionProvider cp = DalConnectionProvider.getReadOnlyConnectionProvider();</code></p>
+<h2 id="using-the-data-access-layer-in-an-ant-task">Using the Data Access Layer in an Ant task</h2>
+<p>To ease the use of the DAL in Ant, a base Ant task class is offered by the
+DAL: the DalInitializingTask in the <em>org.openbravo.dal.core</em> package. This
+class is in charge of of initializing the DAL layer and other details (i.e. using
+the correct classloader).</p>
+<p>To make use of this class, the following changes need to be made to the Ant
+task and the custom Java Ant task implementation:</p>
+<ul>
+<li>The custom Ant task Java class should inherit from the <em>DalInitializatingTask</em> . </li>
+<li>The custom Ant task Java class should implement a <em>doExecute</em> method instead of the execute method in the custom Ant Java class (renaming the execute method to <em>doExecute</em> is enough). </li>
+<li>Two additional properties are required in the ant task definition (in the build.xml): <ul>
+<li>propertiesFile="${base.config}/Openbravo.properties". </li>
+<li>userId="100". </li>
+</ul>
+</li>
+</ul>
+<p>The first property configures the location where the <em>Openbravo.properties</em>
+file can be found. The second property sets the user under which the task is
+performed.</p>
+<h2 id="important-information">Important Information</h2>
+<h3 id="hibernate-proxies">Hibernate Proxies</h3>
+<p>To improve performance of single-ended associations, the DAL makes use of the
+Hibernate proxy functionality. The Hibernate proxy functionality wraps an
+object inside a Hibernate proxy object. This is done at runtime using cglib.
+The Hibernate proxy object takes care of loading the business object when it
+is actually accessed. The advantage of this approach is that if an object is
+never accessed then it is neither loaded, saving performance.</p>
+<p>However, the Hibernate proxy is very visible when a developer debugs through
+an application because the instance of an object at runtime will not be the
+exact class (for example BPGroup) but an instance of a Hibernate proxy class.</p>
+<p>To understand what the consequence of using Hibernate proxies, it is essential
+that a developer using the DAL reads <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html#performance-fetching-proxies" target="_blank">this part</a> of the Hibernate manual.</p>
+<h3 id="performance-getting-the-id-of-a-baseobobject">Performance: getting the ID of a BaseOBObject</h3>
+<p>The previous section discussed the Hibernate proxy concept. A Hibernate proxy
+will load its wrapped business object when one of the methods on the business
+object is called. In many cases, a developer just wants access to the ID or
+entityname of an object. To prevent loading of the business object when
+retrieving just this information, the DalUtil class in
+<em>org.openbravo.dal.core</em> offers a <em>getId</em> method and a <em>getEntityName</em> method.
+These methods work directly with the HibernateProxy object and do not load the
+underlying business object.</p>
+<h3 id="hibernate-inner-workings">Hibernate inner workings</h3>
+<p>To understand how Hibernate operates internally, it is strongly encouraged to
+read chapter 21 of the Hibernate manual:  <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html" target="_blank">Improving Performance</a>.</p>
+<h3 id="classloading">Classloading</h3>
+<p>The DAL loads classes when initializing the DAL. The DAL as a default uses the
+context class loader of the thread. In some cases, this does not work correctly
+(for example when using the DAL in Ant). The DAL uses the OBClassLoader class
+to make the classloader configurable. By calling <em>OBClassLoader.setInstance</em>
+with your own OBClassLoader, you can control the class loader used by the DAL.</p>
+<h3 id="creating-a-new-business-object-with-a-specific-id">Creating a new business object with a specific ID</h3>
+<p>Hibernate will detect that a business object is new when:</p>
+<ul>
+<li>the ID of the business object is not set </li>
+<li>when the flag newOBObject is set to true explicitly </li>
+</ul>
+<p>So if you want to create a new business object with a specific ID (by calling <em>setId(...)</em>) then you explicitly need to call
+<em>businessObject.setNewOBObject(true)</em>. Otherwise, Hibernate will not detect the business object as being new and throw an exception ('count of batch update operation....').</p>
+<h2 id="coding-practices-when-usingextending-the-dal">Coding Practices when using/extending the DAL</h2>
+<p>This section discusses a number of essential coding practices which should be
+followed when using or extending the DAL.</p>
+<h3 id="exception-structure">Exception Structure</h3>
+<p>All exceptions thrown by the DAL extend the base OBException class. The
+OBException is a <em>RuntimeException</em> so no explicit catch and throw statements
+are required.</p>
+<p>The OBException class takes care of logging the exception in a correct way.</p>
+<p>When creating your own exception class, it is best to extend OBException so
+that you can make use of the standard logging capabilities in the OBException
+(the logging capabilities will be extended over time).</p>
+<h3 id="runtime-invariants-the-check-class">Runtime Invariants: The Check class</h3>
+<p>The Data Access Layer in various locations performs assertions or runtime invariant checks. For example, to check if arguments are not null or that a certain condition is met. Implementing these type of checks helps to make your system much more robust. To make implementing these type of checks more convenient the Data Access Layer uses the Check class which is located in the <em>org.openbravo.base.util</em> package. The Check class offers methods to check for <em>instanceof</em> , <em>isNull</em> , <em>isNotNull</em> , etc.</p>
+<p>Using a common class for assertions throughout your code makes your code more readable and easier to understand (compared to implementing your own assertion checking).</p>
+<h3 id="code-formatting">Code Formatting</h3>
+<p>The source code, which is part of the Data Access Layer, is formatted using one formatting template. It is essential that when developing code in or using the Data Access Layer that this same code format template is used.</p>
+<p>A common code format has the following benefits:</p>
+<ul>
+<li>All Etendo Classic code gets a uniform look and feel, looks cleaner/tidier and, therefore, is more professional. </li>
+<li>The code will be easier to understand, less mistakes will be made. </li>
+<li>It is possible to do diff's on different versions of the code in mercurial (through your IDE), it is easier to understand changes over time. </li>
+<li>Solving mercurial conflicts is easier. </li>
+</ul>
+<p>The code formatting template and his configuration can be found in the following article: <a href="../../getting-started/installation/intellij-code-formatting/">IntelliJ Code Formatting</a>.</p>
+<h2 id="tips-tricks-and-troubleshooting">Tips &amp; Tricks and Troubleshooting</h2>
+<p>For tips and tricks and common issues (and solutions) you may find, please visit the <a href="/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer">troubleshooting</a> section.</p>
+<hr />
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Data_Access_Layer" target="_blank">"Data Access Layer"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>. </p>
 
 
 
