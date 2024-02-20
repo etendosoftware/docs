@@ -4896,6 +4896,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-guides/How_to_Create_a_Window.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create a Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -8574,7 +8595,7 @@ it in the database:
 <li>A factory (the OBProvider) is used to create an instance of the BPGroup class. </li>
 <li>The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. </li>
 </ul>
-<p>The code snippet above also shows that you don't need to work with SQL or JDBC
+<p>The code snippet above also shows that you do not need to work with SQL or JDBC
 to work with the data from the database. As a developer, you work
 directly with objects and the available data is directly visible through the
 getters and setters.</p>
@@ -8605,7 +8626,7 @@ will describe the Data Access Layer functionality in more detail.</p>
 <h2 id="dal-architecture">DAL Architecture</h2>
 <p>The image below shows the envisioned architecture for the data access layer in
 Etendo Classic.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/concepts/Data_Access_Layer-0.png" /></a></p>
 <p>This architecture is implemented:</p>
 <ul>
 <li>Runtime model: the runtime model is the main driver for generating the business objects and the Hibernate mapping. It's also used extensively in security, export/import and in webservices implementations. </li>
@@ -8639,7 +8660,7 @@ standard many-to-one associations. For example the foreign key field
 to-many association is then used to generate a List<OrderLine> member in the
 Java Order class and a one-to-many mapping in Hibernate.</p>
 <p>It is possible not to generate those one-to-many associations in the parent
-entity. This can be avoided by setting "Child Property in Parent Entity" field to
+entity. This can be avoided by setting <em>Child Property in Parent Entity</em> field to
 false in Column tab. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -8677,7 +8698,7 @@ get the database connections.</p>
 <li>Using the <em>Default DB Pool used by reports</em> Preference, which defines the default pool returned by <em>OBDal.getReadOnlyInstance()</em> if no entry in Data Pool Selection is made for the current Process. </li>
 </ul>
 <h3 id="obcriteria">OBCriteria</h3>
-<p>The  OBCriteria  class implements the  <a href="https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html" target="_blank">Hibernate Criteria</a> interface. It
+<p>The  OBCriteria  class implements the <a href="https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html" target="_blank">Hibernate Criteria</a> interface. It
 extends the standard Hibernate Criteria functionality for filtering on active,
 client and organization. In addition, it offers convenience methods to set
 orderby and to perform count actions.</p>
@@ -8815,7 +8836,7 @@ Reference</a> section.</p>
 relevant for different situations:</p>
 <ul>
 <li>A table name (stored in <em>AD_Table.tablename</em> ) which is the database table name in the physical database. </li>
-<li>An entity name (present in <em>AD_Table.name</em> ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in <a href="/developer-guide/etendo-classic/concepts/XML_REST_Web_Services">REST webservices</a> and client export/import. </li>
+<li>An entity name (present in <em>AD_Table.name</em> ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in <a href="../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md">REST webservices</a> and client export/import. </li>
 <li>A Java class name (stored in <em>AD_Table.classname</em> ), the classname is used when generating the Java business object. It is unique within the data package of the table. </li>
 </ul>
 <p>Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
@@ -8897,7 +8918,7 @@ time or updated in the database:</p>
 existing object. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see <a href="/developer-guide/etendo-classic/concepts/Data_Access_Layer/#property-naming-and-supported-interfaces">here</a> for more information.</p>
+<p>For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see <a href="./#property-naming-and-supported-interfaces">here</a> for more information.</p>
 </div>
 <h3 id="creating-a-new-instance-of-a-business-object">Creating a new instance of a Business Object</h3>
 <p>A business object may never be created using the Java new operator. All business objects should be created using the  <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/base/provider/OBProvider.java" target="_blank">OBProvider</a>  factory class:
@@ -8944,7 +8965,7 @@ DAL.</p>
 <h3 id="administrator-mode">Administrator Mode</h3>
 <p>As was just mentioned, DAL operates within a user context, and provides
 automatic security checking mechanisms to prevent the user from accessing data
-which according to the Etendo Security Model shouldn't be accessed.</p>
+which according to the Etendo Security Model should not be accessed.</p>
 <p>However, in most cases, the piece of code developed is contained within an
 object which in itself automatically provides part of the security checking,
 in particular the entity access. For example, if the piece of code is part of
@@ -8954,7 +8975,7 @@ entity). The same happens when the code is part of a callout (the callout will
 only be fired if the user is already in the window).</p>
 <p>The OBContext provides an Administrator Mode which can be used to perform
 administrative actions even if the user does not have enough privileges. This
-mode bypasses the Entity Access checking, and it doesn't filter by Client
+mode bypasses the Entity Access checking, and it does not filter by Client
 or Organization.</p>
 <p>An additional Administrator Mode is provided, which bypasses the Entity Access
 checking, but it does filter by Client Organization. It is encouraged to use
@@ -8981,7 +9002,7 @@ unequal to the number of calls to restorePreviousMode then a warning is
 displayed: <em>Unbalanced calls to enableAsAdminContext and resetAsAdminContext</em>.</p>
 </div>
 <h4 id="cross-organization-reference-administrator-mode">Cross Organization Reference Administrator Mode</h4>
-<p>Validation for referenced object's organization in columns <a href="/developer-guide/etendo-classic/concepts/Data_Access_Layer/#cross-organization-references">supporting it</a> can
+<p>Validation for referenced object's organization in columns <a href="./#cross-organization-references">supporting it</a> can
 be bypassed by using a special Administrator mode: <code>setCrossOrgReferenceAdminMode</code> . Restoring previous mode is done by <code>restorePreviousCrossOrgReferenceMode</code> . Similarly to standard admin mode,
 calls must be balanced for this mode, independently from standard admin mode.
 <div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setCrossOrgReferenceAdminMode</span><span class="p">();</span>
@@ -8994,7 +9015,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">      </span><span class="p">}</span>
 </span></code></pre></div></p>
 <h2 id="transaction-and-session">Transaction and Session</h2>
-<p>The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
+<p>The DAL implements the so-called open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -9007,7 +9028,7 @@ this is at the end of the http request. To perform flush on demand, call the
 <p>Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:</p>
 <ul>
-<li>Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java" target="_blank">DalRequestFilter</a>). If an exception occurs, then a rollback is performed. </li>
+<li>Within Etendo Classic: the open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java" target="_blank">DalRequestFilter</a>). If an exception occurs, then a rollback is performed. </li>
 <li>In the Etendo Classic test environment: The DAL base test class (<a href="https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java" target="_blank">OBBaseTest</a>) takes care of committing or rollingback transactions. </li>
 <li>Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: <em>OBDal.getInstance().commitAndClose()</em> or <em>OBDal.getInstance().rollbackAndClose())</em> . </li>
 </ul>
@@ -9114,7 +9135,7 @@ tables defined in the application dictionary. This means that:</p>
 <li>database views are considered as normal business objects </li>
 <li>entities are generated for database views </li>
 <li>database views can be queried using HQL and the DAL query apis </li>
-<li>database views can be accessed through the  <a href="/developer-guide/etendo-classic/concepts/XML_REST_Web_Services">XML</a>  and  <a href="/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services">JSON</a> REST web service apis </li>
+<li>database views can be accessed through the  <a href="../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md">XML</a>  and  <a href="../../../developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md">JSON</a> REST web service apis </li>
 </ul>
 <p>There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
@@ -9292,10 +9313,10 @@ the OBBaseTest class for more information.
 </span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">        </span><span class="c1">// do your test here</span>
 </span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">      </span><span class="p">}</span>
 </span></code></pre></div>
-For more information, visit <a href="/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases">How to develop test cases</a>. </p>
+For more information, visit <a href="../../../developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md">How to develop test cases</a>. </p>
 <h2 id="test-your-hql-the-hql-query-tool">Test your HQL: the HQL Query Tool</h2>
-<p>There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the <a href="https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool">Github repository</a>. 
-This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.</p>
+<p>There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the <a href="https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool" target="_blank">Github repository</a>. </p>
+<p>This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.</p>
 <h2 id="calling-processesstored-procedures-from-the-dal">Calling Processes/Stored Procedures from the DAL</h2>
 <p>Sometimes, it makes sense to call a stored procedure from the DAL using the
 same db connection as it is being used by the DAL. For this purpose, the DAL
@@ -9340,14 +9361,14 @@ task and the custom Java Ant task implementation:</p>
 <li>The custom Ant task Java class should inherit from the <em>DalInitializatingTask</em> . </li>
 <li>The custom Ant task Java class should implement a <em>doExecute</em> method instead of the execute method in the custom Ant Java class (renaming the execute method to <em>doExecute</em> is enough). </li>
 <li>Two additional properties are required in the ant task definition (in the build.xml): <ul>
-<li>propertiesFile="${base.config}/Openbravo.properties". </li>
+<li>propertiesFile= <code>${base.config}/Openbravo.properties</code>. </li>
 <li>userId="100". </li>
 </ul>
 </li>
 </ul>
 <p>The first property configures the location where the <em>Openbravo.properties</em>
 file can be found. The second property sets the user under which the task is
-performed.</p>
+performed.  </p>
 <h2 id="important-information">Important Information</h2>
 <h3 id="hibernate-proxies">Hibernate Proxies</h3>
 <p>To improve performance of single-ended associations, the DAL makes use of the
@@ -9372,7 +9393,7 @@ These methods work directly with the HibernateProxy object and do not load the
 underlying business object.</p>
 <h3 id="hibernate-inner-workings">Hibernate inner workings</h3>
 <p>To understand how Hibernate operates internally, it is strongly encouraged to
-read chapter 21 of the Hibernate manual:  <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html" target="_blank">Improving Performance</a>.</p>
+read chapter 21 of the Hibernate manual: <a href="https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html" target="_blank">Improving Performance</a>.</p>
 <h3 id="classloading">Classloading</h3>
 <p>The DAL loads classes when initializing the DAL. The DAL as a default uses the
 context class loader of the thread. In some cases, this does not work correctly
@@ -9412,9 +9433,12 @@ that you can make use of the standard logging capabilities in the OBException
 </ul>
 <p>The code formatting template and his configuration can be found in the following article: <a href="../../getting-started/installation/intellij-code-formatting/">IntelliJ Code Formatting</a>.</p>
 <h2 id="tips-tricks-and-troubleshooting">Tips &amp; Tricks and Troubleshooting</h2>
-<p>For tips and tricks and common issues (and solutions) you may find, please visit the <a href="/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer">troubleshooting</a> section.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For tips and tricks and common issues (and solutions) you may find, please visit the <a href="../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md">troubleshooting</a> section.</p>
+</div>
 <hr />
-<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Data_Access_Layer" target="_blank">"Data Access Layer"</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>. </p>
+<p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Data_Access_Layer" target="_blank">Data Access Layer</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>. </p>
 
 
 

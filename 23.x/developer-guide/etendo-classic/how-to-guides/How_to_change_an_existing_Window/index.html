@@ -4377,6 +4377,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How_to_Create_a_Window.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create a Window
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7477,8 +7498,7 @@ the AD definition.</p>
 <p>When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.</p>
 <p>When using classic Window a compile step is needed.  </p>
 <p>This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template
-(as explained here) is not needed. Instead, those new elements can just be
+elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
 added using a normal module as explained in the other How-To on
 <a href="../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md">How to add a field to a window Tab</a>. </p>
 <h2 id="objective">Objective</h2>
@@ -7513,14 +7533,14 @@ wanted:</p>
 <li><em>Organization</em> field, change sequence number to <em>200</em> and mark the <em>Start in new line</em> checkbox. This moves the field below all other normally displayed. </li>
 </ul>
 <p>For testing the changed layout, switch away from the <em>System Administrator</em>
-role to e.g. the <em>F &amp;B International Group Admin _ role and open the _Physical
+role to e.g. the <em>F &amp;B International Group Admin</em> role and open the <em>Physical
 Inventory</em> window again. As the instance contains our module marked as
 <em>InDevelopment</em> the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png" /></a></p>
 <p>To apply the same layout changes to the window in <em>classic UI mode</em>, the
 windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile &amp; deploy step can be done by using <em>ant smartbuild</em>
+restarted. The compile &amp; deploy step can be done by using <code>ant smartbuild</code>
 which will recompile all changed windows and deploy the changes.</p>
 <h2 id="exporting-the-changes">Exporting the changes</h2>
 <p>The final step is to export the changes into the module so they are persisted.</p>
@@ -7530,12 +7550,12 @@ which will recompile all changed windows and deploy the changes.</p>
 the <em>template is in development</em> and the module which contains the changed
 object (i.e. window) is not.</p>
 </div>
-<p>After ensuring that the export of the changes consists of the following two
+<p>After ensuring that, the export of the changes consists of the following two
 steps:</p>
-<ol>
-<li><em>./gradlew export.database</em> , same steps as for any other module </li>
-<li><em>./gradlew export.config.script</em> , analyses the changes done and creates a special file <em>configScript.xml</em> in the module to contain them. </li>
-</ol>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="m">1</span>.<span class="w"> </span>_./gradlew<span class="w"> </span>export.database_<span class="w"> </span>,<span class="w"> </span>same<span class="w"> </span>steps<span class="w"> </span>as<span class="w"> </span><span class="k">for</span><span class="w"> </span>any<span class="w"> </span>other<span class="w"> </span>module<span class="w"> </span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="m">2</span>.<span class="w"> </span>_./gradlew<span class="w"> </span>export.config.script_<span class="w"> </span>,<span class="w"> </span>analyses<span class="w"> </span>the<span class="w"> </span>changes<span class="w"> </span><span class="k">done</span><span class="w"> </span>and<span class="w"> </span>creates<span class="w"> </span>a<span class="w"> </span>special<span class="w"> </span>file<span class="w"> </span>_configScript.xml_<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>module<span class="w"> </span>to<span class="w"> </span>contain<span class="w"> </span>them.<span class="w"> </span>
+</span></code></pre></div>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window" target="_blank">How to change an existing window</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.   </p>
 
 
