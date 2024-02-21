@@ -116,7 +116,7 @@ Let's define the tasks that need to be performed by the callout:
 ```java
     // the package name corresponds to the module's manual code folder 
     // created above
-    package org.openbravo.howtos.ad_callouts;
+    package com.etendoerp.customer.example.ad_callouts;
      
     import javax.servlet.ServletException;
      
@@ -181,8 +181,7 @@ screenshot below:
 !!!warning
     The name of the callout should not have spaces or illegal javascript characters.  
 
-  
-![](/assets/developer-guide/etendo-classic/how-to-
+![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-3.png){: .legacy-image-style}
 
   
@@ -192,9 +191,7 @@ however, not correctly since the name could not match the _Callout_ name you
 have provided. Correct it in line with your callout package/class name. See
 screenshot below:
 
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
+![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-4.png){: .legacy-image-style}
 
   
@@ -219,9 +216,7 @@ Go to **Column** tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
+![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-6.png){: .legacy-image-style}
 
   
@@ -255,11 +250,8 @@ product with **Name** = _Bon Fountain_ and leave the **Name** field. Notice
 how the Search Key changes. Then, change the **Product Category** to something
 else and see how the change is reflected inside the **Search Key** field.
 
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
+![](../../../assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-8.png){: .legacy-image-style}
-
 
 You have now successfully created your first new callout and seen how it came
 to life within Etendo Classic. Congratulations!
