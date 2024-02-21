@@ -40988,7 +40988,7 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 #### Release Notes
 ##### 1.0.0
-- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview)
+- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md)
 
 ==ARTICLE_END==
 ==ARTICLE_START==
