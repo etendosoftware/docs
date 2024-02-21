@@ -25720,6 +25720,22 @@ If no records in the **Logs window** were created after the execution of the scr
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Procurement Extensions
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions
+## Article URL: 
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
+## Article Content: 
+#### Overview
+This bundle includes enhancements for Procurement functionalities in Etendo.
+
+#### Translations
+-  :material-translate: Spanish: [Procurement Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=F863020C58E94632A7134A8031A3AA9D){target="_blank"}
+
+#### Modules
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Tax Report Launcher
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Supported Modules/Tax Report Launcher
 ## Article URL: 
@@ -40959,6 +40975,23 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Procurement Extensions Bundle
+## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Procurement Extensions Bundle
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes
+## Article Content: 
+#### Overview
+
+| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
+| --- 		| ---           | ---    | ---    | --- | :---:             |
+| [1.0.0](#100) 	| 19/02/2024 	| 22.1.0 | 24.1.0 | CS	| :white_check_mark:|
+
+#### Release Notes
+##### 1.0.0
+- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview)
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Etendo BI Bundle
 ## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Bundle
 ## Article URL: 
@@ -41113,6 +41146,23 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ##### 1.4.0
 - Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Procurement Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Procurement Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes
+## Article Content: 
+#### Overview
+
+| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
+| --- 		| ---           | --- | --- | :---:             |
+| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.0.0
+- The translation module `com.etendoerp.purchase.invoice.validations.es_es` has been added.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Bundle ES
