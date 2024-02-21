@@ -1,7 +1,5 @@
 ---
 title: Modelo 303
-hide:
-    - navigation
 ---
 
 ## Javapackages 
@@ -484,6 +482,20 @@ Para este tipo de declaraciones, y siempre que el check 'Inscrito en registro de
 - Devolución - Ciudad/City
 - Devolución - Código País/Country code
 - Devolución - Marca SEPA
+
+### Configuración previa antes de generar el Informe
+
+#### **Actividades del I.A.E.**
+
+En el Modelo 303, para generar el informe mensual - último periodo, a partir de 2022, se deben declarar las principales actividades del I.A.E. (Impuesto de Actividades Económicas) en las que la empresa trabaja habitualmente.
+
+El módulo Epígrafes I.A.E., instalado como dependencia del 303, añade una nueva solapa a la ventana de Organización en la que puede indicar todas las actividades en las que su empresa ha estado trabajando. El modelo 303 debe incluir como mínimo una actividad principal, que debe estar marcada en la aplicación como por defecto, y como máximo 5 actividades. En caso de incluir más de 5 actividades, se incluirán en el informe las 5 primeras según el número de línea.
+
+![](/assets/drive/xWyc9Dzkqn1i48qdwqYjwylIUK39OllwglsbxorOf_u8TNJXZr4J4fAxALMyMvi6eCiATDGan8Z0C2No0SA-NVcsiXBPGo1qvj6VLamQwVYMTUgnW5oMaiouFU-eY65XVXK_YZPPzg6z6Rns5Bl-9IpSiIjKz-NCaNr6oG1tsoCdlsSPPfFyGqmH_pPBnQ.png)
+
+En el módulo de Epígrafes IAE se incluye el conjunto correspondiente a la clave 1. Si desea incluir un epígrafe que pertenezca a cualquier otra clave, tan sólo debe crear un nuevo registro en la ventana Epígrafes IAE e incluirlo en un registro de la solapa de Actividades del IAE de la ventana de Organización.
+
+Para el modelo 303, los campos 'Epígrafe IAE' y 'Código' son obligatorios
 
 ### **Generación del modelo 303**
 

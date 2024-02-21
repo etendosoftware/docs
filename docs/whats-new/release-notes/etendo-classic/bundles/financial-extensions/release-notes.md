@@ -14,27 +14,28 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
-| [1.12.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.12.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.10.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.9.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.9.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.8.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.7.1](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.7.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.5.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
-| [1.3.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
-| [1.2.4](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
-| [1.2.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
-| [1.2.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
-| [1.2.0](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
+| [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
+| [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.12.0](#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.3](#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.2](#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.11.1](#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.10.0](#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
+| [1.9.1](#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.9.0](#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.8.0](#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
+| [1.7.1](#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.7.0](#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
+| [1.5.0](#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
+| [1.3.0](#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
+| [1.2.4](#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
+| [1.2.3](#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
+| [1.2.2](#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
+| [1.2.0](#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
 | 1.1.4     | 11/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.3](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.2](/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C  |                       |
+| [1.1.3](#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
+| [1.1.2](#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C  |                       |
 | 1.1.1     | 10/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
 | 1.1.0     | 08/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
 | 1.0.500   | -          | 22.1.0 | 22.1.3 | C  |                       |
@@ -53,6 +54,9 @@ tags:
 
 
 ## Release Notes
+
+### 1.13.1
+- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Unnecessary "Header" tab in the in the ABC Activity window
 
 ### 1.13.0
 - Update Core compatibility until 23.4.x

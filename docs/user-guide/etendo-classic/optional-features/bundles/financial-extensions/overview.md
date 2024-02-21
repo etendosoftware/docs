@@ -129,7 +129,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany Module user guide](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#intercompany).
 
 ### Reverse GL Journal
 
@@ -182,7 +182,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting Module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting Module user guide](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#bulk-posting).
 
 ### Advanced Business Partner Settlement
 

@@ -1,7 +1,5 @@
 ---
 title: Libro de facturas
-hide:
-    - navigation
 ---
 ## Javapackages 
 

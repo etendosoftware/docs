@@ -14,9 +14,9 @@ tags:
 
 ## Overview
 
-| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
-| --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.0.0](#100) 	| 19/02/2024 	| 22.1.0 | 24.1.0 | CS	| :white_check_mark:|
+| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
+| --- 		| ---           | --- | --- | :---:             |
+| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 
 ## Release Notes
 ### 1.0.0
