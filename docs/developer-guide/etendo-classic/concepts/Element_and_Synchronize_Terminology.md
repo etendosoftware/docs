@@ -111,10 +111,6 @@ If you observe the fields in the `Application Dictionary` > `Setup` >`Element`
 you will notice there are standard fields (name, help...) and similar ones
 but for purchases.
 
-In Etendo Classic there are some tables that are used for sales and purchases
-transactions, for example _C_Invoice_ table contains both sales and purchases
-invoices. This means that _Purchase Invoice || Header_ and _Sales Invoice ||
-Header_ tabs use the same table. But it is very usual to label fields for the
 In Etendo, there are some tables that are used for sales and purchases
 transactions, for example `C_Invoice` table contains both sales and purchases
 invoices. This means that `Purchase Invoice` > `Header`  and `Sales Invoice` > `Header` tabs use the same table. But, it is very usual to label fields for the
