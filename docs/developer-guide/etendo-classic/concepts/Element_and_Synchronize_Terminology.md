@@ -1,5 +1,6 @@
 ---
-  tags: 
+title: Element and Synchronize Terminology  
+tags: 
   - application dictionary
   - element
   - field labels
@@ -8,9 +9,6 @@
   - sales
 ---
  
-
-#  Element and Synchronize Terminology
-
 
 ##  Element
 
