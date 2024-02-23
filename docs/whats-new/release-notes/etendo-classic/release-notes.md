@@ -8,7 +8,7 @@ tags:
     - Etendo Core
 ---
 
-## Release Notes Etendo Classic
+:octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
