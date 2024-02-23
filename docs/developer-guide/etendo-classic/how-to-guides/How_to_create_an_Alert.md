@@ -33,8 +33,8 @@ and many more.
 First of all, the condition under which the alert appears needs to be defined.
 This is done using a SQL statement that needs to follow certain conventions.
 
-To enter a new  alert  , use the role _*System Administrator* _ to navigate
-to _*General Setup || Application || Alert* _ window. Depending on how you
+To create a new  alert  rule, use the role _*System Administrator*_ to navigate
+to _*General Setup || Application || Alert*_ window. Depending on how you
 installed Etendo, you might already have some alerts here. If you do, try
 to find the _Customers with exceeded credit_ one and double click it. If not,
 create a new record as indicated below:
@@ -42,9 +42,6 @@ create a new record as indicated below:
   
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-0.png)
 
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_an_Alert-0.png){: .legacy-image-style}
 
 where this is the exact code for the *SQL* field:
 
@@ -77,16 +74,13 @@ The fields in question here are:
 
 ##  Defining recipients
 
-Switch to the role _*System Administrator* _ (or your defined 'administrator'
-role), navigate to _*General Setup || Application || Alert* _ , select the
+Switch to the role _*System Administrator*_ (or your defined 'administrator'
+role), navigate to _*General Setup || Application || Alert*_ , select the
 _Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
 tab. Add a new record as indicated below:
 
   
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_an_Alert-1.png){: .legacy-image-style}
 
   
 !!!note
@@ -96,24 +90,20 @@ guides/How_to_create_an_Alert-1.png){: .legacy-image-style}
 ##  Scheduling the alerting background process
 
 For the alerts to be evaluated and triggered, the background process needs to
-be scheduled. Using the role _*System Administrator* _ (or your defined 'administrator' role) navigate to _*General Setup || Process Scheduling || Process Request* _ and enter a new record:
+be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _*General Setup || Process Scheduling || Process Request*_ and enter a new record:
 
 ![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_an_Alert-2.png){: .legacy-image-style}
-
 ##  The Result
 
-Finally, log out and back in and select the role _*System Administrator* _(or
+Finally, log out and back in and select the role _*System Administrator*_(or
 your defined 'administrator' role). You should be able to see an alert in the
 navigation bar. By clicking on it, you will automatically be taken to the
-_*Alert Management* _ window that should look something like:
+_*Alert Management*_ window that should look something like:
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_an_Alert-3.png){: .legacy-image-style}
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png)
 
   
 
