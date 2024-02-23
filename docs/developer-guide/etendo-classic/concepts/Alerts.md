@@ -68,7 +68,7 @@ The flow for data driven alerts is as follows:
                       AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
                       AND pv.m_pricelist_id = pl.m_pricelist_id
                       AND issopricelist='N')
-    union                  
+    UNION                  
     SELECT m_product_id AS referencekey_id,
            p.name AS record_id,
            '0' AS ad_role_id,
@@ -114,11 +114,9 @@ The flow for data driven alerts is as follows:
 ###  Performance
 
 The sql commands defined in alert rules will be executed periodically in
-your system. Therefore, it is very important to define them as performance-
-efficient.
+your system. Therefore, it is very important to define them as performance-efficient.
 
 If they are not, they will slow down your system noticeably.
-
 
 
 ##  Alert Recipient
