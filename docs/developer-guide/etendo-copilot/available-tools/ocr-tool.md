@@ -24,9 +24,9 @@ Optical Character Recognition (OCR) Tool is a tool that recognizes text from ima
 
 4. You need to do a _update.database smartbuild_ to compile the environment of Etendo Classic.
 
-``` bash title="Terminal"
-./gradlew update.database smartbuild --info
-``` 
+    ``` bash title="Terminal"
+    ./gradlew update.database smartbuild --info
+    ``` 
 
 4. After that, you must configure the tool in a Copilot App, in order to do that, go to _Copilot App_ and pick the _OCR Tool_ option in the _Tool_ tab.
 
