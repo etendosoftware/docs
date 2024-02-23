@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Alerts/</loc>
+         <lastmod>2024-02-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Client_Side_Development_and_API/</loc>
          <lastmod>2024-02-23</lastmod>
          <changefreq>daily</changefreq>
@@ -157,6 +162,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset/</loc>
+         <lastmod>2024-02-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/</loc>
          <lastmod>2024-02-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
