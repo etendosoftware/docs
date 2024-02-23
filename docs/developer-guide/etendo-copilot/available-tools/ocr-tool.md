@@ -1,22 +1,21 @@
 ---
-title: "Query generation from Natural Language: DBQueryTool"
+title: "Optical Character Recognition (OCR) Tool"
 tags:
     - Copilot
     - IA
     - Machine Learning
-    - Database
     - OCR
     - Image Recognition
 ---
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
 
 ## Overview
-Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
+Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It is a tool that can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
 
 ## Functionality
 
 
-1. Add Copilot DB Query Tool dependency in the Etendo Classic project, In `build.gradle`, add:
+1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
     implementation('com.etendoerp:copilot.ocrtool:1.0.0')
     ```
@@ -57,9 +56,12 @@ After the configuration, you can upload an image or pdf to the chat and the tool
 
 
 We attach an image of an invoice
-![](../../../assets/developer-guide/etendo-copilot/ocr-tool.png)
-and copilot will return the recognized(and interpreted) text in the chat.
-![](../../../assets/developer-guide/etendo-copilot/ocr-tool.gif)
+
+![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+
+and Copilot will return the recognized(and interpreted) text in the chat.
+
+![](../../../assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
 ### Result chaining
 Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool a tool that writes the information in a database or sends it to a web service. 
    
