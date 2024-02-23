@@ -37,7 +37,7 @@ The flow for data driven alerts is as follows:
   * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
 
 !!!info
-    For more information, read [how to create an alert](/developer-guide/etendo-classic/how-to-guides/.How_to_create_an_Alert/?h=alert).
+    For more information, read [how to create an alert](/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
 
 ###  Definition
 
