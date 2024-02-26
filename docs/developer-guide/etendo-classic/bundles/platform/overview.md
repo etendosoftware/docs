@@ -262,7 +262,7 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 **Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
 
-### Webhook Events
+## Webhook Events
 
 **Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
