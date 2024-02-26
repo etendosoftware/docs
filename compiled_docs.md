@@ -19453,7 +19453,7 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-        For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
 
 
 
@@ -19466,7 +19466,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-        For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
 
 
 ##### Javax XML SOAP API
@@ -19476,7 +19476,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-        For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
 
 
 ##### Report Cache Management
@@ -19486,7 +19486,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-        For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
+    For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
 
 ##### Etendo Advanced Security
 
@@ -19497,7 +19497,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-        For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
 ##### Dynamic App 
 
@@ -19506,7 +19506,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-        For more information, visit the [Dynamic App user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
         
 ##### EAN 128
 
@@ -19515,7 +19515,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 EAN 128 allows to use bar code in your application
 
 !!! info
-        For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/overview#ean-128).
 
 ##### Etendo RX
 
@@ -19528,6 +19528,12 @@ EAN 128 allows to use bar code in your application
 ##### Webhook Events
 
 :octicons-package-16: Javapackage: com.etendoerp.webhookevents
+
+Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+!!! info
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+
 
 ##### Etendo Async Processes
 
@@ -34323,10 +34329,10 @@ In the end, a message will be shown with the properties which the database will 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Platform Extensions Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Overview
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle
+ https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/overview
 ## Article Content: 
 #### Overview
 
@@ -34586,6 +34592,197 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 **Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
 
+#### Webhook Events
+
+**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+!!! info
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Webhooks
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Etendo Webhooks
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks
+## Article Content: 
+#### Overview
+
+##### What is a Webhook?
+
+A webhook is a method used by web applications to send real-time notifications or data to other applications or servers. Webhooks operate using HTTP callbacks, which means that an application sends an HTTP request to a specified URL (the webhook URL) when a particular event occurs.
+
+In simple terms, a webhook acts as a messenger that delivers a message (data payload) from one application to another when certain conditions are met. Webhooks enable applications to communicate and share information automatically, making it easier to integrate different services and create seamless workflows.
+
+By using webhooks, you can keep your applications in sync, automate processes, and extend the functionality of your applications with minimal effort.
+
+This documentation will guide you through the process of setting up and using webhooks in Etendo Classic. Webhooks allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+
+#### Webhook Description
+
+##### Webhook Header Fields
+
+| Field           | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Name            | Webhook name                                               |
+| Description     | Webhook description                                        |
+| Java Class      | Class in which the webhook service was created             |
+| Module          | Module in which the webhook will be created                |
+| Active          | Webhook status (Active by default)                         |
+
+![Webhook Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
+
+##### Webhook Tabs Fields
+
+Webhook window has 2 tabs: Access and Params.
+
+The params tab allows you to create parameters that will be used in the URL call.
+
+The access tab allows you to create access that will be used in the URL call.
+
+###### Params
+
+| Field           | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Name            | Parameter name that will be used in the URL call           |
+| Is required     | Whether the parameter is required or not                   |
+| Active          | Parameter status (Active by default)                       |
+
+###### Access
+
+| Field           | Description                                                                                 |
+|-----------------|---------------------------------------------------------------------------------------------|
+| Active          | Access status (Active by default)                                                           |
+| Token           | Selector with the token that will be used in the URL call created on User API Token window  |
+
+#### Webhook Usage Example
+
+##### Setting up Webhooks
+
+1. Navigate to the new menu option: `Application → General Setup → Application → Webhook Events → Webhooks`
+2. Create a new webhook by filling in the required fields:
+
+    | Field           | Value                                                      |
+    |-----------------|------------------------------------------------------------|
+    | Name            | Alert                                                      |
+    | Description     | Create alert with custom message                           |
+    | Java Class      | com.etendoerp.webhookevents.ad_alert.AdAlertWebhookService |
+            
+    ![Webhook Alert](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAlert.png)
+
+3. Focus on "Params" tab and create the following params:
+
+    | Field           | Value                    |  Is required       |
+    |-----------------|--------------------------|--------------------|
+    | Name            | description              | :white_check_mark: |
+    | Name            | rule                     | :white_check_mark: | 
+        
+![Webhook Params](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
+        
+
+##### API Key Generation
+
+1. To give execution permission to a user, go to: `Application → General Setup → Application → Webhook Events → User API Token`
+2. Create a new API with the Name: `<<user>> token`
+3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
+    
+![Webhook Token](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
+    
+
+##### Assigning Webhook Access to Users
+
+1. Navigate to: `Application → General Setup → Application → Webhook Events → Webhooks`
+2. Select the created webhook and open the access tab.
+3. Create a new row and select the previously created API record.
+
+![Webhook Access](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
+
+##### Executing the Webhook
+
+To execute the webhook, make a GET request using a REST client like Postman with the following syntax:
+
+```
+URL=http://localhost:8080/
+CONTEXT=etendo
+WEBHOOK_ENDPOINT=/webhooks/
+[VARS]
+WEBHOOK_NAME=name=alert
+APIKEY=8b1012f0d442406ed602d87c13edcee9
+DESCRIPTION=new alert description
+RULE=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+Example URL:
+
+```
+http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+!!! success
+    This webhook creates an alert, and you can visualize it in the "Alert Management" window.
+
+    The response will return a status code **200** and the **alert ID**, for example: 
+    ```
+    {
+      "created": "91FEABC1604E404CB565FC79435C4344"
+    }
+    ```
+
+
+##### Example code usage
+
+```java title="AdAlertWebhookService.java"
+/**
+ * Example webhoook to take as a starting point.
+ * This service receive a description and a alert rule ID and insert one standard alert
+ */
+public class AdAlertWebhookService extends BaseWebhookService {
+  private static final Logger log = LogManager.getLogger();
+  
+  @Override
+  public void get(Map<String, String> parameter, Map<String, String> responseVars) {
+    Alert alert = new Alert();
+    alert.setAlertRule(OBDal.getInstance().get(AlertRule.class, parameter.get("rule")));
+    alert.setDescription(parameter.get("description"));
+    alert.setReferenceSearchKey("");
+    OBDal.getInstance().save(alert);
+    OBDal.getInstance().flush();
+    responseVars.put("created", alert.getId());
+  }
+}
+```
+
+#### Use Cases
+
+##### Tokens Visibility
+
+!!! note
+    :eye: Users can visualize tokens of their current profile.
+
+!!! warning
+    :warning: Other users cannot access another user's token. The API Token Window and webhook access tab will be empty.
+
+##### Error Handling
+
+!!! failure
+    If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a **401** response and a message.
+
+!!! failure
+    If a user calls a webhook with an incorrect webhook name, the backend will respond with a **404** response and a message.
+
+!!! failure
+    If a user calls a webhook without access, the backend will respond with a **401** response and a message.
+
+
+!!! failure
+    If a user calls a webhook with a missing required parameter, the backend will respond with a **500** response and a message.
+
+!!! failure
+    If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a **500** response and a message.
+
+!!! failure
+    If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
