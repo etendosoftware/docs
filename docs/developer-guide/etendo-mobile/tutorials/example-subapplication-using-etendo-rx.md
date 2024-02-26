@@ -103,7 +103,7 @@ This section covers an overview about the product subapplication example screens
 
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
-  - The route to this screen is `src/screens/home/index.tsx`.
+  - The route to this screen is `src/screens/home/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/home/index.tsx){target="_blank"}.
 
 **Key Components:**
 
@@ -111,81 +111,14 @@ This section covers an overview about the product subapplication example screens
 
 2. **ButtonUI**: A customizable UI button from Etendo UI Library, used for actions like navigating to product details. It can be styled in terms of size, style, and includes icons.
 
-3. **Search Component**: Enables product search by name, allowing the product list to be updated based on the query.
+3. **SearchContainer**: Enables product search by name, allowing the product list to be updated based on the query using the component from Etendo UI Library.
 
-4. **Table Component**: Displays products in a table format, allowing interactions such as editing, deleting or viewing product details.
+4. **TableUI**: Displays products in a table format, allowing interactions such as editing, deleting or viewing product details. Available in the tablet or web version.
 
-5. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
+5. **Cards**: Used to display product details in a card format, providing a more detailed view of the product. Only available in the mobile version.
 
-    ```typescript title="Home.tsx"
-    import React, {useEffect, useState} from 'react';
-    import {Text, View} from 'react-native';
-    import Navbar from '../../components/navbar';
+6. **Layout and Style**: The screen is designed to be responsive for both mobile and tablet formats, with a layout comprising the navbar, button, search bar, and table. Styles are defined in the `styles` object for consistency.
 
-    import {Button as ButtonUI, MoreIcon} from 'etendo-ui-library';
-
-    import Search from '../../components/search';
-    import Table from '../../components/table';
-    import {styles} from './style';
-    import {NavigationProp} from '@react-navigation/native';
-    import {isTablet} from '../../utils';
-    import locale from '../../localization/locale';
-    import {INavigationContainerProps} from '../../interfaces';
-    import useProduct from '../../hooks/useProduct';
-    import {ProductList} from '../../../lib/data_gen/product.types';
-
-    interface HomeProps {
-      navigation: NavigationProp<any>;
-      route: any;
-      navigationContainer: INavigationContainerProps;
-    }
-
-    const Home = ({navigation, route, navigationContainer}: HomeProps) => {
-      const {getFilteredProducts} = useProduct();
-      const [products, setProducts] = useState<ProductList>([]);
-      const {dataUser} = route.params;
-
-      const handleData = async (nameFilter?: string) => {
-        const data = await getFilteredProducts(nameFilter);
-        setProducts(data);
-      };
-
-      useEffect(() => {
-        handleData();
-      }, []);
-
-      return (
-        <View style={styles.container}>
-          <Navbar
-            title={locale.t('Home.welcome')}
-            username={dataUser?.username}
-            onOptionSelected={() => {
-              navigationContainer.navigate('Home');
-            }}
-          />
-          <View style={styles.topView}>
-            <Text style={styles.title}>{locale.t('Home.productList')}</Text>
-            <View style={styles.buttonContainer}>
-              <ButtonUI
-                width={isTablet ? '100%' : '60%'}
-                height={50}
-                typeStyle="secondary"
-                onPress={() => {
-                  navigation.navigate('ProductDetail');
-                }}
-                text={locale.t('Home.newProduct')}
-                iconLeft={<MoreIcon style={styles.icon} />}
-              />
-            </View>
-          </View>
-          <Search onSubmit={handleData} />
-          {products.length > 0 && <Table navigation={navigation} data={products} />}
-        </View>
-      );
-    };
-
-    export default Home;
-    ```
 
     <figure markdown>
       ![home-screen.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
@@ -197,7 +130,7 @@ This section covers an overview about the product subapplication example screens
 #### ProductDetail
   - This screen will show the detail of a product. Also, it will allow us to edit the product.
   - It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
-  - The route to this screen is `src/screens/productDetail/index.tsx`.
+  - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx){target="_blank"}.
     <figure markdown>
       ![add-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
       ![edit-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
@@ -351,73 +284,36 @@ Custom hooks, such as `useProduct`, exemplify the integration between frontend c
 
 ### Implementing Custom Hooks
 
-Here's an example of how custom hooks are utilized:
-
-```typescript title="useProduct.ts"
-import { useState, useEffect } from 'react';
-import { Product } from '../../lib/data_gen/product.types';
-import ProductService from '../../lib/data_gen/productservice';
-
-// Custom hook for managing products
-export const useProduct = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  // Fetching data
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await ProductService.BACK.getFilteredProducts();
-      setProducts(data);
-    };
-    fetchData();
-  }, []);
-
-  // Function to handle product update
-  const handleUpdateProduct = async (updatedProduct: Product) => {
-    await ProductService.BACK.updateProduct(updatedProduct);
-    // Optionally, update the products state to reflect the changes
-  };
-
-  // Function to get filtered products (if needed)
-  const getFilteredProducts = async (filterCriteria: any) => {
-    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
-    setFilteredProducts(filtered);
-    return filteredProducts; // This line is optional, allowing the function to return the filtered products
-  };
-
-  return {
-    products,
-    handleUpdateProduct,
-    getFilteredProducts,
-  };
-};
-```
-
-## Implementing `useProduct` Hook in `Home` Component
-
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
+The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The [useProduct](https://github.com/etendosoftware/subapp-product/blob/develop/src/hooks/useProduct.ts){target="_blank"} custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
 
 ### Example Usage
+
+Using the Table component from [Etendo UI Library](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}, the `Home` component lists the products, displaying a loading spinner while the data is being fetched. The `useProduct` hook is used to manage the data and loading state, ensuring that the component remains responsive and user-friendly.
 
 ```typescript title="Home.tsx"
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import useProduct from '../../hooks/useProduct';
-import Table from '../../components/Table';
+import { Table } from 'etendo-ui-library';
 
 const Home = () => {
-  const { getFilteredProducts, updateProduct } = useProduct();
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      const fetchedProducts = await getFilteredProducts();
-      setProducts(fetchedProducts);
-    })();
-  }, []);
-
+  // data is the list of products, as a result of a RX consult in useProduct
+  // loading is a boolean that indicates if the data is being loaded
+  const { data, loading } = useProduct();
+  ...
   return (
     <View>
-      <Table data={products} />
+    ...
+      <TableUI
+        columns={dataColumns}
+        data={data} // here is used to list the products
+        isLoading={loading} // here is used to show a loading spinner
+        onLoadMoreData={onLoadMoreData}
+        commentEmptyTable={locale.t('Table.textEmptyTable')}
+        textEmptyTable={locale.t('Table.commentEmptyTable')}
+        pageSize={PAGE_SIZE}
+      />
+      ...
     </View>
   );
 };

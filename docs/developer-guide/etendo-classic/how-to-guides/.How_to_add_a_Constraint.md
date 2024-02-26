@@ -1,0 +1,164 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to add a Constraint
+
+##  Contents
+
+  * 1  How to add a constraint 
+    * 1.1  Objective 
+    * 1.2  Modularity 
+    * 1.3  Add constraint to database 
+    * 1.4  Adding a proper message 
+    * 1.5  Export database 
+
+  
+---  
+  
+##  How to add a constraint
+
+The generic documentation about Constraints in Openbravo can be found  here  .
+
+###  Objective
+
+The HowTo on  How to add Columns to a Table  added a new _valid to_ column to
+the _ht_salary_ table.
+
+Logically the _valid to_ date should always be after (or identical) to the
+_valid from_ date. Enforcement of this logical restriction is possible with a
+database constraint which is a _SQL-Expression_ which check if the data is
+valid on all modification done to the data in this table.
+
+###  Modularity
+
+The changes described in this Howto are done will all be part of the module
+with the dbprefix **HT2** so will be placed in the same module which added the
+_valid to_ column in the first place.
+
+As the constraint will be placed in the module with dbprefix **HT2** as just
+explained but the table _ht_salary_ is defined in another module **HT** the
+constraint name must follow the usual rule and start with **EM_HT2_** .
+
+If the constraint would be added in the same module as its table, then this
+EM_ naming-rule would not be needed. However best practice is to let it start
+with the full tablename in that case to ensure its name will be unique across
+the database.}}
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+Remember that in all cases the full constraint-name (like any other db-object
+name) is not allowed to be longer then 30 characters.  
+---|---  
+  
+###  Add constraint to database
+
+To add the constraint execute in database the following clause:
+
+**PostgreSQL**
+
+    
+    
+     
+    ALTER TABLE ht_salary ADD constraint em_ht2_ht_salary_date_chk CHECK (em_ht2_validto>=validfrom);
+
+**Oracle**
+
+    
+    
+     
+    ALTER TABLE HT_SALARY ADD CONSTRAINT EM_HT2_HT_SALARY_DATES_CHK CHECK  (VALIDTO>=VALIDFROM) ENABLE;
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+Adding an **unique constraint** to an existing module is considered as an API
+change and could affect to existing environments already populated. Before
+adding it evaluate the risk and consider creating a  a buildvalidation  to
+check if the existing data complies. If it does not the buildvalidation can
+stop the update process and give a proper message.  
+---|---  
+  
+###  Adding a proper message
+
+Now when editing data in the _Employee Salary || Salary_ tab and trying to use
+a _Valid to_ date lying before the _Valid from_ date we get an error message
+like shown below.
+
+However this error message isn't too useful yet for the user as it does not
+indicate at all why the save action was not done.
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_Constraint-2.png){: .legacy-image-style}
+
+  
+It would be better it said something like _"The Valid To date cannot be before
+the Valid From date"_ to help the user to specify the two dates correctly.
+This is done adding a new  Message  . This leverage the Openbravo translation
+system so the message can be translated and shown in a users language.
+
+Details on how to create a new Message entry can be found  here  .
+
+As a short summary:
+
+In the **Application Dictionary || Message** window create a new record using
+the following details:
+
+  * **Module** _Openbravo Howtos 2_ as this is the module containing the constraint also. 
+  * **Search key** : The search key must be exactly the same as the constraint's one, in this case _em_ht2_ht_salary_dates_chk_ as this is the link between the constraint and the message. 
+
+  * **Message type** : Depending on the type the UI for the message box will be different (green for success, yellow for warning...), in our case we want a red error message box, so we select _Error_ . 
+  * **Message text** : It is the user friendly message that will be displayed inside the message box. So let's enter: _The Valid To date may not be before the Valid From date_ . 
+
+That's all now we have a message like:
+
+  
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_Constraint-3.png){: .legacy-image-style}
+
+###  Export database
+
+Whenever Application Dictionary or Physical database is modified, it is
+possible to export that information to xml files, this is the way Openbravo
+ERP maintains database data as part of its source code files. To do it just
+execute:
+
+    
+    
+     ant export.database
+    
+
+For further explanations read the  Development tasks document  .
+
+Retrieved from "  http://wiki.openbravo.com/wiki/How_to_add_a_Constraint  "
+
+This page has been accessed 7,759 times. This page was last modified on 9
+February 2017, at 11:14. Content is available under  Creative Commons
+Attribution-ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

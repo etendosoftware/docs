@@ -9,19 +9,18 @@ This section explains how to install a new Etendo environment. It includes:
 
 ## Tutorial
 
-###
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
-## Etendo Installation
-
-### Requirements 
+## Requirements 
 In this section, you can read the [System Requirements](/getting-started/requirements).
 
-### Install Etendo 
+## PostgreSQL Configuration
+Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
+
+## Install Etendo 
 === ":material-language-java: JAR Format"
 
-    ## Steps to Install Etendo in JAR Format
+    **Steps to Install Etendo in JAR Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -115,16 +114,7 @@ In this section, you can read the [System Requirements](/getting-started/require
         ```
         ./gradlew install smartbuild
         ```
-    9. Make sure you have the following PostgreSQL configuration in your `postgresql.conf`, this file is located wherever you have postgresql installed
-        ```
-        lc_numeric = 'en_US.UTF-8'
-        max_locks_per_transaction = 128
-        ```        
-
-        !!! note
-            After modifying the file restart postgresql
-
-    10. Start the Tomcat, in case of Linux you can run:
+    9. Start the Tomcat, in case of Linux you can run:
         ```
         sudo /etc/init.d/tomcat start
         ```
@@ -132,11 +122,11 @@ In this section, you can read the [System Requirements](/getting-started/require
         !!! note
             If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
 
-    11. Open your browser in `https://<Public server IP>/<Context Name>`
+    10. Open your browser in `https://<Public server IP>/<Context Name>`
 
 === ":octicons-file-zip-24: Source Format"
 
-    ##Steps to Install Etendo in Sources Format
+    **Steps to Install Etendo in Sources Format**
 
     1.  Clone Etendo Base project in a temporal directory.
 
