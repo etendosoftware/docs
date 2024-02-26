@@ -1,59 +1,13 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  How to add a button to the toolbar
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Example Module 
-  * 3  Implementing a toolbar button 
-  * 4  Visualizing the button - Implementation steps 
-    * 4.1  Defining the icon and a css 
-    * 4.2  The javascript to create and register the button 
-    * 4.3  The ComponentProvider 
-    * 4.4  The result 
-  * 5  Adding server side logic - Implementation steps 
-    * 5.1  Implement the server side action handler 
-    * 5.2  Calling the server side from the client, displaying the result 
-    * 5.3  The result 
-
-  
----  
-  
-##  Introduction
+---
+title: How to Add a Button to the Toolbar
+---
+##  Overview
 
 This howto discusses how a button can be added the main toolbar shown in grids
 and forms. The toolbar contains two types of buttons, the application buttons
 on the left (visualized using an icon) and the custom buttons on the right
 (shown with a label). This howto describes how to add a button to the left
 part, the application buttons.
-
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-0.png){: .legacy-image-style}
-
   
 To follow this howto you need to be able to, at a junior level, develop
 javascript as well as server-side java and understand  Data Access Layer
@@ -64,6 +18,9 @@ concepts.
 This howto is supported by an example module which shows example of the code
 shown and discussed in this howto.
 
+![Header](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-0.png)
+
 The code of the example module can be downloaded from this mercurial
 repository:
 https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
@@ -72,19 +29,18 @@ The example module is available through the Central Repository (See 'Client
 Application Examples'), for more information see the  Examples Client
 Application  project page.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  The
-example module also contains implementations of other howtos.  
----|---  
+!!! info
+        The example module also contains implementations of other howtos.  
+ 
   
 ##  Implementing a toolbar button
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-When implementing your own components it often makes sense to extend existing
-components. Make sure that your module then depends on the module that
-provides the base types. This ensures that the javascript is loaded in the
-correct order. You **must** add a dependency from your module to the
-**Openbravo 3.0 Framework** _(org.openbravo.v3.framework)_ module  
----|---  
+!!! info
+        When implementing your own components it often makes sense to extend existing
+        components. Make sure that your module then depends on the module that
+        provides the base types. This ensures that the javascript is loaded in the
+        correct order. You must add a dependency from your module to the
+        Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
   
 The button which we will implement will compute and show the sum of a set of
 selected orders to the user. This howto is divided in 2 parts, the first part
@@ -121,20 +77,22 @@ The icon should be placed in a specific directory in your module:
 web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
 Normally it makes sense to store the icon in a subfolder. The example module
 has the icon file in:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/org.openbravo.client.application.examples/images.
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/images.
 
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-3.png){: .legacy-image-style}
+guides/How_to_add_a_button_to_the_toolbar-3.png)
 
   
 Then add a css file which links this icon to a specific css style. The css
 file must also be located in this directory in your module:
 web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
 In the example module the css file is located here:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/org.openbravo.client.application.examples/ob-
-example-styles.css Within the css file add a style defined like this:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/ob-example-styles.css 
+Within the css file add a style defined like this:
 
     
     
@@ -154,8 +112,7 @@ part to prevent name collisions with other modules.
 The next step is to implement the javascript which defines the button and
 registers it to be shown on tabs. Start by creating a javascript file in this
 location: web/org.openbravo.client.application.examples/js/example-toolbar-
-button.js. In the example module this file is present:
-web/org.openbravo.client.application.examples/js/example-toolbar-button.js  .
+button.js.
 
 This is the overall javascript:
 
@@ -212,7 +169,7 @@ Then the first part of the buttonprops"
   * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-4.png){: .legacy-image-style}
+guides/How_to_add_a_button_to_the_toolbar-4.png)
 
 The updateState function is called to enable and disable the button when the
 user navigates through the system.
@@ -320,7 +277,7 @@ registered for only the sales order header tab.
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-5.png){: .legacy-image-style}
+guides/How_to_add_a_button_to_the_toolbar-5.png)
 
   
 
@@ -426,28 +383,14 @@ Parameters are specified using a %0, %1 etc.:
   
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-6.png){: .legacy-image-style}
+guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 ###  The result
 
 The result shows the sum of the 2 selected order headers:
 
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-7.png){: .legacy-image-style}
+guides/How_to_add_a_button_to_the_toolbar-7.png)
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar  "
-
-This page has been accessed 48,020 times. This page was last modified on 28
-March 2013, at 17:53. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+ 
