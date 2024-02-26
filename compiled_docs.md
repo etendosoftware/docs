@@ -25739,13 +25739,23 @@ This bundle includes enhancements for Procurement functionalities in Etendo.
 
 #### Modules
 
+##### Purchase Invoice Validations
+
+:octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module allows users to prevent the duplication of purchase invoices within the system. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice.
+
+!!! info
+    For more information, visit [the Purchase Invoice Validations user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md).
 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Purchase Invoice Validation
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Purchase Invoice Validation
 ## Article URL: 
- https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/production-extensions/purchase-invoice-validation
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
 ## Article Content: 
 #### Overview
 
@@ -25774,7 +25784,7 @@ A configurable system preference will be used to enable or disable the validatio
 From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.
 
 !!!note
-    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#preference){target="_blank"}.
+    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application.md#preference){target="_blank"}.
 
 ![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
 
