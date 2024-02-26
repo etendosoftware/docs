@@ -182,7 +182,7 @@ screenshot below:
     The name of the callout should not have spaces or illegal javascript characters.  
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-3.png){: .legacy-image-style}
+guides/How_to_create_a_Callout-3.png)
 
   
 Save and navigate to the _**Callout Class** _ tab of the same window. You will
@@ -192,7 +192,7 @@ have provided. Correct it in line with your callout package/class name. See
 screenshot below:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-4.png){: .legacy-image-style}
+guides/How_to_create_a_Callout-4.png)
 
   
 Now Etendo Classic knows that a callout exists and is implemented by the class you
@@ -217,7 +217,7 @@ dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-6.png){: .legacy-image-style}
+guides/How_to_create_a_Callout-6.png)
 
   
 Do the same for the _Product Category_ record since a change in any of them
@@ -233,13 +233,13 @@ should also regenerate the Search Key.
 #  Compiling the Window
 
 Finally, for the callout to take effect, the window that uses it needs to be
-recompiled and deployed to Tomcat. If using an IDE, do 
-   ``` bash
+recompiled and deployed to Tomcat. Do:
+  ``` bash
     ./gradlew smartbuild 
   ```
 
 !!!info
-  Once the compilation has finished, **restart Apache Tomcat server** .  
+    Once the compilation has finished, **restart Apache Tomcat server** .  
   
 
 #  The Result
@@ -250,8 +250,7 @@ product with **Name** = _Bon Fountain_ and leave the **Name** field. Notice
 how the Search Key changes. Then, change the **Product Category** to something
 else and see how the change is reflected inside the **Search Key** field.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-8.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
 
 You have now successfully created your first new callout and seen how it came
 to life within Etendo Classic. Congratulations!
