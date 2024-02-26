@@ -50,5 +50,13 @@ lc_numeric = 'en_US.UTF-8'
 max_locks_per_transaction = 128
 ```        
 
+### Required PostgreSQL extensions
+Etendo Classic currently requires two PostgreSQL extensions to be available:
+
+**uuid-ossp** to generate UUID's
+**pg_trgm** to have index support for fast contains search
+
+**Since version 10 those are part of the normal PostgreSQL server installation.**
+
 !!! note
     After modifying the file restart postgresql service

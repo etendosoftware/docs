@@ -25720,6 +25720,22 @@ If no records in the **Logs window** were created after the execution of the scr
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Procurement Extensions
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions
+## Article URL: 
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
+## Article Content: 
+#### Overview
+This bundle includes enhancements for Procurement functionalities in Etendo.
+
+#### Translations
+-  :material-translate: Spanish: [Procurement Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=F863020C58E94632A7134A8031A3AA9D){target="_blank"}
+
+#### Modules
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Tax Report Launcher
 ## Article Path: /User Guide/Etendo Classic/Optional Features/Supported Modules/Tax Report Launcher
 ## Article URL: 
@@ -28211,6 +28227,14 @@ lc_numeric = 'en_US.UTF-8'
 max_locks_per_transaction = 128
 ```        
 
+##### Required PostgreSQL extensions
+Etendo Classic currently requires two PostgreSQL extensions to be available:
+
+**uuid-ossp** to generate UUID's
+**pg_trgm** to have index support for fast contains search
+
+**Since version 10 those are part of the normal PostgreSQL server installation.**
+
 !!! note
     After modifying the file restart postgresql service
 
@@ -29621,7 +29645,7 @@ There are a number of things which are important to note:
   * A factory (the OBProvider) is used to create an instance of the BPGroup class. 
   * The OBDal service is the main entry point into the Data Access Layer, it offers save, remove and query functionality. The OBDal API is discussed in more detail below. 
 
-The code snippet above also shows that you don't need to work with SQL or JDBC
+The code snippet above also shows that you do not need to work with SQL or JDBC
 to work with the data from the database. As a developer, you work
 directly with objects and the available data is directly visible through the
 getters and setters.
@@ -29699,7 +29723,7 @@ to-many association is then used to generate a List<OrderLine> member in the
 Java Order class and a one-to-many mapping in Hibernate.
   
 It is possible not to generate those one-to-many associations in the parent
-entity. This can be avoided by setting "Child Property in Parent Entity" field to
+entity. This can be avoided by setting *Child Property in Parent Entity* field to
 false in Column tab. 
 
 !!!note
@@ -29744,7 +29768,7 @@ _OBDal.getReadOnlyInstance()_ behavior:
 
 #####  OBCriteria
 
-The  OBCriteria  class implements the  [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} interface. It
+The  OBCriteria  class implements the [Hibernate Criteria](https://docs.jboss.org/hibernate/core/3.5/reference/en/html/querycriteria.html){target="\_blank"} interface. It
 extends the standard Hibernate Criteria functionality for filtering on active,
 client and organization. In addition, it offers convenience methods to set
 orderby and to perform count actions.
@@ -29918,7 +29942,7 @@ An entity (corresponds to a table in Etendo Classic) has different names,
 relevant for different situations:
 
   * A table name (stored in _AD_Table.tablename_ ) which is the database table name in the physical database. 
-  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services) and client export/import. 
+  * An entity name (present in _AD_Table.name_ ) which is a globally unique name. It corresponds to the XML tag name used for that entity. It is, for example, used in [REST webservices](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md) and client export/import. 
   * A Java class name (stored in _AD_Table.classname_ ), the classname is used when generating the Java business object. It is unique within the data package of the table. 
 
 Each table (i.e. entity) in Etendo Classic belongs to a data package. A data
@@ -30000,7 +30024,7 @@ So, a developer does not need to explicitly set this information in a new or
 existing object. 
 
 !!!note 
-    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#property-naming-and-supported-interfaces) for more information.
+    For the data access layer to detect that a table supports the above interfaces, the column names (AD_Column.name) need to adhere to specific standards, see [here](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) for more information.
 
 #####  Creating a new instance of a Business Object
 
@@ -30061,7 +30085,7 @@ DAL.
 
 As was just mentioned, DAL operates within a user context, and provides
 automatic security checking mechanisms to prevent the user from accessing data
-which according to the Etendo Security Model shouldn't be accessed.
+which according to the Etendo Security Model should not be accessed.
 
 However, in most cases, the piece of code developed is contained within an
 object which in itself automatically provides part of the security checking,
@@ -30073,7 +30097,7 @@ only be fired if the user is already in the window).
 
 The OBContext provides an Administrator Mode which can be used to perform
 administrative actions even if the user does not have enough privileges. This
-mode bypasses the Entity Access checking, and it doesn't filter by Client
+mode bypasses the Entity Access checking, and it does not filter by Client
 or Organization.
 
 An additional Administrator Mode is provided, which bypasses the Entity Access
@@ -30105,7 +30129,7 @@ check, this can be done using ` OBContext.setAdminMode(false) ` .
 
 ######  Cross Organization Reference Administrator Mode
   
-Validation for referenced object's organization in columns [supporting it](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#cross-organization-references) can
+Validation for referenced object's organization in columns [supporting it](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#cross-organization-references) can
 be bypassed by using a special Administrator mode: `
 setCrossOrgReferenceAdminMode ` . Restoring previous mode is done by `
 restorePreviousCrossOrgReferenceMode ` . Similarly to standard admin mode,
@@ -30123,7 +30147,7 @@ calls must be balanced for this mode, independently from standard admin mode.
 
 ####  Transaction and Session
 
-The DAL implements the so-called open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern. With a
+The DAL implements the so-called open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern. With a
 slight variation that the DAL will automatically create a Hibernate Session
 and start a transaction when the first data access takes place (if none
 existed). So not when the HTTP requests begins. The Session and Transaction
@@ -30138,7 +30162,7 @@ _OBDal.getInstance().flush()_ method.
 Normally a developer does not need to explicitly commit or rollback a Session
 or Transaction:
 
-  * Within Etendo Classic: the open-session-view[https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
+  * Within Etendo Classic: the open-session-view [https://developer.jboss.org/docs/DOC-13954] pattern is used, when running the code in the Etendo Classic application, the transaction commit and session close takes place at the end of the http request (see the [DalRequestFilter](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/dal/core/DalRequestFilter.java){target="\_blank"}). If an exception occurs, then a rollback is performed. 
   * In the Etendo Classic test environment: The DAL base test class ([OBBaseTest](https://github.com/etendosoftware/etendo_core/blob/main/src-test/src/org/openbravo/test/base/OBBaseTest.java){target="\_blank"}) takes care of committing or rollingback transactions. 
   * Standalone: if the code is running standalone, then an explicit commit or rollback needs to be performed. This can be done through the OBDal methods: _OBDal.getInstance().commitAndClose()_ or _OBDal.getInstance().rollbackAndClose())_ . 
 
@@ -30267,7 +30291,7 @@ tables defined in the application dictionary. This means that:
   * database views are considered as normal business objects 
   * entities are generated for database views 
   * database views can be queried using HQL and the DAL query apis 
-  * database views can be accessed through the  [XML](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services)  and  [JSON](https://docs.etendo.software/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services) REST web service apis 
+  * database views can be accessed through the  [XML](https://docs.etendo.software/developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md)  and  [JSON](https://docs.etendo.software/developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md) REST web service apis 
 
 There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
@@ -30459,11 +30483,12 @@ the OBBaseTest class for more information.
         // do your test here
       }
 ```
-For more information, visit [How to develop test cases](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases). 
+For more information, visit [How to develop test cases](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md). 
 
 ####  Test your HQL: the HQL Query Tool
 
-There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool). 
+There is an Etendo HQL Query Tool which allows you to try an HQL query directly in the Etendo Classic interface. The module can be found in the [Github repository](https://github.com/etendosoftware/org.openbravo.utility.hqlquerytool){target="\_blank"}. 
+
 This module creates a System Administrator window in which you can enter an HQL query and see the result. This window includes a list of all entities and their properties. The HQL Query Tool is a very useful tool to test HQL queries and to see the result of the query.
 
 ####  Calling Processes/Stored Procedures from the DAL
@@ -30521,12 +30546,12 @@ task and the custom Java Ant task implementation:
   * The custom Ant task Java class should inherit from the _DalInitializatingTask_ . 
   * The custom Ant task Java class should implement a _doExecute_ method instead of the execute method in the custom Ant Java class (renaming the execute method to _doExecute_ is enough). 
   * Two additional properties are required in the ant task definition (in the build.xml): 
-    * propertiesFile="${base.config}/Openbravo.properties". 
+    * propertiesFile= `${base.config}/Openbravo.properties`. 
     * userId="100". 
 
 The first property configures the location where the _Openbravo.properties_
 file can be found. The second property sets the user under which the task is
-performed.
+performed.  
 
 ####  Important Information
 
@@ -30560,7 +30585,7 @@ underlying business object.
 #####  Hibernate inner workings
 
 To understand how Hibernate operates internally, it is strongly encouraged to
-read chapter 21 of the Hibernate manual:  [Improving Performance](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
+read chapter 21 of the Hibernate manual: [Improving Performance](https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/performance.html){target="\_blank"}.
 
 #####  Classloading
 
@@ -30618,11 +30643,12 @@ The code formatting template and his configuration can be found in the following
 
 ####  Tips & Tricks and Troubleshooting
 
-For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer) section.
+!!!info
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md) section.
 
 ---
 
-This work is a derivative of ["Data Access Layer"](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+This work is a derivative of [Data Access Layer](http://wiki.openbravo.com/wiki/Data_Access_Layer){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -30938,9 +30964,7 @@ Some important things to note:
 
   * A Dataset belongs to a module, so modules can add new datasets to an Etendo instance. 
   * Data Access Level: filter the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set.
-
-!!!info 
-    For more information read more about [data access level](). 
+ 
 
 If the `export allowed` column is flagged, then an `export` button is displayed.
 When clicking this button the data is exported to the modules directory of the
@@ -30975,7 +30999,7 @@ Some important aspects:
   * `IsBusinessObject`: if flagged then also the 'child-records' of the table are exported, for example if the Dataset Table is defined for the `C_Order` table and this field is flagged then also the related `C_OrderLines` are exported. 
   
 !!!info
-    For more information read how [Business Object](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer/#etendo-business-objects) structures are defined. 
+    For more information read how [Business Object](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Data_Access_Layer.md#etendo-business-objects) structures are defined. 
 
 ######  DatasetTable where clause
 
@@ -31028,7 +31052,7 @@ To export a dataset, it is very important to follow these steps:
   * First click on the `Export Reference Data` button in the `Dataset` window. This will export the dataset contents to an xml file, and will also generate the checksum of this dataset. 
   * Then, execute `./gradlew export.database` to export the checksum information to the module source data. 
 
-After this, you can [publish your module](https://docs.etendo.software/how-to-guides/how-to-publish-modules-to-github-repository.md) your module, which now will include the contents of the dataset.
+After this, you can [publish your module](https://docs.etendo.software/how-to-guides/how-to-publish-modules-to-github-repository.md), which now will include the contents of the dataset. 
 
 !!!note
     The reference data is inserted when a module is applied (built and installed). Or can be imported separately.
@@ -31064,6 +31088,258 @@ Select the organization and the module from which to import the reference data i
 
   
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Alerts
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Alerts
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Alerts
+## Article Content: 
+### Alerts
+
+
+####  Overview
+
+Alerts are the way Etendo Classic can inform users about virtually any event
+that happens in the system (if an appropriate alertrule is created). It can be
+defined by the System Administrator (and exported to a module) or by a Client/Organization Administrator.
+
+This notifications are shown in the top bar, just beside the Application menu.
+
+![]( ../../../assets/developer-guide/etendo-classic/concepts/Alerts-0.png)
+
+
+####  Alert Rules
+
+The definition of the _Alert Rules_ is made in the _Alert_ window ( _General
+Setup || Application || Alert_ ).
+
+####  Data Driven
+
+The Administrator can define a query to test a particular scenario, e.g. Products without defined price, Products under stock, Customers with exceeded credit, etc.
+
+The flow for data driven alerts is as follows:
+
+  * The Administrator creates *alert rules* , which include a SQL clause defining the event that is going to be monitored, and the *recipients* for the alerts. 
+  * A *background process* is permanently checking if the condition defined in each of the active alert rules return any record, in this case a new *alert instance* will be created for each one of the returned record. 
+  * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
+
+!!!info
+    For more information, read [how to create an alert](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
+
+#####  Definition
+
+  * SQL: Example of 'Products without defined price' rule 
+
+    
+    
+  ```sql
+    SELECT m_product_id AS referencekey_id,
+           p.name AS record_id,
+           '0' AS ad_role_id,
+           NULL AS ad_user_id,
+           p.name ||' is not in any Purchase price list' AS description,
+           'Y' AS isActive,
+            ad_org_id, 
+            ad_client_id, 
+            now() AS created,  
+            '0' AS createdBy,  
+            now() AS updated,
+            '0' AS updatedBy
+     FROM m_product p
+    WHERE p.ispurchased='Y'
+    AND NOT EXISTS (SELECT 1 
+                        FROM m_productprice pp,
+                             m_pricelist_version pv,
+                             m_pricelist pl
+                      WHERE p.m_product_id = pp.m_product_id
+                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
+                      AND pv.m_pricelist_id = pl.m_pricelist_id
+                      AND issopricelist='N')
+    UNION                  
+    SELECT m_product_id AS referencekey_id,
+           p.name AS record_id,
+           '0' AS ad_role_id,
+           NULL AS ad_user_id,
+           p.name ||' is not in any Sales price list' AS description,
+           'Y' AS isActive,
+            ad_org_id, 
+            ad_client_id, 
+            now() AS created,  
+            '0' AS createdBy,  
+            now() AS updated,
+            '0' AS updatedBy
+     FROM m_product p
+    WHERE p.ispurchased='N'
+    AND NOT EXISTS (SELECT 1 
+                        FROM m_productprice pp,
+                             m_pricelist_version pv,
+                             m_pricelist pl
+                      WHERE p.m_product_id = pp.m_product_id
+                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
+                      AND pv.m_pricelist_id = pl.m_pricelist_id
+                      AND issopricelist='Y')
+  ```
+
+  * The SQL query must have the following columns: 
+    * referencekey_id 
+    * record_id 
+    * ad_role_id 
+    * ad_user_id 
+    * description 
+    * isactive 
+    * ad_org_id 
+    * ad_client_id 
+    * created 
+    * createdby 
+    * updated 
+    * updatedby 
+
+  * Tab: From the Alert management window you can navigate directly to a record. From the Tab it can be defined to which tab you will navigate to. 
+
+  * Filter clause: This is a non-mandatory SQL whereclause which will be used to filter the alerts which will be shown to the user. 
+
+#####  Performance
+
+The sql commands defined in alert rules will be executed periodically in
+your system. Therefore, it is very important to define them as performance-efficient.
+
+If they are not, they will slow down your system noticeably.
+
+
+####  Alert Recipient
+
+The Alert Recipient tab handles the alert recipients management. You can
+define the Role whom will be notified, or an specific user. Also you can
+define if the user(s) should be notified by email.
+
+This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Element and Synchronize Terminology
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology
+## Article Content: 
+####  Element
+
+Elements  define the text in the label to be displayed for each field in the
+application as well as its related help. Each column in the Application
+Dictionary is linked to an element, note that more than one column can be
+linked to a single element, this is the way to reuse the same text for
+different columns (and finally fields) in the application. 
+
+For example, `C_BPartner_ID` is the name for a number of columns in the application, all of them are a reference to a business partner thus, the text to be displayed as
+well as the help for all of them is the same; instead of maintaining that
+information redundantly in each column all these columns use the same element.
+
+#####  Element maintenance
+
+Elements can be edited in `Application Dictionary` > `Setup ` >`Element` 
+window (as *System Administrator*); but, usually, elements are not directly
+created using this window but by the *Synchronize terminology* . Once the
+element is created, this window is used to edit its contents.
+
+#####  Synchronize Terminology
+
+It is the process that creates the elements for the columns that do not
+already have an associated one and copies the information in the elements to
+the columns and fields which are linked to them.
+
+To run it, go to  `Application Dictionary` > `Synchronize Terminology ` as
+*System Administrator* . 
+
+Basically, this process looks for all the columns that
+have no linked element. In case there is an element with the same column
+name that the orphan column's one, this element is linked to that column, other
+case a new element is created with the same column name the column has. 
+
+All that is done taking into account module, thus an element is only reused if it
+is defined in the same module as the column's one, or in another one dependent
+from the column's module. It also copies the text in the elements to the
+fields that represent the columns for those elements.
+
+!!!info
+    When creating/editing fields is worthless to write a good text for name,
+    description and help fields since they will be overwritten with the ones in
+    the element. When this process is run, just leave them empty (or with
+    some letters for mandatory ones). On the other hand, when creating a new
+    column, if a new element from this column is created, the element will have
+    the contents of those fields in the column. 
+
+!!!note 
+    Note that once the element is created the changes in the column fields will also be overwritten in this process.  
+
+  
+######  In detail
+
+Here are all the steps the *Synchronize Terminology* process executes.
+
+  1. For all the columns and process parameters in the dictionary without element, create an element in case there is no element with the same column name in the same module or in a dependent one, copying to the new element name, help and description from the column/parameter. 
+  2. Delete all the elements that are not used anymore. 
+  3. For the rest of columns and process parameters without elements, associate the existent element in the same module or in a dependent one having the same column name. 
+  4. Update columns and process parameters with the name, help and description values in their associated elements. 
+  5. Update centrally maintained fields with the name, help and description for the elements associated with their associated columns. 
+  6. Update workflow nodes with the name and description in their linked windows. 
+  7. Update menu entries with the name and description in their linked windows, processes, forms or workflows. 
+
+#####  Central Maintenance for fields
+
+In most cases, the previously defined process fits all the requirements for
+field labels. But in some occasions, it is wanted to have a field with a
+different set of label, help and description than the rest of fields
+associated to the same column. 
+
+!!!info
+    For these cases, it is possible to set no to the *Central Maintenance* check in `Application Dictionary` > `Windows, Tabs and Fields` >`Window >> Tab >> Field`, doing so, name, help and description in the field will not be overwritten with the element's ones.
+
+Let's see how it is used with an example:
+
+A very common column name is `AD_Language` , these columns are a reference to languages stored in `AD_Language` table. The name for the `AD_Language` element is *Language* and its help is *The Language identifies the language to use for display* which is very general. 
+
+Modules have a language (which might be different to English)
+which they have the UI defined in. The label and help for `AD_Language` field
+in `Application Dictionary` > `Module` are *Module Language* and this language
+defines the language used as base for the user interface elements in the
+module. This is done by setting the field for `AD_Language` column in
+*Module* tab as not centrally maintained and writing directly in the field the
+name and help.
+
+#####  Translations
+
+As elements are used to define text to be displayed in UI, they can be
+translated to different languages. 
+
+The text in the element must be written in the language its module defines, and then it can be translated to other ones.
+
+!!!note
+    The standard way to translate is by creating a new module with no additional
+    functionality but just translations for the module.
+
+#####  Purchase entries
+
+If you observe the fields in the `Application Dictionary` > `Setup` >`Element` 
+you will notice there are standard fields (name, help...) and similar ones
+but for purchases.
+
+In Etendo, there are some tables that are used for sales and purchases
+transactions, for example `C_Invoice` table contains both sales and purchases
+invoices. This means that `Purchase Invoice` > `Header`  and `Sales Invoice` > `Header` tabs use the same table. But, it is very usual to label fields for the
+same column in a different way depending on whether it is a sales or purchase
+window. 
+
+Instead of doing it, setting all the fields in the purchase windows as
+`not centrally maintained`. This is achieved by populating in the correspondent
+elements, the standard names and the purchase ones. Then, the windows are
+distinguished between sales and purchases using the *Sales Transaction* check
+in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  tab.
+
+
+  
+This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 
 ==ARTICLE_END==
@@ -32353,7 +32629,7 @@ applying the module.
     creation.
 
 !!!info
-    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets/). 
+    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets.md). 
  
 ####  Data structure to define Dataset
 
@@ -32453,7 +32729,8 @@ and navigate to the Etendo development project, execute the `export.database` co
 The last step in the process is to publish the module and distribute across to
 the end user.
 
-For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md)
+!!!info
+    For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
 
 
 ####  Examples
@@ -32538,12 +32815,15 @@ After completing all the steps successfully. Run the below gradle task to export
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
   
 ###### How to Install - Organization Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
@@ -32596,12 +32876,16 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module. 
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+
 
   
 ###### How to Install - System/Client Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * At this point the reference data will not be installed. 
   * Log into the ERP as admin.
   * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
@@ -32692,12 +32976,14 @@ the module:
     ./gradlew export.database
     
 
-And publish the module ([How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md))
+And publish the module.
 
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md). 
   
 ###### How to Install - System Only Access Level Reference Data
 
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/getting-started/installation/install-modules-in-etendo.md) guide.
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
   * It will install along with the reference data. 
 
 
@@ -32870,6 +33156,166 @@ This work is a derivative of [How to add a rich text field and column](http://wi
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to create an Alert
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create an Alert
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
+## Article Content: 
+###  How to create an Alert
+
+ 
+  
+####  Overview
+
+The objective of this how-to is to illustrate how you can add new  alerts  to
+Etendo. Alerts are non-intrusive informational messages to individual users
+or groups (roles) about everything within the system. One can define unlimited
+number of alerts for various statuses, errors, informative purposes, reminder
+etc. 
+
+Some examples are:
+
+  * Errors in the application dictionary that the System Administrator needs to be alerted about (e.g. a table without a an identifier)‏ 
+  * Errors in master data (e.g. a Business partner without an address)‏ 
+  * Notifications about critical situations (e.g. overdue payments)‏ 
+
+and many more.
+
+####  Defining the alert
+
+First of all, the condition under which the alert appears needs to be defined.
+This is done using a SQL statement that needs to follow certain conventions.
+
+To create a new  alert  rule, use the role _*System Administrator*_ to navigate
+to _*General Setup || Application || Alert*_ window. Depending on how you
+installed Etendo, you might already have some alerts here. If you do, try
+to find the _Customers with exceeded credit_ one and double click it. If not,
+create a new record as indicated below:
+
+  
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-0.png)
+
+
+where this is the exact code for the *SQL* field:
+
+    
+    
+     
+     SELECT c_bpartner_id AS referencekey_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
+         0 AS ad_role_id,
+         NULL AS ad_user_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
+         'Y' AS isActive,
+          ad_org_id, 
+          ad_client_id, 
+          now() AS created,  
+          0 AS createdBy,  
+          now() AS updated,
+          0 AS updatedBy
+     FROM c_bpartner 
+     WHERE SO_CreditLimit < SO_CreditUsed
+     AND iscustomer='Y'
+     AND SO_CreditLimit!=0
+
+The fields in question here are:
+
+  * *Name* is a user friendly name for an alert 
+  * *SQL* is the actual SQL statements whose results (individual records) will be items alerted about 
+  * *Tab* is a tab of a specific window where the user should be taken to be shown the item in question generated by the SQL statement 
+
+
+####  Defining recipients
+
+Switch to the role _*System Administrator*_ (or your defined 'administrator'
+role), navigate to _*General Setup || Application || Alert*_ , select the
+_Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
+tab. Add a new record as indicated below:
+
+  
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png)
+
+  
+!!!note
+    Notice that a role can be added (that includes several users) or a specific
+    user.
+
+####  Scheduling the alerting background process
+
+For the alerts to be evaluated and triggered, the background process needs to
+be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _*General Setup || Process Scheduling || Process Request*_ and enter a new record:
+
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
+
+####  The Result
+
+Finally, log out and back in and select the role _*System Administrator*_(or
+your defined 'administrator' role). You should be able to see an alert in the
+navigation bar. By clicking on it, you will automatically be taken to the
+_*Alert Management*_ window that should look something like:
+
+  
+
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png)
+
+  
+
+####  SQL code explained
+
+In order to write any kind of alert, the approach is very similar. Let's take
+another look at the SQL code that describes the condition:
+
+    
+    
+     
+     SELECT c_bpartner_id AS referencekey_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
+         '0' AS ad_role_id,
+         NULL AS ad_user_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
+         'Y' AS isActive,
+          ad_org_id, 
+          ad_client_id, 
+          now() AS created,  
+          '0' AS createdBy,  
+          now() AS updated,
+          '0' AS updatedBy
+     FROM c_bpartner 
+     WHERE SO_CreditLimit < SO_CreditUsed
+     AND iscustomer='Y'
+     AND SO_CreditLimit!=0
+
+Each SQL statement basically simulates an Etendo table which is why it
+needs to have all the columns defined above:
+
+  * *referencekey_id* \- this is ID (primary key) of the record that needs attention and is the cause of the alert. In our case, this would be the C_BPartner_ID of Neil Reiley. 
+  * *record_id* \- this is a user friendly label for the item that is in questions with the referencekey_id. Use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
+  * ad_role_id - should always be set to 0 
+  * ad_user_id - should always be set to null 
+  * *description* \- this is the message shown to the user describing what the problem is. You need construct this message according to what the alert is all about, indicating to the user what caused the alert and what the problem is. Again, use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
+  * isActive - should always be set to 'Y' 
+  * ad_org_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
+  * ad_client_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
+  * created - should always be set to now() 
+  * createdBy - should always be set to 0 
+  * updated - should always be set to now() 
+  * updatedBy - should always be set to 0 
+
+Finally, the WHERE clause describes the condition that triggers the alert. In
+our case the SELECT statement will return all Business Partners (FROM
+c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
+limit (SO_CreditLimit < SO_CreditUsed) which needs to be different from zero
+(SO_CreditLimit!=0).
+
+In other words, anything you can describe in a SQL statement can be defined as
+an alert. 
+
+
+This work is a derivative of [How to create an alert](http://wiki.openbravo.com/wiki/How_to_create_an_Alert){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to change an existing Window
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to change an existing Window
 ## Article URL: 
@@ -32893,8 +33339,7 @@ When using the Etendo UI, the changes can be seem immediately when switching rol
 When using classic Window a compile step is needed.  
 
 This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template
-(as explained here) is not needed. Instead, those new elements can just be
+elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
 added using a normal module as explained in the other How-To on
 [How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
  
@@ -32940,19 +33385,19 @@ wanted:
   * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
 
   
-For testing the changed layout, switch away from the _System Administrator_
-role to e.g. the _F &B International Group Admin _ role and open the _Physical
-Inventory_ window again. As the instance contains our module marked as
-_InDevelopment_ the window layout is reloaded each time the window is opened, so
+For testing the changed layout, switch away from the *System Administrator*
+role to e.g. the *F &B International Group Admin* role and open the *Physical
+Inventory* window again. As the instance contains our module marked as
+*InDevelopment* the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:
 
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
 
 
   
-To apply the same layout changes to the window in _classic UI mode_, the
+To apply the same layout changes to the window in *classic UI mode*, the
 windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile & deploy step can be done by using _ant smartbuild_
+restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
 which will recompile all changed windows and deploy the changes.
 
   
@@ -32966,12 +33411,16 @@ The final step is to export the changes into the module so they are persisted.
     the *template is in development* and the module which contains the changed
     object (i.e. window) is not.
 
-After ensuring that the export of the changes consists of the following two
+After ensuring that, the export of the changes consists of the following two
 steps:
 
+``` bash title="Terminal"
   1. _./gradlew export.database_ , same steps as for any other module 
-  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+```
 
+``` bash title="Terminal"
+  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+```
 
 
 This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
@@ -36081,6 +36530,71 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Optical Character Recognition (OCR) Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Optical Character Recognition (OCR) Tool
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-copilot/available-tools/ocr-tool
+## Article Content: 
+#### Overview
+Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It is a tool that can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+
+#### Functionality
+
+
+1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
+    ```groovy
+    implementation('com.etendoerp:copilot.ocrtool:1.0.0')
+    ```
+
+3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+
+4. You need to do a _update.database smartbuild_ to compile the environment of Etendo Classic.
+
+    ``` bash title="Terminal"
+    ./gradlew update.database smartbuild --info
+    ``` 
+
+4. After that, you must configure the tool in a Copilot App, in order to do that, go to _Copilot App_ and pick the _OCR Tool_ option in the _Tool_ tab.
+
+5. Update you application:
+    - If its an OpenAI Assistant, click in the _Sync OpenAI Assistant_ button.
+    - If its a Langchain App, restart copilot with the following commands:
+    ``` bash title="Terminal"
+    ./gradlew copilot.stop
+    ./gradlew copilot.start
+    ```
+
+5. Now your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+
+#### Examples
+
+!!! info 
+    It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
+    The Tool in general returns the information in json format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
+    
+##### Requesting text recognition from an image/pdf
+
+After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
+    
+1. Open Copilot button and open a chat with the OpenAI Assistant.
+2. Upload a image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
+3. The tool will recognize the text and return it in the chat.
+
+
+We attach an image of an invoice
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+
+and Copilot will return the recognized(and interpreted) text in the chat.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
+##### Result chaining
+Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool a tool that writes the information in a database or sends it to a web service. 
+   
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: XML Translation Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/XML Translation Tool
 ## Article URL: 
@@ -36091,8 +36605,9 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 Translates the content of an XML file from one language to another, as specified within the XML.  
 
-##### Functionality
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+##### Functionality
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
@@ -37759,2657 +38274,11 @@ Article URL: https://etendo.software
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Overview
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/Overview
+# Article Title: Release Notes
+## Article Path: /What's New/Release Notes/Etendo Classic/Release Notes
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/overview
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/release-notes
 ## Article Content: 
-#### Release Notes Etendo Classic
-
-| Release notes | Publication date | Version | Status | ISO Image | GitHub |
-| ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.1](https://docs.etendo.software/23Q4-1) | 02/02/2023 | 23.4.1 | QAA	| | :white_check_mark:|
-| [23Q4.0](https://docs.etendo.software/23Q4-0) | 28/12/2023 | 23.4.0 | CS	| [23Q4-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark:|
-| [23Q3.4](https://docs.etendo.software/23Q3-4) | 05/12/2023 | 23.3.4 | C | | :white_check_mark:|
-| [23Q3.3](https://docs.etendo.software/23Q3-3) | 30/11/2023 | 23.3.3 | C | | :white_check_mark:|
-| [23Q3.2](https://docs.etendo.software/23Q3-2) | 10/11/2023 | 23.3.2 | C	| | :white_check_mark:|
-| [23Q3.1](https://docs.etendo.software/23Q3-1) | 01/11/2023 | 23.3.1 | C	| | :white_check_mark:|
-| [23Q3.0](https://docs.etendo.software/23Q3-0) | 29/09/2023 | 23.3.0 | C	| [23Q3-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) | :white_check_mark:|
-| [23Q2.8](https://docs.etendo.software/23Q2-8) | 14/09/2023 | 23.2.8 | C	| | :white_check_mark:|
-| [23Q2.7](https://docs.etendo.software/23Q2-7) | 05/09/2023 | 23.2.7 | C	| | :white_check_mark:|
-| [23Q2.6](https://docs.etendo.software/23Q2-6) | 25/08/2023 | 23.2.6 | C	| | :white_check_mark:|
-| [23Q2.5](https://docs.etendo.software/23Q2-5) | 17/08/2023 | 23.2.5 | C	| | :white_check_mark:|
-| [23Q2.4](https://docs.etendo.software/23Q2-4) | 16/08/2023 | 23.2.4 | C	| | :white_check_mark:|
-| [23Q2.3](https://docs.etendo.software/23Q2-3) | 04/08/2023 | 23.2.3 | C	| | :white_check_mark:|
-| [23Q2.2](https://docs.etendo.software/23Q2-2) | 26/07/2023 | 23.2.2 | C	| | :white_check_mark:|
-| [23Q2.1](https://docs.etendo.software/23Q2-1) | 17/07/2023 | 23.2.1 | C  	| | :white_check_mark:|
-| [23Q2.0](https://docs.etendo.software/23Q2-0) | 27/06/2023 | 23.2.0 | C	| [23Q2-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso)| :white_check_mark:|
-| [23Q1.5](https://docs.etendo.software/23Q1-5) | 29/05/2023 | 23.1.5 | C 	| | :white_check_mark:|
-| [23Q1.4](https://docs.etendo.software/23Q1-4) | 19/05/2023 | 23.1.4 | C 	| | :white_check_mark:|
-| [23Q1.3](https://docs.etendo.software/23Q1-3) | 02/05/2023 | 23.1.3 | C 	| | :white_check_mark:|
-| [23Q1.2](https://docs.etendo.software/23Q1-2) | 19/04/2023 | 23.1.2 | C	| | :white_check_mark:|
-| [23Q1.1](https://docs.etendo.software/23Q1-1) | 11/04/2023 | 23.1.1 | C  	| | :white_check_mark:|
-| [23Q1.0](https://docs.etendo.software/23Q1-0) | 31/03/2023 | 23.1.0 | C  	| [23Q1-0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) | :white_check_mark:| 
-| [22Q4.6](https://docs.etendo.software/22Q4-6) | 17/08/2023 | 22.4.6 | CS  | | |
-| [22Q4.5](https://docs.etendo.software/22Q4-5) | 16/03/2023 | 22.4.5 | C  | [22Q4-5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso)| |
-| [22Q4.4](https://docs.etendo.software/22Q4-4) | 16/02/2023 | 22.4.4 | C   | | |
-| [22Q4.3](https://docs.etendo.software/22Q4-3) | 03/02/2023 | 22.4.3 | C   | | |
-| [22Q4.2](https://docs.etendo.software/22Q4-2) | 25/01/2023 | 22.4.2 | C   | | |
-| [22Q4.1](https://docs.etendo.software/22Q4-1) | 13/01/2023 | 22.4.1 | C   | | |
-| [22Q4.0](https://docs.etendo.software/22Q4-0) | 04/01/2023 | 22.4.0 | C   | | |
-| [22Q3.0](https://docs.etendo.software/22Q3-0) | 05/10/2022 | 22.3.0 | C   | | |
-| [22Q2.2](https://docs.etendo.software/22Q2-2) | 12/08/2022 | 22.2.2 | C   | | |
-| [22Q2.1](https://docs.etendo.software/22Q2-1) | 05/08/2022 | 22.2.1 | C   | | |
-| [22Q2.0](https://docs.etendo.software/22Q2-0) | 06/07/2022 | 22.2.0 | C   | | |
-| [22Q1.3](https://docs.etendo.software/22Q1-3) | 21/06/2022 | 22.1.3 | C   | | |
-| [22Q1.2](https://docs.etendo.software/22Q1-2) | 25/05/2022 | 22.1.2 | C   | | |
-| [22Q1.1](https://docs.etendo.software/22Q1-1) | 11/05/2022 | 22.1.1 | C   | | |
-| [22Q1.0](https://docs.etendo.software/22Q1-0) | 01/03/2022 | 22.1.0 | C   | | |
-| [21Q4.9](https://docs.etendo.software/21Q4-9) | 04/01/2023 | 21.4.9 | C   | | |
-| [21Q4.8](https://docs.etendo.software/21Q4-8) | 12/08/2022 | 21.4.8 | C   | | |
-| [21Q4.7](https://docs.etendo.software/21Q4-7) | 05/08/2022 | 21.4.7 | C   | | |
-| [21Q4.6](https://docs.etendo.software/21Q4-6) | 21/06/2022 | 21.4.6 | C   | | |
-| [21Q4.5](https://docs.etendo.software/21Q4-5) | 27/05/2022 | 21.4.5 | C   | | |
-| [21Q4.4](https://docs.etendo.software/21Q4-4) | 25/05/2022 | 21.4.4 | C   | | |
-| [21Q4.3](https://docs.etendo.software/21Q4-3) | 11/05/2022 | 21.4.3 | C   | | |
-| [21Q4.2](https://docs.etendo.software/21Q4-2) | 10/03/2022 | 21.4.2 | C   | | |
-| [21Q4.1](https://docs.etendo.software/21Q4-1) | 17/12/2021 | 21.4.1 | C   | | |
-| [21Q4.0](https://docs.etendo.software/21Q4-0) | 13/12/2021 | 21.4.0 | C   | | |
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q4.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q4.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-1
-## Article Content: 
-#### Fixed Issues
-
-- [EPL-1196](https://github.com/etendosoftware/etendo_core/issues/281){target="\_blank"} AverageAlgorithm class can be improved by showing the product.getName() on the OBException.
-- [EPL-1197](https://github.com/etendosoftware/etendo_core/issues/282){target="\_blank"} Problem when creating a "payment in" or "payment out" from the creation of a transaction line in the financial account window.
-- [EPL-1214](https://github.com/etendosoftware/etendo_core/issues/290){target="\_blank"} Reference type error in the 'Description' field of the sales order window (c_order).
-
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q4.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q4.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q4-0
-## Article Content: 
-#### New Platform Features
-
-- [Issue-199](https://github.com/etendosoftware/etendo_core/pull/228){target="\_blank"} Upgrade prettier from 2.8.8 to 3.0.3
-- [Issue-200](https://github.com/etendosoftware/etendo_core/pull/229){target="\_blank"} Upgrade eslint-plugin-prettier from 4.2.1 to 5.0.0
-- [Issue-201](https://github.com/etendosoftware/etendo_core/pull/230){target="\_blank"} Upgrade eslint-plugin-prettier from 3.3.1 to 4.2.1
-
-#### Fixed Issues
-
-- [EPL-1069](https://github.com/etendosoftware/etendo_core/issues/245){target="\_blank"} Invoice line with 0 amount remains without taxes
-- [EPL-1146](https://github.com/etendosoftware/etendo_core/issues/264){target="\_blank"} Delete client process not finished normally when database has idle in transaction queries
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to version 23.2.0 or later, you must run:
-    `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q3.4
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q3.4
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-4
-## Article Content: 
-#### Fixed Issues
-
-- [EPL-549](https://github.com/etendosoftware/etendo_core/issues/144){target="\_blank"} The method "getProductPrice" generates a NPE.
-- [EPL-553](https://github.com/etendosoftware/etendo_core/issues/148){target="\_blank"} Manual reconciliation's error message does not show correctly.
-- [EPL-571](https://github.com/etendosoftware/etendo_core/issues/260){target="\_blank"} Error is not displayed correctly when deleting a business partner and throwing an exception.
-- [EPL-750](https://github.com/etendosoftware/etendo_core/issues/192){target="\_blank"} Error when creating a background process with "Standard" UI Pattern.
-- [EPL-1066](https://github.com/etendosoftware/etendo_core/issues/232){target="\_blank"} Error when build validations tries to insert alert rule.
-
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q3.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q3.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-3
-## Article Content: 
-#### Fixed Issues
-
-- [EPL-1111](https://github.com/etendosoftware/etendo_core/issues/251){target="\_blank"} Duplication of discount on sales orders
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q3.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q3.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-2
-## Article Content: 
-#### Fixed Issues
-
-- [EPL-929](https://github.com/etendosoftware/etendo_core/issues/241){target="\_blank"} Decimal place validation error sends to Openbravo wiki instead of Etendo wiki
-- [EPL-962](https://github.com/etendosoftware/etendo_core/issues/227){target="\_blank"} Error when trying to delete an ad_client from 'Delete Client' process
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'<version>'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version '<version>'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q3.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q3.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-1
-## Article Content: 
-#### Fixed Issues
-
-- [EPL-1085](https://github.com/etendosoftware/etendo_core/issues/236){target="\_blank"} Right click window function 'Configure Sort' cannot be translated
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q3.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q3.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q3-0
-## Article Content: 
-#### New Platform Features
-
-- [ETO-248](https://github.com/etendosoftware/etendo_core/pull/226){target="\_blank"} Update Wiki URLs
-- [Issue-199](https://github.com/etendosoftware/etendo_core/pull/199){target="\_blank"} Upgrade prettier from 1.18.2 to 2.8.8
-- [Issue-200](https://github.com/etendosoftware/etendo_core/pull/200){target="\_blank"} Upgrade eslint-config-prettier from 7.1.0 to 8.8.0
-- [Issue-201](https://github.com/etendosoftware/etendo_core/pull/201){target="\_blank"} Upgrade eslint-plugin-prettier from 3.3.1 to 4.2.1
-
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.8
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.8
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-8
-## Article Content: 
-#### Fixed issues
-
-- [EPL-895](https://github.com/etendosoftware/etendo_core/issues/224){target="\_blank"} Error adding line in sales order
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.7
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.7
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-7
-## Article Content: 
-#### Fixed issues
-
-- [EPL-860](https://github.com/etendosoftware/etendo_core/issues/222){target="\_blank"} Modified CompileSqlc task,included class.path.full
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.6
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.6
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-6
-## Article Content: 
-#### Fixed issues
-
-- [EPL-596](https://github.com/etendosoftware/etendo_core/issues/166){target="\_blank"}  Error when changing currency type for business partner with unused credits
-
-- [EPL-615](https://github.com/etendosoftware/etendo_core/issues/219){target="\_blank"}  Sales invoice dimensional report in excel format does not work in Firefox
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.5
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.5
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-5
-## Article Content: 
-#### Fixed issues
-
-[EPL-856](https://github.com/etendosoftware/etendo_core/issues/217){target="\_blank"}  Windows-Ant limitation: The file name or extension is too long
-
-#### Known Issues 
-
-- [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin 
-??? example "Workaround"
-
-
-    Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
-
-    On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
-
-    ``` groovy title="build.gradlew" 
-    etendo {
-        ignoreCoreJarDependency = true
-    }
-    ```
-
-    This configuration will allow you to download the source of the project on your local environment. It will be needed for following steps. 
-
-    Now we need to execute the command that will download the source code:
-
-    ```bash title='terminal'
-    ./gradlew clean
-    ./gradlew expandCore 
-    ```
-    If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.4
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.4
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-4
-## Article Content: 
-#### Fixed issues
-
-[EPL-830](https://github.com/etendosoftware/etendo_core/issues/215){target="\_blank"}  Discounts applied from the Discounts and Promotions window are not reflected in the "Discounts" field of the order lines
-
-#### Installation and Updates
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-3
-## Article Content: 
-#### Fixed issues
-
-[EPL-512](https://github.com/etendosoftware/etendo_core/issues/121){target="\_blank"}  Discounts applied from the Discounts and Promotions window are not reflected in the "Discounts" field of the order lines
-
-[EPL-592](https://github.com/etendosoftware/etendo_core/issues/165){target="\_blank"}  The validation rule in the tab "Machine station" of the window "Work center" is wrong
-
-[EPL-748](https://github.com/etendosoftware/etendo_core/issues/191){target="\_blank"}  Reset accounts - does not take into account the indicated dates
-
-#### Installation and Updates
-
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-2
-## Article Content: 
-#### Fixed issues
-
-[EPL-543](https://github.com/etendosoftware/etendo_core/issues/204){target="\_blank"}  Business Partner's balance sheet does not match reality
-
-#### Installation and Updates
-
-!!! warning
-        If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`. Please check it in the `build.gradle` file. `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-1
-## Article Content: 
-#### Fixed issues
-
-[EPL-594](https://github.com/etendosoftware/etendo_core/issues/197){target="\_blank"} MaterialReceiptPending.processPurchaseOrder causes idle in transactions to be left (in some cases)
-
-#### Installation and Updates
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q2.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q2.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q2-0
-## Article Content: 
-#### New Platform Features
-
-[EPL-493](#epl-493) Make authentication classes extensible by implementing hooks
-
-#### Installation and Updates
-
-!!! warning
-    If you upgrade an existing Etendo environment to 23.2.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-
-#### Details
-
-##### EPL-493
-###### Make authentication classes extensible by implementing hooks
-
-**Issue Description**
-Make authentication classes `(UserInfoWidgetActionHandler, LoginHandler)` extensible by implementing hooks order to extend and enhance the security functionality
-
-**Solution Design**
-Create `UserInfoWidgetHook` and `LoginHandlerHook` for code injection into `UserInfoWidgetActionHandler` and `LoginHandler`.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.5
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.5
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-5
-## Article Content: 
-#### Fixed issues
-
-[EPL-474](https://github.com/etendosoftware/etendo_core/issues/105){target="\_blank"} Error logging in when user password has expired
-
-#### Installation and Updates
-
-!!! warning
-    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.4
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.4
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-4
-## Article Content: 
-#### Fixed issues
-
-[EPL-639](https://github.com/etendosoftware/etendo_core/issues/183){target="\_blank"} Error when displaying a message in an action, it is displayed in the window and not in the popup
-
-#### Installation and Updates
-
-!!! warning
-    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-3
-## Article Content: 
-#### Fixed issues
-
-[EPL-591](https://github.com/etendosoftware/etendo_core/issues/173){target="\_blank"} Error in the sequence generation process
-
-#### Installation and Updates
-
-!!! warning    
-    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-2
-## Article Content: 
-#### Fixed issues
-
-[EPL-603](https://github.com/etendosoftware/etendo_core/issues/168){target="\_blank"} Error when adding payment from financial account
-
-#### Installation and Updates
-
-!!! warning
-    If you upgrade an existing Etendo environment to 23.1.2 version you must run `./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-1
-## Article Content: 
-#### Fixed issues
-[EPL-573](https://github.com/etendosoftware/etendo_core/issues/159){target="\_blank"} Add Payment button error in the Sales Invoice window [Oracle]
-
-
-
-#### Installation and Updates
-
-!!! warning
-    If you upgrade an existing Etendo environment to 23.1.1 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 23Q1.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/23Q1.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/23Q1-0
-## Article Content: 
-#### New Platform Features
-
-- [EPL-574](#epl-574) Upgrade Gradle Version to 7.3.2
-- [EPL-531](#epl-531) Undo post/unpost button
-- [EPL-535](#epl-535) Move Process / Reactivate Payment to Action
-- [EPL-537](#epl-537) Add hooks in the AddPaymentActionHandler
-- [EPL-529](#epl-529) Add hooks in the process shipments
-
-
-#### Installation and Updates
-
-!!! warning
-
-    If you upgrade an existing Etendo environment to 23.1.0 version you must run:`./gradlew wrapper --gradle-version 7.3.2` and a new Gradle version will be instaled, then update the gradle plugin-in to `'latest.release'`
-    Please check it in the `build.gradle` file.
-    `id 'com.etendoerp.gradleplugin' version 'latest.release'`
-
-
-#### Details
-
-##### EPL-574
-###### Upgrade Gradle Version to 7.3.2
-
-**Issue Description**
-The current version of Gradle used in the koodu_software/int_etendo_base, GitHub - etendosoftware/etendo_core: Etendo Classic source code  and koodu_software/etendo_gradle_plugin  needs to be updated to version 7.3.2 to take advantage of its improved performance and features. However, manual upgrades may not be feasible in all environments, and some systems may need to be updated manually to support the new version of Gradle. Furthermore, the upgrade may introduce changes to the project's behavior, and it is essential to test these changes thoroughly to minimize the risk of unexpected issues in production.
-
-  
-##### EPL-531
-###### Undo post/unpost button
-
-**Issue Description**
-Delete Post/Unpost button and undo changes on accounting status column  from Goods Receipt, Goods Shipments, Physical Inventory, Transaction Tab from Financial Account, Payment In, Payment Out, Purchase Invoice and Sales Invoice windows from Core  Module.
-
-**Solution Design**
-- Activate the Core module.
-- Then export the changes that always brings the module and create a patch with the diff that we obtained.
-- Perform the following steps for each of the windows implicit in the description
-- Copy the Display logic of the Post/Unpost button in Post.
-- Delete the Post/Unpost button.
-- Change in Post the display length, the description and the Help/Comment, uncheck Read Only, Show in grid view and Show in status bar.
-- In the Column change the Reference to Button and the Reference Search Key to All_Posted Status, the Application Element to Posted-Posted, the description, the Help/Comment and the Length in some cases.
-- Activate the Synchronize Terminology.
-
-##### EPL-535
-###### Add hooks in the AddPaymentActionHandler
-
-**Issue Description**
-
-Move the process payment that is process definition to action in order to be able to concatenate actions in the future. 
-
-**Solution Design**
-
-- Move to action
-- Check that the behavior of the process has not been modified.
-- Check if you can discriminate by window to allow multiple payments by WS
-- Allow multiple selection when calling the process from a WS with the corresponding flag processByWebService
-- Add the pre and post hooks that were implemented in the feature/EPL-537 branch
-
-- Change the class that extends the process to Action, implement the action method, make some superior methods to transform the data and call the original method for the cases of 1 single payment either from the windows or by WS, I will also add a validation so that it is not allowed to call the process with more than one record selected unless it has the flag mentioned above to call by ws and process multiple payments.By WS only multiple payments will be able to be processed, the payments will have to be created previously with their respective details, etc.By WS you can create and process a payment passing the correct json.
-
-    URL:`http://localhost:8080/etendo/sws/com.smf.securewebservices.kernel/org.openbravo.client.kernel?processId=9BED7889E1034FE68BD85D5D16857320&_action=org.openbravo.advpaymentmngt.actionHandler.`
-
-    ``` title="AddPaymentActionHandler"
-    {"recordIds":["69A235939B474190B9559A31933A303C"],
-      "_params":{
-        "fin_payment_id":"69A235939B474190B9559A31933A303C",
-        "ad_org_id":"E443A31992CB4635AFCAEABE7183CE85",
-        "issotrx":false,
-        "document_action":"25889363327D44FC851D97EA78F6BCFC",
-        "c_currency_id":"102",
-        "received_from":"858B90C7AF0A4533863EEC65437382BF",
-        "actual_payment":"100",
-        "payment_date":"2023-01-10",
-        "difference":null,
-        "conversion_rate":null,
-        "converted_amount":null,
-        "reference_no":"",
-        "credit_to_use":{"_selection":[]},
-        "order_invoice":{"_selection":[]},
-        "glitem":{"_allRows":[]}
-      },
-    "_entityName":"FIN_Payment"
-    }
-
-    To process multiple payments, you should send the following json
-
-    {"recordIds":["69A235939B474190B9559A31933A303C","123E1CF82DA4443EBE34F858409CDC0B"],
-
-    "document_action":"25889363327D44FC851D97EA78F6BCFC",
-    "processByWebService":true,
-    "_entityName": "FIN_Payment"
-    }
-    ```
-
-- If the payment is not well created, it will give error.
-- Also modify the message capture to process multiple payments, and a commit will be made for each payment so that in case one payment fails it will not rollback all the payments.
-
-##### EPL-537
-###### Add hooks in the AddPaymentActionHandler
-**Issue Description**
-Create a possibility to implement hooks of pre and post payment to add validation or any develop before payment start the processing and after finish the process payment
-
-**Solution Design**
-- Create a interface called PaymentProcessHook with two methods called preProcess and posProcess this methods will have a JSONObjets as a parameter and return the same type
-- Create an abstract class called PaymentProcessOrderHook with a method called getPriority and return an int
-- Modify the class AddPaymentActionHandler and add the execution of this hooks when start the process and when finish the process
-
-##### EPL-529
-###### Add hooks in the process shipments
-**Issue Description**
-Allow hook of pre and post shipments, This functionanily add a hooks to implement for partners o customer
-
-**Solution Design**
-- Create a new interface called ProcessShipmentHook in org.openbravo.advpaymentmngt module
-- Create a util called ProcessShipmentUtil copy from ProcessOrderUtil and do all necessary changes
-- Change the method processShipment in ProcessShiment java and call to ProcessShipmentUtil to process the shipment.
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.6
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.6
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-6
-## Article Content: 
-#### Fixed issues
-
-[EPL-856](https://github.com/etendosoftware/etendo_core/issues/217){target="\_blank"}  Windows-Ant limitation: The file name or extension is too long
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.5
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.5
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-5
-## Article Content: 
-#### Fixed issues
-
-[EPL-554](https://github.com/etendosoftware/etendo_core/issues/150){target="\_blank"} Vulnerability found in Postgresql JDBC JAR
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.4
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.4
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-4
-## Article Content: 
-#### Fixed issues
-
-[EPL-550](https://github.com/etendosoftware/etendo_core/issues/145){target="\_blank"} Error accessing Goods Shipments window after clearing cache
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-3
-## Article Content: 
-#### Fixed issues
-
-[EPL-540](https://github.com/etendosoftware/etendo_core/issues/139){target="\_blank"} Mark missing modules_core as 'Translation required'
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-2
-## Article Content: 
-#### Fixed issues
-
-[EPL-523](https://github.com/etendosoftware/etendo_core/issues/128){target="\_blank"} Modify the c_order_post this not delete the basic discounts
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-1
-## Article Content: 
-#### Fixed issues
-
-[EPL-501](https://github.com/etendosoftware/etendo_core/issues/115){target="\_blank"} When close an invoice is showing the close button but with empty options
-
-[EPL-510](https://github.com/etendosoftware/etendo_core/issues/116){target="\_blank"} When close an order is showing the close button but with empty options
-
-[EPL-521](https://github.com/etendosoftware/etendo_core/issues/125){target="\_blank"} Update ojdbc version and fix processHasOrgParam query
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q4.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q4.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q4-0
-## Article Content: 
-#### Fixed issues
-
- [EPL-51](https://github.com/etendosoftware/etendo_core/issues/110){target="\_blank"} Sequence references to do not have a UI Definition.
-
-[EPL-371](https://github.com/etendosoftware/etendo_core/issues/54){target="\_blank"} Blank line when a GL Item is removed.
-
-[EPL-426](https://github.com/etendosoftware/etendo_core/issues/87){target="\_blank"} General Ledger not exporting long Excel files
-
-[EPL-455](https://github.com/etendosoftware/etendo_core/issues/97){target="\_blank"} Rounded amounts in the 'Create Invoices From Orders' window.
-
-[EPL-456](https://github.com/etendosoftware/etendo_core/issues/98){target="\_blank"} Error in first time execution of an scheduled process
-
-[EPL-473](https://github.com/etendosoftware/etendo_core/issues/103){target="\_blank"} Error when attaching documents in a window.
-
-[EPL-407](https://github.com/etendosoftware/etendo_core/issues/80){target="\_blank"} Oracle bug.
-
-[EPL-486](https://github.com/etendosoftware/etendo_core/issues/113){target="\_blank"} Error downloading reports with Google Chrome 108.0.5359.94
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q3.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q3.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q3-0
-## Article Content: 
-#### Fixed issues
-
-[EPL-383](https://github.com/etendosoftware/etendo_core/issues/70){target="\_blank"} Error when post good movement "NoFactAct"
-
-[EPL-372](https://github.com/etendosoftware/etendo_core/issues/55){target="\_blank"} Manual report does not load properly when an invalid date is entered
-
-[EPL-370](https://github.com/etendosoftware/etendo_core/issues/52){target="\_blank"} Updating attribute value doesn't update attribute set instance correctly
-
-[EPL-181](https://github.com/etendosoftware/etendo_core/issues/92){target="\_blank"} When information is accessed from APIRest and sending for parameter an ID return all records and not apply the filter
-
-[EPL-117](https://github.com/etendosoftware/etendo_core/issues/91){target="\_blank"} Error in export.database with a table in DB without key column
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q2.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q2.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-2
-## Article Content: 
-#### Fixed issues
-
-###### Bug
-
-- [EPL-359](https://github.com/etendosoftware/etendo_core/issues/44){target="\_blank"} Multirecord processes cause loss of focus on records
-- [EPL-275](https://github.com/etendosoftware/etendo_core/issues/23){target="\_blank"} Error when posting document with product with no cost defined
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q2.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q2.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-1
-## Article Content: 
-#### Fixed issues
-
-- [EPL-230](https://github.com/etendosoftware/etendo_core/issues/51){target="\_blank"} Duplicate foreign keys in 'JOBS_JOB_RESULT.xml' and ojdbc8
-- [EPL-338](https://github.com/etendosoftware/etendo_core/issues/20){target="\_blank"} Customize Field Skin in read-only
-- [EPL-347](https://github.com/etendosoftware/etendo_core/issues/22){target="\_blank"} Error when post/unpost transactions from financial account
-- [EPL-351](https://github.com/etendosoftware/etendo_core/issues/32){target="\_blank"} Process buttons in form mode that are disabled are visible
-- [EPL-353](https://github.com/etendosoftware/etendo_core/issues/33){target="\_blank"} When clicking on "Complete" a Goods Shipment the "Document Action" field has no default value.
-- [EPL-356](https://github.com/etendosoftware/etendo_core/issues/36){target="\_blank"} The background process monitor does not work properly when it ends with an error
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q2.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q2.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q2-0
-## Article Content: 
-#### New Platform Features
-
-- [EPL-112](#epl-112) EtendoRX - Integrations
-- [EPL-218](#epl-218) Add task to compile style changes.
-- [EPL-203](#epl-203) Refactor the Offer Pick Action handlers to jobs.
-- [EPL-201](#epl-201) Move Valued Stock Report to a process definition and it will only be able download report in pdf and excel format.
-- [EPL-199](#epl-199) Refactor the process 'Payment execution' to a process definition.
-
-#### Fixed issues
-
-- [EPL-57](#epl-52) Posting a goods shipment with non accounting / error message displayed.
-- [EPL-61](#epl-61) Errors in "Add details" process displayed columns.
-- [EPL-194](#EPL-194) Remove "External Point of Sales" view and its documentation.
-- [EPL-228](#epl-228) The system loses the selection order when adding lines to a new order.
-- [EPL-237](#epl-237) Accounting templates defined for the m_costadjustment table are not executed.
-- [EPL-263](#epl-263) Error ocurred in payments in and payments out when payment date is null.
-
-#### Details 
-
-##### EPL-57
-
-###### Posting a goods shipment with non accounting / error message displayed.
-
-**Error's description**
-When posting a goods shipment with non accounting, even though this functionality works well, an error message is shown with the correct text.
-
-**Steps to reproduce the error**
-Post a goods shipment that does not generate accounting.
-
-**Expected result**
-A success message in green is shown.
-
-**Environment**
-Etendo 21.4.0
-
-##### EPL-61
-
-###### Errors in "Add details" process displayed columns
-
-**Error's description**
-When you want to Add Details in a ‘Payment In', in the grid:
-
-1. The column ‘c_ob_selected’ does not have label.
-2. The columns Creation Date and Created By are empty.
-
-**Steps to reproduce the error**
-
-- Go to 'Payment In'
-- Select record in status 'Awaiting Payment'
-- Click on 'Add Details'
-- Click right on columns
-- View that column ‘c_ob_selected’ doesn’t have label
-- Check columns ‘Creation Date' and 'Created By’
-- View in grid that the columns are empty
-
-**Expected Result:**
-
-- The column 'c_ob_selected' has label
-- The columns ‘Creation Date’ and ‘Created By’ are not empty
-
-**Environmnet**
-Etendo 21.4.0
-
-##### EPL-194
-
-###### Remove "External Point of Sales" view and its documentation
-
-**Error's description:**
-Showing the external point of sales window, but this window belongs to integration with POS.
-
-**Steps to reproduce**
-Search the external point of sales windows or go to Application -> Sales Management -> Setup -> External point of sales.
-
-**Expected behavior**
-Do not show External point of sales windows.
-
-**Affected Version**
-Etendo 21Q4.1
-
-##### EPL-228
-
-###### The system loses the selection order when adding lines to a new order
-
-**Error's description**
-The error occurs in windows such as the order window. Sometimes, when saving the header of a new order and want to add a line, the toolbar buttons are disabled.
-
-**Steps to reproduce the error**
-
-- Go to 'Sales Order' windows
-- Clear filters
-- Create a new sales order
-- Save header
-- Click on lines
-- See that the toolbar buttons are disabled and it is not possible to add lines.
-
-**Expected behaviour**
-It should be possible to click the button to add a new line.
-
-**Affected version**
-Etendo 21.4.2
-Etendo 22.1.0
-
-##### EPL-237
-
-###### Accounting templates defined for the m_costadjustment table are not executed
-
-**Error's description**
-In case a new accounting template is defined in the m_costadjustment table, it is never executed, and only the core one is executed.
-
-**Steps to reproduce the error**
-
-- Define a new accounting template for the m_costadjustment table.
-- Execute the process.
-- Verify in debug mode that the defined template is set but not executed. The defined for core is executed.
-
-**Expected behavior**
-The new accounting template defined must be executed.
-
-**Affected Version**
-Etendo 22.1.0
-
-##### EPL-263
-
-###### Error ocurred in payments in and payments out when payment date is null
-
-**Error's description**
-A pop up with error when pressing “Add Details“ in payment in or payment out
-
-**Steps to reproduce the error**
-
-- Create a payment in or payment out, remove the payment date and press the button “Add Details“.
-- See a pop up with the following error.
-
-**Expected behavior**
-Show a pop up with invoices and orders.
-Disappear the pop up with the error.
-
-**Affected Version**
-Etendo 22.1.0
-
-##### EPL-112
-
-###### EtendoRX - Integrations
-
-The main objective of this new solution is to complement the existing ERP: “Etendo Classic”, making usage of new technologies and applying proved patterns and good practices while maintaining the best features it has to create integrations with third-party applications by an easy way.
-Etendo has been integrated with Zapier as concept.
-Zapier is a tool that allows users to integrate programs and web applications, making it possible to move information between platforms and perform combined actions.
-
-To try it, you can read [Create a Zap using Etendo Integration](https://docs.etendo.software/developer-guide/etendo-rx/integrations/zapier/)
-
-##### EPL-218
-
-###### Add task to compile style changes
-
-**Issue Description:**
-For a partner to be able to make modifications to the styles, it is necessary to add a gradle task that compiles the .scss files.
-In addition, problems with the kubernetes plugin need to be solved. When running a smartbuild on a server the antWar and deployK8s tasks are not running.
-
-**Solution Design:**
-
-- In web/skins/Default/Openbravo_ERP_250.scss in line 20 change /modules/ to /modules_core/.
-- Add to the build.gradle the task cssCompile in etendo_gradle_plugin
-
-##### EPL-203
-
-###### Refactor the Offer Pick Action handlers to jobs
-
-**Issue Description**
-Refactor the Offer Pick Action handlers to jobs
-
-**Solution Design**
-
-Convert to jobs the following classes:
-OfferPickOrgActionHandler.java
-OfferPickProductCategoryActionHandler.java
-OfferPickAndExecBaseActionHandler.java
-OfferPickProductActionHandler.java
-
-**Use/Test Cases**
-
-- Case 1
-  Given: a discount and promotion
-  When: you execute the button Add organization
-  Then: this allows adding multiple organizations implemented by jobs
-
-- Case 2
-  Given: a discount and promotion
-  When: the button Add Product Category is executed
-  Then: this allows adding multiple Product Category implemented by jobs
-
-- Case 3
-  Given: a discount and promotion
-  When: the button Add Product is executed
-  Then: this allows adding multiples Product implemented by jobs
-
-##### EPL-201
-
-###### Move "Valued Stock Report" to a process definition, the report only can be downloaded in Exel and PDF formatts
-
-**Issue Description**
-
-- Refactor "Valued Stock Report" to a process definition maintaining the functionality.
-- The report only can be downloaded in Exel and PDF formatts.
-
-**Solution Design**
-
-For the report valuation stock, move to process definition and remove the possibility that export in html
-remove the menu and form, and the following files
-src/org/openbravo/erpCommon/ad_reports/ReportValuationStock2.xml
-src/org/openbravo/erpCommon/ad_reports/ReportValuationStock2.html
-
-**Use/Test Cases**
-Given: Etendo environment.
-When: Execute the report valuation stock.
-Then: The process should return the same result.
-
-##### EPL-199
-
-###### Refactor the process 'Payment execution' to a process definition
-
-**Issue Description**
-
-Refactor the process 'Payment execution' to a process definition.
-
-**Solution Design**
-
-- modules_core/org.openbravo.advpaymentmngt/src/org/openbravo/advpaymentmngt/
-ad_forms/BatchPaymentExecution.html
-
-**Use/Test Cases**
-
-Search the process with the ‘Payment execution’ name. This opens a window where the ‘Payments’ with status ‘RPAE’ (If you want to see some values set the payment status to RPAE in DB) can be filtered.
-
-To define a ‘process execution’ go to the financial account window and select a payment method in the ‘payment method’ tab. Set the payment execution type to Automatic and select a ‘execution process’.
-
-**Automatic tests definition**
-
-**Refresh grid test**
-
-Given: A user sending a request with the search button value.
-when: The user sends the request to the process handler.
-then: The response should contain the retry execution.
-and: The response actions should contain the refresh grid values.
-
-**Lines not selected test**
-
-given: A user sending the a request with the process button value.
-when: The user sends the request to the process handler without selected lines.
-then: The response should contain a error for the missing lines.
-
-**Execution process not found test**
-
-given: "A user sending a request with a selected payment".
-when: "The user send the request to the process handler".
-then: "The response should contain a error for the missing 'execution process'".
-
-**Generate popup and execute the process for a custom payment**
-
-given: The user wanting to run the execution process for a payment with automatic execution type.
-when: The user sends the request to the process handler.
-then: The response should contain the information of the popup.
-
-when: The user sends the execution command for the process to be run
-then: The process will execute successfully
-and: The message will show the documentNo of the processed payment
-and: The payment status will be diferent of 'RPAE'.
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q1.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q1.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-3
-## Article Content: 
-#### Fixed issues
-
-
-##### EPL-53
-###### No valid open periods when document is posted but don't have any lines in fact acct
-**Issue Description**
-When you post a document that it don't create any line in fact acct, this document change the status to posted but when you unpost the document with the period closed the class ResetAccounting don't valid if the period is open or not
-
-**Solution Design**
-In the class ResetAccounting validate if the period is open before change the status for the document to set unposted
-
-I included a patch that catch an exception and put this for show a pretty message when a trigger throw an exception, but the finish solution is valid the period and this catch
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-191
-###### Button panel menu is not visible when you move the mouse over it
-**Issue Description**
-What is happening is that when selecting any drop-down menu from the toolbar, the color of the highlight is the same as the color of the font, preventing this from being able to properly display the text.
-
-**Steps to reproduce the error**
-1. Go to https://demo.etendo.cloud/etendo/security/Login and log in.
-2. After that enter to the Invoice (Customer) window, position on an invoice and press from the toolbar the option "Save view" it will open a menu and you can see that the highlight color is the same as the font color and you cannot read the text.
-
-**Expected behavior**
-You should be able to read the text of each menu option.
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-304
-###### Scroll bar with dropdown fields bug
-**Issue Description**
-In form mode using Chrome or Firefox, there is a scrollbar and you have to use it if the fourth field in the row is a dropdown 
-
-**Steps to reproduce the error**
-1. Enter a window where the fourth field of form view is a dropdown list.
-2. The scroll bar appears beneath the form
-
-**Expected behavior**
-No scroll bar should appear
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-306
-###### Problem with the skin of process definition buttons
-**Issue Description**
-In definition processes accessed from the menu, the buttons at the top right are not visible. While the mandatory fields are not filled in, they appear blank and the text is not visible and when the mandatory fields are filled in, only the text appears and the background of the button is not visible 
-
-**Steps to reproduce the error**
-1. Enter from the menu to a process definition window. 
-2. Notice that the process buttons are white
-3. Fill in the required fields and notice that the process buttons are left without the background color 
-
-**Expected behavior**
-The buttons must appear with the corresponding Skin 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-307
-###### Difficulty to see the gray letters in the grid and the letters of the tabs are not active
-**Issue Description**
-Texts on unselected tabs are not as legible due to the color. In addition, it could be analyzed to darken the lettering of the records in grid mode to improve the display.
-
-**Steps to reproduce the error**
-1. Go to Sales Invoice window
-2. See that the names of the tabs TAX, BASIC DISCOUNTS, PAYMENT PLAN, ETC do not contrast well because of their color. Also, note that in grid mode the letter of the existing records could be displayed better.
-
-**Expected behavior**
-It is expected that these letters will be of a contrasting color to enhance contrast and improve visualization. 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-308
-###### The height of the toolbar is reduced when the side scroll bar appears
-**Issue Description**
-In the toolbar, when the side scrollbar is needed, the vertical scrollbar also appears.
-
-**Steps to reproduce the error**
-1. Go to Sales Invoices window
-2. Select a record in grid
-3. Minimize navigator size
-4. Check that two scrollbars appear in the toolbar
-
-**Expected behavior**
-The vertical scroll bar should not appear 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-318
-###### Difficulty in realizing that a record is selected in grid mode
-**Issue Description**
-The colour with which a selected record is shaded in grid mode is very light and often it is not possible to distinguish which one is selected.
-
-**Steps to reproduce the error**
-1. Go to Sales Order window.
-2. Select a record.
-3. Check that the selected record is not very well distinguished.
-
-**Expected behavior**
-Improve shading contrast 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q1.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q1.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-2
-## Article Content: 
-#### Fixed issues
-
-##### EPL-309
-###### No sequences are obtained from the parent organization if the organization does not have one configured
-
-**Error's description**
-When generating a new document to obtain the sequence, the context organization is used and in case there is not one, the sequence of the parent organization should be used.
-
-**Steps to reproduce the error**
-1. Login as F&B International Group Admin (Organization: F&B España, Region Norte)
-2. Go to Document Sequences window
-3. Filter for (F&B España - Region Norte, Order-Document No., Standard Order) and delete records.
-4. Filter for (F&B España S.A., Order-Document No., Standard Order) and delete records.
-5. Go to Sales Order and create a new record.
-6. Check that no header field is rendered
-
-**Expected behavior**
-In the DocumentNo. field, you should set the sequence corresponding to F&B International Group Admin
-
-**Affected Version**
-Etendo 21.4.3
-Etendo 22.1.1
-
-##### EPL-118
-###### Filter nexus credentials in Setup task and only declare nexus credentials in gradle.properties
-
-**Error's description**
-When the setup task is executed and the credentials are configured in the gradle.properties, they are copied to the Openbravo.properties.
-Also, refactor the code to only use nexusUser and nexusPassword.
-
-**Steps to reproduce the error**
-Add nexus credentials in build.gradle  and execute ./gradlew setup task.
-
-**Expected behavior**
-The credentials must not  be added  in Openbravo properties file
-
-**Affected Version**
-22Q1.1  >> Plugin 1.0.0
-
-**Solution Design (optional)**
-Create a filter in the plugin to avoid copying the credentials.
-
-##### EPL-242
-###### Modify the folder where the war is created if the core is in Jars.
-
-**Error's description**
- If the core is in JAR, generate the “etendo.war” file in build/etendo/libs instead of  libs/
-
-**Steps to reproduce the error**
-- In a Etendo base, add the Core jar dependency in the ‘build.gradle': 
-
-```
-dependencies {
-    implementation 'com.etendoerp.platform:etendo-core:22.1.1'
-}
-```
-
-- Verify that the Core in jars is resolved correctly (build/etendo dir)
-- Configure your credentials and run the ./gradlew setup
-- Install the environment ./gradlew install
-- run the antWar task: ./gradlew antWar
-- The ant war file should be created in the lib dir of the root project
-
-**Expected behavior**
-The etendo.war file should be in libs/ insted of build/etendo/libs 
-
-**Affected Version**
-22Q1.1 >> Plugin 1.0.0
-
-**Solution Design (optional)**
-Change the build.xml files to point to the lib root project depending on if the core is in JARs or SOURCES.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q1.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q1.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-1
-## Article Content: 
-#### New features
-##### EE-134
-###### Set the xsql as public access
-**Issue Description**
-Set public access DocInvoice_data.xsql DocLineInvoice_data.xsql to use it in custom modules.
-
-
-#### Fixed issues
-
-##### EPL-227
-###### Error when saving and printing reports
-**Error's description**
-
-When trying to save and print a report (for example: an invoice) an empty error window is launched and the action is not executed.
-The log shows the following error:
-
-```
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.65]
-at java.lang.Thread.run(Thread.java:829) [?:?]
-2022-03-18 19:02:18,587 [http-nio-8080-exec-57] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
-2022-03-18 19:04:51,571 [http-nio-8080-exec-58] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
-2022-03-18 19:05:53,897 [http-nio-8080-exec-41] INFO org.openbravo.service.datasource.DefaultDataSourceService - Couldn't find property from additional property product$productName in entity InvoiceLine
-2022-03-18 19:06:13,094 [http-nio-8080-exec-49] ERROR org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices - Error captured:
-java.lang.NullPointerException: null
-at org.openbravo.erpCommon.utility.reporting.printing.PrintController.buildReport(PrintController.java:654) ~[classes/:?]
-at org.openbravo.erpCommon.utility.reporting.printing.PrintController.post(PrintController.java:269) [classes/:?]
-at org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices.doPost(PrintInvoices.java:57) [classes/:?]
-at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [servlet-api.jar:?]
-at org.openbravo.base.HttpBaseServlet.serviceInitialized(HttpBaseServlet.java:200) [openbravo-core.jar:?]
-at org.openbravo.base.secureApp.HttpSecureAppServlet.service(HttpSecureAppServlet.java:459) [classes/:?]
-at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [servlet-api.jar:?]
-...
-```
-
-This error occurs on a server but does not occur in a local environment.
-
-**Steps to reproduce the error**
-1. Go to a Sales Invoice
-2. Select an existing document
-3. Click on 'Print'
-4. Select 'Yes' option
-5. View the error window
-
-**Expected behaviour**
-The option to save the report must be given.
-
-**Affected Version**
-Etendo 21Q4.2
-
-##### EPL-251
-###### Logs are not displayed when the Acct Server Process is executed
-**Error's description**
-When the accounting process is executed, it is not possible to see the log of this process, although it is executed correctly.
-
-**Steps to reproduce the error**
-1. Go to 'Process Request' window 
-2. Select 'Acct Server Process' record 
-3. Go to 'Process Monitor' tab
-4. Verify that 'Process Log' column is empty
-
-**Expected behavior**
-In 'Process Log' column you should see the process log
-
-**Affected Version**
-Etendo 21.4.2
-Etendo 22.1.0
-
-##### EPL-262
-###### No grouped processes are executed
-**Error's description**
-When a process group is scheduling in process request window, this process never finish
-
-**Steps to reproduce the error**
-- Go to process group window
-- Create a process group with name Test
-- Add “Alert Process” in Process Group List tab
-- Add “Costing Background process” in Process Group List tab
-- Go to Process Request window
-- Create a new record
-- Check the field called Group
-- In the process group field, set the process created called Test
-- Set the timing as Run Immediately
-- Press the button Schedule process.
-- See that process schedule not finish
-
-**Expected behavior**
-- The process group should be finish when all of process configured finish
-- In process Monitor, the end time should not be null and the status should be Success.
-- Check exists data in Process Request → Process Monitor → Processes in Group tab.
-
-**Affected Version**
-Etendo 21.4.2
-Etendo 22.1.0
-
-
-
-
-
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 22Q1.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/22Q1.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/22Q1-0
-## Article Content: 
-#### New platform features
-
-Now you can see the details, scope and documentation in the link below.
-
-- [EPL-3](#epl-3) JARs format supported in Core and Modules.
-- [EPL-195](#epl-195) Landscape balance sheet and profit & loss and only with headings.
-
-#### Fixed issues
-
-- [EPL-50](#epl-50) Property Fields are executing callouts when they should not.
-- [EPL-56](#epl-56) Error when trying to unpost a document with no accounting lines.
-- [EPL-72](#epl-72) Some configuration files are overwritten after expanding Core Version.
-- [EPL-73](#epl-73) Old sequences are used instead of the new ones generated.
-- [EPL-91](#epl-91) Transactionality is not guaranteed when modifying the document type.
-- [EPL-94](#epl-94) The sequence preview is not masked correctly.
-- [EPL-97](#epl-97) Post button gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
-- [EPL-98](#epl-98) Unexpected error with the Etendo logo and Etendo favicon.
-- [EPL-109](#epl-109) When a translation version module is updated, the changes are not applied.
-- [EPL-118](#epl-118) Filter nexus credentials in Setup task.
-- [EPL-119](#epl-119) Delete ad_error_log from the compilation tasks.
-- [EPL-192](#epl-192) Accounting status field is editable
-- [EPL-193](#epl-193) The 'Posted' column has no default value.
-- [EPL-220](#epl-220) buildValidations and moduleScript classes missing in modules_core
-
-
-#### Details
-
-##### EPL-3
-
-###### JARs format supported in Core and Modules.
-
-This allows Etendo to be installed and deployed using compiled Java distributed in JAR format, without losing compatibility with the legacy source format. For this, we work on the tasks of publishing, compiling and deploying the code supported as a JAR.  
-If you work with Etendo in JAR format, you will only visualize some configuration and modules directories, all the rest is in build volatile folder.
-
-You can read more about how to install Etendo modules in JAR format reading [Install modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) page.
-
-You can read the [How to publish modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) page to find out about the new way of publishing.
-
-
-You can migrate the Core format from Source to JAR and the other way around. Read more information in [Core Format Migration](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/core-format-migration/).
-
-You can upgrade Etendo to new versions in only a few steps following the [Upgrade Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/upgrade/upgrade-etendo-to-any-version/) guide.
-
-##### EPL-50
-
-###### Property Fields are executing callouts when they should not
-
-**Issue Description**
-When there is a property field defined for certain window, the callout of the referenced field gets executed. This is wrong.
-For example, defining a property field in the Sales Invoice window referencing a field of the Sales Order window, will execute a Sales Order callout, an it will likely fail with an exception.
-
-**Solution Design**
-FormInitializationComponent should be making a special consideration when determining which fields have a callout, by checking if the current field is a property field or not.
-
-##### EPL-56
-
-###### Error when trying to unpost a document without accounting lines
-
-**Error's description**  
-When trying to unpost a document that did not generate any accounting lines (fact_acct records), an error is raised.  
-An example of a document that does not have any accounting lines after being posted is a Goods Shipment without price (in its related Sales Order).
-
-**Solution Design**  
-The root issue is a null pointer exception in the ResetAccounting class. The Posted class will try to select the organization and client of the accounting records, and given that there are none, the values are sorted as empty strings. This leads to the NullPointerException down the line.
-
-Either class should check their input so that the exception is not raised, but the document should also be left as Posted = 'N' without errors facing the user.
-
-**Affected Version**  
-21Q4
-
-##### EPL-72
-
-###### Some configuration files are overwritten after expanding Core Version
-
-**Error description: **
-After doing a version update of Etendo core the Openbravo.properties configuration file is completely overwritten by modifying the following points:
-
-- attach.path
-- context.name
-- source.path
-- bbdd.url
-- bbdd.sid
-- allow.root
-
-The Format.xml file was also modified, probably for the same as point 1).
-
-**Steps to reproduce the error:**
-./gradlew expandCore (in the main directory of the ERP)
-
-**Expected result:**
-A clean update with no overwritten settings.
-
-**Affected Version:**
-Specifically snapshot 20.2.1.1636372732–20211108.135711–2
-
-##### EPL-73
-
-###### Old sequences are used instead of the new ones generated
-
-**Error's description**  
-When the sequence defined with the new process is used and the mask to include dates or some prefix is changed, the old sequence is called and generates a wrong result.
-
-**Steps to reproduce the error**
-
-- Log-in as system administrator.
-- Go to tables and columns and search ‘c_invoice' table and modify 'DocumentNo’ record:
-- Reference: Transactional Sequence.
-- Run './gradlew martbuild'
-- Change role to 'QA Testing'
-- Go to General Setup || Application || Create Sequences
-- Select '\*' organization and click 'Done' (Execute the process which creates the sequences).
-- Go to Financial Management || Accounting || Setup || Document Sequence
-- pen as form the register (Spain, Invoice-Document No., AR Invoice).
-- Change the mask: Mask: y-###-##### and Save.
-- Create a new sales invoice register
-
-**Expected result**  
-The documentNo record should show a preview like “2021-100-0001“
-
-**Affected Version**  
-Etendo 21Q4
-
-##### EPL-91
-
-###### Transactionality is not guaranteed when modifying the document type
-
-**Error's description**  
-When a document is saved and the sequence is generated, if the document type is changed, the callout changes the documentNo and the transactionality is broken
-
-**Steps to reproduce the error**  
--Create a new invoice and save it
-
--Change the document type and save again
-
-**Expected result**  
-An error message should be shown
-
-**Solution Design**  
-Auto generate event observers in the compilation time (like the contributors generation) and throw an exception in case of updating the transactional sequence field.
-
-**Affected Version**  
-21Q4
-
-##### EPL-94
-
-###### The sequence preview is not masked correctly
-
-**Error's description**
-When a new document is created, the preview in the documentNo field only shows the next number but not masked (because a legacy callout is called)
-
-**Steps to reproduce the error**
-Create a new invoice
-
-**Expected result**
-The documentNo field preview shows the same sequence as when the document is saved
-
-**Solution Design**
-Modify the legacy callout to identify if the field is a transactional sequence reference and avoid to execute the logic.
-
-**Affected Version:**
-21Q4
-
-##### EPL-97
-
-###### Post button gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
-
-**Error's description:**
-When trying to post a Collection, being disabled for accounting the table fin_payment, it remains in 'Error', when it should be in 'Document disabled'
-According to the log, the error is in the module com.smf.jobs
-
-**Steps to reproduce the error:**
-
-1. Disable accounting for the Fin_Payment table
-2. Create a payment in/payment out, complete it and then post it.
-
-**Expected behaviour**:
-When accounting is not enabled for that window in the posting button, after an attempt is made to post it, it should be shown as "Document Disabled".
-
-**Affected Version:**
-Etendo 21Q3 - 21Q4
-
-##### EPL-98
-
-###### Unexpected error with the Etendo logo and Etendo favicon.
-
-**Error's description:**
-
-1\. The Openbravo logo is shown when the system does not find the page you try to visit.
-
-2\. The Openbravo favicon is shown when the system does not find the page you are trying to visit, but if the page is found, the Etendo favicon is not shown and it remains blank.
-
-3\. The Etendo logo is not shown in the login page.
-
-**Affected Version:**  
-Etendo  21Q4
-
-##### EPL-109
-
-###### When a translation version module is updated, the changes are not applied
-
-**Error's description**
-If changes were made to an installed module, these changes are not applied when an update.database is run.
-
-**Steps to reproduce the error**
-
-- Install a translation module, e.g. moduleDeps ('com.etendoerp:quotation.es_ES:latest.release@zip')
-- Make a change in this module and change the version in AD_MODULE.xml
-- Run ./gradlew update.database smartbuild
-- Verify the change is not applied
-
-**Expected behaviour**  
-The change has been applied
-
-**Affected Version**  
-Etendo 21Q4.1
-
-##### EPL-118
-
-###### Filter nexus credentials in Setup task
-
-**Error's description**  
-When the setup task is executed and the credentials are configured in the gradle.properties, they are copied to the Openbravo.properties.
-
-**Steps to reproduce the error**  
-Add nexus credentials in build.gradle and execute ./gradlew setup task.
-
-**Expected behaviour**  
-The credentials must not be added in Openbravo properties file
-
-**Affected Version**  
-21Q4.1 >> Plugin 1.0.0
-
-##### EPL-119
-
-###### Delete ad_error_log from the compilation tasks
-
-**Error's description**  
-\[ant:sql\] Failed to execute: DELETE FROM ad_error_log where system_status=(select system_status from ad_system_info)\[ant:sql\] org.postgresql.util.PSQLException: ERROR: relation "ad_error_log" does not exist
-
-**Steps to reproduce the error**  
-When compilation tasks are executed, this error is shown, because this relation was deleted.
-
-**Expected behaviour**  
-Description of the expected behaviour without the bug.
-
-**Affected Version**  
-Develop - 22Q1
-
-**Solution Design**  
-Find the task that executes this sql and delete it.
-
-##### EPL-192
-
-###### Accounting status field is editable
-
-**Error's description:**
-Etendo has the new functionality of the 'Accounting Status' field which details the accounting status of the records. Currently, it is editable by the user and should be in read-only mode.It is visible in the c_invoice, m_inout, fin_payment, m_inventory and fin_finacc_transaction tables.
-
-**Steps to reproduce the error**
-
-- Go to 'Sales Invoice' window
-- Open a record in form mode
-- Verify that 'Accounting Status' is editable
-
-**Expected behavior**
-The 'Accounting status' field must be read-only.
-
-**Affected Version**
-Etendo 21Q4.1
-
-##### EPL-193
-
-###### The 'Posted' column has no default value
-
-**Error's description:**
-In the ‘M_Inventory’ and ‘M_InOut’ tables, the 'Posted' column has no default value set.
-
-**Steps to reproduce the error**
-
-- Login as ‘System administrator’
-- Go to 'Tables and Columns'
-- Select 'M_InOut' table
-- Verify that 'Posted' column has not defaulted value
-- Go to 'Reference'
-- Open 'ALL_ACCOUNTING STATUS'
-- Sort 'LIST REFERENCE' alphabetically
-- Verify that the first value is 'Cost Not Calculated'
-- Login as 'F&B International Group Admin'
-- Go to 'Goods Shipment'
-- Create a new Good Shipment
-- Verify that the value of the 'Accounting Status' field is 'Cost Not Calculated'.
-
-**Expected behavior**
-The 'Accounting Status' field must have a default value.
-
-**Affected Version**
-Etendo 21Q4.1
-
-##### EPL-195
-
-###### Landscape balance sheet and profit & loss and only with headings
-
-**Issue Description**
-Allow download the pdf from balance sheet and profit & loss in landscape mode.
-
-**Solution Design**
-
-- Add a new check for select if the report should be downloaded in landscape or not.
-
-- Create a new jrxml in landscape mode for balance sheet report
-
-- Create a new jrxml in landscape mode for profit & loss report
-
-- Modify the java implementation for print one jrxml or jrxml in landscape depending the new check created previously
-
-**Use/Test Cases**
-
-- Given: “Balance Sheet AND P&L Structure Process“
-- When: Generate the pdf to print the balance sheet report or profit & loss report and select the check for print in landscape in true
-- Then: Generate the pdf to print the balance sheet report or profit & loss report and select the check for print in landscape in true And you should see the pdf downloaded are in landscape with the new jrxml created
-
-##### EPL-220
-
-###### buildValidations and moduleScript classes missing in modules_core
-
-**Error description **
-The buildValidation and modulesScript of the modules_core are not being distributed in the core.
-
-**Steps to reproduce the error**
-Run update.database
-
-**Expected behaviour**
-The buildValidationsand modulesScript cases are found in the project and executed.
-
-**Affected version**
-21Q4
-
-**Solution design**
-Compile the buildValidations and mosduleScript and add them to the core repository.
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.9
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.9
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-9
-## Article Content: 
-#### Fixed issues
-
-###### Bug
-
-- [EPL-486](https://github.com/etendosoftware/etendo_core/issues/113){target="\_blank"} Error downloading reports with Google Chrome
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.8
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.8
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-8
-## Article Content: 
-#### Fixed issues
-
-###### Bug
-
-- [EPL-359](https://github.com/etendosoftware/etendo_core/issues/44){target="\_blank"} Multirecord processes cause loss of focus on records
-- [EPL-351](https://github.com/etendosoftware/etendo_core/issues/32){target="\_blank"} Process buttons in form mode that are disabled are visible
-- [EPL-275](https://github.com/etendosoftware/etendo_core/issues/23){target="\_blank"} Error when posting document with product with no cost defined
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.7
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.7
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-7
-## Article Content: 
-#### Fixed issues
-
-- [EPL-230](https://github.com/etendosoftware/etendo_core/issues/51){target="\_blank"} Duplicate foreign keys in 'JOBS_JOB_RESULT.xml' and ojdbc8
-- [EPL-338](https://github.com/etendosoftware/etendo_core/issues/20){target="\_blank"} Customize Field Skin in read-only
-- [EPL-353](https://github.com/etendosoftware/etendo_core/issues/33){target="\_blank"} When clicking on "Complete" a Goods Shipment the "Document Action" field has no default value.
-- [EPL-356](https://github.com/etendosoftware/etendo_core/issues/36){target="\_blank"} The background process monitor does not work properly when it ends with an error
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.6
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.6
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-6
-## Article Content: 
-#### Fixed issues
-
-
-##### EPL-191
-###### Button panel menu is not visible when you move the mouse over it
-**Issue Description**
-What is happening is that when selecting any drop-down menu from the toolbar, the color of the highlight is the same as the color of the font, preventing this from being able to properly display the text.
-
-**Steps to reproduce the error**
-1. Go to https://demo.etendo.cloud/etendo/security/Login and log in.
-2. After that enter to the "Invoice (Customer)" window, position on an invoice and press from the toolbar the option "Save view" it will open a menu and you can see that the highlight color is the same as the font color and you cannot read the text.
-
-**Expected behavior**
-You should be able to read the text of each menu option.
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-304
-###### Scroll bar with dropdown fields bug
-**Issue Description**
-In form mode using Chrome or Firefox, there is a scrollbar and you have to use it if the fourth field in the row is a dropdown 
-
-**Steps to reproduce the error**
-1. Enter a window where the fourth field of form view is a dropdown list.
-2. The scroll bar appears beneath the form
-
-**Expected behavior**
-No scroll bar should appear
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-306
-###### Problem with the skin of process definition buttons
-**Issue Description**
-In definition processes accessed from the menu, the buttons at the top right are not visible. While the mandatory fields are not filled in, they appear blank and the text is not visible and when the mandatory fields are filled in, only the text appears and the background of the button is not visible 
-
-**Steps to reproduce the error**
-1. Enter from the menu to a process definition window. 
-2. Notice that the process buttons are white
-3. Fill in the required fields and notice that the process buttons are left without the background color 
-
-**Expected behavior**
-The buttons must appear with the corresponding Skin 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-307
-###### Difficulty to see the gray letters in the grid and the letters of the tabs are not active
-**Issue Description**
-Texts on unselected tabs are not as legible due to the color. In addition, it could be analyzed to darken the lettering of the records in grid mode to improve the display.
-
-**Steps to reproduce the error**
-1. Go to Sales Invoice window
-2. See that the names of the tabs TAX, BASIC DISCOUNTS, PAYMENT PLAN, ETC do not contrast well because of their color. Also, note that in grid mode the letter of the existing records could be displayed better.
-
-**Expected behavior**
-It is expected that these letters will be of a contrasting color to enhance contrast and improve visualization. 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-308
-###### The height of the toolbar is reduced when the side scroll bar appears
-**Issue Description**
-In the toolbar, when the side scrollbar is needed, the vertical scrollbar also appears.
-
-**Steps to reproduce the error**
-1. Go to Sales Invoices window
-2. Select a record in grid
-3. Minimize navigator size
-4. Check that two scrollbars appear in the toolbar
-
-**Expected behavior**
-The vertical scroll bar should not appear 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-##### EPL-318
-###### Difficulty in realizing that a record is selected in grid mode
-**Issue Description**
-The colour with which a selected record is shaded in grid mode is very light and often it is not possible to distinguish which one is selected.
-
-**Steps to reproduce the error**
-1. Go to Sales Order window.
-2. Select a record.
-3. Check that the selected record is not very well distinguished.
-
-**Expected behavior**
-Improve shading contrast 
-
-**Affected Version**
-Etendo 21.4.5
-Etendo 22.1.2
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.5
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.5
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-5
-## Article Content: 
-#### Fixed issues
-
-
-##### EPL-50 
-###### Property Field are executing callouts when they should not
-**Issue Description**
-When there is a property field defined for certain window, the callout of the referenced field gets executed. This is wrong.
-For example, defining a property field in the Sales Invoice window referencing a field of the Sales Order window, will execute a Sales Order callout, an it will likely fail with an exception.
-
-**Solution Design**
-Apply the attached patch.
-FormInitializationComponent should be making a special consideration when determining which fields have a callout, by checking if the current field is a property field or not.
-
-##### EPL-56 
-###### Error when trying to unpost a document with no accounting lines
-**Issue Description**
-When trying to unpost a document that did not generate any accounting lines (fact_acct records), an error is raised.
-
-An example of a document that does not have any accounting lines after being posted, is of a Goods Shipment without price (in its related Sales Order).
-
-**Solution Design**
-
-The root issue is a null pointer exception in the ResetAccounting class. The Posted class will try to select the organization and client of the accounting records, and given that there are none, the values are sorted as empty strings. This leads to the NullPointerException down the line.
-
-Either class should check their input so that the exception is not raised, but the document should also be left as Posted = 'N' without errors facing the user.
-
-##### EPL-97 
-###### Accounting status column gets the message "Error" when it should indicate "Document Disabled" when posting a payment/collection.
-
-**Error's description:**
-When trying to post a Collection, being disabled for accounting the table fin_payment, it remains in 'Error', when it should be in 'Document disabled' (image albastar error).
-According to the log, the error is in the module com.smf.jobs (log image is attached).
-
-**Steps to reproduce the error:**
-1. Disable accounting for the Fin_Payment table
-2. Create a payment in/payment out, complete it and then post it.
-
-**Expected behaviour:**
-When accounting is not enabled for that window in the posting button, after an attempt is made to post it should show as "Document Disabled".
-
-**Affected Version:**
-Etendo 21Q4
-
-##### EPL-109 
-###### When update a translation version module, the changes aren't applied
-**Error's description**
-If changes were made to an installed module, these changes are not applied when an update.database is run.
-
-**Steps to reproduce the error**
-1. Install a translation module,  e.g. 
-
-```
-moduleDeps ('com.etendoerp:quotation.es_ES:latest.release@zip'){ transitive = true}
-```
-
-2. Make a some change in this module and change the version in AD_MODULE.xml
-
-3. Run ./gradlew update.database smartbuild
-
-4. Verify that change are not applied
-
-**Expected behaviour**
-The change has been applied
-
-**Affected Version**
-Etendo 21Q4.1
-
-
-##### EPL-220 
-###### buildValidations and moduleScript classes missing in modules_core
-**Description of the error**
-The buildValidation and modulesScript of the modules_core are not being distributed in the core.
-
-**Steps to reproduce the error**
-Run update.database
-
-**Expected behaviour**
-The buildValidationsand modulesScript cases are found in the project and executed.
-
-**Affected version**
-Etendo 21Q4
-
-**Solution design**
-Compile the buildValidations and mosduleScript and add them to the core repository.
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.4
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.4
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-4
-## Article Content: 
-#### Fixed issues
-
-##### EPL-94
-###### The sequence preview is not masked correctly
-
-**Error's description**
-When  a new document is created, the preview in the documentNo field  only show the next number but not masked (because a legacy callout is called)
-
-**Steps to reproduce the error**
-Create a new invoice
-
-**Expected result**
-The documentNo field preview show the same sequence as when save the document
-
-**Solution Design**
-Modify the legacy callout to identify if the field is an transactional sequence reference and avoid to execute the logic. 
-
-**Environment**
-21Q4.3
-
-##### EPL-309
-###### No sequences are obtained from the parent organization if the organization does not have one configured
-
-**Error's description**
-When generating a new document to obtain the sequence, the context organization is used and in case there is not one, the sequence of the parent organization should be used.
-
-**Steps to reproduce the error**
-1. Login as F&B International Group Admin (Organization: F&B España, Region Norte)
-2. Go to Document Sequences window
-3. Filter for (F&B España - Region Norte, Order-Document No., Standard Order) and delete records.
-4. Filter for (F&B España S.A., Order-Document No., Standard Order) and delete records.
-5. Go to Sales Order and create a new record.
-6. Check that no header field is rendered
-
-**Expected behavior**
-In the DocumentNo. field, you should set the sequence corresponding to F&B International Group Admin
-
-**Affected Version**
-Etendo 21.4.3
-Etendo 22.1.1
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.3
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.3
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-3
-## Article Content: 
-#### Fixed issues
-
-##### EPL-227
-###### Error when saving and printing reports
-
-**Error's description**
-When trying to save and print a report (for example: an invoice) an empty error window is launched and the action is not executed.
-The log shows the following error:
-
-```
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.65]
-at java.lang.Thread.run(Thread.java:829) [?:?]
-2022-03-18 19:02:18,587 [http-nio-8080-exec-57] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
-2022-03-18 19:04:51,571 [http-nio-8080-exec-58] INFO org.openbravo.erpCommon.obps.ActivationKey - Loading activation key from DB
-2022-03-18 19:05:53,897 [http-nio-8080-exec-41] INFO org.openbravo.service.datasource.DefaultDataSourceService - Couldn't find property from additional property product$productName in entity InvoiceLine
-2022-03-18 19:06:13,094 [http-nio-8080-exec-49] ERROR org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices - Error captured:
-java.lang.NullPointerException: null
-at org.openbravo.erpCommon.utility.reporting.printing.PrintController.buildReport(PrintController.java:654) ~[classes/:?]
-at org.openbravo.erpCommon.utility.reporting.printing.PrintController.post(PrintController.java:269) [classes/:?]
-at org.openbravo.erpCommon.utility.reporting.printing.PrintInvoices.doPost(PrintInvoices.java:57) [classes/:?]
-at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [servlet-api.jar:?]
-at org.openbravo.base.HttpBaseServlet.serviceInitialized(HttpBaseServlet.java:200) [openbravo-core.jar:?]
-at org.openbravo.base.secureApp.HttpSecureAppServlet.service(HttpSecureAppServlet.java:459) [classes/:?]
-at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [servlet-api.jar:?]
-...
-```
-
-This error occurs on a server but does not occur in a local environment.
-
-**Steps to reproduce the error**
-1. Go to a Sales Invoice
-2. Select an existing document
-3. Click on 'Print'
-4. Select 'Yes' option
-5. View the error window
-
-**Expected behaviour**
-The option to save the report must be given.
-
-**Affected Version**
-Etendo 21Q4.2
-
-##### EPL-251
-###### Logs are not displayed when the Acct Server Process is executed
-
-**Error's description**
-When the accounting process is executed, it is not possible to see the log of this process, although it is executed correctly.
-
-**Steps to reproduce the error**
-1. Go to 'Process Request' window 
-2. Select 'Acct Server Process' record 
-3. Go to 'Process Monitor' tab
-4. Verify that 'Process Log' column is empty
-
-**Expected behavior**
-In 'Process Log' column you should see the process log
-
-**Affected Version**
-Etendo 21.4.2
-Etendo 22.1.0
-
-##### EPL-262
-###### No grouped processes are executed
-
-**Error's description**
-When a process group is scheduling in process request window, this process never finish
-
-**Steps to reproduce the error**
-- Go to process group window
-- Create a process group with name Test
-- Add “Alert Process” in Process Group List tab
-- Add “Costing Background process” in Process Group List tab
-- Go to Process Request window
-- Create a new record
-- Check the field called Group
-- In the process group field, set the process created called Test
-- Set the timing as Run Immediately
-- Press the button Schedule process.
-- See that process schedule not finish
-
-**Expected behavior**
-- The process group should be finish when all of process configured finish
-- In process Monitor, the end time should not be null and the status should be Success.
-- Check exists data in Process Request → Process Monitor → Processes in Group tab
-
-**Affected Version**
-Etendo 21.4.2
-Etendo 22.1.0
-
-
-
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.2
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.2
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-2
-## Article Content: 
-#### Fixed issues
-
-##### EPL-192
-
-###### Accounting status field is editable
-
-**Error's description:**
-Etendo has the new functionality of the 'Accounting Status' field which details the accounting status of the records. Currently, it is editable by the user and should be in read-only mode. It is visible in the c_invoice, m_inout, fin_payment, m_inventory and fin_finacc_transaction tables.
-
-**Steps to reproduce the error**
-
-Go to 'Sales Invoice' window
-Open a record in form mode
-Verify that 'Accounting Status' is editable
-Expected behavior
-The 'Accounting status' field must be read-only.
-
-**Affected Version**
-Etendo 21Q4.1
-
-##### EPL-193
-
-###### The 'Posted' column has no default value
-
-**Error's description:**
-In the ‘M_Inventory’ and ‘M_InOut’ tables, the 'Posted' column has no default value set.
-
-**Steps to reproduce the error**
-
-Login as ‘System administrator’
-Go to 'Tables and Columns'
-Select 'M_InOut' table
-Verify that 'Posted' column has not defaulted value
-Go to 'Reference'
-Open 'ALL_ACCOUNTING STATUS'
-Sort 'LIST REFERENCE' alphabetically
-Verify that the first value is 'Cost Not Calculated'
-Login as 'F&B International Group Admin'
-Go to 'Goods Shipment'
-Create a new Good Shipment
-Verify that the value of the 'Accounting Status' field is 'Cost Not Calculated'.
-Expected behavior
-The 'Accounting Status' field must have a default value.
-
-**Affected Version**
-Etendo 21Q4.1
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.1
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.1
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-1
-## Article Content: 
-#### Fixed issues
-
-##### EPL-103
-
-###### Upgrade of log4j to version 2.16 to fix vulnerabilities
-
-**Error's description**
-In response to the recent security vulnerabilities identified in the Log4j project, an extra recommended action is now advised for users. The primary reasons for this recommendation are as follows:
-
-* **Upgrade to Log4j 2.16**: The Log4j project security team now strongly recommends updating to version 2.16 for enhanced protection. This version disables the risky "JNDI Lookups" feature, significantly bolstering security. This proactive step provides an additional layer of defense against any potential future vulnerabilities discovered in this area.
-
-* **CVE-2021-45046**: A new security vulnerability, identified as CVE-2021-45046, has been reported recently. This vulnerability was not covered by the existing recommendations, creating a potential security gap.
-
-For detailed technical information and instructions, please refer to the following resources:
-
-* [Apache Log4j security information (for 2.16)](https://logging.apache.org/log4j/2.x/security.html){target="\_blank"}
-* [CVE-2021-45046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046){target="\_blank"}
-* [External Analysis and Mitigation Guidance](https://www.lunasec.io/docs/blog/log4j-zero-day-mitigation-guide/){target="\_blank"}
-* [Updates on CVE-2021-45046](https://www.lunasec.io/docs/blog/log4j-zero-day-update-on-cve-2021-45046/){target="\_blank"}
-
-**Affected Version**
-Etendo 21Q4
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: 21Q4.0
-## Article Path: /What's New/Release Notes/Etendo Classic/Releases/21Q4.0
-## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/versions/21Q4-0
-## Article Content: 
-#### New functionalities
-
-[ERP-635] Fix AllQuickAntTaskTests test suite
-
-[ERP-576] Define initializator for database acces for Spock Test
-
-[ERP-574] Transactional Sequencte Tests implementation
-
-[ERP-557] Develop the  process to create sequences
-
-[ERP-520] Proof of concept legacy code injection
-
-[ERP-500] New Sequence Implementation Tests
-
-[ERP-497] DB Sequences must be exportables and  being able to install when installing a module
-
-[ERP-496] Implement Masking and regex logic
-
-[ERP-495] Non Transactional Sequence Implementation
-
-[ERP-494] Transactional Sequence Implementation
-
-[ERP-493] Check new sequence generation performance
-
-[ERP-490] Ensure new sequence is compatible with the current AD\_SEQUENCE approach
-
-[ERP-489]Implement Sequence Reference in Application Dictionary
-
-[ERP-488] Implement new sequences architecture in Java
-
-[ERP-471] Define a new mechanism to handle sequenced columns
-
-[ERP-461] HBM files creation on compile time
-
-[ERP-447] Create role for k8s with limited resources
-
-[ERP-431] Implement tests infrastructure for gradle plugin tasks
-
-[ERP-424] Cluster-aware process execution
-
-[ERP-422] Create Task in gradle to generate Nexus users from csv file.
-
-[ERP-408] Gradle task for change deployment from mvn to gradle
-
-[ERP-369] Massive post/unpost docs
-
-[ERP-367] Use Tomcat redis  instead of  local cache
-
-[ERP-366] Fix login cloud instances in cluster implementations
-
-[ERP-364]Implement health checks \(kubernete\)
-
-[ERP-362] Add parameters for core and plugin version in etendo docker images for testing
-
-[ERP-345] Create task in gradle  to check that all basic compile files are available
-
-[ERP-338] expandCore/expandModules reset flag
-
-[ERP-314] Etendo legacy skin
-
-[ERP-277]Kubernetes Ready
-
-[ERP-274]Test if skin modules are compatible with default changed ui
-
-[ERP-266] Refactor jobs separating functionality and architecture in different modules
-
-[ERP-249] Modules directory: modules\_core, modules \(custom\)
-
-[ERP-235] Update license restrictions file with new signature
-
-[ERP-228] Update Jenkins deployment pipeline to support deploying modules via Gradle
-
-[ERP-226] Migrate Core repository to Gradle based deployment
-
-[ERP-225] Support core version change from user's build.gradle when using etendo.gradle plugin
-
-[ERP-223] New skin design 
-
-[ERP-212] Gradle tomcat deployment
-
-[ERP-210] Mechanism to use public jars rather than local jars \(For new libs dependencies\)
-
-[ERP-181] Replace all references of Openbravo keywords
-
-[ERP-143] support ant log level in gradle \(etendo core\)
-
-[ERP-138] Verify Gradle dependency resolution and module expansion
-
-[ERP-121] Alert to send Host and instance purpose when sending e-mail
-
-[ERP-114] Apply patches with improvements to core
-
-[ERP-84] Massive SI Creation
-
-[ERP-83] Massive SO Send
-
-[ERP-82] Massive PO Closing
-
-[ERP-64] Introduce gitflow to repository
-
-[ERP-54] Test infrastructure
-
-[ERP-29] Process Invoice Action
-
-[ERP-27] Massive record cloning
-
-[ERP-26] Grid summary functions dynamically calculated when selecting records
-
-[ERP-21] CI and demo environment
-
-[ERP-10] General Backend \(Entities, classes, API\)
-
-###### Sub Tasks
-
-[ERP-252] Publish jar task
-
-[ERP-234] Task declareModule
-
-[ERP-231] New default skin
-
-[ERP-229] Login HTML page should have CSS and Fonts as local resources
-
-[ERP-224] New login page
-
-[ERP-221] remove modules to normalize
-
-[ERP-220] Modify dependencies in build.gradle
-
-[ERP-216] Credits Section in Login Page
-
-[ERP-215] Gradle request to nexus  to check if the module exist in own repository
-
-[ERP-213] Remove mvn requirement to publish modules
-
-[ERP-208] Check API to see if the module already exists
-
-[ERP-207] Ask for Nexus credentials
-
-[ERP-201] Deploy in nexus
-
-[ERP-198] Check if pom.xml and assembly.xml files exist in a module directory
-
-[ERP-183] Add a mechanism to download the latest compiled version
-
-[ERP-182] Replace all logos and images with Etendo logos and new placeholders
-
-[ERP-175] Update server build.gradle
-
-[ERP-172] Create etendo gradle plugin
-
-[ERP-170] Set configuration parameters from original Openbravo.properties file.
-
-[ERP-169] Nexus security - gradle interaction
-
-[ERP-160] Gradle read dependencies from external file
-
-[ERP-150] Synchronize module list between service
-
-[ERP-149] Metadata analyze and decide  what to do in client and server.
-
-[ERP-141] Show Etendo logo in login page
-
-[ERP-118] Upgrade core to 20Q2
-
-
-[ERP-117] Deploy modules to nexus
-
-[ERP-110] Deploy modules to nexus repository
-
-[ERP-109] Upgrade modules to a 20Q1 compatible version
-
-[ERP-105] Configure Nexus Repo
-
-[ERP-88] Permissions
-
-[ERP-86] Fix Legacy Test failures
-
-[ERP-85] Killable Implementation
-
-[ERP-71] Manual Testing
-
-[ERP-66] Test definition
-
-[ERP-52] Test and fixes
-
-[ERP-51] Expo Eject
-
-[ERP-50] Functional Documentation
-
-[ERP-49] Technical Documentation
-
-[ERP-48] User Manual
-
-[ERP-43] Set up ERP server with the stack
-
-[ERP-41] Main implementation
-
-[ERP-40] Implement Tests
-
-
-#### Fixed issues
-
-###### Bugs
-
-[ERP-601] Gradle freeze on intellij on windows
-
-[ERP-562] The accounting process of goods shipment does not use the custom class of the project, but the etendo class.
-
-[ERP-561] Error in displaying error message in the accounting process in the goods shipment window
-
-[ERP-487] AttachImplementationManager process fails to update/save metadata of type OBUISEL\_Selector
-
-[ERP-473] Process Orders pop up fails when record is opened from the "Recent Documents" menu
-
-[ERP-455] Wrong gradle settings
-
-[ERP-444] Change URL / Link on Etendo Logo
-
-[ERP-440] Mixed request content broke manual windows
-
-[ERP-405] Complete/Reactivate process does not show result message when being executed from a child tab.
-
-[ERP-404] Improve Address handling when creating an Invoice from a Goods Shipment
-
-[ERP-385] export.config.script does not include modules\_core
-
-[ERP-378] Sales Quotation has no document action when status is under evaluation
-
-[ERP-370] XSS Attack
-
-[ERP-281] Wrong translation in Show grid \+ form tooltip
-
-[ERP-204] Checkbox need 2 clicks to be checked or unchecked
-
-[ERP-200] Sales Order Default action is not correct
-
-[ERP-87] Fix Menu Tree not available
-
-###### Internal Bug
-
-[ERP-556] Mask Formatter truncates input when it overflows the mask
-
-[ERP-486] Rich field text area error
-
-[ERP-436] registerModule task does not use credentials when stored in gradle.properties
-
-[ERP-428] Set correct core version in AD\_MODULE.XML
-
-[ERP-423] Gradle setup task does not replace settings
-
-[ERP-376] registerModule Task: Return an OK status when nexus privilege already exists
-
-[ERP-344] ERP Change favicon with the one in the web
-
-[ERP-315] javascript error when login after merged massive jobs refactor
-
-[ERP-269] CI / CD Jenkins automation - Dockerize core
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40938,6 +38807,23 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Procurement Extensions Bundle
+## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Procurement Extensions Bundle
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/procurement-extensions/release-notes
+## Article Content: 
+#### Overview
+
+| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
+| --- 		| ---           | ---    | ---    | --- | :---:             |
+| [1.0.0](#100) 	| 19/02/2024 	| 22.1.0 | 24.1.0 | CS	| :white_check_mark:|
+
+#### Release Notes
+##### 1.0.0
+- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md)
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Etendo BI Bundle
 ## Article Path: /What's New/Release Notes/Etendo Classic/Bundles/Etendo BI Bundle
 ## Article URL: 
@@ -41092,6 +38978,23 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 ##### 1.4.0
 - Remove all translation modules dependencies to translated modules
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Procurement Extensions Bundle ES
+## Article Path: /What's New/Release Notes/Etendo Classic/Translation Bundles/Procurement Extensions Bundle ES
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes
+## Article Content: 
+#### Overview
+
+| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
+| --- 		| ---           | --- | --- | :---:             |
+| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+
+#### Release Notes
+##### 1.0.0
+- The translation module `com.etendoerp.purchase.invoice.validations.es_es` has been added.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Bundle ES
