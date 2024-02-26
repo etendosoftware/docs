@@ -29,7 +29,7 @@ This documentation will guide you through the process of setting up and using we
 | Module          | Module in which the webhook will be created                |
 | Active          | Webhook status (Active by default)                         |
 
-![Webhook Header](/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
+![Webhook Header](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
 
 ### Webhook Tabs Fields
 
@@ -67,7 +67,7 @@ The access tab allows you to create access that will be used in the URL call.
     | Description     | Create alert with custom message                           |
     | Java Class      | com.etendoerp.webhookevents.ad_alert.AdAlertWebhookService |
             
-    ![Webhook Alert](/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAlert.png)
+    ![Webhook Alert](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAlert.png)
 
 3. Focus on "Params" tab and create the following params:
 
@@ -76,7 +76,7 @@ The access tab allows you to create access that will be used in the URL call.
     | Name            | description              | :white_check_mark: |
     | Name            | rule                     | :white_check_mark: | 
         
-![Webhook Params](/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
+![Webhook Params](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
         
 
 ### API Key Generation
@@ -85,7 +85,7 @@ The access tab allows you to create access that will be used in the URL call.
 2. Create a new API with the Name: `<<user>> token`
 3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
     
-![Webhook Token](/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
+![Webhook Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
     
 
 ### Assigning Webhook Access to Users
@@ -94,7 +94,7 @@ The access tab allows you to create access that will be used in the URL call.
 2. Select the created webhook and open the access tab.
 3. Create a new row and select the previously created API record.
 
-![Webhook Access](/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
+![Webhook Access](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
 
 ### Executing the Webhook
 
