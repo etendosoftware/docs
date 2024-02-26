@@ -13,7 +13,7 @@ Etendo will consider a purchase invoice duplicated if another purchase invoice w
 - Supplier Reference
 - Invoice year, present in the Invoice date field
 
-![](/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
 
 Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.
 
@@ -26,12 +26,12 @@ A configurable system preference will be used to enable or disable the validatio
 From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.
 
 !!!note
-    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#preference){target="_blank"}.
+    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#preference){target="_blank"}.
 
-![](/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
 
 ## Validation
 
 The validation will prevent the saving of a purchase invoice that is considered duplicated according to the established criteria. If the system detects that the invoice being saved is duplicated, the user will be informed through a message indicating the nature of the duplication as shown here:
 
-![](/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png)
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png)
