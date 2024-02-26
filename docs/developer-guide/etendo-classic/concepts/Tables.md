@@ -1,61 +1,20 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  Tables
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Common Columns 
-    * 2.1  Primary Key 
-    * 2.2  Client/Organization 
-    * 2.3  Audit Information 
-  * 3  Naming conventions 
-    * 3.1  Tables 
-    * 3.2  Columns 
-      * 3.2.1  Modularity 
-      * 3.2.2  Primary Key Column 
-      * 3.2.3  Foreign Key Columns 
-      * 3.2.4  Naming of Columns and the Data Access Layer 
-  * 4  Supported Column Data types 
-
-  
----  
+---
+title: Tables
+---
   
 ##  Introduction
 
 Physical database tables are the basis  Application Dictionary Data Model  is
-built on. This document discusses the particularities all tables in Openbravo
-ERP must have.
+built on. This document discusses the particularities all tables in Etendo Classic must have.
 
 ##  Common Columns
 
-All tables in Openbravo ERP must have some common columns. All these columns
+All tables in Etendo Classic must have some common columns. All these columns
 must be defined as not nullable.
 
 ###  Primary Key
 
-All tables in Openbravo ERP have a single column primary key. This column will
+All tables in Etendo Classic have a single column primary key. This column will
 be automatically populated with a generated  UUID  therefore the type for this
 column must be _VARCHAR2(32)_ .
 
@@ -67,7 +26,7 @@ defining it as ID in Application Dictionary.
 
 ###  Client/Organization
 
-As Openbravo ERP is a  multi client and multi organization  application, all
+As Etendo Classic is a  multi client and multi organization  application, all
 data belongs to a client and an organization, so all tables must have these
 two columns:
 
@@ -101,8 +60,7 @@ The only element to take into consideration is the module's  DB Prefix  . The
 table's name must start with this DB prefix followed by underscore character
 (_).
 
-The following table prefixes are used by Openbravo and are not allowed to be
-used by any modules:
+The following table prefixes are used by Etendo Classic and are not allowed to be used by any modules:
 
   
 
@@ -142,14 +100,12 @@ table belonging to a different module, the column name must start with _EM__
 plus the DB Prefix of the module the column belongs to. For instance,
 _EM_MYMODULEDBPREFIX_COLUMNNAME_ .
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  NOTE:
-The column name must not exceed the 30 characters long, that includes the
-"EM_" plus the DB Prefix of the module.
+!!!notes
+    The column name must not exceed the 30 characters long, that includes the
+    "EM_" plus the DB Prefix of the module.
 
-In PostgreSQL, **all column names must be defined in lower case**  
-  
----|---  
-  
+    In PostgreSQL, **all column names must be defined in lower case**  
+
 This restriction also applies for naming constraints, triggers and functions.
 
 ####  Primary Key Column
@@ -161,19 +117,14 @@ document.
 
 It is a best practice to name, if possible, foreign key columns in the same
 manner than the primary key column of the table they link to. The reason for
-this is that in Oracle, foreign key (and the rest of the db contraints) names
-must be unique at a database-level. So, for example if we have in our table a
-column that contains a business partner it should be named _C_BPartner_ID_
-because it is a foreign key to _ C_BPartner.C_BPartner_ID  _ column. This is
-not possible when there is the same table more than one column linking to the
-same table or when adding columns in a different module than the table's one.
+this is that in Oracle, foreign key (and the rest of the db contraints) names must be unique at a database-level. 
+So, for example if we have in our table a column that contains a business partner it should be named _C_BPartner_ID_ because it is a foreign key to _C_BPartner.C_BPartner_ID_ column. This is not possible when there is the same table more than one column linking to the same table or when adding columns in a different module than the table's one.
 
-Following this naming rule allows to define standard references as _ TableDir
-_ when the column is defined in Application Dictionary.
+Following this naming rule allows to define standard references as _TableDir_ when the column is defined in Application Dictionary.
 
 ####  Naming of Columns and the Data Access Layer
 
-In Openbravo, Java classes are generated from the tables definition. A DAL
+In Etendo, Java classes are generated from the tables definition. A DAL
 entity is generated from every table defined in the Application Dictionary.
 You can find more information about this  here  .
 
@@ -190,7 +141,6 @@ DBSourceManager, the utility that Openbravo uses to manage database related
 operations, supports a subset of the datatypes that Oracle and PostgreSQL
 databases support. Below we include the currently supported data types:
 
-  
 
 Oracle  |  PostgreSQL  
 ---|---  
