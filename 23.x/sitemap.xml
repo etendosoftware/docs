@@ -166,6 +166,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout/</loc>
+         <lastmod>2024-02-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset/</loc>
          <lastmod>2024-02-26</lastmod>
          <changefreq>daily</changefreq>
