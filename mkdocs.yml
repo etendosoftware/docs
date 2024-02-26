@@ -214,7 +214,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
             - Etendo BI Connector Module: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
-          - Procurement Extensions: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+          - Procurement Extensions: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/production-extensions/purchase-invoice-validation.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
