@@ -214,7 +214,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
             - Etendo BI Connector Module: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
-          - Procurement Extensions: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+          - Procurement Extensions: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
@@ -411,7 +413,7 @@ nav:
         - How to create an Alert: developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md
 #        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
-#        - How to add a button to the toolbar: developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar.md
+        - How to add a button to the toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
 #        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component.md
 #        - How to create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
 #        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
@@ -427,7 +429,9 @@ nav:
         - Etendo Gradle Plugin: developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin.md
         - Etendo Backup and Restore Plugin: developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool.md
       - Bundles:
-        - Platform Extensions Bundle: developer-guide/etendo-classic/bundles/platform-extensions-bundle.md
+        - Platform Extensions Bundle:
+          - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
+          - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md

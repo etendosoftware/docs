@@ -1,46 +1,20 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags: 
+  - callout creation
+  - simple callout
+  - DAL
+  - Etendo Infrastructure
+  - Etendo ERP
+  - FIC
+---
 
 #  How to create a Callout
 
-##  Contents
+##  Objective
 
-  * 1  Objective 
-  * 2  Creating the Callout 
-    * 2.1  Theory 
-      * 2.1.1  Extend a Callout 
-    * 2.2  Product Search Key Calculation using SimpleCallout 
-  * 3  Defining the Callout within the Application Dictionary 
-  * 4  Associating the Callout with a Column 
-  * 5  Compiling the Window 
-  * 6  The Result 
 
-  
----  
-  
-#  Objective
 
-The objective of this article is to show you how to create a new  callout  . A
+The objective of this article is to show you how to create a new  callout . A
 callout is a piece of Javascript code associated with a particular field on a
 tab. This code is executed whenever the field changes. It is a type of Ajax
 substitute, changing parts of a tab/window without the need of refreshing it.
@@ -49,57 +23,53 @@ It works by calling the FIC when a field with an associated callout is
 changed. The FIC (Form Initialization Component) refreshes the needed fields
 based on the callout logic.
 
-This how-to will implement the following new functionality: When entering a
+This section will implement the following new functionality: When entering a
 new product, one has the option of entering the _Search Key_ for the product,
 the _Name_ and the _Category_ it belongs to. But what if our client wants the
 search key to be constructed automatically by taking the product's name,
 removing all spaces, appending the underscore (_) and the category name it
-belongs to.
+belongs to?
 
-**For example** , this way the **Search Key** of a product that has the
-**Name** _Bon Fountain_ and belongs to the _Water_ **Product Category** would
-become _BonFountain_Water_ . Let's see how this could be done using a callout.
+For example, the Search Key of a product that has the
+Name _Bon Fountain_ and belongs to the _Water_ Product Category would
+become _BonFountain_Water_. Let's see how this could be done using a callout.
 
 The steps involved in creating a new callout are:
 
   1. Create the source file(s) of the callout (usually a java file). 
-  2. Define the new  callout  within the application dictionary (menu **Application Dictionary > Setup > Callout ** ). 
-  3. Associate this callout with a table  column  ( **Application Dictionary > Table and Column ** : **Callout** field withinin **Column** tab). 
-  4. Compile the window/tab(s) where this **Column** is used. 
+  2. Define the new  callout  within the application dictionary (menu Application Dictionary > Setup > Callout  ). 
+  3. Associate this callout with a table  column  ( Application Dictionary > Table and Column: Callout field withinin Column tab). 
+  4. Compile the window/tab(s) where this Column is used. 
 
-**IMPORTANT NOTE:** Developments related to points (1) and (2) must belong to
-a module that is not the _core_ module. Please follow the  How to create and
-package a module  section to create a new module. For the development related
-to point (3) about modifying a _core_ located column, a new template is
-needed. You can read the  How to change an existing Window  article to obtain
-more information.
+!!!Important
+    Developments related to points (1) and (2) must belong to
+    a module that is not the _core_ module. Please follow the [How to create and package a module](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    to point (3) about modifying a _core_ located column, a new template is
+    needed. You can read the [How to change an existing Window](../../../developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md) article to obtain more information.
 
-|  ![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This article assumes you have created both module and template according to
-the howtos just mentioned.  
----|---  
+!!!Note
+    This article assumes you have created both module and template according to the articles just mentioned.  
+
   
-  
-
-#  Creating the Callout
+##  Creating the Callout
 
 Existing callouts are located in _src/org/openbravo/erpCommon/ad_callouts_ .
 
 The right way to create a callout is by extending the SimpleCallout class.
-This class simplify the callout code, hide some of the internals of the
-callout and keep you focused on the operations required. To access database
-data DAL is used.
+This class simplifies the callout code, hides some of the internals of the
+callout and keeps you focused on the operations required. To access database
+data, DAL is used.
 
-##  Theory
+###  Theory
 
-To develop a new callout based on this class you only have to create a new
+To develop a new callout based on this class, you only have to create a new
 java class that extends SimpleCallout and overwrite the following method:
 
     
     
      protected void execute(CalloutInfo info) throws ServletException;
 
-In this method you can develop the logic of the callout and use the info
+With this method, you can develop the logic of the callout and use the info
 object of class CalloutInfo to access window fields, database and other
 methods. The most important are:
 
@@ -122,15 +92,11 @@ methods. The most important are:
   * public String getWindowId() : Returns the Window Id that triggered the callout. 
   * public VariablesSecureApp vars : This instance field contains the VariablesSecureApp associated to the callout servlet. 
 
-It is important to keep coherence with each expected data type (String,
-BigDecimal, ...)
+It is important to keep coherence with each expected data type (String, BigDecimal, ...)
 
 See the following class as an example of a class that currently uses
-SimpleCallout:  SL_Project_Service  . This callout simply takes the numeric
-value of two fields, calculates the sum and writes it into another field. This
-is the interesting part of the code that performs the logic:
+SimpleCallout:  [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="\_blank"}. This callout simply takes the numeric value of two fields,calculates the sum and writes it into another field. This is the interesting part of the code that performs the logic:
 
-    
     
      @Override
      protected void execute(CalloutInfo info) throws ServletException { 
@@ -143,17 +109,12 @@ is the interesting part of the code that performs the logic:
          info.addResult("inpservcost", serviceTotalCost);
      }
 
-###  Extend a Callout
+####  Extend a Callout
 
 It is possible to implement a callout that extends from another callout. For
-more information visit this  How to create a callout that extends from another
-callout  tutorial.
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This feature is available from version **3.0PR16Q4**  
----|---  
+more information visit this [How to create a callout that extends from another callout](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
   
-##  Product Search Key Calculation using SimpleCallout
+###  Product Search Key Calculation using SimpleCallout
 
 Let's define the tasks that need to be performed by the callout:
 
@@ -163,7 +124,7 @@ Let's define the tasks that need to be performed by the callout:
   4. Strip spaces out of the product and category names 
   5. Construct the Search Key 
 
-    
+```
     
     // the package name corresponds to the module's manual code folder 
     // created above
@@ -220,64 +181,56 @@ Let's define the tasks that need to be performed by the callout:
         return generatedSearchKey;
       }
     }
+``` 
 
-#  Defining the Callout within the Application Dictionary
+## Defining the Callout within the Application Dictionary
 
-**NOTE:** You need to have ONLY your module as "In Development" at this stage.
+!!!note
+    You need to have only your module as "In Development" at this stage.
 
-Using the role _**System Administrator** _ navigate to _**Application
-Dictionary || Setup || Callout** _ . Create a new  record  as indicated by the
+Using the role _System Administrator_, navigate to _Application
+Dictionary > Setup > Callout_. Create a new  record as indicated by the
 screenshot below:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+!!!info
+    The name of the callout should not have spaces or illegal javascript
+    characters.  
+  
 
-The name of the callout should not have spaces or illegal javascript
-characters.  
-  
----|---  
-  
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-3.png){: .legacy-image-style}
-
   
-Save and navigate to the _**Callout Class** _ tab of the same window. You will
-notice that the **Java Class Name** was automatically generated for you,
+Save and navigate to the _Callout Class_ tab of the same window. You will
+notice that the Java Class Name was automatically generated for you,
 however, not correctly since the name could not match the _Callout_ name you
 have provided. Correct it in line with your callout package/class name. See
 screenshot below:
-
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-4.png){: .legacy-image-style}
 
   
-Now Openbravo knows that a callout exists and is implemented by the class you
+Now Etendo knows that a callout exists and is implemented by the class you
 have just specified.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-
 Remember to perform
-
-    
-    
+   
     ant export.database
     
 
-in order to persist your changes in your module.  
+in order for your changes to persist in your module.  
   
----|---  
   
-#  Associating the Callout with a Column
+##  Associating the Callout with a Column
 
-**NOTE:** You need to have ONLY your template as "In Development" at this
-stage.
+!!!note
+    You need to have ONLY your template as "In Development" at this stage.
 
-Using the role _**System Administrator** _ navigate to _**Application
-Dictionary || Tables and Columns** _ and find the _M_Product_ DB Table. This
-is the underlying table of the main tab of the _**Product** _ window.
+Using the role _System Administrator_ navigate to _Application
+Dictionary_ > _Tables and Columns_ > and find the _M_Product_ DB Table. This
+is the underlying table of the main tab of the _Product_ window.
 
-Go to **Column** tab, find the _Name_ record and edit it. Find the  Callout
+Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
@@ -292,83 +245,49 @@ should also regenerate the Search Key.
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
 
-Remember to perform
-
-    
+Remember to perform  
     
     ant export.database
     
 
 and
-
-    
     
     ant export.config.script
     
 
-in order to persist your changes in your template.  
+in order for your changes to persist in your template.  
   
----|---  
-  
-#  Compiling the Window
+##  Compiling the Window
 
 Finally, for the callout to take effect, the window that uses it needs to be
 recompiled and deployed to Tomcat. If using Eclipse, use the
-**eclipse.compile** ant task and enter _Product_ into the dialog that pops up.
-If manually compiling Openbravo, use the
-
-    
+eclipse.compile ant task and enter _Product_ into the dialog that pops up.
+If manually compiling Etendo, use the
     
     ant smartbuild 
     
 
-or
-
-    
+or  
     
     ant compile.development -Dtab=Product
     
 
-**IMPORTANT NOTE:** once the compilation has finished, **restart Apache Tomcat
-server** .  
-  
----  
-  
-See more on  Build Tasks  .
+!!!Important
+    Once the compilation has finished, restart Apache Tomcat server.  
 
-Now it is time to test the result!
+##  The Result
 
-  
+Using the role _System Admin_ (or your defined 'administrator' role),
+navigate to the _Master Data Management_ > _Product_ window. Enter a new
+product with Name = _Bon Fountain_ and leave the Name field. Notice
+how the Search Key changes. Then, modify the Product Category and see how the change is reflected inside the Search Key field.
 
-#  The Result
-
-Using the role _**Openbravo Admin** _ (or your defined 'administrator' role),
-navigate to the _**Master Data Management || Product** _ window. Enter a new
-product with **Name** = _Bon Fountain_ and leave the **Name** field. Notice
-how the Search Key changes. Then, change the **Product Category** to something
-else and see how the change is reflected inside the **Search Key** field.
-
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_a_Callout-8.png){: .legacy-image-style}
 
-  
-Save.
+Last, save changes.
 
-You have now successfully created your first new callout and seen how it came
-to life within Openbravo. Congratulations!
+---
 
-Retrieved from "  http://wiki.openbravo.com/wiki/How_to_create_a_Callout  "
-
-This page has been accessed 37,042 times. This page was last modified on 2
-November 2020, at 06:14. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
