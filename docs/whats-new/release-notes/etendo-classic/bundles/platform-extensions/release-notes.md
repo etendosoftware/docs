@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.12.1](#1201) | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | C  | :white_check_mark: |
 | [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
 | [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
 | [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
@@ -33,6 +34,8 @@ tags:
 | 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
 
 ## Release Notes
+### 1.12.1
+- [EE-815](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/6){target="\_blank"} Field arrangements in Webhooks Events module
 ### 1.12.0
 - Update Core compatibility until 23.4.x
 - [EE-658](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/2){target="\_blank"} Warning: Non-varargs Call to Varargs Method in com.etendoerp.webhookevents Module
