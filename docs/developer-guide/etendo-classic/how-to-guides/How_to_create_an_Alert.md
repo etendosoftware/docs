@@ -9,8 +9,6 @@ tags:
 
 
 #  How to create an Alert
-
- 
   
 ##  Overview
 
