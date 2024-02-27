@@ -6797,7 +6797,7 @@ etc. </p>
 <p>First of all, the condition under which the alert appears needs to be defined.
 This is done using a SQL statement that needs to follow certain conventions.</p>
 <p>To create a new  alert  rule, use the role <em><em>System Administrator</em></em> to navigate
-to <em><em>General Setup || Application || Alert</em></em> window. Depending on how you
+to <code>General Setup</code> &gt; <code>Application</code> &gt;<code>Alert</code> window. Depending on how you
 installed Etendo, you might already have some alerts here. If you do, try
 to find the <em>Customers with exceeded credit</em> one and double click it. If not,
 create a new record as indicated below:</p>
@@ -6829,7 +6829,7 @@ create a new record as indicated below:</p>
 </ul>
 <h2 id="defining-recipients">Defining recipients</h2>
 <p>Switch to the role <em><em>System Administrator</em></em> (or your defined 'administrator'
-role), navigate to <em><em>General Setup || Application || Alert</em></em> , select the
+role), navigate to <em><code>General Setup</code> &gt; <code>Application</code> &gt;<code>Alert</code></em> , select
 <em>Customers with exceeded credit</em> alert and switch to the  <em>Alert Recipients</em>
 tab. Add a new record as indicated below:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png" /></a></p>
@@ -6840,11 +6840,11 @@ user.</p>
 </div>
 <h2 id="scheduling-the-alerting-background-process">Scheduling the alerting background process</h2>
 <p>For the alerts to be evaluated and triggered, the background process needs to
-be scheduled. Using the role <em><em>System Administrator</em></em> (or your defined 'administrator' role) navigate to <em><em>General Setup || Process Scheduling || Process Request</em></em> and enter a new record:</p>
+be scheduled. Using the role <em><em>System Administrator</em></em> (or your defined 'administrator' role) navigate to <em><code>General Setup</code> &gt; <code>Process Scheduling</code> &gt;<code>Process Request</code></em> and enter a new record:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png" /></a></p>
 <h2 id="the-result">The Result</h2>
-<p>Finally, log out and back in and select the role <em><em>System Administrator</em></em>(or
-your defined 'administrator' role). You should be able to see an alert in the
+<p>Finally, log out and back in and select the role <em><em>System Administrator</em></em> (or
+your defined administrator role). You should be able to see an alert in the
 navigation bar. By clicking on it, you will automatically be taken to the
 <em><em>Alert Management</em></em> window that should look something like:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png" /></a></p>
@@ -6888,8 +6888,8 @@ needs to have all the columns defined above:</p>
 <p>Finally, the WHERE clause describes the condition that triggers the alert. In
 our case the SELECT statement will return all Business Partners (FROM
 c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
-limit (SO_CreditLimit &lt; SO_CreditUsed) which needs to be different from zero
-(SO_CreditLimit!=0).</p>
+limit (<code>SO_CreditLimit &lt; SO_CreditUsed</code>) which needs to be different from zero
+(<code>SO_CreditLimit!=0</code>).</p>
 <p>In other words, anything you can describe in a SQL statement can be defined as
 an alert. </p>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_an_Alert" target="_blank">How to create an alert</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
