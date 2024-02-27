@@ -1,4 +1,5 @@
 ---
+title: How to create a Callout
 tags: 
   - callout creation
   - simple callout
@@ -8,7 +9,6 @@ tags:
   - FIC
 ---
 
-#  How to create a Callout
 
 ##  Objective
 
@@ -64,12 +64,10 @@ data, DAL is used.
 
 To develop a new callout based on this class, you only have to create a new
 java class that extends SimpleCallout and overwrite the following method:
-
-    
-    
-     protected void execute(CalloutInfo info) throws ServletException;
-
-With this method, you can develop the logic of the callout and use the info
+```java
+  protected void execute(CalloutInfo info) throws ServletException;
+```
+In this method you can develop the logic of the callout and use the info
 object of class CalloutInfo to access window fields, database and other
 methods. The most important are:
 
@@ -95,24 +93,23 @@ methods. The most important are:
 It is important to keep coherence with each expected data type (String, BigDecimal, ...)
 
 See the following class as an example of a class that currently uses
-SimpleCallout:  [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="\_blank"}. This callout simply takes the numeric value of two fields,calculates the sum and writes it into another field. This is the interesting part of the code that performs the logic:
-
-    
-     @Override
-     protected void execute(CalloutInfo info) throws ServletException { 
-     
-         BigDecimal serviceSerCost = info.getBigDecimalParameter("inpservsercost");
-         BigDecimal serviceOutCost = info.getBigDecimalParameter("inpservoutcost"); 
-     
-         BigDecimal serviceTotalCost = serviceSerCost.add(serviceOutCost);
-     
-         info.addResult("inpservcost", serviceTotalCost);
-     }
-
-####  Extend a Callout
+SimpleCallout:  SL_Project_Service  . This callout simply takes the numeric
+value of two fields, calculates the sum and writes it into another field. This
+is the interesting part of the code that performs the logic:
+```java
+  @Override
+  protected void execute(CalloutInfo info) throws ServletException { 
+    BigDecimal serviceSerCost = info.getBigDecimalParameter("inpservsercost");
+    BigDecimal serviceOutCost = info.getBigDecimalParameter("inpservoutcost"); 
+    BigDecimal serviceTotalCost = serviceSerCost.add(serviceOutCost);
+    info.addResult("inpservcost", serviceTotalCost);
+  }
+```
+###  Extend a Callout
 
 It is possible to implement a callout that extends from another callout. For
-more information visit this [How to create a callout that extends from another callout](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+more information visit this [How to create a callout that extends from another callout](./How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+
   
 ###  Product Search Key Calculation using SimpleCallout
 
@@ -123,12 +120,10 @@ Let's define the tasks that need to be performed by the callout:
   3. Get the name of the product category inside the database using the product category ID retrieved 
   4. Strip spaces out of the product and category names 
   5. Construct the Search Key 
-
-```
-    
+```java
     // the package name corresponds to the module's manual code folder 
     // created above
-    package org.openbravo.howtos.ad_callouts;
+    package com.etendoerp.customer.example.ad_callouts;
      
     import javax.servlet.ServletException;
      
@@ -192,13 +187,11 @@ Using the role _System Administrator_, navigate to _Application
 Dictionary > Setup > Callout_. Create a new  record as indicated by the
 screenshot below:
 
-!!!info
-    The name of the callout should not have spaces or illegal javascript
-    characters.  
-  
+!!!warning
+    The name of the callout should not have spaces or illegal javascript characters.  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-3.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-3.png)
+
   
 Save and navigate to the _Callout Class_ tab of the same window. You will
 notice that the Java Class Name was automatically generated for you,
@@ -206,20 +199,16 @@ however, not correctly since the name could not match the _Callout_ name you
 have provided. Correct it in line with your callout package/class name. See
 screenshot below:
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-4.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png)
 
   
-Now Etendo knows that a callout exists and is implemented by the class you
+Now Etendo Classic knows that a callout exists and is implemented by the class you
 have just specified.
 
-Remember to perform
-   
-    ant export.database
-    
-
-in order for your changes to persist in your module.  
-  
+!!!warning Remember to perform
+    ```./gradlew export.database```
+    in order to persist your changes in your module.  
+ 
   
 ##  Associating the Callout with a Column
 
@@ -234,57 +223,44 @@ Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-6.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Callout-6.png)
 
   
 Do the same for the _Product Category_ record since a change in any of them
 should also regenerate the Search Key.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-
-Remember to perform  
-    
-    ant export.database
-    
+!!! warning Remember to perform
+```./gradlew export.database```
 
 and
-    
-    ant export.config.script
-    
 
-in order for your changes to persist in your template.  
+```./gradlew export.config.script```
+
+in order to persist your changes in your template.  
   
-##  Compiling the Window
+  
+#  Compiling the Window
 
 Finally, for the callout to take effect, the window that uses it needs to be
-recompiled and deployed to Tomcat. If using Eclipse, use the
-eclipse.compile ant task and enter _Product_ into the dialog that pops up.
-If manually compiling Etendo, use the
-    
-    ant smartbuild 
-    
+recompiled and deployed to Tomcat. Do:
+  ``` bash
+    ./gradlew smartbuild 
+  ```
 
-or  
-    
-    ant compile.development -Dtab=Product
-    
+!!!info
+    Once the compilation has finished, **restart Apache Tomcat server** .  
+  
 
-!!!Important
-    Once the compilation has finished, restart Apache Tomcat server.  
+#  The Result
 
-##  The Result
+Using the role _**Group Admin** _ (or your defined 'administrator' role),
+navigate to the _**Master Data Management || Product** _ window. Enter a new
+product with **Name** = _Bon Fountain_ and leave the **Name** field. Notice
+how the Search Key changes. Then, change the **Product Category** to something
+else and see how the change is reflected inside the **Search Key** field.
 
-Using the role _System Admin_ (or your defined 'administrator' role),
-navigate to the _Master Data Management_ > _Product_ window. Enter a new
-product with Name = _Bon Fountain_ and leave the Name field. Notice
-how the Search Key changes. Then, modify the Product Category and see how the change is reflected inside the Search Key field.
-
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-8.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
 
 Last, save changes.
 
