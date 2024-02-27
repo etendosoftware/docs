@@ -19453,7 +19453,7 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-        For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
 
 
 
@@ -19466,7 +19466,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-        For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
 
 
 ##### Javax XML SOAP API
@@ -19476,7 +19476,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-        For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
 
 
 ##### Report Cache Management
@@ -19486,7 +19486,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-        For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
+    For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
 
 ##### Etendo Advanced Security
 
@@ -19497,7 +19497,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-        For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
 
 ##### Dynamic App 
 
@@ -19506,7 +19506,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-        For more information, visit the [Dynamic App user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
         
 ##### EAN 128
 
@@ -19515,7 +19515,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 EAN 128 allows to use bar code in your application
 
 !!! info
-        For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#ean-128).
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/overview#ean-128).
 
 ##### Etendo RX
 
@@ -19528,6 +19528,12 @@ EAN 128 allows to use bar code in your application
 ##### Webhook Events
 
 :octicons-package-16: Javapackage: com.etendoerp.webhookevents
+
+Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+!!! info
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+
 
 ##### Etendo Async Processes
 
@@ -25720,8 +25726,8 @@ If no records in the **Logs window** were created after the execution of the scr
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Procurement Extensions
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Overview
 ## Article URL: 
  https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
 ## Article Content: 
@@ -25733,7 +25739,60 @@ This bundle includes enhancements for Procurement functionalities in Etendo.
 
 #### Modules
 
+##### Purchase Invoice Validations
 
+:octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module allows users to prevent the duplication of purchase invoices within the system. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice.
+
+!!! info
+    For more information, visit [the Purchase Invoice Validations user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Purchase Invoice Validation
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Purchase Invoice Validation
+## Article URL: 
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
+## Article Content: 
+#### Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.
+
+#### Invoice duplication criteria
+
+Etendo will consider a purchase invoice duplicated if another purchase invoice with the same key details already exists, namely:
+
+- Business Partner
+- Supplier Reference
+- Invoice year, present in the Invoice date field
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
+
+Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.
+
+Also, it is only possible to have one purchase invoice with the same supplier reference every year. This means that, even when the invoice day and month are different from another invoice with the same supplier reference, if the year is the same, the invoice is considered duplicated.
+
+#### Preference
+
+A configurable system preference will be used to enable or disable the validation that prevents the duplication of purchase invoices. This allows the client to decide whether to use this functionality or not. The versatility of preferences allows modifying their visibility, determining whether the validation will be active for all users, roles, organizations, etc.
+
+From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.
+
+!!!note
+    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application.md#preference){target="_blank"}.
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
+
+#### Validation
+
+The validation will prevent the saving of a purchase invoice that is considered duplicated according to the established criteria. If the system detects that the invoice being saved is duplicated, the user will be informed through a message indicating the nature of the duplication as shown here:
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Tax Report Launcher
@@ -33316,6 +33375,406 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to add a button to the toolbar
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a button to the toolbar
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
+## Article Content: 
+####  Overview
+
+This howto discusses how a button can be added the main toolbar shown in grids
+and forms. The toolbar contains two types of buttons, the application buttons
+on the left (visualized using an icon) and the custom buttons on the right
+(shown with a label). This howto describes how to add a button to the left
+part, the application buttons.
+  
+To follow this howto you need to be able to, at a junior level, develop
+javascript as well as server-side java and understand  Data Access Layer
+concepts.
+
+####  Example Module
+
+This howto is supported by an example module which shows example of the code
+shown and discussed in this howto.
+
+![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-0.png)
+
+The code of the example module can be downloaded from this mercurial
+repository:
+https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+
+The example module is available through the Central Repository (See 'Client
+Application Examples'), for more information see the  Examples Client
+Application  project page.
+
+!!! info
+        The example module also contains implementations of other howtos.  
+ 
+  
+####  Implementing a toolbar button
+
+!!! info
+        When implementing your own components it often makes sense to extend existing
+        components. Make sure that your module then depends on the module that
+        provides the base types. This ensures that the javascript is loaded in the
+        correct order. You must add a dependency from your module to the
+        Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
+  
+The button which we will implement will compute and show the sum of a set of
+selected orders to the user. This howto is divided in 2 parts, the first part
+focuses on visualizing the button in the correct windows and tabs and making
+sure the button is enabled/disabled appropriately. The second part will
+discuss how to implement backend logic and how to call the server side logic
+when the button gets clicked and show its results.
+
+The first part consists of the following steps:
+
+  * an icon for the visualization 
+  * a css style and javascript linking the icon to the button 
+  * javascript implementing the buttons click/action method and to register the button in the global registry 
+  * add javascript to enable/disable the button when records are selected in the grid 
+  * a ComponentProvider java class to register the javascript and css in Openbravo 
+
+These steps will visualize the button but not actually do anything yet. The
+follow up steps will add logic:
+
+  * a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) 
+  * client side javascript to call the server and process the result 
+
+Each of these steps is described in more detail below.
+
+####  Visualizing the button - Implementation steps
+
+#####  Defining the icon and a css
+
+The icon and its related style is defined through an icon file. For standard
+visualization using the Openbravo style the icon should be 24x24 without a
+background colour.
+
+The icon should be placed in a specific directory in your module:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+Normally it makes sense to store the icon in a subfolder. The example module
+has the icon file in:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/images.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-3.png)
+
+  
+Then add a css file which links this icon to a specific css style. The css
+file must also be located in this directory in your module:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+In the example module the css file is located here:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/ob-example-styles.css 
+Within the css file add a style defined like this:
+
+    
+    
+    .OBToolbarIconButton_icon_obexapp_sum {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(./images/iconButton-sum.png);
+    }
+
+**Note:** the name of the css class is important, it should start with
+'OBToolbarIconButton_icon_', the part after that (obexapp_sum) is used later
+in this tutorial. It makes sense to use the module's dbprefix in this last
+part to prevent name collisions with other modules.
+
+#####  The javascript to create and register the button
+
+The next step is to implement the javascript which defines the button and
+registers it to be shown on tabs. Start by creating a javascript file in this
+location: web/org.openbravo.client.application.examples/js/example-toolbar-
+button.js.
+
+This is the overall javascript:
+
+    
+    
+    (function () {
+      var buttonProps = {
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'obexapp_sum',
+          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+          updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+        };
+      
+      // register the button for the sales order tab
+      // the first parameter is a unique identification so that one button can not be registered multiple times.
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+    }());
+
+Let's walk through the different parts. The javascript starts and ends with
+this part:
+
+    
+    
+    (function () {
+    ...
+    }());
+
+This is done to prevent the local variables to be available globally, it
+creates a function and executes it immediately.
+
+Then the first part of the buttonprops"
+
+    
+    
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'obexapp_sum',
+          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+
+  * Sets the action method which gets called when the user clicks the button. 
+  * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
+  * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-4.png)
+
+The updateState function is called to enable and disable the button when the
+user navigates through the system.
+
+    
+    
+         updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+
+The function enables/disables the button if the form or grid is new and if
+there are no records selected.
+
+Then this code registers the button for the tab with id '186':
+
+    
+    
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+
+Note:
+
+  * the first parameter is a unique identification so that one button can not be registered multiple times. 
+  * as the second parameter the button javascript class is passed in, as a default always use isc.OBToolbarIconButton 
+  * the buttonProps define the button characteristics 
+  * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
+  * the last parameter is the tabId (a String), you can pass null to register a button for all tabs. From 3.00MP2 and further it is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
+  * to register a button for multiple tabs call the registerButton multiple times for different tabs 
+
+Note: in 3.00MP0 a button can only be registered for one specific tab or for
+all tabs. In 3.00MP2 this will be solved by allowing an array of tab ids (see
+this  issue  to track the solution)
+
+#####  The ComponentProvider
+
+The previous steps added static resources (javascript and css) to the system.
+Now Openbravo should know where to find these resources when initializing and
+generating the user interface. For this the css and javascript and resources
+have to be registered. This is done through a ComponentProvider. For more
+detailed information on the ComponentProvider concept visit this  page  .
+
+    
+    
+     
+    @ApplicationScoped
+    @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
+    public class ExampleComponentProvider extends BaseComponentProvider {
+      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "OBEXAPP_ExampleViewType";
+     
+      /*
+       * (non-Javadoc)
+       * 
+       * @see org.openbravo.client.kernel.ComponentProvider#getComponent(java.lang.String,
+       * java.util.Map)
+       */
+      @Override
+      public Component getComponent(String componentId, Map<String, Object> parameters) {
+        throw new IllegalArgumentException("Component id " + componentId + " not supported."); 
+        /* in this howto we only need to return static resources so there is no need to return anything here */
+      }
+     
+      @Override
+      public List<ComponentResource> getGlobalComponentResources() {
+        final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+        globalResources.add(createStaticResource(
+            "web/org.openbravo.client.application.examples/js/example-toolbar-button.js", false));
+        globalResources.add(createStyleSheetResource(
+            "web/org.openbravo.userinterface.smartclient/openbravo/skins/"
+                + KernelConstants.SKIN_VERSION_PARAMETER
+                + "/org.openbravo.client.application.examples/example-styles.css", false));
+     
+        return globalResources;
+      }
+     
+      @Override
+      public List<String> getTestResources() {
+        return Collections.emptyList();
+      }
+    }
+
+A short explanation:
+
+  * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
+  * The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. 
+
+To explain how Openbravo can find the ComponentProvider: Openbravo/Weld will
+analyze the classpath and find all the classes which have a @ComponentProvider
+annotation.
+
+#####  The result
+
+To see the result, restart Tomcat, clear the cache of the browser (sometimes
+css styles are not picked up) and go back to the application and then
+specifically the sales order window. You should see this:
+
+Note: the button is not visualized in other windows/tabs because it is
+registered for only the sales order header tab.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-5.png)
+
+  
+
+####  Adding server side logic - Implementation steps
+
+The next step in this how to is to add the server side logic and calling this
+logic from the client. The server side logic is implemented using the action
+handler concept. The action handler concept allows you to create classes on
+the server which are callable from the client. This how to will illustrate
+this.
+
+#####  Implement the server side action handler
+
+The server side action handler (  SumOrderActionHandler.java  ) receives an
+array of order numbers of the selected orders. It will sum the order values
+and then return the total as a JSON string.
+
+This is the implementation of the server side:
+
+    
+    
+    public class SumOrderActionHandler extends BaseActionHandler {
+     
+      protected JSONObject execute(Map<String, Object> parameters, String data) {
+        try {
+     
+          // get the data as json
+          final JSONObject jsonData = new JSONObject(data);
+          final JSONArray orderIds = jsonData.getJSONArray("orders");
+     
+          // start with zero
+          BigDecimal total = new BigDecimal("0");
+     
+          // iterate over the orderids
+          for (int i = 0; i < orderIds.length(); i++) {
+            final String orderId = orderIds.getString(i);
+     
+            // get the order
+            final Order order = OBDal.getInstance().get(Order.class, orderId);
+     
+            // and add its grand total
+            total = total.add(order.getGrandTotalAmount());
+          }
+     
+          // create the result
+          JSONObject json = new JSONObject();
+          json.put("total", total.doubleValue());
+     
+          // and return it
+          return json;
+        } catch (Exception e) {
+          throw new OBException(e);
+        }
+      }
+    }
+
+Notes:
+
+  * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
+  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used 
+  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Openbravo system numbers are therefore send from client-server (and vice versa) as strings. 
+  * the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . 
+  * the result is returned as json again 
+
+#####  Calling the server side from the client, displaying the result
+
+Then on the client the action method of the button has to be implemented to
+call the server. Here is the implementation. See the
+web/org.openbravo.client.application.examples/js/example-toolbar-button.js
+for the full listing:
+
+    
+    
+          action: function(){
+            var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+            // collect the order ids
+            for (i = 0; i < selectedRecords.length; i++) {
+              orders.push(selectedRecords[i].id);
+            }
+            
+            // define the callback function which shows the result to the user
+            callback = function(rpcResponse, data, rpcRequest) {
+              isc.say(OB.I18N.getLabel('OBEXAPP_SumResult', [data.total]));
+            }
+            
+            // and call the server
+            OB.RemoteCallManager.call('org.openbravo.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+
+Note:
+
+  * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
+  * the call to the server is asynchronously therefore a callback is used, which is called when the server returns the result. The callback gets 3 parameters, the data parameter contains the JSONObject returned by the server's execute method. 
+  * the call to the RemoteCallManager has these parameters: 
+    * the class name of the action handler 
+    * the data being sent as the request body 
+    * request parameters (in this case nothing there) 
+    * and the callback 
+
+Then when the server returns the callback is called which will display a
+prompt. Note that the label used in the callback uses parameter substitution.
+Parameters are specified using a %0, %1 etc.:
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-6.png)
+
+#####  The result
+
+The result shows the sum of the 2 selected order headers:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_add_a_button_to_the_toolbar-7.png)
+
+ 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to change an existing Window
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to change an existing Window
 ## Article URL: 
@@ -34323,10 +34782,10 @@ In the end, a message will be shown with the properties which the database will 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Platform Extensions Bundle
-## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle
+# Article Title: Overview
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Overview
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle
+ https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/overview
 ## Article Content: 
 #### Overview
 
@@ -34586,6 +35045,197 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 
 **Purpose**: It defines the global resources that are necessary for the operation of the components it provides.
 
+#### Webhook Events
+
+**Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+!!! info
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Webhooks
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Etendo Webhooks
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform/etendo-webhooks
+## Article Content: 
+#### Overview
+
+##### What is a Webhook?
+
+A webhook is a method used by web applications to send real-time notifications or data to other applications or servers. Webhooks operate using HTTP callbacks, which means that an application sends an HTTP request to a specified URL (the webhook URL) when a particular event occurs.
+
+In simple terms, a webhook acts as a messenger that delivers a message (data payload) from one application to another when certain conditions are met. Webhooks enable applications to communicate and share information automatically, making it easier to integrate different services and create seamless workflows.
+
+By using webhooks, you can keep your applications in sync, automate processes, and extend the functionality of your applications with minimal effort.
+
+This documentation will guide you through the process of setting up and using webhooks in Etendo Classic. Webhooks allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
+
+
+#### Webhook Description
+
+##### Webhook Header Fields
+
+| Field           | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Name            | Webhook name                                               |
+| Description     | Webhook description                                        |
+| Java Class      | Class in which the webhook service was created             |
+| Module          | Module in which the webhook will be created                |
+| Active          | Webhook status (Active by default)                         |
+
+![Webhook Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
+
+##### Webhook Tabs Fields
+
+Webhook window has 2 tabs: Access and Params.
+
+The params tab allows you to create parameters that will be used in the URL call.
+
+The access tab allows you to create access that will be used in the URL call.
+
+###### Params
+
+| Field           | Description                                                |
+|-----------------|------------------------------------------------------------|
+| Name            | Parameter name that will be used in the URL call           |
+| Is required     | Whether the parameter is required or not                   |
+| Active          | Parameter status (Active by default)                       |
+
+###### Access
+
+| Field           | Description                                                                                 |
+|-----------------|---------------------------------------------------------------------------------------------|
+| Active          | Access status (Active by default)                                                           |
+| Token           | Selector with the token that will be used in the URL call created on User API Token window  |
+
+#### Webhook Usage Example
+
+##### Setting up Webhooks
+
+1. Navigate to the new menu option: `Application → General Setup → Application → Webhook Events → Webhooks`
+2. Create a new webhook by filling in the required fields:
+
+    | Field           | Value                                                      |
+    |-----------------|------------------------------------------------------------|
+    | Name            | Alert                                                      |
+    | Description     | Create alert with custom message                           |
+    | Java Class      | com.etendoerp.webhookevents.ad_alert.AdAlertWebhookService |
+            
+    ![Webhook Alert](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAlert.png)
+
+3. Focus on "Params" tab and create the following params:
+
+    | Field           | Value                    |  Is required       |
+    |-----------------|--------------------------|--------------------|
+    | Name            | description              | :white_check_mark: |
+    | Name            | rule                     | :white_check_mark: | 
+        
+![Webhook Params](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
+        
+
+##### API Key Generation
+
+1. To give execution permission to a user, go to: `Application → General Setup → Application → Webhook Events → User API Token`
+2. Create a new API with the Name: `<<user>> token`
+3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
+    
+![Webhook Token](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
+    
+
+##### Assigning Webhook Access to Users
+
+1. Navigate to: `Application → General Setup → Application → Webhook Events → Webhooks`
+2. Select the created webhook and open the access tab.
+3. Create a new row and select the previously created API record.
+
+![Webhook Access](https://docs.etendo.software/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
+
+##### Executing the Webhook
+
+To execute the webhook, make a GET request using a REST client like Postman with the following syntax:
+
+```
+URL=http://localhost:8080/
+CONTEXT=etendo
+WEBHOOK_ENDPOINT=/webhooks/
+[VARS]
+WEBHOOK_NAME=name=alert
+APIKEY=8b1012f0d442406ed602d87c13edcee9
+DESCRIPTION=new alert description
+RULE=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+Example URL:
+
+```
+http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+!!! success
+    This webhook creates an alert, and you can visualize it in the "Alert Management" window.
+
+    The response will return a status code **200** and the **alert ID**, for example: 
+    ```
+    {
+      "created": "91FEABC1604E404CB565FC79435C4344"
+    }
+    ```
+
+
+##### Example code usage
+
+```java title="AdAlertWebhookService.java"
+/**
+ * Example webhoook to take as a starting point.
+ * This service receive a description and a alert rule ID and insert one standard alert
+ */
+public class AdAlertWebhookService extends BaseWebhookService {
+  private static final Logger log = LogManager.getLogger();
+  
+  @Override
+  public void get(Map<String, String> parameter, Map<String, String> responseVars) {
+    Alert alert = new Alert();
+    alert.setAlertRule(OBDal.getInstance().get(AlertRule.class, parameter.get("rule")));
+    alert.setDescription(parameter.get("description"));
+    alert.setReferenceSearchKey("");
+    OBDal.getInstance().save(alert);
+    OBDal.getInstance().flush();
+    responseVars.put("created", alert.getId());
+  }
+}
+```
+
+#### Use Cases
+
+##### Tokens Visibility
+
+!!! note
+    :eye: Users can visualize tokens of their current profile.
+
+!!! warning
+    :warning: Other users cannot access another user's token. The API Token Window and webhook access tab will be empty.
+
+##### Error Handling
+
+!!! failure
+    If a user calls a webhook without a token or includes an incorrect API token, the backend will respond with a **401** response and a message.
+
+!!! failure
+    If a user calls a webhook with an incorrect webhook name, the backend will respond with a **404** response and a message.
+
+!!! failure
+    If a user calls a webhook without access, the backend will respond with a **401** response and a message.
+
+
+!!! failure
+    If a user calls a webhook with a missing required parameter, the backend will respond with a **500** response and a message.
+
+!!! failure
+    If a user calls a webhook without a newly required parameter (after the backend configuration is changed), the backend will respond with a **500** response and a message.
+
+!!! failure
+    If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle

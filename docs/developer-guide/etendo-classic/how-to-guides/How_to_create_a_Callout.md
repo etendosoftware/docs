@@ -1,10 +1,20 @@
 ---
 title: How to create a Callout
+tags: 
+  - callout creation
+  - simple callout
+  - DAL
+  - Etendo Infrastructure
+  - Etendo ERP
+  - FIC
 ---
-  
-#  Objective
 
-The objective of this article is to show you how to create a new  callout  . A
+
+##  Objective
+
+
+
+The objective of this article is to show you how to create a new  callout . A
 callout is a piece of Javascript code associated with a particular field on a
 tab. This code is executed whenever the field changes. It is a type of Ajax
 substitute, changing parts of a tab/window without the need of refreshing it.
@@ -13,48 +23,46 @@ It works by calling the FIC when a field with an associated callout is
 changed. The FIC (Form Initialization Component) refreshes the needed fields
 based on the callout logic.
 
-This how-to will implement the following new functionality: When entering a
+This section will implement the following new functionality: When entering a
 new product, one has the option of entering the _Search Key_ for the product,
 the _Name_ and the _Category_ it belongs to. But what if our client wants the
 search key to be constructed automatically by taking the product's name,
 removing all spaces, appending the underscore (_) and the category name it
-belongs to.
+belongs to?
 
-**For example** , this way the **Search Key** of a product that has the
-**Name** _Bon Fountain_ and belongs to the _Water_ **Product Category** would
-become _BonFountain_Water_ . Let's see how this could be done using a callout.
+For example, the Search Key of a product that has the
+Name _Bon Fountain_ and belongs to the _Water_ Product Category would
+become _BonFountain_Water_. Let's see how this could be done using a callout.
 
 The steps involved in creating a new callout are:
 
   1. Create the source file(s) of the callout (usually a java file). 
-  2. Define the new  callout  within the application dictionary (menu **Application Dictionary > Setup > Callout ** ). 
-  3. Associate this callout with a table  column  ( **Application Dictionary > Table and Column ** : **Callout** field withinin **Column** tab). 
-  4. Compile the window/tab(s) where this **Column** is used. 
+  2. Define the new  callout  within the application dictionary (menu Application Dictionary > Setup > Callout  ). 
+  3. Associate this callout with a table  column  ( Application Dictionary > Table and Column: Callout field withinin Column tab). 
+  4. Compile the window/tab(s) where this Column is used. 
 
-**IMPORTANT NOTE:** Developments related to points (1) and (2) must belong to
-a module that is not the _core_ module. Please follow the  How to create and
-package a module  section to create a new module. For the development related
-to point (3) about modifying a _core_ located column, a new template is
-needed. You can read the  How to change an existing Window  article to obtain
-more information.
+!!!Important
+    Developments related to points (1) and (2) must belong to
+    a module that is not the _core_ module. Please follow the [How to create and package a module](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    to point (3) about modifying a _core_ located column, a new template is
+    needed. You can read the [How to change an existing Window](../../../developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md) article to obtain more information.
 
-!!!note
-    This article assumes you have created both module and template according to the howtos just mentioned.  
+!!!Note
+    This article assumes you have created both module and template according to the articles just mentioned.  
+
   
-  
-
-#  Creating the Callout
+##  Creating the Callout
 
 Existing callouts are located in _src/org/openbravo/erpCommon/ad_callouts_ .
 
 The right way to create a callout is by extending the SimpleCallout class.
-This class simplify the callout code, hide some of the internals of the
-callout and keep you focused on the operations required. To access database
-data DAL is used.
+This class simplifies the callout code, hides some of the internals of the
+callout and keeps you focused on the operations required. To access database
+data, DAL is used.
 
-##  Theory
+###  Theory
 
-To develop a new callout based on this class you only have to create a new
+To develop a new callout based on this class, you only have to create a new
 java class that extends SimpleCallout and overwrite the following method:
 ```java
   protected void execute(CalloutInfo info) throws ServletException;
@@ -82,8 +90,7 @@ methods. The most important are:
   * public String getWindowId() : Returns the Window Id that triggered the callout. 
   * public VariablesSecureApp vars : This instance field contains the VariablesSecureApp associated to the callout servlet. 
 
-It is important to keep coherence with each expected data type (String,
-BigDecimal, ...)
+It is important to keep coherence with each expected data type (String, BigDecimal, ...)
 
 See the following class as an example of a class that currently uses
 SimpleCallout:  SL_Project_Service  . This callout simply takes the numeric
@@ -104,7 +111,7 @@ It is possible to implement a callout that extends from another callout. For
 more information visit this [How to create a callout that extends from another callout](./How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
 
   
-##  Product Search Key Calculation using SimpleCallout
+###  Product Search Key Calculation using SimpleCallout
 
 Let's define the tasks that need to be performed by the callout:
 
@@ -169,30 +176,30 @@ Let's define the tasks that need to be performed by the callout:
         return generatedSearchKey;
       }
     }
-```
-#  Defining the Callout within the Application Dictionary
+``` 
 
-**NOTE:** You need to have ONLY your module as "In Development" at this stage.
+## Defining the Callout within the Application Dictionary
 
-Using the role _**System Administrator** _ navigate to _**Application
-Dictionary || Setup || Callout** _ . Create a new  record  as indicated by the
+!!!note
+    You need to have only your module as "In Development" at this stage.
+
+Using the role _System Administrator_, navigate to _Application
+Dictionary > Setup > Callout_. Create a new  record as indicated by the
 screenshot below:
 
 !!!warning
     The name of the callout should not have spaces or illegal javascript characters.  
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-3.png)
 
   
-Save and navigate to the _**Callout Class** _ tab of the same window. You will
-notice that the **Java Class Name** was automatically generated for you,
+Save and navigate to the _Callout Class_ tab of the same window. You will
+notice that the Java Class Name was automatically generated for you,
 however, not correctly since the name could not match the _Callout_ name you
 have provided. Correct it in line with your callout package/class name. See
 screenshot below:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-4.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png)
 
   
 Now Etendo Classic knows that a callout exists and is implemented by the class you
@@ -203,16 +210,16 @@ have just specified.
     in order to persist your changes in your module.  
  
   
-#  Associating the Callout with a Column
+##  Associating the Callout with a Column
 
-**NOTE:** You need to have ONLY your template as "In Development" at this
-stage.
+!!!note
+    You need to have ONLY your template as "In Development" at this stage.
 
-Using the role _**System Administrator** _ navigate to _**Application
-Dictionary || Tables and Columns** _ and find the _M_Product_ DB Table. This
-is the underlying table of the main tab of the _**Product** _ window.
+Using the role _System Administrator_ navigate to _Application
+Dictionary_ > _Tables and Columns_ > and find the _M_Product_ DB Table. This
+is the underlying table of the main tab of the _Product_ window.
 
-Go to **Column** tab, find the _Name_ record and edit it. Find the  Callout
+Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
@@ -224,10 +231,13 @@ Do the same for the _Product Category_ record since a change in any of them
 should also regenerate the Search Key.
 
 !!! warning Remember to perform
-    ```./gradlew export.database```
-    and
-    ```./gradlew export.config.script```
-    in order to persist your changes in your template.  
+```./gradlew export.database```
+
+and
+
+```./gradlew export.config.script```
+
+in order to persist your changes in your template.  
   
   
 #  Compiling the Window
@@ -252,7 +262,8 @@ else and see how the change is reflected inside the **Search Key** field.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
 
-You have now successfully created your first new callout and seen how it came
-to life within Etendo Classic. Congratulations!
+Last, save changes.
 
-Retrieved from "  http://wiki.openbravo.com/wiki/How_to_create_a_Callout  "
+---
+
+This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
