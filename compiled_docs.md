@@ -39513,7 +39513,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.3](#1133)   | 27/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
@@ -39545,15 +39546,11 @@ Article URL: https://etendo.software
 | 1.0.100   | -          | 21.4.0 | 21.4.x | C  |                       |
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
-#### Known Issues
-
-- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
-  
-    !!! warning "Attention"
-        The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
-
-
 #### Release Notes
+
+##### 1.13.3
+- [EE-839](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/31){target="\_blank"} Financial Reports Advanced Module Ignore Selected ERP Language
+- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage
 
 ##### 1.13.2
 - [EE-786](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/20){target="\_blank"} Functionality to select orders or invoices in remittances does not work well total
