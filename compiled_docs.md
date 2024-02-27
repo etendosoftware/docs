@@ -31172,8 +31172,7 @@ This notifications are shown in the top bar, just beside the Application menu.
 
 ####  Alert Rules
 
-The definition of the _Alert Rules_ is made in the _Alert_ window ( _General
-Setup || Application || Alert_ ).
+The definition of the _Alert Rules_ is made in the _Alert_ window (`General Setup` > `Application ` >`Alert`).
 
 ####  Data Driven
 
@@ -33246,7 +33245,7 @@ First of all, the condition under which the alert appears needs to be defined.
 This is done using a SQL statement that needs to follow certain conventions.
 
 To create a new  alert  rule, use the role _*System Administrator*_ to navigate
-to _*General Setup || Application || Alert*_ window. Depending on how you
+to `General Setup` > `Application ` >`Alert` window. Depending on how you
 installed Etendo, you might already have some alerts here. If you do, try
 to find the _Customers with exceeded credit_ one and double click it. If not,
 create a new record as indicated below:
@@ -33287,7 +33286,7 @@ The fields in question here are:
 ####  Defining recipients
 
 Switch to the role _*System Administrator*_ (or your defined 'administrator'
-role), navigate to _*General Setup || Application || Alert*_ , select the
+role), navigate to _`General Setup` > `Application ` >`Alert`_ , select
 _Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
 tab. Add a new record as indicated below:
 
@@ -33302,14 +33301,14 @@ tab. Add a new record as indicated below:
 ####  Scheduling the alerting background process
 
 For the alerts to be evaluated and triggered, the background process needs to
-be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _*General Setup || Process Scheduling || Process Request*_ and enter a new record:
+be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _`General Setup` > `Process Scheduling ` >`Process Request`_ and enter a new record:
 
 ![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
 
 ####  The Result
 
-Finally, log out and back in and select the role _*System Administrator*_(or
-your defined 'administrator' role). You should be able to see an alert in the
+Finally, log out and back in and select the role _*System Administrator*_ (or
+your defined administrator role). You should be able to see an alert in the
 navigation bar. By clicking on it, you will automatically be taken to the
 _*Alert Management*_ window that should look something like:
 
@@ -33363,8 +33362,8 @@ needs to have all the columns defined above:
 Finally, the WHERE clause describes the condition that triggers the alert. In
 our case the SELECT statement will return all Business Partners (FROM
 c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
-limit (SO_CreditLimit < SO_CreditUsed) which needs to be different from zero
-(SO_CreditLimit!=0).
+limit (`SO_CreditLimit < SO_CreditUsed`) which needs to be different from zero
+(`SO_CreditLimit!=0`).
 
 In other words, anything you can describe in a SQL statement can be defined as
 an alert. 
