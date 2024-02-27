@@ -23,8 +23,7 @@ This notifications are shown in the top bar, just beside the Application menu.
 
 ##  Alert Rules
 
-The definition of the _Alert Rules_ is made in the _Alert_ window ( _General
-Setup || Application || Alert_ ).
+The definition of the _Alert Rules_ is made in the _Alert_ window (`General Setup` > `Application ` >`Alert`).
 
 ##  Data Driven
 
