@@ -39190,6 +39190,9 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/whats-new/release-notes/etendo-classic/release-notes
 ## Article Content: 
+### Release Notes
+
+:octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
