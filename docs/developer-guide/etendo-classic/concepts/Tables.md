@@ -1,4 +1,5 @@
 ---
+title: Tables
 tags: 
   - Database Tables
   - Common Columns
@@ -34,9 +35,9 @@ defining it as ID in Application Dictionary.
 
 ###  Client/Organization
 
-As Etendo ERP is a [multi client and multi organization](/developer-guide/etendo-classic/concepts/.Multi_Client_and_Multi_Org/?h=multi) application, all
+As Etendo ERP is a [multi client and multi organization](Multi_Client_and_Multi_Org.md) application, all
 data belongs to a client and an organization, so all tables must have these
-two columns:
+two columns:  
 
   * _AD_Client_ID_
   * _AD_Org_ID_
@@ -123,7 +124,7 @@ This restriction also applies for naming constraints, triggers and functions.
 ####  Primary Key Column
 
 !!!info
-    Naming for primary key column is explained in [Primary Key](/developer-guide/etendo-classic/concepts/.Tables/?h=tables#primary-key-column) section of this document.
+    Naming for primary key column is explained in [Primary Key](#primary-key) section of this document.
 
 ####  Foreign Key Columns
 
@@ -145,7 +146,7 @@ In Etendo, Java classes are generated from the tables definition. A DAL
 entity is generated from every table defined in the Application Dictionary.
 
 !!!info
-    For more information, visit [Data Access Layer](/developer-guide/etendo-classic/concepts/Data_Access_Layer/) .
+    For more information, visit [Data Access Layer](../concepts/Data_Access_Layer.md).
 
 It is important you take this into account when thinking about the names for
 your columns. The columns you define in a table will correspond to Java
@@ -161,7 +162,6 @@ which collide with Java keywords* , such as *class* , *if* , *int* , ...
 operations, supports a subset of the datatypes that Oracle and PostgreSQL
 databases support. Below we include the currently supported data types:
 
-  
 
 Oracle  |  PostgreSQL  
 ---|---  
@@ -172,8 +172,6 @@ date  |  timestamp
 number  |  numeric  
 clob  |  text  
   
-
-
 
 
   
