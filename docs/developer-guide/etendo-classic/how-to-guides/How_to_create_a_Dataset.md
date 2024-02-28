@@ -299,7 +299,7 @@ the module:
 And publish the module. 
 
 !!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+    For more information, see [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md).
 
 
   
