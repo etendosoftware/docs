@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Tables/</loc>
+         <lastmod>2024-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/etendo-jars/</loc>
          <lastmod>2024-02-28</lastmod>
          <changefreq>daily</changefreq>
