@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objective" class="md-skip">
+        <a href="#how-to-create-a-callout" class="md-skip">
           Skip to content
         </a>
       
@@ -4465,6 +4465,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -4495,6 +4497,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4503,9 +4507,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      Overview
     </span>
   </a>
   
@@ -6713,6 +6717,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6721,9 +6727,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      Overview
     </span>
   </a>
   
@@ -6866,7 +6872,8 @@
   
 
 
-<h2 id="objective">Objective</h2>
+<h1 id="how-to-create-a-callout">How to create a callout</h1>
+<h2 id="overview">Overview</h2>
 <p>The objective of this article is to show you how to create a new  callout . A
 callout is a piece of Javascript code associated with a particular field on a
 tab. This code is executed whenever the field changes. It is a type of Ajax
@@ -6874,7 +6881,7 @@ substitute, changing parts of a tab/window without the need of refreshing it.</p
 <p>It works by calling the FIC when a field with an associated callout is
 changed. The FIC (Form Initialization Component) refreshes the needed fields
 based on the callout logic.</p>
-<p>This section will implement the following new functionality: When entering a
+<p>This section implements the following new functionality: When entering a
 new product, one has the option of entering the <em>Search Key</em> for the product,
 the <em>Name</em> and the <em>Category</em> it belongs to. But what if our client wants the
 search key to be constructed automatically by taking the product's name,
@@ -6886,14 +6893,14 @@ become <em>BonFountain_Water</em>. Let's see how this could be done using a call
 <p>The steps involved in creating a new callout are:</p>
 <ol>
 <li>Create the source file(s) of the callout (usually a java file). </li>
-<li>Define the new  callout  within the application dictionary (menu Application Dictionary &gt; Setup &gt; Callout  ). </li>
-<li>Associate this callout with a table  column  ( Application Dictionary &gt; Table and Column: Callout field withinin Column tab). </li>
+<li>Define the new  callout  within the application dictionary (<code>Menu</code> &gt; <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; <code>Callout</code>). </li>
+<li>Associate this callout with a table  column  ( <code>Application Dictionary</code> &gt; <code>Table and Column: Callout field within Column tab</code>). </li>
 <li>Compile the window/tab(s) where this Column is used. </li>
 </ol>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Developments related to points (1) and (2) must belong to
-a module that is not the <em>core</em> module. Please follow the <a href="../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md">How to create and package a module</a>  section to create a new module. For the development related
+a module that is not the <em>core</em> module. Please follow the <a href="How_To_Create_and_Package_a_Module.md">How to create and package a module</a>  section to create a new module. For the development related
 to point (3) about modifying a <em>core</em> located column, a new template is
 needed. You can read the <a href="../How_to_change_an_existing_Window/">How to change an existing Window</a> article to obtain more information.</p>
 </div>
@@ -6902,7 +6909,7 @@ needed. You can read the <a href="../How_to_change_an_existing_Window/">How to c
 <p>This article assumes you have created both module and template according to the articles just mentioned.  </p>
 </div>
 <h2 id="creating-the-callout">Creating the Callout</h2>
-<p>Existing callouts are located in <em>src/org/openbravo/erpCommon/ad_callouts</em> .</p>
+<p>Existing callouts are located in <a href="https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts" target="_blank">src/org/openbravo/erpCommon/ad_callouts</a>.</p>
 <p>The right way to create a callout is by extending the SimpleCallout class.
 This class simplifies the callout code, hides some of the internals of the
 callout and keeps you focused on the operations required. To access database
@@ -6916,29 +6923,28 @@ In this method you can develop the logic of the callout and use the info
 object of class CalloutInfo to access window fields, database and other
 methods. The most important are:</p>
 <ul>
-<li>public String getStringParameter(String param, RequestFilter filter) : Returns the value of a field named param as an String using the filter to accept values. </li>
-<li>public BigDecimal getBigDecimalParameter(String param) throws ServletException : This method returns the value of of a field named param as a BigDecimal. </li>
-<li>public void addResult(String param, String value) : This method sets the value of a field named param with the String value indicated. </li>
-<li>public void addResult(String param, Object value) : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. </li>
-<li>public void addSelect(String param) : Starts the inclusion of values of a field named param of type select. </li>
-<li>public void addSelectResult(String name, String value) : Adds an entry to the select field and marks it as unselected. </li>
-<li>public void addSelectResult(String name, String value, boolean selected) : Adds an entry to the select field. </li>
-<li>public void endSelect() : Finish the inclusion of values to the select field. </li>
-<li>protected void showMessage(String value) : Shows a message in the browser with the value indicated. </li>
-<li>protected void showError(String value) : Shows an error message in the browser with the value indicated. </li>
-<li>protected void showWarning(String value) : Shows a warning message in the browser with the value indicated. </li>
-<li>protected void showInformation(String value) : Shows an information message in the browser with the value indicated. </li>
-<li>protected void showSuccess(String value) : Shows a success message in the browser with the value indicated. </li>
-<li>protected void executeCodeInBrowser(String value) : Executes the javascript code indicated in the value in the browser. </li>
-<li>public String getLastFieldChanged() : Returns the name of field that triggered the callout. </li>
-<li>public String getTabId() : Returns the Tab Id that triggered the callout. </li>
-<li>public String getWindowId() : Returns the Window Id that triggered the callout. </li>
-<li>public VariablesSecureApp vars : This instance field contains the VariablesSecureApp associated to the callout servlet. </li>
+<li>public String <code>getStringParameter(String param, RequestFilter filter)</code> : Returns the value of a field named param as an String using the filter to accept values. </li>
+<li>public BigDecimal <code>getBigDecimalParameter(String param) throws ServletException</code> : This method returns the value of of a field named param as a BigDecimal. </li>
+<li>public void <code>addResult(String param, String value)</code> : This method sets the value of a field named param with the String value indicated. </li>
+<li>public void <code>addResult(String param, Object value)</code> : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. </li>
+<li>public void <code>addSelect(String param)</code> : Starts the inclusion of values of a field named param of type select. </li>
+<li>public void <code>addSelectResult(String name, String value)</code> : Adds an entry to the select field and marks it as unselected. </li>
+<li>public void <code>addSelectResult(String name, String value, boolean selected)</code> : Adds an entry to the select field. </li>
+<li>public void <code>endSelect()</code> : Finish the inclusion of values to the select field. </li>
+<li>protected void <code>showMessage(String value)</code> : Shows a message in the browser with the value indicated. </li>
+<li>protected void <code>showError(String value)</code> : Shows an error message in the browser with the value indicated. </li>
+<li>protected void <code>showWarning(String value)</code> : Shows a warning message in the browser with the value indicated. </li>
+<li>protected void <code>showInformation(String value)</code> : Shows an information message in the browser with the value indicated. </li>
+<li>protected void <code>showSuccess(String value)</code> : Shows a success message in the browser with the value indicated. </li>
+<li>protected void <code>executeCodeInBrowser(String value)</code> : Executes the javascript code indicated in the value in the browser. </li>
+<li>public String <code>getLastFieldChanged()</code> : Returns the name of field that triggered the callout. </li>
+<li>public String <code>getTabId()</code> : Returns the Tab Id that triggered the callout. </li>
+<li>public String <code>getWindowId()</code> : Returns the Window Id that triggered the callout. </li>
+<li>public <code>VariablesSecureApp vars</code> : This instance field contains the VariablesSecureApp associated to the callout servlet. </li>
 </ul>
 <p>It is important to keep coherence with each expected data type (String, BigDecimal, ...)</p>
 <p>See the following class as an example of a class that currently uses
-SimpleCallout:  SL_Project_Service  . This callout simply takes the numeric
-value of two fields, calculates the sum and writes it into another field. This
+SimpleCallout: <a href="https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java" target="_blank">SL_Project_Service</a>. This callout simply takes the numeric value of two fields, calculates the sum and writes it into another field. This
 is the interesting part of the code that performs the logic:
 <div class="language-java highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="nd">@Override</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">CalloutInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
@@ -6950,7 +6956,7 @@ is the interesting part of the code that performs the logic:
 </span></code></pre></div></p>
 <h3 id="extend-a-callout">Extend a Callout</h3>
 <p>It is possible to implement a callout that extends from another callout. For
-more information visit this <a href="./How_to_create_a_callout_that_extends_from_another_callout.md">How to create a callout that extends from another callout</a> tutorial.</p>
+more information visit this <a href="How_to_create_a_callout_that_extends_from_another_callout.md">How to create a callout that extends from another callout</a> tutorial.</p>
 <h3 id="product-search-key-calculation-using-simplecallout">Product Search Key Calculation using SimpleCallout</h3>
 <p>Let's define the tasks that need to be performed by the callout:</p>
 <ol>
@@ -7021,9 +7027,7 @@ more information visit this <a href="./How_to_create_a_callout_that_extends_from
 <p class="admonition-title">Note</p>
 <p>You need to have only your module as "In Development" at this stage.</p>
 </div>
-<p>Using the role <em>System Administrator</em>, navigate to <em>Application
-Dictionary &gt; Setup &gt; Callout</em>. Create a new  record as indicated by the
-screenshot below:</p>
+<p>Using the role <em>System Administrator</em>, navigate to <code>Application Dictionary</code> &gt; <code>Setup</code> &gt; <code>Callout</code>. Create a new  record as indicated by the screenshot below:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The name of the callout should not have spaces or illegal javascript characters.  </p>
@@ -7037,9 +7041,10 @@ screenshot below:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png" /></a></p>
 <p>Now Etendo Classic knows that a callout exists and is implemented by the class you
 have just specified.</p>
-<div class="admonition warning remember to perform">
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><code>./gradlew export.database</code>
+<p>Remember to perform
+<code>./gradlew export.database</code>
 in order to persist your changes in your module.  </p>
 </div>
 <h2 id="associating-the-callout-with-a-column">Associating the Callout with a Column</h2>
@@ -7047,37 +7052,36 @@ in order to persist your changes in your module.  </p>
 <p class="admonition-title">Note</p>
 <p>You need to have ONLY your template as "In Development" at this stage.</p>
 </div>
-<p>Using the role <em>System Administrator</em> navigate to <em>Application
-Dictionary</em> &gt; <em>Tables and Columns</em> &gt; and find the <em>M_Product</em> DB Table. This
-is the underlying table of the main tab of the <em>Product</em> window.</p>
+<p>Using the role <em>System Administrator</em> navigate to <code>Application Dictionary</code> &gt; <code>Tables and Columns</code> &gt; and find the <em>M_Product</em> DB Table. This is the underlying table of the main tab of the <em>Product</em> window.</p>
 <p>Go to Column tab, find the <em>Name</em> record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 <em>Product_Construct_SearchKey</em> callout and save the record:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-6.png" /></a></p>
 <p>Do the same for the <em>Product Category</em> record since a change in any of them
 should also regenerate the Search Key.</p>
-<div class="admonition warning remember to perform">
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
-</div>
-<p><code>./gradlew export.database</code></p>
+<p>Remember to perform
+<code>./gradlew export.database</code></p>
 <p>and</p>
 <p><code>./gradlew export.config.script</code></p>
 <p>in order to persist your changes in your template.  </p>
-<h1 id="compiling-the-window">Compiling the Window</h1>
+</div>
+<h2 id="compiling-the-window">Compiling the Window</h2>
 <p>Finally, for the callout to take effect, the window that uses it needs to be
 recompiled and deployed to Tomcat. Do:
   <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span>./gradlew<span class="w"> </span>smartbuild<span class="w"> </span>
 </span></code></pre></div></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Once the compilation has finished, <strong>restart Apache Tomcat server</strong> .  </p>
+<p>Once the compilation has finished, restart Apache Tomcat server.  </p>
 </div>
-<h1 id="the-result">The Result</h1>
-<p>Using the role <em><strong>Group Admin</strong> _ (or your defined 'administrator' role),
-navigate to the </em><strong>Master Data Management || Product</strong> _ window. Enter a new
-product with <strong>Name</strong> = <em>Bon Fountain</em> and leave the <strong>Name</strong> field. Notice
-how the Search Key changes. Then, change the <strong>Product Category</strong> to something
-else and see how the change is reflected inside the <strong>Search Key</strong> field.</p>
+<h2 id="the-result">The Result</h2>
+<p>Using the role <em>Group Admin</em> (or your defined 'administrator' role),
+navigate to the <code>Master Data Management</code> &gt; <code>Product</code> window. Enter a new
+product with Name = <em>Bon Fountain</em> and leave the Name field. Notice
+how the Search Key changes. Then, change the Product Category to something
+else and see how the change is reflected inside the Search Key field.</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png" /></a></p>
 <p>Last, save changes.</p>
 <hr />
