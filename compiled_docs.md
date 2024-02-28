@@ -32935,7 +32935,7 @@ the module:
 And publish the module. 
 
 !!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+    For more information, see [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md).
 
 
   
@@ -33766,9 +33766,9 @@ The result shows the sum of the 2 selected order headers:
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
 ## Article Content: 
-####  Objective
+### How to create a callout
 
-
+####  Overview
 
 The objective of this article is to show you how to create a new  callout . A
 callout is a piece of Javascript code associated with a particular field on a
@@ -33779,7 +33779,7 @@ It works by calling the FIC when a field with an associated callout is
 changed. The FIC (Form Initialization Component) refreshes the needed fields
 based on the callout logic.
 
-This section will implement the following new functionality: When entering a
+This section implements the following new functionality: When entering a
 new product, one has the option of entering the _Search Key_ for the product,
 the _Name_ and the _Category_ it belongs to. But what if our client wants the
 search key to be constructed automatically by taking the product's name,
@@ -33793,15 +33793,15 @@ become _BonFountain_Water_. Let's see how this could be done using a callout.
 The steps involved in creating a new callout are:
 
   1. Create the source file(s) of the callout (usually a java file). 
-  2. Define the new  callout  within the application dictionary (menu Application Dictionary > Setup > Callout  ). 
-  3. Associate this callout with a table  column  ( Application Dictionary > Table and Column: Callout field withinin Column tab). 
+  2. Define the new  callout  within the application dictionary (`Menu` > `Application Dictionary` > `Setup` > `Callout`). 
+  3. Associate this callout with a table  column  ( `Application Dictionary` > `Table and Column: Callout field within Column tab`). 
   4. Compile the window/tab(s) where this Column is used. 
 
 !!!Important
     Developments related to points (1) and (2) must belong to
-    a module that is not the _core_ module. Please follow the [How to create and package a module](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
     to point (3) about modifying a _core_ located column, a new template is
-    needed. You can read the [How to change an existing Window](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md) article to obtain more information.
+    needed. You can read the [How to change an existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
 
 !!!Note
     This article assumes you have created both module and template according to the articles just mentioned.  
@@ -33809,7 +33809,7 @@ The steps involved in creating a new callout are:
   
 ####  Creating the Callout
 
-Existing callouts are located in _src/org/openbravo/erpCommon/ad_callouts_ .
+Existing callouts are located in [src/org/openbravo/erpCommon/ad_callouts](https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts){target="_blank"}.
 
 The right way to create a callout is by extending the SimpleCallout class.
 This class simplifies the callout code, hides some of the internals of the
@@ -33827,30 +33827,29 @@ In this method you can develop the logic of the callout and use the info
 object of class CalloutInfo to access window fields, database and other
 methods. The most important are:
 
-  * public String getStringParameter(String param, RequestFilter filter) : Returns the value of a field named param as an String using the filter to accept values. 
-  * public BigDecimal getBigDecimalParameter(String param) throws ServletException : This method returns the value of of a field named param as a BigDecimal. 
-  * public void addResult(String param, String value) : This method sets the value of a field named param with the String value indicated. 
-  * public void addResult(String param, Object value) : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. 
-  * public void addSelect(String param) : Starts the inclusion of values of a field named param of type select. 
-  * public void addSelectResult(String name, String value) : Adds an entry to the select field and marks it as unselected. 
-  * public void addSelectResult(String name, String value, boolean selected) : Adds an entry to the select field. 
-  * public void endSelect() : Finish the inclusion of values to the select field. 
-  * protected void showMessage(String value) : Shows a message in the browser with the value indicated. 
-  * protected void showError(String value) : Shows an error message in the browser with the value indicated. 
-  * protected void showWarning(String value) : Shows a warning message in the browser with the value indicated. 
-  * protected void showInformation(String value) : Shows an information message in the browser with the value indicated. 
-  * protected void showSuccess(String value) : Shows a success message in the browser with the value indicated. 
-  * protected void executeCodeInBrowser(String value) : Executes the javascript code indicated in the value in the browser. 
-  * public String getLastFieldChanged() : Returns the name of field that triggered the callout. 
-  * public String getTabId() : Returns the Tab Id that triggered the callout. 
-  * public String getWindowId() : Returns the Window Id that triggered the callout. 
-  * public VariablesSecureApp vars : This instance field contains the VariablesSecureApp associated to the callout servlet. 
+  * public String `getStringParameter(String param, RequestFilter filter)` : Returns the value of a field named param as an String using the filter to accept values. 
+  * public BigDecimal `getBigDecimalParameter(String param) throws ServletException` : This method returns the value of of a field named param as a BigDecimal. 
+  * public void `addResult(String param, String value)` : This method sets the value of a field named param with the String value indicated. 
+  * public void `addResult(String param, Object value)` : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. 
+  * public void `addSelect(String param)` : Starts the inclusion of values of a field named param of type select. 
+  * public void `addSelectResult(String name, String value)` : Adds an entry to the select field and marks it as unselected. 
+  * public void `addSelectResult(String name, String value, boolean selected)` : Adds an entry to the select field. 
+  * public void `endSelect()` : Finish the inclusion of values to the select field. 
+  * protected void `showMessage(String value)` : Shows a message in the browser with the value indicated. 
+  * protected void `showError(String value)` : Shows an error message in the browser with the value indicated. 
+  * protected void `showWarning(String value)` : Shows a warning message in the browser with the value indicated. 
+  * protected void `showInformation(String value)` : Shows an information message in the browser with the value indicated. 
+  * protected void `showSuccess(String value)` : Shows a success message in the browser with the value indicated. 
+  * protected void `executeCodeInBrowser(String value)` : Executes the javascript code indicated in the value in the browser. 
+  * public String `getLastFieldChanged()` : Returns the name of field that triggered the callout. 
+  * public String `getTabId()` : Returns the Tab Id that triggered the callout. 
+  * public String `getWindowId()` : Returns the Window Id that triggered the callout. 
+  * public `VariablesSecureApp vars` : This instance field contains the VariablesSecureApp associated to the callout servlet. 
 
 It is important to keep coherence with each expected data type (String, BigDecimal, ...)
 
 See the following class as an example of a class that currently uses
-SimpleCallout:  SL_Project_Service  . This callout simply takes the numeric
-value of two fields, calculates the sum and writes it into another field. This
+SimpleCallout: [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="_blank"}. This callout simply takes the numeric value of two fields, calculates the sum and writes it into another field. This
 is the interesting part of the code that performs the logic:
 ```java
   @Override
@@ -33864,7 +33863,7 @@ is the interesting part of the code that performs the logic:
 #####  Extend a Callout
 
 It is possible to implement a callout that extends from another callout. For
-more information visit this [How to create a callout that extends from another callout](./How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+more information visit this [How to create a callout that extends from another callout](How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
 
   
 #####  Product Search Key Calculation using SimpleCallout
@@ -33939,9 +33938,7 @@ Let's define the tasks that need to be performed by the callout:
 !!!note
     You need to have only your module as "In Development" at this stage.
 
-Using the role _System Administrator_, navigate to _Application
-Dictionary > Setup > Callout_. Create a new  record as indicated by the
-screenshot below:
+Using the role _System Administrator_, navigate to `Application Dictionary` > `Setup` > `Callout`. Create a new  record as indicated by the screenshot below:
 
 !!!warning
     The name of the callout should not have spaces or illegal javascript characters.  
@@ -33961,7 +33958,8 @@ screenshot below:
 Now Etendo Classic knows that a callout exists and is implemented by the class you
 have just specified.
 
-!!!warning Remember to perform
+!!!warning 
+    Remember to perform
     ```./gradlew export.database```
     in order to persist your changes in your module.  
  
@@ -33971,9 +33969,7 @@ have just specified.
 !!!note
     You need to have ONLY your template as "In Development" at this stage.
 
-Using the role _System Administrator_ navigate to _Application
-Dictionary_ > _Tables and Columns_ > and find the _M_Product_ DB Table. This
-is the underlying table of the main tab of the _Product_ window.
+Using the role _System Administrator_ navigate to `Application Dictionary` > `Tables and Columns` > and find the _M_Product_ DB Table. This is the underlying table of the main tab of the _Product_ window.
 
 Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
@@ -33986,17 +33982,18 @@ guides/How_to_create_a_Callout-6.png)
 Do the same for the _Product Category_ record since a change in any of them
 should also regenerate the Search Key.
 
-!!! warning Remember to perform
-```./gradlew export.database```
+!!! warning
+    Remember to perform
+    ```./gradlew export.database```
 
-and
+    and
 
-```./gradlew export.config.script```
+    ```./gradlew export.config.script```
 
-in order to persist your changes in your template.  
+    in order to persist your changes in your template.  
   
   
-###  Compiling the Window
+####  Compiling the Window
 
 Finally, for the callout to take effect, the window that uses it needs to be
 recompiled and deployed to Tomcat. Do:
@@ -34005,16 +34002,16 @@ recompiled and deployed to Tomcat. Do:
   ```
 
 !!!info
-    Once the compilation has finished, **restart Apache Tomcat server** .  
+    Once the compilation has finished, restart Apache Tomcat server.  
   
 
-###  The Result
+####  The Result
 
-Using the role _**Group Admin** _ (or your defined 'administrator' role),
-navigate to the _**Master Data Management || Product** _ window. Enter a new
-product with **Name** = _Bon Fountain_ and leave the **Name** field. Notice
-how the Search Key changes. Then, change the **Product Category** to something
-else and see how the change is reflected inside the **Search Key** field.
+Using the role _Group Admin_ (or your defined 'administrator' role),
+navigate to the `Master Data Management` > `Product` window. Enter a new
+product with Name = _Bon Fountain_ and leave the Name field. Notice
+how the Search Key changes. Then, change the Product Category to something
+else and see how the change is reflected inside the Search Key field.
 
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
 
