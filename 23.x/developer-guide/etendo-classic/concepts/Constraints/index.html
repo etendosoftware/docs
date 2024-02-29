@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/">
+        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/concepts/Constraints/">
       
       
         <link rel="prev" href="../Data_Access_Layer/">
@@ -21,11 +21,11 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
-        <title>Constraints and Triggers - Etendo Documentation</title>
+        <title>Constraints - Etendo Documentation</title>
       
     
     
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Constraints and Triggers
+              Constraints
             
           </span>
         </div>
@@ -4044,7 +4044,7 @@
           
   
   <span class="md-ellipsis">
-    Constraints and Triggers
+    Constraints
   </span>
   
 
@@ -4055,7 +4055,7 @@
         
   
   <span class="md-ellipsis">
-    Constraints and Triggers
+    Constraints
   </span>
   
 
@@ -4185,81 +4185,6 @@
       Indexes for Contains Search
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Triggers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Triggers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etendo-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Etendo Conventions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Etendo Conventions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exceptions-and-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exceptions and messages
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oracles-laziness" class="md-nav__link">
-    <span class="md-ellipsis">
-      Oracle's laziness
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#soft-disabling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soft disabling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#object-returning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object returning
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -6963,81 +6888,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#triggers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Triggers
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Triggers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#etendo-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Etendo Conventions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Etendo Conventions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exceptions-and-messages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exceptions and messages
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oracles-laziness" class="md-nav__link">
-    <span class="md-ellipsis">
-      Oracle's laziness
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#soft-disabling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soft disabling
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#object-returning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object returning
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7063,12 +6913,6 @@
     
     
     
-      <span class="md-tag">triggers</span>
-    
-  
-    
-    
-    
       <span class="md-tag">indexes</span>
     
   
@@ -7076,6 +6920,12 @@
     
     
       <span class="md-tag">naming</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">modularity</span>
     
   
     
@@ -7091,35 +6941,35 @@
   
 
 
-  <h1>Constraints and Triggers</h1>
+  <h1>Constraints</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for triggers and constraints but just the particularities Etendo Classic has in their usage.</p>
+<p>Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.</p>
 <h2 id="naming">Naming</h2>
 <p>When adding a check constraint, triggers and indexes modularity naming rules have to be taken into account. This is necessary because triggers and indexes are global objects for a database. </p>
 <p>The modularity naming rule is as follows: 
 the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. </p>
-<p>For instance,<code>_MYMODULEDBPREFIX_CONSTRAINTNAME_</code>.</p>
+<p>For instance,<code>MYMODULEDBPREFIX_CONSTRAINTNAME</code>.</p>
 <p>In the case of indexes and constraints, if the index/constraint is added to a
-table of another module then an additional <code>_EM__ prefix</code> is required:</p>
-<p><code>_EM_MYMODULEDBPREFIX_CONSTRAINTNAME_</code>.</p>
+table of another module then an additional <code>EM_</code> prefix is required:</p>
+<p><code>EM_MYMODULEDBPREFIX_CONSTRAINTNAME</code>.</p>
 <p>By following this naming rule, the index/trigger/constraint is exported to the
 module directory and packaged with the module.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The name of the constraints and triggers must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  </p>
+<p>The name of the constraints must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  </p>
 </div>
 <h2 id="constraints">Constraints</h2>
 <p>Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, read <a href="/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint">How to add a Constraint</a>.</p>
+<p>For more information, read <a href="../how-to-guides/How_to_add_a_Constraint.md">How to add a Constraint</a>.</p>
 </div>
 <h3 id="messages">Messages</h3>
 <p>It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>How to do that is explained in the <a href="/developer-guide/etendo-classic/concepts/Messages#checks">Messages</a> documentation.</p>
+<p>How to do that is explained in the <a href="Messages.md#checks">Messages</a> documentation.</p>
 </div>
 <h3 id="backwards-compatibility">Backwards compatibility</h3>
 <p>Modules should allow compatibility for other ones built on top of them at least between minor versions, additionally there could be user data already in the application if it is in a productive environment. 
@@ -7127,7 +6977,7 @@ This means that user data or other module's could rely on the current database m
 than it was, backwards compatibility could be broken. Therefore, it should be avoided to add new constraints or to modify existent ones to make them more restrictive during between versions.</p>
 <h2 id="indexes">Indexes</h2>
 <h3 id="operator-classes">Operator Classes</h3>
-<p>In <code>PostgreSQL  Operator Classes</code>  certain operator classes (<code>text_pattern_ops</code>,
+<p>In PostgreSQL <a href="https://www.postgresql.org/docs/9.3/indexes-opclass.html" target="_blank">Operator Classes</a> certain operator classes (<code>text_pattern_ops</code>,
 <code>varchar_pattern_ops</code>, and <code>bpchar_pattern_ops</code>) enables using indexes in queries
 involving pattern matching expressions. For instance, the following query:</p>
 <p><div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
@@ -7173,11 +7023,6 @@ The following index can also be used.</p>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="p">(</span><span class="k">UPPER</span><span class="p">(</span><span class="k">REPLACE</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">)),</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">       </span><span class="k">UPPER</span><span class="p">(</span><span class="n">c_bpartner_id</span><span class="p">));</span>
 </span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Functions used in indexes must be immutable. It is
-possible to define <a href="/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure#volatility">custom immutable functions</a>, previously only built-in immutable functions could be used in indexes.  </p>
-</div>
 <h3 id="partial-indexes">Partial indexes</h3>
 <p><code>PostgreSQL</code> supports the definition of <a href="https://www.postgresql.org/docs/9.3/indexes-partial.html" target="_blank">partial indexes</a>. A partial index is an index where it is possible to specify the rows that are indexed. This kind of indexes are useful for commonly used <em>WHERE</em> conditions that use constant values.</p>
 <p>Thus, with a partial index it is possible to index just the table data that is most commonly used, helping to reduce the amount of disk space used by the index.</p>
@@ -7189,7 +7034,7 @@ possible to define <a href="/developer-guide/etendo-classic/how-to-guides/How_to
 <p>Oracle does not support the creation of partial indexes in an explicit way yet. For this reason, if a partial index is found in the Etendo XML model when using an Oracle database, the partial index definition is not taken into account and it is created as a regular index.</p>
 <h4 id="not-null-partial-indexes-on-nullable-columns">Not Null Partial Indexes On Nullable Columns</h4>
 <p>In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.</p>
-<p>This is not the behavior in PostgresSQL databases, where we will need to define the index as partial to get the same behavior. For example:</p>
+<p>This is not the behavior in <code>PostgreSQL databases</code>, where we will need to define the index as partial to get the same behavior. For example:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">c_order_return_reason</span><span class="w"> </span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">      </span><span class="k">ON</span><span class="w"> </span><span class="n">c_order</span><span class="w"> </span><span class="p">(</span><span class="n">c_return_reason_id</span><span class="p">)</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">      </span><span class="k">WHERE</span><span class="w"> </span><span class="n">c_return_reason_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
@@ -7201,70 +7046,18 @@ possible to define <a href="/developer-guide/etendo-classic/how-to-guides/How_to
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To define this kind of indexes, we have to make use of the <strong><code>gin</code>
-** access method together with the </strong><code>gin_trgm_ops</code> ** operator class for
-the indexed column. Both elements are available thanks to the  <code>pg_trgm</code>
+<p>To define this kind of indexes, we have to make use of the <code>gin</code>
+access method together with the <code>gin_trgm_ops</code> operator class for
+the indexed column. Both elements are available thanks to the <code>pg_trgm</code>
 extension which is included in Etendo distribution by default.</p>
 </div>
-<p>Besides, this feature allows defining a <a href="/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/#function-based-indexes">function based index</a> to improve icontains (case-insensitive) searching:</p>
+<p>Besides, this feature allows defining a <a href="#function-based-indexes">function based index</a> to improve icontains (case-insensitive) searching:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="o">`</span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">c_bpartner_value_basic</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">c_bpartner</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">gin</span><span class="w"> </span><span class="p">(</span><span class="k">UPPER</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="n">gin_trgm_ops</span><span class="p">);</span><span class="o">`</span>
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.</p>
 </div>
-<h2 id="triggers">Triggers</h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For more information, read <a href="/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger">How to add a Trigger</a>.</p>
-</div>
-<h3 id="syntax">Syntax</h3>
-<p>Triggers, as the rest of <code>PL code</code> in Etendo Classic, should be written following
-some restrictions in order to make them compatible between <code>PostgreSQL</code> and
-Oracle and to make it possible to correctly export and import them using
-<code>DBSourceManager</code>. These rules are detailed in the <code>PL-SQL</code> code rules
-document.</p>
-<h3 id="etendo-conventions">Etendo Conventions</h3>
-<h4 id="exceptions-and-messages">Exceptions and messages</h4>
-<p>Triggers can raise exceptions (it is the common practice to abort a
-transaction), the back-end captures that exception in order to show a proper
-message. </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>For more information, read the <a href="/developer-guide/etendo-classic/concepts/Messages#checks">Message</a> documentation how to do it.</p>
-</div>
-<h4 id="oracles-laziness">Oracle's laziness</h4>
-<p>Whereas oracle evaluates expressions in a lazy manner, <code>PostgreSQL</code> does not do
-so. This is specially important for triggers that are for <code>_insert_ and _delete_</code>
-since in the first case there are new variables and in the second one there
-are old ones, so when writing if clauses (even in Oracle, if we want to do
-compatible code), this must be taken into account writing two clauses instead
-of just one.</p>
-<h4 id="soft-disabling">Soft disabling</h4>
-<p>All triggers in Etendo Classic must be able to be disabled softly. This means
-not disabling it in database but just in a logic way. </p>
-<p>This is used by DAL when it is importing data: triggers must be disabled in order to allow data
-importation without triggering them, but that only should affect the session
-that is executing the importation. To add this capability to triggers, the
-first lines of each of them should look like:</p>
-<p>In Oracle    </p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="n">AD_isTriggerEnabled</span><span class="p">()</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">          </span><span class="k">RETURN</span><span class="p">;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
-</span></code></pre></div>
-<p>In PostgreSQL</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">         </span><span class="k">IF</span><span class="w"> </span><span class="n">AD_isTriggerEnabled</span><span class="p">()</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="w"> </span><span class="k">THEN</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">            </span><span class="k">IF</span><span class="w"> </span><span class="n">TG_OP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="k">RETURN</span><span class="w"> </span><span class="k">OLD</span><span class="p">;</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">         </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
-</span></code></pre></div>
-<h4 id="object-returning">Object returning</h4>
-<p><code>PostgreSQL</code> trigger function must explicitly focus on returning the trigger
-object, also depending on the type of the trigger. This means that the last
-line of the trigger function must be something like:</p>
-<div class="language-text highlight"><pre><span></span><code> 
-     `IF TG_OP = &#39;DELETE&#39; THEN RETURN OLD; ELSE RETURN NEW; END IF;`
-</code></pre></div>
-<hr />
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/Constraints_and_Triggers" target="_blank">Constraints_and_Triggers</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>. </p>
 
 
@@ -7361,7 +7154,7 @@ line of the trigger function must be something like:</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
