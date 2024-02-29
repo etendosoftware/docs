@@ -57,7 +57,7 @@ than it was, backwards compatibility could be broken. Therefore, it should be av
 ###  Operator Classes
 
   
-In `PostgreSQL  Operator Classes`  certain operator classes (`text_pattern_ops`,
+In PostgreSQL [Operator Classes](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} certain operator classes (`text_pattern_ops`,
 `varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
 involving pattern matching expressions. For instance, the following query:
 
@@ -132,9 +132,7 @@ The following index can also be used.
        UPPER(c_bpartner_id));
 ```
 
-!!!info
-    Functions used in indexes must be immutable. It is
-    possible to define [custom immutable functions](../how-to-guides/How_to_create_a_Stored_Procedure.md#volatility), previously only built-in immutable functions could be used in indexes.  
+
   
 ###  Partial indexes
   
