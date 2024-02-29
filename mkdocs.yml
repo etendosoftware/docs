@@ -275,7 +275,7 @@ nav:
         - Data Access Layer: developer-guide/etendo-classic/concepts/Data_Access_Layer.md
 #        - PL-SQL code rules to write Oracle and Postgresql code: developer-guide/etendo-classic/concepts/PL_SQL_code_rules_to_write_Oracle_and_Postgresql_code.md
 #        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
-        - Constraints and Triggers: developer-guide/etendo-classic/concepts/Constraints_and_Triggers.md
+        - Constraints: developer-guide/etendo-classic/concepts/Constraints.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md
         - Datasets: developer-guide/etendo-classic/concepts/Datasets.md
