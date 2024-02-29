@@ -22,7 +22,7 @@ the constraint, index or trigger name must start with the DB Prefix of the modul
 For instance,`MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
 In the case of indexes and constraints, if the index/constraint is added to a
-table of another module then an additional `EM_ prefix` is required:
+table of another module then an additional `EM_` prefix is required:
 
 `EM_MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
@@ -44,7 +44,7 @@ Check constraints do not have any particularity in Etendo, except for how they s
 It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
 
 !!!info
-    How to do that is explained in the [Messages](../Messages.md#checks) documentation.
+    How to do that is explained in the [Messages](Messages.md#checks) documentation.
 
 ###  Backwards compatibility
 
