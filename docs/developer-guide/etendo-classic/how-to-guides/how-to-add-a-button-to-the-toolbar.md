@@ -31,7 +31,8 @@ guides/How_to_add_a_button_to_the_toolbar-0.png)
         When implementing your own components it often makes sense to extend existing
         components. Make sure that your module then depends on the module that
         provides the base types. This ensures that the javascript is loaded in the
-        correct order. 
+        correct order. You must add a dependency from your module to the
+        Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
   
 The button which we will implement will compute and show the sum of a set of
 selected orders to the user. This howto is divided in 2 parts, the first part
