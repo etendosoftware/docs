@@ -924,7 +924,16 @@ By following this setup flow you should be able to have your own version of Eten
 ## Article URL: 
  https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache
 ## Article Content: 
+!!! info
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
 
+![](https://docs.etendo.software/assets/drive/1QOK6qRnoFyXzZwsY4Cgwo22iBZ2CITgV.png)
+
+In this window, the user, in general a developer, can delete the report cache data by clicking the “Done” button. This has technical purposes.  
+After clicking it, a success message will be shown indicating the completion of the process.
+
+!!! info
+    For more information, visit [Platform Extensions Bundle developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Attachments Configuration
@@ -13150,9 +13159,6 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
 
-!!! warning "Attention"
-
-    The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
   
 From the **Payment Out** window, it is possible to create a settlement by clicking on the **Add Details** button.
 In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. The **Actual Payment amount** to pay is set, then select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
@@ -13548,10 +13554,6 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
-
-!!! warning "Attention"
-
-    The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
 
 From the **Payment In** window, it is possible to create a settlement by clicking on the **Add Details** button. In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. First, set the **Actual Payment amount** to be paid and then, select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
@@ -14291,10 +14293,6 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 !!! info
     To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
-
-!!! warning "Attention"
-
-    The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
 
 Etendo allows performing a settlement from a bank reconciliation.
 From the **Financial Account** window, once the bank statements are already imported and processed, the user is able to select the bank statement from the financial account and match it with the invoice to be paid by clicking on the **Match Statement** button.
@@ -25726,8 +25724,8 @@ If no records in the **Logs window** were created after the execution of the scr
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Procurement Extensions
-## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Overview
 ## Article URL: 
  https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview
 ## Article Content: 
@@ -25739,7 +25737,60 @@ This bundle includes enhancements for Procurement functionalities in Etendo.
 
 #### Modules
 
+##### Purchase Invoice Validations
 
+:octicons-package-16: Javapackage: `com.etendoerp.purchase.invoice.validations`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module allows users to prevent the duplication of purchase invoices within the system. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice.
+
+!!! info
+    For more information, visit [the Purchase Invoice Validations user guide](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Purchase Invoice Validation
+## Article Path: /User Guide/Etendo Classic/Optional Features/Bundles/Procurement Extensions/Purchase Invoice Validation
+## Article URL: 
+ https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation
+## Article Content: 
+#### Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.
+
+#### Invoice duplication criteria
+
+Etendo will consider a purchase invoice duplicated if another purchase invoice with the same key details already exists, namely:
+
+- Business Partner
+- Supplier Reference
+- Invoice year, present in the Invoice date field
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
+
+Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.
+
+Also, it is only possible to have one purchase invoice with the same supplier reference every year. This means that, even when the invoice day and month are different from another invoice with the same supplier reference, if the year is the same, the invoice is considered duplicated.
+
+#### Preference
+
+A configurable system preference will be used to enable or disable the validation that prevents the duplication of purchase invoices. This allows the client to decide whether to use this functionality or not. The versatility of preferences allows modifying their visibility, determining whether the validation will be active for all users, roles, organizations, etc.
+
+From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.
+
+!!!note
+    By default, there is an existing preference with the Validate duplicated purchase invoices property and the value N, which means that it is disabled. In case the user wants to enable this preference, it is necessary to create a new one and mark the selected checkbox. For more information,  visit [preference](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/application.md#preference){target="_blank"}.
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation2.png)
+
+#### Validation
+
+The validation will prevent the saving of a purchase invoice that is considered duplicated according to the established criteria. If the system detects that the invoice being saved is duplicated, the user will be informed through a message indicating the nature of the duplication as shown here:
+
+![](https://docs.etendo.software/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation3.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Tax Report Launcher
@@ -30658,14 +30709,14 @@ This work is a derivative of [Data Access Layer](http://wiki.openbravo.com/wiki/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Constraints and Triggers
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints and Triggers
+# Article Title: Constraints
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints
 ## Article Content: 
 #### Overview
 
-Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for triggers and constraints but just the particularities Etendo Classic has in their usage.
+Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.
 
 ####  Naming
 
@@ -30674,32 +30725,32 @@ When adding a check constraint, triggers and indexes modularity naming rules hav
 The modularity naming rule is as follows: 
 the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. 
 
-For instance,`_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+For instance,`MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
 In the case of indexes and constraints, if the index/constraint is added to a
-table of another module then an additional `_EM__ prefix` is required:
+table of another module then an additional `EM_` prefix is required:
 
-`_EM_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+`EM_MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
 By following this naming rule, the index/trigger/constraint is exported to the
 module directory and packaged with the module.
 
 !!!info
-    The name of the constraints and triggers must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
+    The name of the constraints must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
 
 ####  Constraints
 
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
 !!!info
-    For more information, read [How to add a Constraint](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint).
+    For more information, read [How to add a Constraint](https://docs.etendo.software/how-to-guides/How_to_add_a_Constraint.md).
 
 #####  Messages
 
 It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
 
 !!!info
-    How to do that is explained in the [Messages](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation.
+    How to do that is explained in the [Messages](Messages.md#checks) documentation.
 
 #####  Backwards compatibility
 
@@ -30712,7 +30763,7 @@ than it was, backwards compatibility could be broken. Therefore, it should be av
 #####  Operator Classes
 
   
-In `PostgreSQL  Operator Classes`  certain operator classes (`text_pattern_ops`,
+In PostgreSQL [Operator Classes](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} certain operator classes (`text_pattern_ops`,
 `varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
 involving pattern matching expressions. For instance, the following query:
 
@@ -30787,9 +30838,7 @@ The following index can also be used.
        UPPER(c_bpartner_id));
 ```
 
-!!!info
-    Functions used in indexes must be immutable. It is
-    possible to define [custom immutable functions](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure#volatility), previously only built-in immutable functions could be used in indexes.  
+
   
 #####  Partial indexes
   
@@ -30812,7 +30861,7 @@ Oracle does not support the creation of partial indexes in an explicit way yet. 
 
 In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.
 
-This is not the behavior in PostgresSQL databases, where we will need to define the index as partial to get the same behavior. For example:
+This is not the behavior in `PostgreSQL databases`, where we will need to define the index as partial to get the same behavior. For example:
 
     
 ```sql 
@@ -30824,7 +30873,7 @@ This is not the behavior in PostgresSQL databases, where we will need to define 
 #####  Indexes for Contains Search
 
   
-The indexes for _contains_ search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
+The indexes for *contains* search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
 
 In PostgresSQL we can define a contains search index as follows:
 
@@ -30834,12 +30883,12 @@ In PostgresSQL we can define a contains search index as follows:
 ```
 
 !!!note
-    To define this kind of indexes, we have to make use of the **` gin `
-    ** access method together with the **` gin_trgm_ops ` ** operator class for
-    the indexed column. Both elements are available thanks to the  ` pg_trgm `
+    To define this kind of indexes, we have to make use of the ` gin `
+    access method together with the ` gin_trgm_ops ` operator class for
+    the indexed column. Both elements are available thanks to the ` pg_trgm `
     extension which is included in Etendo distribution by default.
 
-Besides, this feature allows defining a [function based index](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/#function-based-indexes) to improve icontains (case-insensitive) searching:
+Besides, this feature allows defining a [function based index](#function-based-indexes) to improve icontains (case-insensitive) searching:
 
     
 ```sql
@@ -30849,78 +30898,6 @@ Besides, this feature allows defining a [function based index](https://docs.eten
 !!!info
     This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
 
-####  Triggers
-
-!!!info
-    For more information, read [How to add a Trigger](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger).
-
-#####  Syntax
-
-Triggers, as the rest of `PL code` in Etendo Classic, should be written following
-some restrictions in order to make them compatible between `PostgreSQL` and
-Oracle and to make it possible to correctly export and import them using
-`DBSourceManager`. These rules are detailed in the `PL-SQL` code rules
-document.
-
-#####  Etendo Conventions
-
-######  Exceptions and messages
-
-Triggers can raise exceptions (it is the common practice to abort a
-transaction), the back-end captures that exception in order to show a proper
-message. 
-
-!!!info
-    For more information, read the [Message](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation how to do it.
-
-######  Oracle's laziness
-
-Whereas oracle evaluates expressions in a lazy manner, `PostgreSQL` does not do
-so. This is specially important for triggers that are for `_insert_ and _delete_`
-since in the first case there are new variables and in the second one there
-are old ones, so when writing if clauses (even in Oracle, if we want to do
-compatible code), this must be taken into account writing two clauses instead
-of just one.
-
-######  Soft disabling
-
-All triggers in Etendo Classic must be able to be disabled softly. This means
-not disabling it in database but just in a logic way. 
-
-This is used by DAL when it is importing data: triggers must be disabled in order to allow data
-importation without triggering them, but that only should affect the session
-that is executing the importation. To add this capability to triggers, the
-first lines of each of them should look like:
-
-In Oracle    
-    
-```sql
-        IF AD_isTriggerEnabled()='N' THEN 
-          RETURN;
-        END IF;
-```
-
-In PostgreSQL
-    
-```sql
-         IF AD_isTriggerEnabled()='N' THEN
-            IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;
-         END IF;
-```
-
-######  Object returning
-
-`PostgreSQL` trigger function must explicitly focus on returning the trigger
-object, also depending on the type of the trigger. This means that the last
-line of the trigger function must be something like:
-
-    
-    
-     
-         `IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;`
-
-
----
 
 This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
@@ -31119,8 +31096,7 @@ This notifications are shown in the top bar, just beside the Application menu.
 
 ####  Alert Rules
 
-The definition of the _Alert Rules_ is made in the _Alert_ window ( _General
-Setup || Application || Alert_ ).
+The definition of the _Alert Rules_ is made in the _Alert_ window (`General Setup` > `Application ` >`Alert`).
 
 ####  Data Driven
 
@@ -31346,6 +31322,184 @@ in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  t
 
   
 This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Tables
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Tables
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Tables
+## Article Content: 
+###  Tables
+
+  
+####  Overview
+
+Physical database tables are the basis  Application Dictionary Data Model  is
+built on. This document discusses the particularities all tables in Etendo
+ERP must have.
+
+####  Common Columns
+
+All tables in Etendo must have some common columns. All these columns
+must be defined as not nullable.
+
+#####  Primary Key
+
+All tables in Etendo have a single column primary key. This column will
+be automatically populated with a generated  UUID  therefore the type for this
+column must be _VARCHAR2(32)_ .
+
+Primary Key column must be named like its table with an ID suffix. Thus, the
+primary key column for *HT Salary* table would be *HT Salary ID*.
+
+This column must be also set as primary key in database, it is not enough with
+defining it as ID in Application Dictionary.
+
+#####  Client/Organization
+
+As Etendo ERP is a [multi client and multi organization](Multi_Client_and_Multi_Org.md) application, all
+data belongs to a client and an organization, so all tables must have these
+two columns:  
+
+  * _AD_Client_ID_
+  * _AD_Org_ID_
+
+These columns are a foreign key to *AD Client*  and  *AD Org*  tables. So, their
+types must also be *VARCHAR2(32)* , and there must be a foreign key to these
+tables.
+
+#####  Audit Information
+
+Finally, there are some columns that store information about whether a record
+is active and when and who created and last modified it. This information is
+maintained in the following columns:
+
+  * _IsActive_ : It is a boolean value (Y/N) indicating whether the record is active or not. Its type must be _CHAR(1)_ and generally, its default value is 'Y'. It is also good practice to create a check constraint forcing its value to be either 'Y' or 'N'. 
+  * _Created_ : It contains the date and time when the record was created. Its type is _DATE_ . 
+  * _CreatedBy_ : Indicates the user that created the record. It is a foreign key to  *AD User*  so its type is _VARCHAR2(32)_ . 
+  * _Upated_ : It contains the last date and time when the record was modified (or created if no modification was performed later). Its type is _DATE_ . 
+  * _UpdatedBy_ : Indicates the last user that updated the record. It is a foreign key to  *AD User*  so its type is _VARCHAR2(32)_ . 
+
+####  Naming conventions
+
+When creating new tables it is necessary to pay special attention to the names
+given to tables and columns, particularly regarding modularity.
+
+#####  Tables
+
+The only element to take into consideration is the module's  DB Prefix  . The
+table's name must start with this DB prefix followed by underscore character
+(_).
+
+The following table prefixes are used by Etendo and are not allowed to be
+used by any modules:
+
+  
+
+Table prefix  |  Description  
+---|---  
+A  |  asset management  
+AD  |  application dictionary  
+C  |  core functionality  
+I  |  import temporary tables and processes  
+M  |  material management  
+FACT  |  accounting  
+GL  |  general ledger  
+MA  |  manufacturing  
+MRP  |  material resource  
+S  |  service management  
+AT,AU,EM,FIN,I,MA,R,RV,T  |  other Core prefixes  
+CUS, PD, US, ZZ  |  personal developments  
+APRM  |  Advanced Payables and Receivables Mngmt  
+OBUIAPP, NAVBA  |  User Interface Application  
+OBCHW  |  HTML Widget  
+OBCLFRE, OBCLKER  |  User Interface Client Kernel  
+OBKMO  |  Workspace & Widgets  
+OBCQL  |  Query/List Widget  
+OBSERDS  |  JSON Datasource  
+OBJSON  |  JSON REST Webservice  
+OBUISEL  |  User Interface Selector  
+OBUISC  |  Smartclient  
+FINPR  |  Orders Awaiting Delivery  
+  
+#####  Columns
+
+######  Modularity
+
+In case the column belongs to the same module than its table no special rule
+must be followed for its name. But if the column is going to be added to a
+table belonging to a different module, the column name must start with *EM 
+plus* the *DB Prefix* of the module the column belongs to. For instance,
+`EM_MYMODULEDBPREFIX_COLUMNNAME`.
+
+!!!note
+    The column name must not exceed the 30 characters long, that includes the
+    EM plus the DB Prefix of the module.
+
+!!!info
+    In PostgreSQL, all column names must be defined in lower case.  
+  
+
+  
+This restriction also applies for naming constraints, triggers and functions.
+
+######  Primary Key Column
+
+!!!info
+    Naming for primary key column is explained in [Primary Key](#primary-key) section of this document.
+
+######  Foreign Key Columns
+
+It is a best practice to name, if possible, foreign key columns in the same
+manner than the primary key column of the table they link to. The reason for
+this is that in Oracle, foreign key (and the rest of the db contraints) names
+must be unique at a database-level. So, for example if we have in our table a
+column that contains a business partner it should be named *C_BPartner_ID*
+because it is a foreign key to  *C_BPartner*.*C_BPartner_ID* column. This is
+not possible when there is in the same table more than one column linking to the
+same table or when adding columns in a different module than the table's one.
+
+Following this naming rule allows to define standard references as *TableDir*
+when the column is defined in Application Dictionary.
+
+######  Naming of Columns and the Data Access Layer
+
+In Etendo, Java classes are generated from the tables definition. A DAL
+entity is generated from every table defined in the Application Dictionary.
+
+!!!info
+    For more information, visit [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md).
+
+It is important you take this into account when thinking about the names for
+your columns. The columns you define in a table will correspond to Java
+properties in a generated Java class. Therefore, *you must not choose names
+which collide with Java keywords* , such as *class* , *if* , *int* , ...
+
+!!!info
+    Here you can find a list of the [Java keywords](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html){target="\_blank"}.
+
+####  Supported Column Data types
+
+`DBSourceManager`, the utility that Etendo uses to manage database related
+operations, supports a subset of the datatypes that Oracle and PostgreSQL
+databases support. Below we include the currently supported data types:
+
+
+Oracle  |  PostgreSQL  
+---|---  
+(n)char  |  char  
+(n)varchar(2)  |  varchar  
+blob  |  bytea  
+date  |  timestamp  
+number  |  numeric  
+clob  |  text  
+  
+
+
+  
+This work is a derivative of [Tables](http://wiki.openbravo.com/wiki/Tables){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 
 ==ARTICLE_END==
@@ -32885,7 +33039,7 @@ the module:
 And publish the module. 
 
 !!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+    For more information, see [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md).
 
 
   
@@ -33193,7 +33347,7 @@ First of all, the condition under which the alert appears needs to be defined.
 This is done using a SQL statement that needs to follow certain conventions.
 
 To create a new  alert  rule, use the role _*System Administrator*_ to navigate
-to _*General Setup || Application || Alert*_ window. Depending on how you
+to `General Setup` > `Application ` >`Alert` window. Depending on how you
 installed Etendo, you might already have some alerts here. If you do, try
 to find the _Customers with exceeded credit_ one and double click it. If not,
 create a new record as indicated below:
@@ -33234,7 +33388,7 @@ The fields in question here are:
 ####  Defining recipients
 
 Switch to the role _*System Administrator*_ (or your defined 'administrator'
-role), navigate to _*General Setup || Application || Alert*_ , select the
+role), navigate to _`General Setup` > `Application ` >`Alert`_ , select
 _Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
 tab. Add a new record as indicated below:
 
@@ -33249,14 +33403,14 @@ tab. Add a new record as indicated below:
 ####  Scheduling the alerting background process
 
 For the alerts to be evaluated and triggered, the background process needs to
-be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _*General Setup || Process Scheduling || Process Request*_ and enter a new record:
+be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _`General Setup` > `Process Scheduling ` >`Process Request`_ and enter a new record:
 
 ![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
 
 ####  The Result
 
-Finally, log out and back in and select the role _*System Administrator*_(or
-your defined 'administrator' role). You should be able to see an alert in the
+Finally, log out and back in and select the role _*System Administrator*_ (or
+your defined administrator role). You should be able to see an alert in the
 navigation bar. By clicking on it, you will automatically be taken to the
 _*Alert Management*_ window that should look something like:
 
@@ -33310,8 +33464,8 @@ needs to have all the columns defined above:
 Finally, the WHERE clause describes the condition that triggers the alert. In
 our case the SELECT statement will return all Business Partners (FROM
 c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
-limit (SO_CreditLimit < SO_CreditUsed) which needs to be different from zero
-(SO_CreditLimit!=0).
+limit (`SO_CreditLimit < SO_CreditUsed`) which needs to be different from zero
+(`SO_CreditLimit!=0`).
 
 In other words, anything you can describe in a SQL statement can be defined as
 an alert. 
@@ -33320,6 +33474,656 @@ an alert.
 This work is a derivative of [How to create an alert](http://wiki.openbravo.com/wiki/How_to_create_an_Alert){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a button to the toolbar
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a button to the toolbar
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
+## Article Content: 
+####  Overview
+
+This howto discusses how a button can be added the main toolbar shown in grids
+and forms. The toolbar contains two types of buttons, the application buttons
+on the left (visualized using an icon) and the custom buttons on the right
+(shown with a label). This howto describes how to add a button to the left
+part, the application buttons.
+  
+To follow this howto you need to be able to, at a junior level, develop
+javascript as well as server-side java and understand  Data Access Layer
+concepts.
+
+####  Example Module
+
+This howto is supported by an example module which shows example of the code
+shown and discussed in this howto.
+
+![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
+
+The code of the example module can be downloaded from this mercurial
+repository:
+https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+
+The example module is available through the Central Repository (See 'Client
+Application Examples'), for more information see the  Examples Client
+Application  project page.
+
+!!! info
+        The example module also contains implementations of other howtos.  
+ 
+  
+####  Implementing a toolbar button
+
+!!! info
+        When implementing your own components it often makes sense to extend existing
+        components. Make sure that your module then depends on the module that
+        provides the base types. This ensures that the javascript is loaded in the
+        correct order. You must add a dependency from your module to the
+        Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
+  
+The button which we will implement will compute and show the sum of a set of
+selected orders to the user. This howto is divided in 2 parts, the first part
+focuses on visualizing the button in the correct windows and tabs and making
+sure the button is enabled/disabled appropriately. The second part will
+discuss how to implement backend logic and how to call the server side logic
+when the button gets clicked and show its results.
+
+The first part consists of the following steps:
+
+  * an icon for the visualization 
+  * a css style and javascript linking the icon to the button 
+  * javascript implementing the buttons click/action method and to register the button in the global registry 
+  * add javascript to enable/disable the button when records are selected in the grid 
+  * a ComponentProvider java class to register the javascript and css in Openbravo 
+
+These steps will visualize the button but not actually do anything yet. The
+follow up steps will add logic:
+
+  * a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) 
+  * client side javascript to call the server and process the result 
+
+Each of these steps is described in more detail below.
+
+####  Visualizing the button - Implementation steps
+
+#####  Defining the icon and a css
+
+The icon and its related style is defined through an icon file. For standard
+visualization using the Openbravo style the icon should be 24x24 without a
+background colour.
+
+The icon should be placed in a specific directory in your module:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+Normally it makes sense to store the icon in a subfolder. The example module
+has the icon file in:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/images.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png)
+
+  
+Then add a css file which links this icon to a specific css style. The css
+file must also be located in this directory in your module:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+In the example module the css file is located here:
+web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
+org.openbravo.client.application.examples/ob-example-styles.css 
+Within the css file add a style defined like this:
+
+    
+    
+    .OBToolbarIconButton_icon_obexapp_sum {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(./images/iconButton-sum.png);
+    }
+
+**Note:** the name of the css class is important, it should start with
+'OBToolbarIconButton_icon_', the part after that (obexapp_sum) is used later
+in this tutorial. It makes sense to use the module's dbprefix in this last
+part to prevent name collisions with other modules.
+
+#####  The javascript to create and register the button
+
+The next step is to implement the javascript which defines the button and
+registers it to be shown on tabs. Start by creating a javascript file in this
+location: web/org.openbravo.client.application.examples/js/example-toolbar-
+button.js.
+
+This is the overall javascript:
+
+``` javascript
+    
+    (function () {
+      var buttonProps = {
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'obexapp_sum',
+          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+          updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+        };
+      
+      // register the button for the sales order tab
+      // the first parameter is a unique identification so that one button can not be registered multiple times.
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+    }());
+```
+Let's walk through the different parts. The javascript starts and ends with
+this part:
+
+``` javascript
+    
+    (function () {
+    ...
+    }());
+```
+
+This is done to prevent the local variables to be available globally, it
+creates a function and executes it immediately.
+
+Then the first part of the buttonprops"
+
+``` javascript
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'obexapp_sum',
+          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+```
+  * Sets the action method which gets called when the user clicks the button. 
+  * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
+  * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png)
+
+The updateState function is called to enable and disable the button when the
+user navigates through the system.
+
+```javascript   
+    
+         updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+```
+The function enables/disables the button if the form or grid is new and if
+there are no records selected.
+
+Then this code registers the button for the tab with id '186':
+
+``` javascript
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+```
+Note:
+
+  * the first parameter is a unique identification so that one button can not be registered multiple times. 
+  * as the second parameter the button javascript class is passed in, as a default always use isc.OBToolbarIconButton 
+  * the buttonProps define the button characteristics 
+  * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
+  * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
+  * To register a button for multiple tabs call the registerButton multiple times for different tabs 
+
+
+#####  The ComponentProvider
+
+The previous steps added static resources (javascript and css) to the system.
+Now Openbravo should know where to find these resources when initializing and
+generating the user interface. For this the css and javascript and resources
+have to be registered. This is done through a ComponentProvider. For more
+detailed information on the ComponentProvider concept visit this  page  .
+
+```javascript
+     
+    @ApplicationScoped
+    @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
+    public class ExampleComponentProvider extends BaseComponentProvider {
+      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "OBEXAPP_ExampleViewType";
+     
+      /*
+       * (non-Javadoc)
+       * 
+       * @see org.openbravo.client.kernel.ComponentProvider#getComponent(java.lang.String,
+       * java.util.Map)
+       */
+      @Override
+      public Component getComponent(String componentId, Map<String, Object> parameters) {
+        throw new IllegalArgumentException("Component id " + componentId + " not supported."); 
+        /* in this howto we only need to return static resources so there is no need to return anything here */
+      }
+     
+      @Override
+      public List<ComponentResource> getGlobalComponentResources() {
+        final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+        globalResources.add(createStaticResource(
+            "web/org.openbravo.client.application.examples/js/example-toolbar-button.js", false));
+        globalResources.add(createStyleSheetResource(
+            "web/org.openbravo.userinterface.smartclient/openbravo/skins/"
+                + KernelConstants.SKIN_VERSION_PARAMETER
+                + "/org.openbravo.client.application.examples/example-styles.css", false));
+     
+        return globalResources;
+      }
+     
+      @Override
+      public List<String> getTestResources() {
+        return Collections.emptyList();
+      }
+    }
+```
+A short explanation:
+
+  * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
+  * The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. 
+
+To explain how Openbravo can find the ComponentProvider: Openbravo/Weld will
+analyze the classpath and find all the classes which have a @ComponentProvider
+annotation.
+
+#####  The result
+
+To see the result, restart Tomcat, clear the cache of the browser (sometimes
+css styles are not picked up) and go back to the application and then
+specifically the sales order window. You should see this:
+
+Note: the button is not visualized in other windows/tabs because it is
+registered for only the sales order header tab.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png)
+
+  
+
+####  Adding server side logic - Implementation steps
+
+The next step in this how to is to add the server side logic and calling this
+logic from the client. The server side logic is implemented using the action
+handler concept. The action handler concept allows you to create classes on
+the server which are callable from the client. This how to will illustrate
+this.
+
+#####  Implement the server side action handler
+
+The server side action handler (  SumOrderActionHandler.java  ) receives an
+array of order numbers of the selected orders. It will sum the order values
+and then return the total as a JSON string.
+
+This is the implementation of the server side:
+
+```java
+    
+    public class SumOrderActionHandler extends BaseActionHandler {
+     
+      protected JSONObject execute(Map<String, Object> parameters, String data) {
+        try {
+     
+          // get the data as json
+          final JSONObject jsonData = new JSONObject(data);
+          final JSONArray orderIds = jsonData.getJSONArray("orders");
+     
+          // start with zero
+          BigDecimal total = new BigDecimal("0");
+     
+          // iterate over the orderids
+          for (int i = 0; i < orderIds.length(); i++) {
+            final String orderId = orderIds.getString(i);
+     
+            // get the order
+            final Order order = OBDal.getInstance().get(Order.class, orderId);
+     
+            // and add its grand total
+            total = total.add(order.getGrandTotalAmount());
+          }
+     
+          // create the result
+          JSONObject json = new JSONObject();
+          json.put("total", total.doubleValue());
+     
+          // and return it
+          return json;
+        } catch (Exception e) {
+          throw new OBException(e);
+        }
+      }
+    }
+```
+Notes:
+
+  * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
+  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used 
+  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Openbravo system numbers are therefore send from client-server (and vice versa) as strings. 
+  * the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . 
+  * the result is returned as json again 
+
+#####  Calling the server side from the client, displaying the result
+
+Then on the client the action method of the button has to be implemented to
+call the server. Here is the implementation. See the
+web/org.openbravo.client.application.examples/js/example-toolbar-button.js
+for the full listing:
+
+```javascript
+    
+          action: function(){
+            var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+            // collect the order ids
+            for (i = 0; i < selectedRecords.length; i++) {
+              orders.push(selectedRecords[i].id);
+            }
+            
+            // define the callback function which shows the result to the user
+            callback = function(rpcResponse, data, rpcRequest) {
+              isc.say(OB.I18N.getLabel('OBEXAPP_SumResult', [data.total]));
+            }
+            
+            // and call the server
+            OB.RemoteCallManager.call('org.openbravo.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+```
+Note:
+
+  * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
+  * the call to the server is asynchronously therefore a callback is used, which is called when the server returns the result. The callback gets 3 parameters, the data parameter contains the JSONObject returned by the server's execute method. 
+  * the call to the RemoteCallManager has these parameters: 
+    * the class name of the action handler 
+    * the data being sent as the request body 
+    * request parameters (in this case nothing there) 
+    * and the callback 
+
+Then when the server returns the callback is called which will display a
+prompt. Note that the label used in the callback uses parameter substitution.
+Parameters are specified using a %0, %1 etc.:
+
+  
+
+![](https://docs.etendo.software//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+
+#####  The result
+
+The result shows the sum of the 2 selected order headers:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
+
+ 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to create a Callout
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Callout
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
+## Article Content: 
+### How to create a callout
+
+####  Overview
+
+The objective of this article is to show you how to create a new  callout . A
+callout is a piece of Javascript code associated with a particular field on a
+tab. This code is executed whenever the field changes. It is a type of Ajax
+substitute, changing parts of a tab/window without the need of refreshing it.
+
+It works by calling the FIC when a field with an associated callout is
+changed. The FIC (Form Initialization Component) refreshes the needed fields
+based on the callout logic.
+
+This section implements the following new functionality: When entering a
+new product, one has the option of entering the _Search Key_ for the product,
+the _Name_ and the _Category_ it belongs to. But what if our client wants the
+search key to be constructed automatically by taking the product's name,
+removing all spaces, appending the underscore (_) and the category name it
+belongs to?
+
+For example, the Search Key of a product that has the
+Name _Bon Fountain_ and belongs to the _Water_ Product Category would
+become _BonFountain_Water_. Let's see how this could be done using a callout.
+
+The steps involved in creating a new callout are:
+
+  1. Create the source file(s) of the callout (usually a java file). 
+  2. Define the new  callout  within the application dictionary (`Menu` > `Application Dictionary` > `Setup` > `Callout`). 
+  3. Associate this callout with a table  column  ( `Application Dictionary` > `Table and Column: Callout field within Column tab`). 
+  4. Compile the window/tab(s) where this Column is used. 
+
+!!!Important
+    Developments related to points (1) and (2) must belong to
+    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    to point (3) about modifying a _core_ located column, a new template is
+    needed. You can read the [How to change an existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
+
+!!!Note
+    This article assumes you have created both module and template according to the articles just mentioned.  
+
+  
+####  Creating the Callout
+
+Existing callouts are located in [src/org/openbravo/erpCommon/ad_callouts](https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts){target="_blank"}.
+
+The right way to create a callout is by extending the SimpleCallout class.
+This class simplifies the callout code, hides some of the internals of the
+callout and keeps you focused on the operations required. To access database
+data, DAL is used.
+
+#####  Theory
+
+To develop a new callout based on this class, you only have to create a new
+java class that extends SimpleCallout and overwrite the following method:
+```java
+  protected void execute(CalloutInfo info) throws ServletException;
+```
+In this method you can develop the logic of the callout and use the info
+object of class CalloutInfo to access window fields, database and other
+methods. The most important are:
+
+  * public String `getStringParameter(String param, RequestFilter filter)` : Returns the value of a field named param as an String using the filter to accept values. 
+  * public BigDecimal `getBigDecimalParameter(String param) throws ServletException` : This method returns the value of of a field named param as a BigDecimal. 
+  * public void `addResult(String param, String value)` : This method sets the value of a field named param with the String value indicated. 
+  * public void `addResult(String param, Object value)` : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. 
+  * public void `addSelect(String param)` : Starts the inclusion of values of a field named param of type select. 
+  * public void `addSelectResult(String name, String value)` : Adds an entry to the select field and marks it as unselected. 
+  * public void `addSelectResult(String name, String value, boolean selected)` : Adds an entry to the select field. 
+  * public void `endSelect()` : Finish the inclusion of values to the select field. 
+  * protected void `showMessage(String value)` : Shows a message in the browser with the value indicated. 
+  * protected void `showError(String value)` : Shows an error message in the browser with the value indicated. 
+  * protected void `showWarning(String value)` : Shows a warning message in the browser with the value indicated. 
+  * protected void `showInformation(String value)` : Shows an information message in the browser with the value indicated. 
+  * protected void `showSuccess(String value)` : Shows a success message in the browser with the value indicated. 
+  * protected void `executeCodeInBrowser(String value)` : Executes the javascript code indicated in the value in the browser. 
+  * public String `getLastFieldChanged()` : Returns the name of field that triggered the callout. 
+  * public String `getTabId()` : Returns the Tab Id that triggered the callout. 
+  * public String `getWindowId()` : Returns the Window Id that triggered the callout. 
+  * public `VariablesSecureApp vars` : This instance field contains the VariablesSecureApp associated to the callout servlet. 
+
+It is important to keep coherence with each expected data type (String, BigDecimal, ...)
+
+See the following class as an example of a class that currently uses
+SimpleCallout: [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="_blank"}. This callout simply takes the numeric value of two fields, calculates the sum and writes it into another field. This
+is the interesting part of the code that performs the logic:
+```java
+  @Override
+  protected void execute(CalloutInfo info) throws ServletException { 
+    BigDecimal serviceSerCost = info.getBigDecimalParameter("inpservsercost");
+    BigDecimal serviceOutCost = info.getBigDecimalParameter("inpservoutcost"); 
+    BigDecimal serviceTotalCost = serviceSerCost.add(serviceOutCost);
+    info.addResult("inpservcost", serviceTotalCost);
+  }
+```
+#####  Extend a Callout
+
+It is possible to implement a callout that extends from another callout. For
+more information visit this [How to create a callout that extends from another callout](How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+
+  
+#####  Product Search Key Calculation using SimpleCallout
+
+Let's define the tasks that need to be performed by the callout:
+
+  1. Retrieve the name of the product as entered by the user 
+  2. Retrieve the ID of the category selected from a dropdown by the user 
+  3. Get the name of the product category inside the database using the product category ID retrieved 
+  4. Strip spaces out of the product and category names 
+  5. Construct the Search Key 
+```java
+    // the package name corresponds to the module's manual code folder 
+    // created above
+    package com.etendoerp.customer.example.ad_callouts;
+     
+    import javax.servlet.ServletException;
+     
+    import org.openbravo.utils.FormatUtilities;
+    import org.openbravo.erpCommon.ad_callouts.SimpleCallout;
+    import org.openbravo.base.secureApp.VariablesSecureApp;
+    // classes required to retrieve product category data from the 
+    // database using the DAL
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.plm.ProductCategory;
+     
+    // the name of the class corresponds to the filename that holds it 
+    // hence, modules/modules/org.openbravo.howtos/src/org/openbravo/howtos/ad_callouts/ProductConstructSearchKey.java.
+    // The class must extend SimpleCallout
+    public class ProductConstructSearchKey extends SimpleCallout {
+     
+      private static final long serialVersionUID = 1L;
+     
+      @Override
+      protected void execute(CalloutInfo info) throws ServletException {
+     
+        // parse input parameters here; the names derive from the column
+        // names of the table prepended by inp and stripped of all
+        // underscore characters; letters following the underscore character
+        // are capitalized; this way a database column named
+        // M_PRODUCT_CATEGORY_ID that is shown on a tab will become
+        // inpmProductCategoryId html field
+        String strProductName = info.getStringParameter("inpname", null);
+        String strProductCategoryId = info
+                        .getStringParameter("inpmProductCategoryId", null);
+     
+        // inject the result into the response
+        info.addResult("inpvalue", getConstructedKey(info.vars, strProductName, strProductCategoryId));
+      }
+     
+      protected String getConstructedKey(VariablesSecureApp vars,
+            String strProductName, String strProductCategoryId) {
+     
+        // Retrieve the product category name
+        final ProductCategory productCategory = OBDal.getInstance().get(ProductCategory.class,
+                strProductCategoryId);
+        String strProductCategoryName = productCategory.getName();
+     
+        // construct full key
+        String generatedSearchKey = FormatUtilities.replaceJS(strProductName
+                    .replaceAll(" ", ""))
+                    + "_" + strProductCategoryName.replaceAll(" ", "");
+     
+        // return generated key
+        return generatedSearchKey;
+      }
+    }
+``` 
+
+#### Defining the Callout within the Application Dictionary
+
+!!!note
+    You need to have only your module as "In Development" at this stage.
+
+Using the role _System Administrator_, navigate to `Application Dictionary` > `Setup` > `Callout`. Create a new  record as indicated by the screenshot below:
+
+!!!warning
+    The name of the callout should not have spaces or illegal javascript characters.  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-3.png)
+
+  
+Save and navigate to the _Callout Class_ tab of the same window. You will
+notice that the Java Class Name was automatically generated for you,
+however, not correctly since the name could not match the _Callout_ name you
+have provided. Correct it in line with your callout package/class name. See
+screenshot below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png)
+
+  
+Now Etendo Classic knows that a callout exists and is implemented by the class you
+have just specified.
+
+!!!warning 
+    Remember to perform
+    ```./gradlew export.database```
+    in order to persist your changes in your module.  
+ 
+  
+####  Associating the Callout with a Column
+
+!!!note
+    You need to have ONLY your template as "In Development" at this stage.
+
+Using the role _System Administrator_ navigate to `Application Dictionary` > `Tables and Columns` > and find the _M_Product_ DB Table. This is the underlying table of the main tab of the _Product_ window.
+
+Go to Column tab, find the _Name_ record and edit it. Find the  Callout
+dropdown  that should at this point be empty. Select our
+_Product_Construct_SearchKey_ callout and save the record:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Callout-6.png)
+
+  
+Do the same for the _Product Category_ record since a change in any of them
+should also regenerate the Search Key.
+
+!!! warning
+    Remember to perform
+    ```./gradlew export.database```
+
+    and
+
+    ```./gradlew export.config.script```
+
+    in order to persist your changes in your template.  
+  
+  
+####  Compiling the Window
+
+Finally, for the callout to take effect, the window that uses it needs to be
+recompiled and deployed to Tomcat. Do:
+  ``` bash
+    ./gradlew smartbuild 
+  ```
+
+!!!info
+    Once the compilation has finished, restart Apache Tomcat server.  
+  
+
+####  The Result
+
+Using the role _Group Admin_ (or your defined 'administrator' role),
+navigate to the `Master Data Management` > `Product` window. Enter a new
+product with Name = _Bon Fountain_ and leave the Name field. Notice
+how the Search Key changes. Then, change the Product Category to something
+else and see how the change is reflected inside the Search Key field.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
+
+Last, save changes.
+
+---
+
+This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to change an existing Window
@@ -38476,7 +39280,60 @@ Article URL: https://etendo.software
 ## Article URL: 
  https://docs.etendo.software/whats-new/release-notes/etendo-classic/release-notes
 ## Article Content: 
+### Release Notes
 
+:octicons-package-16: Javapackage: `com.etendoerp.platform.etendo-core`
+
+| Release notes | Publication date | Version | Status | ISO Image | GitHub |
+| ---           | ---              | ---     | ---    | ---       | :---:  |
+| [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | QAA |  | :white_check_mark: |
+| [23Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.1){target="_blank"} | 02/02/2023 | 23.4.1 | C |  | :white_check_mark: |
+| [23Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.0){target="_blank"} | 28/12/2023 | 23.4.0 | C | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark: |
+| [23Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.4){target="_blank"} | 05/12/2023 | 23.3.4 | C |  | :white_check_mark: |
+| [23Q3.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.3){target="_blank"} | 30/11/2023 | 23.3.3 | C |  | :white_check_mark: |
+| [23Q3.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.2){target="_blank"} | 10/11/2023 | 23.3.2 | C |  | :white_check_mark: |
+| [23Q3.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.1){target="_blank"} | 01/11/2023 | 23.3.1 | C |  | :white_check_mark: |
+| [23Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.0){target="_blank"} | 29/09/2023 | 23.3.0 | C | [23Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) | :white_check_mark: |
+| [23Q2.8](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.8){target="_blank"} | 14/09/2023 | 23.2.8 | C |  | :white_check_mark: |
+| [23Q2.7](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.7){target="_blank"} | 05/09/2023 | 23.2.7 | C |  | :white_check_mark: |
+| [23Q2.6](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.6){target="_blank"} | 25/08/2023 | 23.2.6 | C |  | :white_check_mark: |
+| [23Q2.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.5){target="_blank"} | 17/08/2023 | 23.2.5 | C |  | :white_check_mark: |
+| [23Q2.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.4){target="_blank"} | 16/08/2023 | 23.2.4 | C |  | :white_check_mark: |
+| [23Q2.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.3){target="_blank"} | 04/08/2023 | 23.2.3 | C |  | :white_check_mark: |
+| [23Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.2){target="_blank"} | 26/07/2023 | 23.2.2 | C |  | :white_check_mark: |
+| [23Q2.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.1){target="_blank"} | 17/07/2023 | 23.2.1 | C |  | :white_check_mark: |
+| [23Q2.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.2.0){target="_blank"} | 27/06/2023 | 23.2.0 | C | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) | :white_check_mark: |
+| [23Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.5){target="_blank"} | 29/05/2023 | 23.1.5 | C |  | :white_check_mark: |
+| [23Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.4){target="_blank"} | 19/05/2023 | 23.1.4 | C |  | :white_check_mark: |
+| [23Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.3){target="_blank"} | 02/05/2023 | 23.1.3 | C |  | :white_check_mark: |
+| [23Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.2){target="_blank"} | 19/04/2023 | 23.1.2 | C |  | :white_check_mark: |
+| [23Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.1){target="_blank"} | 11/04/2023 | 23.1.1 | C |  | :white_check_mark: |
+| [23Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.1.0){target="_blank"} | 31/03/2023 | 23.1.0 | C | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) | :white_check_mark: | 
+| [22Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.6){target="_blank"} | 17/08/2023 | 22.4.6 | CS |  | |
+| [22Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.5){target="_blank"} | 16/03/2023 | 22.4.5 | C | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) | |
+| [22Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.4){target="_blank"} | 16/02/2023 | 22.4.4 | C |  | |
+| [22Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.3){target="_blank"} | 03/02/2023 | 22.4.3 | C |  | |
+| [22Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.2){target="_blank"} | 25/01/2023 | 22.4.2 | C |  | |
+| [22Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.1){target="_blank"} | 13/01/2023 | 22.4.1 | C |  | |
+| [22Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/22.4.0){target="_blank"} | 04/01/2023 | 22.4.0 | C |  | |
+| [22Q3.0](https://github.com/etendosoftware/etendo_core/releases/tag/22.3.0){target="_blank"} | 05/10/2022 | 22.3.0 | C |  | |
+| [22Q2.2](https://github.com/etendosoftware/etendo_core/releases/tag/22.2.2){target="_blank"} | 12/08/2022 | 22.2.2 | C |  | |
+| [22Q2.1](https://github.com/etendosoftware/etendo_core/releases/tag/22.2.1){target="_blank"} | 05/08/2022 | 22.2.1 | C |  | |
+| [22Q2.0](https://github.com/etendosoftware/etendo_core/releases/tag/22.2.0){target="_blank"} | 06/07/2022 | 22.2.0 | C |  | |
+| [22Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/22.1.3){target="_blank"} | 21/06/2022 | 22.1.3 | C |  | |
+| [22Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/22.1.2){target="_blank"} | 25/05/2022 | 22.1.2 | C |  | |
+| [22Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/22.1.1){target="_blank"} | 11/05/2022 | 22.1.1 | C |  | |
+| [22Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/22.1.0){target="_blank"} | 01/03/2022 | 22.1.0 | C |  | |
+| [21Q4.9](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.9){target="_blank"} | 04/01/2023 | 21.4.9 | C |  | |
+| [21Q4.8](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.8){target="_blank"} | 12/08/2022 | 21.4.8 | C |  | |
+| [21Q4.7](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.7){target="_blank"} | 05/08/2022 | 21.4.7 | C |  | |
+| [21Q4.6](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.6){target="_blank"} | 21/06/2022 | 21.4.6 | C |  | |
+| [21Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.5){target="_blank"} | 27/05/2022 | 21.4.5 | C |  | |
+| [21Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.4){target="_blank"} | 25/05/2022 | 21.4.4 | C |  | |
+| [21Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.3){target="_blank"} | 11/05/2022 | 21.4.3 | C |  | |
+| [21Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.2){target="_blank"} | 10/03/2022 | 21.4.2 | C |  | |
+| [21Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.1){target="_blank"} | 17/12/2021 | 21.4.1 | C |  | |
+| [21Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/21.4.0){target="_blank"} | 13/12/2021 | 21.4.0 | C |  | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Gradle Plugin
@@ -38577,7 +39434,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.1](#1201) | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | C  | :white_check_mark: |
 | [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
 | [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
 | [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
@@ -38596,6 +39454,8 @@ Article URL: https://etendo.software
 | 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
 
 #### Release Notes
+##### 1.13.1
+- [EE-815](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/6){target="\_blank"} Field arrangements in Webhooks Events module
 ##### 1.12.0
 - Update Core compatibility until 23.4.x
 - [EE-658](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/2){target="\_blank"} Warning: Non-varargs Call to Varargs Method in com.etendoerp.webhookevents Module
@@ -38748,7 +39608,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.3](#1133)   | 27/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
@@ -38780,15 +39641,11 @@ Article URL: https://etendo.software
 | 1.0.100   | -          | 21.4.0 | 21.4.x | C  |                       |
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
-#### Known Issues
-
-- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
-  
-    !!! warning "Attention"
-        The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
-
-
 #### Release Notes
+
+##### 1.13.3
+- [EE-839](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/31){target="\_blank"} Financial Reports Advanced Module Ignore Selected ERP Language
+- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage
 
 ##### 1.13.2
 - [EE-786](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/20){target="\_blank"} Functionality to select orders or invoices in remittances does not work well total
@@ -38868,7 +39725,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.1](#191) | 28/02/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
@@ -38891,24 +39749,27 @@ Article URL: https://etendo.software
 
 #### Versiones Disponibles
 
+##### 1.9.1
+- [EE-838](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/21){target="\_blank"} Se corrigió un error de envío al SII, en el que se creaban los ficheros con la URL del SII de Guipúzcoa. Se revirtió la funcionalidad de envío al SII de Bizkaia
 ##### 1.9.0
-- Parámetros modelo 347 - Rangos nuevos 2023 \
+- Parámetros modelo 347 - Rangos nuevos 2023 </br>
 Se asociaron nuevos parámetros de impuestos a los siguientes rangos:
-  - Adquisiciones IVA 0% 
-  - Entregas IVA 0%  
-  - Entregas IVA 0+RE 0+0% 
-  - Entregas IVA 0+RE 0+0% (+0% IVA) 
-  - Entregas IVA 0+RE 0+0% (+0% RE) 
-  - Entregas IVA 5% 
-  - Entregas IVA+RE 21+1.75% 
-  - Entregas IVA+RE 21+1.75% (+1.75%) 
-  - Entregas IVA+RE 21+1.75% (+21%) 
-  - Entregas IVA+RE 5+0.62% 
-  - Entregas IVA+RE 5+0.62% (+0.62%) 
-  - Entregas IVA+RE 5+0.62% (+5%) 
-  - Servicios Prestados 0% 
+    - Adquisiciones IVA 0% 
+    - Entregas IVA 0%  
+    - Entregas IVA 0+RE 0+0% 
+    - Entregas IVA 0+RE 0+0% (+0% IVA) 
+    - Entregas IVA 0+RE 0+0% (+0% RE) 
+    - Entregas IVA 5% 
+    - Entregas IVA+RE 21+1.75% 
+    - Entregas IVA+RE 21+1.75% (+1.75%) 
+    - Entregas IVA+RE 21+1.75% (+21%) 
+    - Entregas IVA+RE 5+0.62% 
+    - Entregas IVA+RE 5+0.62% (+0.62%) 
+    - Entregas IVA+RE 5+0.62% (+5%) 
+    - Servicios Prestados 0% 
+- Agregada al SII la funcionalidad de envío a hacienda de Bizkaia
 ##### 1.8.0
-- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 \
+- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 </br>
 Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
     - Recargo de equivalencia - Tipo 0% - Base imponible [663]
     - Recargo de equivalencia - Tipo 0% - Cuota [664]
@@ -39088,9 +39949,12 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.3.0](#130) | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
 
 #### Release Notes
+##### 1.3.0
+- Add Webhook Events translation module dependency
 ##### 1.2.0
 - Remove all translation modules dependencies to translated modules
 ==ARTICLE_END==
@@ -39241,12 +40105,6 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
     If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
   
 
-
-##### [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
-!!! warning "Attention"
-
-    The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
-  
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Classic Subapp Extensions

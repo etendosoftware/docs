@@ -18,8 +18,7 @@ concepts.
 This howto is supported by an example module which shows example of the code
 shown and discussed in this howto.
 
-![Header](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-0.png)
+![Header](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
 
 !!! info
         The example module also contains implementations of other howtos.  
@@ -74,8 +73,7 @@ com.etendoerp.client.application.examples/images.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png)
 
   
 Then add a css file which links this icon to a specific css style. The css
@@ -108,7 +106,7 @@ button.js.
 
 This is the overall javascript:
 
-    
+``` javascript
     
     (function () {
       var buttonProps = {
@@ -133,40 +131,40 @@ This is the overall javascript:
       // the first parameter is a unique identification so that one button can not be registered multiple times.
       ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
     }());
-
+```
 Let's walk through the different parts. The javascript starts and ends with
 this part:
 
-    
+``` javascript
     
     (function () {
     ...
     }());
+```
 
 This is done to prevent the local variables to be available globally, it
 creates a function and executes it immediately.
 
 Then the first part of the buttonprops"
 
-    
-    
+``` javascript
           action: function(){
             alert('You clicked me!');
           },
           buttonType: 'etexapp_sum',
           prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
 
+
   * Sets the action method which gets called when the user clicks the button. 
   * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
   * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-4.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png)
 
 The updateState function is called to enable and disable the button when the
 user navigates through the system.
 
-    
+```javascript   
     
          updateState: function(){
               var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
@@ -178,15 +176,16 @@ user navigates through the system.
                 this.setDisabled(selectedRecords.length === 0);
               }
           }
-
+```
 The function enables/disables the button if the form or grid is new and if
 there are no records selected.
 
 Then this code registers the button for the tab with id '186':
 
-    
-    
-      ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
+
+``` javascript
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+```
 
 Note:
 
@@ -194,12 +193,9 @@ Note:
   * as the second parameter the button javascript class is passed in, as a default always use isc.ETToolbarIconButton 
   * the buttonProps define the button characteristics 
   * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
-  * the last parameter is the tabId (a String), you can pass null to register a button for all tabs. From 3.00MP2 and further it is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
-  * to register a button for multiple tabs call the registerButton multiple times for different tabs 
+  * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
+  * To register a button for multiple tabs call the registerButton multiple times for different tabs 
 
-Note: in 3.00MP0 a button can only be registered for one specific tab or for
-all tabs. In 3.00MP2 this will be solved by allowing an array of tab ids (see
-this  issue  to track the solution)
 
 ###  The ComponentProvider
 
@@ -209,8 +205,7 @@ generating the user interface. For this the css and javascript and resources
 have to be registered. This is done through a ComponentProvider. For more
 detailed information on the ComponentProvider concept visit this  page  .
 
-    
-    
+```javascript
      
     @ApplicationScoped
     @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
@@ -247,7 +242,7 @@ detailed information on the ComponentProvider concept visit this  page  .
         return Collections.emptyList();
       }
     }
-
+```
 A short explanation:
 
   * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
@@ -268,8 +263,7 @@ registered for only the sales order header tab.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-5.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png)
 
   
 
@@ -289,7 +283,7 @@ and then return the total as a JSON string.
 
 This is the implementation of the server side:
 
-    
+```java
     
     public class SumOrderActionHandler extends BaseActionHandler {
      
@@ -325,7 +319,7 @@ This is the implementation of the server side:
         }
       }
     }
-
+```
 Notes:
 
   * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
@@ -341,7 +335,7 @@ call the server. Here is the implementation. See the
 web/com.etendoerp.client.application.examples/js/example-toolbar-button.js
 for the full listing:
 
-    
+```javascript
     
           action: function(){
             var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
@@ -357,6 +351,7 @@ for the full listing:
             
             // and call the server
             OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+
 
 Note:
 
@@ -374,15 +369,13 @@ Parameters are specified using a %0, %1 etc.:
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-6.png)
+![](../../..//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 ###  The result
 
 The result shows the sum of the 2 selected order headers:
 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_a_button_to_the_toolbar-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
 
  

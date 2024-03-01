@@ -70,8 +70,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - search:
@@ -214,7 +214,9 @@ nav:
             - Overview: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/overview.md
             - Etendo BI Inclusion/Exclusion Module Configuration: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md
             - Etendo BI Connector Module: user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md
-          - Procurement Extensions: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+          - Procurement Extensions: 
+            - Overview: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md
+            - Purchase Invoice Validation: user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation.md
         - Supported Modules:
           - Tax Report Launcher: user-guide/etendo-classic/optional-features/supported-modules/tax-report-launcher.md
       - How to Guides:
@@ -273,7 +275,7 @@ nav:
         - Data Access Layer: developer-guide/etendo-classic/concepts/Data_Access_Layer.md
 #        - PL-SQL code rules to write Oracle and Postgresql code: developer-guide/etendo-classic/concepts/PL_SQL_code_rules_to_write_Oracle_and_Postgresql_code.md
 #        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
-        - Constraints and Triggers: developer-guide/etendo-classic/concepts/Constraints_and_Triggers.md
+        - Constraints: developer-guide/etendo-classic/concepts/Constraints.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md
         - Datasets: developer-guide/etendo-classic/concepts/Datasets.md
@@ -285,7 +287,7 @@ nav:
 #        - Application Menu: developer-guide/etendo-classic/concepts/Application_Menu.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
         - Element and Synchronize Terminology: developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology.md
-#        - Tables: developer-guide/etendo-classic/concepts/Tables.md
+        - Tables: developer-guide/etendo-classic/concepts/Tables.md
 #        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
 #        - Multi-Client and Multi-Org: developer-guide/etendo-classic/concepts/Multi_Client_and_Multi_Org.md
 #        - Data Model: developer-guide/etendo-classic/concepts/Data_Model.md
@@ -413,7 +415,7 @@ nav:
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
         - How to add a button to the toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
 #        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component.md
-#        - How to create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
+        - How to create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
 #        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
