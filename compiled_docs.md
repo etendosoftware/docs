@@ -33500,14 +33500,6 @@ shown and discussed in this howto.
 
 ![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
 
-The code of the example module can be downloaded from this mercurial
-repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
-
-The example module is available through the Central Repository (See 'Client
-Application Examples'), for more information see the  Examples Client
-Application  project page.
-
 !!! info
         The example module also contains implementations of other howtos.  
  
@@ -33534,7 +33526,7 @@ The first part consists of the following steps:
   * a css style and javascript linking the icon to the button 
   * javascript implementing the buttons click/action method and to register the button in the global registry 
   * add javascript to enable/disable the button when records are selected in the grid 
-  * a ComponentProvider java class to register the javascript and css in Openbravo 
+  * a ComponentProvider java class to register the javascript and css in Etendo 
 
 These steps will visualize the button but not actually do anything yet. The
 follow up steps will add logic:
@@ -33549,15 +33541,15 @@ Each of these steps is described in more detail below.
 #####  Defining the icon and a css
 
 The icon and its related style is defined through an icon file. For standard
-visualization using the Openbravo style the icon should be 24x24 without a
+visualization using the Etendo style the icon should be 24x24 without a
 background colour.
 
 The icon should be placed in a specific directory in your module:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
 Normally it makes sense to store the icon in a subfolder. The example module
 has the icon file in:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
-org.openbravo.client.application.examples/images.
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images.
 
   
 
@@ -33566,22 +33558,22 @@ org.openbravo.client.application.examples/images.
   
 Then add a css file which links this icon to a specific css style. The css
 file must also be located in this directory in your module:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
 In the example module the css file is located here:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
-org.openbravo.client.application.examples/ob-example-styles.css 
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles.css 
 Within the css file add a style defined like this:
 
     
     
-    .OBToolbarIconButton_icon_obexapp_sum {
+    .ETToolbarIconButton_icon_etexapp_sum {
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url(./images/iconButton-sum.png);
     }
 
 **Note:** the name of the css class is important, it should start with
-'OBToolbarIconButton_icon_', the part after that (obexapp_sum) is used later
+'ETToolbarIconButton_icon_', the part after that (etexapp_sum) is used later
 in this tutorial. It makes sense to use the module's dbprefix in this last
 part to prevent name collisions with other modules.
 
@@ -33589,7 +33581,7 @@ part to prevent name collisions with other modules.
 
 The next step is to implement the javascript which defines the button and
 registers it to be shown on tabs. Start by creating a javascript file in this
-location: web/org.openbravo.client.application.examples/js/example-toolbar-
+location: web/com.etendoerp.client.application.examples/js/example-toolbar-
 button.js.
 
 This is the overall javascript:
@@ -33601,8 +33593,8 @@ This is the overall javascript:
           action: function(){
             alert('You clicked me!');
           },
-          buttonType: 'obexapp_sum',
-          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
           updateState: function(){
               var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
               if (view.isShowingForm && form.isNew) {
@@ -33617,7 +33609,7 @@ This is the overall javascript:
       
       // register the button for the sales order tab
       // the first parameter is a unique identification so that one button can not be registered multiple times.
-      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+      ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
     }());
 ```
 Let's walk through the different parts. The javascript starts and ends with
@@ -33639,9 +33631,10 @@ Then the first part of the buttonprops"
           action: function(){
             alert('You clicked me!');
           },
-          buttonType: 'obexapp_sum',
-          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
-```
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
+
+
   * Sets the action method which gets called when the user clicks the button. 
   * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
   * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
@@ -33669,13 +33662,15 @@ there are no records selected.
 
 Then this code registers the button for the tab with id '186':
 
+
 ``` javascript
       OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
 ```
+
 Note:
 
   * the first parameter is a unique identification so that one button can not be registered multiple times. 
-  * as the second parameter the button javascript class is passed in, as a default always use isc.OBToolbarIconButton 
+  * as the second parameter the button javascript class is passed in, as a default always use isc.ETToolbarIconButton 
   * the buttonProps define the button characteristics 
   * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
   * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
@@ -33685,7 +33680,7 @@ Note:
 #####  The ComponentProvider
 
 The previous steps added static resources (javascript and css) to the system.
-Now Openbravo should know where to find these resources when initializing and
+Now Etendo should know where to find these resources when initializing and
 generating the user interface. For this the css and javascript and resources
 have to be registered. This is done through a ComponentProvider. For more
 detailed information on the ComponentProvider concept visit this  page  .
@@ -33695,12 +33690,12 @@ detailed information on the ComponentProvider concept visit this  page  .
     @ApplicationScoped
     @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
     public class ExampleComponentProvider extends BaseComponentProvider {
-      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "OBEXAPP_ExampleViewType";
+      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "ETEXAPP_ExampleViewType";
      
       /*
        * (non-Javadoc)
        * 
-       * @see org.openbravo.client.kernel.ComponentProvider#getComponent(java.lang.String,
+       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,
        * java.util.Map)
        */
       @Override
@@ -33713,11 +33708,11 @@ detailed information on the ComponentProvider concept visit this  page  .
       public List<ComponentResource> getGlobalComponentResources() {
         final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
         globalResources.add(createStaticResource(
-            "web/org.openbravo.client.application.examples/js/example-toolbar-button.js", false));
+            "web/com.etendoerp.client.application.examples/js/example-toolbar-button.js", false));
         globalResources.add(createStyleSheetResource(
-            "web/org.openbravo.userinterface.smartclient/openbravo/skins/"
+            "web/com.etendoerp.userinterface.smartclient/etendo/skins/"
                 + KernelConstants.SKIN_VERSION_PARAMETER
-                + "/org.openbravo.client.application.examples/example-styles.css", false));
+                + "/com.etendoerp.client.application.examples/example-styles.css", false));
      
         return globalResources;
       }
@@ -33733,7 +33728,7 @@ A short explanation:
   * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
   * The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. 
 
-To explain how Openbravo can find the ComponentProvider: Openbravo/Weld will
+To explain how Etendo can find the ComponentProvider: Etendo/Weld will
 analyze the classpath and find all the classes which have a @ComponentProvider
 annotation.
 
@@ -33809,7 +33804,7 @@ Notes:
 
   * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
   * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used 
-  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Openbravo system numbers are therefore send from client-server (and vice versa) as strings. 
+  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
   * the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . 
   * the result is returned as json again 
 
@@ -33817,7 +33812,7 @@ Notes:
 
 Then on the client the action method of the button has to be implemented to
 call the server. Here is the implementation. See the
-web/org.openbravo.client.application.examples/js/example-toolbar-button.js
+web/com.etendoerp.client.application.examples/js/example-toolbar-button.js
 for the full listing:
 
 ```javascript
@@ -33831,12 +33826,13 @@ for the full listing:
             
             // define the callback function which shows the result to the user
             callback = function(rpcResponse, data, rpcRequest) {
-              isc.say(OB.I18N.getLabel('OBEXAPP_SumResult', [data.total]));
+              isc.say(OB.I18N.getLabel('ETEXAPP_SumResult', [data.total]));
             }
             
             // and call the server
-            OB.RemoteCallManager.call('org.openbravo.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
-```
+            OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+
+
 Note:
 
   * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
