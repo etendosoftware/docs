@@ -14,7 +14,8 @@ tags:
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.3](#1133)   | 27/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
+| [1.13.4](#1134) | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.3](#1133) | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
 | [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
@@ -48,6 +49,12 @@ tags:
 | 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
 
 ## Release Notes
+
+### 1.13.4
+- [EE-771](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/23){target="\_blank"} Remove payment button is shown in "purchase order" window even when there is no payment associated
+- [EE-799](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/29){target="\_blank"} Inability to reactivate manual reconciliations
+- [EE-804](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/33){target="\_blank"} The "select invoices and order" button in the "remittances" window does not work properly with the pre-filtering
+- [EE-849](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/32){target="\_blank"} It is not allowed to modify the name of the organization with the system administrator role
 
 ### 1.13.3
 - [EE-839](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/31){target="\_blank"} Financial Reports Advanced Module Ignore Selected ERP Language
