@@ -757,7 +757,14 @@ Before customizing and programming your sub-application, ensure your development
     !!! warning "Important"
         Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
 
-  4. **Restart the Etendo RX Service:**
+  4. In the rxconfig/das.yaml file you must declare the javapackage of the world you are developing with the following code:
+
+    ``` groovy title="das.yaml"
+    scan:
+	    basePackage: com.etendorx.subapp.product
+    ``` 
+  
+  5. **Restart the Etendo RX Service:**
     After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
 
     ```bash title="Terminal"
