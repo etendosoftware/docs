@@ -13,7 +13,7 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.2](#192) | 08/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.2](#192) | 04/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
 | [1.9.1](#191) | 28/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
@@ -39,8 +39,9 @@ tags:
 ## Versiones Disponibles
 
 ### 1.9.2
-- [EE-858](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/22){target="\_blank"} Se creó un nuevo módulo de traducción para los elementos del módulo de Jobs
 - [EE-766](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/14){target="\_blank"} Se agregaron traducciones faltantes en campos de la solapa 'Solapa' de la ventana 'Ventanas, Solapas y Campos'
+- [EE-791](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/17){target="\_blank"} Se eliminó el trigger `AEATSII_UPDATESII_KEYLIST_TRG` y se movió su funcionalidad al trigger `AEATSII_INVOICE_TRG`  
+- [EE-858](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/22){target="\_blank"} Se creó un nuevo módulo de traducción para los elementos del módulo de Jobs
 ### 1.9.1
 - [EE-838](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/21){target="\_blank"} Se corrigió un error de envío al SII, en el que se creaban los ficheros con la URL del SII de Guipúzcoa. Se revirtió la funcionalidad de envío al SII de Bizkaia
 ### 1.9.0
