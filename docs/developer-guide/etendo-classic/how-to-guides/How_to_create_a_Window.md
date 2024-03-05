@@ -34,8 +34,8 @@ From Date is the salary that is valid today.
 As mentioned above, this tutorial is based on two previous tutorials
 and assumes that the following objectives have been already completed:
 
-  * Creation of a new module with _dbprefix_ _HT_
-  * Creation + Registration in the AD of a new table _ht_salary_
+  * Creation of a new module with `dbprefix_ _HT`
+  * Creation + Registration in the AD of a new table `ht_salary`
 
 ##  Creating the New Window
 
@@ -46,9 +46,9 @@ Create a new record as indicated by the screenshot below:
 
 
 The main fields of this window are:
-(for more information see the  *AD Window*  table
-description)
 
+
+  * *Module*: defines the module for which this element will belong to.
   * *Name*: defines the name that Etendo uses to recognize this window. 
   * *Description*: gives a small description of the table. 
   * *Help/Comments*: defines the text that is displayed in Help window. 
@@ -66,8 +66,7 @@ below, creating the first tab to show the employee information:
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png)  
 
 
-Main fields of this window are (for more information see the  AD_Tab  table
-description):
+Main fields of this window are:
 
   * *Name*: defines the name that Etendo uses to recognize this tab. 
   * *Description*: gives a small description of the table. 
@@ -83,7 +82,7 @@ description):
 
 Save this record and then click the *Copy Tab Fields* button to copy
 fields from the existing main tab of the Business Partner window into our new
-one. Select the *Business Partner-Business Partner* Tab - Window combination
+one. Select the `Business Partner` > `Business Partner` Tab - Window combination
 and confirm the dialog with OK.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
@@ -102,9 +101,6 @@ If required, changes to these fields could be made or new ones could be added ma
     For not header tabs, it is very important not to remove the field
     that point the to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
 
-!!!info
-    For more information, see the  AD_Field  table description.
-
 
 
 Now, go back to *Tab* tab and create a new record that will represent the
@@ -116,11 +112,9 @@ child tab of the Employee tab where salaries will be managed:
   
 Most importantly, make sure you select:
 
-  * *Table* = _HT_Salary_
+  * *Table* = `HT_Salary`
   * *Tab Level* = _1_
 
-!!!info
-    For more information see the  AD_Tab  table description.
 
 By clicking and confirming the *Create Fields* dialog, the application will
 automatically insert the columns of the selected table into the fields tab of
@@ -137,9 +131,9 @@ To arrange the columns according to common look and feel of other windows, we no
 
 
   
-For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides. In our case, the *Employee Salary* window is used to manage the content of the *HT_Salary* database table. Hence, all salary records need to be shown within that window. 
+For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides. In our case, the *Employee Salary* window is used to manage the content of the `HT_Salary` database table. Hence, all salary records need to be shown within that window. 
 
-To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find our HT_Salary table and set the *Window* as indicated below:
+To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the `HT_Salary` table and set the *Window* as indicated below:
 
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
@@ -153,9 +147,9 @@ A menu item is required for the user to be able to call up the new window we dev
 
 
   
-Main fields of this window are (for more information see the  AD_Menu  table
-description):
+Main fields of this window are:
 
+  * *Module*: defines the module for which this element will belong to.
   * *Name*: defines the name that Etendo uses to recognize this menu item. 
   * *Description*: gives a small description of the table. 
   * *Summary level*: defines a folder containing menu items (windows, processes, reports and so on). 
@@ -207,6 +201,7 @@ By clicking 'New in form' while having the _Salary_ tab in focus a salary record
   
 !!!success
     You have now successfully created your own new window and seen how it came to life within Etendo. 
+
 
 This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
