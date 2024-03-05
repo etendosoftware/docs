@@ -580,7 +580,7 @@ Before customizing and programming your sub-application, ensure your development
     ./gradlew rx:generate.entities
     ```
 
-    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the ProductValue.java mapping java class. 
+    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the `ProductValue.java` mapping java class. 
     
     ```
     modules-rx
@@ -772,7 +772,7 @@ Before customizing and programming your sub-application, ensure your development
     !!! warning "Important"
         Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
 
-  4. In the rxconfig/das.yaml file you must declare the javapackage of the world you are developing with the following code:
+  4. In the `rxconfig/das.yaml` file you must declare the javapackage of the world you are developing with the following code:
 
     ``` groovy title="das.yaml"
     scan:
