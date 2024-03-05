@@ -1,0 +1,39 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup github config
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Docs
+        uses: ./.github/actions/setup-docs
+      - name: Deploy Docs
+        run: mkdocs gh-deploy
+
+  deploy-versioning:
+    needs: deploy-docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup github config
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Docs
+        uses: ./.github/actions/setup-docs
+      - name: Setup Github Config
+        run: |
+          git config --local user.name "${{ secrets.ETENDOBOT_NAME}}"
+          git config --local user.email "${{ secrets.ETENDOBOT_EMAIL}}"
+      - name: Deploy Versioning
+        run: mike deploy --push --update-aliases ${{ secrets.DOCS_VERSION }} latest
