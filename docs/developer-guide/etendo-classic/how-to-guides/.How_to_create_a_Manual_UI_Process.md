@@ -1,0 +1,511 @@
+![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+
+######  Toolbox
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
+  
+  
+
+######  Search
+
+######  Participate
+
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
+![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
+
+  
+
+#  How to create a Manual UI Process
+
+##  Contents
+
+  * 1  Introduction 
+  * 2  Example Module 
+  * 3  Steps to implement the Process 
+    * 3.1  Overview 
+    * 3.2  Implementation 
+      * 3.2.1  Defining the Processes 
+      * 3.2.2  Adding a button to Sales Order 
+        * 3.2.2.1  Create a Column 
+        * 3.2.2.2  Create a Field 
+      * 3.2.3  JavaScript Implementation 
+      * 3.2.4  Java Implementation 
+  * 4  Testing the Process 
+  * 5  Advanced Topics 
+    * 5.1  Manual Parameter Window 
+    * 5.2  Read Only and Display Logic 
+    * 5.3  Security 
+
+  
+---  
+  
+##  Introduction
+
+_Manual UI Pattern Process_ is an implememtation for the new process
+definition in Openbravo 3 (see also  How to create a Pick and Execute Process
+). It allows to code the whole UI with SmartClient, it can be used when
+default generated UI doesn't fit the needs of the process.
+
+This how to will add 2 new Manual UI Processes associated with the Sales Order
+window.
+
+The implementation requires development experience. See the following concept
+pages for background information on action handlers and javascript
+development:
+
+  * Action Handler 
+  * Client_Side_Development_and_API 
+  * JavaScript_Coding_Conventions 
+
+It also makes sense to study the following page:  Openbravo_3_Architecture  .
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  The
+Manual UI Processes explained in this how to, is available from **3.0MP12**  
+---|---  
+  
+##  Example Module
+
+This howto is supported by an example module which shows examples of the code
+shown and discussed.
+
+The code of the example module can be downloaded from this mercurial
+repository:
+https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+
+The example module is available through the Central Repository (See 'Client
+Application Examples'), for more information see the  Examples Client
+Application  project page.
+
+##  Steps to implement the Process
+
+###  Overview
+
+In this how to we will create 2 processes that will be shown as 2 buttons in
+Sales Order window. Each of them implements a Manual UI Process. First of the
+buttons sums 1 to a new field (Total example) and the second one subtract 1 to
+the same field. Both can be executed for multiple records at the same time.
+
+Manual UI Processes are implemented by a JavaScript function that is invoked
+when the button associated is clicked. This function is in charge of managing
+the whole process including UI.
+
+###  Implementation
+
+####  Defining the Processes
+
+Let's create 2 similar processes: one for summing and another one for
+subtracting.
+
+  * Create a new record in Process Definition window 
+  * Define the UI pattern: Manual 
+  * Set the Handler: JavaScript function to be invoked when executing the process 
+  * Mark Multi Record: this allows to execute the process for several records at the same time. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-1.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-2.png){: .legacy-image-style}
+
+####  Adding a button to Sales Order
+
+#####  Create a Column
+
+As you know, you required to have a new column to associated it to a button.
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |  You
+can check other how-to if you are not confident with this process, e.g.
+How_to_add_a_field_to_a_Window_Tab  
+---|---  
+  
+In this case we are going to create 3 new columns in C_Order table: 1 for each
+of the buttons and another one just to visualize the results.
+
+  * Create the new columns in the C_Order table. PostgreSQL syntax: 
+
+    
+    
+    ALTER TABLE c_order ADD COLUMN em_obexapp_sum_proc character varying(1);
+    ALTER TABLE c_order ADD COLUMN em_obexapp_subs_proc character varying(1);
+    ALTER TABLE c_order ADD COLUMN em_obexapp_total numeric;
+
+  * Go to: Tables and Columns 
+  * Open the C_Order record 
+  * Execute: **Create Columns from DB** process 
+  * Move to the Columns Tab 
+  * Pick the newly created _em_obexapp_subs_proc_ column 
+  * Change the reference to Button 
+  * Pick your defined Subtract process 
+  * Repeat last steps for sum column and process 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-4.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-5.png){: .legacy-image-style}
+
+#####  Create a Field
+
+  * Go to Windows, Tabs and Fields 
+  * Search for Sales Order 
+  * Select Header tab 
+  * Execute Create Fields to add new fields for your columns 
+
+####  JavaScript Implementation
+
+As mentioned above, Manual UI Processes are implemented by a JavaScript
+function. Now it is time to write that. In this how to we will focus on the
+JavaScript itself, to learn how to add new static JavaScript files in your
+module, you can read  Component provider section in this how to  .
+
+In MP27 a change was done so that the grid would not load all the properties
+for each record, just the ones that are being shown. This means that the data
+related to columns that are not visible in the grid might not be available in
+the javascript function. Because of this, the best practice is to just send
+the record id, which is always available, to the backend process. There you
+have access to all the properties of the record.
+
+    
+    
+     
+    OB.OBEXAPP = OB.OBEXAPP || {};
+     
+    OB.OBEXAPP.Process = {
+      execute: function (params, view) {
+        var i, selection = params.button.contextView.viewGrid.getSelectedRecords(),
+            orders = [],
+            callback;
+     
+        callback = function (rpcResponse, data, rpcRequest) {
+          // show result
+          isc.say(OB.I18N.getLabel('Obexapp_Updated', [data.updated]));
+     
+          // refresh the whole grid after executing the process
+          params.button.contextView.viewGrid.refreshGrid();
+        };
+     
+        for (i = 0; i < selection.length; i++) {
+          orders.push(selection[i].id);
+        };
+     
+        OB.RemoteCallManager.call('org.openbravo.client.application.examples.ManualProcessActionHandler', {
+          orders: orders,
+          action: params.action
+        }, {}, callback);
+      },
+     
+      sum: function (params, view) {
+        params.action = 'sum';
+        OB.OBEXAPP.Process.execute(params, view);
+      },
+     
+      subtract: function (params, view) {
+        params.action = 'subtract';
+        c.Process.execute(params, view);
+      }
+    };
+
+We are defining _sum_ and _subtract_ function within _OB.OBEXAPP.Process_
+object. Note these are the functions we previously set as handlers for the 2
+processes we created. They receive as parameters _params_ which is an object
+containing the button invoking the process among other things, and the _view_
+the button is in. These 2 functions call _execute_ method.
+
+The _execute_ method does the following:
+
+  * Obtains the list of selected records (remember we defined these processes to be able to be ran from several records at the same time): _params.button.contextView.viewGrid.getSelectedRecords()_
+  * Send them to a Java action handler 
+  * callback function receives ActionHanlder response, prints it, and refreshes the whole grid with _params.button.contextView.viewGrid.refreshGrid()_
+
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+**Note about refresh after execution** . Prior to _PR15Q1_ the way to refresh
+after execution was ` params.button.closeProcessPopup() ` , this method
+refreshed the whole grid. In order to improve performance the behavior of this
+function was changed to refresh only the selected record. In case whole grid
+is required to be refreshed after executing the process `
+params.button.contextView.viewGrid.refreshGrid ` should be invoked instead.  
+---|---  
+  
+####  Java Implementation
+
+In this example we are implementing the backend process as an ActionHandler.
+
+As mentioned earlier you should be confident with the concept of an  action
+handler  .
+
+  
+
+    
+    
+     
+    package org.openbravo.client.application.examples;
+     
+    import java.util.Map;
+     
+    import org.codehaus.jettison.json.JSONArray;
+    import org.codehaus.jettison.json.JSONObject;
+    import org.openbravo.base.exception.OBException;
+    import org.openbravo.client.kernel.BaseActionHandler;
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.order.Order;
+     
+    public class ManualProcessActionHandler extends BaseActionHandler {
+     
+      @Override
+      protected JSONObject execute(Map<String, Object> parameters, String data) {
+        try {
+          final JSONObject jsonData = new JSONObject(data);
+          final JSONArray orderIds = jsonData.getJSONArray("orders");
+          final String action = jsonData.getString("action");
+     
+          for (int i = 0; i < orderIds.length(); i++) {
+            final String orderId = orderIds.getString(i);
+     
+            // get the order
+            final Order order = OBDal.getInstance().get(Order.class, orderId);
+     
+            // and add or subtract 1
+            Long originalValue = order.getObexappTotal();
+            if (originalValue == null) {
+              originalValue = 0L;
+            }
+     
+            Long finalValue;
+            if ("sum".equals(action)) {
+              finalValue = originalValue + 1L;
+            } else {
+              finalValue = originalValue - 1L;
+            }
+     
+            order.setObexappTotal(finalValue);
+          }
+     
+          JSONObject result = new JSONObject();
+          result.put("updated", orderIds.length());
+     
+          return result;
+        } catch (Exception e) {
+          throw new OBException(e);
+        }
+      }
+    }
+
+This class just receives an array of sales order IDs, iterates over it adding
+or sustracting 1 to total field.
+
+##  Testing the Process
+
+Since you have changed the structure of some Entity by adding new columns, you
+need to rebuild generated classes ( _ant smarbuild_ ) and restart the tomcat
+server.
+
+  * After restarting, you should be able to go to the Sales Order window and see a new field and 2 new buttons that are shown when there is at least a selected record. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-7.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-8.png){: .legacy-image-style}
+
+  * When clicking the button, the process is executed and a popup indicating how many records have been affected is shown. 
+
+##  Advanced Topics
+
+###  Manual Parameter Window
+
+Sometimes we may need to use a parameter window, to provide additional data to
+the process. For Manual UI Processes, this window have to be coded manually.
+
+Following the previous example, we are going to create a window with:
+
+  * A parameter: a date field 
+  * Two buttons: one to execute the process and the other one just to cancel and close the window. 
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-9.png){: .legacy-image-style}
+
+![](/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Manual_UI_Process-10.png){: .legacy-image-style}
+
+First of all we have to create our parameter window, that will extend
+Openbravo OBPopup class:
+
+    
+    
+     
+    // Define a class that extends OBPopup
+    isc.defineClass('OBEXAPP_ParameterPopup', isc.OBPopup);
+     
+    isc.OBEXAPP_ParameterPopup.addProperties({
+      width: 320,
+      height: 200,
+      title: null,
+      showMinimizeButton: false,
+      showMaximizeButton: false,
+      
+      view: null,
+      params: null,
+      actionHandler: null,
+      orders: null,
+      
+      mainform: null,
+      okButton: null,
+      cancelButton: null,
+      
+      initWidget: function () {
+    	
+        // Form that contains the parameters
+        this.mainform = isc.DynamicForm.create({
+          numCols: 1,
+          fields: [{
+    	    name: 'Date',
+                title: OB.I18N.getLabel('OBEXAPP_Dialog.DATE_TITLE'),
+    	    height: 20,
+    	    width: 200,
+    	    type: '_id_15' //Date reference
+    	  }]
+        });
+    	
+        // OK Button
+        this.okButton = isc.OBFormButton.create({
+          title: OB.I18N.getLabel('OBEXAPP_Dialog.OK_BUTTON_TITLE'),
+          popup: this,
+          action: function () {
+            var callback = function (rpcResponse, data, rpcRequest) {
+              // show result
+              isc.say(OB.I18N.getLabel('Obexapp_Updated', [data.updated]));
+     
+              // close process to refresh current view
+              rpcRequest.clientContext.popup.closeClick();
+            };
+     
+            OB.RemoteCallManager.call(this.popup.actionHandler, {
+              orders: this.popup.orders,
+              action: this.popup.params.action,
+              dateParam: this.popup.mainform.getField('Date').getValue(), //send the parameter to the server too
+            }, {}, callback, {popup: this.popup}); 
+          }
+       });
+       
+       // Cancel Button
+       this.cancelButton = isc.OBFormButton.create({
+         title: OB.I18N.getLabel('OBEXAPP_Dialog.CANCEL_BUTTON_TITLE'),
+         popup: this,
+         action: function () {
+           this.popup.closeClick();
+         }
+       }); 
+       
+       //Add the elements into a layout   
+       this.items = [
+         isc.VLayout.create({
+           defaultLayoutAlign: "center",
+           align: "center",
+           width: "100%",
+           layoutMargin: 10,
+           membersMargin: 6,
+           members: [
+             isc.HLayout.create({
+               defaultLayoutAlign: "center",
+               align: "center",
+               layoutMargin: 30,
+               membersMargin: 6,
+               members: this.mainform
+             }), 
+             isc.HLayout.create({
+               defaultLayoutAlign: "center",
+               align: "center",
+               membersMargin: 10,
+               members: [this.okButton, this.cancelButton]
+             })
+           ]
+         })
+       ];
+       
+       this.Super('initWidget', arguments);
+      }
+     
+    });
+
+Now in our process, instead of calling directly to the action handler, we fill
+and open our custom parameter window first:
+
+    
+    
+     
+    OB.OBEXAPP.Process = {
+      execute: function (params, view) {
+        var i, selection = params.button.contextView.viewGrid.getSelectedRecords(),
+            orders = [],
+            callback;
+     
+        for (i = 0; i < selection.length; i++) {
+          orders.push(selection[i][OB.Constants.ID]);
+        }
+        
+        // Create the PopUp
+        isc.OBEXAPP_ParameterPopup.create({
+          orders: orders,
+          view: view,
+          params: params,
+          actionHandler: 'org.openbravo.client.application.examples.ManualProcessActionHandler'
+        }).show();
+      },
+    ...
+
+And finally, in the server side, we have just to retrieve the date parameter
+in our action handler as it is done with the rest of the data sent:
+
+    
+    
+     
+      final String date = jsonData.getString("dateParam");
+
+###  Read Only and Display Logic
+
+Columns implementing Manual UI processes can have read only logic. In case the
+process supports multi record, the button will be clickable if all the
+selected records comply the expression.
+
+In the same way, fields for these processes can have display logic. If the
+process is multi record, it will be displayed only in case all selected
+records satisfy the expression.
+
+For example:
+
+  * Lets add display logic to the subtract button, not to be shown in case the total is empty or 0, to prevent negative totals. In the field the display logic would be: 
+    
+        @EM_Obexapp_Total@!'' & @EM_Obexapp_Total@>0
+
+  * And lets put read only logic to hide sum button when total is 5. In the column for sum button, read only logic would be: 
+    
+        @EM_Obexapp_Total@!'' & @EM_Obexapp_Total@>4
+
+###  Security
+
+By default, in the same way as the rest of processes, access to execute these
+processes is granted by access to the window containing them.
+
+It is possible to change this behavior setting a _ Secured Process  _
+preference.
+
+Retrieved from "
+http://wiki.openbravo.com/wiki/How_to_create_a_Manual_UI_Process  "
+
+This page has been accessed 30,357 times. This page was last modified on 28
+May 2015, at 07:47. Content is available under  Creative Commons Attribution-
+ShareAlike 2.5 Spain License  .
+
+  
+**
+
+Category  :  HowTo
+
+**
+

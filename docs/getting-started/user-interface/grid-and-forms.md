@@ -88,7 +88,7 @@ The document actions displayed when selecting more than one document will be all
 
 Save View stores grid and form settings, column filters and even the entire layout of the screen, for example, the position of the splitter bar between the header and lines. With this option, the user can rearrange the grid, adapt it to their task and save this view to open it at another time. The user can access saved views through a pull down menu that sits underneath the Save View button in the toolbar.
 
-![Save view option](/assets/drive/1pimqAzN4KUwC_QxVD_rrIbS1VQwtL4WH.png)
+![Save view option](../../assets/drive/1pimqAzN4KUwC_QxVD_rrIbS1VQwtL4WH.png)
 
 A saved view can be set as default and can be deleted. The active view is indicated by a little arrow in front of the view name.
 

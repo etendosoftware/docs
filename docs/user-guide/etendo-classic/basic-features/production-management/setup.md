@@ -218,7 +218,7 @@ The Copy From Attribute tab is used for products of the production type P+. The 
 
 In this tab, the user can define the employees that can perform a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the Calculate Standard Cost section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](/assets/drive/_TM91ctLLzY-kvMDwkeAXnsjXaTTWLmu6O6lpbdvHkVppxgcJxxTgczX8WTkoREEEM2rtbilAmnP77WAuzezDQkrZw7V94pweP9L1TFnXsc3xP6ljzT-Z6UIAAKqvh_Ga6ZrcViJNhB2SD0HE5bk2Z5WKOFqgl_YQ1epU93daoZFpzUbQTtG3CO7NaqdYA.png)
 
@@ -226,7 +226,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define machines that are used for a specific process. In the example, there is no machine defined.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the Calculate Standard Cost section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](/assets/drive/5YE-jABPzRHKUP12eBMB7MbOIqTUNgzHxd2ME1FqiNLuUzfTA9vwH-4oVqSBWT-6HSlsrp-m8V0Dq8ZwlhnCbCYnXdhljrOy2h4JGGkjAD7gobebyea6R2BhH-dusTBknb5gdSKNkithzk5BETzXNA_1bKqO8TWDH-YgtLpZXaQA4ztz09WrHJlTn_xCwQ.png)
 
@@ -234,7 +234,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define indirect costs related to a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the Calculate Standard Cost section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](/assets/drive/DN4ZfyHumPHB6J5C5N3CtmU6prJP2FSSwd2ppRQnHjdlP-yDPHMS439-Uz75x9_2rfEYJPxBClFSzJi0Oe6kC9pdP-Vlx1Az0paKbEJ9OrAiY7RFVgpTO1cNACgoMsHMrn_GfNMEYmxkjrnuEqcn64owZmB1ePyOd1YZ0PYEkcENwtiALXsjAoEls1z6Mw.png)
 

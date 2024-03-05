@@ -8,8 +8,11 @@ tags:
 ---
 
 ![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+#
 
 ## Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2fGUSzo2ACI?si=h1BqAWPYXf6S1Pnj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 In Material Requirement Planning the application is used to *automatically review the demand and display suggestions concerning required supply*. In the *Manufacturing Plan*, the application suggests required *Work Requirements* and *Requisitions*. In the *Purchasing Plan*, the application suggests required *Purchase Orders*.
 
