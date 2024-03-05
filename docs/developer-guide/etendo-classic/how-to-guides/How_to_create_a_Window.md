@@ -11,9 +11,11 @@ tags:
   
 ##  Overview
 
-The objective of this how-to is to show how you can create a new  window  from
-scratch. The how-to builds on top of two previous how-to's which explained
-How to create a module  and  How to create a table.
+The objective of this section is to show how you can create a new window from scratch. 
+
+!!!info
+    This section builds on top of two previous sections which explain
+    [How to create a module](../../../developer-guide/etendo-classic/how-to-guides/.How_To_Create_and_Package_a_Module.md)  and [How to create a table](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Table.md).
 
 Let's have a reminder scenario to base this process on:
 
@@ -22,10 +24,10 @@ the user to input salaries of employees. We also need to track the employee's
 salary so history records need to be preserved. Each salary record needs to
 have a Valid From Date field that indicates when a particular salary came into
 being. The record belonging to a particular employee with the latest Valid
-From Date is the salary that is valid today. Note that employees are already
-inside the system contained in the C_BPARTNER database table and indicated by
-the `C_BPARTNER.ISEMPLOYEE` column. Therefore, we only need to create a database
-table that will hold the actual salaries.
+From Date is the salary that is valid today. 
+
+!!!note
+    Employees are already inside the system contained in the C_BPARTNER database table and indicated by the `C_BPARTNER.ISEMPLOYEE` column. Therefore, we only need to create a database table that will hold the actual salaries.
 
 ##  Module & Table
 
@@ -44,7 +46,7 @@ Create a new record as indicated by the screenshot below:
 
 
 The main fields of this window are:
-(for more information see the  AD_Window  table
+(for more information see the  *AD Window*  table
 description)
 
   * *Name*: defines the name that Etendo uses to recognize this window. 
@@ -173,6 +175,8 @@ other menu groups.
   
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
+
+
 ##  Compiling the Application with the New Window
 
 Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. 
@@ -183,7 +187,7 @@ Finally, the application needs to be recompiled in order to generate the new win
 
 ##  The Result
 
-Using the *F &B International Group Admin* role, select the link to the new window from the menu. 
+Using the *F&B International Group Admin* role, select the link to the new window from the menu. 
 
 Notice the new window and the two tabs hierarchically positioned one above another (one Employe can have one or more salary records):
 
