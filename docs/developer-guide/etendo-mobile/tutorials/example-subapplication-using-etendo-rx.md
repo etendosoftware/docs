@@ -83,8 +83,20 @@ This tutorial is based in our example of a product subapplication, which allows 
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
 
-![repository-cloned.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png)
-
+  ```
+  modules
+  └── com.etendoerx.subapp.product
+      ├── src-db 
+      └── subapp-product
+          ├── .bundle
+          ├── _tests_
+          ├── android
+          ├── ios
+          ├── lib
+          ├── node_modules
+          └── src
+  ```
+  
 !!! warning "Important"
     Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
 
@@ -514,175 +526,6 @@ This is the M_Product_Category - Write fields.
 
   ![entity-fields-read.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
 
-  Using the following command generates the module `com.etendoerx.subapp.product` inside `modules_rx` in which the java mapping class must be added.
-
-  ``` bash title="Terminal"
-  ./gradlew rx:rx
-  ```
-
-  Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the ProductValue.java mapping java class. 
-   
-  ```
-  modules-rx
-  └── com.etendoerx.subapp.product
-      ├── build 
-      ├── lib
-      ├── src
-      │   └── main
-      │       └── java
-      │           └── com
-      │               └── etendorx
-      │                   └── subapp
-      |                       └── product
-      |                           └── javamap
-      |                               └── ProductValue.java
-      ├── src-gen
-      └── build.gradle
-  ```
-
-  ```java title="ProductValue.java"
-  package com.etendorx.subapp.product.javamap;
-
-  import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
-  import com.etendorx.entities.jparepo.OrganizationRepository;
-  import com.etendorx.entities.jparepo.ProductCategoryRepository;
-  import com.etendorx.entities.jparepo.UOMRepository;
-  import com.etendorx.entities.mapper.lib.DTOWriteMapping;
-  import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
-  import org.apache.commons.lang3.StringUtils;
-  import org.openbravo.model.common.plm.Product;
-  import org.springframework.stereotype.Component;
-
-  @Component("PRODSUBAPPProductValueWrite")
-  public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
-
-    private final OrganizationRepository organizationRepository;
-    private final ProductCategoryRepository productCategoryRepository;
-    private final UOMRepository uomRepository;
-    private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
-
-    public ProductValue(OrganizationRepository organizationRepository,
-        ProductCategoryRepository productCategoryRepository,
-        FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
-        UOMRepository uomRepository) {
-      this.organizationRepository = organizationRepository;
-      this.productCategoryRepository = productCategoryRepository;
-      this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
-      this.uomRepository = uomRepository;
-    }
-
-    @Override
-    public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
-      if (StringUtils.isEmpty(entity.getSearchKey())) {
-        entity.setSearchKey("TEST " + Math.random());
-      }
-      if (StringUtils.isEmpty(entity.getDescription())) {
-        entity.setDescription("default");
-      }
-      if (entity.getOrganization() == null) {
-        entity.setOrganization(
-            organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
-      }
-      if (entity.getProductCategory() == null) {
-        entity.setProductCategory(
-            productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
-      }
-      if (StringUtils.isEmpty(entity.getProductType())) {
-        entity.setProductType("I");
-      }
-      if (entity.getTaxCategory() == null) {
-        entity.setTaxCategory(
-            financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
-                .orElse(null));
-      }
-      if (entity.getUOM() == null) {
-        entity.setUOM(uomRepository.findById("100").orElse(null));
-      }
-    }
-  }
-
-  ```
-
-  ``` groovy title="build.gradle"
-  plugins {
-    id 'java'
-    id 'org.springframework.boot'
-    id 'io.spring.dependency-management'
-  }
-
-  group = 'com.etendorx.subapp'
-  version = "1.0.0"
-  sourceCompatibility = JavaVersion.VERSION_17
-
-  java {
-    sourceCompatibility = '17'
-  }
-
-  ext {
-      includeInDasDependencies = true
-  }
-
-  repositories {
-    mavenCentral()
-    maven {
-      url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
-      credentials {
-        username = "${githubUser}"
-        password = "${githubToken}"
-      }
-    }
-    maven {
-      url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
-      credentials {
-        username = "${nexusUser}"
-        password = "${nexusPassword}"
-      }
-    }
-  }
-
-  ext {
-    set('springCloudVersion', "2022.0.4")
-    includeInDasDependencies = true
-  }
-
-  dependencies {
-    implementation 'org.springframework.cloud:spring-cloud-starter-config'
-
-    compileOnly 'org.projectlombok:lombok:1.18.22'
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-    implementation project(path: ':com.etendorx.entities')
-    annotationProcessor 'org.projectlombok:lombok:1.18.22'
-
-    implementation "com.etendorx:das_core:" + findProperty("rx.version")
-    implementation project(path: ':com.etendorx.entities')
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.testcontainers:postgresql:1.17.3'
-    testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
-    testImplementation ('com.etendorx:das') {
-      transitive = false
-      exclude group: 'com.etendorx.test.grpc'
-    }
-    testImplementation (':com.etendorx.utils:auth') {
-      exclude group: 'org.slf4j', module: '*'
-    }
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
-  }
-
-  dependencyManagement {
-    imports {
-      mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-    }
-  }
-
-  tasks.named('test') {
-    useJUnitPlatform()
-  }
-
-  ```
 
 ## Create a New Repository
 
@@ -726,8 +569,8 @@ Next we will define a search method to be used later when we want to consume the
 Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
 
 1. **Create a Java Package:** 
-   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.
-
+   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.   
+  
 2. **Generate Entities Using Etendo RX:**
    Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
    
@@ -737,10 +580,169 @@ Before customizing and programming your sub-application, ensure your development
     ./gradlew rx:generate.entities
     ```
 
-    In turn, this command will initiate the Etendo RX's entity generation process.
+    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the ProductValue.java mapping java class. 
     
-    ![modules-rx.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
+    ```
+    modules-rx
+    └── com.etendoerx.subapp.product
+        ├── build 
+        ├── lib
+        ├── src
+        │   └── main
+        │       └── java
+        │           └── com
+        │               └── etendorx
+        │                   └── subapp
+        |                       └── product
+        |                           └── javamap
+        |                               └── ProductValue.java
+        ├── src-gen
+        └── build.gradle
+    ```
 
+    ```java title="ProductValue.java"
+    package com.etendorx.subapp.product.javamap;
+
+    import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
+    import com.etendorx.entities.jparepo.OrganizationRepository;
+    import com.etendorx.entities.jparepo.ProductCategoryRepository;
+    import com.etendorx.entities.jparepo.UOMRepository;
+    import com.etendorx.entities.mapper.lib.DTOWriteMapping;
+    import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
+    import org.apache.commons.lang3.StringUtils;
+    import org.openbravo.model.common.plm.Product;
+    import org.springframework.stereotype.Component;
+
+    @Component("PRODSUBAPPProductValueWrite")
+    public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
+
+      private final OrganizationRepository organizationRepository;
+      private final ProductCategoryRepository productCategoryRepository;
+      private final UOMRepository uomRepository;
+      private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
+
+      public ProductValue(OrganizationRepository organizationRepository,
+          ProductCategoryRepository productCategoryRepository,
+          FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
+          UOMRepository uomRepository) {
+        this.organizationRepository = organizationRepository;
+        this.productCategoryRepository = productCategoryRepository;
+        this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
+        this.uomRepository = uomRepository;
+      }
+
+      @Override
+      public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
+        if (StringUtils.isEmpty(entity.getSearchKey())) {
+          entity.setSearchKey("TEST " + Math.random());
+        }
+        if (StringUtils.isEmpty(entity.getDescription())) {
+          entity.setDescription("default");
+        }
+        if (entity.getOrganization() == null) {
+          entity.setOrganization(
+              organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
+        }
+        if (entity.getProductCategory() == null) {
+          entity.setProductCategory(
+              productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
+        }
+        if (StringUtils.isEmpty(entity.getProductType())) {
+          entity.setProductType("I");
+        }
+        if (entity.getTaxCategory() == null) {
+          entity.setTaxCategory(
+              financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
+                  .orElse(null));
+        }
+        if (entity.getUOM() == null) {
+          entity.setUOM(uomRepository.findById("100").orElse(null));
+        }
+      }
+    }
+
+    ```
+
+    ``` groovy title="build.gradle"
+    plugins {
+      id 'java'
+      id 'org.springframework.boot'
+      id 'io.spring.dependency-management'
+    }
+
+    group = 'com.etendorx.subapp'
+    version = "1.0.0"
+    sourceCompatibility = JavaVersion.VERSION_17
+
+    java {
+      sourceCompatibility = '17'
+    }
+
+    ext {
+        includeInDasDependencies = true
+    }
+
+    repositories {
+      mavenCentral()
+      maven {
+        url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
+        credentials {
+          username = "${githubUser}"
+          password = "${githubToken}"
+        }
+      }
+      maven {
+        url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
+        credentials {
+          username = "${nexusUser}"
+          password = "${nexusPassword}"
+        }
+      }
+    }
+
+    ext {
+      set('springCloudVersion', "2022.0.4")
+      includeInDasDependencies = true
+    }
+
+    dependencies {
+      implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+      compileOnly 'org.projectlombok:lombok:1.18.22'
+      annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+      implementation project(path: ':com.etendorx.entities')
+      annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+      implementation "com.etendorx:das_core:" + findProperty("rx.version")
+      implementation project(path: ':com.etendorx.entities')
+
+      implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+      testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
+      testImplementation 'org.springframework.boot:spring-boot-starter-test'
+      testImplementation 'org.testcontainers:postgresql:1.17.3'
+      testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
+      testImplementation ('com.etendorx:das') {
+        transitive = false
+        exclude group: 'com.etendorx.test.grpc'
+      }
+      testImplementation (':com.etendorx.utils:auth') {
+        exclude group: 'org.slf4j', module: '*'
+      }
+      implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    }
+
+    dependencyManagement {
+      imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+      }
+    }
+
+    tasks.named('test') {
+      useJUnitPlatform()
+    }
+
+    ```
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
 3. **Migrate the 'lib' Directory:**
@@ -750,9 +752,22 @@ Before customizing and programming your sub-application, ensure your development
     mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
     ```
 
-    ![inside-modules.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
+    ```
+    modules
+    └── com.etendoerx.subapp.product
+        ├── src-db 
+        └── subapp-product
+            ├── .bundle
+            ├── _tests_
+            ├── android
+            ├── ios
+            ├── lib
+            ├── node_modules
+            └── src
+    ```
 
     Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
+    
 
     !!! warning "Important"
         Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
