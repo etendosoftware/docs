@@ -28,7 +28,7 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 Different functionalities are added to this window which allows the user to make changes and/or to adjust the information entered, to generate the sales quotations in order to create the corresponding orders from those quotations.
 
 !!! info
-         For more information, visit the [Sales Quotation user guide](/user-guide/etendo-classic/basic-features/sales-management/transactions#advanced-sales-quotation).
+		For more information, visit the [Sales Quotation user guide](/user-guide/etendo-classic/basic-features/sales-management/transactions#advanced-sales-quotation).
 
 
 ### Advanced Rappels
@@ -43,4 +43,4 @@ Different functionalities are added to this window which allows the user to make
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-        For more information, visit the [Advanced Rappels user guide](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration).
+		For more information, visit the [Advanced Rappels user guide](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration). 
