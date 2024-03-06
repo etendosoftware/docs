@@ -17,25 +17,13 @@ The objective of this section is to show how you can create a new window from sc
     This section builds on top of two previous sections which explain
     [How to create a module](../../../developer-guide/etendo-classic/how-to-guides/.How_To_Create_and_Package_a_Module.md)  and [How to create a table](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Table.md).
 
-Let's have a reminder scenario to base this process on:
-
-Imagine we are developing an HR module and we need a window that will enable
-the user to input salaries of employees. We also need to track the employee's
-salary so history records need to be preserved. Each salary record needs to
-have a Valid From Date field that indicates when a particular salary came into
-being. The record belonging to a particular employee with the latest Valid
-From Date is the salary that is valid today. 
-
-!!!note
-    Employees are already inside the system contained in the C_BPARTNER database table and indicated by the `C_BPARTNER.ISEMPLOYEE` column. Therefore, we only need to create a database table that will hold the actual salaries.
-
 ##  Module & Table
 
 As mentioned above, this tutorial is based on two previous tutorials
 and assumes that the following objectives have been already completed:
 
-  * Creation of a new module with `dbprefix_ _HT`
-  * Creation + Registration in the AD of a new table `ht_salary`
+  * Creation of a new module
+  * Creation + Registration in the AD of a new table
 
 ##  Creating the New Window
 
@@ -61,7 +49,7 @@ The main fields of this window are:
 
   
 Save this record and move to *Tab* tab. Create a new record as shown
-below, creating the first tab to show the employee information:
+below, creating the first tab:
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png)  
 
@@ -80,26 +68,27 @@ Main fields of this window are:
   * *HQL Where Clause*: by using this HQL filter, the user will never be able to see data that does not fit the criteria. When referring to properties of the entity shown in the tab then use the prefix *e* . In our case, we use this field to display only business partners that are our employees (using the _employee_ property). 
   * *SQL Where Clause* Same like HQL Where Clause but using SQL syntax and used for filtering in _classic windows_ . 
 
-Save this record and then click the *Copy Tab Fields* button to copy
-fields from the existing main tab of the Business Partner window into our new
-one. Select the `Business Partner` > `Business Partner` Tab - Window combination
-and confirm the dialog with OK.
+The *Copy Tab Fields* button can be used to copy fields from an existing tab into our new
+one.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
 
-
+The *Create Fields* button can be used to create fields for the new tab based on its associated table
   
 Move to *Field* tab to see the created fields.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
 
 
+
+  
+  
   
 If required, changes to these fields could be made or new ones could be added manually. 
 
 !!!note
-    For not header tabs, it is very important not to remove the field
-    that point the to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
+    For not header tabs, it is very important to not remove the field
+    that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
 
 
 
@@ -131,16 +120,16 @@ To arrange the columns according to common look and feel of other windows, we no
 
 
   
-For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides. In our case, the *Employee Salary* window is used to manage the content of the `HT_Salary` database table. Hence, all salary records need to be shown within that window. 
+For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides.
 
-To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the `HT_Salary` table and set the *Window* as indicated below:
+To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the corresponding table and set the *Window* as indicated below:
 
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
 
 ##  Creating the Menu Item
 
-A menu item is required for the user to be able to call up the new window we developed. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
+A menu item is required for the user to be able to call up the new window. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
 
   
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
@@ -163,7 +152,7 @@ Main fields of this window are:
 Save this record then click on _Tree_ icon ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_8.png)
 
 
-Here you can drag and drop the new Employee Salary menu item to any of the
+Here you can drag and drop the new menu item to any of the
 other menu groups.
 
   
@@ -183,21 +172,7 @@ Finally, the application needs to be recompiled in order to generate the new win
 
 Using the *F&B International Group Admin* role, select the link to the new window from the menu. 
 
-Notice the new window and the two tabs hierarchically positioned one above another (one Employe can have one or more salary records):
-
-  
-
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png)
-
-  
-By double clicking Juan Lopez , details of this employee appear, however in a read-only mode (notice all fields are gray).
-
-By clicking 'New in form' while having the _Salary_ tab in focus a salary record can be created for this employee.
-
-  
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_11.png)
-
   
 !!!success
     You have now successfully created your own new window and seen how it came to life within Etendo. 
