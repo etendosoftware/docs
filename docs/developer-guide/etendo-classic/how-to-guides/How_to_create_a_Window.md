@@ -15,7 +15,7 @@ The objective of this section is to show how you can create a new window from sc
 
 !!!info
     This section builds on top of two previous sections which explain
-    [How to create a module](../../../developer-guide/etendo-classic/how-to-guides/.How_To_Create_and_Package_a_Module.md)  and [How to create a table](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Table.md).
+    [How to create a module](How_To_Create_and_Package_a_Module.md)  and [How to create a table](How_to_create_a_Table.md).
 
 ##  Module & Table
 
