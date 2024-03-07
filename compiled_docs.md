@@ -34282,11 +34282,11 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 #### Etendo plugin
 
 
-Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/) or use `lastest.release` to resolve the latest version.
+Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes) or use `lastest.release` to resolve the latest version.
 
 ```groovy title="build.gradle"
 plugins {
-    id 'com.etendoerp.gradleplugin' version '1.2.2'
+    id 'com.etendoerp.gradleplugin' version '<version>'
 }
 ```
 
