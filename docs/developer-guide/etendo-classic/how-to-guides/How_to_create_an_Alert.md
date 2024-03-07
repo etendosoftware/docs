@@ -40,7 +40,7 @@ to find the _Customers with exceeded credit_ one and double click it. If not,
 create a new record as indicated below:
 
   
-![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-0.png)
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-00.png)
 
 
 where this is the exact code for the *SQL* field:
@@ -80,7 +80,7 @@ _Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
 tab. Add a new record as indicated below:
 
   
-![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png)
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-01.png)
 
   
 !!!note
@@ -92,7 +92,7 @@ tab. Add a new record as indicated below:
 For the alerts to be evaluated and triggered, the background process needs to
 be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _`General Setup` > `Process Scheduling ` >`Process Request`_ and enter a new record:
 
-![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-02.png)
 
 ##  The Result
 
@@ -103,7 +103,7 @@ _*Alert Management*_ window that should look something like:
 
   
 
-![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png)
+![alt text](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-03.png)
 
   
 
