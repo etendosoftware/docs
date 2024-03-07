@@ -560,9 +560,12 @@ En el caso de las facturas de compra no es necesario indicar si se trata o no de
 
 Y además, debemos reflejar el número de factura del proveedor en el campo **"Referencia del Proveedor"**.
 
-Las facturas recibidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha del registro contable de la factura y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado).
+Las facturas recibidas deben enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) naturales desde la fecha del registro contable de la factura, excluyendo sábados, domingos, y feriados reconocidos nacionalmente y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado). El periodo límite puede ser más corto que los días iniciales del plazo. Si el día 15 es Sábado, Domingo o feriado, la fecha límite se extiende al siguiente día hábil.
 
 Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha de registro contable** de la factura como fecha a tener en cuenta respecto del alta en SII.
+
+!!! info
+    Se puede utilizar la [Calculadora de Plazos de la Agencia Tributaria](https://www2.agenciatributaria.gob.es/wlpl/AVAC-CALC/LanzadorCalculadoraPlazos) para realizar simulaciones para diferentes casos y ayudar a clarificar cualquier duda respecto a los plazos de liquidación.
 
 Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
 
