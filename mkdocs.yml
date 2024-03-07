@@ -469,7 +469,9 @@ nav:
     - Release Notes:
       - Etendo Classic:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
-        - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
+        - Plugins:
+          - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
+          - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
           - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
