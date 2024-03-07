@@ -13,7 +13,9 @@ tags:
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.2](#192) | 04/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
+| [1.9.1](#191) | 28/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
+| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
 | [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
@@ -36,24 +38,31 @@ tags:
 
 ## Versiones Disponibles
 
+### 1.9.2
+- [EE-766](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/14){target="\_blank"} Se agregaron traducciones faltantes en campos de la solapa 'Solapa' de la ventana 'Ventanas, Solapas y Campos'
+- [EE-791](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/17){target="\_blank"} Se eliminó el trigger `AEATSII_UPDATESII_KEYLIST_TRG` y se movió su funcionalidad al trigger `AEATSII_INVOICE_TRG`  
+- [EE-858](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/22){target="\_blank"} Se creó un nuevo módulo de traducción para los elementos del módulo de Jobs
+### 1.9.1
+- [EE-838](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/21){target="\_blank"} Se corrigió un error de envío al SII, en el que se creaban los ficheros con la URL del SII de Guipúzcoa. Se revirtió la funcionalidad de envío al SII de Bizkaia
 ### 1.9.0
-- Parámetros modelo 347 - Rangos nuevos 2023 \
+- Parámetros modelo 347 - Rangos nuevos 2023 </br>
 Se asociaron nuevos parámetros de impuestos a los siguientes rangos:
-  - Adquisiciones IVA 0% 
-  - Entregas IVA 0%  
-  - Entregas IVA 0+RE 0+0% 
-  - Entregas IVA 0+RE 0+0% (+0% IVA) 
-  - Entregas IVA 0+RE 0+0% (+0% RE) 
-  - Entregas IVA 5% 
-  - Entregas IVA+RE 21+1.75% 
-  - Entregas IVA+RE 21+1.75% (+1.75%) 
-  - Entregas IVA+RE 21+1.75% (+21%) 
-  - Entregas IVA+RE 5+0.62% 
-  - Entregas IVA+RE 5+0.62% (+0.62%) 
-  - Entregas IVA+RE 5+0.62% (+5%) 
-  - Servicios Prestados 0% 
+    - Adquisiciones IVA 0% 
+    - Entregas IVA 0%  
+    - Entregas IVA 0+RE 0+0% 
+    - Entregas IVA 0+RE 0+0% (+0% IVA) 
+    - Entregas IVA 0+RE 0+0% (+0% RE) 
+    - Entregas IVA 5% 
+    - Entregas IVA+RE 21+1.75% 
+    - Entregas IVA+RE 21+1.75% (+1.75%) 
+    - Entregas IVA+RE 21+1.75% (+21%) 
+    - Entregas IVA+RE 5+0.62% 
+    - Entregas IVA+RE 5+0.62% (+0.62%) 
+    - Entregas IVA+RE 5+0.62% (+5%) 
+    - Servicios Prestados 0% 
+- Agregada al SII la funcionalidad de envío a hacienda de Bizkaia
 ### 1.8.0
-- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 \
+- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 </br>
 Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
     - Recargo de equivalencia - Tipo 0% - Base imponible [663]
     - Recargo de equivalencia - Tipo 0% - Cuota [664]

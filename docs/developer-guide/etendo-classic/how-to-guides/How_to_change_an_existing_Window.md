@@ -82,7 +82,7 @@ we can see the changed layout immediate as seen below:
   
 To apply the same layout changes to the window in *classic UI mode*, the
 windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile & deploy step can be done by using `ant smartbuild`
+restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
 which will recompile all changed windows and deploy the changes.
 
   
