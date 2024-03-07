@@ -34977,7 +34977,7 @@ To use the Etendo Backup and Restore tool, you should add the plugin id on the `
 
 ``` groovy  title="build.gradle"
 plugins {
-    id 'com.etendoerp.etendobackup' version "<version>"
+    id 'com.etendoerp.etendobackup' version '<version>'
 }
 ```
 
