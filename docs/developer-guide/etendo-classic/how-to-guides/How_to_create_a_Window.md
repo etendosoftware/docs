@@ -56,6 +56,7 @@ below, creating the first tab:
 
 Main fields of this window are:
 
+  * *Module*: defines the module for which this element will belong to.
   * *Name*: defines the name that Etendo uses to recognize this tab. 
   * *Description*: gives a small description of the table. 
   * *Help/Comments*: defines the text that is displayed in Help window. 
