@@ -9,11 +9,12 @@ tags:
 
 #  How to run an initial client setup process
 
-# Overview
+## Overview
 
-The Initial Client setup process allows to create a Client and besides a *Client Admin* role with no access restrictions.
+The Initial Client setup process allows to create a Client and also a *Client Admin* role with no access restrictions.
 
 The initial client setup process is an automated process which can be run by logging in Etendo as *System Administrator* role.
+
 
 This process allows to:
 
@@ -29,30 +30,30 @@ This process allows to:
 
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 
-  - a [Fiscal Calendar](../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar.md) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
-  - an [Account Tree]() or *Chart of Accounts* and a [General Ledger configuration](../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig.md) which is shared by all the organizations created within the Client.
+  - a [Fiscal Calendar](../../../basic-features/financial-management/accounting/setup/#fiscal-calendar.md) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
+  - an [Account Tree](../../../basic-features/financial-management/accounting/setup/#account-tree.md) or *Chart of Accounts* and a [General Ledger configuration](../../../basic-features/financial-management/accounting/setup/#glconfig.md) which is shared by all the organizations created within the Client.
 
 The *General Ledger Configuration* and the *Chart of Accounts* created by default can be later on customized. 
 
 !!!info
-    For more information, read Setup Accounting. 
+    For more information, read [General Setup](../../../basic-features/general-setup/getting-started/.md). 
 
 
-The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension]() of the general ledger configuration.
+The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](../../../basic-features/financial-management/accounting/setup/#dimension.md) of the general ledger configuration.
 
 !!!note
     It is possible to create a client without selecting the *Include Accounting* checkbox, in fact that is the recommended option. Accounting configuration will then rely on the organization type being created later on in the Client.
 
 !!!info
-    For more information, read [Initial Organization Setup]().
+    For more information, read [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/#initial-organization-setup.md).
 
 - Finally, it is possible to apply reference data such as:
 
   - Standard document types for orders, invoices, etc, this one is selected by default as it is necessary for creating transactional data such as orders and invoices.
-  - Document types and default algorithm for bank statements auto-matching, this one is similar to the previous one but for specific financial flows such as [Payment Outs](), [Payment In]() and [Financial Accounts]().
+  - Document types and default algorithm for bank statements auto-matching, this one is similar to the previous one but for specific financial flows such as [Payment Outs](../../../basic-features/financial-management/receivables-and-payables/transactions/#payment-out.md), [Payment In](../../../etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in.md) and [Financial Accounts](../../../basic-features/financial-management/receivables-and-payables/transactions/#financial-account.md).
   - or reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension modules.
 
-Every new [Client]() created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
+Every new [Client](../../../basic-features/general-setup/client/.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
 
 - Organization
 - Business Partner
