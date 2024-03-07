@@ -36,22 +36,20 @@ Create a new record as indicated by the screenshot below:
 The main fields of this window are:
 
 
-  * *Module*: defines the module for which this element will belong to.
-  * *Name*: defines the name that Etendo uses to recognize this window. 
-  * *Description*: gives a small description of the table. 
-  * *Help/Comments*: defines the text that is displayed in Help window. 
-  * *Window Type*: defines some user interface specifics for a window: 
-    * _Maintain_ : is used for windows with few entries. 
-    * _Transaction_ : for transactional windows. 
-      * The header tab's underlying table must contain the PROCESSED and UPDATED columns 
-      * by default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents. 
-    * _Query Only_ : for read-only windows that only enable viewing of data. 
+  - *Module*: defines the module for which this element will belong to.
+  - *Name*: defines the name that Etendo uses to recognize this window. 
+  - *Description*: gives a small description of the table. 
+  - *Help/Comments*: defines the text that is displayed in Help window. 
+  - *Window Type*: defines some user interface specifics for a window: 
+    - _Maintain_ : is used for windows with few entries. 
+    - _Transaction_ : for transactional windows. The header tab's underlying table must contain the PROCESSED and UPDATED columns. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents.
+    - _Query Only_ : for read-only windows that only enable viewing of data. 
 
   
 Save this record and move to *Tab* tab. Create a new record as shown
 below, creating the first tab:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png)  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_1.png)  
 
 
 Main fields of this window are:
