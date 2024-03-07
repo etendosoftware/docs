@@ -42,7 +42,7 @@ The main fields of this window are:
   - *Help/Comments*: defines the text that is displayed in Help window. 
   - *Window Type*: defines some user interface specifics for a window: 
     - _Maintain_ : is used for windows with few entries. 
-    - _Transaction_ : for transactional windows. The header tab's underlying table must contain the PROCESSED and UPDATED columns. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents.
+    - _Transaction_ : for transactional windows. It's the type of window that's used for showing the information of tables with a large volume of data. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents. The header tab's underlying table must contain the PROCESSED and UPDATED columns (for the data filters to work).
     - _Query Only_ : for read-only windows that only enable viewing of data. 
 
   
