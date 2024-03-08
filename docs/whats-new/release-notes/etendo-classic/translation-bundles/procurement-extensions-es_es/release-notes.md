@@ -15,5 +15,5 @@ tags:
 ## Overview
 
 | Version | Publication Date | Compatibility with Procurement Extensions | Status | GitHub |
-| --- 		| ---           | --- | --- | :---:             |
+| --- | --- | --- | :----: | :----: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
