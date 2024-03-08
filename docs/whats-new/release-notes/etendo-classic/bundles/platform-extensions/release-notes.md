@@ -29,6 +29,6 @@ tags:
 | [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
 | [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
-| 1.0.501	|-  		| 22.1.0 | 22.1.3	| C		|                       |
-| 1.0.500	|-		    | 22.1.0 | 22.1.3   | C 	|                       |
-| 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
+| 1.0.501 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.400 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |

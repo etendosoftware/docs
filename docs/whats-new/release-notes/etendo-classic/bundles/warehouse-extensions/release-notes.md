@@ -21,5 +21,5 @@ tags:
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.1.0){target="_blank"} | 06/04/2023 | 21.4.0 | 23.1.5 | C | :white_check_mark: |
 | [1.0.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.3){target="_blank"} | 06/02/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
 | [1.0.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.2){target="_blank"} | 25/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
-| [1.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/v1.0.1){target="_blank"} | 06/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |					|
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/v1.0.1){target="_blank"} | 06/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.0){target="_blank"} | 30/09/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
