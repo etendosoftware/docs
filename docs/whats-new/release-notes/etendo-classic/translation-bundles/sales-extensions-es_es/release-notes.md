@@ -17,9 +17,5 @@ tags:
 ## Overview
 
 | Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
-
-## Release Notes
-### 1.6.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
