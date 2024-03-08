@@ -18,8 +18,4 @@ tags:
 
 | Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-## Release Notes
-### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |

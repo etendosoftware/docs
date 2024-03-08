@@ -18,11 +18,5 @@ tags:
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.3.0](#130) | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
-| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
-
-## Release Notes
-### 1.3.0
-- Add Webhook Events translation module dependency
-### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |

@@ -14,10 +14,6 @@ tags:
 
 ## Overview
 
-| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
+| Version | Publication Date | Compatibility with Procurement Extensions | Status | GitHub |
 | --- 		| ---           | --- | --- | :---:             |
-| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-## Release Notes
-### 1.0.0
-- The translation module `com.etendoerp.purchase.invoice.validations.es_es` has been added.
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |

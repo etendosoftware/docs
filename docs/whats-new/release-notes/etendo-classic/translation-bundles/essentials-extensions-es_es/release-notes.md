@@ -18,8 +18,4 @@ tags:
 
 | Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
 | ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-## Release Notes
-### 1.1.0
-- Remove all translation modules dependencies to translated modules
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
