@@ -40128,26 +40128,13 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub |
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  |  :white_check_mark:|
-| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   |  :white_check_mark:|
-| [1.1.0](#110) | 27/06/2023 | 22.1.0 | 23.2.8 | C   |  :white_check_mark:|
-| [1.0.0](#100) | 10/05/2023 | 22.1.0 | 23.1.5 | C   |  :white_check_mark:|
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.1.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.0.0){target="_blank"} | 10/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
 
-#### Release Notes
-
-##### 1.3.0
-- Update Core compatibility until 23.4.x
-
-##### 1.2.0
-- Update Core compatibility until 23.3.x
-
-##### 1.1.0
-- Update Core compatibility until 23.2.x
-
-##### 1.0.0
-- Add Advanced Business Partner module
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Platform Extensions Bundle
@@ -40159,52 +40146,24 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.13.1](#1201) | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
-| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | C  | :white_check_mark: |
-| [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
-| [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.7.1](#171)   | 17/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.6.0](#160)   | 29/06/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.5.0](#150)   | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.4.0](#140)   | 17/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
-| [1.3.0](#130)   | 06/04/2023 | 22.1.0 | 23.1.5 | C  |                    |
-| 1.2.0 	|06/04/2023	| 22.1.0 | 23.1.5	| C  	|                       |
-| [1.1.3](#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
-| 1.1.2 	|06/10/2022	| 22.1.0 | 22.3.0	| C  	|                       |
-| 1.1.1		|19/07/2022	| 22.1.0 | 22.2.2	| C  	|                       |
-| 1.1.0		|08/07/2022	| 22.1.0 | 22.2.2   | C  	|                       |
-| 1.0.501	|-  		| 22.1.0 | 22.1.3	| C		|                       |
-| 1.0.500	|-		    | 22.1.0 | 22.1.3   | C 	|                       |
-| 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
-
-#### Release Notes
-##### 1.13.1
-- [EE-815](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/6){target="\_blank"} Field arrangements in Webhooks Events module
-##### 1.12.0
-- Update Core compatibility until 23.4.x
-- [EE-658](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/2){target="\_blank"} Warning: Non-varargs Call to Varargs Method in com.etendoerp.webhookevents Module
-##### 1.10.0
-- Update Core compatibility until 23.3.x
-##### 1.9.0
-- Add *Generic Utils for EAN128 Definition and parsing* module, Javapackage:  `com.smf.ean128`
-##### 1.8.0
-- Add *Dynamic App* module, Javapakage: `com.etendoerp.dynamic.app`
-##### 1.7.1
-- Fix incompatibility of the com.etendoerp.etendorx module with Oracle
-##### 1.6.0
-- Add *Etendo Advanced Security* module, Javapackage:  `com.etendoerp.advanced.security`
-##### 1.5.0
-- Update Core compatibility until 23.2.x
-##### 1.4.0
-- All packages have been published on GitHub.
-
-##### 1.3.0
-- Add `com.etendoerp.asyncprocess` module
-- Add `com.etendoerp.webhookevents` module
-
-##### 1.1.3 
-- Move Amortization Report module (Platform Bundle) to Financial Extension (Financial Bundle)
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.12.0){target="_blank"} | 29/12/2023 | 23.2.0 | 23.4.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.9.0){target="_blank"} | 14/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.8.0){target="_blank"} | 28/08/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.7.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.7.1){target="_blank"} | 17/08/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.6.0){target="_blank"} | 29/06/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.5.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.4.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | :white_check_mark:|
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| 1.0.501 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.400 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
@@ -40214,36 +40173,17 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.5.0](#150) | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark:	|
-| [1.4.0](#140) | 29/09/2023 | 21.4.0 | 23.3.x | C  | :white_check_mark:	|
-| [1.3.0](#130) | 27/06/2023 | 21.4.0 | 23.2.8 | C  | :white_check_mark:	|
-| [1.2.0](#120) | 17/05/2023 | 21.4.0 | 23.1.5 | C  | :white_check_mark:	|
-| [1.1.0](#120) | 06/04/2023 | 21.4.0 | 23.1.5 | C  |					|
-| [1.0.3](#103) | 06/02/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.2](#102) | 25/01/2023 | 21.4.0 | 22.4.6 | C  |					|
-| 1.0.1 | 06/01/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.0](#100) | 30/09/2022 | 21.4.0 | 22.3.0 | C  |					|
-
-#### Release Notes
-
-##### 1.5.0
-- Update Core compatibility until 23.4.x
-##### 1.4.0
-- Update Core compatibility until 23.3.x
-##### 1.3.0
-- Update Core compatibility until 23.2.x
-##### 1.2.0
-- All packages have been published on GitHub.
-##### 1.1.0
-- Solving bug: Reactivate Warehouse Document incompatible with Oracle
-##### 1.0.3
-- Solving bugs in Stock History module
-##### 1.0.2
-- Add Reactivate Warehouse Documents
-##### 1.0.0
-- Add Stock History module
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 21.4.0 | 23.3.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 21.4.0 | 23.2.8 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.2.0){target="_blank"} | 17/05/2023 | 21.4.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.1.0){target="_blank"} | 06/04/2023 | 21.4.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.3){target="_blank"} | 06/02/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.2){target="_blank"} | 25/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/v1.0.1){target="_blank"} | 06/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.0){target="_blank"} | 30/09/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle
@@ -40253,30 +40193,15 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.5.0](#150) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:	|
-| [1.4.0](#140) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:	|
-| [1.3.0](#130) | 27/06/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:	|
-| [1.2.0](#120) | 17/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:	|
-| 1.1.0 | 06/04/2023 | 22.1.0 | 23.1.5 | C   | 						|
-| [1.0.0](#100) | 06/03/2023 | 22.1.0 | 22.4.5 | C   | 						|
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.2.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.1.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.0.0){target="_blank"} | 06/03/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
 
-#### Release Notes
-
-##### 1.5.0
-- Update Core compatibility until 23.4.x
-  
-##### 1.4.0
-- Update Core compatibility until 23.3.x
-
-##### 1.3.0
-- Update Core compatibility until 23.2.x
-##### 1.2.0
-- All packages have been published on GitHub.
-
-##### 1.0.0
-- Add Advanced Work Effort module
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sales Extensions Bundle
@@ -40286,40 +40211,24 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
-| --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.7.0](#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
-| [1.6.0](#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
-| [1.5.2](#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.5.1](#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.5.0](#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.4.0](#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.3.0](#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
-| 1.2.0 	| 05/04/2023 	| 22.1.0 | 23.1.5 | C	|                   |
-| 1.1.2 	| 06/01/2023 	| 22.1.0 | 22.4.5 | C 	|                   |
-| 1.1.1 	| 05/10/2022 	| 22.1.0 | 22.3.0 | C 	|                   |
-| 1.1.0     | 11/07/2022 	| 22.1.0 | 22.2.2 | C 	|                   |
-| 1.0.400   | - 			| 22.1.0 | 22.1.3 | C 	|                   |
-| 1.0.300   | - 			| 22.1.0 | 22.1.3 | C	|                   |
-| 1.0.200   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-| 1.0.100   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-| 1.0.000   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-
-#### Release Notes
-##### 1.7.0
-- Update Core compatibility until 23.4.x
-##### 1.6.0
-- Update Core compatibility until 23.3.x
-##### 1.5.2
-- Modifications to messages in "Advanced Rappels" module
-##### 1.5.1
-- Hotfix: Rappels Advanced Oracle compatibility
-##### 1.5.0
-- Add Rappels Advanced module
-##### 1.4.0
-- Update Core compatibility until 23.2.x
-##### 1.3.0
-- All packages have been published on GitHub.
+| Version | Publication Date | From Core | To Core | Status | GitHub |
+| --- | --- | --- | --- | :---: | :---: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.7.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.6.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.5.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.2){target="_blank"} | 16/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.1){target="_blank"} | 04/07/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.3.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| 1.0.400 | - | 22.1.0 | 22.1.3 | C | |
+| 1.0.300 | - | 22.1.0 | 22.1.3 | C | |
+| 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
+| 1.0.100 | 06/01/2022 | 21.4.0 | 22.1.3 | C | |
+| 1.0.000 | 03/01/2022 | 21.4.0 | 22.1.3 | C | |
 
 
 ==ARTICLE_END==
@@ -40331,121 +40240,41 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.4](#1134) | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
-| [1.13.3](#1133) | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
-| [1.13.2](#1132) | 14/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
-| [1.13.1](#1131) | 10/01/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
-| [1.13.0](#1130) | 29/12/2023 | 23.1.4 | 23.4.x | C | :white_check_mark: |
-| [1.12.1](#1121) | 15/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.12.0](#1120) | 13/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.11.3](#1113) | 07/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.11.2](#1112) | 05/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.11.1](#1111) | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.10.0](#1100) | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
-| [1.9.1](#191) | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
-| [1.9.0](#190) | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
-| [1.8.0](#180) | 27/06/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
-| [1.7.1](#171) | 12/06/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
-| [1.7.0](#170) | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
-| [1.5.0](#150) | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
-| [1.3.0](#130) | 06/04/2023 | 22.4.2 | 23.1.5 | C | |
-| [1.2.4](#124) | 14/02/2023 | 22.4.2 | 22.4.x | CS | |
-| [1.2.3](#123) | 31/01/2023 | 22.4.2 | 22.4.x | C | |
-| [1.2.2](#122) | 10/01/2023 | 22.2.1 | 22.4.x | C | |
-| [1.2.0](#120) | 12/10/2022 | 22.2.1 | 22.3.0 | C | |
-| 1.1.4         | 11/10/2022 | 22.2.1 | 22.3.0 | C | |
-| [1.1.3](#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C | |
-| [1.1.2](#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C | |
-| 1.1.1 | 10/07/2022 | 22.1.1 | 22.2.2 | C | |
-| 1.1.0 | 08/07/2022 | 22.1.1 | 22.2.2 | C | |
+| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.3){target="_blank"} | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.2){target="_blank"} | 14/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.1){target="_blank"} | 10/01/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.0){target="_blank"} | 29/12/2023 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.12.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.12.1){target="_blank"} | 15/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.12.0){target="_blank"} | 13/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.3){target="_blank"} | 07/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.2){target="_blank"} | 05/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.1){target="_blank"} | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.9.1){target="_blank"} | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.9.0){target="_blank"} | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.8.0){target="_blank"} | 27/06/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.7.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.1){target="_blank"} | 12/06/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.0){target="_blank"} | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.5.0){target="_blank"} | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
+| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | :white_check_mark: |
+| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | :white_check_mark: |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
 | 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.400 | 15/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | 23/04/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.200 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.100 | 06/01/2022 | 21.4.0 | 21.4.x | C | |
 | 1.0.000 | 04/01/2022 | 21.4.0 | 21.4.x | C | |
-
-#### Release Notes
-
-##### 1.13.4
-- [EE-771](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/23){target="\_blank"} Remove payment button is shown in "purchase order" window even when there is no payment associated
-- [EE-799](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/29){target="\_blank"} Inability to reactivate manual reconciliations
-- [EE-804](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/33){target="\_blank"} The "select invoices and order" button in the "remittances" window does not work properly with the pre-filtering
-- [EE-849](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/32){target="\_blank"} It is not allowed to modify the name of the organization with the system administrator role
-
-##### 1.13.3
-- [EE-839](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/31){target="\_blank"} Financial Reports Advanced Module Ignore Selected ERP Language
-- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage
-
-##### 1.13.2
-- [EE-786](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/20){target="\_blank"} Functionality to select orders or invoices in remittances does not work well total
-- [EE-723](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/30){target="\_blank"} Incomplete titles when exporting Balance Sheet And P&L Structure Advanced Report with templates to Excel
-
-##### 1.13.1
-- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Unnecessary "Header" tab in the in the ABC Activity window
-
-##### 1.13.0
-- Update Core compatibility until 23.4.x
-
-##### 1.12.1
-- [EE-745](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/10){target="\_blank"}  Errors during remittance processing when grouping by business partners
-- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} Multiselector of organizations of the general ledger report advanced report does not work
-- [EE-764](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/21){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
-
-##### 1.12.0
-- [EE-746](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/11){target="\_blank"} General Ledger Report Advanced does not print if Group By is added
-- [EE-751](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/12){target="\_blank"} Reverse pre-filtering in "select invoices and order" process in remittances
- 
-##### 1.11.3
-- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} The Payments void option is not available
-- [EE-754](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/15){target="\_blank"} Payment is not created when settling the processed remittance lines
-- [EE-759](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/19){target="\_blank"} No "payment in" is created from the "add payment" process of the sales invoice when the sales invoice is cancelled with another one
-
-##### 1.11.2
-- [EE-726](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/5){target="\_blank"} When you want to create a payment for a financing plan, the process does not end
-- [EE-744](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/9){target="\_blank"} Unable to generate credit from the "payment out" window
-##### 1.11.1
-- [EE-738](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/6){target="\_blank"} Additional accounting lines created from banking group
-- [EE-727](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/7){target="\_blank"} Error in translation of pop up window remittance
-##### 1.10.0 
-- Update Core compatibility until 23.3.x
-##### 1.9.1 
-- Fix bug related to completing invoices generated from Financial Type configuration.
-##### 1.9.0 
-- Update org.openbravo.module.remittance version
-##### 1.8.0
-- Update Core compatibility until 23.2.x
-##### 1.7.1
-- Fix com.etendoerp.advanced.bpsettlement bugs.
-##### 1.7.0
-- Add com.etendoerp.advanced.bpsettlement module
-##### 1.5.0
-- All packages have been published on GitHub.
-##### 1.3.0
-- Add Bulk Posting module.
-
-##### 1.2.4
-- Fix Payment Removal bug.
-
-##### 1.2.3
-- Add Advanced Financial Docs Processing.
-
-##### 1.2.2
-- Add Amortization Report module.
-- Publish module - G/L Journal Reverse.
-- Fix Banking pool bugs.
-- Fix Financial Advanced Reports bugs.
-
-##### 1.2.0
-- Advanced Intercompany module 1.0.0 version added.
-
-##### 1.1.3
-- Payment Removal module 1.0.0 version added.
-
-##### 1.1.2
-- Financial Reports Advanced module 1.0.0 version added.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Spanish Localization Bundle
@@ -40455,150 +40284,29 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Introducción
 
-| Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
+| Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.2](#192) | 04/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
-| [1.9.1](#191) | 28/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.4.1](#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
-| [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](#120) | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
-| [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
-| 1.0.3 | 06/10/2022 | 21.4.0 | 22.3.x | C  |                   |
-| [1.0.2](#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
-| [1.0.1](#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
-| 1.0.0 | 01/01/2022 | 21.4.0 | \*     | C  |                   |
-
-
-#### Versiones Disponibles
-
-##### 1.9.2
-- [EE-766](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/14){target="\_blank"} Se agregaron traducciones faltantes en campos de la solapa 'Solapa' de la ventana 'Ventanas, Solapas y Campos'
-- [EE-791](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/17){target="\_blank"} Se eliminó el trigger `AEATSII_UPDATESII_KEYLIST_TRG` y se movió su funcionalidad al trigger `AEATSII_INVOICE_TRG`  
-- [EE-858](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/22){target="\_blank"} Se creó un nuevo módulo de traducción para los elementos del módulo de Jobs
-##### 1.9.1
-- [EE-838](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/21){target="\_blank"} Se corrigió un error de envío al SII, en el que se creaban los ficheros con la URL del SII de Guipúzcoa. Se revirtió la funcionalidad de envío al SII de Bizkaia
-##### 1.9.0
-- Parámetros modelo 347 - Rangos nuevos 2023 </br>
-Se asociaron nuevos parámetros de impuestos a los siguientes rangos:
-    - Adquisiciones IVA 0% 
-    - Entregas IVA 0%  
-    - Entregas IVA 0+RE 0+0% 
-    - Entregas IVA 0+RE 0+0% (+0% IVA) 
-    - Entregas IVA 0+RE 0+0% (+0% RE) 
-    - Entregas IVA 5% 
-    - Entregas IVA+RE 21+1.75% 
-    - Entregas IVA+RE 21+1.75% (+1.75%) 
-    - Entregas IVA+RE 21+1.75% (+21%) 
-    - Entregas IVA+RE 5+0.62% 
-    - Entregas IVA+RE 5+0.62% (+0.62%) 
-    - Entregas IVA+RE 5+0.62% (+5%) 
-    - Servicios Prestados 0% 
-- Agregada al SII la funcionalidad de envío a hacienda de Bizkaia
-##### 1.8.0
-- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 </br>
-Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
-    - Recargo de equivalencia - Tipo 0% - Base imponible [663]
-    - Recargo de equivalencia - Tipo 0% - Cuota [664]
-    - Recargo de equivalencia - Tipo 0,62% - Base imponible [665]
-    - Recargo de equivalencia - Tipo 0,62% - Cuota [666]
-##### 1.7.0
-- [EE-301](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/18) Se agregó un nuevo estado 'No Declarable en SII' para facturas de venta que tengan todos sus productos relacionados a impuestos configurados como 'No Declarables en SII'.
-- [EE-796](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/19) Se corrigió el error en el que la página T303DID00 no se genera de forma correcta para el 303 del último periodo.
-- Se añadió el nuevo diseño de registro para el Modelo de Declaración de Impuestos 190, versión 2023.
-- Se añadió la oficina impositiva de Bizkaia en la configuración del SII para facturas recibidas.
-##### 1.6.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.4.x
-- [EE-779](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/16){target="\_blank"} Se corrigió error al crear un libro de facturas simplificado con un socio comercial sin CIF
-##### 1.5.2
-- [EE-741](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/9){target="\_blank"} Se añadió la traducción de la ventana 'Valued Stock Report'
-- [EE-728](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/8){target="\_blank"} Se agregó la traducción faltante para la ventana 'Pending Goods Receipts'
-- [EE-736](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/7){target="\_blank"} Se corrigió la validación 'Acogida al SII' de la configuración SII
-##### 1.5.1
-- [EE-730](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/5){target="\_blank"} Se corrigió una traducción errónea en un campo de la ventana 'Producto'
-- [EE-729](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/4){target="\_blank"} Se añadió una traducción faltante para las opciones que aparecen al hacer click derecho sobre las columnas de una ventana
-- [EE-725](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/3){target="\_blank"} Se añadió una traducción faltante para la ventana 'Marca'
-##### 1.5.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.3.x
-##### 1.4.1
-- [EE-720](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/2){target="\_blank"} Se renombró a minúsculas el java package del modulo `org.openbravo.localization.spain.referencedata.translation.eses` 
-##### 1.4.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.2.x
-##### 1.3.0
-- Se publicaron todos los paquetes en GitHub
-##### 1.2.1
-- Se resolvió problemas funcionales de la localización española utilizando las dependencias en formato JAR.
-
-##### 1.2.0
-- Se añadieron nuevos rangos de impuestos:
-	Adquisiciones IVA 0%
-  Adquisiciones IVA 0+RE 0+0%
-  Adquisiciones IVA+RE 21+1.75%
-  Adquisiciones IVA+RE 5+0.62%
-  Adquisiciones intracomunitarias 5%
-  Entregas IVA 0%
-  Entregas IVA 0+RE 0+0%
-  Entregas IVA 5%
-  Entregas IVA+RE 21+1.75%
-  Entregas IVA+RE 5+0.62% 
-  Servicios prestados 0%
-  
-  (**)Al tratarse de impuestos temporales, el campo "válido desde" tiene indicada la fecha "01-01-9999". Para que estos nuevos rangos puedan ser utilizados tendrá que editarse la misma y poner una fecha real (Ej. 01-01-2023).
-  
-- Se incluyen los parámetros del modelo 303 y modelo 349 a los nuevos rangos temporales.
-
-- Se actualiza el modelo 303, en función del nuevo diseño de registro publicado por la [AEAT](https://sede.agenciatributaria.gob.es/Sede/ayuda/disenos-registro/modelos-300-399.html)
-
-- Actualización del módulo "epígrafes"
-
-##### 1.1.0
-- Se actualizó la compatibilidad de Core desde 22.4.3 a 22.4.x
-- Se añadió la dependencia de la traducción del módulo de Default Jobs
-
-##### 1.0.5
-- Se actualizó la compatibilidad de Core a 22.4.x
-- Se eliminó la dependencia de Cash VAT Management
-- Se eliminó la dependencia del modulo JAX-WS-JAVA API
-
-##### 1.0.4
-- Se eliminaron los módulos de Facturacion Electrónica
-- Se añadió la traducción de Libro de Facturas 
-
-
-##### 1.0.2
-
-Version actualizada para ser compatible con Etendo 22Q2
-
-##### 1.0.1
-
-####### Errores Solucionados
-
-EE-171 -  SII versión 1.9.213100 - Se envían incorrectamente las facturas con NOI
-
-**org.openbravo.module.sii**
-
-En facturas proveedor con proveedores extranjeros (NOI) se estaba cortando a 9 caracteres el taxid lo que provocaba que se enviasen mal al SII las facturas y que luego Etendo diese error "Factura no encontrada".
-
-####### EE-115 - **Intrastat “Null Pointer Exception” cuando el campo TaxId es vacío**
-
-**org.openbravo.module.intrastat**
-
-Al intentar generar el archivo Intrastat, si uno de los terceros incluidos en el fichero no tenía información en el campo TaxId, se mostraba un error “null pointer exception” y el archivo no se generaba.  
-Ahora se visualizará un mensaje de error con el siguiente texto:
-
--   En Inglés: *“The value of the Tax ID field is empty for the business partner with Search Key ...”*
--   En Castellano: *"El valor del campo CIF/NIF se encuentra vacío para el tercero con Identificador ..."*
-
+| [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.1){target="_blank"} | 28/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.0){target="_blank"} | 06/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.8.0){target="_blank"} | 26/01/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.7.0){target="_blank"} | 24/01/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.6.0){target="_blank"} | 29/12/2023 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.5.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.2){target="_blank"} | 10/11/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.1){target="_blank"} | 01/11/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.0){target="_blank"} | 29/09/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.1){target="_blank"} | 19/09/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.3.0){target="_blank"} | 24/05/2023 | 22.4.3 | 23.1.5 | C | :white_check_mark: |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | :white_check_mark: |
+| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | :white_check_mark: |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \*     | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \*     | C | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40609,13 +40317,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
-| --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.0.0](#100) 	| 19/02/2024 	| 22.1.0 | 24.1.0 | CS	| :white_check_mark:|
-
-#### Release Notes
-##### 1.0.0
-- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md)
+| Version | Publication Date | From Core | To Core | Status | GitHub |
+| --- | --- | --- | --- | :---: | :---: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | CS | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40626,38 +40330,16 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
-| [1.2.1](#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.1.2](#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.1](#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.0](#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.1](#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.0](#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-
-#### Release Notes
-##### 1.3.0
-- Update Core compatibility until 23.4.x
-##### 1.2.1
-- [EE-722](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/issues/2){target="\_blank"} The connector generates the csv file correctly but the power bi reports need the file to be separated by another symbol not by commas
-##### 1.2.0
-- Update Core compatibility until 23.3.x
-##### 1.1.2
-- Update original components in EtendoBI Inclusion/Exclusion module
-
-##### 1.1.1
-- Fix bug in EtendoBI Inclusion/Exclusion module
-
-##### 1.1.0
-- Add com.etendoerp.integration.powerbi module
-
-##### 1.0.1
-- Add new feature in the module "EtendoBI Inclusion/Exclusion", in case of no category type in the header in the lines all configuration options appear.
-
-##### 1.0.0
-- Add EtendoBI Inclusion/Exclusion module
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.1){target="_blank"} | 15/11/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.2){target="_blank"} | 04/09/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.1){target="_blank"} | 07/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.0.1){target="_blank"} | 23/06/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.0.0){target="_blank"} | 29/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40669,12 +40351,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.1.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Platform Extensions Bundle ES
@@ -40685,15 +40363,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.3.0](#130) | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
-| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
-
-#### Release Notes
-##### 1.3.0
-- Add Webhook Events translation module dependency
-##### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle ES
@@ -40704,12 +40376,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.3.0](#130) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.3.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle ES
@@ -40720,12 +40388,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sales Extensions Bundle ES
@@ -40736,12 +40400,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.6.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle ES
@@ -40751,31 +40411,13 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-|	 Version	| Publication Date | Compatibility With Financial Extensions | Status |		   GitHub		 |
-|	   ---		|		---		   |				   ---					 | :----: |		   :----:		 |
-| [1.5.0](#150) |	 23/01/2024	   |			 [1.13.1, latest]			 |	 CS	  |  :white_check_mark:  |
-| [1.4.3](#143) |	 12/01/2024    |			 [1.13.1, latest]			 |	 C	  |  :white_check_mark:  |
-| [1.4.2](#142) |	 07/12/2023    |			 [1.11.3, 1.13.0]			 |	 C	  |  :white_check_mark:  |
-| [1.4.1](#141) |	 06/12/2023    |			 [1.11.2, 1.11.2]			 |	 C	  |  :white_check_mark:  |
-| [1.4.0](#140) |	 23/10/2023    |			 [1.0.0, 1.11.1]			 |	 C	  |  :white_check_mark:  |
-
-
-#### Release Notes
-##### 1.5.0
-- [EE-749](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/5){target="\_blank"} Create Translation Module for GL Journal Reverse
-- [EE-748](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/4){target="\_blank"} Add com.smf.asset.amortization.report.es_es module into com.etendoerp.financial.extensions.es_es Bundle
-
-##### 1.4.3
-- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
-  
-##### 1.4.2
-- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} Modified translation of the Reactivate Payments buttons of the Payment Removal module
-
-##### 1.4.1
-- [EE-724](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/6){target="\_blank"} 'Balance Sheet And P&L Structure Advanced' report's fields are not being translated when in Excel format
-
-##### 1.4.0
-- Remove all translation modules dependencies to translated modules
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.4.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.3){target="_blank"} | 12/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
+| [1.4.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.2){target="_blank"} | 07/12/2023 | [1.11.3, 1.13.0] | C | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.1){target="_blank"} | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.0){target="_blank"} | 23/10/2023 | [1.0.0, 1.11.1] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Procurement Extensions Bundle ES
@@ -40785,13 +40427,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
-| --- 		| ---           | --- | --- | :---:             |
-| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.0.0
-- The translation module `com.etendoerp.purchase.invoice.validations.es_es` has been added.
+| Version | Publication Date | Compatibility with Procurement Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40803,13 +40441,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.1.0
-- Remove all translation modules dependencies to translated modules
-- Add integration powerBi translation to Etendo BI bundle ES
+| --- | --- | --- | :----: | :----: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Known Issues
