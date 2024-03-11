@@ -19790,7 +19790,7 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 Different functionalities are added to this window which allows the user to make changes and/or to adjust the information entered, to generate the sales quotations in order to create the corresponding orders from those quotations.
 
 !!! info
-        For more information, visit the [Sales Quotation user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions#advanced-sales-quotation).
+	For more information, visit the [Sales Quotation user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions#advanced-sales-quotation).
 
 
 ##### Advanced Rappels
@@ -19805,8 +19805,10 @@ Different functionalities are added to this window which allows the user to make
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-        For more information, visit the [Advanced Rappels user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration).
+	For more information, visit the [Advanced Rappels user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration). 
 
+!!! info
+	For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle
@@ -20995,9 +20997,12 @@ En el caso de las facturas de compra no es necesario indicar si se trata o no de
 
 Y además, debemos reflejar el número de factura del proveedor en el campo **"Referencia del Proveedor"**.
 
-Las facturas recibidas deben de enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) desde la fecha del registro contable de la factura y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado).
+Las facturas recibidas deben enviarse a SII (alta en SII) en el plazo de 8 días (4 días a partir del 01-01-2018) naturales desde la fecha del registro contable de la factura, excluyendo sábados, domingos, y feriados reconocidos nacionalmente y, en todo caso, antes del día 16 del mes siguiente al periodo de liquidación en que se hayan incluido las operaciones correspondientes (período en que se deduce el IVA soportado). El periodo límite puede ser más corto que los días iniciales del plazo. Si el día 15 es Sábado, Domingo o feriado, la fecha límite se extiende al siguiente día hábil.
 
 Por tanto, en el caso de las facturas de compra, debemos considerar la **fecha de registro contable** de la factura como fecha a tener en cuenta respecto del alta en SII.
+
+!!! info
+    Se puede utilizar la [Calculadora de Plazos de la Agencia Tributaria](https://www2.agenciatributaria.gob.es/wlpl/AVAC-CALC/LanzadorCalculadoraPlazos) para realizar simulaciones para diferentes casos y ayudar a clarificar cualquier duda respecto a los plazos de liquidación.
 
 Y, además, tenemos que tener en cuenta las siguientes fechas para el cálculo del periodo de liquidación del impuesto que se refleja en el XML dentro de la sección "Periodo de Liquidación" (Ejercicio/Periodo):
 
@@ -30709,14 +30714,14 @@ This work is a derivative of [Data Access Layer](http://wiki.openbravo.com/wiki/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Constraints and Triggers
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints and Triggers
+# Article Title: Constraints
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints
 ## Article Content: 
 #### Overview
 
-Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for triggers and constraints but just the particularities Etendo Classic has in their usage.
+Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.
 
 ####  Naming
 
@@ -30725,32 +30730,32 @@ When adding a check constraint, triggers and indexes modularity naming rules hav
 The modularity naming rule is as follows: 
 the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. 
 
-For instance,`_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+For instance,`MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
 In the case of indexes and constraints, if the index/constraint is added to a
-table of another module then an additional `_EM__ prefix` is required:
+table of another module then an additional `EM_` prefix is required:
 
-`_EM_MYMODULEDBPREFIX_CONSTRAINTNAME_`.
+`EM_MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
 By following this naming rule, the index/trigger/constraint is exported to the
 module directory and packaged with the module.
 
 !!!info
-    The name of the constraints and triggers must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
+    The name of the constraints must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
 
 ####  Constraints
 
 Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
 !!!info
-    For more information, read [How to add a Constraint](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint).
+    For more information, read [How to add a Constraint](https://docs.etendo.software/how-to-guides/How_to_add_a_Constraint.md).
 
 #####  Messages
 
 It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
 
 !!!info
-    How to do that is explained in the [Messages](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation.
+    How to do that is explained in the [Messages](Messages.md#checks) documentation.
 
 #####  Backwards compatibility
 
@@ -30763,7 +30768,7 @@ than it was, backwards compatibility could be broken. Therefore, it should be av
 #####  Operator Classes
 
   
-In `PostgreSQL  Operator Classes`  certain operator classes (`text_pattern_ops`,
+In PostgreSQL [Operator Classes](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} certain operator classes (`text_pattern_ops`,
 `varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
 involving pattern matching expressions. For instance, the following query:
 
@@ -30838,9 +30843,7 @@ The following index can also be used.
        UPPER(c_bpartner_id));
 ```
 
-!!!info
-    Functions used in indexes must be immutable. It is
-    possible to define [custom immutable functions](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure#volatility), previously only built-in immutable functions could be used in indexes.  
+
   
 #####  Partial indexes
   
@@ -30863,7 +30866,7 @@ Oracle does not support the creation of partial indexes in an explicit way yet. 
 
 In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.
 
-This is not the behavior in PostgresSQL databases, where we will need to define the index as partial to get the same behavior. For example:
+This is not the behavior in `PostgreSQL databases`, where we will need to define the index as partial to get the same behavior. For example:
 
     
 ```sql 
@@ -30875,7 +30878,7 @@ This is not the behavior in PostgresSQL databases, where we will need to define 
 #####  Indexes for Contains Search
 
   
-The indexes for _contains_ search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
+The indexes for *contains* search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
 
 In PostgresSQL we can define a contains search index as follows:
 
@@ -30885,12 +30888,12 @@ In PostgresSQL we can define a contains search index as follows:
 ```
 
 !!!note
-    To define this kind of indexes, we have to make use of the **` gin `
-    ** access method together with the **` gin_trgm_ops ` ** operator class for
-    the indexed column. Both elements are available thanks to the  ` pg_trgm `
+    To define this kind of indexes, we have to make use of the ` gin `
+    access method together with the ` gin_trgm_ops ` operator class for
+    the indexed column. Both elements are available thanks to the ` pg_trgm `
     extension which is included in Etendo distribution by default.
 
-Besides, this feature allows defining a [function based index](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints_and_Triggers/#function-based-indexes) to improve icontains (case-insensitive) searching:
+Besides, this feature allows defining a [function based index](#function-based-indexes) to improve icontains (case-insensitive) searching:
 
     
 ```sql
@@ -30900,78 +30903,6 @@ Besides, this feature allows defining a [function based index](https://docs.eten
 !!!info
     This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
 
-####  Triggers
-
-!!!info
-    For more information, read [How to add a Trigger](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger).
-
-#####  Syntax
-
-Triggers, as the rest of `PL code` in Etendo Classic, should be written following
-some restrictions in order to make them compatible between `PostgreSQL` and
-Oracle and to make it possible to correctly export and import them using
-`DBSourceManager`. These rules are detailed in the `PL-SQL` code rules
-document.
-
-#####  Etendo Conventions
-
-######  Exceptions and messages
-
-Triggers can raise exceptions (it is the common practice to abort a
-transaction), the back-end captures that exception in order to show a proper
-message. 
-
-!!!info
-    For more information, read the [Message](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Messages#checks) documentation how to do it.
-
-######  Oracle's laziness
-
-Whereas oracle evaluates expressions in a lazy manner, `PostgreSQL` does not do
-so. This is specially important for triggers that are for `_insert_ and _delete_`
-since in the first case there are new variables and in the second one there
-are old ones, so when writing if clauses (even in Oracle, if we want to do
-compatible code), this must be taken into account writing two clauses instead
-of just one.
-
-######  Soft disabling
-
-All triggers in Etendo Classic must be able to be disabled softly. This means
-not disabling it in database but just in a logic way. 
-
-This is used by DAL when it is importing data: triggers must be disabled in order to allow data
-importation without triggering them, but that only should affect the session
-that is executing the importation. To add this capability to triggers, the
-first lines of each of them should look like:
-
-In Oracle    
-    
-```sql
-        IF AD_isTriggerEnabled()='N' THEN 
-          RETURN;
-        END IF;
-```
-
-In PostgreSQL
-    
-```sql
-         IF AD_isTriggerEnabled()='N' THEN
-            IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;
-         END IF;
-```
-
-######  Object returning
-
-`PostgreSQL` trigger function must explicitly focus on returning the trigger
-object, also depending on the type of the trigger. This means that the last
-line of the trigger function must be something like:
-
-    
-    
-     
-         `IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;`
-
-
----
 
 This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
@@ -33574,26 +33505,18 @@ shown and discussed in this howto.
 
 ![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
 
-The code of the example module can be downloaded from this mercurial
-repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
-
-The example module is available through the Central Repository (See 'Client
-Application Examples'), for more information see the  Examples Client
-Application  project page.
-
 !!! info
-        The example module also contains implementations of other howtos.  
+	The example module also contains implementations of other howtos.  
  
   
 ####  Implementing a toolbar button
 
 !!! info
-        When implementing your own components it often makes sense to extend existing
-        components. Make sure that your module then depends on the module that
-        provides the base types. This ensures that the javascript is loaded in the
-        correct order. You must add a dependency from your module to the
-        Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
+	When implementing your own components it often makes sense to extend existing
+	components. Make sure that your module then depends on the module that
+	provides the base types. This ensures that the javascript is loaded in the
+	correct order. You must add a dependency from your module to the
+	Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
   
 The button which we will implement will compute and show the sum of a set of
 selected orders to the user. This howto is divided in 2 parts, the first part
@@ -33608,7 +33531,7 @@ The first part consists of the following steps:
   * a css style and javascript linking the icon to the button 
   * javascript implementing the buttons click/action method and to register the button in the global registry 
   * add javascript to enable/disable the button when records are selected in the grid 
-  * a ComponentProvider java class to register the javascript and css in Openbravo 
+  * a ComponentProvider java class to register the javascript and css in Etendo 
 
 These steps will visualize the button but not actually do anything yet. The
 follow up steps will add logic:
@@ -33623,15 +33546,15 @@ Each of these steps is described in more detail below.
 #####  Defining the icon and a css
 
 The icon and its related style is defined through an icon file. For standard
-visualization using the Openbravo style the icon should be 24x24 without a
+visualization using the Etendo style the icon should be 24x24 without a
 background colour.
 
 The icon should be placed in a specific directory in your module:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
 Normally it makes sense to store the icon in a subfolder. The example module
 has the icon file in:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
-org.openbravo.client.application.examples/images.
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images.
 
   
 
@@ -33640,22 +33563,22 @@ org.openbravo.client.application.examples/images.
   
 Then add a css file which links this icon to a specific css style. The css
 file must also be located in this directory in your module:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/[modulename].
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
 In the example module the css file is located here:
-web/org.openbravo.userinterface.smartclient/openbravo/skins/Default/
-org.openbravo.client.application.examples/ob-example-styles.css 
+web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles.css 
 Within the css file add a style defined like this:
 
     
     
-    .OBToolbarIconButton_icon_obexapp_sum {
+    .ETToolbarIconButton_icon_etexapp_sum {
       background-repeat: no-repeat;
       background-position: center center;
       background-image: url(./images/iconButton-sum.png);
     }
 
 **Note:** the name of the css class is important, it should start with
-'OBToolbarIconButton_icon_', the part after that (obexapp_sum) is used later
+'ETToolbarIconButton_icon_', the part after that (etexapp_sum) is used later
 in this tutorial. It makes sense to use the module's dbprefix in this last
 part to prevent name collisions with other modules.
 
@@ -33663,7 +33586,7 @@ part to prevent name collisions with other modules.
 
 The next step is to implement the javascript which defines the button and
 registers it to be shown on tabs. Start by creating a javascript file in this
-location: web/org.openbravo.client.application.examples/js/example-toolbar-
+location: web/com.etendoerp.client.application.examples/js/example-toolbar-
 button.js.
 
 This is the overall javascript:
@@ -33675,8 +33598,8 @@ This is the overall javascript:
           action: function(){
             alert('You clicked me!');
           },
-          buttonType: 'obexapp_sum',
-          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
           updateState: function(){
               var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
               if (view.isShowingForm && form.isNew) {
@@ -33691,7 +33614,7 @@ This is the overall javascript:
       
       // register the button for the sales order tab
       // the first parameter is a unique identification so that one button can not be registered multiple times.
-      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+      ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
     }());
 ```
 Let's walk through the different parts. The javascript starts and ends with
@@ -33713,9 +33636,10 @@ Then the first part of the buttonprops"
           action: function(){
             alert('You clicked me!');
           },
-          buttonType: 'obexapp_sum',
-          prompt: OB.I18N.getLabel('OBEXAPP_SumData'),
-```
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
+
+
   * Sets the action method which gets called when the user clicks the button. 
   * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
   * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
@@ -33743,13 +33667,15 @@ there are no records selected.
 
 Then this code registers the button for the tab with id '186':
 
+
 ``` javascript
       OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
 ```
+
 Note:
 
   * the first parameter is a unique identification so that one button can not be registered multiple times. 
-  * as the second parameter the button javascript class is passed in, as a default always use isc.OBToolbarIconButton 
+  * as the second parameter the button javascript class is passed in, as a default always use isc.ETToolbarIconButton 
   * the buttonProps define the button characteristics 
   * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
   * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
@@ -33759,7 +33685,7 @@ Note:
 #####  The ComponentProvider
 
 The previous steps added static resources (javascript and css) to the system.
-Now Openbravo should know where to find these resources when initializing and
+Now Etendo should know where to find these resources when initializing and
 generating the user interface. For this the css and javascript and resources
 have to be registered. This is done through a ComponentProvider. For more
 detailed information on the ComponentProvider concept visit this  page  .
@@ -33769,12 +33695,12 @@ detailed information on the ComponentProvider concept visit this  page  .
     @ApplicationScoped
     @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
     public class ExampleComponentProvider extends BaseComponentProvider {
-      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "OBEXAPP_ExampleViewType";
+      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "ETEXAPP_ExampleViewType";
      
       /*
        * (non-Javadoc)
        * 
-       * @see org.openbravo.client.kernel.ComponentProvider#getComponent(java.lang.String,
+       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,
        * java.util.Map)
        */
       @Override
@@ -33787,11 +33713,11 @@ detailed information on the ComponentProvider concept visit this  page  .
       public List<ComponentResource> getGlobalComponentResources() {
         final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
         globalResources.add(createStaticResource(
-            "web/org.openbravo.client.application.examples/js/example-toolbar-button.js", false));
+            "web/com.etendoerp.client.application.examples/js/example-toolbar-button.js", false));
         globalResources.add(createStyleSheetResource(
-            "web/org.openbravo.userinterface.smartclient/openbravo/skins/"
+            "web/com.etendoerp.userinterface.smartclient/etendo/skins/"
                 + KernelConstants.SKIN_VERSION_PARAMETER
-                + "/org.openbravo.client.application.examples/example-styles.css", false));
+                + "/com.etendoerp.client.application.examples/example-styles.css", false));
      
         return globalResources;
       }
@@ -33807,7 +33733,7 @@ A short explanation:
   * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
   * The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. 
 
-To explain how Openbravo can find the ComponentProvider: Openbravo/Weld will
+To explain how Etendo can find the ComponentProvider: Etendo/Weld will
 analyze the classpath and find all the classes which have a @ComponentProvider
 annotation.
 
@@ -33883,7 +33809,7 @@ Notes:
 
   * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
   * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used 
-  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Openbravo system numbers are therefore send from client-server (and vice versa) as strings. 
+  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
   * the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . 
   * the result is returned as json again 
 
@@ -33891,7 +33817,7 @@ Notes:
 
 Then on the client the action method of the button has to be implemented to
 call the server. Here is the implementation. See the
-web/org.openbravo.client.application.examples/js/example-toolbar-button.js
+web/com.etendoerp.client.application.examples/js/example-toolbar-button.js
 for the full listing:
 
 ```javascript
@@ -33905,12 +33831,13 @@ for the full listing:
             
             // define the callback function which shows the result to the user
             callback = function(rpcResponse, data, rpcRequest) {
-              isc.say(OB.I18N.getLabel('OBEXAPP_SumResult', [data.total]));
+              isc.say(OB.I18N.getLabel('ETEXAPP_SumResult', [data.total]));
             }
             
             // and call the server
-            OB.RemoteCallManager.call('org.openbravo.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
-```
+            OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+
+
 Note:
 
   * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
@@ -34313,6 +34240,185 @@ This work is a derivative of [How to change an existing window](http://wiki.open
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create a Window
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Window
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
+## Article Content: 
+####  Overview
+
+The objective of this section is to show how you can create a new window from scratch. 
+
+!!!info
+    This section builds on top of two previous sections which explain
+    [How to create a module](How_To_Create_and_Package_a_Module.md)  and [How to create a table](How_to_create_a_Table.md).
+
+####  Module & Table
+
+As mentioned above, this tutorial is based on two previous tutorials
+and assumes that the following objectives have been already completed:
+
+  * Creation of a new module
+  * Creation + Registration in the AD of a new table
+
+####  Creating the New Window
+
+Using the *System Administrator* role navigate to `Application Dictionary` > `Windows, Tabs and Fields `. 
+Create a new record as indicated by the screenshot below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_0.png) 
+
+
+The main fields of this window are:
+
+
+  - *Module*: defines the module for which this element will belong to.
+  - *Name*: defines the name that Etendo uses to recognize this window. 
+  - *Description*: gives a small description of the table. 
+  - *Help/Comments*: defines the text that is displayed in Help window. 
+  - *Window Type*: defines some user interface specifics for a window: 
+    - _Maintain_ : is used for windows with few entries. 
+    - _Transaction_ : for transactional windows. It's the type of window that's used for showing the information of tables with a large volume of data. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents. The header tab's underlying table must contain the PROCESSED and UPDATED columns (for the data filters to work).
+    - _Query Only_ : for read-only windows that only enable viewing of data. 
+
+  
+Save this record and move to *Tab* tab. Create a new record as shown
+below, creating the first tab:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_1.png)  
+
+
+Main fields of this window are:
+
+  * *Module*: defines the module for which this element will belong to.
+  * *Name*: defines the name that Etendo uses to recognize this tab. 
+  * *Description*: gives a small description of the table. 
+  * *Help/Comments*: defines the text that is displayed in Help window. 
+  * *Table*: specifies the table that the tab will show the data from. 
+  * *Table Level*: defines the hierarchy of tabs, _0_ being the highest level. 
+  * *UI Pattern* This dropdown offers the following options: 
+    * _Standard_ \- standard interface where multiple records can be added, viewed and edited 
+    * _Read Only_ \- this option disables any editing/creating capabilities for any user within this tab 
+    * _Single Record_ \- this option enforces a one-to-one relationship between a parent and a child tab, allowing the user to enter maximum one record in the tab 
+  * *HQL Where Clause*: by using this HQL filter, the user will never be able to see data that does not fit the criteria. When referring to properties of the entity shown in the tab then use the prefix *e* . In our case, we use this field to display only business partners that are our employees (using the _employee_ property). 
+  * *SQL Where Clause* Same like HQL Where Clause but using SQL syntax and used for filtering in _classic windows_ . 
+
+The *Copy Tab Fields* button can be used to copy fields from an existing tab into our new
+one.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
+
+The *Create Fields* button can be used to create fields for the new tab based on its associated table
+  
+Move to *Field* tab to see the created fields.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
+
+
+
+  
+  
+  
+If required, changes to these fields could be made or new ones could be added manually. 
+
+!!!note
+    For not header tabs, it is very important to not remove the field
+    that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
+
+
+
+Now, go back to *Tab* tab and create a new record that will represent the
+child tab of the Employee tab where salaries will be managed:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
+
+
+  
+Most importantly, make sure you select:
+
+  * *Table* = `HT_Salary`
+  * *Tab Level* = _1_
+
+
+By clicking and confirming the *Create Fields* dialog, the application will
+automatically insert the columns of the selected table into the fields tab of
+the *Salary* one.
+
+  
+To arrange the columns according to common look and feel of other windows, we now change a view field properties as can be seen in following screenshot.
+
+  * Hide field _c_bpartner_id_
+  * Reorder fields (using sequence), to have _isactive_ after all other fields 
+  * Mark _amount_ and _isactive_ as *Start in new line*
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_5.png) 
+
+
+  
+For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides.
+
+To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the corresponding table and set the *Window* as indicated below:
+
+  
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
+
+####  Creating the Menu Item
+
+A menu item is required for the user to be able to call up the new window. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
+
+  
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
+
+
+  
+Main fields of this window are:
+
+  * *Module*: defines the module for which this element will belong to.
+  * *Name*: defines the name that Etendo uses to recognize this menu item. 
+  * *Description*: gives a small description of the table. 
+  * *Summary level*: defines a folder containing menu items (windows, processes, reports and so on). 
+  * *Action*: defines the type of menu item. 
+  * *URL* If _Action_ is _External link_ or _Internal link_ , defines the _URL_ to be linked. 
+  * *Special Form*: If _Action_ is _Form_ , defines the form to be linked. 
+  * *Process*: If _Action_ is _Process_ , defines the process to be launched. 
+  * *Report*: If _Action_ is _Report_ , defines the report to be linked. 
+  * *Window*: If _Action_ is _Window_ , defines the window to be linked. 
+
+Save this record then click on _Tree_ icon ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_8.png)
+
+
+Here you can drag and drop the new menu item to any of the
+other menu groups.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
+
+
+####  Compiling the Application with the New Window
+
+Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. 
+
+```bash
+./gradlew smartbuild
+```
+
+####  The Result
+
+Using the *F&B International Group Admin* role, select the link to the new window from the menu. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png)
+  
+!!!success
+    You have now successfully created your own new window and seen how it came to life within Etendo. 
+
+
+This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Etendo Gradle Plugin
 ## Article Path: /Developer Guide/Etendo Classic/Developer Tools/Etendo Gradle Plugin
 ## Article URL: 
@@ -34358,11 +34464,11 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 #### Etendo plugin
 
 
-Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin/) or use `lastest.release` to resolve the latest version.
+Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes) or use `lastest.release` to resolve the latest version.
 
 ```groovy title="build.gradle"
 plugins {
-    id 'com.etendoerp.gradleplugin' version '1.2.2'
+    id 'com.etendoerp.gradleplugin' version '<version>'
 }
 ```
 
@@ -35043,15 +35149,22 @@ Finally, restart Tomcat to apply the changes and ensure the updated `.css` files
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-backup-restore-tool
 ## Article Content: 
-#### Resolving the plugin
+#### Overview
+
+This article explains how to use the Etendo Backup and Restore plugin in Etendo Classic. This plugin allows you to easily generate and restore Etendo backups.
+
+#### Install plugin
 
 To use the Etendo Backup and Restore tool, you should add the plugin id on the `build.gradle` file, with the selected version.
 
 ``` groovy  title="build.gradle"
 plugins {
-    id 'com.etendoerp.etendobackup' version "1.0.0"
+    id 'com.etendoerp.etendobackup' version '<version>'
 }
 ```
+
+!!! info
+    To know the available versions of the plugin, please visit [Etendo Backup and Restore Plugin | Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md).
 
 To resolve the plugin dependiencies, you should add the following lines on top of the `settings.gradle` file
 
@@ -35059,7 +35172,11 @@ To resolve the plugin dependiencies, you should add the following lines on top o
 pluginManagement {
     repositories {
         maven {
-            url "https://repo.futit.cloud/repository/static-public-releases"
+            url 'https://maven.pkg.github.com/etendosoftware/com.etendoerp.etendobackup'
+            credentials {
+                username "${githubUser}"
+                password "${githubToken}"
+            }
         }
         maven {
             url "https://repo.futit.cloud/repository/static-public-snapshots"
@@ -35069,10 +35186,13 @@ pluginManagement {
 }
 ```
 
-##### Backup task
+!!! warning
+    Make sure you have your Github credentials (`githubUser` and `githubToken`) set in the `gradle.properties` file.
+
+#### Backup task
 
 !!! warning
-    The User running the backup must have SUDO access and the `backup.properties` file properly configured.
+    The User running the backup must have `SUDO` access and the `backup.properties` file properly configured.
 
 
 To run the backup, execute
@@ -35083,14 +35203,13 @@ To run the backup, execute
 
 Where the mode could be `manual` or `auto`
 
-
-#### Backup properties file
+##### Backup properties file
 
 The `backup.properties` file is found inside the `config` folder on the root project.
 If it does not exists, run `./gradlew setup` to generate the missing files.
 
 You can also provide a custom location of `backup.properties` adding the next block inside `build.gradle`.
-``` groovy title="backup.properties"
+``` groovy title="build.gradle"
 backup {
     configPath = "/path/to/backup.properties"
 }
@@ -35098,66 +35217,91 @@ backup {
 
 `backup.properties` contains most of the properties that you should customize before running the backup.
 
-* USER 
+* `USER`
 Sets the user who will be running the backup.
 
-* GROUP
+* `GROUP`
 Sets the group related to the user running the backup.
 
-* BACKUPS_DIR
+* `BACKUPS_DIR`
 Sets the path where the backup will be stored.
 
-* BACKUPS_TMP_DIR
+* `BACKUPS_TMP_DIR`
 Sets the path where the temp directory will be created to store the generated files.
 
-* ATTACH_COPY
-Sets a flag (yes or no) if the external attachments (if cointained) should be included in the backup.
+* `ATTACH_COPY`
+Sets a flag (`yes` or `no`) if the external attachments (if cointained) should be included in the backup.
 
-* ATTACH_IN_BKP
-Sets a flag (yes or no) if the source attachments should be included in the backup.
+* `ATTACH_IN_BKP`
+Sets a flag (`yes` or `no`) if the source attachments should be included in the backup.
 
-<br>
-
-##### Email properties
+###### Email properties
 
 These properties are used when the backup is running in `auto` mode.
 
-* EMAIL_FROM
+* `EMAIL_FROM`
 Sets the address sending emails.
-* EMAIL_USER
+* `EMAIL_SERVER`
+Sets the email server address.
+* `EMAIL_PORT`
+Sets the port for the email server..
+* `EMAIL_USER`
 Sets the user address who sends emails.
-* EMAIL_PASSWORD
+* `EMAIL_PASSWORD`
 Sets the email user password.
+* `EMAIL_ENVIRONMENT`
+Specifies the environment for sending emails.
 
-A backup could finalize in 3 STATES: `ERROR - WARNING - SUCCESS`
+Depending on the end `STATE`, the following properties are used to specify the email address where to send emails.
 
-Depending on the finish STATE, the next properties are used to specify the email address where to send emails.
+!!! failure "Error" 
+    * `EMAIL_ERROR_TO`
+      Sets the email address where error emails will be sent.
+    * `EMAIL_ERROR_CC`
+      Sets the email address to which copies (CC) will be sent in case of error.
+    * `EMAIL_ERROR_SUBJECT`
+      Sets the subject of the error email.
 
-* EMAIL_*STATE*_TO
-Sets the email address where to send emails.
+!!! warning 
+    * `SEND_EMAIL_ON_WARNING`
+      Specifies whether to send an email notification in case of warning during the backup process. Accepted values are `yes` or `no`.
+    * `EMAIL_WARNING_TO`
+      Sets the email address where warning emails will be sent.
+    * `EMAIL_WARNING_CC`
+      Sets the email address to which copies (CC) will be sent in case of warning.
+    * `EMAIL_WARNING_SUBJECT`
+      Sets the subject of the warning email.
 
-* EMAIL_*STATE*_CC
-Sets multiple email address (separated with `;`) which will receive the email
-`Ex:EMAIL_ERROR_CC=user1@etendo.software;user2@etendo.software`
+!!! success 
+    * `SEND_EMAIL_ON_SUCCESS`
+      Specifies whether to send an email notification in case of success during the backup process. Accepted values are `yes` or `no`.
+    * `EMAIL_WARNING_TO`
+      Sets the email address where success emails will be sent.
+    * `EMAIL_WARNING_CC`
+      Sets the email address to which copies (CC) will be sent in case of success.
+    * `EMAIL_WARNING_SUBJECT`
+      Sets the subject of the success email.
 
-* EMAIL_*STATE*_SUBJECT
-Sets the subject of the email.
+!!! note
+    In order to send the email to multiple accounts, separate addresses with `;`.<br>
+    For example: `EMAIL_ERROR_CC=user1@smfconsulting.es;user2@smfconsulting.es`
 
+##### End states
+The following are the possible states at the end of the `backup` task:
 
-##### Finalized states
-* ERROR
-Occurs when the creation of the backup fails. An email must be sent to the specified properties.
+!!! failure "Error" 
+    Occurs when the creation of the backup fails. An email must be sent to the specified properties.
 
-* WARNING
-The backup finalizes with WARNING messages. If the SEND_EMAIL_ON_WARNING flag is set to yes, an email should be sent to the specified properties.
+!!! warning
+    The backup ends with warning messages. If the `SEND_EMAIL_ON_WARNING` flag is set to yes, an email should be sent to the specified properties.
 
-* SUCCESS
-The backup finalizes without warning or errors. If the SEND_EMAIL_ON_SUCCESS flag is set to yes, an email should be sent to the specified properties.
+!!! success
+    The backup ends without warning or errors. If the `SEND_EMAIL_ON_SUCCESS` flag is set to yes, an email should be sent to the specified properties.
 
 #### Restore task
 
 !!! warning
-    The user running the restore should have SUDO access.
+    The user running the restore should have `SUDO` access.
 
 To run the restore, execute
 
@@ -35169,37 +35313,36 @@ Replace `/path/to/backup/` with the location of the backup to be restored.
 
 A menu will be shown where you can choose multiple options to be performed.
 
-!!! failure
+!!! warning
     Make sure all the options selected are correct. The selected destination directories and database will be OVERWRITTEN.
 
+1. *User verification*<br>
+  You should run the restore with `SUDO` access (recommended). In case of not having permissions, you will have the option of inserting the `SUDO` password.
 
-1. User verification:<br>
-You should run the restore with SUDO access (recommended). In case of not having permissions, you will have the option of inserting the SUDO password.
-<br>
-2. Sources destination:<br>
-You can select the location in which the sources will be restored. The default path is set to the root dir from the project where the restore command is being executed.
-<br>
-3. Attachments verification:<br>
-You can select to keep or ignore the copy of attachments (externals or contained inside the sources).
-<br>
-4. Properties verification:<br>
-You can select which properties to use.
+2. *Sources destination*<br>
+  You can select the location in which the sources will be restored. The default path is set to the root dir from the project where the restore command is being executed.
 
-!!! info
-    The properties set the options which the database will use on the restore.
+3. *Attachments verification*<br>
+  You can select to keep or ignore the copy of attachments (externals or contained inside the sources).
 
-- Project properties 
-Obtained from the `gradle.properties` file inside the current project running the restore. 
-You can change these properties to select, for example, the name of the database to be restored.
-Once the restore is done, the properties inside `config/Openbravo.properties` will be updated with the selected ones.
-<br>
-- Original sources properties
-Obtained from the `gradle.properties` file inside the original sources.
-The database will be restored with the original options (this could overwrite an existing database)
-The properties inside `config/Openbravo.properties` will not change.
+4. *Properties verification*<br>
+  You can select which properties to use.
 
-5. **Database properties**
-In the end, a message will be shown with the properties which the database will use to be restored. These properties depend on the ones selected previously.
+    !!! info
+        The properties set the options which the database will use on the restore.
+
+    - *Project properties*<br>
+      Obtained from the `gradle.properties` file inside the current project running the restore. 
+      You can change these properties to select, for example, the name of the database to be restored.
+      Once the restore is done, the properties inside `config/Openbravo.properties` will be updated with the selected ones.
+
+    - *Original sources properties*<br>
+      Obtained from the `gradle.properties` file inside the original sources.
+      The database will be restored with the original options (this could overwrite an existing database)
+      The properties inside `config/Openbravo.properties` will not change.
+
+5. *Database properties*<br>
+  In the end, a message will be shown with the properties which the database will use to be restored. These properties depend on the ones selected previously.
 
 
 
@@ -38648,8 +38791,20 @@ This tutorial is based in our example of a product subapplication, which allows 
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
 
-![repository-cloned.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/repository-cloned.png)
-
+  ```
+  modules
+  └── com.etendoerx.subapp.product
+      ├── src-db 
+      └── subapp-product
+          ├── .bundle
+          ├── _tests_
+          ├── android
+          ├── ios
+          ├── lib
+          ├── node_modules
+          └── src
+  ```
+  
 !!! warning "Important"
     Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
 
@@ -38705,7 +38860,7 @@ This section covers an overview about the product subapplication example screens
 
 ### Projections, Repository and Search
 !!! info
-    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit [Projections, Repository And Search](https://docs.etendo.software/developer-guide/etendo-rx/concepts/projections){target="_blank"}  official documentation. 
+    In this section we will explain how to configure the projections, repository and search needed in this example. For more info visit Projections, Repository And Search official documentation. 
 
 #### Create a projection
 
@@ -38723,34 +38878,294 @@ To do this we will go to the `Projections` window and create a projection with t
   ![projection.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
 
 
-##### Adding the projection to a table
+##### Adding the projection and mapping
 
-As we have created the projection, we now have to assign it to a table from which we want to extract data. To do this, we open the Tables and Columns window and look for the `M_Product` table.
+Having created the projection, we now need to map it to a table from which we want to extract data. To do this, we open the Projections and Mappings window.
 
-Next, navigate to the *Projections* tab and add a new projection with the following value:
+Next, we add a new record with the following values:
 
-  | Field      | Value                                          |
-  | ---------- | ---------------------------------------------- |
-  | Projection |`ProdSubApp - Subapp Product Module - 1.0.0` |
+  | Field        | Value                                            |
+  | ----------   | -------------------------------------------------|
+  | Organization | `*`                                              |
+  | Module       | `Product Subapplication - 1.0.0 - English (USA)` |
+  | Name         | `prodsubapp`                                     |
+  | GRPC         | `false`                                          |
+  | description  | `-`                                              |
+  | active       | `false`                                          |
 
 
-  ![assign-projection.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/assign-projection.png)
+  ![projection-mapping.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
 
 
 
-##### Adding entity fields
+##### Adding projected entities
 
-Once we have the projection, we must define which fields we want to retrieve.
-For it in the Tables and columns window we look for the table M_Product and in the Projection tab navigate to the Entity Field tab and add the following fields:
+Now with the projection selected add in the Projected Entities tab the write and read projections of Product and Product_Category in which we can specify the required values from the M_Product table.
 
-| Name                |  Property             |
-| ------------------- | --------------------- |
-| id                  |`id`                   |
-| name                |`name`                 |
-| productCategory     |`productCategory`      |
-| uPCEAN              |`uPCEAN`               |
+=== "Product - Read"
+    
+    | Name                |  Property                   |
+    | ------------------- | ----------------------------|
+    | Organization        |`*`                          |
+    | Name                |`PRODSUBAPP - Product - Read`|
+    | Table               |`M_Product`                  |
+    | Identity            |`false`                      |
+    | Mapping Type        |`Etendo to external system`  |
+    | Is Rest Endopoint   |`true`                       |
+    | External_Name       |`Product`                    |
+    | Active              |`true`                       |
 
-  ![entity-fields.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/entity-field.png)
+=== "Product - Write"
+  
+    | Name                |  Property                    |
+    | ------------------- | -----------------------------|
+    | Organization        |`*`                           |
+    | Name                |`PRODSUBAPP - Product - Write`|
+    | Table               |`M_Product`                   |
+    | Identity            |`false`                       |
+    | Mapping Type        |`External system to Etendo`   |
+    | Is Rest Endopoint   |`true`                        |
+    | External_Name       |`Product`                     |
+    | Active              |`true`                        |
+
+=== "Product_Category - Read"
+    
+    | Name                |  Property                              |
+    | ------------------- | ---------------------------------------|
+    | Organization        |`*`                                     |
+    | Name                |`PRODSUBAPP - M_Product_Category - Read`|
+    | Table               |`M_Product_Category`                    |
+    | Identity            |`false`                                 |
+    | Mapping Type        |`Etendo to external system`             |
+    | Is Rest Endopoint   |`true`                                  |
+    | External_Name       |`M_Product_Category`                    |
+    | Active              |`true`                                  |
+
+=== "Product_Category - Write"
+  
+    | Name                |  Property                               |
+    | ------------------- | ----------------------------------------|
+    | Organization        |`*`                                      |
+    | Name                |`PRODSUBAPP - M_Product_Category - Write`|
+    | Table               |`M_Product`                              |
+    | Identity            |`false`                                  |
+    | Mapping Type        |`External system to Etendo`              |
+    | Is Rest Endopoint   |`true`                                   |
+    | External_Name       |`Product`                                |
+    | Active              |`true`                                   |
+
+  ![projected-entities.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
+
+Now we define which fields we want to retrieve in the Entity Field tab by adding the following fields:
+
+This is the M_Product - Read fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "productCategory"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`30`                                             |
+    | Property                     |`productCategory`                                |
+    | Name                         |`productCategory`                                |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Entity Mapping`                                 |
+    | Related Projection Entity    |`PRODSUBAPP - M_Product_Category - Read`         | 
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "uPCEAN"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`40`                                             |
+    | Property                     |`uPCEAN`                                         |
+    | Name                         |`uPCEAN`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "active"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`50`                                             |
+    | Property                     |`active`                                         |
+    | Name                         |`active`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the M_Product - Write fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "uPCEAN"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`30`                                             |
+    | Property                     |`uPCEAN`                                         |
+    | Name                         |`uPCEAN`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "searchKey"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`40`                                             |
+    | Property                     |`searchKey`                                      |
+    | Name                         |`searchKey`                                      |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Java Mapping`                                   |
+    | Java Mapping                 |`PRODSUBAPPProductValueWrite`                    |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "active"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`50`                                             |
+    | Property                     |`active`                                         |
+    | Name                         |`active`                                         |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the M_Product_Category - Read fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+=== "name"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`20`                                             |
+    | Property                     |`name`                                           |
+    | Name                         |`name`                                           |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`false`                                          |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+This is the M_Product_Category - Write fields.
+
+=== "id"
+
+    | Name                         |  Property                                       |
+    | -----------------------------| ------------------------------------------------|
+    | Module                       |`Product Subapplication - 1.0.0 - English (USA)` |
+    | Organization                 |`*`                                              |
+    | Line                         |`10`                                             |
+    | Property                     |`id`                                             |
+    | Name                         |`id`                                             |
+    | Is Mandatory                 |`false`                                          |
+    | Identifies Record Univocally |`true`                                           |
+    | Field Mapping                |`Direct mapping`                                 |
+    | Constant Value               |`-`                                              |
+    | Active                       |`true`                                           |
+
+
+
+  ![entity-fields-read.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
 
 
 #### Create a New Repository
@@ -38795,8 +39210,8 @@ Next we will define a search method to be used later when we want to consume the
 Before customizing and programming your sub-application, ensure your development environment is properly set up. The following steps detail how to do this:
 
 1. **Create a Java Package:** 
-   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.
-
+   Create a Java package in the `modules_rx` directory of your Etendo environment. This package should match the Etendo RX Java package created in Etendo Classic for your sub-application. For instance, if you're developing a product sub-application, you could create a package like `com.etendorx.subapp.product`.   
+  
 2. **Generate Entities Using Etendo RX:**
    Use Etendo RX to generate entities for your sub-application's data structure. Run the command `./gradlew rx:generate.entities` in the root of your Etendo environment. This generates essential directories and files like `lib`, `src-db`, and `src-gen` in your Java package.
    
@@ -38806,10 +39221,169 @@ Before customizing and programming your sub-application, ensure your development
     ./gradlew rx:generate.entities
     ```
 
-    In turn, this command will initiate the Etendo RX's entity generation process.
+    Once generated `com.etendoerx.subapp.product` inside `modules_rx` add a file named `build.gradle` and the `src/main/java/com/etendorx/subapp/product/javamap` folders inside add the `ProductValue.java` mapping java class. 
     
-    ![generate-entities.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-rx.png)
+    ```
+    modules-rx
+    └── com.etendoerx.subapp.product
+        ├── build 
+        ├── lib
+        ├── src
+        │   └── main
+        │       └── java
+        │           └── com
+        │               └── etendorx
+        │                   └── subapp
+        |                       └── product
+        |                           └── javamap
+        |                               └── ProductValue.java
+        ├── src-gen
+        └── build.gradle
+    ```
 
+    ```java title="ProductValue.java"
+    package com.etendorx.subapp.product.javamap;
+
+    import com.etendorx.entities.jparepo.FinancialMgmtTaxCategoryRepository;
+    import com.etendorx.entities.jparepo.OrganizationRepository;
+    import com.etendorx.entities.jparepo.ProductCategoryRepository;
+    import com.etendorx.entities.jparepo.UOMRepository;
+    import com.etendorx.entities.mapper.lib.DTOWriteMapping;
+    import com.etendorx.entities.mappings.PRODSUBAPPM_ProductDTOWrite;
+    import org.apache.commons.lang3.StringUtils;
+    import org.openbravo.model.common.plm.Product;
+    import org.springframework.stereotype.Component;
+
+    @Component("PRODSUBAPPProductValueWrite")
+    public class ProductValue implements DTOWriteMapping<Product, PRODSUBAPPM_ProductDTOWrite> {
+
+      private final OrganizationRepository organizationRepository;
+      private final ProductCategoryRepository productCategoryRepository;
+      private final UOMRepository uomRepository;
+      private final FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository;
+
+      public ProductValue(OrganizationRepository organizationRepository,
+          ProductCategoryRepository productCategoryRepository,
+          FinancialMgmtTaxCategoryRepository financialMgmtTaxCategoryRepository,
+          UOMRepository uomRepository) {
+        this.organizationRepository = organizationRepository;
+        this.productCategoryRepository = productCategoryRepository;
+        this.financialMgmtTaxCategoryRepository = financialMgmtTaxCategoryRepository;
+        this.uomRepository = uomRepository;
+      }
+
+      @Override
+      public void map(Product entity, PRODSUBAPPM_ProductDTOWrite dto) {
+        if (StringUtils.isEmpty(entity.getSearchKey())) {
+          entity.setSearchKey("TEST " + Math.random());
+        }
+        if (StringUtils.isEmpty(entity.getDescription())) {
+          entity.setDescription("default");
+        }
+        if (entity.getOrganization() == null) {
+          entity.setOrganization(
+              organizationRepository.findById("B843C30461EA4501935CB1D125C9C25A").orElse(null));
+        }
+        if (entity.getProductCategory() == null) {
+          entity.setProductCategory(
+              productCategoryRepository.findById("DC7F246D248B4C54BFC5744D5C27704F").orElse(null));
+        }
+        if (StringUtils.isEmpty(entity.getProductType())) {
+          entity.setProductType("I");
+        }
+        if (entity.getTaxCategory() == null) {
+          entity.setTaxCategory(
+              financialMgmtTaxCategoryRepository.findById("E020A69A1E784DC39BE57C41D6D5DB4E")
+                  .orElse(null));
+        }
+        if (entity.getUOM() == null) {
+          entity.setUOM(uomRepository.findById("100").orElse(null));
+        }
+      }
+    }
+
+    ```
+
+    ``` groovy title="build.gradle"
+    plugins {
+      id 'java'
+      id 'org.springframework.boot'
+      id 'io.spring.dependency-management'
+    }
+
+    group = 'com.etendorx.subapp'
+    version = "1.0.0"
+    sourceCompatibility = JavaVersion.VERSION_17
+
+    java {
+      sourceCompatibility = '17'
+    }
+
+    ext {
+        includeInDasDependencies = true
+    }
+
+    repositories {
+      mavenCentral()
+      maven {
+        url = "https://maven.pkg.github.com/etendosoftware/etendo_rx"
+        credentials {
+          username = "${githubUser}"
+          password = "${githubToken}"
+        }
+      }
+      maven {
+        url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
+        credentials {
+          username = "${nexusUser}"
+          password = "${nexusPassword}"
+        }
+      }
+    }
+
+    ext {
+      set('springCloudVersion', "2022.0.4")
+      includeInDasDependencies = true
+    }
+
+    dependencies {
+      implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+      compileOnly 'org.projectlombok:lombok:1.18.22'
+      annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+      implementation project(path: ':com.etendorx.entities')
+      annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+      implementation "com.etendorx:das_core:" + findProperty("rx.version")
+      implementation project(path: ':com.etendorx.entities')
+
+      implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+      testImplementation 'org.springframework.boot:spring-boot-starter-data-rest:2.5.10'
+      testImplementation 'org.springframework.boot:spring-boot-starter-test'
+      testImplementation 'org.testcontainers:postgresql:1.17.3'
+      testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
+      testImplementation ('com.etendorx:das') {
+        transitive = false
+        exclude group: 'com.etendorx.test.grpc'
+      }
+      testImplementation (':com.etendorx.utils:auth') {
+        exclude group: 'org.slf4j', module: '*'
+      }
+      implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    }
+
+    dependencyManagement {
+      imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+      }
+    }
+
+    tasks.named('test') {
+      useJUnitPlatform()
+    }
+
+    ```
     Verify the completion of this process and the accurate creation of all essential files and directories.
 
 3. **Migrate the 'lib' Directory:**
@@ -38819,14 +39393,34 @@ Before customizing and programming your sub-application, ensure your development
     mv modules_rx/com.etendorx.subapp.product/lib/ modules/com.etendoerp.subapp.product/subapp-product/
     ```
 
-    ![generate-entities.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-example-subapplication/lib-inside-modules.png)
+    ```
+    modules
+    └── com.etendoerx.subapp.product
+        ├── src-db 
+        └── subapp-product
+            ├── .bundle
+            ├── _tests_
+            ├── android
+            ├── ios
+            ├── lib
+            ├── node_modules
+            └── src
+    ```
 
     Completing this step ensures that the libraries are correctly placed in the project, promoting efficient integration of your sub-application.
+    
 
     !!! warning "Important"
         Consider moving the generated files and directories to the location described in the previous step after each execution of `./gradlew rx:generate.entities`. Otherwise, your sub-application may work incorrectly. It is strongly recommended to check and confirm the location of these files after each entity generation.
 
-  4. **Restart the Etendo RX Service:**
+  4. In the `rxconfig/das.yaml` file you must declare the javapackage of the world you are developing with the following code:
+
+    ``` groovy title="das.yaml"
+    scan:
+	    basePackage: com.etendorx.subapp.product
+    ``` 
+  
+  5. **Restart the Etendo RX Service:**
     After successfully migrating the `lib` directory, restart the Etendo RX service to recognize the new changes. To do this, first stop the currently running Etendo RX service, and then restart it using the following command from the root of your Etendo environment:
 
     ```bash title="Terminal"
@@ -38849,7 +39443,50 @@ Custom hooks, such as `useProduct`, exemplify the integration between frontend c
 
 ##### Implementing Custom Hooks
 
-The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The [useProduct](https://github.com/etendosoftware/subapp-product/blob/develop/src/hooks/useProduct.ts){target="_blank"} custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
+Here's an example of how custom hooks are utilized:
+
+```typescript title="useProduct.ts"
+import { useState, useEffect } from 'react';
+import { Product } from '../../lib/data_gen/product.types';
+import ProductService from '../../lib/data_gen/productservice';
+
+// Custom hook for managing products
+export const useProduct = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  // Fetching data
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await ProductService.BACK.getFilteredProducts(); 
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
+
+  // Function to handle product update
+  const handleUpdateProduct = async (updatedProduct: Product) => {
+    await ProductService.BACK.updateProduct(updatedProduct);
+    // Optionally, update the products state to reflect the changes
+  };
+
+  // Function to get filtered products (if needed)
+  const getFilteredProducts = async (filterCriteria: any) => {
+    const filteredProducts = await ProductService.BACK.getFilteredProducts(filterCriteria);
+    setFilteredProducts(filtered);
+    return filteredProducts; // This line is optional, allowing the function to return the filtered products
+  };
+
+  return {
+    products,
+    handleUpdateProduct,
+    getFilteredProducts,
+  };
+};
+```
+
+#### Implementing `useProduct` Hook in `Home` Component
+
+The `Home` component serves as a central hub for product management within our React Native application, which allows interacting with product data. The `useProduct` custom hook provides functions for retrieving and updating products, which the `Home` component uses to maintain its state and user interface.
 
 ##### Example Usage
 
@@ -39360,7 +39997,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | QAA |  | :white_check_mark: |
+| [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | QAA |  | :white_check_mark: |
+| [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | C |  | :white_check_mark: |
 | [23Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.1){target="_blank"} | 02/02/2023 | 23.4.1 | C |  | :white_check_mark: |
 | [23Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.0){target="_blank"} | 28/12/2023 | 23.4.0 | C | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark: |
 | [23Q3.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.3.4){target="_blank"} | 05/12/2023 | 23.3.4 | C |  | :white_check_mark: |
@@ -39411,63 +40049,40 @@ Article URL: https://etendo.software
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Gradle Plugin
-## Article Path: /What's New/Release Notes/Etendo Classic/Etendo Gradle Plugin
+## Article Path: /What's New/Release Notes/Etendo Classic/Plugins/Etendo Gradle Plugin
 ## Article URL: 
- https://docs.etendo.software/whats-new/release-notes/etendo-classic/etendo-gradle-plugin
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes
 ## Article Content: 
 #### Overview
 
 | Version | Publication Date | Status |
 | --- | --- | --- |
-| 1.3.2 | 04/01/2024 | CS |
-| 1.3.1 | 15/12/2023 | C  |
-| 1.3.0 | 12/12/2023 | C  |
-| 1.2.2 | 20/10/2023 | C  |
-| 1.2.1 | 18/10/2023 | C  |
-| 1.2.0 | 17/10/2023 | C  |
-| 1.1.3 | 31/08/2023 | C  |
-| 1.1.2 | 31/07/2023 | C  |
-| 1.1.1 | 10/07/2023 | C  |
-| 1.1.0 | 30/05/2023 | C  |
-| 1.0.7 | 05/04/2023 | C  |
+| [1.3.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.3){target="_blank"} | 11/03/2024 | CS |
+| [1.3.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.2){target="_blank"} | 04/01/2024 | C |
+| [1.3.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.1){target="_blank"} | 15/12/2023 | C |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.3.0){target="_blank"} | 12/12/2023 | C |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.2.2){target="_blank"} | 20/10/2023 | C |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.2.1){target="_blank"} | 18/10/2023 | C |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.2.0){target="_blank"} | 17/10/2023 | C |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.3){target="_blank"} | 31/08/2023 | C |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.2){target="_blank"} | 31/07/2023 | C |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.1){target="_blank"} | 10/07/2023 | C |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.1.0){target="_blank"} | 30/05/2023 | C |
+| [1.0.7](https://github.com/etendosoftware/com.etendoerp.gradleplugin/releases/tag/1.0.7){target="_blank"} | 05/04/2023 | C |
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Backup and Restore
+## Article Path: /What's New/Release Notes/Etendo Classic/Plugins/Etendo Backup and Restore
+## Article URL: 
+ https://docs.etendo.software/whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes
+## Article Content: 
+#### Overview
 
-#### Release Notes
-##### 1.3.2
--  [EML-428](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/32){target="\_blank"} Copilot fails when uses host.docker.internal in Linux Docker 
+| Version | Publication Date | Status | GitHub |
+| --- | --- | :---: | :---: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.1.0) | 06/03/2024 | CS | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobackup/releases/tag/1.0.0) | 19/12/2022 | C | |
 
-##### 1.3.1
--  [EML-421](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/29){target="\_blank"} Copilot dependencies load is fail in Jar format
-
-##### 1.3.0
-- Parametized the image tag, added parameter to avoid image pulling and container name parameter. Added reutilization of container name.
-- Added dynamic tool_deps.toml load.
-- add variables file replacing . with _ to use as environment variables-
-- Removed translation tool.
-
-##### 1.2.2
--  [EPL-1054](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/18){target="\_blank"} Bug Fix for copilot translation task. The copilot.translation task should require an -Parg  parameter instead of -Ppkg.
-
-##### 1.2.1
--  [EPL-1047](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/16){target="\_blank"} Bug Fix for copilot translation task. When the copilot.translate task is executed and API fails, it ends with build successful.
-
-##### 1.2.0
--  Add copilot tasks in [Etendo Gradle Plugin](https://docs.etendo.software/developer-guide/etendo-classic/developer-tools/etendo-gradle-plugin/#copilot)
-
-##### 1.1.3
-- EPL-855: Bug fix for compilation of Etendo on Windows, resolving `"File name or file extension is too long"` error.
-
-##### 1.1.2
-- EPL-818: Bug fix related to duplication of `beans.xml` entry in the resources when setting `etendo-resources` as `sourceSets.main.resources.srcDirs` in the module.
-
-##### 1.1.1
-- EPL-439: Bug fix for compilation of Etendo on Windows, resolving unexpected behavior and errors encountered during the execution of `compile.complete`
-- EPL-740: Bug fix related to downloading dependencies from Nexus. This fix restores the ability to resolve dependencies from Nexus after migration to GitHub, fixing regression.
-
-##### 1.1.0
-- EPL-597: New features for Github dependency resolution. (Migration bundles to Github)
- 
-##### 1.0.7
-- EPL-574: Upgrade Gradle to version 7.3.2 :zap:
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Essentials Extensions Bundle
@@ -39477,26 +40092,13 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub |
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  |  :white_check_mark:|
-| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   |  :white_check_mark:|
-| [1.1.0](#110) | 27/06/2023 | 22.1.0 | 23.2.8 | C   |  :white_check_mark:|
-| [1.0.0](#100) | 10/05/2023 | 22.1.0 | 23.1.5 | C   |  :white_check_mark:|
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.1.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions/releases/tag/1.0.0){target="_blank"} | 10/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
 
-#### Release Notes
-
-##### 1.3.0
-- Update Core compatibility until 23.4.x
-
-##### 1.2.0
-- Update Core compatibility until 23.3.x
-
-##### 1.1.0
-- Update Core compatibility until 23.2.x
-
-##### 1.0.0
-- Add Advanced Business Partner module
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Platform Extensions Bundle
@@ -39508,52 +40110,24 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.13.1](#1201) | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
-| [1.12.0](#1200) | 29/12/2023 | 23.2.0 | 23.4.x | C  | :white_check_mark: |
-| [1.10.0](#1100) | 29/09/2023 | 23.2.0 | 23.3.x | C  | :white_check_mark: |
-| [1.9.0](#190)   | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.8.0](#180)   | 28/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.7.1](#171)   | 17/08/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.6.0](#160)   | 29/06/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.5.0](#150)   | 27/06/2023 | 22.1.0 | 23.2.8 | C  | :white_check_mark: |
-| [1.4.0](#140)   | 17/05/2023 | 22.1.0 | 23.1.5 | C  | :white_check_mark: |
-| [1.3.0](#130)   | 06/04/2023 | 22.1.0 | 23.1.5 | C  |                    |
-| 1.2.0 	|06/04/2023	| 22.1.0 | 23.1.5	| C  	|                       |
-| [1.1.3](#113) 	|09/01/2023	| 22.1.0 | 22.4.5	| C  	|                       |
-| 1.1.2 	|06/10/2022	| 22.1.0 | 22.3.0	| C  	|                       |
-| 1.1.1		|19/07/2022	| 22.1.0 | 22.2.2	| C  	|                       |
-| 1.1.0		|08/07/2022	| 22.1.0 | 22.2.2   | C  	|                       |
-| 1.0.501	|-  		| 22.1.0 | 22.1.3	| C		|                       |
-| 1.0.500	|-		    | 22.1.0 | 22.1.3   | C 	|                       |
-| 1.0.400	|- 			| 22.1.0 | 22.1.3   | C 	|                       |
-
-#### Release Notes
-##### 1.13.1
-- [EE-815](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/6){target="\_blank"} Field arrangements in Webhooks Events module
-##### 1.12.0
-- Update Core compatibility until 23.4.x
-- [EE-658](https://github.com/etendosoftware/com.etendoerp.platform.extensions/issues/2){target="\_blank"} Warning: Non-varargs Call to Varargs Method in com.etendoerp.webhookevents Module
-##### 1.10.0
-- Update Core compatibility until 23.3.x
-##### 1.9.0
-- Add *Generic Utils for EAN128 Definition and parsing* module, Javapackage:  `com.smf.ean128`
-##### 1.8.0
-- Add *Dynamic App* module, Javapakage: `com.etendoerp.dynamic.app`
-##### 1.7.1
-- Fix incompatibility of the com.etendoerp.etendorx module with Oracle
-##### 1.6.0
-- Add *Etendo Advanced Security* module, Javapackage:  `com.etendoerp.advanced.security`
-##### 1.5.0
-- Update Core compatibility until 23.2.x
-##### 1.4.0
-- All packages have been published on GitHub.
-
-##### 1.3.0
-- Add `com.etendoerp.asyncprocess` module
-- Add `com.etendoerp.webhookevents` module
-
-##### 1.1.3 
-- Move Amortization Report module (Platform Bundle) to Financial Extension (Financial Bundle)
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.12.0){target="_blank"} | 29/12/2023 | 23.2.0 | 23.4.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.9.0){target="_blank"} | 14/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.8.0){target="_blank"} | 28/08/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.7.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.7.1){target="_blank"} | 17/08/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.6.0){target="_blank"} | 29/06/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.5.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.4.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | :white_check_mark:|
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| 1.0.501 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.400 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
@@ -39563,36 +40137,17 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.5.0](#150) | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark:	|
-| [1.4.0](#140) | 29/09/2023 | 21.4.0 | 23.3.x | C  | :white_check_mark:	|
-| [1.3.0](#130) | 27/06/2023 | 21.4.0 | 23.2.8 | C  | :white_check_mark:	|
-| [1.2.0](#120) | 17/05/2023 | 21.4.0 | 23.1.5 | C  | :white_check_mark:	|
-| [1.1.0](#120) | 06/04/2023 | 21.4.0 | 23.1.5 | C  |					|
-| [1.0.3](#103) | 06/02/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.2](#102) | 25/01/2023 | 21.4.0 | 22.4.6 | C  |					|
-| 1.0.1 | 06/01/2023 | 21.4.0 | 22.4.6 | C  |					|
-| [1.0.0](#100) | 30/09/2022 | 21.4.0 | 22.3.0 | C  |					|
-
-#### Release Notes
-
-##### 1.5.0
-- Update Core compatibility until 23.4.x
-##### 1.4.0
-- Update Core compatibility until 23.3.x
-##### 1.3.0
-- Update Core compatibility until 23.2.x
-##### 1.2.0
-- All packages have been published on GitHub.
-##### 1.1.0
-- Solving bug: Reactivate Warehouse Document incompatible with Oracle
-##### 1.0.3
-- Solving bugs in Stock History module
-##### 1.0.2
-- Add Reactivate Warehouse Documents
-##### 1.0.0
-- Add Stock History module
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 21.4.0 | 23.4.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 21.4.0 | 23.3.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 21.4.0 | 23.2.8 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.2.0){target="_blank"} | 17/05/2023 | 21.4.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.1.0){target="_blank"} | 06/04/2023 | 21.4.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.3){target="_blank"} | 06/02/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.2){target="_blank"} | 25/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/v1.0.1){target="_blank"} | 06/01/2023 | 21.4.0 | 22.4.6 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.0.0){target="_blank"} | 30/09/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle
@@ -39602,30 +40157,15 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.5.0](#150) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:	|
-| [1.4.0](#140) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:	|
-| [1.3.0](#130) | 27/06/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:	|
-| [1.2.0](#120) | 17/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:	|
-| 1.1.0 | 06/04/2023 | 22.1.0 | 23.1.5 | C   | 						|
-| [1.0.0](#100) | 06/03/2023 | 22.1.0 | 22.4.5 | C   | 						|
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.2.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.1.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.production.extensions/releases/tag/1.0.0){target="_blank"} | 06/03/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
 
-#### Release Notes
-
-##### 1.5.0
-- Update Core compatibility until 23.4.x
-  
-##### 1.4.0
-- Update Core compatibility until 23.3.x
-
-##### 1.3.0
-- Update Core compatibility until 23.2.x
-##### 1.2.0
-- All packages have been published on GitHub.
-
-##### 1.0.0
-- Add Advanced Work Effort module
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sales Extensions Bundle
@@ -39635,40 +40175,24 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
-| --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.7.0](#170) 	| 29/12/2023 	| 22.1.0 | 23.4.x | CS	| :white_check_mark:|
-| [1.6.0](#160) 	| 29/09/2023 	| 22.1.0 | 23.3.x | C 	| :white_check_mark:|
-| [1.5.2](#152) 	| 16/07/2023 	| 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.5.1](#151) 	| 04/07/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.5.0](#150) 	| 30/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.4.0](#140) 	| 27/06/2023 	| 22.1.0 | 23.2.x | C 	| :white_check_mark:|
-| [1.3.0](#130) 	| 17/05/2023 	| 22.1.0 | 23.1.5 | C 	| :white_check_mark:|
-| 1.2.0 	| 05/04/2023 	| 22.1.0 | 23.1.5 | C	|                   |
-| 1.1.2 	| 06/01/2023 	| 22.1.0 | 22.4.5 | C 	|                   |
-| 1.1.1 	| 05/10/2022 	| 22.1.0 | 22.3.0 | C 	|                   |
-| 1.1.0     | 11/07/2022 	| 22.1.0 | 22.2.2 | C 	|                   |
-| 1.0.400   | - 			| 22.1.0 | 22.1.3 | C 	|                   |
-| 1.0.300   | - 			| 22.1.0 | 22.1.3 | C	|                   |
-| 1.0.200   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-| 1.0.100   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-| 1.0.000   | - 			| 21.4.0 | 22.1.3 | C 	|                   |
-
-#### Release Notes
-##### 1.7.0
-- Update Core compatibility until 23.4.x
-##### 1.6.0
-- Update Core compatibility until 23.3.x
-##### 1.5.2
-- Modifications to messages in "Advanced Rappels" module
-##### 1.5.1
-- Hotfix: Rappels Advanced Oracle compatibility
-##### 1.5.0
-- Add Rappels Advanced module
-##### 1.4.0
-- Update Core compatibility until 23.2.x
-##### 1.3.0
-- All packages have been published on GitHub.
+| Version | Publication Date | From Core | To Core | Status | GitHub |
+| --- | --- | --- | --- | :---: | :---: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.7.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.6.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.5.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.2){target="_blank"} | 16/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.1){target="_blank"} | 04/07/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.3.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| 1.0.400 | - | 22.1.0 | 22.1.3 | C | |
+| 1.0.300 | - | 22.1.0 | 22.1.3 | C | |
+| 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
+| 1.0.100 | 06/01/2022 | 21.4.0 | 22.1.3 | C | |
+| 1.0.000 | 03/01/2022 | 21.4.0 | 22.1.3 | C | |
 
 
 ==ARTICLE_END==
@@ -39680,114 +40204,41 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.3](#1133)   | 27/02/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark:    |
-| [1.13.2](#1132)   | 14/02/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
-| [1.13.1](#1131)   | 10/01/2024 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
-| [1.13.0](#1130)   | 29/12/2023 | 23.1.4 | 23.4.x | C  | :white_check_mark:    |
-| [1.12.1](#1121)   | 15/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.12.0](#1120)   | 13/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.3](#1113)   | 07/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.2](#1112)   | 05/12/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.11.1](#1111)   | 16/11/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.10.0](#1100)   | 29/09/2023 | 23.1.4 | 23.3.x | C  | :white_check_mark:    |
-| [1.9.1](#191)     | 15/08/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.9.0](#190)     | 12/07/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.8.0](#180)     | 27/06/2023 | 23.1.4 | 23.2.8 | C  | :white_check_mark:    |
-| [1.7.1](#171)     | 12/06/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.7.0](#170)     | 31/05/2023 | 23.1.4 | 23.1.5 | C  | :white_check_mark:    |
-| [1.5.0](#150)     | 17/05/2023 | 22.4.2 | 23.1.5 | C  | :white_check_mark:    |
-| [1.3.0](#130)     | 06/04/2023 | 22.4.2 | 23.1.5 | C  |                       |
-| [1.2.4](#124)     | 14/02/2023 | 22.4.2 | 22.4.x | CS |                       |
-| [1.2.3](#123)     | 31/01/2023 | 22.4.2 | 22.4.x | C  |                       |   
-| [1.2.2](#122)     | 10/01/2023 | 22.2.1 | 22.4.x | C  |                       |
-| [1.2.0](#120)     | 12/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| 1.1.4     | 11/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.3](#113) | 06/10/2022 | 22.2.1 | 22.3.0 | C  |                       |
-| [1.1.2](#112) | 30/08/2022 | 22.2.1 | 22.2.2 | C  |                       |
-| 1.1.1     | 10/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
-| 1.1.0     | 08/07/2022 | 22.1.1 | 22.2.2 | C  |                       |
-| 1.0.500   | -          | 22.1.0 | 22.1.3 | C  |                       |
-| 1.0.400   | -          | 22.1.0 | 22.1.3 | C  |                       |
-| 1.0.300   | -          | 22.1.0 | 22.1.3 | C  |                       |
-| 1.0.200   | -          | 22.1.0 | 22.1.3 | C  |                       |
-| 1.0.100   | -          | 21.4.0 | 21.4.x | C  |                       |
-| 1.0.0     | -          | 21.4.0 | 21.4.x | C  |                       |
-
-#### Release Notes
-
-##### 1.13.3
-- [EE-839](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/31){target="\_blank"} Financial Reports Advanced Module Ignore Selected ERP Language
-- [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage
-
-##### 1.13.2
-- [EE-786](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/20){target="\_blank"} Functionality to select orders or invoices in remittances does not work well total
-- [EE-723](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/30){target="\_blank"} Incomplete titles when exporting Balance Sheet And P&L Structure Advanced Report with templates to Excel
-
-##### 1.13.1
-- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Unnecessary "Header" tab in the in the ABC Activity window
-
-##### 1.13.0
-- Update Core compatibility until 23.4.x
-
-##### 1.12.1
-- [EE-745](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/10){target="\_blank"}  Errors during remittance processing when grouping by business partners
-- [EE-763](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/22){target="\_blank"} Multiselector of organizations of the general ledger report advanced report does not work
-- [EE-764](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/21){target="\_blank"} When printing a general ledger report advanced in view it does not print correctly
-
-##### 1.12.0
-- [EE-746](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/11){target="\_blank"} General Ledger Report Advanced does not print if Group By is added
-- [EE-751](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/12){target="\_blank"} Reverse pre-filtering in "select invoices and order" process in remittances
- 
-##### 1.11.3
-- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} The Payments void option is not available
-- [EE-754](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/15){target="\_blank"} Payment is not created when settling the processed remittance lines
-- [EE-759](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/19){target="\_blank"} No "payment in" is created from the "add payment" process of the sales invoice when the sales invoice is cancelled with another one
-
-##### 1.11.2
-- [EE-726](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/5){target="\_blank"} When you want to create a payment for a financing plan, the process does not end
-- [EE-744](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/9){target="\_blank"} Unable to generate credit from the "payment out" window
-##### 1.11.1
-- [EE-738](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/6){target="\_blank"} Additional accounting lines created from banking group
-- [EE-727](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/7){target="\_blank"} Error in translation of pop up window remittance
-##### 1.10.0 
-- Update Core compatibility until 23.3.x
-##### 1.9.1 
-- Fix bug related to completing invoices generated from Financial Type configuration.
-##### 1.9.0 
-- Update org.openbravo.module.remittance version
-##### 1.8.0
-- Update Core compatibility until 23.2.x
-##### 1.7.1
-- Fix com.etendoerp.advanced.bpsettlement bugs.
-##### 1.7.0
-- Add com.etendoerp.advanced.bpsettlement module
-##### 1.5.0
-- All packages have been published on GitHub.
-##### 1.3.0
-- Add Bulk Posting module.
-
-##### 1.2.4
-- Fix Payment Removal bug.
-
-##### 1.2.3
-- Add Advanced Financial Docs Processing.
-
-##### 1.2.2
-- Add Amortization Report module.
-- Publish module - G/L Journal Reverse.
-- Fix Banking pool bugs.
-- Fix Financial Advanced Reports bugs.
-
-##### 1.2.0
-- Advanced Intercompany module 1.0.0 version added.
-
-##### 1.1.3
-- Payment Removal module 1.0.0 version added.
-
-##### 1.1.2
-- Financial Reports Advanced module 1.0.0 version added.
+| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.3){target="_blank"} | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.2){target="_blank"} | 14/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.1){target="_blank"} | 10/01/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.13.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.0){target="_blank"} | 29/12/2023 | 23.1.4 | 23.4.x | C | :white_check_mark: |
+| [1.12.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.12.1){target="_blank"} | 15/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.12.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.12.0){target="_blank"} | 13/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.3){target="_blank"} | 07/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.2){target="_blank"} | 05/12/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.11.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.11.1){target="_blank"} | 16/11/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.1.4 | 23.3.x | C | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.9.1){target="_blank"} | 15/08/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.9.0){target="_blank"} | 12/07/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.8.0){target="_blank"} | 27/06/2023 | 23.1.4 | 23.2.8 | C | :white_check_mark: |
+| [1.7.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.1){target="_blank"} | 12/06/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.0){target="_blank"} | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.5.0){target="_blank"} | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
+| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | :white_check_mark: |
+| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | :white_check_mark: |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
+| 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.400 | 15/06/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.300 | 23/04/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.200 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
+| 1.0.100 | 06/01/2022 | 21.4.0 | 21.4.x | C | |
+| 1.0.000 | 04/01/2022 | 21.4.0 | 21.4.x | C | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Spanish Localization Bundle
@@ -39797,145 +40248,30 @@ Article URL: https://etendo.software
 ## Article Content: 
 #### Introducción
 
-| Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub|
+| Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.1](#191) | 28/02/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark:|
-| [1.9.0](#190) | 06/02/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.8.0](#180) | 26/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.7.0](#170) | 24/01/2024 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.6.0](#160) | 29/12/2023 | 22.4.3 | 23.4.x | C  | :white_check_mark:|
-| [1.5.2](#152) | 10/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.1](#151) | 01/11/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.5.0](#150) | 29/09/2023 | 22.4.3 | 23.3.x | C  | :white_check_mark:|
-| [1.4.1](#141) | 19/09/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.4.0](#140) | 27/06/2023 | 22.4.3 | 23.2.8 | C  | :white_check_mark:|
-| [1.3.0](#130) | 24/05/2023 | 22.4.3 | 23.1.5 | C  | :white_check_mark:|
-| [1.2.1](#121) | 26/04/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.2.0](#120) | 03/03/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.1.0](#110) | 03/02/2023 | 22.4.3 | 22.4.5 | C  |                   |
-| [1.0.5](#105) | 12/01/2023 | 21.4.0 | 22.4.5 | C  |                   |
-| [1.0.4](#104) | 07/12/2022 | 21.4.0 | 22.3.0 | C  |                   |
-| 1.0.3 | 06/10/2022 | 21.4.0 | 22.3.x | C  |                   |
-| [1.0.2](#102) | 11/07/2022 | 21.4.0 | 22.2.2 | C  |                   |
-| [1.0.1](#101) | 16/06/2022 | 21.4.0 | \*     | C  |                   |
-| 1.0.0 | 01/01/2022 | 21.4.0 | \*     | C  |                   |
-
-
-#### Versiones Disponibles
-
-##### 1.9.1
-- [EE-838](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/21){target="\_blank"} Se corrigió un error de envío al SII, en el que se creaban los ficheros con la URL del SII de Guipúzcoa. Se revirtió la funcionalidad de envío al SII de Bizkaia
-##### 1.9.0
-- Parámetros modelo 347 - Rangos nuevos 2023 </br>
-Se asociaron nuevos parámetros de impuestos a los siguientes rangos:
-    - Adquisiciones IVA 0% 
-    - Entregas IVA 0%  
-    - Entregas IVA 0+RE 0+0% 
-    - Entregas IVA 0+RE 0+0% (+0% IVA) 
-    - Entregas IVA 0+RE 0+0% (+0% RE) 
-    - Entregas IVA 5% 
-    - Entregas IVA+RE 21+1.75% 
-    - Entregas IVA+RE 21+1.75% (+1.75%) 
-    - Entregas IVA+RE 21+1.75% (+21%) 
-    - Entregas IVA+RE 5+0.62% 
-    - Entregas IVA+RE 5+0.62% (+0.62%) 
-    - Entregas IVA+RE 5+0.62% (+5%) 
-    - Servicios Prestados 0% 
-- Agregada al SII la funcionalidad de envío a hacienda de Bizkaia
-##### 1.8.0
-- Nuevo diseño de registro - Modelo de impuestos 390 - Versión 2023 </br>
-Se agregaron al parámetro "Recargo de Equivalencia" del grupo "IVA Devengado" los impuestos siguientes, declarados en las casillas que se explican a continuación:
-    - Recargo de equivalencia - Tipo 0% - Base imponible [663]
-    - Recargo de equivalencia - Tipo 0% - Cuota [664]
-    - Recargo de equivalencia - Tipo 0,62% - Base imponible [665]
-    - Recargo de equivalencia - Tipo 0,62% - Cuota [666]
-##### 1.7.0
-- [EE-301](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/18) Se agregó un nuevo estado 'No Declarable en SII' para facturas de venta que tengan todos sus productos relacionados a impuestos configurados como 'No Declarables en SII'.
-- [EE-796](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/19) Se corrigió el error en el que la página T303DID00 no se genera de forma correcta para el 303 del último periodo.
-- Se añadió el nuevo diseño de registro para el Modelo de Declaración de Impuestos 190, versión 2023.
-- Se añadió la oficina impositiva de Bizkaia en la configuración del SII para facturas recibidas.
-##### 1.6.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.4.x
-- [EE-779](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/16){target="\_blank"} Se corrigió error al crear un libro de facturas simplificado con un socio comercial sin CIF
-##### 1.5.2
-- [EE-741](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/9){target="\_blank"} Se añadió la traducción de la ventana 'Valued Stock Report'
-- [EE-728](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/8){target="\_blank"} Se agregó la traducción faltante para la ventana 'Pending Goods Receipts'
-- [EE-736](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/7){target="\_blank"} Se corrigió la validación 'Acogida al SII' de la configuración SII
-##### 1.5.1
-- [EE-730](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/5){target="\_blank"} Se corrigió una traducción errónea en un campo de la ventana 'Producto'
-- [EE-729](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/4){target="\_blank"} Se añadió una traducción faltante para las opciones que aparecen al hacer click derecho sobre las columnas de una ventana
-- [EE-725](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/3){target="\_blank"} Se añadió una traducción faltante para la ventana 'Marca'
-##### 1.5.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.3.x
-##### 1.4.1
-- [EE-720](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/issues/2){target="\_blank"} Se renombró a minúsculas el java package del modulo `org.openbravo.localization.spain.referencedata.translation.eses` 
-##### 1.4.0
-- Se actualizó la compatibilidad de Core incluyendo hasta 23.2.x
-##### 1.3.0
-- Se publicaron todos los paquetes en GitHub
-##### 1.2.1
-- Se resolvió problemas funcionales de la localización española utilizando las dependencias en formato JAR.
-
-##### 1.2.0
-- Se añadieron nuevos rangos de impuestos:
-	Adquisiciones IVA 0%
-  Adquisiciones IVA 0+RE 0+0%
-  Adquisiciones IVA+RE 21+1.75%
-  Adquisiciones IVA+RE 5+0.62%
-  Adquisiciones intracomunitarias 5%
-  Entregas IVA 0%
-  Entregas IVA 0+RE 0+0%
-  Entregas IVA 5%
-  Entregas IVA+RE 21+1.75%
-  Entregas IVA+RE 5+0.62% 
-  Servicios prestados 0%
-  
-  (**)Al tratarse de impuestos temporales, el campo "válido desde" tiene indicada la fecha "01-01-9999". Para que estos nuevos rangos puedan ser utilizados tendrá que editarse la misma y poner una fecha real (Ej. 01-01-2023).
-  
-- Se incluyen los parámetros del modelo 303 y modelo 349 a los nuevos rangos temporales.
-
-- Se actualiza el modelo 303, en función del nuevo diseño de registro publicado por la [AEAT](https://sede.agenciatributaria.gob.es/Sede/ayuda/disenos-registro/modelos-300-399.html)
-
-- Actualización del módulo "epígrafes"
-
-##### 1.1.0
-- Se actualizó la compatibilidad de Core desde 22.4.3 a 22.4.x
-- Se añadió la dependencia de la traducción del módulo de Default Jobs
-
-##### 1.0.5
-- Se actualizó la compatibilidad de Core a 22.4.x
-- Se eliminó la dependencia de Cash VAT Management
-- Se eliminó la dependencia del modulo JAX-WS-JAVA API
-
-##### 1.0.4
-- Se eliminaron los módulos de Facturacion Electrónica
-- Se añadió la traducción de Libro de Facturas 
-
-
-##### 1.0.2
-
-Version actualizada para ser compatible con Etendo 22Q2
-
-##### 1.0.1
-
-####### Errores Solucionados
-
-EE-171 -  SII versión 1.9.213100 - Se envían incorrectamente las facturas con NOI
-
-**org.openbravo.module.sii**
-
-En facturas proveedor con proveedores extranjeros (NOI) se estaba cortando a 9 caracteres el taxid lo que provocaba que se enviasen mal al SII las facturas y que luego Etendo diese error "Factura no encontrada".
-
-####### EE-115 - **Intrastat “Null Pointer Exception” cuando el campo TaxId es vacío**
-
-**org.openbravo.module.intrastat**
-
-Al intentar generar el archivo Intrastat, si uno de los terceros incluidos en el fichero no tenía información en el campo TaxId, se mostraba un error “null pointer exception” y el archivo no se generaba.  
-Ahora se visualizará un mensaje de error con el siguiente texto:
-
--   En Inglés: *“The value of the Tax ID field is empty for the business partner with Search Key ...”*
--   En Castellano: *"El valor del campo CIF/NIF se encuentra vacío para el tercero con Identificador ..."*
-
+| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.9.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.1){target="_blank"} | 28/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.9.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.0){target="_blank"} | 06/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.8.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.8.0){target="_blank"} | 26/01/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.7.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.7.0){target="_blank"} | 24/01/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.6.0){target="_blank"} | 29/12/2023 | 22.4.3 | 23.4.x | C | :white_check_mark: |
+| [1.5.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.2){target="_blank"} | 10/11/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.5.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.1){target="_blank"} | 01/11/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.5.0){target="_blank"} | 29/09/2023 | 22.4.3 | 23.3.x | C | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.1){target="_blank"} | 19/09/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.3.0){target="_blank"} | 24/05/2023 | 22.4.3 | 23.1.5 | C | :white_check_mark: |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
+| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | :white_check_mark: |
+| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | :white_check_mark: |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \*     | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \*     | C | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -39946,13 +40282,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| From Core | To Core| Status | GitHub|
-| --- 		| ---           | ---    | ---    | --- | :---:             |
-| [1.0.0](#100) 	| 19/02/2024 	| 22.1.0 | 24.1.0 | CS	| :white_check_mark:|
-
-#### Release Notes
-##### 1.0.0
-- The `com.etendoerp.purchase.invoice.validations` module was added in [Procurement Extensions Bundle](https://docs.etendo.software/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/overview.md)
+| Version | Publication Date | From Core | To Core | Status | GitHub |
+| --- | --- | --- | --- | :---: | :---: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | 22.1.0 | 24.1.0 | CS | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -39963,38 +40295,16 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](#130) | 29/12/2023 | 22.1.0 | 23.4.x | CS  | :white_check_mark:|
-| [1.2.1](#121) | 15/11/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.2.0](#120) | 29/09/2023 | 22.1.0 | 23.3.x | C   | :white_check_mark:|
-| [1.1.2](#112) | 04/09/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.1](#111) | 07/07/2023 | 22.1.0 | 23.2.8 | C   | :white_check_mark:|
-| [1.1.0](#110) | 30/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.1](#101) | 23/06/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-| [1.0.0](#100) | 29/05/2023 | 22.1.0 | 23.1.5 | C   | :white_check_mark:|
-
-#### Release Notes
-##### 1.3.0
-- Update Core compatibility until 23.4.x
-##### 1.2.1
-- [EE-722](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/issues/2){target="\_blank"} The connector generates the csv file correctly but the power bi reports need the file to be separated by another symbol not by commas
-##### 1.2.0
-- Update Core compatibility until 23.3.x
-##### 1.1.2
-- Update original components in EtendoBI Inclusion/Exclusion module
-
-##### 1.1.1
-- Fix bug in EtendoBI Inclusion/Exclusion module
-
-##### 1.1.0
-- Add com.etendoerp.integration.powerbi module
-
-##### 1.0.1
-- Add new feature in the module "EtendoBI Inclusion/Exclusion", in case of no category type in the header in the lines all configuration options appear.
-
-##### 1.0.0
-- Add EtendoBI Inclusion/Exclusion module
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | CS | :white_check_mark: |
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.1){target="_blank"} | 15/11/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.2){target="_blank"} | 04/09/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.1){target="_blank"} | 07/07/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.1.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.0.1){target="_blank"} | 23/06/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.0.0){target="_blank"} | 29/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40006,12 +40316,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Essentials Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.1.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.essentials.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Platform Extensions Bundle ES
@@ -40022,12 +40328,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.1.3, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle ES
@@ -40038,12 +40341,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.3.0](#130) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.3.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle ES
@@ -40054,12 +40353,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Production Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.2.0](#120) | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.2.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.production.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sales Extensions Bundle ES
@@ -40070,12 +40365,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Sales Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.6.0](#160) | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.6.0
-- Remove all translation modules dependencies to translated modules
+| --- | --- | --- | :----: | :----: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions.es_es/releases/tag/1.6.0){target="_blank"} | 18/01/2024 | [1.0.000, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle ES
@@ -40085,31 +40376,13 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-|	 Version	| Publication Date | Compatibility With Financial Extensions | Status |		   GitHub		 |
-|	   ---		|		---		   |				   ---					 | :----: |		   :----:		 |
-| [1.5.0](#150) |	 23/01/2024	   |			 [1.13.1, latest]			 |	 CS	  |  :white_check_mark:  |
-| [1.4.3](#143) |	 12/01/2024    |			 [1.13.1, latest]			 |	 C	  |  :white_check_mark:  |
-| [1.4.2](#142) |	 07/12/2023    |			 [1.11.3, 1.13.0]			 |	 C	  |  :white_check_mark:  |
-| [1.4.1](#141) |	 06/12/2023    |			 [1.11.2, 1.11.2]			 |	 C	  |  :white_check_mark:  |
-| [1.4.0](#140) |	 23/10/2023    |			 [1.0.0, 1.11.1]			 |	 C	  |  :white_check_mark:  |
-
-
-#### Release Notes
-##### 1.5.0
-- [EE-749](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/5){target="\_blank"} Create Translation Module for GL Journal Reverse
-- [EE-748](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/4){target="\_blank"} Add com.smf.asset.amortization.report.es_es module into com.etendoerp.financial.extensions.es_es Bundle
-
-##### 1.4.3
-- [EE-782](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/26){target="\_blank"} Removing the unnecessary "Header" tab in the ABC Activity window and its translation
-  
-##### 1.4.2
-- [EE-753](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/14){target="\_blank"} Modified translation of the Reactivate Payments buttons of the Payment Removal module
-
-##### 1.4.1
-- [EE-724](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/issues/6){target="\_blank"} 'Balance Sheet And P&L Structure Advanced' report's fields are not being translated when in Excel format
-
-##### 1.4.0
-- Remove all translation modules dependencies to translated modules
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.5.0){target="_blank"} | 23/01/2024 | [1.13.1, latest] | CS | :white_check_mark: |
+| [1.4.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.3){target="_blank"} | 12/01/2024 | [1.13.1, latest] | C | :white_check_mark: |
+| [1.4.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.2){target="_blank"} | 07/12/2023 | [1.11.3, 1.13.0] | C | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.1){target="_blank"} | 06/12/2023 | [1.11.2, 1.11.2] | C | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions.es_es/releases/tag/1.4.0){target="_blank"} | 23/10/2023 | [1.0.0, 1.11.1] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Procurement Extensions Bundle ES
@@ -40119,13 +40392,9 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article Content: 
 #### Overview
 
-| Version   | Publication Date 	| Compatibility with Procurement Extensions | Status | GitHub|
-| --- 		| ---           | --- | --- | :---:             |
-| [1.0.0](#142) | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.0.0
-- The translation module `com.etendoerp.purchase.invoice.validations.es_es` has been added.
+| Version | Publication Date | Compatibility with Procurement Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 19/02/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40137,13 +40406,8 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 #### Overview
 
 | Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-#### Release Notes
-##### 1.1.0
-- Remove all translation modules dependencies to translated modules
-- Add integration powerBi translation to Etendo BI bundle ES
+| --- | --- | --- | :----: | :----: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Known Issues
@@ -40151,15 +40415,30 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
 ## Article URL: 
  https://docs.etendo.software/whats-new/release-notes/etendo-classic/known-issues
 ## Article Content: 
-##### [EPL-858](https://github.com/etendosoftware/etendo_core/issues/221){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
-??? example "Workaround"
+#### Overview
+This page displays the known issues reported by the support team.
 
+#### Know Issues
+
+??? success "EE-758 Solved"
+
+    ### [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.
+
+    #### Attention
+
+    The combination of Payments (In/Out) with credit usage in the Business Partner Settlement module is currently experiencing issues. Incorrect values for amount and credit used may result in financial account discrepancies. We advise against combining credit usage with settlement until this issue is resolved.
+
+??? success "EPL-858 Solved"
+
+    ### [EPL-858](https://github.com/etendosoftware/com.etendoerp.gradleplugin/issues/34){target="\_blank"} Etendo does not compile with latest version of gradle plugin in JAR format.
+
+    #### Workaround
 
     Before execute setup tasks in a etendo project in JAR format you must follow the next steps:
 
     On the source path, open `build.gradle` and locate the 'etendo' block in the file. Inside of it, add the following propertie:
 
-    ``` groovy title="build.gradlew" 
+    ``` groovy title="build.gradle" 
     etendo {
         ignoreCoreJarDependency = true
     }
@@ -40174,7 +40453,6 @@ Ahora se visualizará un mensaje de error con el siguiente texto:
     ./gradlew expandCore 
     ```
     If you don't want to change the `build.gradle`, you can execute the command `./gradlew expandCore` and add the flag `-PforceExpand=true` at the end of it
-  
 
 ==ARTICLE_END==
 ==ARTICLE_START==
