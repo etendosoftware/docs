@@ -76,14 +76,13 @@ setup a module and publish it for distribution.
 The first step in the development process is to create a new module. From the
 Application menu, select `Application Dictionary` > `Module`.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-0.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
 
 Note the following important fields: (for more details see the  AD_Module
 table description):
 
   * The format of the Version field is three numbers separated by two dots. 
-  * The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _com.etendoerp.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , etc. 
+  * The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _com.etendoerp.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , org.etendo.howtos, etc. 
   * The In Development option informs the system that you are developing the module. Only modules in development are exported by development tools and the system will raise an error if you try to modify a component of a module that is not in development. 
   * The Default field option for a module marks that module as the one which is selected by default when developing and when editing components in the Application Dictionary. You may be developing more than one module at any one time, and specifying a default enables the module you want to be selected by default. 
   * Select the Translation Required option if your module contains UI artifacts (window, field) with translatable elements. 
@@ -112,8 +111,7 @@ in turn, it has a dependency on Etendo core. In the Dependency window,
 specify that the module is dependent on User Interface Application. (see also
 the  AD_Module_Dependency description):
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
 
   
 DB Prefix: at least one db prefix is required when a module also contains
@@ -126,8 +124,7 @@ starts with one of the defined db_prefixes. If database artifacts will be added 
     be from [A-Z] only.  
 
   
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-3.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
 
 !!!info
     For more information, see the  AD_Module_Dbprefix  table description.
@@ -137,8 +134,7 @@ Data Package: Tables are linked to a module through the Data Package. The
 generated business object for the new table will use the Java Package defined
 in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-4.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
 
 
 ##  Develop your software artifacts
@@ -176,8 +172,7 @@ Since we do not have any additional developments yet, only the corresponding
 folder structure and the module descriptor XML files have been created at this
 point.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-6.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-4.png)
 
   
 Etendo Classic validates the database and module artifacts of a module when the
@@ -193,13 +188,11 @@ module is exported and its build file is created. See more information on the [d
 To develop manual Java code you need a _src_ directory inside of your specific
 module:
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_To_Create_and_Package_a_Module-7.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-5.png)
 
   
 The Java package in the source directory should start with the Java package of
-the module. So for this case _com.etendoerp.documentation.test_ and
-_com.etendoerp.documentation.app_ would both be valid packages.
+the module.
 
 ## Publishing a Module
 
