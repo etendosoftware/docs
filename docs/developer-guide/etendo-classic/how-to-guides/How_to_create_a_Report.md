@@ -16,18 +16,25 @@ products.
 ##  Setting up Jaspersoft Studio
   
 !!!note
-    Use Jaspersoft Studio version 6.17.0 as it is the
-    recommended version.  
+    It is recommended to use the latest version of Jaspersoft Studio.  
   
   
 First, you need to download Jaspersoft Studio, a graphical tool that allows you to
 create and modify JasperReports templates (.jrxml files).
 
-  * Download  [Jaspersoft Studio](https://sourceforge.net/directory/design/linux/){target="\_blank"}  version *6.0.0* (v6.0.0). If using a higher version then it is necessary to ensure that the reports are generated for the *JasperReport 6.0.0* version. More info can be found  [here](https://community.jaspersoft.com/knowledgebase/best-practices/compile-older-jasperreports-version-jaspersoft-studio/){target="\_blank"}. 
+  * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
   * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
   * On Windows: Download and execute the .exe file.
 
-###  Configuring Jaspersoft Studio
+###  Configuring Jaspersoft Studio Library Version
+!!! warning
+    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. Its very important to use the correct version of JasperReports library,so the jrxml file can has the syntax compatible with Etendo.
+
+* Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-27.png)
+
+###  Configuring Jaspersoft Studio Properties
 
 Some properties of Jaspersoft Studio need to be modified in order to work
 properly. In short, you need to make sure:
@@ -36,9 +43,6 @@ properly. In short, you need to make sure:
   * Do not use any *Scriplet* class 
   * Use *Java* as default expression language 
 
-!!!info
-    Jasperreport can be used in hw manager, but the version should be 1.0.2801 or
-    higher. 
 
   
 ###  Setting up Classpath
@@ -61,10 +65,10 @@ The project has a classpath, and here is where you can add the jars you need.
   * The *New Report Wizard* will be opened 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-3.png){: .legacy-image-style}
+guides/How_to_create_a_Report-3.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-4.png){: .legacy-image-style}
+guides/How_to_create_a_Report-4.png)
 
   * Select a Report Template, (_Blank_ following our example) 
   * Define a Report Name 
@@ -88,10 +92,10 @@ Dictionary also.
   * Save 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-5.png){: .legacy-image-style}
+guides/How_to_create_a_Report-5.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-6.png){: .legacy-image-style}
+guides/How_to_create_a_Report-6.png)
 
 Now we have to configure the query: we are going to list the products present
 in the database.
@@ -99,10 +103,10 @@ in the database.
   * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-7.png){: .legacy-image-style}
+guides/How_to_create_a_Report-7.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-8.png){: .legacy-image-style}
+guides/How_to_create_a_Report-8.png)
 
   * The products are stored in the M_Product table 
     
@@ -114,10 +118,10 @@ guides/How_to_create_a_Report-8.png){: .legacy-image-style}
     * name 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-9.png){: .legacy-image-style}
+guides/How_to_create_a_Report-9.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-10.png){: .legacy-image-style}
+guides/How_to_create_a_Report-10.png)
 
   * Click *OK* 
   * Remember to clear the Scriptlet class and modify the Language for expressions 
@@ -127,9 +131,9 @@ guides/How_to_create_a_Report-10.png){: .legacy-image-style}
     * Choose Java as Language 
   * Save your changes 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
 
 Let's now design the Report Layout
 
@@ -138,20 +142,20 @@ Let's now design the Report Layout
   * Save your changes 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-13.png){: .legacy-image-style}
+guides/How_to_create_a_Report-13.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-14.png){: .legacy-image-style}
+guides/How_to_create_a_Report-14.png)
 
   * Switch to the *Preview* subtab to get a report preview 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-15.png){: .legacy-image-style}
+guides/How_to_create_a_Report-15.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-16.png){: .legacy-image-style}
+guides/How_to_create_a_Report-16.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
+![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png) |
 
 !!!note
     It is recommended to use Dejavu fonts in jasper reports because these
@@ -228,10 +232,10 @@ It is possible to create a report using a process definition. For more informati
     * *Handler*: use the default _org.openbravo.client.application.report.BaseReportActionHandler_
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-19.png){: .legacy-image-style}
+guides/How_to_create_a_Report-19.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-20.png){: .legacy-image-style}
+guides/How_to_create_a_Report-20.png)
 
 We must copy the .jrxml template file generated with Jaspersoft Studio into
 our module. When using Process Definition to generate a Report, templates need
@@ -242,10 +246,10 @@ the following location: _/web/org.openbravo.platform.features/jasper_
   * Fill the PDF template field with the location of the .jrxml file 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-21.png){: .legacy-image-style}
+guides/How_to_create_a_Report-21.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-22.png){: .legacy-image-style}
+guides/How_to_create_a_Report-22.png)
 
 ###  Creating the Menu record
 
@@ -260,24 +264,22 @@ guides/How_to_create_a_Report-22.png){: .legacy-image-style}
     * *Process Definition:* Pick your Process Definition (Product List) 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-23.png){: .legacy-image-style}
+guides/How_to_create_a_Report-23.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-24.png){: .legacy-image-style}
+guides/How_to_create_a_Report-24.png)
 
 ##  Compiling
 
 After you have registered the report and menu entry in the Application
 Dictionary, you need to compile to generate the necessary code.
 
-    
-    
-    ant smartbuild
-
+    ```bash 
+        ./gradlew smartbuild
+    ``` 
 Once the compilation has been completed: 
 
-1. refresh your [Eclipse project](How_to_setup_Eclipse_IDE.md), and
-2. restart your Tomcat server.
+1. restart your Tomcat server.
 
 ##  Testing the Report
 
@@ -285,10 +287,10 @@ If you have completed all the steps, you should be able to open your Product
 List report form the quick-lauch, or menu entry.
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-25.png){: .legacy-image-style}
+guides/How_to_create_a_Report-25.png)
 
 ![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-26.png){: .legacy-image-style}
+guides/How_to_create_a_Report-26.png)
 
 ##  Further Details
 
