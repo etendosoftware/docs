@@ -32,7 +32,7 @@ create and modify JasperReports templates (.jrxml files).
 
 * Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-27.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
 
 ###  Configuring Jaspersoft Studio Properties
 
@@ -64,19 +64,15 @@ The project has a classpath, and here is where you can add the jars you need.
   * Pick *Jasper Report*
   * The *New Report Wizard* will be opened 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-3.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-4.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-2.png)
 
   * Select a Report Template, (_Blank_ following our example) 
   * Define a Report Name 
   * Define the file Location in the project. 
 
 Later on, we will copy this .jrxml file inside our Etendo module that is
-going to keep our Report and the required configuration in the Application
-Dictionary also.
+going to keep our Report and also the required configuration in the Application
+Dictionary.
 
   * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
   * Click *New*
@@ -91,37 +87,25 @@ Dictionary also.
   * Test your connection 
   * Save 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-5.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-6.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
 
 Now we have to configure the query: we are going to list the products present
 in the database.
 
   * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-4.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-8.png)
-
-  * The products are stored in the M_Product table 
+  * The products are stored in the `M_Product` table 
     
         SELECT m_product_id, value, name FROM m_product
 
   * We have to add the fields based on your query which we want to use in the report, so we are going to add: 
-    * m_product_id 
-    * value 
-    * name 
+    * `m_product_id` 
+    * `value` 
+    * `name` 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-9.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-10.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-5.png)
 
   * Click *OK* 
   * Remember to clear the Scriptlet class and modify the Language for expressions 
@@ -131,9 +115,7 @@ guides/How_to_create_a_Report-10.png)
     * Choose Java as Language 
   * Save your changes 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-6.png)
 
 Let's now design the Report Layout
 
@@ -141,21 +123,11 @@ Let's now design the Report Layout
   * Place the fields in the *Detail* band and a title in the *Column Header* band 
   * Save your changes 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-13.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-14.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-7.png)
 
   * Switch to the *Preview* subtab to get a report preview 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-15.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-16.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png) |
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-8.png)
 
 !!!note
     It is recommended to use Dejavu fonts in jasper reports because these
@@ -225,31 +197,23 @@ It is possible to create a report using a process definition. For more informati
   * Create a new record 
   * Fill all required fields 
     * *Module:* Pick your module 
-    * *Search Key:* OBPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](../concepts/Modularity_Concepts.md#DB_prefix)) 
     * *Name:* Product List 
     * *UI Pattern:* Report (Using JR templates) 
     * *Data Access Level:* Client/Organization 
-    * *Handler*: use the default _org.openbravo.client.application.report.BaseReportActionHandler_
+    * *Handler*: use the default `org.openbravo.client.application.report.BaseReportActionHandler`
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-19.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-20.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
 
 We must copy the .jrxml template file generated with Jaspersoft Studio into
 our module. When using Process Definition to generate a Report, templates need
 to be stored in the web folder of the module. In our example, we place it in
-the following location: _/web/org.openbravo.platform.features/jasper_
+the following location: `/web/com.etendoerp.platform.features/jasper`
 
   * Navigate to the *Report Definition* tab 
   * Fill the PDF template field with the location of the .jrxml file 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-21.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-22.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
 
 ###  Creating the Menu record
 
@@ -260,14 +224,10 @@ guides/How_to_create_a_Report-22.png)
     * *Module:* Your module 
     * *Name:* Name of the menu entry (Product List) 
     * *Description:* Description of the action related to the menu entry 
-    * *Action:* Pick Process Definition 
+    * *Action:* Pick `Process Definition` 
     * *Process Definition:* Pick your Process Definition (Product List) 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-23.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-24.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
 
 ##  Compiling
 
@@ -286,11 +246,7 @@ Once the compilation has been completed:
 If you have completed all the steps, you should be able to open your Product
 List report form the quick-lauch, or menu entry.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-25.png)
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Report-26.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
 
 ##  Further Details
 
@@ -311,7 +267,7 @@ To override this configuration, the following must be done inside the .jrxml
 report template:
 
   1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
-  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With `<pattern>` tag a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
+  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
 
 !!!note
     The decimal and thousands *separators* used for the numeric
