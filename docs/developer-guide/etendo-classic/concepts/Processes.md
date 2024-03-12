@@ -12,12 +12,10 @@ tags:
   
 ##  Overview
 
-A process is a systematic series of actions directed to some end. Typically a
-process receives some parameters and taking them into account performs some
-actions to obtain a result. Etendo defines two main kinds of processes
+A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes
 _PL/SQL Processes_ and _Java Processes_ .
 
-All processes (as well as [Reports](../../../developer-guide/etendo-classic/concepts/.How_to_create_a_Report.md)) are managed from the same window: `Application Dictionary > Report and Process`. 
+All processes (as well as [Reports](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md)) are managed from the same window: `Application Dictionary > Report and Process`. 
 
 Once a process is defined it can be added to the menu to be called directly from there, it can be invoked through a button or it can be scheduled to be executed in the background.
 
@@ -27,7 +25,7 @@ Background processes can be set as _Prevent Concurrent Executions_ . Before a pr
 
 When a process (PL/SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Processes-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Processes-0.png)
 
 This pop-up has a section with information about the process, this information is obtained from the _Help_ field in the _Report and Process_ tab.
 
@@ -36,20 +34,24 @@ It also prompts for a number of parameters, and finally there are two buttons, _
 When this kind of process requires parameters they must be defined in the `Application Dictionary > Report and Process > Parameter`tab.
 
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Processes-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Processes-1.png)
 
 Parameters are defined in a very similar way than columns are. Depending on the _Reference_ field, the generated UI assigned for the parameter will be different.
 
 Let's overview some of the most important fields in this tab:
 
-  * *DB Column name* : This is the name the parameter will be passed with to the process. When the process is going to use this parameter it will have to use this name. Please notice that Postgresql is case-sensitive. In case the parameter references an existing column in database (for example, it is a parameter of type search), then the _DB Column name_ field must be cased the same way as the column in the Application Dictionary. 
+  * *DB Column name* : This is the name the parameter will be passed with to the process. When the process is going to use this parameter, it will have to use this name. 
+  
+!!!note
+      Notice that `Postgresql` is case-sensitive. In case the parameter references an existing column in database (for example, it is a parameter of type search), then the _DB Column name_ field must be cased the same way as the column in the Application Dictionary. 
+  
   * *Sequence* : It is a numeric value to order the parameter in the pop-up. 
-  * *Application Element* : It is the [Element](../../../developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology.md)  that will be used to get the label from, in this way parameters are translatable. 
+  * *Application Element* : It is the [Element](Element_and_Synchronize_Terminology.md)  that will be used to get the label from, in this way parameters are translatable. 
   
 !!!note 
     It is also possible to set or not this element as *Centrally Maintained*. 
 
-  * *Reference* , *Reference Search Key* and *Validation*: These three fields works exactly like the same ones when defining references for columns. 
+  * *Reference* , *Reference Search Key* and *Validation*: These three fields work exactly like the same ones when defining references for columns. 
   * *Range* : If it is checked, the pop-up will display two parameters in order to define a range, the first parameter will be named as specified in _DB Column name_ field and the second one will have the same name with a _TO_ suffix. 
 
 ###  Defining Processes
@@ -85,25 +87,17 @@ Java processes are implemented by java classes.
 !!!info
     For more information, read [How to create a Java Process](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Java_Based_Process.md)   .
 
-Java processes are also defined in the `Application Dictionary > Report and Process` window. Depending on the _UI pattern_ they use, they can be split
-into _Standard_ and _Manual_ . Additionally, if the _UI Pattern_ is set to
-_Manual_, it is necessary to include an entry in the *Process Mapping* to make
-it accessible in the `web.xml`.
+Java processes are also defined in the `Application Dictionary > Report and Process` window. Depending on the _UI pattern_ they use, they can be split into _Standard_ and _Manual_. Additionally, if the _UI Pattern_ is set to _Manual_, it is necessary to include an entry in the *Process Mapping* to make it accessible in the `web.xml`.
 
 !!!note
-    The pop-up used to invoke Java processes defined with _Standard_ _UI pattern_
-    is automatically generated in the same way the interface for PL/SQL processes
-    is done.
+    The pop-up used to invoke Java processes defined with _Standard_ _UI pattern_ is automatically generated in the same way the interface for PL/SQL processes is done.
 
-To set a Java process to be have Standard UI just set the _UI Pattern_ field
-to _Standard_ in the `Application Dictionary > Report and Process` header.
+To set a Java process to be have Standard UI just set the _UI Pattern_ field to _Standard_ in the `Application Dictionary > Report and Process` header.
 
-It is also necessary to indicate the Java class that is going to implement the
-process, this is done adding a new record in the *Process Class* tab. At
-least, one record in this tab must be checked as default.
+It is also necessary to indicate the Java class that is going to implement the process. This is done by adding a new record in the *Process Class* tab. At least, one record in this tab must be checked as default.
 
-If the process requires parameters they can be defined in the *Parameter*
-tab as explained in the [Parameters](#parameters) section of this document.
+!!!info
+    If the process requires parameters they can be defined in the *Parameter* tab as explained in the [Parameters](#parameters) section of this document.
 
 ###  Executing processes
 
@@ -113,30 +107,19 @@ tab as explained in the [Parameters](#parameters) section of this document.
     restarting Tomcat afterwards.  
 
   
-Processes can be executed from the user interface from a menu or in with
-button. It can also be scheduled to be executed in the background without any
-user interaction.
+Processes can be executed from the user interface from a menu or with a button. It can also be scheduled to be executed in the background without any user interaction.
 
 ####  Executing a process from a menu option
 
-To execute a process from a menu option, you need to define a new menu option
-that executes the process. Menus are defined in `General Setup > Application > Menu`. In the *Action* field the *Process* entry must be selected, then in the *Process* field select the process. it will be executed immediately and then saved.
+To execute a process from a menu option, you need to define a new menu option that executes the process. Menus are defined in `General Setup > Application > Menu`. In the *Action* field the *Process* entry must be selected, then in the *Process* field select the process. it will be executed immediately and then saved.
 
-Finally, press the *Tree* button to organize the new menu option in the menu
-tree, and now the process defined can be executed selecting this new menu
-created.
+Finally, press the *Tree* button to organize the new menu option in the menu tree, and now the process defined can be executed selecting this new menu created.
 
 ####  Executing a process from a button
 
-To execute a process with a button you need to define a column that references
-a button. In `Application Dictionary > Tables and Columns`, go to the
-column you want to use to execute the process and in the field *Reference*
-select the *Button* entry, then in the *Process* field select the process
-you want to execute and save.
+To execute a process with a button you need to define a column that references a button. In `Application Dictionary > Tables and Columns`, go to the column you want to use to execute the process and in the field *Reference* select the *Button* entry, then in the *Process* field select the process you want to execute and save.
 
-When executing a process with a button, the record ID of the current record
-selected of the table will be passed to the process. This allows to execute
-functions for specific records.
+When executing a process with a button, the record ID of the current record selected of the table will be passed to the process. This allows to execute functions for specific records.
 
 ####  Executing a process in the background
 
@@ -145,35 +128,24 @@ Backgroung processes are defined in `General Setup > Process Scheduling > Proces
 !!!info
     For more information, read [How to create a Background Process](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md).
 
-In this window you can define a background process. The process to be executed
-can be selected in the *Process* field. Then you define the scheduling for
-the background process and it is then ready for use.
+In this window you can define a background process. The process to be executed can be selected in the *Process* field. Then you define the scheduling for the background process and it is then ready to use.
 
 !!!note
-    There is no user interaction necessary to execute the process, thus no pop-up
-    will appear prompting for additional parameters.
+    There is no user interaction necessary to execute the process, thus, no pop-up will appear prompting for additional parameters.
 
 #####  Kill a background Process
  
   
-A button *Kill Process* is shown in the Process Monitor window on that
-processes that implements the KillableProcess interface while a process is
-being executed (Status = Processing). The interface KillableProcess will let
-you kill your process using a kill mechanism.
+A button *Kill Process* is shown in the Process Monitor window on that processes that implement the KillableProcess interface while a process is being executed (Status = Processing). The interface KillableProcess will let you kill your process using a kill mechanism.
 
 **Mechanism to Kill**
 
-The mechanism that your background process uses to kill itself might vary
-between implementations. However the main idea in any implementation
-should be to have the body of the job's execution periodically check some
-flag to see if a kill has been requested, and if the flag is set, somehow
-abort the performance of the rest of the job's work.
+The mechanism that your background process uses to kill itself might vary between implementations. However, the main idea in any implementation should be to check some flag perodically during execution to see if a kill has been requested, and if the flag is set, somehow abort the execution of the rest of the job's work.
 
 
-Let's see an example
+Let's see an example,
 
-Here we have a dummy process which simply prints in the log
-the identifier for all the business partners:
+here we have a dummy process which simply prints the identifier in the log for all the business partners:
 
     
     
@@ -278,15 +250,14 @@ Let us comment the code. First, we need to implement the KillableProcess interfa
     
     public class DummyProcessKillable extends DalBaseProcess implements KillableProcess {
 
-We create a variable *stop* that we will use to check the continuity of the execution.
+We create a variable *stop* that will be used to check the continuity of the execution.
 
     
     
     // Add a variable 'stop' to control the kill implementation and set false by default
       private boolean stop = false;
 
-In the main loop of the process, we add the check to stop the execution when
-the variable is set to true.
+In the main loop of the process, we add the check to stop the execution when the variable is set to true.
 
     
     
@@ -311,8 +282,9 @@ Finally, we implement the kill method that sets *stop* to true.
         stop = true;
       }
 
-Now, we are able to kill the process from the Process Monitor. When a process
-is killed, the status in the process monitor will be *Killed by User*.
+Now, we are able to kill the process from the Process Monitor. 
+
+When a process is killed, the status in the process monitor will be *Killed by User*.
 
 
 
