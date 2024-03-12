@@ -333,7 +333,7 @@ nav:
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
 #        - How to create QUnit testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_QUnit_testcases.md
 #        - How to create Jest testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_Jest_testcases.md
-#        - How to create JUnit testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_JUnit_testcases.md
+        - How to create JUnit testcases: developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases.md
 #        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
 #        - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Use_an_External_Connection_Pool.md
 #        - How to Print Reports with Subreports: developer-guide/etendo-classic/how-to-guides/How_to_Print_Reports_with_Subreports.md
