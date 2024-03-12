@@ -420,7 +420,7 @@ nav:
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
         - How to change an existing Window: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md
-#        - How to Create a Window: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window.md
+        - How to Create a Window: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
 #        - How to create testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md
 #        - How to setup Eclipse IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Eclipse_IDE.md
@@ -469,7 +469,9 @@ nav:
     - Release Notes:
       - Etendo Classic:
         - Release Notes: whats-new/release-notes/etendo-classic/release-notes.md
-        - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/etendo-gradle-plugin.md
+        - Plugins:
+          - Etendo Gradle Plugin: whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md
+          - Etendo Backup and Restore: whats-new/release-notes/etendo-classic/plugins/etendo-backup-restore-plugin/release-notes.md
         - Bundles:
           - Essentials Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md
           - Platform Extensions Bundle: whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md
