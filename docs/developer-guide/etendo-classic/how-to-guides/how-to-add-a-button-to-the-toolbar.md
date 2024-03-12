@@ -68,12 +68,12 @@ The icon and its related style is defined through an icon file.
 
 
 The icon should be placed in a specific directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
 
 Normally, it makes sense to store the icon in a subfolder. The example module has the icon file in:
 
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/images.
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images`.
 
   
 
@@ -81,11 +81,14 @@ com.etendoerp.client.application.examples/images.
 
   
 Then add a `css file` which links this icon to a specific `css` style. The `css` file must also be located in this directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
 
 In the example module, the `css` file is located here:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/example-styles.css 
+
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles`
+
+
 
 Within the `css` file add a style defined like this:
 
@@ -103,9 +106,10 @@ Within the `css` file add a style defined like this:
 
 ###  The javascript to create and register the button
 
-The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: web/com.etendoerp.client.application.examples/js/example-toolbar-button.js.
+The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: `web/com.etendoerp.client.application.examples/js/example-toolbar-button.js`.
 
-This is the overall javascript:
+This is the overall javascript for `toolbar-button`:
+
 
 ``` javascript
     
