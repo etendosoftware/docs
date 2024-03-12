@@ -53,9 +53,9 @@ The development consists of 2 steps:
 The first step is to implement your canvas class in javascript. This is done in 2 steps:
 
   * Create a  [javascript](../concepts/Client_Side_Development_and_API#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
-  * Register the javascript file (and other static resources such as css files) in Etendo using a ComponentProvider 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](../concepts/Etendo_Architecture/#component-provider) 
 
-The example module implements a button and a calculated field in the  `example-canvas-field.js`  file.
+The example module implements a button and a calculated field in the `example-canvas-field.js` file.
 
 The first example in the file implements a button which shows the identifier of the current record:
 
@@ -131,7 +131,7 @@ isc.OBEXAPP_SalesOrderCalculated.addProperties({
 });
 ```
 
-The javascript file is registered in the example modules' ComponentProvider like this:
+The javascript file is registered in the example modules' [ComponentProvider](../concepts/Etendo_Architecture/#component-provider) like this:
 
     
 ```java  
