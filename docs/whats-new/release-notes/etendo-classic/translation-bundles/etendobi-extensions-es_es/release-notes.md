@@ -17,10 +17,5 @@ tags:
 ## Overview
 
 | Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
-| ---     |       ---        |                  ---                    | :----: | :----: |
-| [1.1.0](#110) | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
-
-## Release Notes
-### 1.1.0
-- Remove all translation modules dependencies to translated modules
-- Add integration powerBi translation to Etendo BI bundle ES
+| --- | --- | --- | :----: | :----: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
