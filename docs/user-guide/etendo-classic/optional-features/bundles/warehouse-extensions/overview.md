@@ -34,12 +34,12 @@ It provides updated information about the daily history stock of the products.
 This functionality is part of the Warehouse Extensions Bundle and it is useful when the user needs to reactivate documents such as Goods Movements, Goods Receipts, Goods Shipments and Physical Inventories. 
 
 !!! info
-        For more information, visit the user guide for:
+    For more information, visit the user guide for:
 
-        - [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
-        - [Goods Receipts](/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
-        - [Goods Shipments](/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
-        - [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+    - [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
+    - [Goods Receipts](/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
+    - [Goods Shipments](/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
+    - [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
 
 ## Uninstall bundle
 
