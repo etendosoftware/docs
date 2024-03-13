@@ -4,8 +4,8 @@ title: How to Create JUnit testcases
   
 ##  Overview
 
-This how-to will focus on creating a testcase making use of the Openbravo test
-base classes. The testcase will check that our system has at least one User
+This how-to will focus on creating a testcase making use of the OBBaseTest classes.
+The testcase will check that our system has at least one User
 with password. For this, we'll use the new DAL approach to access the
 database.
 
@@ -22,14 +22,14 @@ All new developments must belong to a module that is not the _core_ module.
 ##  Preparing development environment
 
 First of all you need to create a src-test directory in your module package directory in Etendo ERP.
-```
-EtendoERP
- |- modules
-    |- com.etendoerp.example
-      |- src-test                  <-- source of the testcases
-        |- src
-          |- com.etendoerp.example
-            |- EtendoTest
+
+``` 
+modules
+└── com.etendoerp.example
+    └── src-test                <-- source of the testcases 
+        └── src
+            └── com.etendoerp.example
+                └── EtendoTest.java
 ```
 
 !!! info
@@ -65,7 +65,7 @@ failure on certain platforms.
 ###  Creating the Java class
 
   * Open your IntelliJ IDE. 
-  * Create a new folder structure under the _modules_ folder: _modules/com.etendoerp.examples/src-test/src/com.etendoerp.example_ . 
+  * Create a new folder structure under the ``modules`` folder: ``modules/com.etendoerp.examples/src-test/src/com.etendoerp.example`` . 
   * Create a new Java class with the following content: 
 
     
@@ -131,8 +131,8 @@ public void testUsersCount() {}
 ```
 
 This class has a testUsersCount function. Note that all testing methods _must_
-start with test in the function name. e.g. testAllWarehouses(),
-testMyFirstTest(), etc        
+start with test in the function name. e.g. ``testAllWarehouses()``,
+``testMyFirstTest()``, etc        
 
 ```java
 
@@ -189,7 +189,7 @@ Finally we print a total of users with password just for the record.
 
 A question which might pop-up when looking at the above code: where is the
 database transaction handling done? The answer is that this is handled by the
-WeldBaseTest class and the Openbravo data access layer:
+WeldBaseTest class and the Etendo data access layer:
 
   * a transaction is automatically started at first database access in the test cases. This is done by the Data Access Layer. 
   * a transaction is either committed (when no exception happened) or rolled-back (when an exception happened). 
@@ -221,7 +221,7 @@ This last point is important because there can be always reasons why during a
 test the clean-up step is not performed. For example because the test run is
 stopped before the clean-up is done.
 
-###  Approach to features of JUnit 4.11
+###  Approach to features of JUnit
 
 ####  Parameterized Tests
 
@@ -252,7 +252,7 @@ precision, helps greatly in writing tests.
 
 ###  JSON Matchers
   
-Openbravo provides a set of matchers that can be useful when asserting
+Etendo provides a set of matchers that can be useful when asserting
 JSONObjects or JSONArrays.
 
 ####  equal
@@ -359,13 +359,13 @@ public void testHasItems() {
 }
 ```
 
-###  Ant Test Tasks
+### Test Tasks
 
 Etendo has a number of ant tasks which run the test cases:
 
-  * run.tests: the default, it runs the suite: _org.openbravo.test.AntTaskTests_ . These tests are side effect free and can be run multiple times, after the run the database should be in the same state as before. 
-  * run.quick.tests: this task runs test cases which are fast and which test the most important parts of the system. It runs the test suite: _org.openbravo.test.AllQuickAntTaskTests_ . 
-  * run.all.tests: runs the suite _org.openbravo.test.AllAntTaskTests_ . This suite contains all the test cases, also tests which can change the database. 
+  * ./gradlew ant.run.tests: the default, it runs the suite: _org.openbravo.test.AntTaskTests_ . These tests are side effect free and can be run multiple times, after the run the database should be in the same state as before. 
+  * ./gradlew ant.run.quick.tests: this task runs test cases which are fast and which test the most important parts of the system. It runs the test suite: _org.openbravo.test.AllQuickAntTaskTests_ . 
+  * ./gradlew ant.run.all.tests: runs the suite _org.openbravo.test.AllAntTaskTests_ . This suite contains all the test cases, also tests which can change the database. 
 
 All the test cases are based on the Small Bazaar default data.
 
@@ -397,7 +397,7 @@ To be able to execute your testcases:
 
 ##  Testing Requests
 
-In general unit tests don't require of an Openbravo instance running in Tomcat
+In general unit tests don't require of an Etendo Classic instance running in Tomcat
 to be executed. But in some cases, how requests work is wanted to be tested.
 Depending on the request to be tested, different classes should be extended:
 
