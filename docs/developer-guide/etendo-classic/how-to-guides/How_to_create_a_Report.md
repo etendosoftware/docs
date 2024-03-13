@@ -28,7 +28,7 @@ create and modify JasperReports templates (.jrxml files).
 
 ###  Configuring Jaspersoft Studio Library Version
 !!! warning
-    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. Its very important to use the correct version of JasperReports library,so the jrxml file can has the syntax compatible with Etendo.
+    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. It is very important to use the correct version of JasperReports library,so the jrxml file has the syntax compatible with Etendo.
 
 * Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
 
@@ -237,9 +237,7 @@ Dictionary, you need to compile to generate the necessary code.
     ```bash 
         ./gradlew smartbuild
     ``` 
-Once the compilation has been completed: 
-
-1. restart your Tomcat server.
+Once the compilation has been completed, restart your Tomcat server.
 
 ##  Testing the Report
 
