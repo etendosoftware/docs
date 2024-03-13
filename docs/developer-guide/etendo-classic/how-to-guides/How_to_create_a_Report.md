@@ -81,7 +81,7 @@ Dictionary.
     * *Name:* Etendo (or any name you like, e.g. pi) 
     * *JDBC Driver:* PostgreSQL (org.postgresql.Driver). In this case, we'll use PostgreSQL 
     * *JDBC URL:* jdbc:postgresql://localhost:5432/etendo where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
-    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](docs.etendo.software/latest/getting-started/installation/#install-etendo)) 
+    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](/docs/getting-started/installation#install-etendo)) 
     * *Password:* tad 
   * Click the Finish button to generate the JDBC Connection 
   * Test your connection 
