@@ -13,10 +13,9 @@ tags:
 
 This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). 
 
-This section describes how to add a button to the left
-part: the application buttons.
+This section describes how to add a button to the left part: the application buttons.
   
-To follow this section, you need to be able to at a junior level, develop javascript as well as server-side java and understand [Data Access Layer](../concepts/Data_Access_Layer.md) concepts.
+To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](../concepts/Data_Access_Layer.md) concepts.
 
 ##  Example Module
 
@@ -75,9 +74,23 @@ Normally, it makes sense to store the icon in a subfolder. The example module ha
 `web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
 com.etendoerp.client.application.examples/images`.
 
-  
-
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png)
+    com.etendoerp.client.application.examples
+    ├── reference data
+    ├── src
+    ├── src-db
+    └── web
+        ├── com.etendoerp.client.application.examples
+        │   └── js
+        │       ├── example-toolbar-button.js
+        │       └── example-view-component.js
+        └── com.etendoerp.userinterface.smartclient
+            └── etendo
+                └── skins
+                    └── Default
+                        └── com.etendoerp.client.application.examples
+                            ├── images
+                            │   └── iconButton-sum.png
+                            └── example-styles.css
 
   
 Then add a `css file` which links this icon to a specific `css` style. The `css` file must also be located in this directory in your module:
@@ -111,7 +124,7 @@ The next step is to implement the javascript which defines the button and regist
 This is the overall javascript for `toolbar-button`:
 
 
-``` javascript
+```js title="example-toolbar-button.js"
     
     (function () {
       var buttonProps = {
@@ -208,7 +221,7 @@ The previous steps added static resources (javascript and css) to the system.
 Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
 
 !!!info
-    For more detailed information, visit [ComponentProvider](../concepts/.Etendo_Architecture/?h=component+provider#component-provider.md).
+    For more detailed information, visit [ComponentProvider](../concepts/Etendo_Architecture/#component-provider.md).
 
 
 ```javascript
@@ -292,8 +305,23 @@ The server side action handler (`SumOrderActionHandler.java`) receives an array 
 
 This is the implementation of the server side:
 
-```java
-    
+```java title="SumOrderActionHandler.java"
+     */
+package org.openbravo.client.application.examples;
+
+import java.math.BigDecimal;
+import java.util.Map;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.base.exception.OBException;
+import org.openbravo.client.kernel.BaseActionHandler;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.common.order.Order;
+
+/**
+ * Sums the orders passed in through a json array and returns the result.
+ */
     public class SumOrderActionHandler extends BaseActionHandler {
      
       protected JSONObject execute(Map<String, Object> parameters, String data) {
