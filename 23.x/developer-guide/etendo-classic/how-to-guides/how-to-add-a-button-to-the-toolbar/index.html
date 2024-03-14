@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Add a Button to the Toolbar - Etendo Documentation</title>
+        <title>How to add a button to the toolbar - Etendo Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#how-to-add-a-button-to-the-toolbar" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Add a Button to the Toolbar
+              How to add a button to the toolbar
             
           </span>
         </div>
@@ -4465,6 +4465,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -4494,6 +4496,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="In This Page">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -6857,6 +6861,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6997,55 +7003,83 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Toolbar</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Button</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">JavaScript</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Data Access Layer</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Implementation</span>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>How to add a button to the toolbar</h1>
-
+<h1 id="how-to-add-a-button-to-the-toolbar">How to Add a Button to the Toolbar</h1>
 <h2 id="overview">Overview</h2>
-<p>This howto discusses how a button can be added the main toolbar shown in grids
-and forms. The toolbar contains two types of buttons, the application buttons
-on the left (visualized using an icon) and the custom buttons on the right
-(shown with a label). This howto describes how to add a button to the left
-part, the application buttons.</p>
-<p>To follow this howto you need to be able to, at a junior level, develop
-javascript as well as server-side java and understand  Data Access Layer
-concepts.</p>
+<p>This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). </p>
+<p>This section describes how to add a button to the left part: the application buttons.</p>
+<p>To follow this section, develop javascript as well as server-side java and understand <a href="../../concepts/Data_Access_Layer/">Data Access Layer</a> concepts.</p>
 <h2 id="example-module">Example Module</h2>
-<p>This howto is supported by an example module which shows example of the code
-shown and discussed in this howto.</p>
+<p>This section is supported by an example module which shows example of the code shown and discussed here.</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Header" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The example module also contains implementations of other howtos.  </p>
+<p>The example module also contains implementations of other sections.  </p>
 </div>
 <h2 id="implementing-a-toolbar-button">Implementing a toolbar button</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>When implementing your own components it often makes sense to extend existing
-components. Make sure that your module then depends on the module that
-provides the base types. This ensures that the javascript is loaded in the
-correct order. You must add a dependency from your module to the
-Openbravo 3.0 Framework (org.openbravo.v3.framework) module  </p>
+<p>When implementing your own components, it often makes sense to extend existing components. Make sure that your module then depends on the module that provides the base types. This ensures that the javascript is loaded in the correct order.  </p>
 </div>
-<p>The button which we will implement will compute and show the sum of a set of
-selected orders to the user. This howto is divided in 2 parts, the first part
-focuses on visualizing the button in the correct windows and tabs and making
-sure the button is enabled/disabled appropriately. The second part will
-discuss how to implement backend logic and how to call the server side logic
-when the button gets clicked and show its results.</p>
+<p>The button to be implemented, will compute and show the sum of a set of selected orders to the user. </p>
+<p>This section is divided in 2 parts:</p>
+<ul>
+<li>
+<p>the first part
+focuses on visualizing the button in the correct windows and tabs and making sure the button is enabled/disabled appropriately. </p>
+</li>
+<li>
+<p>The second part will discuss how to implement backend logic and how to call the server side logic when the button gets clicked and show its results.</p>
+</li>
+</ul>
 <p>The first part consists of the following steps:</p>
 <ul>
 <li>an icon for the visualization </li>
-<li>a css style and javascript linking the icon to the button </li>
+<li>a <code>css</code> style and javascript linking the icon to the button </li>
 <li>javascript implementing the buttons click/action method and to register the button in the global registry </li>
 <li>add javascript to enable/disable the button when records are selected in the grid </li>
-<li>a ComponentProvider java class to register the javascript and css in Etendo </li>
+<li>a <code>ComponentProvider</code> java class to register the javascript and <code>css</code> in Etendo.</li>
 </ul>
-<p>These steps will visualize the button but not actually do anything yet. The
-follow up steps will add logic:</p>
+<p>These steps will visualize the button but not actually do anything yet. The follow up steps will add logic:</p>
 <ul>
 <li>a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) </li>
 <li>client side javascript to call the server and process the result </li>
@@ -7053,40 +7087,55 @@ follow up steps will add logic:</p>
 <p>Each of these steps is described in more detail below.</p>
 <h2 id="visualizing-the-button-implementation-steps">Visualizing the button - Implementation steps</h2>
 <h3 id="defining-the-icon-and-a-css">Defining the icon and a css</h3>
-<p>The icon and its related style is defined through an icon file. For standard
-visualization using the Etendo style the icon should be 24x24 without a
-background colour.</p>
+<p>The icon and its related style is defined through an icon file. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For standard visualization using the Etendo style the icon should be 24x24 without a background colour.</p>
+</div>
 <p>The icon should be placed in a specific directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
-Normally it makes sense to store the icon in a subfolder. The example module
-has the icon file in:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/images.</p>
-<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png" /></a></p>
-<p>Then add a css file which links this icon to a specific css style. The css
-file must also be located in this directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
-In the example module the css file is located here:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/example-styles.css 
-Within the css file add a style defined like this:</p>
+<code>web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]</code>.</p>
+<p>Normally, it makes sense to store the icon in a subfolder. The example module has the icon file in:</p>
+<p><code>web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images</code>.</p>
+<div class="language-text highlight"><pre><span></span><code>com.etendoerp.client.application.examples
+├── reference data
+├── src
+├── src-db
+└── web
+    ├── com.etendoerp.client.application.examples
+    │   └── js
+    │       ├── example-toolbar-button.js
+    │       └── example-view-component.js
+    └── com.etendoerp.userinterface.smartclient
+        └── etendo
+            └── skins
+                └── Default
+                    └── com.etendoerp.client.application.examples
+                        ├── images
+                        │   └── iconButton-sum.png
+                        └── example-styles.css
+</code></pre></div>
+<p>Then add a <code>css file</code> which links this icon to a specific <code>css</code> style. The <code>css</code> file must also be located in this directory in your module:
+<code>web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]</code>.</p>
+<p>In the example module, the <code>css</code> file is located here:</p>
+<p><code>web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles</code></p>
+<p>Within the <code>css</code> file add a style defined like this:</p>
 <div class="language-text highlight"><pre><span></span><code>.ETToolbarIconButton_icon_etexapp_sum {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(./images/iconButton-sum.png);
 }
 </code></pre></div>
-<p><strong>Note:</strong> the name of the css class is important, it should start with
-'ETToolbarIconButton_icon_', the part after that (etexapp_sum) is used later
-in this tutorial. It makes sense to use the module's dbprefix in this last
-part to prevent name collisions with other modules.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name of the <code>css</code> class is important, it should start with
+<code>ETToolbarIconButton_icon_</code>, the part after that (etexapp_sum) is used later in this tutorial. It makes sense to use the module's dbprefix in this last part to prevent name collisions with other modules.</p>
+</div>
 <h3 id="the-javascript-to-create-and-register-the-button">The javascript to create and register the button</h3>
-<p>The next step is to implement the javascript which defines the button and
-registers it to be shown on tabs. Start by creating a javascript file in this
-location: web/com.etendoerp.client.application.examples/js/example-toolbar-
-button.js.</p>
-<p>This is the overall javascript:</p>
-<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<p>The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: <code>web/com.etendoerp.client.application.examples/js/example-toolbar-button.js</code>.</p>
+<p>This is the overall javascript for <code>toolbar-button</code>:</p>
+<p><div class="language-js highlight"><span class="filename">example-toolbar-button.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">buttonProps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">          </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;You clicked me!&#39;</span><span class="p">);</span>
@@ -7110,191 +7159,204 @@ button.js.</p>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nx">ET</span><span class="p">.</span><span class="nx">ToolbarRegistry</span><span class="p">.</span><span class="nx">registerButton</span><span class="p">(</span><span class="nx">buttonProps</span><span class="p">.</span><span class="nx">buttonType</span><span class="p">,</span><span class="w"> </span><span class="nx">isc</span><span class="p">.</span><span class="nx">ETToolbarIconButton</span><span class="p">,</span><span class="w"> </span><span class="nx">buttonProps</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;186&#39;</span><span class="p">);</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="p">}());</span>
 </span></code></pre></div>
-Let's walk through the different parts. The javascript starts and ends with
-this part:</p>
+Let's walk through the different parts. The javascript starts and ends with this part:</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">...</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="p">}());</span>
 </span></code></pre></div>
-<p>This is done to prevent the local variables to be available globally, it
-creates a function and executes it immediately.</p>
+<p>This is done to prevent the local variables to be available globally. It creates a function and executes it immediately.</p>
 <p>Then the first part of the buttonprops"</p>
-<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">          </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">          </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;You clicked me!&#39;</span><span class="p">);</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">          </span><span class="p">},</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">          </span><span class="nx">buttonType</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;etexapp_sum&#39;</span><span class="p">,</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">          </span><span class="nx">prompt</span><span class="o">:</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">I18N</span><span class="p">.</span><span class="nx">getLabel</span><span class="p">(</span><span class="s1">&#39;ETEXAPP_SumData&#39;</span><span class="p">),</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nx">Sets</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">action</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">which</span><span class="w"> </span><span class="nx">gets</span><span class="w"> </span><span class="nx">called</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">clicks</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">button</span><span class="p">.</span><span class="w"> </span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">buttonType</span><span class="w"> </span><span class="nx">maps</span><span class="w"> </span><span class="nx">back</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">css</span><span class="w"> </span><span class="nx">style</span><span class="p">,</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">controls</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">icon</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">styling</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">identification</span><span class="w"> </span><span class="nx">also</span><span class="w"> </span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">shown</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">hovers</span><span class="w"> </span><span class="nx">over</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">mouse</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">retrieved</span><span class="w"> </span><span class="nx">through</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">I18N</span><span class="p">.</span><span class="nx">getLabel</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">support</span><span class="w"> </span><span class="nx">translation</span><span class="p">,</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">label</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">Messages</span><span class="w"> </span><span class="nx">table</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">correctly</span><span class="w"> </span><span class="nx">visualize</span><span class="w"> </span><span class="nx">it</span><span class="o">:</span><span class="w"> </span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="o">!</span><span class="p">[](..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="nx">assets</span><span class="o">/</span><span class="nx">developer</span><span class="o">-</span><span class="nx">guide</span><span class="o">/</span><span class="nx">etendo</span><span class="o">-</span><span class="nx">classic</span><span class="o">/</span><span class="nx">how</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">guides</span><span class="o">/</span><span class="nx">How_to_add_a_button_to_the_toolbar</span><span class="o">-</span><span class="mf">4.</span><span class="nx">png</span><span class="p">)</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nx">The</span><span class="w"> </span><span class="nx">updateState</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">called</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">enable</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">disable</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nx">user</span><span class="w"> </span><span class="nx">navigates</span><span class="w"> </span><span class="nx">through</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">system</span><span class="p">.</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="sb">```javascript   </span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="sb">         updateState: function(){</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="sb">              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="sb">              if (view.isShowingForm &amp;&amp; form.isNew) {</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="sb">                this.setDisabled(true);</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="sb">              } else if (view.isEditingGrid &amp;&amp; grid.getEditForm().isNew) {</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="sb">                this.setDisabled(true);</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="sb">              } else {</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="sb">                this.setDisabled(selectedRecords.length === 0);</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="sb">              }</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="sb">          }</span>
+</span></code></pre></div>
+<ul>
+<li>Sets the action method which gets called when the user clicks the button. </li>
+<li>The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also </li>
+<li>The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: </li>
+</ul>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png" /></a></p>
+<p>The updateState function is called to enable and disable the button when the
+user navigates through the system.</p>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">         </span><span class="nx">updateState</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">              </span><span class="kd">var</span><span class="w"> </span><span class="nx">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">,</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">view</span><span class="p">.</span><span class="nx">viewForm</span><span class="p">,</span><span class="w"> </span><span class="nx">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">view</span><span class="p">.</span><span class="nx">viewGrid</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">grid</span><span class="p">.</span><span class="nx">getSelectedRecords</span><span class="p">();</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">isShowingForm</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">form</span><span class="p">.</span><span class="nx">isNew</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">setDisabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">              </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">view</span><span class="p">.</span><span class="nx">isEditingGrid</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">grid</span><span class="p">.</span><span class="nx">getEditForm</span><span class="p">().</span><span class="nx">isNew</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">setDisabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">              </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="nx">setDisabled</span><span class="p">(</span><span class="nx">selectedRecords</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">              </span><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">          </span><span class="p">}</span>
 </span></code></pre></div>
 The function enables/disables the button if the form or grid is new and if
 there are no records selected.</p>
 <p>Then this code registers the button for the tab with id '186':</p>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">      </span><span class="nx">OB</span><span class="p">.</span><span class="nx">ToolbarRegistry</span><span class="p">.</span><span class="nx">registerButton</span><span class="p">(</span><span class="nx">buttonProps</span><span class="p">.</span><span class="nx">buttonType</span><span class="p">,</span><span class="w"> </span><span class="nx">isc</span><span class="p">.</span><span class="nx">OBToolbarIconButton</span><span class="p">,</span><span class="w"> </span><span class="nx">buttonProps</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;186&#39;</span><span class="p">);</span>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">      </span><span class="nx">OB</span><span class="p">.</span><span class="nx">ToolbarRegistry</span><span class="p">.</span><span class="nx">registerButton</span><span class="p">(</span><span class="nx">buttonProps</span><span class="p">.</span><span class="nx">buttonType</span><span class="p">,</span><span class="w"> </span><span class="nx">isc</span><span class="p">.</span><span class="nx">OBToolbarIconButton</span><span class="p">,</span><span class="w"> </span><span class="nx">buttonProps</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;186&#39;</span><span class="p">);</span>
 </span></code></pre></div>
 <p>Note:</p>
 <ul>
 <li>the first parameter is a unique identification so that one button can not be registered multiple times. </li>
-<li>as the second parameter the button javascript class is passed in, as a default always use isc.ETToolbarIconButton </li>
+<li>as the second parameter the button javascript class is passed in, as a default always use <code>isc.ETToolbarIcon</code>Button </li>
 <li>the buttonProps define the button characteristics </li>
 <li>the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. </li>
 <li>The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. </li>
 <li>To register a button for multiple tabs call the registerButton multiple times for different tabs </li>
 </ul>
 <h3 id="the-componentprovider">The ComponentProvider</h3>
-<p>The previous steps added static resources (javascript and css) to the system.
-Now Etendo should know where to find these resources when initializing and
-generating the user interface. For this the css and javascript and resources
-have to be registered. This is done through a ComponentProvider. For more
-detailed information on the ComponentProvider concept visit this  page  .</p>
-<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">     </span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="err">@</span><span class="nx">ApplicationScoped</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="err">@</span><span class="nx">ComponentProvider</span><span class="p">.</span><span class="nx">Qualifier</span><span class="p">(</span><span class="nx">ExampleComponentProvider</span><span class="p">.</span><span class="nx">EXAMPLE_VIEW_COMPONENT_TYPE</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ExampleComponentProvider</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BaseComponentProvider</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kr">final</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">EXAMPLE_VIEW_COMPONENT_TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ETEXAPP_ExampleViewType&quot;</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">     </span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="cm">/*</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="cm">       * (non-Javadoc)</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="cm">       * </span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="cm">       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="cm">       * java.util.Map)</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="cm">       */</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="nx">getComponent</span><span class="p">(</span><span class="nb">String</span><span class="w"> </span><span class="nx">componentId</span><span class="p">,</span><span class="w"> </span><span class="nb">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nb">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">parameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">IllegalArgumentException</span><span class="p">(</span><span class="s2">&quot;Component id &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">componentId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; not supported.&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="cm">/* in this howto we only need to return static resources so there is no need to return anything here */</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">     </span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">getGlobalComponentResources</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="kr">final</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">globalResources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="p">();</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nx">globalResources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">createStaticResource</span><span class="p">(</span>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">            </span><span class="s2">&quot;web/com.etendoerp.client.application.examples/js/example-toolbar-button.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">        </span><span class="nx">globalResources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">createStyleSheetResource</span><span class="p">(</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">            </span><span class="s2">&quot;web/com.etendoerp.userinterface.smartclient/etendo/skins/&quot;</span>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="nx">KernelConstants</span><span class="p">.</span><span class="nx">SKIN_VERSION_PARAMETER</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/com.etendoerp.client.application.examples/example-styles.css&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">     </span>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">globalResources</span><span class="p">;</span>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">     </span>
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">getTestResources</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">Collections</span><span class="p">.</span><span class="nx">emptyList</span><span class="p">();</span>
-</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="p">}</span>
+<p>The previous steps added static resources (javascript and css) to the system.</p>
+<p>Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the <code>css</code> and javascript and resources have to be registered. This is done through a ComponentProvider. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more detailed information, visit <a href="../concepts/Etendo_Architecture/#component-provider.md">ComponentProvider</a>.</p>
+</div>
+<p><div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">     </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="err">@</span><span class="nx">ApplicationScoped</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="err">@</span><span class="nx">ComponentProvider</span><span class="p">.</span><span class="nx">Qualifier</span><span class="p">(</span><span class="nx">ExampleComponentProvider</span><span class="p">.</span><span class="nx">EXAMPLE_VIEW_COMPONENT_TYPE</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ExampleComponentProvider</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BaseComponentProvider</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kr">final</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">EXAMPLE_VIEW_COMPONENT_TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ETEXAPP_ExampleViewType&quot;</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">     </span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="cm">/*</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="cm">       * (non-Javadoc)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="cm">       * </span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="cm">       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="cm">       * java.util.Map)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="cm">       */</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="nx">getComponent</span><span class="p">(</span><span class="nb">String</span><span class="w"> </span><span class="nx">componentId</span><span class="p">,</span><span class="w"> </span><span class="nb">Map</span><span class="o">&lt;</span><span class="nb">String</span><span class="p">,</span><span class="w"> </span><span class="nb">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">parameters</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">IllegalArgumentException</span><span class="p">(</span><span class="s2">&quot;Component id &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">componentId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; not supported.&quot;</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="cm">/* in this howto we only need to return static resources so there is no need to return anything here */</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">     </span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">getGlobalComponentResources</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="kr">final</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">globalResources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">ComponentResource</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">        </span><span class="nx">globalResources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">createStaticResource</span><span class="p">(</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">            </span><span class="s2">&quot;web/com.etendoerp.client.application.examples/js/example-toolbar-button.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">        </span><span class="nx">globalResources</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">createStyleSheetResource</span><span class="p">(</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">            </span><span class="s2">&quot;web/com.etendoerp.userinterface.smartclient/etendo/skins/&quot;</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="nx">KernelConstants</span><span class="p">.</span><span class="nx">SKIN_VERSION_PARAMETER</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;/com.etendoerp.client.application.examples/example-styles.css&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">     </span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">globalResources</span><span class="p">;</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">     </span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">      </span><span class="err">@</span><span class="nx">Override</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">      </span><span class="kr">public</span><span class="w"> </span><span class="nx">List</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">getTestResources</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">Collections</span><span class="p">.</span><span class="nx">emptyList</span><span class="p">();</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">    </span><span class="p">}</span>
 </span></code></pre></div>
 A short explanation:</p>
 <ul>
-<li>The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. </li>
-<li>The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. </li>
+<li>The annotations in the top of the class are related to <a href="../concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md">Weld</a>. </li>
 </ul>
-<p>To explain how Etendo can find the ComponentProvider: Etendo/Weld will
-analyze the classpath and find all the classes which have a @ComponentProvider
-annotation.</p>
+<p>The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. </p>
+<ul>
+<li>The getGlobalResources is important here, it shows how to register the global resources defined in the example module. </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For your own module just follow the same path structure and approach. </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To explain how Etendo can find the ComponentProvider: Etendo/Weld will analyze the classpath and find all the classes which have a @ComponentProvider annotation.</p>
+</div>
 <h3 id="the-result">The result</h3>
-<p>To see the result, restart Tomcat, clear the cache of the browser (sometimes
-css styles are not picked up) and go back to the application and then
-specifically the sales order window. You should see this:</p>
-<p>Note: the button is not visualized in other windows/tabs because it is
+<p>To see the result, restart Tomcat, clear the cache of the browser (sometimes <code>css</code> styles are not picked up) and go back to the application and then specifically to the sales order window. </p>
+<p>You should see this:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The button is not visualized in other windows/tabs because it is
 registered for only the sales order header tab.</p>
+</div>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png" /></a></p>
 <h2 id="adding-server-side-logic-implementation-steps">Adding server side logic - Implementation steps</h2>
-<p>The next step in this how to is to add the server side logic and calling this
-logic from the client. The server side logic is implemented using the action
-handler concept. The action handler concept allows you to create classes on
-the server which are callable from the client. This how to will illustrate
-this.</p>
+<p>The next step in this how to is to add the server side logic and calling this logic from the client. The server side logic is implemented using the action handler concept. 
+The action handler concept allows you to create classes on
+the server which are callable from the client. </p>
 <h3 id="implement-the-server-side-action-handler">Implement the server side action handler</h3>
-<p>The server side action handler (  SumOrderActionHandler.java  ) receives an
-array of order numbers of the selected orders. It will sum the order values
-and then return the total as a JSON string.</p>
+<p>The server side action handler (<code>SumOrderActionHandler.java</code>) receives an array of order numbers of the selected orders. It will sum the order values and then return the total as a JSON string.</p>
 <p>This is the implementation of the server side:</p>
-<p><div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumOrderActionHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseActionHandler</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">     </span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">      </span><span class="kd">protected</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">     </span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">          </span><span class="c1">// get the data as json</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">          </span><span class="kd">final</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">          </span><span class="kd">final</span><span class="w"> </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">orderIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonData</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">&quot;orders&quot;</span><span class="p">);</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">     </span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">          </span><span class="c1">// start with zero</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">          </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">);</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">     </span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">          </span><span class="c1">// iterate over the orderids</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">orderIds</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">orderId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orderIds</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">     </span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">            </span><span class="c1">// get the order</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Order</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">orderId</span><span class="p">);</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">     </span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">            </span><span class="c1">// and add its grand total</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">order</span><span class="p">.</span><span class="na">getGrandTotalAmount</span><span class="p">());</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">          </span><span class="p">}</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">     </span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">          </span><span class="c1">// create the result</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">          </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">          </span><span class="n">json</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;total&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">     </span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">          </span><span class="c1">// and return it</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="p">;</span>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">          </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">    </span><span class="p">}</span>
+<p><div class="language-java highlight"><span class="filename">SumOrderActionHandler.java</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">     </span><span class="o">*/</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.openbravo.client.application.examples</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.BigDecimal</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.codehaus.jettison.json.JSONArray</span><span class="p">;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.codehaus.jettison.json.JSONObject</span><span class="p">;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.base.exception.OBException</span><span class="p">;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.client.kernel.BaseActionHandler</span><span class="p">;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.dal.service.OBDal</span><span class="p">;</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.model.common.order.Order</span><span class="p">;</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="cm">/**</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="cm"> * Sums the orders passed in through a json array and returns the result.</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="cm"> */</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumOrderActionHandler</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BaseActionHandler</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">     </span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">      </span><span class="kd">protected</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">     </span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">          </span><span class="c1">// get the data as json</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">          </span><span class="kd">final</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">          </span><span class="kd">final</span><span class="w"> </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">orderIds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonData</span><span class="p">.</span><span class="na">getJSONArray</span><span class="p">(</span><span class="s">&quot;orders&quot;</span><span class="p">);</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">     </span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">          </span><span class="c1">// start with zero</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">          </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">&quot;0&quot;</span><span class="p">);</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">     </span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">          </span><span class="c1">// iterate over the orderids</span>
+</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">orderIds</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">orderId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orderIds</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">     </span>
+</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">            </span><span class="c1">// get the order</span>
+</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">            </span><span class="kd">final</span><span class="w"> </span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="n">Order</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">orderId</span><span class="p">);</span>
+</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">     </span>
+</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">            </span><span class="c1">// and add its grand total</span>
+</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">            </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">order</span><span class="p">.</span><span class="na">getGrandTotalAmount</span><span class="p">());</span>
+</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-6-39"><a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a><span class="w">     </span>
+</span><span id="__span-6-40"><a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">          </span><span class="c1">// create the result</span>
+</span><span id="__span-6-41"><a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">          </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
+</span><span id="__span-6-42"><a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">          </span><span class="n">json</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;total&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">.</span><span class="na">doubleValue</span><span class="p">());</span>
+</span><span id="__span-6-43"><a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="w">     </span>
+</span><span id="__span-6-44"><a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a><span class="w">          </span><span class="c1">// and return it</span>
+</span><span id="__span-6-45"><a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="p">;</span>
+</span><span id="__span-6-46"><a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-47"><a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">          </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</span><span id="__span-6-48"><a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-6-49"><a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-6-50"><a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a><span class="w">    </span><span class="p">}</span>
 </span></code></pre></div>
 Notes:</p>
 <ul>
 <li>The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. </li>
-<li>Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used </li>
+<li>Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.</li>
 <li>Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. </li>
-<li>the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . </li>
-<li>the result is returned as json again </li>
+<li>the logic iterates over the order ids and retrieves the order using the <a href="../../concepts/Data_Access_Layer/">Data Access Layer</a>. </li>
+<li>the result is returned as json again.</li>
 </ul>
 <h3 id="calling-the-server-side-from-the-client-displaying-the-result">Calling the server side from the client, displaying the result</h3>
-<p>Then on the client the action method of the button has to be implemented to
-call the server. Here is the implementation. See the
-web/com.etendoerp.client.application.examples/js/example-toolbar-button.js
-for the full listing:</p>
-<p>```javascript</p>
-<div class="language-text highlight"><pre><span></span><code>      action: function(){
-        var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
-        // collect the order ids
-        for (i = 0; i &lt; selectedRecords.length; i++) {
-          orders.push(selectedRecords[i].id);
-        }
-
-        // define the callback function which shows the result to the user
-        callback = function(rpcResponse, data, rpcRequest) {
-          isc.say(OB.I18N.getLabel(&#39;ETEXAPP_SumResult&#39;, [data.total]));
-        }
-
-        // and call the server
-        OB.RemoteCallManager.call(&#39;com.etendoerp.client.application.examples.SumOrderActionHandler&#39;, {orders: orders}, {}, callback);
-</code></pre></div>
+<p>Then, on the client, the action method of the button has to be implemented to call the server. Here is the implementation. </p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">          </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">callback</span><span class="p">,</span><span class="w"> </span><span class="nx">orders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">,</span><span class="w"> </span><span class="nx">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">view</span><span class="p">.</span><span class="nx">viewGrid</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedRecords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">grid</span><span class="p">.</span><span class="nx">getSelectedRecords</span><span class="p">();</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">            </span><span class="c1">// collect the order ids</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">selectedRecords</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">              </span><span class="nx">orders</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">selectedRecords</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">id</span><span class="p">);</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="c1">// define the callback function which shows the result to the user</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">            </span><span class="nx">callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">rpcResponse</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">rpcRequest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">              </span><span class="nx">isc</span><span class="p">.</span><span class="nx">say</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">I18N</span><span class="p">.</span><span class="nx">getLabel</span><span class="p">(</span><span class="s1">&#39;ETEXAPP_SumResult&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">total</span><span class="p">]));</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">            </span><span class="c1">// and call the server</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">            </span><span class="nx">OB</span><span class="p">.</span><span class="nx">RemoteCallManager</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">&#39;com.etendoerp.client.application.examples.SumOrderActionHandler&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">orders</span><span class="o">:</span><span class="w"> </span><span class="nx">orders</span><span class="p">},</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="nx">callback</span><span class="p">);</span>
+</span></code></pre></div>
 <p>Note:</p>
 <ul>
 <li>the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id </li>
@@ -7307,13 +7369,17 @@ for the full listing:</p>
 </ul>
 </li>
 </ul>
-<p>Then when the server returns the callback is called which will display a
-prompt. Note that the label used in the callback uses parameter substitution.
+<p>Then when the server returns, the callback is called which will display a prompt. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The label used in the callback, uses parameter substitution.
 Parameters are specified using a %0, %1 etc.:</p>
+</div>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png" /></a></p>
 <h3 id="the-result_1">The result</h3>
 <p>The result shows the sum of the 2 selected order headers:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png" /></a></p>
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar" target="_blank">How to add a button to the toolbar</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
