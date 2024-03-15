@@ -18,7 +18,7 @@ It is closely related to the previous [How to add Columns to a Table](/developer
 
 The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
 
-In this HowTo we will show how to place new fields in a window.
+in this HowTo we will show how to place the example*column field in the \_Production Run* window using the create fields button.
 
 ### Add the fields to the window example
 
