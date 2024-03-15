@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/</loc>
+         <lastmod>2024-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column/</loc>
          <lastmod>2024-03-15</lastmod>
          <changefreq>daily</changefreq>
