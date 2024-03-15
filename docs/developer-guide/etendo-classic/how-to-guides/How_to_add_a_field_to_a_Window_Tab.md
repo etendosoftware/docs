@@ -18,7 +18,7 @@ It is closely related to the previous [How to add Columns to a Table](/developer
 
 ### Add the fields to the window
 
-The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to Application Dictionary | Window, Tabs and Fields, we need to search for the _Production Run_ window. Then, for that window, mark its _Incidence_ tab.
+The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary > Window, Tabs and Fields`, we need to search for the _Production Run_ window. Then, for that window, mark its _Incidence_ tab.
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
 
@@ -36,12 +36,9 @@ synchronize our newly added fields to the elements created for the columns
 they are based on, so that the UI labels for the new fields get the names
 defined in those elements.
 
-If this window should also be used in _classic UI mode_ then now _ant
-smartbuild_ should be execute to compile the changed window.
+If this window should also be used in _classic UI mode_ then now _`./gradlew smartbuild`_ should be execute to compile the changed window.
 
-To see the changes in the new UI just switch role away from the _System
-Administrator_ role used for this section and go to the changed window to see it
-having the new field as the one shown here:
+To see the changes in the new user interface just change the _System Administrator_ role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
 
