@@ -14,15 +14,15 @@ tags:
 
 The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
 
-It is closely related to the previous [How to add Columns to a Table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/) section which showed how to add new columns to a table.
+It is closely related to the previous [How to add Columns to a Table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/) section.
 
 The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
 
-in this HowTo we will show how to place the example*column field in the \_Production Run* window using the create fields button.
+On this page we will show an example of how to place the `example_column` field in the `Production Run` window using the `create fields` button.
 
 ### Add the fields to the window example
 
-The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary > Window, Tabs and Fields`, we need to search for the _Production Run_ window. Then, for that window, mark its _Incidence_ tab.
+The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary` > `Window, Tabs and Fields`, we need to search for the `Production Run` window. Then, for that window, mark its `Incidence` tab.
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
 
@@ -35,14 +35,11 @@ and automatically place the field into the module.
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png)
 
-As a last step, the Synchronize Terminology process should be run to
-synchronize our newly added fields to the elements created for the columns
-they are based on, so that the UI labels for the new fields get the names
-defined in those elements.
+As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.
 
-If this window should also be used in _classic UI mode_ then now _`./gradlew smartbuild`_ should be execute to compile the changed window.
+If this window should also be used in _classic UI mode_ then now `./gradlew smartbuild` should be execute to compile the changed window.
 
-To see the changes in the new user interface just change the _System Administrator_ role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
+To see the changes in the new user interface just change the `System Administrator` role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
 
