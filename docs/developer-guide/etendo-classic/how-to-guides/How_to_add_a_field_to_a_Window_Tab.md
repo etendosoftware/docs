@@ -10,7 +10,7 @@ tags:
 
 # How to add a field to a Window Tab
 
-## Objective
+## Overview
 
 The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
 
