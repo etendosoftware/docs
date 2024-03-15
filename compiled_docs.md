@@ -40284,7 +40284,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.1){target="_blank"} | 28/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.0){target="_blank"} | 06/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -40306,7 +40307,6 @@ Article URL: https://etendo.software
 | [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | :white_check_mark: |
 | [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \*     | C | :white_check_mark: |
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \*     | C | :white_check_mark: |
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Procurement Extensions Bundle
