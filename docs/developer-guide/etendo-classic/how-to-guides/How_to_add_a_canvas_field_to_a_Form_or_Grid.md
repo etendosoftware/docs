@@ -39,7 +39,7 @@ This section is supported by an example module which shows examples of the code
 shown and discussed.
 
 The code of the example module can be downloaded from this
-repository: [org.openbravo.client.application.examples](https://gitlab.com/openbravo/product/unsupported/modules/org.openbravo.client.application.examples)
+repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
 
 ##  Main development steps for creating a new canvas field
 
