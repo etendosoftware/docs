@@ -16,7 +16,11 @@ The objective of this section is to show how you can add a new field to a tab in
 
 It is closely related to the previous [How to add Columns to a Table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/) section which showed how to add new columns to a table.
 
-### Add the fields to the window
+The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
+
+In this HowTo we will show how to place new fields in a window.
+
+### Add the fields to the window example
 
 The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary > Window, Tabs and Fields`, we need to search for the _Production Run_ window. Then, for that window, mark its _Incidence_ tab.
 
