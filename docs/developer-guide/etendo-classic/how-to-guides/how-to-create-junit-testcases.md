@@ -4,18 +4,9 @@ title: How to Create JUnit testcases
   
 ##  Overview
 
-This how-to will focus on creating a testcase making use of the OBBaseTest classes.
-The testcase will check that our system has at least one User
-with password. For this, we'll use the new DAL approach to access the
-database.
+This how-to will focus on creating a testcase making use of the `OBBaseTest` and `WeldBaseTest` classes. The testcase will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
 
-In computer programming, **unit testing** is a software design and development
-method where the programmer gains confidence that individual units of source
-code are fit for use. A unit is the smallest testable part of an application.
-In procedural programming a unit may be an individual program, function,
-procedure, etc., while in object-oriented programming, the smallest unit is a
-method, which may belong to a base/super class, abstract class or
-derived/child class.
+In computer programming, **unit testing** is a software design and development method where the programmer gains confidence that individual units of source code are fit for use. A unit is the smallest testable part of an application. In procedural programming a unit may be an individual program, function, procedure, etc., while in object-oriented programming, the smallest unit is a method, which may belong to a base/super class, abstract class or derived/child class.
 
 All new developments must belong to a module that is not the _core_ module.
 
@@ -33,19 +24,15 @@ modules
 ```
 
 !!! info
-    In the file `tests.gradle` you need comment the line: **test.dependsOn('ant.compile.test')** for running the tests locally.
+    In the file `tests.gradle` you need comment the line: `test.dependsOn('ant.compile.test')` for running the tests locally.
 
 Now, you are ready to work with test cases.
 
 ##  Creating the testcase
 
-####  Inheriting from OBBaseTest
+###  Inheriting from OBBaseTest
 
-All the core testcases are subclasses from OBBaseTest.
-(org.openbravo.test.base.OBBaseTest). This class handles all the necessary
-steps to initialize the Data Access Layer, takes care of transaction handling
-and provides a set of utilities (methods) for working with the Openbravo
-context (OBContext).
+All the core testcases are subclasses from `OBBaseTest`. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).
 
 !!! info
     When writing test cases for Etendo that involve dependency injection or require the execution of DAL event observers, it is recommended to extend `org.openbravo.base.weld.test.WeldBaseTest` instead of `org.openbravo.test.base.OBBaseTest`.
@@ -53,14 +40,9 @@ context (OBContext).
     Make sure to use `WeldBaseTest` to leverage the full capabilities of dependency injection and DAL event observers in your test cases.
 
 
-####  Execution order of test methods
+###  Execution order of test methods
 
-Until now, the methods were simply invoked in the order returned by the
-reflection API. However, using the JVM order is unwise since the Java platform
-does not specify any particular order, and in fact JDK 7 returns a more or
-less random order. Of course, well-written test code would not assume any
-order, but some does, and a predictable failure is better than a random
-failure on certain platforms.
+Until now, the methods were simply invoked in the order returned by the reflection API. However, using the JVM order is unwise since the Java platform does not specify any particular order. Of course, well-written test code would not assume any order, but some does, and a predictable failure is better than a random failure on certain platforms.
 
 ###  Creating the Java class
 
@@ -123,16 +105,13 @@ public class ExampleTest extends WeldBaseTest {
 
 ####  Understanding the class
 
-You have just created a new class named Example that extends from the
-WeldBaseTest class.
+You have just created a new class named Example that extends from the `WeldBaseTest` class.
 
 ```java
 public void testUsersCount() {}
 ```
 
-This class has a testUsersCount function. Note that all testing methods _must_
-start with test in the function name. e.g. ``testAllWarehouses()``,
-``testMyFirstTest()``, etc        
+This class has a testUsersCount function. Note that all testing methods _must_ start with test in the function name. e.g. ``testAllWarehouses()``, ``testMyFirstTest()``, etc        
 
 ```java
 
@@ -152,16 +131,14 @@ public void setUp() throws Exception {
 }
 ```
 
-Sets the context as if a System Administrator is logged in the application.
-You can also set the context as if another user is logged in the application.
+Sets the context as if a System Administrator is logged in the application. You can also set the context as if another user is logged in the application.
 
 ```java
 final OBCriteria<User> uCriteria = OBDal.getInstance().createCriteria(User.class);
 final List<User> uList = uCriteria.list();
 ```
 
-Uses the  OBDal  instance to create a new  OBCriteria  object, and uses it for
-listing all (since we are not filtering) the Users in the database.
+Uses the `OBDal` instance to create a new `OBCriteria` object, and uses it for listing all (since we are not filtering) the Users in the database.
 
 ```java
 int userCount = 0;
@@ -187,79 +164,60 @@ Finally we print a total of users with password just for the record.
 
 ###  Transaction Handling
 
-A question which might pop-up when looking at the above code: where is the
-database transaction handling done? The answer is that this is handled by the
-WeldBaseTest class and the Etendo data access layer:
+A question which might pop-up when looking at the above code: where is the database transaction handling done? The answer is that this is handled by the `WeldBaseTest` class and the Etendo data access layer:
 
   * a transaction is automatically started at first database access in the test cases. This is done by the Data Access Layer. 
   * a transaction is either committed (when no exception happened) or rolled-back (when an exception happened). 
 
-The WeldBaseTest class detects automatically if an exception happened or not.
+The `WeldBaseTest` class detects automatically if an exception happened or not.
 
-There are certainly cases whereby it makes sense to have more control over the
-database transactions. There are a number of relevant methods which can be
-useful then:
+There are certainly cases whereby it makes sense to have more control over the database transactions. There are a number of relevant methods which can be useful then:
 
-  * **OBDal.getInstance().flush()**: flushes the update/insert queries in hibernate to the database. 
-  * **OBDal.getInstance().commitAndClose()**: commits the transaction and closes the session. A new session/transaction is automatically started at the next database access. 
-  * **OBDal.getInstance().rollbackAndClose()**: rolls back and closes the transactions. A new session/transaction is automatically started at the next database access. 
+  * `OBDal.getInstance().flush()`: flushes the update/insert queries in hibernate to the database. 
+  * `OBDal.getInstance().commitAndClose()`: commits the transaction and closes the session. A new session/transaction is automatically started at the next database access. 
+  * `OBDal.getInstance().rollbackAndClose()`: rolls back and closes the transactions. A new session/transaction is automatically started at the next database access. 
 
 !!! info
-    DAL event observers  are not triggered within test cases extending ` OBBaseTest ` class. They to work require of test cases extending ` WeldBaseTest `. 
+    DAL event observers  are not triggered within test cases extending `OBBaseTest` class. They to work require of test cases extending `WeldBaseTest`. 
 
 ###  Side-Effect Free
 
-A test case will often change the data in the underlying database. Most of the
-time it is not feasible to setup a completely new test database for each test
-run. Therefore test-cases should be developed such that they are side effect
-free. This means:
+A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
 
   * When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. 
-  * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used _AfterClass_ notation. This method runs automatically at the end of the class.
+  * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterClass` notation. This method runs automatically at the end of the class.
 
-This last point is important because there can be always reasons why during a
-test the clean-up step is not performed. For example because the test run is
-stopped before the clean-up is done.
+This last point is important because there can be always reasons why during a test the clean-up step is not performed. For example because the test run is stopped before the clean-up is done.
 
 ###  Approach to features of JUnit
 
 ####  Parameterized Tests
 
 !!! info
-    More info in:  [Parameterized-Test](https://github.com/junit-team/junit4/wiki/Parameterized-tests){target="_blank"}
+    For more information, visit:  [Parameterized-Test](https://github.com/junit-team/junit4/wiki/Parameterized-tests){target="_blank"}
 
 ####  Rules
 
 !!! info
-    More info in:  [Rules](https://github.com/junit-team/junit4/wiki/Rules){target="_blank"}
+    For more information, visit:  [Rules](https://github.com/junit-team/junit4/wiki/Rules){target="_blank"}
 
 ####  Assertions and Hamcrest 1.13
 
-Hamcrest is a framework for writing matcher objects allowing 'match' rules to
-be defined declaratively. There are a number of situations where matchers are
-invaluble, such as UI validation, or data filtering, but it is in the area of
-writing flexible tests that matchers are most commonly used.
-
-When writing tests it is sometimes difficult to get the balance right between
-overspecifying the test, and not specifying enough (making the test less
-valuable). Having a tool that allows you to pick out precisely the aspect
-under test and describe the values it should have, to a controlled level of
-precision, helps greatly in writing tests.
-
 !!! info
-    More info in:  [Hamcrest](https://hamcrest.org/){target="_blank"}
+    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}
+
+Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.
+
+When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.
   
 
 ###  JSON Matchers
   
-Etendo provides a set of matchers that can be useful when asserting
-JSONObjects or JSONArrays.
+Etendo provides a set of matchers that can be useful when asserting JSONObjects or JSONArrays.
 
 ####  equal
 
-Matches when the examined JSONObject has exactly the same number of properties
-with the same values as the expected one. The order of the keys is not taken
-into account. Supports matcher properties.
+Matches when the examined `JSONObject` has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.
 
 ```java  
    
@@ -282,9 +240,7 @@ public void testEqual() {
 
 ####  matchesObject
 
-Matches when the examined JSONObject contains the properties with the same
-values of the expected one. The order of the keys is not taken into account.
-Supports matcher properties.
+Matches when the examined JSONObject contains the properties with the same values of the expected one. The order of the keys is not taken into account. Supports matcher properties.
 
 ```java
  
@@ -309,12 +265,9 @@ public void testMatchesObject() {
 
 ####  hasItems
 
-Used to match the items of a JSONArray. This matcher can be used with two
-different kind of arguments.
+Used to match the items of a `JSONArray`. This matcher can be used with two different kind of arguments.
 
-If an array of objects is passed, then it matches when the examined JSONArray
-contains all the received objects. The order of the objects is not taken into
-account.
+If an array of objects is passed, then it matches when the examined `JSONArray` contains all the received objects. The order of the objects is not taken into account.
 
 ```java   
  
@@ -335,8 +288,7 @@ public void testHasItems() {
 }
 ```
 
-It also supports receiving an array of  Hamcrest  matchers. In that case, then
-it matches when the examined JSONArray matches with all the received matchers.
+It also supports receiving an array of  Hamcrest  matchers. In that case, then it matches when the examined JSONArray matches with all the received matchers.
 
 ```java
  
@@ -359,30 +311,18 @@ public void testHasItems() {
 }
 ```
 
-### Test Tasks
+### Run Tests
 
 Etendo has a number of ant tasks which run the test cases:
 
-  * ./gradlew ant.run.tests: the default, it runs the suite: _org.openbravo.test.AntTaskTests_ . These tests are side effect free and can be run multiple times, after the run the database should be in the same state as before. 
-  * ./gradlew ant.run.quick.tests: this task runs test cases which are fast and which test the most important parts of the system. It runs the test suite: _org.openbravo.test.AllQuickAntTaskTests_ . 
-  * ./gradlew ant.run.all.tests: runs the suite _org.openbravo.test.AllAntTaskTests_ . This suite contains all the test cases, also tests which can change the database. 
+  * _./gradlew test_: This suite contains all the test cases.
+  * _./gradlew test --tests "module-name.\*"_: This suite contains all the test cases of a particular module. *(e.g. ./gradlew test --tests "com.etendoerp.example.\*")*
 
 All the test cases are based on the Small Bazaar default data.
 
-When adding new test classes to Etendo ERP the developer has to always add
-the test class to the AllAntTaskTests test suite and if it is side effect free
-and quick to the AllQuickAntTaskTests and if it is side effect free but takes
-a bit more time to the AntTaskTests test suite.
+When adding new test classes to Etendo ERP the developer has to always add the test class to the AllAntTaskTests test suite and if it is side effect free and quick to the AllQuickAntTaskTests and if it is side effect free but takes a bit more time to the AntTaskTests test suite.
 
-####  Skipping test cases
-  
-It's possible to define a list of test cases to be skipped. This is done by
-creating a file named ` disabled-tests ` in ` config ` directory. This file
-can contain a list of either fully qualified class names to be completely
-skipped and/or fully qualified class names followed by a "." and method name
-to skip individual test cases.
-
-##  The Result
+###  The Result
 
 To be able to execute your testcases:
 
@@ -395,22 +335,25 @@ To be able to execute your testcases:
 
 ![](/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
 
+Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
+``` 
+build
+└── reports
+    └── tests 
+        └── test
+            └── index.html
+```
+
 ##  Testing Requests
 
-In general unit tests don't require of an Etendo Classic instance running in Tomcat
-to be executed. But in some cases, how requests work is wanted to be tested.
-Depending on the request to be tested, different classes should be extended:
+In general unit tests don't require of an Etendo Classic instance running in Tomcat to be executed. But in some cases, how requests work is wanted to be tested. Depending on the request to be tested, different classes should be extended:
 
-  * **REST Webservices** . ` BaseWSTest ` should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. 
-  * **Other Requests** (such as datasources). ` BaseDataSourceTestNoDal ` or ` BaseDataSourceTestDal ` classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. 
+  * _REST Webservices_ . ` BaseWSTest ` should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. 
+  * _Other Requests_ (such as datasources). ` BaseDataSourceTestNoDal ` or ` BaseDataSourceTestDal ` classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. 
 
 ##  Testing CDI
   
-Default test cases extending ` org.openbravo.test.base.OBBaseTest ` class
-cannot make use of dependency injection. In order to use it `
-org.openbravo.base.weld.test.WeldBaseTest ` class needs to be extended
-instead. This is also a subclass of ` OBBaseTest ` , so it makes available all
-DAL infrastructure.
+Default test cases extending ` org.openbravo.test.base.OBBaseTest ` class cannot make use of dependency injection. In order to use it ` org.openbravo.base.weld.test.WeldBaseTest ` class needs to be extended instead. This is also a subclass of ` OBBaseTest ` , so it makes available all DAL infrastructure.
 
 ` OBBaseTest ` uses internally  Arquillian  runner to create a Weld container.
 
@@ -441,9 +384,7 @@ public void beansAreInjected() {
 
 ###  Scopes
 
-Application and session scopes are shared among all test cases in the same
-class whereas a new request scope is created for each test case method.
-Application scope is reset for each new class.
+Application and session scopes are shared among all test cases in the same class whereas a new request scope is created for each test case method. Application scope is reset for each new class.
 
 ```java
 
@@ -474,12 +415,7 @@ public void applicationAndSessionShouldBeKept() {
 
 Because ` CdiInfrastructure ` class uses `org.jboss.arquillian.junit.Arquillian` runner, it is not possible to use other runners, which also includes ` org.junit.runners.Parameterized ` runner.
 
-This limitation can be workarounded by adding a field annotated as ` @Rule `
-with ` org.openbravo.base.weld.test.ParameterCdiTestRule ` type created with
-the list of the values for parameters and another field annotated as `
-@ParameterCdiTest ` which will take those values. In this case each test case
-will be executed as many times as number of items the parameter list contains
-each of them the parameter field will take a different item.
+This limitation can be workarounded by adding a field annotated as ` @Rule ` with ` org.openbravo.base.weld.test.ParameterCdiTestRule ` type created with the list of the values for parameters and another field annotated as ` @ParameterCdiTest ` which will take those values. In this case each test case will be executed as many times as number of items the parameter list contains each of them the parameter field will take a different item.
 
 ```java
  
@@ -505,19 +441,13 @@ public class ParameterizedCdi extends WeldBaseTest {
 }
 ```
 
-In this example ` test1 ` test case will be executed 3 times having `
-parameter ` field "param1", "param2" and "param3" value in each of these
-executions.
+In this example ` test1 ` test case will be executed 3 times having ` parameter ` field "param1", "param2" and "param3" value in each of these executions.
 
-Unlike when using ` Parameterized.class ` runner, all these 3 executions are
-seen as a single execution ( ` Parameterized.class ` would show 3 independent
-executions), this causes that if, for example, first execution fails the rest
-will not be run.
+Unlike when using ` Parameterized.class ` runner, all these 3 executions are seen as a single execution ( ` Parameterized.class ` would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.
 
 ###  DAL event observers
 
-Because  DAL event observers  make use of CDI to work, they are not executed
-in standard test cases extending ` OBBaseTest ` .
+Because  DAL event observers  make use of CDI to work, they are not executed in standard test cases extending ` OBBaseTest ` .
 
 This limitation does not apply when using ` WeldBaseTest ` tests.
 
