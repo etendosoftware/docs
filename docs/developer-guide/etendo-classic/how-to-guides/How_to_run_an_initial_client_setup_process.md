@@ -23,7 +23,7 @@ This process allows to:
 
 ## Including accounting Schema
 
-Decide on the *accounting schema* the organization will use and, from the Initial Client Setup window, set the accounting which will involve setting up the Chart of Accounts. 
+Decide on the *accounting schema* the organization will use and, from the Initial Client Setup window, set the accounting which will involve setting up the [Chart of Accounts](). 
 
 
 ### Include accounting
@@ -66,7 +66,7 @@ Etendo also allows choosing the accounting csv file with the corresponding chart
 
 ## Module configuration
 
-Etendo distributes accounting 'csv files' as modules which can be applied as reference data. These kinds of modules are part of the Etendo localization for a given country.
+Etendo distributes accounting `csv files` as modules which can be applied as reference data. These kinds of modules are part of the Etendo localization for a given country.
 
 There are some additional modules that may be important for the initial client setup.
 
@@ -100,5 +100,6 @@ To conclude, it is important to carefully conduct the initial setup in Etendo, c
 !!!info
     For more information, read [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/#initial-organization-setup.md).
 
+---
 
 This work is a derivative of [Initial Client Setup](https://wiki.openbravo.com/wiki/Initial_Client_Setup){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
