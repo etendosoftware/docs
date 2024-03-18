@@ -31,7 +31,7 @@ javascript development:
 
 It also makes sense to study the following page: [Etendo Architecture](../concepts/Etendo_Architecture).
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
 
 ##  Example Module
 
@@ -148,18 +148,18 @@ public List<ComponentResource> getGlobalComponentResources() {
 The next step is to create a new field in the tab, and set its client class
 field:  
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
 
-It is also possible to add in-line properties in the "Clientclass" field, for example, 'OBEXAPP_SalesOrderActionButton {"title":
+It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title":
 "My Action Button"}'
 
 ###  The result
 
 The result is shown in both the grid and the form:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
 
 ##  Javascript events passed to the canvas
 
@@ -175,11 +175,11 @@ The last 2 cases are similar.
 In grid-display mode the following applies:
 
   * In grid mode the following properties are set on the canvas: 
-    * grid: the grid object 
-    * rowNum: the row number/record index for which the canvas is used 
-    * record: the record for which the canvas is used 
-    * colNum: the column in which the canvas is shown 
-    * field: the field where the canvas is used 
+    * `grid`: the grid object 
+    * `rowNum`: the row number/record index for which the canvas is used 
+    * `record`: the record for which the canvas is used 
+    * `colNum`: the column in which the canvas is shown 
+    * `field`: the field where the canvas is used 
   * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
   When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
 
@@ -188,7 +188,7 @@ In form-edit or grid-edit mode, the following applies:
   * The canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
     * `this.canvasItem.form`: the form instance 
     * `this.canvasItem.form.grid`: in case of grid editing 
-  * If the canvas has a property noTitle with the value true then in form mode no title/label is displayed 
+  * If the canvas has a property noTitle with the value `true` then in form mode no title/label is displayed 
   * Form changes: the canvas can capture form/value change events by implementing 2 methods (both without arguments): 
     * `onItemChanged`: is called when a value on the form changes 
     * `redrawingItem`: is called just before the form is redrawn 
