@@ -19713,12 +19713,12 @@ It provides updated information about the daily history stock of the products.
 This functionality is part of the Warehouse Extensions Bundle and it is useful when the user needs to reactivate documents such as Goods Movements, Goods Receipts, Goods Shipments and Physical Inventories. 
 
 !!! info
-        For more information, visit the user guide for:
+    For more information, visit the user guide for:
 
-        - [Goods Movements](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
-        - [Goods Receipts](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
-        - [Goods Shipments](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
-        - [Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+    - [Goods Movements](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
+    - [Goods Receipts](https://docs.etendo.software/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
+    - [Goods Shipments](https://docs.etendo.software/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
+    - [Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
 
 #### Uninstall bundle
 
@@ -33486,55 +33486,49 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
 ## Article Content: 
+### How to Add a Button to the Toolbar
+
 ####  Overview
 
-This howto discusses how a button can be added the main toolbar shown in grids
-and forms. The toolbar contains two types of buttons, the application buttons
-on the left (visualized using an icon) and the custom buttons on the right
-(shown with a label). This howto describes how to add a button to the left
-part, the application buttons.
+This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). 
+
+This section describes how to add a button to the left part: the application buttons.
   
-To follow this howto you need to be able to, at a junior level, develop
-javascript as well as server-side java and understand  Data Access Layer
-concepts.
+To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md) concepts.
 
 ####  Example Module
 
-This howto is supported by an example module which shows example of the code
-shown and discussed in this howto.
+This section is supported by an example module which shows example of the code shown and discussed here.
 
 ![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
 
 !!! info
-	The example module also contains implementations of other howtos.  
+    The example module also contains implementations of other sections.  
  
   
 ####  Implementing a toolbar button
 
 !!! info
-	When implementing your own components it often makes sense to extend existing
-	components. Make sure that your module then depends on the module that
-	provides the base types. This ensures that the javascript is loaded in the
-	correct order. You must add a dependency from your module to the
-	Openbravo 3.0 Framework (org.openbravo.v3.framework) module  
+    When implementing your own components, it often makes sense to extend existing components. Make sure that your module then depends on the module that provides the base types. This ensures that the javascript is loaded in the correct order.  
   
-The button which we will implement will compute and show the sum of a set of
-selected orders to the user. This howto is divided in 2 parts, the first part
-focuses on visualizing the button in the correct windows and tabs and making
-sure the button is enabled/disabled appropriately. The second part will
-discuss how to implement backend logic and how to call the server side logic
-when the button gets clicked and show its results.
+The button to be implemented, will compute and show the sum of a set of selected orders to the user. 
+
+This section is divided in 2 parts:
+
+- the first part
+focuses on visualizing the button in the correct windows and tabs and making sure the button is enabled/disabled appropriately. 
+
+- The second part will discuss how to implement backend logic and how to call the server side logic when the button gets clicked and show its results.
 
 The first part consists of the following steps:
 
   * an icon for the visualization 
-  * a css style and javascript linking the icon to the button 
+  * a `css` style and javascript linking the icon to the button 
   * javascript implementing the buttons click/action method and to register the button in the global registry 
   * add javascript to enable/disable the button when records are selected in the grid 
-  * a ComponentProvider java class to register the javascript and css in Etendo 
+  * a `ComponentProvider` java class to register the javascript and `css` in Etendo.
 
-These steps will visualize the button but not actually do anything yet. The
-follow up steps will add logic:
+These steps will visualize the button but not actually do anything yet. The follow up steps will add logic:
 
   * a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) 
   * client side javascript to call the server and process the result 
@@ -33545,29 +33539,50 @@ Each of these steps is described in more detail below.
 
 #####  Defining the icon and a css
 
-The icon and its related style is defined through an icon file. For standard
-visualization using the Etendo style the icon should be 24x24 without a
-background colour.
+The icon and its related style is defined through an icon file. 
+
+!!!info
+    For standard visualization using the Etendo style the icon should be 24x24 without a background colour.
+
 
 The icon should be placed in a specific directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
-Normally it makes sense to store the icon in a subfolder. The example module
-has the icon file in:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/images.
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
+
+Normally, it makes sense to store the icon in a subfolder. The example module has the icon file in:
+
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images`.
+
+    com.etendoerp.client.application.examples
+    ├── reference data
+    ├── src
+    ├── src-db
+    └── web
+        ├── com.etendoerp.client.application.examples
+        │   └── js
+        │       ├── example-toolbar-button.js
+        │       └── example-view-component.js
+        └── com.etendoerp.userinterface.smartclient
+            └── etendo
+                └── skins
+                    └── Default
+                        └── com.etendoerp.client.application.examples
+                            ├── images
+                            │   └── iconButton-sum.png
+                            └── example-styles.css
 
   
+Then add a `css file` which links this icon to a specific `css` style. The `css` file must also be located in this directory in your module:
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
 
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-3.png)
+In the example module, the `css` file is located here:
 
-  
-Then add a css file which links this icon to a specific css style. The css
-file must also be located in this directory in your module:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename].
-In the example module the css file is located here:
-web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/example-styles.css 
-Within the css file add a style defined like this:
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles`
+
+
+
+Within the `css` file add a style defined like this:
 
     
     
@@ -33577,21 +33592,18 @@ Within the css file add a style defined like this:
       background-image: url(./images/iconButton-sum.png);
     }
 
-**Note:** the name of the css class is important, it should start with
-'ETToolbarIconButton_icon_', the part after that (etexapp_sum) is used later
-in this tutorial. It makes sense to use the module's dbprefix in this last
-part to prevent name collisions with other modules.
+!!!note
+    The name of the `css` class is important, it should start with
+    `ETToolbarIconButton_icon_`, the part after that (etexapp_sum) is used later in this tutorial. It makes sense to use the module's dbprefix in this last part to prevent name collisions with other modules.
 
 #####  The javascript to create and register the button
 
-The next step is to implement the javascript which defines the button and
-registers it to be shown on tabs. Start by creating a javascript file in this
-location: web/com.etendoerp.client.application.examples/js/example-toolbar-
-button.js.
+The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: `web/com.etendoerp.client.application.examples/js/example-toolbar-button.js`.
 
-This is the overall javascript:
+This is the overall javascript for `toolbar-button`:
 
-``` javascript
+
+```js title="example-toolbar-button.js"
     
     (function () {
       var buttonProps = {
@@ -33617,8 +33629,7 @@ This is the overall javascript:
       ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
     }());
 ```
-Let's walk through the different parts. The javascript starts and ends with
-this part:
+Let's walk through the different parts. The javascript starts and ends with this part:
 
 ``` javascript
     
@@ -33627,8 +33638,7 @@ this part:
     }());
 ```
 
-This is done to prevent the local variables to be available globally, it
-creates a function and executes it immediately.
+This is done to prevent the local variables to be available globally. It creates a function and executes it immediately.
 
 Then the first part of the buttonprops"
 
@@ -33638,6 +33648,7 @@ Then the first part of the buttonprops"
           },
           buttonType: 'etexapp_sum',
           prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
+```
 
 
   * Sets the action method which gets called when the user clicks the button. 
@@ -33675,7 +33686,7 @@ Then this code registers the button for the tab with id '186':
 Note:
 
   * the first parameter is a unique identification so that one button can not be registered multiple times. 
-  * as the second parameter the button javascript class is passed in, as a default always use isc.ETToolbarIconButton 
+  * as the second parameter the button javascript class is passed in, as a default always use `isc.ETToolbarIcon`Button 
   * the buttonProps define the button characteristics 
   * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
   * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
@@ -33685,10 +33696,12 @@ Note:
 #####  The ComponentProvider
 
 The previous steps added static resources (javascript and css) to the system.
-Now Etendo should know where to find these resources when initializing and
-generating the user interface. For this the css and javascript and resources
-have to be registered. This is done through a ComponentProvider. For more
-detailed information on the ComponentProvider concept visit this  page  .
+
+Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
+
+!!!info
+    For more detailed information, visit [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider.md).
+
 
 ```javascript
      
@@ -33730,21 +33743,28 @@ detailed information on the ComponentProvider concept visit this  page  .
 ```
 A short explanation:
 
-  * The annotations in the top of the class are related to Weld, see the description  here  . The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
-  * The getGlobalResources is the important here, it shows how to register the global resources defined in the example module. For your own module just follow the same path structure and approach. 
+  * The annotations in the top of the class are related to [Weld](https://docs.etendo.software/concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md). 
+  
+  The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
 
-To explain how Etendo can find the ComponentProvider: Etendo/Weld will
-analyze the classpath and find all the classes which have a @ComponentProvider
-annotation.
+  * The getGlobalResources is important here, it shows how to register the global resources defined in the example module. 
+  
+!!!note
+      For your own module just follow the same path structure and approach. 
+
+!!!info
+    To explain how Etendo can find the ComponentProvider: Etendo/Weld will analyze the classpath and find all the classes which have a @ComponentProvider annotation.
+
 
 #####  The result
 
-To see the result, restart Tomcat, clear the cache of the browser (sometimes
-css styles are not picked up) and go back to the application and then
-specifically the sales order window. You should see this:
+To see the result, restart Tomcat, clear the cache of the browser (sometimes `css` styles are not picked up) and go back to the application and then specifically to the sales order window. 
 
-Note: the button is not visualized in other windows/tabs because it is
-registered for only the sales order header tab.
+You should see this:
+
+!!!note
+    The button is not visualized in other windows/tabs because it is
+    registered for only the sales order header tab.
 
   
 
@@ -33754,22 +33774,33 @@ registered for only the sales order header tab.
 
 ####  Adding server side logic - Implementation steps
 
-The next step in this how to is to add the server side logic and calling this
-logic from the client. The server side logic is implemented using the action
-handler concept. The action handler concept allows you to create classes on
-the server which are callable from the client. This how to will illustrate
-this.
+The next step in this how to is to add the server side logic and calling this logic from the client. The server side logic is implemented using the action handler concept. 
+The action handler concept allows you to create classes on
+the server which are callable from the client. 
 
 #####  Implement the server side action handler
 
-The server side action handler (  SumOrderActionHandler.java  ) receives an
-array of order numbers of the selected orders. It will sum the order values
-and then return the total as a JSON string.
+The server side action handler (`SumOrderActionHandler.java`) receives an array of order numbers of the selected orders. It will sum the order values and then return the total as a JSON string.
 
 This is the implementation of the server side:
 
-```java
-    
+```java title="SumOrderActionHandler.java"
+     */
+package org.openbravo.client.application.examples;
+
+import java.math.BigDecimal;
+import java.util.Map;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.base.exception.OBException;
+import org.openbravo.client.kernel.BaseActionHandler;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.common.order.Order;
+
+/**
+ * Sums the orders passed in through a json array and returns the result.
+ */
     public class SumOrderActionHandler extends BaseActionHandler {
      
       protected JSONObject execute(Map<String, Object> parameters, String data) {
@@ -33808,17 +33839,14 @@ This is the implementation of the server side:
 Notes:
 
   * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
-  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used 
+  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.
   * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
-  * the logic iterates over the order ids and retrieves the order using the  Data Access Layer  . 
-  * the result is returned as json again 
+  * the logic iterates over the order ids and retrieves the order using the [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md). 
+  * the result is returned as json again.
 
 #####  Calling the server side from the client, displaying the result
 
-Then on the client the action method of the button has to be implemented to
-call the server. Here is the implementation. See the
-web/com.etendoerp.client.application.examples/js/example-toolbar-button.js
-for the full listing:
+Then, on the client, the action method of the button has to be implemented to call the server. Here is the implementation. 
 
 ```javascript
     
@@ -33836,7 +33864,7 @@ for the full listing:
             
             // and call the server
             OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
-
+```
 
 Note:
 
@@ -33848,9 +33876,12 @@ Note:
     * request parameters (in this case nothing there) 
     * and the callback 
 
-Then when the server returns the callback is called which will display a
-prompt. Note that the label used in the callback uses parameter substitution.
-Parameters are specified using a %0, %1 etc.:
+
+Then when the server returns, the callback is called which will display a prompt. 
+
+!!!note
+    The label used in the callback, uses parameter substitution.
+    Parameters are specified using a %0, %1 etc.:
 
   
 
@@ -33863,7 +33894,7 @@ The result shows the sum of the 2 selected order headers:
 
 ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
 
- 
+This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to create a Callout
@@ -34125,6 +34156,52 @@ Last, save changes.
 ---
 
 This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a field to a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a field to a Window Tab
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab
+## Article Content: 
+### How to add a field to a Window Tab
+
+#### Overview
+
+The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
+
+It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
+
+The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
+
+On this page we will show an example of how to place the `example_column` field in the `Production Run` window using the `create fields` button.
+
+##### Add the fields to the window example
+
+The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary` > `Window, Tabs and Fields`, we need to search for the `Production Run` window. Then, for that window, mark its `Incidence` tab.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
+
+Now, we use the Create Fields process on this tab to let it add all columns
+of the underlying _MA_WEIncidence_ table to this tab if they have not been previously
+added.
+
+This will then add one new field to the tab matching the new column
+and automatically place the field into the module.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png)
+
+As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.
+
+If this window should also be used in _classic UI mode_ then now `./gradlew smartbuild` should be execute to compile the changed window.
+
+To see the changes in the new user interface just change the `System Administrator` role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
+
+---
+
+This work is a derivative of [How to add a field to a window tab](http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to change an existing Window
@@ -39997,7 +40074,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | QAA |  | :white_check_mark: |
+| [23Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.4){target="_blank"} | 15/03/2024 | 23.4.4 | QAA |  | :white_check_mark: |
+| [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | C |  | :white_check_mark: |
 | [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | C |  | :white_check_mark: |
 | [23Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.1){target="_blank"} | 02/02/2023 | 23.4.1 | C |  | :white_check_mark: |
 | [23Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.0){target="_blank"} | 28/12/2023 | 23.4.0 | C | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark: |
@@ -40110,7 +40188,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.12.0){target="_blank"} | 29/12/2023 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.9.0){target="_blank"} | 14/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
@@ -40119,12 +40198,12 @@ Article URL: https://etendo.software
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.6.0){target="_blank"} | 29/06/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.5.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.4.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | :white_check_mark:|
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | |
 | 1.0.501 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.400 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
@@ -40184,10 +40263,10 @@ Article URL: https://etendo.software
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.3.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| :white_check_mark: |
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | |
 | 1.0.400 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
@@ -40206,7 +40285,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.5){target="_blank"} | 15/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.3){target="_blank"} | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.2){target="_blank"} | 14/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.1){target="_blank"} | 10/01/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
@@ -40224,15 +40304,15 @@ Article URL: https://etendo.software
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.0){target="_blank"} | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.5.0){target="_blank"} | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
-| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | :white_check_mark: |
-| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | :white_check_mark: |
-| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
+| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | |
+| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | |
 | 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.400 | 15/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | 23/04/2022 | 22.1.0 | 22.1.3 | C | |
@@ -40250,7 +40330,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.1){target="_blank"} | 28/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.0){target="_blank"} | 06/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -40263,16 +40344,15 @@ Article URL: https://etendo.software
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.1){target="_blank"} | 19/09/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.3.0){target="_blank"} | 24/05/2023 | 22.4.3 | 23.1.5 | C | :white_check_mark: |
-| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | :white_check_mark: |
-| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
-| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | :white_check_mark: |
-| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | :white_check_mark: |
-| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \*     | C | :white_check_mark: |
-| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \*     | C | :white_check_mark: |
-
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | |
+| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \* | C | |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \* | C | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Procurement Extensions Bundle
@@ -40573,30 +40653,37 @@ To report a bug, a standard structure is meant to be followed. This structure is
      Short description of the bug.
     
 -   **Steps to reproduce the error**
-    Detailed description that can be followed step by step to reproduce the error. It can include screen videos and/or screenshots.
+    Detailed description of settings and steps to be followed to reproduce the error. It can include screen videos and/or screenshots.
     
 -   **Expected behavior** 
-		Description of the expected behaviour without the bug.
-    
+    Description of the expected behaviour without the bug.
+
 -   **Affected Version**
     Version of **Etendo** in which the error occurs.
-		(*Browser & Version - SO & Version*)
+    (*Browser & Version - SO & Version*)
+
 -   **Solution Design (optional)**
     After analyzing the bug, describe how it will be solved and also if necessary, the details of implementation.
+
 -   **Other test cases**
     If necessary, add more test cases.
  
  ```
   # Error's description
-    
+  
   # Steps to reproduce the error
+
+  ### Required Configurations (if necessary)
+
   1. <step>
   2. <step>
   ...
   
   # Expected behavior
-  
+
   # Affected Version
+  ¿Latest/Specific?
+  Version number:
   
   # Solution Design (optional)
   

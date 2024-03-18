@@ -21,10 +21,10 @@ tags:
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.3.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| :white_check_mark: |
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | |
 | 1.0.400 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
