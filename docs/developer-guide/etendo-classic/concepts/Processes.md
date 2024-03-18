@@ -1,19 +1,16 @@
 ---
 tags: 
-  - PL/SQL Processes
+  - SQL Processes
   - Java Processes
   - Execution Methods
   - Process Scheduling
   - Parameters
 ---
 #  Processes
-
-
   
 ##  Overview
 
-A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes
-_PL/SQL Processes_ and _Java Processes_ .
+A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes _SQL Processes_ and _Java Processes_.
 
 All processes (as well as [Reports](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md)) are managed from the same window: `Application Dictionary > Report and Process`. 
 
@@ -23,7 +20,7 @@ Background processes can be set as _Prevent Concurrent Executions_ . Before a pr
 
 ###  Parameters
 
-When a process (PL/SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
+When a process (SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
 
 ![](../../../assets/developer-guide/etendo-classic/concepts/Processes-0.png)
 
@@ -56,23 +53,23 @@ Let's overview some of the most important fields in this tab:
 
 ###  Defining Processes
 
-Processes can be of two different types: _PL/SQL Processes_ and _Java
-Processes_ . PL/SQL processes are implemented in the PL/SQL language and are executed by the database engine. Java proceses are implemented in the Java language and are executed by the application server.
+Processes can be of two different types: _SQL Processes_ and _Java
+Processes_ . SQL processes are implemented in the SQL language and are executed by the database engine. Java proceses are implemented in the Java language and are executed by the application server.
 
-####  PL/SQL Processes
+####  SQL Processes
 
-_PL/SQL Processes_ are implemented by database stored procedures. 
+_SQL Processes_ are implemented by database stored procedures. 
 
 !!!info
     For more information, read [How to create a Stored Procedure](../../../developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Stored_Procedure.md).
 
-PL/SQL processes are defined in `Application Dictionary > Report and Process`. The only field to take into account for this kind of processes is *Procedure*: It is the procedure name in the database. 
+SQL processes are defined in `Application Dictionary > Report and Process`. The only field to take into account for this kind of processes is *Procedure*: It is the procedure name in the database. 
 
 !!!note
-    As PL/SQL procedures are assigned to modules, they must be named according to following the naming rules: the name of the procedure must start with the module's
+    As SQL procedures are assigned to modules, they must be named according to following the naming rules: the name of the procedure must start with the module's
     DBPrefix.
 
-As the pop-up for PL/SQL processes is always automatically generated, the *UI
+As the pop-up for SQL processes is always automatically generated, the *UI
 Pattern* field must be set as _Standard_ .
 
 In case the process requires any parameter, it is possible to define them. 
@@ -90,7 +87,7 @@ Java processes are implemented by java classes.
 Java processes are also defined in the `Application Dictionary > Report and Process` window. Depending on the _UI pattern_ they use, they can be split into _Standard_ and _Manual_. Additionally, if the _UI Pattern_ is set to _Manual_, it is necessary to include an entry in the *Process Mapping* to make it accessible in the `web.xml`.
 
 !!!note
-    The pop-up used to invoke Java processes defined with _Standard_ _UI pattern_ is automatically generated in the same way the interface for PL/SQL processes is done.
+    The pop-up used to invoke Java processes defined with _Standard_ _UI pattern_ is automatically generated in the same way the interface for SQL processes is done.
 
 To set a Java process to be have Standard UI just set the _UI Pattern_ field to _Standard_ in the `Application Dictionary > Report and Process` header.
 
@@ -147,8 +144,20 @@ Let's see an example,
 
 here we have a dummy process which simply prints the identifier in the log for all the business partners:
 
-    
-    
+```java    
+    package com.openbravo.example.killprocess.process;
+
+    import org.apache.log4j.Logger;
+    import org.hibernate.ScrollMode;
+    import org.hibernate.ScrollableResults;
+    import org.openbravo.dal.service.OBCriteria;
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.businesspartner.BusinessPartner;
+    import org.openbravo.scheduling.ProcessBundle;
+    import org.openbravo.service.db.DalBaseProcess;
+    import org.openbravo.service.db.DbUtility;
+    import org.quartz.JobExecutionException;
+
     public class DummyProcess extends DalBaseProcess {
      
       private static final Logger log4j = Logger.getLogger(DummyProcess.class);
@@ -185,12 +194,26 @@ here we have a dummy process which simply prints the identifier in the log for a
       }
      
     }
+```
 
-**Killable Process**
+*Killable Process*
 
-Now, we will see the same process but with Interface KillableProcess implemented with the kill method.
+Now, we will see the same process but with Interface `KillableProcess` implemented with the kill method.
 
-    
+```java
+    package com.openbravo.example.killprocess.process;
+
+    import org.apache.log4j.Logger;
+    import org.hibernate.ScrollMode;
+    import org.hibernate.ScrollableResults;
+    import org.openbravo.dal.service.OBCriteria;
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.businesspartner.BusinessPartner;
+    import org.openbravo.scheduling.KillableProcess;
+    import org.openbravo.scheduling.ProcessBundle;
+    import org.openbravo.service.db.DalBaseProcess;
+    import org.openbravo.service.db.DbUtility;
+    import org.quartz.JobExecutionException;
     
     public class DummyProcessKillable extends DalBaseProcess implements KillableProcess {
      
@@ -243,14 +266,16 @@ Now, we will see the same process but with Interface KillableProcess implemented
       }
      
     }
+```
 
 Let us comment the code. First, we need to implement the KillableProcess interface.
 
-    
+```java
     
     public class DummyProcessKillable extends DalBaseProcess implements KillableProcess {
+```
 
-We create a variable *stop* that will be used to check the continuity of the execution.
+We create a variable `stop` that will be used to check the continuity of the execution.
 
     
     
@@ -266,12 +291,14 @@ In the main loop of the process, we add the check to stop the execution when the
 
 We have also added a sleep (30 seconds) to make the execution time longer.
 
-    
-    
+  
+```java
             Thread.sleep(30000);
+```
 
-Finally, we implement the kill method that sets *stop* to true.
+Finally, we implement the kill method that sets `stop` to true.
 
+```java
     
     
       @Override
@@ -281,6 +308,7 @@ Finally, we implement the kill method that sets *stop* to true.
         // next iteration: while (partnerScroller.next() && !stop)
         stop = true;
       }
+```
 
 Now, we are able to kill the process from the Process Monitor. 
 
@@ -289,4 +317,3 @@ When a process is killed, the status in the process monitor will be *Killed by U
 
 
 This work is a derivative of [Processes](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-
