@@ -79,9 +79,9 @@ Dictionary.
   * Pick *Database JDBC Connection* and click _Next_
   * Fill all the fields 
     * *Name:* Etendo (or any name you like, e.g. pi) 
-    * *JDBC Driver:* PostgreSQL (org.postgresql.Driver). In this case, we'll use PostgreSQL 
-    * *JDBC URL:* jdbc:postgresql://localhost:5432/etendo where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
-    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](/docs/getting-started/installation#install-etendo)) 
+    * *JDBC Driver:* PostgreSQL (`org.postgresql.Driver`). In this case, we'll use PostgreSQL 
+    * *JDBC URL:* `jdbc:postgresql://localhost:5432/etendo` where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
+    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](../../../getting-started/installation.md#install-etendo)) 
     * *Password:* tad 
   * Click the Finish button to generate the JDBC Connection 
   * Test your connection 
@@ -137,14 +137,14 @@ Let's now design the Report Layout
   
 ###  Etendo Runtime Environment
 
-The standard reports in Etendo (_src/org/openbravo/erpReports_) make use
+The standard reports in Etendo (`src/org/openbravo/erpReports`) make use
 of several methods that reside inside the *Etendo Runtime Environment* ,
 which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of
-the _org.openbravo.erpCommon.utility.Utility_ Class:
+the `org.openbravo.erpCommon.utility.Utility` Class:
 
-  * *public static BufferedImage showImageLogo*: returns a logo image that is already included in the JAR archive 
-  * *public static String applyCountryDateFormat*: always returns the date formatted in this pattern dd-MM-yyyy 
-  * *public static DecimalFormat getCountryNumberFormat*: just returns the same DecimalFormat received as parameter 
+  * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
+  * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
+  * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
 
 For this, to be able to preview the standard Etendo reports from
 *JasperStudio*, it suffices just to import the .jar file into the classpath
@@ -165,23 +165,22 @@ Images loaded with this method must not have alpha channel. A transparency
 layer is not supported by the function that loads images in Jasper Reports.
 
   * If you want to use the ShowImage function, you need to make the expression image look like: 
-    * org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID") 
+    * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
 
 IMAGEID needs to be the UUID of the image you want to show. You could set this
 value using a Jasper parameter.
 
   * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
     * This one will show the Company logo at System level: 
-        * org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin") 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin")` 
     * This one will show the Company log at Client level (the client used will be the one the user logged at): 
-        * org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu") 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu")` 
     * This one will show the Company logo at Organization level: 
-        * org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID") 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
 
 ORGANIZATIONID needs to be the UUID of the Organization whose log you want to
 show. You could set this value using a Jasper argument. An example could be
-*org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc",
-"4387D62C6486481AB3D148442A6AD34E")* being 4387D62C6486481AB3D148442A6AD34E
+`org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E`
 the organization ID.
 
 ##  Registering the Report in Application Dictionary
@@ -297,10 +296,10 @@ extension. Thus, this extension allows to:
 ###  Barcodes
 
 It is possible to generate barcodes from JasperReports, using barcode4j or
-barbecue libraries. These libraries are included in [Barcode_generation_in_reports](https://bitbucket.org/koodu_software/org.openbravo.service.reporting.barcode/src/master/) module.
+barbecue libraries. These libraries are included in [Barcode generation in reports](../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
 
 In Platform Features module, there is an example of a report making use of
-different barcode styles, see here the jrxml template.
+different barcode styles, see the [jrxml template](../../../assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
 
 ---
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
