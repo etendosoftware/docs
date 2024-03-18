@@ -179,7 +179,7 @@ In grid-display mode the following applies:
     * rowNum: the row number/record index for which the canvas is used 
     * record: the record for which the canvas is used 
     * colNum: the column in which the canvas is shown 
-    * field: (since 3.0MP20) the field where the canvas is used 
+    * field: the field where the canvas is used 
   * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
   When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
 
