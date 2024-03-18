@@ -13,18 +13,15 @@ tags:
   
 ##  Introduction
 
-A canvas field allows the user to add any visual component to a form or a row in a
-grid. This concept can be used to add a calculated field to a form and grid.
-Visual components which can be added are for example buttons, links and
-(computed) labels.
+A canvas field allows the user to add any visual component to a form or a row in a grid. 
+This concept can be used to add a calculated field to a form and grid. 
+Visual components which can be added are for example buttons, links and (computed) labels.
 
-In this section, we will be adding a button and a calculated field to the form
-and to every row in the grid. We will illustrate how information from
-the record and form can be used to get dynamic information from the Form/Grid.
+In this section, we will be adding a button and a calculated field to the form and to every row in the grid.
+We will illustrate how information from the record and form can be used to get dynamic information from the Form/Grid.
 
-The implementation of canvas fields requires javascript development
-experience. See the following concept pages for background information on
-javascript development:
+The implementation of canvas fields requires javascript development experience. 
+See the following concept pages for background information on javascript development:
 
   * [Client Side Development and API](../concepts/Client_Side_Development_and_API.md)
   * [JavaScript Coding Conventions](../concepts/JavaScript_Coding_Conventions) 
@@ -35,11 +32,9 @@ It also makes sense to study the following page: [Etendo Architecture](../concep
 
 ##  Example Module
 
-This section is supported by an example module which shows examples of the code
-shown and discussed.
+This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this
-repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
 
 ##  Main development steps for creating a new canvas field
 
@@ -145,13 +140,11 @@ public List<ComponentResource> getGlobalComponentResources() {
 
 ###  Defining the canvas in the Tab-Field (ADField)
 
-The next step is to create a new field in the tab, and set its client class
-field:  
+The next step is to create a new field in the tab, and set its client class field:  
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
 
-It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title":
-"My Action Button"}'
+It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
 
 ###  The result
 
@@ -163,8 +156,7 @@ The result is shown in both the grid and the form:
 
 ##  Javascript events passed to the canvas
 
-When implementing your canvas, you should take into account that the canvas is
-used in 3 different situations:
+When implementing your canvas, you should take into account that the canvas is used in 3 different situations:
 
   * When displaying a row in the grid 
   * When editing a row in the grid 
