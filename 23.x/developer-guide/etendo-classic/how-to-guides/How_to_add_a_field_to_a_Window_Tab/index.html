@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.10ba22f1.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -6881,22 +6881,22 @@
 <h1 id="how-to-add-a-field-to-a-window-tab">How to add a field to a Window Tab</h1>
 <h2 id="overview">Overview</h2>
 <p>The objective of this section is to show how you can add a new field to a tab in Etendo Classic.</p>
-<p>It is closely related to the previous <a href="/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/">How to add Columns to a Table</a> section.</p>
+<p>It is closely related to the previous <a href="How_to_add_Columns_to_a_Table.md">How to add Columns to a Table</a> section.</p>
 <p>The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.</p>
 <p>On this page we will show an example of how to place the <code>example_column</code> field in the <code>Production Run</code> window using the <code>create fields</code> button.</p>
 <h3 id="add-the-fields-to-the-window-example">Add the fields to the window example</h3>
 <p>The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to <code>Application Dictionary</code> &gt; <code>Window, Tabs and Fields</code>, we need to search for the <code>Production Run</code> window. Then, for that window, mark its <code>Incidence</code> tab.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png" /></a></p>
 <p>Now, we use the Create Fields process on this tab to let it add all columns
 of the underlying <em>MA_WEIncidence</em> table to this tab if they have not been previously
 added.</p>
 <p>This will then add one new field to the tab matching the new column
 and automatically place the field into the module.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png" /></a></p>
 <p>As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.</p>
 <p>If this window should also be used in <em>classic UI mode</em> then now <code>./gradlew smartbuild</code> should be execute to compile the changed window.</p>
 <p>To see the changes in the new user interface just change the <code>System Administrator</code> role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png" /></a></p>
 <hr />
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab" target="_blank">How to add a field to a window tab</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
@@ -6994,7 +6994,7 @@ and automatically place the field into the module.</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
