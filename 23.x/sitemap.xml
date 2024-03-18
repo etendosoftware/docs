@@ -221,6 +221,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jest-testcases/</loc>
+         <lastmod>2024-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/</loc>
          <lastmod>2024-03-18</lastmod>
          <changefreq>daily</changefreq>

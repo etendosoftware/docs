@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/">
+        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jest-testcases/">
       
       
-        <link rel="prev" href="../how-to-create-scan-process/">
+        <link rel="prev" href="../how-to-create-a-module-that-adds-an-accounting-process/">
       
       
-        <link rel="next" href="../how-to-copy-and-paste-images-in-etendo/">
+        <link rel="next" href="../How_to_create_a_Dataset/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Use Secure Webservices - Etendo Documentation</title>
+        <title>How to Create Jest testcases - Etendo Documentation</title>
       
     
     
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Use Secure Webservices
+              How to Create Jest testcases
             
           </span>
         </div>
@@ -4309,28 +4309,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    How to Use Secure Webservices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-use-secure-webservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4339,35 +4321,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4419,10 +4372,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../how-to-create-jest-testcases/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to create Jest testcases
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4431,6 +4402,77 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-test-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Test Case
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Test Case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-test-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample test file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-testscoverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run tests/coverage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6804,6 +6846,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-test-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Test Case
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Test Case">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-test-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample test file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-testscoverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run tests/coverage
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6822,16 +6906,65 @@
   
 
 
-  <h1>How to Use Secure Webservices</h1>
+  <h1>How to create Jest testcases</h1>
 
 <h2 id="overview">Overview</h2>
-<p>This module allows calling any standard Etendo web service in the same way as calling the "/ws" endpoint, but using token authentication.</p>
-<p>This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.</p>
-<p>Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).</p>
+<p><a href="https://jestjs.io/" target="_blank">Jest</a> is a testing framework created by Facebook and currently used as the default testing framework in  <a href="https://github.com/facebook/create-react-app" target="_blank">create-react-app</a>  . Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel or Typescript.</p>
+<h2 id="installation">Installation</h2>
+<p>All dependencies can be installed just by
+running:</p>
+<div class="language-text highlight"><pre><span></span><code>npm install
+</code></pre></div>
+<h2 id="creating-a-test-case">Creating a Test Case</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, follow this information in <a href="https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login" target="_blank">Secure Webservices</a>.</p>
+<p>Tests should be placed in <code>web-test</code> folder, and files should have the
+suffix <code>.test.js</code> .</p>
+<p>This is a valid path for a test class:</p>
+<p><code>modules/com.etendoerp.mymodule/web-test/mycomponent.test.js</code>  </p>
 </div>
+<p>Now you can require() your subject under test and start creating test cases. See  <a href="https://jestjs.io/docs/getting-started" target="_blank">Jest documentation</a>  for reference.</p>
+<h4 id="sample-test-file">Sample test file</h4>
+<div class="language-javascript highlight"><span class="filename">org.openbravo.client.application/web-test/ob-utilities-date.test.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../web/org.openbravo.client.application/js/utilities/ob-utilities-date&#39;</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;org.openbravo.client.application - OB.Utilities.Date&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">beforeEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Execute this before each test</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w"> </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nx">afterEach</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="c1">// Execute this after each test</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w"> </span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;The year where we should change century in 2 digits year format is 50&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">centuryReference</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mf">50</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w"> </span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="c1">// Describe blocks can be nested to group test cases</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;OB.Utilities.Date.normalizeDisplayFormat&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;function works&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">&#39;DD-MM-YYYY&#39;</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">&#39;%d-%m-%Y&#39;</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w"> </span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nx">it</span><span class="p">(</span><span class="s1">&#39;function works with other input&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">normalizedFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">OB</span><span class="p">.</span><span class="nx">Utilities</span><span class="p">.</span><span class="nb">Date</span><span class="p">.</span><span class="nx">normalizeDisplayFormat</span><span class="p">(</span><span class="s1">&#39;DD-MM-YY&#39;</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">      </span><span class="nx">expect</span><span class="p">(</span><span class="nx">normalizedFormat</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">&#39;%d-%m-%y&#39;</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">});</span>
+</span></code></pre></div>
+<h2 id="run-testscoverage">Run tests/coverage</h2>
+<p>To run all unit tests available in an Etendo instance (both Core and all installed modules), run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code>npm test
+</code></pre></div>
+<p>Testing can be limited to a particular module adding the path at the end of the command:    </p>
+<div class="language-text highlight"><pre><span></span><code>npm test modules/com.etendoerp.mymodule/
+</code></pre></div>
+<p>If, along with the test, you want to see a coverage report, run:</p>
+<div class="language-text highlight"><pre><span></span><code>npm run coverage
+</code></pre></div>
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases" target="_blank">How to Create Jest testcases</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
