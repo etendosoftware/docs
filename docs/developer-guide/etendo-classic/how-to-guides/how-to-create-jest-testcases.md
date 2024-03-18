@@ -4,11 +4,7 @@ title: How to Create Jest testcases
   
 ##  Overview
 
-Jest  is a testing framework created by Facebook and currently used as the
-default testing framework in  create-react-app  . Unlike Mocha, it is an
-opinionated test runner and provides its own assertion and mocking methods.
-The main advantage is that it runs out-of-the-box and has good integration
-with technologies like React, Babel or Typescript.
+[Jest](https://jestjs.io/){target="_blank"} is a testing framework created by Facebook and currently used as the default testing framework in  [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}  . Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel or Typescript.
 
 ##  Installation
 
@@ -20,15 +16,14 @@ running:
 ##  Creating a Test Case
 
 !!! info
-    Tests should be placed in **web-test** folder, and files should have the
-    suffix **.test.js** .
+    Tests should be placed in `web-test` folder, and files should have the
+    suffix `.test.js` .
 
     This is a valid path for a test class:
 
-    **modules/com.etendoerp.mymodule/web-test/mycomponent.test.js**  
+    `modules/com.etendoerp.mymodule/web-test/mycomponent.test.js`  
 
-Now you can require() your subject under test and start creating test cases.
-See  [Jest documentation](https://jestjs.io/docs/getting-started){target="_blank"}  for reference.
+Now you can require() your subject under test and start creating test cases. See  [Jest documentation](https://jestjs.io/docs/getting-started){target="_blank"}  for reference.
 
 ####  Sample test file
 
@@ -65,13 +60,11 @@ describe('org.openbravo.client.application - OB.Utilities.Date', () => {
 
 ##  Run tests/coverage
 
-To run all unit tests available in an Etendo instance (both Core and all
-installed modules), run the following command:
+To run all unit tests available in an Etendo instance (both Core and all installed modules), run the following command:
 
     npm test
 
-Testing can be limited to a particular module adding the path at the end of
-the command:    
+Testing can be limited to a particular module adding the path at the end of the command:    
     
     npm test modules/com.etendoerp.mymodule/
 
