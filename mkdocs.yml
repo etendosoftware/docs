@@ -352,17 +352,6 @@ nav:
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
 #        - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition.md
-#        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
-#        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
-#        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
-#        - How to develop a DAL background process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
-        - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
-#        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
-#        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
-#      - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
-#        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
-#        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
-#        - How to use an Extension Point: developer-guide/etendo-classic/how-to-guides/How_to_use_an_Extension_Point.md
 #        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
 #        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md
 #        - How to create a Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md
@@ -399,7 +388,7 @@ nav:
 #        - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_To_Exclude_Database_Physical_Objects_From_Model.md
 #        - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
 #        - How to export sample data: developer-guide/etendo-classic/how-to-guides/How_to_export_sample_data.md
-#        - How to implement a business event handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
+        - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
 #        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors.md

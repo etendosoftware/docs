@@ -1,7 +1,13 @@
 ---
+tags:
+  - JUnit
+  - Test
+  - Test Cases
 title: How to Create JUnit Test Cases
 ---
-  
+
+# How to Create JUnit Test Cases
+
 ##  Overview
 
 This how-to will focus on creating a test case making use of the `OBBaseTest` and `WeldBaseTest` classes. The test case will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
