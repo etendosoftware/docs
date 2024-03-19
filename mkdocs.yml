@@ -388,7 +388,7 @@ nav:
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
 #        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
 #        - How to develop a DAL background process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
-#        - How to implement a business event handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
+        - How to implement a business event handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
 #        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
 #      - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
