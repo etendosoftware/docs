@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/">
+        <link rel="canonical" href="https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/">
       
       
-        <link rel="prev" href="../how-to-create-and-update-translation-modules/">
+        <link rel="prev" href="../how-to-create-jest-testcases/">
       
       
-        <link rel="next" href="../how-to-create-a-clone-hook/">
+        <link rel="next" href="../How_to_create_a_Dataset/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Create Jobs and Actions - Etendo Documentation</title>
+        <title>How to Create JUnit testcases - Etendo Documentation</title>
       
     
     
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Create Jobs and Actions
+              How to Create JUnit testcases
             
           </span>
         </div>
@@ -4225,28 +4225,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    How to Create Jobs and Actions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-create-jobs-and-actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4255,59 +4237,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-an-action" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create an Action
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Create an Action">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extend-and-execute-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extend and Execute Actions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4464,10 +4393,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../how-to-create-junit-testcases/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How to create JUnit testcases
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4476,6 +4423,272 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing development environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-testcase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the testcase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the testcase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inheriting-from-obbasetest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inheriting from OBBaseTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-order-of-test-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution order of test methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-java-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Java class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the Java class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-effect-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Side-Effect Free
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approach-to-features-of-junit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach to features of JUnit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Approach to features of JUnit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterized Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions-and-hamcrest-113" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assertions and Hamcrest 1.13
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-matchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Matchers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON Matchers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equal" class="md-nav__link">
+    <span class="md-ellipsis">
+      equal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matchesobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      matchesObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasItems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-cdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing CDI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing CDI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dal-event-observers" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL event observers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6850,19 +7063,232 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-an-action" class="md-nav__link">
+  <a href="#preparing-development-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an Action
+      Preparing development environment
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create an Action">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-testcase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the testcase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the testcase">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#extend-and-execute-actions" class="md-nav__link">
+  <a href="#inheriting-from-obbasetest" class="md-nav__link">
     <span class="md-ellipsis">
-      Extend and Execute Actions
+      Inheriting from OBBaseTest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-order-of-test-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution order of test methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-java-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Java class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating the Java class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transaction-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-effect-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Side-Effect Free
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approach-to-features-of-junit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approach to features of JUnit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Approach to features of JUnit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterized Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions-and-hamcrest-113" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assertions and Hamcrest 1.13
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-matchers" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Matchers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON Matchers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equal" class="md-nav__link">
+    <span class="md-ellipsis">
+      equal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matchesobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      matchesObject
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasItems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-cdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing CDI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing CDI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scopes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scopes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dal-event-observers" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAL event observers
     </span>
   </a>
   
@@ -6891,217 +7317,366 @@
   
 
 
-  <h1>How to Create Jobs and Actions</h1>
+  <h1>How to create JUnit testcases</h1>
 
 <h2 id="overview">Overview</h2>
-<p>Etendo introduces the concept of Jobs which is about one or more Actions executed in sequence. These Actions are standard processes which enable the user to create and store Jobs for later usage. Jira Automations and iOS Shortcuts are similar concepts.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The GUI to create and execute jobs is coming soon to a newer version of Etendo. At present, it is only possible to define Actions which act as standard processes available in the existing UI nevertheless, they will also support the newer UI when released.</p>
-</div>
-<h2 id="create-an-action">Create an Action</h2>
+<p>This how-to will focus on creating a testcase making use of the <code>OBBaseTest</code> and <code>WeldBaseTest</code> classes. The testcase will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.</p>
+<p>In computer programming, <strong>unit testing</strong> is a software design and development method where the programmer gains confidence that individual units of source code are fit for use. A unit is the smallest testable part of an application. In procedural programming a unit may be an individual program, function, procedure, etc., while in object-oriented programming, the smallest unit is a method, which may belong to a base/super class, abstract class or derived/child class.</p>
+<p>All new developments must belong to a module that is not the <em>core</em> module.</p>
+<h2 id="preparing-development-environment">Preparing development environment</h2>
+<p>First of all you need to create a src-test directory in your module package directory in Etendo ERP.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>modules
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>└── com.etendoerp.example
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    └── src-test                &lt;-- source of the testcases 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        └── src
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            └── com.etendoerp.example
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                └── EtendoTest.java
+</span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Actions are based on the existing Standard Process architecture.</p>
+<p>In the file <code>tests.gradle</code> you need comment the line: <code>test.dependsOn('ant.compile.test')</code> for running the tests locally.</p>
 </div>
-<ol>
-<li>
-<p>Create a new record in the Process Definition window:</p>
-<p><a class="glightbox" href="/assets/legacy/technicaldocumentation/platform/createjobs1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="createjobs1.png" src="/assets/legacy/technicaldocumentation/platform/createjobs1.png" /></a></p>
-</li>
-<li>
-<p>Define UI Pattern as Action. The process has to be marked as multi record. All actions must support multi record input. The rest of the definitions are analogous to any Standard Process. Parameters, onLoad functions, etc. are supported.</p>
-</li>
-<li>Create a column and a field to run the Action from a button in the current UI, or a menu entry to run the process from the menu.</li>
-<li>The Java class associated with the new Action must extend the Action type (<code>com.smf.jobs.Action</code>).</li>
-</ol>
-<p>Your IDE of choice should prompt you to fill the required methods:</p>
+<p>Now, you are ready to work with test cases.</p>
+<h2 id="creating-the-testcase">Creating the testcase</h2>
+<h3 id="inheriting-from-obbasetest">Inheriting from OBBaseTest</h3>
+<p>All the core testcases are subclasses from <code>OBBaseTest</code>. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When writing test cases for Etendo that involve dependency injection or require the execution of DAL event observers, it is recommended to extend <code>org.openbravo.base.weld.test.WeldBaseTest</code> instead of <code>org.openbravo.test.base.OBBaseTest</code>.
+<code>OBBaseTest</code> has limitations related to CDI, and it does not support certain features that are available when using WeldBaseTest tests. The latter is a subclass of <code>OBBaseTest</code> and provides access to the complete DAL infrastructure, making it more suitable for scenarios involving CDI and event observers.
+Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of dependency injection and DAL event observers in your test cases.</p>
+</div>
+<h3 id="execution-order-of-test-methods">Execution order of test methods</h3>
+<p>Until now, the methods were simply invoked in the order returned by the reflection API. However, using the JVM order is unwise since the Java platform does not specify any particular order. Of course, well-written test code would not assume any order, but some does, and a predictable failure is better than a random failure on certain platforms.</p>
+<h3 id="creating-the-java-class">Creating the Java class</h3>
 <ul>
-<li><code>ActionResult action(JSONObject parameters, MutableBoolean isStopped)</code></li>
-<li><code>Class&lt;T&gt; getInputClass()</code></li>
+<li>Open your IntelliJ IDE. </li>
+<li>Create a new folder structure under the <code>modules</code> folder: <code>modules/com.etendoerp.examples/src-test/src/com.etendoerp.example</code> . </li>
+<li>Create a new Java class with the following content: </li>
 </ul>
-<p>The first <code>action()</code> method is where the main process logic happens. You will receive the process parameters in a json object, and a boolean to check if the process was requested to stop. Once the logic is done, your code should return an <code>ActionResult</code> type detailing if the execution was successfully finished or not. There will also be a message for the user.</p>
-<p>The <code>getInputClass()</code> method must return the class type this Actions supports as an input. For example <code>Invoice.class:</code></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import org.openbravo.model.common.invoice.Invoice;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/* ... */
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>@Override
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>protected Class&lt;Invoice&gt; getInputClass() {
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    return Invoice.class;
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
+<p><div class="language-java highlight"><span class="filename">ExampleTest.java</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.etendoerp.example</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import static</span><span class="w"> </span><span class="nn">org.junit.Assert.assertTrue</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w"> </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Before</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.dal.core.OBContext</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.dal.service.OBCriteria</span><span class="p">;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.dal.service.OBDal</span><span class="p">;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.model.ad.access.User</span><span class="p">;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.base.weld.test.WeldBaseTest</span><span class="p">;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.test.base.TestConstants</span><span class="p">;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.client.kernel.RequestContext</span><span class="p">;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.base.secureApp.VariablesSecureApp</span><span class="p">;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExampleTest</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">WeldBaseTest</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">  </span><span class="nd">@Override</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">  </span><span class="nd">@Before</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">setUp</span><span class="p">();</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setOBContext</span><span class="p">(</span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Users</span><span class="p">.</span><span class="na">SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Roles</span><span class="p">.</span><span class="na">SYS_ADMIN</span><span class="p">,</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Clients</span><span class="p">.</span><span class="na">SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Orgs</span><span class="p">.</span><span class="na">MAIN</span><span class="p">);</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="n">VariablesSecureApp</span><span class="w"> </span><span class="n">vsa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VariablesSecureApp</span><span class="p">(</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getUser</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getCurrentClient</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getCurrentOrganization</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getRole</span><span class="p">().</span><span class="na">getId</span><span class="p">()</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="n">RequestContext</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">setVariableSecureApp</span><span class="p">(</span><span class="n">vsa</span><span class="p">);</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w"> </span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">  </span><span class="nd">@Test</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testUsersCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">OBCriteria</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createCriteria</span><span class="p">(</span><span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uCriteria</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">userCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">u</span><span class="p">:</span><span class="w"> </span><span class="n">uList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="na">getPassword</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">u</span><span class="p">.</span><span class="na">getPassword</span><span class="p">().</span><span class="na">isEmpty</span><span class="p">())</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">        </span><span class="n">userCount</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">userCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total of users with password: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">userCount</span><span class="p">));</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>The input data (the user selected record(s), or the result of another Action) can be obtained with the method <code>getInputContents()</code>. By default, this method will return a list of <code>BaseOBObject</code>, but it can be parametrized using the previous <code>getInputClass()</code> method (or the class directly).
-For example:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// Assuming getInputClass() returns Invoice.class
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>List&lt;Invoice&gt; invoices = getInputContents(getInputClass());
+     </p>
+<h4 id="understanding-the-class">Understanding the class</h4>
+<p>You have just created a new class named Example that extends from the <code>WeldBaseTest</code> class.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testUsersCount</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
 </span></code></pre></div>
-<p>The <code>ActionResult</code> type can be used to show a message to the user:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>result.setType(Result.Type.ERROR);
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>result.setMessage(OBMessageUtils.getI18NMessage(&quot;Success&quot;));
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>/* ... */
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>return result;
+<p>This class has a testUsersCount function. Note that all testing methods <em>must</em> start with test in the function name. e.g. <code>testAllWarehouses()</code>, <code>testMyFirstTest()</code>, etc        </p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@Override</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nd">@Before</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="kd">super</span><span class="p">.</span><span class="na">setUp</span><span class="p">();</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="n">OBContext</span><span class="p">.</span><span class="na">setOBContext</span><span class="p">(</span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Users</span><span class="p">.</span><span class="na">SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Roles</span><span class="p">.</span><span class="na">SYS_ADMIN</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Clients</span><span class="p">.</span><span class="na">SYSTEM</span><span class="p">,</span><span class="w"> </span><span class="n">TestConstants</span><span class="p">.</span><span class="na">Orgs</span><span class="p">.</span><span class="na">MAIN</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">VariablesSecureApp</span><span class="w"> </span><span class="n">vsa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">VariablesSecureApp</span><span class="p">(</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getUser</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getCurrentClient</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getCurrentOrganization</span><span class="p">().</span><span class="na">getId</span><span class="p">(),</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="n">OBContext</span><span class="p">.</span><span class="na">getOBContext</span><span class="p">().</span><span class="na">getRole</span><span class="p">().</span><span class="na">getId</span><span class="p">()</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="n">RequestContext</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">setVariableSecureApp</span><span class="p">(</span><span class="n">vsa</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>The result object can also set an output to be used as input for the next job, when the new Job UI is implemented:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>List&lt;Invoices&gt; invoices = processInvoices();
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>result.setOutput(invoices);
+<p>Sets the context as if a System Administrator is logged in the application. You can also set the context as if another user is logged in the application.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">final</span><span class="w"> </span><span class="n">OBCriteria</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uCriteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">createCriteria</span><span class="p">(</span><span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uCriteria</span><span class="p">.</span><span class="na">list</span><span class="p">();</span>
 </span></code></pre></div>
-<p>For more complex operations present in standard processes, the <code>setResponseActionsBuilder()</code> method can be used to set a response builder. This follows the same existing logic when using a <code>BaseProcessActionHandler</code> class.</p>
-<p>The main logic of the process can be constructed as any process which previously extended the <code>BaseProcessActionHandler</code> class. It should be trivial to port existing processes to Actions.</p>
-<p>Examples of other Actions implemented in Etendo are usually present in the <code>com.smf.jobs.defaults</code> package.</p>
-<p>A full example of an Action java class is shown below:</p>
-<div class="language-java highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">com.smf.jobs.defaults</span><span class="p">;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.smf.jobs.ActionResult</span><span class="p">;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.smf.jobs.Result</span><span class="p">;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.smf.jobs.Action</span><span class="p">;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.commons.lang.mutable.MutableBoolean</span><span class="p">;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.logging.log4j.LogManager</span><span class="p">;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.logging.log4j.Logger</span><span class="p">;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.codehaus.jettison.json.JSONException</span><span class="p">;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.codehaus.jettison.json.JSONObject</span><span class="p">;</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.advpaymentmngt.ProcessInvoiceUtil</span><span class="p">;</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.base.weld.WeldUtils</span><span class="p">;</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.client.kernel.RequestContext</span><span class="p">;</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.erpCommon.utility.OBDateUtils</span><span class="p">;</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.erpCommon.utility.OBError</span><span class="p">;</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.model.common.invoice.Invoice</span><span class="p">;</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.service.db.DalConnectionProvider</span><span class="p">;</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.openbravo.service.json.JsonUtils</span><span class="p">;</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.inject.Inject</span><span class="p">;</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.text.ParseException</span><span class="p">;</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="cm">/**</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="cm"> * Action for processing invoices.</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="cm"> * Allows for the same actions available in the UI as part of a Job.</span>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="cm"> */</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ProcessInvoices</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Action</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="n">Logger</span><span class="w"> </span><span class="n">log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LogManager</span><span class="p">.</span><span class="na">getLogger</span><span class="p">();</span>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="nd">@Inject</span>
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">WeldUtils</span><span class="w"> </span><span class="n">weldUtils</span><span class="p">;</span>
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="nd">@Override</span>
-</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">ActionResult</span><span class="w"> </span><span class="nf">action</span><span class="p">(</span><span class="n">JSONObject</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"> </span><span class="n">MutableBoolean</span><span class="w"> </span><span class="n">isStopped</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ActionResult</span><span class="p">();</span>
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
-</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getInputContents</span><span class="p">(</span><span class="n">getInputClass</span><span class="p">());</span>
-</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">documentAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;DocAction&quot;</span><span class="p">);</span>
-</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">voidDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">isNull</span><span class="p">(</span><span class="s">&quot;VoidDate&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;VoidDate&quot;</span><span class="p">);</span>
-</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">voidAcctDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">isNull</span><span class="p">(</span><span class="s">&quot;VoidAccountingDate&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">parameters</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;VoidAccountingDate&quot;</span><span class="p">);</span>
-</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">processMessages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span>
-</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">errors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
-</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="n">Result</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">SUCCESS</span><span class="p">);</span>
-</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>
-</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Invoice</span><span class="w"> </span><span class="n">invoice</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">processInvoice</span><span class="p">(</span><span class="n">invoice</span><span class="p">,</span><span class="w"> </span><span class="n">documentAction</span><span class="p">,</span><span class="w"> </span><span class="n">voidDate</span><span class="p">,</span><span class="w"> </span><span class="n">voidAcctDate</span><span class="p">);</span>
-</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">getType</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">                    </span><span class="n">errors</span><span class="o">++</span><span class="p">;</span>
-</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">getMessage</span><span class="p">().</span><span class="na">isBlank</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">                    </span><span class="n">processMessages</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">invoice</span><span class="p">.</span><span class="na">getDocumentNo</span><span class="p">()).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;: &quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">getTitle</span><span class="p">()).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="w">                    </span><span class="n">processMessages</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">invoice</span><span class="p">.</span><span class="na">getDocumentNo</span><span class="p">()).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;: &quot;</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">getMessage</span><span class="p">()).</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
-</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>
-</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">errors</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="n">Result</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">ERROR</span><span class="p">);</span>
-</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">errors</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="n">Result</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">WARNING</span><span class="p">);</span>
-</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>
-</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">                </span><span class="c1">// Show the message in a pop up when more than one invoice was selected, for better readability.</span>
-</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="w">                </span><span class="kd">var</span><span class="w"> </span><span class="n">jsonMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
-</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="w">                </span><span class="n">jsonMessage</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;message&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">processMessages</span><span class="p">.</span><span class="na">toString</span><span class="p">().</span><span class="na">replaceAll</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">));</span>
-</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="w">                </span><span class="n">result</span><span class="p">.</span><span class="na">setResponseActionsBuilder</span><span class="p">(</span><span class="n">getResponseBuilder</span><span class="p">().</span><span class="na">addCustomResponseAction</span><span class="p">(</span><span class="s">&quot;smartclientSay&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">jsonMessage</span><span class="p">));</span>
-</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a>
-</span><span id="__span-4-72"><a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">processMessages</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-</span><span id="__span-4-73"><a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="na">setOutput</span><span class="p">(</span><span class="n">getInput</span><span class="p">());</span>
-</span><span id="__span-4-74"><a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>
-</span><span id="__span-4-75"><a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a>
-</span><span id="__span-4-76"><a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">JSONException</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ParseException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-77"><a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a><span class="w">            </span><span class="n">log</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
-</span><span id="__span-4-78"><a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="n">Result</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">ERROR</span><span class="p">);</span>
-</span><span id="__span-4-79"><a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a><span class="w">            </span><span class="n">result</span><span class="p">.</span><span class="na">setMessage</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-</span><span id="__span-4-80"><a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-4-81"><a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a>
-</span><span id="__span-4-82"><a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-</span><span id="__span-4-83"><a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-84"><a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a>
-</span><span id="__span-4-85"><a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">OBError</span><span class="w"> </span><span class="nf">processInvoice</span><span class="p">(</span><span class="n">Invoice</span><span class="w"> </span><span class="n">invoice</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">docAction</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">_strVoidDate</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">_strVoidAcctDate</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ParseException</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-86"><a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a>
-</span><span id="__span-4-87"><a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">processor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weldUtils</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">ProcessInvoiceUtil</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-</span><span id="__span-4-88"><a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">strVoidDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-</span><span id="__span-4-89"><a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">strVoidAcctDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-</span><span id="__span-4-90"><a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>
-</span><span id="__span-4-91"><a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_strVoidDate</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">_strVoidAcctDate</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-92"><a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a><span class="w">            </span><span class="c1">// Convert from the JSON date format to the OBProperties date format</span>
-</span><span id="__span-4-93"><a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">voidDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonUtils</span><span class="p">.</span><span class="na">createDateFormat</span><span class="p">().</span><span class="na">parse</span><span class="p">(</span><span class="n">_strVoidDate</span><span class="p">);</span>
-</span><span id="__span-4-94"><a id="__codelineno-4-94" name="__codelineno-4-94" href="#__codelineno-4-94"></a><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="n">voidAcctDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonUtils</span><span class="p">.</span><span class="na">createDateFormat</span><span class="p">().</span><span class="na">parse</span><span class="p">(</span><span class="n">_strVoidAcctDate</span><span class="p">);</span>
-</span><span id="__span-4-95"><a id="__codelineno-4-95" name="__codelineno-4-95" href="#__codelineno-4-95"></a>
-</span><span id="__span-4-96"><a id="__codelineno-4-96" name="__codelineno-4-96" href="#__codelineno-4-96"></a><span class="w">            </span><span class="n">strVoidDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDateUtils</span><span class="p">.</span><span class="na">formatDate</span><span class="p">(</span><span class="n">voidDate</span><span class="p">);</span>
-</span><span id="__span-4-97"><a id="__codelineno-4-97" name="__codelineno-4-97" href="#__codelineno-4-97"></a><span class="w">            </span><span class="n">strVoidAcctDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OBDateUtils</span><span class="p">.</span><span class="na">formatDate</span><span class="p">(</span><span class="n">voidAcctDate</span><span class="p">);</span>
-</span><span id="__span-4-98"><a id="__codelineno-4-98" name="__codelineno-4-98" href="#__codelineno-4-98"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-4-99"><a id="__codelineno-4-99" name="__codelineno-4-99" href="#__codelineno-4-99"></a>
-</span><span id="__span-4-100"><a id="__codelineno-4-100" name="__codelineno-4-100" href="#__codelineno-4-100"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">processor</span><span class="p">.</span><span class="na">process</span><span class="p">(</span>
-</span><span id="__span-4-101"><a id="__codelineno-4-101" name="__codelineno-4-101" href="#__codelineno-4-101"></a><span class="w">                </span><span class="n">invoice</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span>
-</span><span id="__span-4-102"><a id="__codelineno-4-102" name="__codelineno-4-102" href="#__codelineno-4-102"></a><span class="w">                </span><span class="n">docAction</span><span class="p">,</span>
-</span><span id="__span-4-103"><a id="__codelineno-4-103" name="__codelineno-4-103" href="#__codelineno-4-103"></a><span class="w">                </span><span class="n">strVoidDate</span><span class="p">,</span>
-</span><span id="__span-4-104"><a id="__codelineno-4-104" name="__codelineno-4-104" href="#__codelineno-4-104"></a><span class="w">                </span><span class="n">strVoidAcctDate</span><span class="p">,</span>
-</span><span id="__span-4-105"><a id="__codelineno-4-105" name="__codelineno-4-105" href="#__codelineno-4-105"></a><span class="w">                </span><span class="n">RequestContext</span><span class="p">.</span><span class="na">get</span><span class="p">().</span><span class="na">getVariablesSecureApp</span><span class="p">(),</span>
-</span><span id="__span-4-106"><a id="__codelineno-4-106" name="__codelineno-4-106" href="#__codelineno-4-106"></a><span class="w">                </span><span class="k">new</span><span class="w"> </span><span class="n">DalConnectionProvider</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-</span><span id="__span-4-107"><a id="__codelineno-4-107" name="__codelineno-4-107" href="#__codelineno-4-107"></a><span class="w">        </span><span class="p">);</span>
-</span><span id="__span-4-108"><a id="__codelineno-4-108" name="__codelineno-4-108" href="#__codelineno-4-108"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-109"><a id="__codelineno-4-109" name="__codelineno-4-109" href="#__codelineno-4-109"></a>
-</span><span id="__span-4-110"><a id="__codelineno-4-110" name="__codelineno-4-110" href="#__codelineno-4-110"></a><span class="w">    </span><span class="nd">@Override</span>
-</span><span id="__span-4-111"><a id="__codelineno-4-111" name="__codelineno-4-111" href="#__codelineno-4-111"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;</span><span class="n">Invoice</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getInputClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-112"><a id="__codelineno-4-112" name="__codelineno-4-112" href="#__codelineno-4-112"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Invoice</span><span class="p">.</span><span class="na">class</span><span class="p">;</span>
-</span><span id="__span-4-113"><a id="__codelineno-4-113" name="__codelineno-4-113" href="#__codelineno-4-113"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-4-114"><a id="__codelineno-4-114" name="__codelineno-4-114" href="#__codelineno-4-114"></a><span class="p">}</span>
+<p>Uses the <code>OBDal</code> instance to create a new <code>OBCriteria</code> object, and uses it for listing all (since we are not filtering) the Users in the database.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">userCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">u</span><span class="p">:</span><span class="w"> </span><span class="n">uList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="na">getPassword</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">u</span><span class="p">.</span><span class="na">getPassword</span><span class="p">().</span><span class="na">isEmpty</span><span class="p">())</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">userCount</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="extend-and-execute-actions">Extend and Execute Actions</h3>
-<p>It is also possible to extend actions by adding new functionality.<br />
-The following is an example of extending the <code>com.smf.jobs.defaults.ProcessOrders</code> class found inside the standard actions distributed with Etendo.</p>
-<div class="language-Java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExtendProcessOrder</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">smf</span><span class="p">.</span><span class="na">jobs</span><span class="p">.</span><span class="na">defaults</span><span class="p">.</span><span class="na">ProcessOrders</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">ExtendProcessOrder</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kd">super</span><span class="p">();</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">ActionResult</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="n">Data</span><span class="w"> </span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">param</span><span class="p">,</span><span class="w"> </span><span class="n">MutableBoolean</span><span class="w"> </span><span class="n">stopped</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">setParameters</span><span class="p">(</span><span class="n">param</span><span class="p">);</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">stopped</span><span class="p">);</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">executeProcessOrderAction</span><span class="p">(</span><span class="n">Order</span><span class="w"> </span><span class="n">order</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="n">ExtendProcessOrder</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WeldUtils</span><span class="p">.</span><span class="na">getInstanceFromStaticBeanManager</span><span class="p">(</span><span class="n">ExtendProcessOrder</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">jsonData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">();</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">      </span><span class="n">jsonData</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;DocAction&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;CO&quot;</span><span class="p">);</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">      </span><span class="n">Data</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Data</span><span class="p">(</span><span class="n">jsonData</span><span class="p">,</span><span class="w"> </span><span class="n">Order</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">      </span><span class="n">List</span><span class="o">&lt;</span><span class="n">BaseOBObject</span><span class="o">&gt;</span><span class="w"> </span><span class="n">orderList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">      </span><span class="n">OBDal</span><span class="p">.</span><span class="na">getInstance</span><span class="p">().</span><span class="na">refresh</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">      </span><span class="n">orderList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">order</span><span class="p">);</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">      </span><span class="n">data</span><span class="p">.</span><span class="na">setContents</span><span class="p">(</span><span class="n">orderList</span><span class="p">);</span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">      </span><span class="kd">final</span><span class="w"> </span><span class="n">MutableBoolean</span><span class="w"> </span><span class="n">mutableBoolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MutableBoolean</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">process</span><span class="p">.</span><span class="na">run</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">jsonData</span><span class="p">,</span><span class="w"> </span><span class="n">mutableBoolean</span><span class="p">);</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getType</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">Result</span><span class="p">.</span><span class="na">Type</span><span class="p">.</span><span class="na">ERROR</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBException</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OBException</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">  </span><span class="p">}</span>
+<p>We loop trough the uList collection, and we increment the userCount variable if the user has a password.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">assertTrue</span><span class="p">(</span><span class="n">userCount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </span></code></pre></div>
-<p>It is necessary to implement a method that gets and executes the current action, in our example we implement <code>executeProcessOrderAction(Order order)</code> which dynamically gets an instance of the <code>ExtendProcessOrder</code> class and executes it.
-It is also possible to add validations and override the original methods.</p>
+<p>We assert that the userCount is more than 0.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total of users with password: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">userCount</span><span class="p">));</span>
+</span></code></pre></div>
+<p>Finally we print a total of users with password just for the record.</p>
+<h3 id="transaction-handling">Transaction Handling</h3>
+<p>A question which might pop-up when looking at the above code: where is the database transaction handling done? The answer is that this is handled by the <code>WeldBaseTest</code> class and the Etendo data access layer:</p>
+<ul>
+<li>a transaction is automatically started at first database access in the test cases. This is done by the Data Access Layer. </li>
+<li>a transaction is either committed (when no exception happened) or rolled-back (when an exception happened). </li>
+</ul>
+<p>The <code>WeldBaseTest</code> class detects automatically if an exception happened or not.</p>
+<p>There are certainly cases whereby it makes sense to have more control over the database transactions. There are a number of relevant methods which can be useful then:</p>
+<ul>
+<li><code>OBDal.getInstance().flush()</code>: flushes the update/insert queries in hibernate to the database. </li>
+<li><code>OBDal.getInstance().commitAndClose()</code>: commits the transaction and closes the session. A new session/transaction is automatically started at the next database access. </li>
+<li><code>OBDal.getInstance().rollbackAndClose()</code>: rolls back and closes the transactions. A new session/transaction is automatically started at the next database access. </li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>DAL event observers  are not triggered within test cases extending <code>OBBaseTest</code> class. They to work require of test cases extending <code>WeldBaseTest</code>. </p>
+</div>
+<h3 id="side-effect-free">Side-Effect Free</h3>
+<p>A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:</p>
+<ul>
+<li>When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. </li>
+<li>This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used <code>@AfterClass</code> notation. This method runs automatically at the end of the class.</li>
+</ul>
+<p>This last point is important because there can be always reasons why during a test the clean-up step is not performed. For example because the test run is stopped before the clean-up is done.</p>
+<h3 id="approach-to-features-of-junit">Approach to features of JUnit</h3>
+<h4 id="parameterized-tests">Parameterized Tests</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit:  <a href="https://github.com/junit-team/junit4/wiki/Parameterized-tests" target="_blank">Parameterized-Test</a></p>
+</div>
+<h4 id="rules">Rules</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit:  <a href="https://github.com/junit-team/junit4/wiki/Rules" target="_blank">Rules</a></p>
+</div>
+<h4 id="assertions-and-hamcrest-113">Assertions and Hamcrest 1.13</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information, visit:  <a href="https://hamcrest.org/" target="_blank">Hamcrest</a></p>
+</div>
+<p>Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.</p>
+<p>When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.</p>
+<h3 id="json-matchers">JSON Matchers</h3>
+<p>Etendo provides a set of matchers that can be useful when asserting JSONObjects or JSONArrays.</p>
+<h4 id="equal">equal</h4>
+<p>Matches when the examined <code>JSONObject</code> has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">   </span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nd">@Test</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testEqual</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;efgh&quot;</span><span class="p">));</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">greaterThan</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">startsWith</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">)));</span><span class="w"> </span><span class="c1">// matcher properties</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w"> </span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON objects are equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">equal</span><span class="p">(</span><span class="n">json2</span><span class="p">));</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON objects are equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">equal</span><span class="p">(</span><span class="n">json3</span><span class="p">));</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON objects are not equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">equal</span><span class="p">(</span><span class="n">json4</span><span class="p">)));</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON objects are not equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">equal</span><span class="p">(</span><span class="n">json5</span><span class="p">)));</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON objects are equal&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">equal</span><span class="p">(</span><span class="n">json6</span><span class="p">));</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="matchesobject">matchesObject</h4>
+<p>Matches when the examined JSONObject contains the properties with the same values of the expected one. The order of the keys is not taken into account. Supports matcher properties.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w"> </span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nd">@Test</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testMatchesObject</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;efgh&quot;</span><span class="p">));</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">greaterThan</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w"> </span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json2</span><span class="p">));</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json3</span><span class="p">));</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object does not match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json4</span><span class="p">)));</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json5</span><span class="p">));</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object does not match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json6</span><span class="p">)));</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON object match&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">json1</span><span class="p">,</span><span class="w"> </span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json7</span><span class="p">));</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="hasitems">hasItems</h4>
+<p>Used to match the items of a <code>JSONArray</code>. This matcher can be used with two different kind of arguments.</p>
+<p>If an array of objects is passed, then it matches when the examined <code>JSONArray</code> contains all the received objects. The order of the objects is not taken into account.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w"> </span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nd">@Test</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testHasItems</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;efgh&quot;</span><span class="p">));</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONArray</span><span class="p">();</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">json1</span><span class="p">);</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">json2</span><span class="p">);</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">startsWith</span><span class="p">(</span><span class="s">&quot;e&quot;</span><span class="p">)));</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ijkl&quot;</span><span class="p">));</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w"> </span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array has items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">hasItems</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">json3</span><span class="p">));</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array does not have items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">hasItems</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">json3</span><span class="p">)));</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array does not have items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">hasItems</span><span class="p">(</span><span class="n">json4</span><span class="p">)));</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>It also supports receiving an array of  Hamcrest  matchers. In that case, then it matches when the examined JSONArray matches with all the received matchers.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nd">@Test</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testHasItems</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="p">));</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;efgh&quot;</span><span class="p">));</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="n">JSONArray</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONArray</span><span class="p">();</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">json1</span><span class="p">);</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">json2</span><span class="p">);</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="n">array</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">startsWith</span><span class="p">(</span><span class="s">&quot;e&quot;</span><span class="p">)));</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">  </span><span class="n">JSONObject</span><span class="w"> </span><span class="n">json5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JSONObject</span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="s">&quot;p2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;p3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ijkl&quot;</span><span class="p">));</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w"> </span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array has items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">hasItems</span><span class="p">(</span><span class="n">greaterThan</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">equal</span><span class="p">(</span><span class="n">json3</span><span class="p">)));</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array has items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">hasItems</span><span class="p">(</span><span class="n">greaterThan</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">matchesObject</span><span class="p">(</span><span class="n">json4</span><span class="p">)));</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array does not have items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">hasItems</span><span class="p">(</span><span class="n">greaterThan</span><span class="p">(</span><span class="mi">5</span><span class="p">))));</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;JSON array does not have items&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">not</span><span class="p">(</span><span class="n">hasItems</span><span class="p">(</span><span class="n">equal</span><span class="p">(</span><span class="n">json5</span><span class="p">))));</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="run-tests">Run Tests</h3>
+<p>Etendo has a number of ant tasks which run the test cases:</p>
+<ul>
+<li><code>./gradlew test</code>: This suite contains all the test cases.</li>
+<li><code>./gradlew test --tests "module-name.\*"</code>: This suite contains all the test cases of a particular module. (e.g. <code>./gradlew test --tests "com.etendoerp.example.\*"</code>)</li>
+</ul>
+<p>All the test cases are based on the Small Bazaar default data.</p>
+<p>When adding new test classes to Etendo ERP the developer has to always add the test class to the AllAntTaskTests test suite and if it is side effect free and quick to the AllQuickAntTaskTests and if it is side effect free but takes a bit more time to the AntTaskTests test suite.</p>
+<h3 id="the-result">The Result</h3>
+<p>To be able to execute your testcases:</p>
+<ul>
+<li>Right click on the <code>ExampleTest</code> class. </li>
+<li>Select Run <code>ExampleTest</code>. </li>
+</ul>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" /></a></p>
+<ul>
+<li>You can check the result of the test case on the JUnit view and the output of your tests in the Console view: </li>
+</ul>
+<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" /></a></p>
+<p>Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>build
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>└── reports
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    └── tests 
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        └── test
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            └── index.html
+</span></code></pre></div></p>
+<h2 id="testing-requests">Testing Requests</h2>
+<p>In general unit tests don't require of an Etendo Classic instance running in Tomcat to be executed. But in some cases, how requests work is wanted to be tested. Depending on the request to be tested, different classes should be extended:</p>
+<ul>
+<li><em>REST Webservices</em> . <code>BaseWSTest</code> should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. </li>
+<li><em>Other Requests</em> (such as datasources). <code>BaseDataSourceTestNoDal</code> or <code>BaseDataSourceTestDal</code> classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. </li>
+</ul>
+<h2 id="testing-cdi">Testing CDI</h2>
+<p>Default test cases extending <code>org.openbravo.test.base.OBBaseTest</code> class cannot make use of dependency injection. In order to use it <code>org.openbravo.base.weld.test.WeldBaseTest</code> class needs to be extended instead. This is also a subclass of <code>OBBaseTest</code> , so it makes available all DAL infrastructure.</p>
+<p><code>OBBaseTest</code> uses internally  Arquillian  runner to create a Weld container.</p>
+<p>Example of a test case injecting dependencies:</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CdiInfrastructure</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">WeldBaseTest</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w"> </span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nd">@Inject</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kd">private</span><span class="w"> </span><span class="n">ApplicationScopedBean</span><span class="w"> </span><span class="n">applicationBean</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w"> </span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="nd">@Inject</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="kd">private</span><span class="w"> </span><span class="n">SessionScopedBean</span><span class="w"> </span><span class="n">sessionBean</span><span class="p">;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w"> </span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nd">@Inject</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="kd">private</span><span class="w"> </span><span class="n">RequestScopedBean</span><span class="w"> </span><span class="n">requestBean</span><span class="p">;</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w"> </span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="cm">/** beans are correctly injected */</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="nd">@Test</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">beansAreInjected</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;application bean is injected&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">applicationBean</span><span class="p">,</span><span class="w"> </span><span class="n">notNullValue</span><span class="p">());</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;session bean is injected&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sessionBean</span><span class="p">,</span><span class="w"> </span><span class="n">notNullValue</span><span class="p">());</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;request bean is injected&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">requestBean</span><span class="p">,</span><span class="w"> </span><span class="n">notNullValue</span><span class="p">());</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="p">}</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="scopes">Scopes</h3>
+<p>Application and session scopes are shared among all test cases in the same class whereas a new request scope is created for each test case method. Application scope is reset for each new class.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cm">/** starts application and session scopes */</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nd">@Test</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nd">@InSequence</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="n">applicationBean</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="s">&quot;application&quot;</span><span class="p">);</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="n">sessionBean</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="s">&quot;session&quot;</span><span class="p">);</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span><span class="n">requestBean</span><span class="p">.</span><span class="na">setValue</span><span class="p">(</span><span class="s">&quot;request&quot;</span><span class="p">);</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w"> </span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">applicationBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;application&quot;</span><span class="p">));</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">sessionBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;session&quot;</span><span class="p">));</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">requestBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;request&quot;</span><span class="p">));</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="p">}</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w"> </span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="cm">/** application and session scopes are preserved but not request scope */</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="nd">@Test</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nd">@InSequence</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">applicationAndSessionShouldBeKept</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">applicationBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;application&quot;</span><span class="p">));</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">sessionBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="s">&quot;session&quot;</span><span class="p">));</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">  </span><span class="n">assertThat</span><span class="p">(</span><span class="n">requestBean</span><span class="p">.</span><span class="na">getValue</span><span class="p">(),</span><span class="w"> </span><span class="n">nullValue</span><span class="p">());</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="parameterization">Parameterization</h3>
+<p>Because <code>CdiInfrastructure</code> class uses <code>org.jboss.arquillian.junit.Arquillian</code> runner, it is not possible to use other runners, which also includes <code>org.junit.runners.Parameterized</code> runner.</p>
+<p>This limitation can be workarounded by adding a field annotated as <code>@Rule</code> with <code>org.openbravo.base.weld.test.ParameterCdiTestRule</code> type created with the list of the values for parameters and another field annotated as <code>@ParameterCdiTest</code> which will take those values. In this case each test case will be executed as many times as number of items the parameter list contains each of them the parameter field will take a different item.</p>
+<div class="language-java highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w"> </span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ParameterizedCdi</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">WeldBaseTest</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PARAMS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;param2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;param3&quot;</span><span class="p">);</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w"> </span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="cm">/** defines the values the parameter will take. */</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nd">@Rule</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">ParameterCdiTestRule</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parameterValuesRule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ParameterCdiTestRule</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">(</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">      </span><span class="n">PARAMS</span><span class="p">);</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w"> </span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">  </span><span class="cm">/** this field will take the values defined by parameterValuesRule field. */</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="nd">@ParameterCdiTest</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">parameter</span><span class="p">;</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w"> </span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">counterTest1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="w"> </span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">  </span><span class="cm">/** Test case to be executed once per parameter value */</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">  </span><span class="nd">@Test</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">    </span><span class="n">assertThat</span><span class="p">(</span><span class="s">&quot;parameter value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">parameter</span><span class="p">,</span><span class="w"> </span><span class="n">equalTo</span><span class="p">(</span><span class="n">PARAMS</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">counterTest1</span><span class="p">)));</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">    </span><span class="n">counterTest1</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>In this example <code>test1</code> test case will be executed 3 times having <code>parameter</code> field "param1", "param2" and "param3" value in each of these executions.</p>
+<p>Unlike when using <code>Parameterized.class</code> runner, all these 3 executions are seen as a single execution ( <code>Parameterized.class</code> would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.</p>
+<h3 id="dal-event-observers">DAL event observers</h3>
+<p>Because  DAL event observers  make use of CDI to work, they are not executed in standard test cases extending <code>OBBaseTest</code> .</p>
+<p>This limitation does not apply when using <code>WeldBaseTest</code> tests.</p>
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases" target="_blank">How to Create JUnit testcases</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
