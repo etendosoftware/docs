@@ -5,9 +5,11 @@ tags:
   - Event Handler
   - Business Logic
   - Event Method
-title: How to implement a business event handler 
+title: How to Implement a Business Event Handler
 ---
-  
+ 
+# How to Implement a Business Event Handler
+
 ## Overview
 
 The  business entity event  allows you to implement business logic which reacts to specific events which are fired when entities are updated, deleted or inserted into the database. 
@@ -16,11 +18,14 @@ The main advantage of implementing logic using business entity events instead of
 This helps productivity and quality as you can code, debug and test in an integrated environment with the rest of your business logic.
 
 !!! note "Some notes on business entity events:"
+    * They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity. 
+    * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. 
+    * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
+    * You can make use of the full [data access layer](../concepts/Data_Access_Layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
+      
+      Warning: Don't call setters on the instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. 
+      So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
-  * They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity. 
-  * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. 
-  * You can make use of the full [data access layer](../concepts/Data_Access_Layer.md) functionality in your event handling code, you can query, create new objects, persist etc. 
-  * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
 
 Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. Weld automa
 
@@ -313,7 +318,7 @@ greetingTrls.add(greetingTrl);
 The trl object is a child of the Greeting event entity and will persist together with it, so it is not necessary to explicitly save it.
 When you now enter a new entry in the window, you will see an additional translation child record being created.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
 
 ###  Interrupt the Save Action
 
