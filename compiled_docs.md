@@ -32752,6 +32752,8 @@ The dataset definition is ready, so the user just needs to export it to a file p
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases
 ## Article Content: 
+### How to Create Jest Test Cases
+  
 ####  Overview
 
 [Jest](https://jestjs.io/){target="_blank"} is a testing framework created by Facebook and currently used as the default testing framework in  [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}  . Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel or Typescript.
@@ -32832,6 +32834,8 @@ This work is a derivative of [How to Create Jest testcases](https://wiki.openbra
 ## Article URL: 
  https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases
 ## Article Content: 
+### How to Create JUnit Test Cases
+
 ####  Overview
 
 This how-to will focus on creating a test case making use of the `OBBaseTest` and `WeldBaseTest` classes. The test case will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
