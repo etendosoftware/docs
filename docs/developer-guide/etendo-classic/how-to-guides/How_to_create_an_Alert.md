@@ -5,10 +5,11 @@ tags:
   - alert recipients
   - notification system
   - user roles and permissions
+title: How to Create an Alert
 ---
 
 
-#  How to create an Alert
+#  How to Create an Alert
 
  
   

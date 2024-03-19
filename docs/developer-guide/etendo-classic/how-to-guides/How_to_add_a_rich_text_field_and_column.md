@@ -4,9 +4,10 @@ tags:
   - column
   - database
   - user interface Design
+title: How to Add a Rich Text Field and Column
 ---
 
-#  How to add a rich text field and column
+#  How to Add a Rich Text Field and Column
  
   
 ##  Overview

@@ -6,9 +6,10 @@ tags:
   - Etendo Infrastructure
   - Etendo ERP
   - FIC
+title: How to Create a Callout
 ---
 
-# How to create a callout
+# How to Create a Callout
 
 ##  Overview
 

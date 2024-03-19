@@ -6,9 +6,10 @@ tags:
   - UI Design
   - Application Dictionary
   - Modules
+title: How to Add a Field to a Window Tab
 ---
 
-# How to add a field to a Window Tab
+# How to Add a Field to a Window Tab
 
 ## Overview
 
