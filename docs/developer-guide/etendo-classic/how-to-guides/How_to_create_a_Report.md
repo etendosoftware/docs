@@ -10,8 +10,7 @@ tags:
   
 ##  Overview
 
-In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of
-products.
+In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
 
 ##  Setting up Jaspersoft Studio
   
@@ -19,8 +18,7 @@ products.
     It is recommended to use the latest version of Jaspersoft Studio.  
   
   
-First, you need to download Jaspersoft Studio, a graphical tool that allows you to
-create and modify JasperReports templates (.jrxml files).
+First, you need to download Jaspersoft Studio, a graphical tool that allows you to create and modify JasperReports templates (.jrxml files).
 
   * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
   * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
@@ -36,8 +34,7 @@ create and modify JasperReports templates (.jrxml files).
 
 ###  Configuring Jaspersoft Studio Properties
 
-Some properties of Jaspersoft Studio need to be modified in order to work
-properly. In short, you need to make sure:
+Some properties of Jaspersoft Studio need to be modified in order to work properly. In short, you need to make sure:
 
   * You modified the JasperReport property _net.sf.jasperreports.awt.ignore.missing.font_ and set it to *true*. It can be changed in `Properties` > `Jaspersoft Studio` > `Properties` 
   * Do not use any *Scriplet* class 
@@ -47,8 +44,7 @@ properly. In short, you need to make sure:
   
 ###  Setting up Classpath
 
-In Jaspersoft Studio, each report is supposed to be part of a project. So, you
-first need to create a new project (`File` > `New` > `Project`).
+In Jaspersoft Studio, each report is supposed to be part of a project. So, you first need to create a new project (`File` > `New` > `Project`).
 
 The project has a classpath, and here is where you can add the jars you need.
 
@@ -70,9 +66,7 @@ The project has a classpath, and here is where you can add the jars you need.
   * Define a Report Name 
   * Define the file Location in the project. 
 
-Later on, we will copy this .jrxml file inside our Etendo module that is
-going to keep our Report and also the required configuration in the Application
-Dictionary.
+Later on, we will copy this .jrxml file inside our Etendo module that is going to keep our Report and also the required configuration in the Application Dictionary.
 
   * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
   * Click *New*
@@ -89,8 +83,7 @@ Dictionary.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
 
-Now we have to configure the query: we are going to list the products present
-in the database.
+Now we have to configure the query: we are going to list the products present in the database.
 
   * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
 
@@ -137,23 +130,17 @@ Let's now design the Report Layout
   
 ###  Etendo Runtime Environment
 
-The standard reports in Etendo (`src/org/openbravo/erpReports`) make use
-of several methods that reside inside the *Etendo Runtime Environment* ,
-which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of
-the `org.openbravo.erpCommon.utility.Utility` Class:
+The standard reports in Etendo (`src/org/openbravo/erpReports`) make use of several methods that reside inside the *Etendo Runtime Environment*, which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of the `org.openbravo.erpCommon.utility.Utility` Class:
 
   * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
   * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
   * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
 
-For this, to be able to preview the standard Etendo reports from
-*JasperStudio*, it suffices just to import the .jar file into the classpath
-of the project within JasperStudio.
+For this, to be able to preview the standard Etendo reports from *JasperStudio*, it suffices just to import the .jar file into the classpath of the project within JasperStudio.
 
 ###  Adding images and logos to a report using the ShowImage API
 
-You can use the Image BLOB reference to display an image for a specific
-report, or one of the Company logos in the application. 
+You can use the Image BLOB reference to display an image for a specific report, or one of the Company logos in the application. 
 
 To do so:
 
@@ -161,14 +148,12 @@ To do so:
 
 2. set the expression class to "java.awt.Image" and the expression image to a call to the ShowImage function of the Utility class (if you want it to display a standard ImageBLOB image reference, that corresponds to a field added to a tab), or to the ShowImageLogo function if you want to display the logo of an Organization or Client.
 
-Images loaded with this method must not have alpha channel. A transparency
-layer is not supported by the function that loads images in Jasper Reports.
+Images loaded with this method must not have alpha channel. A transparency layer is not supported by the function that loads images in Jasper Reports.
 
   * If you want to use the ShowImage function, you need to make the expression image look like: 
     * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
 
-IMAGEID needs to be the UUID of the image you want to show. You could set this
-value using a Jasper parameter.
+IMAGEID needs to be the UUID of the image you want to show. You could set this value using a Jasper parameter.
 
   * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
     * This one will show the Company logo at System level: 
@@ -178,10 +163,7 @@ value using a Jasper parameter.
     * This one will show the Company logo at Organization level: 
         * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
 
-ORGANIZATIONID needs to be the UUID of the Organization whose log you want to
-show. You could set this value using a Jasper argument. An example could be
-`org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E`
-the organization ID.
+ORGANIZATIONID needs to be the UUID of the Organization whose log you want to show. You could set this value using a Jasper argument. An example could be `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E` the organization ID.
 
 ##  Registering the Report in Application Dictionary
 
@@ -204,10 +186,7 @@ It is possible to create a report using a process definition. For more informati
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
 
-We must copy the .jrxml template file generated with Jaspersoft Studio into
-our module. When using Process Definition to generate a Report, templates need
-to be stored in the web folder of the module. In our example, we place it in
-the following location: `/web/com.etendoerp.platform.features/jasper`
+We must copy the .jrxml template file generated with Jaspersoft Studio into our module. When using Process Definition to generate a Report, templates need to be stored in the web folder of the module. In our example, we place it in the following location: `/web/com.etendoerp.platform.features/jasper`
 
   * Navigate to the *Report Definition* tab 
   * Fill the PDF template field with the location of the .jrxml file 
@@ -230,18 +209,17 @@ the following location: `/web/com.etendoerp.platform.features/jasper`
 
 ##  Compiling
 
-After you have registered the report and menu entry in the Application
-Dictionary, you need to compile to generate the necessary code.
+After you have registered the report and menu entry in the Application Dictionary, you need to compile to generate the necessary code.
 
-    ```bash 
-        ./gradlew smartbuild
-    ``` 
+``` bash title="Terminal"
+./gradlew smartbuild
+```
+
 Once the compilation has been completed, restart your Tomcat server.
 
 ##  Testing the Report
 
-If you have completed all the steps, you should be able to open your Product
-List report form the quick-lauch, or menu entry.
+If you have completed all the steps, you should be able to open your Product List report form the quick-lauch, or menu entry.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
 
@@ -255,13 +233,11 @@ Also, a tutorial with the basics of how to design a report can be found [here](h
 
 ###  Configuring Cell Type in XLS Reports
 
-By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
+By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
 
-If we want to have a particular format in a cell of our XLS report, and for
-example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
+If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
 
-To override this configuration, the following must be done inside the .jrxml
-report template:
+To override this configuration, the following must be done inside the .jrxml report template:
 
   1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
   2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
@@ -275,18 +251,11 @@ report template:
 
 In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
 
-###  Creating a Reports in old releases
-
-To get information about reporting in old releases, you can go [here](../concepts/.Reports_obsolete.md).
-
 ###  Report Compilation
   
-When printing a report in the application, it is previously compiled at
-runtime. The result of this report compilation is cached if there are no
-modules in _in development_ status.
+When printing a report in the application, it is previously compiled at runtime. The result of this report compilation is cached if there are no modules in _in development_ status.
 
-Besides, it is possible to handle the state of this cache through a JMX
-extension. Thus, this extension allows to:
+Besides, it is possible to handle the state of this cache through a JMX extension. Thus, this extension allows to:
 
   * See if the cache is enabled. 
   * Enable/Disable the cache. 
@@ -295,11 +264,9 @@ extension. Thus, this extension allows to:
 
 ###  Barcodes
 
-It is possible to generate barcodes from JasperReports, using barcode4j or
-barbecue libraries. These libraries are included in [Barcode generation in reports](../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
+It is possible to generate barcodes from JasperReports, using barcode4j or barbecue libraries. These libraries are included in [Barcode generation in reports](../../../assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
 
-In Platform Features module, there is an example of a report making use of
-different barcode styles, see the [jrxml template](../../../assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
+In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](../../../assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
 
 ---
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
