@@ -1,5 +1,5 @@
 ---
-title: How to Create Jest testcases
+title: How to Create Jest Test Cases
 ---
   
 ##  Overview
