@@ -221,17 +221,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jest-testcases/</loc>
-         <lastmod>2024-03-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions/</loc>
-         <lastmod>2024-03-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/</loc>
          <lastmod>2024-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -252,6 +242,16 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/</loc>
+         <lastmod>2024-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases/</loc>
+         <lastmod>2024-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases/</loc>
          <lastmod>2024-03-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
