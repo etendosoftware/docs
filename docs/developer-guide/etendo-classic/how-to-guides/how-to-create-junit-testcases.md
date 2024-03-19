@@ -329,11 +329,11 @@ To be able to execute your testcases:
   * Right click on the `ExampleTest` class. 
   * Select Run `ExampleTest`. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
 
   * You can check the result of the test case on the JUnit view and the output of your tests in the Console view: 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
 
 Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
 ``` 
