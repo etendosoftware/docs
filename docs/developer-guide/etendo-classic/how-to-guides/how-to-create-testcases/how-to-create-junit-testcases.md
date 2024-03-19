@@ -1,10 +1,10 @@
 ---
-title: How to Create JUnit testcases
+title: How to Create JUnit Test Cases
 ---
   
 ##  Overview
 
-This how-to will focus on creating a testcase making use of the `OBBaseTest` and `WeldBaseTest` classes. The testcase will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
+This how-to will focus on creating a test case making use of the `OBBaseTest` and `WeldBaseTest` classes. The test case will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
 
 In computer programming, **unit testing** is a software design and development method where the programmer gains confidence that individual units of source code are fit for use. A unit is the smallest testable part of an application. In procedural programming a unit may be an individual program, function, procedure, etc., while in object-oriented programming, the smallest unit is a method, which may belong to a base/super class, abstract class or derived/child class.
 
@@ -17,7 +17,7 @@ First of all you need to create a src-test directory in your module package dire
 ``` 
 modules
 └── com.etendoerp.example
-    └── src-test                <-- source of the testcases 
+    └── src-test                <-- source of the test cases 
         └── src
             └── com.etendoerp.example
                 └── EtendoTest.java
@@ -28,11 +28,11 @@ modules
 
 Now, you are ready to work with test cases.
 
-##  Creating the testcase
+##  Creating the test case
 
 ###  Inheriting from OBBaseTest
 
-All the core testcases are subclasses from `OBBaseTest`. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).
+All the core test cases are subclasses from `OBBaseTest`. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).
 
 !!! info
     When writing test cases for Etendo that involve dependency injection or require the execution of DAL event observers, it is recommended to extend `org.openbravo.base.weld.test.WeldBaseTest` instead of `org.openbravo.test.base.OBBaseTest`.
@@ -324,7 +324,7 @@ When adding new test classes to Etendo ERP the developer has to always add the t
 
 ###  The Result
 
-To be able to execute your testcases:
+To be able to execute your test cases:
 
   * Right click on the `ExampleTest` class. 
   * Select Run `ExampleTest`. 
