@@ -192,7 +192,7 @@ In form-edit or grid-edit mode, the following applies:
 
 ##  Adding server side actions
 
-The button implementation can easily be extended with a server side action. Etendo Classic supports the action handler concept for this purpose.
+The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](../concepts/.Etendo_Architecture#actionhandler-server-side-calling-from-the-client)  for this purpose.
 
 ---
 
