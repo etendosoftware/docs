@@ -10,7 +10,12 @@ tags:
 ---
 
 #  How to add a canvas field to a Form or Grid
-  
+
+## Overview
+
+This guide explains how to integrate canvas fields into forms and grids within Etendo, enabling the addition of customized visual components such as buttons, links, and calculated labels. 
+Canvas fields offer dynamic data presentation and interaction, leveraging JavaScript development expertise for implementation.
+
 ##  Introduction
 
 A canvas field allows the user to add any visual component to a form or a row in a grid. 
@@ -34,7 +39,7 @@ It also makes sense to study the following page: [Etendo Architecture](../concep
 
 This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip)
 
 ##  Main development steps for creating a new canvas field
 
@@ -55,7 +60,7 @@ The example module implements a button and a calculated field in the `example-ca
 The first example in the file implements a button which shows the identifier of the current record:
 
     
-```javascript    
+```javascript title="example-canvas-field.js"
 isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
  
 isc.OBEXAPP_SalesOrderActionButton.addProperties({
@@ -77,7 +82,7 @@ The second example shows a calculated field which divides 2 values from the curr
 It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
 
     
-```javascript      
+```javascript title="example-canvas-field.js"
 isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
  
 isc.OBEXAPP_SalesOrderCalculated.addProperties({
@@ -129,7 +134,7 @@ isc.OBEXAPP_SalesOrderCalculated.addProperties({
 The javascript file is registered in the example modules' [ComponentProvider](../concepts/Etendo_Architecture/#component-provider) like this:
 
     
-```java  
+```java title="ExampleComponentProvider.java"
 @Override
 public List<ComponentResource> getGlobalComponentResources() {
   final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
