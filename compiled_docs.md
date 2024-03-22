@@ -39737,7 +39737,7 @@ Etendo UI is a _library of components_ that will be used throughout the example 
 
 ![etendo-ui-library-npm.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
 
-For more information, visit [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
 
 _Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
@@ -39877,7 +39877,7 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
 ## Article Content: 
 #### Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
     Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
@@ -40973,7 +40973,7 @@ After save, the final result, you should see something like this:
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
 ## Article Path: /Developer Guide/Etendo Mobile/Etendo UI Library
-Article URL: https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs
+Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
