@@ -462,7 +462,7 @@ nav:
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
         - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
-      - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
+      - Etendo UI Library: "https://main--65785998e8389d9993e8ec4c.chromatic.com"
   - What's New:
     - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md
