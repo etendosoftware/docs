@@ -37,7 +37,7 @@ additional reports, additional windows, connectors, content packs
 
 !!!info
     For a detailed description on the Etendo Classic modularity concept, see the
-    [Modularity Guide](/concepts/Modularity_Concepts.md).
+    [Modularity Guide](../concepts/Modularity_Concepts.md).
 
 This section explains only the standard module type, because that is most
 relevant for the other sections.
@@ -52,9 +52,9 @@ module can consist of the following software artifacts:
 
 The process of developing a module has three main steps:
 
-  1. Register your module in the Application Dictionary and in the central repository. 
+  1. Register your module in the Application Dictionary and in your github repository.
   2. Develop the artifacts included in your module. Depending on the functional specification and technical design of your module, it might include only one type of artifacts or a combination of them. In following sections, each type of artifact is described in detail. 
-  3. Publish the module in the central repository. 
+  3. Publish the module in your github repository.
 
 !!!Important
     Every piece of Etendo Classic code belongs to a module, including
@@ -66,10 +66,10 @@ The process of developing a module has three main steps:
 
 A module can be distributed and downloaded by other Etendo Classic users via
 the central repository. For more information about the central repository and
-distribution of modules, visit the [Modularity Guide](/concepts/Modularity_Concepts.md).
+distribution of modules, visit the [Modularity Guide](../concepts/Modularity_Concepts.md).
 
 The following sections discuss the main topic of this section: create and
-setup a module and publish it for distribution.
+setup a module and [publish it for distribution](how-to-publish-modules-to-github-repository.md).
 
 ##  Creating a Module
 
@@ -172,15 +172,25 @@ Since we do not have any additional developments yet, only the corresponding
 folder structure and the module descriptor XML files have been created at this
 point.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-4.png)
+```
+modules
+    └── org.etendo.howtos
+        └── src-db 
+            database
+               └── sourcedata
+                   ├── AD_MODULE_DBPREFIX.xml
+                   ├── AD_MODULE_DEPENDENCY.xml
+                   ├── AD_MODULE.xml
+                   └── AD_PACKAGE.xml
+```
 
   
 Etendo Classic validates the database and module artifacts of a module when the
-module is exported and its build file is created. See more information on the [database validation step](concepts/Development_Build_Tasks).
+module is exported and its build file is created. See more information on the [database validation step](../concepts/Development_Build_Tasks).
 
 !!!info
     For a detailed description of this `export.database` task and other relevant
-    Module related gradle tasks, see the [database gradle tasks](concepts/Development_Build_Tasks#database_tasks) and [module gradle task](concepts/Development_Build_Tasks#Modules) descriptions.
+    Module related gradle tasks, see the [database gradle tasks](../concepts/Development_Build_Tasks#database_tasks) and [module gradle task](../concepts/Development_Build_Tasks#Modules) descriptions.
 
 
 ##  Creating a Source Directory
@@ -188,8 +198,17 @@ module is exported and its build file is created. See more information on the [d
 To develop manual Java code you need a _src_ directory inside of your specific
 module:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-5.png)
-
+```
+modules
+    └── org.etendo.howtos
+        ├── src 
+        │   └── org
+        │       └── etendo
+        │           └── howtos
+        │                └── 
+        └── src-db
+            └──[...]
+```
   
 The Java package in the source directory should start with the Java package of
 the module.
@@ -206,4 +225,4 @@ The result of this section is a correctly set up module, which can be installed 
 
 ---
 
-This work is a derivative of [How to Create and Package a Module](http://wiki.Etendo.com/wiki/How_To_Create_and_Package_a_Module){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+This work is a derivative of [How to Create and Package a Module](http://wiki.openbravo.com/wiki/How_To_Create_and_Package_a_Module){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
