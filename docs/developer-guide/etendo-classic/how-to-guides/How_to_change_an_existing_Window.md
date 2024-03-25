@@ -4,9 +4,10 @@ tags:
   - UI Customization
   - Physical Inventory
   - Module Development
+title: How to Change an Existing Window
 ---
 
-#  How to change an existing Window
+#  How to Change an Existing Window
 
   
 ##  Overview
