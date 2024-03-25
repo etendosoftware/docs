@@ -29292,368 +29292,323 @@ If you encounter any issues or need additional help, do not hesitate to reach ou
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Etendo Jars
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Etendo Jars
+# Article Title: Alerts
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Alerts
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Alerts
 ## Article Content: 
-#### Overview
-
-The new version of Etendo comes with a new plugin which is focused on JARs.
-
-A [JAR](https://docs.oracle.com/javase/8/technotes/guides/jar/jarGuide.html){target="_blank"} (Java ARchive) is a packaged file format containing compiled classes, metadata information and resources for a Java application in a single file. 
-
-A JAR file provides multiple benefits:
-
--   Security
--   Portability
--   Compression
--   Packaging
--   Distribution
+### Alerts
 
 
-One common case of JAR uses are libraries.
+####  Overview
 
-With [Gradle](https://gradle.org/){target="_blank"} you can make use of libraries to incorporate new functionality to your application.
+Alerts are the way Etendo Classic can inform users about virtually any event
+that happens in the system (if an appropriate alertrule is created). It can be
+defined by the System Administrator (and exported to a module) or by a Client/Organization Administrator.
 
-Using the 'implementation' configuration provided by gradle you can define multiple dependencies:
+This notifications are shown in the top bar, just beside the Application menu.
 
-`implementation 'groupId:artifactId:version'`
-
-For example, to make use of the [Javax email library](https://mvnrepository.com/artifact/javax.mail/mail/1.4.7){target="_blank"} you need to define the next block of code in the gradle build file.
-``` groovy
-dependencies {
-	// https://mvnrepository.com/artifact/javax.mail/mail
-	implementation group: 'javax.mail', name: 'mail', version: '1.4.7'
-}
-```
+![]( ../../../assets/developer-guide/etendo-classic/concepts/Alerts-0.png)
 
 
-The Etendo plugin tries to use this approach, managing all libraries and dependencies that you need to run your Etendo environment.
+####  Alert Rules
 
----
+The definition of the _Alert Rules_ is made in the _Alert_ window (`General Setup` > `Application ` >`Alert`).
 
-##### Etendo JAR Modules
+####  Data Driven
 
-Modules are an important aspect of Etendo, they let you create and introduce new functionality to your application.
+The Administrator can define a query to test a particular scenario, e.g. Products without defined price, Products under stock, Customers with exceeded credit, etc.
 
-To acquire all the benefits of a JAR file, the new plugin allows the user to create a JAR version of a module with all the configuration needed to be published and distributed.
+The flow for data driven alerts is as follows:
+
+  * The Administrator creates *alert rules* , which include a SQL clause defining the event that is going to be monitored, and the *recipients* for the alerts. 
+  * A *background process* is permanently checking if the condition defined in each of the active alert rules return any record, in this case a new *alert instance* will be created for each one of the returned record. 
+  * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
+
+!!!info
+    For more information, read [how to create an alert](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
+
+#####  Definition
+
+  * SQL: Example of 'Products without defined price' rule 
+
+    
+    
+  ```sql
+    SELECT m_product_id AS referencekey_id,
+           p.name AS record_id,
+           '0' AS ad_role_id,
+           NULL AS ad_user_id,
+           p.name ||' is not in any Purchase price list' AS description,
+           'Y' AS isActive,
+            ad_org_id, 
+            ad_client_id, 
+            now() AS created,  
+            '0' AS createdBy,  
+            now() AS updated,
+            '0' AS updatedBy
+     FROM m_product p
+    WHERE p.ispurchased='Y'
+    AND NOT EXISTS (SELECT 1 
+                        FROM m_productprice pp,
+                             m_pricelist_version pv,
+                             m_pricelist pl
+                      WHERE p.m_product_id = pp.m_product_id
+                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
+                      AND pv.m_pricelist_id = pl.m_pricelist_id
+                      AND issopricelist='N')
+    UNION                  
+    SELECT m_product_id AS referencekey_id,
+           p.name AS record_id,
+           '0' AS ad_role_id,
+           NULL AS ad_user_id,
+           p.name ||' is not in any Sales price list' AS description,
+           'Y' AS isActive,
+            ad_org_id, 
+            ad_client_id, 
+            now() AS created,  
+            '0' AS createdBy,  
+            now() AS updated,
+            '0' AS updatedBy
+     FROM m_product p
+    WHERE p.ispurchased='N'
+    AND NOT EXISTS (SELECT 1 
+                        FROM m_productprice pp,
+                             m_pricelist_version pv,
+                             m_pricelist pl
+                      WHERE p.m_product_id = pp.m_product_id
+                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
+                      AND pv.m_pricelist_id = pl.m_pricelist_id
+                      AND issopricelist='Y')
+  ```
+
+  * The SQL query must have the following columns: 
+    * referencekey_id 
+    * record_id 
+    * ad_role_id 
+    * ad_user_id 
+    * description 
+    * isactive 
+    * ad_org_id 
+    * ad_client_id 
+    * created 
+    * createdby 
+    * updated 
+    * updatedby 
+
+  * Tab: From the Alert management window you can navigate directly to a record. From the Tab it can be defined to which tab you will navigate to. 
+
+  * Filter clause: This is a non-mandatory SQL whereclause which will be used to filter the alerts which will be shown to the user. 
+
+#####  Performance
+
+The sql commands defined in alert rules will be executed periodically in
+your system. Therefore, it is very important to define them as performance-efficient.
+
+If they are not, they will slow down your system noticeably.
 
 
-###### Permissions
-To obtain permissions to  publish a new version of a module you need to run:
+####  Alert Recipient
 
-`./gradlew registerModule -Ppkg=<package name> -Prepo=<repository rame>`
+The Alert Recipient tab handles the alert recipients management. You can
+define the Role whom will be notified, or an specific user. Also you can
+define if the user(s) should be notified by email.
 
-This task gives you privileges to publish in the specified repository. It also executes internally the **createModuleBuild** task to generate the **build.gradle** file.
-
-!!! warning
-    If you already have permissions to publish and the **build.gradle** file already exists you do not have to run this task.
-
-The **build.gradle** is a file that holds all the configuration and information used when the module is published.
-
-Modules containing a **build.gradle** file are now recognized as Gradle subprojects, creating a [multi-project build](https://docs.gradle.org/current/userguide/multi_project_builds.html){target="_blank"}.
-
-
-!!! info
-    If you only want to generate the **build.gradle** file you can run
-    `./gradlew createModuleBuild -Ppkg=<package name> -Prepo=<repository rame>`
-    This command will **overwrite** the build.gradle file if is already present.
-
-###### Publishing
-
-To publish a new version of a module you need to run
-
-`./gradlew publishVersion -Ppkg=<package name> -Prepo=<repository rame>`
-
-
-This task creates the JAR and ZIP version of the module, and tries to publish it in the specified repository.
-
-!!! info
-    The module needs to be compiled before published. You have to be working in a compiled environment with all the autogenerated entities created.
-
-!!! info
-    For more information refer to the [How to Publish Modules to a GitHub Repository guide](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
-
-
-<br>
-
-###### JAR File Structure
-Etendo JARs **modules** contains a special structure. All content of the ***src*** dir will be contained in the root of the JAR, with the compiled java classes. 
-Others directories like ***src-db***, ***src-util*** etc, will be stored in the '***META-INF/etendo***' location.
-
-
-###### Using an Etendo JAR Module
-To use a published version of a module in your Etendo enviroment, you need to define the dependency in the '**build.gradle**' file of the root project.
-
-Just like a library, using the implementation configuration:
-
-`implementation 'moduleGroupId:moduleArtifactId:moduleVersion'`
-
-The Etendo plugin will try automatically to resolve the artifact. If the dependency is a Etendo module, it will be located in the '**build/etendo/modules**' directory.
-
-The '**build/etendo/modules**' directory is a new special location. Etendo development tasks now will use this place as a new modules location to search.
-
-##### Etendo Core JAR
-
-With the new version of Etendo, you can still work with the code in sources or the new **JAR** format.
-
-The new Etendo core JAR contains a structure similar to JAR modules.
-
-To make use of the Etendo core JAR, same as a library, you need to define the dependency in the **build.gradle** of the root project
-
-``` groovy
-dependencies {
-  implementation group: 'com.etendoerp.platform', name: 'etendo-core', version: '22.1.0'
-}
-```
-
-Once the artifact is resolved, the Etendo plugin will identify that the dependency is the Etendo core, and will be located in the '**build/etendo**' directory.
-
-A config directory will be created in the root project. This directory contains the configurations templates used by Etendo to run the application.
-
-You need to set your own configurations using a **gradle.properties** file and run:
-
-`./gradlew setup`
-
-Once the configurations files are created, you can install the application.
-
-`./gradlew install`
-
-All the Etendo development tasks used with the core in sources should still be working with JARs.
-
-
-!!! info
-    Etendo Core, (**Sources** and **Jar**), allows the user to work with  modules in both formats.
-
-
+This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Inventory Status
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Inventory Status
+# Article Title: Constraints
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints
 ## Article Content: 
 #### Overview
 
-This section explains the Inventory Status concept that is part of Etendo.
+Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.
 
-#### Configuration
+####  Naming
 
-The Inventory Status will be available and configured as part of Etendo.
+When adding a check constraint, triggers and indexes modularity naming rules have to be taken into account. This is necessary because triggers and indexes are global objects for a database. 
 
-By default, all the Bins will be in an undefined Inventory Status. There are two possibilities:
+The modularity naming rule is as follows: 
+the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. 
 
--   **Undefined**. Available and Nettable, but not possible to go to Over Issue.
--   **Undefined OverIssue**. Available and Nettable and possible to go to Over Issue.
+For instance,`MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
-The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
+In the case of indexes and constraints, if the index/constraint is added to a
+table of another module then an additional `EM_` prefix is required:
 
-!!! info
-        For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/).
+`EM_MYMODULEDBPREFIX_CONSTRAINTNAME`.
 
-#### Functionality
+By following this naming rule, the index/trigger/constraint is exported to the
+module directory and packaged with the module.
 
-The Inventory Status concept is part of the inventory management of Etendo and includes the dimensions for Available, Nettable, and OverIssue to the storage bin and all stock in this bin has the same Inventory Status. The semantics of the Inventory Status refers to the condition of a specific inventory and can be configured. See examples at the end of this section.
+!!!info
+    The name of the constraints must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
 
-The master data for inventory status is maintained on system-level and the most typical values come predefined with the Etendo dataset. It is possible to add new and/or translate existing inventory status.
+####  Constraints
 
-!!! info
-    To have access to this window, it is necessary to log in as system administrator.
+Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
 
+!!!info
+    For more information, read [How to add a Constraint](https://docs.etendo.software/how-to-guides/How_to_add_a_Constraint.md).
 
-![](https://docs.etendo.software/assets/drive/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg.png)
+#####  Messages
 
-In the image above, the various Inventory Status values that are supplied with the installation of the software are shown.
+It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
 
-The inventory status allows or disallows certain business processes.
+!!!info
+    How to do that is explained in the [Messages](Messages.md#checks) documentation.
 
--   Ability to create/modify/delete Inventory Status with the following attributes:
-    -   **Available**: Inventory that is available for reservations and picking.
-    -   **Nettable**: Inventory that is available for planning of future supply (MRP).
-    -   **OverIssue**: Inventory that is allowed to go negative during the Issue of stock (not during the picking).
-        -   Note: It is not possible to go to negative if there are reservations against a particular stock. The reservation is always respected, regardless of the inventory status.
--   Add an Inventory Status value to each location or bin record.
--   Add the possibility to manually update the Inventory Status of a Storage Detail by moving it to a virtual, AdHoc created, bin.
--   A new process that identifies affected reservations when a change of the inventory status reduces/increases the quantity available. (Once identified, the relevant users could receive an alert about the consequence of the change in availability).
+#####  Backwards compatibility
 
-##### Inventory Status Change
+Modules should allow compatibility for other ones built on top of them at least between minor versions, additionally there could be user data already in the application if it is in a productive environment. 
+This means that user data or other module's could rely on the current database model and in case a new constraint is added or an existent one is modified to be more restrictive
+than it was, backwards compatibility could be broken. Therefore, it should be avoided to add new constraints or to modify existent ones to make them more restrictive during between versions.
 
-In the Warehouse and Storage Bins window, It is possible to check the Inventory Status of a Storage Bin and also to modify it.
+####  Indexes
 
-By selecting a Storage Bin in this window, it is possible to check its current Inventory Status.
+#####  Operator Classes
 
-![](https://docs.etendo.software/assets/drive/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ.png)
+  
+In PostgreSQL [Operator Classes](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} certain operator classes (`text_pattern_ops`,
+`varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
+involving pattern matching expressions. For instance, the following query:
 
-Also, by selecting a Storage Bin, a button named Change Status appears. By clicking it, it is possible to select a different Inventory Status for the selected Storage Bin.
+    
+```sql   
+    SELECT name
+    FROM c_bpartner
+    WHERE name LIKE 'John%'
+```
+would not use an index created like this:
 
-There are some restrictions:
+    
+```sql   
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (name COLLATE pg_catalog."default");
+```
 
--   If there are existing Reservations against the Stock of the Storage Bin, this Storage Bin can not be changed to an Inventory Status that does not have the Available flag checked
--   If there is negative stock in the Storage Bin, it is not possible to change the Inventory Status to one that does not have the Over Issue flag checked
+but would use an index defined with an operator class:
 
-![](https://docs.etendo.software/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png)
+    
+```sql 
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (name COLLATE pg_catalog."default" varchar_pattern_ops);
+```
 
-##### Examples
+Operator Classes are not needed in Oracle to use an index in the previously defined query, in that case if the index column defines an operator class, the operator class will have no effect.
 
-Examples of inventory status values:
+#####  Function based indexes
 
--   **Available** (YYN -> Available, Nettable, Not OverIssue, Owned/Not-Owned) can be set for all inventory that is free to be picked, for sales, production or any other purpose.
--   **In Transit** (NYN) is not free to be sold or shipped but is expected within a limited time and for that, we will take it into account for planning.
--   **Quarantine or Blocked** (NNN) is not available nor nettable since we expect a larger duration of this status.
--   **Inspect** (NYN) is also not available but is expected to be freed in a limited time and for that reason visible for planning/MRP.
--   **BackFlush** (YYY) will allow going negative due to unexpected waste in manufacturing environments.
--   **Public** (YYY) will allow going negative due to unexpected stock in public picking areas.
-> 
-!!! info
-    The inventory status does not have an effect on the inventory value.
+  
+Etendo  supports the use of functions in indexes. For instance, this along with the use of an operator class, would enable the use of indexes in case insensitive queries that use the iStartsWith operator, like this one:
 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Naming Guideliness for Modules
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Naming Guideliness for Modules
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules
-## Article Content: 
-#### Introduction
+    
+```sql
+    SELECT name
+    FROM c_bpartner
+    WHERE UPPER(name) LIKE 'JOHN%'
+```
 
-It is important to select an appropriate name for your module in order to make it easier for users to recognize it both in the Forge and in the Enterprise Module Management window.
+The following index could be used by the previous query:
 
-In the future, Etendo may also use these naming conventions to automatically categorize modules based on tags, therefore it is important that these naming conventions are followed.
+    
+```sql
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (upper(name) COLLATE pg_catalog."default" varchar_pattern_ops);
+```
 
-Here is a set of naming guidelines that we ask module authors to follow:
+Any function can be used in the indexes, as long as it is deterministic. Even
+needed functions are supported:
 
-#### Branding rules
+    
+```sql 
+    CREATE INDEX c_bpartner_name
+      ON c_bpartner
+      USING btree
+      (UPPER(REPLACE(name, 'a', 'b')));
+```
+The following index can also be used.
 
-- The module name should match the project name in the Forge (optional)
-- Module names should not be longer than 5 or 6 words and less than 60 character long (optional)
-- Module names cannot contain the word "Etendo"
-    - JSON REST Web Services: :white_check_mark:
-    - Etendo JSON REST Web Services: :no_entry:
-- Exception to the previous rule: modules that Etendo decides to market as products rather than modules:
-    - Etendo QuickStart Template: :white_check_mark:
-- You do not need to specify the Etendo version in the module name:
-    - Translation: Arabic Saudi Arabia (ar_SA): :white_check_mark:
-    - Translation: Arabic Saudi Arabia (ar_SA) for Etendo 2.50: :no_entry:
-- Module names should not contain the word "Module"
-    - Copy Role: :white_check_mark:
-    - Copy Role Module: :no_entry:
-
-#### Language and grammar conventions
-
-- All module names must be in English. The module description and help can be in any other language.
-- Non English proper nouns are accepted as part of a module name specified in English
-    - Tax Report: Modelo 349 (Spain): :white_check_mark:
-    - Tax Report: Form 349 (Spain): :no_entry: (rationale: Modelo 349 is a proper noun and should not be  translated)
-    - Informe Fiscal: Modelo 349 (Spain): :no_entry:
-- The module help must differ from the module description
-- Grammatically, module names should be treated as proper nouns and you should capitalize the first letter of every word in the module name (with the exception of short words and acronyms)
-    - Initial Data Load: :white_check_mark:
-    - Initial data load: :no_entry:
-    - Direct Debit Form of Payment: :white_check_mark:
-    - Direct Debit Form Of Payment: :no_entry:
-    - Three Digits ISO Country Codes: :white_check_mark:
-    - Three Digits Iso Country Codes: :no_entry:
-- You should avoid using numeric characters to express quantities (they are OK in codes and dates)
-    - Three Digit ISO Country Codes: :white_check_mark:
-    - 3 Digit ISO Country Codes: :no_entry:
-    - Chart of Accounts - PGC 2007 General: Spain: :white_check_mark:
-    - Tax Report: Modelo 349 - Spain
-- Module names should not end with a full stop:
-    - Initial Data Load: :white_check_mark:
-    - Initial Data Load.: :no_entry:
-- Module description should end with a full stop
-    - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher.: :white_check_mark:
-    - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher: :no_entry:
-
-#### Specific Types of Modules
-
-- Core translations (translation of Etendo Core) should follow the convention:
-    - "Translation: $LANG $COUNTRY ($CODE)"
-    - Translation: Arabic Saudi Arabia (ar_SA) :white_check_mark:
-- Module translations (translations of modules other than Etendo Core) should follow the convention:
-    - "$MODULE NAME Translation: $LANG $COUNTRY ($CODE)"
-    - Tax Report Launcher Translation: Spanish Spain (es_ES) :white_check_mark:
-- The description for module translations should include an appropriate translation of the module name in the target language as well as both the name of the language and the name of the country in the target language:
-    - + Name: Tax Report Launcher Translation: Spanish Spain (es_ES) + Description: Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher. :white_check_mark:
-- Chart of accounts modules should follow the convention:
-    - "Chart of Accounts: $COUNTRY"
-    - Chart of Accounts: France :white_check_mark:
-- For countries with multiple charts of accounts, use the conventions
-    - "Chart of Accounts: $TYPE - $COUNTRY"
-    - Chart of Accounts: PGC 2007 General - Spain :white_check_mark:
-    - Chart of Accounts: PGC 2007 PYMEs - Spain :white_check_mark:
-- Tax configuration modules should follow the convention:
-    - "Tax Configuration: $COUNTRY"
-    - Tax Configuration: France :white_check_mark:
-- Tax report modules should follow the convention:
-    - "Tax Report: $FORM_NAME - $COUNTRY"
-    - Tax Report: Modelo 347 - Spain :white_check_mark:
-- Region modules should follow the convention:
-    - "Regions: $COUNTRY"
-    - "Regions: Brazil" :white_check_mark:
-    !!! note
-        Whenever the regions of a country are called something other than regions, you can use the :white_check_mark: term in the module description. Example: + Name: Regions: United States of America + Description: US states.
-- Report modules (other than tax reports) should follow the convention:
-    - "Report: $REPORT_NAME"
-    - Report: Shipments Awaiting Invoice :white_check_mark:
-- Skin modules should follow the convention:
-    - "Skin: $SKIN_NAME"
-    - Skin: Blue Sea :white_check_mark:
-- Tutorial modules (provided as examples to illustrate how to develop modules) should follow the convention:
-    - "Tutorial: $TUTORIAL NAME"
-    - Tutorial: Solitaire :white_check_mark:
-
-#### Bundles
-
-- Do not use "module" in bundles, everything is a module (including core) so this would be redundant.
-- In general modules should not use subpackages of other modules since it might create a conflict. In particular do not use subpackages for modules included in a pack (eg. several modules in the spanish localization pack use as a package that is a subpackage of the spanish localization pack package). That inclusion is declared in the pack itself and using subpackaging would create a kind of redundancy (the module could be taken out from the pack later) or modules originally not designed for the pack could be included later.
-- The only case where a subpackage makes sense are translations since that relationship can not be changed.
-For translations, do not use the word "translation" but directly the language code: translatedmodulepackage.languageCode (eg. org.openbravo.document.massinvoicing.es_ES).
-- For translations of core, it does not work (org.openbravo.es_ES) because the core package is not clear enough. In that case, use org.openbravo.coretranslation.es_ES or just org.openbravo.core.es_ES)
-- Do not use the "type of artifacts" included in the module for packaging (eg. org.openbravo.report.xxx or org.openbravo.callout.xxx are wrong). The content of a module should not be defined by the "technical components" used to implement them but by the functional objective of the module. It might happen that the functional objective can be reached in a different manner and it should not force repackaging.
-- In some cases, functional and technical categories are the same (eg. report) - in this case, put the word "report" in the name of the module but not as a package (eg. org.openbravo.financial.taxreportXX instead of org.openbravo.financial.report.taxXX)
-- A package for a module developed by Etendo and staff should be:
-org.openbravo.functionalcategory.modulename
-
-    - In some cases, it makes sense to use an additional level:
-        org.openbravo.functionalcategory.functionalsubcategory.modulename
-
-    - Use a common set of functional categories and subcategories (when needed). Each scrum team defines their own list of categories and subcategories. This is a starting point (split by teams):
-
-        - applicationdictionary (platform)
-        - kernel (platform)
-        - utility (platform)
-        - setup (erp engineering)
-        - common (erp engineering)
-        - document (erp engineering)
-        - warehouse (erp engineering)
-        - project (erp engineering)
-        - production (erp engineering)
-        - mrp (erp engineering)
-        - financial (erp engineering)
-        - erputil (erp engineering)
-        - localization (localization) ->  subcategories for each country (eg. localization.spain)
-        - localizationutil (localization)
-        - quickstart (industry templates / verticals are a category by itself)
-        - quickstartspain (industry templates / verticals are a category by itself)
-
-#### Choosing a db_prefix
-
-##### Modules created by Partners
-- Use a db_prefix that do not begin with the letters ET
-- EM is a reserved word not allowed as a db_prefix
-
-##### Modules created by Etendo and staff
-- Use a db_prefix ETX where X: from one to 5 characters for the module itself
-
-##### Customization modules
-- Use a db_prefix beginning with CUST
-
-Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with CUST. Modules with these kind of DBPrefixes cannot be registered in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use CUST and do not register it.
+    
+```sql
+    CREATE INDEX c_bpartner_name_id
+      ON c_bpartner
+      USING btree
+      (UPPER(REPLACE(name, 'a', 'b')),
+       UPPER(c_bpartner_id));
+```
 
 
+  
+#####  Partial indexes
+  
+`PostgreSQL` supports the definition of [partial indexes](https://www.postgresql.org/docs/9.3/indexes-partial.html){target="\_blank"}. A partial index is an index where it is possible to specify the rows that are indexed. This kind of indexes are useful for commonly used _WHERE_ conditions that use constant values.
+
+Thus, with a partial index it is possible to index just the table data that is most commonly used, helping to reduce the amount of disk space used by the index.
+
+A partial index can be created as follows:
+
+    
+```sql
+    CREATE INDEX a_amortization_active 
+      ON a_amortization (isactive)
+      WHERE isactive = 'Y';
+```
+
+Oracle does not support the creation of partial indexes in an explicit way yet. For this reason, if a partial index is found in the Etendo XML model when using an Oracle database, the partial index definition is not taken into account and it is created as a regular index.
+  
+######  Not Null Partial Indexes On Nullable Columns
+
+In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.
+
+This is not the behavior in `PostgreSQL databases`, where we will need to define the index as partial to get the same behavior. For example:
+
+    
+```sql 
+    CREATE INDEX c_order_return_reason 
+      ON c_order (c_return_reason_id)
+      WHERE c_return_reason_id IS NOT NULL;
+```
+
+#####  Indexes for Contains Search
+
+  
+The indexes for *contains* search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
+
+In PostgresSQL we can define a contains search index as follows:
+
+    
+```sql
+    CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (value gin_trgm_ops);
+```
+
+!!!note
+    To define this kind of indexes, we have to make use of the ` gin `
+    access method together with the ` gin_trgm_ops ` operator class for
+    the indexed column. Both elements are available thanks to the ` pg_trgm `
+    extension which is included in Etendo distribution by default.
+
+Besides, this feature allows defining a [function based index](#function-based-indexes) to improve icontains (case-insensitive) searching:
+
+    
+```sql
+    `CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (UPPER(value) gin_trgm_ops);`
+```
+
+!!!info
+    This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
+
+
+This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Data Access Layer
@@ -30714,199 +30669,6 @@ This work is a derivative of [Data Access Layer](http://wiki.openbravo.com/wiki/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Constraints
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Constraints
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/Constraints
-## Article Content: 
-#### Overview
-
-Both check constraints and triggers are objects defined physically in database. This document will not explain the basis for constraints but just the particularities Etendo Classic has in their usage.
-
-####  Naming
-
-When adding a check constraint, triggers and indexes modularity naming rules have to be taken into account. This is necessary because triggers and indexes are global objects for a database. 
-
-The modularity naming rule is as follows: 
-the constraint, index or trigger name must start with the DB Prefix of the module the constraint belongs to. 
-
-For instance,`MYMODULEDBPREFIX_CONSTRAINTNAME`.
-
-In the case of indexes and constraints, if the index/constraint is added to a
-table of another module then an additional `EM_` prefix is required:
-
-`EM_MYMODULEDBPREFIX_CONSTRAINTNAME`.
-
-By following this naming rule, the index/trigger/constraint is exported to the
-module directory and packaged with the module.
-
-!!!info
-    The name of the constraints must not exceed the 30 characters as the maximum length of an object name in oracle is 30 characters.  
-
-####  Constraints
-
-Check constraints do not have any particularity in Etendo, except for how they should be named and how the back-end treats them to show messages.
-
-!!!info
-    For more information, read [How to add a Constraint](https://docs.etendo.software/how-to-guides/How_to_add_a_Constraint.md).
-
-#####  Messages
-
-It is possible to define a message to be shown when the rule defined by the constraint is not satisfied. 
-
-!!!info
-    How to do that is explained in the [Messages](Messages.md#checks) documentation.
-
-#####  Backwards compatibility
-
-Modules should allow compatibility for other ones built on top of them at least between minor versions, additionally there could be user data already in the application if it is in a productive environment. 
-This means that user data or other module's could rely on the current database model and in case a new constraint is added or an existent one is modified to be more restrictive
-than it was, backwards compatibility could be broken. Therefore, it should be avoided to add new constraints or to modify existent ones to make them more restrictive during between versions.
-
-####  Indexes
-
-#####  Operator Classes
-
-  
-In PostgreSQL [Operator Classes](https://www.postgresql.org/docs/9.3/indexes-opclass.html){target="\_blank"} certain operator classes (`text_pattern_ops`,
-`varchar_pattern_ops`, and `bpchar_pattern_ops`) enables using indexes in queries
-involving pattern matching expressions. For instance, the following query:
-
-    
-```sql   
-    SELECT name
-    FROM c_bpartner
-    WHERE name LIKE 'John%'
-```
-would not use an index created like this:
-
-    
-```sql   
-    CREATE INDEX c_bpartner_name
-      ON c_bpartner
-      USING btree
-      (name COLLATE pg_catalog."default");
-```
-
-but would use an index defined with an operator class:
-
-    
-```sql 
-    CREATE INDEX c_bpartner_name
-      ON c_bpartner
-      USING btree
-      (name COLLATE pg_catalog."default" varchar_pattern_ops);
-```
-
-Operator Classes are not needed in Oracle to use an index in the previously defined query, in that case if the index column defines an operator class, the operator class will have no effect.
-
-#####  Function based indexes
-
-  
-Etendo  supports the use of functions in indexes. For instance, this along with the use of an operator class, would enable the use of indexes in case insensitive queries that use the iStartsWith operator, like this one:
-
-    
-```sql
-    SELECT name
-    FROM c_bpartner
-    WHERE UPPER(name) LIKE 'JOHN%'
-```
-
-The following index could be used by the previous query:
-
-    
-```sql
-    CREATE INDEX c_bpartner_name
-      ON c_bpartner
-      USING btree
-      (upper(name) COLLATE pg_catalog."default" varchar_pattern_ops);
-```
-
-Any function can be used in the indexes, as long as it is deterministic. Even
-needed functions are supported:
-
-    
-```sql 
-    CREATE INDEX c_bpartner_name
-      ON c_bpartner
-      USING btree
-      (UPPER(REPLACE(name, 'a', 'b')));
-```
-The following index can also be used.
-
-    
-```sql
-    CREATE INDEX c_bpartner_name_id
-      ON c_bpartner
-      USING btree
-      (UPPER(REPLACE(name, 'a', 'b')),
-       UPPER(c_bpartner_id));
-```
-
-
-  
-#####  Partial indexes
-  
-`PostgreSQL` supports the definition of [partial indexes](https://www.postgresql.org/docs/9.3/indexes-partial.html){target="\_blank"}. A partial index is an index where it is possible to specify the rows that are indexed. This kind of indexes are useful for commonly used _WHERE_ conditions that use constant values.
-
-Thus, with a partial index it is possible to index just the table data that is most commonly used, helping to reduce the amount of disk space used by the index.
-
-A partial index can be created as follows:
-
-    
-```sql
-    CREATE INDEX a_amortization_active 
-      ON a_amortization (isactive)
-      WHERE isactive = 'Y';
-```
-
-Oracle does not support the creation of partial indexes in an explicit way yet. For this reason, if a partial index is found in the Etendo XML model when using an Oracle database, the partial index definition is not taken into account and it is created as a regular index.
-  
-######  Not Null Partial Indexes On Nullable Columns
-
-In an Oracle database, it does not include rows in an index if the indexed columns are NULL. That means that for the case where we are indexing a nullable foreign key column every index is a partial index.
-
-This is not the behavior in `PostgreSQL databases`, where we will need to define the index as partial to get the same behavior. For example:
-
-    
-```sql 
-    CREATE INDEX c_order_return_reason 
-      ON c_order (c_return_reason_id)
-      WHERE c_return_reason_id IS NOT NULL;
-```
-
-#####  Indexes for Contains Search
-
-  
-The indexes for *contains* search are those intended to provide fast searching of sub-strings within the values stored in a particular database column.
-
-In PostgresSQL we can define a contains search index as follows:
-
-    
-```sql
-    CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (value gin_trgm_ops);
-```
-
-!!!note
-    To define this kind of indexes, we have to make use of the ` gin `
-    access method together with the ` gin_trgm_ops ` operator class for
-    the indexed column. Both elements are available thanks to the ` pg_trgm `
-    extension which is included in Etendo distribution by default.
-
-Besides, this feature allows defining a [function based index](#function-based-indexes) to improve icontains (case-insensitive) searching:
-
-    
-```sql
-    `CREATE INDEX c_bpartner_value_basic ON c_bpartner USING gin (UPPER(value) gin_trgm_ops);`
-```
-
-!!!info
-    This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
-
-
-This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Datasets
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Datasets
 ## Article URL: 
@@ -31080,129 +30842,492 @@ This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets)
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Alerts
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Alerts
+# Article Title: Element and Synchronize Terminology
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/Alerts
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology
 ## Article Content: 
-### Alerts
+####  Element
 
+Elements  define the text in the label to be displayed for each field in the
+application as well as its related help. Each column in the Application
+Dictionary is linked to an element, note that more than one column can be
+linked to a single element, this is the way to reuse the same text for
+different columns (and finally fields) in the application. 
 
-####  Overview
+For example, `C_BPartner_ID` is the name for a number of columns in the application, all of them are a reference to a business partner thus, the text to be displayed as
+well as the help for all of them is the same; instead of maintaining that
+information redundantly in each column all these columns use the same element.
 
-Alerts are the way Etendo Classic can inform users about virtually any event
-that happens in the system (if an appropriate alertrule is created). It can be
-defined by the System Administrator (and exported to a module) or by a Client/Organization Administrator.
+#####  Element maintenance
 
-This notifications are shown in the top bar, just beside the Application menu.
+Elements can be edited in `Application Dictionary` > `Setup ` >`Element` 
+window (as *System Administrator*); but, usually, elements are not directly
+created using this window but by the *Synchronize terminology* . Once the
+element is created, this window is used to edit its contents.
 
-![]( ../../../assets/developer-guide/etendo-classic/concepts/Alerts-0.png)
+#####  Synchronize Terminology
 
+It is the process that creates the elements for the columns that do not
+already have an associated one and copies the information in the elements to
+the columns and fields which are linked to them.
 
-####  Alert Rules
+To run it, go to  `Application Dictionary` > `Synchronize Terminology ` as
+*System Administrator* . 
 
-The definition of the _Alert Rules_ is made in the _Alert_ window (`General Setup` > `Application ` >`Alert`).
+Basically, this process looks for all the columns that
+have no linked element. In case there is an element with the same column
+name that the orphan column's one, this element is linked to that column, other
+case a new element is created with the same column name the column has. 
 
-####  Data Driven
-
-The Administrator can define a query to test a particular scenario, e.g. Products without defined price, Products under stock, Customers with exceeded credit, etc.
-
-The flow for data driven alerts is as follows:
-
-  * The Administrator creates *alert rules* , which include a SQL clause defining the event that is going to be monitored, and the *recipients* for the alerts. 
-  * A *background process* is permanently checking if the condition defined in each of the active alert rules return any record, in this case a new *alert instance* will be created for each one of the returned record. 
-  * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
+All that is done taking into account module, thus an element is only reused if it
+is defined in the same module as the column's one, or in another one dependent
+from the column's module. It also copies the text in the elements to the
+fields that represent the columns for those elements.
 
 !!!info
-    For more information, read [how to create an alert](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
+    When creating/editing fields is worthless to write a good text for name,
+    description and help fields since they will be overwritten with the ones in
+    the element. When this process is run, just leave them empty (or with
+    some letters for mandatory ones). On the other hand, when creating a new
+    column, if a new element from this column is created, the element will have
+    the contents of those fields in the column. 
 
-#####  Definition
+!!!note 
+    Note that once the element is created the changes in the column fields will also be overwritten in this process.  
 
-  * SQL: Example of 'Products without defined price' rule 
+  
+######  In detail
 
-    
-    
-  ```sql
-    SELECT m_product_id AS referencekey_id,
-           p.name AS record_id,
-           '0' AS ad_role_id,
-           NULL AS ad_user_id,
-           p.name ||' is not in any Purchase price list' AS description,
-           'Y' AS isActive,
-            ad_org_id, 
-            ad_client_id, 
-            now() AS created,  
-            '0' AS createdBy,  
-            now() AS updated,
-            '0' AS updatedBy
-     FROM m_product p
-    WHERE p.ispurchased='Y'
-    AND NOT EXISTS (SELECT 1 
-                        FROM m_productprice pp,
-                             m_pricelist_version pv,
-                             m_pricelist pl
-                      WHERE p.m_product_id = pp.m_product_id
-                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
-                      AND pv.m_pricelist_id = pl.m_pricelist_id
-                      AND issopricelist='N')
-    UNION                  
-    SELECT m_product_id AS referencekey_id,
-           p.name AS record_id,
-           '0' AS ad_role_id,
-           NULL AS ad_user_id,
-           p.name ||' is not in any Sales price list' AS description,
-           'Y' AS isActive,
-            ad_org_id, 
-            ad_client_id, 
-            now() AS created,  
-            '0' AS createdBy,  
-            now() AS updated,
-            '0' AS updatedBy
-     FROM m_product p
-    WHERE p.ispurchased='N'
-    AND NOT EXISTS (SELECT 1 
-                        FROM m_productprice pp,
-                             m_pricelist_version pv,
-                             m_pricelist pl
-                      WHERE p.m_product_id = pp.m_product_id
-                      AND pv.m_pricelist_version_id = pv.m_pricelist_version_id
-                      AND pv.m_pricelist_id = pl.m_pricelist_id
-                      AND issopricelist='Y')
-  ```
+Here are all the steps the *Synchronize Terminology* process executes.
 
-  * The SQL query must have the following columns: 
-    * referencekey_id 
-    * record_id 
-    * ad_role_id 
-    * ad_user_id 
-    * description 
-    * isactive 
-    * ad_org_id 
-    * ad_client_id 
-    * created 
-    * createdby 
-    * updated 
-    * updatedby 
+  1. For all the columns and process parameters in the dictionary without element, create an element in case there is no element with the same column name in the same module or in a dependent one, copying to the new element name, help and description from the column/parameter. 
+  2. Delete all the elements that are not used anymore. 
+  3. For the rest of columns and process parameters without elements, associate the existent element in the same module or in a dependent one having the same column name. 
+  4. Update columns and process parameters with the name, help and description values in their associated elements. 
+  5. Update centrally maintained fields with the name, help and description for the elements associated with their associated columns. 
+  6. Update workflow nodes with the name and description in their linked windows. 
+  7. Update menu entries with the name and description in their linked windows, processes, forms or workflows. 
 
-  * Tab: From the Alert management window you can navigate directly to a record. From the Tab it can be defined to which tab you will navigate to. 
+#####  Central Maintenance for fields
 
-  * Filter clause: This is a non-mandatory SQL whereclause which will be used to filter the alerts which will be shown to the user. 
+In most cases, the previously defined process fits all the requirements for
+field labels. But in some occasions, it is wanted to have a field with a
+different set of label, help and description than the rest of fields
+associated to the same column. 
 
-#####  Performance
+!!!info
+    For these cases, it is possible to set no to the *Central Maintenance* check in `Application Dictionary` > `Windows, Tabs and Fields` >`Window >> Tab >> Field`, doing so, name, help and description in the field will not be overwritten with the element's ones.
 
-The sql commands defined in alert rules will be executed periodically in
-your system. Therefore, it is very important to define them as performance-efficient.
+Let's see how it is used with an example:
 
-If they are not, they will slow down your system noticeably.
+A very common column name is `AD_Language` , these columns are a reference to languages stored in `AD_Language` table. The name for the `AD_Language` element is *Language* and its help is *The Language identifies the language to use for display* which is very general. 
+
+Modules have a language (which might be different to English)
+which they have the UI defined in. The label and help for `AD_Language` field
+in `Application Dictionary` > `Module` are *Module Language* and this language
+defines the language used as base for the user interface elements in the
+module. This is done by setting the field for `AD_Language` column in
+*Module* tab as not centrally maintained and writing directly in the field the
+name and help.
+
+#####  Translations
+
+As elements are used to define text to be displayed in UI, they can be
+translated to different languages. 
+
+The text in the element must be written in the language its module defines, and then it can be translated to other ones.
+
+!!!note
+    The standard way to translate is by creating a new module with no additional
+    functionality but just translations for the module.
+
+#####  Purchase entries
+
+If you observe the fields in the `Application Dictionary` > `Setup` >`Element` 
+you will notice there are standard fields (name, help...) and similar ones
+but for purchases.
+
+In Etendo, there are some tables that are used for sales and purchases
+transactions, for example `C_Invoice` table contains both sales and purchases
+invoices. This means that `Purchase Invoice` > `Header`  and `Sales Invoice` > `Header` tabs use the same table. But, it is very usual to label fields for the
+same column in a different way depending on whether it is a sales or purchase
+window. 
+
+Instead of doing it, setting all the fields in the purchase windows as
+`not centrally maintained`. This is achieved by populating in the correspondent
+elements, the standard names and the purchase ones. Then, the windows are
+distinguished between sales and purchases using the *Sales Transaction* check
+in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  tab.
 
 
-####  Alert Recipient
+  
+This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
-The Alert Recipient tab handles the alert recipients management. You can
-define the Role whom will be notified, or an specific user. Also you can
-define if the user(s) should be notified by email.
 
-This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Jars
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Etendo Jars
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/etendo-jars
+## Article Content: 
+#### Overview
+
+The new version of Etendo comes with a new plugin which is focused on JARs.
+
+A [JAR](https://docs.oracle.com/javase/8/technotes/guides/jar/jarGuide.html){target="_blank"} (Java ARchive) is a packaged file format containing compiled classes, metadata information and resources for a Java application in a single file. 
+
+A JAR file provides multiple benefits:
+
+-   Security
+-   Portability
+-   Compression
+-   Packaging
+-   Distribution
+
+
+One common case of JAR uses are libraries.
+
+With [Gradle](https://gradle.org/){target="_blank"} you can make use of libraries to incorporate new functionality to your application.
+
+Using the 'implementation' configuration provided by gradle you can define multiple dependencies:
+
+`implementation 'groupId:artifactId:version'`
+
+For example, to make use of the [Javax email library](https://mvnrepository.com/artifact/javax.mail/mail/1.4.7){target="_blank"} you need to define the next block of code in the gradle build file.
+``` groovy
+dependencies {
+	// https://mvnrepository.com/artifact/javax.mail/mail
+	implementation group: 'javax.mail', name: 'mail', version: '1.4.7'
+}
+```
+
+
+The Etendo plugin tries to use this approach, managing all libraries and dependencies that you need to run your Etendo environment.
+
+---
+
+##### Etendo JAR Modules
+
+Modules are an important aspect of Etendo, they let you create and introduce new functionality to your application.
+
+To acquire all the benefits of a JAR file, the new plugin allows the user to create a JAR version of a module with all the configuration needed to be published and distributed.
+
+
+###### Permissions
+To obtain permissions to  publish a new version of a module you need to run:
+
+`./gradlew registerModule -Ppkg=<package name> -Prepo=<repository rame>`
+
+This task gives you privileges to publish in the specified repository. It also executes internally the **createModuleBuild** task to generate the **build.gradle** file.
+
+!!! warning
+    If you already have permissions to publish and the **build.gradle** file already exists you do not have to run this task.
+
+The **build.gradle** is a file that holds all the configuration and information used when the module is published.
+
+Modules containing a **build.gradle** file are now recognized as Gradle subprojects, creating a [multi-project build](https://docs.gradle.org/current/userguide/multi_project_builds.html){target="_blank"}.
+
+
+!!! info
+    If you only want to generate the **build.gradle** file you can run
+    `./gradlew createModuleBuild -Ppkg=<package name> -Prepo=<repository rame>`
+    This command will **overwrite** the build.gradle file if is already present.
+
+###### Publishing
+
+To publish a new version of a module you need to run
+
+`./gradlew publishVersion -Ppkg=<package name> -Prepo=<repository rame>`
+
+
+This task creates the JAR and ZIP version of the module, and tries to publish it in the specified repository.
+
+!!! info
+    The module needs to be compiled before published. You have to be working in a compiled environment with all the autogenerated entities created.
+
+!!! info
+    For more information refer to the [How to Publish Modules to a GitHub Repository guide](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
+
+
+<br>
+
+###### JAR File Structure
+Etendo JARs **modules** contains a special structure. All content of the ***src*** dir will be contained in the root of the JAR, with the compiled java classes. 
+Others directories like ***src-db***, ***src-util*** etc, will be stored in the '***META-INF/etendo***' location.
+
+
+###### Using an Etendo JAR Module
+To use a published version of a module in your Etendo enviroment, you need to define the dependency in the '**build.gradle**' file of the root project.
+
+Just like a library, using the implementation configuration:
+
+`implementation 'moduleGroupId:moduleArtifactId:moduleVersion'`
+
+The Etendo plugin will try automatically to resolve the artifact. If the dependency is a Etendo module, it will be located in the '**build/etendo/modules**' directory.
+
+The '**build/etendo/modules**' directory is a new special location. Etendo development tasks now will use this place as a new modules location to search.
+
+##### Etendo Core JAR
+
+With the new version of Etendo, you can still work with the code in sources or the new **JAR** format.
+
+The new Etendo core JAR contains a structure similar to JAR modules.
+
+To make use of the Etendo core JAR, same as a library, you need to define the dependency in the **build.gradle** of the root project
+
+``` groovy
+dependencies {
+  implementation group: 'com.etendoerp.platform', name: 'etendo-core', version: '22.1.0'
+}
+```
+
+Once the artifact is resolved, the Etendo plugin will identify that the dependency is the Etendo core, and will be located in the '**build/etendo**' directory.
+
+A config directory will be created in the root project. This directory contains the configurations templates used by Etendo to run the application.
+
+You need to set your own configurations using a **gradle.properties** file and run:
+
+`./gradlew setup`
+
+Once the configurations files are created, you can install the application.
+
+`./gradlew install`
+
+All the Etendo development tasks used with the core in sources should still be working with JARs.
+
+
+!!! info
+    Etendo Core, (**Sources** and **Jar**), allows the user to work with  modules in both formats.
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Inventory Status
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Inventory Status
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/inventory-status
+## Article Content: 
+#### Overview
+
+This section explains the Inventory Status concept that is part of Etendo.
+
+#### Configuration
+
+The Inventory Status will be available and configured as part of Etendo.
+
+By default, all the Bins will be in an undefined Inventory Status. There are two possibilities:
+
+-   **Undefined**. Available and Nettable, but not possible to go to Over Issue.
+-   **Undefined OverIssue**. Available and Nettable and possible to go to Over Issue.
+
+The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
+
+!!! info
+        For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/).
+
+#### Functionality
+
+The Inventory Status concept is part of the inventory management of Etendo and includes the dimensions for Available, Nettable, and OverIssue to the storage bin and all stock in this bin has the same Inventory Status. The semantics of the Inventory Status refers to the condition of a specific inventory and can be configured. See examples at the end of this section.
+
+The master data for inventory status is maintained on system-level and the most typical values come predefined with the Etendo dataset. It is possible to add new and/or translate existing inventory status.
+
+!!! info
+    To have access to this window, it is necessary to log in as system administrator.
+
+
+![](https://docs.etendo.software/assets/drive/0n3Ivd3Cp7mA5Q7vAbIhorgapjwAxb6ybg6_fqwlpmzwe4FcL3RV2o6AIqsR2cFEdXKSRtzToRe9E5lLZsdoDCGZmM0toNmJZKURGVZxNStUoQW_ocSMxgcB4KjV_ARl4TTg0GWncx0ONJ1GzIfAHsJxNIs38iEekvloTzKkUdFIjICAn0YUklI1ThE-tg.png)
+
+In the image above, the various Inventory Status values that are supplied with the installation of the software are shown.
+
+The inventory status allows or disallows certain business processes.
+
+-   Ability to create/modify/delete Inventory Status with the following attributes:
+    -   **Available**: Inventory that is available for reservations and picking.
+    -   **Nettable**: Inventory that is available for planning of future supply (MRP).
+    -   **OverIssue**: Inventory that is allowed to go negative during the Issue of stock (not during the picking).
+        -   Note: It is not possible to go to negative if there are reservations against a particular stock. The reservation is always respected, regardless of the inventory status.
+-   Add an Inventory Status value to each location or bin record.
+-   Add the possibility to manually update the Inventory Status of a Storage Detail by moving it to a virtual, AdHoc created, bin.
+-   A new process that identifies affected reservations when a change of the inventory status reduces/increases the quantity available. (Once identified, the relevant users could receive an alert about the consequence of the change in availability).
+
+##### Inventory Status Change
+
+In the Warehouse and Storage Bins window, It is possible to check the Inventory Status of a Storage Bin and also to modify it.
+
+By selecting a Storage Bin in this window, it is possible to check its current Inventory Status.
+
+![](https://docs.etendo.software/assets/drive/J6y4kVfAaNOLqMAlBOJxByWBUkIA-lgdT1RM4HHn2jLkwJhzf0efsUgT78F77DEvT9UT9j_8RCRLnaNFVm-kWhGMRRaYf9thzTnAWN2fvBVsKx4aJX6xc4mb1qPlwH46AUwHc5D3v8Xye_ONWikm3ZKGaCTojkJMeTxkBBoLvSEnXoy_Gp85Ws-FY_1yAQ.png)
+
+Also, by selecting a Storage Bin, a button named Change Status appears. By clicking it, it is possible to select a different Inventory Status for the selected Storage Bin.
+
+There are some restrictions:
+
+-   If there are existing Reservations against the Stock of the Storage Bin, this Storage Bin can not be changed to an Inventory Status that does not have the Available flag checked
+-   If there is negative stock in the Storage Bin, it is not possible to change the Inventory Status to one that does not have the Over Issue flag checked
+
+![](https://docs.etendo.software/assets/drive/tchXpNhj5d5jez97SiLuvXUJJNbHIhHgLfDfU4e2hw2Q5tCqACZLE_daLM920HKiFuYVgQAwZoKpTkdw-pICFn8MVz3Y7TuM04CaWGjxclVXTzqz03ZNxpxj3PWkKwX8KB259JYTGJNeWTIRr1rkzAkaAQppROV4yfDIa6qBWHZVfgJA4xjFO84kb41EjQ.png)
+
+##### Examples
+
+Examples of inventory status values:
+
+-   **Available** (YYN -> Available, Nettable, Not OverIssue, Owned/Not-Owned) can be set for all inventory that is free to be picked, for sales, production or any other purpose.
+-   **In Transit** (NYN) is not free to be sold or shipped but is expected within a limited time and for that, we will take it into account for planning.
+-   **Quarantine or Blocked** (NNN) is not available nor nettable since we expect a larger duration of this status.
+-   **Inspect** (NYN) is also not available but is expected to be freed in a limited time and for that reason visible for planning/MRP.
+-   **BackFlush** (YYY) will allow going negative due to unexpected waste in manufacturing environments.
+-   **Public** (YYY) will allow going negative due to unexpected stock in public picking areas.
+> 
+!!! info
+    The inventory status does not have an effect on the inventory value.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Naming Guideliness for Modules
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Naming Guideliness for Modules
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules
+## Article Content: 
+#### Introduction
+
+It is important to select an appropriate name for your module in order to make it easier for users to recognize it both in the Forge and in the Enterprise Module Management window.
+
+In the future, Etendo may also use these naming conventions to automatically categorize modules based on tags, therefore it is important that these naming conventions are followed.
+
+Here is a set of naming guidelines that we ask module authors to follow:
+
+#### Branding rules
+
+- The module name should match the project name in the Forge (optional)
+- Module names should not be longer than 5 or 6 words and less than 60 character long (optional)
+- Module names cannot contain the word "Etendo"
+    - JSON REST Web Services: :white_check_mark:
+    - Etendo JSON REST Web Services: :no_entry:
+- Exception to the previous rule: modules that Etendo decides to market as products rather than modules:
+    - Etendo QuickStart Template: :white_check_mark:
+- You do not need to specify the Etendo version in the module name:
+    - Translation: Arabic Saudi Arabia (ar_SA): :white_check_mark:
+    - Translation: Arabic Saudi Arabia (ar_SA) for Etendo 2.50: :no_entry:
+- Module names should not contain the word "Module"
+    - Copy Role: :white_check_mark:
+    - Copy Role Module: :no_entry:
+
+#### Language and grammar conventions
+
+- All module names must be in English. The module description and help can be in any other language.
+- Non English proper nouns are accepted as part of a module name specified in English
+    - Tax Report: Modelo 349 (Spain): :white_check_mark:
+    - Tax Report: Form 349 (Spain): :no_entry: (rationale: Modelo 349 is a proper noun and should not be  translated)
+    - Informe Fiscal: Modelo 349 (Spain): :no_entry:
+- The module help must differ from the module description
+- Grammatically, module names should be treated as proper nouns and you should capitalize the first letter of every word in the module name (with the exception of short words and acronyms)
+    - Initial Data Load: :white_check_mark:
+    - Initial data load: :no_entry:
+    - Direct Debit Form of Payment: :white_check_mark:
+    - Direct Debit Form Of Payment: :no_entry:
+    - Three Digits ISO Country Codes: :white_check_mark:
+    - Three Digits Iso Country Codes: :no_entry:
+- You should avoid using numeric characters to express quantities (they are OK in codes and dates)
+    - Three Digit ISO Country Codes: :white_check_mark:
+    - 3 Digit ISO Country Codes: :no_entry:
+    - Chart of Accounts - PGC 2007 General: Spain: :white_check_mark:
+    - Tax Report: Modelo 349 - Spain
+- Module names should not end with a full stop:
+    - Initial Data Load: :white_check_mark:
+    - Initial Data Load.: :no_entry:
+- Module description should end with a full stop
+    - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher.: :white_check_mark:
+    - Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher: :no_entry:
+
+#### Specific Types of Modules
+
+- Core translations (translation of Etendo Core) should follow the convention:
+    - "Translation: $LANG $COUNTRY ($CODE)"
+    - Translation: Arabic Saudi Arabia (ar_SA) :white_check_mark:
+- Module translations (translations of modules other than Etendo Core) should follow the convention:
+    - "$MODULE NAME Translation: $LANG $COUNTRY ($CODE)"
+    - Tax Report Launcher Translation: Spanish Spain (es_ES) :white_check_mark:
+- The description for module translations should include an appropriate translation of the module name in the target language as well as both the name of the language and the name of the country in the target language:
+    - + Name: Tax Report Launcher Translation: Spanish Spain (es_ES) + Description: Generador de declaraciones de impuestos. Traducción al español (español España) del módulo Tax Report Launcher. :white_check_mark:
+- Chart of accounts modules should follow the convention:
+    - "Chart of Accounts: $COUNTRY"
+    - Chart of Accounts: France :white_check_mark:
+- For countries with multiple charts of accounts, use the conventions
+    - "Chart of Accounts: $TYPE - $COUNTRY"
+    - Chart of Accounts: PGC 2007 General - Spain :white_check_mark:
+    - Chart of Accounts: PGC 2007 PYMEs - Spain :white_check_mark:
+- Tax configuration modules should follow the convention:
+    - "Tax Configuration: $COUNTRY"
+    - Tax Configuration: France :white_check_mark:
+- Tax report modules should follow the convention:
+    - "Tax Report: $FORM_NAME - $COUNTRY"
+    - Tax Report: Modelo 347 - Spain :white_check_mark:
+- Region modules should follow the convention:
+    - "Regions: $COUNTRY"
+    - "Regions: Brazil" :white_check_mark:
+    !!! note
+        Whenever the regions of a country are called something other than regions, you can use the :white_check_mark: term in the module description. Example: + Name: Regions: United States of America + Description: US states.
+- Report modules (other than tax reports) should follow the convention:
+    - "Report: $REPORT_NAME"
+    - Report: Shipments Awaiting Invoice :white_check_mark:
+- Skin modules should follow the convention:
+    - "Skin: $SKIN_NAME"
+    - Skin: Blue Sea :white_check_mark:
+- Tutorial modules (provided as examples to illustrate how to develop modules) should follow the convention:
+    - "Tutorial: $TUTORIAL NAME"
+    - Tutorial: Solitaire :white_check_mark:
+
+#### Bundles
+
+- Do not use "module" in bundles, everything is a module (including core) so this would be redundant.
+- In general modules should not use subpackages of other modules since it might create a conflict. In particular do not use subpackages for modules included in a pack (eg. several modules in the spanish localization pack use as a package that is a subpackage of the spanish localization pack package). That inclusion is declared in the pack itself and using subpackaging would create a kind of redundancy (the module could be taken out from the pack later) or modules originally not designed for the pack could be included later.
+- The only case where a subpackage makes sense are translations since that relationship can not be changed.
+For translations, do not use the word "translation" but directly the language code: translatedmodulepackage.languageCode (eg. org.openbravo.document.massinvoicing.es_ES).
+- For translations of core, it does not work (org.openbravo.es_ES) because the core package is not clear enough. In that case, use org.openbravo.coretranslation.es_ES or just org.openbravo.core.es_ES)
+- Do not use the "type of artifacts" included in the module for packaging (eg. org.openbravo.report.xxx or org.openbravo.callout.xxx are wrong). The content of a module should not be defined by the "technical components" used to implement them but by the functional objective of the module. It might happen that the functional objective can be reached in a different manner and it should not force repackaging.
+- In some cases, functional and technical categories are the same (eg. report) - in this case, put the word "report" in the name of the module but not as a package (eg. org.openbravo.financial.taxreportXX instead of org.openbravo.financial.report.taxXX)
+- A package for a module developed by Etendo and staff should be:
+org.openbravo.functionalcategory.modulename
+
+    - In some cases, it makes sense to use an additional level:
+        org.openbravo.functionalcategory.functionalsubcategory.modulename
+
+    - Use a common set of functional categories and subcategories (when needed). Each scrum team defines their own list of categories and subcategories. This is a starting point (split by teams):
+
+        - applicationdictionary (platform)
+        - kernel (platform)
+        - utility (platform)
+        - setup (erp engineering)
+        - common (erp engineering)
+        - document (erp engineering)
+        - warehouse (erp engineering)
+        - project (erp engineering)
+        - production (erp engineering)
+        - mrp (erp engineering)
+        - financial (erp engineering)
+        - erputil (erp engineering)
+        - localization (localization) ->  subcategories for each country (eg. localization.spain)
+        - localizationutil (localization)
+        - quickstart (industry templates / verticals are a category by itself)
+        - quickstartspain (industry templates / verticals are a category by itself)
+
+#### Choosing a db_prefix
+
+##### Modules created by Partners
+- Use a db_prefix that do not begin with the letters ET
+- EM is a reserved word not allowed as a db_prefix
+
+##### Modules created by Etendo and staff
+- Use a db_prefix ETX where X: from one to 5 characters for the module itself
+
+##### Customization modules
+- Use a db_prefix beginning with CUST
+
+Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with CUST. Modules with these kind of DBPrefixes cannot be registered in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use CUST and do not register it.
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -31524,131 +31649,6 @@ When a process is killed, the status in the process monitor will be *Killed by U
 This work is a derivative of [Processes](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Element and Synchronize Terminology
-## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology
-## Article Content: 
-####  Element
-
-Elements  define the text in the label to be displayed for each field in the
-application as well as its related help. Each column in the Application
-Dictionary is linked to an element, note that more than one column can be
-linked to a single element, this is the way to reuse the same text for
-different columns (and finally fields) in the application. 
-
-For example, `C_BPartner_ID` is the name for a number of columns in the application, all of them are a reference to a business partner thus, the text to be displayed as
-well as the help for all of them is the same; instead of maintaining that
-information redundantly in each column all these columns use the same element.
-
-#####  Element maintenance
-
-Elements can be edited in `Application Dictionary` > `Setup ` >`Element` 
-window (as *System Administrator*); but, usually, elements are not directly
-created using this window but by the *Synchronize terminology* . Once the
-element is created, this window is used to edit its contents.
-
-#####  Synchronize Terminology
-
-It is the process that creates the elements for the columns that do not
-already have an associated one and copies the information in the elements to
-the columns and fields which are linked to them.
-
-To run it, go to  `Application Dictionary` > `Synchronize Terminology ` as
-*System Administrator* . 
-
-Basically, this process looks for all the columns that
-have no linked element. In case there is an element with the same column
-name that the orphan column's one, this element is linked to that column, other
-case a new element is created with the same column name the column has. 
-
-All that is done taking into account module, thus an element is only reused if it
-is defined in the same module as the column's one, or in another one dependent
-from the column's module. It also copies the text in the elements to the
-fields that represent the columns for those elements.
-
-!!!info
-    When creating/editing fields is worthless to write a good text for name,
-    description and help fields since they will be overwritten with the ones in
-    the element. When this process is run, just leave them empty (or with
-    some letters for mandatory ones). On the other hand, when creating a new
-    column, if a new element from this column is created, the element will have
-    the contents of those fields in the column. 
-
-!!!note 
-    Note that once the element is created the changes in the column fields will also be overwritten in this process.  
-
-  
-######  In detail
-
-Here are all the steps the *Synchronize Terminology* process executes.
-
-  1. For all the columns and process parameters in the dictionary without element, create an element in case there is no element with the same column name in the same module or in a dependent one, copying to the new element name, help and description from the column/parameter. 
-  2. Delete all the elements that are not used anymore. 
-  3. For the rest of columns and process parameters without elements, associate the existent element in the same module or in a dependent one having the same column name. 
-  4. Update columns and process parameters with the name, help and description values in their associated elements. 
-  5. Update centrally maintained fields with the name, help and description for the elements associated with their associated columns. 
-  6. Update workflow nodes with the name and description in their linked windows. 
-  7. Update menu entries with the name and description in their linked windows, processes, forms or workflows. 
-
-#####  Central Maintenance for fields
-
-In most cases, the previously defined process fits all the requirements for
-field labels. But in some occasions, it is wanted to have a field with a
-different set of label, help and description than the rest of fields
-associated to the same column. 
-
-!!!info
-    For these cases, it is possible to set no to the *Central Maintenance* check in `Application Dictionary` > `Windows, Tabs and Fields` >`Window >> Tab >> Field`, doing so, name, help and description in the field will not be overwritten with the element's ones.
-
-Let's see how it is used with an example:
-
-A very common column name is `AD_Language` , these columns are a reference to languages stored in `AD_Language` table. The name for the `AD_Language` element is *Language* and its help is *The Language identifies the language to use for display* which is very general. 
-
-Modules have a language (which might be different to English)
-which they have the UI defined in. The label and help for `AD_Language` field
-in `Application Dictionary` > `Module` are *Module Language* and this language
-defines the language used as base for the user interface elements in the
-module. This is done by setting the field for `AD_Language` column in
-*Module* tab as not centrally maintained and writing directly in the field the
-name and help.
-
-#####  Translations
-
-As elements are used to define text to be displayed in UI, they can be
-translated to different languages. 
-
-The text in the element must be written in the language its module defines, and then it can be translated to other ones.
-
-!!!note
-    The standard way to translate is by creating a new module with no additional
-    functionality but just translations for the module.
-
-#####  Purchase entries
-
-If you observe the fields in the `Application Dictionary` > `Setup` >`Element` 
-you will notice there are standard fields (name, help...) and similar ones
-but for purchases.
-
-In Etendo, there are some tables that are used for sales and purchases
-transactions, for example `C_Invoice` table contains both sales and purchases
-invoices. This means that `Purchase Invoice` > `Header`  and `Sales Invoice` > `Header` tabs use the same table. But, it is very usual to label fields for the
-same column in a different way depending on whether it is a sales or purchase
-window. 
-
-Instead of doing it, setting all the fields in the purchase windows as
-`not centrally maintained`. This is achieved by populating in the correspondent
-elements, the standard names and the purchase ones. Then, the windows are
-distinguished between sales and purchases using the *Sales Transaction* check
-in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  tab.
-
-
-  
-This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: Tables
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Tables
 ## Article URL: 
@@ -31827,178 +31827,2387 @@ This work is a derivative of [Tables](http://wiki.openbravo.com/wiki/Tables){tar
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to Publish Modules to a GitHub Repository
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Publish Modules to a GitHub Repository
+# Article Title: How to Add a Button to the Toolbar
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Button to the Toolbar
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
 ## Article Content: 
+### How to Add a Button to the Toolbar
+
+####  Overview
+
+This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). 
+
+This section describes how to add a button to the left part: the application buttons.
+  
+To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md) concepts.
+
+####  Example Module
+
+This section is supported by an example module which shows example of the code shown and discussed here.
+
+![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
+
+!!! info
+    The example module also contains implementations of other sections.  
+ 
+  
+####  Implementing a toolbar button
+
+!!! info
+    When implementing your own components, it often makes sense to extend existing components. Make sure that your module then depends on the module that provides the base types. This ensures that the javascript is loaded in the correct order.  
+  
+The button to be implemented, will compute and show the sum of a set of selected orders to the user. 
+
+This section is divided in 2 parts:
+
+- the first part
+focuses on visualizing the button in the correct windows and tabs and making sure the button is enabled/disabled appropriately. 
+
+- The second part will discuss how to implement backend logic and how to call the server side logic when the button gets clicked and show its results.
+
+The first part consists of the following steps:
+
+  * an icon for the visualization 
+  * a `css` style and javascript linking the icon to the button 
+  * javascript implementing the buttons click/action method and to register the button in the global registry 
+  * add javascript to enable/disable the button when records are selected in the grid 
+  * a `ComponentProvider` java class to register the javascript and `css` in Etendo.
+
+These steps will visualize the button but not actually do anything yet. The follow up steps will add logic:
+
+  * a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) 
+  * client side javascript to call the server and process the result 
+
+Each of these steps is described in more detail below.
+
+####  Visualizing the button - Implementation steps
+
+#####  Defining the icon and a css
+
+The icon and its related style is defined through an icon file. 
+
+!!!info
+    For standard visualization using the Etendo style the icon should be 24x24 without a background colour.
+
+
+The icon should be placed in a specific directory in your module:
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
+
+Normally, it makes sense to store the icon in a subfolder. The example module has the icon file in:
+
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/images`.
+
+    com.etendoerp.client.application.examples
+    ├── reference data
+    ├── src
+    ├── src-db
+    └── web
+        ├── com.etendoerp.client.application.examples
+        │   └── js
+        │       ├── example-toolbar-button.js
+        │       └── example-view-component.js
+        └── com.etendoerp.userinterface.smartclient
+            └── etendo
+                └── skins
+                    └── Default
+                        └── com.etendoerp.client.application.examples
+                            ├── images
+                            │   └── iconButton-sum.png
+                            └── example-styles.css
+
+  
+Then add a `css file` which links this icon to a specific `css` style. The `css` file must also be located in this directory in your module:
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
+
+In the example module, the `css` file is located here:
+
+`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
+com.etendoerp.client.application.examples/example-styles`
+
+
+
+Within the `css` file add a style defined like this:
+
+    
+    
+    .ETToolbarIconButton_icon_etexapp_sum {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(./images/iconButton-sum.png);
+    }
+
+!!!note
+    The name of the `css` class is important, it should start with
+    `ETToolbarIconButton_icon_`, the part after that (etexapp_sum) is used later in this tutorial. It makes sense to use the module's dbprefix in this last part to prevent name collisions with other modules.
+
+#####  The javascript to create and register the button
+
+The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: `web/com.etendoerp.client.application.examples/js/example-toolbar-button.js`.
+
+This is the overall javascript for `toolbar-button`:
+
+
+```js title="example-toolbar-button.js"
+    
+    (function () {
+      var buttonProps = {
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
+          updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+        };
+      
+      // register the button for the sales order tab
+      // the first parameter is a unique identification so that one button can not be registered multiple times.
+      ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
+    }());
+```
+Let's walk through the different parts. The javascript starts and ends with this part:
+
+``` javascript
+    
+    (function () {
+    ...
+    }());
+```
+
+This is done to prevent the local variables to be available globally. It creates a function and executes it immediately.
+
+Then the first part of the buttonprops"
+
+``` javascript
+          action: function(){
+            alert('You clicked me!');
+          },
+          buttonType: 'etexapp_sum',
+          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
+```
+
+
+  * Sets the action method which gets called when the user clicks the button. 
+  * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
+  * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png)
+
+The updateState function is called to enable and disable the button when the
+user navigates through the system.
+
+```javascript   
+    
+         updateState: function(){
+              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+              if (view.isShowingForm && form.isNew) {
+                this.setDisabled(true);
+              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
+                this.setDisabled(true);
+              } else {
+                this.setDisabled(selectedRecords.length === 0);
+              }
+          }
+```
+The function enables/disables the button if the form or grid is new and if
+there are no records selected.
+
+Then this code registers the button for the tab with id '186':
+
+
+``` javascript
+      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
+```
+
+Note:
+
+  * the first parameter is a unique identification so that one button can not be registered multiple times. 
+  * as the second parameter the button javascript class is passed in, as a default always use `isc.ETToolbarIcon`Button 
+  * the buttonProps define the button characteristics 
+  * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
+  * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
+  * To register a button for multiple tabs call the registerButton multiple times for different tabs 
+
+
+#####  The ComponentProvider
+
+The previous steps added static resources (javascript and css) to the system.
+
+Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
+
+!!!info
+    For more detailed information, visit [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider.md).
+
+
+```javascript
+     
+    @ApplicationScoped
+    @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
+    public class ExampleComponentProvider extends BaseComponentProvider {
+      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "ETEXAPP_ExampleViewType";
+     
+      /*
+       * (non-Javadoc)
+       * 
+       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,
+       * java.util.Map)
+       */
+      @Override
+      public Component getComponent(String componentId, Map<String, Object> parameters) {
+        throw new IllegalArgumentException("Component id " + componentId + " not supported."); 
+        /* in this howto we only need to return static resources so there is no need to return anything here */
+      }
+     
+      @Override
+      public List<ComponentResource> getGlobalComponentResources() {
+        final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+        globalResources.add(createStaticResource(
+            "web/com.etendoerp.client.application.examples/js/example-toolbar-button.js", false));
+        globalResources.add(createStyleSheetResource(
+            "web/com.etendoerp.userinterface.smartclient/etendo/skins/"
+                + KernelConstants.SKIN_VERSION_PARAMETER
+                + "/com.etendoerp.client.application.examples/example-styles.css", false));
+     
+        return globalResources;
+      }
+     
+      @Override
+      public List<String> getTestResources() {
+        return Collections.emptyList();
+      }
+    }
+```
+A short explanation:
+
+  * The annotations in the top of the class are related to [Weld](https://docs.etendo.software/concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md). 
+  
+  The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
+
+  * The getGlobalResources is important here, it shows how to register the global resources defined in the example module. 
+  
+!!!note
+      For your own module just follow the same path structure and approach. 
+
+!!!info
+    To explain how Etendo can find the ComponentProvider: Etendo/Weld will analyze the classpath and find all the classes which have a @ComponentProvider annotation.
+
+
+#####  The result
+
+To see the result, restart Tomcat, clear the cache of the browser (sometimes `css` styles are not picked up) and go back to the application and then specifically to the sales order window. 
+
+You should see this:
+
+!!!note
+    The button is not visualized in other windows/tabs because it is
+    registered for only the sales order header tab.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png)
+
+  
+
+####  Adding server side logic - Implementation steps
+
+The next step in this how to is to add the server side logic and calling this logic from the client. The server side logic is implemented using the action handler concept. 
+The action handler concept allows you to create classes on
+the server which are callable from the client. 
+
+#####  Implement the server side action handler
+
+The server side action handler (`SumOrderActionHandler.java`) receives an array of order numbers of the selected orders. It will sum the order values and then return the total as a JSON string.
+
+This is the implementation of the server side:
+
+```java title="SumOrderActionHandler.java"
+     */
+package org.openbravo.client.application.examples;
+
+import java.math.BigDecimal;
+import java.util.Map;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.base.exception.OBException;
+import org.openbravo.client.kernel.BaseActionHandler;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.common.order.Order;
+
+/**
+ * Sums the orders passed in through a json array and returns the result.
+ */
+    public class SumOrderActionHandler extends BaseActionHandler {
+     
+      protected JSONObject execute(Map<String, Object> parameters, String data) {
+        try {
+     
+          // get the data as json
+          final JSONObject jsonData = new JSONObject(data);
+          final JSONArray orderIds = jsonData.getJSONArray("orders");
+     
+          // start with zero
+          BigDecimal total = new BigDecimal("0");
+     
+          // iterate over the orderids
+          for (int i = 0; i < orderIds.length(); i++) {
+            final String orderId = orderIds.getString(i);
+     
+            // get the order
+            final Order order = OBDal.getInstance().get(Order.class, orderId);
+     
+            // and add its grand total
+            total = total.add(order.getGrandTotalAmount());
+          }
+     
+          // create the result
+          JSONObject json = new JSONObject();
+          json.put("total", total.doubleValue());
+     
+          // and return it
+          return json;
+        } catch (Exception e) {
+          throw new OBException(e);
+        }
+      }
+    }
+```
+Notes:
+
+  * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
+  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.
+  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
+  * the logic iterates over the order ids and retrieves the order using the [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md). 
+  * the result is returned as json again.
+
+#####  Calling the server side from the client, displaying the result
+
+Then, on the client, the action method of the button has to be implemented to call the server. Here is the implementation. 
+
+```javascript
+    
+          action: function(){
+            var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
+            // collect the order ids
+            for (i = 0; i < selectedRecords.length; i++) {
+              orders.push(selectedRecords[i].id);
+            }
+            
+            // define the callback function which shows the result to the user
+            callback = function(rpcResponse, data, rpcRequest) {
+              isc.say(OB.I18N.getLabel('ETEXAPP_SumResult', [data.total]));
+            }
+            
+            // and call the server
+            OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+```
+
+Note:
+
+  * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
+  * the call to the server is asynchronously therefore a callback is used, which is called when the server returns the result. The callback gets 3 parameters, the data parameter contains the JSONObject returned by the server's execute method. 
+  * the call to the RemoteCallManager has these parameters: 
+    * the class name of the action handler 
+    * the data being sent as the request body 
+    * request parameters (in this case nothing there) 
+    * and the callback 
+
+
+Then when the server returns, the callback is called which will display a prompt. 
+
+!!!note
+    The label used in the callback, uses parameter substitution.
+    Parameters are specified using a %0, %1 etc.:
+
+  
+
+![](https://docs.etendo.software//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+
+#####  The result
+
+The result shows the sum of the 2 selected order headers:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
+
+This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Add a Field to a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Field to a Window Tab
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab
+## Article Content: 
+### How to Add a Field to a Window Tab
+
 #### Overview
 
-This article explains how to publish a module to GitHub Repositories.
+The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
 
-Now, modules will be published in ZIP and JAR format.
+It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
 
-A published module can be declared as a Gradle dependency, which makes installing or updating modules easier.
+The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
 
-Using dependencies alongside with Gradle in an Etendo environment can remove the need to transfer the modules from a local machine to the server using FTP, SSH etc. The module is hosted as a package in the repository and  Gradle is in charge of downloading the correct version, and its dependencies.
+On this page we will show an example of how to place the `example_column` field in the `Production Run` window using the `create fields` button.
 
-Partners will have access to Etendo’s public and commercial repositories to download standard modules, in addition to this, it is possible to use their own repositories where they can privately store their modules for internal or commercial usage.
+##### Add the fields to the window example
 
-!!! info "Requirements"
-    - GitHub user and token, with access to read and write packages.
-    - A module to be distributed.
+The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary` > `Window, Tabs and Fields`, we need to search for the `Production Run` window. Then, for that window, mark its `Incidence` tab.
 
-!!! success
-    It is recommended to use [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="_blank"} to manage work flow, versions and tags.
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
 
-#### Deployment
+Now, we use the Create Fields process on this tab to let it add all columns
+of the underlying _MA_WEIncidence_ table to this tab if they have not been previously
+added.
 
-!!! info
-    The module version, group and artifact that will deploy are those declared in the file `src-db/database/sourcedata/AD_MODULE.xml` file
+This will then add one new field to the tab matching the new column
+and automatically place the field into the module.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png)
+
+As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.
+
+If this window should also be used in _classic UI mode_ then now `./gradlew smartbuild` should be execute to compile the changed window.
+
+To see the changes in the new user interface just change the `System Administrator` role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
+
+---
+
+This work is a derivative of [How to add a field to a window tab](http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Add a Rich Text Field and Column
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Rich Text Field and Column
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
+## Article Content: 
+###  How to Add a Rich Text Field and Column
+ 
+  
+####  Overview
+
+This How-to section explains how to add a rich text field and column to the Etendo Classic.
+
+The steps to get a rich text field in your window consists of two steps: 
+
+- [Add a column to a table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/)
+- [Add a field to a tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/)
+
+You can also create a new table and a new window/tab ofcourse.
+This how-to will only focus on the specific part of a rich text field.
+
+  
+####  Example 
+
+For this how-to, we will use the redefine the description field in the sales order window. So, you may need to do a *smartbuild* after the changes to see the result.
 
 
-###### 1.  Create build.gradle file:
+  
+#####  Adding a column
 
-To generate the `build.gradle` with all the necessary information to publish, execute the following task:
+First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md).
+
+
+!!!note
+    As rich text is stored as HTML inside the database, the varchar column type
+    should be used. What is more, the developer needs to keep in mind that 100
+    characters of rich text requires more that 100 chars of storage inside the
+    database due to html markup. Usually, a factor of 2 will suffice, for example,
+    if one wants to allow the user to enter 1000 characters of rich formatted
+    text, the database column should have a type of varchar(2000).  
+
+  
+When introducing the new column to the application dictionary, the correct
+reference must be selected, i.e. the new _Rich Text_ reference:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
+
+#####  Create a field - set col and rowspan
+
+Then [create a field](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
+also set the col and rowspan (these are only shown when the corresponding
+column is defined as rich text):
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
+
+
+#####  The result
+
+The result is visualized as a rich text editor in form view:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
+
+  
+
+!!!info
+    Rich text fields can not be edited in grid mode (a hoover shows the
+    content). They are always displayed as read-only fields.  
+
+  
+
+
+This work is a derivative of [How to add a rich text field and column](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Change an Existing Window
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Change an Existing Window
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
+## Article Content: 
+###  How to Change an Existing Window
+
+  
+####  Overview
+
+Application elements ([windows, tabs and fields](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
+Etendo is able to cope with these changes because its architecture is
+suited to iterative development. The definitions of all generated Windows,
+tabs and fields are stored as metadata in the Application Dictionary (AD).
+
+Changing the window of an existing application is a simple process of changing
+the AD definition.
+
+When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.
+
+When using classic Window a compile step is needed.  
+
+This How-To explains how to modify existing elements of a window. If only new
+elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
+added using a normal module as explained in the other How-To on
+[How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
+ 
+
+
+####  Objective
+
+The objective of this how-to is to illustrate how to make changes to existing
+generated windows in terms of appearance and behavior. The window used in the
+example is the Physical Inventory window and the changes illustrated will be:
+
+  * Hide a field 
+  * Re-sequence the layout 
+
+[Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) is a window that belongs to Etendo Classic.
+It comprises of:
+
+  * 1 Window - Physical Inventory. 
+  * 2 Tabs - Header and Lines. 
+  * A Header Tab has 19 Fields 10 of which are displayed (A few are displayed conditionally).
+
+Before any changes the header tab has the following appearance:
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-1.png)
+
+
+!!!info
+    To customize these window in a Modularity Context a new module of Type
+    *Template* is needed.
+
+
+
+####  Changing the window
+
+Navigate to the `Application Dictionary` > `Windows, Tabs and Fields` window
+and select the record for _Physical Inventory_ .
+
+In the _Fields_ tab we can now make the changes needed to adapt the layout as
+wanted:
+
+  * _Description_ field, unmark the _Displayed_ checkbox to hide the field from the tab. 
+  * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
+
+  
+For testing the changed layout, switch away from the *System Administrator*
+role to e.g. the *F &B International Group Admin* role and open the *Physical
+Inventory* window again. As the instance contains our module marked as
+*InDevelopment* the window layout is reloaded each time the window is opened, so
+we can see the changed layout immediate as seen below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
+
+
+  
+To apply the same layout changes to the window in *classic UI mode*, the
+windows need to be recompiled, the changes deployed to tomcat and tomcat
+restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
+which will recompile all changed windows and deploy the changes.
+
+  
+
+####  Exporting the changes
+
+The final step is to export the changes into the module so they are persisted.
+
+!!!note
+    When exporting changes into a template, it is important that only
+    the *template is in development* and the module which contains the changed
+    object (i.e. window) is not.
+
+After ensuring that, the export of the changes consists of the following two
+steps:
 
 ``` bash title="Terminal"
-./gradlew createModuleBuild `-Ppkg=<javapackage> -Prepo=<repositoryURL> --info
-```
-Example:
-``` bash title="Terminal"
-./gradlew createModuleBuild -Ppkg=com.myrepo.test -Prepo=https://maven.pkg.github.com/myrepo/com.myrepo.test --info
+  1. _./gradlew export.database_ , same steps as for any other module 
 ```
 
-!!! warning "Important"
-        - If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
-        Before adding an Etendo module dependency, they have to be published in the repository.
-        - You need to make sure those dependencies are also published.
-        - Add the dependencies manually in `build.gradle` file.
-        - Add Core dependency to define the range of versions the module is compatible with.
+``` bash title="Terminal"
+  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
+```
+
+
+This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Copy and Paste Images in Etendo
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Copy and Paste Images in Etendo
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo
+## Article Content: 
+#### Copy and Paste Images in Etendo
+
+##### Overview
+
+This section explains how to use rich text areas to save images in Etendo.
+
+##### How to include images with rich text areas
+
+First, the user must define a column in the database where the corresponding image is saved.
 
 !!! info
-     To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
-    If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.
+    To do this, it is important to remember that this column must have the enough size to store a codified image in base64 format. For example: a 2 MB image contains 3 million characters.
+
+
+![](https://docs.etendo.software/assets/drive/wO0NOA64kTnYqRjQ8KTrcBJiMmq2AGvuS6oYHOQ75hZ13OvUYgFkAK2S7iE-SGeRh5PcE5eNA8rgbpzg0LwgGGh-R4fk1yHCI9orYLKJJXDD9noH4K0ernCNFMkZCKBo_4owHCPkqrpxgOcFN2NjHMI0NchPj0r1VminCsMvbp0begvcFdO8FI8DjE5jAA.png)
+
+Once the column is defined, the user must log in with the System Administrator role, go to Application Dictionary | Windows, Tables and Columns, find the corresponding table, in our case “product” and create columns from the database with the “Create column from DB” button. 
+
+In the recently created column, the reference “rich text area” must be selected. 
+
+Also, a field for the corresponding image must be created. 
+
+Finally, it is necessary to compile executing:
+
+```bash title="Terminal"
+./gradlew smartbuild
+```
+
+
+![](https://docs.etendo.software/assets/drive/zd0NYsbcmx0ehnHRsCxb21zazxL6sYuBxqjAOoH74QmK1CTccI-dDyqzmMrTiJDrusrcdifTRiiCPPomRAdduh1LipsA2FHTP84kstjAI8SwL3a7-DkSSmCqbVYsyXF_d1El8Z9QqPqphc4oqIB-wFYadh3OODSzp8QCHSyGBAGZSX8OczGKNApmreM8eg.png)
+
+As seen in the image above, the “image” field was created, in which it is possible to paste content to store in base64 format in the database. In this way, this information is available for later.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Background Process
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Background Process
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
+## Article Content: 
+###  How to Create a Background Process
+
+####  Overview
+
+Background Processes are [Processes](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes.md) that are executed without the direct
+action of the user. There can be set different rules to schedule when the
+process is executed.
+
+This document discusses about the Etendo infrastructure for Background
+Processes. How to define, schedule and monitorize Background Processes.
+
+####  Defining a Background Process
+
+Background Processes are defined in the window `General Setup` > `Process Scheduling ` >`Process Request`. First in the field *Process* select
+the process to execute and, in the *Timing* field, when it will be executed.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png)
+Depending on the *Timing* selected, it is needed to define more fields to
+define this timing:
+
+#####  Run Immediately
+
+This timing option will execute the Background Process only once at the moment
+the button to schedule the process is pressed. After being scheduled, it
+can be rescheduled as many times as needed.
+
+This option is very similar to executing a process from a menu option. The
+difference is that when scheduling a _Run Immediately_ Background Process,
+there will not be any pop-up that indicates when the execution finished and
+instead, its execution  will be registered in the *Process Monitor*.
+
+##### Run Later
+
+This option is similar to the previous option. In this case, the Background
+Process will be executed only one time in one moment in the future.
+
+The moment when the Background Process will be executed is defined in the
+fields *Start Date* and *End Date*.
+
+#####  Schedule
+
+This is the most versatile option that allows to execute a Background Process
+periodically. These are the fields used to define the schedule plan of a
+Background Process:
+
+  * *Start Date* and *Start Time*: Defines the moment when the schedule plan for this Background Process will start. 
+  * *Frequency*: Defines the frequency to execute the Background Process. It can be *Every n seconds* , *Every n minutes* , *Hourly* , *Daily* , *Weekly* , *Monthly* , or *Cron expression*. Depending on the option selected you can define the specific details for each frequency option. 
+  * *Finish Date* and *Finish Time*: These fields can be defined only when the option *Finished* is selected. And it defines when to stop the schedule plan for this Background Process. 
+
+#####  Schedule and Unschedule a Background Process
+
+After the Background Process has been completely defined it can be scheduled
+pressing the button *Schedule Process*. When a process is scheduled, it
+will be executed according the *Timing* options selected, and every
+execution will be registered in the Process Monitor.
+
+To stop future executions of an Background Process just press the button
+*Unschedule Process*. After a Background Process has been unscheduled it
+can be scheduled again in any moment pressing the button *Reschedule
+Process* .
+
+#####  Monitoring executions of Background Processes
+
+All the executions of Background Processes can be monitored in `General Setup` > `Process Scheduling ` >`Process Monitor`.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png)
+
+
+In this window, there is one entry for each Background Process execution and
+the information of each execution. The most important fields are:
+
+  * *Process*: The Process executed. 
+  * *Start Time* , *End Time* and *Duration*: When the execution started, when finished and the time it took to complete. 
+  * *Status*: The final result of the execution of the Process. 
+  * *Process Log*: The information logged during the execution of the Process. For example if the *Status* of the execution is _Error_ here in the *Process Log* the reason of the error can be detected. 
+
+
+This work is a derivative of [How to Create a Background Process](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Callout
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Callout
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
+## Article Content: 
+### How to Create a Callout
 
-Modules Dependencies example:
+####  Overview
 
-```groovy title="build.gradle"
-/**
-*   This file was generated automatically by the 'createModuleBuild' task.
-*   Created at: 2022-12-16T15:41:21.426339Z.
-*
-*   WARNING: Do not put your credentials directly in this file.
-*
-*/
+The objective of this article is to show you how to create a new  callout . A
+callout is a piece of Javascript code associated with a particular field on a
+tab. This code is executed whenever the field changes. It is a type of Ajax
+substitute, changing parts of a tab/window without the need of refreshing it.
 
-group          = "com.etendoerp"
-version        = "1.0.0"
-description    = "Test module to publish"
-ext.artifact   = "test"
-ext.repository = "https://maven.pkg.github.com/myrepo/com.myrepo.test"
+It works by calling the FIC when a field with an associated callout is
+changed. The FIC (Form Initialization Component) refreshes the needed fields
+based on the callout logic.
 
-configurations {
-    moduleDependencyContainer
+This section implements the following new functionality: When entering a
+new product, one has the option of entering the _Search Key_ for the product,
+the _Name_ and the _Category_ it belongs to. But what if our client wants the
+search key to be constructed automatically by taking the product's name,
+removing all spaces, appending the underscore (_) and the category name it
+belongs to?
+
+For example, the Search Key of a product that has the
+Name _Bon Fountain_ and belongs to the _Water_ Product Category would
+become _BonFountain_Water_. Let's see how this could be done using a callout.
+
+The steps involved in creating a new callout are:
+
+  1. Create the source file(s) of the callout (usually a java file). 
+  2. Define the new  callout  within the application dictionary (`Menu` > `Application Dictionary` > `Setup` > `Callout`). 
+  3. Associate this callout with a table  column  ( `Application Dictionary` > `Table and Column: Callout field within Column tab`). 
+  4. Compile the window/tab(s) where this Column is used. 
+
+!!!Important
+    Developments related to points (1) and (2) must belong to
+    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    to point (3) about modifying a _core_ located column, a new template is
+    needed. You can read the [How to Change an Existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
+
+!!!Note
+    This article assumes you have created both module and template according to the articles just mentioned.  
+
+  
+####  Creating the Callout
+
+Existing callouts are located in [src/org/openbravo/erpCommon/ad_callouts](https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts){target="_blank"}.
+
+The right way to create a callout is by extending the SimpleCallout class.
+This class simplifies the callout code, hides some of the internals of the
+callout and keeps you focused on the operations required. To access database
+data, DAL is used.
+
+#####  Theory
+
+To develop a new callout based on this class, you only have to create a new
+java class that extends SimpleCallout and overwrite the following method:
+```java
+  protected void execute(CalloutInfo info) throws ServletException;
+```
+In this method you can develop the logic of the callout and use the info
+object of class CalloutInfo to access window fields, database and other
+methods. The most important are:
+
+  * public String `getStringParameter(String param, RequestFilter filter)` : Returns the value of a field named param as an String using the filter to accept values. 
+  * public BigDecimal `getBigDecimalParameter(String param) throws ServletException` : This method returns the value of of a field named param as a BigDecimal. 
+  * public void `addResult(String param, String value)` : This method sets the value of a field named param with the String value indicated. 
+  * public void `addResult(String param, Object value)` : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. 
+  * public void `addSelect(String param)` : Starts the inclusion of values of a field named param of type select. 
+  * public void `addSelectResult(String name, String value)` : Adds an entry to the select field and marks it as unselected. 
+  * public void `addSelectResult(String name, String value, boolean selected)` : Adds an entry to the select field. 
+  * public void `endSelect()` : Finish the inclusion of values to the select field. 
+  * protected void `showMessage(String value)` : Shows a message in the browser with the value indicated. 
+  * protected void `showError(String value)` : Shows an error message in the browser with the value indicated. 
+  * protected void `showWarning(String value)` : Shows a warning message in the browser with the value indicated. 
+  * protected void `showInformation(String value)` : Shows an information message in the browser with the value indicated. 
+  * protected void `showSuccess(String value)` : Shows a success message in the browser with the value indicated. 
+  * protected void `executeCodeInBrowser(String value)` : Executes the javascript code indicated in the value in the browser. 
+  * public String `getLastFieldChanged()` : Returns the name of field that triggered the callout. 
+  * public String `getTabId()` : Returns the Tab Id that triggered the callout. 
+  * public String `getWindowId()` : Returns the Window Id that triggered the callout. 
+  * public `VariablesSecureApp vars` : This instance field contains the VariablesSecureApp associated to the callout servlet. 
+
+It is important to keep coherence with each expected data type (String, BigDecimal, ...)
+
+See the following class as an example of a class that currently uses
+SimpleCallout: [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="_blank"}. This callout simply takes the numeric value of two fields, calculates the sum and writes it into another field. This
+is the interesting part of the code that performs the logic:
+```java
+  @Override
+  protected void execute(CalloutInfo info) throws ServletException { 
+    BigDecimal serviceSerCost = info.getBigDecimalParameter("inpservsercost");
+    BigDecimal serviceOutCost = info.getBigDecimalParameter("inpservoutcost"); 
+    BigDecimal serviceTotalCost = serviceSerCost.add(serviceOutCost);
+    info.addResult("inpservcost", serviceTotalCost);
+  }
+```
+#####  Extend a Callout
+
+It is possible to implement a callout that extends from another callout. For
+more information visit this [How to create a callout that extends from another callout](How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
+
+  
+#####  Product Search Key Calculation using SimpleCallout
+
+Let's define the tasks that need to be performed by the callout:
+
+  1. Retrieve the name of the product as entered by the user 
+  2. Retrieve the ID of the category selected from a dropdown by the user 
+  3. Get the name of the product category inside the database using the product category ID retrieved 
+  4. Strip spaces out of the product and category names 
+  5. Construct the Search Key 
+```java
+    // the package name corresponds to the module's manual code folder 
+    // created above
+    package com.etendoerp.customer.example.ad_callouts;
+     
+    import javax.servlet.ServletException;
+     
+    import org.openbravo.utils.FormatUtilities;
+    import org.openbravo.erpCommon.ad_callouts.SimpleCallout;
+    import org.openbravo.base.secureApp.VariablesSecureApp;
+    // classes required to retrieve product category data from the 
+    // database using the DAL
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.plm.ProductCategory;
+     
+    // the name of the class corresponds to the filename that holds it 
+    // hence, modules/modules/org.openbravo.howtos/src/org/openbravo/howtos/ad_callouts/ProductConstructSearchKey.java.
+    // The class must extend SimpleCallout
+    public class ProductConstructSearchKey extends SimpleCallout {
+     
+      private static final long serialVersionUID = 1L;
+     
+      @Override
+      protected void execute(CalloutInfo info) throws ServletException {
+     
+        // parse input parameters here; the names derive from the column
+        // names of the table prepended by inp and stripped of all
+        // underscore characters; letters following the underscore character
+        // are capitalized; this way a database column named
+        // M_PRODUCT_CATEGORY_ID that is shown on a tab will become
+        // inpmProductCategoryId html field
+        String strProductName = info.getStringParameter("inpname", null);
+        String strProductCategoryId = info
+                        .getStringParameter("inpmProductCategoryId", null);
+     
+        // inject the result into the response
+        info.addResult("inpvalue", getConstructedKey(info.vars, strProductName, strProductCategoryId));
+      }
+     
+      protected String getConstructedKey(VariablesSecureApp vars,
+            String strProductName, String strProductCategoryId) {
+     
+        // Retrieve the product category name
+        final ProductCategory productCategory = OBDal.getInstance().get(ProductCategory.class,
+                strProductCategoryId);
+        String strProductCategoryName = productCategory.getName();
+     
+        // construct full key
+        String generatedSearchKey = FormatUtilities.replaceJS(strProductName
+                    .replaceAll(" ", ""))
+                    + "_" + strProductCategoryName.replaceAll(" ", "");
+     
+        // return generated key
+        return generatedSearchKey;
+      }
+    }
+``` 
+
+#### Defining the Callout within the Application Dictionary
+
+!!!note
+    You need to have only your module as "In Development" at this stage.
+
+Using the role _System Administrator_, navigate to `Application Dictionary` > `Setup` > `Callout`. Create a new  record as indicated by the screenshot below:
+
+!!!warning
+    The name of the callout should not have spaces or illegal javascript characters.  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-3.png)
+
+  
+Save and navigate to the _Callout Class_ tab of the same window. You will
+notice that the Java Class Name was automatically generated for you,
+however, not correctly since the name could not match the _Callout_ name you
+have provided. Correct it in line with your callout package/class name. See
+screenshot below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png)
+
+  
+Now Etendo Classic knows that a callout exists and is implemented by the class you
+have just specified.
+
+!!!warning 
+    Remember to perform
+    ```./gradlew export.database```
+    in order to persist your changes in your module.  
+ 
+  
+####  Associating the Callout with a Column
+
+!!!note
+    You need to have ONLY your template as "In Development" at this stage.
+
+Using the role _System Administrator_ navigate to `Application Dictionary` > `Tables and Columns` > and find the _M_Product_ DB Table. This is the underlying table of the main tab of the _Product_ window.
+
+Go to Column tab, find the _Name_ record and edit it. Find the  Callout
+dropdown  that should at this point be empty. Select our
+_Product_Construct_SearchKey_ callout and save the record:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
+guides/How_to_create_a_Callout-6.png)
+
+  
+Do the same for the _Product Category_ record since a change in any of them
+should also regenerate the Search Key.
+
+!!! warning
+    Remember to perform
+    ```./gradlew export.database```
+
+    and
+
+    ```./gradlew export.config.script```
+
+    in order to persist your changes in your template.  
+  
+  
+####  Compiling the Window
+
+Finally, for the callout to take effect, the window that uses it needs to be
+recompiled and deployed to Tomcat. Do:
+  ``` bash
+    ./gradlew smartbuild 
+  ```
+
+!!!info
+    Once the compilation has finished, restart Apache Tomcat server.  
+  
+
+####  The Result
+
+Using the role _Group Admin_ (or your defined 'administrator' role),
+navigate to the `Master Data Management` > `Product` window. Enter a new
+product with Name = _Bon Fountain_ and leave the Name field. Notice
+how the Search Key changes. Then, change the Product Category to something
+else and see how the change is reflected inside the Search Key field.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
+
+Last, save changes.
+
+---
+
+This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Clone Hook
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Clone Hook
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook
+## Article Content: 
+#### Introduction
+
+Etendo allows for any window or tab to have a Clone button. By default, it will use the Dal.copy() method, but this can be overridden using hooks, to implement custom Cloning logic for specific entities.
+
+![](https://docs.etendo.software/assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png)
+
+#### How to create a Clone Hook?
+
+To create a Clone Hook, you only have to follow a few steps:
+
+1. Create a Java Class of type CloneRecordHook
+2. Use the @Qualifier annotation to define which entity this class will clone
+3. Override the required methods and implement their logic according to your needs
+4. Enable the clone button inside the tab associated with the Entity used in the hook ExampleCloningHook.java
+
+```java
+@ApplicationScoped
+
+@Qualifier(Invoice.ENTITY_NAME)
+
+public class ExampleCloningHook extends CloneRecordHook {
+
+  @Override
+  public boolean shouldCopyChildren(boolean uiCopyChildren) {
+    //Implementation
+  }
+
+  @Override
+  public BaseOBObject preCopy(BaseOBObject originalRecord) {
+  	//Implementation
+  }
+
+  @Override
+  public BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord) {
+    //Implementation
+  }
 }
 
-publishing {
-    publications {
-        "com.myrepo.test"(MavenPublication) {
-            from components.java
-            groupId    = group
-            artifactId = artifact
-            version    = version
-        }
-    }
-    repositories {
-        maven {
-            url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
-        }
-    }
-}
+```
 
-repositories {
-    mavenCentral()
-    maven {
-        url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
-    }
-}
+#### Clone Hook API
 
-/**
-* Declare Java dependencies using 'implementation'
-* Ex: implementation "com.sun.mail:javax.mail:1.6.2"
-*/
-dependencies {
-		implementation(com.myrepo:dependency.test:1.0.0)
+To create a Clone Hook, you only have to follow a few steps:
+
+1. ### `boolean shouldCopyChildren(boolean uiCopyChildren)`
+
+    This method will return a boolean indicating if the Hook will use the DalUtil.copy() to copy the children entities.
+    For example, cloning an Invoice and its children will mean that Lines, Taxes, etc. are also cloned into the new document.
+
+2. ### `BaseOBObject preCopy(BaseOBObject originalRecord)`
+
+    This method must return the original object, which is the parameter received.
+    Here you can make special validations or extra logic involving the original record, before it is cloned.
+
+3. ### `BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord)`
+
+    Here you have access to the newly created record, a result of the DalUtil.copy().
+    This method is where you should implement special logic after the record is cloned.
+    For example, if the method shouldCopyChildren returns false, then here you would copy the children with all special considerations needed.
+
+4. ### `BaseOBObject copy(BaseOBObject bob, boolean copyChildren)`
+
+    Optional: Only override this method when the existing functionality is not enough, here you must implement the cloning functionality manually and call postCopy()on your own.
+
+5. ### `boolean shouldResetId()`
+
+    Override this method when you don’t want the DalUtil.copy()to reset the copied objects IDs. Refer to the DalUtil.copy() documentation for more information. This method returns true by default.
+
+6. ### `int getPriority()`
+
+    Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
+    The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Dataset
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Dataset
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
+## Article Content: 
+### How to Create a Dataset
+
+  
+####  Overview
+
+This how-to will focus on creating a dataset in Etendo Classic and also will give some examples in detail under Examples section. Dataset will export both reference data as well as default data.
+
+#####  Introduction to Dataset Concept
+
+
+  
+First of all we need to understand the dataset concept, which allows to export
+the sets of data from different tables in one step. This is especially useful
+to manage and distribute the module along with _reference data_ , for instance
+tax rates, regions or _default data_ in a new table(s) added by a module.
+
+A dataset is defined by its Dataset Tables and Dataset Columns. This detailed
+configuration leads to which tables to be exported, and which columns of each
+table are executed and exported.
+
+  
+There are some important things to note:
+
+  * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
+  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. 
+
+  
+  
+#####  Reference Data
+
+The reference data is published, distributed and installed together with the
+program code implementation of the module.
+
+In Etendo, the concept of reference data is generalized and any data
+in the instance can be exported in a module and imported when installing /
+applying the module.
+
+!!!note
+    You can find the _Has reference data_ field / option at the time of module
+    creation.
+
+!!!info
+    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets.md). 
+ 
+####  Data structure to define Dataset
+
+There are mainly three tables referred to as data structure to define datasets. They
+are:
+
+1\. *DataSet* with the following columns: _Value, Name, Description, Module
+and DataAccessLevel_
+
+  * Data sets have a name and a description to describe the content of the data set. 
+  * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
+  * A data set is owned by a module in the same way that all Application Dictionary components. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
+
     
-   	implementation('com.etendoerp.platform:etendo-core:[22.1.0, x.y.z)')
-}
+
+!!!note
+    If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
+    
+
+2\. *DataSet_Table* with the following columns: _DataSet, Table,
+fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQL
+expression)_
+
+  * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
+  * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
+  * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
+  * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
+    
+!!!note 
+    If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
+    For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
+    
+
+  
+!!!info
+    A full business object is a record including all its one-to-many relationships
+    as defined in the AD through the isParent attribute of a column. An example of
+    a full business object is a product with its vendors, prices, etc. A complete
+    description of business objects is provided in the DAL project.
+
+  
+  
+3\. *Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression)*.
+
+  * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
+  * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
+
+#####  Data Access Level
+
+The Data Access Level is used to define how to import / install the module at
+various levels, like System level, Client level, Organization level, etc. This
+access level value is available at `Dataset` table. 
+
+This is a detailed explanation at each access level.
+
+  * _System Only:_ data will be imported at module installation time at System level without any user interaction. 
+  * _Client:_ data will be imported at `Initial Client Setup` if the user chooses the module where the DataSet is included. 
+  * _Organization:_ data will be imported at `Initial Organization Setup` if the user chooses the module where the DataSet is included. 
+  * _Client/Organization:_ data will be imported at `Initial Client Setup` or `Initial Organization Setup` if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. 
+    
+!!!info
+    - The relationship between each entry data imported, the DataSet where it came 
+    from, and the original ID it has in the DataSet's XML can be found in 
+    the `AD_Ref_Data_Loaded` table.
+    - Data from a DataSet being imported for the first time will be created 
+    **with the ID set in its XML file**. A new ID will be created 
+    for each entry from then on.
+    - The `AD_Orginfo` table has information on which DataSet has ben imported 
+    for which client and/or organization
+
+
+####  Exporting Module
+
+Before publishing, we need to export the module which creates a directory in the
+module under Etendo Classic root directory and the appropriate XML files for
+inclusion in the finished module. 
+
+!!!note
+    Modules that are not flagged as being in development are not exported, so remember that you must select the InDevelopment checkbox when you define a new module.
+
+When the development of the module is finished, open a command window/shell
+and navigate to the Etendo development project, execute the `export.database` command.
+
+    
+```bash title="Terminal"   
+./gradlew export.database
+```  
+
+####  Publishing a Module
+
+The last step in the process is to publish the module and distribute across to
+the end user.
+
+!!!info
+    For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
+
+
+####  Examples
+
+Please find below the examples to know how to create a dataset and to export
+it along with the reference data.
+
+#####  Dataset of roles and accesses
+
+In this section you can find the example of a dataset of roles and access. It
+basically covers the definition of the role in the organization and the
+privileges they require.
+
+**Create a Role and Assign Privileges**
+
+  * Change to the admin role of your client. 
+  * Click on `General Setup` and Navigate to `Security` > `Role`. 
+  * Create a new record. Fill up the mandatory fields that required for this record. They are: 
+    * `Name`: the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. 
+    * `Active`: Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. 
+    * `User Level`: This controls which organizations the role has access to. There are four options, the most common are: 
+        - `Organization`: the role only has access to organization specific data. 
+        - `Client and Organization`: the role has access to organization specific data and client shared data. 
+    * `Manual`: The controls if all existing privileges are automatically given to the role or if they are manually associated on a peer need basis. Selecting this option for manual control is recommended. 
+  * Save the record. 
+  * Now you need to assign some privileges by clicking on `Grant Access` button. 
+  * select the module and access type to assign the privileges to the newly created role. 
+
+###### Create a User and assign the user to the Role
+
+  * Click on `General Setup` and navigate to `Security` > `User`. 
+  * Create a new record. The `Client` field will show the name of your client by default. 
+  * Select the Organization (This can be for access to one or all organizations in a client). 
+    - First Name. 
+    - Last Name. 
+    - Name (Default). 
+    - Select Active (Default). 
+    - Username (The default is a concatenation of first and last name). 
+    - Enter the user Password (Remember this). 
+  * Save the record. 
+
+  * Focus in the `User` window again
+  * Select the `User Roles` tab. 
+  * Create a new record and select a role. 
+  * Save the record. 
+  * Add all roles this new user will be able to have/use (one line for each role). 
+  * Logout from the current role. 
+
+###### Create a new module
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Click on `Module` menu from the Application Dictionary. 
+  * From the `Module Type` list, select Module. 
+  * In the `Name` field, type the java package name of the module(proper naming convention). 
+  * Complete the `Description` and `Help` fields. Supply the information about chart of accounts. 
+  * Select the `Has reference data` option. 
+  * Clear the `Has chart of accounts`, `Translation required` and `Is translation module` options. 
+  * Select the In development option. Remember that you cannot work on a module unless the `In development` option is selected. 
+  * On the `Dependencies` tab, select Core. 
+  * Save the module 
+
+###### Create a Dataset of roles and access
+
+  1. From the Application menu, select `Application Dictionary` > `Dataset` 
+  2. Click New. 
+  3. From the `Module` list, select the module above created. 
+  4. Specify a search key, name and description. 
+  5. From the `Data Access Level` list, select the Data access level as *Organization*. 
+  6. Select the `Export allowed` option. 
+  7. Select the `Table` Tab.
+  8. From the `Table` list, select the table whose content you want to include in the module. For example, ad_role_org_access, ad_role, ad_user_roles. 
+  9. In the SQL where clause field, specify the SQL "WHERE" statement that will identify the set of rows to be exported, in DAL notation. For example, adrole.id='2EA831D59184490E9BA858E9745EF89F' 
+  10. Select the `Include All Columns` option. 
+  11. Select `isBusinessObject` option.
+  12. Click Save. 
+  13. Click the `Export Reference Data` button to export the reference data to an .xml file that you can include in the module. 
+
+###### Exporting and Publishing Module
+
+After completing all the steps successfully. Run the below gradle task to export the module:
+
+    ./gradlew export.database
+    
+
+And publish the module.
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
+
+  
+###### How to Install - Organization Access Level Reference Data
+
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
+  * At this point the reference data will not be installed. 
+  * Log into the ERP as admin.
+  * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
+  * Select the `Organization type` then select the appropriate module and click Ok to install the reference data. 
+
+#####  Dataset of taxes or alerts
+
+In this section you can find the example on dataset of taxes or alerts. The
+process for creating a standard reference data module for taxes and alerts,
+you have set up Etendo ERP in a particular way to meet local requirements,
+you can export this data and convert it to a module, so that you can share it
+with other users.
+
+###### Registering a data module for taxes and alerts:
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Click on `Module` menu from the Application Dictionary. 
+  * From the `Module Type` list, select Module. 
+  * In the `Name` field, type the java package name of the module(proper naming convention). 
+  * Complete the `Description` and `Help` fields. Supply the information about chart of accounts. 
+  * Select the `Has reference data` option. 
+  * Clear the `Has chart of accounts`, `Translation required` and `Is translation module` options. 
+  * Select the `In development` option. Remember that you cannot work on a module unless the `In development` option is selected. 
+  * On the `Dependencies` tab, select Core. 
+  * Save the module.
+
+###### Defining and exporting the dataset
+
+  1. From the Application menu, select `Application Dictionary` > `Dataset` 
+  2. Click New. 
+  3. From the `Module` list, select the module above created. 
+  4. Specify a `search key`, `name` and `description`. 
+  5. From the `Data Access Level` list, select the Data access level as System only. 
+  6. Select the `Export allowed` option. 
+  7. Select the `Table` Tab.
+  8. From the `Table` list, select the table whose content you want to include in the module. 
+  9. In the `SQL where clause` field, specify the SQL WHERE statement that will identify the set of rows to be exported, in DAL notation. For example, client.id='1000001' 
+  10. To export all columns, select the `Include All Columns` option. To include only the columns you specify, select the `Columns` tab and create a new record for each column you want to export. 
+  11. To include the security audit columns (created, createdby, updated and updatedby) in the export, clear the `Exclude Audit Info` checkbox. 
+  12. Clear the `Is Business Object` option. 
+  13. Click Save.
+  14. Click the `Export Reference Data` button to export the reference data to an .xml file that you can include in the module.
+
+  
+###### Exporting and Publishing Module
+
+After completing all the steps successfully. Run the below gradle task to export
+the module:
+    
+    ./gradlew export.database
+    
+
+And publish the module. 
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md).
+
+
+  
+###### How to Install - System/Client Access Level Reference Data
+
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
+  * At this point the reference data will not be installed. 
+  * Log into the ERP as admin.
+  * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
+  * Fill up all the mandatory fields and then select the appropriate module. 
+  * Finally click Ok to install the reference data. 
+
+#####  Dataset of regions
+
+In this section you can export the reference data with the examples on
+regions. Find below the steps to create the Dataset for this module:
+
+  * Log into Etendo ERP as a System Administrator. 
+  * Create a new module called _Indian States_ for this example. 
+  * Make sure that you have selected or flagged for the field `Has Reference Data`. 
+  * Now expand the `Application Dictionary` menu. 
+  * Click on `Dataset` menu and create a new record for the for this module. 
+  * For example, here the Name `Indian States` has been given. You can give a name as you wish to select the region. 
+  * Fill up the Dataset form using the below mentioned values. 
+    
+    Field              |  value for the field   
+    ---                |          ---  
+    Active             |  make it flagged/put a tick mark  
+    Module             |  select the value from the drop down _Indian States - 1.0.0_  
+    Search Key         |  Indian States  
+    Name               |  Indian States  
+    Data Access Level  |  System Only  
+
+  * Before assigning the tables to Dataset. Please execute the below query in sqldeveloper or postgres IDE to find the `C_country_Id` for INDIA. After executing the below query the result of `c_country_id` would be 208 for the below query. 
+
+    ```sql
+    select * from c_country where countrycode like 'IN%';
+    ```
+
+  * Navigate to `Table` Tab and create 2 new records for the dataset. 
+  * Fill up the form by using the values below for the following Table: `C_Country`
+
+    Field                |  value for the field   
+    ---                  |          ---   
+    Table                |  `C_Country`  
+    Active               |  Default it is flagged. Leave as it is  
+    Module               |  Indian States - 1.0.0  
+    SQL Where Clause     |  id='208'  
+    Include All Columns  |  Remove the flag or tick mark (Individual columns will be added in later steps)
+    Exclude Audit Info   |  Mark it as flagged or put tick mark for this check box  
+
+  * Fill up the form by using the values below for the following Table: `C_Region`
+
+    Field                |  value for the field   
+    ---                  |          ---  
+    Table                |  `C_Region`  
+    Active               |  Default it is flagged. Leave as it is  
+    Module               |  Indian States - 1.0.0  
+    SQL Where Clause     |  country.id='208'  
+    Include All Columns  |  Mark it as flagged or put tick mark for this check box  
+    Exclude Audit Info   |  Mark it as flagged or put tick mark for this check box  
+
+  * Select the `C_Country` table from the table grid view and navigate to `Column` Tab. 
+  * Click on create a new record button for the above table. You need to select three columns for this table. 
+  * Those columns are:
+      - Name
+      - CountryCode
+      - HasRegion 
+  * Fill up the following values in the form. 
+
+    Field   |  value for the field   
+    ---     |          ---  
+    **Column 1:**   
+    Column  |  Name  
+    Active  |  It has benn flagged. Leave as it is  
+    Module  |  Indian States - 1.0.0  
+    **Column 2:**  
+    Column  |  CountryCode  
+    Active  |  It has benn flagged. Leave as it is  
+    Module  |  Indian States - 1.0.0  
+    **Column 3:**  
+    Column  |  HasRegion  
+    Active  |  It has benn flagged. Leave as it is  
+    Module  |  Indian States - 1.0.0  
+
+  * Finally navigate to `Dataset Tab` of Indian States and Click on `Export Reference Data` button to export the data. 
+
+  
+###### Exporting and Publishing Module
+
+After completing all the steps successfully, run the below gradle task to export
+the module:
+    
+    ./gradlew export.database
+    
+
+And publish the module.
+
+!!!info
+    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md). 
+  
+###### How to Install - System Only Access Level Reference Data
+
+  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
+  * It will install along with the reference data. 
+
+
+This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com/wiki/How_to_create_a_Dataset){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How To Create a Module
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module
+## Article Content: 
+###  How To Create a Module
+
+####  Overview
+
+Etendo uses the concept of Modularity. Modularity provides developers with the means to be able to develop, publish and distribute their work in a structured and controlled manner. For users of Etendo Classic, Modularity makes it possible to download, install and update custom developments.
+
+This section describes how to create a new module. It is of particular interest as it describes the first steps which should be followed in all of the other sections in this developer's guide and in Etendo Classic custom development in general.
+
+####  Introduction to Modularity
+
+The objectives of modularity are:
+
+  * To make it easier to contribute to Etendo Classic by allowing distributed and decoupled development and maintenance of optional features. 
+  * To provide the community with a rich set of extensions to meet their unique business requirements without bloating the core product. 
+  * To shorten the implementation cycles by enabling system integrators to develop very specific functionality to meet the unique needs of a particular market. 
+
+A module is a piece of additional functionality that can be deployed optionally and independently on top of Etendo Classic. Examples of modules are:
+additional reports, additional windows, connectors, content packs (translations, chart of accounts, list of tax codes, product categories, etc).
+
+!!!info
+    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](https://docs.etendo.software/concepts/Modularity_Concepts.md).
+
+This section explains only the standard module type, because that is most relevant for the other sections.
+
+All new development should be done as a part of a module. Only modules which are marked as _In Development_ can be used in the development process. A module can consist of the following software artifacts:
+
+  * Application dictionary components: all new application dictionary artifacts must be associated with a module. Application dictionary windows have a field that enables you to link an application dictionary component to a module. 
+  * Software resources: these are artifacts not defined in Etendo Classic itself but, for example, Java classes, libraries, web resources (images, etc.), configuration files, etc. To maintain the relationship with the module, software resources need to be located in the module's directory inside the Etendo Classic development project. Each module has its own unique directory. 
+  * Reference data: modules can be distributed with their own set of reference business data, for example, product categories, tax code, etc. The reference data is defined in datasets which can be related to a module. 
+
+The process of developing a module has three main steps:
+
+  1. Register your module in the Application Dictionary and in your github repository.
+  2. Develop the artifacts included in your module. Depending on the functional specification and technical design of your module, it might include only one type of artifacts or a combination of them. In following sections, each type of artifact is described in detail. 
+  3. Publish the module in your github repository.
+
+!!!Important
+    Every piece of Etendo Classic code belongs to a module, including Etendo Classic core itself. You should do all your developments through modules, including customizations. You can make changes directly in other modules -including Etendo Classic core- but it is highly recommended not to do that. It makes it much easier to maintain Etendo Classic if you restrict code changes to modules.
+
+A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](https://docs.etendo.software/concepts/Modularity_Concepts.md).
+
+The following sections discuss the main topic of this section: create and setup a module, and [publish it for distribution](how-to-publish-modules-to-github-repository.md).
+
+####  Creating a Module
+
+The first step in the development process is to create a new module. From the Application menu, select `Application Dictionary` > `Module`.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
+
+Note the following important fields: (for more details see the  AD_Module table description):
+
+  * The format of the Version field is three numbers separated by two dots. 
+  * The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _org.etendo.howtos_ , _com.etendoerp.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , etc. 
+  * The In Development option informs the system that you are developing the module. Only modules in development are exported by development tools and the system will raise an error if you try to modify a component of a module that is not in development. 
+  * The Default field option for a module marks that module as the one which is selected by default when developing and when editing components in the Application Dictionary. You may be developing more than one module at any one time, and specifying a default enables the module you want to be selected by default. 
+  * Select the Translation Required option if your module contains UI artifacts (window, field) with translatable elements. 
+
+The tabs at the bottom of the window enable you to define the module further:
+
+  * Dependency: defines the module's dependency on other modules. 
+  * Include: is used by industry templates/packs. 
+  * DB Prefix: relates database schema artifacts to modules. 
+  * Data Package: allows you to groups tables together. Data packages are used to determine the Java package generated Java code (business objects). 
+  * Naming Exceptions: is used during upgrades of previous versions of Etendo Classic. It should not be used for any other purpose. 
+  * Merges: If this module A does now include the content of another module B previously published independently (So module B was merged into module A). 
+  * Translation: is used for supporting translations. 
+
+  
+In this section, we create an example module, called _Etendo Howtos_ .
+We will define the module using the following three tabs of the `Application Dictionary` > `Module` window:
+
+  * Dependency
+  * DB Prefix
+  * Data Package
+
+Dependency: Etendo Classic core functionality is in itself a module, called _Core_. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  AD_Module_Dependency description):
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
+
+  
+DB Prefix: at least one db prefix is required when a module also contains database artifacts (table, column, constraints, etc.). Etendo Classic determines the module of a database artifact by checking to see if its name starts with one of the defined db_prefixes. If database artifacts will be added to the module, at least one DB prefix must be specified.
+
+!!!important
+    DB Prefix can only contain uppercase [A-Z0-9] and the first letter is required to be from [A-Z] only.  
+
+  
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
+
+!!!info
+    For more information, see the  AD_Module_Dbprefix  table description.
+
+  
+Data Package: Tables are linked to a module through the Data Package. The generated business object for the new table will use the Java Package defined in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
+
+
+####  Develop your software artifacts
+
+Now, let's see how to develop the software artifacts required for the functionality of the module. While developing, the relation to the module is maintained in different ways:
+
+  * Direct: for example, a Window is directly related to a specific module. 
+  * Indirect: a table belongs to a data package which again belongs to a module. 
+  * By name: a new stored procedure is linked through a module by prefixing it with the _DB\_Prefix_ of the module. 
+
+When the custom development is ready, the next step is to export the module.
+
+####  Exporting a Module
+
+Exporting a module creates a directory for your module under Etendo Classic root directory and the appropriate XML files for inclusion in the finished module. Modules that are not flagged as being in development are not exported.
+
+!!!note
+    Remember that you must select the In Development checkbox when you define a new module, otherwise it will not be exported.
+
+When the development of the module is finished (or to deliver intermediate results), open a command window/shell and navigate to the Etendo Classic development project execute the `./gradlew export.database` command.
+
+!!!important
+    Export database task will export all and only the modules set as in Development  
+    `./gradlew export.database`
+    
+Since we do not have any additional developments yet, only the corresponding
+folder structure and the module descriptor XML files have been created at this
+point.
 
 ```
-
-###### 2.  In case of adding dependencies of a new repository, declare it in `build.gradle`
-
-```groovy title="build.gradle"
-repositories {
-    mavenCentral()
-    maven {
-        url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
-    }
-     maven {
-        url "https://maven.pkg.github.com/myrepo2/com.myrepo2.test"
-    }
-}
+modules
+    └── org.etendo.howtos
+        └── src-db 
+            database
+               └── sourcedata
+                   ├── AD_MODULE_DBPREFIX.xml
+                   ├── AD_MODULE_DEPENDENCY.xml
+                   ├── AD_MODULE.xml
+                   └── AD_PACKAGE.xml
 ```
 
+  
+Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/concepts/Development_Build_Tasks).
+
+!!!info
+    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/concepts/Development_Build_Tasks#database_tasks) and [module gradle task](https://docs.etendo.software/concepts/Development_Build_Tasks#Modules) descriptions.
 
 
-###### 3. If your module makes use of dependency injection, you need to specify the location of the **'beans.xml'** file
+####  Creating a Source Directory
 
-Add to the build.gradle the location of the beans.xml
-``` groovy
-sourceSets {
-    main {
-        resources {
-            srcDirs("etendo-resources")
-        }
-    }
-}
+To develop manual Java code you need a _src_ directory inside of your specific module:
+
 ```
-
-Create the following structure in the root of your module
+modules
+    └── org.etendo.howtos
+        ├── src 
+        │   └── org
+        │       └── etendo
+        │           └── howtos
+        │                └── 
+        └── src-db
+            └──[...]
 ```
-com.test.yourmodule
-	|--- etendo-resources
-  			| --- META-INF
-        			| --- beans.xml
-```
+  
+The Java package in the source directory should start with the Java package of the module.
 
-Add to the **beans.xml**
+#### Publishing a Module
 
-``` xml
-<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd" bean-discovery-mode="all" version="2.0">
-</beans>
-```
+Once the module is created and documented, the next step is to publish it for it to be available.
 
-###### 4.  Deploy the new module, running the commands :
+For detailed information about this process, visit the [How to Publish Modules to Github Repository guide](how-to-publish-modules-to-github-repository.md)
+
+####  The Result
+
+The result of this section is a correctly set up module, which can be installed in an Etendo Classic instance that meets the module's requirements.
+
+---
+
+This work is a derivative of [How to Create and Package a Module](http://wiki.openbravo.com/wiki/How_To_Create_and_Package_a_Module){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Module that Adds an Accounting Process
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Module that Adds an Accounting Process
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process
+## Article Content: 
+#### Introduction
+
+This module is not to change the accounting entries generated by Etendo, but to run any additional process to be executed at posting time.
+ 
+From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig) in the general accounting configuration for Etendo.
+
+Etendo allows running processes just after the posting logic for any document which has been successfully completed. These kinds of processes are called Accounting Post-Processes because they are executed after the normal accounting process.
+
+From a development point of view, this feature gives us the possibility to fulfill any possible requirement specific for our country, like for example to keep an up-to-date log of the documents that have been posted, create some kind of official reports each time a document is posted, send data to a webservice, etc.
+ 
+!!! note
+    Depending on the country's requirements, these Accounting Post-Processes may not be necessary. These kinds of modules are not part of the core for a localization, like translations, chart of accounts or taxes, and must be included into a localization extension just in case they are really needed.
+
+####  Creating the module definition
+
+Each time a new module is developed, the first step must always be to create the module's definition and to register it in the Central Repository.
+
+These are the special considerations for the module:
+
+- Try to follow the [Naming guidelines for modules](https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules)
+- The flag Has reference data must be set because the module [will contain a dataset](#dataset-definition) with the Accounting Post-Process configuration. Remember to write any useful information inside the Reference Data Description field.
+- Define the mandatory dependency to Core.
+- Include a DB Prefix for the module in case it is necessary. For example, the module will probably define new messages that will require a DB Prefix.
+- If the module has UI elements that can be translated (like messages), set the Translation Required checkbox and specify the necessary Module Language.
+
+![](https://docs.etendo.software/assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
+
 !!! info
-    Before publishing a module, it will be compiled and packaged to a JAR format.
+    Now export the database to generate the file structure inside the module folder     ant export.database
+
+ 
+Finally, inside the modules accounting post-process java package directory, create the src folder, where the Java class that implements the accounting post-process code is stored.
+
+  ![](https://docs.etendo.software/assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
+
+#### Creating the Accounting Post-Process Configuration
+  
+The Java class that implements the Accounting Post-Process logic is defined at the Accounting Process window. The definition is quite simple and only requires a name and the Java class name, which must be inside the java package of the module.
+
+![](https://docs.etendo.software/assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png)
+
+This Accounting Post-Process will be later on associated with an Accounting Schema. So in this step it is important to define as many Java classes as Accounting Post-Processes we want to include in our module, although it is usually recommended to include just one process per module to keep the general rule of isolating features in separate modules.
+ 
+##### Dataset definition
+  
+Dataset definition is a key step in this process. A wrong dataset definition can waste all our previous work, so it is important to follow all these considerations:
+
+- The dataset must belong to your accounting post-process module.
+- Try to avoid strange characters in the dataset name. This string is used for generating the XML file name that stores the dataset.
+- The Data Access Level must be set to System/Client, which means we allow users to apply the configuration only at Client level (Organization *).
+- The Export allowed flag must be set.
+- Inside the Table tab we must include the AD_AcctProcess table, which is the one that stores the Accounting Process configuration.
+- The HQL/SQL Where clause is an important field, because it allows filtering the records necessary  to include into the dataset. In the example all the records that are inside our module java package name are filtered.
+
+![](https://docs.etendo.software/assets/drive/1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J.png)
+
+The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
+  
+!!! info
+    In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Report
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
+## Article Content: 
+###  How to Create a Report
+  
+####  Overview
+
+In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
+
+####  Setting up Jaspersoft Studio
+  
+!!!note
+    It is recommended to use the latest version of Jaspersoft Studio.  
+  
+  
+First, you need to download Jaspersoft Studio, a graphical tool that allows you to create and modify JasperReports templates (.jrxml files).
+
+  * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
+  * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
+  * On Windows: Download and execute the .exe file.
+
+#####  Configuring Jaspersoft Studio Library Version
+!!! warning
+    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. It is very important to use the correct version of JasperReports library,so the jrxml file has the syntax compatible with Etendo.
+
+* Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
+
+#####  Configuring Jaspersoft Studio Properties
+
+Some properties of Jaspersoft Studio need to be modified in order to work properly. In short, you need to make sure:
+
+  * You modified the JasperReport property _net.sf.jasperreports.awt.ignore.missing.font_ and set it to *true*. It can be changed in `Properties` > `Jaspersoft Studio` > `Properties` 
+  * Do not use any *Scriplet* class 
+  * Use *Java* as default expression language 
+
+
+  
+#####  Setting up Classpath
+
+In Jaspersoft Studio, each report is supposed to be part of a project. So, you first need to create a new project (`File` > `New` > `Project`).
+
+The project has a classpath, and here is where you can add the jars you need.
+
+  * Right-click on the project name: `Properties` > `Java Build Path`
+  * Move to *Libraries* tab 
+  * Click *Add External Jars* button 
+  * Add the desired library. 
+  * Click *OK*
+
+####  Creating the Template
+
+  * Go to `File` > `New`
+  * Pick *Jasper Report*
+  * The *New Report Wizard* will be opened 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-2.png)
+
+  * Select a Report Template, (_Blank_ following our example) 
+  * Define a Report Name 
+  * Define the file Location in the project. 
+
+Later on, we will copy this .jrxml file inside our Etendo module that is going to keep our Report and also the required configuration in the Application Dictionary.
+
+  * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
+  * Click *New*
+  * Pick *Database JDBC Connection* and click _Next_
+  * Fill all the fields 
+    * *Name:* Etendo (or any name you like, e.g. pi) 
+    * *JDBC Driver:* PostgreSQL (`org.postgresql.Driver`). In this case, we'll use PostgreSQL 
+    * *JDBC URL:* `jdbc:postgresql://localhost:5432/etendo` where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
+    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](https://docs.etendo.software/getting-started/installation.md#install-etendo)) 
+    * *Password:* tad 
+  * Click the Finish button to generate the JDBC Connection 
+  * Test your connection 
+  * Save 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
+
+Now we have to configure the query: we are going to list the products present in the database.
+
+  * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-4.png)
+
+  * The products are stored in the `M_Product` table 
+    
+        SELECT m_product_id, value, name FROM m_product
+
+  * We have to add the fields based on your query which we want to use in the report, so we are going to add: 
+    * `m_product_id` 
+    * `value` 
+    * `name` 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-5.png)
+
+  * Click *OK* 
+  * Remember to clear the Scriptlet class and modify the Language for expressions 
+  * Right-click on the Report Outline menu, and select *Show Properties*. 
+  * In the report properties in the right, look for the following: 
+    * Clear the Scriptlet class 
+    * Choose Java as Language 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-6.png)
+
+Let's now design the Report Layout
+
+  * Put a static text as report title: _Product List_
+  * Place the fields in the *Detail* band and a title in the *Column Header* band 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-7.png)
+
+  * Switch to the *Preview* subtab to get a report preview 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-8.png)
+
+!!!note
+    It is recommended to use Dejavu fonts in jasper reports because these
+    fonts support most of the characters in almost all languages​​. Besides,
+    Dejavu typography is the family of fonts that Etendo included in
+    jasperreports-fonts library.   
+  
+#####  Etendo Runtime Environment
+
+The standard reports in Etendo (`src/org/openbravo/erpReports`) make use of several methods that reside inside the *Etendo Runtime Environment*, which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of the `org.openbravo.erpCommon.utility.Utility` Class:
+
+  * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
+  * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
+  * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
+
+For this, to be able to preview the standard Etendo reports from *JasperStudio*, it suffices just to import the .jar file into the classpath of the project within JasperStudio.
+
+#####  Adding images and logos to a report using the ShowImage API
+
+You can use the Image BLOB reference to display an image for a specific report, or one of the Company logos in the application. 
+
+To do so:
+
+1. Add an image object to your report
+
+2. set the expression class to "java.awt.Image" and the expression image to a call to the ShowImage function of the Utility class (if you want it to display a standard ImageBLOB image reference, that corresponds to a field added to a tab), or to the ShowImageLogo function if you want to display the logo of an Organization or Client.
+
+Images loaded with this method must not have alpha channel. A transparency layer is not supported by the function that loads images in Jasper Reports.
+
+  * If you want to use the ShowImage function, you need to make the expression image look like: 
+    * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
+
+IMAGEID needs to be the UUID of the image you want to show. You could set this value using a Jasper parameter.
+
+  * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
+    * This one will show the Company logo at System level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin")` 
+    * This one will show the Company log at Client level (the client used will be the one the user logged at): 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu")` 
+    * This one will show the Company logo at Organization level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
+
+ORGANIZATIONID needs to be the UUID of the Organization whose log you want to show. You could set this value using a Jasper argument. An example could be `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E` the organization ID.
+
+####  Registering the Report in Application Dictionary
+
+#####  Creating the Report
+
+It is possible to create a report using a process definition. For more information, visit [this section](How_to_create_a_Report_using_Process_Definition.md).
+
+  * Using the System Administrator role 
+  * Using the quick-launch, open: *Process Definition* window 
+    * You can find it in the menu: `Application Dictionary` > `Process Definition` 
+
+  * Create a new record 
+  * Fill all required fields 
+    * *Module:* Pick your module 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](https://docs.etendo.software/concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Name:* Product List 
+    * *UI Pattern:* Report (Using JR templates) 
+    * *Data Access Level:* Client/Organization 
+    * *Handler*: use the default `org.openbravo.client.application.report.BaseReportActionHandler`
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
+
+We must copy the .jrxml template file generated with Jaspersoft Studio into our module. When using Process Definition to generate a Report, templates need to be stored in the web folder of the module. In our example, we place it in the following location: `/web/com.etendoerp.platform.features/jasper`
+
+  * Navigate to the *Report Definition* tab 
+  * Fill the PDF template field with the location of the .jrxml file 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
+
+#####  Creating the Menu record
+
+  * Using the System Administrator role 
+  * Open the Menu window 
+  * Create a new record 
+  * Fill all required fields: 
+    * *Module:* Your module 
+    * *Name:* Name of the menu entry (Product List) 
+    * *Description:* Description of the action related to the menu entry 
+    * *Action:* Pick `Process Definition` 
+    * *Process Definition:* Pick your Process Definition (Product List) 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
+
+####  Compiling
+
+After you have registered the report and menu entry in the Application Dictionary, you need to compile to generate the necessary code.
 
 ``` bash title="Terminal"
-./gradlew update.database smartbuild
-```
-``` bash title="Terminal"
-./gradlew publishVersion -Ppkg=<javapackage>
+./gradlew smartbuild
 ```
 
+Once the compilation has been completed, restart your Tomcat server.
 
-!!! success
-    Once Gradle finishes the deployment, your module is ready to be used as a dependency.
+####  Testing the Report
+
+If you have completed all the steps, you should be able to open your Product List report form the quick-lauch, or menu entry.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
+
+####  Further Details
+
+#####  Layout
+
+For information on how JasperReports handles the layout, check [Making HTML,XLS or CSV friendly reports](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/making-html-xls-or-csv-friendly-reports/){target="\_blank"}.
+
+Also, a tutorial with the basics of how to design a report can be found [here](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/designing-report-jaspersoft-studio/){target="\_blank"}.
+
+#####  Configuring Cell Type in XLS Reports
+
+By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
+
+If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
+
+To override this configuration, the following must be done inside the .jrxml report template:
+
+  1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
+  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
+
+!!!note
+    The decimal and thousands *separators* used for the numeric
+    cells exported in this way, will be those defined inside the spreadsheet
+    program itself (LibreOffice Calc, Excel,etc).
+
+#####  Creating a Report Using Report and Process
+
+In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
+
+#####  Report Compilation
+  
+When printing a report in the application, it is previously compiled at runtime. The result of this report compilation is cached if there are no modules in _in development_ status.
+
+Besides, it is possible to handle the state of this cache through a JMX extension. Thus, this extension allows to:
+
+  * See if the cache is enabled. 
+  * Enable/Disable the cache. 
+  * See the list of reports whose compilation is stored in cache. 
+  * Clear the cache contents. 
+
+#####  Barcodes
+
+It is possible to generate barcodes from JasperReports, using barcode4j or barbecue libraries. These libraries are included in [Barcode generation in reports](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
+
+In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
+
+---
+This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Window
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Window
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
+## Article Content: 
+####  Overview
+
+The objective of this section is to show how you can create a new window from scratch. 
+
+!!!info
+    This section builds on top of two previous sections which explain
+    [How to Create a Module](How_To_Create_and_Package_a_Module.md)  and [How to Create a Table](How_to_create_a_Table.md).
+
+####  Module & Table
+
+As mentioned above, this tutorial is based on two previous tutorials
+and assumes that the following objectives have been already completed:
+
+  * Creation of a new module
+  * Creation + Registration in the AD of a new table
+
+####  Creating the New Window
+
+Using the *System Administrator* role navigate to `Application Dictionary` > `Windows, Tabs and Fields `. 
+Create a new record as indicated by the screenshot below:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_0.png) 
+
+
+The main fields of this window are:
+
+
+  - *Module*: defines the module for which this element will belong to.
+  - *Name*: defines the name that Etendo uses to recognize this window. 
+  - *Description*: gives a small description of the table. 
+  - *Help/Comments*: defines the text that is displayed in Help window. 
+  - *Window Type*: defines some user interface specifics for a window: 
+    - _Maintain_ : is used for windows with few entries. 
+    - _Transaction_ : for transactional windows. It's the type of window that's used for showing the information of tables with a large volume of data. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents. The header tab's underlying table must contain the PROCESSED and UPDATED columns (for the data filters to work).
+    - _Query Only_ : for read-only windows that only enable viewing of data. 
+
+  
+Save this record and move to *Tab* tab. Create a new record as shown
+below, creating the first tab:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_1.png)  
+
+
+Main fields of this window are:
+
+  * *Module*: defines the module for which this element will belong to.
+  * *Name*: defines the name that Etendo uses to recognize this tab. 
+  * *Description*: gives a small description of the table. 
+  * *Help/Comments*: defines the text that is displayed in Help window. 
+  * *Table*: specifies the table that the tab will show the data from. 
+  * *Table Level*: defines the hierarchy of tabs, _0_ being the highest level. 
+  * *UI Pattern* This dropdown offers the following options: 
+    * _Standard_ \- standard interface where multiple records can be added, viewed and edited 
+    * _Read Only_ \- this option disables any editing/creating capabilities for any user within this tab 
+    * _Single Record_ \- this option enforces a one-to-one relationship between a parent and a child tab, allowing the user to enter maximum one record in the tab 
+  * *HQL Where Clause*: by using this HQL filter, the user will never be able to see data that does not fit the criteria. When referring to properties of the entity shown in the tab then use the prefix *e* . In our case, we use this field to display only business partners that are our employees (using the _employee_ property). 
+  * *SQL Where Clause* Same like HQL Where Clause but using SQL syntax and used for filtering in _classic windows_ . 
+
+The *Copy Tab Fields* button can be used to copy fields from an existing tab into our new
+one.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
+
+The *Create Fields* button can be used to create fields for the new tab based on its associated table
+  
+Move to *Field* tab to see the created fields.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
+
+
+
+  
+  
+  
+If required, changes to these fields could be made or new ones could be added manually. 
+
+!!!note
+    For not header tabs, it is very important to not remove the field
+    that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
+
+
+
+Now, go back to *Tab* tab and create a new record that will represent the
+child tab of the Employee tab where salaries will be managed:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
+
+
+  
+Most importantly, make sure you select:
+
+  * *Table* = `HT_Salary`
+  * *Tab Level* = _1_
+
+
+By clicking and confirming the *Create Fields* dialog, the application will
+automatically insert the columns of the selected table into the fields tab of
+the *Salary* one.
+
+  
+To arrange the columns according to common look and feel of other windows, we now change a view field properties as can be seen in following screenshot.
+
+  * Hide field _c_bpartner_id_
+  * Reorder fields (using sequence), to have _isactive_ after all other fields 
+  * Mark _amount_ and _isactive_ as *Start in new line*
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_5.png) 
+
+
+  
+For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides.
+
+To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the corresponding table and set the *Window* as indicated below:
+
+  
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
+
+####  Creating the Menu Item
+
+A menu item is required for the user to be able to call up the new window. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
+
+  
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
+
+
+  
+Main fields of this window are:
+
+  * *Module*: defines the module for which this element will belong to.
+  * *Name*: defines the name that Etendo uses to recognize this menu item. 
+  * *Description*: gives a small description of the table. 
+  * *Summary level*: defines a folder containing menu items (windows, processes, reports and so on). 
+  * *Action*: defines the type of menu item. 
+  * *URL* If _Action_ is _External link_ or _Internal link_ , defines the _URL_ to be linked. 
+  * *Special Form*: If _Action_ is _Form_ , defines the form to be linked. 
+  * *Process*: If _Action_ is _Process_ , defines the process to be launched. 
+  * *Report*: If _Action_ is _Report_ , defines the report to be linked. 
+  * *Window*: If _Action_ is _Window_ , defines the window to be linked. 
+
+Save this record then click on _Tree_ icon ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_8.png)
+
+
+Here you can drag and drop the new menu item to any of the
+other menu groups.
+
+  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
+
+
+####  Compiling the Application with the New Window
+
+Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. 
+
+```bash
+./gradlew smartbuild
+```
+
+####  The Result
+
+Using the *F&B International Group Admin* role, select the link to the new window from the menu. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png)
+  
+!!!success
+    You have now successfully created your own new window and seen how it came to life within Etendo. 
+
+
+This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create an Alert
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create an Alert
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
+## Article Content: 
+###  How to Create an Alert
+
+####  Overview
+
+The objective of this how-to is to illustrate how you can add new  alerts  to
+Etendo. Alerts are non-intrusive informational messages to individual users
+or groups (roles) about everything within the system. One can define unlimited
+number of alerts for various statuses, errors, informative purposes, reminder
+etc. 
+
+Some examples are:
+
+  * Errors in the application dictionary that the System Administrator needs to be alerted about (e.g. a table without a an identifier)‏ 
+  * Errors in master data (e.g. a Business partner without an address)‏ 
+  * Notifications about critical situations (e.g. overdue payments)‏ 
+
+and many more.
+
+####  Defining the alert
+
+First of all, the condition under which the alert appears needs to be defined.
+This is done using a SQL statement that needs to follow certain conventions.
+
+To create a new  alert  rule, use the role _*System Administrator*_ to navigate
+to `General Setup` > `Application ` >`Alert` window. Depending on how you
+installed Etendo, you might already have some alerts here. If you do, try
+to find the _Customers with exceeded credit_ one and double click it. If not,
+create a new record as indicated below:
+
+  
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-0.png)
+
+
+where this is the exact code for the *SQL* field:
+
+    
+    
+     
+     SELECT c_bpartner_id AS referencekey_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
+         0 AS ad_role_id,
+         NULL AS ad_user_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
+         'Y' AS isActive,
+          ad_org_id, 
+          ad_client_id, 
+          now() AS created,  
+          0 AS createdBy,  
+          now() AS updated,
+          0 AS updatedBy
+     FROM c_bpartner 
+     WHERE SO_CreditLimit < SO_CreditUsed
+     AND iscustomer='Y'
+     AND SO_CreditLimit!=0
+
+The fields in question here are:
+
+  * *Name* is a user friendly name for an alert 
+  * *SQL* is the actual SQL statements whose results (individual records) will be items alerted about 
+  * *Tab* is a tab of a specific window where the user should be taken to be shown the item in question generated by the SQL statement 
+
+
+####  Defining recipients
+
+Switch to the role _*System Administrator*_ (or your defined 'administrator'
+role), navigate to _`General Setup` > `Application ` >`Alert`_ , select
+_Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
+tab. Add a new record as indicated below:
+
+  
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png)
+
+  
+!!!note
+    Notice that a role can be added (that includes several users) or a specific
+    user.
+
+####  Scheduling the alerting background process
+
+For the alerts to be evaluated and triggered, the background process needs to
+be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _`General Setup` > `Process Scheduling ` >`Process Request`_ and enter a new record:
+
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
+
+####  The Result
+
+Finally, log out and back in and select the role _*System Administrator*_ (or
+your defined administrator role). You should be able to see an alert in the
+navigation bar. By clicking on it, you will automatically be taken to the
+_*Alert Management*_ window that should look something like:
+
+  
+
+![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png)
+
+  
+
+####  SQL code explained
+
+In order to write any kind of alert, the approach is very similar. Let's take
+another look at the SQL code that describes the condition:
+
+    
+    
+     
+     SELECT c_bpartner_id AS referencekey_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
+         '0' AS ad_role_id,
+         NULL AS ad_user_id,
+         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
+         'Y' AS isActive,
+          ad_org_id, 
+          ad_client_id, 
+          now() AS created,  
+          '0' AS createdBy,  
+          now() AS updated,
+          '0' AS updatedBy
+     FROM c_bpartner 
+     WHERE SO_CreditLimit < SO_CreditUsed
+     AND iscustomer='Y'
+     AND SO_CreditLimit!=0
+
+Each SQL statement basically simulates an Etendo table which is why it
+needs to have all the columns defined above:
+
+  * *referencekey_id* \- this is ID (primary key) of the record that needs attention and is the cause of the alert. In our case, this would be the C_BPartner_ID of Neil Reiley. 
+  * *record_id* \- this is a user friendly label for the item that is in questions with the referencekey_id. Use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
+  * ad_role_id - should always be set to 0 
+  * ad_user_id - should always be set to null 
+  * *description* \- this is the message shown to the user describing what the problem is. You need construct this message according to what the alert is all about, indicating to the user what caused the alert and what the problem is. Again, use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
+  * isActive - should always be set to 'Y' 
+  * ad_org_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
+  * ad_client_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
+  * created - should always be set to now() 
+  * createdBy - should always be set to 0 
+  * updated - should always be set to now() 
+  * updatedBy - should always be set to 0 
+
+Finally, the WHERE clause describes the condition that triggers the alert. In
+our case the SELECT statement will return all Business Partners (FROM
+c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
+limit (`SO_CreditLimit < SO_CreditUsed`) which needs to be different from zero
+(`SO_CreditLimit!=0`).
+
+In other words, anything you can describe in a SQL statement can be defined as
+an alert. 
+
+
+This work is a derivative of [How to create an alert](http://wiki.openbravo.com/wiki/How_to_create_an_Alert){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -32513,359 +34722,6 @@ It is also possible to add validations and override the original methods.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to Create a Clone Hook
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Clone Hook
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook
-## Article Content: 
-#### Introduction
-
-Etendo allows for any window or tab to have a Clone button. By default, it will use the Dal.copy() method, but this can be overridden using hooks, to implement custom Cloning logic for specific entities.
-
-![](https://docs.etendo.software/assets/drive/0MigjYdnUWzz7TltzquaKnHZBJkr6dhSt8o-c6WbrEYVqHL8R8SNC3lvoTFs-_XOI1qhnCopBhqqzL1THLQ61n4sYhGsRGyT-BtGPes-kykNZO79OUtW55PAmcjxNOA-i9gEK2uaDivHwfJTUdYykeDqL5-qk0UzbVmuGJIpaVufYYmX02sjk3fr.png)
-
-#### How to create a Clone Hook?
-
-To create a Clone Hook, you only have to follow a few steps:
-
-1. Create a Java Class of type CloneRecordHook
-2. Use the @Qualifier annotation to define which entity this class will clone
-3. Override the required methods and implement their logic according to your needs
-4. Enable the clone button inside the tab associated with the Entity used in the hook ExampleCloningHook.java
-
-```java
-@ApplicationScoped
-
-@Qualifier(Invoice.ENTITY_NAME)
-
-public class ExampleCloningHook extends CloneRecordHook {
-
-  @Override
-  public boolean shouldCopyChildren(boolean uiCopyChildren) {
-    //Implementation
-  }
-
-  @Override
-  public BaseOBObject preCopy(BaseOBObject originalRecord) {
-  	//Implementation
-  }
-
-  @Override
-  public BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord) {
-    //Implementation
-  }
-}
-
-```
-
-#### Clone Hook API
-
-To create a Clone Hook, you only have to follow a few steps:
-
-1. ### `boolean shouldCopyChildren(boolean uiCopyChildren)`
-
-    This method will return a boolean indicating if the Hook will use the DalUtil.copy() to copy the children entities.
-    For example, cloning an Invoice and its children will mean that Lines, Taxes, etc. are also cloned into the new document.
-
-2. ### `BaseOBObject preCopy(BaseOBObject originalRecord)`
-
-    This method must return the original object, which is the parameter received.
-    Here you can make special validations or extra logic involving the original record, before it is cloned.
-
-3. ### `BaseOBObject postCopy(BaseOBObject originalRecord, BaseOBObject newRecord)`
-
-    Here you have access to the newly created record, a result of the DalUtil.copy().
-    This method is where you should implement special logic after the record is cloned.
-    For example, if the method shouldCopyChildren returns false, then here you would copy the children with all special considerations needed.
-
-4. ### `BaseOBObject copy(BaseOBObject bob, boolean copyChildren)`
-
-    Optional: Only override this method when the existing functionality is not enough, here you must implement the cloning functionality manually and call postCopy()on your own.
-
-5. ### `boolean shouldResetId()`
-
-    Override this method when you don’t want the DalUtil.copy()to reset the copied objects IDs. Refer to the DalUtil.copy() documentation for more information. This method returns true by default.
-
-6. ### `int getPriority()`
-
-    Override this method when there is an existing hook for your selected Entity (for example, there is a cloning process already implemented for Invoices and Orders), and you want your own hook to be used instead.
-    The hook with the lowest priority per Entity will be selected and executed. It returns 100 by default.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Use Advanced Sequences
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Advanced Sequences
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences
-## Article Content: 
-#### Sequences
-
-##### Overview
-
-This document covers how to use the implementation of sequences, explain all the features, and give some implementation example cases.
-
-There are two base reference implementations defined that you can use or extend:
-
-- Transactional Sequences: These sequences lock the table in the database to guarantee  the generation of identifiers sequentially and avoid duplicates or gaps.
-- Non-Transactional Sequences: In this case, the process to create sequences uses Database Sequences and should be used in cases where the gaps between numbers is not an issue.
-
-!!! warning "Important"
-	Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.
-
-
-##### Quick sequence setup
-
-1. First, log-in as “System administrator”. Open the `Application` > `Application Dictionary ` >`Tables and Columns` Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.
-	
-	!!! info
-		If you want to define a new sequence reference, you must add it in **Reference Search Key** field and the parent (Base Sequence) must be in the **Reference** field.
-		See how to create a new reference in [new sequence reference](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference).
-	
-	<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/quicksequence.png){ width="700" }
-  <figcaption>Adding transactional sequence in the invoice table</figcaption>
-	</figure>
-
-
-2. Then, it is necessary to run a process in `Application` > `General Setup`\> `Application`\> `Create Sequences` to generate the sequences, selecting the root Organization where they will be created.
-
-	!!! warning
-		To run this process, the user must be logged using the role which manages the sequence, not as system administrator.
-
-
-	!!! warning
-		This process will only generate the combinations for organization and document types, in case you want to generate sequences for the new dimensions described below, you must extend the `SequencesGenerator` action and overwrite the `generateSequenceCombination` and `setSequenceValues` methods in order to generate the relevant combinations and set the newly added dimensions.
-		You can also create the required sequences manually.
-
-	<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/createsequencesprocess.png){ width="700" }
-  <figcaption>Executing the process to create new sequences</figcaption>
-	</figure>
-
-
-	---
-
-	After that, in the `Document Sequence` window you can see the sequences generated.
-
-	<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/sequenceslist.png){ width="700" }
-  <figcaption>List of sequences generated by the process</figcaption>
-	</figure>
-
-	When you edit the record, you can see:
-
-	<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/formviewad_sequence.png){ width="700" }
-  <figcaption>Sequence form view</figcaption>
-	</figure>
-
-	- **Organization:** Owner organization associated to the sequence.
-	- **Name:** An identifier using the Table and Column associated to the sequence.
-	- **Description:** Field to add information or details about the sequence.
-	- **Auto Numbering:**  Check to define the increment and initial numbering.
-	- **Increment By:** Numeric Value to define the sequence increment.
-	- **Next Assigned Number:** Initial sequence number.
-	- **Prefix:** String at the beginning of the sequence  **(**Supports masking**).**
-	- **Suffix:** String at the end of the sequence  **(**Supports masking**).**
-	- **Document Type :** In case that the table has document types, a sequence for each document type will have been created.
-	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
-
-	!!! info
-		For more information about masking see [Sequences Masking user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
-
-	- **Table:** Defines the table in which the sequence type column is located.
-	- **Column:** The column where the sequence is defined.
-
-3. In case the sequence is applied in DocumentNo field, the user has to ensure that the Document Type associated has the property `sequenced document` unchequed to avoid throwing the legacy process. To do that, first log in as a user, then open `Aplication>Finantial Management>Accounting>Setup>Document Type`, select the Document Type associated and finally, edit it.
-
-	!!! warning
-		_If the step is not followed, the legacy process will be run._
-
-	<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/doctypesettings.png){ width="700" }
-  <figcaption>Document Type example</figcaption>
-	</figure>
-
-
-4. Finally, you must compile the application. To do this, run:
-
-	```bash title="Terminal"
-	./gradlew compile.complete smartbuild
-	```
-
-5. To export the changes to your module, do not forget to do a:
-
-	```bash title="Terminal"
- 	./gradlew export.database
-	```
-
-##### **New sequence reference**
-
-If you want to define a new reference with transactional or non-transactional parent reference, you must create a new record in the Reference window (`Application` > `Application Dictionary ` >`Reference`) and set:
-
-<figure markdown>
-  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/new_sequence_reference.png){ width="700" }
-  <figcaption>New sequence reference example</figcaption>
-</figure>
-
-
-- **Name:** New reference identifier.
-- **Description:** Field to add information or details about the reference.
-- **Parent Reference:** Select transactional or non-transactional sequence.
-
-&nbsp;
-&nbsp;
-
-###### Sequence Config tab: 
-
-![sequence_config.png](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/sequence_config.png)
-
-- **Generator Java Class:** Class that generate the next sequence value using the document sequence definitions. (If it is empty, a default generator is used ).
-
-When creating a non-transactional sequence, you must define:
-
-- **DB Sequence Name:** Name of the sequence defined in Data Base.
-- **DB Sequence Initial Value**: Initial sequence number.
-- **DB Sequence Increment Value:** Numeric Value to define the sequence increment.
-
-You can use a defined Sequence or create a new one using SQL:
-
-```sql
-CREATE SEQUENCE [ IF NOT EXISTS ] sequence_name
-    [ AS { SMALLINT | INT | BIGINT } ]
-    [ INCREMENT [ BY ] increment ]
-    [ MINVALUE minvalue | NO MINVALUE ]
-    [ MAXVALUE maxvalue | NO MAXVALUE ]
-    [ START [ WITH ] start ]
-    [ CACHE cache ]
-    [ [ NO ] CYCLE ]
-    [ OWNED BY { table_name.column_name | NONE } ]
-```
-
-| _Postgres syntax to create a new sequence_ |
-
-!!! info
-    In case the parent is Transactional Sequence only the Generator Java Class field will appear, but in case of the parent being a Non-Transactional Sequence you must define all the fiels.
-
-&nbsp;
-
-###### Dimension List
-
-A Dimension is a new filter clause used to select the sequence to be used when creating or saving a new record. The default dimensions are:
-
-- Client
-- Organization
-- Document Type
-
-This way you can have two different sequences depending on, for example, the Organization of the record. The same applies to the other default dimensions.
-
-!!! info
-    Dimensions are currently supported only in **Transactional Sequences**.
-
-![dimension_graph1.png](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/dimension_graph1.png)
-
-&nbsp;
-
-####### Adding custom dimensions
-
-If you want to add a new dimension to filter sequences, this dimension should be a column in both tables `AD_Sequence` and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the `Dimension List` tab with this column (see how to create a new sequence reference above).
-
-
-####### When a dimension is a foreign key column
-
-1. To define a new dimension, you have to start adding a column in the `AD_Sequence` table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (`M_Product` in this example) unless you decide to use an existing column as dimension.
-
-	!!! warning
-		The name of the columns must be the same in both tables.
-
-	```sql
-	ALTER TABLE AD_Sequence ADD COLUMN <dimension>_id varchar(32),
-	ADD CONSTRAINT ad_sequence_<dimension> FOREIGN KEY (<dimension>_id) REFERENCES <table> (<dimension>_id)
-
-	ALTER TABLE M_Product ADD COLUMN <dimension>_id varchar(32),
-	ADD CONSTRAINT M_product_<dimension> FOREIGN KEY (<dimension>_id) REFERENCES <table> (<dimension>_id)
-	```
-	!!!note
-		Remember to replace `<dimension>` with your desired name.
-
-2. Then you have to create the corresponding `AD_Column` register in the Application Dictionary. `Application` > `Application Dictionary ` > `Tables and Columns` search the `AD_Sequence` Table and create the new column.
-   Then you must set the `Reference` field of the dimension pointing to the foreign key table.
-
-	!!! warning
-		If the table with the dimension records is a new table, it should be created in `Application` > `Application Dictionary ` >`Reference`, setting the Base Reference as Table, and adding the table in the `Table Reference` tab.
-
-3.  Also, you have to create the field in the `Document Sequence` window. `Application` > `Application Dictionary ` >`Windows, Tabs and Fields` search `Document Sequence` window and in `Sequence` tab run the process to create the new field.
-
-4.  If the dimension is a new column, you must to repeat the previous step to create the field in the table where the sequence is used.
-
-5.  Finally, go back to your Reference created previously and create a new register in the `Dimension List` tab, selecting the new column you just created, then execute a:
-
-```bash title="Terminal"
-  ./gradlew smartbuild
-```
-
-
-####### When a dimension is a List
-
-1. First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.
-
-	!!! warning
-		The name of the columns must be the same in both tables.
-
-	```sql
-	ALTER TABLE public.ad_sequence
-	ADD COLUMN <list_name> character varying(60);
-
-	ALTER TABLE public.m_product
-	ADD COLUMN <list_name> character varying(60);
-
-	```
-	
-	!!! note
-		Remember to replace `<list_name>` with your desired name.	
-
-2. Then, you have to create the column in the `Application` > `Application Dictionary ` >`Tables and Columns` search `AD_Sequence` Table and create the new column.
-   You must set the `Reference` field of the new Column to `List` and indicate the corresponding Reference Search Key (Or define a new one). In the Default field you can set the id of one of the list elements and when a new Sequence is created, the reference automatically will be set.
-   You also have to do the same in the table that uses the sequence, or you can use an existing one.
-
-3. Finally, go back to your Reference previously created and create a new register in the `Dimension List` tab by selecting the new column you have just created then, execute a:
-
-```bash title="Terminal"
-  ./gradlew smartbuild.
-```
-
-
-####### Change sequence when change dimension
-
-- If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
-  The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.
-
-```java
-public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
-  @Override
-  protected void execute(SimpleCallout.CalloutInfo info) throws ServletException {
-    final String strcProductId = info.vars.getStringParameter("inpmProductId");
-
-    if (StringUtils.isBlank(strcProductId)) {
-      try {
-        OBContext.setAdminMode();
-        Tab tab = OBDal.getInstance().get(Tab.class,info.getTabId());
-        Field field = tab.getADFieldList()
-        .stream()
-        .filter(f -> ("inp" + Sqlc.TransformaNombreColumna(f.getColumn().getDBColumnName())).equals("inpvalue"))
-        .findFirst()
-        .orElse(null);
-        String sequenceNumber = Utilities.getDocumentNo(field);
-        info.addResult("inpvalue", "<" + sequenceNumber + ">");
-      } finally {
-        OBContext.restorePreviousMode();
-      }
-    }
-  }
-}
-```
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: How to Create Scan Process
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Scan Process
 ## Article URL: 
@@ -32938,402 +34794,6 @@ Optional:
     When the process is executed from the mobile application, a Json will be sent to the backend with all the scanned information. This data must be processed from the Java class defined in the handler and the expected functionality must be performed.
     An Example of this Java class is `InventoryScan`, which can be found in the `com.smf.mobile.scan` module.
 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Use Secure Webservices
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Secure Webservices
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
-## Article Content: 
-#### Overview
-
-This module allows calling any standard Etendo web service in the same way as calling the "/ws" endpoint, but using token authentication.
-
-This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
-
-Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
-
-
-!!! info
-    For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Copy and Paste Images in Etendo
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Copy and Paste Images in Etendo
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo
-## Article Content: 
-#### Copy and Paste Images in Etendo
-
-##### Overview
-
-This section explains how to use rich text areas to save images in Etendo.
-
-##### How to include images with rich text areas
-
-First, the user must define a column in the database where the corresponding image is saved.
-
-!!! info
-    To do this, it is important to remember that this column must have the enough size to store a codified image in base64 format. For example: a 2 MB image contains 3 million characters.
-
-
-![](https://docs.etendo.software/assets/drive/wO0NOA64kTnYqRjQ8KTrcBJiMmq2AGvuS6oYHOQ75hZ13OvUYgFkAK2S7iE-SGeRh5PcE5eNA8rgbpzg0LwgGGh-R4fk1yHCI9orYLKJJXDD9noH4K0ernCNFMkZCKBo_4owHCPkqrpxgOcFN2NjHMI0NchPj0r1VminCsMvbp0begvcFdO8FI8DjE5jAA.png)
-
-Once the column is defined, the user must log in with the System Administrator role, go to Application Dictionary | Windows, Tables and Columns, find the corresponding table, in our case “product” and create columns from the database with the “Create column from DB” button. 
-
-In the recently created column, the reference “rich text area” must be selected. 
-
-Also, a field for the corresponding image must be created. 
-
-Finally, it is necessary to compile executing:
-
-```bash title="Terminal"
-./gradlew smartbuild
-```
-
-
-![](https://docs.etendo.software/assets/drive/zd0NYsbcmx0ehnHRsCxb21zazxL6sYuBxqjAOoH74QmK1CTccI-dDyqzmMrTiJDrusrcdifTRiiCPPomRAdduh1LipsA2FHTP84kstjAI8SwL3a7-DkSSmCqbVYsyXF_d1El8Z9QqPqphc4oqIB-wFYadh3OODSzp8QCHSyGBAGZSX8OczGKNApmreM8eg.png)
-
-As seen in the image above, the “image” field was created, in which it is possible to paste content to store in base64 format in the database. In this way, this information is available for later.
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Create a Module that Adds an Accounting Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Module that Adds an Accounting Process
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process
-## Article Content: 
-#### Introduction
-
-This module is not to change the accounting entries generated by Etendo, but to run any additional process to be executed at posting time.
- 
-From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig) in the general accounting configuration for Etendo.
-
-Etendo allows running processes just after the posting logic for any document which has been successfully completed. These kinds of processes are called Accounting Post-Processes because they are executed after the normal accounting process.
-
-From a development point of view, this feature gives us the possibility to fulfill any possible requirement specific for our country, like for example to keep an up-to-date log of the documents that have been posted, create some kind of official reports each time a document is posted, send data to a webservice, etc.
- 
-!!! note
-    Depending on the country's requirements, these Accounting Post-Processes may not be necessary. These kinds of modules are not part of the core for a localization, like translations, chart of accounts or taxes, and must be included into a localization extension just in case they are really needed.
-
-####  Creating the module definition
-
-Each time a new module is developed, the first step must always be to create the module's definition and to register it in the Central Repository.
-
-These are the special considerations for the module:
-
-- Try to follow the [Naming guidelines for modules](https://docs.etendo.software/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules)
-- The flag Has reference data must be set because the module [will contain a dataset](#dataset-definition) with the Accounting Post-Process configuration. Remember to write any useful information inside the Reference Data Description field.
-- Define the mandatory dependency to Core.
-- Include a DB Prefix for the module in case it is necessary. For example, the module will probably define new messages that will require a DB Prefix.
-- If the module has UI elements that can be translated (like messages), set the Translation Required checkbox and specify the necessary Module Language.
-
-![](https://docs.etendo.software/assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
-
-!!! info
-    Now export the database to generate the file structure inside the module folder     ant export.database
-
- 
-Finally, inside the modules accounting post-process java package directory, create the src folder, where the Java class that implements the accounting post-process code is stored.
-
-  ![](https://docs.etendo.software/assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
-
-#### Creating the Accounting Post-Process Configuration
-  
-The Java class that implements the Accounting Post-Process logic is defined at the Accounting Process window. The definition is quite simple and only requires a name and the Java class name, which must be inside the java package of the module.
-
-![](https://docs.etendo.software/assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png)
-
-This Accounting Post-Process will be later on associated with an Accounting Schema. So in this step it is important to define as many Java classes as Accounting Post-Processes we want to include in our module, although it is usually recommended to include just one process per module to keep the general rule of isolating features in separate modules.
- 
-##### Dataset definition
-  
-Dataset definition is a key step in this process. A wrong dataset definition can waste all our previous work, so it is important to follow all these considerations:
-
-- The dataset must belong to your accounting post-process module.
-- Try to avoid strange characters in the dataset name. This string is used for generating the XML file name that stores the dataset.
-- The Data Access Level must be set to System/Client, which means we allow users to apply the configuration only at Client level (Organization *).
-- The Export allowed flag must be set.
-- Inside the Table tab we must include the AD_AcctProcess table, which is the one that stores the Accounting Process configuration.
-- The HQL/SQL Where clause is an important field, because it allows filtering the records necessary  to include into the dataset. In the example all the records that are inside our module java package name are filtered.
-
-![](https://docs.etendo.software/assets/drive/1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J.png)
-
-The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
-  
-!!! info
-    In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Create a Report
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
-## Article Content: 
-###  How to Create a Report
-  
-####  Overview
-
-In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
-
-####  Setting up Jaspersoft Studio
-  
-!!!note
-    It is recommended to use the latest version of Jaspersoft Studio.  
-  
-  
-First, you need to download Jaspersoft Studio, a graphical tool that allows you to create and modify JasperReports templates (.jrxml files).
-
-  * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
-  * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
-  * On Windows: Download and execute the .exe file.
-
-#####  Configuring Jaspersoft Studio Library Version
-!!! warning
-    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. It is very important to use the correct version of JasperReports library,so the jrxml file has the syntax compatible with Etendo.
-
-* Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
-
-#####  Configuring Jaspersoft Studio Properties
-
-Some properties of Jaspersoft Studio need to be modified in order to work properly. In short, you need to make sure:
-
-  * You modified the JasperReport property _net.sf.jasperreports.awt.ignore.missing.font_ and set it to *true*. It can be changed in `Properties` > `Jaspersoft Studio` > `Properties` 
-  * Do not use any *Scriplet* class 
-  * Use *Java* as default expression language 
-
-
-  
-#####  Setting up Classpath
-
-In Jaspersoft Studio, each report is supposed to be part of a project. So, you first need to create a new project (`File` > `New` > `Project`).
-
-The project has a classpath, and here is where you can add the jars you need.
-
-  * Right-click on the project name: `Properties` > `Java Build Path`
-  * Move to *Libraries* tab 
-  * Click *Add External Jars* button 
-  * Add the desired library. 
-  * Click *OK*
-
-####  Creating the Template
-
-  * Go to `File` > `New`
-  * Pick *Jasper Report*
-  * The *New Report Wizard* will be opened 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-2.png)
-
-  * Select a Report Template, (_Blank_ following our example) 
-  * Define a Report Name 
-  * Define the file Location in the project. 
-
-Later on, we will copy this .jrxml file inside our Etendo module that is going to keep our Report and also the required configuration in the Application Dictionary.
-
-  * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
-  * Click *New*
-  * Pick *Database JDBC Connection* and click _Next_
-  * Fill all the fields 
-    * *Name:* Etendo (or any name you like, e.g. pi) 
-    * *JDBC Driver:* PostgreSQL (`org.postgresql.Driver`). In this case, we'll use PostgreSQL 
-    * *JDBC URL:* `jdbc:postgresql://localhost:5432/etendo` where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
-    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](https://docs.etendo.software/getting-started/installation.md#install-etendo)) 
-    * *Password:* tad 
-  * Click the Finish button to generate the JDBC Connection 
-  * Test your connection 
-  * Save 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
-
-Now we have to configure the query: we are going to list the products present in the database.
-
-  * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-4.png)
-
-  * The products are stored in the `M_Product` table 
-    
-        SELECT m_product_id, value, name FROM m_product
-
-  * We have to add the fields based on your query which we want to use in the report, so we are going to add: 
-    * `m_product_id` 
-    * `value` 
-    * `name` 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-5.png)
-
-  * Click *OK* 
-  * Remember to clear the Scriptlet class and modify the Language for expressions 
-  * Right-click on the Report Outline menu, and select *Show Properties*. 
-  * In the report properties in the right, look for the following: 
-    * Clear the Scriptlet class 
-    * Choose Java as Language 
-  * Save your changes 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-6.png)
-
-Let's now design the Report Layout
-
-  * Put a static text as report title: _Product List_
-  * Place the fields in the *Detail* band and a title in the *Column Header* band 
-  * Save your changes 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-7.png)
-
-  * Switch to the *Preview* subtab to get a report preview 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-8.png)
-
-!!!note
-    It is recommended to use Dejavu fonts in jasper reports because these
-    fonts support most of the characters in almost all languages​​. Besides,
-    Dejavu typography is the family of fonts that Etendo included in
-    jasperreports-fonts library.   
-  
-#####  Etendo Runtime Environment
-
-The standard reports in Etendo (`src/org/openbravo/erpReports`) make use of several methods that reside inside the *Etendo Runtime Environment*, which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of the `org.openbravo.erpCommon.utility.Utility` Class:
-
-  * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
-  * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
-  * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
-
-For this, to be able to preview the standard Etendo reports from *JasperStudio*, it suffices just to import the .jar file into the classpath of the project within JasperStudio.
-
-#####  Adding images and logos to a report using the ShowImage API
-
-You can use the Image BLOB reference to display an image for a specific report, or one of the Company logos in the application. 
-
-To do so:
-
-1. Add an image object to your report
-
-2. set the expression class to "java.awt.Image" and the expression image to a call to the ShowImage function of the Utility class (if you want it to display a standard ImageBLOB image reference, that corresponds to a field added to a tab), or to the ShowImageLogo function if you want to display the logo of an Organization or Client.
-
-Images loaded with this method must not have alpha channel. A transparency layer is not supported by the function that loads images in Jasper Reports.
-
-  * If you want to use the ShowImage function, you need to make the expression image look like: 
-    * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
-
-IMAGEID needs to be the UUID of the image you want to show. You could set this value using a Jasper parameter.
-
-  * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
-    * This one will show the Company logo at System level: 
-        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin")` 
-    * This one will show the Company log at Client level (the client used will be the one the user logged at): 
-        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu")` 
-    * This one will show the Company logo at Organization level: 
-        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
-
-ORGANIZATIONID needs to be the UUID of the Organization whose log you want to show. You could set this value using a Jasper argument. An example could be `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E` the organization ID.
-
-####  Registering the Report in Application Dictionary
-
-#####  Creating the Report
-
-It is possible to create a report using a process definition. For more information, visit [this section](How_to_create_a_Report_using_Process_Definition.md).
-
-  * Using the System Administrator role 
-  * Using the quick-launch, open: *Process Definition* window 
-    * You can find it in the menu: `Application Dictionary` > `Process Definition` 
-
-  * Create a new record 
-  * Fill all required fields 
-    * *Module:* Pick your module 
-    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](https://docs.etendo.software/concepts/Modularity_Concepts.md#DB_prefix)) 
-    * *Name:* Product List 
-    * *UI Pattern:* Report (Using JR templates) 
-    * *Data Access Level:* Client/Organization 
-    * *Handler*: use the default `org.openbravo.client.application.report.BaseReportActionHandler`
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
-
-We must copy the .jrxml template file generated with Jaspersoft Studio into our module. When using Process Definition to generate a Report, templates need to be stored in the web folder of the module. In our example, we place it in the following location: `/web/com.etendoerp.platform.features/jasper`
-
-  * Navigate to the *Report Definition* tab 
-  * Fill the PDF template field with the location of the .jrxml file 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
-
-#####  Creating the Menu record
-
-  * Using the System Administrator role 
-  * Open the Menu window 
-  * Create a new record 
-  * Fill all required fields: 
-    * *Module:* Your module 
-    * *Name:* Name of the menu entry (Product List) 
-    * *Description:* Description of the action related to the menu entry 
-    * *Action:* Pick `Process Definition` 
-    * *Process Definition:* Pick your Process Definition (Product List) 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
-
-####  Compiling
-
-After you have registered the report and menu entry in the Application Dictionary, you need to compile to generate the necessary code.
-
-``` bash title="Terminal"
-./gradlew smartbuild
-```
-
-Once the compilation has been completed, restart your Tomcat server.
-
-####  Testing the Report
-
-If you have completed all the steps, you should be able to open your Product List report form the quick-lauch, or menu entry.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
-
-####  Further Details
-
-#####  Layout
-
-For information on how JasperReports handles the layout, check [Making HTML,XLS or CSV friendly reports](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/making-html-xls-or-csv-friendly-reports/){target="\_blank"}.
-
-Also, a tutorial with the basics of how to design a report can be found [here](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/designing-report-jaspersoft-studio/){target="\_blank"}.
-
-#####  Configuring Cell Type in XLS Reports
-
-By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
-
-If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
-
-To override this configuration, the following must be done inside the .jrxml report template:
-
-  1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
-  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
-
-!!!note
-    The decimal and thousands *separators* used for the numeric
-    cells exported in this way, will be those defined inside the spreadsheet
-    program itself (LibreOffice Calc, Excel,etc).
-
-#####  Creating a Report Using Report and Process
-
-In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
-
-#####  Report Compilation
-  
-When printing a report in the application, it is previously compiled at runtime. The result of this report compilation is cached if there are no modules in _in development_ status.
-
-Besides, it is possible to handle the state of this cache through a JMX extension. Thus, this extension allows to:
-
-  * See if the cache is enabled. 
-  * Enable/Disable the cache. 
-  * See the list of reports whose compilation is stored in cache. 
-  * Clear the cache contents. 
-
-#####  Barcodes
-
-It is possible to generate barcodes from JasperReports, using barcode4j or barbecue libraries. These libraries are included in [Barcode generation in reports](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
-
-In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
-
----
-This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jest Test Cases
@@ -33879,504 +35339,6 @@ This work is a derivative of [How to Create JUnit testcases](https://wiki.openbr
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Dataset
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Dataset
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset
-## Article Content: 
-###  How to create a Dataset
-
-  
-####  Overview
-
-This how-to will focus on creating a dataset in Etendo Classic and also will give some examples in detail under Examples section. Dataset will export both reference data as well as default data.
-
-#####  Introduction to Dataset Concept
-
-
-  
-First of all we need to understand the dataset concept, which allows to export
-the sets of data from different tables in one step. This is especially useful
-to manage and distribute the module along with _reference data_ , for instance
-tax rates, regions or _default data_ in a new table(s) added by a module.
-
-A dataset is defined by its Dataset Tables and Dataset Columns. This detailed
-configuration leads to which tables to be exported, and which columns of each
-table are executed and exported.
-
-  
-There are some important things to note:
-
-  * A Dataset belongs to a module, so modules can add Datasets and define their own Datasets. 
-  * Data Access Level: filters the tables which can be selected for this dataset, only tables with the set data access level can be included in the data set. 
-
-  
-  
-#####  Reference Data
-
-The reference data is published, distributed and installed together with the
-program code implementation of the module.
-
-In Etendo, the concept of reference data is generalized and any data
-in the instance can be exported in a module and imported when installing /
-applying the module.
-
-!!!note
-    You can find the _Has reference data_ field / option at the time of module
-    creation.
-
-!!!info
-    For detailed theoretical concepts on datasets please have a look at [Datasets](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Datasets.md). 
- 
-####  Data structure to define Dataset
-
-There are mainly three tables referred to as data structure to define datasets. They
-are:
-
-1\. *DataSet* with the following columns: _Value, Name, Description, Module
-and DataAccessLevel_
-
-  * Data sets have a name and a description to describe the content of the data set. 
-  * The value is used to get a dataSet object from the factory provided by DAL (eg. DBSourceManager gets the AD dataSet). 
-  * A data set is owned by a module in the same way that all Application Dictionary components. 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-2.png)
-
-    
-
-!!!note
-    If the export allowed column is flagged, then an **Export Reference Data** button is displayed. 
-    
-
-2\. *DataSet_Table* with the following columns: _DataSet, Table,
-fullBusinessObject, includeAllColumns, excludeAuditInfo and whereClause (HQL
-expression)_
-
-  * A data set can have one or many tables from the ones registered in the `AD_Table`. For each of them developers can decide to include only records in that table or export the full business object using the check `fullBusinessObject`. 
-  * Developers can also define for each table the columns that are included in the dataset. They can include all columns using the `includeAllColumns` check and then remove some of them in the column definition or only include the ones that are explicitly defined in the column definition. 
-  * The whereClause is a *HQL expression* to filter the rows that are included in the DataSet. Details on this expression will be provided in the DAL project. 
-  * Developers can exclude the audit information column like _created, createdby, updated, etc._ by checking the `excludeAuditInfo` column. 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_a_Dataset-3.png)  
-    
-!!!note 
-    If IsBusinessObject field is flagged then the ` child-records ` of the table are exported.
-    For example if the Dataset Table is defined for the ` C_Order ` table and this field is flagged then also the related ` C_OrderLines ` are exported. 
-    
-
-  
-!!!info
-    A full business object is a record including all its one-to-many relationships
-    as defined in the AD through the isParent attribute of a column. An example of
-    a full business object is a product with its vendors, prices, etc. A complete
-    description of business objects is provided in the DAL project.
-
-  
-  
-3\. *Dataset_column* with the following columns: *DataSet_Table, Column, isExcluded and conditionClause(Java expression)*.
-
-  * For each table in a data set, developers can decide what columns to include from the ones registered in the AD for that table. 
-  * They can exclude columns using the `isExcluded` check if they have marked the table as _Include all columns_ . Typically audit info will be removed from the dataset. 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset-4.png)   
-
-#####  Data Access Level
-
-The Data Access Level is used to define how to import / install the module at
-various levels, like System level, Client level, Organization level, etc. This
-access level value is available at `Dataset` table. 
-
-This is a detailed explanation at each access level.
-
-  * _System Only:_ data will be imported at module installation time at System level without any user interaction. 
-  * _Client:_ data will be imported at `Initial Client Setup` if the user chooses the module where the DataSet is included. 
-  * _Organization:_ data will be imported at `Initial Organization Setup` if the user chooses the module where the DataSet is included. 
-  * _Client/Organization:_ data will be imported at `Initial Client Setup` or `Initial Organization Setup` if the user chooses the module where the DataSet is included. The module can not be applied at both levels at the same time because it would lead to data redundancy. So if the module is applied to a Client it will not be available to apply in its Organizations and if the module is applied in an Organization it will not be available to apply in its Client. 
-    
-!!!info
-    - The relationship between each entry data imported, the DataSet where it came 
-    from, and the original ID it has in the DataSet's XML can be found in 
-    the `AD_Ref_Data_Loaded` table.
-    - Data from a DataSet being imported for the first time will be created 
-    **with the ID set in its XML file**. A new ID will be created 
-    for each entry from then on.
-    - The `AD_Orginfo` table has information on which DataSet has ben imported 
-    for which client and/or organization
-
-
-####  Exporting Module
-
-Before publishing, we need to export the module which creates a directory in the
-module under Etendo Classic root directory and the appropriate XML files for
-inclusion in the finished module. 
-
-!!!note
-    Modules that are not flagged as being in development are not exported, so remember that you must select the InDevelopment checkbox when you define a new module.
-
-When the development of the module is finished, open a command window/shell
-and navigate to the Etendo development project, execute the `export.database` command.
-
-    
-```bash title="Terminal"   
-./gradlew export.database
-```  
-
-####  Publishing a Module
-
-The last step in the process is to publish the module and distribute across to
-the end user.
-
-!!!info
-    For a detailed guide on how to do so, visit [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
-
-
-####  Examples
-
-Please find below the examples to know how to create a dataset and to export
-it along with the reference data.
-
-#####  Dataset of roles and accesses
-
-In this section you can find the example of a dataset of roles and access. It
-basically covers the definition of the role in the organization and the
-privileges they require.
-
-**Create a Role and Assign Privileges**
-
-  * Change to the admin role of your client. 
-  * Click on `General Setup` and Navigate to `Security` > `Role`. 
-  * Create a new record. Fill up the mandatory fields that required for this record. They are: 
-    * `Name`: the name of the role in the customer organization e.i., Sales Clerk, Production Manager, Forecaster, etc. 
-    * `Active`: Select Option to ensure this role appears in the generated application. During development you may require the role only to appear when it is complete. 
-    * `User Level`: This controls which organizations the role has access to. There are four options, the most common are: 
-        - `Organization`: the role only has access to organization specific data. 
-        - `Client and Organization`: the role has access to organization specific data and client shared data. 
-    * `Manual`: The controls if all existing privileges are automatically given to the role or if they are manually associated on a peer need basis. Selecting this option for manual control is recommended. 
-  * Save the record. 
-  * Now you need to assign some privileges by clicking on `Grant Access` button. 
-  * select the module and access type to assign the privileges to the newly created role. 
-
-###### Create a User and assign the user to the Role
-
-  * Click on `General Setup` and navigate to `Security` > `User`. 
-  * Create a new record. The `Client` field will show the name of your client by default. 
-  * Select the Organization (This can be for access to one or all organizations in a client). 
-    - First Name. 
-    - Last Name. 
-    - Name (Default). 
-    - Select Active (Default). 
-    - Username (The default is a concatenation of first and last name). 
-    - Enter the user Password (Remember this). 
-  * Save the record. 
-
-  * Focus in the `User` window again
-  * Select the `User Roles` tab. 
-  * Create a new record and select a role. 
-  * Save the record. 
-  * Add all roles this new user will be able to have/use (one line for each role). 
-  * Logout from the current role. 
-
-###### Create a new module
-
-  * Log into Etendo ERP as a System Administrator. 
-  * Click on `Module` menu from the Application Dictionary. 
-  * From the `Module Type` list, select Module. 
-  * In the `Name` field, type the java package name of the module(proper naming convention). 
-  * Complete the `Description` and `Help` fields. Supply the information about chart of accounts. 
-  * Select the `Has reference data` option. 
-  * Clear the `Has chart of accounts`, `Translation required` and `Is translation module` options. 
-  * Select the In development option. Remember that you cannot work on a module unless the `In development` option is selected. 
-  * On the `Dependencies` tab, select Core. 
-  * Save the module 
-
-###### Create a Dataset of roles and access
-
-  1. From the Application menu, select `Application Dictionary` > `Dataset` 
-  2. Click New. 
-  3. From the `Module` list, select the module above created. 
-  4. Specify a search key, name and description. 
-  5. From the `Data Access Level` list, select the Data access level as *Organization*. 
-  6. Select the `Export allowed` option. 
-  7. Select the `Table` Tab.
-  8. From the `Table` list, select the table whose content you want to include in the module. For example, ad_role_org_access, ad_role, ad_user_roles. 
-  9. In the SQL where clause field, specify the SQL "WHERE" statement that will identify the set of rows to be exported, in DAL notation. For example, adrole.id='2EA831D59184490E9BA858E9745EF89F' 
-  10. Select the `Include All Columns` option. 
-  11. Select `isBusinessObject` option.
-  12. Click Save. 
-  13. Click the `Export Reference Data` button to export the reference data to an .xml file that you can include in the module. 
-
-###### Exporting and Publishing Module
-
-After completing all the steps successfully. Run the below gradle task to export the module:
-
-    ./gradlew export.database
-    
-
-And publish the module.
-
-!!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
-
-  
-###### How to Install - Organization Access Level Reference Data
-
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
-  * At this point the reference data will not be installed. 
-  * Log into the ERP as admin.
-  * Click on `General Setup` and navigate to `Enterprise` > `Enterprise module Management`. 
-  * Select the `Organization type` then select the appropriate module and click Ok to install the reference data. 
-
-#####  Dataset of taxes or alerts
-
-In this section you can find the example on dataset of taxes or alerts. The
-process for creating a standard reference data module for taxes and alerts,
-you have set up Etendo ERP in a particular way to meet local requirements,
-you can export this data and convert it to a module, so that you can share it
-with other users.
-
-###### Registering a data module for taxes and alerts:
-
-  * Log into Etendo ERP as a System Administrator. 
-  * Click on `Module` menu from the Application Dictionary. 
-  * From the `Module Type` list, select Module. 
-  * In the `Name` field, type the java package name of the module(proper naming convention). 
-  * Complete the `Description` and `Help` fields. Supply the information about chart of accounts. 
-  * Select the `Has reference data` option. 
-  * Clear the `Has chart of accounts`, `Translation required` and `Is translation module` options. 
-  * Select the `In development` option. Remember that you cannot work on a module unless the `In development` option is selected. 
-  * On the `Dependencies` tab, select Core. 
-  * Save the module.
-
-###### Defining and exporting the dataset
-
-  1. From the Application menu, select `Application Dictionary` > `Dataset` 
-  2. Click New. 
-  3. From the `Module` list, select the module above created. 
-  4. Specify a `search key`, `name` and `description`. 
-  5. From the `Data Access Level` list, select the Data access level as System only. 
-  6. Select the `Export allowed` option. 
-  7. Select the `Table` Tab.
-  8. From the `Table` list, select the table whose content you want to include in the module. 
-  9. In the `SQL where clause` field, specify the SQL WHERE statement that will identify the set of rows to be exported, in DAL notation. For example, client.id='1000001' 
-  10. To export all columns, select the `Include All Columns` option. To include only the columns you specify, select the `Columns` tab and create a new record for each column you want to export. 
-  11. To include the security audit columns (created, createdby, updated and updatedby) in the export, clear the `Exclude Audit Info` checkbox. 
-  12. Clear the `Is Business Object` option. 
-  13. Click Save.
-  14. Click the `Export Reference Data` button to export the reference data to an .xml file that you can include in the module.
-
-  
-###### Exporting and Publishing Module
-
-After completing all the steps successfully. Run the below gradle task to export
-the module:
-    
-    ./gradlew export.database
-    
-
-And publish the module. 
-
-!!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](how-to-publish-modules-to-github-repository.md).
-
-
-  
-###### How to Install - System/Client Access Level Reference Data
-
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
-  * At this point the reference data will not be installed. 
-  * Log into the ERP as admin.
-  * Click on `General Setup` and navigate to `Client` > `Initial Client Setup`.
-  * Fill up all the mandatory fields and then select the appropriate module. 
-  * Finally click Ok to install the reference data. 
-
-#####  Dataset of regions
-
-In this section you can export the reference data with the examples on
-regions. Find below the steps to create the Dataset for this module:
-
-  * Log into Etendo ERP as a System Administrator. 
-  * Create a new module called _Indian States_ for this example. 
-  * Make sure that you have selected or flagged for the field `Has Reference Data`. 
-  * Now expand the `Application Dictionary` menu. 
-  * Click on `Dataset` menu and create a new record for the for this module. 
-  * For example, here the Name `Indian States` has been given. You can give a name as you wish to select the region. 
-  * Fill up the Dataset form using the below mentioned values. 
-    
-    Field              |  value for the field   
-    ---                |          ---  
-    Active             |  make it flagged/put a tick mark  
-    Module             |  select the value from the drop down _Indian States - 1.0.0_  
-    Search Key         |  Indian States  
-    Name               |  Indian States  
-    Data Access Level  |  System Only  
-
-  * Before assigning the tables to Dataset. Please execute the below query in sqldeveloper or postgres IDE to find the `C_country_Id` for INDIA. After executing the below query the result of `c_country_id` would be 208 for the below query. 
-
-    ```sql
-    select * from c_country where countrycode like 'IN%';
-    ```
-
-  * Navigate to `Table` Tab and create 2 new records for the dataset. 
-  * Fill up the form by using the values below for the following Table: `C_Country`
-
-    Field                |  value for the field   
-    ---                  |          ---   
-    Table                |  `C_Country`  
-    Active               |  Default it is flagged. Leave as it is  
-    Module               |  Indian States - 1.0.0  
-    SQL Where Clause     |  id='208'  
-    Include All Columns  |  Remove the flag or tick mark (Individual columns will be added in later steps)
-    Exclude Audit Info   |  Mark it as flagged or put tick mark for this check box  
-
-  * Fill up the form by using the values below for the following Table: `C_Region`
-
-    Field                |  value for the field   
-    ---                  |          ---  
-    Table                |  `C_Region`  
-    Active               |  Default it is flagged. Leave as it is  
-    Module               |  Indian States - 1.0.0  
-    SQL Where Clause     |  country.id='208'  
-    Include All Columns  |  Mark it as flagged or put tick mark for this check box  
-    Exclude Audit Info   |  Mark it as flagged or put tick mark for this check box  
-
-  * Select the `C_Country` table from the table grid view and navigate to `Column` Tab. 
-  * Click on create a new record button for the above table. You need to select three columns for this table. 
-  * Those columns are:
-      - Name
-      - CountryCode
-      - HasRegion 
-  * Fill up the following values in the form. 
-
-    Field   |  value for the field   
-    ---     |          ---  
-    **Column 1:**   
-    Column  |  Name  
-    Active  |  It has benn flagged. Leave as it is  
-    Module  |  Indian States - 1.0.0  
-    **Column 2:**  
-    Column  |  CountryCode  
-    Active  |  It has benn flagged. Leave as it is  
-    Module  |  Indian States - 1.0.0  
-    **Column 3:**  
-    Column  |  HasRegion  
-    Active  |  It has benn flagged. Leave as it is  
-    Module  |  Indian States - 1.0.0  
-
-  * Finally navigate to `Dataset Tab` of Indian States and Click on `Export Reference Data` button to export the data. 
-
-  
-###### Exporting and Publishing Module
-
-After completing all the steps successfully, run the below gradle task to export
-the module:
-    
-    ./gradlew export.database
-    
-
-And publish the module.
-
-!!!info
-    For more information, see [How to Publish Modules to a GitHub Repository](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md). 
-  
-###### How to Install - System Only Access Level Reference Data
-
-  * Install the module following the [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) guide.
-  * It will install along with the reference data. 
-
-
-This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com/wiki/How_to_create_a_Dataset){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to create a Background Process
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Background Process
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process
-## Article Content: 
-###  How to create a Background Process
-
-####  Overview
-
-Background Processes are [Processes](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes.md) that are executed without the direct
-action of the user. There can be set different rules to schedule when the
-process is executed.
-
-This document discusses about the Etendo infrastructure for Background
-Processes. How to define, schedule and monitorize Background Processes.
-
-####  Defining a Background Process
-
-Background Processes are defined in the window `General Setup` > `Process Scheduling ` >`Process Request`. First in the field *Process* select
-the process to execute and, in the *Timing* field, when it will be executed.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-0.png)
-Depending on the *Timing* selected, it is needed to define more fields to
-define this timing:
-
-#####  Run Immediately
-
-This timing option will execute the Background Process only once at the moment
-the button to schedule the process is pressed. After being scheduled, it
-can be rescheduled as many times as needed.
-
-This option is very similar to executing a process from a menu option. The
-difference is that when scheduling a _Run Immediately_ Background Process,
-there will not be any pop-up that indicates when the execution finished and
-instead, its execution  will be registered in the *Process Monitor*.
-
-##### Run Later
-
-This option is similar to the previous option. In this case, the Background
-Process will be executed only one time in one moment in the future.
-
-The moment when the Background Process will be executed is defined in the
-fields *Start Date* and *End Date*.
-
-#####  Schedule
-
-This is the most versatile option that allows to execute a Background Process
-periodically. These are the fields used to define the schedule plan of a
-Background Process:
-
-  * *Start Date* and *Start Time*: Defines the moment when the schedule plan for this Background Process will start. 
-  * *Frequency*: Defines the frequency to execute the Background Process. It can be *Every n seconds* , *Every n minutes* , *Hourly* , *Daily* , *Weekly* , *Monthly* , or *Cron expression*. Depending on the option selected you can define the specific details for each frequency option. 
-  * *Finish Date* and *Finish Time*: These fields can be defined only when the option *Finished* is selected. And it defines when to stop the schedule plan for this Background Process. 
-
-#####  Schedule and Unschedule a Background Process
-
-After the Background Process has been completely defined it can be scheduled
-pressing the button *Schedule Process*. When a process is scheduled, it
-will be executed according the *Timing* options selected, and every
-execution will be registered in the Process Monitor.
-
-To stop future executions of an Background Process just press the button
-*Unschedule Process*. After a Background Process has been unscheduled it
-can be scheduled again in any moment pressing the button *Reschedule
-Process* .
-
-#####  Monitoring executions of Background Processes
-
-All the executions of Background Processes can be monitored in `General Setup` > `Process Scheduling ` >`Process Monitor`.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process-1.png)
-
-
-In this window, there is one entry for each Background Process execution and
-the information of each execution. The most important fields are:
-
-  * *Process*: The Process executed. 
-  * *Start Time* , *End Time* and *Duration*: When the execution started, when finished and the time it took to complete. 
-  * *Status*: The final result of the execution of the Process. 
-  * *Process Log*: The information logged during the execution of the Process. For example if the *Status* of the execution is _Error_ here in the *Process Log* the reason of the error can be detected. 
-
-
-This work is a derivative of [How to Create a Background Process](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
 # Article Title: How to Implement a Business Event Handler
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Implement a Business Event Handler
 ## Article URL: 
@@ -34730,1630 +35692,472 @@ This work is a derivative of [How to implement a business event handler](https:/
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to add a rich text field and column
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a rich text field and column
+# Article Title: How to Publish Modules to a GitHub Repository
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Publish Modules to a GitHub Repository
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository
 ## Article Content: 
-###  How to add a rich text field and column
- 
-  
-####  Overview
+#### Overview
 
-This How-to section explains how to add a rich text field and column to the Etendo Classic.
+This article explains how to publish a module to GitHub Repositories.
 
-The steps to get a rich text field in your window consists of two steps: 
+Now, modules will be published in ZIP and JAR format.
 
-- [Add a column to a table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/)
-- [Add a field to a tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/)
+A published module can be declared as a Gradle dependency, which makes installing or updating modules easier.
 
-You can also create a new table and a new window/tab ofcourse.
-This how-to will only focus on the specific part of a rich text field.
+Using dependencies alongside with Gradle in an Etendo environment can remove the need to transfer the modules from a local machine to the server using FTP, SSH etc. The module is hosted as a package in the repository and  Gradle is in charge of downloading the correct version, and its dependencies.
 
-  
-####  Example 
+Partners will have access to Etendo’s public and commercial repositories to download standard modules, in addition to this, it is possible to use their own repositories where they can privately store their modules for internal or commercial usage.
 
-For this how-to, we will use the redefine the description field in the sales order window. So, you may need to do a *smartbuild* after the changes to see the result.
+!!! info "Requirements"
+    - GitHub user and token, with access to read and write packages.
+    - A module to be distributed.
 
+!!! success
+    It is recommended to use [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="_blank"} to manage work flow, versions and tags.
 
-  
-#####  Adding a column
-
-First, you have to [add a column to the existing table](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md).
-
-
-!!!note
-    As rich text is stored as HTML inside the database, the varchar column type
-    should be used. What is more, the developer needs to keep in mind that 100
-    characters of rich text requires more that 100 chars of storage inside the
-    database due to html markup. Usually, a factor of 2 will suffice, for example,
-    if one wants to allow the user to enter 1000 characters of rich formatted
-    text, the database column should have a type of varchar(2000).  
-
-  
-When introducing the new column to the application dictionary, the correct
-reference must be selected, i.e. the new _Rich Text_ reference:
-
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_add_a_rich_text_field_and_column-1.png)
-
-#####  Create a field - set col and rowspan
-
-Then [create a field](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
-also set the col and rowspan (these are only shown when the corresponding
-column is defined as rich text):
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
-
-
-#####  The result
-
-The result is visualized as a rich text editor in form view:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-3.png) 
-
-  
-
-!!!info
-    Rich text fields can not be edited in grid mode (a hoover shows the
-    content). They are always displayed as read-only fields.  
-
-  
-
-
-This work is a derivative of [How to add a rich text field and column](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to create an Alert
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create an Alert
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert
-## Article Content: 
-###  How to create an Alert
-  
-####  Overview
-
-The objective of this how-to is to illustrate how you can add new  alerts  to
-Etendo. Alerts are non-intrusive informational messages to individual users
-or groups (roles) about everything within the system. One can define unlimited
-number of alerts for various statuses, errors, informative purposes, reminder
-etc. 
-
-Some examples are:
-
-  * Errors in the application dictionary that the System Administrator needs to be alerted about (e.g. a table without a an identifier)‏ 
-  * Errors in master data (e.g. a Business partner without an address)‏ 
-  * Notifications about critical situations (e.g. overdue payments)‏ 
-
-and many more.
-
-####  Defining the alert
-
-First of all, the condition under which the alert appears needs to be defined.
-This is done using a SQL statement that needs to follow certain conventions.
-
-To create a new  alert  rule, use the role _*System Administrator*_ to navigate
-to `General Setup` > `Application ` >`Alert` window. Depending on how you
-installed Etendo, you might already have some alerts here. If you do, try
-to find the _Customers with exceeded credit_ one and double click it. If not,
-create a new record as indicated below:
-
-  
-![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-0.png)
-
-
-where this is the exact code for the *SQL* field:
-
-    
-    
-     
-     SELECT c_bpartner_id AS referencekey_id,
-         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
-         0 AS ad_role_id,
-         NULL AS ad_user_id,
-         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
-         'Y' AS isActive,
-          ad_org_id, 
-          ad_client_id, 
-          now() AS created,  
-          0 AS createdBy,  
-          now() AS updated,
-          0 AS updatedBy
-     FROM c_bpartner 
-     WHERE SO_CreditLimit < SO_CreditUsed
-     AND iscustomer='Y'
-     AND SO_CreditLimit!=0
-
-The fields in question here are:
-
-  * *Name* is a user friendly name for an alert 
-  * *SQL* is the actual SQL statements whose results (individual records) will be items alerted about 
-  * *Tab* is a tab of a specific window where the user should be taken to be shown the item in question generated by the SQL statement 
-
-
-####  Defining recipients
-
-Switch to the role _*System Administrator*_ (or your defined 'administrator'
-role), navigate to _`General Setup` > `Application ` >`Alert`_ , select
-_Customers with exceeded credit_ alert and switch to the  *Alert Recipients*
-tab. Add a new record as indicated below:
-
-  
-![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-1.png)
-
-  
-!!!note
-    Notice that a role can be added (that includes several users) or a specific
-    user.
-
-####  Scheduling the alerting background process
-
-For the alerts to be evaluated and triggered, the background process needs to
-be scheduled. Using the role _*System Administrator*_ (or your defined 'administrator' role) navigate to _`General Setup` > `Process Scheduling ` >`Process Request`_ and enter a new record:
-
-![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-2.png)
-
-####  The Result
-
-Finally, log out and back in and select the role _*System Administrator*_ (or
-your defined administrator role). You should be able to see an alert in the
-navigation bar. By clicking on it, you will automatically be taken to the
-_*Alert Management*_ window that should look something like:
-
-  
-
-![alt text](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_create_an_alert-3.png)
-
-  
-
-####  SQL code explained
-
-In order to write any kind of alert, the approach is very similar. Let's take
-another look at the SQL code that describes the condition:
-
-    
-    
-     
-     SELECT c_bpartner_id AS referencekey_id,
-         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') AS record_id,
-         '0' AS ad_role_id,
-         NULL AS ad_user_id,
-         ad_column_identifier('C_BPartner', c_bpartner_id, 'en_US') ||' has '||SO_CreditLimit||' as limit and has reached '||SO_CreditUsed AS description,
-         'Y' AS isActive,
-          ad_org_id, 
-          ad_client_id, 
-          now() AS created,  
-          '0' AS createdBy,  
-          now() AS updated,
-          '0' AS updatedBy
-     FROM c_bpartner 
-     WHERE SO_CreditLimit < SO_CreditUsed
-     AND iscustomer='Y'
-     AND SO_CreditLimit!=0
-
-Each SQL statement basically simulates an Etendo table which is why it
-needs to have all the columns defined above:
-
-  * *referencekey_id* \- this is ID (primary key) of the record that needs attention and is the cause of the alert. In our case, this would be the C_BPartner_ID of Neil Reiley. 
-  * *record_id* \- this is a user friendly label for the item that is in questions with the referencekey_id. Use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
-  * ad_role_id - should always be set to 0 
-  * ad_user_id - should always be set to null 
-  * *description* \- this is the message shown to the user describing what the problem is. You need construct this message according to what the alert is all about, indicating to the user what caused the alert and what the problem is. Again, use the _ad_column_identifier_ function as shown to retrieve all column values required to uniquely identify the problematic record within the specific table. 
-  * isActive - should always be set to 'Y' 
-  * ad_org_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
-  * ad_client_id - should be inherited from the actual record that triggers the alert, in this case, the record from the C_BPartner table 
-  * created - should always be set to now() 
-  * createdBy - should always be set to 0 
-  * updated - should always be set to now() 
-  * updatedBy - should always be set to 0 
-
-Finally, the WHERE clause describes the condition that triggers the alert. In
-our case the SELECT statement will return all Business Partners (FROM
-c_bpartner) that are customers (iscustomer='Y') and have exceeded their credit
-limit (`SO_CreditLimit < SO_CreditUsed`) which needs to be different from zero
-(`SO_CreditLimit!=0`).
-
-In other words, anything you can describe in a SQL statement can be defined as
-an alert. 
-
-
-This work is a derivative of [How to create an alert](http://wiki.openbravo.com/wiki/How_to_create_an_Alert){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to add a button to the toolbar
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a button to the toolbar
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar
-## Article Content: 
-### How to Add a Button to the Toolbar
-
-####  Overview
-
-This section discusses how a button can be added the main toolbar shown in grids and forms. The toolbar contains two types of buttons, the application buttons on the left (visualized using an icon) and the custom buttons on the right (shown with a label). 
-
-This section describes how to add a button to the left part: the application buttons.
-  
-To follow this section, develop javascript as well as server-side java and understand [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md) concepts.
-
-####  Example Module
-
-This section is supported by an example module which shows example of the code shown and discussed here.
-
-![Header](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-0.png)
+#### Deployment
 
 !!! info
-    The example module also contains implementations of other sections.  
- 
-  
-####  Implementing a toolbar button
+    The module version, group and artifact that will deploy are those declared in the file `src-db/database/sourcedata/AD_MODULE.xml` file
+
+
+###### 1.  Create build.gradle file:
+
+To generate the `build.gradle` with all the necessary information to publish, execute the following task:
+
+``` bash title="Terminal"
+./gradlew createModuleBuild `-Ppkg=<javapackage> -Prepo=<repositoryURL> --info
+```
+Example:
+``` bash title="Terminal"
+./gradlew createModuleBuild -Ppkg=com.myrepo.test -Prepo=https://maven.pkg.github.com/myrepo/com.myrepo.test --info
+```
+
+!!! warning "Important"
+        - If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
+        Before adding an Etendo module dependency, they have to be published in the repository.
+        - You need to make sure those dependencies are also published.
+        - Add the dependencies manually in `build.gradle` file.
+        - Add Core dependency to define the range of versions the module is compatible with.
 
 !!! info
-    When implementing your own components, it often makes sense to extend existing components. Make sure that your module then depends on the module that provides the base types. This ensures that the javascript is loaded in the correct order.  
-  
-The button to be implemented, will compute and show the sum of a set of selected orders to the user. 
-
-This section is divided in 2 parts:
-
-- the first part
-focuses on visualizing the button in the correct windows and tabs and making sure the button is enabled/disabled appropriately. 
-
-- The second part will discuss how to implement backend logic and how to call the server side logic when the button gets clicked and show its results.
-
-The first part consists of the following steps:
-
-  * an icon for the visualization 
-  * a `css` style and javascript linking the icon to the button 
-  * javascript implementing the buttons click/action method and to register the button in the global registry 
-  * add javascript to enable/disable the button when records are selected in the grid 
-  * a `ComponentProvider` java class to register the javascript and `css` in Etendo.
-
-These steps will visualize the button but not actually do anything yet. The follow up steps will add logic:
-
-  * a server side actionhandler to implement the server side logic (summing the orders and returning the result to the client) 
-  * client side javascript to call the server and process the result 
-
-Each of these steps is described in more detail below.
-
-####  Visualizing the button - Implementation steps
-
-#####  Defining the icon and a css
-
-The icon and its related style is defined through an icon file. 
-
-!!!info
-    For standard visualization using the Etendo style the icon should be 24x24 without a background colour.
-
-
-The icon should be placed in a specific directory in your module:
-`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
-
-Normally, it makes sense to store the icon in a subfolder. The example module has the icon file in:
-
-`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/images`.
-
-    com.etendoerp.client.application.examples
-    ├── reference data
-    ├── src
-    ├── src-db
-    └── web
-        ├── com.etendoerp.client.application.examples
-        │   └── js
-        │       ├── example-toolbar-button.js
-        │       └── example-view-component.js
-        └── com.etendoerp.userinterface.smartclient
-            └── etendo
-                └── skins
-                    └── Default
-                        └── com.etendoerp.client.application.examples
-                            ├── images
-                            │   └── iconButton-sum.png
-                            └── example-styles.css
-
-  
-Then add a `css file` which links this icon to a specific `css` style. The `css` file must also be located in this directory in your module:
-`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/[modulename]`.
-
-In the example module, the `css` file is located here:
-
-`web/com.etendoerp.userinterface.smartclient/etendo/skins/Default/
-com.etendoerp.client.application.examples/example-styles`
+     To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
+    If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.
 
 
 
-Within the `css` file add a style defined like this:
 
-    
-    
-    .ETToolbarIconButton_icon_etexapp_sum {
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-image: url(./images/iconButton-sum.png);
+Modules Dependencies example:
+
+```groovy title="build.gradle"
+/**
+*   This file was generated automatically by the 'createModuleBuild' task.
+*   Created at: 2022-12-16T15:41:21.426339Z.
+*
+*   WARNING: Do not put your credentials directly in this file.
+*
+*/
+
+group          = "com.etendoerp"
+version        = "1.0.0"
+description    = "Test module to publish"
+ext.artifact   = "test"
+ext.repository = "https://maven.pkg.github.com/myrepo/com.myrepo.test"
+
+configurations {
+    moduleDependencyContainer
+}
+
+publishing {
+    publications {
+        "com.myrepo.test"(MavenPublication) {
+            from components.java
+            groupId    = group
+            artifactId = artifact
+            version    = version
+        }
     }
-
-!!!note
-    The name of the `css` class is important, it should start with
-    `ETToolbarIconButton_icon_`, the part after that (etexapp_sum) is used later in this tutorial. It makes sense to use the module's dbprefix in this last part to prevent name collisions with other modules.
-
-#####  The javascript to create and register the button
-
-The next step is to implement the javascript which defines the button and registers it to be shown on tabs. Start by creating a javascript file in this location: `web/com.etendoerp.client.application.examples/js/example-toolbar-button.js`.
-
-This is the overall javascript for `toolbar-button`:
-
-
-```js title="example-toolbar-button.js"
-    
-    (function () {
-      var buttonProps = {
-          action: function(){
-            alert('You clicked me!');
-          },
-          buttonType: 'etexapp_sum',
-          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
-          updateState: function(){
-              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
-              if (view.isShowingForm && form.isNew) {
-                this.setDisabled(true);
-              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
-                this.setDisabled(true);
-              } else {
-                this.setDisabled(selectedRecords.length === 0);
-              }
-          }
-        };
-      
-      // register the button for the sales order tab
-      // the first parameter is a unique identification so that one button can not be registered multiple times.
-      ET.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.ETToolbarIconButton, buttonProps, 100, '186');
-    }());
-```
-Let's walk through the different parts. The javascript starts and ends with this part:
-
-``` javascript
-    
-    (function () {
-    ...
-    }());
-```
-
-This is done to prevent the local variables to be available globally. It creates a function and executes it immediately.
-
-Then the first part of the buttonprops"
-
-``` javascript
-          action: function(){
-            alert('You clicked me!');
-          },
-          buttonType: 'etexapp_sum',
-          prompt: OB.I18N.getLabel('ETEXAPP_SumData'),
-```
-
-
-  * Sets the action method which gets called when the user clicks the button. 
-  * The buttonType maps back to the name used in the css style, it controls the icon and styling and is used as an identification also 
-  * The prompt is shown when the user hovers over the button with the mouse, the label is retrieved through the OB.I18N.getLabel method to support translation, add a label in the Messages table to correctly visualize it: 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-4.png)
-
-The updateState function is called to enable and disable the button when the
-user navigates through the system.
-
-```javascript   
-    
-         updateState: function(){
-              var view = this.view, form = view.viewForm, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
-              if (view.isShowingForm && form.isNew) {
-                this.setDisabled(true);
-              } else if (view.isEditingGrid && grid.getEditForm().isNew) {
-                this.setDisabled(true);
-              } else {
-                this.setDisabled(selectedRecords.length === 0);
-              }
-          }
-```
-The function enables/disables the button if the form or grid is new and if
-there are no records selected.
-
-Then this code registers the button for the tab with id '186':
-
-
-``` javascript
-      OB.ToolbarRegistry.registerButton(buttonProps.buttonType, isc.OBToolbarIconButton, buttonProps, 100, '186');
-```
-
-Note:
-
-  * the first parameter is a unique identification so that one button can not be registered multiple times. 
-  * as the second parameter the button javascript class is passed in, as a default always use `isc.ETToolbarIcon`Button 
-  * the buttonProps define the button characteristics 
-  * the third parameter defines the order in the toolbar, the standard buttons are placed with an interval of 10, so you can place your button in between other buttons. 
-  * The last parameter is the tabId (a String), you can pass null to register a button for all tabs. It is also possible to pass in an array of tabIds (strings) to register a button for multiple tabs. 
-  * To register a button for multiple tabs call the registerButton multiple times for different tabs 
-
-
-#####  The ComponentProvider
-
-The previous steps added static resources (javascript and css) to the system.
-
-Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
-
-!!!info
-    For more detailed information, visit [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider.md).
-
-
-```javascript
-     
-    @ApplicationScoped
-    @ComponentProvider.Qualifier(ExampleComponentProvider.EXAMPLE_VIEW_COMPONENT_TYPE)
-    public class ExampleComponentProvider extends BaseComponentProvider {
-      public static final String EXAMPLE_VIEW_COMPONENT_TYPE = "ETEXAPP_ExampleViewType";
-     
-      /*
-       * (non-Javadoc)
-       * 
-       * @see com.etendoerp.client.kernel.ComponentProvider#getComponent(java.lang.String,
-       * java.util.Map)
-       */
-      @Override
-      public Component getComponent(String componentId, Map<String, Object> parameters) {
-        throw new IllegalArgumentException("Component id " + componentId + " not supported."); 
-        /* in this howto we only need to return static resources so there is no need to return anything here */
-      }
-     
-      @Override
-      public List<ComponentResource> getGlobalComponentResources() {
-        final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
-        globalResources.add(createStaticResource(
-            "web/com.etendoerp.client.application.examples/js/example-toolbar-button.js", false));
-        globalResources.add(createStyleSheetResource(
-            "web/com.etendoerp.userinterface.smartclient/etendo/skins/"
-                + KernelConstants.SKIN_VERSION_PARAMETER
-                + "/com.etendoerp.client.application.examples/example-styles.css", false));
-     
-        return globalResources;
-      }
-     
-      @Override
-      public List<String> getTestResources() {
-        return Collections.emptyList();
-      }
+    repositories {
+        maven {
+            url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
+        }
     }
-```
-A short explanation:
+}
 
-  * The annotations in the top of the class are related to [Weld](https://docs.etendo.software/concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md). 
-  
-  The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
-
-  * The getGlobalResources is important here, it shows how to register the global resources defined in the example module. 
-  
-!!!note
-      For your own module just follow the same path structure and approach. 
-
-!!!info
-    To explain how Etendo can find the ComponentProvider: Etendo/Weld will analyze the classpath and find all the classes which have a @ComponentProvider annotation.
-
-
-#####  The result
-
-To see the result, restart Tomcat, clear the cache of the browser (sometimes `css` styles are not picked up) and go back to the application and then specifically to the sales order window. 
-
-You should see this:
-
-!!!note
-    The button is not visualized in other windows/tabs because it is
-    registered for only the sales order header tab.
-
-  
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-5.png)
-
-  
-
-####  Adding server side logic - Implementation steps
-
-The next step in this how to is to add the server side logic and calling this logic from the client. The server side logic is implemented using the action handler concept. 
-The action handler concept allows you to create classes on
-the server which are callable from the client. 
-
-#####  Implement the server side action handler
-
-The server side action handler (`SumOrderActionHandler.java`) receives an array of order numbers of the selected orders. It will sum the order values and then return the total as a JSON string.
-
-This is the implementation of the server side:
-
-```java title="SumOrderActionHandler.java"
-     */
-package org.openbravo.client.application.examples;
-
-import java.math.BigDecimal;
-import java.util.Map;
-
-import org.codehaus.jettison.json.JSONArray;
-import org.codehaus.jettison.json.JSONObject;
-import org.openbravo.base.exception.OBException;
-import org.openbravo.client.kernel.BaseActionHandler;
-import org.openbravo.dal.service.OBDal;
-import org.openbravo.model.common.order.Order;
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
+    }
+}
 
 /**
- * Sums the orders passed in through a json array and returns the result.
- */
-    public class SumOrderActionHandler extends BaseActionHandler {
-     
-      protected JSONObject execute(Map<String, Object> parameters, String data) {
-        try {
-     
-          // get the data as json
-          final JSONObject jsonData = new JSONObject(data);
-          final JSONArray orderIds = jsonData.getJSONArray("orders");
-     
-          // start with zero
-          BigDecimal total = new BigDecimal("0");
-     
-          // iterate over the orderids
-          for (int i = 0; i < orderIds.length(); i++) {
-            final String orderId = orderIds.getString(i);
-     
-            // get the order
-            final Order order = OBDal.getInstance().get(Order.class, orderId);
-     
-            // and add its grand total
-            total = total.add(order.getGrandTotalAmount());
-          }
-     
-          // create the result
-          JSONObject json = new JSONObject();
-          json.put("total", total.doubleValue());
-     
-          // and return it
-          return json;
-        } catch (Exception e) {
-          throw new OBException(e);
+* Declare Java dependencies using 'implementation'
+* Ex: implementation "com.sun.mail:javax.mail:1.6.2"
+*/
+dependencies {
+		implementation(com.myrepo:dependency.test:1.0.0)
+    
+   	implementation('com.etendoerp.platform:etendo-core:[22.1.0, x.y.z)')
+}
+
+```
+
+###### 2.  In case of adding dependencies of a new repository, declare it in `build.gradle`
+
+```groovy title="build.gradle"
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.pkg.github.com/myrepo/com.myrepo.test"
+    }
+     maven {
+        url "https://maven.pkg.github.com/myrepo2/com.myrepo2.test"
+    }
+}
+```
+
+
+
+###### 3. If your module makes use of dependency injection, you need to specify the location of the **'beans.xml'** file
+
+Add to the build.gradle the location of the beans.xml
+``` groovy
+sourceSets {
+    main {
+        resources {
+            srcDirs("etendo-resources")
         }
-      }
     }
-```
-Notes:
-
-  * The BaseActionHandler is extended, this is often the best approach when implementing an ActionHandler, in this case only the execute methods needs to be implemented. 
-  * Data can be send in 2 ways to server: as parameters and as part of the request body. Therefore the execute method has 2 parameters. In this example the request body is used.
-  * Use a BigDecimal for numbers, as this far more precise than a double, unfortunately json only supports doubles. In the core Etendo system numbers are therefore send from client-server (and vice versa) as strings. 
-  * the logic iterates over the order ids and retrieves the order using the [Data Access Layer](https://docs.etendo.software/concepts/Data_Access_Layer.md). 
-  * the result is returned as json again.
-
-#####  Calling the server side from the client, displaying the result
-
-Then, on the client, the action method of the button has to be implemented to call the server. Here is the implementation. 
-
-```javascript
-    
-          action: function(){
-            var callback, orders = [], i, view = this.view, grid = view.viewGrid, selectedRecords = grid.getSelectedRecords();
-            // collect the order ids
-            for (i = 0; i < selectedRecords.length; i++) {
-              orders.push(selectedRecords[i].id);
-            }
-            
-            // define the callback function which shows the result to the user
-            callback = function(rpcResponse, data, rpcRequest) {
-              isc.say(OB.I18N.getLabel('ETEXAPP_SumResult', [data.total]));
-            }
-            
-            // and call the server
-            OB.RemoteCallManager.call('com.etendoerp.client.application.examples.SumOrderActionHandler', {orders: orders}, {}, callback);
+}
 ```
 
-Note:
+Create the following structure in the root of your module
+```
+com.test.yourmodule
+	|--- etendo-resources
+  			| --- META-INF
+        			| --- beans.xml
+```
 
-  * the selectedRecords contain the full record information of the order (businessPartner etc.), in this case we only use the id 
-  * the call to the server is asynchronously therefore a callback is used, which is called when the server returns the result. The callback gets 3 parameters, the data parameter contains the JSONObject returned by the server's execute method. 
-  * the call to the RemoteCallManager has these parameters: 
-    * the class name of the action handler 
-    * the data being sent as the request body 
-    * request parameters (in this case nothing there) 
-    * and the callback 
+Add to the **beans.xml**
+
+``` xml
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd" bean-discovery-mode="all" version="2.0">
+</beans>
+```
+
+###### 4.  Deploy the new module, running the commands :
+!!! info
+    Before publishing a module, it will be compiled and packaged to a JAR format.
+
+``` bash title="Terminal"
+./gradlew update.database smartbuild
+```
+``` bash title="Terminal"
+./gradlew publishVersion -Ppkg=<javapackage>
+```
 
 
-Then when the server returns, the callback is called which will display a prompt. 
+!!! success
+    Once Gradle finishes the deployment, your module is ready to be used as a dependency.
 
-!!!note
-    The label used in the callback, uses parameter substitution.
-    Parameters are specified using a %0, %1 etc.:
-
-  
-
-![](https://docs.etendo.software//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
-
-#####  The result
-
-The result shows the sum of the 2 selected order headers:
-
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
-
-This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Callout
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Callout
+# Article Title: How to Use Advanced Sequences
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Advanced Sequences
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences
 ## Article Content: 
-### How to create a callout
+#### Sequences
 
-####  Overview
+##### Overview
 
-The objective of this article is to show you how to create a new  callout . A
-callout is a piece of Javascript code associated with a particular field on a
-tab. This code is executed whenever the field changes. It is a type of Ajax
-substitute, changing parts of a tab/window without the need of refreshing it.
+This document covers how to use the implementation of sequences, explain all the features, and give some implementation example cases.
 
-It works by calling the FIC when a field with an associated callout is
-changed. The FIC (Form Initialization Component) refreshes the needed fields
-based on the callout logic.
+There are two base reference implementations defined that you can use or extend:
 
-This section implements the following new functionality: When entering a
-new product, one has the option of entering the _Search Key_ for the product,
-the _Name_ and the _Category_ it belongs to. But what if our client wants the
-search key to be constructed automatically by taking the product's name,
-removing all spaces, appending the underscore (_) and the category name it
-belongs to?
+- Transactional Sequences: These sequences lock the table in the database to guarantee  the generation of identifiers sequentially and avoid duplicates or gaps.
+- Non-Transactional Sequences: In this case, the process to create sequences uses Database Sequences and should be used in cases where the gaps between numbers is not an issue.
 
-For example, the Search Key of a product that has the
-Name _Bon Fountain_ and belongs to the _Water_ Product Category would
-become _BonFountain_Water_. Let's see how this could be done using a callout.
+!!! warning "Important"
+	Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.
 
-The steps involved in creating a new callout are:
 
-  1. Create the source file(s) of the callout (usually a java file). 
-  2. Define the new  callout  within the application dictionary (`Menu` > `Application Dictionary` > `Setup` > `Callout`). 
-  3. Associate this callout with a table  column  ( `Application Dictionary` > `Table and Column: Callout field within Column tab`). 
-  4. Compile the window/tab(s) where this Column is used. 
+##### Quick sequence setup
 
-!!!Important
-    Developments related to points (1) and (2) must belong to
-    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
-    to point (3) about modifying a _core_ located column, a new template is
-    needed. You can read the [How to change an existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
+1. First, log-in as “System administrator”. Open the `Application` > `Application Dictionary ` >`Tables and Columns` Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.
+	
+	!!! info
+		If you want to define a new sequence reference, you must add it in **Reference Search Key** field and the parent (Base Sequence) must be in the **Reference** field.
+		See how to create a new reference in [new sequence reference](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference).
+	
+	<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/quicksequence.png){ width="700" }
+  <figcaption>Adding transactional sequence in the invoice table</figcaption>
+	</figure>
 
-!!!Note
-    This article assumes you have created both module and template according to the articles just mentioned.  
 
-  
-####  Creating the Callout
+2. Then, it is necessary to run a process in `Application` > `General Setup`\> `Application`\> `Create Sequences` to generate the sequences, selecting the root Organization where they will be created.
 
-Existing callouts are located in [src/org/openbravo/erpCommon/ad_callouts](https://github.com/etendosoftware/etendo_core/tree/main/src/org/openbravo/erpCommon/ad_callouts){target="_blank"}.
+	!!! warning
+		To run this process, the user must be logged using the role which manages the sequence, not as system administrator.
 
-The right way to create a callout is by extending the SimpleCallout class.
-This class simplifies the callout code, hides some of the internals of the
-callout and keeps you focused on the operations required. To access database
-data, DAL is used.
 
-#####  Theory
+	!!! warning
+		This process will only generate the combinations for organization and document types, in case you want to generate sequences for the new dimensions described below, you must extend the `SequencesGenerator` action and overwrite the `generateSequenceCombination` and `setSequenceValues` methods in order to generate the relevant combinations and set the newly added dimensions.
+		You can also create the required sequences manually.
 
-To develop a new callout based on this class, you only have to create a new
-java class that extends SimpleCallout and overwrite the following method:
-```java
-  protected void execute(CalloutInfo info) throws ServletException;
+	<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/createsequencesprocess.png){ width="700" }
+  <figcaption>Executing the process to create new sequences</figcaption>
+	</figure>
+
+
+	---
+
+	After that, in the `Document Sequence` window you can see the sequences generated.
+
+	<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/sequenceslist.png){ width="700" }
+  <figcaption>List of sequences generated by the process</figcaption>
+	</figure>
+
+	When you edit the record, you can see:
+
+	<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/formviewad_sequence.png){ width="700" }
+  <figcaption>Sequence form view</figcaption>
+	</figure>
+
+	- **Organization:** Owner organization associated to the sequence.
+	- **Name:** An identifier using the Table and Column associated to the sequence.
+	- **Description:** Field to add information or details about the sequence.
+	- **Auto Numbering:**  Check to define the increment and initial numbering.
+	- **Increment By:** Numeric Value to define the sequence increment.
+	- **Next Assigned Number:** Initial sequence number.
+	- **Prefix:** String at the beginning of the sequence  **(**Supports masking**).**
+	- **Suffix:** String at the end of the sequence  **(**Supports masking**).**
+	- **Document Type :** In case that the table has document types, a sequence for each document type will have been created.
+	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
+
+	!!! info
+		For more information about masking see [Sequences Masking user guide](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
+
+	- **Table:** Defines the table in which the sequence type column is located.
+	- **Column:** The column where the sequence is defined.
+
+3. In case the sequence is applied in DocumentNo field, the user has to ensure that the Document Type associated has the property `sequenced document` unchequed to avoid throwing the legacy process. To do that, first log in as a user, then open `Aplication>Finantial Management>Accounting>Setup>Document Type`, select the Document Type associated and finally, edit it.
+
+	!!! warning
+		_If the step is not followed, the legacy process will be run._
+
+	<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/doctypesettings.png){ width="700" }
+  <figcaption>Document Type example</figcaption>
+	</figure>
+
+
+4. Finally, you must compile the application. To do this, run:
+
+	```bash title="Terminal"
+	./gradlew compile.complete smartbuild
+	```
+
+5. To export the changes to your module, do not forget to do a:
+
+	```bash title="Terminal"
+ 	./gradlew export.database
+	```
+
+##### **New sequence reference**
+
+If you want to define a new reference with transactional or non-transactional parent reference, you must create a new record in the Reference window (`Application` > `Application Dictionary ` >`Reference`) and set:
+
+<figure markdown>
+  ![Image title](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/new_sequence_reference.png){ width="700" }
+  <figcaption>New sequence reference example</figcaption>
+</figure>
+
+
+- **Name:** New reference identifier.
+- **Description:** Field to add information or details about the reference.
+- **Parent Reference:** Select transactional or non-transactional sequence.
+
+&nbsp;
+&nbsp;
+
+###### Sequence Config tab: 
+
+![sequence_config.png](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/sequence_config.png)
+
+- **Generator Java Class:** Class that generate the next sequence value using the document sequence definitions. (If it is empty, a default generator is used ).
+
+When creating a non-transactional sequence, you must define:
+
+- **DB Sequence Name:** Name of the sequence defined in Data Base.
+- **DB Sequence Initial Value**: Initial sequence number.
+- **DB Sequence Increment Value:** Numeric Value to define the sequence increment.
+
+You can use a defined Sequence or create a new one using SQL:
+
+```sql
+CREATE SEQUENCE [ IF NOT EXISTS ] sequence_name
+    [ AS { SMALLINT | INT | BIGINT } ]
+    [ INCREMENT [ BY ] increment ]
+    [ MINVALUE minvalue | NO MINVALUE ]
+    [ MAXVALUE maxvalue | NO MAXVALUE ]
+    [ START [ WITH ] start ]
+    [ CACHE cache ]
+    [ [ NO ] CYCLE ]
+    [ OWNED BY { table_name.column_name | NONE } ]
 ```
-In this method you can develop the logic of the callout and use the info
-object of class CalloutInfo to access window fields, database and other
-methods. The most important are:
 
-  * public String `getStringParameter(String param, RequestFilter filter)` : Returns the value of a field named param as an String using the filter to accept values. 
-  * public BigDecimal `getBigDecimalParameter(String param) throws ServletException` : This method returns the value of of a field named param as a BigDecimal. 
-  * public void `addResult(String param, String value)` : This method sets the value of a field named param with the String value indicated. 
-  * public void `addResult(String param, Object value)` : This method sets the value of a field named param with the value indicated. This method is useful to set numbers like BigDecimal objects. 
-  * public void `addSelect(String param)` : Starts the inclusion of values of a field named param of type select. 
-  * public void `addSelectResult(String name, String value)` : Adds an entry to the select field and marks it as unselected. 
-  * public void `addSelectResult(String name, String value, boolean selected)` : Adds an entry to the select field. 
-  * public void `endSelect()` : Finish the inclusion of values to the select field. 
-  * protected void `showMessage(String value)` : Shows a message in the browser with the value indicated. 
-  * protected void `showError(String value)` : Shows an error message in the browser with the value indicated. 
-  * protected void `showWarning(String value)` : Shows a warning message in the browser with the value indicated. 
-  * protected void `showInformation(String value)` : Shows an information message in the browser with the value indicated. 
-  * protected void `showSuccess(String value)` : Shows a success message in the browser with the value indicated. 
-  * protected void `executeCodeInBrowser(String value)` : Executes the javascript code indicated in the value in the browser. 
-  * public String `getLastFieldChanged()` : Returns the name of field that triggered the callout. 
-  * public String `getTabId()` : Returns the Tab Id that triggered the callout. 
-  * public String `getWindowId()` : Returns the Window Id that triggered the callout. 
-  * public `VariablesSecureApp vars` : This instance field contains the VariablesSecureApp associated to the callout servlet. 
+| _Postgres syntax to create a new sequence_ |
 
-It is important to keep coherence with each expected data type (String, BigDecimal, ...)
+!!! info
+    In case the parent is Transactional Sequence only the Generator Java Class field will appear, but in case of the parent being a Non-Transactional Sequence you must define all the fiels.
 
-See the following class as an example of a class that currently uses
-SimpleCallout: [SL_Project_Service](https://github.com/etendosoftware/etendo_core/blob/main/src/org/openbravo/erpCommon/ad_callouts/SL_Project_Service.java){target="_blank"}. This callout simply takes the numeric value of two fields, calculates the sum and writes it into another field. This
-is the interesting part of the code that performs the logic:
+&nbsp;
+
+###### Dimension List
+
+A Dimension is a new filter clause used to select the sequence to be used when creating or saving a new record. The default dimensions are:
+
+- Client
+- Organization
+- Document Type
+
+This way you can have two different sequences depending on, for example, the Organization of the record. The same applies to the other default dimensions.
+
+!!! info
+    Dimensions are currently supported only in **Transactional Sequences**.
+
+![dimension_graph1.png](https://docs.etendo.software/assets/legacy/technicaldocumentation/platform/dimension_graph1.png)
+
+&nbsp;
+
+####### Adding custom dimensions
+
+If you want to add a new dimension to filter sequences, this dimension should be a column in both tables `AD_Sequence` and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the `Dimension List` tab with this column (see how to create a new sequence reference above).
+
+
+####### When a dimension is a foreign key column
+
+1. To define a new dimension, you have to start adding a column in the `AD_Sequence` table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (`M_Product` in this example) unless you decide to use an existing column as dimension.
+
+	!!! warning
+		The name of the columns must be the same in both tables.
+
+	```sql
+	ALTER TABLE AD_Sequence ADD COLUMN <dimension>_id varchar(32),
+	ADD CONSTRAINT ad_sequence_<dimension> FOREIGN KEY (<dimension>_id) REFERENCES <table> (<dimension>_id)
+
+	ALTER TABLE M_Product ADD COLUMN <dimension>_id varchar(32),
+	ADD CONSTRAINT M_product_<dimension> FOREIGN KEY (<dimension>_id) REFERENCES <table> (<dimension>_id)
+	```
+	!!!note
+		Remember to replace `<dimension>` with your desired name.
+
+2. Then you have to create the corresponding `AD_Column` register in the Application Dictionary. `Application` > `Application Dictionary ` > `Tables and Columns` search the `AD_Sequence` Table and create the new column.
+   Then you must set the `Reference` field of the dimension pointing to the foreign key table.
+
+	!!! warning
+		If the table with the dimension records is a new table, it should be created in `Application` > `Application Dictionary ` >`Reference`, setting the Base Reference as Table, and adding the table in the `Table Reference` tab.
+
+3.  Also, you have to create the field in the `Document Sequence` window. `Application` > `Application Dictionary ` >`Windows, Tabs and Fields` search `Document Sequence` window and in `Sequence` tab run the process to create the new field.
+
+4.  If the dimension is a new column, you must to repeat the previous step to create the field in the table where the sequence is used.
+
+5.  Finally, go back to your Reference created previously and create a new register in the `Dimension List` tab, selecting the new column you just created, then execute a:
+
+```bash title="Terminal"
+  ./gradlew smartbuild
+```
+
+
+####### When a dimension is a List
+
+1. First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.
+
+	!!! warning
+		The name of the columns must be the same in both tables.
+
+	```sql
+	ALTER TABLE public.ad_sequence
+	ADD COLUMN <list_name> character varying(60);
+
+	ALTER TABLE public.m_product
+	ADD COLUMN <list_name> character varying(60);
+
+	```
+	
+	!!! note
+		Remember to replace `<list_name>` with your desired name.	
+
+2. Then, you have to create the column in the `Application` > `Application Dictionary ` >`Tables and Columns` search `AD_Sequence` Table and create the new column.
+   You must set the `Reference` field of the new Column to `List` and indicate the corresponding Reference Search Key (Or define a new one). In the Default field you can set the id of one of the list elements and when a new Sequence is created, the reference automatically will be set.
+   You also have to do the same in the table that uses the sequence, or you can use an existing one.
+
+3. Finally, go back to your Reference previously created and create a new register in the `Dimension List` tab by selecting the new column you have just created then, execute a:
+
+```bash title="Terminal"
+  ./gradlew smartbuild.
+```
+
+
+####### Change sequence when change dimension
+
+- If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
+  The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.
+
 ```java
+public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
   @Override
-  protected void execute(CalloutInfo info) throws ServletException { 
-    BigDecimal serviceSerCost = info.getBigDecimalParameter("inpservsercost");
-    BigDecimal serviceOutCost = info.getBigDecimalParameter("inpservoutcost"); 
-    BigDecimal serviceTotalCost = serviceSerCost.add(serviceOutCost);
-    info.addResult("inpservcost", serviceTotalCost);
-  }
-```
-#####  Extend a Callout
+  protected void execute(SimpleCallout.CalloutInfo info) throws ServletException {
+    final String strcProductId = info.vars.getStringParameter("inpmProductId");
 
-It is possible to implement a callout that extends from another callout. For
-more information visit this [How to create a callout that extends from another callout](How_to_create_a_callout_that_extends_from_another_callout.md) tutorial.
-
-  
-#####  Product Search Key Calculation using SimpleCallout
-
-Let's define the tasks that need to be performed by the callout:
-
-  1. Retrieve the name of the product as entered by the user 
-  2. Retrieve the ID of the category selected from a dropdown by the user 
-  3. Get the name of the product category inside the database using the product category ID retrieved 
-  4. Strip spaces out of the product and category names 
-  5. Construct the Search Key 
-```java
-    // the package name corresponds to the module's manual code folder 
-    // created above
-    package com.etendoerp.customer.example.ad_callouts;
-     
-    import javax.servlet.ServletException;
-     
-    import org.openbravo.utils.FormatUtilities;
-    import org.openbravo.erpCommon.ad_callouts.SimpleCallout;
-    import org.openbravo.base.secureApp.VariablesSecureApp;
-    // classes required to retrieve product category data from the 
-    // database using the DAL
-    import org.openbravo.dal.service.OBDal;
-    import org.openbravo.model.common.plm.ProductCategory;
-     
-    // the name of the class corresponds to the filename that holds it 
-    // hence, modules/modules/org.openbravo.howtos/src/org/openbravo/howtos/ad_callouts/ProductConstructSearchKey.java.
-    // The class must extend SimpleCallout
-    public class ProductConstructSearchKey extends SimpleCallout {
-     
-      private static final long serialVersionUID = 1L;
-     
-      @Override
-      protected void execute(CalloutInfo info) throws ServletException {
-     
-        // parse input parameters here; the names derive from the column
-        // names of the table prepended by inp and stripped of all
-        // underscore characters; letters following the underscore character
-        // are capitalized; this way a database column named
-        // M_PRODUCT_CATEGORY_ID that is shown on a tab will become
-        // inpmProductCategoryId html field
-        String strProductName = info.getStringParameter("inpname", null);
-        String strProductCategoryId = info
-                        .getStringParameter("inpmProductCategoryId", null);
-     
-        // inject the result into the response
-        info.addResult("inpvalue", getConstructedKey(info.vars, strProductName, strProductCategoryId));
-      }
-     
-      protected String getConstructedKey(VariablesSecureApp vars,
-            String strProductName, String strProductCategoryId) {
-     
-        // Retrieve the product category name
-        final ProductCategory productCategory = OBDal.getInstance().get(ProductCategory.class,
-                strProductCategoryId);
-        String strProductCategoryName = productCategory.getName();
-     
-        // construct full key
-        String generatedSearchKey = FormatUtilities.replaceJS(strProductName
-                    .replaceAll(" ", ""))
-                    + "_" + strProductCategoryName.replaceAll(" ", "");
-     
-        // return generated key
-        return generatedSearchKey;
+    if (StringUtils.isBlank(strcProductId)) {
+      try {
+        OBContext.setAdminMode();
+        Tab tab = OBDal.getInstance().get(Tab.class,info.getTabId());
+        Field field = tab.getADFieldList()
+        .stream()
+        .filter(f -> ("inp" + Sqlc.TransformaNombreColumna(f.getColumn().getDBColumnName())).equals("inpvalue"))
+        .findFirst()
+        .orElse(null);
+        String sequenceNumber = Utilities.getDocumentNo(field);
+        info.addResult("inpvalue", "<" + sequenceNumber + ">");
+      } finally {
+        OBContext.restorePreviousMode();
       }
     }
-``` 
+  }
+}
+```
 
-#### Defining the Callout within the Application Dictionary
-
-!!!note
-    You need to have only your module as "In Development" at this stage.
-
-Using the role _System Administrator_, navigate to `Application Dictionary` > `Setup` > `Callout`. Create a new  record as indicated by the screenshot below:
-
-!!!warning
-    The name of the callout should not have spaces or illegal javascript characters.  
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-3.png)
-
-  
-Save and navigate to the _Callout Class_ tab of the same window. You will
-notice that the Java Class Name was automatically generated for you,
-however, not correctly since the name could not match the _Callout_ name you
-have provided. Correct it in line with your callout package/class name. See
-screenshot below:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-4.png)
-
-  
-Now Etendo Classic knows that a callout exists and is implemented by the class you
-have just specified.
-
-!!!warning 
-    Remember to perform
-    ```./gradlew export.database```
-    in order to persist your changes in your module.  
- 
-  
-####  Associating the Callout with a Column
-
-!!!note
-    You need to have ONLY your template as "In Development" at this stage.
-
-Using the role _System Administrator_ navigate to `Application Dictionary` > `Tables and Columns` > and find the _M_Product_ DB Table. This is the underlying table of the main tab of the _Product_ window.
-
-Go to Column tab, find the _Name_ record and edit it. Find the  Callout
-dropdown  that should at this point be empty. Select our
-_Product_Construct_SearchKey_ callout and save the record:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-6.png)
-
-  
-Do the same for the _Product Category_ record since a change in any of them
-should also regenerate the Search Key.
-
-!!! warning
-    Remember to perform
-    ```./gradlew export.database```
-
-    and
-
-    ```./gradlew export.config.script```
-
-    in order to persist your changes in your template.  
-  
-  
-####  Compiling the Window
-
-Finally, for the callout to take effect, the window that uses it needs to be
-recompiled and deployed to Tomcat. Do:
-  ``` bash
-    ./gradlew smartbuild 
-  ```
-
-!!!info
-    Once the compilation has finished, restart Apache Tomcat server.  
-  
-
-####  The Result
-
-Using the role _Group Admin_ (or your defined 'administrator' role),
-navigate to the `Master Data Management` > `Product` window. Enter a new
-product with Name = _Bon Fountain_ and leave the Name field. Notice
-how the Search Key changes. Then, change the Product Category to something
-else and see how the change is reflected inside the Search Key field.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-8.png)
-
-Last, save changes.
-
----
-
-This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to add a field to a Window Tab
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a field to a Window Tab
+# Article Title: How to Use Secure Webservices
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Secure Webservices
 ## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices
 ## Article Content: 
-### How to add a field to a Window Tab
-
 #### Overview
 
-The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
+This module allows calling any standard Etendo web service in the same way as calling the "/ws" endpoint, but using token authentication.
 
-It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
+This authentication method also allows defining the context for the calls by choosing the role and/or organization when requesting a token. It is also possible to renew a token to refresh the expiration date or change the role/organization.
 
-The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
+Besides the new authentication implementation, the module includes utilities for developers and useful web services, such as jsonDal (to access the OB Data Access Layer with json).
 
-On this page we will show an example of how to place the `example_column` field in the `Production Run` window using the `create fields` button.
 
-##### Add the fields to the window example
+!!! info
+    For more information, follow this information in [Secure Webservices](https://demo.etendo.cloud/etendo/web/com.smf.securewebservices/doc/#/Login/post_sws_login){target="_blank"}.
 
-The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary` > `Window, Tabs and Fields`, we need to search for the `Production Run` window. Then, for that window, mark its `Incidence` tab.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
-
-Now, we use the Create Fields process on this tab to let it add all columns
-of the underlying _MA_WEIncidence_ table to this tab if they have not been previously
-added.
-
-This will then add one new field to the tab matching the new column
-and automatically place the field into the module.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png)
-
-As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.
-
-If this window should also be used in _classic UI mode_ then now `./gradlew smartbuild` should be execute to compile the changed window.
-
-To see the changes in the new user interface just change the `System Administrator` role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
-
----
-
-This work is a derivative of [How to add a field to a window tab](http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to add a canvas field to a Form or Grid
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a canvas field to a Form or Grid
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid
-## Article Content: 
-###  How to add a canvas field to a Form or Grid
-
-#### Overview
-
-This guide explains how to integrate canvas fields into forms and grids within Etendo, enabling the addition of customized visual components such as buttons, links, and calculated labels. 
-Canvas fields offer dynamic data presentation and interaction, leveraging JavaScript development expertise for implementation.
-
-####  Introduction
-
-A canvas field allows the user to add any visual component to a form or a row in a grid. 
-This concept can be used to add a calculated field to a form and grid. 
-Visual components which can be added are for example buttons, links and (computed) labels.
-
-In this section, we will be adding a button and a calculated field to the form and to every row in the grid.
-We will illustrate how information from the record and form can be used to get dynamic information from the Form/Grid.
-
-The implementation of canvas fields requires javascript development experience. 
-See the following concept pages for background information on javascript development:
-
-  * [Client Side Development and API](https://docs.etendo.software/concepts/Client_Side_Development_and_API.md)
-  * [JavaScript Coding Conventions](https://docs.etendo.software/concepts/JavaScript_Coding_Conventions) 
-
-It also makes sense to study the following page: [Etendo Architecture](https://docs.etendo.software/concepts/Etendo_Architecture).
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
-
-####  Example Module
-
-This section is supported by an example module which shows examples of the code shown and discussed.
-
-The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip)
-
-####  Main development steps for creating a new canvas field
-
-The development consists of 2 steps:
-
-  1. Implement the canvas itself, normally this is done in javascript. 
-  2. Specify the canvas javascript class in the field definition of the tab/window 
-
-#####  Implementing your canvas in javascript
-
-The first step is to implement your canvas class in javascript. This is done in 2 steps:
-
-  * Create a  [javascript](https://docs.etendo.software/concepts/Client_Side_Development_and_API#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
-  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) 
-
-The example module implements a button and a calculated field in the `example-canvas-field.js` file.
-
-The first example in the file implements a button which shows the identifier of the current record:
-
-    
-```javascript title="example-canvas-field.js"
-isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
- 
-isc.OBEXAPP_SalesOrderActionButton.addProperties({
-  noTitle: true,
-  title: OB.I18N.getLabel('OBUISC_Identifier'),
-  click: function() {
-    var info = '';
-    if (this.record) {
-      info = this.record._identifier;
-    } else if (this.canvasItem) {
-      info = this.canvasItem.form.getValue(OB.Constants.IDENTIFIER);
-    }
-    isc.say(info);
-  }
-});
-```
-
-The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. 
-It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
-
-    
-```javascript title="example-canvas-field.js"
-isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
- 
-isc.OBEXAPP_SalesOrderCalculated.addProperties({
-  height: 1,
-  width: 1,
-  overflow: 'visible',
-  contents: '',
-  initWidget: function() {
-    if (this.canvasItem) {
-      this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
-    }
- 
-    this.Super('initWidget', arguments);
-  },
-  
-  // is called when the form gets redrawn
-  redrawingItem: function() {
-    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
-  },
-  
-  // is called when a field on the form changes its value
-  onItemChanged: function() {
-    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
-  },
-  
-  // is called in grid-display mode when the canvas is created/used
-  // for a record
-  setRecord: function(record) {
-    this.computeContents(record.grandTotalAmount, record.summedLineAmount);
-  },
-  
-  computeContents: function(val1, val2) {
-    var num;
-    if (!val2) {
-      this.setContents('');
-    } else {
-      num = OB.Utilities.Number.JSToOBMasked(val1/val2, 
-          OB.Format.defaultNumericMask,
-          OB.Format.defaultDecimalSymbol,
-          OB.Format.defaultGroupingSymbol,
-          OB.Format.defaultGroupingSize);
-      
-      this.setContents(num);
-    }
-  }
-});
-```
-
-The javascript file is registered in the example modules' [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) like this:
-
-    
-```java title="ExampleComponentProvider.java"
-@Override
-public List<ComponentResource> getGlobalComponentResources() {
-  final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
-  globalResources.add(createStaticResource(
-      "web/org.openbravo.client.application.examples/js/example-canvas-field.js", false));
-.....
-```
-
-#####  Defining the canvas in the Tab-Field (ADField)
-
-The next step is to create a new field in the tab, and set its client class field:  
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
-
-It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
-
-#####  The result
-
-The result is shown in both the grid and the form:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
-
-####  Javascript events passed to the canvas
-
-When implementing your canvas, you should take into account that the canvas is used in 3 different situations:
-
-  * When displaying a row in the grid 
-  * When editing a row in the grid 
-  * In form view, when editing a record 
-
-The last 2 cases are similar.
-
-In grid-display mode the following applies:
-
-  * In grid mode the following properties are set on the canvas: 
-    * `grid`: the grid object 
-    * `rowNum`: the row number/record index for which the canvas is used 
-    * `record`: the record for which the canvas is used 
-    * `colNum`: the column in which the canvas is shown 
-    * `field`: the field where the canvas is used 
-  * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
-  When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
-
-In form-edit or grid-edit mode, the following applies:
-
-  * The canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
-    * `this.canvasItem.form`: the form instance 
-    * `this.canvasItem.form.grid`: in case of grid editing 
-  * If the canvas has a property noTitle with the value `true` then in form mode no title/label is displayed 
-  * Form changes: the canvas can capture form/value change events by implementing 2 methods (both without arguments): 
-    * `onItemChanged`: is called when a value on the form changes 
-    * `redrawingItem`: is called just before the form is redrawn 
-
-####  Adding server side actions
-
-The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](https://docs.etendo.software/concepts/.Etendo_Architecture#actionhandler-server-side-calling-from-the-client)  for this purpose.
-
----
-
-This work is a derivative of ["How to add a canvas field to a form or grid"](http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to change an existing Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to change an existing Window
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window
-## Article Content: 
-###  How to change an existing Window
-
-  
-####  Overview
-
-Application elements ([windows, tabs and fields](https://docs.etendo.software/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
-Etendo is able to cope with these changes because its architecture is
-suited to iterative development. The definitions of all generated Windows,
-tabs and fields are stored as metadata in the Application Dictionary (AD).
-
-Changing the window of an existing application is a simple process of changing
-the AD definition.
-
-When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.
-
-When using classic Window a compile step is needed.  
-
-This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on
-[How to add a field to a window Tab](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
- 
-
-
-####  Objective
-
-The objective of this how-to is to illustrate how to make changes to existing
-generated windows in terms of appearance and behavior. The window used in the
-example is the Physical Inventory window and the changes illustrated will be:
-
-  * Hide a field 
-  * Re-sequence the layout 
-
-[Physical Inventory](https://docs.etendo.software/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) is a window that belongs to Etendo Classic.
-It comprises of:
-
-  * 1 Window - Physical Inventory. 
-  * 2 Tabs - Header and Lines. 
-  * A Header Tab has 19 Fields 10 of which are displayed (A few are displayed conditionally).
-
-Before any changes the header tab has the following appearance:
-
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-1.png)
-
-
-!!!info
-    To customize these window in a Modularity Context a new module of Type
-    *Template* is needed.
-
-
-
-####  Changing the window
-
-Navigate to the `Application Dictionary` > `Windows, Tabs and Fields` window
-and select the record for _Physical Inventory_ .
-
-In the _Fields_ tab we can now make the changes needed to adapt the layout as
-wanted:
-
-  * _Description_ field, unmark the _Displayed_ checkbox to hide the field from the tab. 
-  * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
-
-  
-For testing the changed layout, switch away from the *System Administrator*
-role to e.g. the *F &B International Group Admin* role and open the *Physical
-Inventory* window again. As the instance contains our module marked as
-*InDevelopment* the window layout is reloaded each time the window is opened, so
-we can see the changed layout immediate as seen below:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
-
-
-  
-To apply the same layout changes to the window in *classic UI mode*, the
-windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
-which will recompile all changed windows and deploy the changes.
-
-  
-
-####  Exporting the changes
-
-The final step is to export the changes into the module so they are persisted.
-
-!!!note
-    When exporting changes into a template, it is important that only
-    the *template is in development* and the module which contains the changed
-    object (i.e. window) is not.
-
-After ensuring that, the export of the changes consists of the following two
-steps:
-
-``` bash title="Terminal"
-  1. _./gradlew export.database_ , same steps as for any other module 
-```
-
-``` bash title="Terminal"
-  2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
-```
-
-
-This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How to Create a Window
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Window
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window
-## Article Content: 
-####  Overview
-
-The objective of this section is to show how you can create a new window from scratch. 
-
-!!!info
-    This section builds on top of two previous sections which explain
-    [How to create a module](How_To_Create_and_Package_a_Module.md)  and [How to create a table](How_to_create_a_Table.md).
-
-####  Module & Table
-
-As mentioned above, this tutorial is based on two previous tutorials
-and assumes that the following objectives have been already completed:
-
-  * Creation of a new module
-  * Creation + Registration in the AD of a new table
-
-####  Creating the New Window
-
-Using the *System Administrator* role navigate to `Application Dictionary` > `Windows, Tabs and Fields `. 
-Create a new record as indicated by the screenshot below:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_0.png) 
-
-
-The main fields of this window are:
-
-
-  - *Module*: defines the module for which this element will belong to.
-  - *Name*: defines the name that Etendo uses to recognize this window. 
-  - *Description*: gives a small description of the table. 
-  - *Help/Comments*: defines the text that is displayed in Help window. 
-  - *Window Type*: defines some user interface specifics for a window: 
-    - _Maintain_ : is used for windows with few entries. 
-    - _Transaction_ : for transactional windows. It's the type of window that's used for showing the information of tables with a large volume of data. By default this window filters out old (n days – `General Setup` > `Application ` >`Session Preferences` window setting) and processed documents. The header tab's underlying table must contain the PROCESSED and UPDATED columns (for the data filters to work).
-    - _Query Only_ : for read-only windows that only enable viewing of data. 
-
-  
-Save this record and move to *Tab* tab. Create a new record as shown
-below, creating the first tab:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_1.png)  
-
-
-Main fields of this window are:
-
-  * *Module*: defines the module for which this element will belong to.
-  * *Name*: defines the name that Etendo uses to recognize this tab. 
-  * *Description*: gives a small description of the table. 
-  * *Help/Comments*: defines the text that is displayed in Help window. 
-  * *Table*: specifies the table that the tab will show the data from. 
-  * *Table Level*: defines the hierarchy of tabs, _0_ being the highest level. 
-  * *UI Pattern* This dropdown offers the following options: 
-    * _Standard_ \- standard interface where multiple records can be added, viewed and edited 
-    * _Read Only_ \- this option disables any editing/creating capabilities for any user within this tab 
-    * _Single Record_ \- this option enforces a one-to-one relationship between a parent and a child tab, allowing the user to enter maximum one record in the tab 
-  * *HQL Where Clause*: by using this HQL filter, the user will never be able to see data that does not fit the criteria. When referring to properties of the entity shown in the tab then use the prefix *e* . In our case, we use this field to display only business partners that are our employees (using the _employee_ property). 
-  * *SQL Where Clause* Same like HQL Where Clause but using SQL syntax and used for filtering in _classic windows_ . 
-
-The *Copy Tab Fields* button can be used to copy fields from an existing tab into our new
-one.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_2.png) 
-
-The *Create Fields* button can be used to create fields for the new tab based on its associated table
-  
-Move to *Field* tab to see the created fields.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
-
-
-
-  
-  
-  
-If required, changes to these fields could be made or new ones could be added manually. 
-
-!!!note
-    For not header tabs, it is very important to not remove the field
-    that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
-
-
-
-Now, go back to *Tab* tab and create a new record that will represent the
-child tab of the Employee tab where salaries will be managed:
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
-
-
-  
-Most importantly, make sure you select:
-
-  * *Table* = `HT_Salary`
-  * *Tab Level* = _1_
-
-
-By clicking and confirming the *Create Fields* dialog, the application will
-automatically insert the columns of the selected table into the fields tab of
-the *Salary* one.
-
-  
-To arrange the columns according to common look and feel of other windows, we now change a view field properties as can be seen in following screenshot.
-
-  * Hide field _c_bpartner_id_
-  * Reorder fields (using sequence), to have _isactive_ after all other fields 
-  * Mark _amount_ and _isactive_ as *Start in new line*
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_5.png) 
-
-
-  
-For Etendo, to create links (labels that appear blue) to table elements, the system needs to know which window represents the table where a certain element resides.
-
-To indicate that, go to the `Application Dictionary` > `Tables and Columns` window, find the corresponding table and set the *Window* as indicated below:
-
-  
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_6.png)
-
-####  Creating the Menu Item
-
-A menu item is required for the user to be able to call up the new window. Using the System Administrator role navigate to `General Setup` > `Application` >`Menu` and create a new record:
-
-  
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
-
-
-  
-Main fields of this window are:
-
-  * *Module*: defines the module for which this element will belong to.
-  * *Name*: defines the name that Etendo uses to recognize this menu item. 
-  * *Description*: gives a small description of the table. 
-  * *Summary level*: defines a folder containing menu items (windows, processes, reports and so on). 
-  * *Action*: defines the type of menu item. 
-  * *URL* If _Action_ is _External link_ or _Internal link_ , defines the _URL_ to be linked. 
-  * *Special Form*: If _Action_ is _Form_ , defines the form to be linked. 
-  * *Process*: If _Action_ is _Process_ , defines the process to be launched. 
-  * *Report*: If _Action_ is _Report_ , defines the report to be linked. 
-  * *Window*: If _Action_ is _Window_ , defines the window to be linked. 
-
-Save this record then click on _Tree_ icon ![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_8.png)
-
-
-Here you can drag and drop the new menu item to any of the
-other menu groups.
-
-  
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
-
-
-####  Compiling the Application with the New Window
-
-Finally, the application needs to be recompiled in order to generate the new window's code and deploy it to Tomcat. 
-
-```bash
-./gradlew smartbuild
-```
-
-####  The Result
-
-Using the *F&B International Group Admin* role, select the link to the new window from the menu. 
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_10.png)
-  
-!!!success
-    You have now successfully created your own new window and seen how it came to life within Etendo. 
-
-
-This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: How To Create a Module
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
-## Article URL: 
- https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module
-## Article Content: 
-###  How To Create a Module
-
-####  Overview
-
-Etendo uses the concept of Modularity. Modularity provides developers with the means to be able to develop, publish and distribute their work in a structured and controlled manner. For users of Etendo Classic, Modularity makes it possible to download, install and update custom developments.
-
-This section describes how to create a new module. It is of particular interest as it describes the first steps which should be followed in all of the other sections in this developer's guide and in Etendo Classic custom development in general.
-
-####  Introduction to Modularity
-
-The objectives of modularity are:
-
-  * To make it easier to contribute to Etendo Classic by allowing distributed and decoupled development and maintenance of optional features. 
-  * To provide the community with a rich set of extensions to meet their unique business requirements without bloating the core product. 
-  * To shorten the implementation cycles by enabling system integrators to develop very specific functionality to meet the unique needs of a particular market. 
-
-A module is a piece of additional functionality that can be deployed optionally and independently on top of Etendo Classic. Examples of modules are:
-additional reports, additional windows, connectors, content packs (translations, chart of accounts, list of tax codes, product categories, etc).
-
-!!!info
-    For a detailed description on the Etendo Classic modularity concept, see the [Modularity Guide](https://docs.etendo.software/concepts/Modularity_Concepts.md).
-
-This section explains only the standard module type, because that is most relevant for the other sections.
-
-All new development should be done as a part of a module. Only modules which are marked as _In Development_ can be used in the development process. A module can consist of the following software artifacts:
-
-  * Application dictionary components: all new application dictionary artifacts must be associated with a module. Application dictionary windows have a field that enables you to link an application dictionary component to a module. 
-  * Software resources: these are artifacts not defined in Etendo Classic itself but, for example, Java classes, libraries, web resources (images, etc.), configuration files, etc. To maintain the relationship with the module, software resources need to be located in the module's directory inside the Etendo Classic development project. Each module has its own unique directory. 
-  * Reference data: modules can be distributed with their own set of reference business data, for example, product categories, tax code, etc. The reference data is defined in datasets which can be related to a module. 
-
-The process of developing a module has three main steps:
-
-  1. Register your module in the Application Dictionary and in your github repository.
-  2. Develop the artifacts included in your module. Depending on the functional specification and technical design of your module, it might include only one type of artifacts or a combination of them. In following sections, each type of artifact is described in detail. 
-  3. Publish the module in your github repository.
-
-!!!Important
-    Every piece of Etendo Classic code belongs to a module, including Etendo Classic core itself. You should do all your developments through modules, including customizations. You can make changes directly in other modules -including Etendo Classic core- but it is highly recommended not to do that. It makes it much easier to maintain Etendo Classic if you restrict code changes to modules.
-
-A module can be distributed and downloaded by other Etendo Classic users via the central repository. For more information about the central repository and distribution of modules, visit the [Modularity Guide](https://docs.etendo.software/concepts/Modularity_Concepts.md).
-
-The following sections discuss the main topic of this section: create and setup a module, and [publish it for distribution](how-to-publish-modules-to-github-repository.md).
-
-####  Creating a Module
-
-The first step in the development process is to create a new module. From the Application menu, select `Application Dictionary` > `Module`.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
-
-Note the following important fields: (for more details see the  AD_Module table description):
-
-  * The format of the Version field is three numbers separated by two dots. 
-  * The Java Package is a unique identifier of your module and has to match the Java package naming rules as described in the  Java Naming Conventions  (names and package names). Be careful when setting this value as you are not allowed to change it once your module is registered in the central repository. If your module includes Java files, they have to be packaged within your module's Java package or in its sub-packages. Examples of Java packages for a module are _org.etendo.howtos_ , _com.etendoerp.examples.helloworld_ , _com.yourcompany.yourPackage_ , _org.yourfoundation.yourPackage.yourSubpackage_ , etc. 
-  * The In Development option informs the system that you are developing the module. Only modules in development are exported by development tools and the system will raise an error if you try to modify a component of a module that is not in development. 
-  * The Default field option for a module marks that module as the one which is selected by default when developing and when editing components in the Application Dictionary. You may be developing more than one module at any one time, and specifying a default enables the module you want to be selected by default. 
-  * Select the Translation Required option if your module contains UI artifacts (window, field) with translatable elements. 
-
-The tabs at the bottom of the window enable you to define the module further:
-
-  * Dependency: defines the module's dependency on other modules. 
-  * Include: is used by industry templates/packs. 
-  * DB Prefix: relates database schema artifacts to modules. 
-  * Data Package: allows you to groups tables together. Data packages are used to determine the Java package generated Java code (business objects). 
-  * Naming Exceptions: is used during upgrades of previous versions of Etendo Classic. It should not be used for any other purpose. 
-  * Merges: If this module A does now include the content of another module B previously published independently (So module B was merged into module A). 
-  * Translation: is used for supporting translations. 
-
-  
-In this section, we create an example module, called _Etendo Howtos_ .
-We will define the module using the following three tabs of the `Application Dictionary` > `Module` window:
-
-  * Dependency
-  * DB Prefix
-  * Data Package
-
-Dependency: Etendo Classic core functionality is in itself a module, called _Core_. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  AD_Module_Dependency description):
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
-
-  
-DB Prefix: at least one db prefix is required when a module also contains database artifacts (table, column, constraints, etc.). Etendo Classic determines the module of a database artifact by checking to see if its name starts with one of the defined db_prefixes. If database artifacts will be added to the module, at least one DB prefix must be specified.
-
-!!!important
-    DB Prefix can only contain uppercase [A-Z0-9] and the first letter is required to be from [A-Z] only.  
-
-  
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
-
-!!!info
-    For more information, see the  AD_Module_Dbprefix  table description.
-
-  
-Data Package: Tables are linked to a module through the Data Package. The generated business object for the new table will use the Java Package defined in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.
-
-![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
-
-
-####  Develop your software artifacts
-
-Now, let's see how to develop the software artifacts required for the functionality of the module. While developing, the relation to the module is maintained in different ways:
-
-  * Direct: for example, a Window is directly related to a specific module. 
-  * Indirect: a table belongs to a data package which again belongs to a module. 
-  * By name: a new stored procedure is linked through a module by prefixing it with the _DB\_Prefix_ of the module. 
-
-When the custom development is ready, the next step is to export the module.
-
-####  Exporting a Module
-
-Exporting a module creates a directory for your module under Etendo Classic root directory and the appropriate XML files for inclusion in the finished module. Modules that are not flagged as being in development are not exported.
-
-!!!note
-    Remember that you must select the In Development checkbox when you define a new module, otherwise it will not be exported.
-
-When the development of the module is finished (or to deliver intermediate results), open a command window/shell and navigate to the Etendo Classic development project execute the `./gradlew export.database` command.
-
-!!!important
-    Export database task will export all and only the modules set as in Development  
-    `./gradlew export.database`
-    
-Since we do not have any additional developments yet, only the corresponding
-folder structure and the module descriptor XML files have been created at this
-point.
-
-```
-modules
-    └── org.etendo.howtos
-        └── src-db 
-            database
-               └── sourcedata
-                   ├── AD_MODULE_DBPREFIX.xml
-                   ├── AD_MODULE_DEPENDENCY.xml
-                   ├── AD_MODULE.xml
-                   └── AD_PACKAGE.xml
-```
-
-  
-Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/concepts/Development_Build_Tasks).
-
-!!!info
-    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/concepts/Development_Build_Tasks#database_tasks) and [module gradle task](https://docs.etendo.software/concepts/Development_Build_Tasks#Modules) descriptions.
-
-
-####  Creating a Source Directory
-
-To develop manual Java code you need a _src_ directory inside of your specific module:
-
-```
-modules
-    └── org.etendo.howtos
-        ├── src 
-        │   └── org
-        │       └── etendo
-        │           └── howtos
-        │                └── 
-        └── src-db
-            └──[...]
-```
-  
-The Java package in the source directory should start with the Java package of the module.
-
-#### Publishing a Module
-
-Once the module is created and documented, the next step is to publish it for it to be available.
-
-For detailed information about this process, visit the [How to Publish Modules to Github Repository guide](how-to-publish-modules-to-github-repository.md)
-
-####  The Result
-
-The result of this section is a correctly set up module, which can be installed in an Etendo Classic instance that meets the module's requirements.
-
----
-
-This work is a derivative of [How to Create and Package a Module](http://wiki.openbravo.com/wiki/How_To_Create_and_Package_a_Module){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Gradle Plugin
