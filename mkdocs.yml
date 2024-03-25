@@ -282,7 +282,6 @@ nav:
 #        - Model Object Mapping: developer-guide/etendo-classic/concepts/Model_Object_Mapping.md
         - Alerts: developer-guide/etendo-classic/concepts/Alerts.md
         - Processes: developer-guide/etendo-classic/concepts/Processes.md
-#        - How to create a Report: developer-guide/etendo-classic/concepts/How_to_create_a_Report.md
 #        - Messages: developer-guide/etendo-classic/concepts/Messages.md
 #        - Application Menu: developer-guide/etendo-classic/concepts/Application_Menu.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
@@ -327,13 +326,13 @@ nav:
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a callout that extends from another callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
-#        - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
+        - How to Create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
-#        - How to create QUnit testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_QUnit_testcases.md
-#        - How to create Jest testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_Jest_testcases.md
-#        - How to create JUnit testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_JUnit_testcases.md
+        - How to Create Test Cases:
+          - How to Create Jest Test Cases: developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases.md
+          - How to Create JUnit Test Cases: developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases.md
 #        - How to change an existing Report: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Report.md
 #        - How to Use an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Use_an_External_Connection_Pool.md
 #        - How to Print Reports with Subreports: developer-guide/etendo-classic/how-to-guides/How_to_Print_Reports_with_Subreports.md
@@ -388,7 +387,7 @@ nav:
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
 #        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
 #        - How to develop a DAL background process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
-#        - How to implement a business event handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
+        - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - Data Access Layer: developer-guide/etendo-classic/how-to-guides/Data_Access_Layer.md
 #        - Client Side Development and API: developer-guide/etendo-classic/how-to-guides/Client_Side_Development_and_API.md
 #      - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
@@ -418,11 +417,12 @@ nav:
         - How to create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
 #        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
+        - How to add a field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
+        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
         - How to change an existing Window: developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
-#        - How to create testcases: developer-guide/etendo-classic/how-to-guides/How_to_create_testcases.md
 #        - How to setup Eclipse IDE: developer-guide/etendo-classic/how-to-guides/How_to_setup_Eclipse_IDE.md
 #        - How To Create and Package a Module: developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md
       - Developer Tools:
@@ -461,7 +461,7 @@ nav:
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
         - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
-      - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
+      - Etendo UI Library: "https://main--65785998e8389d9993e8ec4c.chromatic.com"
   - What's New:
     - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md

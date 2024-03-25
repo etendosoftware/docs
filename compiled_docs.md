@@ -32747,6 +32747,820 @@ The dataset definition is ready, so the user just needs to export it to a file p
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
+## Article Content: 
+###  How to Create a Report
+  
+####  Overview
+
+In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
+
+####  Setting up Jaspersoft Studio
+  
+!!!note
+    It is recommended to use the latest version of Jaspersoft Studio.  
+  
+  
+First, you need to download Jaspersoft Studio, a graphical tool that allows you to create and modify JasperReports templates (.jrxml files).
+
+  * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
+  * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
+  * On Windows: Download and execute the .exe file.
+
+#####  Configuring Jaspersoft Studio Library Version
+!!! warning
+    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. It is very important to use the correct version of JasperReports library,so the jrxml file has the syntax compatible with Etendo.
+
+* Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
+
+#####  Configuring Jaspersoft Studio Properties
+
+Some properties of Jaspersoft Studio need to be modified in order to work properly. In short, you need to make sure:
+
+  * You modified the JasperReport property _net.sf.jasperreports.awt.ignore.missing.font_ and set it to *true*. It can be changed in `Properties` > `Jaspersoft Studio` > `Properties` 
+  * Do not use any *Scriplet* class 
+  * Use *Java* as default expression language 
+
+
+  
+#####  Setting up Classpath
+
+In Jaspersoft Studio, each report is supposed to be part of a project. So, you first need to create a new project (`File` > `New` > `Project`).
+
+The project has a classpath, and here is where you can add the jars you need.
+
+  * Right-click on the project name: `Properties` > `Java Build Path`
+  * Move to *Libraries* tab 
+  * Click *Add External Jars* button 
+  * Add the desired library. 
+  * Click *OK*
+
+####  Creating the Template
+
+  * Go to `File` > `New`
+  * Pick *Jasper Report*
+  * The *New Report Wizard* will be opened 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-2.png)
+
+  * Select a Report Template, (_Blank_ following our example) 
+  * Define a Report Name 
+  * Define the file Location in the project. 
+
+Later on, we will copy this .jrxml file inside our Etendo module that is going to keep our Report and also the required configuration in the Application Dictionary.
+
+  * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
+  * Click *New*
+  * Pick *Database JDBC Connection* and click _Next_
+  * Fill all the fields 
+    * *Name:* Etendo (or any name you like, e.g. pi) 
+    * *JDBC Driver:* PostgreSQL (`org.postgresql.Driver`). In this case, we'll use PostgreSQL 
+    * *JDBC URL:* `jdbc:postgresql://localhost:5432/etendo` where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
+    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](https://docs.etendo.software/getting-started/installation.md#install-etendo)) 
+    * *Password:* tad 
+  * Click the Finish button to generate the JDBC Connection 
+  * Test your connection 
+  * Save 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
+
+Now we have to configure the query: we are going to list the products present in the database.
+
+  * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-4.png)
+
+  * The products are stored in the `M_Product` table 
+    
+        SELECT m_product_id, value, name FROM m_product
+
+  * We have to add the fields based on your query which we want to use in the report, so we are going to add: 
+    * `m_product_id` 
+    * `value` 
+    * `name` 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-5.png)
+
+  * Click *OK* 
+  * Remember to clear the Scriptlet class and modify the Language for expressions 
+  * Right-click on the Report Outline menu, and select *Show Properties*. 
+  * In the report properties in the right, look for the following: 
+    * Clear the Scriptlet class 
+    * Choose Java as Language 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-6.png)
+
+Let's now design the Report Layout
+
+  * Put a static text as report title: _Product List_
+  * Place the fields in the *Detail* band and a title in the *Column Header* band 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-7.png)
+
+  * Switch to the *Preview* subtab to get a report preview 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-8.png)
+
+!!!note
+    It is recommended to use Dejavu fonts in jasper reports because these
+    fonts support most of the characters in almost all languages​​. Besides,
+    Dejavu typography is the family of fonts that Etendo included in
+    jasperreports-fonts library.   
+  
+#####  Etendo Runtime Environment
+
+The standard reports in Etendo (`src/org/openbravo/erpReports`) make use of several methods that reside inside the *Etendo Runtime Environment*, which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of the `org.openbravo.erpCommon.utility.Utility` Class:
+
+  * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
+  * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
+  * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
+
+For this, to be able to preview the standard Etendo reports from *JasperStudio*, it suffices just to import the .jar file into the classpath of the project within JasperStudio.
+
+#####  Adding images and logos to a report using the ShowImage API
+
+You can use the Image BLOB reference to display an image for a specific report, or one of the Company logos in the application. 
+
+To do so:
+
+1. Add an image object to your report
+
+2. set the expression class to "java.awt.Image" and the expression image to a call to the ShowImage function of the Utility class (if you want it to display a standard ImageBLOB image reference, that corresponds to a field added to a tab), or to the ShowImageLogo function if you want to display the logo of an Organization or Client.
+
+Images loaded with this method must not have alpha channel. A transparency layer is not supported by the function that loads images in Jasper Reports.
+
+  * If you want to use the ShowImage function, you need to make the expression image look like: 
+    * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
+
+IMAGEID needs to be the UUID of the image you want to show. You could set this value using a Jasper parameter.
+
+  * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
+    * This one will show the Company logo at System level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin")` 
+    * This one will show the Company log at Client level (the client used will be the one the user logged at): 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu")` 
+    * This one will show the Company logo at Organization level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
+
+ORGANIZATIONID needs to be the UUID of the Organization whose log you want to show. You could set this value using a Jasper argument. An example could be `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E` the organization ID.
+
+####  Registering the Report in Application Dictionary
+
+#####  Creating the Report
+
+It is possible to create a report using a process definition. For more information, visit [this section](How_to_create_a_Report_using_Process_Definition.md).
+
+  * Using the System Administrator role 
+  * Using the quick-launch, open: *Process Definition* window 
+    * You can find it in the menu: `Application Dictionary` > `Process Definition` 
+
+  * Create a new record 
+  * Fill all required fields 
+    * *Module:* Pick your module 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](https://docs.etendo.software/concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Name:* Product List 
+    * *UI Pattern:* Report (Using JR templates) 
+    * *Data Access Level:* Client/Organization 
+    * *Handler*: use the default `org.openbravo.client.application.report.BaseReportActionHandler`
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
+
+We must copy the .jrxml template file generated with Jaspersoft Studio into our module. When using Process Definition to generate a Report, templates need to be stored in the web folder of the module. In our example, we place it in the following location: `/web/com.etendoerp.platform.features/jasper`
+
+  * Navigate to the *Report Definition* tab 
+  * Fill the PDF template field with the location of the .jrxml file 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
+
+#####  Creating the Menu record
+
+  * Using the System Administrator role 
+  * Open the Menu window 
+  * Create a new record 
+  * Fill all required fields: 
+    * *Module:* Your module 
+    * *Name:* Name of the menu entry (Product List) 
+    * *Description:* Description of the action related to the menu entry 
+    * *Action:* Pick `Process Definition` 
+    * *Process Definition:* Pick your Process Definition (Product List) 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
+
+####  Compiling
+
+After you have registered the report and menu entry in the Application Dictionary, you need to compile to generate the necessary code.
+
+``` bash title="Terminal"
+./gradlew smartbuild
+```
+
+Once the compilation has been completed, restart your Tomcat server.
+
+####  Testing the Report
+
+If you have completed all the steps, you should be able to open your Product List report form the quick-lauch, or menu entry.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
+
+####  Further Details
+
+#####  Layout
+
+For information on how JasperReports handles the layout, check [Making HTML,XLS or CSV friendly reports](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/making-html-xls-or-csv-friendly-reports/){target="\_blank"}.
+
+Also, a tutorial with the basics of how to design a report can be found [here](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/designing-report-jaspersoft-studio/){target="\_blank"}.
+
+#####  Configuring Cell Type in XLS Reports
+
+By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
+
+If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
+
+To override this configuration, the following must be done inside the .jrxml report template:
+
+  1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
+  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
+
+!!!note
+    The decimal and thousands *separators* used for the numeric
+    cells exported in this way, will be those defined inside the spreadsheet
+    program itself (LibreOffice Calc, Excel,etc).
+
+#####  Creating a Report Using Report and Process
+
+In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
+
+#####  Report Compilation
+  
+When printing a report in the application, it is previously compiled at runtime. The result of this report compilation is cached if there are no modules in _in development_ status.
+
+Besides, it is possible to handle the state of this cache through a JMX extension. Thus, this extension allows to:
+
+  * See if the cache is enabled. 
+  * Enable/Disable the cache. 
+  * See the list of reports whose compilation is stored in cache. 
+  * Clear the cache contents. 
+
+#####  Barcodes
+
+It is possible to generate barcodes from JasperReports, using barcode4j or barbecue libraries. These libraries are included in [Barcode generation in reports](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
+
+In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
+
+---
+This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create Jest Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create Jest Test Cases
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-jest-testcases
+## Article Content: 
+### How to Create Jest Test Cases
+  
+####  Overview
+
+[Jest](https://jestjs.io/){target="_blank"} is a testing framework created by Facebook and currently used as the default testing framework in  [create-react-app](https://github.com/facebook/create-react-app){target="_blank"}  . Unlike Mocha, it is an opinionated test runner and provides its own assertion and mocking methods. The main advantage is that it runs out-of-the-box and has good integration with technologies like React, Babel or Typescript.
+
+####  Installation
+
+All dependencies can be installed just by
+running:
+    
+    npm install
+
+####  Creating a Test Case
+
+!!! info
+    Tests should be placed in `web-test` folder, and files should have the
+    suffix `.test.js` .
+
+    This is a valid path for a test class:
+
+    `modules/com.etendoerp.mymodule/web-test/mycomponent.test.js`  
+
+Now you can require() your subject under test and start creating test cases. See  [Jest documentation](https://jestjs.io/docs/getting-started){target="_blank"}  for reference.
+
+######  Sample test file
+
+```javascript title="org.openbravo.client.application/web-test/ob-utilities-date.test.js"
+require('../web/org.openbravo.client.application/js/utilities/ob-utilities-date');
+ 
+describe('org.openbravo.client.application - OB.Utilities.Date', () => {
+  beforeEach(() => {
+    // Execute this before each test
+  });
+ 
+  afterEach(() => {
+    // Execute this after each test
+  });
+ 
+  it('The year where we should change century in 2 digits year format is 50', () => {
+    expect(OB.Utilities.Date.centuryReference).toEqual(50);
+  });
+ 
+  // Describe blocks can be nested to group test cases
+  describe('OB.Utilities.Date.normalizeDisplayFormat', () => {
+    it('function works', () => {
+      const normalizedFormat = OB.Utilities.Date.normalizeDisplayFormat('DD-MM-YYYY');
+      expect(normalizedFormat).toEqual('%d-%m-%Y');
+    });
+ 
+    it('function works with other input', () => {
+      const normalizedFormat = OB.Utilities.Date.normalizeDisplayFormat('DD-MM-YY');
+      expect(normalizedFormat).toEqual('%d-%m-%y');
+    });
+  });
+});
+```
+
+####  Run tests/coverage
+
+To run all unit tests available in an Etendo instance (both Core and all installed modules), run the following command:
+
+    npm test
+
+Testing can be limited to a particular module adding the path at the end of the command:    
+    
+    npm test modules/com.etendoerp.mymodule/
+
+If, along with the test, you want to see a coverage report, run:
+    
+    npm run coverage
+
+This work is a derivative of [How to Create Jest testcases](https://wiki.openbravo.com/wiki/How_to_create_Jest_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+  
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create JUnit Test Cases
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Test Cases/How to Create JUnit Test Cases
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/how-to-create-testcases/how-to-create-junit-testcases
+## Article Content: 
+### How to Create JUnit Test Cases
+
+####  Overview
+
+This how-to will focus on creating a test case making use of the `OBBaseTest` and `WeldBaseTest` classes. The test case will check that our system has at least one User with password. For this, we'll use the new DAL approach to access the database.
+
+In computer programming, **unit testing** is a software design and development method where the programmer gains confidence that individual units of source code are fit for use. A unit is the smallest testable part of an application. In procedural programming a unit may be an individual program, function, procedure, etc., while in object-oriented programming, the smallest unit is a method, which may belong to a base/super class, abstract class or derived/child class.
+
+All new developments must belong to a module that is not the _core_ module.
+
+####  Preparing development environment
+
+First of all you need to create a src-test directory in your module package directory in Etendo ERP.
+
+``` 
+modules
+└── com.etendoerp.example
+    └── src-test                <-- source of the test cases 
+        └── src
+            └── com.etendoerp.example
+                └── EtendoTest.java
+```
+
+!!! info
+    In the file `tests.gradle` you need comment the line: `test.dependsOn('ant.compile.test')` for running the tests locally.
+
+Now, you are ready to work with test cases.
+
+####  Creating the test case
+
+#####  Inheriting from OBBaseTest
+
+All the core test cases are subclasses from `OBBaseTest`. (org.openbravo.test.base.OBBaseTest). This class handles all the necessary steps to initialize the Data Access Layer, takes care of transaction handling and provides a set of utilities (methods) for working with the Openbravo context (OBContext).
+
+!!! info
+    When writing test cases for Etendo that involve dependency injection or require the execution of DAL event observers, it is recommended to extend `org.openbravo.base.weld.test.WeldBaseTest` instead of `org.openbravo.test.base.OBBaseTest`.
+    `OBBaseTest` has limitations related to CDI, and it does not support certain features that are available when using WeldBaseTest tests. The latter is a subclass of `OBBaseTest` and provides access to the complete DAL infrastructure, making it more suitable for scenarios involving CDI and event observers.
+    Make sure to use `WeldBaseTest` to leverage the full capabilities of dependency injection and DAL event observers in your test cases.
+
+
+#####  Execution order of test methods
+
+Until now, the methods were simply invoked in the order returned by the reflection API. However, using the JVM order is unwise since the Java platform does not specify any particular order. Of course, well-written test code would not assume any order, but some does, and a predictable failure is better than a random failure on certain platforms.
+
+#####  Creating the Java class
+
+  * Open your IntelliJ IDE. 
+  * Create a new folder structure under the ``modules`` folder: ``modules/com.etendoerp.examples/src-test/src/com.etendoerp.example`` . 
+  * Create a new Java class with the following content: 
+
+    
+```java title="ExampleTest.java" 
+package com.etendoerp.example;
+ 
+import static org.junit.Assert.assertTrue;
+ 
+import java.util.List;
+ 
+import org.junit.Test;
+import org.junit.Before;
+import org.openbravo.dal.core.OBContext;
+import org.openbravo.dal.service.OBCriteria;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.model.ad.access.User;
+import org.openbravo.base.weld.test.WeldBaseTest;
+import org.openbravo.test.base.TestConstants;
+import org.openbravo.client.kernel.RequestContext;
+import org.openbravo.base.secureApp.VariablesSecureApp;
+
+
+public class ExampleTest extends WeldBaseTest {
+
+  @Override
+  @Before
+  public void setUp() throws Exception {
+    super.setUp();
+    OBContext.setOBContext(TestConstants.Users.SYSTEM, TestConstants.Roles.SYS_ADMIN,
+        TestConstants.Clients.SYSTEM, TestConstants.Orgs.MAIN);
+    VariablesSecureApp vsa = new VariablesSecureApp(
+        OBContext.getOBContext().getUser().getId(),
+        OBContext.getOBContext().getCurrentClient().getId(),
+        OBContext.getOBContext().getCurrentOrganization().getId(),
+        OBContext.getOBContext().getRole().getId()
+    );
+    RequestContext.get().setVariableSecureApp(vsa);
+  }
+ 
+  @Test
+  public void testUsersCount() {
+    final OBCriteria<User> uCriteria = OBDal.getInstance().createCriteria(User.class);
+    final List<User> uList = uCriteria.list();
+    int userCount = 0;
+    for (User u: uList) {
+      if (u != null && u.getPassword() != null && !u.getPassword().isEmpty())
+        userCount++;
+    }
+    assertTrue(userCount > 0);
+    System.out.println("Total of users with password: " + (userCount));
+  }
+}
+```
+     
+
+######  Understanding the class
+
+You have just created a new class named Example that extends from the `WeldBaseTest` class.
+
+```java
+public void testUsersCount() {}
+```
+
+This class has a testUsersCount function. Note that all testing methods _must_ start with test in the function name. e.g. ``testAllWarehouses()``, ``testMyFirstTest()``, etc        
+
+```java
+
+@Override
+@Before
+public void setUp() throws Exception {
+  super.setUp();
+  OBContext.setOBContext(TestConstants.Users.SYSTEM, TestConstants.Roles.SYS_ADMIN,
+      TestConstants.Clients.SYSTEM, TestConstants.Orgs.MAIN);
+  VariablesSecureApp vsa = new VariablesSecureApp(
+      OBContext.getOBContext().getUser().getId(),
+      OBContext.getOBContext().getCurrentClient().getId(),
+      OBContext.getOBContext().getCurrentOrganization().getId(),
+      OBContext.getOBContext().getRole().getId()
+  );
+  RequestContext.get().setVariableSecureApp(vsa);
+}
+```
+
+Sets the context as if a System Administrator is logged in the application. You can also set the context as if another user is logged in the application.
+
+```java
+final OBCriteria<User> uCriteria = OBDal.getInstance().createCriteria(User.class);
+final List<User> uList = uCriteria.list();
+```
+
+Uses the `OBDal` instance to create a new `OBCriteria` object, and uses it for listing all (since we are not filtering) the Users in the database.
+
+```java
+int userCount = 0;
+for (User u: uList) {
+  if (u != null && u.getPassword() != null && !u.getPassword().isEmpty())
+    userCount++;
+}
+```
+
+We loop trough the uList collection, and we increment the userCount variable if the user has a password.
+
+```java
+assertTrue(userCount > 0);
+```
+
+We assert that the userCount is more than 0.
+
+```java
+System.out.println("Total of users with password: " + (userCount));
+```
+
+Finally we print a total of users with password just for the record.
+
+#####  Transaction Handling
+
+A question which might pop-up when looking at the above code: where is the database transaction handling done? The answer is that this is handled by the `WeldBaseTest` class and the Etendo data access layer:
+
+  * a transaction is automatically started at first database access in the test cases. This is done by the Data Access Layer. 
+  * a transaction is either committed (when no exception happened) or rolled-back (when an exception happened). 
+
+The `WeldBaseTest` class detects automatically if an exception happened or not.
+
+There are certainly cases whereby it makes sense to have more control over the database transactions. There are a number of relevant methods which can be useful then:
+
+  * `OBDal.getInstance().flush()`: flushes the update/insert queries in hibernate to the database. 
+  * `OBDal.getInstance().commitAndClose()`: commits the transaction and closes the session. A new session/transaction is automatically started at the next database access. 
+  * `OBDal.getInstance().rollbackAndClose()`: rolls back and closes the transactions. A new session/transaction is automatically started at the next database access. 
+
+!!! info
+    DAL event observers  are not triggered within test cases extending `OBBaseTest` class. They to work require of test cases extending `WeldBaseTest`. 
+
+#####  Side-Effect Free
+
+A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
+
+  * When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. 
+  * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterClass` notation. This method runs automatically at the end of the class.
+
+This last point is important because there can be always reasons why during a test the clean-up step is not performed. For example because the test run is stopped before the clean-up is done.
+
+#####  Approach to features of JUnit
+
+######  Parameterized Tests
+
+!!! info
+    For more information, visit:  [Parameterized-Test](https://github.com/junit-team/junit4/wiki/Parameterized-tests){target="_blank"}
+
+######  Rules
+
+!!! info
+    For more information, visit:  [Rules](https://github.com/junit-team/junit4/wiki/Rules){target="_blank"}
+
+######  Assertions and Hamcrest 1.13
+
+!!! info
+    For more information, visit:  [Hamcrest](https://hamcrest.org/){target="_blank"}
+
+Hamcrest is a framework for writing matcher objects allowing 'match' rules to be defined declaratively. There are a number of situations where matchers are invaluble, such as UI validation, or data filtering, but it is in the area of writing flexible tests that matchers are most commonly used.
+
+When writing tests it is sometimes difficult to get the balance right between overspecifying the test, and not specifying enough (making the test less valuable). Having a tool that allows you to pick out precisely the aspect under test and describe the values it should have, to a controlled level of precision, helps greatly in writing tests.
+  
+
+#####  JSON Matchers
+  
+Etendo provides a set of matchers that can be useful when asserting JSONObjects or JSONArrays.
+
+######  equal
+
+Matches when the examined `JSONObject` has exactly the same number of properties with the same values as the expected one. The order of the keys is not taken into account. Supports matcher properties.
+
+```java  
+   
+@Test
+public void testEqual() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
+  JSONObject json5 = new JSONObject(Map.of("p1", 1));
+  JSONObject json6 = new JSONObject(Map.of("p1", greaterThan(0), "p2", startsWith("abc"))); // matcher properties
+ 
+  assertThat("JSON objects are equal", json1, equal(json2));
+  assertThat("JSON objects are equal", json1, equal(json3));
+  assertThat("JSON objects are not equal", json1, not(equal(json4)));
+  assertThat("JSON objects are not equal", json1, not(equal(json5)));
+  assertThat("JSON objects are equal", json1, equal(json6));
+}
+```
+
+######  matchesObject
+
+Matches when the examined JSONObject contains the properties with the same values of the expected one. The order of the keys is not taken into account. Supports matcher properties.
+
+```java
+ 
+@Test
+public void testMatchesObject() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json3 = new JSONObject(Map.of("p2", "abcd", "p1", 1));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1, "p2", "efgh"));
+  JSONObject json5 = new JSONObject(Map.of("p1", 1));
+  JSONObject json6 = new JSONObject(Map.of("p1", 1, "p2", "abcd", "p3", "abcd"));
+  JSONObject json7 = new JSONObject(Map.of("p1", greaterThan(0), "p2", "abcd"));
+ 
+  assertThat("JSON object match", json1, matchesObject(json2));
+  assertThat("JSON object match", json1, matchesObject(json3));
+  assertThat("JSON object does not match", json1, not(matchesObject(json4)));
+  assertThat("JSON object match", json1, matchesObject(json5));
+  assertThat("JSON object does not match", json1, not(matchesObject(json6)));
+  assertThat("JSON object match", json1, matchesObject(json7));
+}
+```
+
+######  hasItems
+
+Used to match the items of a `JSONArray`. This matcher can be used with two different kind of arguments.
+
+If an array of objects is passed, then it matches when the examined `JSONArray` contains all the received objects. The order of the objects is not taken into account.
+
+```java   
+ 
+@Test
+public void testHasItems() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
+  JSONArray array = new JSONArray();
+  array.put(json1);
+  array.put(json2);
+  array.put(5);
+  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
+  JSONObject json4 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
+ 
+  assertThat("JSON array has items", array, hasItems(5, json3));
+  assertThat("JSON array does not have items", array, not(hasItems(4, json3)));
+  assertThat("JSON array does not have items", array, not(hasItems(json4)));
+}
+```
+
+It also supports receiving an array of  Hamcrest  matchers. In that case, then it matches when the examined JSONArray matches with all the received matchers.
+
+```java
+ 
+@Test
+public void testHasItems() {
+  JSONObject json1 = new JSONObject(Map.of("p1", 1, "p2", "abcd"));
+  JSONObject json2 = new JSONObject(Map.of("p2", 2, "p3", "efgh"));
+  JSONArray array = new JSONArray();
+  array.put(json1);
+  array.put(json2);
+  array.put(5);
+  JSONObject json3 = new JSONObject(Map.of("p2", 2, "p3", startsWith("e")));
+  JSONObject json4 = new JSONObject(Map.of("p1", 1));
+  JSONObject json5 = new JSONObject(Map.of("p2", 2, "p3", "ijkl"));
+ 
+  assertThat("JSON array has items", array, hasItems(greaterThan(4), equal(json3)));
+  assertThat("JSON array has items", array, hasItems(greaterThan(4), matchesObject(json4)));
+  assertThat("JSON array does not have items", array, not(hasItems(greaterThan(5))));
+  assertThat("JSON array does not have items", array, not(hasItems(equal(json5))));
+}
+```
+
+##### Run Tests
+
+Etendo has a number of ant tasks which run the test cases:
+
+  * `./gradlew test`: This suite contains all the test cases.
+  * `./gradlew test --tests "module-name.\*"`: This suite contains all the test cases of a particular module. (e.g. `./gradlew test --tests "com.etendoerp.example.\*"`)
+
+All the test cases are based on the Small Bazaar default data.
+
+When adding new test classes to Etendo ERP the developer has to always add the test class to the AllAntTaskTests test suite and if it is side effect free and quick to the AllQuickAntTaskTests and if it is side effect free but takes a bit more time to the AntTaskTests test suite.
+
+#####  The Result
+
+To be able to execute your test cases:
+
+  * Right click on the `ExampleTest` class. 
+  * Select Run `ExampleTest`. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
+
+  * You can check the result of the test case on the JUnit view and the output of your tests in the Console view: 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
+
+Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
+``` 
+build
+└── reports
+    └── tests 
+        └── test
+            └── index.html
+```
+
+####  Testing Requests
+
+In general unit tests don't require of an Etendo Classic instance running in Tomcat to be executed. But in some cases, how requests work is wanted to be tested. Depending on the request to be tested, different classes should be extended:
+
+  * _REST Webservices_ . ` BaseWSTest ` should be extended, it deals with authentication and provides methods to execute requests, parse xml results, etc. 
+  * _Other Requests_ (such as datasources). ` BaseDataSourceTestNoDal ` or ` BaseDataSourceTestDal ` classes can be extended (depending if the test case requires or not DAL). Similarly to webservices it provides authentication handling as well as utility methods to perform requests. 
+
+####  Testing CDI
+  
+Default test cases extending ` org.openbravo.test.base.OBBaseTest ` class cannot make use of dependency injection. In order to use it ` org.openbravo.base.weld.test.WeldBaseTest ` class needs to be extended instead. This is also a subclass of ` OBBaseTest ` , so it makes available all DAL infrastructure.
+
+` OBBaseTest ` uses internally  Arquillian  runner to create a Weld container.
+
+Example of a test case injecting dependencies:
+
+```java
+
+public class CdiInfrastructure extends WeldBaseTest {
+ 
+@Inject
+private ApplicationScopedBean applicationBean;
+ 
+@Inject
+private SessionScopedBean sessionBean;
+ 
+@Inject
+private RequestScopedBean requestBean;
+ 
+/** beans are correctly injected */
+@Test
+public void beansAreInjected() {
+  assertThat("application bean is injected", applicationBean, notNullValue());
+  assertThat("session bean is injected", sessionBean, notNullValue());
+  assertThat("request bean is injected", requestBean, notNullValue());
+}
+}
+```
+
+#####  Scopes
+
+Application and session scopes are shared among all test cases in the same class whereas a new request scope is created for each test case method. Application scope is reset for each new class.
+
+```java
+
+/** starts application and session scopes */
+@Test
+@InSequence(1)
+public void start() {
+  applicationBean.setValue("application");
+  sessionBean.setValue("session");
+  requestBean.setValue("request");
+ 
+  assertThat(applicationBean.getValue(), equalTo("application"));
+  assertThat(sessionBean.getValue(), equalTo("session"));
+  assertThat(requestBean.getValue(), equalTo("request"));
+}
+ 
+/** application and session scopes are preserved but not request scope */
+@Test
+@InSequence(2)
+public void applicationAndSessionShouldBeKept() {
+  assertThat(applicationBean.getValue(), equalTo("application"));
+  assertThat(sessionBean.getValue(), equalTo("session"));
+  assertThat(requestBean.getValue(), nullValue());
+}
+```
+
+#####  Parameterization
+
+Because ` CdiInfrastructure ` class uses `org.jboss.arquillian.junit.Arquillian` runner, it is not possible to use other runners, which also includes ` org.junit.runners.Parameterized ` runner.
+
+This limitation can be workarounded by adding a field annotated as ` @Rule ` with ` org.openbravo.base.weld.test.ParameterCdiTestRule ` type created with the list of the values for parameters and another field annotated as ` @ParameterCdiTest ` which will take those values. In this case each test case will be executed as many times as number of items the parameter list contains each of them the parameter field will take a different item.
+
+```java
+ 
+public class ParameterizedCdi extends WeldBaseTest {
+  public static final List<String> PARAMS = Arrays.asList("param1", "param2", "param3");
+ 
+  /** defines the values the parameter will take. */
+  @Rule
+  public ParameterCdiTestRule<String> parameterValuesRule = new ParameterCdiTestRule<String>(
+      PARAMS);
+ 
+  /** this field will take the values defined by parameterValuesRule field. */
+  private @ParameterCdiTest String parameter;
+ 
+  private static int counterTest1 = 0;
+ 
+  /** Test case to be executed once per parameter value */
+  @Test
+  public void test1() {
+    assertThat("parameter value", parameter, equalTo(PARAMS.get(counterTest1)));
+    counterTest1++;
+  }
+}
+```
+
+In this example ` test1 ` test case will be executed 3 times having ` parameter ` field "param1", "param2" and "param3" value in each of these executions.
+
+Unlike when using ` Parameterized.class ` runner, all these 3 executions are seen as a single execution ( ` Parameterized.class ` would show 3 independent executions), this causes that if, for example, first execution fails the rest will not be run.
+
+#####  DAL event observers
+
+Because  DAL event observers  make use of CDI to work, they are not executed in standard test cases extending ` OBBaseTest ` .
+
+This limitation does not apply when using ` WeldBaseTest ` tests.
+
+This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to create a Dataset
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Dataset
 ## Article URL: 
@@ -33242,6 +34056,359 @@ the information of each execution. The most important fields are:
 This work is a derivative of [How to Create a Background Process](http://wiki.openbravo.com/wiki/How_to_create_a_Background_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Implement a Business Event Handler
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Implement a Business Event Handler
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler
+## Article Content: 
+### How to Implement a Business Event Handler
+
+#### Overview
+
+The  business entity event  allows you to implement business logic which reacts to specific events which are fired when entities are updated, deleted or inserted into the database. 
+Business entity events correspond to triggers in the database. 
+The main advantage of implementing logic using business entity events instead of in triggers is that you can code your logic in java using your IDE. 
+This helps productivity and quality as you can code, debug and test in an integrated environment with the rest of your business logic.
+
+!!! note "Some notes on business entity events:"
+    * They are fired when an entity instance is updated, deleted or inserted. Before the actual operation has been done in the database, so you can change or add information which persists together with the event entity. 
+    * Your event handling code runs in the same transaction as the business event, changes you make to the database persist together with the business entity event in one transaction. 
+    * Business entity events only work when accessing the database through the data access layer, so they do not work for classic windows or direct jdbc calls.
+    * You can make use of the full [data access layer](https://docs.etendo.software/concepts/Data_Access_Layer.md) functionality in your event handling code, you can query, create new objects, persist etc.
+      
+      Warning: Don't call setters on the instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. 
+      So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
+
+
+Business events make use of the event framework provided by the [Weld](https://docs.etendo.software/concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. Weld automa
+
+!!!note
+    In order to maximize performance, certain part of the classpath are excluded, check out [this section](https://docs.etendo.software/concepts/Etendo_Architecture.md#Analyzing_the_classpath) if your event handlers are not found.
+
+In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
+
+####  Example Module
+
+This section is supported by an example module which shows an example of the code shown and discussed here.
+
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+  
+####  The event handler - A first implementation
+
+An event handler is implemented as a normal java class in your module. The key thing is to create methods with an annotation on the parameters. Here is a first simple example of an event handler which listens to events on the Greeting entity:
+
+    
+```java title="GreetingEventHandler.java"
+class GreetingEventHandler extends EntityPersistenceEventObserver {
+  private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
+  private static final Logger logger = LogManager.getLogger();
+ 
+  @Override
+  protected Entity[] getObservedEntities() {
+    return entities;
+  }
+ 
+  public void onUpdate(@Observes EntityUpdateEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+  }
+ 
+  public void onSave(@Observes EntityNewEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
+        + " is being created");
+  }
+ 
+  public void onDelete(@Observes EntityDeleteEvent event) {
+    if (!isValidEvent(event)) {
+      return;
+    }
+    logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
+  }
+}
+```
+
+!!!note
+    * It makes sense to extend the [EntityPersistenceEventObserver](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.kernel/src/org/openbravo/client/kernel/event/EntityPersistenceEventObserver.java){target="\_blank"}, it helps to filter for the correct events. 
+    * The name of the method is not relevant, the relevant thing is the annotation on the parameter and the parameter. Weld uses this to detect and register for which events this class listens to 
+    * The event handler will be called for events occurring on all entities, therefore each method starts with the if statement with isValidEvent, to filter out unwanted events. 
+    * The use of the `_org.apache.logging.log4j.Logger_` class is recommended for logging as shown above 
+
+!!!info
+    Classes extending `_EntityPersistenceEventObserver_` are defined as `_@ApplicationScoped_` by default.
+
+#####  Result
+
+When you add the above class to your module, restart the system, then go to the greeting window:
+[http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)
+
+And do some actions you should see the following messages in the console:
+
+```bash
+Greeting FF8081813097E041013097E805F4000F is being updated
+Greeting FF8081813097E041013097E805F4000F is being deleted
+Greeting Mr is being created
+```
+
+#####  Event methods
+
+The source code above illustrates how the event methods are implemented:
+     
+```java    
+public void onUpdate(@Observes EntityUpdateEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+}
+ 
+public void onSave(@Observes EntityNewEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
+      + " is being created");
+}
+ 
+public void onDelete(@Observes EntityDeleteEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  logger.info("Greeting " + event.getTargetInstance().getId() + " is being deleted");
+}
+```
+
+!!!note 
+    * You only need to implement a method for the event you want to listen to, so if you only need to listen to update events, then only implement a method with the @Observes EntityUpdateEvent parameter. 
+    * Each method starts with a check if the event is valid, this is needed to filter for relevant events only, see the section below. 
+    * Within the event handler methods, you can use the api on the event object to detect which is the entity event and to get access to the current and previous state of the entity. See [here](https://docs.etendo.software/concepts/Etendo_Architecture.md#Event_Classes_and_API) for more information. 
+
+#####  Filtering Only Relevant Events
+
+As mentioned above, the event methods get called for all entities of all types. 
+In our example, we only want to handle events on the Greeting entity.
+There is specific code in the example above which takes care of this. 
+It starts in the top of the class:
+
+```java
+private static Entity[] entities = { ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME) };
+ 
+@Override
+protected Entity[] getObservedEntities() {
+  return entities;
+}
+```
+
+The `getObservedEntities` method is called when you call the `isValidEvent` method, `getObservedEntities` returns the entities you want to handle in this event handler. 
+To make use of it add this code to each event handling method in the beginning:
+
+```java
+if (!isValidEvent(event)) {
+  return;
+}
+```
+
+This part is needed because the event methods will be called for entities of all types. 
+In this example we only want to listen to changes on the Greeting entity.
+
+####  Adding some business logic
+
+In this next step, we add logic to the event handler:
+
+  * Whenever a greeting gets created/updated, add a . to the title, if it was not already there 
+  * When a new greeting gets created, add a translation for it. 
+
+!!!note
+    To create a new translation for when a new greeting is added. 
+    For this example, we will be adding a dutch translation.
+    
+
+#####  Changing the entity on update/insert
+
+In this step we will be adding some simple logic to the update and save event to add a dot to the title if it not already has one.
+
+```java
+public void onUpdate(@Observes EntityUpdateEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    // note use setCurrentState and not setters on the Greeting object directly
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
+  logger.info("Greeting " + event.getTargetInstance().getId() + " is being updated");
+}
+ 
+public void onSave(@Observes EntityNewEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final Greeting greeting = (Greeting) event.getTargetInstance();
+  // now also add the dot to the title
+  final String title = greeting.getTitle();
+  if (title != null && !title.endsWith(".")) {
+    final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+    final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+    // note use setCurrentState and not setters on the Greeting object directly
+    event.setCurrentState(greetingTitleProperty, title + ".");
+  }
+ 
+  logger.info("Greeting " + ((Greeting) event.getTargetInstance()).getName()
+      + " is being created");
+}
+```
+
+Let's walk through the code. First, cast the instance and get the title:
+
+    
+```java
+final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+final String title = greeting.getTitle();
+```
+
+If the title does not end on a dot then get the entity and the relevant property:
+
+```java
+if (title != null && !title.endsWith(".")) {
+  final Entity greetingEntity = ModelProvider.getInstance().getEntity(Greeting.ENTITY_NAME);
+  final Property greetingTitleProperty = greetingEntity.getProperty(Greeting.PROPERTY_TITLE);
+```
+
+!!!note
+    We use the generated constants to the entity name and property
+    names, this gives compile time checking and is a recommended practice.
+
+And then set the current state.
+
+!!!note
+    Don't call setters on the Greeting instance itself, this does not work because when the event has been broadcasted, Hibernate has already read the state of the object. So you must change the value through the special `setCurrentState` method:
+
+```java
+event.setCurrentState(greetingTitleProperty, title + ".");
+```
+
+The changed entity instance does not need to be saved explicitly, this is done by the [data access layer](https://docs.etendo.software/concepts/Data_Access_Layer.md) and hibernate automatically.
+
+Then test the changes, go to the window ([http://localhost:8080/etendo/?tabId=282](http://localhost:8080/etendo/?tabId=282)), enter a new greeting without a dot in the title. 
+When saving you will see a dot getting added. 
+Try updating the record, you will have the same behavior.
+
+#####  Adding a child instance
+
+As the next step we will be adding logic to the `onSave` method to create an extra child instance (a new translation). 
+This is a bit more complex. Add the following code to the onSave method at the end:
+
+```java
+final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+// set relevant translation properties
+greetingTrl.setGreeting(greeting);
+// 171 is dutch, choose any other language..
+greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+// note we can call getters on the targetInstance, but not setters!
+greetingTrl.setName(greeting.getName());
+greetingTrl.setTitle(greeting.getTitle());
+greetingTrl.setTranslation(false);
+ 
+// and add the greetingTrl to the greeting
+// we don't use event.setCurrentState as we get the list and add to it
+// get the trl property for the greeting entity
+final Property greetingTrlProperty = greetingEntity
+    .getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+@SuppressWarnings("unchecked")
+final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+greetingTrls.add(greetingTrl);
+ 
+// don't need to save the greetingTrl, it is saved as the child of the greeting
+// OBDal.getInstance().save(greetingTrl);
+```
+
+
+Let's walk through the code. First the trl object is created and some properties are set. 
+Note as the object is not part of the event you can call its setters directly. 
+The language is arbitrarily chosen. 
+See the  [DAL](https://docs.etendo.software/concepts/Data_Access_Layer.md) document for information on the api's you can use to retrieve objects from the database.
+
+```java
+final GreetingTrl greetingTrl = OBProvider.getInstance().get(GreetingTrl.class);
+// set relevant translation properties
+greetingTrl.setGreeting(greeting);
+// 171 is dutch, choose any other language..
+greetingTrl.setLanguage(OBDal.getInstance().get(Language.class, "171"));
+// note we can call getters on the targetInstance, but not setters!
+greetingTrl.setName(greeting.getName());
+greetingTrl.setTitle(greeting.getTitle());
+greetingTrl.setTranslation(false);
+```
+
+Then, as a next step, add the new trl object to the event entity. This is a bit
+special as we need to update a List property of the event entity. So instead
+of calling `setCurrentState` we get the list and add to it. This is a correct way of doing this:
+
+```java
+// and add the greetingTrl to the greeting
+// we don't use event.setCurrentState as we get the list and add to it
+// get the trl property for the greeting entity
+final Property greetingTrlProperty = greetingEntity
+    .getProperty(Greeting.PROPERTY_GREETINGTRLLIST);
+@SuppressWarnings("unchecked")
+final List<Object> greetingTrls = (List<Object>) event.getCurrentState(greetingTrlProperty);
+greetingTrls.add(greetingTrl);
+ 
+// don't need to save the greetingTrl, it is saved as the child of the greeting
+// OBDal.getInstance().save(greetingTrl);
+```
+
+The trl object is a child of the Greeting event entity and will persist together with it, so it is not necessary to explicitly save it.
+When you now enter a new entry in the window, you will see an additional translation child record being created.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-3.png)
+
+#####  Interrupt the Save Action
+
+Sometimes you need to interrupt the save action because the user is doing something wrong, this can be done throwing an exception
+
+```java
+public void onUpdate(@Observes
+EntityUpdateEvent event) {
+  if (!isValidEvent(event)) {
+    return;
+  }
+  final OBSA_Orderline_Assign olineAssign = (OBSA_Orderline_Assign) event.getTargetInstance();
+  if (olineAssign.getProductWithStorage().getProduct() != olineAssign.getSalesOrderLine()
+      .getProduct()) {
+    String language = OBContext.getOBContext().getLanguage().getLanguage();
+    ConnectionProvider conn = new DalConnectionProvider(false);
+    throw new OBException(Utility.messageBD(conn, "OBSA_ErrorProduct", language));
+  }
+}
+```
+
+####  Examples of Business Entity Event Handlers
+
+Etendo Classic uses business entity event handlers to implement business logic in
+various locations, here are some examples:
+
+  * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
+  * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
+
+The complete source code of the example event handler is available [here](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+
+---
+
+This work is a derivative of [How to implement a business event handler](https://wiki.openbravo.com/wiki/How_to_implement_a_business_event_handler){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -34156,6 +35323,248 @@ Last, save changes.
 ---
 
 This work is a derivative of [How to Create a Callout](http://wiki.openbravo.com/wiki/How_to_create_a_Callout){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a field to a Window Tab
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a field to a Window Tab
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab
+## Article Content: 
+### How to add a field to a Window Tab
+
+#### Overview
+
+The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
+
+It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
+
+The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
+
+On this page we will show an example of how to place the `example_column` field in the `Production Run` window using the `create fields` button.
+
+##### Add the fields to the window example
+
+The process to add new fields to an existing window is the same as the one to add fields to a new (empty) window. Going to `Application Dictionary` > `Window, Tabs and Fields`, we need to search for the `Production Run` window. Then, for that window, mark its `Incidence` tab.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_0.png)
+
+Now, we use the Create Fields process on this tab to let it add all columns
+of the underlying _MA_WEIncidence_ table to this tab if they have not been previously
+added.
+
+This will then add one new field to the tab matching the new column
+and automatically place the field into the module.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_1.png)
+
+As a last step, the Synchronize Terminology process should be run to synchronize our newly added fields to the elements created for the columns they are based on, so that the UI labels for the new fields get the names defined in those elements.
+
+If this window should also be used in _classic UI mode_ then now `./gradlew smartbuild` should be execute to compile the changed window.
+
+To see the changes in the new user interface just change the `System Administrator` role used for this section (Select a role where you have access to the window) and go to the modified window to see that it has the new field as shown here:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_tab_2.png)
+
+---
+
+This work is a derivative of [How to add a field to a window tab](http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a canvas field to a Form or Grid
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a canvas field to a Form or Grid
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid
+## Article Content: 
+###  How to add a canvas field to a Form or Grid
+
+#### Overview
+
+This guide explains how to integrate canvas fields into forms and grids within Etendo, enabling the addition of customized visual components such as buttons, links, and calculated labels. 
+Canvas fields offer dynamic data presentation and interaction, leveraging JavaScript development expertise for implementation.
+
+####  Introduction
+
+A canvas field allows the user to add any visual component to a form or a row in a grid. 
+This concept can be used to add a calculated field to a form and grid. 
+Visual components which can be added are for example buttons, links and (computed) labels.
+
+In this section, we will be adding a button and a calculated field to the form and to every row in the grid.
+We will illustrate how information from the record and form can be used to get dynamic information from the Form/Grid.
+
+The implementation of canvas fields requires javascript development experience. 
+See the following concept pages for background information on javascript development:
+
+  * [Client Side Development and API](https://docs.etendo.software/concepts/Client_Side_Development_and_API.md)
+  * [JavaScript Coding Conventions](https://docs.etendo.software/concepts/JavaScript_Coding_Conventions) 
+
+It also makes sense to study the following page: [Etendo Architecture](https://docs.etendo.software/concepts/Etendo_Architecture).
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
+
+####  Example Module
+
+This section is supported by an example module which shows examples of the code shown and discussed.
+
+The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip)
+
+####  Main development steps for creating a new canvas field
+
+The development consists of 2 steps:
+
+  1. Implement the canvas itself, normally this is done in javascript. 
+  2. Specify the canvas javascript class in the field definition of the tab/window 
+
+#####  Implementing your canvas in javascript
+
+The first step is to implement your canvas class in javascript. This is done in 2 steps:
+
+  * Create a  [javascript](https://docs.etendo.software/concepts/Client_Side_Development_and_API#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) 
+
+The example module implements a button and a calculated field in the `example-canvas-field.js` file.
+
+The first example in the file implements a button which shows the identifier of the current record:
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
+ 
+isc.OBEXAPP_SalesOrderActionButton.addProperties({
+  noTitle: true,
+  title: OB.I18N.getLabel('OBUISC_Identifier'),
+  click: function() {
+    var info = '';
+    if (this.record) {
+      info = this.record._identifier;
+    } else if (this.canvasItem) {
+      info = this.canvasItem.form.getValue(OB.Constants.IDENTIFIER);
+    }
+    isc.say(info);
+  }
+});
+```
+
+The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. 
+It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
+ 
+isc.OBEXAPP_SalesOrderCalculated.addProperties({
+  height: 1,
+  width: 1,
+  overflow: 'visible',
+  contents: '',
+  initWidget: function() {
+    if (this.canvasItem) {
+      this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+    }
+ 
+    this.Super('initWidget', arguments);
+  },
+  
+  // is called when the form gets redrawn
+  redrawingItem: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called when a field on the form changes its value
+  onItemChanged: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called in grid-display mode when the canvas is created/used
+  // for a record
+  setRecord: function(record) {
+    this.computeContents(record.grandTotalAmount, record.summedLineAmount);
+  },
+  
+  computeContents: function(val1, val2) {
+    var num;
+    if (!val2) {
+      this.setContents('');
+    } else {
+      num = OB.Utilities.Number.JSToOBMasked(val1/val2, 
+          OB.Format.defaultNumericMask,
+          OB.Format.defaultDecimalSymbol,
+          OB.Format.defaultGroupingSymbol,
+          OB.Format.defaultGroupingSize);
+      
+      this.setContents(num);
+    }
+  }
+});
+```
+
+The javascript file is registered in the example modules' [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) like this:
+
+    
+```java title="ExampleComponentProvider.java"
+@Override
+public List<ComponentResource> getGlobalComponentResources() {
+  final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+  globalResources.add(createStaticResource(
+      "web/org.openbravo.client.application.examples/js/example-canvas-field.js", false));
+.....
+```
+
+#####  Defining the canvas in the Tab-Field (ADField)
+
+The next step is to create a new field in the tab, and set its client class field:  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
+
+It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
+
+#####  The result
+
+The result is shown in both the grid and the form:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
+
+####  Javascript events passed to the canvas
+
+When implementing your canvas, you should take into account that the canvas is used in 3 different situations:
+
+  * When displaying a row in the grid 
+  * When editing a row in the grid 
+  * In form view, when editing a record 
+
+The last 2 cases are similar.
+
+In grid-display mode the following applies:
+
+  * In grid mode the following properties are set on the canvas: 
+    * `grid`: the grid object 
+    * `rowNum`: the row number/record index for which the canvas is used 
+    * `record`: the record for which the canvas is used 
+    * `colNum`: the column in which the canvas is shown 
+    * `field`: the field where the canvas is used 
+  * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
+  When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
+
+In form-edit or grid-edit mode, the following applies:
+
+  * The canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
+    * `this.canvasItem.form`: the form instance 
+    * `this.canvasItem.form.grid`: in case of grid editing 
+  * If the canvas has a property noTitle with the value `true` then in form mode no title/label is displayed 
+  * Form changes: the canvas can capture form/value change events by implementing 2 methods (both without arguments): 
+    * `onItemChanged`: is called when a value on the form changes 
+    * `redrawingItem`: is called just before the form is redrawn 
+
+####  Adding server side actions
+
+The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](https://docs.etendo.software/concepts/.Etendo_Architecture#actionhandler-server-side-calling-from-the-client)  for this purpose.
+
+---
+
+This work is a derivative of ["How to add a canvas field to a form or grid"](http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to change an existing Window
@@ -38599,7 +40008,7 @@ Etendo UI is a _library of components_ that will be used throughout the example 
 
 ![etendo-ui-library-npm.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
 
-For more information, visit [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
 
 _Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
@@ -38739,7 +40148,7 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
 ## Article Content: 
 #### Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
     Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
@@ -39835,7 +41244,7 @@ After save, the final result, you should see something like this:
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
 ## Article Path: /Developer Guide/Etendo Mobile/Etendo UI Library
-Article URL: https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs
+Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40028,7 +41437,9 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | QAA |  | :white_check_mark: |
+| [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | QAA |  | :white_check_mark: |
+| [23Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.4){target="_blank"} | 15/03/2024 | 23.4.4 | C |  | :white_check_mark: |
+| [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | C |  | :white_check_mark: |
 | [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | C |  | :white_check_mark: |
 | [23Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.1){target="_blank"} | 02/02/2023 | 23.4.1 | C |  | :white_check_mark: |
 | [23Q4.0](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.0){target="_blank"} | 28/12/2023 | 23.4.0 | C | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) | :white_check_mark: |
@@ -40141,7 +41552,9 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
+| [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.12.0){target="_blank"} | 29/12/2023 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.9.0){target="_blank"} | 14/09/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
@@ -40150,12 +41563,12 @@ Article URL: https://etendo.software
 | [1.6.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.6.0){target="_blank"} | 29/06/2023 | 23.2.0 | 23.2.8 | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.5.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.8 | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.4.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | :white_check_mark:|
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.1.0 | 23.1.5 | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.2.0){target="_blank"} | 06/04/2023	| 22.1.0 | 23.1.5 | C | |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.3){target="_blank"} 	|09/01/2023	| 22.1.0 | 22.4.5 | C | |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.2){target="_blank"} | 06/10/2022 | 22.1.0 | 22.3.0 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.1.1){target="_blank"} | 19/07/2022	| 22.1.0 | 22.2.2 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022	| 22.1.0 | 22.2.2 | C | |
 | 1.0.501 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.400 | 05/04/2022 | 22.1.0 | 22.1.3 | C | |
@@ -40215,10 +41628,10 @@ Article URL: https://etendo.software
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.5.0){target="_blank"} | 30/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.1.0 | 23.2.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/1.3.0){target="_blank"} | 17/05/2023 | 22.1.0 | 23.1.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| :white_check_mark: |
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | :white_check_mark: |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.2.0){target="_blank"} | 05/04/2023 | 22.1.0 | 23.1.5 | C	| |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 06/01/2023 | 22.1.0 | 22.4.5 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.1){target="_blank"} | 05/10/2022 | 22.1.0 | 22.3.0 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.sales.extensions/releases/tag/v1.1.2){target="_blank"} | 11/07/2022 | 22.1.0 | 22.2.2 | C | |
 | 1.0.400 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | - | 22.1.0 | 22.1.3 | C | |
 | 1.0.200 | - | 21.4.0 | 22.1.3 | C | |
@@ -40237,7 +41650,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.5){target="_blank"} | 15/03/2024 | 23.1.4 | 23.4.x | CS | :white_check_mark: |
+| [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.3){target="_blank"} | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.2){target="_blank"} | 14/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.1){target="_blank"} | 10/01/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
@@ -40255,15 +41669,15 @@ Article URL: https://etendo.software
 | [1.7.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.7.0){target="_blank"} | 31/05/2023 | 23.1.4 | 23.1.5 | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.5.0){target="_blank"} | 17/05/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.3.0){target="_blank"} | 06/04/2023 | 22.4.2 | 23.1.5 | C | :white_check_mark: |
-| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | :white_check_mark: |
-| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | :white_check_mark: |
-| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | :white_check_mark: |
-| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | :white_check_mark: |
-| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | :white_check_mark: |
+| [1.2.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.4){target="_blank"} | 14/02/2023 | 22.4.2 | 22.4.x | CS | |
+| [1.2.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.3){target="_blank"} | 31/01/2023 | 22.4.2 | 22.4.x | C | |
+| [1.2.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.2){target="_blank"} | 10/01/2023 | 22.2.1 | 22.4.x | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.2.0){target="_blank"} | 12/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.4){target="_blank"} | 11/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.3){target="_blank"} | 06/10/2022 | 22.2.1 | 22.3.0 | C | |
+| [1.1.2](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.2){target="_blank"} | 30/08/2022 | 22.2.1 | 22.2.2 | C | |
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.1.1){target="_blank"} | 10/07/2022 | 22.1.1 | 22.2.2 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/v1.1.0){target="_blank"} | 08/07/2022 | 22.1.1 | 22.2.2 | C | |
 | 1.0.500 | 24/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.400 | 15/06/2022 | 22.1.0 | 22.1.3 | C | |
 | 1.0.300 | 23/04/2022 | 22.1.0 | 22.1.3 | C | |
@@ -40281,7 +41695,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | CS | :white_check_mark: |
+| [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.1){target="_blank"} | 28/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.0){target="_blank"} | 06/02/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -40294,16 +41709,15 @@ Article URL: https://etendo.software
 | [1.4.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.1){target="_blank"} | 19/09/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.4.0){target="_blank"} | 27/06/2023 | 22.4.3 | 23.2.8 | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.3.0){target="_blank"} | 24/05/2023 | 22.4.3 | 23.1.5 | C | :white_check_mark: |
-| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | :white_check_mark: |
-| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | :white_check_mark: |
-| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | :white_check_mark: |
-| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | :white_check_mark: |
-| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | :white_check_mark: |
-| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \*     | C | :white_check_mark: |
-| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \*     | C | :white_check_mark: |
-
+| [1.2.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.1){target="_blank"} | 26/04/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.2.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.2.0){target="_blank"} | 03/03/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.1.1){target="_blank"} | 03/02/2023 | 22.4.3 | 22.4.5 | C | |
+| [1.0.5](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.5){target="_blank"} | 12/01/2023 | 21.4.0 | 22.4.5 | C | |
+| [1.0.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.4){target="_blank"} | 07/12/2022 | 21.4.0 | 22.3.0 | C | |
+| [1.0.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.3){target="_blank"} | 06/10/2022 | 21.4.0 | 22.3.x | C | |
+| [1.0.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.2){target="_blank"} | 11/07/2022 | 21.4.0 | 22.2.2 | C | |
+| [1.0.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.0.1){target="_blank"} | 16/06/2022 | 21.4.0 | \* | C | |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/v1.0.0){target="_blank"} | 01/01/2022 | 21.4.0 | \* | C | |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Procurement Extensions Bundle
