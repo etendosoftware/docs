@@ -54,7 +54,7 @@ The following sections discuss the main topic of this section: create and setup 
 
 The first step in the development process is to create a new module. From the Application menu, select `Application Dictionary` > `Module`.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-0.png)
 
 Note the following important fields: (for more details see the  AD_Module table description):
 
@@ -84,7 +84,7 @@ We will define the module using the following three tabs of the `Application Dic
 
 Dependency: Etendo Classic core functionality is in itself a module, called _Core_. All modules have a dependency on User Interface Application and in turn, it has a dependency on Etendo core. In the Dependency window, specify that the module is dependent on User Interface Application. (see also the  AD_Module_Dependency description):
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-1.png)
 
   
 DB Prefix: at least one db prefix is required when a module also contains database artifacts (table, column, constraints, etc.). Etendo Classic determines the module of a database artifact by checking to see if its name starts with one of the defined db_prefixes. If database artifacts will be added to the module, at least one DB prefix must be specified.
@@ -93,7 +93,7 @@ DB Prefix: at least one db prefix is required when a module also contains databa
     DB Prefix can only contain uppercase [A-Z0-9] and the first letter is required to be from [A-Z] only.  
 
   
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-2.png)
 
 !!!info
     For more information, see the  AD_Module_Dbprefix  table description.
@@ -101,7 +101,7 @@ DB Prefix: at least one db prefix is required when a module also contains databa
   
 Data Package: Tables are linked to a module through the Data Package. The generated business object for the new table will use the Java Package defined in the  Data Package. If new tables are to be added to the module, a data package must be specified as illustrated in the image below.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module-3.png)
 
 
 ##  Develop your software artifacts
