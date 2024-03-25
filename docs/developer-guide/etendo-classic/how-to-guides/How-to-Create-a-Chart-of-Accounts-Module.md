@@ -7,7 +7,7 @@ tags:
   - Module Creation
 ---
 
-# How to create a Chart of Accounts Module
+# How to Create a Chart of Accounts Module
 
 ## Overview
 
