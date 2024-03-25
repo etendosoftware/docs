@@ -15,30 +15,37 @@ To report a bug, a standard structure is meant to be followed. This structure is
      Short description of the bug.
     
 -   **Steps to reproduce the error**
-    Detailed description that can be followed step by step to reproduce the error. It can include screen videos and/or screenshots.
+    Detailed description of settings and steps to be followed to reproduce the error. It can include screen videos and/or screenshots.
     
 -   **Expected behavior** 
-		Description of the expected behaviour without the bug.
-    
+    Description of the expected behaviour without the bug.
+
 -   **Affected Version**
     Version of **Etendo** in which the error occurs.
-		(*Browser & Version - SO & Version*)
+    (*Browser & Version - SO & Version*)
+
 -   **Solution Design (optional)**
     After analyzing the bug, describe how it will be solved and also if necessary, the details of implementation.
+
 -   **Other test cases**
     If necessary, add more test cases.
  
  ```
   # Error's description
-    
+  
   # Steps to reproduce the error
+
+  ### Required Configurations (if necessary)
+
   1. <step>
   2. <step>
   ...
   
   # Expected behavior
-  
+
   # Affected Version
+  ¿Latest/Specific?
+  Version number:
   
   # Solution Design (optional)
   
