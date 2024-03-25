@@ -6,7 +6,7 @@ tags:
   - Jaspersoft Studio
   - classpath
 ---
-#  How to create a Report
+#  How to Create a Report
   
 ##  Overview
 
