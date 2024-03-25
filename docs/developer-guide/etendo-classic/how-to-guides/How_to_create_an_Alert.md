@@ -5,13 +5,11 @@ tags:
   - alert recipients
   - notification system
   - user roles and permissions
+title: How to Create an Alert
 ---
 
+#  How to Create an Alert
 
-#  How to create an Alert
-
- 
-  
 ##  Overview
 
 The objective of this how-to is to illustrate how you can add new  alerts  to
