@@ -75,7 +75,7 @@ The tabs at the bottom of the window enable you to define the module further:
   * Translation: is used for supporting translations. 
 
   
-In this section, we create an example module, called _Etendo Documentation_ .
+In this section, we create an example module, called _Etendo Howtos_ .
 We will define the module using the following three tabs of the `Application Dictionary` > `Module` window:
 
   * Dependency
