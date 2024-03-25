@@ -7,7 +7,7 @@ tags:
   - System Administrator
 ---
 
-#  How to run an initial client setup process
+#  How to Run an Initial Client Setup Process
 
 ## Overview
 
