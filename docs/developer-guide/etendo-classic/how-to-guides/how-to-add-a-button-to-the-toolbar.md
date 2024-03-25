@@ -5,6 +5,7 @@ tags:
 - JavaScript
 - Data Access Layer
 - Implementation
+title: How to Add a Button to the Toolbar
 ---
 
 # How to Add a Button to the Toolbar
