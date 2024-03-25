@@ -151,6 +151,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module/</loc>
+         <lastmod>2024-03-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/23.x/developer-guide/etendo-classic/how-to-guides/How_To_Log_Using_Log4j1_x/</loc>
          <lastmod>2024-03-25</lastmod>
          <changefreq>daily</changefreq>
