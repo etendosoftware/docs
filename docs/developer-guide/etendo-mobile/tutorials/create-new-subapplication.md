@@ -195,7 +195,7 @@ Etendo UI is a _library of components_ that will be used throughout the example 
 
 ![etendo-ui-library-npm.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
 
-For more information, visit [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
 
 _Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 

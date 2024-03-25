@@ -278,7 +278,6 @@ nav:
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
 #        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
 #        - Format.xml: developer-guide/etendo-classic/concepts/Format_xml.md
-#        - How to create a Report: developer-guide/etendo-classic/concepts/How_to_create_a_Report.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
 #        - Java Coding Conventions: developer-guide/etendo-classic/concepts/Java_Coding_Conventions.md
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/JavaScript_Coding_Conventions.md
@@ -292,7 +291,7 @@ nav:
         - Naming Guideliness for Modules: developer-guide/etendo-classic/concepts/naming-guidelines-for-modules.md
 #        - PL-SQL code rules to write Oracle and Postgresql code: developer-guide/etendo-classic/concepts/PL_SQL_code_rules_to_write_Oracle_and_Postgresql_code.md
 #        - Prerequisite Knowledge: developer-guide/etendo-classic/concepts/Prerequisite_Knowledge.md
-#        - Processes: developer-guide/etendo-classic/concepts/Processes.md
+        - Processes: developer-guide/etendo-classic/concepts/Processes.md
 #        - Reports obsolete: developer-guide/etendo-classic/concepts/Reports_obsolete.md
 #        - Security Model: developer-guide/etendo-classic/concepts/Security_Model.md
 #        - Selectors: developer-guide/etendo-classic/concepts/Selectors.md
@@ -340,6 +339,7 @@ nav:
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Manual UI Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Manual_UI_Process.md
+        - How To Create a Module: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md
         - How to Create a Module that Adds an Accounting Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md
 #        - How to create a Multi Selector: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector.md
 #        - How to create a Navigation Bar Component: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component.md
@@ -348,9 +348,9 @@ nav:
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
 #        - How to create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
+        - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
-#        - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition.md
 #        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
 #        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md
@@ -362,7 +362,6 @@ nav:
         - How to Create an Alert: developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md
 #        - How to Create an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Create_an_External_Connection_Pool.md
 #        - How To Create An Import Process With Images: developer-guide/etendo-classic/how-to-guides/How_To_Create_An_Import_Process_With_Images.md
-#        - How To Create and Package a Module: developer-guide/etendo-classic/how-to-guides/How_To_Create_and_Package_a_Module.md
 #        - How to Create And Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
 #        - How to create build validations and module scripts: developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts.md
@@ -458,7 +457,7 @@ nav:
         - Create New Subapplication: developer-guide/etendo-mobile/tutorials/create-new-subapplication.md
         - Example Subapplication Using Etendo RX: developer-guide/etendo-mobile/tutorials/example-subapplication-using-etendo-rx.md
         - Use PDF utilities: developer-guide/etendo-mobile/tutorials/use-pdf-utilities.md
-      - Etendo UI Library: "https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs"
+      - Etendo UI Library: "https://main--65785998e8389d9993e8ec4c.chromatic.com"
   - What's New:
     - Overview: whats-new/overview.md
     - Etendo Release Cycle: whats-new/etendo-release-cycle.md

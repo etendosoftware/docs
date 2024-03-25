@@ -31206,6 +31206,324 @@ This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){ta
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Processes
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Processes
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/concepts/Processes
+## Article Content: 
+###  Processes
+  
+####  Overview
+
+A process is a systematic series of actions directed to some end.  A process receives some parameters and taking them into account performs some actions to obtain a result. Etendo defines two main kinds of processes _SQL Processes_ and _Java Processes_.
+
+All processes (as well as [Reports](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md)) are managed from the same window: `Application Dictionary > Report and Process`. 
+
+Once a process is defined it can be added to the menu to be called directly from there, it can be invoked through a button or it can be scheduled to be executed in the background.
+
+Background processes can be set as _Prevent Concurrent Executions_ . Before a process with this attribute is about to be executed, it is checked there are no other instances of the same process in execution at the same time, in this case another execution is aborted.
+
+#####  Parameters
+
+When a process (SQL or Java) or a Jasper Report is set as _Standard_, a pop-up message is automatically generated and displayed when invoking it, this message looks like this:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/concepts/Processes-0.png)
+
+This pop-up has a section with information about the process, this information is obtained from the _Help_ field in the _Report and Process_ tab.
+
+It also prompts for a number of parameters, and finally there are two buttons, _OK_ to start the process and _Cancel_ to close the pop-up and not to do anything else. In case the process did not require any parameter that section would be empty.
+
+When this kind of process requires parameters they must be defined in the `Application Dictionary > Report and Process > Parameter`tab.
+
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/concepts/Processes-1.png)
+
+Parameters are defined in a very similar way than columns are. Depending on the _Reference_ field, the generated UI assigned for the parameter will be different.
+
+Let's overview some of the most important fields in this tab:
+
+  * *DB Column name* : This is the name the parameter will be passed with to the process. When the process is going to use this parameter, it will have to use this name. 
+  
+!!!note
+      Notice that `Postgresql` is case-sensitive. In case the parameter references an existing column in database (for example, it is a parameter of type search), then the _DB Column name_ field must be cased the same way as the column in the Application Dictionary. 
+  
+  * *Sequence* : It is a numeric value to order the parameter in the pop-up. 
+  * *Application Element* : It is the [Element](Element_and_Synchronize_Terminology.md)  that will be used to get the label from, in this way parameters are translatable. 
+  
+!!!note 
+    It is also possible to set or not this element as *Centrally Maintained*. 
+
+  * *Reference* , *Reference Search Key* and *Validation*: These three fields work exactly like the same ones when defining references for columns. 
+  * *Range* : If it is checked, the pop-up will display two parameters in order to define a range, the first parameter will be named as specified in _DB Column name_ field and the second one will have the same name with a _TO_ suffix. 
+
+#####  Defining Processes
+
+Processes can be of two different types: _SQL Processes_ and _Java
+Processes_ . SQL processes are implemented in the SQL language and are executed by the database engine. Java proceses are implemented in the Java language and are executed by the application server.
+
+######  SQL Processes
+
+_SQL Processes_ are implemented by database stored procedures. 
+
+!!!info
+    For more information, read [How to create a Stored Procedure](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Stored_Procedure.md).
+
+SQL processes are defined in `Application Dictionary > Report and Process`. The only field to take into account for this kind of processes is *Procedure*: It is the procedure name in the database. 
+
+!!!note
+    As SQL procedures are assigned to modules, they must be named according to following the naming rules: the name of the procedure must start with the module's
+    DBPrefix.
+
+As the pop-up for SQL processes is always automatically generated, the *UI
+Pattern* field must be set as _Standard_ .
+
+In case the process requires any parameter, it is possible to define them. 
+
+!!!info
+    To learn more about how to do it read [Parameters](#parameters).
+
+######  Java Processes
+
+Java processes are implemented by java classes. 
+
+!!!info
+    For more information, read [How to create a Java Process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/.How_to_create_a_Java_Based_Process.md)   .
+
+Java processes are also defined in the `Application Dictionary > Report and Process` window. Depending on the _UI pattern_ they use, they can be split into _Standard_ and _Manual_. Additionally, if the _UI Pattern_ is set to _Manual_, it is necessary to include an entry in the *Process Mapping* to make it accessible in the `web.xml`.
+
+!!!note
+    The pop-up used to invoke Java processes defined with _Standard_ _UI pattern_ is automatically generated in the same way the interface for SQL processes is done.
+
+To set a Java process to be have Standard UI just set the _UI Pattern_ field to _Standard_ in the `Application Dictionary > Report and Process` header.
+
+It is also necessary to indicate the Java class that is going to implement the process. This is done by adding a new record in the *Process Class* tab. At least, one record in this tab must be checked as default.
+
+!!!info
+    If the process requires parameters they can be defined in the *Parameter* tab as explained in the [Parameters](#parameters) section of this document.
+
+#####  Executing processes
+
+!!!note
+    It is required to define the process compilation in order to be able to
+    execute it. This step can be performed executing ` ./gradlew smartbuild ` and
+    restarting Tomcat afterwards.  
+
+  
+Processes can be executed from the user interface from a menu or with a button. It can also be scheduled to be executed in the background without any user interaction.
+
+######  Executing a process from a menu option
+
+To execute a process from a menu option, you need to define a new menu option that executes the process. Menus are defined in `General Setup > Application > Menu`. In the *Action* field the *Process* entry must be selected, then in the *Process* field select the process. it will be executed immediately and then saved.
+
+Finally, press the *Tree* button to organize the new menu option in the menu tree, and now the process defined can be executed selecting this new menu created.
+
+######  Executing a process from a button
+
+To execute a process with a button you need to define a column that references a button. In `Application Dictionary > Tables and Columns`, go to the column you want to use to execute the process and in the field *Reference* select the *Button* entry, then in the *Process* field select the process you want to execute and save.
+
+When executing a process with a button, the record ID of the current record selected of the table will be passed to the process. This allows to execute functions for specific records.
+
+######  Executing a process in the background
+
+Backgroung processes are defined in `General Setup > Process Scheduling > Process Request`. 
+
+!!!info
+    For more information, read [How to create a Background Process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md).
+
+In this window you can define a background process. The process to be executed can be selected in the *Process* field. Then you define the scheduling for the background process and it is then ready to use.
+
+!!!note
+    There is no user interaction necessary to execute the process, thus, no pop-up will appear prompting for additional parameters.
+
+#######  Kill a background Process
+ 
+  
+A button *Kill Process* is shown in the Process Monitor window on that processes that implement the KillableProcess interface while a process is being executed (Status = Processing). The interface KillableProcess will let you kill your process using a kill mechanism.
+
+**Mechanism to Kill**
+
+The mechanism that your background process uses to kill itself might vary between implementations. However, the main idea in any implementation should be to check some flag perodically during execution to see if a kill has been requested, and if the flag is set, somehow abort the execution of the rest of the job's work.
+
+
+Let's see an example,
+
+here we have a dummy process which simply prints the identifier in the log for all the business partners:
+
+```java    
+    package com.openbravo.example.killprocess.process;
+
+    import org.apache.log4j.Logger;
+    import org.hibernate.ScrollMode;
+    import org.hibernate.ScrollableResults;
+    import org.openbravo.dal.service.OBCriteria;
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.businesspartner.BusinessPartner;
+    import org.openbravo.scheduling.ProcessBundle;
+    import org.openbravo.service.db.DalBaseProcess;
+    import org.openbravo.service.db.DbUtility;
+    import org.quartz.JobExecutionException;
+
+    public class DummyProcess extends DalBaseProcess {
+     
+      private static final Logger log4j = Logger.getLogger(DummyProcess.class);
+     
+      @Override
+      protected void doExecute(ProcessBundle bundle) throws Exception {
+        try {
+     
+          // Get all business partners
+          final OBCriteria<BusinessPartner> bpCri = OBDal.getInstance().createCriteria(
+              BusinessPartner.class);
+          bpCri.setFetchSize(1000);
+          final ScrollableResults partnerScroller = bpCri.scroll(ScrollMode.FORWARD_ONLY);
+          int i = 1;
+          // Loop all business partners using a ScrollabeResults to avoid performance issues
+          while (partnerScroller.next()) {
+            final BusinessPartner bp = (BusinessPartner) partnerScroller.get()[0];
+            // Print the Identifier for every business partner
+            log4j.info(bp.getIdentifier());
+     
+            if ((i % 100) == 0) {
+              OBDal.getInstance().getSession().clear();
+            }
+            i++;
+     
+          }
+          partnerScroller.close();
+        } catch (Exception ex) {
+          Throwable e = DbUtility.getUnderlyingSQLException(ex);
+          log4j.error("Error in DummyProcess", e);
+          throw new JobExecutionException(e.getMessage(), e);
+        }
+     
+      }
+     
+    }
+```
+
+*Killable Process*
+
+Now, we will see the same process but with Interface `KillableProcess` implemented with the kill method.
+
+```java
+    package com.openbravo.example.killprocess.process;
+
+    import org.apache.log4j.Logger;
+    import org.hibernate.ScrollMode;
+    import org.hibernate.ScrollableResults;
+    import org.openbravo.dal.service.OBCriteria;
+    import org.openbravo.dal.service.OBDal;
+    import org.openbravo.model.common.businesspartner.BusinessPartner;
+    import org.openbravo.scheduling.KillableProcess;
+    import org.openbravo.scheduling.ProcessBundle;
+    import org.openbravo.service.db.DalBaseProcess;
+    import org.openbravo.service.db.DbUtility;
+    import org.quartz.JobExecutionException;
+    
+    public class DummyProcessKillable extends DalBaseProcess implements KillableProcess {
+     
+      private static final Logger log4j = Logger.getLogger(DummyProcessKillable.class);
+     
+      // Add a variable 'stop' to control the kill implementation and set false by default
+      private boolean stop = false;
+     
+      @Override
+      protected void doExecute(ProcessBundle bundle) throws Exception {
+        try {
+     
+          // Get all business partners
+          final OBCriteria<BusinessPartner> bpCri = OBDal.getInstance().createCriteria(
+              BusinessPartner.class);
+          bpCri.setFetchSize(1000);
+          final ScrollableResults partnerScroller = bpCri.scroll(ScrollMode.FORWARD_ONLY);
+          int i = 1;
+          // Loop all business partners using a ScrollabeResults to avoid performance issues
+     
+          // Only continue with the process if the variable 'stop' is false
+          while (partnerScroller.next() && !stop) {
+            final BusinessPartner bp = (BusinessPartner) partnerScroller.get()[0];
+            // Print the Identifier for every business partner
+            log4j.info(bp.getIdentifier());
+            // Add a timeout of 30 seconds
+            Thread.sleep(30000);
+     
+            if ((i % 100) == 0) {
+              OBDal.getInstance().getSession().clear();
+            }
+            i++;
+     
+          }
+          partnerScroller.close();
+        } catch (Exception ex) {
+          Throwable e = DbUtility.getUnderlyingSQLException(ex);
+          log4j.error("Error in DummyProcess", e);
+          throw new JobExecutionException(e.getMessage(), e);
+        }
+     
+      }
+     
+      @Override
+      public void kill(ProcessBundle bundle) throws Exception {
+        bundle.getLog().log("process killed")
+        // When kill is called set variable 'stop' to true so the process will be interrupted in the
+        // next iteration: while (partnerScroller.next() && !stop)
+        stop = true;
+      }
+     
+    }
+```
+
+Let us comment the code. First, we need to implement the KillableProcess interface.
+
+```java
+    
+    public class DummyProcessKillable extends DalBaseProcess implements KillableProcess {
+```
+
+We create a variable `stop` that will be used to check the continuity of the execution.
+
+    
+    
+    // Add a variable 'stop' to control the kill implementation and set false by default
+      private boolean stop = false;
+
+In the main loop of the process, we add the check to stop the execution when the variable is set to true.
+
+    
+    
+          // Only continue with the process if the variable 'stop' is false
+          while (partnerScroller.next() && !stop) {
+
+We have also added a sleep (30 seconds) to make the execution time longer.
+
+  
+```java
+            Thread.sleep(30000);
+```
+
+Finally, we implement the kill method that sets `stop` to true.
+
+```java
+    
+    
+      @Override
+      public void kill(ProcessBundle bundle) throws Exception {
+        bundle.getLog().log("process killed")
+        // When kill is called set variable 'stop' to true so the process will be interrupted in the
+        // next iteration: while (partnerScroller.next() && !stop)
+        stop = true;
+      }
+```
+
+Now, we are able to kill the process from the Process Monitor. 
+
+When a process is killed, the status in the process monitor will be *Killed by User*.
+
+
+
+This work is a derivative of [Processes](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Element and Synchronize Terminology
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
 ## Article URL: 
@@ -32745,6 +33063,277 @@ The dataset definition is ready, so the user just needs to export it to a file p
   
 !!! info
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
+## Article Content: 
+###  How to Create a Report
+  
+####  Overview
+
+In this section, the user can find information about the steps required to create a new report in Etendo Classic. The example explained is a simple report with a list of products.
+
+####  Setting up Jaspersoft Studio
+  
+!!!note
+    It is recommended to use the latest version of Jaspersoft Studio.  
+  
+  
+First, you need to download Jaspersoft Studio, a graphical tool that allows you to create and modify JasperReports templates (.jrxml files).
+
+  * Download  [Jaspersoft Studio](https://www.jaspersoft.com/products/jaspersoft-community){target="\_blank"}. 
+  * On Linux: just download the .tgz file and uncompress it, execute the binary _Jaspersoft Studio_ located inside the main folder.
+  * On Windows: Download and execute the .exe file.
+
+#####  Configuring Jaspersoft Studio Library Version
+!!! warning
+    Etendo supports Jasper Reports compatible with JasperReports 6.0.0. So, if you are using a newer version of Jaspersoft Studio, you need to make sure that the version of the JasperReports library is 6.0.0. It is very important to use the correct version of JasperReports library,so the jrxml file has the syntax compatible with Etendo.
+
+* Go to `Settings` > `Jaspersoft Studio` > `Compatibility` > `Source .jrxml Version` and set it to 6.0.0.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-1.png)
+
+#####  Configuring Jaspersoft Studio Properties
+
+Some properties of Jaspersoft Studio need to be modified in order to work properly. In short, you need to make sure:
+
+  * You modified the JasperReport property _net.sf.jasperreports.awt.ignore.missing.font_ and set it to *true*. It can be changed in `Properties` > `Jaspersoft Studio` > `Properties` 
+  * Do not use any *Scriplet* class 
+  * Use *Java* as default expression language 
+
+
+  
+#####  Setting up Classpath
+
+In Jaspersoft Studio, each report is supposed to be part of a project. So, you first need to create a new project (`File` > `New` > `Project`).
+
+The project has a classpath, and here is where you can add the jars you need.
+
+  * Right-click on the project name: `Properties` > `Java Build Path`
+  * Move to *Libraries* tab 
+  * Click *Add External Jars* button 
+  * Add the desired library. 
+  * Click *OK*
+
+####  Creating the Template
+
+  * Go to `File` > `New`
+  * Pick *Jasper Report*
+  * The *New Report Wizard* will be opened 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-2.png)
+
+  * Select a Report Template, (_Blank_ following our example) 
+  * Define a Report Name 
+  * Define the file Location in the project. 
+
+Later on, we will copy this .jrxml file inside our Etendo module that is going to keep our Report and also the required configuration in the Application Dictionary.
+
+  * Define the Report Data Source: by clicking on "New", a new database connection can be configured using the *Data Adapter Wizard*
+  * Click *New*
+  * Pick *Database JDBC Connection* and click _Next_
+  * Fill all the fields 
+    * *Name:* Etendo (or any name you like, e.g. pi) 
+    * *JDBC Driver:* PostgreSQL (`org.postgresql.Driver`). In this case, we'll use PostgreSQL 
+    * *JDBC URL:* `jdbc:postgresql://localhost:5432/etendo` where _5432_ is the port where PostgresSQL is running and _etendo_ is the SSID of our database 
+    * *Username:* tad (you can check your username/password in gradle.properties configuration file. For more information about gradle.properties, visit [Install Etendo](https://docs.etendo.software/getting-started/installation.md#install-etendo)) 
+    * *Password:* tad 
+  * Click the Finish button to generate the JDBC Connection 
+  * Test your connection 
+  * Save 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-3.png)
+
+Now we have to configure the query: we are going to list the products present in the database.
+
+  * Right-click on the Report Outline menu, and select *Dataset and Query*. Here is where we have to set the query of the report and it is also possible to switch between the available database connections in case we want to test the query. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-4.png)
+
+  * The products are stored in the `M_Product` table 
+    
+        SELECT m_product_id, value, name FROM m_product
+
+  * We have to add the fields based on your query which we want to use in the report, so we are going to add: 
+    * `m_product_id` 
+    * `value` 
+    * `name` 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-5.png)
+
+  * Click *OK* 
+  * Remember to clear the Scriptlet class and modify the Language for expressions 
+  * Right-click on the Report Outline menu, and select *Show Properties*. 
+  * In the report properties in the right, look for the following: 
+    * Clear the Scriptlet class 
+    * Choose Java as Language 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-6.png)
+
+Let's now design the Report Layout
+
+  * Put a static text as report title: _Product List_
+  * Place the fields in the *Detail* band and a title in the *Column Header* band 
+  * Save your changes 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-7.png)
+
+  * Switch to the *Preview* subtab to get a report preview 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-8.png)
+
+!!!note
+    It is recommended to use Dejavu fonts in jasper reports because these
+    fonts support most of the characters in almost all languages​​. Besides,
+    Dejavu typography is the family of fonts that Etendo included in
+    jasperreports-fonts library.   
+  
+#####  Etendo Runtime Environment
+
+The standard reports in Etendo (`src/org/openbravo/erpReports`) make use of several methods that reside inside the *Etendo Runtime Environment*, which cannot be executed at design time. For this reason, we provide a .jar file that encapsulates the following adapted methods of the `org.openbravo.erpCommon.utility.Utility` Class:
+
+  * `public static BufferedImage showImageLogo`: returns a logo image that is already included in the JAR archive 
+  * `public static String applyCountryDateFormat`: always returns the date formatted in this pattern dd-MM-yyyy 
+  * `public static DecimalFormat getCountryNumberFormat`: just returns the same DecimalFormat received as parameter 
+
+For this, to be able to preview the standard Etendo reports from *JasperStudio*, it suffices just to import the .jar file into the classpath of the project within JasperStudio.
+
+#####  Adding images and logos to a report using the ShowImage API
+
+You can use the Image BLOB reference to display an image for a specific report, or one of the Company logos in the application. 
+
+To do so:
+
+1. Add an image object to your report
+
+2. set the expression class to "java.awt.Image" and the expression image to a call to the ShowImage function of the Utility class (if you want it to display a standard ImageBLOB image reference, that corresponds to a field added to a tab), or to the ShowImageLogo function if you want to display the logo of an Organization or Client.
+
+Images loaded with this method must not have alpha channel. A transparency layer is not supported by the function that loads images in Jasper Reports.
+
+  * If you want to use the ShowImage function, you need to make the expression image look like: 
+    * `org.openbravo.erpCommon.utility.Utility.showImage("IMAGEID")` 
+
+IMAGEID needs to be the UUID of the image you want to show. You could set this value using a Jasper parameter.
+
+  * If you want to use the ShowImageLogo function to show one of the logos, you have several options. 
+    * This one will show the Company logo at System level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanylogin")` 
+    * This one will show the Company log at Client level (the client used will be the one the user logged at): 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanymenu")` 
+    * This one will show the Company logo at Organization level: 
+        * `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc", "ORGANIZATIONID")`
+
+ORGANIZATIONID needs to be the UUID of the Organization whose log you want to show. You could set this value using a Jasper argument. An example could be `org.openbravo.erpCommon.utility.Utility.showImageLogo("yourcompanydoc","4387D62C6486481AB3D148442A6AD34E")̣` being `4387D62C6486481AB3D148442A6AD34E` the organization ID.
+
+####  Registering the Report in Application Dictionary
+
+#####  Creating the Report
+
+It is possible to create a report using a process definition. For more information, visit [this section](How_to_create_a_Report_using_Process_Definition.md).
+
+  * Using the System Administrator role 
+  * Using the quick-launch, open: *Process Definition* window 
+    * You can find it in the menu: `Application Dictionary` > `Process Definition` 
+
+  * Create a new record 
+  * Fill all required fields 
+    * *Module:* Pick your module 
+    * *Search Key:* ETPF_ProductList (It is a best practice to start with your module's [DB_Prefix](https://docs.etendo.software/concepts/Modularity_Concepts.md#DB_prefix)) 
+    * *Name:* Product List 
+    * *UI Pattern:* Report (Using JR templates) 
+    * *Data Access Level:* Client/Organization 
+    * *Handler*: use the default `org.openbravo.client.application.report.BaseReportActionHandler`
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-9.png)
+
+We must copy the .jrxml template file generated with Jaspersoft Studio into our module. When using Process Definition to generate a Report, templates need to be stored in the web folder of the module. In our example, we place it in the following location: `/web/com.etendoerp.platform.features/jasper`
+
+  * Navigate to the *Report Definition* tab 
+  * Fill the PDF template field with the location of the .jrxml file 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-10.png)
+
+#####  Creating the Menu record
+
+  * Using the System Administrator role 
+  * Open the Menu window 
+  * Create a new record 
+  * Fill all required fields: 
+    * *Module:* Your module 
+    * *Name:* Name of the menu entry (Product List) 
+    * *Description:* Description of the action related to the menu entry 
+    * *Action:* Pick `Process Definition` 
+    * *Process Definition:* Pick your Process Definition (Product List) 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-11.png)
+
+####  Compiling
+
+After you have registered the report and menu entry in the Application Dictionary, you need to compile to generate the necessary code.
+
+``` bash title="Terminal"
+./gradlew smartbuild
+```
+
+Once the compilation has been completed, restart your Tomcat server.
+
+####  Testing the Report
+
+If you have completed all the steps, you should be able to open your Product List report form the quick-lauch, or menu entry.
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report-12.png)
+
+####  Further Details
+
+#####  Layout
+
+For information on how JasperReports handles the layout, check [Making HTML,XLS or CSV friendly reports](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/making-html-xls-or-csv-friendly-reports/){target="\_blank"}.
+
+Also, a tutorial with the basics of how to design a report can be found [here](https://community.jaspersoft.com/knowledgebase/tips-n-tricks/designing-report-jaspersoft-studio/){target="\_blank"}.
+
+#####  Configuring Cell Type in XLS Reports
+
+By default, Etendo Classic reporting engine exports the XLS data as strings. This is done in order to ensure that the exported data can be read after opening the report with the vast majority of spreadsheet applications.
+
+If we want to have a particular format in a cell of our XLS report, and for example, display numbers inside a numeric cell, this default configuration can be overridden at template level.
+
+To override this configuration, the following must be done inside the .jrxml report template:
+
+  1. Add the *net.sf.jasperreports.export.xls.detect.cell.type* property with true as its value. 
+  2. Add a *pattern* for the text field that will be displayed in the XLS cell. With the `<pattern>` tag, a fixed pattern can be set and with the `<patternExpression>` tag, it is possible to define a dynamic pattern. 
+
+!!!note
+    The decimal and thousands *separators* used for the numeric
+    cells exported in this way, will be those defined inside the spreadsheet
+    program itself (LibreOffice Calc, Excel,etc).
+
+#####  Creating a Report Using Report and Process
+
+In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
+
+#####  Report Compilation
+  
+When printing a report in the application, it is previously compiled at runtime. The result of this report compilation is cached if there are no modules in _in development_ status.
+
+Besides, it is possible to handle the state of this cache through a JMX extension. Thus, this extension allows to:
+
+  * See if the cache is enabled. 
+  * Enable/Disable the cache. 
+  * See the list of reports whose compilation is stored in cache. 
+  * Clear the cache contents. 
+
+#####  Barcodes
+
+It is possible to generate barcodes from JasperReports, using barcode4j or barbecue libraries. These libraries are included in [Barcode generation in reports](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/org.openbravo.service.reporting.barcode.zip){target="\_blank"} module.
+
+In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
+
+---
+This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jest Test Cases
@@ -35097,6 +35686,202 @@ To see the changes in the new user interface just change the `System Administrat
 ---
 
 This work is a derivative of [How to add a field to a window tab](http://wiki.openbravo.com/wiki/How_to_add_a_field_to_a_Window_Tab){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to add a canvas field to a Form or Grid
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to add a canvas field to a Form or Grid
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid
+## Article Content: 
+###  How to add a canvas field to a Form or Grid
+
+#### Overview
+
+This guide explains how to integrate canvas fields into forms and grids within Etendo, enabling the addition of customized visual components such as buttons, links, and calculated labels. 
+Canvas fields offer dynamic data presentation and interaction, leveraging JavaScript development expertise for implementation.
+
+####  Introduction
+
+A canvas field allows the user to add any visual component to a form or a row in a grid. 
+This concept can be used to add a calculated field to a form and grid. 
+Visual components which can be added are for example buttons, links and (computed) labels.
+
+In this section, we will be adding a button and a calculated field to the form and to every row in the grid.
+We will illustrate how information from the record and form can be used to get dynamic information from the Form/Grid.
+
+The implementation of canvas fields requires javascript development experience. 
+See the following concept pages for background information on javascript development:
+
+  * [Client Side Development and API](https://docs.etendo.software/concepts/Client_Side_Development_and_API.md)
+  * [JavaScript Coding Conventions](https://docs.etendo.software/concepts/JavaScript_Coding_Conventions) 
+
+It also makes sense to study the following page: [Etendo Architecture](https://docs.etendo.software/concepts/Etendo_Architecture).
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
+
+####  Example Module
+
+This section is supported by an example module which shows examples of the code shown and discussed.
+
+The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip)
+
+####  Main development steps for creating a new canvas field
+
+The development consists of 2 steps:
+
+  1. Implement the canvas itself, normally this is done in javascript. 
+  2. Specify the canvas javascript class in the field definition of the tab/window 
+
+#####  Implementing your canvas in javascript
+
+The first step is to implement your canvas class in javascript. This is done in 2 steps:
+
+  * Create a  [javascript](https://docs.etendo.software/concepts/Client_Side_Development_and_API#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) 
+
+The example module implements a button and a calculated field in the `example-canvas-field.js` file.
+
+The first example in the file implements a button which shows the identifier of the current record:
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderActionButton', isc.OBGridFormButton);
+ 
+isc.OBEXAPP_SalesOrderActionButton.addProperties({
+  noTitle: true,
+  title: OB.I18N.getLabel('OBUISC_Identifier'),
+  click: function() {
+    var info = '';
+    if (this.record) {
+      info = this.record._identifier;
+    } else if (this.canvasItem) {
+      info = this.canvasItem.form.getValue(OB.Constants.IDENTIFIER);
+    }
+    isc.say(info);
+  }
+});
+```
+
+The second example shows a calculated field which divides 2 values from the current record and displays the result in a formatted way. 
+It also illustrates several methods which are called when the context/environment changes (for example when a value on the form changes):
+
+    
+```javascript title="example-canvas-field.js"
+isc.defineClass('OBEXAPP_SalesOrderCalculated', isc.Label);
+ 
+isc.OBEXAPP_SalesOrderCalculated.addProperties({
+  height: 1,
+  width: 1,
+  overflow: 'visible',
+  contents: '',
+  initWidget: function() {
+    if (this.canvasItem) {
+      this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+    }
+ 
+    this.Super('initWidget', arguments);
+  },
+  
+  // is called when the form gets redrawn
+  redrawingItem: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called when a field on the form changes its value
+  onItemChanged: function() {
+    this.computeContents(this.canvasItem.form.getValue('grandTotalAmount'), this.canvasItem.form.getValue('summedLineAmount'));
+  },
+  
+  // is called in grid-display mode when the canvas is created/used
+  // for a record
+  setRecord: function(record) {
+    this.computeContents(record.grandTotalAmount, record.summedLineAmount);
+  },
+  
+  computeContents: function(val1, val2) {
+    var num;
+    if (!val2) {
+      this.setContents('');
+    } else {
+      num = OB.Utilities.Number.JSToOBMasked(val1/val2, 
+          OB.Format.defaultNumericMask,
+          OB.Format.defaultDecimalSymbol,
+          OB.Format.defaultGroupingSymbol,
+          OB.Format.defaultGroupingSize);
+      
+      this.setContents(num);
+    }
+  }
+});
+```
+
+The javascript file is registered in the example modules' [ComponentProvider](https://docs.etendo.software/concepts/Etendo_Architecture/#component-provider) like this:
+
+    
+```java title="ExampleComponentProvider.java"
+@Override
+public List<ComponentResource> getGlobalComponentResources() {
+  final List<ComponentResource> globalResources = new ArrayList<ComponentResource>();
+  globalResources.add(createStaticResource(
+      "web/org.openbravo.client.application.examples/js/example-canvas-field.js", false));
+.....
+```
+
+#####  Defining the canvas in the Tab-Field (ADField)
+
+The next step is to create a new field in the tab, and set its client class field:  
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-1.png)
+
+It is also possible to add in-line properties in the `"Clientclass"` field, for example, 'OBEXAPP_SalesOrderActionButton {"title": "My Action Button"}'
+
+#####  The result
+
+The result is shown in both the grid and the form:
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-2.png)
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-3.png)
+
+####  Javascript events passed to the canvas
+
+When implementing your canvas, you should take into account that the canvas is used in 3 different situations:
+
+  * When displaying a row in the grid 
+  * When editing a row in the grid 
+  * In form view, when editing a record 
+
+The last 2 cases are similar.
+
+In grid-display mode the following applies:
+
+  * In grid mode the following properties are set on the canvas: 
+    * `grid`: the grid object 
+    * `rowNum`: the row number/record index for which the canvas is used 
+    * `record`: the record for which the canvas is used 
+    * `colNum`: the column in which the canvas is shown 
+    * `field`: the field where the canvas is used 
+  * A canvas can be created and pooled, so over time it is created once and re-used when records are scrolled into view. 
+  When a canvas is used for a record, then the setRecord method on it is called (if the canvas has this method). 
+
+In form-edit or grid-edit mode, the following applies:
+
+  * The canvasItem property will be set pointing to the form item the canvasItem can be used to get to the form itself and to the grid (if editing in the grid): 
+    * `this.canvasItem.form`: the form instance 
+    * `this.canvasItem.form.grid`: in case of grid editing 
+  * If the canvas has a property noTitle with the value `true` then in form mode no title/label is displayed 
+  * Form changes: the canvas can capture form/value change events by implementing 2 methods (both without arguments): 
+    * `onItemChanged`: is called when a value on the form changes 
+    * `redrawingItem`: is called just before the form is redrawn 
+
+####  Adding server side actions
+
+The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](https://docs.etendo.software/concepts/.Etendo_Architecture#actionhandler-server-side-calling-from-the-client)  for this purpose.
+
+---
+
+This work is a derivative of ["How to add a canvas field to a form or grid"](http://wiki.openbravo.com/wiki/How_to_add_a_canvas_field_to_a_Form_or_Grid){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -39541,7 +40326,7 @@ Etendo UI is a _library of components_ that will be used throughout the example 
 
 ![etendo-ui-library-npm.png](https://docs.etendo.software/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
 
-For more information, visit [Etendo UI Library](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"} 
+For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
 
 _Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
@@ -39681,7 +40466,7 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
 ## Article Content: 
 #### Overview
 
-This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
+This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
     Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
@@ -40777,7 +41562,7 @@ After save, the final result, you should see something like this:
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
 ## Article Path: /Developer Guide/Etendo Mobile/Etendo UI Library
-Article URL: https://develop--649b07373a33e896f7881dd9.chromatic.com/?path=/docs/how-to-install-steps--docs
+Article URL: https://main--65785998e8389d9993e8ec4c.chromatic.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40970,7 +41755,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [23Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.4){target="_blank"} | 15/03/2024 | 23.4.4 | QAA |  | :white_check_mark: |
+| [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | QAA |  | :white_check_mark: |
+| [23Q4.4](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.4){target="_blank"} | 15/03/2024 | 23.4.4 | C |  | :white_check_mark: |
 | [23Q4.3](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.3){target="_blank"} | 08/03/2024 | 23.4.3 | C |  | :white_check_mark: |
 | [23Q4.2](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.2){target="_blank"} | 26/02/2024 | 23.4.2 | C |  | :white_check_mark: |
 | [23Q4.1](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.1){target="_blank"} | 02/02/2023 | 23.4.1 | C |  | :white_check_mark: |
@@ -41084,7 +41870,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | CS | :white_check_mark: |
+| [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.12.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.12.0){target="_blank"} | 29/12/2023 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.10.0){target="_blank"} | 29/09/2023 | 23.2.0 | 23.3.x | C | :white_check_mark: |

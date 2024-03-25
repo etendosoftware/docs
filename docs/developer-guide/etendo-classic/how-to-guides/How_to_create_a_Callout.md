@@ -44,7 +44,7 @@ The steps involved in creating a new callout are:
     Developments related to points (1) and (2) must belong to
     a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
     to point (3) about modifying a _core_ located column, a new template is
-    needed. You can read the [How to change an existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
+    needed. You can read the [How to Change an Existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
 
 !!!Note
     This article assumes you have created both module and template according to the articles just mentioned.  
