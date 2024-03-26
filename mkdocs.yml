@@ -329,6 +329,7 @@ nav:
         - How to Create a Background Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Background_Process.md
         - How to Create a Callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout.md
 #        - How to create a callout that extends from another callout: developer-guide/etendo-classic/how-to-guides/How_to_create_a_callout_that_extends_from_another_callout.md
+        - How to Create a Chart of Accounts Module: developer-guide/etendo-classic/how-to-guides/How-to-Create-a-Chart-of-Accounts-Module.md 
         - How to Create a Clone Hook: developer-guide/etendo-classic/how-to-guides/how-to-create-a-clone-hook.md
 #        - How to create a Computed Column: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Computed_Column.md
 #        - How To Create a Configuration Script: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Configuration_Script.md
@@ -359,6 +360,7 @@ nav:
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
 #        - How to create a Trigger: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger.md
         - How to Create a Window: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Window.md
+        - How to Create Accounts Files: developer-guide/etendo-classic/how-to-guides/How-to-Create-Accounts-Files.md
         - How to Create an Alert: developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md
 #        - How to Create an External Connection Pool: developer-guide/etendo-classic/how-to-guides/How_to_Create_an_External_Connection_Pool.md
 #        - How To Create An Import Process With Images: developer-guide/etendo-classic/how-to-guides/How_To_Create_An_Import_Process_With_Images.md
