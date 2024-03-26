@@ -11,7 +11,7 @@ tags:
 # How to Create Accounts Files
 
 ## Overview
-Etendo supports importing the Chart of Accounts through a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values){target="\_blank"} (comma-separated values) file with a concrete structure. This CSV file is afterward included into a module that can be distributed and installed from the Central Repository.
+Etendo supports importing the Chart of Accounts through a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values){target="\_blank"} (comma-separated values) file with a concrete structure. This CSV file is afterward included into a module that can be distributed and installed from [Etendo marketplace](https://marketplace.etendo.cloud/#/){target="\_blank"}.
 
 To create the CSV file, it is recommended to use any spreadsheet sofware that supports exporting to CSV, like [LibreOffice Calc](https://www.libreoffice.org/){target="\_blank"}.
 
@@ -56,9 +56,6 @@ The *Parent_Value* column of the accounts file creates the hierarchical relation
 ## Default accounts
 
 Etendo Classic makes most account entries automatically. To enable automatic account entries, it is necessary to define the default accounts. With this information, Etendo Classic builds the accounting entry with the account number defined in the chart of accounts.
-
-!!!important
-    The chart of accounts must include the defaults that are explained here.
 
 The mandatory default accounts are defined in the chart of accounts file with a constant that must be written literally in the *Default Account* column. The following table has an explanation of these accounts.
 

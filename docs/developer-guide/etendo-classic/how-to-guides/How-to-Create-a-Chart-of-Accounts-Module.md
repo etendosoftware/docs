@@ -31,9 +31,6 @@ Before creating the Chart of Accounts module, we should first check that the CSV
 2. The second check can be directly executed through the ERP. It just consists on importing our CSV file when running the Initial Client Setup process.
 Finally, there is also recommended to create some accounting entries for every transactional document and ensure the accounting report information is OK.
 
-!!!info
-    Please visit [Chart of Accounts Testing]() to learn more about these steps.
-
 ## Creating the Chart of Accounts module
 
 The remaining step is clearly the easiest one, which is just including the CSV file into our Chart of Accounts module.
@@ -42,7 +39,7 @@ A Chart of Accounts module is like any other module, but it has just the followi
 
 - The CSV file must be included into the `referencedata/accounts/` directory of our module.
 
-- The file must be renamed to COA.csv. So the directory structure for our module should look like:
+- The file must be renamed to `COA.csv`. So the directory structure for our module should look like:
 
 ```java
  <module java package name>
@@ -73,7 +70,7 @@ A Chart of Accounts module is like any other module, but it has just the followi
 
 ### Publishing the Chart of Accounts Module
 
-The way to package a chart of accounts module is similar to the [standard publishing process](.How_To_Create_and_Package_a_Module.md) for any module, just taking into account the previous particular considerations.
+The way to package a chart of accounts module is similar to the [how to publish modules to github repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/) process.
 
 The summarized process is:
 
@@ -83,17 +80,20 @@ The summarized process is:
 
 - Export the database to create the file structure
 
-        `gradle export.database`
+``` gradle title="Terminal"
+  ./gradlew export.database
+```
 
-- Save the COA.csv file inside the module's `referencedata/accounts/` directory. You should manually create this directory structure if necessary.
+- Save the `COA.csv` file inside the module's `referencedata/accounts/` directory. You should manually create this directory structure if necessary.
 
-- Generate the obx file
+- Publish the chart of accounts module
 
-        `gradle package.module -Dmodule=<module's java package name>`
-
+``` gradle title="Terminal"
+  ./gradlew publishVersion -Ppkg=<module javapackage>
+```
 ## Translating a Chart of Accounts
 
-In some countries it can be useful to have the same chart of accounts translated into several languages. Unfortunatelly Etendo does not support yet the translation of chart of accounts, although it is in our roadmap.
+In some countries it can be useful to have the same chart of accounts translated into several languages. Unfortunatelly Etendo does not support yet the translation of chart of accounts.
 
 If you are in this situation, you have two possible workarounds:
 
