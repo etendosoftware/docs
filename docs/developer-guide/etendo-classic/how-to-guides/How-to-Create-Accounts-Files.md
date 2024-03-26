@@ -110,5 +110,12 @@ Once we have entered all the accounts into our spreadsheet, it is time to export
 !!!note
     If you afterward want to edit this CSV file in your spreadsheet software, remember to use this configuration when opening it.
 
+## Chart of accounts in Etendo Classic
+
+After the [Initial client setup process](How_to_run_an_initial_client_setup_process.md), the user can find the corresponding Chart of accounts in the *Account Tree* window of Etendo Classic.
+
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/chartofaccountsics.png)
+
 ---
+
 This work is a derivative of [Creating Account Files](https://wiki.openbravo.com/wiki/Creating_Accounts_Files){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

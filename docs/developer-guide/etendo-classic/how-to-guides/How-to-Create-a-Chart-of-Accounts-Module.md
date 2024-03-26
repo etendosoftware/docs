@@ -41,7 +41,7 @@ A Chart of Accounts module is like any other module, but it has just the followi
 
 - The file must be renamed to `COA.csv`. So the directory structure for our module should look like:
 
-```java
+```
  <module java package name>
    ├── referencedata 
    │   └── accounts 
