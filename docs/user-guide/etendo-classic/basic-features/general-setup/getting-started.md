@@ -35,7 +35,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
 
 #### Initial Client Setup
 

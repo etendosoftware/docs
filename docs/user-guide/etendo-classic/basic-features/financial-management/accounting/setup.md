@@ -258,15 +258,15 @@ As shown in the image above, the main fields in this Window are:
 
 An account tree is the way Etendo captures the chart of accounts of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger.
 
-Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a "Localization Pack" which includes the Statutory Chart of Accounts.
+Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a "Localization Bundle" which includes the Statutory Chart of Accounts.
 
-For instance, the Spanish Localization Pack includes
+For instance, the Spanish Localization Bundle includes
 
 -   the General Spanish CoA
 -   the PYMES Spanish CoA.
 -   and the Abreviado Spanish CoA.
 
-After installation, the Charts of Accounts are available for selection during the Initial Client Setup and the Initial Organization setup.
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) and the Initial Organization setup.
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 
@@ -775,7 +775,7 @@ Besides a general ledger configuration, those accounting files also create:
 
 Etendo delivers accounting files through:
 
--   the "Chart of Accounts" modules contained in a Localization Pack if available for your country
+-   the "Chart of Accounts" modules contained in a Localization Bundle if available for your country
 -   and the Generic Chart of Accounts module
 
 Additionally, a general ledger configuration can also be created manually, but once the corresponding Account Tree has been created.
