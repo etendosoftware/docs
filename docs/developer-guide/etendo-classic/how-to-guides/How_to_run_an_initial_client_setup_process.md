@@ -25,7 +25,7 @@ This process allows to:
 
 ## Including accounting Schema
 
-Decide on the *accounting schema* the organization will use and, from the Initial Client Setup window, set the accounting which will involve setting up the [Chart of Accounts](). 
+Decide on the *accounting schema* the organization will use and, from the Initial Client Setup window, set the accounting which will involve setting up the [Chart of Accounts](How-to-Create-a-Chart-of-Accounts-Module.md). 
 
 
 ### Include accounting
@@ -64,7 +64,7 @@ Etendo also allows choosing the accounting csv file with the corresponding chart
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
 !!!info
-    For more information, read [Creating Accounts Files]() 
+    For more information, read [How to Create Accounts Files](How-to-Create-Accounts-Files.md) 
 
 ## Module configuration
 
