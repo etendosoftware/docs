@@ -36,7 +36,8 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 2. If you have a localization bundle installed, selecting one of the chart of accounts listed in the Reference data section since these datasets are already installed.
 
 !!!info
-    It is recommended to have the Include Accounting option checked if the user needs to apply the same chart of accounts to all of its organizations. In case of entering a different chart of accounts for each specific organization, the window to use for this step is [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+    It is recommended to have the Include Accounting option checked if the user needs to apply the same chart of accounts to all of its organizations.
+    In case of entering a different chart of accounts for each specific organization, you should run this process without checking the checkbox and then configure the Chart of Accounts in the [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup) window.
 
 !!!note
     In the Reference Data section, the existing datasets will depend on the localization installed, if any. 
@@ -102,7 +103,7 @@ unless the *Central Maintenance* checkbox is unselected for the Client which wou
 To conclude, it is important to carefully conduct the initial setup in Etendo, considering the organization's needs and specific requirements. Additionally, thorough documentation of the accounting structure and module configurations is essential for future reference and efficient system management.
 
 !!!info
-    For more information, read [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup).
+    Visit [General Setup](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md) to continue with Etendo's initial setup.
 
 ---
 
