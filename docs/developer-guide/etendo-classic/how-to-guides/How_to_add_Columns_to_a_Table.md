@@ -27,18 +27,16 @@ These changes can be done in two different locations:
   1. Add columns to the *original* module (dbprefix *HT* ) 
   2. Create a *second* module (dbprefix *HT2* ) which adds the columns to the first module 
 
-The first option can be chosen if the original module author wants to add more columns to his/her module. The second option is possible for anyone as the columns are added by a new module to the existing one which is not changed directly.
+The first option can be chosen if the original module author wants to add more columns to their module. The second option is possible for anyone as the columns are added by a new module to the existing one which is not changed directly.
 
 The main difference between these two methods is the names which need to be chosen for the columns to comply with the modularity naming rules.
 
   1. Adding column to same module: Any valid column name can be picked 
   2. Via second module: New column name must comply to the pattern *EM_ <DBPREFIX>_ * where _ <DBPREFIX> must be the dbprefix if the new module contaning the column to be added. In this example: *EM_HT2_* _
 
-For the rest of the howto we follow this second approach and will place all new elements into a new module with dbprefix _HT2_ .
+From now on, we follow this second approach and will place all new elements into a new module with dbprefix _HT2_ .
 
-The  next Howto  will continue with adding the new columns to the window defined on top of the _ht_salary_ table.
-
-To show how different types of column are configure we will be adding 3 new columns:
+To show how different types of column are configured, we will be adding 3 new columns:
 
   * _Valid To_ a simple column of type date 
   * _Payment Schedule_ a list-reference containing a list of values: _Start of Month_ , _Mid of Month_ , _End of Month_
@@ -46,7 +44,7 @@ To show how different types of column are configure we will be adding 3 new colu
 
 ###  Creating the new module
 
-This section only lists the main important elements needed for the new module. More details can be found in the  How to Create and Package a Module tutorial.
+This section only lists the main important elements needed for the new module. More details can be found in the How to Create and Package a Module tutorial.
 
   * dbprefix: *HT2*
   * Dependencies: 
@@ -73,22 +71,36 @@ To create the above table within the database, use one of the following ALTER TA
       ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
       ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_ht2_c_salary_category_id) REFERENCES c_salary_category(c_salary_category_id);
 
-As can be seen in the SQL a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.
+As can be seen in the SQL, a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.
 
-Taking a look at the folder structure of the module after running _ant export.database_ shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the _ht_salary_ table but instead is adding new elements to it.
+Taking a look at the folder structure of the module after running _gradle export.database_, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the _ht_salary_ table but instead is adding new elements to it.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_Columns_to_a_Table-0.png){: .legacy-image-style}
+```
+org.openbravo.howtos2
+└── src-db
+    └── database
+        └── model
+            ├── functions
+            │   └── modifiedTables
+            │       └── HT_SALARY.xml
+            ├── sequences
+            ├── tables
+            ├── triggers
+            └── views
+        └── sourcedata
+            ├── AD_MODULE_DBPREFIX.xml
+            ├── AD_MODULE_DEPENDENCY.xml
+            ├── AD_MODULE.xml
+            └── AD_PACKAGE.xml
+```
 
 ###  Adding & Configuring the columns in the Application Dictionary
 
-In this part we will add the newly added column to the list of  columns
-already defined for the _ht_salary_ table and then configure those column
-definition to match the description giving in the objective section above.
+In this part, we will add the newly added column to the list of columns already defined for the _ht_salary_ table and then configure those column definitions to match the description giving in the objective section above.
 
 ####  Adding the new column to the Application Dictionary
 
-This is the same process as described in the previous  HowTo  .
+This is the same process as described in the previous  HowTo.
 
   1. In the ' *Tables and Columns'* window search for the entry of the _ht_salary_ table. 
   2. With this record selected, run the ' *Create columns from DB'* process. As the table already contains several column only column which are not yet present in the Application Dictionary definition of that table will be added. In this HowTo this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix _HT2_ as the process detected this via the naming of the database columns. 
