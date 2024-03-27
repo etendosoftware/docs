@@ -73,7 +73,7 @@ To create the above table within the database, use one of the following ALTER TA
 
 As can be seen in the SQL, a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.
 
-Taking a look at the folder structure of the module after running _gradle export.database_, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the _ht_salary_ table but instead is adding new elements to it.
+Taking a look at the folder structure of the module after running `./gradlew export.database`, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the _ht_salary_ table but instead is adding new elements to it.
 
 ```
 org.openbravo.howtos2
@@ -124,17 +124,12 @@ The first step is to create a new *Reference* to hold the list of values for the
 
 The following screenshot shows how the defined reference will look like.
 
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_Columns_to_a_Table-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png){: .legacy-image-style}
 
   
-The second step is to create a *Table Reference* to define how the new
-*Salary Category* field is linked with the *c_salary_category* table.
+The second step is to create a *Table Reference* to define how the new *Salary Category* field is linked with the *c_salary_category* table.
 
-For this again a new *Reference* needs to be created. In this case, the
-important values for it are the following:
+For this, a new *Reference* needs to be created. In this case, the important values for it are the following:
 
   * _Parent Reference_ = *Table* to denote this is a Table Reference. 
   * In the _Table Reference_ Tab: 
@@ -142,18 +137,16 @@ important values for it are the following:
     * _Key Column_ = _c_salary_category_id_ as this is the primary key of the target table 
     * _Display Column_ = _Name_ to denote the field of this table which should be shown in the UI for this column. 
 
-Again the following screenshot shows how the defined reference will look like.  
+The following screenshot shows how the defined reference will look like.  
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_Columns_to_a_Table-2.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png){: .legacy-image-style}
 
   
-After this two previous steps, we can finally configure the new columns to
-use the reference we just created.
+After this two previous steps, we can finally configure the new columns to use the reference we just created.
 
 In the *Tables and Columns* window, we search for the entry to the _ht_salary_ table. In the column tab we make the following changes for our new columns:
 
-  1. _Payment Schedule_ , change the *Reference* of this column from _String_ to *List* and change the *Reference Search Key* to our newly created List Reference with name *EM_Ht2_Payment_Schedule* . 
+  1. _Payment Schedule_, change the *Reference* of this column from _String_ to *List* and change the *Reference Search Key* to our newly created List Reference with name *EM_Ht2_Payment_Schedule*. 
   2. _Salary Category_ , change the *Reference* of this column from _TableDir_ to *Table* and change the *Reference Search Key* to the new *ht_salary_c_salary_category* . 
 
   
@@ -167,7 +160,7 @@ To work around this and reuse the existing core elements for the two columns
 for which such exists ( _validto_ , _Salary Category_ ) assign the existing
 elements manually to those two columns.
 
-For this the following changes are needed in the same open window *Tables and
+For this, the following changes are needed in the same open window *Tables and
 Columns* still open from the last step and in the *Columns* tab of the
 _ht_salary_ table.
 
@@ -175,43 +168,28 @@ _ht_salary_ table.
   2. _Salary Category_ change the *Application Element* to _C_Salary_Category_ID - Salary Category_
 
   
-Now run the *Synchronize Terminology* process to set  element  for the last
-column which does not yet have a matching element.
+Now run the *Synchronize Terminology* process to set  element  for the last column which does not yet have a matching element.
 
-After this the new columns should look like shown in the following screenshot:
+After this, the new columns should look like shown in the following screenshot:
 
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png){: .legacy-image-style}
   
+As a final step, we now update the newly created _EM_Ht2_Payment_Schedule_ element to have a useful label for the UI.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_add_Columns_to_a_Table-3.png){: .legacy-image-style}
-
-  
-As a final step we now update the newly create _EM_Ht2_Payment_Schedule_
-element to have a useful label for the UI.
-
-Navigating to the *Application Dictionary || Element* we search for the new
-element and to the following updates:
+Navigating to the *Application Dictionary | Element* we search for the new element and to the following updates:
 
   1. *Name* change from _EM_Ht2_Payment_Schedule_ to *Payment Schedule*
   2. *Print Name* change from _EM_Ht2_Payment_Schedule_ to *Payment Schedule*
 
-Those updates are needed to have useful labels in the UI for any windows
-defined on this table and to avoid those having internal names using the
-technical _EM__ -terminology.
+Those updates are needed to have useful labels in the UI for any windows defined on this table and to avoid those having internal names using the technical _EM_-terminology.
 
 ###  Rebuilding the system
 
-Finally to make the newly added columns available at runtime _ant
-generate.entities_ needs to called and the changes deployed to tomcat. Those
-to steps can be done together by calling _ant smartbuild_ . After that Tomcat
-must be restarted to refresh the DAL In-Memory Model so it knows about the
-newly added columns.
+Finally, to make the newly added columns available at runtime `./gradlew generate.entities` needs to be called and the changes deployed to tomcat. Those two steps can be done together by calling `./gradlew smartbuild`. After that, Tomcat must be restarted to refresh the DAL In-Memory Model so it knows about the newly added columns.
 
-This concludes the How To on adding new columns to an existing table. Now
-might be a good time to  export  your module.
+Once the columns are added to the table, the user can export the module.
 
-To add the new columns to the window defined on top of this table go ahead to
-the next  How to add a field to a Window Tab.
+To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab]().
 
 ---
 
