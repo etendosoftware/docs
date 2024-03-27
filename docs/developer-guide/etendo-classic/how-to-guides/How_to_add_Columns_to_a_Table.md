@@ -81,7 +81,7 @@ org.openbravo.howtos2
     └── database
         └── model
             ├── functions
-            │   └── modifiedTables
+            └── modifiedTables
             │       └── HT_SALARY.xml
             ├── sequences
             ├── tables
@@ -100,28 +100,25 @@ In this part, we will add the newly added column to the list of columns already 
 
 ####  Adding the new column to the Application Dictionary
 
-This is the same process as described in the previous  HowTo.
+The steps to follow are:
 
-  1. In the ' *Tables and Columns'* window search for the entry of the _ht_salary_ table. 
-  2. With this record selected, run the ' *Create columns from DB'* process. As the table already contains several column only column which are not yet present in the Application Dictionary definition of that table will be added. In this HowTo this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix _HT2_ as the process detected this via the naming of the database columns. 
+  1. In the `Tables and Columns` window search for the entry of the _ht_salary_ table. 
+  2. With this record selected, run the *Create columns from DB* process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix _HT2_ as the process detected this via the naming of the database columns. 
 
 ####  Configuring the new columns
 
-Before starting to configure the new columns two preparatory steps need to be
-done.
+Before starting to configure the new columns, two preparatory steps need to be done.
 
-  1. Create a _List Reference_ for the column _Payment Schedule_ , to define the 3 values which should be allowed for this list. 
-  2. Create _Table_ reference for the _em_ht2_c_salary_category_id_ column as the standard _TableDir' reference cannot be used with_ em_ _type columns._
+  1. Create a _List Reference_ for the column _Payment Schedule_ to define the 3 values which should be allowed for this list. 
+  2. Create _Table_ reference for the _em_ht2_c_salary_category_id_ column as the standard _TableDir' reference cannot be used with _em_ _type columns_.
 
-When adding these new elements care should be taken to place them in the new
-module with prefix _HT2_ .
+When adding these new elements remember to place them in the new module with prefix _HT2_.
 
-The first step is to create a new ' *Reference'* to hold the list of values
-for the _Payment Schedule_ column. Important values to configure here are:
+The first step is to create a new *Reference* to hold the list of values for the _Payment Schedule_ column. Important values to configure here are:
 
-  * _Parent Reference_ = ' *List'* in the Reference definition itself, to define it as a List Reference. 
+  * _Parent Reference_= *List* in the Reference definition itself, to define it as a List Reference. 
   * For each entry in the _List Reference_ tab 
-    * _Search Key_ The value stored in the database field when this entry in selected by a user in the ComboBox. 
+    * _Search Key_ The value stored in the database field when this entry is selected by a user in the ComboBox. 
     * _Name_ The user visible (translatable) text shown in the UI. 
     * _Sequence_ to define the order of the entries which should be used in the UI. 
 
@@ -133,32 +130,28 @@ The following screenshot shows how the defined reference will look like.
 guides/How_to_add_Columns_to_a_Table-1.png){: .legacy-image-style}
 
   
-The second step is to create a ' *Table Reference'* do define how the new
-'Salary Category _field is linked with the_ c_salary_category' table.
+The second step is to create a *Table Reference* to define how the new
+*Salary Category* field is linked with the *c_salary_category* table.
 
-For this again a new ' *Reference'* needs to be created. In this case the
+For this again a new *Reference* needs to be created. In this case, the
 important values for it are the following:
 
-  * _Parent Reference_ = ' *Table* to denote this is a Table Reference. 
+  * _Parent Reference_ = *Table* to denote this is a Table Reference. 
   * In the _Table Reference_ Tab: 
-    * _Table_ = _c_salary_category' as this is the target table our new column will be pointing to._
+    * _Table_ = *c_salary_category* as this is the target table our new column will be pointing to.
     * _Key Column_ = _c_salary_category_id_ as this is the primary key of the target table 
     * _Display Column_ = _Name_ to denote the field of this table which should be shown in the UI for this column. 
 
-Again the following screenshot shows how the defined reference will look like.
-
-  
+Again the following screenshot shows how the defined reference will look like.  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_add_Columns_to_a_Table-2.png){: .legacy-image-style}
 
   
-After this two preparatory steps we can finally configure the new columns to
+After this two previous steps, we can finally configure the new columns to
 use the reference we just created.
 
-In the ' *Tables and Columns'* window we search for the entry to the
-_ht_salary_ table. In the column tab we make the following changes for our new
-columns:
+In the *Tables and Columns* window, we search for the entry to the _ht_salary_ table. In the column tab we make the following changes for our new columns:
 
   1. _Payment Schedule_ , change the *Reference* of this column from _String_ to *List* and change the *Reference Search Key* to our newly created List Reference with name *EM_Ht2_Payment_Schedule* . 
   2. _Salary Category_ , change the *Reference* of this column from _TableDir_ to *Table* and change the *Reference Search Key* to the new *ht_salary_c_salary_category* . 
