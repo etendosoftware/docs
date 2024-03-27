@@ -55,7 +55,7 @@ The *General Ledger Configuration* and the *Chart of Accounts* created by defaul
     For more information, read [General Setup](../../../user-guide/etendo-classic/basic-features/general-setup/getting-started.md). 
 
 
-The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension.md) of the general ledger configuration.
+The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension) of the general ledger configuration.
 
 ### Accounting file 
 
@@ -88,7 +88,7 @@ These modules are useful as tax configurations generally apply to all organizati
 
 
 !!!info
-    Module Installation: additional modules can be added from the [Enterprise Module Management](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window within the system.
+    Datasets Installation: additional modules can be added from the [Enterprise Module Management](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window within the system.
 
 
 Every new [Client](../../../user-guide/etendo-classic/basic-features/general-setup/client.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
