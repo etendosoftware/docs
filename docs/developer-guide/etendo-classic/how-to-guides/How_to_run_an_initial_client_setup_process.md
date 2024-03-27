@@ -102,7 +102,7 @@ unless the *Central Maintenance* checkbox is unselected for the Client which wou
 To conclude, it is important to carefully conduct the initial setup in Etendo, considering the organization's needs and specific requirements. Additionally, thorough documentation of the accounting structure and module configurations is essential for future reference and efficient system management.
 
 !!!info
-    For more information, read [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/#initial-organization-setup.md).
+    For more information, read [Initial Organization Setup](../../../user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup).
 
 ---
 
