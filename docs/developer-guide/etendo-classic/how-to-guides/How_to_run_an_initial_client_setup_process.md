@@ -13,11 +13,14 @@ tags:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yGzPXU3nxpk?si=akTrp1_j8RAafSWx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The Initial Client Setup process is a crucial process in Etendo which allows defining information about the client and the accounting schema the organization will use. The information configured through this window sets the bases for the organizational structure and the chart of accounts to be used with every organization of the client. It can be run by logging in Etendo as *System Administrator* role.
+The Initial Client Setup process is a crucial process in Etendo which allows defining information about the client and the accounting schema the organization will use. The information configured through this window sets the bases for the organizational structure and the chart of accounts to be used with every organization of the client. 
+
+!!!info
+    It can be run by logging in Etendo as *System Administrator* role.
 
 This process allows to:
 
-- Enter the name of the client and the client admin user name and a password.
+- Enter the name of the client, the client username and a password.
 - Enter the base currency of the client, that is going to be the currency of the Client regardless of if an Organization which belongs to it might have a different currency.
 - Include Accounting for the client.
 
@@ -29,7 +32,7 @@ Decide on the *accounting schema* the organization will use and set the accounti
 
 To include this data, there is a checkbox named *Include Accounting* which obligates the user to enter a specific chart of accounts. For this, there are two options:
 
-1. Uploading a `CSV` file with the chart of accounts, as explained in the Accounting File section below.
+1. Uploading a `CSV` file with the chart of accounts, as explained in the [Accounting File](#accounting-file) section below.
 2. If you have a localization bundle installed, selecting one of the chart of accounts listed in the Reference data section since these datasets are already installed.
 
 !!!info
@@ -56,7 +59,7 @@ The *General Ledger Configuration* is linked to the *Account Tree* as the *Accou
 
 ### Accounting file 
 
-Etendo also allows choosing the accounting csv file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup.md#account-tree)) to upload into the system from the field *Accounting File*. 
+Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](../../../user-guide/etendo-classic//basic-features/financial-management/accounting/setup.md#account-tree)) to upload into the system from the field *Accounting File*. 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
 
@@ -97,7 +100,6 @@ Every new [Client](../../../user-guide/etendo-classic/basic-features/general-set
 unless the *Central Maintenance* checkbox is unselected for the Client which would imply the configuration and management of all the accounting dimensions (mandatory and not mandatory) at organization level.
 
 To conclude, it is important to carefully conduct the initial setup in Etendo, considering the organization's needs and specific requirements. Additionally, thorough documentation of the accounting structure and module configurations is essential for future reference and efficient system management.
-
 
 !!!info
     For more information, read [Initial Organization Setup](../../../basic-features/general-setup/enterprise-model/#initial-organization-setup.md).
