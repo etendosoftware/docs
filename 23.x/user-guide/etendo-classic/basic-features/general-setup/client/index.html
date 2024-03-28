@@ -994,30 +994,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-client-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Client Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#client" class="md-nav__link">
     <span class="md-ellipsis">
       Client
@@ -4859,6 +4835,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Run an Initial Client Setup Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/" class="md-nav__link">
         
   
@@ -7065,30 +7062,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#initial-client-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Client Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Initial Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#client" class="md-nav__link">
     <span class="md-ellipsis">
       Client
@@ -7159,55 +7132,8 @@
 <li>besides, each organization can also manage its own master data and have its own transactional data</li>
 <li>finally, a Client cannot share any master data with another Client.</li>
 </ul>
-<p>Clients are created by running the Initial Client setup process available for the "System Administrator" role.</p>
+<p>Clients are created by running the <a href="../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process/">Initial Client setup process</a> available for the "System Administrator" role.</p>
 <p>Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.</p>
-<h2 id="initial-client-setup">Initial Client Setup</h2>
-<h3 id="overview">Overview</h3>
-<p>The Initial Client setup process allows creating a Client and a Client Admin role with no access restrictions.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The initial client setup process is an automated process which can be run by logging in Etendo as System Administrator role.</p>
-</div>
-<p>This process allows the user to:</p>
-<ul>
-<li>enter the <strong>name of the client</strong>, the <strong>client admin user name</strong> and a <strong>password</strong></li>
-<li>enter the <strong>base currency</strong> of the client, that is going to be the currency of the Client regardless an Organization which belongs to it might have a different currency.</li>
-<li>include <strong>Accounting</strong> for the client.
-There is a checkbox named <em>Include Accounting</em> which allows to select an accounting csv file in the field <em>Accounting File</em> or an accounting reference data within the section Reference Data.</li>
-</ul>
-<p>Etendo distributes accounting csv file as modules which can be applied as reference data. This kind of modules are part of the Etendo localization for a given country.
-If the checkbox <em>Include Accounting</em> is selected and an accounting file or reference data is selected, Etendo creates:</p>
-<ul>
-<li>a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a> which can be shared by all the Legal with Accounting organizations types which belongs to that <a href="/user-guide/etendo-classic/basic-features/general-setup/client/">Client</a></li>
-<li>and an Account Tree or Chart of Accounts and a General Ledger configuration which is shared by all the organizations created within the Client.</li>
-</ul>
-<p>The General Ledger Configuration and the Chart of Accounts created by default can be later on customized as explained in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup">Setup Accounting</a> section of the Getting Started.</p>
-<p>The General Ledger Configuration is linked to the Account Tree as the Account is a mandatory <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#dimension">dimension</a> of the general ledger configuration.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>It is possible to create a client without selecting the Include Accounting checkbox, in fact that is the recommended option. Accounting configuration will then rely on the organization type being created later on in the Client.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Read the <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup">Initial Organization setup</a> documetation for more information.</p>
-</div>
-<ul>
-<li>
-<p>finally it is possible to apply reference data such as:</p>
-</li>
-<li>
-<p><strong>Standard document types for orders, invoices, etc</strong>, this one is selected by default as it is necessary for creating transactional data such as orders and invoices.</p>
-</li>
-<li><strong>Document types and default algorithm for bank statements auto-matching</strong>, this one is similar to the previous one but for specific financial flows such as <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out">Payment Out</a>, <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in">Payment In</a> and <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</li>
-<li>or reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension bundles.</li>
-</ul>
-<p>Every new Client created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:</p>
-<ul>
-<li>Organization</li>
-<li>Business Partner</li>
-<li>and Product</li>
-</ul>
-<p>unless the <em>Central Maintenance</em> checkbox is unselected for the Client which would imply the configuration and management of all the accounting dimensions (mandatory and not mandatory) at organization level.</p>
 <h2 id="client">Client</h2>
 <p>The Client window allows the user to view and maintain the clients created by running the Initial Client Setup process.</p>
 <p><a class="glightbox" href="/assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/drive/wMk7KssPzOXZVKhjV7qnWPlXL7Jxp4k-0URRQOskHEzl8S2Bm-YYnS9alftc1syx4nGMulhABjv_qKTWCD8QksvoikpfUN0DQCMBGXnTR-SKMjk2Ic7tMe5M7CZaE-yz5FCMtuXB.png" /></a></p>
