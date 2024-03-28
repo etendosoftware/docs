@@ -815,7 +815,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) or the [Initial Organization setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
 
 ###### Initial Client Setup
 
@@ -1497,55 +1497,9 @@ Normally, it is enough creating just one Client which hosts multiple organizatio
 - besides, each organization can also manage its own master data and have its own transactional data
 - finally, a Client cannot share any master data with another Client.
 
-Clients are created by running the Initial Client setup process available for the "System Administrator" role.
+Clients are created by running the [Initial Client setup process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) available for the "System Administrator" role.
 
 Organizations are created by running the Initial Organization setup process available for the "Client Administrator" role.
-
-#### Initial Client Setup
-
-##### Overview
-
-The Initial Client setup process allows creating a Client and a Client Admin role with no access restrictions.
-
-!!!warning
-    The initial client setup process is an automated process which can be run by logging in Etendo as System Administrator role.
-
-This process allows the user to:
-
-- enter the **name of the client**, the **client admin user name** and a **password**
-- enter the **base currency** of the client, that is going to be the currency of the Client regardless an Organization which belongs to it might have a different currency.
-- include **Accounting** for the client.
-There is a checkbox named *Include Accounting* which allows to select an accounting csv file in the field *Accounting File* or an accounting reference data within the section Reference Data.
-
-Etendo distributes accounting csv file as modules which can be applied as reference data. This kind of modules are part of the Etendo localization for a given country.
-If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
-
-   - a [Fiscal Calendar](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar) which can be shared by all the Legal with Accounting organizations types which belongs to that [Client](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client/)
-   - and an Account Tree or Chart of Accounts and a General Ledger configuration which is shared by all the organizations created within the Client.
-
-The General Ledger Configuration and the Chart of Accounts created by default can be later on customized as explained in the [Setup Accounting](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup) section of the Getting Started.
-
-The General Ledger Configuration is linked to the Account Tree as the Account is a mandatory [dimension](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#dimension) of the general ledger configuration.
-
-!!!info
-    It is possible to create a client without selecting the Include Accounting checkbox, in fact that is the recommended option. Accounting configuration will then rely on the organization type being created later on in the Client.
-
-!!!info
-    Read the [Initial Organization setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) documetation for more information.
-
-- finally it is possible to apply reference data such as:
-
-   - **Standard document types for orders, invoices, etc**, this one is selected by default as it is necessary for creating transactional data such as orders and invoices.
-   - **Document types and default algorithm for bank statements auto-matching**, this one is similar to the previous one but for specific financial flows such as [Payment Out](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out), [Payment In](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) and [Financial Accounts](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
-   - or reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension bundles.
-
-   Every new Client created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
-
-- Organization
-- Business Partner
-- and Product
-
-unless the *Central Maintenance* checkbox is unselected for the Client which would imply the configuration and management of all the accounting dimensions (mandatory and not mandatory) at organization level.
 
 #### Client
 
@@ -1799,7 +1753,7 @@ This action creates:
 - a General Ledger configuration which is automatically linked to the Organization being created
 - and an Account Tree or Chart of Accounts which is also linked to the Organization being created
 
-This step does not create a Fiscal Calendar as the Initial Client Setup process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
+This step does not create a Fiscal Calendar as the [Initial Client Setup](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) process does, because Fiscal Calendars need to be created ad hoc for the "Legal with Accounting" Organizations for which "Allow Period Control" feature is going to be enabled.
 
 !!! note
     This step does not imply to manage accounting within an organization, but just to include an accounting file or an accounting reference data in an organization.
@@ -2268,7 +2222,7 @@ The admin user has several roles assigned:
 - the _F&B International Group Admin Role_ demo data (this one is also assigned to it by default)
     - this role enables admin users to have "F&B demo data" Client admin rights.
 - and besides:
-    - every time a new "Client" is created by running the Initial Client Setup process, Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
+    - every time a new "Client" is created by running the [Initial Client Setup process](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md), Etendo automatically creates for that Client a _"Client Admin"_ user linked to a _"Client Admin role"_:
       - the client admin role enables "Client Admin" user to have admin access rights to that Client and all the organization/s of that client once signed in.
       - the newly created client admin role is also assigned to the admin user by default, therefore it will be possible for the admin user to access the newly created Client.
 
@@ -17369,15 +17323,15 @@ As shown in the image above, the main fields in this Window are:
 
 An account tree is the way Etendo captures the chart of accounts of an Organization. The chart of accounts is a list of the accounts used in an organization's general ledger.
 
-Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a "Localization Pack" which includes the Statutory Chart of Accounts.
+Some countries such as Spain or France require that a specific chart of accounts is used in the statutory books, therefore the authorities can see the same list of accounts and the same level of detail in the P&L and Balance Sheet. In that case, Etendo provides a "Localization Bundle" which includes the Statutory Chart of Accounts.
 
-For instance, the Spanish Localization Pack includes
+For instance, the Spanish Localization Bundle includes
 
 -   the General Spanish CoA
 -   the PYMES Spanish CoA.
 -   and the Abreviado Spanish CoA.
 
-After installation, the Charts of Accounts are available for selection during the Initial Client Setup and the Initial Organization setup.
+After installation, the Charts of Accounts are available for selection during the [Initial Client Setup](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) and the Initial Organization setup.
 
 On the other hand, some countries such as the USA do not require that specific level of detail.
 
@@ -17886,7 +17840,7 @@ Besides a general ledger configuration, those accounting files also create:
 
 Etendo delivers accounting files through:
 
--   the "Chart of Accounts" modules contained in a Localization Pack if available for your country
+-   the "Chart of Accounts" modules contained in a Localization Bundle if available for your country
 -   and the Generic Chart of Accounts module
 
 Additionally, a general ledger configuration can also be created manually, but once the corresponding Account Tree has been created.
@@ -30696,7 +30650,7 @@ organization using the `Enterprise Module Management` window. They contain
 Organization level information.
 
 Client/Organization-level datasets work like Organization-level datasets, but
-can also be applied on `Initial Client Setup` when creating a new client. They
+can also be applied on [Initial Client Setup](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) when creating a new client. They
 contain Organization/Client level information.
 
 ####  Main Concepts
@@ -30834,7 +30788,7 @@ Select the organization and the module from which to import the reference data i
 
 
 !!!note
-    If a dataset is defined as Organization/Client level, then it can also be imported when using the `Initial Client Setup` utility to create a new client.
+    If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
 
   
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
@@ -36087,6 +36041,113 @@ Add to the **beans.xml**
 !!! success
     Once Gradle finishes the deployment, your module is ready to be used as a dependency.
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Run an Initial Client Setup Process
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Run an Initial Client Setup Process
+## Article URL: 
+ https://docs.etendo.software/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process
+## Article Content: 
+###  How to Run an Initial Client Setup Process
+
+#### Overview
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yGzPXU3nxpk?si=akTrp1_j8RAafSWx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The Initial Client Setup process is a crucial process in Etendo which allows defining information about the client and the accounting schema the organization will use. The information configured through this window sets the bases for the organizational structure and the chart of accounts to be used with every organization of the client. 
+
+!!!info
+    It can be run by logging in Etendo as *System Administrator* role.
+
+This process allows to:
+
+- Enter the name of the client, the client username and a password.
+- Enter the base currency of the client, that is going to be the currency of the Client regardless of if an Organization which belongs to it might have a different currency.
+- Include Accounting for the client.
+
+#### Including accounting Schema
+
+Decide on the *accounting schema* the organization will use and set the accounting using the Initial Client Set up window.
+
+##### Include accounting
+
+To include this data, there is a checkbox named *Include Accounting* which obligates the user to enter a specific chart of accounts. For this, there are two options:
+
+1. Uploading a `CSV` file with the chart of accounts, as explained in the [Accounting File](#accounting-file) section below.
+2. If you have a localization bundle installed, selecting one of the chart of accounts listed in the Reference data section since these datasets are already installed.
+
+!!!info
+    It is recommended to have the Include Accounting option checked if the user needs to apply the same chart of accounts to all of its organizations.
+    In case of entering a different chart of accounts for each specific organization, you should run this process without checking the checkbox and then configure the Chart of Accounts in the [Initial Organization Setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#initial-organization-setup) window.
+
+!!!note
+    In the Reference Data section, the existing datasets will depend on the localization installed, if any. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides How_to_run_an_initial_client_setup_process-1.png)
+
+If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
+
+  - a [Fiscal Calendar](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#fiscal-calendar) which can be shared by all the *Legal with Accounting* organizations types which belongs to that Client and 
+  - an [Account Tree](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-tree) or *Chart of Accounts* and a [General Ledger configuration](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#glconfig) which is shared by all the organizations created within the Client.
+
+The *General Ledger Configuration* and the *Chart of Accounts* created by default can be later on customized. 
+
+!!!info
+    For more information, read [General Setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started.md). 
+
+
+The *General Ledger Configuration* is linked to the *Account Tree* as the *Account* is a mandatory [dimension](https://docs.etendo.software/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#dimension) of the general ledger configuration.
+
+##### Accounting file 
+
+Etendo also allows choosing the accounting `CSV` file with the corresponding chart of accounts ([Account Tree](https://docs.etendo.software/user-guide/etendo-classic//basic-features/financial-management/accounting/setup.md#account-tree)) to upload into the system from the field *Accounting File*. 
+
+![](https://docs.etendo.software/assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-2.png)
+
+!!!info
+    For more information, read [How to Create Accounts Files](How-to-Create-Accounts-Files.md) 
+
+#### Module configuration
+
+Etendo distributes accounting `CSV` files as modules which can be applied as reference data. These kinds of modules are part of the Etendo localization for a given country.
+
+!!!info
+    The list of available localization bundles is found in the [Etendo marketplace](https://marketplace.etendo.cloud/#/){target="\_blank"}.
+
+There are some additional modules that may be important for the initial client setup.
+
+The key modules include:
+
+- Standard document types for orders, invoices, etc, this one is selected by default as it is necessary for creating transactional data such as orders and invoices.
+
+- Reference data such as master data or configuration data (i.e. tax setup) created for Etendo extension modules.
+
+These modules are useful as tax configurations generally apply to all organizations in a country, and setting standard document types helps avoid inconsistent numbering issues across different organizations.
+
+!!!note
+    It is recommended to install necessary modules for the proper operation of the client, based on their specific requirements.
+
+
+!!!info
+    Datasets Installation: additional modules can be added from the [Enterprise Module Management](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#enterprise-module-management) window within the system.
+
+
+Every new [Client](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/client.md) created in Etendo centrally maintains at least the mandatory accounting dimensions listed below:
+
+- Organization
+- Business Partner
+- and Product
+
+unless the *Central Maintenance* checkbox is unselected for the Client which would imply the configuration and management of all the accounting dimensions (mandatory and not mandatory) at organization level.
+
+To conclude, it is important to carefully conduct the initial setup in Etendo, considering the organization's needs and specific requirements. Additionally, thorough documentation of the accounting structure and module configurations is essential for future reference and efficient system management.
+
+!!!info
+    Visit [General Setup](https://docs.etendo.software/user-guide/etendo-classic/basic-features/general-setup/getting-started.md) to continue with Etendo's initial setup.
+
+---
+
+This work is a derivative of [Initial Client Setup](https://wiki.openbravo.com/wiki/Initial_Client_Setup){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Advanced Sequences
