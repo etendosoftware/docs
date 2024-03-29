@@ -42498,7 +42498,8 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core| Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.3.0](#130)  | 04/01/2024 | 23.2.0 | 23.4.x | CS  | :white_check_mark:|
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.3.0](#130)  | 04/01/2024 | 23.2.0 | 23.4.x | C  | :white_check_mark:|
 | [1.2.0](#120)  | 29/09/2023 | 23.2.0 | 23.3.x | C   | :white_check_mark:|
 | [1.1.0](#110)  | 11/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark:|
 | [1.0.0](#100) | 11/09/2023 | 23.2.0 | 23.2.8 | C   | :white_check_mark:|
