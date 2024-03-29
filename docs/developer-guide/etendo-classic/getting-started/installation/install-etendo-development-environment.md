@@ -25,7 +25,7 @@ To install Etendo in a development environment, follow the same steps as describ
         To install, go to `Settings` >> `Plugins` and search for `“Smart Tomcat”`
         ![install-smart-tomcat.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/install-smart-tomcat.png)
 
-    3.  Download [Apache Tomcat](https://tomcat.apache.org/download-80.cgi){target="_blank"} and unzip it in the project directory
+    3.  Download [Apache Tomcat](https://tomcat.apache.org/download-90.cgi){target="_blank"} and unzip it in the project directory
 
     4. Setting up Tomcat
         
