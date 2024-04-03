@@ -10,7 +10,7 @@ tags:
 
 ##  Overview
 
-In this section, the user can find information about how to extend the table created in the [How to Create a Table]() section to include additional fields.
+In this section, the user can find information about how to extend the table created in the [How to Create a Table](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md) section to include additional fields.
 
 Three different fields will be added to show how to configure some of the possible references:
 
@@ -32,7 +32,7 @@ The first option can be chosen if the original module author wants to add more c
 The main difference between these two methods is the names which need to be chosen for the columns to comply with the modularity naming rules.
 
   1. Adding column to same module: Any valid column name can be picked 
-  2. Via second module: New column name must comply to the pattern *EM_ <DBPREFIX>_ * where _ <DBPREFIX> must be the dbprefix if the new module contaning the column to be added. In this example: *EM_HT2_* _
+  2. Via second module: New column name must comply to the pattern *EM_ <DBPREFIX>_ * where _ <DBPREFIX> must be the dbprefix if the new module contaning the column to be added. In this example: *EM_HT2*
 
 From now on, we follow this second approach and will place all new elements into a new module with dbprefix _HT2_ .
 
@@ -150,25 +150,19 @@ In the *Tables and Columns* window, we search for the entry to the _ht_salary_ t
   2. _Salary Category_ , change the *Reference* of this column from _TableDir_ to *Table* and change the *Reference Search Key* to the new *ht_salary_c_salary_category* . 
 
   
-The final step would be to run the *Synchronize Terminology* process and
-update the created elements to have useful names for the UI.
+The final step would be to run the *Synchronize Terminology* process and update the created elements to have useful names for the UI.
 
-However as long as issue  10886  is unfixed this process will not map existing
-elements correctly for columns following the _EM__ naming rules.
+However as long as issue  10886  is unfixed this process will not map existing elements correctly for columns following the _EM__ naming rules.
 
-To work around this and reuse the existing core elements for the two columns
-for which such exists ( _validto_ , _Salary Category_ ) assign the existing
-elements manually to those two columns.
+To work around this and reuse the existing core elements for the two columns for which such exists ( _validto_ , _Salary Category_ ) assign the existing elements manually to those two columns.
 
-For this, the following changes are needed in the same open window *Tables and
-Columns* still open from the last step and in the *Columns* tab of the
-_ht_salary_ table.
+For this, the following changes are needed in the same open window *Tables and Columns* still open from the last step and in the *Columns* tab of the _ht_salary_ table.
 
   1. _ValidTo_ change the *Application Element* to _ValidTo - Valid To Date_
   2. _Salary Category_ change the *Application Element* to _C_Salary_Category_ID - Salary Category_
 
   
-Now run the *Synchronize Terminology* process to set  element  for the last column which does not yet have a matching element.
+Now run the *Synchronize Terminology* process to set element for the last column which does not yet have a matching element.
 
 After this, the new columns should look like shown in the following screenshot:
 
@@ -176,7 +170,7 @@ After this, the new columns should look like shown in the following screenshot:
   
 As a final step, we now update the newly created _EM_Ht2_Payment_Schedule_ element to have a useful label for the UI.
 
-Navigating to the *Application Dictionary | Element* we search for the new element and to the following updates:
+Navigating to `Application Dictionary` > `Element` we search for the new element and to the following updates:
 
   1. *Name* change from _EM_Ht2_Payment_Schedule_ to *Payment Schedule*
   2. *Print Name* change from _EM_Ht2_Payment_Schedule_ to *Payment Schedule*
@@ -187,9 +181,9 @@ Those updates are needed to have useful labels in the UI for any windows defined
 
 Finally, to make the newly added columns available at runtime `./gradlew generate.entities` needs to be called and the changes deployed to tomcat. Those two steps can be done together by calling `./gradlew smartbuild`. After that, Tomcat must be restarted to refresh the DAL In-Memory Model so it knows about the newly added columns.
 
-Once the columns are added to the table, the user can export the module.
+Once the columns are added to the table, the user can [export](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) the module.
 
-To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab]().
+To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md).
 
 ---
 
