@@ -335,6 +335,7 @@ nav:
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
+        - How to create a documentation page in Etendo documentation: developer-guide/etendo-classic/how-to-guides/How_to_create_a_documentation_page_in_Etendo_documentation.md
 #        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
@@ -354,7 +355,7 @@ nav:
 #        - How to create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition.md
 #        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
 #        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md
-#        - How to create a Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md
+        - How to create a Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md
 #        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
 #        - How to create a Trigger: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger.md
