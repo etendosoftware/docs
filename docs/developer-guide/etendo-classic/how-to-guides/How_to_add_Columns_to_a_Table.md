@@ -63,13 +63,14 @@ To create the above table within the database, use one of the following ALTER TA
 
 *PostgreSQL*
 
-    
+```sql
     
      
       ALTER TABLE ht_salary ADD COLUMN em_ht2_validto timestamp without time zone;
       ALTER TABLE ht_salary ADD COLUMN em_ht2_payment_schedule VARCHAR(60);
       ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
       ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_ht2_c_salary_category_id) REFERENCES c_salary_category(c_salary_category_id);
+```
 
 As can be seen in the SQL, a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.
 
@@ -124,7 +125,7 @@ The first step is to create a new *Reference* to hold the list of values for the
 
 The following screenshot shows how the defined reference will look like.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png)
 
   
 The second step is to create a *Table Reference* to define how the new *Salary Category* field is linked with the *c_salary_category* table.
@@ -139,7 +140,7 @@ For this, a new *Reference* needs to be created. In this case, the important val
 
 The following screenshot shows how the defined reference will look like.  
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png){:.legacy-image-style}
 
   
 After this two previous steps, we can finally configure the new columns to use the reference we just created.
