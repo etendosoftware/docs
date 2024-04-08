@@ -7,25 +7,27 @@ tags:
   - format
 ---
 
-# How to create a documentation page in Etendo documentation
+# How to create a page in Etendo documentation
 
 ## Overview
 This guide contains basic rules, tips, and suggestions for people intending to develop documentation for Etendo. When different documents use the same guidelines, they are more user friendly, consistent and more simple to combine and reuse. We therefore strongly encourage all contributors to follow these guidelines for the benefit of the readers.
 
 
 ## Requirements
-[Python 3](link){target="\_blank"}
+- Python version ^3.10. To install it, follow [The Official Installation Guide](https://www.python.org/downloads/){target="\_blank"}.
+
 
 ## Steps
+
 1. Clone the docs repository 
 	
-    ```bash title="terminal" 
+    ```bash title="Terminal" 
         git clone git@github.com:etendosoftware/docs.git
     ```
 
 2. Install dependencies
 
-    ```bash title="terminal" 
+    ```bash title="Terminal" 
         python3 -m venv venv
         source venv/bin/activate
         pip install mkdocs-material
@@ -35,25 +37,32 @@ This guide contains basic rules, tips, and suggestions for people intending to d
         pip install mkdocs-rss-plugin
     ```
 
-3. Create a new branch with [gitflow](link){target="\_blank"}, where the related pages, assets and configurations are stored.
+3. Create a new branch with [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
 
-    ```bash title="terminal" 
-        # This command should be executed only the first time.
-        git flow init 
+    ```bash title="Terminal" 
+	# This command should be executed only the first time after cloning the repository.
+	git flow init 
     ```
 
-    ```bash title="terminal" 
-        git flow feature start <task key>
+    ```bash title="Terminal" 
+    git flow feature start <task key>
     ```
-4. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be camelcase separated by underscores. 
+
+4. To run the Etendo documentation locally, execute:
+
+    ```bash title="Terminal"
+    source venv/bin/activate
+    mkdocs serve
+    ```
+
+5. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be camelcase separated by underscores. 
 
     ``` title="Documentation Structure" 
-
     └── docs
     ├── developer-guide 
     │   └── ..
     │       └── how-to
-    │           ├── ..
+    │           ├── New-Page.md
     │           ├── ..
     │           ├── ..
     │           └── ..
@@ -62,6 +71,9 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     ```
 
     In order to display the page in the menu, add this page in the `mkdocs.yml` file in the nav section.
+    
+    !!!important
+        When adding pages to the navigation structure, remember to organize them in alphabetical order.
 
     !!!important
         The directory and navigation structure must be the same.
@@ -70,9 +82,122 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 
     Once the documentation is finished:
 
-5. create a PR to develop with all the related changes
-6. once all the comments are resolved, and you have two approved, merge the PR
-7. a new version of the documentation will be automatically deployed in [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
+
+6. Create a PR to develop with all the related changes.
+7. Once all the comments are resolved, and you have two approved, merge the PR.
+8. A new version of the documentation will be automatically deployed in [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
+
+## Page format
+
+### Page structure
+
+```
+---
+tags: 
+  - Tag example 1
+  - Tag example 2
+---
+ 
+# Title
+  
+## Overview
+
+
+(General description of the section)
+
+
+## Title 1
+
+
+### Subtitle
+```
+!!!note
+    If the page was extrated from OB wiki, add the following footer editing the title and the link of the original page:
+    ```
+    ---
+    
+    This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+    ```
+
+### Useful references
+
+#### Code
+- \`code\` -> `code`
+
+#### Images path format
+- Images -> ![]\(path/to/the/image.png)
+
+For more information about how to add images to pages, read the [Images](#images) section
+
+#### Admonitions
+- Admonitions -> !!!note
+
+
+Example:
+
+```
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+
+#### How to show locations:
+
+```
+modules
+└── org.openbravo.localization.spain.referencedata.taxes
+    └── referencedata 
+        └── standard
+            ├── Impuestos_ES.xml
+            └── Spanish_Tax_Alerts.xml
+```
+
+
+#### Links
+- Links -> \[Google Example](https://google.com){target="_blank"} 
+
+
+Example:
+[Google Example](https://google.com){target="_blank"} 
+
+#### Article Reference
+- Article reference -> \[Article Example](../../how-to-guides/Article_Example)
+
+
+Example:
+[Article Example](../../how-to-guides/Article_Example)
+
+???? 
+- Italic format -> \*italic* 
+
+
+Example: *italic*
+
+#### Lists
+- Bullet points for lists -> `- Bullet point`
+
+
+Example:
+
+- Bullet point a
+- Bullet point b
+
+!!!info
+  For more info about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="_blank"}.
+
+### Images
+
+In order to add images to the page, remember to upload the image to the *assets* folder and name it using the name of the page the image belongs to.
+
+If there is more than one image to upload, you can add numbers to the name of the file.
+
+Example: ?
 
 ## Style Guide
 
@@ -81,7 +206,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 #### Bold, Italics and Paths
 
 - **Bold**. Use sparingly for emphasis, or to highlight file paths or option names, for example:
-            From the **File** menu, select **New**.
+From the **File** menu, select **New**.
 
 - *Italic*. Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
 
@@ -91,7 +216,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 #### Tabs for different platforms
 When documenting a feature that varies by platform (Windows or Linux, for example), use the following tabs to include information relevant for each platform. Readers can then choose the corresponding tab with the necessary information.
 
-```bash title="tabs"
+```bash title="Tabs"
 === "Windows"
 
     ``` c
@@ -204,108 +329,6 @@ Some important recommendations:
 
 - If you have a list of items (for example a list of files to be downloaded) order them alphabetically unless there is a more obvious logical order.
 - Do not use contractions (don't, you're, etc).
-
-## Page format
-
-### Page structure
-
-```
----
-tags: 
-  - Tag example 1
-  - Tag example 2
----
- 
-# Title
-  
-## Overview
-
-
-(General description of the section)
-
-
-## Title 1
-
-
-### Subtitle
-```
-!!!note
-    If the page was extrated from OB wiki, add the following footer editing the title and the link of the original page:
-    ```
-    ---
-    
-    This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-    ```
-
-### Useful references
-
-
-- \`code\` -> `code`
-
-
-- Images -> ![]\(path/to/the/image.png)
-
-
-- Admonitions -> !!!note
-
-
-Example:
-
-```
-!!!note
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-```
-!!!note
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
-
-- How to show locations:
-
-
-```
-modules
-└── org.openbravo.localization.spain.referencedata.taxes
-    └── referencedata 
-        └── standard
-            ├── Impuestos_ES.xml
-            └── Spanish_Tax_Alerts.xml
-```
-
-
-- Links -> \[Google Example](https://google.com){target="_blank"} 
-
-
-Example:
-[Google Example](https://google.com){target="_blank"} 
-
-
-- Article reference -> \[Article Example](../../how-to-guides/Article_Example)
-
-
-Example:
-[Article Example](../../how-to-guides/Article_Example)
-
-
-- Italic format -> \*italic* 
-
-
-Example: *italic*
-
-
-- Bullet points for lists -> `- Bullet point`
-
-
-Example:
-
-- Bullet point a
-- Bullet point b
-
-!!!info
-        For more info about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="_blank"}.
 
 ---
 
