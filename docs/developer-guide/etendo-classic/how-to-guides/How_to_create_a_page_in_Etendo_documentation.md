@@ -55,14 +55,14 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     mkdocs serve
     ```
 
-5. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be camelcase separated by underscores. 
+5. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be in lowercase separated by hyphens. 
 
     ``` title="Documentation Structure" 
     └── docs
     ├── developer-guide 
-    │   └── ..
-    │       └── how-to
-    │           ├── New-Page.md
+    │   └── etendo-classic
+    │       └── how-to-guides
+    │           ├── new-page.md
     │           ├── ..
     │           ├── ..
     │           └── ..
@@ -76,6 +76,20 @@ This guide contains basic rules, tips, and suggestions for people intending to d
         - When adding pages to the navigation structure, remember to organize them in alphabetical order.
         - The directory and navigation structure must be the same.
 
+    Example
+
+    ``` title="mkdocs.yml"
+    nav: 
+    - Home : index.md
+    - User Guide:
+        ...
+        - How-To:
+            ...
+            - New Page: developer-guide/etendo-classic/how-to-guides/new-page.md
+            ...
+    - Developer Guide
+    ...
+    ```
 
     The documentation should be worked on following the [style guide](#style-guide) described in the next section.
 
@@ -120,8 +134,20 @@ tags:
 
 ### Useful references
 
-#### Code
-- \`code\` -> `code`
+#### Backticks
+Use them to refer to paths, inline code and for menu navigation. 
+
+For example:
+- Menu navigation:
+        ```
+        `Document`>`New`>`Template`
+        ```              
+        Shown as: `Document`>`New`>`Template`
+- Path
+        ````
+        `/directory/filename.txt`
+        ```
+        Shown as: `/directory/filename.txt\`
 
 #### Images path format
 - Images -> ![]\(path/to/the/image.png)
