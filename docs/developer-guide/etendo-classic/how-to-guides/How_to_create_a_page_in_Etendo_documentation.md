@@ -73,10 +73,9 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     In order to display the page in the menu, add this page in the `mkdocs.yml` file in the nav section.
     
     !!!important
-        When adding pages to the navigation structure, remember to organize them in alphabetical order.
+        - When adding pages to the navigation structure, remember to organize them in alphabetical order.
+        - The directory and navigation structure must be the same.
 
-    !!!important
-        The directory and navigation structure must be the same.
 
     The documentation should be worked on following the [style guide](#style-guide) described in the next section.
 
@@ -112,7 +111,7 @@ tags:
 ### Subtitle
 ```
 !!!note
-    If the page was extrated from OB wiki, add the following footer editing the title and the link of the original page:
+    If the page was extracted from OB wiki, add the following footer editing the title and the link of the original page:
     ```
     ---
     
@@ -130,8 +129,7 @@ tags:
 For more information about how to add images to pages, read the [Images](#images) section
 
 #### Admonitions
-- Admonitions -> !!!note
-
+- Admonitions have the following syntax: !!! to start the block, a single keyword used according to the type of admonition. After four spaces, the content of the block is added.
 
 Example:
 
@@ -147,7 +145,8 @@ Example:
     massa, nec semper lorem quam in massa.
 
 
-#### How to show locations:
+#### Locations:
+In order to show locations, it is important to apply the following format:
 
 ```
 modules
@@ -189,15 +188,23 @@ Example:
 - Bullet point b
 
 !!!info
-  For more info about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="_blank"}.
+    For more info about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="_blank"}.
 
 ### Images
 
-In order to add images to the page, remember to upload the image to the *assets* folder and name it using the name of the page the image belongs to.
+In order to add images to the page, remember to upload the image to the **assets** folder with the corresponding specific location.
 
-If there is more than one image to upload, you can add numbers to the name of the file.
+For example, if the image location is `Documentation`>`Section 1`>`New Page`, the location of the image should be:
 
-Example: ?
+```
+
+ Assets 
+    └── Documentation
+         └── Section 1
+                └── New Page
+                    └── new image
+```
+
 
 ## Style Guide
 
@@ -205,19 +212,24 @@ Example: ?
 
 #### Bold, Italics and Paths
 
-- **Bold**. Use sparingly for emphasis, or to highlight file paths or option names, for example:
-From the **File** menu, select **New**.
+- **Bold**. Use sparingly for emphasis, or to highlight option names, for example:
+From the **File** menu, select **New**
 
 - *Italic*. Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
 
-- backticks ` `. Use them for paths both in functional and technical documentation. For menu navigation (for example starting a new document) bold the whole thing and use > to separate the menu items. For example:
-            `Document` >`New`> `Template`.
+- backticks ` `. Use them for paths both in functional and technical documentation. For menu navigation (for example starting a new document) bold the whole thing and use > to separate the menu items. 
+
+For example:
+
+        `Document` >`New`> `Template`.
+
+This is shown as: `Document` >`New`> `Template`.
 
 #### Tabs for different platforms
 When documenting a feature that varies by platform (Windows or Linux, for example), use the following tabs to include information relevant for each platform. Readers can then choose the corresponding tab with the necessary information.
 
 ```bash title="Tabs"
-=== "Windows"
+=== "C"
 
     ``` c
     #include <stdio.h>
@@ -228,7 +240,7 @@ When documenting a feature that varies by platform (Windows or Linux, for exampl
     }
     ```
 
-=== "Linux"
+=== "C++"
 
     ``` c++
     #include <iostream>
@@ -240,7 +252,7 @@ When documenting a feature that varies by platform (Windows or Linux, for exampl
     ```
 ```
 
-=== "Windows"
+=== "C"
 
     ``` c
     #include <stdio.h>
@@ -251,7 +263,7 @@ When documenting a feature that varies by platform (Windows or Linux, for exampl
     }
     ```
 
-=== "Linux"
+=== "C++"
 
     ``` c++
     #include <iostream>
@@ -281,18 +293,18 @@ In addition, try to refrain from using must, have to, need to, will, should and 
 Keep in mind that a manual describes mandatory procedures to follow to accomplish a certain task.
 
 - **Wrong**<br>
-You will have to press return to reboot the system.
+*You will have to press return to reboot the system.*
 - **Correct**<br> 
-Press return to reboot the system.
+*Press return to reboot the system.*
 
 
 #### Use third person
-Where possible, use the third person imperative. 
+*Where possible, use the third person imperative.* 
 
 - **Wrong**<br>
-You should run the installation script
+*You should run the installation script*
 - **Correct**<br>
-Run the installation script
+*Run the installation script*
 
 However, as long as you don't overdo it, it is fine to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
 
@@ -301,21 +313,21 @@ Readers of software documentation are men and women. Avoid using expressions tha
 You can avoid gender forms or use *they*/*their* as a generic third-person singular pronoun to refer to a person whose gender is unknown or irrelevant to the context of the usage.
 
 - **Wrong**<br>
-Every user has his home directory.
+*Every user has his home directory.*
 
 - **Correct**<br>
-Every user has a home directory.<br>
-Every user has their home directory.
+*Every user has a home directory.*<br>
+*Every user has their home directory.*
 
 
 #### Only describe current functionality
 Avoid talking about future features or plans for a product or an application.
 
 - **Wrong**<br>
-Graphics can be saved as a GIF image. Support for new formats will be added in future versions.
+*Graphics can be saved as a GIF image. Support for new formats will be added in future versions.*
 
 - **Correct**<br>
-Graphics can be saved as a GIF image.
+*Graphics can be saved as a GIF image.*
 
 
 #### Writing for a global audience
