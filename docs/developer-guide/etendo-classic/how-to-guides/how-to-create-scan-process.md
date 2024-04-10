@@ -22,7 +22,7 @@ Optional:
 
 1. First of all, you have to create a process. Log in as "System administrator. Open the `Application` > `Application Dictionary` > `Process Definition` window and create a new record.
 
-    ![scanprocessdefinition.png](/assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png)
+    ![scanprocessdefinition.png](../../../assets/legacy/technicaldocumentation/platform/scanprocessdefinition.png)
 
     - **Module**: It refers to the module where the process will be added.
     - **Identifier**: It is the identifier used to save the process in the database.
@@ -57,12 +57,12 @@ Optional:
 
 4. Change the **reference** to Button and in **Process Definition** select the process created recently.
 
-    ![scanprocess2](/assets/developer-guide/etendo-classic/how-to-guides/scanprocess2.png)
+    ![scanprocess2](../../../assets/developer-guide/etendo-classic/how-to-guides/scanprocess2.png)
 
 5. In `Application` > `Application Dictionary` > `Windows,Tabs and Fields`, search for the windows where you want the process.
    E.g. Search **asset windows** and then **assets scan field** in the main tab search. Uncheck "Displayed" (because the scan should only be shown in the mobile app).
 
-    ![sacnprocess1](/assets/developer-guide/etendo-classic/how-to-guides/scanprocess1.png)
+    ![sacnprocess1](../../../assets/developer-guide/etendo-classic/how-to-guides/scanprocess1.png)
 
 
 !!! success

@@ -7,7 +7,7 @@ tags:
  - setup
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -110,7 +110,7 @@ User Access Level allows limiting the records which will be accessible in entiti
 
 The diagram below shows the Etendo basic General Setup flow for a legal entity with accounting. This flow is one part of the overall Business setup flow.
 
-![](/assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png)
 
 In the example above, the **Accounting** data can not be shared across all the organization/s of the client because it was not applied at client level but to the Organization being created.
 
@@ -132,7 +132,7 @@ A defaulted **General Ledger configuration** and the **Chart of Accounts** can b
 The diagram below shows the business setup flow.
 This business setup flow goes from the Generic setup and Master Data areas to the Accounting and Warehouse setup areas.
 
-![](/assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/Quick_Guide_Diagram_new.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/Quick_Guide_Diagram_new.png)
 
 If you want to know more about the basic setup of the business configurations in Etendo, please review the different articles in the General Setup section.
 

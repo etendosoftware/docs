@@ -18,7 +18,7 @@ Once Logged in, go to the modules window, and create a new one as the image show
 | `Version`               | Version name                                                     | 1.0.0                                   |
 
 
-![create-module..png](/assets/developer-guide/etendo-mobile/create-new-subapplication/create-module.png)
+![create-module..png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/create-module.png)
 
 !!! Tip
     - Notice that the name can be anything you want, but the type has to be setted as Module.
@@ -37,7 +37,7 @@ After saving all the configuration, you have to export it. Open a terminal in th
 
 ## Add the dummy application
 1. To start, you must download the latest version of the [Dummy subapplication zip](https://github.com/etendosoftware/subapp/releases){target="_blank"} file and unzip it inside the module just created in the `subapp` folder.
-    ![modules.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
+    ![modules.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/modules.png)
 
 2. In a terminal on path `modules/<javapackage>/subapp` install the depedencies declared in the package.json and the following command would be executed.
     ``` bash title="Terminal"
@@ -65,7 +65,7 @@ After selecting this record in the `Dynamic App Version` tab, we must add the ve
 | `Active`                | If active                                                        | true                                   |
 | `Is Development`        | Is the development mode                                          | true                                   |
 
-![dynamicapp-versio.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
+![dynamicapp-versio.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/dynamicapp-version.png)
 
 Permissions must be given to the Admin role in order to view the application within the Etendo Mobile subapplication.
 From the `Role` window, look for the name Admin and in the `DYNAMIC APPS - Subapp` tab, add the example record Subapp Example with dev version.
@@ -77,7 +77,7 @@ From the `Role` window, look for the name Admin and in the `DYNAMIC APPS - Subap
 | `Version`               | Version number                                                   | dev                                    |
 | `Active`                | If active                                                        | true                                   |
 
-![role-dynamicapp.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
+![role-dynamicapp.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/role-dynamicapp.png)
 
 ## Concepts
 
@@ -86,7 +86,7 @@ In this section, we will explain the main parts and files of the subapplication 
 #### App.tsx
   This file is located in the root of the subapplication and it is the main file. In this file, we will define the routes and the components that will be rendered in each route. In addition, this file is responsible of the initialization of the subapplication and gets the params from Etendo Mobile.
 
-![path-to-app-file.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
+![path-to-app-file.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/path-to-app-file.png)
 
 #### Params from Etendo Mobile
 Etendo Mobile _sends_ params to the subapplication and all of them are ready to use, they are:
@@ -193,13 +193,13 @@ export default App;
 Etendo UI is a _library of components_ that will be used throughout the example subapplication. This library is based on React Native Elements and it is available on [NPM](https://www.npmjs.com/package/etendo-ui-library){target="_blank"}. You can use it in all of your subapplications.
   In this library we can find components like:  Button, Input, Navbar etc.
 
-![etendo-ui-library-npm.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
+![etendo-ui-library-npm.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/etendo-ui-library-npm.png)
 
 For more information, visit [Etendo UI Library](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"} 
 
 _Storybook_ is a place where you can see all the components of the library. Also, you can see the code of each component and how to use it.
 
-![storybook.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png)
+![storybook.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/storybook.png)
 
 ## Development mode setup
 
@@ -276,12 +276,12 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
 !!! info
     To find out your IP address on the local network, you can run the command `ifconfig` in a Mac or Linux terminal or `ipconfig` in Windows CMD.
   
-![ip-config](/assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png)
+![ip-config](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/ip-config.png)
 
 2. Login Etendo Mobile and you will see the list of subapps. Clicking on `Subapp Example` will download the building previously generated and exposed in the environment URL.
-    ![app-home.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png)
+    ![app-home.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/app-home.png)
 3. Here is the subapplication.
-    ![sub-app.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
+    ![sub-app.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/sub-app.png)
 
 
 ## Applying changes workflow
@@ -325,4 +325,4 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
     yarn build && yarn dev
     ```
 3.  Exit and re-enter the subapplication to visualize the changes.(No need to log out).
-     ![app-test.png](/assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)
+     ![app-test.png](../../../assets/developer-guide/etendo-mobile/create-new-subapplication/app-test.png)

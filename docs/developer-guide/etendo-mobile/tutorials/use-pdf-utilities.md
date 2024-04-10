@@ -3,7 +3,7 @@
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started]](/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
 
 ## Setup
 
@@ -195,8 +195,8 @@ return (
 This will be displayed as follows:
 
 <figure markdown>
-![main-screen.png](/assets/developer-guide/etendo-mobile/use-pdf-utilities/main-screen.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
-![loading-screen.png](/assets/developer-guide/etendo-mobile/use-pdf-utilities/loading-screen.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
+![main-screen.png](../../../assets/developer-guide/etendo-mobile/use-pdf-utilities/main-screen.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
+![loading-screen.png](../../../assets/developer-guide/etendo-mobile/use-pdf-utilities/loading-screen.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
 </figure>
 
 
@@ -249,6 +249,6 @@ To preview the PDF file, you need to use the *react-native-pdf* library. Followi
 After save, the final result, you should see something like this:
 
 <figure markdown>
-  ![saving-file.png](/assets/developer-guide/etendo-mobile/use-pdf-utilities/saving-file.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
-  ![pdf-show.png](/assets/developer-guide/etendo-mobile/use-pdf-utilities/pdf-show.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
+  ![saving-file.png](../../../assets/developer-guide/etendo-mobile/use-pdf-utilities/saving-file.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
+  ![pdf-show.png](../../../assets/developer-guide/etendo-mobile/use-pdf-utilities/pdf-show.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
 </figure>

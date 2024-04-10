@@ -10,7 +10,7 @@ tags:
 
 A schematic of the infrastructure is shown here:
 
-![etendo-mobile-infrastructure.png](/assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png)
+![etendo-mobile-infrastructure.png](../../assets/developer-guide/etendo-mobile/getting-started/etendo-mobile-infrastructure.png)
 
 On this page we will explain what are the requirements to create a subapplication and how to install all the necessary tools to develop a new subapplication.
 
