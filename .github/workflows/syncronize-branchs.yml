@@ -29,14 +29,14 @@ jobs:
                 COMMIT_MESSAGE=$(git log -1 --pretty=%B)
                 IS_MERGE_COMMIT=$(git rev-list --parents -n 1 HEAD | awk '{print NF-1}')
                 if [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
-                    if [[ $IS_MERGE_COMMIT -gt 1 && $COMMIT_MESSAGE =~ Merge\ remote-tracking\ branch\ \'origin\/(develop|main)\' || $COMMIT_MESSAGE =~ Merged\ in\ hotfix || $COMMIT_MESSAGE =~ Merge\ branch\ \'develop\'\ into\ \'main\' ]]; then
+                    if [[ $IS_MERGE_COMMIT -gt 1 && $COMMIT_MESSAGE =~ Merge\ remote-tracking\ branch\ \'origin\/(develop|main)\' || $COMMIT_MESSAGE =~ Merged\ in\ hotfix || $COMMIT_MESSAGE =~ Merge\ branch\ \'main\'\ into\ \'develop\' ]]; then
                     echo "Skipping pipeline for merge commit";
                     echo "::set-output name=skip_steps::true"
                     exit 0;
                     fi
                 elif [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
                     if [[ $IS_MERGE_COMMIT -gt 1 && $COMMIT_MESSAGE =~ Merge\ remote-tracking\ branch\ \'origin\/(develop|main)\' || 
-                    $COMMIT_MESSAGE =~ Merged\ in\ feature || $COMMIT_MESSAGE =~ Merge\ branch\ \'main\'\ into\ \'develop\' ]]; then
+                    $COMMIT_MESSAGE =~ Merged\ in\ feature || $COMMIT_MESSAGE =~ Merge\ branch\ \'develop\'\ into\ \'main\' ]]; then
                     echo "Skipping pipeline for merge commit";
                     echo "::set-output name=skip_steps::true"
                     exit 0;
