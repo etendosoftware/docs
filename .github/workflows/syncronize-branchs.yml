@@ -52,6 +52,8 @@ jobs:
 
             - name: Merge main to develop
               if: steps.commit-check.outputs.skip_steps != 'true' && endsWith(github.ref, 'main')
+              env:
+                GITHUB_TOKEN: ${{ secrets.ETENDO_BOT_KEY }}
               run: |
                 git checkout develop
                 git pull origin develop
@@ -60,6 +62,8 @@ jobs:
 
             - name: Merge develop to main
               if: steps.commit-check.outputs.skip_steps != 'true' && endsWith(github.ref, 'develop')
+              env:
+                GITHUB_TOKEN: ${{ secrets.ETENDO_BOT_KEY }}
               id: merge-develop-to-main
               run: |
                 git checkout main
