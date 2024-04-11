@@ -71,11 +71,3 @@ jobs:
                 git pull origin main
                 git merge origin/develop -m "Merge branch 'develop' into 'main'"
                 git push origin main
-
-            - name: Dispatch deploy-event
-              if: success() && steps.merge-develop-to-main.conclusion == 'success'
-              run: | 
-                curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                -H "Accept: application/vnd.github.everest-preview+json" \
-                "https://api.github.com/repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/dispatches" \
-                -d '{"event_type": "deploy-event"}'
