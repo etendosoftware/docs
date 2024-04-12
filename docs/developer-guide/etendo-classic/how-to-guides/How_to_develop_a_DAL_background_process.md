@@ -73,7 +73,7 @@ The example module implements the background process in the _modules/org.openbra
 ```java title="ProductRevenueCalculation.java"
 // assign the background process to a package that belongs to the 
 // main package of the module this custom development belongs to  
-package org.openbravo.client.application.examples;
+package com.etendoerp.client.application.examples;
   
 import java.math.BigDecimal;
 import java.util.Calendar;
@@ -105,7 +105,7 @@ public class ProductRevenueCalculation extends DalBaseProcess {
  
     logger = bundle.getLogger(); // this logger logs into the LOG column of
     // the AD_PROCESS_RUN database table
-    BigDecimal sumAmount = new BigDecimal(0);
+    BigDecimal sumAmount = BigDecimal.ZERO;
  
     logger.log("Starting background product revenue calculation. Loop " + counter + "\n");
  
@@ -125,7 +125,7 @@ public class ProductRevenueCalculation extends DalBaseProcess {
       // for each
       for (Product product : productList.list()) {
  
-        sumAmount = new BigDecimal(0);
+        sumAmount = BigDecimal.ZERO;
  
         // select lines from C_ORDERLINE table that match the product
         final Criteria orderLineList = OBDal.getInstance().createCriteria(OrderLine.class)
