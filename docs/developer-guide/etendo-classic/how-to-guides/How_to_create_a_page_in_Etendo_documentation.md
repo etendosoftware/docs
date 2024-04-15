@@ -22,19 +22,19 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 1. Clone the docs repository 
 	
     ```bash title="Terminal" 
-        git clone git@github.com:etendosoftware/docs.git
+    git clone git@github.com:etendosoftware/docs.git
     ```
 
 2. Install dependencies
 
     ```bash title="Terminal" 
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install mkdocs-material
-        pip install pillow cairosvg
-        pip install mkdocs-glightbox
-        pip install mike
-        pip install mkdocs-rss-plugin
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install mkdocs-material
+    pip install pillow cairosvg
+    pip install mkdocs-glightbox
+    pip install mike
+    pip install mkdocs-rss-plugin
     ```
 
 3. Create a new branch with [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
@@ -132,7 +132,32 @@ tags:
     This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
     ```
 
-### Useful references
+### Useful References
+
+#### Bold
+
+Use sparingly for emphasis, or to highlight option names, for example:
+From the **Sales order** window, select **New**
+
+```
+**Bold**
+```
+
+This is shown as:
+
+**Bold**
+
+#### Italics 
+
+Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
+
+```
+*Italic*
+```
+
+This is shown as:
+
+*Italic*
 
 #### Backticks
 
@@ -155,23 +180,27 @@ Use them to refer to paths, inline code and for menu navigation. For example:
     ```              
     Shown as: `Document`>`New`>`Template`
 
-#### Images path format
-
-To include images in the documentation, use the following path format: 
-
-`![](path/to/the/image.png)`
-
-!!!info
-    For more information about how to add images to pages, read the [Images](#images) section
-
 #### Admonitions
 
-Admonitions have the following syntax: !!! to start the block, a single keyword used according to the type of admonition. After four spaces, the content of the block is added.
-
-Example:
+Admonitions are used to include extra content without interrupting the flow of the page. As shown below, there are different types: 
 
 ```
 !!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!error
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
@@ -183,9 +212,92 @@ This is shown as:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 
-#### Locations
-In order to show locations, it is necessary to apply the following format:
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!failure
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+It is also possible to edit the title of the blockquote by adding:
+
+```
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+This is shown as:
+
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+For more information, visit [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="\_blank"}.
+
+#### Content Tabs
+
+When documenting a feature with different options (JAR or Source, Windows or Linux, C or C++ for example), use the following tabs to include information relevant for each option. Readers can then choose the corresponding tab with the necessary information and skip reading non-relevant information.
+
+```bash title="Content Tabs"
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+```
+This is shown as:
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+#### Directory Structure
+
+In order to the directory structure, it is necessary to apply the following format:
 
 ```
 modules
@@ -197,28 +309,35 @@ modules
 ```
 
 
-#### Links
+#### External Links
 
 To include external links in the documentation, use the following path format: 
 
-`[Google Example](https://google.com){target="_blank"}` 
+```
+[Google Example](https://google.com){target="_blank"}
+```
 
 This is shown as:
 
 [Google Example](https://google.com){target="_blank"} 
 
-#### Article Reference
+#### Internal links (Redirection)
 
-To include article references, use the relative paths such as the following example:
+To include internal links, use the relative paths from the current page such as the following example:
 
-`[Article Example](../../how-to-guides/Article_Example)`
+```
+[Internal Link](../../how-to-guides/Internal_Link)
+```
 
 This is shown as:
 
 [Article Example](../../how-to-guides/Article_Example)
 
 #### Lists
-To include lists in the documentation, use the following format:
+
+To include lists in the documentation, use the following formats:
+
+Bullet points:
 
 ```
 List:
@@ -234,97 +353,53 @@ List:
 - Bullet point a
 - Bullet point b
 
+Numbered list:
+
+```
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+```
+This is shown as:
+
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+
+Remember respecting the tabs is essential for the continuity of lists, this means that the content of different items must be tabulated.  
+
+#### Images
+
+To include images in the documentation, use the relative paths from the current page with the following format: 
+
+`![](../../assets/path/to/the/image.png)`
+
 !!!info
-    For more info about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="_blank"}.
-
-### Images
-
-In order to add images to the documentation, remember to upload the image to the **assets** folder with the corresponding specific location.
+    Remember to upload the image to the **assets** folder with the corresponding specific location.
 
 For example, if the image location is `Documentation`>`Section 1`>`New Page`, the location of the image should be:
 
 ```
 
- Assets 
-    └── Documentation
-         └── Section 1
-                └── New Page
-                    └── new image
+ assets 
+    └── documentation
+         └── section-1
+                └── new-page
+                    └── new-image.png
 ```
+#### More references
 
+For more information about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference){target="_blank"}.
 
-## Style Guide
+## Writing Rules
 
-### Format
-
-#### Bold, Italics and Paths
-
-- **Bold**. Use sparingly for emphasis, or to highlight option names, for example:
-From the **File** menu, select **New**
-
-- *Italic*. Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
-
-- backticks ` `` `. Use them for paths both in functional and technical documentation. To guide menu navigation, use backsticks for each item and > to separate the menu items. 
-
-For example:
-
-        `Document` >`New`> `Template`.
-
-This is shown as: `Document` >`New`> `Template`.
-
-#### Tabs for different platforms
-When documenting a feature that varies by platform (Windows or Linux, for example), use the following tabs to include information relevant for each platform. Readers can then choose the corresponding tab with the necessary information and skip reading non-relevant information.
-
-```bash title="Tabs"
-=== "C"
-
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-```
-
-=== "C"
-
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-
-### Writing Rules
-
-#### Keep it simple
+### Keep it simple
 Use short sentences and punctuation to keep ideas clear and simple. Introduce a single idea, concept or action per sentence.
 
 - **Wrong**<br>
@@ -334,7 +409,7 @@ Use short sentences and punctuation to keep ideas clear and simple. Introduce a 
 *The manufacturing module allows users to define the process plans, work requirements and work efforts. This section describes how processes that produce intermediate and final goods function.*
 
 
-#### Tenses
+### Tenses
 Always use the present tense. Avoid past or future tenses if possible.
 In addition, try to refrain from using must, have to, need to, will, should and similar forms.
 Keep in mind that a manual describes mandatory procedures to follow to accomplish a certain task.
@@ -345,7 +420,7 @@ Keep in mind that a manual describes mandatory procedures to follow to accomplis
 *Press return to reboot the system.*
 
 
-#### Use third person
+### Use third person
 *Where possible, use the third person imperative.* 
 
 - **Wrong**<br>
@@ -355,7 +430,7 @@ Keep in mind that a manual describes mandatory procedures to follow to accomplis
 
 However, as long as you do not overdo it, it is accepted to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
 
-#### Avoid gender discrimination
+### Avoid gender discrimination
 Readers of software documentation are men and women. Avoid using expressions that refer to specific gender forms.
 You can avoid gender forms or use *they*/*their* as a generic third-person singular pronoun to refer to a person whose gender is unknown or irrelevant to the context of the usage.
 
@@ -367,7 +442,7 @@ You can avoid gender forms or use *they*/*their* as a generic third-person singu
 *Every user has their home directory.*
 
 
-#### Only describe current functionality
+### Only describe current functionality
 Avoid talking about future features or plans for a product or an application.
 
 - **Wrong**<br>
@@ -377,14 +452,14 @@ Avoid talking about future features or plans for a product or an application.
 *Graphics can be saved as a GIF image.*
 
 
-#### Writing for a global audience
+### Writing for a global audience
 Keep in mind that people from all over the globe can use Etendo and its related documentation.
 Some important recommendations:
 
 - Avoid using names of people, addresses, and other sample information that are not common in the English language.
 - Remember that currencies and formats to represent dates and numbers are not the same in every part of the world.
 
-#### Other conventions
+### Other conventions
 
 - If you have a list of items (for example a list of files to be downloaded) order them alphabetically unless there is a more obvious logical order.
 - Do not use contractions (don't, you're, etc).
