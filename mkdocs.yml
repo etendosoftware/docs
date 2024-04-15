@@ -453,7 +453,7 @@ nav:
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
-      - How to create Copilot tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
+      - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
       - Tutorials: 
