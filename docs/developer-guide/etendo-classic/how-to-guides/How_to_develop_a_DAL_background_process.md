@@ -49,12 +49,12 @@ Before continuing, decide how the background process will perform the database o
  - Use the XSQL file that will get converted to a Java class by the SQLC core library upon runtime. If this option is used, your background Java class should _implement_ the **Process interface** and implement the `execute` method to perform our tasks. 
   
 !!!info
-      Find this interface in _src/org/openbravo/scheduling/Process.java_. 
+      Find this interface in `src/org/openbravo/scheduling/Process.java`. 
 
  - Use the new Data Access Layer which provides mid-tier POJOs through which we can manipulate database tables. If this method is used, your background Java class must _extend_ the **DalBaseProcess class** and implement the `doExecute` method that performs your task. This will give it access to the correct data context provided by DAL and at the same time, take care of authentication and privileges. 
   
 !!!info
-      Find the abstract class in _src/org/openbravo/service/db/DalBaseProcess.java_ . 
+      Find the abstract class in `src/org/openbravo/service/db/DalBaseProcess.java` . 
 
 Since the first method will eventually become deprecated due to database dependency, the second one is the prudent option to take.
 
@@ -68,7 +68,7 @@ The Data Access Layer is discussed in several other articles and sections.
 
 ##  Implementation
 
-The example module implements the background process in the _modules/org.openbravo.client.application.examples/src/org.openbravo.client.application.examples.ProductRevenueCalculation.java_
+The example module implements the background process in the `modules/org.openbravo.client.application.examples/src/org.openbravo.client.application.examples.ProductRevenueCalculation.java`
 
 ```java title="ProductRevenueCalculation.java"
 // assign the background process to a package that belongs to the 
