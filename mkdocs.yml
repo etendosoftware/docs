@@ -381,7 +381,7 @@ nav:
 #        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
 #        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
-#        - How to develop a DAL background process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
+        - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
 #        - How to do a complex query using the DAL-1: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_1.md
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
 #        - How to embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab.md
