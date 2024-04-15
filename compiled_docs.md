@@ -40042,8 +40042,8 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create Copilot tools
-## Article Path: /Developer Guide/Etendo Copilot/How to create Copilot tools
+# Article Title: How to Create Copilot Tools
+## Article Path: /Developer Guide/Etendo Copilot/How to Create Copilot Tools
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools
 ## Article Content: 
