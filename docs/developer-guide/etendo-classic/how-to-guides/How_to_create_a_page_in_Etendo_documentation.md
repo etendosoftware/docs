@@ -14,7 +14,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 
 
 ## Requirements
-- Python version ^3.10. To install it, follow [The Official Installation Guide](https://www.python.org/downloads/){target="\_blank"}.
+- Python version ^3.10. To install it, follow [the Python installation guide](https://www.python.org/downloads/){target="\_blank"}.
 
 
 ## Steps
@@ -135,27 +135,38 @@ tags:
 ### Useful references
 
 #### Backticks
-Use them to refer to paths, inline code and for menu navigation. 
 
-For example:
+Use them to refer to paths, inline code and for menu navigation. For example:
+
+- Path:
+    ```
+    `/directory/filename.txt`
+    ```
+    Shown as: `/directory/filename.txt`
+- Inline Code:
+    ```
+    `./gradlew update.database --info`
+    ```
+    Shown as: `./gradlew update.database --info`
+
 - Menu navigation:
-        ```
-        `Document`>`New`>`Template`
-        ```              
-        Shown as: `Document`>`New`>`Template`
-- Path
-        ````
-        `/directory/filename.txt`
-        ```
-        Shown as: `/directory/filename.txt\`
+    ```
+    `Document`>`New`>`Template`
+    ```              
+    Shown as: `Document`>`New`>`Template`
 
 #### Images path format
-- Images -> ![]\(path/to/the/image.png)
 
-For more information about how to add images to pages, read the [Images](#images) section
+To include images in the documentation, use the following path format: 
+
+`![](path/to/the/image.png)`
+
+!!!info
+    For more information about how to add images to pages, read the [Images](#images) section
 
 #### Admonitions
-- Admonitions have the following syntax: !!! to start the block, a single keyword used according to the type of admonition. After four spaces, the content of the block is added.
+
+Admonitions have the following syntax: !!! to start the block, a single keyword used according to the type of admonition. After four spaces, the content of the block is added.
 
 Example:
 
@@ -165,14 +176,16 @@ Example:
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 ```
+This is shown as:
+
 !!!note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 
 
-#### Locations:
-In order to show locations, it is important to apply the following format:
+#### Locations
+In order to show locations, it is necessary to apply the following format:
 
 ```
 modules
@@ -185,30 +198,38 @@ modules
 
 
 #### Links
-- Links -> \[Google Example](https://google.com){target="_blank"} 
 
+To include external links in the documentation, use the following path format: 
 
-Example:
+`[Google Example](https://google.com){target="_blank"}` 
+
+This is shown as:
+
 [Google Example](https://google.com){target="_blank"} 
 
 #### Article Reference
-- Article reference -> \[Article Example](../../how-to-guides/Article_Example)
 
+To include article references, use the relative paths such as the following example:
 
-Example:
+`[Article Example](../../how-to-guides/Article_Example)`
+
+This is shown as:
+
 [Article Example](../../how-to-guides/Article_Example)
 
-???? 
-- Italic format -> \*italic* 
-
-
-Example: *italic*
-
 #### Lists
-- Bullet points for lists -> `- Bullet point`
+To include lists in the documentation, use the following format:
 
+```
+List:
 
-Example:
+- Bullet point a
+- Bullet point b
+```
+
+This is shown as:
+
+List:
 
 - Bullet point a
 - Bullet point b
@@ -218,7 +239,7 @@ Example:
 
 ### Images
 
-In order to add images to the page, remember to upload the image to the **assets** folder with the corresponding specific location.
+In order to add images to the documentation, remember to upload the image to the **assets** folder with the corresponding specific location.
 
 For example, if the image location is `Documentation`>`Section 1`>`New Page`, the location of the image should be:
 
@@ -243,7 +264,7 @@ From the **File** menu, select **New**
 
 - *Italic*. Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
 
-- backticks ` `. Use them for paths both in functional and technical documentation. For menu navigation (for example starting a new document) bold the whole thing and use > to separate the menu items. 
+- backticks ` `` `. Use them for paths both in functional and technical documentation. To guide menu navigation, use backsticks for each item and > to separate the menu items. 
 
 For example:
 
@@ -252,7 +273,7 @@ For example:
 This is shown as: `Document` >`New`> `Template`.
 
 #### Tabs for different platforms
-When documenting a feature that varies by platform (Windows or Linux, for example), use the following tabs to include information relevant for each platform. Readers can then choose the corresponding tab with the necessary information.
+When documenting a feature that varies by platform (Windows or Linux, for example), use the following tabs to include information relevant for each platform. Readers can then choose the corresponding tab with the necessary information and skip reading non-relevant information.
 
 ```bash title="Tabs"
 === "C"
@@ -307,10 +328,10 @@ When documenting a feature that varies by platform (Windows or Linux, for exampl
 Use short sentences and punctuation to keep ideas clear and simple. Introduce a single idea, concept or action per sentence.
 
 - **Wrong**<br>
-The manufacturing module allows users to define the process plans, work requirements and work efforts; this is how the processes that produce intermediate and final goods work.
+*The manufacturing module allows users to define the process plans, work requirements and work efforts; this is how the processes that produce intermediate and final goods work.*
 
 - **Correct**<br>
-The manufacturing module allows users to define the process plans, work requirements and work efforts. This section describes how processes that produce intermediate and final goods function.
+*The manufacturing module allows users to define the process plans, work requirements and work efforts. This section describes how processes that produce intermediate and final goods function.*
 
 
 #### Tenses
@@ -332,7 +353,7 @@ Keep in mind that a manual describes mandatory procedures to follow to accomplis
 - **Correct**<br>
 *Run the installation script*
 
-However, as long as you don't overdo it, it is fine to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
+However, as long as you do not overdo it, it is accepted to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
 
 #### Avoid gender discrimination
 Readers of software documentation are men and women. Avoid using expressions that refer to specific gender forms.
