@@ -221,6 +221,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process/</loc>
+         <lastmod>2024-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler/</loc>
          <lastmod>2024-04-15</lastmod>
          <changefreq>daily</changefreq>
