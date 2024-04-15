@@ -326,12 +326,22 @@ This is shown as:
 To include internal links, use the relative paths from the current page such as the following example:
 
 ```
-[Internal Link](../../how-to-guides/Internal_Link)
+[Internal Link](../../how-to-guides/example-page.md)
 ```
 
 This is shown as:
 
-[Article Example](../../how-to-guides/Article_Example)
+[Internal Link](../../how-to-guides/example-page.md)
+
+It is also possible to refer to a specific section inside a page using
+
+```
+[Specific section](../../how-to-guides/example-page.md#specific-section)
+```
+
+This is shown as:
+
+[Specific section](../../how-to-guides/example-page.md#specific-section)
 
 #### Lists
 
@@ -378,18 +388,18 @@ Remember respecting the tabs is essential for the continuity of lists, this mean
 
 To include images in the documentation, use the relative paths from the current page with the following format: 
 
-`![](../../assets/path/to/the/image.png)`
+`![](../../assets/developer-guide/how-to-guides/new-page/new-image.png)`
 
 !!!info
     Remember to upload the image to the **assets** folder with the corresponding specific location.
 
-For example, if the image location is `Documentation`>`Section 1`>`New Page`, the location of the image should be:
+For example, if the image location is `developer-guide`> `how-to-guides` >`new-page`, the location of the image should be:
 
 ```
 
  assets 
-    └── documentation
-         └── section-1
+    └── developer-guide
+         └── how-to-guides
                 └── new-page
                     └── new-image.png
 ```
