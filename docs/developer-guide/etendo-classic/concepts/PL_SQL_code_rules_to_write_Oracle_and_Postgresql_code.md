@@ -1,78 +1,39 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
+---
+title: Tables
+tags: 
+  - Oracle
+  - PostgreSQL
+  - Database Development
+  - SQL Standards
+  - Translation
+  - Cursors
+---
 
-######  Toolbox
+#  PL-SQL Code Rules to Write Oracle and Postgresql Code
 
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
+##  Procedure Language Rules
 
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
-
-#  PL-SQL code rules to write Oracle and Postgresql code
-
-##  Contents
-
-  * 1  Procedure Language rules 
-    * 1.1  General rules 
-      * 1.1.1  Cursors 
-      * 1.1.2  Arrays 
-      * 1.1.3  ROWNUM 
-      * 1.1.4  %ROWCOUNT 
-      * 1.1.5  %ISOPEN, %NOTFOUND 
-      * 1.1.6  Formating code 
-      * 1.1.7  Elements not supported by dbsource manager 
-    * 1.2  Functions 
-    * 1.3  Procedures 
-    * 1.4  Views 
-    * 1.5  Triggers 
-
-  
----  
-  
-###  Procedure Language rules
-
-Openbravo supports Oracle and PostgreSQL database engines.
+Etendo supports Oracle and PostgreSQL database engines.
 
 The minimum required version are:
 
   * Oracle >= 10R2 
   * PostgreSQL >= 8.3 
 
-as described in the  System Requirements  .
+as described in the  System Requirements.
 
-This is a set of recommendations for writing Procedure Language that works on
-both database backends (when possible) or that can be automatically translated
-by  DBSourceManager  .
+This is a set of recommendations for writing Procedure Language that works on both database backends (when possible) or that can be automatically translated by  DBSourceManager  .
 
-These recommendations assume that you have written code in Oracle and that you
-want to port it to PostgreSQL. So they point out many features/constructs
-which oracle adds on top of the SQL standard and which are thus oracle
+These recommendations assume that code in Oracle is written and that the user wants to port it to PostgreSQL. So, many features/constructs are pointed out which oracle adds on top of the SQL standard and which are thus oracle
 specific and not available in PostgreSQL.
 
-To help developers to test if their code can be translated by dbsourcemanager
-the _ant export.database_ command contains an **Translation consistency
-check** which does the complete standardization/translation cycle once and
-reports and differences found (ignoring whitespace).
+To help developers to test if their code can be translated by dbsourcemanager the `_ant export.database_ command` contains a **Translation consistency check** which does the complete standardization/translation cycle once and
+reports differences found (ignoring whitespace).
 
   
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  Note: It
-is strongly recommended to avoid (when possible) using PL/SQL when writing new
-code and write it using DAL instead.  
----|---  
+!!!note
+      It is strongly recommended to avoid (when possible) using PL/SQL when writing new code and write it using DAL instead.  
+  
   
 ####  General rules
 
@@ -80,7 +41,7 @@ This a list of general rules that assure that PL runs properly on different
 database backgrounds.
 
   * JOIN statement. Change the code replacing the (+) by LEFT JOIN or RIGHT JOIN 
-  * In XSQL we use a questionmark (?) as parameter placeholder. If it is a NUMERIC variable use TO_NUMBER(?). For dates use TO_DATE(?). 
+  * In XSQL use a questionmark (?) as parameter placeholder. If it is a NUMERIC variable use TO_NUMBER(?). For dates use TO_DATE(?). 
   * Do not use GOTO since PostgreSQL does not support it. To get the same functionality that GOTO use boolean control variables and IF/THEN statements to check if the conditions are TRUE/FALSE. 
   * Replace oracle specific NVL commands by COALESCE. 
   * Replace oracle specific DECODE commands by CASE. If the CASE is NULL the format is: 
@@ -118,12 +79,16 @@ required.
   * PostgreSQL does not support COMMIT. It does automatically an explicit COMMIT between BEGIN END blocks. Throwing an exception produces a ROLLBACK. 
   * PostgreSQL does not support SAVEPOINT. BEGIN, END and ROLLBACK should be used instead to achieve the same functionality. 
   * PostgreSQL does not support CONNECT. 
-  * Both Oracle and PostgreSQL do not support using variable names that match column table names. For example, use v_IsProcessing instead of IsProcessing. 
+  * Both Oracle and PostgreSQL do not support using variable names that match column table names. For example, use `v_IsProcessing` instead of `IsProcessing`. 
   * PostgreSQL does not support EXECUTE IMMEDIATE ... USING. The same functionality can be achieved using SELECT and replacing the variables with parameters manually. 
   * PostgreSQL requires () in calls to functions without parameters. 
   * DBMS_OUTPUT should be done in a single line to enable the automatic translator building the comment. 
-  * In PostgreSQL any string concatenated to a NULL string generates a NULL string as result. It's is recommended to use a COALESCE or initialize the variable to ''. 
-    * **Notice** that in Oracle null||'a' will return 'a' but in PostgrSQL null, so the solution would be coalesce(null,'')||'a' that will return the same for both. But if the we are working with Oracle's NVarchar type this will cause an ORA-12704: character set mismatch error, to fix it it is possible to use coalesce(to_char(myNVarCharVariable), _)||'a'._
+  * In PostgreSQL any string concatenated to a NULL string generates a NULL string as result. It is is recommended to use a COALESCE or initialize the variable to ''. 
+
+!!!note
+      In Oracle null||'a' will return 'a' but in PostgrSQL null, so the solution would be coalesce(null,'')||'a' that will return the same for both. But if the we are working with Oracle's NVarchar type this will cause an ORA-12704: character set mismatch error, to fix it it is possible to use coalesce(to_char(myNVarCharVariable), _)||'a'._
+
+
   * Instead of doing 
 
     
@@ -188,10 +153,9 @@ that is both accepted by Oracle and PostgreSQL.
 
 #####  Arrays
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |
-Currently Arrays are not supported by dbsourcemanager so cannot be used in PL-
-SQL code.  
----|---  
+!!!info
+      Currently Arrays are not supported by dbsourcemanager so cannot be used in PL-SQL code.  
+
   
 In Oracle, arrays are defined in the following way:
 
@@ -308,16 +272,17 @@ the procedure and is updated manually when the cursor is opened or closed.
 
 #####  Elements not supported by dbsource manager
 
-  * Functions that return "set of tablename" 
+  * Functions that return **set of tablename** 
   * Functions that return and array 
   * Functions using regular expresions 
   * Column with type not included on the table in  this  document. 
 
+!!!info
+    For more information, see [Tables](Tables.md).
+
 ####  Functions
 
-PERFORM and SELECT are the two commands that allow calling a function. Since
-PostgreSQL does not accept default function parameters we define an overloaded
-function with default parameters.
+`PERFORM` and `SELECT` are the two commands that allow calling a function. Since `PostgreSQL` does not accept default function parameters we define an overloaded function with default parameters.
 
 To allow the automatic translator to do its job the following recommendations
 should be followed:
@@ -330,7 +295,7 @@ should be followed:
 
 ####  Procedures
 
-There are two ways of invoking procedures from PosgreSQL:
+There are two ways of invoking procedures from `PosgreSQL`:
 
   * Using the format variable_name := Procedure_Name(...); 
   * Using a SELECT. This is the method used for procedures that return more than one parameter. 
@@ -343,9 +308,9 @@ PostgreSQL does not support update for the views. If there is the need of
 updating a view a set of rules should be created for the views that need to be
 updated.
 
-In PostgreSQL there are no table/views USER_TABLES or USER_TAB_COLUMNS. They
-should be created from PostgreSQL specific tables like pg_class or
-pg_attribute.
+In `PostgreSQL` there are no table/views `USER_TABLES` or `USER_TAB_COLUMNS`. They
+should be created from PostgreSQL specific tables like `pg_class` or
+`pg_attribute`.
 
   
 
@@ -353,7 +318,7 @@ pg_attribute.
 
 Rules that the triggers should follow:
 
-  * As general rule, is not desirable to modify child columns in a trigger of the parent table, because it is very usual that child trigger have to consult data from parent table, originating a _mutating table error_ . 
+  * As general rule, is not desirable to modify child columns in a trigger of the parent table, because it is very usual that child trigger have to consult data from parent table, originating a **mutating table error** . 
   * The name should not be quoted (") because PostgreSQL interprets it literally. 
   * All the triggers have a DECLARE before the legal notice. In PostgreSQL it is necessary to do a function declaration first and then the trigger's declaration that executes the function. 
   * PostgreSQL does not support the OF ..(columns).. ON Table definition. It is necessary to include the checking inside the trigger. 
@@ -379,19 +344,8 @@ If you are using the automatic translator consider that:
 
   * The last EXCEPTION in the trigger should not have spaces to its left. The translator considers this the last exception and uses it to setup the right return value. 
   * The last END should not have spaces to its left. The indentation is used to determine where function ends. 
-  * Beware that if you add an statement like "IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;" just before the EXCEPTION statement, it might be removed by the automatic translator. 
+  * Beware that if you add an statement like `IF TG_OP = 'DELETE' THEN RETURN OLD; ELSE RETURN NEW; END IF;` just before the EXCEPTION statement, it might be removed by the automatic translator. 
 
-Retrieved from "  http://wiki.openbravo.com/wiki/PL-
-SQL_code_rules_to_write_Oracle_and_Postgresql_code  "
 
-This page has been accessed 30,897 times. This page was last modified on 22
-October 2019, at 20:45. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  Concepts
-
-**
+This work is a derivative of [PL-SQL code rules to write Oracle and Postgresql code](http://wiki.openbravo.com/wiki/PL-SQL_code_rules_to_write_Oracle_and_Postgresql_code){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
