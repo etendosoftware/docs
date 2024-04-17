@@ -7,7 +7,7 @@ tags:
   - format
 ---
 
-# How to create a page in Etendo documentation
+# How to Create a Page in Etendo Documentation
 
 ## Overview
 This guide contains basic rules, tips, and suggestions for people intending to develop documentation for Etendo. When different documents use the same guidelines, they are more user friendly, consistent and more simple to combine and reuse. We therefore strongly encourage all contributors to follow these guidelines for the benefit of the readers.
@@ -19,7 +19,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
 
 ## Steps
 
-1. Clone the docs repository 
+1. Clone the [docs](https://github.com/etendosoftware/docs){target="\_blank"} repository 
 	
     ```bash title="Terminal" 
     git clone git@github.com:etendosoftware/docs.git
@@ -37,7 +37,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     pip install mkdocs-rss-plugin
     ```
 
-3. Create a new branch with [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
+3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
 
     ```bash title="Terminal" 
 	# This command should be executed only the first time after cloning the repository.
@@ -70,7 +70,7 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     │   └── basic-feature
     ```
 
-    In order to display the page in the menu, add this page in the `mkdocs.yml` file in the nav section.
+    In order to display the page in the menu, add this page in the `mkdocs.yml` file in the **nav** section.
     
     !!!important
         - When adding pages to the navigation structure, remember to organize them in alphabetical order.
@@ -91,12 +91,12 @@ This guide contains basic rules, tips, and suggestions for people intending to d
     ...
     ```
 
-    The documentation should be worked on following the [style guide](#style-guide) described in the next section.
+    The documentation should be worked on following the [page format](#page-format) described in the next section.
 
     Once the documentation is finished:
 
 
-6. Create a PR to develop with all the related changes.
+6. Create a PR to `develop` with all the related changes.
 7. Once all the comments are resolved, and you have two approved, merge the PR.
 8. A new version of the documentation will be automatically deployed in [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
 
@@ -125,7 +125,7 @@ tags:
 ### Subtitle
 ```
 !!!note
-    If the page was extracted from OB wiki, add the following footer editing the title and the link of the original page:
+    If the page was extracted from OB wiki, for copyright reasons, add the following footer editing the title and the link of the original page:
     ```
     ---
     
@@ -382,13 +382,16 @@ List:
     - item 2
 2. Numbered option 2
 
-Remember respecting the tabs is essential for the continuity of lists, this means that the content of different items must be tabulated.  
+!!!info
+    Remember respecting the tabs is essential for the continuity of lists, this means that the content of different items must be tabulated.  
 
 #### Images
 
 To include images in the documentation, use the relative paths from the current page with the following format: 
 
-`![](../../assets/developer-guide/how-to-guides/new-page/new-image.png)`
+```
+![](../../assets/developer-guide/how-to-guides/new-page/new-image.png)
+```
 
 !!!info
     Remember to upload the image to the **assets** folder with the corresponding specific location.
