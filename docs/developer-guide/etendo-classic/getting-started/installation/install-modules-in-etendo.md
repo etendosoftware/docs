@@ -20,14 +20,14 @@ There are two ways to search for and install modules on Etendo:
 
     Install bundles from the Etendo Marketplace: In this case, you will install bundles that include a set of modules grouped by functionality.
 
-    ![](/assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png)
+    ![](../../../../assets/drive/LWaskO0G5UdmwGWdwZy5nHf4FcCTMBcgObbWv_PSjtMPCOAeqBPNSoLKrqheTLiNqc_aiqbVrJYYJlCQ_o7rGGofcqN0-myRi3u3YpXYNuVt1FYIli0RbiWYD8hYGcDLMpRYVS_dHOGGOLY117nmB2o.png)
     
     1.  First, go to [Etendo Marketplace](http://marketplace.etendo.cloud){target="_blank"}.
     2.  Search for the bundles that you want to install.
     3.  Click on the bundle to see its details, such as the version, description, and compatibility.
     4.  Check the requirements for the module, such as any dependencies or system configurations needed to run the module.
     5.  Select the format for the installation of the module, Source or JAR, and copy the corresponding dependency. E.g
-    ![marketplace-dependency.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/marketplace-dependency.png)
+    ![marketplace-dependency.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/marketplace-dependency.png)
 
 
 === ":simple-github: GitHub Packages"
@@ -38,11 +38,11 @@ There are two ways to search for and install modules on Etendo:
 
     Exploring the bundles and modules documentation, you find the javapackages of each one. E.g. [Banking Pool](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview/#banking-pool) documentation.
     
-    ![search-packages.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png)
+    ![search-packages.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/search-packages.png)
 
     When you select a package, you see the related information, e.g. 
 
-    ![package.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png)
+    ![package.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/package.png)
 
     You should use this information to include the dependency, in our case in Gradle format.
 
@@ -113,7 +113,7 @@ Based on the modules format you want to work with, you need to specify different
     
     A menu is displayed showing the modules that will be expanded, you have to confirm manually to continue with the expansion.
 
-    ![expand.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/expand.png)
+    ![expand.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-modules-in-etendo/expand.png)
 
     You can manually exclude the expansion of modules adding it in the *sourceModulesInDevelopment* list.
 

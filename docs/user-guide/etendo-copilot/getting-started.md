@@ -6,7 +6,7 @@ tags:
  - ai tools
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Etendo Copilot: Integrated Assistant
@@ -20,7 +20,7 @@ Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, 
 
 ### What is Etendo Copilot?
 
-![Copilot Chat](/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
+![Copilot Chat](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
 At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
@@ -35,7 +35,7 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 ###  Key Features:
 
-![Copilot Chat2](/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
+![Copilot Chat2](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
 
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
@@ -50,7 +50,7 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
-![Copilot Navbar](/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
 Here, you can select an Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
 
@@ -59,7 +59,7 @@ Here, you can select an Copilot App and engage in a conversation with it. Copilo
 The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows you to define and configure applications:
 
 <figure markdown>
-  ![Copilot App](/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
+  ![Copilot App](../../assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
   <figcaption> Open AI assistant type example</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you
     | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
 
     <figure markdown>
-    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
+    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
     <figcaption> Example of remote file configuration</figcaption>
     </figure>
 
@@ -166,7 +166,7 @@ In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you
     Attach a file in the `Attachments` section
 
     <figure markdown>
-    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
+    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
     <figcaption> Example of attached file configuration</figcaption>
     </figure>
 
@@ -177,4 +177,4 @@ In the Role window `Application`>`General Setup`>`Security`>`Role`, you can conf
 
 In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
 
-![Copilot Role](/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
+![Copilot Role](../../assets/user-guide/etendo-copilot/getting-started/copilot-role.png)

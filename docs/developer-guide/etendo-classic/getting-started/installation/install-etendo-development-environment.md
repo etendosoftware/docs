@@ -19,18 +19,18 @@ To install Etendo in a development environment, follow the same steps as describ
     1. Download and install [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download){target="_blank"}
 
     2. Open Etendo source directory with IntelliJ:
-        ![open-project.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/open-project.png)
+        ![open-project.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/open-project.png)
 
     2. Install Smart Tomcat plugin:
         To install, go to `Settings` >> `Plugins` and search for `“Smart Tomcat”`
-        ![install-smart-tomcat.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/install-smart-tomcat.png)
+        ![install-smart-tomcat.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/install-smart-tomcat.png)
 
     3.  Download [Apache Tomcat](https://tomcat.apache.org/download-90.cgi){target="_blank"} and unzip it in the project directory
 
     4. Setting up Tomcat
         
         - Go to Current File >> Edit configurations.
-        ![edit-configurations.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/edit-configurations.png){ align=right }
+        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/edit-configurations.png){ align=right }
         - Add new Smart Tomcat Configuration, clicking "+"
         - Name: Tomcat
         - Tomcat Server: Select unziped Apache Tomcat directory
@@ -38,11 +38,11 @@ To install Etendo in a development environment, follow the same steps as describ
         - Context path: define the same context path defined in gradle.properties file (by default "/etendo" )
         - Before launch: Remove all default tasks
 
-        ![add-new-configuration.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-new-configuration.png) 
+        ![add-new-configuration.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-new-configuration.png) 
 
     5. Start the Tomcat 
 
-        ![edit-configurations.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
+        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
         
         !!! success
                  Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)
@@ -59,27 +59,27 @@ To install Etendo in a development environment, follow the same steps as describ
 
     2. Open Etendo source directory with IntelliJ:
 
-        ![open-project-ultimate.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/open project-ultimate.png)
+        ![open-project-ultimate.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/open project-ultimate.png)
 
     3. Seting up Tomcat
         
         - Go to Current File >> Edit configurations.
             
-            ![edit-configurations.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/edit-configurations.png)
+            ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/edit-configurations.png)
         
         - Select the Tomcat configuration that appears first in the list, check the Tomcat server configuration on your machine.
             
-            ![add-new-configuration-ultimate.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-new-configuration-ultimate.png)
+            ![add-new-configuration-ultimate.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-new-configuration-ultimate.png)
         - In the Deployment section, add external sources 
 
-            ![add-new-configuration-ultimate.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-external-source.png)
+            ![add-new-configuration-ultimate.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/add-external-source.png)
         - Selec the C `${env.CATALINA_HOME}/webapps/etendo` folder  or  the and then click the OK button.
 
-            ![config-deployment-folder.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/config-deployment-folder.png)
+            ![config-deployment-folder.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/config-deployment-folder.png)
 
     4. Start the Tomcat
 
-        ![edit-configurations.png](/assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
+        ![edit-configurations.png](../../../../assets/developer-guide/etendo-classic/getting-started/instalation/install-etendo-development-environment/start-tomcat.png){ align=right }
         
         !!! success
                  Now you have a new Etendo environment running in [http://localhost:8080/etendo](http://localhost:8080/etendo)

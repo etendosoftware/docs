@@ -7,7 +7,7 @@ tags:
  - work effort
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -24,7 +24,7 @@ The main documents to manage the production process are:
 - the Work Requirement
 - the Work Effort
 
-![](/assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png)
+![](../../../../assets/drive/1lCJc82jrHhfKt3KS2Eg9SS0aoPpYMsD7.png)
 
 #### **Configuration**
 

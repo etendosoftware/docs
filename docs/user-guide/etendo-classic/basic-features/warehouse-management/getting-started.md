@@ -5,7 +5,7 @@ tags:
  - inventory accuracy
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -16,7 +16,7 @@ In Etendo, most of the warehouse movements are created automatically based on th
 
 ## Inventory Accuracy
 
-![](/assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png)
 
 Main sub-processes of the Inventory Accuracy business flow are:
 

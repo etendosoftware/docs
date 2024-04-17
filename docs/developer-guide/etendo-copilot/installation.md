@@ -85,10 +85,10 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     The copilot will detect the tool that best suits the prompt and will return the response of the tool.
 
     In the following example, we can see how the copilot detects that the tool that best suits the prompt is the `HelloWorldTool`(a default tool) and returns the response of the tool:
-    ![Alt text](/assets/developer-guide/etendo-copilot/getting-started/helloworld.png)
+    ![Alt text](../../assets/developer-guide/etendo-copilot/getting-started/helloworld.png)
     
     Another screenshot from the Copilot side, where we can see how the copilot detects that the tool that best suits the prompt is the `HelloWorldTool`:
-    ![Alt text](/assets/developer-guide/etendo-copilot/getting-started/helloworld-1.png)
+    ![Alt text](../../assets/developer-guide/etendo-copilot/getting-started/helloworld-1.png)
 
 7. When done using Etendo Copilot, run:
 
