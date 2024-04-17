@@ -10,7 +10,7 @@ tags:
 
 :octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions.es_es`
 [link](#overview)
-[link2](../../../etendo-classic/basic-features/general-setup/security.md#dynamic-app)
+[link2](../../../../../user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app)
 
 :material-store: Etendo Marketplace:  [Warehouse Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=BAE67A5B5BC4496D9B1CA002BBCDC80E){target="_blank"}
 
