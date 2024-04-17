@@ -16,7 +16,7 @@ tags:
 Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot you can read the [Copilot Instalation](/developer-guide/etendo-copilot/installation/) guide in the developer's guide section.
+    To install Etendo copilot you can read the [Copilot Instalation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
 ### What is Etendo Copilot?
 
