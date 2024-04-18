@@ -26,7 +26,7 @@ These are the special considerations for the module:
 - Include a DB Prefix for the module in case it is necessary. For example, the module will probably define new messages that will require a DB Prefix.
 - If the module has UI elements that can be translated (like messages), set the Translation Required checkbox and specify the necessary Module Language.
 
-![](/assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
+![](../../../assets/drive/1GUwtOTGd6LoJPGLquBJJrSTsh4jVXiD6.png)
 
 !!! info
     Now export the database to generate the file structure inside the module folder     ant export.database
@@ -34,13 +34,13 @@ These are the special considerations for the module:
  
 Finally, inside the modules accounting post-process java package directory, create the src folder, where the Java class that implements the accounting post-process code is stored.
 
-  ![](/assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
+  ![](../../../assets/drive/18i01Ilr0UNLViWoeUAbrJy_qcRhE6koC.png)
 
 ## Creating the Accounting Post-Process Configuration
   
 The Java class that implements the Accounting Post-Process logic is defined at the Accounting Process window. The definition is quite simple and only requires a name and the Java class name, which must be inside the java package of the module.
 
-![](/assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png)
+![](../../../assets/drive/1gzkW_cziu4nYBGnOqLo3LFoHNupaFH0N.png)
 
 This Accounting Post-Process will be later on associated with an Accounting Schema. So in this step it is important to define as many Java classes as Accounting Post-Processes we want to include in our module, although it is usually recommended to include just one process per module to keep the general rule of isolating features in separate modules.
  
@@ -55,7 +55,7 @@ Dataset definition is a key step in this process. A wrong dataset definition can
 - Inside the Table tab we must include the AD_AcctProcess table, which is the one that stores the Accounting Process configuration.
 - The HQL/SQL Where clause is an important field, because it allows filtering the records necessary  to include into the dataset. In the example all the records that are inside our module java package name are filtered.
 
-![](/assets/drive/1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J.png)
+![](../../../assets/drive/1J7nXqk7o0-CB9aE7fPpvs23PoB8HJD4J.png)
 
 The dataset definition is ready, so the user just needs to export it to a file pressing the Export Reference Data button. This process queries the previous tables and gets all the records that fulfill the HQL/SQL Where clause, generating a XML file inside the module's referencedata/standard directory. As a fast check, this file can be opened using any plain text editor and the user can verify that it contains several lines.
   

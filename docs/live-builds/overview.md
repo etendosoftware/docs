@@ -7,7 +7,7 @@ hide:
     - navigation
     - toc
 ---
-![cover-live-builds.png](/assets/live-builds/overview/cover-live-builds.png){align="right" }
+![cover-live-builds.png](../assets/live-builds/overview/cover-live-builds.png){align="right" }
 #
 ## Explore and Experiment with Live Builds in Etendo Classic
 

@@ -26,7 +26,7 @@ As already mentioned, the company in this example needs to create a specific pay
 
 A "Prepay" payment term can be created as shown in the image below:
  
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentterm.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentterm.png)
 
 Above means that the Company will have to pay 25% of the total order amount and the rest 30 days after the vendors Invoice Date.
 
@@ -43,7 +43,7 @@ In this scenario, the parties have agreed a specific payment term which can be f
 
 Once every required data is filled in as appropriate, the Purchase Order needs to be booked as every time an order is completed a Payment Plan is created for that Order.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseorder2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseorder2.png)
 
 !!! note
         It is not possible to record payments against orders which are not completed and therefore do not already have a payment plan linked to them.
@@ -58,7 +58,7 @@ The main fields to fill in the header section of the payment in window are:
 - Paying From, the financial bank account where the money is taken out from.
 - and the Payment Method which in the example is "Wire Transfer"
 
-![](d/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
 
 Then, it is possible to register vendor payment details by using the process button named “Add Details”.
 
@@ -66,7 +66,7 @@ A new window is shown where it is required to specify the "transaction type" to 
 
 The company in this example needs to choose "Orders" and then the order which is going to be partially paid.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/adddetails2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/adddetails2.png)
 
 Once everything is filled in, press the button Process.
 
@@ -94,7 +94,7 @@ The purchase order payment plan includes the payment registered in the Payment O
 
 Back to the [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
 
 To summarize:
 
@@ -110,7 +110,7 @@ The company in this example can register the [Goods Receipt](/user-guide/etendo-
 
 This process allows introducing the exact amount of goods received from the vendor against each purchase order line.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/pendinggoodsreceipts2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/pendinggoodsreceipts2.png)
 
 Once processed, Etendo informs about the Goods Receipt number just registered.
 
@@ -118,7 +118,7 @@ Next step is to enter the vendor invoice. There are several ways of entering a v
 
 The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 
 The invoice created once completed will inherit the payment plan of the order.
 
@@ -127,7 +127,7 @@ In this example:
 - the invoice payment plan will already reflect the amount already paid against the order, which is USD 50
 - and besides, it will also reflect the outstanding amount to be paid, which is USD 60
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseinvoice.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseinvoice.png)
 
 Above situation it is also reflected in accounting, as purchase invoice posting will look like:
 
@@ -145,20 +145,20 @@ In this example, this report shows in an intuitive way:
 - the status of the payment made against the order and later on inherited by the invoice as "Withdrawn not Cleared", that means that the payment has been withdrawn from a financial bank account but it is not reconcile yet
 - and the invoice outstanding amount to be paid as "Awaiting payment".
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentreport.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentreport.png)
 
 In this example, the last step is to register the remaining amount payment of the vendor invoice 30 days after the invoice date. A payment made to a vendor invoice can be registered in the system two ways:
 
 - in the Payment Out window, same way as described here but this time the payment must be related to a "Transaction Type" equal to "Invoices"
 - or in the Purchase Invoice window, by using the process button "Add Payment".
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/addpayment.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/addpayment.png)
 
 Once this new payment is processed, the purchase invoice changes to fully paid. In other words, the "Payment Complete" check box of the invoice is now selected.
 
 Finally, the "Payment Report" now shows the invoice as fully paid, in Etendo terms it is shown as "Withdrawn not Cleared".
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentreport2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentreport2.png)
 
 ## Invoice prepayment: Execution steps
 
@@ -167,7 +167,7 @@ In Etendo, the company in this example will have to configure a payment method w
 ### Payment method configuration
 The payment method to be used needs to be configured in order to allow the posting of the prepayment as soon as it is made, therefore the "Withdrawn Payment Account" can be specified in the field 'Upon Payment Use'.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentmethod.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentmethod.png)
 
 !!! note
     The checkbox "Automatic Withdrawn" is also selected. That means that the payment will be automatically withdrawn from the financial account.
@@ -176,7 +176,7 @@ The payment method to be used needs to be configured in order to allow the posti
 
 First step is to issue the purchase invoice dated on November 6th, 2023 for instance. The issued invoice can be completed as soon as it is properly filled in.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseinvoice3.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/purchaseinvoice3.png)
 
 ### Payment creation and accounting
 
@@ -184,7 +184,7 @@ Next step is to register the prepayment of the invoice in an earlier date than t
 
 Above is done by using the "Add Payment" button. The "Payment Date" field needs to be modified as required.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/addpayment3.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/addpayment3.png)
 
 Once processed,  a payment is created in the "Payment Out" window and besides the withdrawal of that payment is automatically registered in the corresponding financial account.
 
@@ -192,7 +192,7 @@ The payment can be posted from the "Payment Out" window.
 
 Payment posting looks like:
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport .png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport .png)
 
 Above posting reflects the moment in which the vendor liability is canceled by the prepayment, which is also canceled by the recognition of the payment withdrawn.
 
@@ -201,7 +201,7 @@ Above posting reflects the moment in which the vendor liability is canceled by t
 Last step is to post the purchase invoice to the ledger.
 Invoice posting looks like:
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport2.png)
 
 Above posting reflects the moment in which the vendor liability is accounted, however vendor liability is already canceled by the prepayment.
 

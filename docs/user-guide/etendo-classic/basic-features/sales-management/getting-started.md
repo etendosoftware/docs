@@ -6,7 +6,7 @@ tags:
     - quotation
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -29,11 +29,11 @@ Due to its complexity and different roles involved, it is convenient to split Or
 
 1. *Order to Shipment* process starts when a customer requests a quotation or orders goods to the moment the warehouse staff ships the merchandise.
 
-    ![ord-to-ship-bus-pro](/assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/ord-to-ship-bus-pro.png)
+    ![ord-to-ship-bus-pro](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/ord-to-ship-bus-pro.png)
 
 2. *Customer Invoice to Cash* continues the previous sub-process by invoicing customer deliveries and closes it by receiving payments from buyers.
 
-![cust-inv-bus-proc](/assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cust-inv-bus-proc.png)
+![cust-inv-bus-proc](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cust-inv-bus-proc.png)
 
 ### Configuration
 
@@ -129,11 +129,11 @@ For more information about payment management documentation visit the [Financial
 
 Customer Returns workflow manages the business processes for returning items back from customers either for credit
 
-![cust-ret-cr-business-process](/assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cust-ret-cr-business-process.png)
+![cust-ret-cr-business-process](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cust-ret-cr-business-process.png)
 
 or for replacement.
 
-![cus-ret-replace-business-process](/assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cus-ret-replace-business-process.png)
+![cus-ret-replace-business-process](../../../../assets/user-guide/etendo-classic/basic-features/sales-management/getting-started/cus-ret-replace-business-process.png)
 
 ### Configuration
 
