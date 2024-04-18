@@ -1,5 +1,4 @@
 ---
-title: How to Create a Standard Process Definition
 tags: 
   - Java Implementation
   - Validation
@@ -15,13 +14,13 @@ tags:
 
 **Standard UI pattern of Process Definition** allows to create Parameter Windows defined in Application Dictionary, the UI for this windows is generated on demand so once defined those parameters, developer only needs to take care about process implementation.
 
-This section will add a new Standard Process Definition and create a menu entry to invoke it.
+This section will add a new **Standard Process Definition** and create a menu entry to invoke it.
 
 The implementation requires development experience. See the following concept pages for background information on action handlers and javascript development:
 
-  * [Action Handler](../../../concepts/Etendo_Architecture.md)
-  * [Client_Side_Development_and_API](../../../concepts/Client_Side_Development_and_API.md)
-  * [JavaScript_Coding_Conventions](../../../concepts/JavaScript_Coding_Conventions.md)
+  * [Action Handler](../../concepts/Etendo_Architecture.md)
+  * [Client_Side_Development_and_API](../../concepts/Client_Side_Development_and_API.md)
+  * [JavaScript_Coding_Conventions](../../concepts/JavaScript_Coding_Conventions.md)
 
 
 ##  Steps to implement the Process
@@ -38,7 +37,7 @@ This example process will have the following parameters:
 
 When **Done** button is clicked the process is executed:
 
-  * It verifies in backend max qty field is greater than min qty. In case they are not, a validation error is sent back to the client asking the user to fix the values before continuing. 
+  * It verifies in backend `max qty` field is greater than `min qty`. In case they are not, a validation error is sent back to the client asking the user to fix the values before continuing. 
   * If previous validation is satisfied: 
     * Total amount of all selected orders is summed and displayed in a message in the **parameter** window. 
     * If a business partner is selected, **Business Partner** window is opened within the selected one and a message is shown in this window. 
@@ -55,12 +54,12 @@ When **Done** button is clicked the process is executed:
 
 ####  Adding Parameters
 
-  * _Min Qty_ parameter 
+  * `Min Qty` parameter 
     * Move to **Parameters** tab 
     * Create a new record 
-    * Name: Min Qty. This is the name that will be shown in UI for this parameter. 
+    * Name: `Min Qty`. This is the name that will be shown in UI for this parameter. 
     * Internal Name: min. It is the internal name that will be used to retrieve the value in the java class. 
-    * Sequence Number: 10. Defines the position of this field in the Parameter window in relation with the rest of fields. 
+    * Sequence Number: 10. Defines the position of this field in the **Parameter window** in relation with the rest of fields. 
     * Reference: Integer. Defines both the data type the parameter will hold and how this parameter is visualized and behaves in the UI. 
     * Mandatory: true. Will force the parameter to have a value before allowing to submit the info to the process. 
     * Default value: 0. It is the value that will take the parameter by default. It is a javascript expression evaluated in the server side, like  Default Filter Expressions  used in selectors. 
@@ -83,7 +82,7 @@ Adding a process to the menu allows to open it from menu as a new tab.
 ####  Java Implementation
 
 
-In the case of a Process Definition action handler, extend from **BaseProcessActionHandler** and implement the **doExecute** method.
+In the case of a Process Definition action handler, extend from `BaseProcessActionHandler` and implement the `doExecute` method.
 
     
     
@@ -235,7 +234,7 @@ The response would look similar to this:
 After executing the process, it is possible to perform a series of actions.
 
 !!!info
-    For more information, see [Pick & Execute process extension/Technical Specification](). 
+    For more information, see [Pick & Execute process extension](How_to_create_a_Pick_and_Execute_Process.md). 
 
 The response should look like:
 
@@ -271,6 +270,8 @@ The response should look like:
       }]
     }
 
+
+
   * **` responseActions ` ** . It is the name of the ` JSONArray ` that indicates a series of actions will be performed after execution. Each of the items in the array is one action, different kinds of actions can be executed. It is also possible to  extend through modules  the possible actions to be performed: 
     * **` showMsgInProcessView ` ** . Shows a message in the same tab the process was invoked from. In case the process is opened from menu, this message will be seen in the window where the values for the parameters are provided; if the process is invoked from a button in a tab, the message will be shown in that tab. 
     * **` openDirectTab ` ** . Opens a new tab ( ` tabId ` , it is possible to indicate the record to open in that tab ( ` recordId ` ). The ` wait: true ` property indicates next action will not be started till this one finishes. Optionally, you can also include a criteria object to automatically add a removable filter to the open tab (a criteria is an object which describes a filter in a grid. 
@@ -280,14 +281,13 @@ The response should look like:
 
 
 
-  * **` showMsgInView ` ** . Shows a message in the recently opened tab. 
-    * **` refreshGrid ` ** . Refreshes the grid where the process button is defined. From PR15Q1 on, grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the refreshGrid to the list of response actions to see the updated data in the grid. 
-    * **` refreshGridParameter ` ** . Refreshes the **grid parameter** with name ` gridName ` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
+  * ` showMsgInView ` . Shows a message in the recently opened tab. 
+    * ` refreshGrid ` . Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the `refreshGrid` to the list of response actions to see the updated data in the grid. 
+    * ` refreshGridParameter ` . Refreshes the **grid parameter** with name ` gridName ` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
 
 
   
-The `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler` . This method returns a helper that can be used to build the result of the process with the desired standard response actions in
-an easy way. For example:
+The `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
 
     
     
@@ -306,10 +306,9 @@ an easy way. For example:
 After compiling and deploying (because a new java class is added, note this is
 not needed in case of just editing/adding paramters).
 
-There is a new entry in the menu: **Example Param Process** , this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is
-executed:
+There is a new entry in the menu: **Example Param Process** , this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
 
-  * If Max Qty is greater the Min Qty, a message is shown and the process can be submited again. 
+  * If `Max Qty` is greater the `Min Qty`, a message is shown and the process can be submited again. 
   * A message in the parameter window is shown summing the amounts of all selected orders. 
   * If a business partner is selected, it is opened in a new tab displaying a message on it. 
 
@@ -323,7 +322,7 @@ guides/How_to_create_a_Standard_Process_Definition-2.png){: .legacy-image-style}
 Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. 
 
 !!!info
-    More details about this process visit [How to create a Pick and Execute Process](). 
+    More details about this process visit [How to create a Pick and Execute Process](How_to_create_a_Pick_and_Execute_Process.md). 
 
 
 ###  Read Only and Display Logic
@@ -334,8 +333,7 @@ Parameters in Process Definition support display and read only logic. This allow
 ###  Subordinated Combos
 
   
-The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in
-javascript being posible to use OBBindings, in the same way default value is written.
+The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being posible to use `OBBindings`, in the same way default value is written.
 
 ###  Parameter Grouping
 
@@ -360,8 +358,7 @@ To accomplish this, the data/json object returned from the server handler should
       "showResultsInProcessView": true
     }
 
-The called java script method gets an object with a `processView` property which refers back to the overall process view. From the process view you can get to the resultLayout to show the result. The resultLayout is a Smartclient
-HLayout.
+The called `java script` method gets an object with a `processView` property which refers back to the overall process view. From the process view you can get to the resultLayout to show the result. The resultLayout is a `SmartclientHLayout`.
 
 For example, a return action:
 
@@ -409,8 +406,7 @@ For instance:
         failureCallback();
       }
 
-In addition, client side validation functions support a fourth parameter that contains additional information, like the
-pressed button:
+In addition, client side validation functions support a fourth parameter that contains additional information, like the pressed button:
 
     
     
@@ -422,7 +418,7 @@ pressed button:
       }
 
 !!!info
-    To learn how to define new buttons in a standard process definition window, see [Adding new buttons](Adding_new_buttons.md).
+    To learn how to define new buttons in a standard process definition window, see [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons).
 
 
 Additional information can be added to the payload the process will receive. For example, this code would add a new parameter named `myParam`:
@@ -435,8 +431,7 @@ Additional information can be added to the payload the process will receive. For
 ###  Invoking a function when a non-grid parameter is changed
 
   
-The **On Change Function** field of the Parameter tab allows defining a function that will be executed when a non-grid parameter is updated, after the parameter loses its focus. This function can be used to do validations or to
-implement **client side callouts**, among other things.
+The **On Change Function** field of the Parameter tab allows defining a function that will be executed when a non-grid parameter is updated, after the parameter loses its focus. This function can be used to do validations or to implement **client side callouts**, among other things.
 
 The function must accept four parameters:
 
@@ -472,7 +467,8 @@ The **On Refresh Function** field of the Process Definition tab allows defining 
 
 For example, if the process has a child-process, once the child-process finishes, it will invoke a refresh of the parent process.
 
-Since each process has its particularities, a custom refresh function should be defined in case the process be susceptible of being refreshed/reloaded.
+!!!note
+    Since each process has its particularities, a custom refresh function should be defined in case the process is susceptible of being refreshed/reloaded.
 
 The function must accept, at least, one parameter:
 
@@ -481,8 +477,7 @@ The function must accept, at least, one parameter:
 ###  Invoking when a grid parameter is loaded for the first time
 
   
-The initialization of the grid parameters is done asynchronously, so when the general **onLoadFunction** is invoked, it is not certain whether all the grid parameters have been loaded with their initial data. If you need to execute
-some code right after a grid is loaded for the first time, use the **On Grid Load Function** field. The function used here must accept one parameter, the grid itself.
+The initialization of the grid parameters is done asynchronously, so when the general **onLoadFunction** is invoked, it is not certain whether all the grid parameters have been loaded with their initial data. If you need to execute some code right after a grid is loaded for the first time, use the **On Grid Load Function** field. The function used here must accept one parameter, the grid itself.
 
 For example:
 
@@ -496,10 +491,10 @@ For example:
 
 ###  Specifying the number of rows displayed in a grid parameter
 
-You can set the number of rows that should be shown at the first time in a grid parameter using the **Number of Displayed Rows** field. This field is used just for setting the height of the grid, if the grid has actually more rows
-than the Number of Displayed Rows, a scrollbar will be shown. The default value for this field is 5.
+You can set the number of rows that should be shown at the first time in a grid parameter using the **Number of Displayed Rows** field. This field is used just for setting the height of the grid, if the grid has actually more rows than the Number of Displayed Rows, a scrollbar will be shown. The default value for this field is 5.
 
-It is not possible to define the colspan of the grid parameters, because they always use the four available columns of the form.
+!!!note
+    It is not possible to define the colspan of the grid parameters, because they always use the four available columns of the form.
 
 ###  Defining a display logic for the fields of a grid parameter
 
@@ -508,7 +503,7 @@ The **Display Logic for Grid Column** field in the Field tab allows to define a 
 
 For instance, suppose that you have defined a parameter window with two parameters:
 
-  * a boolean called Show Advanced Columns (column name showAdvancedColumns 
+  * a boolean called Show Advanced Columns `(column name showAdvancedColumns` 
   * a grid. 
 
 Let's suppose the grid has some fields that should be displayed only if the **Show Advanced Column** flag is checked. The Display Logic for Grid Column field of these fields should be set to:
@@ -522,19 +517,18 @@ Let's suppose the grid has some fields that should be displayed only if the **Sh
 ###  Specifying a default value for the filter of a parameter grid field
 
   
-The **Default Filter Expression** field of the Field tab allows to define a default value for the filter of a field. This default value can be a constant, dependent from another parameter or use OBBindings.
+The **Default Filter Expression** field of the Field tab allows to define a default value for the filter of a field. This default value can be a constant, dependent from another parameter or use `OBBindings`.
 
 ###  Hiding the parameter name of a grid parameter
 
   
-Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, you might consider not
-showing the name of the grid parameter. You can do this by unckecking the flag **Show Title** in the Parameter tab.
+Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unckecking the flag **Show Title** in the Parameter tab.
 
 ###  Adding new buttons
 
 By default, process definitions have a single **Done** button (and a **Cancel** one in case they are shown in a popup from a standard window). It is possible to change that button or to add new ones.
 
-To do it you can:
+To do it:
 
   1. Create a new **Reference with Button List** as **Parent Reference**. In the **List Reference** add as many records as buttons to be displayed in the process. The name of these elements will be seen in the button's label whereas the **Search Key** is the value that will be sent to the **Handler** in the backend within the ` buttonValue ` field. 
   2. Add a new parameter to the process with **Button List** as reference and the new reference just created as **Reference Search Key** . 
@@ -557,8 +551,7 @@ guides/How_to_create_a_Standard_Process_Definition-20.png){: .legacy-image-style
 
 By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
 
-Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the Process Event Handler. The entry corresponding to the file upload will contain
-a Map with the following information:
+Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the **Process Event Handler**. The entry corresponding to the file upload will contain a Map with the following information:
 
     
     
@@ -624,16 +617,16 @@ This behavior can be modified overriding the method uploadAttachment.
 
 
 !!!info
-    For more information, see an example in [ExportFileExample](https://gitlab.com/users/sign_in){target="\_blank"}
+    For more information, see an example in [ExportFileExample](https://gitlab.com/users/sign_in){target="\_blank"}.
 
 
 ##  Limitations
 
 ###  References
 
-Currently, not all references available in Standard windows are available in Process Definition. The following ones cannot be used as parameters:
+Currently, not all references available in **Standard windows** are available in **Process Definition**. The following ones cannot be used as parameters:
 
-  * Button: the mechanism to add new buttons is described in [Adding new buttons](Adding_new_buttons.md). 
+  * Button: the mechanism to add new buttons is described in [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons). 
   * Image 
   * Masked String 
   * Table 
@@ -649,14 +642,13 @@ Callouts are not implemented for parameters.
   
 ##  Migrating old Processes
 
-Process Definitions support several parameters. In order to implement this support, the way grid parameter value is
-sent to backend was changed and a new **Compatibility with Legacy Grids_** flag was added.  
+Process Definitions support several parameters. In order to implement this support, the way grid parameter value is sent to backend was changed and a new **Compatibility with Legacy Grids** flag was added.  
 
 To migrate grid legacy compatible processes to new format, set **Compatibility with Legacy Grids** to false and depending on the case:
 
-  * If the process' **UI Pattern** is **Manual** , no other change is needed. 
+  * If the process **UI Pattern** is **Manual** , no other change is needed. 
   * If the process has no parameter, no other change is needed. 
-  * If the process has a (grid) parameter, the JSON that ` doExecute ` method receives changes these are the required modifications: 
+  * If the process has a (grid) parameter, the `JSON` that ` doExecute ` method receives changes these are the required modifications: 
 
 Old code  |  New code  
 ---|---  
