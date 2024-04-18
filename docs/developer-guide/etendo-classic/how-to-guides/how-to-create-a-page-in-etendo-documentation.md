@@ -143,9 +143,7 @@ From the **Sales order** window, select **New**
 **Bold**
 ```
 
-This is shown as:
-
-**Bold**
+This is shown as: **Bold**
 
 #### Italics 
 
@@ -155,9 +153,7 @@ Use it when quoting a piece of a text from another source, a piece of text in an
 *Italic*
 ```
 
-This is shown as:
-
-*Italic*
+This is shown as: *Italic*
 
 #### Backticks
 
@@ -167,18 +163,18 @@ Use them to refer to paths, inline code and for menu navigation. For example:
     ```
     `/directory/filename.txt`
     ```
-    Shown as: `/directory/filename.txt`
+    This is shown as: `/directory/filename.txt`
 - Inline Code:
     ```
     `./gradlew update.database --info`
     ```
-    Shown as: `./gradlew update.database --info`
+    This is shown as: `./gradlew update.database --info`
 
 - Menu navigation:
     ```
     `Document`>`New`>`Template`
     ```              
-    Shown as: `Document`>`New`>`Template`
+    This is shown as: `Document`>`New`>`Template`
 
 #### Admonitions
 
@@ -317,9 +313,7 @@ To include external links in the documentation, use the following path format:
 [Google Example](https://google.com){target="_blank"}
 ```
 
-This is shown as:
-
-[Google Example](https://google.com){target="_blank"} 
+This is shown as: [Google Example](https://google.com){target="_blank"} 
 
 #### Internal links (Redirection)
 
@@ -329,9 +323,7 @@ To include internal links, use the relative paths from the current page such as 
 [Internal Link](../../how-to-guides/example-page.md)
 ```
 
-This is shown as:
-
-[Internal Link](../../how-to-guides/example-page.md)
+This is shown as: [Internal Link](../../how-to-guides/example-page.md)
 
 It is also possible to refer to a specific section inside a page using
 
@@ -339,9 +331,7 @@ It is also possible to refer to a specific section inside a page using
 [Specific section](../../how-to-guides/example-page.md#specific-section)
 ```
 
-This is shown as:
-
-[Specific section](../../how-to-guides/example-page.md#specific-section)
+This is shown as: [Specific section](../../how-to-guides/example-page.md#specific-section)
 
 #### Lists
 
