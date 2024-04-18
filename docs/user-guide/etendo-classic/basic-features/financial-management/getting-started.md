@@ -7,7 +7,7 @@ tags:
     - assets
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -63,7 +63,7 @@ This application area covers the [Period End Close to Financial Report](/user-gu
 
 Payables and Receivables Management addresses customer collections and supplier payments as well as other payments not related to invoices but to orders (prepayments) or G/L Items.
 
-![payment-workflow.png](/assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
+![payment-workflow.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/payment-workflow.png)
 
 ### Configuration
 
@@ -190,7 +190,7 @@ Finally Finance Staff prints the Reconciliation reports (Reconciliation Details,
 
 *Period End Close to Financial Report* business flow manages the open and close of periods.
 
-![periodendclose-tofinancialreport.png](/assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
+![periodendclose-tofinancialreport.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/periodendclose-tofinancial-report.png)
 
 #### Configuration
 
@@ -420,7 +420,7 @@ And besides:
 
 Manages global assets life cycle from acquisition to disposition, including depreciation and other write-downs.
 
-![asset-acq-disp-business-process.png](/assets/user-guide/etendo-classic/basic-features/financial-management/asset-acq-disp-business-process.png)
+![asset-acq-disp-business-process.png](../../../../assets/user-guide/etendo-classic/basic-features/financial-management/asset-acq-disp-business-process.png)
 
 
 

@@ -7,7 +7,7 @@ tags:
  - requirement
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -18,14 +18,14 @@ In Material Requirement Planning the application is used to *automatically revie
 
 ## Material Requirement Planning
 
-The Master Requirement Planning consists of two plans:
+The Material Requirement Planning consists of two plans:
 
 - Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) and the [Requisition](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition).
 - Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order).
 
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
-![](/assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png)
 
 
 

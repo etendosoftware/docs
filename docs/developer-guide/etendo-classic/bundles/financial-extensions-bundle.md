@@ -385,13 +385,13 @@ The abstract methods must be implemented in the new Java class and, if required,
 
 In the Financial Type window a new record is created with the new Financial Type and in the Class Name field the package of the Java class that was implemented is entered followed by the Java class name.
 
-![](/assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png)
+![](../../../assets/drive/O0wwVyzJUyoTZblrURHjjOMPgcwQ1-NPr8XlI1qaE37Mo0PQ1WVVdHlOV1YPDpBjbzzeDaOgIsWoS01ptNgGT3_VintShkcxoZGdioZ8jTNuk-CyXUxZNjmSa8YaEKwlP58Gv3AXBmqEmdG2IQ.png)
 
 By simply filling in the Class Name field, the Create New Funding Plan and Update Funding Plan button will be visible.
 
-![](/assets/drive/aq3IBl8B85MUhWR_N0Buo6qjtcxAhESwYOpGkh8Hn1X-ka9jGGVpgfaW3jzbzfuY2Bca2F3O-zPaU3GEtdYEVLy2_u0_f1wVNF3rjteWPBBbCFIM4Lv_ZW5FEMni5EVA2IKgtiOckQPrzhSa1g.png)
+![](../../../assets/drive/aq3IBl8B85MUhWR_N0Buo6qjtcxAhESwYOpGkh8Hn1X-ka9jGGVpgfaW3jzbzfuY2Bca2F3O-zPaU3GEtdYEVLy2_u0_f1wVNF3rjteWPBBbCFIM4Lv_ZW5FEMni5EVA2IKgtiOckQPrzhSa1g.png)
 
-![](/assets/drive/_r4oVdOsDGq8rLR2_c2foimTnGGh66TGlUIs1J_ZiWG4yuSXnNNMLDFAwtN4D6w_GU_XjgJ8Ix5s9KF4jrTAKHsdLliRdPS06BqHgl8hPYmf9QvYfbg9oOwWRUp9pBNbhcIDN6KOtS07OornYw.png)
+![](../../../assets/drive/_r4oVdOsDGq8rLR2_c2foimTnGGh66TGlUIs1J_ZiWG4yuSXnNNMLDFAwtN4D6w_GU_XjgJ8Ix5s9KF4jrTAKHsdLliRdPS06BqHgl8hPYmf9QvYfbg9oOwWRUp9pBNbhcIDN6KOtS07OornYw.png)
 
 There is no need to modify any of the 2 buttons, as they automatically execute the Exec method of the Java class specified in the Financial Type.
 

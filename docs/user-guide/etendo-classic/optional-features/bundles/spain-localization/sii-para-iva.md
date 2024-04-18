@@ -29,7 +29,7 @@ Existen dos posibilidades de envío o alta/modificación de los registros de fac
 2.  a través del Formulario de alta web, que la AEAT pone a disposición de los contribuyentes.  
     En este portal se pueden consultar, modificar o dar de baja facturas ya enviadas.
 
-![](/assets/drive/NcapLkTK0dSBkBKnjlIi4vrC9hJzMZL9ZBod26PJNUbKwihAng4l6CYr99qkDa4oF13Qu117ZzDoaMx3Fxlo1K9Xv65A3akDmFWkF0WYKZlNNU-SN0z9vcHkE8a_dZGxs05lrXEjgsv8EVRPzAQ.png)
+![](../../../../../assets/drive/NcapLkTK0dSBkBKnjlIi4vrC9hJzMZL9ZBod26PJNUbKwihAng4l6CYr99qkDa4oF13Qu117ZzDoaMx3Fxlo1K9Xv65A3akDmFWkF0WYKZlNNU-SN0z9vcHkE8a_dZGxs05lrXEjgsv8EVRPzAQ.png)
 
 Desde Etendo es posible enviar (dar de alta o modificar) los registros de facturas por vía telemática, opción 1 anterior, lo cual se traduce en la generación de un fichero XML con el siguiente contenido por cada envío a SII:
 
@@ -133,7 +133,7 @@ Un NIF no censado es un NIF que se ha dado de baja.
 
 Esta nueva clave habrá que configurarla para aquellos terceros con un NIF español válido pero no censado, respecto de los que sea necesario emitir facturas de venta o recibir facturas de compra.
 
-![](/assets/drive/x32lggVwaGGuN2LEHAcmdiTxQkiGQmJy-C-c1aJE_PtbYs-wEPOGsmF60MeJ-dy-mCyeV5bMha-AGazmPGsm8zJNwXbnA03--9vbE9SM3kBh1NFa23UUVAm58gGNEmODILze76yjrlb8PoaCM2Q.png)
+![](../../../../../assets/drive/x32lggVwaGGuN2LEHAcmdiTxQkiGQmJy-C-c1aJE_PtbYs-wEPOGsmF60MeJ-dy-mCyeV5bMha-AGazmPGsm8zJNwXbnA03--9vbE9SM3kBh1NFa23UUVAm58gGNEmODILze76yjrlb8PoaCM2Q.png)
 
 Las facturas con un NIF no censado que se den de alta en SII, quedarán en un estado "Aceptado con errores".
 
@@ -172,7 +172,7 @@ Los bienes inmuebles se configuran en la ventana "Producto", asociándolos la ca
 
 En la ventana "Configuración SII" se configuran todos los parámetros necesarios para un correcto envío de registros de facturas a SII (alta/modificación).
 
-![](/assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png)
+![](../../../../../assets/drive/PUUxVQZw1yZL9b2ewXHB-XVmzsLyPo5faDW1aeCsJFwhbChyd9ruI4NLYICeHXrV48LcMdddkTCLen33qEYscOjGen7klkPxS8qHfCLTiL9IlOByRZvbjg9lRVFUsnmjV3Tu-DwuITRpXYEC6lo.png)
 
 Tal y como se muestra en la imagen anterior, los parámetros de configuración de SII son los siguientes:
 
@@ -230,7 +230,7 @@ Las descripciones introducidas en esta pantalla:
 - se podrán seleccionar tanto en las facturas de compra como de venta, si los dos checks "**Descripción factura de compra**" y "**Descripción factura de venta**", están seleccionados.
 - será el que por defecto se seleccione tanto en facturas de compra como de venta, si además se selecciona el check "**Por defecto**".
 
-![](/assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png)
+![](../../../../../assets/drive/x5SNFYObWJ09RINUVFsSyaz2GXjEz9dgzB8uii8Aop2bTJzFPhKiRl1DQn0U_ftwny6e4YRNo-48sriTWNDSvvOX-J0Riu4Vih2WmesHgfYJR10cNFG54mM1I6fXN2UpnoclPpOSgD7GKqH5tVw.png)
 
 Además, en las ventanas de
 
@@ -280,7 +280,7 @@ Es por ello que en la ventana "**Método de Pago**" tendremos que configurar el 
 - los métodos de Pago que configuremos con el tipo "Check", serán del tipo 02 = Cheque
 - y los métodos de Pago que configuremos con el tipo "Others", serán del tipo 04 = Otros.
 
-![](/assets/drive/6RIBz5XNdlOJZfAYW9noDPVGUdVjzgJ-odzlxR_I1kl4zuYXuKJeVqJ-oFz2l39Lk3LFBcIOpFh-JT6v4sa4TseyUaT6AXWHwV7_uD-XTTRasQSsjYBhZUzzVR12IJXodchVfGWSmlPZRVFQ8Zs.png)
+![](../../../../../assets/drive/6RIBz5XNdlOJZfAYW9noDPVGUdVjzgJ-odzlxR_I1kl4zuYXuKJeVqJ-oFz2l39Lk3LFBcIOpFh-JT6v4sa4TseyUaT6AXWHwV7_uD-XTTRasQSsjYBhZUzzVR12IJXodchVfGWSmlPZRVFQ8Zs.png)
 
 ### **Causas de exención**
 
@@ -303,13 +303,13 @@ En Etendo existen dos opciones para indicar la causa de exención junto con la b
 - En la **ventana Factura (Cliente)**, dentro del grupo de campos AEAT SII, se cumplimentará la causa de exención relacionada con las bases exentas de la factura. El usuario tendrá que asignar un valor del desplegable de forma manual que trasladará al XML la clave que hace referencia a la base imponible exenta en factura.
 - En la **ventana "Causa de exención"** existe la opción de establecer una clave por defecto que se asignará en factura cuando se incorporen líneas que utilicen un impuesto configurado como exento. Es decir, cuando en una factura de venta se introduzca una línea exenta, automáticamente en la cabecera se seleccionará la causa asignada por defecto, siendo modificable si el usuario quisiera elegir otra.
 
-![](/assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png)
+![](../../../../../assets/drive/68wFWHAUwNPb9pxqJ74XV0_7GWE9NTOwLRq_zcsu_25D9eEKbCC0yAZGot3P-LRyMP3m9ofSVHjHV_ayL7VWhPK_FCONObalaYedgxtIYblbAHMwbOQxRJxU94A9dUIyPYu3cvxn397kT5FKRK0.png)
 
 ### **Configuración alta de factura de compra sólo tras su contabilización**
 
 Para organizaciones que desean dar de alta una factura de compra sólo tras su contabilización, existe la opción de controlarlo mediante la activación del check "Alta en SII facturas de compra tras su contabilización" ubicado en la ventana Configuración SII, de manera que la fecha registro contable únicamente se rellenará en el momento que la factura sea contabilizada con el día en el que se produzca el asiento contable independientemente de la fecha imputada en el libro diario, completando así la información necesaria para dar de alta la factura en SII.
 
-![](/assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png)
+![](../../../../../assets/drive/wDYzHV8OVfCzUR5nY9mJRuHgfVRARdfad7C_5joSfI3YHj-oIZ5jlqbHpoEAnmFdR2foIajkDQ4kWPpS7263-7CMJnIGChmJVinY3s7Pan3paaZYYICZgySArMwH4Aa1QKNgveg43dODi9zPD5I.png)
 
 !!! info
     Si se decide optar por esta funcionalidad, es conveniente que la organización no tenga activo el proceso de contabilización automático, ya que imputará la fecha registro contable en el momento de realizar la contabilización.
@@ -322,12 +322,12 @@ porcentaje de deducción varía año a año al no ser un porcentaje fijo.
 
 En la ventana “Rango impuesto” se ha creado un nuevo check denominado “Is prorate”:
 
-![screenhunter_01_sep._01_11.08.gif](/assets/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
+![screenhunter_01_sep._01_11.08.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_01_sep._01_11.08.gif)
 
 Al tener activo este check, se mostrará un segundo check nuevo, dentro de la cabecera en
 el detalle de “More Information” que se llamará “Prorrata SII - XML” que estará marcado por
 defecto como “Si”:
-![screenhunter_02_sep._01_11.09.gif](/assets/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
+![screenhunter_02_sep._01_11.09.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_02_sep._01_11.09.gif)
 
 Estos check permitirán, con la configuración correcta que realicemos, enviar al SII
 información sobre facturas de compra afectadas por la prorrata del IVA.
@@ -335,7 +335,7 @@ información sobre facturas de compra afectadas por la prorrata del IVA.
 A continuación, utilizaremos como ejemplo el iva del 10%, para mostrar la configuración que
 debe realizarse para que la información se envíe de forma correcta al SII:
 
-![unnamed.gif](/assets/legacy/enduserdocumentation/unnamed.gif)
+![unnamed.gif](../../../../../assets/legacy/enduserdocumentation/unnamed.gif)
 
 1 – Crear un rango padre “Prorrata Gener.22 (77%) IVA 10%”:
 Lo haremos con la misma configuración que puede tener cualquier rango nacional de la
@@ -345,9 +345,9 @@ valor total del impuesto (en los rangos “padres” estándar es un campo en el
 y activar el check “Is Prorate”. En nuestro ejemplo indicaremos en el campo “Indice” el valor
 10 y posteriormente marcaremos el check de “Nivel de agrupación”.
 
-![screenhunter_04_sep._01_11.16.gif](/assets/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
+![screenhunter_04_sep._01_11.16.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_04_sep._01_11.16.gif)
 
-![screenhunter_05_sep._01_11.16.gif](/assets/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
+![screenhunter_05_sep._01_11.16.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_05_sep._01_11.16.gif)
 
 2 – Crear un rango hijo deducible “Prorrata Gener.22 (77%) IVA 10% (+77%)”:
 Al igual que en el punto anterior, crearemos un rango “hijo” con la misma configuración que
@@ -357,7 +357,7 @@ Las únicas particularidades que debemos tener en cuenta serán las de indicar e
 “Indice” el valor del porcentaje de impuesto deducible (según nuestro ejemplo indicaremos
 7,7) y activar el check “Is Prorate”:
 
-![screenhunter_06_sep._01_11.17.gif](/assets/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
+![screenhunter_06_sep._01_11.17.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_06_sep._01_11.17.gif)
 
 3 – Crear un rango hijo no deducible “Prorrata Gener.22 (77%) IVA 10% (-23%)”:
 Crearemos el segundo rango “hijo” de la misma manera que el anterior. Además de indicar
@@ -365,8 +365,8 @@ en el campo “Indice” el valor del porcentaje de impuesto no deducible (segú
 
 ejemplo indicaremos 2,3) y activar el check “Is Prorate”, tendremos que marcar el check de
 “Impuesto no deducible” que se encuentra dentro del detalle “More Information”:
-![screenhunter_07_sep._01_11.18.gif](/assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
-![screenhunter_08_sep._01_11.19.gif](/assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
+![screenhunter_07_sep._01_11.18.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_07_sep._01_11.18.gif)
+![screenhunter_08_sep._01_11.19.gif](../../../../../assets/legacy/enduserdocumentation/screenhunter_08_sep._01_11.19.gif)
 
 ## **Envío de registros de facturas a SII**
 
@@ -384,7 +384,7 @@ Desde la ventana "Factura (Cliente)" se crea una nueva factura de venta, tal y c
 
 Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
 
-![](/assets/drive/9JpfQqGKF7-_z1OT14yslxXsujho_F52LKKra1oEchhjCvNqSuKeeAFl-I_8R9ZLicY5kC7xFZWE0pKjKoL37cWY460b3-oxGq8rCAF0jeNDnY9zW-1kx3JeANgejmqgjvbjC3dOTHStPYt8ag8.png)
+![](../../../../../assets/drive/9JpfQqGKF7-_z1OT14yslxXsujho_F52LKKra1oEchhjCvNqSuKeeAFl-I_8R9ZLicY5kC7xFZWE0pKjKoL37cWY460b3-oxGq8rCAF0jeNDnY9zW-1kx3JeANgejmqgjvbjC3dOTHStPYt8ag8.png)
 
 - la "**Fecha Operación**" que por defecto se informa con la misma fecha que la "Fecha de la factura", si bien el usuario la puede modificar.
 - la **Clave Tipo Factura**, que por defecto se informará con el valor "**Factura**", clave tipo factura "F1".  
@@ -418,7 +418,7 @@ Una vez introducida esta información, podemos completar y contabilizar la factu
 
 En este momento el botón "**Alta en SII**" se muestra habilitado.
 
-![](/assets/drive/7cFVkpUUzmAnQ82GFakllefI21kNGCJOtphTnAVpQM-249bn8AgShm_73EiSU6YnkQ2Th2bfw7xfX36ohWf7LMrZP_CbAAjUv8E3Sns6qsP5BZXOzjP-wQ9TsS_Fu_ncK0Gfg1pFoOW_Pdu4yUU.png)
+![](../../../../../assets/drive/7cFVkpUUzmAnQ82GFakllefI21kNGCJOtphTnAVpQM-249bn8AgShm_73EiSU6YnkQ2Th2bfw7xfX36ohWf7LMrZP_CbAAjUv8E3Sns6qsP5BZXOzjP-wQ9TsS_Fu_ncK0Gfg1pFoOW_Pdu4yUU.png)
 
 Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
 
@@ -468,7 +468,7 @@ Y, en el grupo de campos "**Archivos Adjuntos**", podremos encontrar los fichero
 
 Finalmente, en la cabecera de la factura de venta enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
 
-![](/assets/drive/g2N7zkHFiQI0VRRrWd1wUiRbD_YMkUTZbPjj55rc-J27t0yuKU8a53rk49H79ww5LD3qEXTg6YF5TReKkRhcxZYX4ZN2e7_G_LsptRjA5Wm5jDmezbpqjEJXtxGIFho5QDNvJEKSpLX4FNfcO5Q.png)
+![](../../../../../assets/drive/g2N7zkHFiQI0VRRrWd1wUiRbD_YMkUTZbPjj55rc-J27t0yuKU8a53rk49H79ww5LD3qEXTg6YF5TReKkRhcxZYX4ZN2e7_G_LsptRjA5Wm5jDmezbpqjEJXtxGIFho5QDNvJEKSpLX4FNfcO5Q.png)
 
 ##### **Facturas Rectificativas de Venta**
 
@@ -488,7 +488,7 @@ En este caso, al registrar la factura rectificativa por diferencias, dentro del 
 
 Este tipo de facturas rectificativas se deben crear con documentos del tipo "Reverse" (por ejemplo: "Reverse Sales Invoice"), e importes negativos, tal y como se muestra en la pantalla. Etendo mostrará un error en caso contrario.
 
-![](/assets/drive/vTuKPdCz4_8FyY4_zSO6LA157zXc_9Nr_D8zgcKv0O4rP5aKXnKOTp6T4ga6SwbHN29oEgD3MZBP_lEyZ4uTmZY43pXsiFapBmKqvowAp_z9xCeRLmituMo4UW7FG0zv2wbDhZuUvIiRR2diRP0.png)
+![](../../../../../assets/drive/vTuKPdCz4_8FyY4_zSO6LA157zXc_9Nr_D8zgcKv0O4rP5aKXnKOTp6T4ga6SwbHN29oEgD3MZBP_lEyZ4uTmZY43pXsiFapBmKqvowAp_z9xCeRLmituMo4UW7FG0zv2wbDhZuUvIiRR2diRP0.png)
 
 Al dar de Alta esa factura en SII, el fichero XML registrará de forma automática la siguiente información:
 
@@ -496,7 +496,7 @@ Al dar de Alta esa factura en SII, el fichero XML registrará de forma automáti
 - Tipo Rectificativa = I
 - Importe total = -27.77
 
-![](/assets/drive/SeBxMk8qhA3rmNFmPr8rDLDp0Te2HvbQ6RS9HV_BlXMUelz5MFQEFTIvC_pg7HDHeh4joNbWJekXn4gGPcPBVhqE4JWeIrEuGE-vXyWDbF0EYfTQVeXUS_9SIqTt-hIk5IGmO4BKrjnfCwV7cVs.png)
+![](../../../../../assets/drive/SeBxMk8qhA3rmNFmPr8rDLDp0Te2HvbQ6RS9HV_BlXMUelz5MFQEFTIvC_pg7HDHeh4joNbWJekXn4gGPcPBVhqE4JWeIrEuGE-vXyWDbF0EYfTQVeXUS_9SIqTt-hIk5IGmO4BKrjnfCwV7cVs.png)
 
 **Por Sustitución**, en este caso se produce una anulación de la factura original (ya dada de alta en SII) y la creación de una nueva factura con los importes correctos.
 
@@ -519,7 +519,7 @@ Posteriormente, se crea la nueva factura con los importes correctos y con los si
 - **Motivo de la rectificación** = R1...R4, a seleccionar por el usuario según el motivo de la rectificación.
 - **Fecha de operación** = fecha de operación de la factura original
 
-![](/assets/drive/rdC0SMKqwDEIs85X9vxqT-gH-nz2YhzthhfKlLB_r9C21y2DwmdHFH5IAjvQSuPjMhDh68W3XBvEA1suciw55sUz01nQtcCjXQLCPLy4GM79hmE-0TnTPJWtlT9wqsIQiSjLi7NSbJQYNjLoePI.png)
+![](../../../../../assets/drive/rdC0SMKqwDEIs85X9vxqT-gH-nz2YhzthhfKlLB_r9C21y2DwmdHFH5IAjvQSuPjMhDh68W3XBvEA1suciw55sUz01nQtcCjXQLCPLy4GM79hmE-0TnTPJWtlT9wqsIQiSjLi7NSbJQYNjLoePI.png)
 
 Al dar de Alta esta factura rectificativa por sustitución en SII, el fichero XML registrará de forma automática la siguiente información:
 
@@ -527,7 +527,7 @@ Al dar de Alta esta factura rectificativa por sustitución en SII, el fichero XM
 - Tipo Rectificativa = S
 - Importe total = 92.57
 
-![](/assets/drive/lnYFE3_FU4bzz-1q2uHRiBxo8WEjg6PJjEZxg7iqFzPwM5kUFVzoXW7eGuF7vCCciW59Ls5jRsSI6vksPNZ6nvMYFB2yBLMgqjW6oausvB8IvBPlj3mVYTv9qAbRfhLQaTat-jaFOxSIpzrRrPw.png)
+![](../../../../../assets/drive/lnYFE3_FU4bzz-1q2uHRiBxo8WEjg6PJjEZxg7iqFzPwM5kUFVzoXW7eGuF7vCCciW59Ls5jRsSI6vksPNZ6nvMYFB2yBLMgqjW6oausvB8IvBPlj3mVYTv9qAbRfhLQaTat-jaFOxSIpzrRrPw.png)
 
 Tanto en facturas rectificativas de venta por diferencias como por sustitución, el usuario deberá asignar la fecha de operación correspondiente a la factura original (devengo de la operación). Sin embargo, **en facturas rectificativas el periodo de alta en SII será el correspondiente a la fecha factura**, incorporándose a la declaración de IVA en dicho mes.
 
@@ -539,7 +539,7 @@ La información del alta del registro de la factura de compra en SII se recoger�
 
 Dentro del grupo de campos "AEAT SII" debemos indicar, tal y como se muestra en la siguiente imagen:
 
-![](/assets/drive/cqDeUP_hKuC8VbLZevAo4OeHT3UwNZ3jdR2d30gp4MCdn2Gt3BmAwtXG_808xBrfS_VOHrta0oBdhRVjlUlB959b2ZuhfP4oPjpw1tL_d1VyK6m-0V7YwTkcq7Y_UvYuDQCGARgGz0hkuCdYgA0.png)
+![](../../../../../assets/drive/cqDeUP_hKuC8VbLZevAo4OeHT3UwNZ3jdR2d30gp4MCdn2Gt3BmAwtXG_808xBrfS_VOHrta0oBdhRVjlUlB959b2ZuhfP4oPjpw1tL_d1VyK6m-0V7YwTkcq7Y_UvYuDQCGARgGz0hkuCdYgA0.png)
 
 - la "**Fecha Operación**", que por defecto se informa con la misma fecha que la "Fecha de la factura", fecha actual o de creación de la factura en Etendo, si bien el usuario la puede modificar.
 - la "**Fecha registro contable**", que por defecto y para las facturas que se crean de forma manual se informa con la fecha actual, o fecha de creación de la factura en Etendo y, por tanto, registro de la factura recibida en Etendo.  
@@ -592,7 +592,7 @@ Una vez introducida esta información, podemos completar y contabilizar la factu
 
 En este momento el botón "**Alta en SII**" se muestra habilitado.
 
-![](/assets/drive/W1rkgnVrH0mKDQ0NA-IAK1sLYniuAWMvnbMWL0uzeVoFAitGq8m9p_nu1zpcBthrvEmYnuJpHAvGF1iK6xfsCBwukRa6Si97mEssOkn6thGnWEhTyPyopkGdd-5pEsKpggQZEd4BjTqOFxy_LLY.png)
+![](../../../../../assets/drive/W1rkgnVrH0mKDQ0NA-IAK1sLYniuAWMvnbMWL0uzeVoFAitGq8m9p_nu1zpcBthrvEmYnuJpHAvGF1iK6xfsCBwukRa6Si97mEssOkn6thGnWEhTyPyopkGdd-5pEsKpggQZEd4BjTqOFxy_LLY.png)
 
 Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
 
@@ -607,7 +607,7 @@ Es decir, siempre es posible contabilizar/descontabilizar la factura después de
 
 Finalmente, en la cabecera de la factura de compra enviada a SII de forma manual o automática, tendremos información del "**Ejercicio**" y del "**Periodo**" que se incluyeron en el alta en SII de dicha factura.
 
-![](/assets/drive/Qj4R1IM6iiRpAwD5W06pJn2eqh9uR_mlF5dhG82eF3WkUc7_9mVb9jrw8EinOCeDZJL2U1kSXGoHnWZQ7vTV-ykEAu_PUGcAfengKKCFtGrRR89qnQGMNryBR9kWqseAky2pyK-f5XwISH1dPl4.png)
+![](../../../../../assets/drive/Qj4R1IM6iiRpAwD5W06pJn2eqh9uR_mlF5dhG82eF3WkUc7_9mVb9jrw8EinOCeDZJL2U1kSXGoHnWZQ7vTV-ykEAu_PUGcAfengKKCFtGrRR89qnQGMNryBR9kWqseAky2pyK-f5XwISH1dPl4.png)
 
 ##### **Facturas de Importación (DUA)**
 
@@ -636,7 +636,7 @@ Al seleccionar esta opción:
 
 - los campos "**DUA**" y "**Fecha DUA**" de la cabecera de la factura no se muestran ya que dichos campos **se tienen que informar en la pestaña "Impuestos"**, con el fin de relacionar el DUA y su fecha, con la base imponible de importación correspondiente, tal y como se muestra en la siguiente imagen.
 
-![](/assets/drive/lFZBqb1lzXOH1Y1FtRibpnZJ3Rh9aXTirC2xlThC9N6okNSa2pFWBQa0582MMpvssLILoOwm27vTXyXK4Vxi0qIAN537ODDJZ8GuVDik669avGDaIn2K3ShmyjKRcwSBXiGJ6Hz_YNCazPDxOh8.png)
+![](../../../../../assets/drive/lFZBqb1lzXOH1Y1FtRibpnZJ3Rh9aXTirC2xlThC9N6okNSa2pFWBQa0582MMpvssLILoOwm27vTXyXK4Vxi0qIAN537ODDJZ8GuVDik669avGDaIn2K3ShmyjKRcwSBXiGJ6Hz_YNCazPDxOh8.png)
 
 ##### **Facturas de Compra (alta tras la contabilización)**
 
@@ -691,7 +691,7 @@ Una vez introducida esta información, podemos completar y contabilizar la factu
 
 Tras la contabilización del documento, el botón "**Alta en SII**" se muestra habilitado.
 
-![](/assets/drive/1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv.png)
+![](../../../../../assets/drive/1UMsgNf7I6yPu5bwhqBTR6B6CoBqaRXmv.png)
 
 Al hacer click en ese botón, iniciamos el proceso de alta del registro de esa factura en SII (Tipo de comunicación A0).
 
@@ -703,7 +703,7 @@ Siempre es posible contabilizar/descontabilizar la factura después de darla de 
 
 El día 26 de julio el empresario B se da cuenta que tuvo un error en el momento de introducir el precio del producto en la línea de la factura, por lo que es necesario realizar una modificación por error registral (Tipo de comunicación A1). El proceso a seguir es "Descontabilizar", activar el check "Modificar por error registral" y "Reactivar" el documento. Tras hacer la modificación correspondiente, de nuevo se completa y contabiliza el documento antes de pulsar el botón "Modificación en SII", manteniéndose la fecha registro contable que inicialmente se informó en SII.
 
-![](/assets/drive/1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA.png)
+![](../../../../../assets/drive/1GfPbKvhLR_HiB8Cg0zq63hbOvKGyMtIA.png)
 
 En el caso de las facturas de compra, tampoco será posible cambiar la fecha contable de facturas dadas de alta en SII de forma correcta.
 
@@ -737,7 +737,7 @@ En ningún caso será posible modificar:
 
 El botón "**Modificación en SII**" nos permitirá enviar la modificación del registro de la factura a SII, tal y como se muestra en la pantalla siguiente:
 
-![](/assets/drive/662noKMIVCrzTjC2DZyK9mKmy-suka3TFRNe707uHDJqd_LF2rhWbpV50_BnPRTsYT1cWx7KZ6JPOvO5IKs4A1KJpQLlBeYg0587HHMHVgh0zBRf-1NT1VWvysRKzeD-_Owkm-sYIYPiv8VkOAM.png)
+![](../../../../../assets/drive/662noKMIVCrzTjC2DZyK9mKmy-suka3TFRNe707uHDJqd_LF2rhWbpV50_BnPRTsYT1cWx7KZ6JPOvO5IKs4A1KJpQLlBeYg0587HHMHVgh0zBRf-1NT1VWvysRKzeD-_Owkm-sYIYPiv8VkOAM.png)
 
 El suministro de este tipo de registros de "modificación" deberá realizarse antes del día 16 del mes siguiente al periodo al que se refiera la declaración en la que deba tenerse en cuenta dicha modificación.
 
@@ -755,7 +755,7 @@ Sería posible también que la opción diaria sólo incluyera los días de la se
 
 Este proceso permite el "alta" masiva (tipo de comunicación A0) en SII de todas las facturas de compra y venta en estado "completado".
 
-![](/assets/drive/w1ekffFhD9rdzVfeuBL6r7EuYU8QgRufj8cyg-0mKZNIEPgr69BvsDWLgP6xvlBCiwe1yYbGt3ROyHqcfeOqH4aDs_2TsY2Mfxb7cOtY_pbzlL_nGXeqptJosBJWmGXWUDZ0jVARQj6PlmMA7OI.png)
+![](../../../../../assets/drive/w1ekffFhD9rdzVfeuBL6r7EuYU8QgRufj8cyg-0mKZNIEPgr69BvsDWLgP6xvlBCiwe1yYbGt3ROyHqcfeOqH4aDs_2TsY2Mfxb7cOtY_pbzlL_nGXeqptJosBJWmGXWUDZ0jVARQj6PlmMA7OI.png)
 
 En el caso de las **facturas de venta**, este proceso tendrá en cuenta:
 
@@ -823,7 +823,7 @@ Tal y como se muestra en la siguiente pantalla, filtramos por:
 
 seleccionamos varias facturas y procedemos a su Alta en SII.
 
-![](/assets/drive/OOCosDIgqaozTNviBVAylAHt_OtM1Xs1MCqkHr8ZwFcnzZ365gqZH7PMx4QVCXEjC6AHI7FYUQlG_HLFCToPyy4es_b5DUxJMU03G2dnnNWgmhz2LQ6lZnC_f-QSZsbRwH2h6vUZCeRfp71BG-XyKpg.png)
+![](../../../../../assets/drive/OOCosDIgqaozTNviBVAylAHt_OtM1Xs1MCqkHr8ZwFcnzZ365gqZH7PMx4QVCXEjC6AHI7FYUQlG_HLFCToPyy4es_b5DUxJMU03G2dnnNWgmhz2LQ6lZnC_f-QSZsbRwH2h6vUZCeRfp71BG-XyKpg.png)
 
 Lo mismo aplica para el envío masivo de modificaciones de facturas emitidas/recibidas. En ese caso, dichas facturas deberán encontrarse marcadas como "Modificada por error registral" = SI.
 
@@ -835,7 +835,7 @@ Tal y como se muestra en la siguiente pantalla, filtramos por:
 
 seleccionamos varias facturas y procedemos a su Modificación en SII.
 
-![](/assets/drive/GDKayCFFhT9bAkhr68IiFXboS51M5wwZQs89d7pc9uW3Uo1dXDTlfMgSrfBQZl6ZjHmIuJlSSTiXfOP_MdskUK7Rhbqw6l3RWQ506xpkixCHok3iH0RJ4-bd3RtElOGY0LlpuPEWUzEfAljwwuUNf4U.png)
+![](../../../../../assets/drive/GDKayCFFhT9bAkhr68IiFXboS51M5wwZQs89d7pc9uW3Uo1dXDTlfMgSrfBQZl6ZjHmIuJlSSTiXfOP_MdskUK7Rhbqw6l3RWQ506xpkixCHok3iH0RJ4-bd3RtElOGY0LlpuPEWUzEfAljwwuUNf4U.png)
 
 ## **Creación automática de facturas de venta**
 
@@ -852,7 +852,7 @@ En ningún caso es posible enviar pedidos de venta a SII (alta/modificación).
 
 Tal y como se muestra en la pantalla, es posible seleccionar los pedidos a factura, e indicar una fecha de factura:
 
-![](/assets/drive/Ew-3GmSHo4SC8MYPB1b_faB3t50XX3uNoBlp8hK4o8NQ_NNQGk0Rlfkgjxvmvp7QJn-acYuicdRzLB8eZ_EgDfvgBKxcOSoolmbX-kn6oROckmVoCBYZKrtoA55jIXX51NQ1-wp7DLVY5ETVjxvHSdk.png)
+![](../../../../../assets/drive/Ew-3GmSHo4SC8MYPB1b_faB3t50XX3uNoBlp8hK4o8NQ_NNQGk0Rlfkgjxvmvp7QJn-acYuicdRzLB8eZ_EgDfvgBKxcOSoolmbX-kn6oROckmVoCBYZKrtoA55jIXX51NQ1-wp7DLVY5ETVjxvHSdk.png)
 
 Al procesar, Etendo nos informa de que se han creado las facturas correspondientes, que tendrán ya un estado de "Completado".
 
@@ -862,7 +862,7 @@ Al procesar, Etendo nos informa de que se han creado las facturas correspondient
 !!! info
     La clave de tipo factura no se informa por defecto, por tanto el usuario, antes de dar de alta en SII, tendrá que seleccionar el valor "Factura".
 
-![](/assets/drive/aMgaLXe4tY4nipPDVT33nXXZCbiZiuddcE0lErcIFB-8SKN3BRIzIRw88im-00dJUrIlUoROIE7koQT9TfNhz81rTmkaR1EoLZZ_B53WfMtum0QRsdwvaxFUT3ruMFTNiMGL-m6NJVySFnQTXvyxn30.png)
+![](../../../../../assets/drive/aMgaLXe4tY4nipPDVT33nXXZCbiZiuddcE0lErcIFB-8SKN3BRIzIRw88im-00dJUrIlUoROIE7koQT9TfNhz81rTmkaR1EoLZZ_B53WfMtum0QRsdwvaxFUT3ruMFTNiMGL-m6NJVySFnQTXvyxn30.png)
 
 Si el pedido de venta o los pedidos de venta fueran negativos, este proceso generaría facturas de tipo "AR Invoice" que tendremos que reactivar y modificar antes de dar de alta en SII:
 
@@ -871,7 +871,7 @@ Si el pedido de venta o los pedidos de venta fueran negativos, este proceso gene
   - el tipo de rectificativa
   - y el motivo de la rectificación.
 
-![](/assets/drive/pwCBP_ahyxDvNz_-q3IcT0IJBo4B1r05w3AhJLrmfTGMoX9-BFL41vf4-CH6DMC_RN-pZBjBp0LlOigea-baElLEvjiaMlZt52aVaw7SmLR6EW5QwzM86iNtmfaQcygSC21OipvaKGRLLiK4v2w1YeU.png)
+![](../../../../../assets/drive/pwCBP_ahyxDvNz_-q3IcT0IJBo4B1r05w3AhJLrmfTGMoX9-BFL41vf4-CH6DMC_RN-pZBjBp0LlOigea-baElLEvjiaMlZt52aVaw7SmLR6EW5QwzM86iNtmfaQcygSC21OipvaKGRLLiK4v2w1YeU.png)
 
 ### **Crear Líneas de** 
 
@@ -961,7 +961,7 @@ El XML de alta en SII contendrá la siguiente información:
 - Sujeta No Exenta "S1"
 - con desglose por detalle de IVA.
 
-![](/assets/drive/CDES62-nQ75UdtctVvQydN6-vDcqgQcFcdf3rRCeadKiYdCTTh4dXbX70wFVbxAC4sAuX10W_4MWkj7T-Z8xzuenunrPQ3FfIy6iHs7SvZOcX7eLi5RNKQdU8g0nhLtcG-RtZCWsFxP2sPRRW-x9TnE.png)
+![](../../../../../assets/drive/CDES62-nQ75UdtctVvQydN6-vDcqgQcFcdf3rRCeadKiYdCTTh4dXbX70wFVbxAC4sAuX10W_4MWkj7T-Z8xzuenunrPQ3FfIy6iHs7SvZOcX7eLi5RNKQdU8g0nhLtcG-RtZCWsFxP2sPRRW-x9TnE.png)
 
 Es importante recalcar que:
 
@@ -997,7 +997,7 @@ El XML de alta en SII contendrá la siguiente información:
 - prestación del servicio "No sujeto por reglas de localización"
 - exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación).
 
-![](/assets/drive/5zXCAlCIBhJiUvUE2u4IPU47L16nNpn96Y-FbZ5SXgiiHoocMWiyDbeUoVD8UY7LVRTxk75wW3hqZnOjC0rDk2OSh5zZgWu07ggeMiRrDfJVAY01TQ-e8SaS2IdbuHMtJ8DQPAA-1n1f9fBVVFuwepE.png)
+![](../../../../../assets/drive/5zXCAlCIBhJiUvUE2u4IPU47L16nNpn96Y-FbZ5SXgiiHoocMWiyDbeUoVD8UY7LVRTxk75wW3hqZnOjC0rDk2OSh5zZgWu07ggeMiRrDfJVAY01TQ-e8SaS2IdbuHMtJ8DQPAA-1n1f9fBVVFuwepE.png)
 
 Es importante recalcar que:
 
@@ -1012,7 +1012,7 @@ el XML generado incluye igualmente:
 - prestación del servicio "No sujeto por reglas de localización"
 - exportación del bien "Sujeta y Exenta", con clave de causa de exención "E2" (Exportación). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
 
-![](/assets/drive/BnMTWAUJv3Itf0gbWYlfNV0RuyNPonFy4GFIpV9Ahh81Y2KK9JiI1p7dVLY79EidOqX8eOuGrGYYwN6Y6cVERAU_iNjULVsQUU_FKxk30SLRq1Nz-WDyW2SCC_YKC1gDqGXGt87ofjEjs9ka8oiiiQY.png)
+![](../../../../../assets/drive/BnMTWAUJv3Itf0gbWYlfNV0RuyNPonFy4GFIpV9Ahh81Y2KK9JiI1p7dVLY79EidOqX8eOuGrGYYwN6Y6cVERAU_iNjULVsQUU_FKxk30SLRq1Nz-WDyW2SCC_YKC1gDqGXGt87ofjEjs9ka8oiiiQY.png)
 
 #### **Tercero (Cliente) Intracomunitario**
 
@@ -1045,7 +1045,7 @@ El XML de alta en SII contendrá la siguiente información:
 - prestación del servicio "No sujeto por reglas de localización"
 - exportación del bien "Sujeta y Exenta", con clave de causa de exención "E5" (Entrega intracomunitaria). Esta clave se puede configurar para que aparezca por defecto en la ventana "Causa de exención" o indicar en la cabecera de la factura.
 
-![](/assets/drive/luCZJQdNJOYe_30B8lauePugxFfIgv8TCOATfe2t1uFBz-FVINtxs0KooEAXdaTMGE9o44PXUQF4lS5hwGljNUQU-1G_x5GqakdHzFPBerOuzHQr3am409yP-YwDbE1YEknU8jFIatjxrkzkuUEiCHY.png)
+![](../../../../../assets/drive/luCZJQdNJOYe_30B8lauePugxFfIgv8TCOATfe2t1uFBz-FVINtxs0KooEAXdaTMGE9o44PXUQF4lS5hwGljNUQU-1G_x5GqakdHzFPBerOuzHQr3am409yP-YwDbE1YEknU8jFIatjxrkzkuUEiCHY.png)
 
 Es importante recalcar que:
 
@@ -1074,7 +1074,7 @@ El XML de alta en SII contendrá la siguiente información:
 - Sujeta No Exenta "S1"
 - con desglose por detalle de IVA.
 
-![](/assets/drive/-vN1cdTs45fGesRdAFTV6SOW8rbFfLo_9e32RSYXjKQkjKOCm4htirPAxfxUPkJZiu595v01C7vEC0iKxCiz7QDmp_ihz41rxp_O563v357xtRFwjToD69L_nGu6_B_e2bX_anYMqi0WCy-w3Cce6Wg.png)
+![](../../../../../assets/drive/-vN1cdTs45fGesRdAFTV6SOW8rbFfLo_9e32RSYXjKQkjKOCm4htirPAxfxUPkJZiu595v01C7vEC0iKxCiz7QDmp_ihz41rxp_O563v357xtRFwjToD69L_nGu6_B_e2bX_anYMqi0WCy-w3Cce6Wg.png)
 
 #### **Cobros de facturas en Régimen Especial de Criterio de Caja (RECC)**
 
@@ -1088,7 +1088,7 @@ Una vez dado de alta en SII, el XML generado informa de los siguientes datos del
 - **Importe**
 - **Medio**
 
-![](/assets/drive/zNO7__LCn0RS6lT_b-IqOr-5UI7FWlcdIhnJAiPhseee-s6Wc1FTV4EtmD9Ujp_R_Q7WEKcPY-LBi9xWWe_hj2Q28fkR-JnyV3NVvoPKGxhptTlVq6VOhKpIVhfkkUsi6H_Dj1eCS8kcA2T6YgkonZg.png)
+![](../../../../../assets/drive/zNO7__LCn0RS6lT_b-IqOr-5UI7FWlcdIhnJAiPhseee-s6Wc1FTV4EtmD9Ujp_R_Q7WEKcPY-LBi9xWWe_hj2Q28fkR-JnyV3NVvoPKGxhptTlVq6VOhKpIVhfkkUsi6H_Dj1eCS8kcA2T6YgkonZg.png)
 
 El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
 
@@ -1100,18 +1100,18 @@ La modificación de un cobro en RECC ya dado de alta en SII se efectuará envian
 
 Lo anterior implica que en Etendo, no podremos reactivar un cobro en RECC ya dado de alta en SII, si no que tendremos que revertirlo, con la opción "Revertir pago" que se muestra en la siguiente imagen:
 
-![](/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
+![](../../../../../assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
 Al revertir el cobro, Etendo genera un nuevo cobro por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
 
-![](/assets/drive/10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD.png)
+![](../../../../../assets/drive/10k-gBCn4bUmQfxOqxjngiqdb-sgzhskD.png)
 
 El XML generado contendrá la siguiente información:
 
 - el importe del cobro en negativo
 - referido a la factura
 
-![](/assets/drive/pi-8xhxVCAgUYqm35_0jxct9_B8i6lAHxBLIJ0rCGmfu44v4C47P8iWd02KZ7XTF2kwbYe8F2FvU9YelFpyCORry5_1vIHqvwjuDNFIE09Ns1bA9myQEb0Ar5j01RihIO-Wk_AoTlNOxPl4tODJwAMo.png)
+![](../../../../../assets/drive/pi-8xhxVCAgUYqm35_0jxct9_B8i6lAHxBLIJ0rCGmfu44v4C47P8iWd02KZ7XTF2kwbYe8F2FvU9YelFpyCORry5_1vIHqvwjuDNFIE09Ns1bA9myQEb0Ar5j01RihIO-Wk_AoTlNOxPl4tODJwAMo.png)
 
 **Facturas en RECC no cobradas en el año natural** (en desarrollo).
 
@@ -1143,7 +1143,7 @@ El XML de alta en SII contendrá la siguiente información:
   - tipo recargo de equivalencia
   - cuota del recargo de equivalencia
 
-![](/assets/drive/T3uUXF3GgSV_UnjkKYJeJT1TvMTg-mly1C1HdKbirdRo3sdYKRAU_-hTXitit3t6jnZoEeMHJ98cgMIHKA4u4u0wJ-eZipjPEFC6vpd89qTTwDpBcOSwNsL350kqL3WZMpUsXmeVxA3o42FhhrZJAZM.png)
+![](../../../../../assets/drive/T3uUXF3GgSV_UnjkKYJeJT1TvMTg-mly1C1HdKbirdRo3sdYKRAU_-hTXitit3t6jnZoEeMHJ98cgMIHKA4u4u0wJ-eZipjPEFC6vpd89qTTwDpBcOSwNsL350kqL3WZMpUsXmeVxA3o42FhhrZJAZM.png)
 
 #### **Operaciones de venta con ISP**
 
@@ -1165,7 +1165,7 @@ El XML de alta en SII contendrá la siguiente información:
 - y la operación dentro del bloque funcional ”Desglose factura”, "Sujeta - No Exenta – Con Inversión sujeto pasivo” (S2).
 - Los campos “tipo impositivo” “cuota repercutida” se informarán con importe cero
 
-![](/assets/drive/ZEqqB3TgdDl7PnFVsTpM5FtOKACsXZ1wU2VmDKspeWJQCkSuqpJCREyAK2NtnDT9QweIYdz-H89Bh74hcqr1ATWVgxjZm15zPTXzGRBLkZvGnq0uFrFAJIp1HochquU5YMhUpboj3HTmXg1eJe7beRo.png)
+![](../../../../../assets/drive/ZEqqB3TgdDl7PnFVsTpM5FtOKACsXZ1wU2VmDKspeWJQCkSuqpJCREyAK2NtnDT9QweIYdz-H89Bh74hcqr1ATWVgxjZm15zPTXzGRBLkZvGnq0uFrFAJIp1HochquU5YMhUpboj3HTmXg1eJe7beRo.png)
 
 #### **Arrendamiento de local de negocio**
 
@@ -1195,7 +1195,7 @@ El XML de alta en SII contendrá la siguiente información:
   - Situación del inmueble
   - Referencia catastral
 
-![](/assets/drive/mtf9dUeo9KXFMRhgM2rj868eBLugn6FjnystCp18gska41BDKkO60I5tH3m99sf-T4l0Hmo2_9-ZJvMPMvpCXSmqnSEZ5TIVEQ1CshWlVxKkItpZ_renVXmVhQIJVbdLrOOKP67AH_txpy4JoY8dKn0.png)
+![](../../../../../assets/drive/mtf9dUeo9KXFMRhgM2rj868eBLugn6FjnystCp18gska41BDKkO60I5tH3m99sf-T4l0Hmo2_9-ZJvMPMvpCXSmqnSEZ5TIVEQ1CshWlVxKkItpZ_renVXmVhQIJVbdLrOOKP67AH_txpy4JoY8dKn0.png)
 
 En el caso de que el arrendamiento incluya retención, el tipo impositivo a utilizar sería del tipo "Arrendamientos 21% -19%R (cobros)" y la información del XML la siguiente:
 
@@ -1203,7 +1203,7 @@ En el caso de que el arrendamiento incluya retención, el tipo impositivo a util
 - con clave régimen especial "11" (Operaciones de arrendamiento de local de negocio sujetas a retención)
 - Sujeta No Exenta "S1"
 
-![](/assets/drive/u3q1KqomFK1gk_RK0zXOfJ0_Rzk3WlN5GkS0mr7t0UfP_Wza_qXiAf6FXXatfzGxod5gHiJNkirgqTm8URkstrpTCBGd-TBL0O9CuYm5Jq4_s2nQd8tl_iCpOrrRtNgd1guBelPfd-kcdMXzl7yqBj8.png)
+![](../../../../../assets/drive/u3q1KqomFK1gk_RK0zXOfJ0_Rzk3WlN5GkS0mr7t0UfP_Wza_qXiAf6FXXatfzGxod5gHiJNkirgqTm8URkstrpTCBGd-TBL0O9CuYm5Jq4_s2nQd8tl_iCpOrrRtNgd1guBelPfd-kcdMXzl7yqBj8.png)
 
 En el caso de locales arrendados sujetos a retención, no es necesario especificar la información del inmueble, por incluirse ésta en el modelo de retenciones (Modelo 180) correspondiente.
 
@@ -1237,7 +1237,7 @@ El XML de alta en SII contendrá la siguiente información:
 - con clave régimen especial "08" (Operaciones sujetas a IPSI/IGIC)
 - y todo el importe de la operación (bases imponibles) tanto de bienes como servicios, en el nodo "Operación no sujeta por reglas de localización"
 
-![](/assets/drive/MvYNDpfiSbbn9wkjDb_pvc0rMIlv0l1_DQuAarhiNZfGz3apN6HhQaeSl_MGMhkmhXW2wMj2MimCCnviAA5U9rxNuVFcK4fG_jGtfzqLGAzJPFyfudlMA3yKBMqFMO_KIpL_Yje6DeDTIpQkN3RCWSw.png)
+![](../../../../../assets/drive/MvYNDpfiSbbn9wkjDb_pvc0rMIlv0l1_DQuAarhiNZfGz3apN6HhQaeSl_MGMhkmhXW2wMj2MimCCnviAA5U9rxNuVFcK4fG_jGtfzqLGAzJPFyfudlMA3yKBMqFMO_KIpL_Yje6DeDTIpQkN3RCWSw.png)
 
 #### **Transmisión de bienes inmuebles**
 
@@ -1258,7 +1258,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con un importe por transmisión de bienes inmuebles de
 
-![](/assets/drive/YvejK7Py-383mQDuU6vqd4psPpJzCR5oLQ3vMFcCHWdEVw33FtvP_yX8ZzHiiROQ9sQmQNYMZTaJ1E_2J9mtdaa5cIpHIYXkUY2vLnjeB9uB5FSKrfi91Qt-2onjt5AP-aSWZMI7eIOOlHFhuQKhUeU.png)
+![](../../../../../assets/drive/YvejK7Py-383mQDuU6vqd4psPpJzCR5oLQ3vMFcCHWdEVw33FtvP_yX8ZzHiiROQ9sQmQNYMZTaJ1E_2J9mtdaa5cIpHIYXkUY2vLnjeB9uB5FSKrfi91Qt-2onjt5AP-aSWZMI7eIOOlHFhuQKhUeU.png)
 
 #### **Cobros en metálico**
 
@@ -1276,7 +1276,7 @@ Una vez introducida dicha información, el botón "**Actualizar Cobros Metálico
 - respecto de operaciones/transacciones bancarias relacionadas con **Facturas y Conceptos Contables**, asociadas a un “Tercero” identificado con un **Tax ID** (por ejemplo NIF)
 - y que, **agrupadas por dicho tercero**, superen el importe de 6.000,00 €
 
-![](/assets/drive/1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt.png)
+![](../../../../../assets/drive/1SFZL1-iAvHxq27c-zACBqx-a-EKd5Rzt.png)
 
 Una vez generado el cobro/cobros, se puede realizar su "**Alta en SII**". Una vez dado de alta en SII, los campos "Alta en SII", "Estado registro SII", "Importe", "Importe enviado" e "Importe enviado" se actualizarán.
 
@@ -1295,7 +1295,7 @@ Para ello, se diferencian los siguientes campos:
 
 Por ejemplo para un tercero determinado se realizaron varias facturas durante el año 2021 que se cobran en metálico. El importe total de dichas facturas y, por tanto, el importe recibido en metálico de este tercero asciende a 151,000.00. Tanto las facturas como el cobro en metálico se han dado de alta en SII.
 
-![](/assets/drive/1u1oUThSf80IxxOdRGouxAHwQraXG2w1o.png)
+![](../../../../../assets/drive/1u1oUThSf80IxxOdRGouxAHwQraXG2w1o.png)
 
 Con posterioridad se realiza una nueva factura por importe de 1,800.00 €, que también se cobra en efectivo, y que por tanto debe darse de alta en SII.
 
@@ -1303,13 +1303,13 @@ En la ventana "SII Cobros en Metálico", tendremos que:
 
 - actualizar la información para que se refleje el nuevo cobro creado como "Importe pendiente" de alta en SII, tal y como se muestra en la imagen siguiente:
 
-![](/assets/drive/1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF.png)
+![](../../../../../assets/drive/1BbyKHAgfLYfW2n4tXqhw9n18lsO9eRxF.png)
 
 - y activar el check "**Modificada error registral**" en el cobro.
 
 Una vez hecho esto se podrá proceder a la modificación en SII de dicho cobro para el tercero, a través del botón "**Modificación en SII**".
 
-![](/assets/drive/1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF.png)
+![](../../../../../assets/drive/1e8dQ5G3FbWKQue-E1ZCfu-LwgtpxD0PF.png)
 
 Es importante recalcar que si de un tercero se recibiera un cobro en metálico con fecha del ejercicio a declarar (por ejemplo 2017), respecto de una factura de fecha anterior (por ejemplo 2016), dicho cobro también se incluirá en la selección, para su alta en SII, siempre que el importe total recibido/cobrado de ese tercero supere los 6000.00 €.
 
@@ -1328,7 +1328,7 @@ Lo anterior aplica excepto para sujetos pasivos en REDEME que ya las habrán env
 
 En Etendo, al dar de alta en SII una factura con fecha anterior al 01-07-2017, comprobaremos que el esquema XML es del tipo siguiente:
 
-![](/assets/drive/4o687WK4KAze5LKKh6DcmXN0Jqu4THxG1BB-V_FpI_5XiZa81XzP251gWHKh-Cz0-rrVi4psJ8-QAlLPOpukxkxn-QYlxf1DdNzAycfo9bYHX1PIZGe6BVaO93zMFRtbn5h7BjemISBttCGvqH8s9bU.png)
+![](../../../../../assets/drive/4o687WK4KAze5LKKh6DcmXN0Jqu4THxG1BB-V_FpI_5XiZa81XzP251gWHKh-Cz0-rrVi4psJ8-QAlLPOpukxkxn-QYlxf1DdNzAycfo9bYHX1PIZGe6BVaO93zMFRtbn5h7BjemISBttCGvqH8s9bU.png)
 
 En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
 
@@ -1376,7 +1376,7 @@ Fecha Contable: 02-01-2022
 
 **Ejercicio SII: 2022**
 
-![](/assets/drive/HJdwEipVS4djsZugPA3zso45tgrG6enxXhlP_KOSpe4a9r2v8EcytimONV_AMoVyaMIE8oJ3f4oLSpzObpdoRRgJ3HsTjWRAijIB94bZdAt45OvJPcGz-rwKdw2x1ykj9oX6_eoMKw02eqNaAk01Tjs.png)
+![](../../../../../assets/drive/HJdwEipVS4djsZugPA3zso45tgrG6enxXhlP_KOSpe4a9r2v8EcytimONV_AMoVyaMIE8oJ3f4oLSpzObpdoRRgJ3HsTjWRAijIB94bZdAt45OvJPcGz-rwKdw2x1ykj9oX6_eoMKw02eqNaAk01Tjs.png)
 
 El día 1 de marzo, se produce una devolución por mal estado del 20% de la mercancía con un valor de 484 € (IVA incluido) por lo que F&B España procede a la anulación de la factura original y emisión de una nueva con el importe final correcto.
 
@@ -1394,7 +1394,7 @@ Fecha Contable: 01-03-2018
 
 **Fecha de Operación: 02-01-2018** (fecha de operación de la factura original)
 
-![](/assets/drive/fetQO0nNF-Q3kkLURvyOFzQ46wSUEIIjymSsJCfk9GkiUMInhKjnvjWnmvgsZdi2_oM-dpdLGenWjw9a1h6OFBxj7CUAfQBzNLrTT64XL0pA6zhIrcE8hJxoOFD-KP6Uywr6ZuOKqbzsVSUCIt3J2EE.png)
+![](../../../../../assets/drive/fetQO0nNF-Q3kkLURvyOFzQ46wSUEIIjymSsJCfk9GkiUMInhKjnvjWnmvgsZdi2_oM-dpdLGenWjw9a1h6OFBxj7CUAfQBzNLrTT64XL0pA6zhIrcE8hJxoOFD-KP6Uywr6ZuOKqbzsVSUCIt3J2EE.png)
 
 Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
 
@@ -1404,7 +1404,7 @@ Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de f
 
 El periodo asignado en SII no se corresponde con la fecha de operación, si no con la Fecha Factura (julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
 
-![](/assets/drive/qPqZ-pAmr6pO6ALY0z4_PrmOrkEnqWO5b-YqmEbVPZX3DSUQUEd36VwA5LmUZciyEqR4l70kFCR9QIv0u2VgUf-HJEWUEDJcp9mCuBe5J_sW6o8wC5PSAesUXAsH3e_0cOVbsnHg4LmSx3XFpJIQtfs.png)
+![](../../../../../assets/drive/qPqZ-pAmr6pO6ALY0z4_PrmOrkEnqWO5b-YqmEbVPZX3DSUQUEd36VwA5LmUZciyEqR4l70kFCR9QIv0u2VgUf-HJEWUEDJcp9mCuBe5J_sW6o8wC5PSAesUXAsH3e_0cOVbsnHg4LmSx3XFpJIQtfs.png)
 
 Posteriormente, se crea la nueva factura con los importes correctos y con los siguientes datos:
 
@@ -1422,7 +1422,7 @@ Fecha Contable: 01-03-2018
 
 **Fecha de Operación: 02-01-2018** (fecha de operación de la factura original que tendrá que seleccionar el usuario de forma manual)
 
-![](/assets/drive/Ln5HvZyVHOBK-JEMdCGGj7N__H5Bzn8mAm3xqW2jRUNOpDdeOdBXNWaa6F-0lWrHDbXbVFXclkYHFqsQ5e-IJWVuo_o8871Y0TTpk7apWwr7W6lwixlux5lbKxTfBsJBHP1o1RsigQrozwyHTJSuGPk.png)
+![](../../../../../assets/drive/Ln5HvZyVHOBK-JEMdCGGj7N__H5Bzn8mAm3xqW2jRUNOpDdeOdBXNWaa6F-0lWrHDbXbVFXclkYHFqsQ5e-IJWVuo_o8871Y0TTpk7apWwr7W6lwixlux5lbKxTfBsJBHP1o1RsigQrozwyHTJSuGPk.png)
 
 Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de forma automática la siguiente información:
 
@@ -1430,7 +1430,7 @@ Al dar de Alta esa factura de anulación en SII, el fichero XML registrará de f
 
 **Ejercicio SII: 2022**
 
-![](/assets/drive/WmCrqgr1mzfFPN73yfGGt5a6jseoeH0wUEAWYyzaOROUsZtcVEtmljTWDUh_CT6KpHmza0a2Oc6P1ZqnczOZF8COnXiEXg2_W2FiQU8vz_fgIINsqydZnwSpojBEjhBGMcJgJXFss9Ihy4eIjKWzgPo.png)
+![](../../../../../assets/drive/WmCrqgr1mzfFPN73yfGGt5a6jseoeH0wUEAWYyzaOROUsZtcVEtmljTWDUh_CT6KpHmza0a2Oc6P1ZqnczOZF8COnXiEXg2_W2FiQU8vz_fgIINsqydZnwSpojBEjhBGMcJgJXFss9Ihy4eIjKWzgPo.png)
 
 Al igual que la anterior factura que anula el importe de la original, el periodo asignado en SII, no se corresponde con la fecha de operación si no con la Fecha Factura (Julio), por lo que **pasará a formar parte de la liquidación del impuesto del mes de julio**.
 
@@ -1496,7 +1496,7 @@ El XML de alta en SII contendrá la siguiente información:
 
 Después de su alta en SII, es posible contabilizar y descontabilizar la factura de compra, si fuera necesario, pero no será posible cambiar la fecha contable de la factura por ser este campo obligatorio respecto de las facturas de compra.
 
-![](/assets/drive/AH_zdSOXyQVvw8Vxt60YW-gZbSimeZlJnn0v0oX2nrUZSpfkNn1B_sf8RCGyM5a1GP-thIUBE0HVOVI5rR_59xkcn4dWgR6JmeeqGbuG4fHFz5fPoKe_Gdg-izeDXm0f1yLl_YBFcSN7ce6s42Oto-g.png)
+![](../../../../../assets/drive/AH_zdSOXyQVvw8Vxt60YW-gZbSimeZlJnn0v0oX2nrUZSpfkNn1B_sf8RCGyM5a1GP-thIUBE0HVOVI5rR_59xkcn4dWgR6JmeeqGbuG4fHFz5fPoKe_Gdg-izeDXm0f1yLl_YBFcSN7ce6s42Oto-g.png)
 
 Es importante recalcar que:
 
@@ -1528,7 +1528,7 @@ El XML de alta en SII contendrá la siguiente información:
 - con clave régimen especial "13" (Factura correspondiente a una importación (informada sin asociar a un DUA).)
 - e información en euros de la base imponible de la factura del proveedor extranjero.
 
-![](/assets/drive/yv6n8NS37hU1NicRu2Rw0r0TtaClew1amM4KkLpPf2jCiX6AbV1oE2XVroCIIsOOvMZRfE1phnO6hcgL_CPUyyq8bn2gUpowhkQ2WOaCotbfNO-CeFwKXv1QR-GrBsvGJctagqLNNobK8eDZMyVaQLg.png)
+![](../../../../../assets/drive/yv6n8NS37hU1NicRu2Rw0r0TtaClew1amM4KkLpPf2jCiX6AbV1oE2XVroCIIsOOvMZRfE1phnO6hcgL_CPUyyq8bn2gUpowhkQ2WOaCotbfNO-CeFwKXv1QR-GrBsvGJctagqLNNobK8eDZMyVaQLg.png)
 
 Es importante recalcar que habiendo registrado un DUA (Caso 3 siguiente) no es necesario registrar la factura del proveedor extranjero.
 
@@ -1550,7 +1550,7 @@ La forma de registrar en Etendo la factura de transitario que incluye el IVA de 
 - en la pestaña "**Líneas**" introducimos la prestación de servicios del transitario sujeta y no exenta, en euros, con una base imponible de 500 €, por ejemplo; así como el resto de líneas de la factura del transitario por conceptos exentos de IVA del tipo "seguro" o "flete".
 - en la pestaña "**Impuestos**" creamos una nueva línea de impuestos con el tipo de impuesto "Importaciones 21%". En el campo "Base Imponible" introducimos la base imponible de importación, reflejada en la casilla 47 del DUA.
 
-![](/assets/drive/vQSib6h0rlB988u0S84IkPdDUQWZOVwPLTHBjgTRPXDjrmWMLf4Ix0K901j0Cw-5coy52rLVU5M-Bzki63aleZoqmv2BtYqrKxpQe7qms2C8DNJLn77KoQZpoUnBBnfLrx83uf6_HzeGpa68qGnIerU.png)
+![](../../../../../assets/drive/vQSib6h0rlB988u0S84IkPdDUQWZOVwPLTHBjgTRPXDjrmWMLf4Ix0K901j0Cw-5coy52rLVU5M-Bzki63aleZoqmv2BtYqrKxpQe7qms2C8DNJLn77KoQZpoUnBBnfLrx83uf6_HzeGpa68qGnIerU.png)
 
 Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
 
@@ -1564,7 +1564,7 @@ El XML de alta en SII contendrá la siguiente información:
   - la clave de régimen especial 01 (Régimen General)
   - y los importes correspondientes a la base imponible, tipo y cuota del impuesto (cuota deducible) en euros
 
-![](/assets/drive/ZJPF4ktKtyLgWY4KCQFHWYC_C5ZQJEg0t000RLzZGUTlFRCBJFL1THMSRDs_bJADn_rImCucvOFJpYvR75hrwmrNdg77Phspx5yAfSb_skBHnDhkxueRi7cUrz5nPdqn2MaBrF2_vAPkarH6n8BYtko.png)
+![](../../../../../assets/drive/ZJPF4ktKtyLgWY4KCQFHWYC_C5ZQJEg0t000RLzZGUTlFRCBJFL1THMSRDs_bJADn_rImCucvOFJpYvR75hrwmrNdg77Phspx5yAfSb_skBHnDhkxueRi7cUrz5nPdqn2MaBrF2_vAPkarH6n8BYtko.png)
 
 - el alta/registro de la factura del proveedor (Transitario) con
   - la clave tipo de factura "F1"
@@ -1574,7 +1574,7 @@ El XML de alta en SII contendrá la siguiente información:
   - la clave de régimen especial 01 (Régimen General)
   - y los importes correspondientes a la base imponible, tipo y cuota del impuesto (cuota deducible) en euros, por la prestación de servicios sujeta y no exenta.
 
-![](/assets/drive/4pMaJ6g3yMj7fZotizXLbgwfpFLPziqoQOUdxahcLyupnKiZgG-VwpIhhDTTzXoSxbsx4-5NKG7CtYwDIDaVGWm_Hts8AiKdQQ4Vlv3zF4rFnWMwLJLZoPbkRCSnCa7K9gmxiqUCuO_RU1L9xcZHM8w.png)
+![](../../../../../assets/drive/4pMaJ6g3yMj7fZotizXLbgwfpFLPziqoQOUdxahcLyupnKiZgG-VwpIhhDTTzXoSxbsx4-5NKG7CtYwDIDaVGWm_Hts8AiKdQQ4Vlv3zF4rFnWMwLJLZoPbkRCSnCa7K9gmxiqUCuO_RU1L9xcZHM8w.png)
 
 Respecto de la factura del proveedor extranjero, ésta se deberá registrar también en la ventana "Factura Proveedor", en la divisa que corresponda y, con la clave de tipo de factura "Factura" (F1).
 
@@ -1628,13 +1628,13 @@ Finalmente, el usuario de forma manual, deberá realizar los cambios que se indi
 
 Hay que tener en cuenta que el importe del DUA vendrá indicado en euros. No es posible mezclar líneas en diferentes divisas en la misma factura, por lo que al introducir la factura de proveedor extranjero junto al DUA deberá existir una única divisa en euros.
 
-![](/assets/drive/hQRaZcDRImXLJ1uxBUsDD45E2fdO1ljdl_vdmoJYdQ3zxWNLNCDwiU6Nl2mXF2XA92JGyxnwkfXlOuiK9uIEv0pjGxeQF1d_jzYdZTsoreulXX2HU3ExUFsjQQE7l2td1kyuZEfOZ5LLB7nOblD44Fg.png)
+![](../../../../../assets/drive/hQRaZcDRImXLJ1uxBUsDD45E2fdO1ljdl_vdmoJYdQ3zxWNLNCDwiU6Nl2mXF2XA92JGyxnwkfXlOuiK9uIEv0pjGxeQF1d_jzYdZTsoreulXX2HU3ExUFsjQQE7l2td1kyuZEfOZ5LLB7nOblD44Fg.png)
 
 Una vez completada la factura, se procede a su Alta en SII, bien de forma manual o automática.
 
 El XML de alta en SII contendrá únicamente la información de la parte correspondiente al DUA con la siguiente estructura:
 
-![](/assets/drive/41ktdG4IiR4yFuhrvP8jBdJPBedtzT2ibeHHHiiznkxlcR7S9cV2ZEqEbz42RLvmRO7QUkOKEJSz2D0QBGGdR_DAAwX4DtZUateDK6RV-PUIn_kcGyfdlI9t6m2jQsbfXcF0KOHytWPSLapBl_-yh_E.png)
+![](../../../../../assets/drive/41ktdG4IiR4yFuhrvP8jBdJPBedtzT2ibeHHHiiznkxlcR7S9cV2ZEqEbz42RLvmRO7QUkOKEJSz2D0QBGGdR_DAAwX4DtZUateDK6RV-PUIn_kcGyfdlI9t6m2jQsbfXcF0KOHytWPSLapBl_-yh_E.png)
 
 _Al introducir la línea de impuestos del tipo "Importaciones 21" referido al IVA de importación soportado, no hay que volver a introducir esta línea en la factura del transitario si en su caso la hubiera._
 
@@ -1666,7 +1666,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave régimen especial "09" (Adquisiciones Intracomunitarias de bienes y prestaciones de servicios)
 
-![](/assets/drive/mMuCVKFYyjCifvhuXcjK52_gRt7sDUvQu_W3ZOzNLJ_zm12hQcpGkPR4j1PSFUkeZiGGL2YdbtiiGZHYX-g63Wa8O0w275WkSQaoHvu5nt3ykRCXDw876iQBgNdTCtMJulXfB2J3WrmNFsuck8I74UI.png)
+![](../../../../../assets/drive/mMuCVKFYyjCifvhuXcjK52_gRt7sDUvQu_W3ZOzNLJ_zm12hQcpGkPR4j1PSFUkeZiGGL2YdbtiiGZHYX-g63Wa8O0w275WkSQaoHvu5nt3ykRCXDw876iQBgNdTCtMJulXfB2J3WrmNFsuck8I74UI.png)
 
 Es importante recalcar que:
 
@@ -1691,7 +1691,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave régimen especial "07" (Régimen especial del criterio de caja)
 
-![](/assets/drive/mO8mH-cFpIjIEhf7x8OIEFtgg6cbSDoi6Bma3vizcThfAP1A4BFdemNNaydfBiIG2WQkpsNn83DjhVPR5bqoAsDkk0sG6fqOpuvGn3KMcgyvVjq_DtdjZVdVOxAuWLzq3UfxQbIy794DJKj219pOy6M.png)
+![](../../../../../assets/drive/mO8mH-cFpIjIEhf7x8OIEFtgg6cbSDoi6Bma3vizcThfAP1A4BFdemNNaydfBiIG2WQkpsNn83DjhVPR5bqoAsDkk0sG6fqOpuvGn3KMcgyvVjq_DtdjZVdVOxAuWLzq3UfxQbIy794DJKj219pOy6M.png)
 
 Es importante recalcar que:
 
@@ -1709,7 +1709,7 @@ Una vez dado de alta en SII, el XML generado informa de los siguientes datos del
 - **Importe**
 - **Medio**
 
-![](/assets/drive/pTf6aP4P4yYSU7eESj_WiuFr1XYE_4hk8WEz5XcZ6g8pe7TApPwnYGTNX201Hfibrhyjd09RryZ8HEAJp0kROlrZP-88pas8JvfcfbY6wHWI-I8H0gOWndeLzJf9r23nigKinsyKyPNVnc3ew_RAUyA.png)
+![](../../../../../assets/drive/pTf6aP4P4yYSU7eESj_WiuFr1XYE_4hk8WEz5XcZ6g8pe7TApPwnYGTNX201Hfibrhyjd09RryZ8HEAJp0kROlrZP-88pas8JvfcfbY6wHWI-I8H0gOWndeLzJf9r23nigKinsyKyPNVnc3ew_RAUyA.png)
 
 El Medio que en nuestro ejemplo es el 02 (Cheque), debe configurarse en el Método de Pago, campo "**Type**".
 
@@ -1723,14 +1723,14 @@ Lo anterior implica que en Etendo, al igual que se ha explicado para los cobros 
 
 Al revertir el pago, Etendo genera un nuevo pago por el mismo importe en negativo que tendremos que dar de alta en SII desde la ventana "Monitor SII", tal y como se muestra en la siguiente imagen:
 
-![](/assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
+![](../../../../../assets/drive/1aPMk2pmJYGzATaN_B1dI0Ri4wunDMRoW.png)
 
 El XML generado contendrá la siguiente información:
 
 - el importe de pago negativo
 - referencia a la factura original del proveedor.
 
-![](/assets/drive/y6EpMi-6Kruil15GnhETYhDk_slSzWNJ9PON68Q7NnT5k1DkUiqK7izhcAOMC7Hrg5bpI3V2elPMiHTUhsCNIYVca7tBMjhr6Uytqd_Bt9Wa6_JEtOfigV6nZjbIU4rknuZoYjqOXuk1Bg_X0RSSioI.png)
+![](../../../../../assets/drive/y6EpMi-6Kruil15GnhETYhDk_slSzWNJ9PON68Q7NnT5k1DkUiqK7izhcAOMC7Hrg5bpI3V2elPMiHTUhsCNIYVca7tBMjhr6Uytqd_Bt9Wa6_JEtOfigV6nZjbIU4rknuZoYjqOXuk1Bg_X0RSSioI.png)
 
 **Facturas en RECC no pagadas en el año natural** (en desarrollo).
 
@@ -1772,7 +1772,7 @@ Además, este tipo de operación debe marcarse como una factura Tipo Justificant
 
 Una vez completada la factura, se procede a su Alta en SII, de forma manual o automática.
 
-![](/assets/drive/wud2a7NpPuk_Q-UxAlIHJUjblYTHj5NyUT8K2j5mhNIWHEbsLzYEK98yd8peDWvhmzXgTRss4hXNpJqe3TcWWx0MySWmd2M6VcZMcCioQnWVYOUrVQyNGuLTtm0fPBa9dJ9nalvW2oBwWPH6CEbYT38.png)
+![](../../../../../assets/drive/wud2a7NpPuk_Q-UxAlIHJUjblYTHj5NyUT8K2j5mhNIWHEbsLzYEK98yd8peDWvhmzXgTRss4hXNpJqe3TcWWx0MySWmd2M6VcZMcCioQnWVYOUrVQyNGuLTtm0fPBa9dJ9nalvW2oBwWPH6CEbYT38.png)
 
 El XML de alta en SII contiene la siguiente información específica de este tipo de operación:
 
@@ -1785,13 +1785,13 @@ Consignará como **Base Imponible** la base sobre la que se calcula la compensac
 
 Al no ser un impuesto de IVA, los campos _tipo impositivo_ y _cuota soportada_ no se informarán.
 
-![](/assets/drive/Aq-l5YH6S7ULiAFSK3xuSLR-ILBVh9mf-5nulQEGy7OQ9eAsi33K7Op31vjxp_QgXSe-zzjJkqVpWTslEHmMwTioPISRFsNrGcMRQUS4PKGUdr6Or8EcKZ30aavNtKW6BvRk3ncCf6BTZ2p_A7DdUaA.png)
+![](../../../../../assets/drive/Aq-l5YH6S7ULiAFSK3xuSLR-ILBVh9mf-5nulQEGy7OQ9eAsi33K7Op31vjxp_QgXSe-zzjJkqVpWTslEHmMwTioPISRFsNrGcMRQUS4PKGUdr6Or8EcKZ30aavNtKW6BvRk3ncCf6BTZ2p_A7DdUaA.png)
 
 En este régimen, podría producirse "autofacturación", es decir el receptor de la operación realiza la emisión de la factura en nombre del proveedor.
 
 Para esos casos se ha creado el check "**Autofactura**" en el grupo de campos "AEAT SII" de la cabecera de las facturas de compra, que permite que el "Nº de Documento" de factura de Etendo se traslade al campo "Referencia de proveedor", tal y como se muestra en la imagen adjunta:
 
-![](/assets/drive/kVdQsySjrBFfrCYtwfJcPCfQMeNJBmZnZJTnnuVdNPZbq5xZ1_7wpSwMcu8xqeJUCs6ctB1MmFhRPWVpZQwxA2C53rni_TYzg8NvsYv_CvI9C4mS0Ie17IGB8YIn5EPls_HN11zCuvtSDvfvlKTIVEs.png)
+![](../../../../../assets/drive/kVdQsySjrBFfrCYtwfJcPCfQMeNJBmZnZJTnnuVdNPZbq5xZ1_7wpSwMcu8xqeJUCs6ctB1MmFhRPWVpZQwxA2C53rni_TYzg8NvsYv_CvI9C4mS0Ie17IGB8YIn5EPls_HN11zCuvtSDvfvlKTIVEs.png)
 
 #### **Operación de compra sujeta a IPSI/IGIC**
 
@@ -1820,7 +1820,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave régimen especial "08" (Operaciones sujetas al IPSI / IGIC)
 
-![](/assets/drive/4Uai4_Y5oJDKR3tpXAPMEsJbk-D7Dd7z6tNf8OppThhAN-RpmxWBPqy24eVOrsRymKC-gG7dqkPr9Q7L0BlLiCvUvxuqRR-aqNVdGrtcg4ZXmCb4W-GTLLiLbLeaASfDoYu8DpMGkP44lSGmPTT7KPY.png)
+![](../../../../../assets/drive/4Uai4_Y5oJDKR3tpXAPMEsJbk-D7Dd7z6tNf8OppThhAN-RpmxWBPqy24eVOrsRymKC-gG7dqkPr9Q7L0BlLiCvUvxuqRR-aqNVdGrtcg4ZXmCb4W-GTLLiLbLeaASfDoYu8DpMGkP44lSGmPTT7KPY.png)
 
 Es importante recalcar que:
 
@@ -1839,7 +1839,7 @@ El XML de alta en SII contendrá la siguiente información:
 - un tipo de Factura "F1"
 - con clave 12 (Operaciones de arrendamiento de local de negocio.)
 
-![](/assets/drive/qTvK0Nls1j9WXhnmg_GjDdVSJ3f1SoSM2ZQ4HDVfH2PJxTHz1RbsB1-SVuGGtT7lsMY0uYAwxZwqYl4TXTpqYE-JqZp8YVnZRpp4i2wH39PvRWoCi5OvgM9XfH7jHAis1XGEejjA7EqIwaNeZG30-zI.png)
+![](../../../../../assets/drive/qTvK0Nls1j9WXhnmg_GjDdVSJ3f1SoSM2ZQ4HDVfH2PJxTHz1RbsB1-SVuGGtT7lsMY0uYAwxZwqYl4TXTpqYE-JqZp8YVnZRpp4i2wH39PvRWoCi5OvgM9XfH7jHAis1XGEejjA7EqIwaNeZG30-zI.png)
 
 !!! info
     Si una factura de arrendamiento está sujeta al régimen especial del criterio de caja, prevalecerá la clave 07 de Operación Sujeta a RECC.
@@ -1857,7 +1857,7 @@ El registro de estas facturas de compra no se enviarán a SII, en ningún caso.
 
 Una vez completada, si intenta enviar dichas facturas a SII se obtendrá el siguiente error:
 
-![](/assets/drive/_50ZEl68hydwoSJZ27J5MrhxojDwPXnaTWRNM9OWNzJmoTTVcZBYBS70S5U82w9QE3Ln8r9EGQ_WXOeyV1mNNwRXp0Ym2gZIsgph7RVck2vAedl5DiyWn826OZtexzPRKEErqUuE6jwnd0x54Ybc604.png)
+![](../../../../../assets/drive/_50ZEl68hydwoSJZ27J5MrhxojDwPXnaTWRNM9OWNzJmoTTVcZBYBS70S5U82w9QE3Ln8r9EGQ_WXOeyV1mNNwRXp0Ym2gZIsgph7RVck2vAedl5DiyWn826OZtexzPRKEErqUuE6jwnd0x54Ybc604.png)
 
 #### **Inversión del Sujeto Pasivo**
 
@@ -1882,7 +1882,7 @@ El XML de alta en SII contendrá la siguiente información:
 - con clave regimen especial "01" (Régimen General)
 - con información en "EUR" de la base imponible, tipo impositivo y cuota del impuesto dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
 
-![](/assets/drive/hrEpwYN4FiCksO7FAiQzwIZ39yOlBukNGoPtMKYvmdpGF5IXO1D_urMrMfXKD0t8aCcJlw8KCHM5J6q1gV3Ug9Y0L_e5M16s2AVszoG0iK1jOvBmI29xB45RE56Ce3d-LIK9NwdVgQT9WAoH6AxssRE.png)
+![](../../../../../assets/drive/hrEpwYN4FiCksO7FAiQzwIZ39yOlBukNGoPtMKYvmdpGF5IXO1D_urMrMfXKD0t8aCcJlw8KCHM5J6q1gV3Ug9Y0L_e5M16s2AVszoG0iK1jOvBmI29xB45RE56Ce3d-LIK9NwdVgQT9WAoH6AxssRE.png)
 
 Es importante recalcar que si este tipo de facturas incluyen más de un tipo impositivo igual/diferente respecto de la prestación del servicio, se agrupará por tipo impositivo dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
 
@@ -1902,7 +1902,7 @@ El XML de alta en SII contendrá la siguiente información:
 - con clave regimen especial "01" (Régimen General)
 - con información de la base imponible, tipo impositivo y cuota del impuesto dentro del nodo "Desglose Factura/InversiónSujetoPasivo/DetalleIVA".
 
-![](/assets/drive/3da4kENkcjtstpllmIbdw0WajedAkdQIXOaDaagog0swox0L6wRRShSz49ALoQUizqHVOHueaLugaUmJMsC0uIrFnHxVM4uKal40DBmzs143qQSoZ0iiWf-6KfE8-68P6bM1u2P9K07zORWCNzsUwxA.png)
+![](../../../../../assets/drive/3da4kENkcjtstpllmIbdw0WajedAkdQIXOaDaagog0swox0L6wRRShSz49ALoQUizqHVOHueaLugaUmJMsC0uIrFnHxVM4uKal40DBmzs143qQSoZ0iiWf-6KfE8-68P6bM1u2P9K07zORWCNzsUwxA.png)
 
 #### **Factura recibida con fecha contable anterior al 01-07-2017**
 
@@ -1920,7 +1920,7 @@ Lo anterior aplica excepto para sujetos pasivos en REDEME que ya las habrán env
 
 En Etendo, al dar de alta en SII una factura recibida con fecha anterior al 01-07-2017, comprobaremos que el esquema XML es del tipo siguiente:
 
-![](/assets/drive/zt8vxem5cYRQdfY3JQx8syUeoOnxML5LP-obvW0mPL9cfBSER1CL7cMmMUwuWdC33x9F4qsfeI56hCUmnkXN0Y2q-N-tDqAFQD8kp-6U5EVa3vhdokk9P9cckJmUv2D9STo_Orr-eejl2_5Yb8ZcViw.png)
+![](../../../../../assets/drive/zt8vxem5cYRQdfY3JQx8syUeoOnxML5LP-obvW0mPL9cfBSER1CL7cMmMUwuWdC33x9F4qsfeI56hCUmnkXN0Y2q-N-tDqAFQD8kp-6U5EVa3vhdokk9P9cckJmUv2D9STo_Orr-eejl2_5Yb8ZcViw.png)
 
 En Etendo se ha desarrollado un proceso "background" que adapta las facturas de venta del primer semestre para que puedan darse de alta en SII.
 
@@ -1941,21 +1941,21 @@ La ventana "Monitor SII" incluye también una pestaña "Facturas de Compra Prime
 
 Etendo permite la configuración de impuestos de compra no deducibles, tal y como se muestra en la siguiente imagen.
 
-![](/assets/drive/Qu8LkkDz0cuEFwv-abefDr6gMz7pBewViFk3FdE9eOSzKvZAwucoYjgDvD4zckjxG--t75cmEUxloTFi8SDuureO55V5W1XY9Xbdc3EE0TKG4LW87ZOM3DZ_Rzq7ZJXozBXIRVNwNyBAL8la_J4LTJU.png)
+![](../../../../../assets/drive/Qu8LkkDz0cuEFwv-abefDr6gMz7pBewViFk3FdE9eOSzKvZAwucoYjgDvD4zckjxG--t75cmEUxloTFi8SDuureO55V5W1XY9Xbdc3EE0TKG4LW87ZOM3DZ_Rzq7ZJXozBXIRVNwNyBAL8la_J4LTJU.png)
 
 Las facturas de compra que incluyan ese tipo de impuestos, tendrán que darse de alta en SII, tal y como se describe a continuación:
 
 - en la etiqueta "Cuota Soportada", se refleja la cuota soportada
 - y en la etiqueta "Cuota Deducible'', se refleja un "0".
 
-![](/assets/drive/gpb9xZr8kbpoaTim4gGCbBGzKjz393sov8TOW8yBBqIMYfJ-4-vO9ZjaIBP6PDtFc5YiYJd8sDYupg4PeWM0dHltwqIczfMO_XxzbsCPXD-IJLEYZPyN850pc7lbBaeFBGnfZgtGEtysZ28nPehDpt8.png)
+![](../../../../../assets/drive/gpb9xZr8kbpoaTim4gGCbBGzKjz393sov8TOW8yBBqIMYfJ-4-vO9ZjaIBP6PDtFc5YiYJd8sDYupg4PeWM0dHltwqIczfMO_XxzbsCPXD-IJLEYZPyN850pc7lbBaeFBGnfZgtGEtysZ28nPehDpt8.png)
 
 En el caso de impuestos que incluyan parte deducible y parte no deducible, la información a enviar será tal y como se muestra en la siguiente imagen:
 
 - en la etiqueta "Cuota Soportada", se refleja la cuota soportada
 - y en la etiqueta "Cuota Deducible'', se refleja el importe de esa cuota que sea deducible.
 
-![](/assets/drive/itUfZLKo8uBuD5Cv1_2yx5gKK7-0cSLb0MbxoEccSV_OAov_gQtTJL7Q69Inaw8SJm-moaZwoa-N2nqPwxe4SHtAQyEGu4rT5eQbemFSyUzWWYNEMzkDxRzD-nGiBFw0dhNQB1sSZKAPYyShYSA1a1k.png)
+![](../../../../../assets/drive/itUfZLKo8uBuD5Cv1_2yx5gKK7-0cSLb0MbxoEccSV_OAov_gQtTJL7Q69Inaw8SJm-moaZwoa-N2nqPwxe4SHtAQyEGu4rT5eQbemFSyUzWWYNEMzkDxRzD-nGiBFw0dhNQB1sSZKAPYyShYSA1a1k.png)
 
 ### **Informes de comprobación SII (Consultas)**
 
@@ -1963,7 +1963,7 @@ Desde la ventana “**Consulta Facturas SII**” es posible establecer una comun
 
 Esta información es básica para poder conocer el proceso de contraste de los LFRE y LFRR.
 
-![](/assets/drive/7ntfirTf-NO6P8Tp-1jGiD2XKOkzSe-CanqYwZTIHgjMZ_d4oROIuvLTrf6suQ3pF50VOpJjyJoDs1Mpwxty4lBUkRL7F80m9ilSnh_Axoiv744HoOe-H2_4K7U9PenR41VVk0X-SdFZ5_a06wb7M70.png)
+![](../../../../../assets/drive/7ntfirTf-NO6P8Tp-1jGiD2XKOkzSe-CanqYwZTIHgjMZ_d4oROIuvLTrf6suQ3pF50VOpJjyJoDs1Mpwxty4lBUkRL7F80m9ilSnh_Axoiv744HoOe-H2_4K7U9PenR41VVk0X-SdFZ5_a06wb7M70.png)
 
 Seleccionando la organización que va a ser objeto de consulta, accedemos a través de “Nueva Consulta Facturas a SII” a una ventana emergente en la que filtraremos por diferentes criterios para obtener la correspondiente relación de facturas.
 
@@ -1993,4 +1993,4 @@ Para poder efectuar la consulta, será obligatorio completar los campos: _Libro 
 
 Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado según los filtros establecidos anteriormente, ya que una organización acogida a SII podrá consultar los datos enviados (Libros registro declarados) desde la ventana "Consultas Facturas SII"
 
-![](/assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)
+![](../../../../../assets/drive/FTSFjSPwCBgmtGl6WUOV-8tWW64aCeDEpEzCAWGKk4ISvRPZveZSbdG7kMVRrTmZpqm6ZGeKxdB-NN-DBH6bb36VKP-BvRtFQFemHI8AuchI7eH3SG2Dm9aXRAioiXgsZvfXWzGKy8U3wSaPlPxG8UU.png)

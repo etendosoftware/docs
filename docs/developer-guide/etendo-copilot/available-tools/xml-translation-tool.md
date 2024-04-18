@@ -40,7 +40,7 @@ Translates the content of an XML file from one language to another, as specified
 
 First of all, we start from the module `com.etendoerp.bankingpool` originally in English and we can see the Financial Type Configuration window:
 
-![](/assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
+![](../../../assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
 
 1. You must generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
   
@@ -59,4 +59,4 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
     ```
 
 5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
-    ![](/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
+    ![](../../../assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
