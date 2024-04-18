@@ -1,5 +1,5 @@
 ---
-title: "Purchase assistant for Copilot"
+title: "Purchase Assistant for Copilot"
 tags:
     - Copilot
     - IA
@@ -29,8 +29,11 @@ This tool will be the responsible to make the call to the API endpoint, and will
 
 ### Configuration:
  - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
+ 
  - After import the configuration, it is necessary to config the OpenAI model for the assistant and Sync the assistant.
+ 
  - Finally, give access to the role, configure the permissions in "Role" Window.
+
 !!! note
     In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
 

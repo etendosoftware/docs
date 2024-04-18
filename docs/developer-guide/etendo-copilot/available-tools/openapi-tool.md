@@ -1,5 +1,5 @@
 ---
-title: "OpenAPI interaction with Copilot"
+title: "OpenAPI Interaction with Copilot"
 tags:
     - Copilot
     - IA
@@ -14,14 +14,18 @@ tags:
 
 
 ## Overview
-The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. For more information, see the [OpenAPI Initiative](https://www.openapis.org/).
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
 
 This Specification can be very usefull for Copilot, because can be used as guide to Copilot to interact with the services, without the need to know the implementation details and will not be necessary to implement specific code for each service.
 
 
 ## Tools
 
-**Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). At this moment, the Etendo API Tool only returns the OpenAPI Specification of the Etendo API for insert purchase orders in Etendo.
+**Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API for insert purchase orders in Etendo.
+Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the wizard adapts to those changes.
+
+This Tool serves as an example and template, since to integrate with another API, as long as it has an OpenAPI Specification, a similar tool could be made but for that new specification and the assistant who has this tool, could know how to use that API.
+
 
 **API Call Tool**: This tool allows to Copilot to make a call to a API endpoint. 
 This tool will be the responsible to make the call to the API endpoint, and will return the response.
@@ -51,9 +55,13 @@ The combination of the prompt with the functional concepts, the tool that allows
 
 ## How to integrate Copilot with other API's
 The case of the purchase assistant is just an implementation to respond to a need. But, the usefulness of this is that, using the OpenAPI Spec reading tool as a base, the same dynamics can be replicated for a different API. For example, if we want to integrate Copilot with a currency exchange rate API, what we should do is the following:
+
 - Create an App, describing in the App prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
+
 - Create a tool, using the example of the EtendoAPITool, that reads the OpenAPI Spec file, that can be remote or local. This tool should provide the API information. If it is an external API, it is recommended that it reads the remote file provided by the API, so that it is updated on the fly, if the API changes.
+
 - Configure the Tool created in the App, together with the APICallTool, which is a tool included in the module () and is generic for any simple API.
+
 - Sync the assistant and try it out.
 
 This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. 
