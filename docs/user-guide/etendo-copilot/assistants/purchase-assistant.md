@@ -37,6 +37,8 @@ This tool will be the responsible to make the call to the API endpoint, and will
 !!! note
     In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
 
+ For more information about how to import the dataset and configure the assistant, see how its 
+ configured the Bastian Assistant in [Copilot - Getting Started](../getting-started.md) page.
 
 ## Functionality
 
