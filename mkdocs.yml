@@ -230,9 +230,9 @@ nav:
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
     - Etendo Copilot:
-      - Assistants:
-        - Purchase Assistant for Copilot: user-guide/etendo-copilot/assistants/purchase-assistant.md 
       - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
+      - Assistants:
+        - Purchases : user-guide/etendo-copilot/assistants/purchase-assistant.md   
 
   - Developer Guide:
     - Overview: developer-guide/overview.md

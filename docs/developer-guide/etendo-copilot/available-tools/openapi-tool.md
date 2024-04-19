@@ -46,7 +46,7 @@ In the basic use case, a "Purchase Assistant" was implemented, in which an assis
     ETENDO_HOST=http://localhost:8080/etendo
 ```
 !!! warning
-    Replace http://localhost:8080/etendo with the real link of the Etendo system.
+    Replace http://localhost:8080/etendo with the real url of the Etendo system.
 
 
 ## Functionality
