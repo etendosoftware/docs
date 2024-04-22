@@ -6,7 +6,7 @@ There are many situations in which a company needs to transfer funds to modify o
 - a check deposited in the wrong bank account
 - a bank account out of funds...etc.
 
-In Etendo bank and cash accounts are represented as [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+In Etendo bank and cash accounts are represented as [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
 
 There are several kinds of funds transfers depending on the financial account type used and the organization for which the transfer of funds takes place:
 
@@ -16,9 +16,9 @@ There are several kinds of funds transfers depending on the financial account ty
 
 ## Recomended articles
 
-Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item).
+Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item).
 
-It is highly recommended as well to understand how [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) and [Account Combination](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination) work in Etendo.
+It is highly recommended as well to understand how [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) and [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) work in Etendo.
 
 ## Execution Steps
 
@@ -36,10 +36,10 @@ Anyway, the steps to follow are:
 
 ## G/L Item creation
 
-A [G/L Item](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to to that is:
+A [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to do that is:
 
-- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item) window.
-- Create a new record for each organization's general ledger and assign the same [Account Combination](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination) for debit and credit.
+- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) window.
+- Create a new record for each organization's general ledger and assign the same [Account Combination](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) for debit and credit.
 
 For instance, the sample account combinations which could be used are:
 
@@ -54,7 +54,7 @@ A withdrawal transaction needs to be created in the Financial Account where the 
 
 The company in this example needs to:
 
-- navigate to the [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window
+- navigate to the [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) window
 - select the bank to take the money from, for instance Bank A
 - press the process button *Add Transaction*
 - once in that new window select the *Transaction Type* GL Item
@@ -66,14 +66,14 @@ This new transaction is then shown in the *Transaction tab* of the *Financial Ac
 The next step is to post the withdrawal transaction. 
 
 !!!note
-        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
 
 The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)   | Paid Out Amount |        |
-| [Bank A - Withdrawal account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [Bank A - Withdrawal account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 
 ### Creation of the bank fee
@@ -96,8 +96,8 @@ Fee transactions can also be posted the same way as the withdrawal transaction.
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank A -Bank Fee Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Paid Out Amount |        |
-| [Payment Out-Withdrawal](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [Bank A -Bank Fee Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Paid Out Amount |        |
+| [Payment Out-Withdrawal](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 
 ## Creation of the deposit transaction
@@ -105,7 +105,7 @@ Fee transactions can also be posted the same way as the withdrawal transaction.
 The final step is to create a deposit transaction in the Financial Account where the funds must be deposited.
 The company in this example needs to:
 
-- navigate to the [Financial Accounts](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window
+- navigate to the [Financial Accounts](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) window
 - select the bank to deposit the money, for instance Bank B
 - press the process button *Add Transaction*
 - once in that new window select the *Transaction Type* GL Item
@@ -114,7 +114,7 @@ The company in this example needs to:
 - and finally indicate the *Received In* amount, in this example 100,00 USD.
 
 This new transaction is then shown in the *Transaction* tab of the *Financial Account* window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
 
 
 The posting will look like:
@@ -122,8 +122,8 @@ The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank B - Deposit Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)              |        | Received In Amount |
+| [Bank B - Deposit Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
+| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
 
 ## Transfer of funds between cash accounts
 
@@ -143,16 +143,16 @@ Withdrawal transaction posting in Organization A will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)   | Paid Out Amount |        |
-| [Bank A - Withdrawal account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [GL Item Debit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [Bank A - Withdrawal account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 Deposit transaction posting in Organization B will look like:
 
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank B - Deposit Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)              |        | Received In Amount |
+| [Bank B - Deposit Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
+| [GL Item Credit](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
 
 ## Result
 
