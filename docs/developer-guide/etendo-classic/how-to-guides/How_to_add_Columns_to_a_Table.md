@@ -62,17 +62,25 @@ em_ht2_c_salary_category_id  |  VARCHAR  |  32  |  Link to the Salary Category
 To create the above table within the database, use one of the following ALTER TABLE statements depending on the DB you are using:
 
 *PostgreSQL*
-
 ```sql
-    
-     
-      ALTER TABLE ht_salary ADD COLUMN em_ht2_validto timestamp without time zone;
-      ALTER TABLE ht_salary ADD COLUMN em_ht2_payment_schedule VARCHAR(60);
-      ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
-      ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_ht2_c_salary_category_id) REFERENCES c_salary_category(c_salary_category_id);
+ALTER TABLE ht_salary ADD COLUMN em_ht2_validto timestamp without time zone;
+ALTER TABLE ht_salary ADD COLUMN em_ht2_payment_schedule VARCHAR(60);
+ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
+ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_ht2_c_salary_category_id) REFERENCES c_salary_category(c_salary_category_id);
 ```
 
 As can be seen in the SQL, a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.
+
+###  Adding & Configuring the columns in the Application Dictionary
+
+In this part, we will add the newly added column to the list of columns already defined for the _ht_salary_ table and then configure those column definitions to match the description giving in the objective section above.
+
+####  Adding the new column to the Application Dictionary
+
+The steps to follow are:
+
+  1. In the `Tables and Columns` window search for the entry of the _ht_salary_ table. 
+  2. With this record selected, run the *Create columns from DB* process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix _HT2_ as the process detected this via the naming of the database columns. 
 
 Taking a look at the folder structure of the module after running `./gradlew export.database`, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the _ht_salary_ table but instead is adding new elements to it.
 
@@ -93,18 +101,7 @@ org.openbravo.howtos2
             ├── AD_MODULE_DEPENDENCY.xml
             ├── AD_MODULE.xml
             └── AD_PACKAGE.xml
-```
-
-###  Adding & Configuring the columns in the Application Dictionary
-
-In this part, we will add the newly added column to the list of columns already defined for the _ht_salary_ table and then configure those column definitions to match the description giving in the objective section above.
-
-####  Adding the new column to the Application Dictionary
-
-The steps to follow are:
-
-  1. In the `Tables and Columns` window search for the entry of the _ht_salary_ table. 
-  2. With this record selected, run the *Create columns from DB* process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix _HT2_ as the process detected this via the naming of the database columns. 
+```  
 
 ####  Configuring the new columns
 
@@ -140,7 +137,7 @@ For this, a new *Reference* needs to be created. In this case, the important val
 
 The following screenshot shows how the defined reference will look like.  
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png){:.legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png)
 
   
 After this two previous steps, we can finally configure the new columns to use the reference we just created.
@@ -167,7 +164,7 @@ Now run the *Synchronize Terminology* process to set element for the last column
 
 After this, the new columns should look like shown in the following screenshot:
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png)
   
 As a final step, we now update the newly created _EM_Ht2_Payment_Schedule_ element to have a useful label for the UI.
 
