@@ -297,13 +297,13 @@ protected JSONObject doExecute(Map<String, Object> parameters, String content) {
 
 Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding paramters).
 
-There is a new entry in the menu: **Example Param Process**, this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
+After compile and deploy, there will be a new entry in the menu: **Example Param Process**, this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
 
   * If `Max Qty` is greater the `Min Qty`, a message is shown and the process can be submited again. 
   * A message in the parameter window is shown summing the amounts of all selected orders. 
   * If a business partner is selected, it is opened in a new tab displaying a message on it. 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-2.png)
 
 ##  Advanced Topics
 
@@ -330,7 +330,7 @@ It is possible to do groups of parameters in the UI, by using the **Field Group*
 
 It is possible to show the result of a process directly in the process window itself. This makes sense if the parameter section is small and you want to display directly.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-6.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-6.png)
 
 To accomplish this, the data/json object returned from the server handler should set this parameter `showResultsInProcessView` to true. It also makes sense to `retryExecution` parameter to true:
 
@@ -513,7 +513,7 @@ A standard process can be defined as multi record process to be able to execute 
 
 Process definitions can receive files as parameters. To do that, add a `Process File upload`  Reference as a process parameter. This parameter will show a file upload element in the process form where a single file can be uploaded.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png)
 
 By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
 
