@@ -10,7 +10,7 @@ tags:
 
 ##  Overview
 
-In this section, the user can find information about how to extend the table created in the [How to Create a Table](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md) section to include additional fields.
+In this section, the user can find information about how to extend the table created in the [How to Create a Table](how-to-create-a-table.md) section to include additional fields.
 
 Three different fields will be added to show how to configure some of the possible references:
 
@@ -61,8 +61,7 @@ em_ht2_c_salary_category_id  |  VARCHAR  |  32  |  Link to the Salary Category
   
 To create the above table within the database, use one of the following ALTER TABLE statements depending on the DB you are using:
 
-*PostgreSQL*
-```sql
+```sql title="SQL script"
 ALTER TABLE ht_salary ADD COLUMN em_ht2_validto timestamp without time zone;
 ALTER TABLE ht_salary ADD COLUMN em_ht2_payment_schedule VARCHAR(60);
 ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
