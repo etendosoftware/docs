@@ -53,11 +53,11 @@ This section only lists the main important elements needed for the new module. M
 
 ###  Creating the columns in the database
 
-Column name  |  Type  |  Length  |  Note  
----|---|---|---  
-em_ht2_validto  |  DATE  |  |  Date that this salary is valid to.  
-em_ht2_payment_schedule  |  VARCHAR  |  60  |  When the salary is paid  
-em_ht2_c_salary_category_id  |  VARCHAR  |  32  |  Link to the Salary Category  
+| Column name     | Type   | Length | Note                                                                                                                                   |
+| --------------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+|`em_ht2_validto`  |  DATE  |  |  Date that this salary is valid to.  
+|`em_ht2_payment_schedule`  |  VARCHAR  |  60  |  When the salary is paid  
+|`em_ht2_c_salary_category_id`  |  VARCHAR  |  32  |  Link to the Salary Category  
   
 To create the above table within the database, use one of the following ALTER TABLE statements depending on the DB you are using:
 
