@@ -232,7 +232,7 @@ The response would look similar to this:
 After executing the process, it is possible to perform a series of actions.
 
 !!!info
-    For more information, see [Pick & Execute process extension](How_to_create_a_Pick_and_Execute_Process.md). 
+    For more information, see [Pick & Execute process extension](how-to-create-a-pick-and-execute-process.md). 
 
 The response should look like:
 
@@ -312,7 +312,7 @@ After compile and deploy, there will be a new entry in the menu: **Example Param
 Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. 
 
 !!!info
-    More details about this process visit [How to create a Pick and Execute Process](How_to_create_a_Pick_and_Execute_Process.md). 
+    More details about this process visit [How to create a Pick and Execute Process](how-to-create-a-pick-and-execute-process.md). 
 
 ###  Read Only and Display Logic
 
@@ -572,7 +572,19 @@ protected void uploadAttachment(Path originalFile, Map<String, Object> parameter
 ```
 
 !!!info
-    For more information, see an example in [ExportFileExample](https://gitlab.com/users/sign_in){target="\_blank"}.
+    As an example:
+
+    ```java
+    protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
+        throws IOException, JSONException {
+      String tmpFileName = UUID.randomUUID().toString() + ".txt";
+      File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
+      try (FileWriter outputfile = new FileWriter(file)) {
+        outputfile.write("Hello World!");
+      }
+      return file.toPath();
+    }
+    ```
 
 ##  Limitations
 
