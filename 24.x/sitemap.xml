@@ -356,6 +356,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/openapi-tool/</loc>
+         <lastmod>2024-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/xml-translation-tool/</loc>
          <lastmod>2024-04-26</lastmod>
          <changefreq>daily</changefreq>
@@ -842,6 +847,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/getting-started/</loc>
+         <lastmod>2024-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/assistants/purchase-assistant/</loc>
          <lastmod>2024-04-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
