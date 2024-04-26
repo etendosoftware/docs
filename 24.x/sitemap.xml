@@ -256,6 +256,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table/</loc>
+         <lastmod>2024-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-copy-and-paste-images-in-etendo/</loc>
          <lastmod>2024-04-26</lastmod>
          <changefreq>daily</changefreq>
