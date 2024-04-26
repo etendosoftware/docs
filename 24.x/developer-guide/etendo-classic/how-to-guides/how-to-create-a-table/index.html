@@ -7289,7 +7289,7 @@
 <h1 id="how-to-create-a-table">How to Create a Table</h1>
 <h2 id="how-to-create-a-new-table">How to create a new table</h2>
 <p>More generic documentation about tables and their characteristics in Etendo can be found in the <a href="../../concepts/Tables.md">Tables</a> page. That page explains common columns needed for all tables in Etendo, naming rules and more important info.</p>
-<p>First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., <a href="https://www.pgadmin.org/" target="_blank">pgAdmin 4</a> or <a href="https://github.com/phppgadmin/phppgadmin" target="_blank">phpPgAdmin</a> for PostgreSQL and <a href="https://www.oracle.com/database/sqldeveloper/" target="_blank">Oracle SQL Developer</a>) one needs to first CREATE TABLEs that will be used to hold data of the new window/tabs.</p>
+<p>First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., <a href="https://www.pgadmin.org/" target="_blank">pgAdmin 4</a> or <a href="https://github.com/phppgadmin/phppgadmin" target="_blank">phpPgAdmin</a> for PostgreSQL and <a href="https://www.oracle.com/database/sqldeveloper/" target="_blank">Oracle SQL Developer</a>) one needs to first <code>CREATE TABLE</code> that will be used to hold data of the new window/tabs.</p>
 <h3 id="objective">Objective</h3>
 <p>Imagine we are developing an HR module and we need a window that will enable the user to input salaries of employees. We also need to track the employee's salary so history records need to be preserved. Each salary record needs to have a Valid From Date field that indicates when a particular salary came into being. The record belonging to a particular employee with the latest Valid From Date is the salary that is valid today. Note that employees are already inside the system contained in the <code>C_BPARTNER</code> database table and indicated by the <code>C_BPARTNER ISEMPLOYEE</code> column. Therefore, we only need to create a database table that will hold the actual salaries.</p>
 <h3 id="modularity">Modularity</h3>
@@ -7420,13 +7420,13 @@
 <li><em>Name</em> Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in <a href="../../concepts/XML_REST_Web_Services.md">REST webservices</a> and in the <a href="../../concepts/Data_Access_Layer.md#entity-naming">Data Access Layer</a>.</li>
 <li><em>Description</em> Gives a small description of the table.</li>
 <li><em>Help/Comments</em> Defines the text that is displayed in Help window.</li>
-<li><em>DB Table name</em> Defines database table name as it was defined by the CREATE TABLE during its creation.</li>
+<li><em>DB Table name</em> Defines database table name as it was defined by the <code>CREATE TABLE</code> during its creation.</li>
 <li><em>Java Class Name</em> This will be the actual Java class within the Data Package of the module through which you will be able to access this table when using DAL.</li>
 <li><em>Data Access Level</em> determines what kind of data will the table contain due to the multitenancy functionality</li>
-<li><em>System only</em>: Only system records can be inserted into this table (AD_CLIENT_ID=0, AD_ORG_ID=0), for example AD_TABLE.</li>
-<li><em>System/Client</em>: System or client specific records can be inserted here (AD_CLIENT_ID=anything, AD_ORG_ID=0), for example AD_ROLE</li>
-<li><em>Organization</em>: Only client and organization specific data can be inserted into this table (AD_CLIENT_ID&lt;&gt;0, AD_ORG_ID&lt;&gt;0), for example C_INVOICE</li>
-<li><em>Client/Organization</em>: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (AD_CLIENT_ID&lt;&gt;0,AD_ORG_ID=anything), for example C_BPARTNER</li>
+<li><em>System only</em>: Only system records can be inserted into this table (<code>AD_CLIENT_ID=0</code>, <code>AD_ORG_ID=0</code>), for example <code>AD_TABLE</code>.</li>
+<li><em>System/Client</em>: System or client specific records can be inserted here (<code>AD_CLIENT_ID=anything</code>, <code>AD_ORG_ID=0</code>), for example <code>AD_ROLE</code></li>
+<li><em>Organization</em>: Only client and organization specific data can be inserted into this table (<code>AD_CLIENT_ID&lt;&gt;0</code>, <code>AD_ORG_ID&lt;&gt;0</code>), for example <code>C_INVOICE</code></li>
+<li><em>Client/Organization</em>: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (<code>AD_CLIENT_ID&lt;&gt;0</code>,<code>AD_ORG_ID=anything</code>), for example <code>C_BPARTNER</code></li>
 <li><em>All</em>: Any combination of <code>AD_CLIENT_ID</code> and <code>AD_ORG_ID</code> can be inserted into this table.</li>
 </ul>
 <p>Save this record then press the <em>Create columns from DB</em> button to create columns within the Column tab automatically.</p>
@@ -7449,10 +7449,10 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@SQL=SELECT COALESCE(MAX(ColumnName),0)+10 AS DefaultValue FROM TableName
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>WHERE xxParentColumn=@xxParentColumn@
 </span></code></pre></div>
-<p>The <code>WHERE</code> part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the <em>id</em> of the parent one For example, each record of the C_InvoiceLine belongs to a particular C_Invoice record and they are all sequenced. C_Invoice is the parent table for the lines saved in <code>C_InvoiceLine</code> . This table has a column named line and the default value that it takes is:</p>
-<p>```
-@SQL=SELECT COALESCE(MAX(LINE),0)+10 AS DefaultValue FROM C_INVOICELINE
-WHERE C_INVOICE_ID=@C_INVOICE_ID@</p>
+<p>The <code>WHERE</code> part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the <em>id</em> of the parent one For example, each record of the <code>C_InvoiceLine</code> belongs to a particular <code>C_Invoice</code> record and they are all sequenced. <code>C_Invoice</code> is the parent table for the lines saved in <code>C_InvoiceLine</code> . This table has a column named line and the default value that it takes is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@SQL=SELECT COALESCE(MAX(LINE),0)+10 AS DefaultValue FROM C_INVOICELINE
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>WHERE C_INVOICE_ID=@C_INVOICE_ID@
+</span></code></pre></div>
 </div>
 <p>Most of the columns in our specific <code>HT_SALARY</code> case will be automatically detected correctly, however, some need revising:</p>
 <ul>
