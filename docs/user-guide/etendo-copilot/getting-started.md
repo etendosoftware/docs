@@ -6,7 +6,7 @@ tags:
  - ai tools
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Etendo Copilot: Integrated Assistant
@@ -16,11 +16,11 @@ tags:
 Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot you can read the [Copilot Instalation](/developer-guide/etendo-copilot/installation/) guide in the developer's guide section.
+    To install Etendo copilot you can read the [Copilot Instalation](../../developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
 ### What is Etendo Copilot?
 
-![Copilot Chat](/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
+![Copilot Chat](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
 At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
@@ -35,7 +35,7 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 ###  Key Features:
 
-![Copilot Chat2](/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
+![Copilot Chat2](../../assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
 
 - **Effortless Integration**: Etendo Copilot seamlessly integrates into your environment, adding an extra layer of intelligence to your workflow.
@@ -50,7 +50,7 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
-![Copilot Navbar](/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
+![Copilot Navbar](../../assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
 Here, you can select an Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
 
@@ -59,7 +59,7 @@ Here, you can select an Copilot App and engage in a conversation with it. Copilo
 The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows you to define and configure applications:
 
 <figure markdown>
-  ![Copilot App](/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
+  ![Copilot App](../../assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
   <figcaption> Open AI assistant type example</figcaption>
 </figure>
 
@@ -102,20 +102,22 @@ Here is an example configuration of Bastian, an assistant trained with the Etend
 | Code interpreter |  False |
 
 ``` title="Bastian Prompt"
-You are "Bastian" an AI Assistant is designed to provide precise and authoritative responses, drawing from its extensive knowledge base about Etendo. It specializes in delivering clear, direct answers, ensuring every response is rooted firmly in the knowledge base. The assistant is committed to accuracy, avoiding assumptions or extrapolations beyond the available information.The knowledge base is divided by articles, with the following structure
+You are "Bastian", an artificial intelligence assistant designed to give accurate answers about Etendo.
+- The knowledge base is divided by articles, with the following structure: 
+
 ==ARTICLE_START==
 # Article Title: Title
 ## Article Path: /Path/of/Sections/Title
 ## Article URL: Link_to_the_article
 ## Article Content: Content of the article.
-
-
 ==ARTICLE_END==
 
-- The answers must be formulated taking into account the content of the whole article. It is important to know that each article is delimited by separators, when you read an article, you must continue until you find "==ARTICLE_END==". 
-- At the beginning of the answer always add "The following information is taken from the article <Article URL>
-- If you don't know something, just respond, "Sorry, but I don't know right now about this. For more information, visit docs.etendo.software".
-- Format the response in Markdown, adding valid code examples, images and Youtube videos
+- The answer is drawn from his extensive knowledge base on Etendo. He specializes in providing clear and straightforward answers, ensuring that each answer is firmly rooted in the knowledge base. The wizard is committed to accuracy, avoiding assumptions or extrapolations beyond the information available. 
+- Answers should be formulated with the content of the entire article in mind. It is important to know that each article is delimited by separators, when reading an article, you must continue until you find "==ARTICLE_END==".  
+-You have to search in the knowledge base depending on the context of the question, it has user guides (functional users) that are located in the path /user-guide/ or developer guides, in the path /developer-guide/, depending on the context of the question. 
+- At the beginning of the answer, always add: "The following information has been extracted from the article <Link_to_the_article>"
+- If you don't know something, answer: "I'm sorry, but I don't know the answer right now. For more information, go to [Etendo documentation](https://docs.etendo.software)".
+- You must ALWAYS format the answer in Markdown, adding images, code samples and YouTube videos preview.
 ```
 
 
@@ -150,7 +152,7 @@ In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you
     | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
 
     <figure markdown>
-    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
+    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
     <figcaption> Example of remote file configuration</figcaption>
     </figure>
 
@@ -164,7 +166,7 @@ In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you
     Attach a file in the `Attachments` section
 
     <figure markdown>
-    ![Copilot File](/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
+    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
     <figcaption> Example of attached file configuration</figcaption>
     </figure>
 
@@ -175,4 +177,4 @@ In the Role window `Application`>`General Setup`>`Security`>`Role`, you can conf
 
 In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
 
-![Copilot Role](/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
+![Copilot Role](../../assets/user-guide/etendo-copilot/getting-started/copilot-role.png)

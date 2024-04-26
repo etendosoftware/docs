@@ -74,7 +74,7 @@ def get_file_content(value, level):
     content = ""
     if value.endswith(".md"):
         value_without_extension = value[:-3] if value.endswith('.md') else value
-        content += "## Article URL: \n https://docs.etendo.software/" + value_without_extension + "\n"
+        content += "## Article URL: \n https://docs.etendo.software/latest/" + value_without_extension + "\n"
         content += "## Article Content: \n"
         with (open("docs/" + value, "r") as f):
             lines = f.readlines()
@@ -99,7 +99,7 @@ def get_file_content(value, level):
         content += "\n"
     content += "==ARTICLE_END==\n"
     # Clean the relative links
-    prefix_for_relative_links = "https://docs.etendo.software/"
+    prefix_for_relative_links = "https://docs.etendo.software/latest/"
     while content.find("](../../") != -1:  # first reduce the ../../ or bigger to ../
         content = content.replace("](../../", "](../")
     while content.find("](../") != -1:  # then reduce the ../ to /

@@ -2,7 +2,7 @@
 hide:
     - toc
 ---
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../assets/getting-started/overview/cover-getting-started.png)
 
 #
 We're excited to guide you through the swift setup of Etendo Classic, enabling you to have it up and running within a matter of a few simple steps. <br>

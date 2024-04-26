@@ -34,7 +34,7 @@ Business events make use of the event framework provided by the [Weld](../concep
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
 
 ##  Example Module
 

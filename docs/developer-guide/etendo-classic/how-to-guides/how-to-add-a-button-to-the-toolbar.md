@@ -407,7 +407,7 @@ Then when the server returns, the callback is called which will display a prompt
 
   
 
-![](../../..//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 ###  The result
 

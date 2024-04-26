@@ -7,7 +7,7 @@ tags:
  - setup
 ---
 
-![cover-getting-started.png](/assets/getting-started/overview/cover-getting-started.png)
+![cover-getting-started.png](../../../../assets/getting-started/overview/cover-getting-started.png)
 #
 
 ## Overview
@@ -35,7 +35,7 @@ The language is automatically available once the localization bundle has been su
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
 
 #### Initial Client Setup
 
@@ -46,7 +46,7 @@ Above means that certain configurations such as users, customers, vendors and ot
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
 
-The [Initial Client setup](/user-guide/etendo-classic/basic-features/general-setup/initial-client-setup/) is the process which creates a Client in Etendo. A Client cannot be created manually.
+The [Initial Client setup](../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) is the process which creates a Client in Etendo. A Client cannot be created manually.
 
 This process besides creating a Client allows selecting the reference data included in the bundle/s already installed.
 All that data, if applied to the Client, will be shared by all the organizations which belong to the Client.
@@ -110,7 +110,7 @@ User Access Level allows limiting the records which will be accessible in entiti
 
 The diagram below shows the Etendo basic General Setup flow for a legal entity with accounting. This flow is one part of the overall Business setup flow.
 
-![](/assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png)
 
 In the example above, the **Accounting** data can not be shared across all the organization/s of the client because it was not applied at client level but to the Organization being created.
 
@@ -132,7 +132,7 @@ A defaulted **General Ledger configuration** and the **Chart of Accounts** can b
 The diagram below shows the business setup flow.
 This business setup flow goes from the Generic setup and Master Data areas to the Accounting and Warehouse setup areas.
 
-![](/assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/Quick_Guide_Diagram_new.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/Quick_Guide_Diagram_new.png)
 
 If you want to know more about the basic setup of the business configurations in Etendo, please review the different articles in the General Setup section.
 
