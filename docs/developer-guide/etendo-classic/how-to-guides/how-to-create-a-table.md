@@ -13,7 +13,7 @@ tags:
 
 More generic documentation about tables and their characteristics in Etendo can be found in the [Tables](../../concepts/Tables.md) page. That page explains common columns needed for all tables in Etendo, naming rules and more important info.
 
-First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} or [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} for PostgreSQL and [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) one needs to first CREATE TABLEs that will be used to hold data of the new window/tabs.
+First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} or [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} for PostgreSQL and [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) one needs to first `CREATE TABLE` that will be used to hold data of the new window/tabs.
 
 ### Objective
 
@@ -91,13 +91,13 @@ Main fields of this window are (for more information, see the `AD_Table` table d
 - _Name_ Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in [REST webservices](../../concepts/XML_REST_Web_Services.md) and in the [Data Access Layer](../../concepts/Data_Access_Layer.md#entity-naming).
 - _Description_ Gives a small description of the table.
 - _Help/Comments_ Defines the text that is displayed in Help window.
-- _DB Table name_ Defines database table name as it was defined by the CREATE TABLE during its creation.
+- _DB Table name_ Defines database table name as it was defined by the `CREATE TABLE` during its creation.
 - _Java Class Name_ This will be the actual Java class within the Data Package of the module through which you will be able to access this table when using DAL.
 - _Data Access Level_ determines what kind of data will the table contain due to the multitenancy functionality
-  - _System only_: Only system records can be inserted into this table (AD_CLIENT_ID=0, AD_ORG_ID=0), for example AD_TABLE.
-  - _System/Client_: System or client specific records can be inserted here (AD_CLIENT_ID=anything, AD_ORG_ID=0), for example AD_ROLE
-  - _Organization_: Only client and organization specific data can be inserted into this table (AD_CLIENT_ID<>0, AD_ORG_ID<>0), for example C_INVOICE
-  - _Client/Organization_: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (AD_CLIENT_ID<>0,AD_ORG_ID=anything), for example C_BPARTNER
+  - _System only_: Only system records can be inserted into this table (`AD_CLIENT_ID=0`, `AD_ORG_ID=0`), for example `AD_TABLE`.
+  - _System/Client_: System or client specific records can be inserted here (`AD_CLIENT_ID=anything`, `AD_ORG_ID=0`), for example `AD_ROLE`
+  - _Organization_: Only client and organization specific data can be inserted into this table (`AD_CLIENT_ID<>0`, `AD_ORG_ID<>0`), for example `C_INVOICE`
+  - _Client/Organization_: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (`AD_CLIENT_ID<>0`,`AD_ORG_ID=anything`), for example `C_BPARTNER`
   - _All_: Any combination of `AD_CLIENT_ID` and `AD_ORG_ID` can be inserted into this table.
 
 Save this record then press the _Create columns from DB_ button to create columns within the Column tab automatically.
@@ -131,11 +131,12 @@ The name is used by the [Data Access Layer](../../concepts/Data_Access_Layer.md)
     WHERE xxParentColumn=@xxParentColumn@
     ```
 
-    The `WHERE` part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the _id_ of the parent one For example, each record of the C_InvoiceLine belongs to a particular C_Invoice record and they are all sequenced. C_Invoice is the parent table for the lines saved in `C_InvoiceLine` . This table has a column named line and the default value that it takes is:
+    The `WHERE` part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the _id_ of the parent one For example, each record of the `C_InvoiceLine` belongs to a particular `C_Invoice` record and they are all sequenced. `C_Invoice` is the parent table for the lines saved in `C_InvoiceLine` . This table has a column named line and the default value that it takes is:
 
     ```
     @SQL=SELECT COALESCE(MAX(LINE),0)+10 AS DefaultValue FROM C_INVOICELINE
     WHERE C_INVOICE_ID=@C_INVOICE_ID@
+    ```
 
 Most of the columns in our specific `HT_SALARY` case will be automatically detected correctly, however, some need revising:
 
