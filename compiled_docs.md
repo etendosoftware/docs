@@ -10050,7 +10050,7 @@ In Material Requirement Planning the application is used to *automatically revie
 
 #### Material Requirement Planning
 
-The Master Requirement Planning consists of two plans:
+The Material Requirement Planning consists of two plans:
 
 - Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) and the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition).
 - Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order).
@@ -19049,7 +19049,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#bulk-posting)
+- [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management../../../../../assets/overview/#bulk-posting)
 - [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_1)
 - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
 - [Matched Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_2)
@@ -26630,7 +26630,7 @@ The main fields to fill in the header section of the payment in window are:
 - Paying From, the financial bank account where the money is taken out from.
 - and the Payment Method which in the example is "Wire Transfer"
 
-![](d/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
 
 Then, it is possible to register vendor payment details by using the process button named “Add Details”.
 
@@ -27227,7 +27227,6 @@ The user will remain logged in, the system will require reentering the credentia
 Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the “demo try” button must be pressed and the user can enter without credential requirements.
 
 The gear icon shown in the welcome window allows the user to enter the configuration window. (See Settings window).
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: User interface
@@ -27286,9 +27285,6 @@ In case the user has a picture, it will be shown both in this window and in the 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/ProfileScreen.png){ width="300" }
 
 As regards the role, it can only be modified from the app, so each user will enter with their default role (setup in the Etendo Classic).
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Classic Subapp Extensions
@@ -27505,7 +27501,7 @@ We will also notice that the Product's Stock has been updated in the indicated s
 Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation/) guide in the developer's guide section.
+    To install Etendo copilot you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
 ##### What is Etendo Copilot?
 
@@ -27667,7 +27663,6 @@ In the Role window `Application`>`General Setup`>`Security`>`Role`, you can conf
 In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
 
 ![Copilot Role](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -32187,7 +32182,7 @@ Then when the server returns, the callback is called which will display a prompt
 
   
 
-![](https://docs.etendo.software/latest//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 #####  The result
 
@@ -33415,6 +33410,476 @@ This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create a Page in Etendo Documentation
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Page in Etendo Documentation
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation
+## Article Content: 
+### How to Create a Page in Etendo Documentation
+
+#### Overview
+This guide contains basic rules, tips, and suggestions for people intending to develop documentation for Etendo. When different documents use the same guidelines, they are more user friendly, consistent and more simple to combine and reuse. We therefore strongly encourage all contributors to follow these guidelines for the benefit of the readers.
+
+
+#### Requirements
+- Python version ^3.10. To install it, follow [the Python installation guide](https://www.python.org/downloads/){target="\_blank"}.
+
+
+#### Steps
+
+1. Clone the [docs](https://github.com/etendosoftware/docs){target="\_blank"} repository 
+	
+    ```bash title="Terminal" 
+    git clone git@github.com:etendosoftware/docs.git
+    ```
+
+2. Install dependencies
+
+    ```bash title="Terminal" 
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install mkdocs-material
+    pip install pillow cairosvg
+    pip install mkdocs-glightbox
+    pip install mike
+    pip install mkdocs-rss-plugin
+    ```
+
+3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
+
+    ```bash title="Terminal" 
+	# This command should be executed only the first time after cloning the repository.
+	git flow init 
+    ```
+
+    ```bash title="Terminal" 
+    git flow feature start <task key>
+    ```
+
+4. To run the Etendo documentation locally, execute:
+
+    ```bash title="Terminal"
+    source venv/bin/activate
+    mkdocs serve
+    ```
+
+5. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be in lowercase separated by hyphens. 
+
+    ``` title="Documentation Structure" 
+    └── docs
+    ├── developer-guide 
+    │   └── etendo-classic
+    │       └── how-to-guides
+    │           ├── new-page.md
+    │           ├── ..
+    │           ├── ..
+    │           └── ..
+    ├── user-guide
+    │   └── basic-feature
+    ```
+
+    In order to display the page in the menu, add this page in the `mkdocs.yml` file in the **nav** section.
+    
+    !!!important
+        - When adding pages to the navigation structure, remember to organize them in alphabetical order.
+        - The directory and navigation structure must be the same.
+
+    Example
+
+    ``` title="mkdocs.yml"
+    nav: 
+    - Home : index.md
+    - User Guide:
+        ...
+        - How-To:
+            ...
+            - New Page: developer-guide/etendo-classic/how-to-guides/new-page.md
+            ...
+    - Developer Guide
+    ...
+    ```
+
+    The documentation should be worked on following the [page format](#page-format) described in the next section.
+
+    Once the documentation is finished:
+
+
+6. Create a PR to `develop` with all the related changes.
+7. Once all the comments are resolved, and you have two approved, merge the PR.
+8. A new version of the documentation will be automatically deployed in [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
+
+#### Page format
+
+##### Page structure
+
+```
+---
+tags: 
+  - Tag example 1
+  - Tag example 2
+---
+ 
+### Title
+  
+#### Overview
+
+
+(General description of the section)
+
+
+#### Title 1
+
+
+##### Subtitle
+```
+!!!note
+    If the page was extracted from OB wiki, for copyright reasons, add the following footer editing the title and the link of the original page:
+    ```
+    ---
+    
+    This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+    ```
+
+##### Useful References
+
+###### Bold
+
+Use sparingly for emphasis, or to highlight option names, for example:
+From the **Sales order** window, select **New**
+
+```
+**Bold**
+```
+
+This is shown as: **Bold**
+
+###### Italics 
+
+Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
+
+```
+*Italic*
+```
+
+This is shown as: *Italic*
+
+###### Backticks
+
+Use them to refer to paths, inline code and for menu navigation. For example:
+
+- Path:
+    ```
+    `/directory/filename.txt`
+    ```
+    This is shown as: `/directory/filename.txt`
+- Inline Code:
+    ```
+    `./gradlew update.database --info`
+    ```
+    This is shown as: `./gradlew update.database --info`
+
+- Menu navigation:
+    ```
+    `Document`>`New`>`Template`
+    ```              
+    This is shown as: `Document`>`New`>`Template`
+
+###### Admonitions
+
+Admonitions are used to include extra content without interrupting the flow of the page. As shown below, there are different types: 
+
+```
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!error
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+This is shown as:
+
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!failure
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+It is also possible to edit the title of the blockquote by adding:
+
+```
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+This is shown as:
+
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+For more information, visit [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="\_blank"}.
+
+###### Content Tabs
+
+When documenting a feature with different options (JAR or Source, Windows or Linux, C or C++ for example), use the following tabs to include information relevant for each option. Readers can then choose the corresponding tab with the necessary information and skip reading non-relevant information.
+
+```bash title="Content Tabs"
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+```
+This is shown as:
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+###### Directory Structure
+
+In order to the directory structure, it is necessary to apply the following format:
+
+```
+modules
+└── org.openbravo.localization.spain.referencedata.taxes
+    └── referencedata 
+        └── standard
+            ├── Impuestos_ES.xml
+            └── Spanish_Tax_Alerts.xml
+```
+
+
+###### External Links
+
+To include external links in the documentation, use the following path format: 
+
+```
+[Google Example](https://google.com){target="_blank"}
+```
+
+This is shown as: [Google Example](https://google.com){target="_blank"} 
+
+###### Internal links (Redirection)
+
+To include internal links, use the relative paths from the current page such as the following example:
+
+```
+[Internal Link](https://docs.etendo.software/latest/how-to-guides/example-page.md)
+```
+
+This is shown as: [Internal Link](https://docs.etendo.software/latest/how-to-guides/example-page.md)
+
+It is also possible to refer to a specific section inside a page using
+
+```
+[Specific section](https://docs.etendo.software/latest/how-to-guides/example-page.md#specific-section)
+```
+
+This is shown as: [Specific section](https://docs.etendo.software/latest/how-to-guides/example-page.md#specific-section)
+
+###### Lists
+
+To include lists in the documentation, use the following formats:
+
+Bullet points:
+
+```
+List:
+
+- Bullet point a
+- Bullet point b
+```
+
+This is shown as:
+
+List:
+
+- Bullet point a
+- Bullet point b
+
+Numbered list:
+
+```
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+```
+This is shown as:
+
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+
+!!!info
+    Remember respecting the tabs is essential for the continuity of lists, this means that the content of different items must be tabulated.  
+
+###### Images
+
+To include images in the documentation, use the relative paths from the current page with the following format: 
+
+```
+![](https://docs.etendo.software/latest/assets/developer-guide/how-to-guides/new-page/new-image.png)
+```
+
+!!!info
+    Remember to upload the image to the **assets** folder with the corresponding specific location.
+
+For example, if the image location is `developer-guide`> `how-to-guides` >`new-page`, the location of the image should be:
+
+```
+
+ assets 
+    └── developer-guide
+         └── how-to-guides
+                └── new-page
+                    └── new-image.png
+```
+###### More references
+
+For more information about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference){target="_blank"}.
+
+#### Writing Rules
+
+##### Keep it simple
+Use short sentences and punctuation to keep ideas clear and simple. Introduce a single idea, concept or action per sentence.
+
+- **Wrong**<br>
+*The manufacturing module allows users to define the process plans, work requirements and work efforts; this is how the processes that produce intermediate and final goods work.*
+
+- **Correct**<br>
+*The manufacturing module allows users to define the process plans, work requirements and work efforts. This section describes how processes that produce intermediate and final goods function.*
+
+
+##### Tenses
+Always use the present tense. Avoid past or future tenses if possible.
+In addition, try to refrain from using must, have to, need to, will, should and similar forms.
+Keep in mind that a manual describes mandatory procedures to follow to accomplish a certain task.
+
+- **Wrong**<br>
+*You will have to press return to reboot the system.*
+- **Correct**<br> 
+*Press return to reboot the system.*
+
+
+##### Use third person
+*Where possible, use the third person imperative.* 
+
+- **Wrong**<br>
+*You should run the installation script*
+- **Correct**<br>
+*Run the installation script*
+
+However, as long as you do not overdo it, it is accepted to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
+
+##### Avoid gender discrimination
+Readers of software documentation are men and women. Avoid using expressions that refer to specific gender forms.
+You can avoid gender forms or use *they*/*their* as a generic third-person singular pronoun to refer to a person whose gender is unknown or irrelevant to the context of the usage.
+
+- **Wrong**<br>
+*Every user has his home directory.*
+
+- **Correct**<br>
+*Every user has a home directory.*<br>
+*Every user has their home directory.*
+
+
+##### Only describe current functionality
+Avoid talking about future features or plans for a product or an application.
+
+- **Wrong**<br>
+*Graphics can be saved as a GIF image. Support for new formats will be added in future versions.*
+
+- **Correct**<br>
+*Graphics can be saved as a GIF image.*
+
+
+##### Writing for a global audience
+Keep in mind that people from all over the globe can use Etendo and its related documentation.
+Some important recommendations:
+
+- Avoid using names of people, addresses, and other sample information that are not common in the English language.
+- Remember that currencies and formats to represent dates and numbers are not the same in every part of the world.
+
+##### Other conventions
+
+- If you have a list of items (for example a list of files to be downloaded) order them alphabetically unless there is a more obvious logical order.
+- Do not use contractions (don't, you're, etc).
+
+---
+
+This work is a derivative of [Documentation Style Guide](https://wiki.openbravo.com/wiki/Documentation_Style_Guide){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How To Create a Module
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
 ## Article URL: 
@@ -33932,6 +34397,790 @@ In Platform Features module, there is an example of a report making use of diffe
 
 ---
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Standard Process Definition
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Standard Process Definition
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition
+## Article Content: 
+###  How to Create a Standard Process Definition
+  
+####  Overview
+
+**Standard UI pattern of Process Definition** allows to create Parameter Windows defined in Application Dictionary, the UI for this windows is generated on demand so once defined those parameters, developer only needs to take care about process implementation.
+
+This section will add a new **Standard Process Definition** and create a menu entry to invoke it.
+
+The implementation requires development experience. See the following concept pages for background information on action handlers and javascript development:
+
+  * [Action Handler](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md)
+  * [Client Side Development and API](https://docs.etendo.software/latest/concepts/Client_Side_Development_and_API.md)
+  * [JavaScript Coding Conventions](https://docs.etendo.software/latest/concepts/JavaScript_Coding_Conventions.md)
+
+
+####  Steps to implement the Process
+
+#####  Overview
+
+**Standard Process Definition** processes take advantage of the same foundation concepts in the Application Dictionary, allowing to define parameters for the process as meta data that generates the UI when it is required without the need of generating code, compile or restart tomcat to apply the changes when developing.
+
+This example process will have the following parameters:
+
+  * Min and Max Qty: two mandatory integer fields. 
+  * Orders: a search that allows to select several orders at the same time. 
+  * Business Partner: a regular business partner selector. 
+
+When **Done** button is clicked the process is executed:
+
+  * It verifies in backend `max qty` field is greater than `min qty`. In case they are not, a validation error is sent back to the client asking the user to fix the values before continuing. 
+  * If previous validation is satisfied: 
+    * Total amount of all selected orders is summed and displayed in a message in the **parameter** window. 
+    * If a business partner is selected, **Business Partner** window is opened within the selected one and a message is shown in this window. 
+
+#####  Implementation
+
+######  Defining the Process
+
+  * Open **Process Definition** window 
+  * Create a new record 
+  * Define the UI pattern: **Standard (Parameters defined in Dictionary)**
+  * Set the Handler: `org.openbravo.client.application.examples.StandardProcessActionHandler`. This is the Java class implementing the process that will be invoked when user clicks on the action button. 
+  * Save 
+
+######  Adding Parameters
+
+  * `Min Qty` parameter 
+    * Move to **Parameters** tab 
+    * Create a new record 
+    * Name: `Min Qty`. This is the name that will be shown in UI for this parameter. 
+    * Internal Name: min. It is the internal name that will be used to retrieve the value in the java class. 
+    * Sequence Number: 10. Defines the position of this field in the **Parameter window** in relation with the rest of fields. 
+    * Reference: Integer. Defines both the data type the parameter will hold and how this parameter is visualized and behaves in the UI. 
+    * Mandatory: true. Will force the parameter to have a value before allowing to submit the info to the process. 
+    * Default value: 0. It is the value that will take the parameter by default. It is a javascript expression evaluated in the server side, like  Default Filter Expressions  used in selectors. 
+  * Follow similar steps to create **Max Qty** field 
+  * **Orders** multi selector 
+    * Create a  Multi Order  selector 
+    * Create a new parameter 
+    * Reference: `OBUISEL_Multi Selector Reference` 
+    * Reference Search Key: Multi Order Selector 
+  * Business Partner parameter has `OBUISEL_Selector Reference` as Reference and **Business Partner not filtered by default by customer/vendor** as Reference Search Key 
+
+######  Adding it to the Menu
+
+Adding a process to the menu allows to open it from menu as a new tab.
+
+  * In **Menu** window create a new entry 
+  * Action: Process Definition 
+  * Process Definition: Example Parameter Process 
+
+######  Java Implementation
+
+In the case of a Process Definition action handler, extend from `BaseProcessActionHandler` and implement the `doExecute` method.
+
+    
+    
+```java
+/*
+  *************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SLU
+  * All portions are Copyright (C) 2013 Openbravo SLU
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************
+  */
+package org.openbravo.client.application.examples;
+ 
+import java.math.BigDecimal;
+import java.util.Map;
+ 
+import org.apache.log4j.Logger;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.application.process.BaseProcessActionHandler;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.erpCommon.utility.OBMessageUtils;
+import org.openbravo.model.common.order.Order;
+ 
+public class StandardProcessActionHandler extends BaseProcessActionHandler {
+  private static final Logger log = Logger.getLogger(StandardProcessActionHandler.class);
+ 
+  @Override
+  protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+    try {
+      JSONObject result = new JSONObject();
+ 
+      JSONObject request = new JSONObject(content);
+      JSONObject params = request.getJSONObject("_params");
+ 
+      // Do validations on param values
+      double min = params.getDouble("min");
+      double max = params.getDouble("max");
+ 
+      if (max < min) {
+        // In case validations are not satisfied, show an error message and allow user to fix
+        // parameters
+        result.put("retryExecution", true);
+ 
+        JSONObject msg = new JSONObject();
+        msg.put("severity", "error");
+        msg.put(
+            "text",
+            OBMessageUtils.getI18NMessage("OBEXAPP_MinGtMax", new String[] { Double.toString(min),
+                Double.toString(max) }));
+        result.put("message", msg);
+        return result;
+      }
+ 
+      // Execute process and prepare an array with actions to be executed after execution
+      JSONArray actions = new JSONArray();
+ 
+      // 1. Sum amounts of all orders and show a message in process view
+      JSONArray orders = params.getJSONArray("orders");
+      BigDecimal totalAmnt = BigDecimal.ZERO;
+      for (int i = 0; i < orders.length(); i++) {
+        String orderId = orders.getString(i);
+        Order order = OBDal.getInstance().get(Order.class, orderId);
+        totalAmnt = totalAmnt.add(order.getGrandTotalAmount());
+      }
+      JSONObject msgTotal = new JSONObject();
+      msgTotal.put("msgType", "info");
+      // XXX: these two messages should be translatable, like OBEXAPP_MinGtMax above
+      msgTotal.put("msgTitle", "Selected Orders");
+      msgTotal.put("msgText", "Total amount: " + totalAmnt.toString());
+ 
+      JSONObject msgTotalAction = new JSONObject();
+      msgTotalAction.put("showMsgInProcessView", msgTotal);
+ 
+      actions.put(msgTotalAction);
+ 
+      // 2. If business partner is not null, open it in BP window and show a message in new tab
+      if (!params.isNull("bp")) {
+        String bpId = params.getString("bp");
+        JSONObject recordInfo = new JSONObject();
+        recordInfo.put("tabId", "220");
+        recordInfo.put("recordId", bpId);
+        recordInfo.put("wait", true);
+ 
+        JSONObject openTabAction = new JSONObject();
+        openTabAction.put("openDirectTab", recordInfo);
+ 
+        actions.put(openTabAction);
+ 
+        JSONObject msgInBPTab = new JSONObject();
+        msgInBPTab.put("msgType", "success");
+        msgInBPTab.put("msgTitle", "Process execution");
+        msgInBPTab.put("msgText", "This record was opened from process execution");
+ 
+        JSONObject msgInBPTabAction = new JSONObject();
+        msgInBPTabAction.put("showMsgInView", msgInBPTab);
+ 
+        actions.put(msgInBPTabAction);
+      }
+ 
+      result.put("responseActions", actions);
+ 
+      return result;
+    } catch (JSONException e) {
+      log.error("Error in process", e);
+      return new JSONObject();
+    }
+  }
+}
+```
+
+#######  Response
+
+`ActionHandler` return a `JSONObject` with the actions to be performed after execution.
+
+########  Validations
+
+It is possible to do validations in the backend before executing the actual process, when these validations are not satisfied, a message can be shown in the UI to allow the user to fix the problematic values.
+
+When validations are not satisfied `retryExecution: true` property is included in the response. This allows the user to fix data and resubmit again.
+Additionally, a message can be added to show more information about the issue.
+
+The response would look similar to this:
+
+```json
+{
+  "retryExecution": true,
+  "message": {
+    "severity": "error",
+    "text": "Min value (80.0) cannot be greater than Max value (10.0)"
+  }
+}
+```
+
+########  Returning Several Actions
+
+After executing the process, it is possible to perform a series of actions.
+
+!!!info
+    For more information, see [Pick & Execute process extension](how-to-create-a-pick-and-execute-process.md). 
+
+The response should look like:
+
+```json
+{
+  "responseActions": [{
+    "showMsgInProcessView": {
+      "msgType": "info",
+      "msgTitle": "Selected Orders",
+      "msgText": "Total amount: 3020482.63"
+    }
+  }, {
+    "openDirectTab": {
+      "tabId": "220",
+      "recordId": "A6750F0D15334FB890C254369AC750A8",
+      "wait": true
+    }
+  }, {
+    "showMsgInView": {
+      "msgType": "success",
+      "msgTitle": "Process execution",
+      "msgText": "This record was opened from process execution"
+    }
+  }, {
+    "refreshGrid": {
+    }
+  }, {
+    "refreshGridParameter": {
+      "gridName": "gridParameterName"
+    }
+  }]
+}
+```
+
+  * `responseActions`. It is the name of the `JSONArray` that indicates a series of actions will be performed after execution. Each of the items in the array is one action, different kinds of actions can be executed. It is also possible to  extend through modules  the possible actions to be performed: 
+  * `showMsgInProcessView`. Shows a message in the same tab the process was invoked from. In case the process is opened from menu, this message will be seen in the window where the values for the parameters are provided; if the process is invoked from a button in a tab, the message will be shown in that tab. 
+  * `openDirectTab`. Opens a new tab. `tabId`, it is possible to indicate the record to open in that tab (`recordId`). The `wait: true` property indicates next action will not be started till this one finishes. Optionally, you can also include a criteria object to automatically add a removable filter to the open tab. A criteria is an object which describes a filter in a grid. 
+
+!!!info
+    For more information, visit [Smartclient](https://smartclient.com/smartgwt/javadoc/com/smartgwt/client/data/AdvancedCriteria.html){target="\_blank"}.
+
+  * `showMsgInView`. Shows a message in the recently opened tab. 
+  * `refreshGrid`. Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the `refreshGrid` to the list of response actions to see the updated data in the grid. 
+  * `refreshGridParameter`. Refreshes the **grid parameter** with name ` gridName ` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
+
+  
+The `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
+    
+    
+```java
+@Override
+protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+  ...
+  ...
+  return getResponseBuilder()
+      .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
+      .openDirectTab("220", false).build();
+}
+```
+
+####  Testing the Process
+
+Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding paramters).
+
+After compile and deploy, there will be a new entry in the menu: **Example Param Process**, this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
+
+  * If `Max Qty` is greater the `Min Qty`, a message is shown and the process can be submited again. 
+  * A message in the parameter window is shown summing the amounts of all selected orders. 
+  * If a business partner is selected, it is opened in a new tab displaying a message on it. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-2.png)
+
+####  Advanced Topics
+
+#####  Invoke the Process from a Tab
+
+Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. 
+
+!!!info
+    More details about this process visit [How to create a Pick and Execute Process](how-to-create-a-pick-and-execute-process.md). 
+
+#####  Read Only and Display Logic
+
+Parameters in Process Definition support display and read only logic. This allows to show or hide and to make editable or read only parameters based on values entered for other parameters.
+
+#####  Subordinated Combos
+  
+The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being posible to use `OBBindings`, in the same way default value is written.
+
+#####  Parameter Grouping
+  
+It is possible to do groups of parameters in the UI, by using the **Field Group** property when defining the paramter.
+
+#####  Showing results in the process window itself
+
+It is possible to show the result of a process directly in the process window itself. This makes sense if the parameter section is small and you want to display directly.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-6.png)
+
+To accomplish this, the data/json object returned from the server handler should set this parameter `showResultsInProcessView` to true. It also makes sense to `retryExecution` parameter to true:
+
+```json
+{
+  "retryExecution": true,
+  "showResultsInProcessView": true
+}
+```
+
+The called `javascript` method gets an object with a `processView` property which refers back to the overall process view. From the process view you can get to the resultLayout to show the result. The resultLayout is a `SmartclientHLayout`.
+
+For example, a return action:
+
+```javascript
+OB.Utilities.Action.set('openSaikuReport', function(paramObj) {
+  var i, queries = paramObj.queries,
+      processView = paramObj._processView,
+      mainLayout = processView.resultLayout, reportView;
+ 
+  reportView = isc.OBANALY_ShowSaikuReport.create({
+    parameters: paramObj,
+    queries: queries
+  });
+  mainLayout.addMember(reportView);
+```
+
+#####  Placing a parameter in a particular column
+  
+The **Column Number** field of the Parameter tab allows specifying the column where the parameter should be placed. Grid parameters use always the four columns of the form, so this field does not apply to them.
+
+#####  Invoking a client side validation before calling the action handler
+
+The **Client Side Validation** field of the Process Definition tab allows defining a function that will be executed before the request to the action handler is done. This function can be used to do **client side validations**.
+
+This function must accept 3 parameters:
+
+  * the parameter window object. i.e., if you name this parameter **view**, then the form of the parameter window will be accessible via `view.theForm`. The value of a particular parameter can be retreived using `view.theForm.getItem(parameter_name).getValue() `
+  * a validation success callback. If the current values of the form passes the validation, this callback must be invoked
+  * a validation failure callback. If form values do not satisfy the validation, invoke this callback. 
+
+For instance:
+
+```javascript
+OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failureCallback) {
+  var minNumber, maxNumber;
+  minNumber = view.theForm.getItem('min_number').getValue();
+  maxNumber = view.theForm.getItem('max_number').getValue();
+  if (maxNumber >= minNumber) {
+    // only execute the callback if the form values pass the validation
+    actionHandlerCall();
+  } else {
+    failureCallback();
+  }
+```
+
+In addition, client side validation functions support a fourth parameter that contains additional information, like the pressed button:  
+
+```javascript
+OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failureCallback, additionalInfo) {
+  if (additionalInfo.buttonValue === 'OK') {
+    // execute validations related to the 'OK' button
+  } else {
+    // do another validations
+  }
+```
+
+!!!info
+    To learn how to define new buttons in a standard process definition window, see [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons).
+
+
+Additional information can be added to the payload the process will receive. For example, this code would add a new parameter named `myParam`:
+
+```javascript
+view.externalParams = { myParam:'value' };
+```
+
+#####  Invoking a function when a non-grid parameter is changed
+
+The **On Change Function** field of the Parameter tab allows defining a function that will be executed when a non-grid parameter is updated, after the parameter loses its focus. This function can be used to do validations or to implement **client side callouts**, among other things.
+
+The function must accept four parameters:
+
+  * item: the item that has been modified 
+  * view: the parameter window object 
+  * form: the form that contains the item 
+
+#####  How to set the value of non-grid parameters programmatically
+
+It is possible to execute an **On Change Function** , besides when the parameter loses its focus, when setting the parameter value programmatically.
+
+When setting the value of a parameter from code, it is recommended to use the **setValueProgrammatically()** function. This way, if the parameter has an **OnChange Function**, it will be executed after setting the parameter value.
+
+```javascript
+var issotrx = form.getItem('issotrx');
+// Set the value for the item
+// If the 'issotrx' parameter has an 'On Change Function' it will be executed also
+issotrx.setValueProgrammatically('Y');
+```
+
+#####  Invoking a function when all the non-grid parameters have been initialized
+
+The **On Load Function** field of the Process Definition tab allows defining a function that will be executed once the parameters have been initialized.
+
+#####  Invoking a function when the process needs to be refreshed
+
+The **On Refresh Function** field of the Process Definition tab allows defining a function that will be executed when the parameter window refresh action be invoked.
+
+For example, if the process has a child-process, once the child-process finishes, it will invoke a refresh of the parent process.
+
+!!!note
+    Since each process has its particularities, a custom refresh function should be defined in case the process is susceptible of being refreshed/reloaded.
+
+The function must accept, at least, one parameter:
+
+  * view: the parameter window object 
+
+#####  Invoking when a grid parameter is loaded for the first time
+
+The initialization of the grid parameters is done asynchronously, so when the general **onLoadFunction** is invoked, it is not certain whether all the grid parameters have been loaded with their initial data. If you need to execute some code right after a grid is loaded for the first time, use the **On Grid Load Function** field. The function used here must accept one parameter, the grid itself.
+
+For example:
+
+```javascript
+OB.Utilities.TestOnGridLoad = function (grid) {
+  var nRecordsReceived = grid.getData().getLength(),
+      messageBar = grid.view.messageBar;
+  messageBar.setMessage('info', 'The grid has been loaded with ' + nRecordsReceived + ' records');
+    }
+```
+
+#####  Specifying the number of rows displayed in a grid parameter
+
+You can set the number of rows that should be shown at the first time in a grid parameter using the **Number of Displayed Rows** field. This field is used just for setting the height of the grid, if the grid has actually more rows than the Number of Displayed Rows, a scrollbar will be shown. The default value for this field is 5.
+
+!!!note
+    It is not possible to define the colspan of the grid parameters, because they always use the four available columns of the form.
+
+#####  Defining a display logic for the fields of a grid parameter
+
+The **Display Logic for Grid Column** field in the Field tab allows to define a display logic for the fields of grid parameters.
+
+For instance, suppose that you have defined a parameter window with two parameters:
+
+  * a boolean called Show Advanced Columns, column name `showAdvancedColumns` 
+  * a grid. 
+
+Let's suppose the grid has some fields that should be displayed only if the **Show Advanced Column** flag is checked. The Display Logic for Grid Column field of these fields should be set to:
+
+```
+@showAdvancedColumns@='Y'
+```
+
+#####  Specifying a default value for the filter of a parameter grid field
+
+The **Default Filter Expression** field of the Field tab allows to define a default value for the filter of a field. This default value can be a constant, dependent from another parameter or use `OBBindings`.
+
+#####  Hiding the parameter name of a grid parameter
+
+Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unckecking the flag **Show Title** in the Parameter tab.
+
+#####  Adding new buttons
+
+By default, process definitions have a single **Done** button (and a **Cancel** one in case they are shown in a popup from a standard window). It is possible to change that button or to add new ones.
+
+To do it:
+
+  1. Create a new **Reference with Button List** as **Parent Reference**. In the **List Reference** add as many records as buttons to be displayed in the process. The name of these elements will be seen in the button's label whereas the **Search Key** is the value that will be sent to the **Handler** in the backend within the `buttonValue` field. 
+  2. Add a new parameter to the process with **Button List** as reference and the new reference just created as **Reference Search Key**. 
+  
+!!!note
+    There should be, at most, only one parameter of **Button List** type. 
+
+
+#####  Multi Record Process
+
+A standard process can be defined as multi record process to be able to execute it for more than one record.
+
+#####  Uploading files
+
+Process definitions can receive files as parameters. To do that, add a `Process File upload`  Reference as a process parameter. This parameter will show a file upload element in the process form where a single file can be uploaded.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png)
+
+By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
+
+Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the **Process Event Handler**. The entry corresponding to the file upload will contain a Map with the following information:
+
+```java
+Map<String, Object> params = (Map<String, Object>) parameters.get(paramName);
+ 
+String fileName = params.get(PARAM_FILE_NAME); // The file name
+InputStream content = params.get(PARAM_FILE_CONTENT); // The content of the file as an Stream
+Long size = params.get(PARAM_FILE_SIZE); // The file size in bytes
+```
+
+#####  Downloading files
+
+Process definition has the ability to generate and download a file.
+
+In this case of Process Definition, extend from `FileExportActionHandler` and implement the **generateFileToDownload** and **getDownloadFileName** methods.
+
+```java
+/**
+ * Action handler example to export a file from a process definition
+ */
+public class ExportFileExample extends FileExportActionHandler {
+  private static final String FILE_PREFIX = "Test";
+  private static final String FILE_EXTENSION = ".txt";
+ 
+  @Override
+  protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
+      throws IOException, JSONException {
+    String tmpFileName = UUID.randomUUID().toString() + FILE_EXTENSION;
+    File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
+    try (FileWriter outputfile = new FileWriter(file)) {
+      outputfile.write("Hello World!");
+    }
+    return file.toPath();
+  }
+ 
+  @Override
+  protected String getDownloadFileName(Map<String, Object> parameters, JSONObject data) {
+    return FILE_PREFIX + FILE_EXTENSION;
+  }
+}
+```
+
+!!!info
+    If the process definition is launched from a button in a standard window with a header and lines and it is not configured as multi-record, the generated file will be attached to the header by default.
+
+This behavior can be modified overriding the method uploadAttachment.
+
+```java
+@Override
+protected void uploadAttachment(Path originalFile, Map<String, Object> parameters,
+    JSONObject data) throws IOException, JSONException {
+}
+```
+
+!!!info
+    As an example:
+
+    ```java
+    protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
+        throws IOException, JSONException {
+      String tmpFileName = UUID.randomUUID().toString() + ".txt";
+      File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
+      try (FileWriter outputfile = new FileWriter(file)) {
+        outputfile.write("Hello World!");
+      }
+      return file.toPath();
+    }
+    ```
+
+####  Limitations
+
+#####  References
+
+Currently, not all references available in **Standard windows** are available in **Process Definition**. The following ones cannot be used as parameters:
+
+  * Button: the mechanism to add new buttons is described in [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons). 
+  * Image 
+  * Masked String 
+  * Table 
+  * TableDir 
+  * Tree
+
+#####  UI Logic
+
+Callouts are not implemented for parameters.
+
+####  Migrating old Processes
+
+Process Definitions support several parameters. In order to implement this support, the way grid parameter value is sent to backend was changed and a new **Compatibility with Legacy Grids** flag was added.  
+
+To migrate grid legacy compatible processes to new format, set **Compatibility with Legacy Grids** to false and depending on the case:
+
+  * If the process **UI Pattern** is **Manual** , no other change is needed. 
+  * If the process has no parameter, no other change is needed. 
+  * If the process has a (grid) parameter, the `JSON` that `doExecute` method receives changes these are the required modifications: 
+
+```java title="Old Code"
+JSONObject gridInfo = new JSONObject(content);
+JSONArray gridSelection = gridInfo.getJSONArray("_selection");
+JSONArray gridAllRows = gridInfo.getJSONArray("_allRows");
+```
+
+```java title="New code" 
+JSONObject params = new JSONObject(content).getJSONObject("_params");
+// Replace here gridColumnName with the actual DB Column Name for your grid parameter
+JSONObject gridInfo = params.getJSONObject("gridColumnName");
+JSONArray gridSelection = gridInfo.getJSONArray("_selection");
+JSONArray gridAllRows = gridInfo.getJSONArray("_allRows");  
+```
+
+This work is a derivative of [How to Create a Standard Process Definition](http://wiki.openbravo.com/wiki/How_to_create_a_Standard_Process_Definition){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Table
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Table
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table
+## Article Content: 
+### How to Create a Table
+
+#### How to create a new table
+
+More generic documentation about tables and their characteristics in Etendo can be found in the [Tables](https://docs.etendo.software/latest/concepts/Tables.md) page. That page explains common columns needed for all tables in Etendo, naming rules and more important info.
+
+First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} or [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} for PostgreSQL and [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) one needs to first CREATE TABLEs that will be used to hold data of the new window/tabs.
+
+##### Objective
+
+Imagine we are developing an HR module and we need a window that will enable the user to input salaries of employees. We also need to track the employee's salary so history records need to be preserved. Each salary record needs to have a Valid From Date field that indicates when a particular salary came into being. The record belonging to a particular employee with the latest Valid From Date is the salary that is valid today. Note that employees are already inside the system contained in the `C_BPARTNER` database table and indicated by the `C_BPARTNER ISEMPLOYEE` column. Therefore, we only need to create a database table that will hold the actual salaries.
+
+##### Modularity
+
+All new developments must belong to a module that is not the _core_ module. Please follow the [How to create a module](How_To_Create_a_Module.md) section of the Modularity Developer's Manual to create a new module.
+
+Once you have registered the module, you need to decide on the database prefix that will indicate DB items that belong to this module. This is done by adding DB prefix(es) to the module That way, any database artefact(table, trigger, stored procedure) that belongs to that module will need to have the name prefixed with it. In our case, add the `HT` _DB prefix_.
+
+Finally, the data package needs to be entered in the _Data Package_ tab of the _Module_ window. Enter a new record there with HR Data as the _Name_ and _{modulePackage}.data_ (note that this package must be a subpackage of the one you entered on the level of module), for example com.etendoerp.howtos.data in case com.etendoerp.howtos is the package of the module.
+
+##### Create new tables in the database
+
+Let's introduce a new database table called `ht_salary` that will hold the required data. Notice the `HT` prefix of the table name indicating the module this table belongs to.
+
+The new `ht_salary` table must include the `AD_Client_ID`, `AD_Org_ID`, `IsActive`, `Created`, `CreatedBy`, `Updated` and `UpdatedBy` fields that are `mandatory` and required for security and auditory purposes of the application.
+
+| Column name     | Type   | Length | Note                                                                                                                                   |
+| --------------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `HT_SALARY_ID`  | CHAR   | 32     | The primary key of the table that must follow the table name followed by the \_ID.                                                     |
+| `AD_CLIENT_ID`  | CHAR   | 32     | Indicates which client (company) the record belongs to (multitenancy).                                                                 |
+| `AD_ORG_ID`     | CHAR   | 32     | Indicates which organization (city/department/location) within a client a record belongs to.                                           |
+| `ISACTIVE`      | CHAR   | 1      | This is intended for deactivating records that are not valid anymore but are referenced within the system and hence cannot be deleted. |
+| `CREATED`       | DATE   |        | Date/time of creation of a record.                                                                                                     |
+| `CREATEDBY`     | CHAR   | 32     | Foreign key to `AD_USER` indicating the user that created this record.                                                                 |
+| `UPDATED`       | DATE   |        | Date/time of last update of a record.                                                                                                  |
+| `UPDATEDBY`     | CHAR   | 32     | Foreign key to `AD_USER` indicating the user that last updated this record.                                                            |
+| `C_BPARTNER_ID` | CHAR   | 32     | Employee this salary belongs to.                                                                                                       |
+| `AMOUNT`        | NUMBER | 10     | The actual amount of the salary.                                                                                                       |
+| `C_CURRENCY_ID` | CHAR   | 32     | Foreign key to `C_CURRENCY` indicating the currency the amount is in.                                                                  |
+| `VALIDFROM`     | DATE   |        | Date that this salary is valid from.                                                                                                   |
+
+To create the above table within the database, use one of the following `CREATE TABLE` statements depending on the DB you are using:
+
+!!!note
+    All identifiers in the SQL must be written in lowercase. So they can be used later without quoting them.
+
+```sql title="SQL table creation script"
+CREATE TABLE ht_salary
+(
+  ht_salary_id  CHARACTER VARYING(32)		NOT NULL,
+  ad_client_id  CHARACTER VARYING(32)		NOT NULL,
+  ad_org_id     CHARACTER VARYING(32)		NOT NULL,
+  isactive      CHARACTER(1)                   NOT NULL        DEFAULT 'Y',
+  created       TIMESTAMP WITHOUT TIME ZONE 	NOT NULL 	DEFAULT now(),
+  createdby     CHARACTER VARYING(32)		NOT NULL,
+  updated       TIMESTAMP WITHOUT TIME ZONE 	NOT NULL 	DEFAULT now(),
+  updatedby     CHARACTER VARYING(32)         	NOT NULL,
+  c_bpartner_id CHARACTER VARYING(32)         	NOT NULL,
+  amount	 NUMERIC 	      	        NOT NULL,
+  c_currency_id VARCHAR(32)         	        NOT NULL,
+  validfrom     TIMESTAMP WITHOUT TIME ZONE    NOT NULL,
+    CONSTRAINT ht_salary_isactive_check CHECK (isactive = ANY (ARRAY['Y'::bpchar, 'N'::bpchar])),
+    CONSTRAINT ht_salary_key PRIMARY KEY (ht_salary_id),
+    CONSTRAINT ht_salary_ad_org FOREIGN KEY (AD_ORG_ID) REFERENCES AD_ORG (ad_org_id),
+    CONSTRAINT ht_salary_ad_client FOREIGN KEY (AD_CLIENT_ID) REFERENCES AD_CLIENT (ad_client_id),
+    CONSTRAINT ht_salary_c_bpartner FOREIGN KEY (C_BPARTNER_ID) REFERENCES C_BPARTNER (c_bpartner_id),
+    CONSTRAINT ht_salary_c_currency FOREIGN KEY (C_CURRENCY_ID) REFERENCES C_CURRENCY (c_currency_id)
+);
+```
+
+##### Registering the table within the Application Dictionary
+
+The following steps register the newly created table within the Etendo Classic Application Dictionary.
+
+For this purpose, first log into Etendo Classic using a username with access to `System Administrator` > `Role`. Navigate to `Application Dictionary`> `Tables and Columns` and create a new record as shown in the screenshot below:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-1.png)
+
+Main fields of this window are (for more information, see the `AD_Table` table description):
+
+- _Data Package_ specifies to which java data package within the module the table will belong when used within [DAL](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md) (Data Access Layer).
+- _Name_ Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in [REST webservices](https://docs.etendo.software/latest/concepts/XML_REST_Web_Services.md) and in the [Data Access Layer](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md#entity-naming).
+- _Description_ Gives a small description of the table.
+- _Help/Comments_ Defines the text that is displayed in Help window.
+- _DB Table name_ Defines database table name as it was defined by the CREATE TABLE during its creation.
+- _Java Class Name_ This will be the actual Java class within the Data Package of the module through which you will be able to access this table when using DAL.
+- _Data Access Level_ determines what kind of data will the table contain due to the multitenancy functionality
+  - _System only_: Only system records can be inserted into this table (AD_CLIENT_ID=0, AD_ORG_ID=0), for example AD_TABLE.
+  - _System/Client_: System or client specific records can be inserted here (AD_CLIENT_ID=anything, AD_ORG_ID=0), for example AD_ROLE
+  - _Organization_: Only client and organization specific data can be inserted into this table (AD_CLIENT_ID<>0, AD_ORG_ID<>0), for example C_INVOICE
+  - _Client/Organization_: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (AD_CLIENT_ID<>0,AD_ORG_ID=anything), for example C_BPARTNER
+  - _All_: Any combination of `AD_CLIENT_ID` and `AD_ORG_ID` can be inserted into this table.
+
+Save this record then press the _Create columns from DB_ button to create columns within the Column tab automatically.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-2.png)
+
+Once the creation process has finished, you will be informed of the number of columns that have been added to this table.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-3.png)
+
+Switch to _Column_ tab to see all the columns (for more information, see the AD*Column table description) that were created according to their definition within the database. You can now additionally alter the properties of each column. Each column is assigned a reference (which defines the data type) depending on its name and its data type. Run \_Synchronize Terminology* process (`Application Dictionary` > `Synchronize Terminology`). Two tricky details before you run it:
+
+- Check you have defined dependencies from your module to core and any other needed module. Synchronize Terminology will link your columns to Elements in your module or in modules it depends on. If you don't declare the dependency to core, the system will create new elements for standard columns like IsActive, CreatedBy, etc.
+- Do not set the Elements linked to your columns, let the Synchronize terminology to do the job. This way, the process will find the appropiate elements and will set the proper column names for the standard columns (IsActive, CreatedBy, etc.).
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-4.png)
+
+This process tries to find an existing application element (within the currently developed module) and thus its label, help and description and if one is not found, a new one is created. This enables a centralized translation of the application/module.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-5.png)
+
+Each table must have at least one column marked as an identifier. The actual values of identifier columns later get concatenated to be shown to the user as a representation of a particular record (see the link to the Sales Order within the Sales Invoice window). These identifiers will also be used to construct dropdown lists of records of that particular table. By default all columns with column name _Name_ are set as an identifier. In case there is no column with this _Name_ , no identifier is set and needs to be done so manually or compilation will fail.
+
+The name is used by the [Data Access Layer](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md) and in [REST webservices](https://docs.etendo.software/latest/concepts/XML_REST_Web_Services.md). For specific columns (audit info, client/organization, active) it is important to be precise in the naming.
+
+!!!note
+    The columns that are named `line` or `seqNo` are used to contain the sequence number of a record (i.e. the number of a line in an invoice They take a default value like:
+
+    ```
+    @SQL=SELECT COALESCE(MAX(ColumnName),0)+10 AS DefaultValue FROM TableName
+    WHERE xxParentColumn=@xxParentColumn@
+    ```
+
+    The `WHERE` part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the _id_ of the parent one For example, each record of the C_InvoiceLine belongs to a particular C_Invoice record and they are all sequenced. C_Invoice is the parent table for the lines saved in `C_InvoiceLine` . This table has a column named line and the default value that it takes is:
+
+    ```
+    @SQL=SELECT COALESCE(MAX(LINE),0)+10 AS DefaultValue FROM C_INVOICELINE
+    WHERE C_INVOICE_ID=@C_INVOICE_ID@
+
+Most of the columns in our specific `HT_SALARY` case will be automatically detected correctly, however, some need revising:
+
+- _Amount_ : Reference = _Amount_ , Length = _10_
+- _C_BPartner_ID_ : Reference = _Search_ , Reference Search Key = _Business Partner_ , Length = _32_ , Link To Parent Column = _Y_
+- _Valid From_ : Identifier = _Y_
+- _Amount_ : Identifier = _Y_
+
+Etendo Classic now knows about the new HT_SALARY database table and how to treat it in terms of its definition and the representation to the user.
+
+##### Rebuilding the system
+
+Finally to make the newly added table available at runtime `./gradlew generate.entities` needs to called and the changes deployed to Tomcat. Those two steps can be done together by calling `./gradlew smartbuild` . After that, Tomcat must be restarted to refresh the DAL In-Memory Model, so it knows about the newly added columns.
+
+---
+
+This work is a derivative of [How to Create a Table](http://wiki.openbravo.com/wiki/How_to_create_a_Table){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Window
@@ -41782,7 +43031,7 @@ In essence, this integration is a significant stride in creating robust, scalabl
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started]](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
 
 #### Setup
 
@@ -42209,7 +43458,6 @@ New versions of Etendo can include:
 - new functionalities implemented according to the corresponding product roadmap,
 - fixes of the issues reported by Etendo partners, fixed by Etendo according to the corresponding Etendo partner’s services level agreement,
 - and extensions, modules which extend the functionality of Etendo.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Roadmap
@@ -42229,7 +43477,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | QAA |  | :white_check_mark: |
+| [24Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.3){target="_blank"} | 19/04/2024 | 24.1.3 | QAA |  | :white_check_mark: |
+| [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | C |  | :white_check_mark: |
 | [24Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.1){target="_blank"} | 05/04/2024 | 24.1.1 | C |  | :white_check_mark: |
 | [24Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.0){target="_blank"} | 28/03/2024 | 24.1.0 | C | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso){target="_blank"} | :white_check_mark: |
 | [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | CS |  | :white_check_mark: |
@@ -42493,7 +43742,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
