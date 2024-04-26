@@ -7332,16 +7332,16 @@
 </ol>
 <p>These changes can be done in two different locations:</p>
 <ol>
-<li>Add columns to the <em>original</em> module (dbprefix <em>HT</em> ) </li>
-<li>Create a <em>second</em> module (dbprefix <em>HT2</em> ) which adds the columns to the first module </li>
+<li>Add columns to the <em>original</em> module (dbprefix <code>HT</code> ) </li>
+<li>Create a <em>second</em> module (dbprefix <code>HT2</code> ) which adds the columns to the first module </li>
 </ol>
 <p>The first option can be chosen if the original module author wants to add more columns to their module. The second option is possible for anyone as the columns are added by a new module to the existing one which is not changed directly.</p>
 <p>The main difference between these two methods is the names which need to be chosen for the columns to comply with the modularity naming rules.</p>
 <ol>
 <li>Adding column to same module: Any valid column name can be picked </li>
-<li>Via second module: New column name must comply to the pattern <em>EM_ <DBPREFIX>_ * where _ <DBPREFIX> must be the dbprefix if the new module contaning the column to be added. In this example: </em>EM_HT2*</li>
+<li>Via second module: New column name must comply to the pattern <code>EM_&lt;DBPREFIX&gt;</code> where <code>&lt;DBPREFIX&gt;</code> must be the dbprefix if the new module contaning the column to be added. In this example: <code>EM_HT2</code></li>
 </ol>
-<p>From now on, we follow this second approach and will place all new elements into a new module with dbprefix <em>HT2</em> .</p>
+<p>From now on, we follow this second approach and will place all new elements into a new module with dbprefix <code>HT2</code> .</p>
 <p>To show how different types of column are configured, we will be adding 3 new columns:</p>
 <ul>
 <li><em>Valid To</em> a simple column of type date </li>
@@ -7349,12 +7349,11 @@
 <li><em>Salary Category</em> a reference pointing to the existing <em>Salary Category</em> table. </li>
 </ul>
 <h3 id="creating-the-new-module">Creating the new module</h3>
-<p>This section only lists the main important elements needed for the new module. More details can be found in the How to Create and Package a Module tutorial.</p>
+<p>This section only lists the main important elements needed for the new module. More details can be found in the <a href="../How_To_Create_a_Module/">How To Create a Module</a></p>
 <ul>
-<li>dbprefix: <em>HT2</em></li>
+<li>dbprefix: <code>HT2</code></li>
 <li>Dependencies: <ul>
 <li>Core as usual </li>
-<li><em>Openbravo Howtos</em> module (&gt;= 1.0.0) is also needed as this new module adds columns to that existing one, and so needs to ensure the first module is present. </li>
 </ul>
 </li>
 </ul>
@@ -7389,22 +7388,22 @@
 </tr>
 </tbody>
 </table>
-<p>To create the above table within the database, use one of the following ALTER TABLE statements depending on the DB you are using:</p>
+<p>To create the above table within the database, use one of the following <code>ALTER TABLE</code> statements depending on the DB you are using:</p>
 <div class="language-sql highlight"><span class="filename">SQL script</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ht_salary</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">em_ht2_validto</span><span class="w"> </span><span class="k">timestamp</span><span class="w"> </span><span class="k">without</span><span class="w"> </span><span class="k">time</span><span class="w"> </span><span class="k">zone</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ht_salary</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">em_ht2_payment_schedule</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ht_salary</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">em_ht2_c_salary_category_id</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ht_salary</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="ss">&quot;em_ht2_c_salary_category&quot;</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">em_ht2_c_salary_category_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">c_salary_category</span><span class="p">(</span><span class="n">c_salary_category_id</span><span class="p">);</span>
 </span></code></pre></div>
-<p>As can be seen in the SQL, a foreign key is added along with the new field linking to the c_salary_category table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the ht_salary table.</p>
+<p>As can be seen in the SQL, a foreign key is added along with the new field linking to the <code>c_salary_category</code> table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the <code>ht_salary</code> table.</p>
 <h3 id="adding-configuring-the-columns-in-the-application-dictionary">Adding &amp; Configuring the columns in the Application Dictionary</h3>
-<p>In this part, we will add the newly added column to the list of columns already defined for the <em>ht_salary</em> table and then configure those column definitions to match the description giving in the objective section above.</p>
+<p>In this part, we will add the newly added column to the list of columns already defined for the <code>ht_salary</code> table and then configure those column definitions to match the description giving in the objective section above.</p>
 <h4 id="adding-the-new-column-to-the-application-dictionary">Adding the new column to the Application Dictionary</h4>
 <p>The steps to follow are:</p>
 <ol>
-<li>In the <code>Tables and Columns</code> window search for the entry of the <em>ht_salary</em> table. </li>
-<li>With this record selected, run the <em>Create columns from DB</em> process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix <em>HT2</em> as the process detected this via the naming of the database columns. </li>
+<li>In the <code>Tables and Columns</code> window search for the entry of the <code>ht_salary</code> table. </li>
+<li>With this record selected, run the <em>Create columns from DB</em> process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix <code>HT2</code> as the process detected this via the naming of the database columns. </li>
 </ol>
-<p>Taking a look at the folder structure of the module after running <code>./gradlew export.database</code>, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the <em>ht_salary</em> table but instead is adding new elements to it.</p>
+<p>Taking a look at the folder structure of the module after running <code>./gradlew export.database</code>, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the <code>ht_salary</code> table but instead is adding new elements to it.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>org.openbravo.howtos2
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>└── src-db
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    └── database
@@ -7426,12 +7425,12 @@
 <p>Before starting to configure the new columns, two preparatory steps need to be done.</p>
 <ol>
 <li>Create a <em>List Reference</em> for the column <em>Payment Schedule</em> to define the 3 values which should be allowed for this list. </li>
-<li>Create <em>Table</em> reference for the <em>em_ht2_c_salary_category_id</em> column as the standard <em>TableDir' reference cannot be used with _em</em> <em>type columns</em>.</li>
+<li>Create <em>Table</em> reference for the <code>em_ht2_c_salary_category_id</code> column as the standard <em>TableDir</em> reference cannot be used with <code>em</code> <em>type columns</em>.</li>
 </ol>
-<p>When adding these new elements remember to place them in the new module with prefix <em>HT2</em>.</p>
+<p>When adding these new elements remember to place them in the new module with prefix <code>HT2</code>.</p>
 <p>The first step is to create a new <em>Reference</em> to hold the list of values for the <em>Payment Schedule</em> column. Important values to configure here are:</p>
 <ul>
-<li><em>Parent Reference</em>= <em>List</em> in the Reference definition itself, to define it as a List Reference. </li>
+<li><em>Parent Reference</em> = <em>List</em> in the Reference definition itself, to define it as a List Reference. </li>
 <li>For each entry in the <em>List Reference</em> tab <ul>
 <li><em>Search Key</em> The value stored in the database field when this entry is selected by a user in the ComboBox. </li>
 <li><em>Name</em> The user visible (translatable) text shown in the UI. </li>
@@ -7440,44 +7439,44 @@
 </li>
 </ul>
 <p>The following screenshot shows how the defined reference will look like.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png" /></a></p>
-<p>The second step is to create a <em>Table Reference</em> to define how the new <em>Salary Category</em> field is linked with the <em>c_salary_category</em> table.</p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png" /></a></p>
+<p>The second step is to create a <em>Table Reference</em> to define how the new <em>Salary Category</em> field is linked with the <code>c_salary_category</code> table.</p>
 <p>For this, a new <em>Reference</em> needs to be created. In this case, the important values for it are the following:</p>
 <ul>
 <li><em>Parent Reference</em> = <em>Table</em> to denote this is a Table Reference. </li>
 <li>In the <em>Table Reference</em> Tab: <ul>
-<li><em>Table</em> = <em>c_salary_category</em> as this is the target table our new column will be pointing to.</li>
-<li><em>Key Column</em> = <em>c_salary_category_id</em> as this is the primary key of the target table </li>
-<li><em>Display Column</em> = <em>Name</em> to denote the field of this table which should be shown in the UI for this column. </li>
+<li><em>Table</em> = <code>c_salary_category</code> as this is the target table our new column will be pointing to.</li>
+<li><em>Key Column</em> = <code>c_salary_category_id</code> as this is the primary key of the target table </li>
+<li><em>Display Column</em> = <code>Name</code> to denote the field of this table which should be shown in the UI for this column. </li>
 </ul>
 </li>
 </ul>
 <p>The following screenshot shows how the defined reference will look like.  </p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png" /></a></p>
 <p>After this two previous steps, we can finally configure the new columns to use the reference we just created.</p>
-<p>In the <em>Tables and Columns</em> window, we search for the entry to the <em>ht_salary</em> table. In the column tab we make the following changes for our new columns:</p>
+<p>In the <em>Tables and Columns</em> window, we search for the entry to the <code>ht_salary</code> table. In the column tab we make the following changes for our new columns:</p>
 <ol>
-<li><em>Payment Schedule</em>, change the <em>Reference</em> of this column from <em>String</em> to <em>List</em> and change the <em>Reference Search Key</em> to our newly created List Reference with name <em>EM_Ht2_Payment_Schedule</em>. </li>
-<li><em>Salary Category</em> , change the <em>Reference</em> of this column from <em>TableDir</em> to <em>Table</em> and change the <em>Reference Search Key</em> to the new <em>ht_salary_c_salary_category</em> . </li>
+<li><em>Payment Schedule</em>, change the <em>Reference</em> of this column from <em>String</em> to <em>List</em> and change the <em>Reference Search Key</em> to our newly created List Reference with name <code>EM_Ht2_Payment_Schedule</code>. </li>
+<li><em>Salary Category</em> , change the <em>Reference</em> of this column from <em>TableDir</em> to <em>Table</em> and change the <em>Reference Search Key</em> to the new <code>ht_salary_c_salary_category</code> . </li>
 </ol>
 <p>The final step would be to run the <em>Synchronize Terminology</em> process and update the created elements to have useful names for the UI.</p>
-<p>However as long as issue  10886  is unfixed this process will not map existing elements correctly for columns following the _EM__ naming rules.</p>
+<p>However as long as issue  10886  is unfixed this process will not map existing elements correctly for columns following the <code>EM_</code> naming rules.</p>
 <p>To work around this and reuse the existing core elements for the two columns for which such exists ( <em>validto</em> , <em>Salary Category</em> ) assign the existing elements manually to those two columns.</p>
-<p>For this, the following changes are needed in the same open window <em>Tables and Columns</em> still open from the last step and in the <em>Columns</em> tab of the <em>ht_salary</em> table.</p>
+<p>For this, the following changes are needed in the same open window <em>Tables and Columns</em> still open from the last step and in the <em>Columns</em> tab of the <code>ht_salary</code> table.</p>
 <ol>
 <li><em>ValidTo</em> change the <em>Application Element</em> to <em>ValidTo - Valid To Date</em></li>
 <li><em>Salary Category</em> change the <em>Application Element</em> to <em>C_Salary_Category_ID - Salary Category</em></li>
 </ol>
 <p>Now run the <em>Synchronize Terminology</em> process to set element for the last column which does not yet have a matching element.</p>
 <p>After this, the new columns should look like shown in the following screenshot:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png" /></a></p>
-<p>As a final step, we now update the newly created <em>EM_Ht2_Payment_Schedule</em> element to have a useful label for the UI.</p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png" /></a></p>
+<p>As a final step, we now update the newly created <code>EM_Ht2_Payment_Schedule</code> element to have a useful label for the UI.</p>
 <p>Navigating to <code>Application Dictionary</code> &gt; <code>Element</code> we search for the new element and to the following updates:</p>
 <ol>
-<li><em>Name</em> change from <em>EM_Ht2_Payment_Schedule</em> to <em>Payment Schedule</em></li>
-<li><em>Print Name</em> change from <em>EM_Ht2_Payment_Schedule</em> to <em>Payment Schedule</em></li>
+<li><em>Name</em> change from <code>EM_Ht2_Payment_Schedule</code> to <em>Payment Schedule</em></li>
+<li><em>Print Name</em> change from <code>EM_Ht2_Payment_Schedule</code> to <em>Payment Schedule</em></li>
 </ol>
-<p>Those updates are needed to have useful labels in the UI for any windows defined on this table and to avoid those having internal names using the technical <em>EM</em>-terminology.</p>
+<p>Those updates are needed to have useful labels in the UI for any windows defined on this table and to avoid those having internal names using the technical <code>EM</code>-terminology.</p>
 <h3 id="rebuilding-the-system">Rebuilding the system</h3>
 <p>Finally, to make the newly added columns available at runtime <code>./gradlew generate.entities</code> needs to be called and the changes deployed to tomcat. Those two steps can be done together by calling <code>./gradlew smartbuild</code>. After that, Tomcat must be restarted to refresh the DAL In-Memory Model so it knows about the newly added columns.</p>
 <p>Once the columns are added to the table, the user can <a href="../How_To_Create_a_Module/#exporting-a-module">export</a> the module.</p>
