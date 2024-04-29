@@ -346,7 +346,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/db-query-tool/</loc>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/database-query-tool/</loc>
          <lastmod>2024-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -851,7 +851,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/assistants/purchase-assistant/</loc>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/setup/</loc>
+         <lastmod>2024-04-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/copilot-purchase-expert/</loc>
+         <lastmod>2024-04-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/overview/</loc>
          <lastmod>2024-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
