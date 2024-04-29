@@ -47,7 +47,7 @@ The Copilot App window `Application`>`Service`>`Copilot`>`Copilot App` allows yo
 
 In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
 
-- **Open AI Assistand Id**: Read-only field in which the ID of the assistant once created is displayed.
+- **Open AI Assistand ID**: Read-only field in which the ID of the assistant once created is displayed.
 - **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
 - **Open AI Model**: Dropdown with the Open AI models available.
 - **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
@@ -69,8 +69,8 @@ Fields to note:
 - **File**: The file selected as app source
 - **Behaviour**: The way in which the assistant will use the file. It has three available options:
     - Add to the assistant as knowledge base: before using this option, it is necessary to synchronize the assistant with the [Sync OpenIA Assistant](#sync-open-ai-assistant-button). This behaviour is possible only with **Retrieval** checked.
-    - Append the file content to the prompt: In this case, Etendo fails if the file is too large and exceeds the token limit allowed by the assistant. Then, this option is suitable for small files only. The file must be in text format.
-    - Add content to each question: In this case, the file must be in text format. 
+    - Append the file content to the prompt: In this option, Etendo fails if the file is too large and exceeds the token limit allowed by the assistant. Then, this option is suitable for small files only. The file must be in text format.
+    - Add content to each question: In this case, the same restrictions from the previous option apply. 
 - **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
 - **Active**: checkbox to activate the app source.
 
@@ -79,6 +79,9 @@ Fields to note:
 In this tab, you can define the tools to be used by the assistant.
 
 The user can select any of the options available in the field *Copilot Tool*, as many as necessary but one at the time.
+
+!!!info
+    To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
 
 ### Copilot App Example
 
@@ -159,6 +162,20 @@ In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you
     <figcaption> Example of attached file configuration</figcaption>
     </figure>
 
+## Copilot Tool Window
+
+In this window, the user can enter new tools to be used in Copilot assistants.
+
+
+
+Fields to note:
+
+- **Active**: Checkbox to select if this tool is active or not.
+- **Search Key**: Search key of the tool.
+- **Name**: Name description.
+- **Module**: Module description.
+- **JSON info**: Corresponding JSON information.
+- **Description**: Tool description.
 
 ## Role Window
 
@@ -175,7 +192,19 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 
 In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
 
-### Copilot Tab
+### Copilot App Tab
+
+!!! Info
+    This tab is only visible when a **Copilot Apps Schedule** process is selected.
+
+In this tab, the process to be scheduled can be configured. 
+
+Fields to note:
+
+- **Name**: Name description.
+- **Copilot App**: Corresponding assistant for the process.
+- **Prompt**: Instruction for the process.
+- **Active**: To select if this tool is active or not.
 
 !!!info
     For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
