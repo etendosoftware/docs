@@ -27202,7 +27202,7 @@ Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fa
 
 #### Initial Configuration
 
-To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration`.
+To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration` clicking **generate key**..
 
 ![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
@@ -27493,32 +27493,31 @@ We will also notice that the Product's Stock has been updated in the indicated s
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started
 ## Article Content: 
+### Etendo Copilot: Integrated Assistant
 
-#### Etendo Copilot: Integrated Assistant
+#### Overview
 
-##### Overview
-
-Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
+Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the key features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
+    To install Etendo copilot, you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
-##### What is Etendo Copilot?
+#### What is Etendo Copilot?
 
 ![Copilot Chat](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
 
-##### Agent: Your Assistant
+#### Agent
 
 The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
-##### Tools: Your Specialized Partners
+#### Tools
 
-Each Tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of Tools work in harmony to deliver unparalleled support.
+Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.
 
-#####  Key Features:
+####  Key Features
 
 ![Copilot Chat2](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
@@ -27527,21 +27526,51 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
 
-- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution at your fingertips.
+- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution.
 
 - **Open AI Assistants**: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  
 
-##### Copilot Chat
+#### Copilot Chat
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 ![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+Here, you can select a Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Setup
+## Article Path: /User Guide/Etendo Copilot/Setup
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/setup
+## Article Content: 
+### Copilot Setup
 
-##### Copilot App Window
+#### Initial Configuration
 
-The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows you to define and configure applications:
+In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
+
+![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
+
+#### How to Set up Assistants
+
+In this case, Etendo Copilot has two alternatives:
+
+1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, Bastian dataset is available, to answer your questions about Etendo documentation.
+
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/dataset-installing.png)
+
+    !!!info
+        To check the list of available assistants, visit [Default Copilot Apps](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)
+
+    Once the reference data is applied, it is necessary to go to the **Copilot App Window**, select the corresponding Copilot App and click [Sync OpenAI Assistant](#sync-open-ai-assistant-button).
+
+2. *Create your own Copilot app*: Use the Copilot App window to set up a new assistant with all the specific necessary characteristics.
+
+#### Copilot App Window
+
+The Copilot App window `Application`>`Service`>`Copilot`>`Copilot App` allows you to define and configure applications:
 
 <figure markdown>
   ![Copilot App](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
@@ -27549,164 +27578,262 @@ The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows yo
 </figure>
 
 
-- *Name:* Copilot app name
-- *Description:* Copilot app description
-- *App Type:* Langchain Agent or Open AI Assistant
+- **Name**: Copilot app name
+- **Description**: Copilot app description
+- **App Type**: Langchain Agent or Open AI Assistant
 
-*Open AI Assistant*
+    **Open AI Assistant**
+
     These applications leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
 
-*Langchain Agent*
+    **Langchain Agent**
+
     These applications can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc.
 
-In case of defining an `Open AI Assistant` type app, the following fields will be enabled: 
+In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
 
-- *Open AI Assistand Id:* Read-only field in which the ID of the assistant once created is displayed.
-- *Prompt:* Specific instructions of the assistant. 
-- *Open AI Model:* Dropdown with the Open AI models available.
-- *Code interpreter:* Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs. Learn more.
+- **Open AI Assistand ID**: Read-only field in which the ID of the assistant once created is displayed.
+- **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
+- **Open AI Model**: Dropdown with the Open AI models available.
+- **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
+- **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
 
-##### Copilot File Tab
+##### Sync Open AI Assistant Button
 
-In this tab you can define the files that will be uploaded to the assistant and used as knowledge base. 
+This process is only available when the application type is **Open AI Assistant** and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base.
+
+##### App Source Tab
+
+In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/app-source-tab.png)
 
 !!!info
     To load new files, you must do it from the [Copilot File window](#copilot-file-window).
 
-##### Copilot App Example
+Fields to note:
 
-Here is an example configuration of Bastian, an assistant trained with the Etendo documentation:
+- **File**: The file selected as app source
+- **Behaviour**: The way in which the assistant will use the file. It has three available options:
+    - Add to the assistant as knowledge base: before using this option, it is necessary to synchronize the assistant with the [Sync OpenIA Assistant](#sync-open-ai-assistant-button). This behaviour is possible only with **Retrieval** checked.
+    - Append the file content to the prompt: In this option, Etendo fails if the file is too large and exceeds the token limit allowed by the assistant. Then, this option is suitable for small files only. The file must be in text format.
+    - Add content to each question: In this case, the same restrictions from the previous option apply. 
+- **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
+- **Active**: checkbox to activate the app source.
 
-| **Field**   | **Value**  |
-| ----------- | ---------- |
-| Name        | Bastian    | 
-| Description | Bastian is an artificial intelligence assistant that provides accurate answers on Etendo Documentation.  It prioritizes accuracy, avoids assumptions and seeks clarity in ambiguous queries. It includes links to valid sources when available. |
-| App Type  |  Open AI Assistant |
-| Prompt  | Bastian prompt below  |
-| Open AI Model |  gpt-4-1106-preview |
-| Code interpreter |  False |
+##### Tool Tab
 
-``` title="Bastian Prompt"
-You are "Bastian", an artificial intelligence assistant designed to give accurate answers about Etendo.
-- The knowledge base is divided by articles, with the following structure: 
+In this tab, you can define the tools to be used by the assistant.
 
-==ARTICLE_START==
-### Article Title: Title
-#### Article Path: /Path/of/Sections/Title
-#### Article URL: Link_to_the_article
-#### Article Content: Content of the article.
-==ARTICLE_END==
+The user can select any of the options available in the field **Copilot Tool**, as many as necessary but one at the time.
 
-- The answer is drawn from his extensive knowledge base on Etendo. He specializes in providing clear and straightforward answers, ensuring that each answer is firmly rooted in the knowledge base. The wizard is committed to accuracy, avoiding assumptions or extrapolations beyond the information available. 
-- Answers should be formulated with the content of the entire article in mind. It is important to know that each article is delimited by separators, when reading an article, you must continue until you find "==ARTICLE_END==".  
--You have to search in the knowledge base depending on the context of the question, it has user guides (functional users) that are located in the path /user-guide/ or developer guides, in the path /developer-guide/, depending on the context of the question. 
-- At the beginning of the answer, always add: "The following information has been extracted from the article <Link_to_the_article>"
-- If you don't know something, answer: "I'm sorry, but I don't know the answer right now. For more information, go to [Etendo documentation](https://docs.etendo.software)".
-- You must ALWAYS format the answer in Markdown, adding images, code samples and YouTube videos preview.
-```
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/tool-tab.png)
 
+!!!info
+    To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
 
-##### Sync Open AI Assistant Button
+#### Copilot File Window
 
-This process is only available when the application type is `Open AI Assistant` and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the wizard based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base. 
+In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
 
-##### Copilot File Window
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-file.png)
 
-In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
-
-- *Name:* File Name.
-- *Description:* File description.
-- *Type:*
-    - *Attachment File* 
+- **Name**: File Name.
+- **Description**: File description.
+- **Type**:
+    - *Attached File* 
     This allows you to upload files directly into Copilot for later use during interactions with the assistants.
+    - *HQL Query*
+    This allows using an HQL query result as a file for app source.
     - *Remote File* 
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access documents and external resources.
-- *Open AI File ID:* Read-only field showing the Open AI ID of the file once it is created.
-- *Last Synchronization:* Read-only field displaying the date of the last update with OpenAI.
-- *File name:* Name of the remote file in case you want to modify it.
-- *URL:* Source file URL
+- **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
+- **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
+- **File name**: Name of the remote file in case you want to modify it.
+- **URL**: Source file URL
 
-#### Copilot File Example
+#### Copilot Tool Window
 
-- Here is an example of a Remote File configuration, a file used as a knowledge base for the assistants:
+Open `Application`>`Service`>`Copilot`>`Copilot Tool`. In this window , the user can find available tools to be used in Copilot assistants.
 
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Remote File |
-    | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-tool-window.png)
 
-    <figure markdown>
-    ![Copilot File](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
-    <figcaption> Example of remote file configuration</figcaption>
-    </figure>
+!!!info
+    In case you want to define new tools, visit [How to Create Copilot Tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools.md)
 
-- Here is an example of a Attachment File configuration, a file used as a knowledge base for the assistants:
-
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Attachment File |
-
-    Attach a file in the `Attachments` section
-
-    <figure markdown>
-    ![Copilot File](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
-    <figcaption> Example of attached file configuration</figcaption>
-    </figure>
-
-
-##### Role Window
+#### Role Window
 
 In the Role window `Application`>`General Setup`>`Security`>`Role`, you can configure access roles for each Copilot App. This means you can control who has permission to interact with each application. This feature is useful for ensuring that users only have access to applications and functions relevant to their responsibilities.
 
 In the *Role* window, select a role and in the *Copilot App* tab add a new record for each Copilot App you want to give access to.
 
 ![Copilot Role](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
+
+!!!info
+    For more information, visit [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#role).
+
+#### Process Request Window
+
+Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
+
+!!!info
+    For more information, visit [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
+
+##### Copilot App Tab
+
+!!! Info
+    This tab is only visible when a **Copilot Apps Schedule** process is selected.
+
+In this tab, the process to be scheduled can be configured. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/process-request-copilot.png)
+
+Fields to note:
+
+- **Name**: Name description.
+- **Copilot App**: Corresponding assistant for the process.
+- **Prompt**: Instruction for the process.
+- **Active**: Checkbox to select if this tool is active or not.
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Purchases
-## Article Path: /User Guide/Etendo Copilot/Assistants/Purchases
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Overview
 ## Article URL: 
- https://docs.etendo.software/latest/user-guide/etendo-copilot/assistants/purchase-assistant
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview
 ## Article Content: 
-#### Overview
-By using certain Tools and a prompt that gives the Assistant sufficient context, it is possible to make an assistant that can perform a certain task in a satisfactory and intelligent way.
+### Copilot Extensions
 
-For this particular case we have configured a wizard with the functional methodology of creating purchase orders, and we have equipped it with 2 tools:
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
+
+:material-store: Etendo Marketplace:  [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
+
+#### Overview
+
+The Copilot Extensions Bundle includes functionalities that help you streamline your daily tasks using artificial intelligence.
+
+#### Default Copilot Apps
+
+The apps described below belong to preconfigured reference data included in the corresponding modules.
+
+- **Bastian**
+
+    :octicons-package-16: Javapackage: com.etendoerp.copilot
+
+    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+
+- **Copilot Purchase Expert**
+
+    :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+
+#### Modules
+
+##### Etendo Copilot
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot
+
+Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
+
+!!! info
+    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
+
+##### XML Translation Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
+
+!!! info
+    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
+
+##### Database Query Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+
+This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
+
+!!! info
+    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
+
+##### Copilot OCR Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+
+This module implements the Optical Character Recognition (OCR) tool, capable of reading images and PDF and returning a JSON object with the extracted information.
+ 
+!!! info
+    For more information, visit [Copilot OCR Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md).
+
+##### Copilot OpenAPI Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+This Etendo Copilot tool allows interacting with APIs taking the platform to another level.
+
+!!! info
+    For more information, visit [Copilot OpenAPI Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md).
+
+##### Copilot Purchase Expert
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
+
+!!! info
+    For more information, visit [Copilot Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Copilot Purchase Expert
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Copilot Purchase Expert
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert
+## Article Content: 
+### Copilot Purchase Expert
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+
+#### Overview
+
+By using certain tools and a prompt that gives the Assistant appropriate context, it is possible to make an assistant able to perform a certain task in an efficient way.
+
+For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 2 tools:
 
 **Etendo API Tool**: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.
 
-**API Call Tool**: This tool allows to Copilot to make a call to a API, and read and write data in Etendo.
+**API Call Tool**: This tool allows Copilot to make a call to an API, and read and write data in Etendo.
 
-This tool will be the responsible to make the call to the API endpoint, and will return the response.
+This tool will be responsible for calling the API endpoint, and will return the response.
 
 
 ##### Configuration:
- - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
+
+ - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase expert. It can be imported in the "Enterprise module management" window. 
  
- - After import the configuration, it is necessary to config the OpenAI model for the assistant and Sync the assistant.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
  
- - Finally, give access to the role, configure the permissions in "Role" Window.
+ - Finally, give access to the role and configure the permissions in "Role" Window.
 
 !!! note
     In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
 
- For more information about how to import the dataset and configure the assistant, see how its 
- configured the Bastian Assistant in [Copilot - Getting Started](https://docs.etendo.software/latest/getting-started.md) page.
+ For more information about how to import the dataset and configure the assistant, see how the Bastian Assistant is configured  in [Copilot - Getting Started](https://docs.etendo.software/latest/getting-started.md) page.
 
 #### Functionality
 
-When interacting with the assistant, you may be asked to insert a purchase order to a Business Partner, indicating the date and other general data, the items and their quantities for each one. The assistant will then make calls to Etendo API to search and read the info needed to create the purchase order. After that, the assistant will make the call to the API to insert the purchase order in Etendo.
+When interacting with the assistant, you may be asked to insert a purchase order to a Business Partner, indicating the date and other general data, the items and their quantities for each one. The assistant will then make calls to Etendo API to search and read the info needed to create the purchase order. After that, the assistant will call the API to insert the purchase order in Etendo.
 For the items, the assistant will search the items in the Etendo API for the products information, and will insert the items in the purchase order.
 Finally, the assistant will return the link to the purchase order created in Etendo.
 
 #### Technical details for Developers
-- More information about how to integrate Copilot with other API's can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
 
-   
-
-
+More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -41464,8 +41591,13 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool
 ## Article Content: 
+### Optical Character Recognition (OCR) Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+
 #### Overview
-Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It is a tool that can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
 
 #### Functionality
 
@@ -41477,16 +41609,16 @@ Optical Character Recognition (OCR) Tool is a tool that recognizes text from ima
 
 3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
-4. You need to do a _update.database smartbuild_ to compile the environment of Etendo Classic.
+4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
 
     ``` bash title="Terminal"
     ./gradlew update.database smartbuild --info
     ``` 
 
-4. After that, you must configure the tool in a Copilot App, in order to do that, go to _Copilot App_ and pick the _OCR Tool_ option in the _Tool_ tab.
+4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
 
 5. Update you application:
-    - If its an OpenAI Assistant, click in the _Sync OpenAI Assistant_ button.
+    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
     - If its a Langchain App, restart copilot with the following commands:
     ``` bash title="Terminal"
     ./gradlew copilot.stop
@@ -41499,14 +41631,14 @@ Optical Character Recognition (OCR) Tool is a tool that recognizes text from ima
 
 !!! info 
     It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
-    The Tool in general returns the information in json format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
+    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
     
 ##### Requesting text recognition from an image/pdf
 
 After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
     
 1. Open Copilot button and open a chat with the OpenAI Assistant.
-2. Upload a image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
+2. Upload an image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
 3. The tool will recognize the text and return it in the chat.
 
 
@@ -41517,11 +41649,10 @@ We attach an image of an invoice
 and Copilot will return the recognized(and interpreted) text in the chat.
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
-##### Result chaining
-Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool a tool that writes the information in a database or sends it to a web service. 
-   
 
+##### Result Chaining
 
+Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: OpenAPI Interaction with Copilot
@@ -41529,35 +41660,48 @@ Remember that the result of the tool can be used in other tools, for example, yo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool
 ## Article Content: 
-#### Overview
-The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
+### OpenAPI Interaction with Copilot
 
-This Specification can be very usefull for Copilot, because can be used as guide to Copilot to interact with the services, without the need to know the implementation details and will not be necessary to implement specific code for each service.
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+
+#### Overview
+
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. 
+
+!!!info
+    For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
+
+This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.
 
 
 #### Tools
 
-**Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API for insert purchase orders in Etendo.
-Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the wizard adapts to those changes.
+- **Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, it can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API to insert purchase orders in Etendo.
+Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the assistant adapts to those changes.
 
-This Tool serves as an example and template, since to integrate with another API, as long as it has an OpenAPI Specification, a similar tool could be made but for that new specification and the assistant who has this tool, could know how to use that API.
+    This Tool serves as an example and template, since a similar tool could be made to integrate it with another API, as long as it has an OpenAPI Specification. 
 
+- **API Call Tool**: This tool allows Copilot to make a call to an API endpoint. 
+This tool will be responsible for making the call to the API endpoint, and will return the response.
 
-**API Call Tool**: This tool allows to Copilot to make a call to a API endpoint. 
-This tool will be the responsible to make the call to the API endpoint, and will return the response.
+#### Defined Assistant
 
-#### Assistant defined
-In the basic use case, a "Purchase Assistant" was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows to read the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).
+In the basic use case, a **Purchase Assistant** was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows reading the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).
 
-##### Configuration:
+##### Configuration
+
  - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
- - After import the configuration, it is necessary to config the OpenAI model for the assistant and Sync the assistant.
- - Finally, give access to the role, configure the permissions in "Role" Window.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
+ - Finally, give access to the role and configure the permissions in "Role" Window.
 !!! note
     In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
 
-##### Other Configurations:
-- Its necessary to add the ```gradle.properties``` file with the following configuration:
+##### Other Configurations
+
+- It is necessary to add the ```gradle.properties``` file with the following configuration:
 ``` properties
     ETENDO_HOST=http://localhost:8080/etendo
 ```
@@ -41569,10 +41713,11 @@ In the basic use case, a "Purchase Assistant" was implemented, in which an assis
 
 The combination of the prompt with the functional concepts, the tool that allows to read and analyze the OpenAPI Spec to see the available endpoints and the tool to make the API calls, allows the defined assistant to load the purchase and its lines.
 
-#### How to integrate Copilot with other API's
+#### How to integrate Copilot with other APIs
+
 The case of the purchase assistant is just an implementation to respond to a need. But, the usefulness of this is that, using the OpenAPI Spec reading tool as a base, the same dynamics can be replicated for a different API. For example, if we want to integrate Copilot with a [PetStore API](https://petstore.swagger.io/){:target="_blank"} that has an OpenAPI Spec file, we can create a tool that reads that file and provides the information to the assistant. This way, the assistant will be able to make calls to the PetStore API, without the need to know the implementation details of the API. What we should do is the following:
 
-- Create an App, describing in the App prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
+- Create an app, describing in the app prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
 
 The important thing is that the prompt is clear and that the assistant has the necessary context to perform the task. For example, in the case of the petStore assistant, the prompt should be clear that the assistant should be able to search for pets, add pets, etc. The prompt could be something like this:
     
@@ -41656,12 +41801,6 @@ This is a simple example, but it can be expanded to filter the information, to p
 - Sync the assistant and try it out.
 
 This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. 
-
-    
-
-   
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: XML Translation Tool
@@ -41669,14 +41808,17 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool
 ## Article Content: 
-#### Translation Tool: XMLTranslatorTool
+### Translation Tool: XMLTranslatorTool
+
 :octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
 
-Translates the content of an XML file from one language to another, as specified within the XML.  
+#### Overview
+
+This tool translates the content of an XML file from one language to another, as specified within the XML.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-##### Functionality
+#### Functionality
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
@@ -41705,17 +41847,17 @@ Translates the content of an XML file from one language to another, as specified
 
     The tool will know that the language to be translated will be Spanish.
 
-4. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+5. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
 
-##### How to use the XML translation tool shown in an example
+#### How to use the XML translation tool shown in an example
 
 First of all, we start from the module `com.etendoerp.bankingpool` originally in English and we can see the Financial Type Configuration window:
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
 
-1. You must generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
+1. Generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
   
-    After having created the translation module in the modules folder we will find `com.etendoerp.bankingpool.es_es`
+    After having created the translation module in the modules folder, we will find `com.etendoerp.bankingpool.es_es`
 
 2.  To execute translation tool, in a new terminal, run:
     ``` bash title="Terminal"
@@ -41724,7 +41866,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 3. In the folder ```modules/com.etendoerp.bankingpool.es_es``` you will find the automatic translations.
 
-4. To apply the translation compile the enviroment
+4. To apply the translation, compile the enviroment
     ``` bash title="Terminal"
     ./gradlew update.database smartbuild --info
     ```
@@ -41733,12 +41875,17 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
     ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: DB Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/DB Query Tool
+# Article Title: Database Query Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/db-query-tool
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
 ## Article Content: 
+### Database Query Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+
 #### Overview
+
 Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
 
 #### Functionality
@@ -41749,7 +41896,7 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
     implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
     ```
 
-2. In `gradle.properties` file you must add `OPENAI_MODEL` environment variables. 
+2. In `gradle.properties` file, you must add `OPENAI_MODEL` environment variables. 
 
     ```groovy title="gradle.properties"
     OPENAI_MODEL=gpt-4-1106-preview
@@ -41762,16 +41909,15 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
 ``` bash title="Terminal"
 ./gradlew copilot.do -Pprompt="Query's description"
 ``` 
-Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the etendo classic database, but you can tell it in the prompt to access another database.
+Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the Etendo Classic database, but you can select another database in the prompt.
 
-
-5. The tool will execute an agent that will ask to the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
+5. The tool will execute an agent that will ask the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
 
 #### Examples
 
 !!! info 
-    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide sufficient information in the prompt.
-    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where copilot.start is running. You will be able to see the tables involved, the query formed and its execution if necessary. 
+    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide enough information in the prompt.
+    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where `copilot.start` is running. You will be able to see the tables involved, the query formed and its execution, if necessary. 
 
 
 ##### SQL query generation
@@ -41818,7 +41964,7 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 
 
 
-##### Natural language queries for data retrieval
+##### Natural Language Queries for Data Retrieval
 
 1. 
     ``` bash title="Terminal"    
@@ -41858,13 +42004,6 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
     🤖 The sum of the orders in the last month is $7,063.59.
     🤖 Glad to help you! 😃
     ```
-
-
-
-
-   
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
