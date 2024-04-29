@@ -1,5 +1,4 @@
 ---
-title: "OpenAPI Interaction with Copilot"
 tags:
     - Copilot
     - IA
@@ -8,40 +7,49 @@ tags:
     - Swagger
     - API
 ---
+
+# OpenAPI Interaction with Copilot
+
 :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
 
 :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
 
 
 ## Overview
-The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
 
-This Specification can be very usefull for Copilot, because can be used as guide to Copilot to interact with the services, without the need to know the implementation details and will not be necessary to implement specific code for each service.
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. 
+
+!!!info
+    For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
+
+This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.
 
 
 ## Tools
 
-**Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API for insert purchase orders in Etendo.
-Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the wizard adapts to those changes.
+- **Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, it can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API to insert purchase orders in Etendo.
+Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the assistant adapts to those changes.
 
-This Tool serves as an example and template, since to integrate with another API, as long as it has an OpenAPI Specification, a similar tool could be made but for that new specification and the assistant who has this tool, could know how to use that API.
+    This Tool serves as an example and template, since a similar tool could be made to integrate it with another API, as long as it has an OpenAPI Specification. 
 
+- **API Call Tool**: This tool allows Copilot to make a call to an API endpoint. 
+This tool will be responsible for making the call to the API endpoint, and will return the response.
 
-**API Call Tool**: This tool allows to Copilot to make a call to a API endpoint. 
-This tool will be the responsible to make the call to the API endpoint, and will return the response.
+## Defined Assistant
 
-## Assistant defined
-In the basic use case, a "Purchase Assistant" was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows to read the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).
+In the basic use case, a **Purchase Assistant** was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows reading the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).
 
-### Configuration:
+### Configuration
+
  - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
- - After import the configuration, it is necessary to config the OpenAI model for the assistant and Sync the assistant.
- - Finally, give access to the role, configure the permissions in "Role" Window.
+ - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
+ - Finally, give access to the role and configure the permissions in "Role" Window.
 !!! note
     In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
 
-### Other Configurations:
-- Its necessary to add the ```gradle.properties``` file with the following configuration:
+### Other Configurations
+
+- It is necessary to add the ```gradle.properties``` file with the following configuration:
 ``` properties
     ETENDO_HOST=http://localhost:8080/etendo
 ```
@@ -53,10 +61,11 @@ In the basic use case, a "Purchase Assistant" was implemented, in which an assis
 
 The combination of the prompt with the functional concepts, the tool that allows to read and analyze the OpenAPI Spec to see the available endpoints and the tool to make the API calls, allows the defined assistant to load the purchase and its lines.
 
-## How to integrate Copilot with other API's
+## How to integrate Copilot with other APIs
+
 The case of the purchase assistant is just an implementation to respond to a need. But, the usefulness of this is that, using the OpenAPI Spec reading tool as a base, the same dynamics can be replicated for a different API. For example, if we want to integrate Copilot with a [PetStore API](https://petstore.swagger.io/){:target="_blank"} that has an OpenAPI Spec file, we can create a tool that reads that file and provides the information to the assistant. This way, the assistant will be able to make calls to the PetStore API, without the need to know the implementation details of the API. What we should do is the following:
 
-- Create an App, describing in the App prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
+- Create an app, describing in the app prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
 
 The important thing is that the prompt is clear and that the assistant has the necessary context to perform the task. For example, in the case of the petStore assistant, the prompt should be clear that the assistant should be able to search for pets, add pets, etc. The prompt could be something like this:
     
@@ -140,8 +149,3 @@ This is a simple example, but it can be expanded to filter the information, to p
 - Sync the assistant and try it out.
 
 This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. 
-
-    
-
-   
-

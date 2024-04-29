@@ -1,14 +1,18 @@
 ---
-title: "Query generation from Natural Language: DBQueryTool"
 tags:
     - Copilot
     - IA
     - Machine Learning
     - Database
+    - DB query tool
 ---
+
+# Database Query Tool
+
 :octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
 
 ## Overview
+
 Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
 
 ## Functionality
@@ -19,7 +23,7 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
     implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
     ```
 
-2. In `gradle.properties` file you must add `OPENAI_MODEL` environment variables. 
+2. In `gradle.properties` file, you must add `OPENAI_MODEL` environment variables. 
 
     ```groovy title="gradle.properties"
     OPENAI_MODEL=gpt-4-1106-preview
@@ -32,16 +36,15 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
 ``` bash title="Terminal"
 ./gradlew copilot.do -Pprompt="Query's description"
 ``` 
-Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the etendo classic database, but you can tell it in the prompt to access another database.
+Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the Etendo Classic database, but you can select another database in the prompt.
 
-
-5. The tool will execute an agent that will ask to the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
+5. The tool will execute an agent that will ask the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
 
 ## Examples
 
 !!! info 
-    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide sufficient information in the prompt.
-    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where copilot.start is running. You will be able to see the tables involved, the query formed and its execution if necessary. 
+    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide enough information in the prompt.
+    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where `copilot.start` is running. You will be able to see the tables involved, the query formed and its execution, if necessary. 
 
 
 ### SQL query generation
@@ -88,7 +91,7 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 
 
 
-### Natural language queries for data retrieval
+### Natural Language Queries for Data Retrieval
 
 1. 
     ``` bash title="Terminal"    
@@ -128,9 +131,3 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
     🤖 The sum of the orders in the last month is $7,063.59.
     🤖 Glad to help you! 😃
     ```
-
-
-
-
-   
-
