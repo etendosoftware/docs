@@ -498,6 +498,9 @@ nav:
       - Etendo Mobile:
         - Bundles:
           - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
+      - Etendo Copilot:
+        - Bundles:
+          - Etendo Copilot Extensions: whats-new/release-notes/etendo-copilot/bundles/release-notes.md
 
   - Live Builds: live-builds/overview.md
   - Help and Support:
