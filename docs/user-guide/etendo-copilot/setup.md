@@ -1,7 +1,6 @@
 ---
 tags: 
  - copilot
- - bastian
  - ai
  - ai tools
  - setup
@@ -20,6 +19,12 @@ In order to use Copilot, the user must access the Etendo Classic under the role 
 In this case, Etendo Copilot has two alternatives:
 
 1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, Bastian dataset is available, to answer your questions about Etendo documentation.
+
+
+    ![](../../assets/user-guide/etendo-copilot/setup/dataset-installing.png)
+
+    !!!info
+        To check the list of available assistants, visit [Default Copilot Apps](../../user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)
 
 2. *Create your own Copilot app*: Use the Copilot App window to set up a new assistant with all the specific necessary characteristics.
 
@@ -61,6 +66,8 @@ This process is only available when the application type is **Open AI Assistant*
 
 In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
 
+![](../../assets/user-guide/etendo-copilot/setup/app-source-tab.png)
+
 !!!info
     To load new files, you must do it from the [Copilot File window](#copilot-file-window).
 
@@ -79,6 +86,8 @@ Fields to note:
 In this tab, you can define the tools to be used by the assistant.
 
 The user can select any of the options available in the field *Copilot Tool*, as many as necessary but one at the time.
+
+![](../../assets/user-guide/etendo-copilot/setup/tool-tab.png)
 
 !!!info
     To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
@@ -118,6 +127,8 @@ You are "Bastian", an artificial intelligence assistant designed to give accurat
 ## Copilot File Window
 
 In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
+
+![](../../assets/user-guide/etendo-copilot/setup/copilot-file.png)
 
 - **Name**: File Name.
 - **Description**: File description.
@@ -164,18 +175,12 @@ In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you
 
 ## Copilot Tool Window
 
-In this window, the user can enter new tools to be used in Copilot assistants.
+In this window, the user can find available tools to be used in Copilot assistants.
 
+![](../../assets/user-guide/etendo-copilot/setup/copilot-tool-window.png)
 
-
-Fields to note:
-
-- **Active**: Checkbox to select if this tool is active or not.
-- **Search Key**: Search key of the tool.
-- **Name**: Name description.
-- **Module**: Module description.
-- **JSON info**: Corresponding JSON information.
-- **Description**: Tool description.
+!!!info
+    In case you want to define new tools, visit [How to Create Copilot Tools](../../developer-guide/etendo-copilot/how-to-create-copilot-tools.md)
 
 ## Role Window
 
@@ -198,6 +203,8 @@ In this window, the user can schedule Etendo Copilot background processes by sel
     This tab is only visible when a **Copilot Apps Schedule** process is selected.
 
 In this tab, the process to be scheduled can be configured. 
+
+![](../../assets/user-guide/etendo-copilot/setup/process-request.png)
 
 Fields to note:
 

@@ -232,8 +232,10 @@ nav:
     - Etendo Copilot:
       - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
       - Setup: user-guide/etendo-copilot/setup.md
-      - Assistants:
-        - Purchases : user-guide/etendo-copilot/assistants/purchase-assistant.md   
+      - Bundles:
+        - Copilot Extensions: 
+          - Overview: user-guide/etendo-copilot/bundles/overview.md
+          - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md  
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -457,7 +459,7 @@ nav:
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-        - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
+        - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
       - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
