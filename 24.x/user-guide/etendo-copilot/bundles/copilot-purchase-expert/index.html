@@ -3554,20 +3554,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration:
+      Setup
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3575,15 +3569,6 @@
   <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Functionality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-details-for-developers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical details for Developers
     </span>
   </a>
   
@@ -7458,20 +7443,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration:
+      Setup
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7479,15 +7458,6 @@
   <a href="#functionality" class="md-nav__link">
     <span class="md-ellipsis">
       Functionality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-details-for-developers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical details for Developers
     </span>
   </a>
   
@@ -7519,12 +7489,6 @@
     
     
       <span class="md-tag">IA</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">Machine Learning</span>
     
   
     
@@ -7569,33 +7533,51 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg></span> Javapackage: com.etendoerp.copilot.openapi.purchase</p>
 <h2 id="overview">Overview</h2>
 <p>By using certain tools and a prompt that gives the Assistant appropriate context, it is possible to make an assistant able to perform a certain task in an efficient way.</p>
-<p>For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 2 tools:</p>
-<p><strong>Etendo API Tool</strong>: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.</p>
-<p><strong>API Call Tool</strong>: This tool allows Copilot to make a call to an API, and read and write data in Etendo.</p>
-<p>This tool will be responsible for calling the API endpoint, and will return the response.</p>
-<h3 id="configuration">Configuration:</h3>
+<p>For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 3 tools:</p>
 <ul>
 <li>
-<p>In the module <code>com.etendoerp.copilot.openapi.purchase</code> there is a dataset with the basic configuration of the purchase expert. It can be imported in the "Enterprise module management" window. </p>
+<p><strong>OCR Tool</strong>: This tool is capable of reading images and PDF and returning a JSON object with the extracted information</p>
 </li>
 <li>
-<p>After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.</p>
+<p><strong>Etendo API Tool</strong>: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.</p>
 </li>
 <li>
-<p>Finally, give access to the role and configure the permissions in "Role" Window.</p>
+<p><strong>API Call Tool</strong>: This tool allows Copilot to make a call to an API, and read and write data in Etendo. This tool will be responsible for calling the API endpoint, and will return the response.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>
+<p>In the module <code>com.etendoerp.copilot.openapi.purchase</code> there is a dataset with the basic configuration of the <strong>Copilot Purchase Expert</strong>. It can be imported in the <code>Application</code>&gt;<code>General Setup</code> &gt; <code>Enterpice Model</code> &gt; <code>Enterprise module management</code> window. </p>
+</li>
+<li>
+<p>After importing the configuration, it is necessary to configure the OpenAI model for the imported <strong>Copilot App</strong> and click <a href="../../setup/#sync-open-ai-assistant-button">Sync OpenAI Assistant</a> button to create the corresponding assistant.</p>
+</li>
+<li>
+<p>Finally, give access to the role and configure the permissions in <a href="../../setup/#role-window">Role</a> Window.</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&amp;recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.</p>
 </div>
-<p>For more information about how to import the dataset and configure the assistant, see how the Bastian Assistant is configured  in <a href="../../getting-started/">Copilot - Getting Started</a> page.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For more information about how to import the dataset (referencedata) and configure the assistant, see <a href="../../setup/#how-to-set-up-assistants">How to Setup Assistants</a> page.</p>
+</div>
 <h2 id="functionality">Functionality</h2>
-<p>When interacting with the assistant, you may be asked to insert a purchase order to a Business Partner, indicating the date and other general data, the items and their quantities for each one. The assistant will then make calls to Etendo API to search and read the info needed to create the purchase order. After that, the assistant will call the API to insert the purchase order in Etendo.
-For the items, the assistant will search the items in the Etendo API for the products information, and will insert the items in the purchase order.
-Finally, the assistant will return the link to the purchase order created in Etendo.</p>
-<h2 id="technical-details-for-developers">Technical details for Developers</h2>
+<p><a class="glightbox" href="../../../../assets/user-guide/etendo-copilot/bundles/copilot-purchase-expert/createorder.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="CreateOrder" src="../../../../assets/user-guide/etendo-copilot/bundles/copilot-purchase-expert/createorder.gif" width="300" /></a></p>
+<ol>
+<li>When interacting with the assistant, you may be asked to insert a purchase order to a Business Partner, indicating the date and other general data, the items and their quantities. </li>
+<li>The assistant will then make calls to Etendo API to search and read the info needed to create the purchase order. </li>
+<li>After that, the assistant will call the API to insert the purchase order in Etendo.</li>
+<li>For the items, the assistant will search the items in the Etendo API for the products' information, and will insert the items in the purchase order.</li>
+<li>Finally, the assistant will return the link to the purchase order created in Etendo.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Technical Details for Developers</p>
 <p>More information about how to integrate Copilot with other APIs can be found in the <a href="../../../../developer-guide/etendo-copilot/available-tools/openapi-tool/">OpenAPI interaction with Copilot</a> page.</p>
+</div>
 
 
 
