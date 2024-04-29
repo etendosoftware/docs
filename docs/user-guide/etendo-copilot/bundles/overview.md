@@ -20,17 +20,17 @@ The Copilot Extensions Bundle includes functionalities that help you streamline 
 
 The apps described below belong to preconfigured reference data included in the corresponding modules.
 
-### Bastian
+- **Bastian**
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot
+    :octicons-package-16: Javapackage: com.etendoerp.copilot
 
-This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
 
-### Copilot Purchase Expert
+- **Copilot Purchase Expert**
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+    :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
 
-This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
 
 ## Modules
 

@@ -21,7 +21,7 @@ Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fa
 
 ## Initial Configuration
 
-To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration`.
+To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration` clicking **generate key**..
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 

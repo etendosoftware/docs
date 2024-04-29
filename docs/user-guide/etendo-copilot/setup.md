@@ -10,7 +10,7 @@ tags:
 
 ## Initial Configuration
 
-In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`.
+In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
 
 ![](../../assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
@@ -25,6 +25,8 @@ In this case, Etendo Copilot has two alternatives:
 
     !!!info
         To check the list of available assistants, visit [Default Copilot Apps](../../user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)
+
+    Once the reference data is applied, it is necessary to go to the **Copilot App Window**, select the corresponding Copilot App and click [Sync OpenAI Assistant](#sync-open-ai-assistant-button).
 
 2. *Create your own Copilot app*: Use the Copilot App window to set up a new assistant with all the specific necessary characteristics.
 
@@ -81,48 +83,16 @@ Fields to note:
 - **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
 - **Active**: checkbox to activate the app source.
 
-### Tools Tab
+### Tool Tab
 
 In this tab, you can define the tools to be used by the assistant.
 
-The user can select any of the options available in the field *Copilot Tool*, as many as necessary but one at the time.
+The user can select any of the options available in the field **Copilot Tool**, as many as necessary but one at the time.
 
 ![](../../assets/user-guide/etendo-copilot/setup/tool-tab.png)
 
 !!!info
     To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
-
-### Copilot App Example
-
-Here is an example configuration of Bastian, an assistant trained with the Etendo documentation:
-
-| **Field**   | **Value**  |
-| ----------- | ---------- |
-| Name        | Bastian    | 
-| Description | Bastian is an artificial intelligence assistant that provides accurate answers on Etendo Documentation.  It prioritizes accuracy, avoids assumptions and seeks clarity in ambiguous queries. It includes links to valid sources when available. |
-| App Type  |  Open AI Assistant |
-| Prompt  | Bastian prompt below  |
-| Open AI Model |  gpt-4-1106-preview |
-| Code interpreter |  False |
-
-``` title="Bastian Prompt"
-You are "Bastian", an artificial intelligence assistant designed to give accurate answers about Etendo.
-- The knowledge base is divided by articles, with the following structure: 
-
-==ARTICLE_START==
-# Article Title: Title
-## Article Path: /Path/of/Sections/Title
-## Article URL: Link_to_the_article
-## Article Content: Content of the article.
-==ARTICLE_END==
-
-- The answer is drawn from his extensive knowledge base on Etendo. He specializes in providing clear and straightforward answers, ensuring that each answer is firmly rooted in the knowledge base. The assistant is committed to accuracy, avoiding assumptions or extrapolations beyond the information available. 
-- Answers should be formulated with the content of the entire article in mind. It is important to know that each article is delimited by separators, when reading an article, you must continue until you find "==ARTICLE_END==".  
--You have to search in the knowledge base depending on the context of the question, it has user guides (functional users) that are located in the path `user-guide` or developer guides, in the path `developer-guide`, depending on the context of the question. 
-- At the beginning of the answer, always add *The following information has been extracted from the article <Link_to_the_article>*
-- If you do not know something, answer: *I'm sorry, but I don't know the answer right now. For more information, go to [Etendo documentation](https://docs.etendo.software)*.
-- **Always** format the answer in Markdown, adding images, code samples and YouTube videos preview.
-```
 
 ## Copilot File Window
 
@@ -144,38 +114,9 @@ In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you
 - **File name**: Name of the remote file in case you want to modify it.
 - **URL**: Source file URL
 
-### Copilot File Example
-
-- Here is an example of a Remote File configuration, a file used as a knowledge base for the assistants:
-
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Remote File |
-    | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
-
-    <figure markdown>
-    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
-    <figcaption> Example of remote file configuration</figcaption>
-    </figure>
-
-- Here is an example of a Attachment File configuration, a file used as a knowledge base for the assistants:
-
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Attachment File |
-
-    Attach a file in the `Attachments` section
-
-    <figure markdown>
-    ![Copilot File](../../assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
-    <figcaption> Example of attached file configuration</figcaption>
-    </figure>
-
 ## Copilot Tool Window
 
-In this window, the user can find available tools to be used in Copilot assistants.
+Open `Application`>`Service`>`Copilot`>`Copilot Tool`. In this window , the user can find available tools to be used in Copilot assistants.
 
 ![](../../assets/user-guide/etendo-copilot/setup/copilot-tool-window.png)
 
@@ -195,7 +136,10 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 
 ## Process Request Window
 
-In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
+Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
+
+!!!info
+    For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
 
 ### Copilot App Tab
 
@@ -204,14 +148,11 @@ In this window, the user can schedule Etendo Copilot background processes by sel
 
 In this tab, the process to be scheduled can be configured. 
 
-![](../../assets/user-guide/etendo-copilot/setup/process-request.png)
+![](../../assets/user-guide/etendo-copilot/setup/process-request-copilot.png)
 
 Fields to note:
 
 - **Name**: Name description.
 - **Copilot App**: Corresponding assistant for the process.
 - **Prompt**: Instruction for the process.
-- **Active**: To select if this tool is active or not.
-
-!!!info
-    For more information, visit [Process Request](../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
+- **Active**: Checkbox to select if this tool is active or not.
