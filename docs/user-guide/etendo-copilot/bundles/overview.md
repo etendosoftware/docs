@@ -70,7 +70,7 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 This module implements the Optical Character Recognition (OCR) tool, capable of reading images and PDF and returning a JSON object with the extracted information.
  
 !!! info
-    For more information, visit [Copilot OCR Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/ocr-tool.md).
+    For more information, visit [Copilot OCR Tool user guide](../../../user-guide/etendo-copilot/bundles/ocr-tool.md) and [Copilot OCR Tool developer guide](../../../developer-guide/etendo-copilot/available-tools/ocr-tool.md).
 
 ### Copilot OpenAPI Tool
 

@@ -235,7 +235,9 @@ nav:
       - Bundles:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
-          - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md  
+          - Bastian: user-guide/etendo-copilot/bundles/bastian.md
+          - Copilot Purchase Expert: user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
+          - OCR Tool: user-guide/etendo-copilot/bundles/ocr-tool.md
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
