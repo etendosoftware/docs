@@ -88,16 +88,16 @@ If the demand is higher than the supply, or the dates of scheduled Work Requirem
 
 The staff responsible for executing the production can see on the Production Run Status Report what production has to be executed.
 
-At the end of each shift, the production managers enter the information of what is produced in the [_Production Run_](/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run_1) screen.
+At the end of each shift, the production managers enter the information of what is produced in the [_Production Run_](transactions.md#production-run_1) screen.
 
 ## Relationship with other areas
 
 Production Management interacts with the following modules:
 
-- [_Procurement Management_](/user-guide/etendo-classic/basic-features/procurement-management/getting-started): raw material required for use in production is bought using the Procure to Pay process
-- [_Sales Management_](/user-guide/etendo-classic/basic-features/sales-management/getting-started): demand for the products that are produced are generated through the Order to Cash process
-- [_Warehouse Management_](/user-guide/etendo-classic/basic-features/warehouse-management/getting-started):
+- [_Procurement Management_](../procurement-management/getting-started.md): raw material required for use in production is bought using the Procure to Pay process
+- [_Sales Management_](../sales-management/getting-started.md): demand for the products that are produced are generated through the Order to Cash process
+- [_Warehouse Management_](../warehouse-management/getting-started.md):
     - raw material is taken from the warehouse to be used in production
     - end products that come out of production are put into stock
-- [_MRP_](/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/): Work Requirements can be a result of MRP
-- [_Financial Management_](/user-guide/etendo-classic/basic-features/financial-management/getting-started): Cost related to Production is calculated for finance.
+- [_MRP_](../material-requirement-planning/getting-started.md): Work Requirements can be a result of MRP
+- [_Financial Management_](../financial-management/getting-started.md): Cost related to Production is calculated for finance.
