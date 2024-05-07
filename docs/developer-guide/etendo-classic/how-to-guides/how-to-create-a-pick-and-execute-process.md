@@ -40,11 +40,7 @@ get executed when the user hits the **Done** button.
   * Fill the required fields 
   * Select **Pick and Execute** as window type 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-1.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-1.png)
 
   * Following the same concepts, a **Table** is required as data-source. 
 
@@ -55,11 +51,7 @@ guides/How_to_create_a_Pick_and_Execute_Process-2.png){: .legacy-image-style}
       * A table based on an [HQL query](../../how-to-guides/How_to_create_a_HQL_Based_Table.md).
       * A table based on a [manual datasource](../../how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md).
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-3.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-4.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-2.png)
 
   * Create the necessary fields that will turn into the columns of the grid. Pick a **Column** and pay attention to some important properties: 
     * **Displayed:** This must be checked in order to generate a field. If Displayed is unchecked no field will be generated. 
@@ -67,11 +59,7 @@ guides/How_to_create_a_Pick_and_Execute_Process-4.png){: .legacy-image-style}
     * **Show in Grid View:** Defines if the field will be shown in the grid. A Field as displayed can be defined but not shown in grid, so a field will get generated but not shown. This is useful for retrieving data to the grid and send it to the process. 
     * **Grid Position:** Defines the sequence of the fields in the grid.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-5.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-6.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-3.png)
 
 ####  Defining the Reference
 
@@ -81,22 +69,14 @@ After defining the window, a new Reference needs to be defined.
   * Select in the Base Reference drop down: Window Reference 
   * Save 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-7.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-8.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-4.png)
 
   * Move to Window tab 
   * Create a new record 
   * Select your newly created window 
   * Save 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-9.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-10.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-5.png)
 
 ####  Defining the Process
 
@@ -108,11 +88,7 @@ There is a new window for processes: **Process Definition**
   * Set the Handler (Java class implementing the process) 
   * Save 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-11.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-12.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-6.png)
 
 #####  Parameters
 
@@ -126,11 +102,7 @@ Window Reference is an implementation of a **rich parameter**.
   * Pick the Window you defined previously 
   * Save 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-14.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-15.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-7.png)
 
 ####  Adding a button to Sales Order
 
@@ -157,11 +129,7 @@ A new column is required to be associated to a button.
   * Change the reference from: Yes/No to Button 
   * Pick your defined process 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-17.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-18.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-8.png)
 
 #####  Create a Field
 
@@ -169,11 +137,7 @@ guides/How_to_create_a_Pick_and_Execute_Process-18.png){: .legacy-image-style}
   * Search for Sales Order 
   * Create a new Field associated with the column 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-19.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-20.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-9.png)
 
 ####  Java Implementation
 
@@ -255,19 +219,7 @@ Since the structure of some Entity has been changed by adding a new column, it i
 
   * After restarting, it should be able to go to the Sales Order window and see a new button. 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-21.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-22.png){: .legacy-image-style}
-
-  * When clicking the button, a new process window shows up. The user can pick, filter, modify according to the window definition, and click **Done**. 
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-23.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-24.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-10.png)
 
 ##  Advanced Topics
 
@@ -287,11 +239,7 @@ Define at Field level, a JavaScript validation function. In an editable field wh
   * Pick your window and the tab 
   * Go to the Quantity field 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-25.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-26.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-11.png)
 
 ####  JavaScript Definition
 
@@ -301,9 +249,9 @@ guides/How_to_create_a_Pick_and_Execute_Process-26.png){: .legacy-image-style}
 
     
     ```
-    OB.OBEXAPP.PNE = {};
+    OB.OBHT = {};
      
-    OB.OBEXAPP.PNE.validate = function (item, validator, value, record) {
+    OB.OBHT.validate = function (item, validator, value, record) {
       // item has access to grid: item.grid
       // from the grid you can get all selected records and edited values, e.g.
       //   * item.grid.getSelection()
@@ -321,22 +269,16 @@ guides/How_to_create_a_Pick_and_Execute_Process-26.png){: .legacy-image-style}
     ```
 
 
-
 ###  Selection Function
 
 A selection function can be defined at Tab level. This function will get called when the user select/unselect a row.
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-27.png){: .legacy-image-style}
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Pick_and_Execute_Process-28.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-12.png)
 
 And define a JavaScript function in your loaded static `.js` file:
 
-    
-    
-    OB.OBEXAPP.PNE.selectionChanged = function (grid, record, recordList) {
+        
+    OB.OBHT.selectionChanged = function (grid, record, recordList) {
       if (window.console) {
         console.log('selection function!');
         console.log(grid, record, recordList);
@@ -344,8 +286,6 @@ And define a JavaScript function in your loaded static `.js` file:
     };
 
 If you want to change any value of the selected record, use the following instruction:
-
-    
     
     grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
 
@@ -359,4 +299,3 @@ After the process is executed, a series of actions can be taken.
 
 
 This work is a derivative of [How to create a Pick and Execute Process](http://wiki.openbravo.com/wiki/How_to_create_a_Pick_and_Execute_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
