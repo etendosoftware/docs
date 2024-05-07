@@ -497,6 +497,7 @@ nav:
           - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes.md
           - Procurement Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes.md
           - Etendo BI Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes.md
+        - ISO image: whats-new/release-notes/etendo-classic/iso.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
