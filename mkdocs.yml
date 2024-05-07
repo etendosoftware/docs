@@ -274,7 +274,7 @@ nav:
 #        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
-#        - Development Build Tasks: developer-guide/etendo-classic/concepts/Development_Build_Tasks.md
+        - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
 #        - Development Project Structure: developer-guide/etendo-classic/concepts/Development_Project_Structure.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
