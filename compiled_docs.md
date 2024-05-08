@@ -39487,13 +39487,14 @@ This documentation will guide you through the process of setting up and using we
 
 ##### Webhook Header Fields
 
-| Field           | Description                                                |
-|-----------------|------------------------------------------------------------|
-| Name            | Webhook name                                               |
-| Description     | Webhook description                                        |
-| Java Class      | Class in which the webhook service was created             |
-| Module          | Module in which the webhook will be created                |
-| Active          | Webhook status (Active by default)                         |
+| Field                        | Description                                                            |
+|------------------------------|------------------------------------------------------------------------|
+| Module                       | Module in which the webhook will be created                            |
+| Name                         | Webhook name                                                           |
+| Description                  | Webhook description                                                    |
+| Java Class                   | Class in which the webhook service was created                         |
+| Allow to give access to role | Check if it is allowed to give access to roles via secure web services |
+| Active                       | Webhook status (Active by default)                                     |
 
 ![Webhook Header](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
 
@@ -39513,12 +39514,18 @@ The access tab allows you to create access that will be used in the URL call.
 | Is required     | Whether the parameter is required or not                   |
 | Active          | Parameter status (Active by default)                       |
 
-###### Access
+###### User Access
+
+Allow execution via token.
 
 | Field           | Description                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------|
 | Active          | Access status (Active by default)                                                           |
 | Token           | Selector with the token that will be used in the URL call created on User API Token window  |
+
+###### Role Access
+
+If you need to allow authenticated users with SWS read the guide: [How to use secure web services](https://docs.etendo.software/latest/how-to-guides/how-to-use-secure-webservices.md). For this you have to add roles that are allowed to execute a webhook in the **Role access** tab.
 
 #### Webhook Usage Example
 
@@ -39544,17 +39551,17 @@ The access tab allows you to create access that will be used in the URL call.
         
 ![Webhook Params](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
         
+##### Role access
 
-##### API Key Generation
+###### API Key Generation
 
 1. To give execution permission to a user, go to: `Application → General Setup → Application → Webhook Events → User API Token`
 2. Create a new API with the Name: `<<user>> token`
+    ![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
 3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
-    
-![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
-    
+    ![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookTokenString.png)
 
-##### Assigning Webhook Access to Users
+###### Assigning Webhook Access to Users
 
 1. Navigate to: `Application → General Setup → Application → Webhook Events → Webhooks`
 2. Select the created webhook and open the access tab.
@@ -39562,9 +39569,18 @@ The access tab allows you to create access that will be used in the URL call.
 
 ![Webhook Access](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
 
+##### Secure web servicess access
+
+###### Assign allowed roles
+
+In Webhooks window, add roles allowed to run the webhook.
+
+![Webhook Role](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookRole.png)
+
 ##### Executing the Webhook
 
 To execute the webhook, make a GET request using a REST client like Postman with the following syntax:
+
 
 ```
 URL=http://localhost:8080/
@@ -39572,16 +39588,29 @@ CONTEXT=etendo
 WEBHOOK_ENDPOINT=/webhooks/
 [VARS]
 WEBHOOK_NAME=name=alert
-APIKEY=8b1012f0d442406ed602d87c13edcee9
 DESCRIPTION=new alert description
 RULE=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
-Example URL:
+###### Example URL:
+
+*With token*
+
+APIKEY=8b1012f0d442406ed602d87c13edcee9
 
 ```
 http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
+
+*With sws token*
+
+```
+http://localhost:8080/etendo/webhooks/?name=Alert&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+Add as authorization Bearer Token, the JWT obtained via SWS login.
+
+###### Expected response
 
 !!! success
     This webhook creates an alert, and you can visualize it in the "Alert Management" window.
@@ -39592,7 +39621,6 @@ http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=n
       "created": "91FEABC1604E404CB565FC79435C4344"
     }
     ```
-
 
 ##### Example code usage
 
@@ -43991,7 +44019,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.3){target="_blank"} | 19/04/2024 | 24.1.3 | QAA |  | :white_check_mark: |
+| [24Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.4){target="_blank"} | 03/05/2024 | 24.1.4 | QAA | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso){target="_blank"} | :white_check_mark: |
+| [24Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.3){target="_blank"} | 19/04/2024 | 24.1.3 | C |  | :white_check_mark: |
 | [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | C |  | :white_check_mark: |
 | [24Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.1){target="_blank"} | 05/04/2024 | 24.1.1 | C |  | :white_check_mark: |
 | [24Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.0){target="_blank"} | 28/03/2024 | 24.1.0 | C | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso){target="_blank"} | :white_check_mark: |
@@ -44257,7 +44286,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -44428,6 +44458,21 @@ Article URL: https://etendo.software
 This page displays the known issues reported by the support team.
 
 #### Know Issues
+
+??? success "EPL-1449 Solved"
+
+    ### [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1){target="\_blank"} Gradle loses execution permissions when doing an etendo-restore.
+
+    #### Workaround
+
+    Apply the following change in the etendo-restore file to ensure that the gradlew file is excluded from the permission change with chmod:
+
+    ``` groovy title="etendo-restore"
+    - find /opt/EtendoERP -type f -exec chmod 644 '{}' \+
+    + find /opt/EtendoERP -type f ! -name gradlew -exec chmod 644 '{}' \+
+    ```
+
+    This workaround is applicable if you have deployed Etendo from the ISO in versions prior to [24.1.4](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso). Starting from that version, the issue of permission changes on the gradlew file is no longer observed.
 
 ??? success "EE-758 Solved"
 
