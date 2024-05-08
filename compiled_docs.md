@@ -105,7 +105,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 #### Install Etendo 
 === ":material-language-java: JAR Format"
 
-    **Steps to Install Etendo in JAR Format**
+    ### Steps to Install Etendo in JAR Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -211,7 +211,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-file-zip-24: Source Format"
 
-    **Steps to Install Etendo in Sources Format**
+    ### Steps to Install Etendo in Sources Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -316,16 +316,49 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 
+=== ":octicons-issue-opened-24: ISO"
 
+    ### Steps to Install the ISO with Internet Connection
 
+    1. Download the ISO from the [release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso.md) page.
 
+    2. Burn the ISO image into a USB stick. It is recommended to use balenaEtcher on Linux and Rufus on Windows. Alternatively, you can begin with your preferred virtualizer.
 
+    3. Start the system using the ISO image. You will be prompted:
 
+        - **Network Connections**: Verify that you are on a network with an internet connection and that an IP address is correctly assigned to your server.
+        
+        - **Guide Storage Configuration**: Select the disk where you want to run the installation. If you only have one disk, proceed to the next step.
+        
+        - **Storage Configuration**: Same as the previous step.
+        
+        - **Profile Setup**: Enter your name, the server's name, and the user *etendo* with the password of your choice.
 
+    4. Wait for the **operating system** installation and server upgrade to take place. When prompted, select **reboot now**.
 
+    5. After the restart, the final server configuration will begin. Wait for it to finish, and the server will be ready.
 
+    ### Steps to Install the ISO without Internet Connection
 
+    If you do not have an internet connection during installation, follow these additional steps:
 
+    1. Follow the same procedure outlined in the previous section, *Steps to Install the ISO with Internet Connection* up to the network configuration stage.
+
+        - **Network Configuration**: In this section, if you do not have an internet connection, select **Continue without internet**.
+
+    2. After the operating system installation is complete, restart the server as prompted.
+
+    3. Log in to the server using the username and password you configured during installation.
+
+    4. Configure the network settings as desired to establish an internet connection.
+
+    5. Once connected to the internet, log in as the superuser: `sudo su`.
+
+    6. Begin the installation process by running the command: `etendo-install`.
+
+    7. After the installation is finished, the server will be ready for use.
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Workspace
@@ -44447,6 +44480,51 @@ Article URL: https://etendo.software
 | Version | Publication Date | Compatibility With Etendo BI Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: ISO image
+## Article Path: /What's New/Release Notes/Etendo Classic/ISO image
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso
+## Article Content: 
+### ISO Image
+
+:material-tools: Installation Guide: [ISO Installation Guide](https://docs.etendo.software/latest/getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
+
+| Version | Publication Date | ISO Image |
+| --- | --- | --- |
+| [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
+| [24.1.0](#2410) | 28/03/2024 | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso) |
+| [23.4.0](#2340) | 28/12/2023 | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) |
+| [23.3.0](#2330) | 29/09/2023 | [23Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) |
+| [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
+| [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
+| [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.1.4
+New ISO with Etendo Classsic version 24.1.4
+##### Fixed
+ - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+
+#### 24.1.0
+New ISO with Etendo Classsic version 24.1.0
+##### Changes
+ - Upgrade Tomcat version to 9.0.87
+
+#### 23.4.0
+New ISO with Etendo Classsic version 23.4.0
+
+#### 23.3.0
+New ISO with Etendo Classsic version 23.3.0
+
+#### 23.2.0
+New ISO with Etendo Classsic version 23.2.0
+
+#### 23.1.0
+New ISO with Etendo Classsic version 23.1.0
+
+#### 22.4.5 ✨
+First ISO version with Etendo Classsic version 23.4.0
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Known Issues
