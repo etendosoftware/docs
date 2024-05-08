@@ -44467,7 +44467,7 @@ This page displays the known issues reported by the support team.
 
     Apply the following change in the etendo-restore file to ensure that the gradlew file is excluded from the permission change with chmod:
 
-    ``` groovy title="etendo-restore"
+    ``` bash title="etendo-restore"
     - find /opt/EtendoERP -type f -exec chmod 644 '{}' \+
     + find /opt/EtendoERP -type f ! -name gradlew -exec chmod 644 '{}' \+
     ```
