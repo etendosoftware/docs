@@ -5,13 +5,13 @@ title: Financial Management - Assets
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
 
-[:material-file-document-outline: Assets](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#assets){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Assets](#assets){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Group](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#asset-group){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Group](#asset-group){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Amortization](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Amortization](#amortization){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Amortization Report (Excel)](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Amortization Report (Excel)](#amortization-report){ .md-button .md-button--primary } <br>
 
 
 ## **Assets**
@@ -152,7 +152,7 @@ Accounting information related to the amortization
 ### How to Reactivate Amortizations
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
@@ -161,20 +161,20 @@ Etendo allows multiple amortizations to be processed and unprocessed. This proce
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 ## Asset Amortization Report (Excel)
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
@@ -201,5 +201,3 @@ For example: Period date filtered 01-01-2022 and 31-12-2022
 
 !!! info
     When the end date within the Assets window is filled in, that Asset will not appear in the report if the filtered date is after the end date of the Asset.
-
-

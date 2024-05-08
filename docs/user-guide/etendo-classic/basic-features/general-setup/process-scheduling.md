@@ -131,7 +131,7 @@ Process Request has been modified in order to be able to schedule a process grou
 
 The schedule of a process group will work exactly as the schedule of a single process. It is not possible to schedule a process group and a single process at the same time.
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
@@ -139,7 +139,7 @@ More information in [Process Group](/user-guide/etendo-classic/basic-features/ge
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. 
 
-More information in [Process Monitor](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-monitor_1).
+More information in [Process Monitor](#process-monitor_1).
 
 ![](../../../../assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
@@ -147,7 +147,7 @@ More information in [Process Monitor](/user-guide/etendo-classic/basic-features/
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
@@ -187,7 +187,7 @@ As shown in the image above, process monitor window provides the information bel
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
