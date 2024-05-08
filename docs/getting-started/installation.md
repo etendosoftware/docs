@@ -243,7 +243,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
         - **Network Connections**: Verify that you are on a network with an internet connection and that an IP address is correctly assigned to your server.
         
-        - **Guide Storage Configuration**: Select the disk where you want to perform the installation. If you only have one disk, proceed to the next step.
+        - **Guide Storage Configuration**: Select the disk where you want to run the installation. If you only have one disk, proceed to the next step.
         
         - **Storage Configuration**: Same as the previous step.
         
