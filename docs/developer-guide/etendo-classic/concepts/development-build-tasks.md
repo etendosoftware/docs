@@ -19,8 +19,7 @@ This document discusses the **ant tasks** used during the build process of Etend
 
 ##  Main Build Tasks
 
-![](/assets/developer-guide/etendo-
-classic/concepts/Development_Build_Tasks-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Development_Build_Tasks-0.png)
 
 This section explains the main build tasks following the steps as illustrated in the image.
 
