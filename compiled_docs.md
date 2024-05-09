@@ -44618,6 +44618,18 @@ This page displays the known issues reported by the support team.
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | CS   | :white_check_mark:|
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Etendo Copilot Extensions ES
+## Article Path: /What's New/Release Notes/Etendo Copilot/Translation Bundles/Etendo Copilot Extensions ES
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/translation-bundles/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 08/05/2024 | [1.0.0, latest] | CS | :white_check_mark: |
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Live Builds
 ## Article Path: /Live Builds
 ## Article URL: 
