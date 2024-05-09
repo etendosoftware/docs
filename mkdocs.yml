@@ -505,6 +505,8 @@ nav:
       - Etendo Copilot:
         - Bundles:
           - Etendo Copilot Extensions: whats-new/release-notes/etendo-copilot/bundles/release-notes.md
+        - Translation Bundles:
+          - Etendo Copilot Extensions ES: whats-new/release-notes/etendo-copilot/translation-bundles/release-notes.md
 
   - Live Builds: live-builds/overview.md
   - Help and Support:
