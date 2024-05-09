@@ -1006,6 +1006,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/whats-new/release-notes/etendo-copilot/translation-bundles/release-notes/</loc>
+         <lastmod>2024-05-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/</loc>
          <lastmod>2024-05-09</lastmod>
          <changefreq>daily</changefreq>
