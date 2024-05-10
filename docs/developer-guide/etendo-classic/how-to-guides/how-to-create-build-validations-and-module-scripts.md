@@ -41,7 +41,7 @@ This method needs to be implemented. The class will be loaded at the beginning o
 
 As was just explained, a build validation is nothing more than a class which extends the `org.openbravo.buildvalidation.BuildValidation` class, and implements the **abstract execute method**. Let's see an example:
 
-```java
+```java title="ValidationExample.java"
 public class ValidationExample extends BuildValidation {
  
   public List<String> execute() {
@@ -73,7 +73,7 @@ In this example, the main points of any build validation can be seen:
 
 You can also use `SqlClass` if it is necessary to do the database operations.
 
-```java
+```java  title="ValidationExample2.java"
 public class ValidationExample2 extends BuildValidation {
  
   public List<String> execute() {
@@ -94,7 +94,7 @@ public class ValidationExample2 extends BuildValidation {
 
 This needs the following `xsql` file:
 
-```xml
+```xml title="ValidationExample2Data.xsql"
 <?xml version="1.0" encoding="UTF-8" ?>
  
 <SqlClass name="ValidationExample2Data" package="org.openbravo.buildvalidation">
@@ -113,6 +113,8 @@ This needs the following `xsql` file:
 
 
 ###  Compiling the build validation
+
+Build Validations should be compiled using, at most, the latest supported **JDK version**.
   
 To compile the build validation, use the following command:
 
@@ -215,7 +217,7 @@ As with build validations, a module script is a Java class which extends the abs
 
 Here goes a very simple **Module script**, which just sets the value of some column to a default in case the column value is null:
 
-```java
+```java title="ModuleScriptExample.java"
 public class ModuleScriptExample extends ModuleScript {
  
   public void execute() {
@@ -242,11 +244,13 @@ The main two important points to take into account when building the script are:
 
 
 ###  Compiling the module script
-  
+
+Module scripts should be compiled using, at most, the latest supported **JDK version**.
+
 To compile the module script, use the following command:
 
 ```bash
-./gradlew compile.modulescript -Dmodule=javapackageofmodule
+./gradlew compile.modulescript -Dmodule=<javapackage>
 ```
 
 !!!info
