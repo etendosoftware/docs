@@ -286,7 +286,7 @@ It is possible to define a dependency with two versions of a particular module t
 
 This way, the module script can be executed only when it is really needed, avoiding extra time calculations when updating database.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
 
 The dependent module and its limit versions can be set by overriding the`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
 
@@ -320,10 +320,10 @@ This way the `modulescript` will be executed when upgrading the module from any 
 
 ####  Execute on install
 
-It is also possible to configure whether the module script should be executed when installing the dependent module defined with the `getModuleScriptExecutionLimits()` method or during the `install.source` gradle task. By default, the module script will be executed in the following cases:
+It is also possible to configure whether the module script should be executed when installing the dependent module defined with the `getModuleScriptExecutionLimits()` method or during the `install` gradle task. By default, the module script will be executed in the following cases:
 
   * When installing the dependent module 
-  * On `install.source` task 
+  * On `install` task 
 
 But in case we do not want to execute it in these cases, the `executeOnInstall()` method should be overridden as follows:
 
@@ -334,9 +334,9 @@ protected boolean executeOnInstall() {
 }
 ```
 
-####  Executing just on `install.source`
+####  Executing just on `install`
 
-In case we want to configure a `modulescript` to be executed just on every `install.source`, we **do not** override the `executeOnInstall()` method and we define the execution limits as follows:
+In case we want to configure a `modulescript` to be executed just on every `install`, we **do not** override the `executeOnInstall()` method and we define the execution limits as follows:
 
 ```java
 @Override
