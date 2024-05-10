@@ -8,92 +8,62 @@ tags:
 ---
 #  How to Create Build Validations and Module Scripts
 
-  
 ##  Overview
 
 This section provides information about how to create both a **Build Validation** and a **Module Script**. They are both very similar concepts, and are also implemented in a very similar way.
 
 ##  Build Validations
 
-A build validation in Etendo is a Java class which is **executed at the beginning** of the `update.database`  task, and which returns a list of errors. If there is one or more errors, the build is stopped and the errors are shown to the user.
-
-Because of the fact that the **Build Validation** can stop the build process, it is very important that it follows these rules:
-
-  
-
-  * The errors created by the validation will be shown as a message in the **Rebuild** window. In this message, it is very important to state very clearly the cause of the failure and if needed, an alert rule must be created to help users identify the problematic records in case the build fails. 
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_build_validations_and_module_scripts-0.png){: .legacy-image-style}
-
-  * Every developer must ensure and check that the message is understandable once he creates the validation. 
-
-Please see this image as an example:
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_build_validations_and_module_scripts-1.png){: .legacy-image-style}
-
-  * You can find a clear and simple example of how to develop a validation containing alerts in:
-
-    * `src-util/buildvalidation/src/org/openbravo/buildvalidation/Cbpvendoracct_data.xsql` 
-    * `src-util/buildvalidation/src/org/openbravo/buildvalidation/Cbpvendoracct.java` 
+A build validation in Etendo is a Java class which is **executed at the beginning** of the `update.database` task.
 
 The build validations main use is to **stop the build** because the instance is in such a state that rebuilding the system cannot be safely done. In modules, validations can be used to stop the build in case the module cannot be installed safely in the system for some reason.
 
 So, for example, a validation could be used to check if **the user has done a necessary manual setup step that cannot be automated**. Or a validation could also be used to **check if the user has filled some data which is needed for the module to be installed correctly**.
 
-Build validations are a different piece of code in Etendo, in that they are distributed as binaries (compiled classes), which are executed directly without them being compiled on the run. The packaging task for modules will automatically include the binaries inside the `.obx file`, the developer should
-only make sure that the classes were compiled before packaging the module.
+Build validations are a different piece of code in Etendo, in that they are distributed as binaries (compiled classes), which are executed directly without them being compiled on the run. 
 
 !!!note
       Build validations should not be a common case. Normally, they should only be needed when there was a mistake in a previous version of the module, or Core. The ultimate result for a validation is that, if it detects what it was meant to detect, the user will need to do manual actions to fix the problem, and this should be avoided if possible by all developers. 
 
-  
 ###  Introduction to the implementation of build validations
 
 The main steps to create a build validation are:
 
   1. Write it (Create a Java class for each validation you want to do). 
-  2. Compile it (Build Validations are compiled separately from the rest of the Etendo code, using a specific ant compile task). 
+  2. Compile it (Build Validations are compiled separately from the rest of the Etendo code, using a specific gradle compile task). 
   3. Test it (Carefully test the validation before including it in your module, or in Core). 
-  4. Add it to the module, or Core (Do not forget to add the binary classes too, as they are needed, in addition to the Java source `files. ant package.module` will automatically add the files to the `.obx file`, but manually add the binary files in addition to the source files to the Mercurial repository if using one for your module, or if it is needed to add the validation to Core). 
 
-  
 To create a build validation, first create a class which extends the `org.openbravo.buildvalidationBuildValidation class`. This is an abstract class which has one abstract method: `List<String> execute()`
 
-This method needs to be implemented. The class will be loaded at the beginning of the `update.database` task, and this method will be called. A **List of Strings** must be returned. If the list is empty, the build will continue. If the list contains at least one string, every string will be shown to the user, and the build will stop. Every string is supposed to be a meaningful error message, which shows the user what it  needs to fix in his system for the validation to pass.
+This method needs to be implemented. The class will be loaded at the beginning of the `update.database` task, and this method will be called. A **List of Strings** must be returned. If the list is empty, the build will continue. If the list contains at least one string, every string will be shown to the user, and the build will stop. Every string is supposed to be a meaningful error message, which shows the user what it needs to fix in his system for the validation to pass.
 
 ###  Writing the build validation
 
 As was just explained, a build validation is nothing more than a class which extends the `org.openbravo.buildvalidation.BuildValidation` class, and implements the **abstract execute method**. Let's see an example:
 
-  
-
-    
-    
-     
-     
-    public class ValidationExample extends BuildValidation {
-     
-      public List<String> execute() {
-        try {
-          ConnectionProvider cp = getConnectionProvider();
-          PreparedStatement ps = cp
-              .getPreparedStatement("SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL");
-          ps.execute();
-          ResultSet rs = ps.getResultSet();
-          rs.next();
-          ArrayList<String> errors = new ArrayList<String>();
-          if (rs.getInt(1) > 0) {
-            errors
-                .add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
-          }
-          return errors;
-        } catch (Exception e) {
-          return handleError(e);
-        }
+```java
+public class ValidationExample extends BuildValidation {
+ 
+  public List<String> execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      PreparedStatement ps = cp
+          .getPreparedStatement("SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL");
+      ps.execute();
+      ResultSet rs = ps.getResultSet();
+      rs.next();
+      ArrayList<String> errors = new ArrayList<String>();
+      if (rs.getInt(1) > 0) {
+        errors
+            .add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
       }
+      return errors;
+    } catch (Exception e) {
+      return handleError(e);
     }
+  }
+}
+```
 
 In this example, the main points of any build validation can be seen:
 
@@ -101,64 +71,54 @@ In this example, the main points of any build validation can be seen:
   * In the **method**, the validation can be done (i.e. check if the Etendo instance complies with some specific rule). There is a convenient `getConnectionProvider()` method, provided by the abstract superclass, which allows doing direct queries to the database. It is important to remark that **validations should only do queries to the database, they should never change the contents of the database**. Module Scripts can be used to change the database if needed. 
   * Finally, the method returns a **List of error Strings**, which can be empty if the validation went well, or can contain one or more errors if the system did not comply with the validation. 
 
-You can also use `SqlC` if it is necessary to do the database operations.
+You can also use `SqlClass` if it is necessary to do the database operations.
 
-    
-    
-     
-    public class ValidationExample2 extends BuildValidation {
-     
-      public List<String> execute() {
-        try {
-          ConnectionProvider cp = getConnectionProvider();
-          ArrayList<String> errors = new ArrayList<String>();
-          int numBpartners=Integer.parseInt(ValidationExample2Data.queryBPartners(cp));
-          if (numBpartners > 0) {
-            errors.add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
-          }
-          return errors;
-        } catch (Exception e) {
-          return handleError(e);
-        }
+```java
+public class ValidationExample2 extends BuildValidation {
+ 
+  public List<String> execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      ArrayList<String> errors = new ArrayList<String>();
+      int numBpartners=Integer.parseInt(ValidationExample2Data.queryBPartners(cp));
+      if (numBpartners > 0) {
+        errors.add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
       }
+      return errors;
+    } catch (Exception e) {
+      return handleError(e);
     }
+  }
+}
+```
 
 This needs the following `xsql` file:
 
-    
-    
-     
-    <?xml version="1.0" encoding="UTF-8" ?>
-     
-    <SqlClass name="ValidationExample2Data" package="org.openbravo.buildvalidation">
-      <SqlMethod name="queryBPartners" type="preparedStatement" return="string">
-          <SqlMethodComment></SqlMethodComment>
-          <Sql><![CDATA[
-             SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL
-              ]]>
-          </Sql>
-      </SqlMethod>
-    </SqlClass>
-
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<SqlClass name="ValidationExample2Data" package="org.openbravo.buildvalidation">
+  <SqlMethod name="queryBPartners" type="preparedStatement" return="string">
+      <SqlMethodComment></SqlMethodComment>
+      <Sql><![CDATA[
+          SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL
+          ]]>
+      </Sql>
+  </SqlMethod>
+</SqlClass>
+```
 
 !!!info
       The class source files should be inside the module folder, in: `src-util/buildvalidation/src`. And they should follow the standard **Java package rules**. The folder will not exist if it is the first validation, so it will be needed to create it.
 
 
 ###  Compiling the build validation
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_build_validations_and_module_scripts-3.png){: .legacy-image-style}  
-
-Build Validations should be (must be in case they are going to be included in Etendo 3 distribution or in Retail pack) compiled using, at most, latest supported **JDK version**.  
-
   
 To compile the build validation, use the following command:
 
-    
-    
-     
-    ant compile.buildvalidation -Dmodule=javapackageofmodule
+```bash
+./gradlew compile.buildvalidation -Dmodule=javapackageofmodule
+```
 
 !!!info
       In case of compiling the validations of **Etendo Core**, the module property needs to be set to `org.openbravo`. 
@@ -174,8 +134,6 @@ The build validations will be automatically executed in the `update.database` ta
 
 
 Another important point to remark is that the build validations will be executed in every version of the module, or Core, in which they are present. The developer needs to take this into account (it is advisable not to design validations which are **version-dependant**, they should always be designed to be **generic**).
-
-The `package.module` task will automatically include the compiled binaries in the `.obx file`, provided that the validations were compiled before packaging the module.
 
 !!!note
       When adding a validation to Etendo Core, remember to **include the binary classes** contained in 
@@ -198,14 +156,12 @@ This way, the build validation can be executed only when it is really needed, av
 The dependent module and its limit versions can be set by overriding the
 `getBuildValidationLimits()` method in our `BuildValidation` subclass:
 
-    
-    
-     
-      @Override
-      protected ExecutionLimits getBuildValidationLimits() {
-        return new ExecutionLimits("0", new OpenbravoVersion(3, 0, 28207), new OpenbravoVersion(3, 0, 29495));
-      }
-     
+```java
+@Override
+protected ExecutionLimits getBuildValidationLimits() {
+  return new ExecutionLimits("0", new OpenbravoVersion(3, 0, 28207), new OpenbravoVersion(3, 0, 29495));
+}
+```
 
 Following this code example, we are setting that our build validation should only be executed when upgrading core module (id = "0") from a version between _3.0.28207_ (first execution version) and _3.0.29495_ (last execution version). This way, we are avoiding the execution of the build validation in those cases which it does not apply.
 
@@ -215,14 +171,12 @@ In case it is necessary to execute the build validation just once, this can be c
 
 For example, if adding a check in version _1.7.0_ of a module, we want to execute the build validation when upgrading from versions previous this version. So we can define its limits as follows:
 
-    
-    
-     
-      @Override
-      protected ExecutionLimits getBuildValidationLimits() {
-        return new ExecutionLimits(ad_module_id, null, new OpenbravoVersion(1, 7, 0));
-      }
-     
+```java
+@Override
+protected ExecutionLimits getBuildValidationLimits() {
+  return new ExecutionLimits(ad_module_id, null, new OpenbravoVersion(1, 7, 0));
+}
+```
 
 Where `ad_module_id` is the **UUID** of the module.
 
@@ -234,13 +188,12 @@ It is also possible to configure whether the build validation should be executed
 
 But in case we do not want to execute it, the `executeOnInstall()` method should be overridden as follows:
 
-    
-    
-     
-      @Override
-      protected boolean executeOnInstall() {
-        return false;
-      }
+```java
+@Override
+protected boolean executeOnInstall() {
+  return false;
+}
+```
 
 ##  Module Scripts
 
@@ -262,25 +215,21 @@ As with build validations, a module script is a Java class which extends the abs
 
 Here goes a very simple **Module script**, which just sets the value of some column to a default in case the column value is null:
 
-  
-
-    
-    
-     
-     
-    public class ModuleScriptExample extends ModuleScript {
-     
-      public void execute() {
-        try {
-          ConnectionProvider cp = getConnectionProvider();
-          PreparedStatement ps = cp
-              .getPreparedStatement("UPDATE mytable SET mycolumn=0 WHERE mycolumn IS NULL");
-          ps.executeUpdate();
-        } catch (Exception e) {
-          handleError(e);
-        }
-      }
+```java
+public class ModuleScriptExample extends ModuleScript {
+ 
+  public void execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      PreparedStatement ps = cp
+          .getPreparedStatement("UPDATE mytable SET mycolumn=0 WHERE mycolumn IS NULL");
+      ps.executeUpdate();
+    } catch (Exception e) {
+      handleError(e);
     }
+  }
+}
+```
 
 The main two important points to take into account when building the script are:
 
@@ -289,24 +238,16 @@ The main two important points to take into account when building the script are:
 
   
 !!!info
-      The class source files themselves should be inside the module folder, in the folder: `src-util/modulescript/src`. And they should follow the standard **Java package rules**. The folder will not
-      exist if it is the first script, so it will be needed to create it.
+      The class source files themselves should be inside the module folder, in the folder: `src-util/modulescript/src`. And they should follow the standard **Java package rules**. The folder will not exist if it is the first script, so it will be needed to create it.
 
 
 ###  Compiling the module script
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_build_validations_and_module_scripts-5.png){: .legacy-image-style}   
-
-Module Scripts should be (must be in case they are going to be included in Etendo 3 distribution or in Retail pack) compiled using, at most,  latest supported **JDK version**.  
-
   
 To compile the module script, use the following command:
 
-    
-    
-     
-    ant compile.modulescript -Dmodule=javapackageofmodule
+```bash
+./gradlew compile.modulescript -Dmodule=javapackageofmodule
+```
 
 !!!info
       In case of compiling the scripts of **Etendo Core**, the module property needs to be set to `org.openbravo`.
@@ -323,8 +264,6 @@ The **module scripts** will be automatically executed in the `update.database` t
 Another important point to remark is that the module scripts work as **build validations** in regards to execution criteria; that is, they will be executed in every version of the module, or Core, in which they are present. The developer needs to take this into account (it is advisable not to design scripts which are **version-dependant**, they should always be designed to be **generic**).
 
 And, as it was explained above, scripts should also be designed to produce the same result if executed multiple times, because they will be executed every time the system is rebuilt, or the module is updated.
-
-The `package.module` task will automatically include the compiled binaries in the `.obx file`, provided that the module scripts were compiled before packaging the module.
 
 !!!info
       If you are adding a module script to Etendo Core, remember that you need to **include the binary classes** contained in `src-util/modulescript/build/classes/` to the repository as any source files are added. If not, they will not be executed (because the classes are not compiled by default in the build process, they are executed only if the binary files are there).
@@ -343,22 +282,17 @@ It is possible to define a dependency with two versions of a particular module t
 
 This way, the module script can be executed only when it is really needed, avoiding extra time calculations when updating database.
 
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_build_validations_and_module_scripts-7.png){: .legacy-image-style}
+The dependent module and its limit versions can be set by overriding the`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
 
-The dependent module and its limit versions can be set by overriding the
-`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
-
-    
-    
-     
-      @Override
-      protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
-        return new ModuleScriptExecutionLimits("0", new OpenbravoVersion(3,0,27029), 
-            new OpenbravoVersion(3,0,27050));
-      }
-     
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits("0", new OpenbravoVersion(3,0,27029), 
+      new OpenbravoVersion(3,0,27050));
+}
+```
 
 Following this code example, we are setting that our `modulescript` should only be executed when upgrading core module (id = "0") from a version between _3.0.27029_ (first execution version) and _3.0.27050_ (last execution version). This way, we are avoiding the execution of our `modulescript` in those cases which it does not apply.
 
@@ -368,15 +302,13 @@ One typical case of `modulescripts` usage, is to populate the values of a newly 
 
 For example, if we add a new column in version _1.5.0_ of a module, we want to execute the `modulescript` when upgrading from versions previous this version. So, we can define its limits as follows:
 
-    
-    
-     
-      @Override
-      protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
-        return new ModuleScriptExecutionLimits(ad_module_id, null, 
-            new OpenbravoVersion(1,5,0));
-      }
-     
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits(ad_module_id, null, 
+      new OpenbravoVersion(1,5,0));
+}
+ ```
 
 Where `ad_module_id` is the **UUID** of the module.
 
@@ -384,38 +316,30 @@ This way the `modulescript` will be executed when upgrading the module from any 
 
 ####  Execute on install
 
-It is also possible to configure whether the module script should be executed when installing the dependent module defined with the `getModuleScriptExecutionLimits()` method or during the `install.source` ant
-task. By default, the module script will be executed in the following cases:
+It is also possible to configure whether the module script should be executed when installing the dependent module defined with the `getModuleScriptExecutionLimits()` method or during the `install.source` gradle task. By default, the module script will be executed in the following cases:
 
   * When installing the dependent module 
   * On `install.source` task 
 
 But in case we do not want to execute it in these cases, the `executeOnInstall()` method should be overridden as follows:
 
-    
-    
-     
-      @Override
-      protected boolean executeOnInstall() {
-        return false;
-      }
+```java
+@Override
+protected boolean executeOnInstall() {
+  return false;
+}
+```
 
 ####  Executing just on `install.source`
 
 In case we want to configure a `modulescript` to be executed just on every `install.source`, we **do not** override the `executeOnInstall()` method and we define the execution limits as follows:
 
-    
-    
-     
-      @Override
-      protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
-        return new ModuleScriptExecutionLimits(ad_module_id, null, 
-            new OpenbravoVersion(0,0,0));
-      }
-     
-
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits(ad_module_id, null, 
+      new OpenbravoVersion(0,0,0));
+}
+```
 
 This work is a derivative of [How to Create Build Validations and Module Scripts](http://wiki.openbravo.com/wiki/How_to_create_build_validations_and_module_scripts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
-
