@@ -376,6 +376,27 @@ You may change the current user from Openbravo to Etendo, if you want. This guid
 !!! warning
     Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.
 
+### Apply 303 Taxes and Tax Report Fixes
+
+This step is only necessary if the following conditions happen in your environment:
+
+* The `org.openbravo.module.aeat303.temporal.taxes.es`, `org.openbravo.module.aeat303.temporal.taxparameters.es`, `org.openbravo.localization.spain.referencedata.taxes.es` and `org.openbravo.module.aeat303.es` modules are installed and their datasets applied in the ERP
+* You want to update the `Spain Localization Extensions` bundle to version `1.8.0` or higher, otherwise, you want to update the afforementioned modules to these versions:
+    * `org.openbravo.localization.spain.referencedata.taxes.es`: version `1.8.0` or higher
+    * `org.openbravo.module.aeat303.es`: version `1.14.0` or higher
+
+To solve issues with taxes arising from these modules being migrated from Openbravo to Etendo, refer to the related [Known Issue](../../../../whats-new/release-notes/etendo-classic/known-issues.md/#ee-808-problem-when-trying-to-import-the-taxes-configuration-for-spain-dataset-if-the-environment-already-has-imported-the-dataset-related-to-the-303-temporary-taxes-of-openbravo) 
+
+### Apply 390 Taxes and Tax Report Fixes
+
+This step is only necessary if the following conditions happen in your environment:
+
+* The `org.openbravo.module.aeat303.temporal.taxes.es`, `org.openbravo.module.aeat303.temporal.taxparameters.es`, `org.openbravo.localization.spain.referencedata.taxes.es` and `org.openbravo.module.aeat390.es` modules are installed and their datasets applied in the ERP
+* You want to update the `Spain Localization Extensions` bundle to version `1.8.0` or higher, otherwise, you want to update the afforementioned modules to these versions:
+    * `org.openbravo.localization.spain.referencedata.taxes.es`: version `1.8.0` or higher
+    * `org.openbravo.module.aeat390.es`: version `3.9.0` or higher
+
+To solve issues with taxes arising from these modules being migrated from Openbravo to Etendo, refer to the related [Known Issue](../../../../whats-new/release-notes/etendo-classic/known-issues.md/#ee-856-390-tax-report-dataset-duplicates-data-for-2022-when-applied-on-a-server-migrated-from-ob-to-etendo-after-01-2023) 
 
 ## Conclusion
 
