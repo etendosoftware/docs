@@ -36,7 +36,7 @@ The flow for data driven alerts is as follows:
   * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
 
 !!!info
-    For more information, read [how to create an alert](/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
+    For more information, read [how to create an alert](../../../developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md).
 
 ###  Definition
 
@@ -123,5 +123,7 @@ If they are not, they will slow down your system noticeably.
 The Alert Recipient tab handles the alert recipients management. You can
 define the Role whom will be notified, or an specific user. Also you can
 define if the user(s) should be notified by email.
+
+---
 
 This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 

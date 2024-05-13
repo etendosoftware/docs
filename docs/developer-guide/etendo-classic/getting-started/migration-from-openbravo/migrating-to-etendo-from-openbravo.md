@@ -10,11 +10,11 @@ This guide provides the necessary information to migrate an existing Openbravo i
 Before the migration process begins, either if it is done on Linux or on Windows, make sure to have the following items:
 
 !!! info
-    - Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2))
+    - Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](../../../../developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md))
     - If previous installation had custom patches applied, they must be ready to be applied in an 21Q3.2 updated environment.
     - Database should not have local changes.
     - Enough disk space for new installation.
-    - Environment license and GitHub name and token (Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo)).
+    - Environment license and GitHub name and token (Create the credentials by following this [guide](../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md)).
 
 !!! warning
     - The server where the database is hosted needs to have enough free space to hold a copy of the current database.  
@@ -53,7 +53,7 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 3. The `gradle.properties` file has default params but if needed this can be changed.  
 
     ???+Note
-        Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+        Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         
 
     ``` groovy title="gradle.properties"

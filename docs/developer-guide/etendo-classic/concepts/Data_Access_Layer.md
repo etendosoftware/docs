@@ -1056,7 +1056,7 @@ The code formatting template and his configuration can be found in the following
 ##  Tips & Tricks and Troubleshooting
 
 !!!info
-    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md) section.
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](../../../developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer) section.
 
 ---
 
