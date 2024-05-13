@@ -10,7 +10,7 @@ In this section, we welcome you to a complete user guide to facilitate your expe
 
 ### Are you ready to dive into the world of our software?
 
-Whether you're looking to master the basics or explore advanced features, our guides are designed to fit your needs. If you are a developer, we suggest you visit our section created especially for you: [Developer Guide](/developer-guide/overview).
+Whether you're looking to master the basics or explore advanced features, our guides are designed to fit your needs. If you are a developer, we suggest you visit our section created especially for you: [Developer Guide](../developer-guide/overview.md).
 
 ---
 
@@ -37,4 +37,3 @@ Whether you're looking to master the basics or explore advanced features, our gu
 <br>
 ### In this section, you will find everything about our Copilot project. Currently you have information about Bastian, our artificial intelligence based chatbot that can answer you all about Etendo.
 </figure>
-

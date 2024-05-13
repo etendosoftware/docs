@@ -42,7 +42,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 ![](../../../assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
 
-1. You must generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
+1. You must generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](../../../developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
   
     After having created the translation module in the modules folder we will find `com.etendoerp.bankingpool.es_es`
 

@@ -2,9 +2,9 @@
 title: How to Use Advanced Sequences
 ---
 
-## Sequences
+# Sequences
 
-### Overview
+## Overview
 
 This document covers how to use the implementation of sequences, explain all the features, and give some implementation example cases.
 
@@ -17,13 +17,13 @@ There are two base reference implementations defined that you can use or extend:
 	Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.
 
 
-### Quick sequence setup
+## Quick Sequence Setup
 
 1. First, log-in as “System administrator”. Open the `Application` > `Application Dictionary ` >`Tables and Columns` Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.
 	
 	!!! info
 		If you want to define a new sequence reference, you must add it in **Reference Search Key** field and the parent (Base Sequence) must be in the **Reference** field.
-		See how to create a new reference in [new sequence reference](/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference).
+		See how to create a new reference in [new sequence reference](../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md#new-sequence-reference).
 	
 	<figure markdown>
   ![Image title](../../../assets/legacy/technicaldocumentation/platform/quicksequence.png){ width="700" }
@@ -75,7 +75,7 @@ There are two base reference implementations defined that you can use or extend:
 	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
 
 	!!! info
-		For more information about masking see [Sequences Masking user guide](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
+		For more information about masking see [Sequences Masking user guide](../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#sequence-masking).
 
 	- **Table:** Defines the table in which the sequence type column is located.
 	- **Column:** The column where the sequence is defined.
@@ -153,7 +153,7 @@ CREATE SEQUENCE [ IF NOT EXISTS ] sequence_name
 
 &nbsp;
 
-#### Dimension List
+### Dimension List
 
 A Dimension is a new filter clause used to select the sequence to be used when creating or saving a new record. The default dimensions are:
 
@@ -170,12 +170,12 @@ This way you can have two different sequences depending on, for example, the Org
 
 &nbsp;
 
-##### Adding custom dimensions
+#### Adding custom dimensions
 
 If you want to add a new dimension to filter sequences, this dimension should be a column in both tables `AD_Sequence` and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the `Dimension List` tab with this column (see how to create a new sequence reference above).
 
 
-##### When a dimension is a foreign key column
+#### When a dimension is a foreign key column
 
 1. To define a new dimension, you have to start adding a column in the `AD_Sequence` table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (`M_Product` in this example) unless you decide to use an existing column as dimension.
 
@@ -209,7 +209,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 ```
 
 
-##### When a dimension is a List
+#### When a dimension is a List
 
 1. First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.
 
@@ -239,7 +239,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 ```
 
 
-##### Change sequence when change dimension
+#### Change sequence when change dimension
 
 - If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
   The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.

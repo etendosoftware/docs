@@ -13,7 +13,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
 ### Requirements
-- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
+- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md){target="_blank"}.
 - *Python* version ^3.10, to install it follow [The Official Installation Guide](https://www.python.org/downloads/){target="_blank"}.
 - *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/engine/install/)
 
@@ -97,4 +97,3 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ```
 
     This command will stop the Docker container running Copilot.
-

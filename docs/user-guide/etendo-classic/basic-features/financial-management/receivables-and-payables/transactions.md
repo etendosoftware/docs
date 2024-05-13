@@ -6,7 +6,6 @@ title: Financial Management
 
 Financial Management functional documentation provides a detailed description of all windows of the Financial Management application area.
 
-
 ## **Purchase Invoice Payment Plan**
 
 ### **Introduction**
@@ -1740,7 +1739,7 @@ There are two types of remittances:
         ![error.png](../../../../../assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance_1) and [sales](/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance) and [sales](/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](../../procurement-management/transactions.md#remittance_1) and [sales](../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../procurement-management/transactions.md#remittance) and [sales](../../sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:
@@ -1836,7 +1835,7 @@ There are two types of remittances:
         ![error.png](../../../../../assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance_1) and [sales](/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance_1) invoices as well as in [purchase](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance) and [sales](/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](../../procurement-management/transactions.md#remittance_1) and [sales](../../sales-management/transactions.md#remittance_1) invoices as well as in [purchase](../../procurement-management/transactions.md#remittance) and [sales](../../sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:

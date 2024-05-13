@@ -27,14 +27,14 @@ This helps productivity and quality as you can code, debug and test in an integr
       So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. Weld automa
+Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
 
 !!!note
     In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/Etendo_Architecture.md#Analyzing_the_classpath) if your event handlers are not found.
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
 ##  Example Module
 

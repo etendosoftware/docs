@@ -166,7 +166,7 @@ We assert that the userCount is more than 0.
 System.out.println("Total of users with password: " + (userCount));
 ```
 
-Finally we print a total of users with password just for the record.
+Finally, we print a total of users with password just for the record.
 
 ###  Transaction Handling
 
@@ -188,7 +188,7 @@ There are certainly cases whereby it makes sense to have more control over the d
 
 ###  Side-Effect Free
 
-A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
+A test case will often change the data in the underlying database. Most of the time, it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
 
   * When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. 
   * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterClass` notation. This method runs automatically at the end of the class.
@@ -335,11 +335,11 @@ To be able to execute your test cases:
   * Right click on the `ExampleTest` class. 
   * Select Run `ExampleTest`. 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
+![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png)
 
   * You can check the result of the test case on the JUnit view and the output of your tests in the Console view: 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
+![](../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png)
 
 Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
 ``` 
@@ -457,5 +457,6 @@ Because  DAL event observers  make use of CDI to work, they are not executed in 
 
 This limitation does not apply when using ` WeldBaseTest ` tests.
 
-This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+---
 
+This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

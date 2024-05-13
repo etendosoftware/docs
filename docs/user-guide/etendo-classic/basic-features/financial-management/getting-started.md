@@ -15,7 +15,7 @@ tags:
 Etendo automatically generates an accounting representation of all the transactions within the enterprise that have an economic relevance.
 
 Accounting is the system of tracking the assets, the debts, the income and the expenses of a business.
-In Etendo, most of the accounting entries are automatically created while posting [documents](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type). 
+In Etendo, most of the accounting entries are automatically created while posting [documents](../financial-management/accounting/setup.md#document-type). 
 
 - [Goods Receipts](../procurement-management/transactions.md#goods-receipts) and [Purchase Invoices](../procurement-management/transactions.md#purchase-invoice) in the [Procurement Management](../procurement-management/getting-started.md) business area
 - [Goods Shipments](../sales-management/transactions.md#goods-shipment) and [Sales Invoices](../sales-management/transactions.md#sales-invoice) in the [Sales Management](../sales-management/getting-started.md) business area.
@@ -53,7 +53,7 @@ Moreover Organizations of that Client can also have additional dimensions config
 
 Those dimensions are then available just for that Organization.
 
-- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client/) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup.md#dimension).
+- On the other hand, those dimensions can not be centrally maintained in the [Client](../general-setup/client.md) but independently maintained in the [Organization's General Ledger Configuration](../financial-management/accounting/setup.md#dimension).
 
 This application area covers the [Period End Close to Financial Report](../financial-management/getting-started.md#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](../financial-management/getting-started.md#payables-and-receivables-management) business flow.
 
