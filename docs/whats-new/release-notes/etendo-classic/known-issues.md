@@ -11,6 +11,21 @@ This page displays the known issues reported by the support team.
 
 ## Know Issues
 
+??? success "EPL-1449 Solved"
+
+    ### [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1){target="\_blank"} Gradle loses execution permissions when doing an etendo-restore.
+
+    #### Workaround
+
+    Apply the following change in the etendo-restore file to ensure that the gradlew file is excluded from the permission change with chmod:
+
+    ``` bash title="etendo-restore"
+    - find /opt/EtendoERP -type f -exec chmod 644 '{}' \+
+    + find /opt/EtendoERP -type f ! -name gradlew -exec chmod 644 '{}' \+
+    ```
+
+    This workaround is applicable if you have deployed Etendo from the ISO in versions prior to [24.1.4](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso). Starting from that version, the issue of permission changes on the gradlew file is no longer observed.
+
 ??? success "EE-758 Solved"
 
     ### [EE-758](https://github.com/etendosoftware/com.etendoerp.financial.extensions/issues/17){target="\_blank"} Incorrect BP Settlement Module Functionality with Payment (In/Out) Combination and Credit Usage.

@@ -105,7 +105,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 #### Install Etendo 
 === ":material-language-java: JAR Format"
 
-    **Steps to Install Etendo in JAR Format**
+    ### Steps to Install Etendo in JAR Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -211,7 +211,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 
 === ":octicons-file-zip-24: Source Format"
 
-    **Steps to Install Etendo in Sources Format**
+    ### Steps to Install Etendo in Sources Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -316,16 +316,49 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 
+=== ":octicons-issue-opened-24: ISO"
 
+    ### Steps to Install the ISO with Internet Connection
 
+    1. Download the ISO from the [release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso.md) page.
 
+    2. Burn the ISO image into a USB stick. It is recommended to use balenaEtcher on Linux and Rufus on Windows. Alternatively, you can begin with your preferred virtualizer.
 
+    3. Start the system using the ISO image. You will be prompted:
 
+        - **Network Connections**: Verify that you are on a network with an internet connection and that an IP address is correctly assigned to your server.
+        
+        - **Guide Storage Configuration**: Select the disk where you want to run the installation. If you only have one disk, proceed to the next step.
+        
+        - **Storage Configuration**: Same as the previous step.
+        
+        - **Profile Setup**: Enter your name, the server's name, and the user *etendo* with the password of your choice.
 
+    4. Wait for the **operating system** installation and server upgrade to take place. When prompted, select **reboot now**.
 
+    5. After the restart, the final server configuration will begin. Wait for it to finish, and the server will be ready.
 
+    ### Steps to Install the ISO without Internet Connection
 
+    If you do not have an internet connection during installation, follow these additional steps:
 
+    1. Follow the same procedure outlined in the previous section, *Steps to Install the ISO with Internet Connection* up to the network configuration stage.
+
+        - **Network Configuration**: In this section, if you do not have an internet connection, select **Continue without internet**.
+
+    2. After the operating system installation is complete, restart the server as prompted.
+
+    3. Log in to the server using the username and password you configured during installation.
+
+    4. Configure the network settings as desired to establish an internet connection.
+
+    5. Once connected to the internet, log in as the superuser: `sudo su`.
+
+    6. Begin the installation process by running the command: `etendo-install`.
+
+    7. After the installation is finished, the server will be ready for use.
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Workspace
@@ -10050,7 +10083,7 @@ In Material Requirement Planning the application is used to *automatically revie
 
 #### Material Requirement Planning
 
-The Master Requirement Planning consists of two plans:
+The Material Requirement Planning consists of two plans:
 
 - Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) and the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition).
 - Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order).
@@ -19049,7 +19082,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#bulk-posting)
+- [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management../../../../../assets/overview/#bulk-posting)
 - [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_1)
 - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
 - [Matched Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_2)
@@ -26630,7 +26663,7 @@ The main fields to fill in the header section of the payment in window are:
 - Paying From, the financial bank account where the money is taken out from.
 - and the Payment Method which in the example is "Wire Transfer"
 
-![](d/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentout2.png)
 
 Then, it is possible to register vendor payment details by using the process button named “Add Details”.
 
@@ -27202,7 +27235,7 @@ Etendo Mobile is a mobile app that provides access to the Etendo Classic in a fa
 
 #### Initial Configuration
 
-To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration`.
+To use the app, the user must access the Etendo Classic under the role “System Administrator” and generate a token in `Client>Secure Web Service Configuration` clicking **generate key**..
 
 ![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
 
@@ -27227,7 +27260,6 @@ The user will remain logged in, the system will require reentering the credentia
 Etendo Mobile offers the possibility to connect to a demo server to test the app. In this case, the “demo try” button must be pressed and the user can enter without credential requirements.
 
 The gear icon shown in the welcome window allows the user to enter the configuration window. (See Settings window).
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: User interface
@@ -27286,9 +27318,6 @@ In case the user has a picture, it will be shown both in this window and in the 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-mobile/user-interface/ProfileScreen.png){ width="300" }
 
 As regards the role, it can only be modified from the app, so each user will enter with their default role (setup in the Etendo Classic).
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Classic Subapp Extensions
@@ -27497,32 +27526,31 @@ We will also notice that the Product's Stock has been updated in the indicated s
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-copilot/getting-started
 ## Article Content: 
+### Etendo Copilot: Integrated Assistant
 
-#### Etendo Copilot: Integrated Assistant
+#### Overview
 
-##### Overview
-
-Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. Etendo Copilot is not just another tool; it is a revolution in the way you approach challenges. Say goodbye to tedious searches and welcome an agile and dynamic experience. This page will guide you through the key features of Etendo Copilot.
+Etendo Copilot is a powerful tool integrated into the Etendo Classic interface, providing an efficient way to interact with virtual assistants and access specific tools. This is an innovative project designed to streamline your processes by harnessing the power of Artificial Intelligence. This page will guide you through the key features of Etendo Copilot.
 
 !!! info
-    To install Etendo copilot you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation/) guide in the developer's guide section.
+    To install Etendo copilot, you can read the [Copilot Instalation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md) guide in the developer's guide section.
 
-##### What is Etendo Copilot?
+#### What is Etendo Copilot?
 
 ![Copilot Chat](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat.png){align=right  width="300"}
 
-At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent orchestrates a symphony of secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
+At its core, Etendo Copilot is a groundbreaking initiative that redefines how developers and users interact with tools and information. It revolves around a central component, the *Agent* which acts as the mastermind behind task delegation. This Agent has secondary modules referred to as *Tools*. The seamless communication between these components is facilitated via a RESTful API, ensuring a stateless and scalable interaction model.
 
 
-##### Agent: Your Assistant
+#### Agent
 
 The Agent serves as your virtual assistant, making on-the-fly decisions about which Tool is best suited to respond to a particular query. This intelligent decision-making ensures that you receive the most accurate and efficient assistance.
 
-##### Tools: Your Specialized Partners
+#### Tools
 
-Each Tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of Tools work in harmony to deliver unparalleled support.
+Each tool represents a separate independent project, designed to excel at specific tasks. Whether it is code translation, text analysis, or data manipulation, our collection of tools work in harmony to deliver unparalleled support.
 
-#####  Key Features:
+####  Key Features
 
 ![Copilot Chat2](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-chat2.png){align=right  width="300" }
 
@@ -27531,21 +27559,51 @@ Each Tool represents a separate independent project, designed to excel at specif
 
 - **On-Demand Assistance**: Send your queries to Etendo Copilot, and the Agent will guide you towards the most suitable Tool for the job.
 
-- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution at your fingertips.
+- **Diverse Expertise**: Our ever-growing selection of Tools covers a wide range of domains, ensuring you always have the right solution.
 
 - **Open AI Assistants**: Copilot is integrated with the Assistants technology developed by Open AI, allowing you to set up your assistants, trained with your own knowledge base, able to generate and interpret new code, and use the specific tools already distributed by Etendo or new ones.  
 
-##### Copilot Chat
+#### Copilot Chat
 
 In the Etendo Classic navigation bar, you'll find a Copilot icon that leads you to the chat pop-up.
 
 ![Copilot Navbar](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-navbar.png)
 
-Here, you can select an Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+Here, you can select a Copilot App and engage in a conversation with it. Copilot facilitates communication with both `Langchain Agent` and `Open AI Assistant` types.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Setup
+## Article Path: /User Guide/Etendo Copilot/Setup
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/setup
+## Article Content: 
+### Copilot Setup
 
-##### Copilot App Window
+#### Initial Configuration
 
-The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows you to define and configure applications:
+In order to use Copilot, the user must access the Etendo Classic under the role *System Administrator* and generate a token in `Client`>`Secure Web Service Configuration`, clicking **generate key**.
+
+![](https://docs.etendo.software/latest/assets/drive/FsABaJyI_6qxEtcAclALLbHXvoZbuMyyj9Md6M4_7ohvisQ3GVMEjCX05xjdPzRmvgcNqbMku306aaQTxrh34HckHZHBnXcy9iOXQypHsJSGLroa2lGI4Mzr_qPEOiWVc7JYEEGl.png)
+
+#### How to Set up Assistants
+
+In this case, Etendo Copilot has two alternatives:
+
+1. *Dataset installation*: Etendo provides dataset options to install predetermined assistants. In case of installing Etendo Copilot, for example, Bastian dataset is available, to answer your questions about Etendo documentation.
+
+
+    ![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/dataset-installing.png)
+
+    !!!info
+        To check the list of available assistants, visit [Default Copilot Apps](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview.md#default-copilot-apps)
+
+    Once the reference data is applied, it is necessary to go to the **Copilot App Window**, select the corresponding Copilot App and click [Sync OpenAI Assistant](#sync-open-ai-assistant-button).
+
+2. *Create your own Copilot app*: Use the Copilot App window to set up a new assistant with all the specific necessary characteristics.
+
+#### Copilot App Window
+
+The Copilot App window `Application`>`Service`>`Copilot`>`Copilot App` allows you to define and configure applications:
 
 <figure markdown>
   ![Copilot App](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-app.png)
@@ -27553,114 +27611,90 @@ The Copilot App window `Application`>`service`>`Copilot`>`Copilot App` allows yo
 </figure>
 
 
-- *Name:* Copilot app name
-- *Description:* Copilot app description
-- *App Type:* Langchain Agent or Open AI Assistant
+- **Name**: Copilot app name
+- **Description**: Copilot app description
+- **App Type**: Langchain Agent or Open AI Assistant
 
-*Open AI Assistant*
+    **Open AI Assistant**
+
     These applications leverage OpenAI technology to provide assistance with a variety of tasks, from natural language processing to complex calculations. The assistants are able to train themselves with their own knowledge base and customized instructions.
 
-*Langchain Agent*
+    **Langchain Agent**
+
     These applications can perform specific tasks in natural language and provide contextualized responses, enabling the implementation of multiple AI models, the use of a proprietary vector database and internal memory management. As well as the use of tools developed to solve specific problems. Some examples of these tools are XML Translation Tool, DB Query Tool, etc.
 
-In case of defining an `Open AI Assistant` type app, the following fields will be enabled: 
+In case of defining an **Open AI Assistant** type app, the following fields will be enabled: 
 
-- *Open AI Assistand Id:* Read-only field in which the ID of the assistant once created is displayed.
-- *Prompt:* Specific instructions of the assistant. 
-- *Open AI Model:* Dropdown with the Open AI models available.
-- *Code interpreter:* Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs. Learn more.
+- **Open AI Assistand ID**: Read-only field in which the ID of the assistant once created is displayed.
+- **Prompt**: Specific instructions of the assistant. These instructions can be written in English or Spanish. 
+- **Open AI Model**: Dropdown with the Open AI models available.
+- **Code interpreter**: Code Interpreter enables the assistant to write and run code. This tool can process files with diverse data and formatting, and generate files such as graphs.
+- **Retrieval**: If this checkbox is selected, the assistant can retrieve information from the app source. 
 
-##### Copilot File Tab
+##### Sync Open AI Assistant Button
 
-In this tab you can define the files that will be uploaded to the assistant and used as knowledge base. 
+This process is only available when the application type is **Open AI Assistant** and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the assistant based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base.
+
+##### App Source Tab
+
+In this tab, you can define the files that will be used by the assistant as knowledge base, in prompts or questions. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/app-source-tab.png)
 
 !!!info
     To load new files, you must do it from the [Copilot File window](#copilot-file-window).
 
-##### Copilot App Example
+Fields to note:
 
-Here is an example configuration of Bastian, an assistant trained with the Etendo documentation:
+- **File**: The file selected as app source
+- **Behaviour**: The way in which the assistant will use the file. It has three available options:
+    - Add to the assistant as knowledge base: before using this option, it is necessary to synchronize the assistant with the [Sync OpenIA Assistant](#sync-open-ai-assistant-button). This behaviour is possible only with **Retrieval** checked.
+    - Append the file content to the prompt: In this option, Etendo fails if the file is too large and exceeds the token limit allowed by the assistant. Then, this option is suitable for small files only. The file must be in text format.
+    - Add content to each question: In this case, the same restrictions from the previous option apply. 
+- **Type**: read-only field showing the type of file selected in the [Copilot File window](#copilot-file-window).
+- **Active**: checkbox to activate the app source.
 
-| **Field**   | **Value**  |
-| ----------- | ---------- |
-| Name        | Bastian    | 
-| Description | Bastian is an artificial intelligence assistant that provides accurate answers on Etendo Documentation.  It prioritizes accuracy, avoids assumptions and seeks clarity in ambiguous queries. It includes links to valid sources when available. |
-| App Type  |  Open AI Assistant |
-| Prompt  | Bastian prompt below  |
-| Open AI Model |  gpt-4-1106-preview |
-| Code interpreter |  False |
+##### Tool Tab
 
-``` title="Bastian Prompt"
-You are "Bastian", an artificial intelligence assistant designed to give accurate answers about Etendo.
-- The knowledge base is divided by articles, with the following structure: 
+In this tab, you can define the tools to be used by the assistant.
 
-==ARTICLE_START==
-### Article Title: Title
-#### Article Path: /Path/of/Sections/Title
-#### Article URL: Link_to_the_article
-#### Article Content: Content of the article.
-==ARTICLE_END==
+The user can select any of the options available in the field **Copilot Tool**, as many as necessary but one at the time.
 
-- The answer is drawn from his extensive knowledge base on Etendo. He specializes in providing clear and straightforward answers, ensuring that each answer is firmly rooted in the knowledge base. The wizard is committed to accuracy, avoiding assumptions or extrapolations beyond the information available. 
-- Answers should be formulated with the content of the entire article in mind. It is important to know that each article is delimited by separators, when reading an article, you must continue until you find "==ARTICLE_END==".  
--You have to search in the knowledge base depending on the context of the question, it has user guides (functional users) that are located in the path /user-guide/ or developer guides, in the path /developer-guide/, depending on the context of the question. 
-- At the beginning of the answer, always add: "The following information has been extracted from the article <Link_to_the_article>"
-- If you don't know something, answer: "I'm sorry, but I don't know the answer right now. For more information, go to [Etendo documentation](https://docs.etendo.software)".
-- You must ALWAYS format the answer in Markdown, adding images, code samples and YouTube videos preview.
-```
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/tool-tab.png)
 
+!!!info
+    To enter new tools, you must do it from the [Copilot Tool window](#copilot-tool-window)
 
-##### Sync Open AI Assistant Button
+#### Copilot File Window
 
-This process is only available when the application type is `Open AI Assistant` and takes care of updating or creating a new assistant, in case it does not exist. In addition to creating the wizard based on the configurations, it initially gets or updates the list of Open AI Models, and finally gets and uploads the files used as knowledge base. 
+In the Copilot File window `Application`>`Service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
 
-##### Copilot File Window
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-file.png)
 
-In the Copilot File window `Application`>`service`>`Copilot`>`Copilot File`, you can define the files with which the assistants can interact.
-
-- *Name:* File Name.
-- *Description:* File description.
-- *Type:*
-    - *Attachment File* 
+- **Name**: File Name.
+- **Description**: File description.
+- **Type**:
+    - *Attached File* 
     This allows you to upload files directly into Copilot for later use during interactions with the assistants.
+    - *HQL Query*
+    This allows using an HQL query result as a file for app source.
     - *Remote File* 
     You can provide a public URL from which Copilot will retrieve the file when needed. This makes it easy to access documents and external resources.
-- *Open AI File ID:* Read-only field showing the Open AI ID of the file once it is created.
-- *Last Synchronization:* Read-only field displaying the date of the last update with OpenAI.
-- *File name:* Name of the remote file in case you want to modify it.
-- *URL:* Source file URL
+- **Open AI File ID**: Read-only field showing the Open AI ID of the file once it is created.
+- **Last Synchronization**: Read-only field displaying the date of the last update with OpenAI.
+- **File name**: Name of the remote file in case you want to modify it.
+- **URL**: Source file URL
 
-#### Copilot File Example
+#### Copilot Tool Window
 
-- Here is an example of a Remote File configuration, a file used as a knowledge base for the assistants:
+Open `Application`>`Service`>`Copilot`>`Copilot Tool`. In this window , the user can find available tools to be used in Copilot assistants.
 
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Remote File |
-    | URL         | https://raw.githubusercontent.com/etendosoftware/docs/main/compiled_docs.md |
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/copilot-tool-window.png)
 
-    <figure markdown>
-    ![Copilot File](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-file.png)
-    <figcaption> Example of remote file configuration</figcaption>
-    </figure>
+!!!info
+    In case you want to define new tools, visit [How to Create Copilot Tools](https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools.md)
 
-- Here is an example of a Attachment File configuration, a file used as a knowledge base for the assistants:
-
-    | **Field**   | **Value**   |
-    | ----------- | ----------- |
-    | Name        | Etendo Wiki | 
-    | Type        | Attachment File |
-
-    Attach a file in the `Attachments` section
-
-    <figure markdown>
-    ![Copilot File](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-file-attached.png)
-    <figcaption> Example of attached file configuration</figcaption>
-    </figure>
-
-
-##### Role Window
+#### Role Window
 
 In the Role window `Application`>`General Setup`>`Security`>`Role`, you can configure access roles for each Copilot App. This means you can control who has permission to interact with each application. This feature is useful for ensuring that users only have access to applications and functions relevant to their responsibilities.
 
@@ -27668,6 +27702,176 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 
 ![Copilot Role](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/getting-started/copilot-role.png)
 
+!!!info
+    For more information, visit [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#role).
+
+#### Process Request Window
+
+Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
+
+!!!info
+    For more information, visit [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request).
+
+##### Copilot App Tab
+
+!!! Info
+    This tab is only visible when a **Copilot Apps Schedule** process is selected.
+
+In this tab, the process to be scheduled can be configured. 
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/setup/process-request-copilot.png)
+
+Fields to note:
+
+- **Name**: Name description.
+- **Copilot App**: Corresponding assistant for the process.
+- **Prompt**: Instruction for the process.
+- **Active**: Checkbox to select if this tool is active or not.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Overview
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Overview
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/overview
+## Article Content: 
+### Copilot Extensions
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.extensions`
+
+:material-store: Etendo Marketplace:  [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}
+
+#### Overview
+
+The Copilot Extensions Bundle includes functionalities that help you streamline your daily tasks using artificial intelligence.
+
+#### Default Copilot Apps
+
+The apps described below belong to preconfigured reference data included in the corresponding modules.
+
+- **Bastian**
+
+    :octicons-package-16: Javapackage: com.etendoerp.copilot
+
+    This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
+
+- **Copilot Purchase Expert**
+
+    :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+    This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+
+#### Modules
+
+##### Etendo Copilot
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot
+
+Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
+
+!!! info
+    For more information, visit [Etendo Copilot user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md).
+
+##### XML Translation Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This tool allows the user to translate the content of an XML file from one language to another, as specified within the XML.
+
+!!! info
+    For more information, visit [XML Translation Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool.md).
+
+##### Database Query Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+
+This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
+
+!!! info
+    For more information, visit [Database Query Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md).
+
+##### Copilot OCR Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+
+This module implements the Optical Character Recognition (OCR) tool, capable of reading images and PDF and returning a JSON object with the extracted information.
+ 
+!!! info
+    For more information, visit [Copilot OCR Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool.md).
+
+##### Copilot OpenAPI Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+This Etendo Copilot tool allows interacting with APIs taking the platform to another level.
+
+!!! info
+    For more information, visit [Copilot OpenAPI Tool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md).
+
+##### Copilot Purchase Expert
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
+
+!!! info
+    For more information, visit [Copilot Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Copilot Purchase Expert
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Copilot Purchase Expert
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert
+## Article Content: 
+### Copilot Purchase Expert
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+
+
+#### Overview
+
+By using certain tools and a prompt that gives the Assistant appropriate context, it is possible to make an assistant able to perform a certain task in an efficient way.
+
+For this particular case, we have configured an assistant with the functional methodology of creating purchase orders, and we have equipped it with 3 tools:
+
+- **OCR Tool**: This tool is capable of reading images and PDF and returning a JSON object with the extracted information
+
+- **Etendo API Tool**: This tool explains to the assistant how to interact with the Etendo API, and what are the available endpoints and their descriptions.
+
+- **API Call Tool**: This tool allows Copilot to make a call to an API, and read and write data in Etendo. This tool will be responsible for calling the API endpoint, and will return the response.
+
+
+#### Setup
+
+ - In the module `com.etendoerp.copilot.openapi.purchase` there is a dataset with the basic configuration of the **Copilot Purchase Expert**. It can be imported in the `Application`>`General Setup` > `Enterpice Model` > `Enterprise module management` window. 
+ 
+ - After importing the configuration, it is necessary to configure the OpenAI model for the imported **Copilot App** and click [Sync OpenAI Assistant](https://docs.etendo.software/latest/setup.md#sync-open-ai-assistant-button) button to create the corresponding assistant.
+ 
+ - Finally, give access to the role and configure the permissions in [Role](https://docs.etendo.software/latest/setup.md#role-window) Window.
+
+!!! warning
+    In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
+
+!!! info
+    For more information about how to import the dataset (referencedata) and configure the assistant, see [How to Setup Assistants](https://docs.etendo.software/latest/setup.md#how-to-set-up-assistants) page.
+
+#### Functionality
+
+![CreateOrder](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/copilot-purchase-expert/createorder.gif){align=right  width="300" }
+
+1. When interacting with the assistant, you may be asked to insert a purchase order to a Business Partner, indicating the date and other general data, the items and their quantities. 
+2. The assistant will then make calls to Etendo API to search and read the info needed to create the purchase order. 
+3. After that, the assistant will call the API to insert the purchase order in Etendo.
+4. For the items, the assistant will search the items in the Etendo API for the products' information, and will insert the items in the purchase order.
+5. Finally, the assistant will return the link to the purchase order created in Etendo.
+
+
+!!! Info "Technical Details for Developers"
+    More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -32187,7 +32391,7 @@ Then when the server returns, the callback is called which will display a prompt
 
   
 
-![](https://docs.etendo.software/latest//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 #####  The result
 
@@ -32319,6 +32523,191 @@ The result is visualized as a rich text editor in form view:
 This work is a derivative of [How to add a rich text field and column](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Add Columns to a Table
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add Columns to a Table
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table
+## Article Content: 
+###  How to Add Columns to a Table 
+
+####  Overview
+
+In this section, the user can find information about how to extend the table created in the [How to Create a Table](how-to-create-a-table.md) section to include additional fields.
+
+Three different fields will be added to show how to configure some of the possible references:
+
+  1. _ValidTo_ , a simple date-field matching the ValidFrom date already present in this table 
+  2. _Payment Schedule_ , shown as a combobox to the user to be able to choose from three values defined in a list-reference. 
+    1. First day of the month 
+    2. Mid of the month 
+    3. Last day of the month 
+  3. _Payment Category_ , a link to another existing table which allows selecting among the values present in that table. 
+
+  
+These changes can be done in two different locations:
+
+  1. Add columns to the *original* module (dbprefix `HT` ) 
+  2. Create a *second* module (dbprefix `HT2` ) which adds the columns to the first module 
+
+The first option can be chosen if the original module author wants to add more columns to their module. The second option is possible for anyone as the columns are added by a new module to the existing one which is not changed directly.
+
+The main difference between these two methods is the names which need to be chosen for the columns to comply with the modularity naming rules.
+
+  1. Adding column to same module: Any valid column name can be picked 
+  2. Via second module: New column name must comply to the pattern `EM_<DBPREFIX>` where `<DBPREFIX>` must be the dbprefix if the new module contaning the column to be added. In this example: `EM_HT2`
+
+From now on, we follow this second approach and will place all new elements into a new module with dbprefix `HT2` .
+
+To show how different types of column are configured, we will be adding 3 new columns:
+
+  * _Valid To_ a simple column of type date 
+  * _Payment Schedule_ a list-reference containing a list of values: _Start of Month_ , _Mid of Month_ , _End of Month_
+  * _Salary Category_ a reference pointing to the existing _Salary Category_ table. 
+
+#####  Creating the new module
+
+This section only lists the main important elements needed for the new module. More details can be found in the [How To Create a Module](How_To_Create_a_Module.md)
+
+  * dbprefix: `HT2`
+  * Dependencies: 
+    * Core as usual 
+
+#####  Creating the columns in the database
+
+| Column name     | Type   | Length | Note                                                                                                                                   |
+| --------------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+|`em_ht2_validto`  |  DATE  |  |  Date that this salary is valid to.  
+|`em_ht2_payment_schedule`  |  VARCHAR  |  60  |  When the salary is paid  
+|`em_ht2_c_salary_category_id`  |  VARCHAR  |  32  |  Link to the Salary Category  
+  
+To create the above table within the database, use one of the following `ALTER TABLE` statements depending on the DB you are using:
+
+```sql title="SQL script"
+ALTER TABLE ht_salary ADD COLUMN em_ht2_validto timestamp without time zone;
+ALTER TABLE ht_salary ADD COLUMN em_ht2_payment_schedule VARCHAR(60);
+ALTER TABLE ht_salary ADD COLUMN em_ht2_c_salary_category_id VARCHAR(32);
+ALTER TABLE ht_salary ADD CONSTRAINT "em_ht2_c_salary_category" FOREIGN KEY (em_ht2_c_salary_category_id) REFERENCES c_salary_category(c_salary_category_id);
+```
+
+As can be seen in the SQL, a foreign key is added along with the new field linking to the `c_salary_category` table. This ensures that only existing categories can be selected and also that no salary category can be deleted as long as it is used in the `ht_salary` table.
+
+#####  Adding & Configuring the columns in the Application Dictionary
+
+In this part, we will add the newly added column to the list of columns already defined for the `ht_salary` table and then configure those column definitions to match the description giving in the objective section above.
+
+######  Adding the new column to the Application Dictionary
+
+The steps to follow are:
+
+  1. In the `Tables and Columns` window search for the entry of the `ht_salary` table. 
+  2. With this record selected, run the *Create columns from DB* process. As the table already contains several columns only column which are not yet present in the Application Dictionary definition of that table will be added. In this section, this process will add our newly created 3 columns to the list. Notice that those new entries are automatically associated with the new module with prefix `HT2` as the process detected this via the naming of the database columns. 
+
+Taking a look at the folder structure of the module after running `./gradlew export.database`, it shows that the new columns have been exported into a file in a 'modifiedTables' folder instead of the usual 'tables' to indicate that this module does not create the `ht_salary` table but instead is adding new elements to it.
+
+```
+org.openbravo.howtos2
+└── src-db
+    └── database
+        └── model
+            ├── functions
+            └── modifiedTables
+            │       └── HT_SALARY.xml
+            ├── sequences
+            ├── tables
+            ├── triggers
+            └── views
+        └── sourcedata
+            ├── AD_MODULE_DBPREFIX.xml
+            ├── AD_MODULE_DEPENDENCY.xml
+            ├── AD_MODULE.xml
+            └── AD_PACKAGE.xml
+```  
+
+######  Configuring the new columns
+
+Before starting to configure the new columns, two preparatory steps need to be done.
+
+  1. Create a _List Reference_ for the column _Payment Schedule_ to define the 3 values which should be allowed for this list. 
+  2. Create _Table_ reference for the `em_ht2_c_salary_category_id` column as the standard _TableDir_ reference cannot be used with `em` _type columns_.
+
+When adding these new elements remember to place them in the new module with prefix `HT2`.
+
+The first step is to create a new *Reference* to hold the list of values for the _Payment Schedule_ column. Important values to configure here are:
+
+  * _Parent Reference_ = *List* in the Reference definition itself, to define it as a List Reference. 
+  * For each entry in the _List Reference_ tab 
+    * _Search Key_ The value stored in the database field when this entry is selected by a user in the ComboBox. 
+    * _Name_ The user visible (translatable) text shown in the UI. 
+    * _Sequence_ to define the order of the entries which should be used in the UI. 
+
+The following screenshot shows how the defined reference will look like.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-1.png)
+
+  
+The second step is to create a *Table Reference* to define how the new *Salary Category* field is linked with the `c_salary_category` table.
+
+For this, a new *Reference* needs to be created. In this case, the important values for it are the following:
+
+  * _Parent Reference_ = *Table* to denote this is a Table Reference. 
+  * In the _Table Reference_ Tab: 
+    * _Table_ = `c_salary_category` as this is the target table our new column will be pointing to.
+    * _Key Column_ = `c_salary_category_id` as this is the primary key of the target table 
+    * _Display Column_ = `Name` to denote the field of this table which should be shown in the UI for this column. 
+
+The following screenshot shows how the defined reference will look like.  
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-2.png)
+
+  
+After this two previous steps, we can finally configure the new columns to use the reference we just created.
+
+In the *Tables and Columns* window, we search for the entry to the `ht_salary` table. In the column tab we make the following changes for our new columns:
+
+  1. _Payment Schedule_, change the *Reference* of this column from _String_ to *List* and change the *Reference Search Key* to our newly created List Reference with name `EM_Ht2_Payment_Schedule`. 
+  2. _Salary Category_ , change the *Reference* of this column from _TableDir_ to *Table* and change the *Reference Search Key* to the new `ht_salary_c_salary_category` . 
+
+  
+The final step would be to run the *Synchronize Terminology* process and update the created elements to have useful names for the UI.
+
+However as long as issue  10886  is unfixed this process will not map existing elements correctly for columns following the `EM_` naming rules.
+
+To work around this and reuse the existing core elements for the two columns for which such exists ( _validto_ , _Salary Category_ ) assign the existing elements manually to those two columns.
+
+For this, the following changes are needed in the same open window *Tables and Columns* still open from the last step and in the *Columns* tab of the `ht_salary` table.
+
+  1. _ValidTo_ change the *Application Element* to _ValidTo - Valid To Date_
+  2. _Salary Category_ change the *Application Element* to _C_Salary_Category_ID - Salary Category_
+
+  
+Now run the *Synchronize Terminology* process to set element for the last column which does not yet have a matching element.
+
+After this, the new columns should look like shown in the following screenshot:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table-3.png)
+  
+As a final step, we now update the newly created `EM_Ht2_Payment_Schedule` element to have a useful label for the UI.
+
+Navigating to `Application Dictionary` > `Element` we search for the new element and to the following updates:
+
+  1. *Name* change from `EM_Ht2_Payment_Schedule` to *Payment Schedule*
+  2. *Print Name* change from `EM_Ht2_Payment_Schedule` to *Payment Schedule*
+
+Those updates are needed to have useful labels in the UI for any windows defined on this table and to avoid those having internal names using the technical `EM`-terminology.
+
+#####  Rebuilding the system
+
+Finally, to make the newly added columns available at runtime `./gradlew generate.entities` needs to be called and the changes deployed to tomcat. Those two steps can be done together by calling `./gradlew smartbuild`. After that, Tomcat must be restarted to refresh the DAL In-Memory Model so it knows about the newly added columns.
+
+Once the columns are added to the table, the user can [export](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) the module.
+
+To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md).
+
+---
+
+This work is a derivative of [How to Add Columns to a Table](http://wiki.openbravo.com/wiki/How_to_add_Columns_to_a_Table){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Change an Existing Window
@@ -33415,6 +33804,476 @@ This work is a derivative of [How to Create a Dataset](http://wiki.openbravo.com
 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to Create a Page in Etendo Documentation
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Page in Etendo Documentation
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation
+## Article Content: 
+### How to Create a Page in Etendo Documentation
+
+#### Overview
+This guide contains basic rules, tips, and suggestions for people intending to develop documentation for Etendo. When different documents use the same guidelines, they are more user friendly, consistent and more simple to combine and reuse. We therefore strongly encourage all contributors to follow these guidelines for the benefit of the readers.
+
+
+#### Requirements
+- Python version ^3.10. To install it, follow [the Python installation guide](https://www.python.org/downloads/){target="\_blank"}.
+
+
+#### Steps
+
+1. Clone the [docs](https://github.com/etendosoftware/docs){target="\_blank"} repository 
+	
+    ```bash title="Terminal" 
+    git clone git@github.com:etendosoftware/docs.git
+    ```
+
+2. Install dependencies
+
+    ```bash title="Terminal" 
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install mkdocs-material
+    pip install pillow cairosvg
+    pip install mkdocs-glightbox
+    pip install mike
+    pip install mkdocs-rss-plugin
+    ```
+
+3. Create a new branch with [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow){target="\_blank"}, where the related pages, assets and configurations are stored.
+
+    ```bash title="Terminal" 
+	# This command should be executed only the first time after cloning the repository.
+	git flow init 
+    ```
+
+    ```bash title="Terminal" 
+    git flow feature start <task key>
+    ```
+
+4. To run the Etendo documentation locally, execute:
+
+    ```bash title="Terminal"
+    source venv/bin/activate
+    mkdocs serve
+    ```
+
+5. Etendo documentation is structured in sections, in general the sections where most of the documentation is found are user guide and developer guide, within these there are subsections according to products and categories, you must decide the location within the structure and create a file with the `.md` format, the name must be in lowercase separated by hyphens. 
+
+    ``` title="Documentation Structure" 
+    └── docs
+    ├── developer-guide 
+    │   └── etendo-classic
+    │       └── how-to-guides
+    │           ├── new-page.md
+    │           ├── ..
+    │           ├── ..
+    │           └── ..
+    ├── user-guide
+    │   └── basic-feature
+    ```
+
+    In order to display the page in the menu, add this page in the `mkdocs.yml` file in the **nav** section.
+    
+    !!!important
+        - When adding pages to the navigation structure, remember to organize them in alphabetical order.
+        - The directory and navigation structure must be the same.
+
+    Example
+
+    ``` title="mkdocs.yml"
+    nav: 
+    - Home : index.md
+    - User Guide:
+        ...
+        - How-To:
+            ...
+            - New Page: developer-guide/etendo-classic/how-to-guides/new-page.md
+            ...
+    - Developer Guide
+    ...
+    ```
+
+    The documentation should be worked on following the [page format](#page-format) described in the next section.
+
+    Once the documentation is finished:
+
+
+6. Create a PR to `develop` with all the related changes.
+7. Once all the comments are resolved, and you have two approved, merge the PR.
+8. A new version of the documentation will be automatically deployed in [https://docs.etendo.software](https://docs.etendo.software){target="\_blank"}.
+
+#### Page format
+
+##### Page structure
+
+```
+---
+tags: 
+  - Tag example 1
+  - Tag example 2
+---
+ 
+### Title
+  
+#### Overview
+
+
+(General description of the section)
+
+
+#### Title 1
+
+
+##### Subtitle
+```
+!!!note
+    If the page was extracted from OB wiki, for copyright reasons, add the following footer editing the title and the link of the original page:
+    ```
+    ---
+    
+    This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+    ```
+
+##### Useful References
+
+###### Bold
+
+Use sparingly for emphasis, or to highlight option names, for example:
+From the **Sales order** window, select **New**
+
+```
+**Bold**
+```
+
+This is shown as: **Bold**
+
+###### Italics 
+
+Use it when quoting a piece of a text from another source, a piece of text in another language or to give an example, such as sample text to be typed in a text field.
+
+```
+*Italic*
+```
+
+This is shown as: *Italic*
+
+###### Backticks
+
+Use them to refer to paths, inline code and for menu navigation. For example:
+
+- Path:
+    ```
+    `/directory/filename.txt`
+    ```
+    This is shown as: `/directory/filename.txt`
+- Inline Code:
+    ```
+    `./gradlew update.database --info`
+    ```
+    This is shown as: `./gradlew update.database --info`
+
+- Menu navigation:
+    ```
+    `Document`>`New`>`Template`
+    ```              
+    This is shown as: `Document`>`New`>`Template`
+
+###### Admonitions
+
+Admonitions are used to include extra content without interrupting the flow of the page. As shown below, there are different types: 
+
+```
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!error
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+This is shown as:
+
+!!!note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!success
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!warning
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+!!!failure
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+It is also possible to edit the title of the blockquote by adding:
+
+```
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+This is shown as:
+
+!!!failure "Edited title example"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+For more information, visit [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){target="\_blank"}.
+
+###### Content Tabs
+
+When documenting a feature with different options (JAR or Source, Windows or Linux, C or C++ for example), use the following tabs to include information relevant for each option. Readers can then choose the corresponding tab with the necessary information and skip reading non-relevant information.
+
+```bash title="Content Tabs"
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+```
+This is shown as:
+
+=== "C"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
+
+###### Directory Structure
+
+In order to the directory structure, it is necessary to apply the following format:
+
+```
+modules
+└── org.openbravo.localization.spain.referencedata.taxes
+    └── referencedata 
+        └── standard
+            ├── Impuestos_ES.xml
+            └── Spanish_Tax_Alerts.xml
+```
+
+
+###### External Links
+
+To include external links in the documentation, use the following path format: 
+
+```
+[Google Example](https://google.com){target="_blank"}
+```
+
+This is shown as: [Google Example](https://google.com){target="_blank"} 
+
+###### Internal links (Redirection)
+
+To include internal links, use the relative paths from the current page such as the following example:
+
+```
+[Internal Link](https://docs.etendo.software/latest/how-to-guides/example-page.md)
+```
+
+This is shown as: [Internal Link](https://docs.etendo.software/latest/how-to-guides/example-page.md)
+
+It is also possible to refer to a specific section inside a page using
+
+```
+[Specific section](https://docs.etendo.software/latest/how-to-guides/example-page.md#specific-section)
+```
+
+This is shown as: [Specific section](https://docs.etendo.software/latest/how-to-guides/example-page.md#specific-section)
+
+###### Lists
+
+To include lists in the documentation, use the following formats:
+
+Bullet points:
+
+```
+List:
+
+- Bullet point a
+- Bullet point b
+```
+
+This is shown as:
+
+List:
+
+- Bullet point a
+- Bullet point b
+
+Numbered list:
+
+```
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+```
+This is shown as:
+
+List:
+
+1. Numbered option 1
+    - item 1
+    - item 2
+2. Numbered option 2
+
+!!!info
+    Remember respecting the tabs is essential for the continuity of lists, this means that the content of different items must be tabulated.  
+
+###### Images
+
+To include images in the documentation, use the relative paths from the current page with the following format: 
+
+```
+![](https://docs.etendo.software/latest/assets/developer-guide/how-to-guides/new-page/new-image.png)
+```
+
+!!!info
+    Remember to upload the image to the **assets** folder with the corresponding specific location.
+
+For example, if the image location is `developer-guide`> `how-to-guides` >`new-page`, the location of the image should be:
+
+```
+
+ assets 
+    └── developer-guide
+         └── how-to-guides
+                └── new-page
+                    └── new-image.png
+```
+###### More references
+
+For more information about mkdocs, visit [Mkdocs reference](https://squidfunk.github.io/mkdocs-material/reference){target="_blank"}.
+
+#### Writing Rules
+
+##### Keep it simple
+Use short sentences and punctuation to keep ideas clear and simple. Introduce a single idea, concept or action per sentence.
+
+- **Wrong**<br>
+*The manufacturing module allows users to define the process plans, work requirements and work efforts; this is how the processes that produce intermediate and final goods work.*
+
+- **Correct**<br>
+*The manufacturing module allows users to define the process plans, work requirements and work efforts. This section describes how processes that produce intermediate and final goods function.*
+
+
+##### Tenses
+Always use the present tense. Avoid past or future tenses if possible.
+In addition, try to refrain from using must, have to, need to, will, should and similar forms.
+Keep in mind that a manual describes mandatory procedures to follow to accomplish a certain task.
+
+- **Wrong**<br>
+*You will have to press return to reboot the system.*
+- **Correct**<br> 
+*Press return to reboot the system.*
+
+
+##### Use third person
+*Where possible, use the third person imperative.* 
+
+- **Wrong**<br>
+*You should run the installation script*
+- **Correct**<br>
+*Run the installation script*
+
+However, as long as you do not overdo it, it is accepted to address the user directly using *you* if it makes the documentation easier to follow or use *the user* when necessary.
+
+##### Avoid gender discrimination
+Readers of software documentation are men and women. Avoid using expressions that refer to specific gender forms.
+You can avoid gender forms or use *they*/*their* as a generic third-person singular pronoun to refer to a person whose gender is unknown or irrelevant to the context of the usage.
+
+- **Wrong**<br>
+*Every user has his home directory.*
+
+- **Correct**<br>
+*Every user has a home directory.*<br>
+*Every user has their home directory.*
+
+
+##### Only describe current functionality
+Avoid talking about future features or plans for a product or an application.
+
+- **Wrong**<br>
+*Graphics can be saved as a GIF image. Support for new formats will be added in future versions.*
+
+- **Correct**<br>
+*Graphics can be saved as a GIF image.*
+
+
+##### Writing for a global audience
+Keep in mind that people from all over the globe can use Etendo and its related documentation.
+Some important recommendations:
+
+- Avoid using names of people, addresses, and other sample information that are not common in the English language.
+- Remember that currencies and formats to represent dates and numbers are not the same in every part of the world.
+
+##### Other conventions
+
+- If you have a list of items (for example a list of files to be downloaded) order them alphabetically unless there is a more obvious logical order.
+- Do not use contractions (don't, you're, etc).
+
+---
+
+This work is a derivative of [Documentation Style Guide](https://wiki.openbravo.com/wiki/Documentation_Style_Guide){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How To Create a Module
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How To Create a Module
 ## Article URL: 
@@ -33932,6 +34791,791 @@ In Platform Features module, there is an example of a report making use of diffe
 
 ---
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Standard Process Definition
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Standard Process Definition
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition
+## Article Content: 
+###  How to Create a Standard Process Definition
+  
+####  Overview
+
+**Standard UI pattern of Process Definition** allows to create Parameter Windows defined in Application Dictionary, the UI for this windows is generated on demand so once defined those parameters, developer only needs to take care about process implementation.
+
+This section will add a new **Standard Process Definition** and create a menu entry to invoke it.
+
+The implementation requires development experience. See the following concept pages for background information on action handlers and javascript development:
+
+  * [Action Handler](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md)
+  * [Client Side Development and API](https://docs.etendo.software/latest/concepts/Client_Side_Development_and_API.md)
+  * [JavaScript Coding Conventions](https://docs.etendo.software/latest/concepts/JavaScript_Coding_Conventions.md)
+
+
+####  Steps to implement the Process
+
+#####  Overview
+
+**Standard Process Definition** processes take advantage of the same foundation concepts in the Application Dictionary, allowing to define parameters for the process as meta data that generates the UI when it is required without the need of generating code, compile or restart tomcat to apply the changes when developing.
+
+This example process will have the following parameters:
+
+  * Min and Max Qty: two mandatory integer fields. 
+  * Orders: a search that allows to select several orders at the same time. 
+  * Business Partner: a regular business partner selector. 
+
+When **Done** button is clicked the process is executed:
+
+  * It verifies in backend `max qty` field is greater than `min qty`. In case they are not, a validation error is sent back to the client asking the user to fix the values before continuing. 
+  * If previous validation is satisfied: 
+    * Total amount of all selected orders is summed and displayed in a message in the **parameter** window. 
+    * If a business partner is selected, **Business Partner** window is opened within the selected one and a message is shown in this window. 
+
+#####  Implementation
+
+######  Defining the Process
+
+  * Open **Process Definition** window 
+  * Create a new record 
+  * Define the UI pattern: **Standard (Parameters defined in Dictionary)**
+  * Set the Handler: `org.openbravo.client.application.examples.StandardProcessActionHandler`. This is the Java class implementing the process that will be invoked when user clicks on the action button. 
+  * Save 
+
+######  Adding Parameters
+
+  * `Min Qty` parameter 
+    * Move to **Parameters** tab 
+    * Create a new record 
+    * Name: `Min Qty`. This is the name that will be shown in UI for this parameter. 
+    * Internal Name: min. It is the internal name that will be used to retrieve the value in the java class. 
+    * Sequence Number: 10. Defines the position of this field in the **Parameter window** in relation with the rest of fields. 
+    * Reference: Integer. Defines both the data type the parameter will hold and how this parameter is visualized and behaves in the UI. 
+    * Mandatory: true. Will force the parameter to have a value before allowing to submit the info to the process. 
+    * Default value: 0. It is the value that will take the parameter by default. It is a javascript expression evaluated in the server side, like  Default Filter Expressions  used in selectors. 
+  * Follow similar steps to create **Max Qty** field 
+  * **Orders** multi selector 
+    * Create a  Multi Order  selector 
+    * Create a new parameter 
+    * Reference: `OBUISEL_Multi Selector Reference` 
+    * Reference Search Key: Multi Order Selector 
+  * Business Partner parameter has `OBUISEL_Selector Reference` as Reference and **Business Partner not filtered by default by customer/vendor** as Reference Search Key 
+
+######  Adding it to the Menu
+
+Adding a process to the menu allows to open it from menu as a new tab.
+
+  * In **Menu** window create a new entry 
+  * Action: Process Definition 
+  * Process Definition: Example Parameter Process 
+
+######  Java Implementation
+
+In the case of a Process Definition action handler, extend from `BaseProcessActionHandler` and implement the `doExecute` method.
+
+    
+    
+```java
+/*
+  *************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SLU
+  * All portions are Copyright (C) 2013 Openbravo SLU
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************
+  */
+package org.openbravo.client.application.examples;
+ 
+import java.math.BigDecimal;
+import java.util.Map;
+ 
+import org.apache.log4j.Logger;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.application.process.BaseProcessActionHandler;
+import org.openbravo.dal.service.OBDal;
+import org.openbravo.erpCommon.utility.OBMessageUtils;
+import org.openbravo.model.common.order.Order;
+ 
+public class StandardProcessActionHandler extends BaseProcessActionHandler {
+  private static final Logger log = Logger.getLogger(StandardProcessActionHandler.class);
+ 
+  @Override
+  protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+    try {
+      JSONObject result = new JSONObject();
+ 
+      JSONObject request = new JSONObject(content);
+      JSONObject params = request.getJSONObject("_params");
+ 
+      // Do validations on param values
+      double min = params.getDouble("min");
+      double max = params.getDouble("max");
+ 
+      if (max < min) {
+        // In case validations are not satisfied, show an error message and allow user to fix
+        // parameters
+        result.put("retryExecution", true);
+ 
+        JSONObject msg = new JSONObject();
+        msg.put("severity", "error");
+        msg.put(
+            "text",
+            OBMessageUtils.getI18NMessage("OBEXAPP_MinGtMax", new String[] { Double.toString(min),
+                Double.toString(max) }));
+        result.put("message", msg);
+        return result;
+      }
+ 
+      // Execute process and prepare an array with actions to be executed after execution
+      JSONArray actions = new JSONArray();
+ 
+      // 1. Sum amounts of all orders and show a message in process view
+      JSONArray orders = params.getJSONArray("orders");
+      BigDecimal totalAmnt = BigDecimal.ZERO;
+      for (int i = 0; i < orders.length(); i++) {
+        String orderId = orders.getString(i);
+        Order order = OBDal.getInstance().get(Order.class, orderId);
+        totalAmnt = totalAmnt.add(order.getGrandTotalAmount());
+      }
+      JSONObject msgTotal = new JSONObject();
+      msgTotal.put("msgType", "info");
+      // XXX: these two messages should be translatable, like OBEXAPP_MinGtMax above
+      msgTotal.put("msgTitle", "Selected Orders");
+      msgTotal.put("msgText", "Total amount: " + totalAmnt.toString());
+ 
+      JSONObject msgTotalAction = new JSONObject();
+      msgTotalAction.put("showMsgInProcessView", msgTotal);
+ 
+      actions.put(msgTotalAction);
+ 
+      // 2. If business partner is not null, open it in BP window and show a message in new tab
+      if (!params.isNull("bp")) {
+        String bpId = params.getString("bp");
+        JSONObject recordInfo = new JSONObject();
+        recordInfo.put("tabId", "220");
+        recordInfo.put("recordId", bpId);
+        recordInfo.put("wait", true);
+ 
+        JSONObject openTabAction = new JSONObject();
+        openTabAction.put("openDirectTab", recordInfo);
+ 
+        actions.put(openTabAction);
+ 
+        JSONObject msgInBPTab = new JSONObject();
+        msgInBPTab.put("msgType", "success");
+        msgInBPTab.put("msgTitle", "Process execution");
+        msgInBPTab.put("msgText", "This record was opened from process execution");
+ 
+        JSONObject msgInBPTabAction = new JSONObject();
+        msgInBPTabAction.put("showMsgInView", msgInBPTab);
+ 
+        actions.put(msgInBPTabAction);
+      }
+ 
+      result.put("responseActions", actions);
+ 
+      return result;
+    } catch (JSONException e) {
+      log.error("Error in process", e);
+      return new JSONObject();
+    }
+  }
+}
+```
+
+#######  Response
+
+`ActionHandler` return a `JSONObject` with the actions to be performed after execution.
+
+########  Validations
+
+It is possible to do validations in the backend before executing the actual process, when these validations are not satisfied, a message can be shown in the UI to allow the user to fix the problematic values.
+
+When validations are not satisfied `retryExecution: true` property is included in the response. This allows the user to fix data and resubmit again.
+Additionally, a message can be added to show more information about the issue.
+
+The response would look similar to this:
+
+```json
+{
+  "retryExecution": true,
+  "message": {
+    "severity": "error",
+    "text": "Min value (80.0) cannot be greater than Max value (10.0)"
+  }
+}
+```
+
+########  Returning Several Actions
+
+After executing the process, it is possible to perform a series of actions.
+
+!!!info
+    For more information, see [Pick & Execute process extension](how-to-create-a-pick-and-execute-process.md). 
+
+The response should look like:
+
+```json
+{
+  "responseActions": [{
+    "showMsgInProcessView": {
+      "msgType": "info",
+      "msgTitle": "Selected Orders",
+      "msgText": "Total amount: 3020482.63"
+    }
+  }, {
+    "openDirectTab": {
+      "tabId": "220",
+      "recordId": "A6750F0D15334FB890C254369AC750A8",
+      "wait": true
+    }
+  }, {
+    "showMsgInView": {
+      "msgType": "success",
+      "msgTitle": "Process execution",
+      "msgText": "This record was opened from process execution"
+    }
+  }, {
+    "refreshGrid": {
+    }
+  }, {
+    "refreshGridParameter": {
+      "gridName": "gridParameterName"
+    }
+  }]
+}
+```
+
+  * `responseActions`. It is the name of the `JSONArray` that indicates a series of actions will be performed after execution. Each of the items in the array is one action, different kinds of actions can be executed. It is also possible to  extend through modules  the possible actions to be performed: 
+  * `showMsgInProcessView`. Shows a message in the same tab the process was invoked from. In case the process is opened from menu, this message will be seen in the window where the values for the parameters are provided; if the process is invoked from a button in a tab, the message will be shown in that tab. 
+  * `openDirectTab`. Opens a new tab. `tabId`, it is possible to indicate the record to open in that tab (`recordId`). The `wait: true` property indicates next action will not be started till this one finishes. Optionally, you can also include a criteria object to automatically add a removable filter to the open tab. A criteria is an object which describes a filter in a grid. 
+
+!!!info
+    For more information, visit [Smartclient](https://smartclient.com/smartgwt/javadoc/com/smartgwt/client/data/AdvancedCriteria.html){target="\_blank"}.
+
+  * `showMsgInView`. Shows a message in the recently opened tab. 
+  * `refreshGrid`. Refreshes the grid where the process button is defined. Grids are not automatically refreshed after invoking a standard process, only the selected record is refreshed. If the process adds or removes records from that grid, then it must add the `refreshGrid` to the list of response actions to see the updated data in the grid. 
+  * `refreshGridParameter`. Refreshes the **grid parameter** with name ` gridName ` present in the standard process parameter window. This kind of response is specially useful for those parameter windows which are not closed after the execution of the **action handler** (the parameters are visible after the process execution), for example those process definitions which are directly opened from the menu. 
+
+  
+The `getResponseBuilder()` method is available for classes extending `BaseProcessActionHandler`. This method returns a helper that can be used to build the result of the process with the desired standard response actions in an easy way. For example:
+    
+    
+```java
+@Override
+protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+  ...
+  ...
+  return getResponseBuilder()
+      .showMsgInProcessView(MessageType.INFO, "Message Title", "This is a sample message")
+      .openDirectTab("220", false).build();
+}
+```
+
+####  Testing the Process
+
+Now, it's needed to compile and deploy (because a new java class is added, note this is not needed in case of just editing/adding paramters).
+
+After compile and deploy, there will be a new entry in the menu: **Example Param Process**, this entry opens the parameter window where all defined parameters are shown and a **Done** button is presented to submit values set for them. When the process is executed:
+
+  * If `Max Qty` is greater the `Min Qty`, a message is shown and the process can be submited again. 
+  * A message in the parameter window is shown summing the amounts of all selected orders. 
+  * If a business partner is selected, it is opened in a new tab displaying a message on it. 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-2.png)
+
+####  Advanced Topics
+
+#####  Invoke the Process from a Tab
+
+Standard Process Definition processes can be opened as a tab from the menu or as a modal popup from a button in a tab. This second option can be achieved by adding an extra column to the table used in the tab. 
+
+!!!info
+    More details about this process visit [How to create a Pick and Execute Process](how-to-create-a-pick-and-execute-process.md). 
+
+#####  Read Only and Display Logic
+
+Parameters in Process Definition support display and read only logic. This allows to show or hide and to make editable or read only parameters based on values entered for other parameters.
+
+#####  Subordinated Combos
+  
+The data that can be selected within a combo (selector) can be restricted based on values other parameters take using **Validation Rules**. Logic of these validations is a HQL that is appended to its datasource. This is written in javascript being posible to use `OBBindings`, in the same way default value is written.
+
+#####  Parameter Grouping
+  
+It is possible to do groups of parameters in the UI, by using the **Field Group** property when defining the paramter.
+
+#####  Showing results in the process window itself
+
+It is possible to show the result of a process directly in the process window itself. This makes sense if the parameter section is small and you want to display directly.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-6.png)
+
+To accomplish this, the data/json object returned from the server handler should set this parameter `showResultsInProcessView` to true. It also makes sense to `retryExecution` parameter to true:
+
+```json
+{
+  "retryExecution": true,
+  "showResultsInProcessView": true
+}
+```
+
+The called `javascript` method gets an object with a `processView` property which refers back to the overall process view. From the process view you can get to the resultLayout to show the result. The resultLayout is a `SmartclientHLayout`.
+
+For example, a return action:
+
+```javascript
+OB.Utilities.Action.set('openSaikuReport', function(paramObj) {
+  var i, queries = paramObj.queries,
+      processView = paramObj._processView,
+      mainLayout = processView.resultLayout, reportView;
+ 
+  reportView = isc.OBANALY_ShowSaikuReport.create({
+    parameters: paramObj,
+    queries: queries
+  });
+  mainLayout.addMember(reportView);
+```
+
+#####  Placing a parameter in a particular column
+  
+The **Column Number** field of the Parameter tab allows specifying the column where the parameter should be placed. Grid parameters use always the four columns of the form, so this field does not apply to them.
+
+#####  Invoking a client side validation before calling the action handler
+
+The **Client Side Validation** field of the Process Definition tab allows defining a function that will be executed before the request to the action handler is done. This function can be used to do **client side validations**.
+
+This function must accept 3 parameters:
+
+  * the parameter window object. i.e., if you name this parameter **view**, then the form of the parameter window will be accessible via `view.theForm`. The value of a particular parameter can be retreived using `view.theForm.getItem(parameter_name).getValue() `
+  * a validation success callback. If the current values of the form passes the validation, this callback must be invoked
+  * a validation failure callback. If form values do not satisfy the validation, invoke this callback. 
+
+For instance:
+
+```javascript
+OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failureCallback) {
+  var minNumber, maxNumber;
+  minNumber = view.theForm.getItem('min_number').getValue();
+  maxNumber = view.theForm.getItem('max_number').getValue();
+  if (maxNumber >= minNumber) {
+    // only execute the callback if the form values pass the validation
+    actionHandlerCall();
+  } else {
+    failureCallback();
+  }
+```
+
+In addition, client side validation functions support a fourth parameter that contains additional information, like the pressed button:  
+
+```javascript
+OB.Utilities.TestClientSideValidation = function (view, actionHandlerCall, failureCallback, additionalInfo) {
+  if (additionalInfo.buttonValue === 'OK') {
+    // execute validations related to the 'OK' button
+  } else {
+    // do another validations
+  }
+```
+
+!!!info
+    To learn how to define new buttons in a standard process definition window, see [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons).
+
+
+Additional information can be added to the payload the process will receive. For example, this code would add a new parameter named `myParam`:
+
+```javascript
+view.externalParams = { myParam:'value' };
+```
+
+#####  Invoking a function when a non-grid parameter is changed
+
+The **On Change Function** field of the Parameter tab allows defining a function that will be executed when a non-grid parameter is updated, after the parameter loses its focus. This function can be used to do validations or to implement **client side callouts**, among other things.
+
+The function must accept four parameters:
+
+  * item: the item that has been modified 
+  * view: the parameter window object 
+  * form: the form that contains the item 
+
+#####  How to set the value of non-grid parameters programmatically
+
+It is possible to execute an **On Change Function** , besides when the parameter loses its focus, when setting the parameter value programmatically.
+
+When setting the value of a parameter from code, it is recommended to use the **setValueProgrammatically()** function. This way, if the parameter has an **OnChange Function**, it will be executed after setting the parameter value.
+
+```javascript
+var issotrx = form.getItem('issotrx');
+// Set the value for the item
+// If the 'issotrx' parameter has an 'On Change Function' it will be executed also
+issotrx.setValueProgrammatically('Y');
+```
+
+#####  Invoking a function when all the non-grid parameters have been initialized
+
+The **On Load Function** field of the Process Definition tab allows defining a function that will be executed once the parameters have been initialized.
+
+#####  Invoking a function when the process needs to be refreshed
+
+The **On Refresh Function** field of the Process Definition tab allows defining a function that will be executed when the parameter window refresh action be invoked.
+
+For example, if the process has a child-process, once the child-process finishes, it will invoke a refresh of the parent process.
+
+!!!note
+    Since each process has its particularities, a custom refresh function should be defined in case the process is susceptible of being refreshed/reloaded.
+
+The function must accept, at least, one parameter:
+
+  * view: the parameter window object 
+
+#####  Invoking when a grid parameter is loaded for the first time
+
+The initialization of the grid parameters is done asynchronously, so when the general **onLoadFunction** is invoked, it is not certain whether all the grid parameters have been loaded with their initial data. If you need to execute some code right after a grid is loaded for the first time, use the **On Grid Load Function** field. The function used here must accept one parameter, the grid itself.
+
+For example:
+
+```javascript
+OB.Utilities.TestOnGridLoad = function (grid) {
+  var nRecordsReceived = grid.getData().getLength(),
+      messageBar = grid.view.messageBar;
+  messageBar.setMessage('info', 'The grid has been loaded with ' + nRecordsReceived + ' records');
+    }
+```
+
+#####  Specifying the number of rows displayed in a grid parameter
+
+You can set the number of rows that should be shown at the first time in a grid parameter using the **Number of Displayed Rows** field. This field is used just for setting the height of the grid, if the grid has actually more rows than the Number of Displayed Rows, a scrollbar will be shown. The default value for this field is 5.
+
+!!!note
+    It is not possible to define the colspan of the grid parameters, because they always use the four available columns of the form.
+
+#####  Defining a display logic for the fields of a grid parameter
+
+The **Display Logic for Grid Column** field in the Field tab allows to define a display logic for the fields of grid parameters.
+
+For instance, suppose that you have defined a parameter window with two parameters:
+
+  * a boolean called Show Advanced Columns, column name `showAdvancedColumns` 
+  * a grid. 
+
+Let's suppose the grid has some fields that should be displayed only if the **Show Advanced Column** flag is checked. The Display Logic for Grid Column field of these fields should be set to:
+
+```
+@showAdvancedColumns@='Y'
+```
+
+#####  Specifying a default value for the filter of a parameter grid field
+
+The **Default Filter Expression** field of the Field tab allows to define a default value for the filter of a field. This default value can be a constant, dependent from another parameter or use `OBBindings`.
+
+#####  Hiding the parameter name of a grid parameter
+
+Although it is possible to define several grid parameters in a parameter window, it is likely that most of the times there will be at most one (for instance in pick and execute windows). In those cases, consider not showing the name of the grid parameter. Do this by unckecking the flag **Show Title** in the Parameter tab.
+
+#####  Adding new buttons
+
+By default, process definitions have a single **Done** button (and a **Cancel** one in case they are shown in a popup from a standard window). It is possible to change that button or to add new ones.
+
+To do it:
+
+  1. Create a new **Reference with Button List** as **Parent Reference**. In the **List Reference** add as many records as buttons to be displayed in the process. The name of these elements will be seen in the button's label whereas the **Search Key** is the value that will be sent to the **Handler** in the backend within the `buttonValue` field. 
+  2. Add a new parameter to the process with **Button List** as reference and the new reference just created as **Reference Search Key**. 
+  
+!!!note
+    There should be, at most, only one parameter of **Button List** type. 
+
+
+#####  Multi Record Process
+
+A standard process can be defined as multi record process to be able to execute it for more than one record.
+
+#####  Uploading files
+
+Process definitions can receive files as parameters. To do that, add a `Process File upload`  Reference as a process parameter. This parameter will show a file upload element in the process form where a single file can be uploaded.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition-20.png)
+
+By default, files uploaded using this component are limited to be 10MB at most. To override this configuration, set the Preference **MaximumProcess File Upload size (MB)** and change this value. File size validation will be performed both client-side and server-side.
+
+Once uploaded a file, file contents and additional data will be available as a parameter entry in the **doExecute(parameters, content)** function in the **Process Event Handler**. The entry corresponding to the file upload will contain a Map with the following information:
+
+```java
+Map<String, Object> params = (Map<String, Object>) parameters.get(paramName);
+ 
+String fileName = params.get(PARAM_FILE_NAME); // The file name
+InputStream content = params.get(PARAM_FILE_CONTENT); // The content of the file as an Stream
+Long size = params.get(PARAM_FILE_SIZE); // The file size in bytes
+```
+
+#####  Downloading files
+
+Process definition has the ability to generate and download a file.
+
+In this case of Process Definition, extend from `FileExportActionHandler` and implement the **generateFileToDownload** and **getDownloadFileName** methods.
+
+```java
+/**
+ * Action handler example to export a file from a process definition
+ */
+public class ExportFileExample extends FileExportActionHandler {
+  private static final String FILE_PREFIX = "Test";
+  private static final String FILE_EXTENSION = ".txt";
+ 
+  @Override
+  protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
+      throws IOException, JSONException {
+    String tmpFileName = UUID.randomUUID().toString() + FILE_EXTENSION;
+    File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
+    try (FileWriter outputfile = new FileWriter(file)) {
+      outputfile.write("Hello World!");
+    }
+    return file.toPath();
+  }
+ 
+  @Override
+  protected String getDownloadFileName(Map<String, Object> parameters, JSONObject data) {
+    return FILE_PREFIX + FILE_EXTENSION;
+  }
+}
+```
+
+!!!info
+    If the process definition is launched from a button in a standard window with a header and lines and it is not configured as multi-record, the generated file will be attached to the header by default.
+
+This behavior can be modified overriding the method uploadAttachment.
+
+```java
+@Override
+protected void uploadAttachment(Path originalFile, Map<String, Object> parameters,
+    JSONObject data) throws IOException, JSONException {
+}
+```
+
+!!!info
+    As an example:
+
+    ```java
+    protected Path generateFileToDownload(Map<String, Object> parameters, JSONObject data)
+        throws IOException, JSONException {
+      String tmpFileName = UUID.randomUUID().toString() + ".txt";
+      File file = new File(ReportingUtils.getTempFolder(), tmpFileName);
+      try (FileWriter outputfile = new FileWriter(file)) {
+        outputfile.write("Hello World!");
+      }
+      return file.toPath();
+    }
+    ```
+
+####  Limitations
+
+#####  References
+
+Currently, not all references available in **Standard windows** are available in **Process Definition**. The following ones cannot be used as parameters:
+
+  * Button: the mechanism to add new buttons is described in [Adding new buttons](how-to-create-a-standard-process-definition.md#adding-new-buttons). 
+  * Image 
+  * Masked String 
+  * Table 
+  * TableDir 
+  * Tree
+
+#####  UI Logic
+
+Callouts are not implemented for parameters.
+
+####  Migrating old Processes
+
+Process Definitions support several parameters. In order to implement this support, the way grid parameter value is sent to backend was changed and a new **Compatibility with Legacy Grids** flag was added.  
+
+To migrate grid legacy compatible processes to new format, set **Compatibility with Legacy Grids** to false and depending on the case:
+
+  * If the process **UI Pattern** is **Manual** , no other change is needed. 
+  * If the process has no parameter, no other change is needed. 
+  * If the process has a (grid) parameter, the `JSON` that `doExecute` method receives changes these are the required modifications: 
+
+```java title="Old Code"
+JSONObject gridInfo = new JSONObject(content);
+JSONArray gridSelection = gridInfo.getJSONArray("_selection");
+JSONArray gridAllRows = gridInfo.getJSONArray("_allRows");
+```
+
+```java title="New code" 
+JSONObject params = new JSONObject(content).getJSONObject("_params");
+// Replace here gridColumnName with the actual DB Column Name for your grid parameter
+JSONObject gridInfo = params.getJSONObject("gridColumnName");
+JSONArray gridSelection = gridInfo.getJSONArray("_selection");
+JSONArray gridAllRows = gridInfo.getJSONArray("_allRows");  
+```
+
+This work is a derivative of [How to Create a Standard Process Definition](http://wiki.openbravo.com/wiki/How_to_create_a_Standard_Process_Definition){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Table
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Table
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-table
+## Article Content: 
+### How to Create a Table
+
+#### How to create a new table
+
+More generic documentation about tables and their characteristics in Etendo can be found in the [Tables](https://docs.etendo.software/latest/concepts/Tables.md) page. That page explains common columns needed for all tables in Etendo, naming rules and more important info.
+
+First of all, the underlying database structures that will hold the data need to be created. In other words, using a database administration tool (e.g., [pgAdmin 4](https://www.pgadmin.org/){target="\_blank"} or [phpPgAdmin](https://github.com/phppgadmin/phppgadmin){target="\_blank"} for PostgreSQL and [Oracle SQL Developer](https://www.oracle.com/database/sqldeveloper/){target="\_blank"}) one needs to first `CREATE TABLE` that will be used to hold data of the new window/tabs.
+
+##### Objective
+
+Imagine we are developing an HR module and we need a window that will enable the user to input salaries of employees. We also need to track the employee's salary so history records need to be preserved. Each salary record needs to have a Valid From Date field that indicates when a particular salary came into being. The record belonging to a particular employee with the latest Valid From Date is the salary that is valid today. Note that employees are already inside the system contained in the `C_BPARTNER` database table and indicated by the `C_BPARTNER ISEMPLOYEE` column. Therefore, we only need to create a database table that will hold the actual salaries.
+
+##### Modularity
+
+All new developments must belong to a module that is not the _core_ module. Please follow the [How to create a module](How_To_Create_a_Module.md) section of the Modularity Developer's Manual to create a new module.
+
+Once you have registered the module, you need to decide on the database prefix that will indicate DB items that belong to this module. This is done by adding DB prefix(es) to the module That way, any database artefact(table, trigger, stored procedure) that belongs to that module will need to have the name prefixed with it. In our case, add the `HT` _DB prefix_.
+
+Finally, the data package needs to be entered in the _Data Package_ tab of the _Module_ window. Enter a new record there with HR Data as the _Name_ and _{modulePackage}.data_ (note that this package must be a subpackage of the one you entered on the level of module), for example com.etendoerp.howtos.data in case com.etendoerp.howtos is the package of the module.
+
+##### Create new tables in the database
+
+Let's introduce a new database table called `ht_salary` that will hold the required data. Notice the `HT` prefix of the table name indicating the module this table belongs to.
+
+The new `ht_salary` table must include the `AD_Client_ID`, `AD_Org_ID`, `IsActive`, `Created`, `CreatedBy`, `Updated` and `UpdatedBy` fields that are `mandatory` and required for security and auditory purposes of the application.
+
+| Column name     | Type   | Length | Note                                                                                                                                   |
+| --------------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `HT_SALARY_ID`  | CHAR   | 32     | The primary key of the table that must follow the table name followed by the \_ID.                                                     |
+| `AD_CLIENT_ID`  | CHAR   | 32     | Indicates which client (company) the record belongs to (multitenancy).                                                                 |
+| `AD_ORG_ID`     | CHAR   | 32     | Indicates which organization (city/department/location) within a client a record belongs to.                                           |
+| `ISACTIVE`      | CHAR   | 1      | This is intended for deactivating records that are not valid anymore but are referenced within the system and hence cannot be deleted. |
+| `CREATED`       | DATE   |        | Date/time of creation of a record.                                                                                                     |
+| `CREATEDBY`     | CHAR   | 32     | Foreign key to `AD_USER` indicating the user that created this record.                                                                 |
+| `UPDATED`       | DATE   |        | Date/time of last update of a record.                                                                                                  |
+| `UPDATEDBY`     | CHAR   | 32     | Foreign key to `AD_USER` indicating the user that last updated this record.                                                            |
+| `C_BPARTNER_ID` | CHAR   | 32     | Employee this salary belongs to.                                                                                                       |
+| `AMOUNT`        | NUMBER | 10     | The actual amount of the salary.                                                                                                       |
+| `C_CURRENCY_ID` | CHAR   | 32     | Foreign key to `C_CURRENCY` indicating the currency the amount is in.                                                                  |
+| `VALIDFROM`     | DATE   |        | Date that this salary is valid from.                                                                                                   |
+
+To create the above table within the database, use one of the following `CREATE TABLE` statements depending on the DB you are using:
+
+!!!note
+    All identifiers in the SQL must be written in lowercase. So they can be used later without quoting them.
+
+```sql title="SQL table creation script"
+CREATE TABLE ht_salary
+(
+  ht_salary_id  CHARACTER VARYING(32)		NOT NULL,
+  ad_client_id  CHARACTER VARYING(32)		NOT NULL,
+  ad_org_id     CHARACTER VARYING(32)		NOT NULL,
+  isactive      CHARACTER(1)                   NOT NULL        DEFAULT 'Y',
+  created       TIMESTAMP WITHOUT TIME ZONE 	NOT NULL 	DEFAULT now(),
+  createdby     CHARACTER VARYING(32)		NOT NULL,
+  updated       TIMESTAMP WITHOUT TIME ZONE 	NOT NULL 	DEFAULT now(),
+  updatedby     CHARACTER VARYING(32)         	NOT NULL,
+  c_bpartner_id CHARACTER VARYING(32)         	NOT NULL,
+  amount	 NUMERIC 	      	        NOT NULL,
+  c_currency_id VARCHAR(32)         	        NOT NULL,
+  validfrom     TIMESTAMP WITHOUT TIME ZONE    NOT NULL,
+    CONSTRAINT ht_salary_isactive_check CHECK (isactive = ANY (ARRAY['Y'::bpchar, 'N'::bpchar])),
+    CONSTRAINT ht_salary_key PRIMARY KEY (ht_salary_id),
+    CONSTRAINT ht_salary_ad_org FOREIGN KEY (AD_ORG_ID) REFERENCES AD_ORG (ad_org_id),
+    CONSTRAINT ht_salary_ad_client FOREIGN KEY (AD_CLIENT_ID) REFERENCES AD_CLIENT (ad_client_id),
+    CONSTRAINT ht_salary_c_bpartner FOREIGN KEY (C_BPARTNER_ID) REFERENCES C_BPARTNER (c_bpartner_id),
+    CONSTRAINT ht_salary_c_currency FOREIGN KEY (C_CURRENCY_ID) REFERENCES C_CURRENCY (c_currency_id)
+);
+```
+
+##### Registering the table within the Application Dictionary
+
+The following steps register the newly created table within the Etendo Classic Application Dictionary.
+
+For this purpose, first log into Etendo Classic using a username with access to `System Administrator` > `Role`. Navigate to `Application Dictionary`> `Tables and Columns` and create a new record as shown in the screenshot below:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-1.png)
+
+Main fields of this window are (for more information, see the `AD_Table` table description):
+
+- _Data Package_ specifies to which java data package within the module the table will belong when used within [DAL](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md) (Data Access Layer).
+- _Name_ Defines the name that Etendo Classic uses to recognize the defined database table. This name is used in [REST webservices](https://docs.etendo.software/latest/concepts/XML_REST_Web_Services.md) and in the [Data Access Layer](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md#entity-naming).
+- _Description_ Gives a small description of the table.
+- _Help/Comments_ Defines the text that is displayed in Help window.
+- _DB Table name_ Defines database table name as it was defined by the `CREATE TABLE` during its creation.
+- _Java Class Name_ This will be the actual Java class within the Data Package of the module through which you will be able to access this table when using DAL.
+- _Data Access Level_ determines what kind of data will the table contain due to the multitenancy functionality
+  - _System only_: Only system records can be inserted into this table (`AD_CLIENT_ID=0`, `AD_ORG_ID=0`), for example `AD_TABLE`.
+  - _System/Client_: System or client specific records can be inserted here (`AD_CLIENT_ID=anything`, `AD_ORG_ID=0`), for example `AD_ROLE`
+  - _Organization_: Only client and organization specific data can be inserted into this table (`AD_CLIENT_ID<>0`, `AD_ORG_ID<>0`), for example `C_INVOICE`
+  - _Client/Organization_: Only client specific data can be inserted here, however, it can belong to a specific organizations within that client or be shared among all (`AD_CLIENT_ID<>0`,`AD_ORG_ID=anything`), for example `C_BPARTNER`
+  - _All_: Any combination of `AD_CLIENT_ID` and `AD_ORG_ID` can be inserted into this table.
+
+Save this record then press the _Create columns from DB_ button to create columns within the Column tab automatically.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-2.png)
+
+Once the creation process has finished, you will be informed of the number of columns that have been added to this table.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-3.png)
+
+Switch to _Column_ tab to see all the columns (for more information, see the AD*Column table description) that were created according to their definition within the database. You can now additionally alter the properties of each column. Each column is assigned a reference (which defines the data type) depending on its name and its data type. Run \_Synchronize Terminology* process (`Application Dictionary` > `Synchronize Terminology`). Two tricky details before you run it:
+
+- Check you have defined dependencies from your module to core and any other needed module. Synchronize Terminology will link your columns to Elements in your module or in modules it depends on. If you don't declare the dependency to core, the system will create new elements for standard columns like IsActive, CreatedBy, etc.
+- Do not set the Elements linked to your columns, let the Synchronize terminology to do the job. This way, the process will find the appropiate elements and will set the proper column names for the standard columns (IsActive, CreatedBy, etc.).
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-4.png)
+
+This process tries to find an existing application element (within the currently developed module) and thus its label, help and description and if one is not found, a new one is created. This enables a centralized translation of the application/module.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table-5.png)
+
+Each table must have at least one column marked as an identifier. The actual values of identifier columns later get concatenated to be shown to the user as a representation of a particular record (see the link to the Sales Order within the Sales Invoice window). These identifiers will also be used to construct dropdown lists of records of that particular table. By default all columns with column name _Name_ are set as an identifier. In case there is no column with this _Name_ , no identifier is set and needs to be done so manually or compilation will fail.
+
+The name is used by the [Data Access Layer](https://docs.etendo.software/latest/concepts/Data_Access_Layer.md) and in [REST webservices](https://docs.etendo.software/latest/concepts/XML_REST_Web_Services.md). For specific columns (audit info, client/organization, active) it is important to be precise in the naming.
+
+!!!note
+    The columns that are named `line` or `seqNo` are used to contain the sequence number of a record (i.e. the number of a line in an invoice They take a default value like:
+
+    ```
+    @SQL=SELECT COALESCE(MAX(ColumnName),0)+10 AS DefaultValue FROM TableName
+    WHERE xxParentColumn=@xxParentColumn@
+    ```
+
+    The `WHERE` part of this clause needs to be replaced with the required values. The code that should appear here is the name of the column which links with the _id_ of the parent one For example, each record of the `C_InvoiceLine` belongs to a particular `C_Invoice` record and they are all sequenced. `C_Invoice` is the parent table for the lines saved in `C_InvoiceLine` . This table has a column named line and the default value that it takes is:
+
+    ```
+    @SQL=SELECT COALESCE(MAX(LINE),0)+10 AS DefaultValue FROM C_INVOICELINE
+    WHERE C_INVOICE_ID=@C_INVOICE_ID@
+    ```
+
+Most of the columns in our specific `HT_SALARY` case will be automatically detected correctly, however, some need revising:
+
+- _Amount_ : Reference = _Amount_ , Length = _10_
+- _C_BPartner_ID_ : Reference = _Search_ , Reference Search Key = _Business Partner_ , Length = _32_ , Link To Parent Column = _Y_
+- _Valid From_ : Identifier = _Y_
+- _Amount_ : Identifier = _Y_
+
+Etendo Classic now knows about the new HT_SALARY database table and how to treat it in terms of its definition and the representation to the user.
+
+##### Rebuilding the system
+
+Finally to make the newly added table available at runtime `./gradlew generate.entities` needs to called and the changes deployed to Tomcat. Those two steps can be done together by calling `./gradlew smartbuild` . After that, Tomcat must be restarted to refresh the DAL In-Memory Model, so it knows about the newly added columns.
+
+---
+
+This work is a derivative of [How to Create a Table](http://wiki.openbravo.com/wiki/How_to_create_a_Table){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create a Window
@@ -34655,6 +36299,354 @@ src/org/openbravo/erpCommon/ad_callouts/SE_Order_BPartner.java:      message.ap
 ```
 
 Now, we know it is used in a callout, so it is just necessary to find in the Application Dictionary the places where this callout is used, using the Linked Items feature mentioned before.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create Build Validations and Module Scripts
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Build Validations and Module Scripts
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts
+## Article Content: 
+###  How to Create Build Validations and Module Scripts
+
+####  Overview
+
+This section provides information about how to create both a **Build Validation** and a **Module Script**. They are both very similar concepts, and are also implemented in a very similar way.
+
+####  Build Validations
+
+A build validation in Etendo is a Java class which is **executed at the beginning** of the `update.database` task.
+
+The build validations main use is to **stop the build** because the instance is in such a state that rebuilding the system cannot be safely done. In modules, validations can be used to stop the build in case the module cannot be installed safely in the system for some reason.
+
+So, for example, a validation could be used to check if **the user has done a necessary manual setup step that cannot be automated**. Or a validation could also be used to **check if the user has filled some data which is needed for the module to be installed correctly**.
+
+Build validations are a different piece of code in Etendo, in that they are distributed as binaries (compiled classes), which are executed directly without them being compiled on the run. 
+
+!!!note
+      Build validations should not be a common case. Normally, they should only be needed when there was a mistake in a previous version of the module, or Core. The ultimate result for a validation is that, if it detects what it was meant to detect, the user will need to do manual actions to fix the problem, and this should be avoided if possible by all developers. 
+
+#####  Introduction to the implementation of build validations
+
+The main steps to create a build validation are:
+
+  1. Write it (Create a Java class for each validation you want to do). 
+  2. Compile it (Build Validations are compiled separately from the rest of the Etendo code, using a specific gradle compile task). 
+  3. Test it (Carefully test the validation before including it in your module, or in Core). 
+
+To create a build validation, first create a class which extends the `org.openbravo.buildvalidationBuildValidation class`. This is an abstract class which has one abstract method: `List<String> execute()`
+
+This method needs to be implemented. The class will be loaded at the beginning of the `update.database` task, and this method will be called. A **List of Strings** must be returned. If the list is empty, the build will continue. If the list contains at least one string, every string will be shown to the user, and the build will stop. Every string is supposed to be a meaningful error message, which shows the user what it needs to fix in his system for the validation to pass.
+
+#####  Writing the build validation
+
+As was just explained, a build validation is nothing more than a class which extends the `org.openbravo.buildvalidation.BuildValidation` class, and implements the **abstract execute method**. Let's see an example:
+
+```java title="ValidationExample.java"
+public class ValidationExample extends BuildValidation {
+ 
+  public List<String> execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      PreparedStatement ps = cp
+          .getPreparedStatement("SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL");
+      ps.execute();
+      ResultSet rs = ps.getResultSet();
+      rs.next();
+      ArrayList<String> errors = new ArrayList<String>();
+      if (rs.getInt(1) > 0) {
+        errors
+            .add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
+      }
+      return errors;
+    } catch (Exception e) {
+      return handleError(e);
+    }
+  }
+}
+```
+
+In this example, the main points of any build validation can be seen:
+
+  * The class implements the **BuildValidation** class, and its corresponding execute method. 
+  * In the **method**, the validation can be done (i.e. check if the Etendo instance complies with some specific rule). There is a convenient `getConnectionProvider()` method, provided by the abstract superclass, which allows doing direct queries to the database. It is important to remark that **validations should only do queries to the database, they should never change the contents of the database**. Module Scripts can be used to change the database if needed. 
+  * Finally, the method returns a **List of error Strings**, which can be empty if the validation went well, or can contain one or more errors if the system did not comply with the validation. 
+
+You can also use `SqlClass` if it is necessary to do the database operations.
+
+```java  title="ValidationExample2.java"
+public class ValidationExample2 extends BuildValidation {
+ 
+  public List<String> execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      ArrayList<String> errors = new ArrayList<String>();
+      int numBpartners=Integer.parseInt(ValidationExample2Data.queryBPartners(cp));
+      if (numBpartners > 0) {
+        errors.add("There are business partners which don't have a defined name. Please fill the name of every business partner before installing the module MyModule.");
+      }
+      return errors;
+    } catch (Exception e) {
+      return handleError(e);
+    }
+  }
+}
+```
+
+This needs the following `xsql` file:
+
+```xml title="ValidationExample2Data.xsql"
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<SqlClass name="ValidationExample2Data" package="org.openbravo.buildvalidation">
+  <SqlMethod name="queryBPartners" type="preparedStatement" return="string">
+      <SqlMethodComment></SqlMethodComment>
+      <Sql><![CDATA[
+          SELECT COUNT(*) FROM C_Bpartner WHERE name IS NULL
+          ]]>
+      </Sql>
+  </SqlMethod>
+</SqlClass>
+```
+
+!!!info
+      The class source files should be inside the module folder, in: `src-util/buildvalidation/src`. And they should follow the standard **Java package rules**. The folder will not exist if it is the first validation, so it will be needed to create it.
+
+
+#####  Compiling the build validation
+
+Build Validations should be compiled using, at most, the latest supported **JDK version**.
+  
+To compile the build validation, use the following command:
+
+```bash
+./gradlew compile.buildvalidation -Dmodule=javapackageofmodule
+```
+
+!!!info
+      In case of compiling the validations of **Etendo Core**, the module property needs to be set to `org.openbravo`. 
+
+This task will compile the Java classes, and copy them to the correct **build** folder in the module, or in the `src-util/buildvalidation` of Core.
+
+#####  Executing the build validation
+
+The build validations will be automatically executed in the `update.database` task, or in `update.database.mod` if the module is being applied. 
+
+!!!warning
+      Validations will not be compiled in this task, they need to have been compiled previously to be executed.
+
+
+Another important point to remark is that the build validations will be executed in every version of the module, or Core, in which they are present. The developer needs to take this into account (it is advisable not to design validations which are **version-dependant**, they should always be designed to be **generic**).
+
+!!!note
+      When adding a validation to Etendo Core, remember to **include the binary classes** contained in 
+      `src-util/buildvalidation/build/classes/` to the repository as any source files are added. If not, they will not be executed (because the classes are not compiled by default in the build process, they are executed only if the binary files are there).
+
+#####  Defining the build validation execution limits
+  
+The build validations provide by default a couple of mechanisms that allow to control when they should be executed:
+
+######  Build Validation version limits
+
+It is possible to define a dependency with two versions of a particular module to identify when the build validation should be executed:
+
+  * **First Execution Version**: defines the first version since the build validation should be executed. Before an upgrade, if the dependent module has a version lower or equal than this version, the build validation will **NOT** be executed. By setting this limit, it is being ensured that this version and previous ones do not require the build validation execution. 
+
+  * **Last Execution Version**: defines the last version of the dependent module for which the build validation should be executed. Before an upgrade, if the dependent module has a version higher or equal than this version, the build validation will **NOT** be executed. 
+
+This way, the build validation can be executed only when it is really needed, avoiding extra time calculations when updating database.
+
+The dependent module and its limit versions can be set by overriding the
+`getBuildValidationLimits()` method in our `BuildValidation` subclass:
+
+```java
+@Override
+protected ExecutionLimits getBuildValidationLimits() {
+  return new ExecutionLimits("0", new OpenbravoVersion(3, 0, 28207), new OpenbravoVersion(3, 0, 29495));
+}
+```
+
+Following this code example, we are setting that our build validation should only be executed when upgrading core module (id = "0") from a version between _3.0.28207_ (first execution version) and _3.0.29495_ (last execution version). This way, we are avoiding the execution of the build validation in those cases which it does not apply.
+
+######  Executing just once
+
+In case it is necessary to execute the build validation just once, this can be covered by setting just the **Last Execution Version** .
+
+For example, if adding a check in version _1.7.0_ of a module, we want to execute the build validation when upgrading from versions previous this version. So we can define its limits as follows:
+
+```java
+@Override
+protected ExecutionLimits getBuildValidationLimits() {
+  return new ExecutionLimits(ad_module_id, null, new OpenbravoVersion(1, 7, 0));
+}
+```
+
+Where `ad_module_id` is the **UUID** of the module.
+
+This way the build validation will be executed when upgrading the module from any version prior to _1.7.0_ and it will not be executed anymore.
+
+######  Execute on install
+
+It is also possible to configure whether the build validation should be executed when installing the dependent module defined with the `getBuildValidationLimits()` method. By default, the build validation will be executed when installing the dependent module.
+
+But in case we do not want to execute it, the `executeOnInstall()` method should be overridden as follows:
+
+```java
+@Override
+protected boolean executeOnInstall() {
+  return false;
+}
+```
+
+####  Module Scripts
+
+A **module script** is a task that is executed when a module is being applied in the **database**. This task is supposed to do operations that need to be done in the database, and cannot be done in a different way.
+
+Conceptually, they are extremely similar to **Build Validations**, and the main steps involved to create a **Module Script** are virtually the same, so it is advisable to read the previous section before this one. 
+
+The main points of module scripts are the following ones:
+
+  * Whereas build validations are executed at the beginning of update.database, module scripts are executed in the middle of the process, when the foreign keys and triggers of the database have been disabled. 
+  * As with build validations, module scripts will be executed every time an update.database or update.database.mod for that particular module is called. This means that **the script must be built in such a way that can be repeatedly executed without problems** , and this is a very important consideration that the developer needs to take into account. 
+  * The module script should never fail. If it fails, the build will be stopped, but as it has already been started, **the system will be in an inconsistent state** (for example, all the foreign keys and triggers will be down). The developer must avoid this at all costs if possible. 
+
+#####  Introduction to the implementation of module scripts
+
+As with build validations, a module script is a Java class which extends the abstract class `org.openbravo.modulescript.ModuleScript`, and implements the `execute()` method. This execute method will be called by the `update.database` task. This method will include the logic of the module script, here all the operations will be done.
+
+#####  Writing the module script
+
+Here goes a very simple **Module script**, which just sets the value of some column to a default in case the column value is null:
+
+```java title="ModuleScriptExample.java"
+public class ModuleScriptExample extends ModuleScript {
+ 
+  public void execute() {
+    try {
+      ConnectionProvider cp = getConnectionProvider();
+      PreparedStatement ps = cp
+          .getPreparedStatement("UPDATE mytable SET mycolumn=0 WHERE mycolumn IS NULL");
+      ps.executeUpdate();
+    } catch (Exception e) {
+      handleError(e);
+    }
+  }
+}
+```
+
+The main two important points to take into account when building the script are:
+
+  * The script should never fail. Failure will leave the user in a very unfriendly situation (with the build stopped in the middle), and **should be avoided at all costs**. In this case, this script will not fail unless the table does not exist. 
+  * The script needs to be designed so that it can be executed an **indefinite number of times**. This example script, for example, can be executed several times without problems (the first time will set all rows which have a null value, and after that, only the new rows which have been inserted before will be modified, but the previously modified rows will not be modified again unless they have the supposedly wrong null value again). 
+
+  
+!!!info
+      The class source files themselves should be inside the module folder, in the folder: `src-util/modulescript/src`. And they should follow the standard **Java package rules**. The folder will not exist if it is the first script, so it will be needed to create it.
+
+
+#####  Compiling the module script
+
+Module scripts should be compiled using, at most, the latest supported **JDK version**.
+
+To compile the module script, use the following command:
+
+```bash
+./gradlew compile.modulescript -Dmodule=<javapackage>
+```
+
+!!!info
+      In case of compiling the scripts of **Etendo Core**, the module property needs to be set to `org.openbravo`.
+
+This task will compile the Java classes, and copy them to the correct **build** folder in the module, or in the `src-util/modulescript` of Core.
+
+#####  Executing the module script
+
+The **module scripts** will be automatically executed in the `update.database` task, or in `update.database.mod` if the module is being applied. 
+
+!!!warning
+      Module scripts will not be compiled in this task, they need to have been compiled previously to be executed.
+
+Another important point to remark is that the module scripts work as **build validations** in regards to execution criteria; that is, they will be executed in every version of the module, or Core, in which they are present. The developer needs to take this into account (it is advisable not to design scripts which are **version-dependant**, they should always be designed to be **generic**).
+
+And, as it was explained above, scripts should also be designed to produce the same result if executed multiple times, because they will be executed every time the system is rebuilt, or the module is updated.
+
+!!!info
+      If you are adding a module script to Etendo Core, remember that you need to **include the binary classes** contained in `src-util/modulescript/build/classes/` to the repository as any source files are added. If not, they will not be executed (because the classes are not compiled by default in the build process, they are executed only if the binary files are there).
+
+#####  Defining the module script execution limits
+
+The module scripts provide by default a couple of mechanisms that allow to control when they should be executed:
+
+######  Module version limits
+
+It is possible to define a dependency with two versions of a particular module to identify when the module script should be executed:
+
+  * **First Execution Version**: defines the first version since the module script should be executed. Before an upgrade, if the dependent module has a version lower or equal than this version, the module script will **NOT** be executed. By setting this limit we are ensuring that this version and previous ones do not require the module script execution. 
+
+  * **Last Execution Version**: defines the last version of the dependent module for which the module script should be executed. Before an upgrade, if the dependent module has a version higher or equal than this version, the module script will **NOT** be executed. 
+
+This way, the module script can be executed only when it is really needed, avoiding extra time calculations when updating database.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
+
+The dependent module and its limit versions can be set by overriding the`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
+
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits("0", new OpenbravoVersion(3,0,27029), 
+      new OpenbravoVersion(3,0,27050));
+}
+```
+
+Following this code example, we are setting that our `modulescript` should only be executed when upgrading core module (id = "0") from a version between _3.0.27029_ (first execution version) and _3.0.27050_ (last execution version). This way, we are avoiding the execution of our `modulescript` in those cases which it does not apply.
+
+######  Executing just once
+
+One typical case of `modulescripts` usage, is to populate the values of a newly added column. So, it is necessary to execute the `modulescript` once. This can be covered by setting just the **Last Execution Version**.
+
+For example, if we add a new column in version _1.5.0_ of a module, we want to execute the `modulescript` when upgrading from versions previous this version. So, we can define its limits as follows:
+
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits(ad_module_id, null, 
+      new OpenbravoVersion(1,5,0));
+}
+ ```
+
+Where `ad_module_id` is the **UUID** of the module.
+
+This way the `modulescript` will be executed when upgrading the module from any version prior to _1.5.0_ and it will not be executed anymore.
+
+######  Execute on install
+
+It is also possible to configure whether the module script should be executed when installing the dependent module defined with the `getModuleScriptExecutionLimits()` method or during the `install` gradle task. By default, the module script will be executed in the following cases:
+
+  * When installing the dependent module 
+  * On `install` task 
+
+But in case we do not want to execute it in these cases, the `executeOnInstall()` method should be overridden as follows:
+
+```java
+@Override
+protected boolean executeOnInstall() {
+  return false;
+}
+```
+
+######  Executing just on `install`
+
+In case we want to configure a `modulescript` to be executed just on every `install`, we **do not** override the `executeOnInstall()` method and we define the execution limits as follows:
+
+```java
+@Override
+protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
+  return new ModuleScriptExecutionLimits(ad_module_id, null, 
+      new OpenbravoVersion(0,0,0));
+}
+```
+
+This work is a derivative of [How to Create Build Validations and Module Scripts](http://wiki.openbravo.com/wiki/How_to_create_build_validations_and_module_scripts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jobs and Actions
@@ -37876,13 +39868,14 @@ This documentation will guide you through the process of setting up and using we
 
 ##### Webhook Header Fields
 
-| Field           | Description                                                |
-|-----------------|------------------------------------------------------------|
-| Name            | Webhook name                                               |
-| Description     | Webhook description                                        |
-| Java Class      | Class in which the webhook service was created             |
-| Module          | Module in which the webhook will be created                |
-| Active          | Webhook status (Active by default)                         |
+| Field                        | Description                                                            |
+|------------------------------|------------------------------------------------------------------------|
+| Module                       | Module in which the webhook will be created                            |
+| Name                         | Webhook name                                                           |
+| Description                  | Webhook description                                                    |
+| Java Class                   | Class in which the webhook service was created                         |
+| Allow to give access to role | Check if it is allowed to give access to roles via secure web services |
+| Active                       | Webhook status (Active by default)                                     |
 
 ![Webhook Header](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
 
@@ -37902,12 +39895,18 @@ The access tab allows you to create access that will be used in the URL call.
 | Is required     | Whether the parameter is required or not                   |
 | Active          | Parameter status (Active by default)                       |
 
-###### Access
+###### User Access
+
+Allow execution via token.
 
 | Field           | Description                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------|
 | Active          | Access status (Active by default)                                                           |
 | Token           | Selector with the token that will be used in the URL call created on User API Token window  |
+
+###### Role Access
+
+If you need to allow authenticated users with SWS read the guide: [How to use secure web services](https://docs.etendo.software/latest/how-to-guides/how-to-use-secure-webservices.md). For this you have to add roles that are allowed to execute a webhook in the **Role access** tab.
 
 #### Webhook Usage Example
 
@@ -37933,17 +39932,17 @@ The access tab allows you to create access that will be used in the URL call.
         
 ![Webhook Params](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
         
+##### Role access
 
-##### API Key Generation
+###### API Key Generation
 
 1. To give execution permission to a user, go to: `Application → General Setup → Application → Webhook Events → User API Token`
 2. Create a new API with the Name: `<<user>> token`
+    ![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
 3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
-    
-![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
-    
+    ![Webhook Token](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookTokenString.png)
 
-##### Assigning Webhook Access to Users
+###### Assigning Webhook Access to Users
 
 1. Navigate to: `Application → General Setup → Application → Webhook Events → Webhooks`
 2. Select the created webhook and open the access tab.
@@ -37951,9 +39950,18 @@ The access tab allows you to create access that will be used in the URL call.
 
 ![Webhook Access](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
 
+##### Secure web servicess access
+
+###### Assign allowed roles
+
+In Webhooks window, add roles allowed to run the webhook.
+
+![Webhook Role](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookRole.png)
+
 ##### Executing the Webhook
 
 To execute the webhook, make a GET request using a REST client like Postman with the following syntax:
+
 
 ```
 URL=http://localhost:8080/
@@ -37961,16 +39969,29 @@ CONTEXT=etendo
 WEBHOOK_ENDPOINT=/webhooks/
 [VARS]
 WEBHOOK_NAME=name=alert
-APIKEY=8b1012f0d442406ed602d87c13edcee9
 DESCRIPTION=new alert description
 RULE=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
-Example URL:
+###### Example URL:
+
+*With token*
+
+APIKEY=8b1012f0d442406ed602d87c13edcee9
 
 ```
 http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
+
+*With sws token*
+
+```
+http://localhost:8080/etendo/webhooks/?name=Alert&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+Add as authorization Bearer Token, the JWT obtained via SWS login.
+
+###### Expected response
 
 !!! success
     This webhook creates an alert, and you can visualize it in the "Alert Management" window.
@@ -37981,7 +40002,6 @@ http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=n
       "created": "91FEABC1604E404CB565FC79435C4344"
     }
     ```
-
 
 ##### Example code usage
 
@@ -39985,8 +42005,13 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool
 ## Article Content: 
+### Optical Character Recognition (OCR) Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+
 #### Overview
-Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It is a tool that can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
 
 #### Functionality
 
@@ -39998,16 +42023,16 @@ Optical Character Recognition (OCR) Tool is a tool that recognizes text from ima
 
 3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
 
-4. You need to do a _update.database smartbuild_ to compile the environment of Etendo Classic.
+4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
 
     ``` bash title="Terminal"
     ./gradlew update.database smartbuild --info
     ``` 
 
-4. After that, you must configure the tool in a Copilot App, in order to do that, go to _Copilot App_ and pick the _OCR Tool_ option in the _Tool_ tab.
+4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
 
 5. Update you application:
-    - If its an OpenAI Assistant, click in the _Sync OpenAI Assistant_ button.
+    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
     - If its a Langchain App, restart copilot with the following commands:
     ``` bash title="Terminal"
     ./gradlew copilot.stop
@@ -40020,14 +42045,14 @@ Optical Character Recognition (OCR) Tool is a tool that recognizes text from ima
 
 !!! info 
     It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
-    The Tool in general returns the information in json format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
+    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
     
 ##### Requesting text recognition from an image/pdf
 
 After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
     
 1. Open Copilot button and open a chat with the OpenAI Assistant.
-2. Upload a image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
+2. Upload an image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
 3. The tool will recognize the text and return it in the chat.
 
 
@@ -40038,11 +42063,158 @@ We attach an image of an invoice
 and Copilot will return the recognized(and interpreted) text in the chat.
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
-##### Result chaining
-Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool a tool that writes the information in a database or sends it to a web service. 
-   
+
+##### Result Chaining
+
+Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: OpenAPI Interaction with Copilot
+## Article Path: /Developer Guide/Etendo Copilot/Tools/OpenAPI Interaction with Copilot
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool
+## Article Content: 
+### OpenAPI Interaction with Copilot
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
 
 
+#### Overview
+
+The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interfaces have done for lower-level programming, OAS removes the guesswork in calling the service. 
+
+!!!info
+    For more information, see the [OpenAPI Initiative](https://www.openapis.org/){:target="_blank"}.
+
+This specification can be useful for Copilot since it can be used as a guide to Copilot to interact with the services, without the need to know the implementation details and implementing specific code for each service is not be necessary.
+
+
+#### Tools
+
+- **Etendo API Tool**: This tool returns the OpenAPI Specification of the Etendo API, it can be used by Copilot to ask for the general information of the API (endpoints, and the descriptions of the endpoints) or the specific information of the endpoints(Parameters, responses, etc). The Etendo API Tool only returns the OpenAPI Specification of the Etendo API to insert purchase orders in Etendo.
+Roughly speaking, this tool reads and returns information from the Swagger (OpenAPI Spec), allowing the Assistant to request general information from the API, for example to know what endpoints it has and what each one does. It can also request specific information about an endpoint (such as the shape of its body). This allows the helper, in real time, to investigate the structure of the API. In addition, if the API changes, the simple fact that the Swagger is updated will ensure that the assistant adapts to those changes.
+
+    This Tool serves as an example and template, since a similar tool could be made to integrate it with another API, as long as it has an OpenAPI Specification. 
+
+- **API Call Tool**: This tool allows Copilot to make a call to an API endpoint. 
+This tool will be responsible for making the call to the API endpoint, and will return the response.
+
+#### Defined Assistant
+
+In the basic use case, a **Purchase Assistant** was implemented, in which an assistant is defined that knows the flow of how purchase orders are loaded. And it was provided with a Tool that allows reading the API specification (Etendo API Tool) and "understand" it. It was also given access to a Tool to make the API calls (APICallTool).
+
+##### Configuration
+
+ - In the module ```com.etendoerp.copilot.openapi.purchase``` there is a dataset with the basic configuration of the purchase assistant. It can be imported in the "Enterprise module management" window. 
+ - After importing the configuration, it is necessary to configure the OpenAI model for the assistant and Sync the assistant.
+ - Finally, give access to the role and configure the permissions in "Role" Window.
+!!! note
+    In the last paragraph of the prompt, the link "http://localhost:8080/etendo/?tabId=294&recordId={ORDER_HEADER_ID}" is a link for localhost, it is necessary to replace it with the real link of the Etendo system.
+
+##### Other Configurations
+
+- It is necessary to add the ```gradle.properties``` file with the following configuration:
+``` properties
+    ETENDO_HOST=http://localhost:8080/etendo
+```
+!!! warning
+    Replace http://localhost:8080/etendo with the real url of the Etendo system.
+
+
+#### Functionality
+
+The combination of the prompt with the functional concepts, the tool that allows to read and analyze the OpenAPI Spec to see the available endpoints and the tool to make the API calls, allows the defined assistant to load the purchase and its lines.
+
+#### How to integrate Copilot with other APIs
+
+The case of the purchase assistant is just an implementation to respond to a need. But, the usefulness of this is that, using the OpenAPI Spec reading tool as a base, the same dynamics can be replicated for a different API. For example, if we want to integrate Copilot with a [PetStore API](https://petstore.swagger.io/){:target="_blank"} that has an OpenAPI Spec file, we can create a tool that reads that file and provides the information to the assistant. This way, the assistant will be able to make calls to the PetStore API, without the need to know the implementation details of the API. What we should do is the following:
+
+- Create an app, describing in the app prompt the functionality we want the helper to perform. In this case, describing that we need the assistant to know how to look up the exchange rates for us.
+
+The important thing is that the prompt is clear and that the assistant has the necessary context to perform the task. For example, in the case of the petStore assistant, the prompt should be clear that the assistant should be able to search for pets, add pets, etc. The prompt could be something like this:
+    
+    ``` 
+        You are an assistant that can interact with the PetStore API. You can search for pets, add pets, etc. You have a PetStore API Tool that can read the OpenAPI Spec file of the PetStore API. You also have an API Call Tool that allows you to make calls to the PetStore API.
+        The recommended way to interact with the PetStore API is first to use the PetStore API Tool to read the OpenAPI Spec file and understand the available endpoints, without specifiying a specific endpoint(take a look at the general information of the API, like the endpoints and their descriptions). 
+        Then, the PetStore API Tool can be used to read the specific information of the endpoints, like parameters, responses, etc. 
+        Finally, the API Call Tool can be used to make the call to the API endpoint.
+    ```
+
+- Create a tool, using the example of the EtendoAPITool, that reads the OpenAPI Spec file, that can be remote or local. This tool should provide the API information. If it is an external API, it is recommended that it reads the remote file provided by the API, so that it is updated on the fly, if the API changes.
+
+For this example, we will create a PetStoreAPITool.py file in a tools folder of a module. You can see how to create a module in the [How to Create a Module](https://docs.etendo.software/latest/etendo-classic/how-to-guides/How_To_Create_a_Module.md) page.
+
+Here is a sample code to take as a base:
+
+``` Python
+import os
+import threading
+from typing import Dict, Final, Type, Optional
+
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.utilities import RequestsWrapper
+from langchain_core.tools import Tool
+from pydantic import BaseModel, Field
+
+from copilot.core import utils
+from copilot.core.tool_wrapper import ToolWrapper
+from copilot.core.utils import copilot_debug
+
+
+class PetStoreAPIToolInput(BaseModel):
+
+    endpoint: Optional[str] = Field(None,
+                                    description="The endpoint of the API we want to get the information. If not provided, returns the general information of the API, listing all the endpoints. With description of each endpoint,but without the parameters or responses. "
+                                                "It needs to include the Method and the Path of the endpoint. For example, if we want to get the information of the endpoint GET of the path /example, we need to provide the parameter endpoint with the value 'GET /example'. If the endpoint is provided, returns the information of that endpoint, with the parameters and responses."
+                                    )
+
+
+class PetStoreAPITool(ToolWrapper):
+    name = "PetStoreAPITool"
+    description = (''' This Tool, based on the OpenAPI specification, allows you to get information about the API,
+    such as the url of the server, the endpoints, the parameters of each endpoint, the responses of each endpoint, etc.
+    It has one optional parameter, endpoint, which indicates of what endpoint of the API we want to get the information. It needs
+    to include the Method and the Path of the endpoint. For example, if we want to get the information of the endpoint
+    GET of the path /example, we need to provide the parameter endpoint with the value "GET /example".
+    If not provided, returns the general information of the API, listing all the endpoints, with description of each endpoint,
+    but without the parameters or responses. If the endpoint is provided, returns the information of that endpoint, with the
+    parameters and responses.
+    ''')
+    args_schema: Type[BaseModel] = PetStoreAPIToolInput
+
+    def run(self, input_params, *args, **kwargs):
+        try:
+            api_spec_file_url = "https://petstore.swagger.io/v2/swagger.json"
+            url = "https://petstore.swagger.io/v2/"
+            endpoint = input_params.get('endpoint')
+
+            copilot_debug(f"PetStoreAPITool: endpoint: {endpoint}")
+            # read the file from the internet or from the local file
+            raw_api_spec = read_raw_api_spec(api_spec_file_url)
+
+            if endpoint is None or endpoint == "":
+                response = get_general_info(raw_api_spec) # read the information of the API, like the endpoints names and descriptions
+            else:
+                response = get_specific_info(raw_api_spec, endpoint) # read the information of the specific endpoint, like the parameters and responses
+
+            return response
+        except Exception as e:
+            response = {'error': str(e)}
+            return response
+```
+This is a simple example, but it can be expanded to filter the information, to provide more details, etc. In the previous code, the functions read_raw_api_spec, get_general_info and get_specific_info are not defined, but they should be implemented to read the OpenAPI Spec file and return the information requested. 
+
+- Sync the tool information in the "Copilot Tool" tab of Etendo Classic. Remember that is necessary to restart the Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks. Ensure that the tool is loaded by Copilot.
+![Sync tool info](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/openapi-how-to.png)
+
+- Configure the Tool created in the App, together with the APICallTool, which is a tool included in the module (```com.etendoerp.copilot.openai```) and is generic for any simple API.
+![Configure the Assistant](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/openapi-how-to-2.png)
+
+- Sync the assistant and try it out.
+
+This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: XML Translation Tool
@@ -40050,14 +42222,17 @@ Remember that the result of the tool can be used in other tools, for example, yo
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/xml-translation-tool
 ## Article Content: 
-#### Translation Tool: XMLTranslatorTool
+### Translation Tool: XMLTranslatorTool
+
 :octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
 
-Translates the content of an XML file from one language to another, as specified within the XML.  
+#### Overview
+
+This tool translates the content of an XML file from one language to another, as specified within the XML.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=E5JPpLafZG04-tJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-##### Functionality
+#### Functionality
 
 1. Add Copilot Translation Tool dependency in the Etendo Classic project, In `build.gradle`, add:
     ```groovy
@@ -40086,17 +42261,17 @@ Translates the content of an XML file from one language to another, as specified
 
     The tool will know that the language to be translated will be Spanish.
 
-4. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
+5. It goes through each of these XML files and translates what is in the source language to the target language, overwriting them for later use.
 
-##### How to use the XML translation tool shown in an example
+#### How to use the XML translation tool shown in an example
 
 First of all, we start from the module `com.etendoerp.bankingpool` originally in English and we can see the Financial Type Configuration window:
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-en.png)
 
-1. You must generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules/){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
+1. Generate the `com.etendoerp.bankingpool` translation module, you can see how to do it in [How to Create and Update Translation Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md){target="_blank"}. <br> Initially all its fields will be in the source language and then it will be translated by the translation tool.
   
-    After having created the translation module in the modules folder we will find `com.etendoerp.bankingpool.es_es`
+    After having created the translation module in the modules folder, we will find `com.etendoerp.bankingpool.es_es`
 
 2.  To execute translation tool, in a new terminal, run:
     ``` bash title="Terminal"
@@ -40105,7 +42280,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 3. In the folder ```modules/com.etendoerp.bankingpool.es_es``` you will find the automatic translations.
 
-4. To apply the translation compile the enviroment
+4. To apply the translation, compile the enviroment
     ``` bash title="Terminal"
     ./gradlew update.database smartbuild --info
     ```
@@ -40114,12 +42289,17 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
     ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: DB Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/DB Query Tool
+# Article Title: Database Query Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/db-query-tool
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
 ## Article Content: 
+### Database Query Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+
 #### Overview
+
 Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
 
 #### Functionality
@@ -40130,7 +42310,7 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
     implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
     ```
 
-2. In `gradle.properties` file you must add `OPENAI_MODEL` environment variables. 
+2. In `gradle.properties` file, you must add `OPENAI_MODEL` environment variables. 
 
     ```groovy title="gradle.properties"
     OPENAI_MODEL=gpt-4-1106-preview
@@ -40143,16 +42323,15 @@ Generate SQL queries and retrieve data with Etendo's contextual knowledge from n
 ``` bash title="Terminal"
 ./gradlew copilot.do -Pprompt="Query's description"
 ``` 
-Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the etendo classic database, but you can tell it in the prompt to access another database.
+Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the Etendo Classic database, but you can select another database in the prompt.
 
-
-5. The tool will execute an agent that will ask to the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
+5. The tool will execute an agent that will ask the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
 
 #### Examples
 
 !!! info 
-    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide sufficient information in the prompt.
-    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where copilot.start is running. You will be able to see the tables involved, the query formed and its execution if necessary. 
+    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide enough information in the prompt.
+    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where `copilot.start` is running. You will be able to see the tables involved, the query formed and its execution, if necessary. 
 
 
 ##### SQL query generation
@@ -40199,7 +42378,7 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 
 
 
-##### Natural language queries for data retrieval
+##### Natural Language Queries for Data Retrieval
 
 1. 
     ``` bash title="Terminal"    
@@ -40239,13 +42418,6 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
     🤖 The sum of the orders in the last month is $7,063.59.
     🤖 Glad to help you! 😃
     ```
-
-
-
-
-   
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
@@ -41782,7 +43954,7 @@ In essence, this integration is a significant stride in creating robust, scalabl
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started]](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
 
 #### Setup
 
@@ -42209,7 +44381,6 @@ New versions of Etendo can include:
 - new functionalities implemented according to the corresponding product roadmap,
 - fixes of the issues reported by Etendo partners, fixed by Etendo according to the corresponding Etendo partner’s services level agreement,
 - and extensions, modules which extend the functionality of Etendo.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Roadmap
@@ -42229,7 +44400,10 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | QAA |  | :white_check_mark: |
+| [24Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.5){target="_blank"} | 10/05/2024 | 24.1.5 | QAA |  | :white_check_mark: |
+| [24Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.4){target="_blank"} | 03/05/2024 | 24.1.4 | C | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso){target="_blank"} | :white_check_mark: |
+| [24Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.3){target="_blank"} | 19/04/2024 | 24.1.3 | C |  | :white_check_mark: |
+| [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | C |  | :white_check_mark: |
 | [24Q1.1](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.1){target="_blank"} | 05/04/2024 | 24.1.1 | C |  | :white_check_mark: |
 | [24Q1.0](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.0){target="_blank"} | 28/03/2024 | 24.1.0 | C | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso){target="_blank"} | :white_check_mark: |
 | [23Q4.5](https://github.com/etendosoftware/etendo_core/releases/tag/23.4.5){target="_blank"} | 22/03/2024 | 23.4.5 | CS |  | :white_check_mark: |
@@ -42347,7 +44521,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.14.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.14.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.14.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.14.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.13.1](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.1){target="_blank"} | 27/02/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
@@ -42447,7 +44622,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.14.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.0){target="_blank"} | 28/03/2024 | 23.1.4 | 24.1.x | CS | :white_check_mark: |
+| [1.14.1](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.1){target="_blank"} | 26/04/2024 | 23.1.4 | 24.1.x | CS | :white_check_mark: |
+| [1.14.0](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.14.0){target="_blank"} | 28/03/2024 | 23.1.4 | 24.1.x | C | :white_check_mark: |
 | [1.13.5](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.5){target="_blank"} | 15/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.4](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.4){target="_blank"} | 01/03/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.financial.extensions/releases/tag/1.13.3){target="_blank"} | 27/02/2024 | 23.1.4 | 23.4.x | C | :white_check_mark: |
@@ -42493,7 +44669,9 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
+| [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.3](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.3){target="_blank"} | 06/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
 | [1.9.2](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.2){target="_blank"} | 04/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -42541,7 +44719,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | :---: | :---: |
-| [1.4.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.0){target="_blank"} | 03/04/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.4.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.1){target="_blank"} | 10/05/2024 | 22.1.0 | 24.1.x | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.4.0){target="_blank"} | 03/04/2024 | 22.1.0 | 24.1.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.3.0){target="_blank"} | 29/12/2023 | 22.1.0 | 23.4.x | C | :white_check_mark: |
 | [1.2.1](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.1){target="_blank"} | 15/11/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions/releases/tag/1.2.0){target="_blank"} | 29/09/2023 | 22.1.0 | 23.3.x | C | :white_check_mark: |
@@ -42573,7 +44752,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | Compatibility With Platform Extensions | Status | GitHub |
 | --- | --- | --- | :----: | :----: |
-| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 28/02/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.4.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.4.0){target="_blank"} | 08/05/2024 | [1.1.3, latest] | CS | :white_check_mark: |
+| [1.3.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.3.0){target="_blank"} | 28/02/2024 | [1.1.3, latest] | C | :white_check_mark: |
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions.es_es/releases/tag/1.2.0){target="_blank"} | 16/01/2024 | [1.1.3, latest] | C | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -42654,6 +44834,51 @@ Article URL: https://etendo.software
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.etendobi.extensions.es_es/releases/tag/1.1.0){target="_blank"} | 19/01/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: ISO image
+## Article Path: /What's New/Release Notes/Etendo Classic/ISO image
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/iso
+## Article Content: 
+### ISO Image
+
+:material-tools: Installation Guide: [ISO Installation Guide](https://docs.etendo.software/latest/getting-started/installation.md#steps-to-install-the-iso-with-internet-connection)
+
+| Version | Publication Date | ISO Image |
+| --- | --- | --- |
+| [24.1.4](#2414) | 03/05/2024 | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso) |
+| [24.1.0](#2410) | 28/03/2024 | [24Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.0.iso) |
+| [23.4.0](#2340) | 28/12/2023 | [23Q4.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q4.0.iso) |
+| [23.3.0](#2330) | 29/09/2023 | [23Q3.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q3.0.iso) |
+| [23.2.0](#2320) | 27/06/2023 | [23Q2.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q2.0.iso) |
+| [23.1.0](#2310) | 31/03/2023 | [23Q1.0.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-23Q1.3.iso) |
+| [22.4.5](#2245) | 16/03/2023 | [22Q4.5.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-22Q4-5.iso) |
+
+#### 24.1.4
+New ISO with Etendo Classsic version 24.1.4
+##### Fixed
+ - [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1) Gradle loses execution permissions when doing an etendo-restore
+
+#### 24.1.0
+New ISO with Etendo Classsic version 24.1.0
+##### Changes
+ - Upgrade Tomcat version to 9.0.87
+
+#### 23.4.0
+New ISO with Etendo Classsic version 23.4.0
+
+#### 23.3.0
+New ISO with Etendo Classsic version 23.3.0
+
+#### 23.2.0
+New ISO with Etendo Classsic version 23.2.0
+
+#### 23.1.0
+New ISO with Etendo Classsic version 23.1.0
+
+#### 22.4.5 ✨
+First ISO version with Etendo Classsic version 23.4.0
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Known Issues
 ## Article Path: /What's New/Release Notes/Etendo Classic/Known Issues
 ## Article URL: 
@@ -42663,6 +44888,21 @@ Article URL: https://etendo.software
 This page displays the known issues reported by the support team.
 
 #### Know Issues
+
+??? success "EPL-1449 Solved"
+
+    ### [EPL-1449](https://github.com/etendosoftware/etendo_backups_script/issues/1){target="\_blank"} Gradle loses execution permissions when doing an etendo-restore.
+
+    #### Workaround
+
+    Apply the following change in the etendo-restore file to ensure that the gradlew file is excluded from the permission change with chmod:
+
+    ``` bash title="etendo-restore"
+    - find /opt/EtendoERP -type f -exec chmod 644 '{}' \+
+    + find /opt/EtendoERP -type f ! -name gradlew -exec chmod 644 '{}' \+
+    ```
+
+    This workaround is applicable if you have deployed Etendo from the ISO in versions prior to [24.1.4](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso). Starting from that version, the issue of permission changes on the gradlew file is no longer observed.
 
 ??? success "EE-758 Solved"
 
@@ -42707,13 +44947,37 @@ This page displays the known issues reported by the support team.
 ## Article Content: 
 #### Overview
 
-| Version | Publication Date | From Core | To Core| Status | GitHub|
+| Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.4.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.3.0){target="_blank"}  | 04/01/2024 | 23.2.0 | 23.4.x | C  | :white_check_mark:|
 | [1.2.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.2.0){target="_blank"}  | 29/09/2023 | 23.2.0 | 23.3.x | C   | :white_check_mark:|
 | [1.1.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.1.0){target="_blank"}  | 14/09/2023 | 23.2.0 | 23.2.8 | C  | :white_check_mark:|
 | [1.0.0](https://github.com/etendosoftware/com.etendoerp.classic.subapp.extensions/releases/tag/1.0.0){target="_blank"} | 11/09/2023 | 23.2.0 | 23.2.8 | C   | :white_check_mark:|
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Copilot Extensions
+## Article Path: /What's New/Release Notes/Etendo Copilot/Bundles/Etendo Copilot Extensions
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | From Core | To Core | Status | GitHub|
+| --- | --- | --- | --- | :---: | :---: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | CS   | :white_check_mark:|
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: Etendo Copilot Extensions ES
+## Article Path: /What's New/Release Notes/Etendo Copilot/Translation Bundles/Etendo Copilot Extensions ES
+## Article URL: 
+ https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/translation-bundles/release-notes
+## Article Content: 
+#### Overview
+
+| Version | Publication Date | Compatibility With Financial Extensions | Status | GitHub |
+| --- | --- | --- | :----: | :----: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions.es_es/releases/tag/1.0.0){target="_blank"} | 08/05/2024 | [1.0.0, latest] | CS | :white_check_mark: |
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Live Builds

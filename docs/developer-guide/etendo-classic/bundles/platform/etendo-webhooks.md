@@ -21,13 +21,14 @@ This documentation will guide you through the process of setting up and using we
 
 ### Webhook Header Fields
 
-| Field           | Description                                                |
-|-----------------|------------------------------------------------------------|
-| Name            | Webhook name                                               |
-| Description     | Webhook description                                        |
-| Java Class      | Class in which the webhook service was created             |
-| Module          | Module in which the webhook will be created                |
-| Active          | Webhook status (Active by default)                         |
+| Field                        | Description                                                            |
+|------------------------------|------------------------------------------------------------------------|
+| Module                       | Module in which the webhook will be created                            |
+| Name                         | Webhook name                                                           |
+| Description                  | Webhook description                                                    |
+| Java Class                   | Class in which the webhook service was created                         |
+| Allow to give access to role | Check if it is allowed to give access to roles via secure web services |
+| Active                       | Webhook status (Active by default)                                     |
 
 ![Webhook Header](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookHeader.png)
 
@@ -47,12 +48,18 @@ The access tab allows you to create access that will be used in the URL call.
 | Is required     | Whether the parameter is required or not                   |
 | Active          | Parameter status (Active by default)                       |
 
-#### Access
+#### User Access
+
+Allow execution via token.
 
 | Field           | Description                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------|
 | Active          | Access status (Active by default)                                                           |
 | Token           | Selector with the token that will be used in the URL call created on User API Token window  |
+
+#### Role Access
+
+If you need to allow authenticated users with SWS read the guide: [How to use secure web services](../../how-to-guides/how-to-use-secure-webservices.md). For this you have to add roles that are allowed to execute a webhook in the **Role access** tab.
 
 ## Webhook Usage Example
 
@@ -78,17 +85,17 @@ The access tab allows you to create access that will be used in the URL call.
         
 ![Webhook Params](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookParams.png)
         
+### Role access
 
-### API Key Generation
+#### API Key Generation
 
 1. To give execution permission to a user, go to: `Application → General Setup → Application → Webhook Events → User API Token`
 2. Create a new API with the Name: `<<user>> token`
+    ![Webhook Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
 3. After saving, run the “Get API Key” option, and save the resulting token (64-length random string) to your clipboard.
-    
-![Webhook Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookToken.png)
-    
+    ![Webhook Token](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookTokenString.png)
 
-### Assigning Webhook Access to Users
+#### Assigning Webhook Access to Users
 
 1. Navigate to: `Application → General Setup → Application → Webhook Events → Webhooks`
 2. Select the created webhook and open the access tab.
@@ -96,9 +103,18 @@ The access tab allows you to create access that will be used in the URL call.
 
 ![Webhook Access](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookAccess.png)
 
+### Secure web servicess access
+
+#### Assign allowed roles
+
+In Webhooks window, add roles allowed to run the webhook.
+
+![Webhook Role](../../../../assets/developer-guide/etendo-classic/bundles/platform/etendo-webhooks/WebhookRole.png)
+
 ### Executing the Webhook
 
 To execute the webhook, make a GET request using a REST client like Postman with the following syntax:
+
 
 ```
 URL=http://localhost:8080/
@@ -106,16 +122,29 @@ CONTEXT=etendo
 WEBHOOK_ENDPOINT=/webhooks/
 [VARS]
 WEBHOOK_NAME=name=alert
-APIKEY=8b1012f0d442406ed602d87c13edcee9
 DESCRIPTION=new alert description
 RULE=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
 
-Example URL:
+#### Example URL:
+
+*With token*
+
+APIKEY=8b1012f0d442406ed602d87c13edcee9
 
 ```
 http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
 ```
+
+*With sws token*
+
+```
+http://localhost:8080/etendo/webhooks/?name=Alert&description=new alert description&rule=649BBFA37BA74FA59AEBE7F28524B0C8
+```
+
+Add as authorization Bearer Token, the JWT obtained via SWS login.
+
+#### Expected response
 
 !!! success
     This webhook creates an alert, and you can visualize it in the "Alert Management" window.
@@ -126,7 +155,6 @@ http://localhost:8080/etendo/webhooks/?name=Alert&apikey=<api-key>&description=n
       "created": "91FEABC1604E404CB565FC79435C4344"
     }
     ```
-
 
 ### Example code usage
 

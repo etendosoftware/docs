@@ -229,8 +229,13 @@ nav:
       - User interface: user-guide/etendo-mobile/user-interface/user-interface.md
       - Bundles:
         - Etendo Classic Subapp Extensions: user-guide/etendo-mobile/bundles/etendo-classic-subapp-extensions/classic-subapp-extensions.md
-    - Etendo Copilot: 
+    - Etendo Copilot:
       - ✨Getting Started: user-guide/etendo-copilot/getting-started.md
+      - Setup: user-guide/etendo-copilot/setup.md
+      - Bundles:
+        - Copilot Extensions: 
+          - Overview: user-guide/etendo-copilot/bundles/overview.md
+          - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md  
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -258,7 +263,7 @@ nav:
 #        - Categories: developer-guide/etendo-classic/concepts/Categories.md
 #        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
-#        - Client Side Development and API: developer-guide/etendo-classic/concepts/Client_Side_Development_and_API.md
+#        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-aip.md
 #        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/Cluster_Development_Guidelines.md
 #        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
 #        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
@@ -274,13 +279,13 @@ nav:
 #        - Development Project Structure: developer-guide/etendo-classic/concepts/Development_Project_Structure.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
         - Element and Synchronize Terminology: developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology.md
-#        - Etendo Architecture: developer-guide/etendo-classic/concepts/Etendo_Architecture.md
+#        - Etendo Architecture: developer-guide/etendo-classic/concepts/etendo-architecture.md
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
 #        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
 #        - Format.xml: developer-guide/etendo-classic/concepts/Format_xml.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
 #        - Java Coding Conventions: developer-guide/etendo-classic/concepts/Java_Coding_Conventions.md
-#        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/JavaScript_Coding_Conventions.md
+#        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/javascript-coding-conventions.md
 #        - JSON REST Web Services: developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
 #        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md
@@ -316,7 +321,7 @@ nav:
         - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
 #        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
         - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column.md
-#        - How to add Columns to a Table: developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md
+        - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
 #        - How to automatically populate search keys: developer-guide/etendo-classic/how-to-guides/How_to_automatically_populate_search_keys.md
 #        - How to call a stored procedure from the DAL: developer-guide/etendo-classic/how-to-guides/How_to_call_a_stored_procedure_from_the_DAL.md
 #        - How To Call An Openbravo Webservice From Java: developer-guide/etendo-classic/how-to-guides/How_To_Call_An_Openbravo_Webservice_From_Java.md
@@ -336,6 +341,7 @@ nav:
 #        - How to Create a Custom Tree: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Custom_Tree.md
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
+        - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
 #        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
@@ -347,15 +353,15 @@ nav:
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
-#        - How to create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process.md
+#        - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
         - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
-#        - How to create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Standard_Process_Definition.md
+        - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
 #        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
 #        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md
-#        - How to create a Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Table.md
+        - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
 #        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
 #        - How to create a Trigger: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Trigger.md
@@ -366,7 +372,7 @@ nav:
 #        - How To Create An Import Process With Images: developer-guide/etendo-classic/how-to-guides/How_To_Create_An_Import_Process_With_Images.md
 #        - How to Create And Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
-#        - How to create build validations and module scripts: developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts.md
+        - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
 #        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/How_to_create_client_event_handler_actions.md
 #        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
@@ -451,8 +457,9 @@ nav:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Tools:
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
+        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
         - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
-        - DB Query Tool: developer-guide/etendo-copilot/available-tools/db-query-tool.md
+        - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
       - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
@@ -490,10 +497,16 @@ nav:
           - Financial Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/financial-extensions-es_es/release-notes.md
           - Procurement Extensions Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/procurement-extensions-es_es/release-notes.md
           - Etendo BI Bundle ES: whats-new/release-notes/etendo-classic/translation-bundles/etendobi-extensions-es_es/release-notes.md
+        - ISO image: whats-new/release-notes/etendo-classic/iso.md
         - Known Issues: whats-new/release-notes/etendo-classic/known-issues.md
       - Etendo Mobile:
         - Bundles:
           - Etendo Classic Subapp Extensions: whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md
+      - Etendo Copilot:
+        - Bundles:
+          - Etendo Copilot Extensions: whats-new/release-notes/etendo-copilot/bundles/release-notes.md
+        - Translation Bundles:
+          - Etendo Copilot Extensions ES: whats-new/release-notes/etendo-copilot/translation-bundles/release-notes.md
 
   - Live Builds: live-builds/overview.md
   - Help and Support:
