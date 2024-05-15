@@ -137,7 +137,7 @@ A new column is required to be associated to a button.
 
 In the case of a Pick and Execute action handler, extend from **BaseProcessActionHandler** and implement the **doExecute** method.
     
-```    
+```java title="PickExampleActionHandler.java"
 /*
   *************************************************************************
   * The contents of this file are subject to the Openbravo  Public  License
@@ -240,25 +240,25 @@ Define at Field level, a JavaScript validation function. In an editable field wh
   * If the function returns false, the cell will be marked with an error. 
   * In the JavaScript, define a validation function e.g. 
     
-    ```
-    OB.OBHT = {};
-     
-    OB.OBHT.validate = function (item, validator, value, record) {
-      // item has access to grid: item.grid
-      // from the grid you can get all selected records and edited values, e.g.
-      //   * item.grid.getSelection()
-      //   * item.grid.getEditedRecord()
-      // grid has access to view: grid.view
-      // view has access to parentWindow: view.parentWindow (the window running the process)
-      // parentWindow has access to currentView
-      // currentView has getContextInfo
-      // debugger;
-      if(window.console) {
-        console.log('validation function!', value);
-      }
-      return true;
-    };
-    ```
+```javascript
+OB.OBHT = {};
+ 
+OB.OBHT.validate = function (item, validator, value, record) {
+  // item has access to grid: item.grid
+  // from the grid you can get all selected records and edited values, e.g.
+  //   * item.grid.getSelection()
+  //   * item.grid.getEditedRecord()
+  // grid has access to view: grid.view
+  // view has access to parentWindow: view.parentWindow (the window running the process)
+  // parentWindow has access to currentView
+  // currentView has getContextInfo
+  // debugger;
+  if(window.console) {
+    console.log('validation function!', value);
+  }
+  return true;
+};
+```
 
 ###  Selection Function
 
@@ -268,14 +268,14 @@ A selection function can be defined at Tab level. This function will get called 
 
 And define a JavaScript function in your loaded static `.js` file:
 
-    ```
-    OB.OBHT.selectionChanged = function (grid, record, recordList) {
-      if (window.console) {
-        console.log('selection function!');
-        console.log(grid, record, recordList);
-      }
-    };
-    ```
+```javascript
+OB.OBHT.selectionChanged = function (grid, record, recordList) {
+  if (window.console) {
+    console.log('selection function!');
+    console.log(grid, record, recordList);
+  }
+};
+```
 
 If you want to change any value of the selected record, use the following instruction:
     
