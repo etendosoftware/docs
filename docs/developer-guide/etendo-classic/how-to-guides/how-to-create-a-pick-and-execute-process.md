@@ -7,7 +7,6 @@ tags:
   - Standard UI pattern
 ---
 #  How to Create a Pick and Execute Process
-
   
 ##  Overview
 
@@ -20,17 +19,15 @@ The implementation requires development experience.
 The following concept pages provide background information on action handlers and javascript
 development:
 
-  * [Action Handler](../../how-to-guides/example-page.md)
-  * [Client Side Development and API](../../concepts/client-side-development-and-api.md)
-  * [JavaScript Coding Conventions](../../concepts/javascript-coding-conventions.md)
-
+  * [Action Handler](../how-to-guides/how_to_create_client_event_handler_actions.md)
+  * [Client Side Development and API](../concepts/client-side-development-and-api.md)
+  * [JavaScript Coding Conventions](../concepts/javascript-coding-conventions.md)
 
 ##  Steps to implement the Process
 
 ###  Overview
 
-The P&E processes take advantage of the same foundation concepts in the Application Dictionary. The **Window, Tabs and Fields** will be used for defining the editable grid that will be shown, a new **Reference** for the parameter of the process; and then implementing an **action handler** that will
-get executed when the user hits the **Done** button.
+The P&E processes take advantage of the same foundation concepts in the Application Dictionary. The **Window, Tabs and Fields** will be used for defining the editable grid that will be shown, a new **Reference** for the parameter of the process; and then implementing an **action handler** that will get executed when the user hits the **Done** button.
 
 ###  Implementation
 
@@ -43,7 +40,6 @@ get executed when the user hits the **Done** button.
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-1.png)
 
   * Following the same concepts, a **Table** is required as data-source. 
-
 
     In case it is needed to mix information from several tables, there are different options:
 
@@ -93,8 +89,7 @@ There is a new window for processes: **Process Definition**
 #####  Parameters
 
 Window Reference is an implementation of a **rich parameter**.
- 
-  
+   
   * Move to Parameters tab 
   * Create a new record 
   * Fill the required fields. The name of the parameter will be the name shown in the title of the running process. 
@@ -112,14 +107,13 @@ A new column is required to be associated to a button.
 
 !!!info
       For more information, read [How to add a field to a Window Tab](../../etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md).  
- 
   
   * Create a new column in the `C_Order` table. `PostgreSQL` syntax: 
-
     
-    
+    ```    
     `ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1)`;
     `ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT 'N'::bpchar`;
+    ```
 
   * Go to: Tables and Columns 
   * Open the `C_Order` record 
@@ -141,77 +135,76 @@ A new column is required to be associated to a button.
 
 ####  Java Implementation
 
-
 In the case of a Pick and Execute action handler, extend from **BaseProcessActionHandler** and implement the **doExecute** method.
-
     
-    
-    /*
-     *************************************************************************
-     * The contents of this file are subject to the Openbravo  Public  License
-     * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
-     * Version 1.1  with a permitted attribution clause; you may not  use this
-     * file except in compliance with the License. You  may  obtain  a copy of
-     * the License at http://www.openbravo.com/legal/license.html
-     * Software distributed under the License  is  distributed  on  an "AS IS"
-     * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
-     * License for the specific  language  governing  rights  and  limitations
-     * under the License.
-     * The Original Code is Openbravo ERP.
-     * The Initial Developer of the Original Code is Openbravo SLU
-     * All portions are Copyright (C) 2011 Openbravo SLU
-     * All Rights Reserved.
-     * Contributor(s):  ______________________________________.
-     ************************************************************************
-     */
-    package org.openbravo.client.application.examples;
-     
-    import java.util.Map;
-     
-    import org.apache.log4j.Logger;
-    import org.codehaus.jettison.json.JSONArray;
-    import org.codehaus.jettison.json.JSONObject;
-    import org.openbravo.client.application.ApplicationConstants;
-    import org.openbravo.client.application.process.BaseProcessActionHandler;
-     
-    /**
-     * @author iperdomo
-     * 
-     */
-    public class PickExampleActionHandler extends BaseProcessActionHandler {
-     
-      private static final Logger log = Logger.getLogger(PickExampleActionHandler.class);
-     
-      @Override
-      protected JSONObject doExecute(Map<String, Object> parameters, String content) {
-        try {
-          JSONObject request = new JSONObject(content);
-     
-          log.info(">> parameters: " + parameters);
-          // log.info(">> content:" + content);
-     
-          // _selection contains the rows that the user selected.
-          JSONArray selection = new JSONArray(
-              request.getString(ApplicationConstants.SELECTION_PROPERTY));
-     
-          log.info(">> selected: " + selection);
-     
-          // _allRows contains all the rows available in the grid
-          JSONArray allRows = new JSONArray(request.getString(ApplicationConstants.ALL_ROWS_PARAM));
-     
-          log.info(">> allRows: " + allRows);
-     
-          // A Pick and Execute process can have several buttons (buttonList)
-          // You can know which button was clicked getting the value of _buttonValue
-          log.info(">> clicked button: " + request.getString(ApplicationConstants.BUTTON_VALUE));
-     
-          return request;
-        } catch (Exception e) {
-          log.error("Error processing request: " + e.getMessage(), e);
-        }
-        return new JSONObject();
-      }
+```    
+/*
+  *************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SLU
+  * All portions are Copyright (C) 2011 Openbravo SLU
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************
+  */
+package org.openbravo.client.application.examples;
+ 
+import java.util.Map;
+ 
+import org.apache.log4j.Logger;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.application.ApplicationConstants;
+import org.openbravo.client.application.process.BaseProcessActionHandler;
+ 
+/**
+  * @author iperdomo
+  * 
+  */
+public class PickExampleActionHandler extends BaseProcessActionHandler {
+ 
+  private static final Logger log = Logger.getLogger(PickExampleActionHandler.class);
+ 
+  @Override
+  protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+    try {
+      JSONObject request = new JSONObject(content);
+ 
+      log.info(">> parameters: " + parameters);
+      // log.info(">> content:" + content);
+ 
+      // _selection contains the rows that the user selected.
+      JSONArray selection = new JSONArray(
+          request.getString(ApplicationConstants.SELECTION_PROPERTY));
+ 
+      log.info(">> selected: " + selection);
+ 
+      // _allRows contains all the rows available in the grid
+      JSONArray allRows = new JSONArray(request.getString(ApplicationConstants.ALL_ROWS_PARAM));
+ 
+      log.info(">> allRows: " + allRows);
+ 
+      // A Pick and Execute process can have several buttons (buttonList)
+      // You can know which button was clicked getting the value of _buttonValue
+      log.info(">> clicked button: " + request.getString(ApplicationConstants.BUTTON_VALUE));
+ 
+      return request;
+    } catch (Exception e) {
+      log.error("Error processing request: " + e.getMessage(), e);
     }
+    return new JSONObject();
+  }
+}
+```    
 
 ##  Testing the Process
 
@@ -246,7 +239,6 @@ Define at Field level, a JavaScript validation function. In an editable field wh
   * The Component Provider needs to register a new global resource.
   * If the function returns false, the cell will be marked with an error. 
   * In the JavaScript, define a validation function e.g. 
-
     
     ```
     OB.OBHT = {};
@@ -268,7 +260,6 @@ Define at Field level, a JavaScript validation function. In an editable field wh
     };
     ```
 
-
 ###  Selection Function
 
 A selection function can be defined at Tab level. This function will get called when the user select/unselect a row.
@@ -277,13 +268,14 @@ A selection function can be defined at Tab level. This function will get called 
 
 And define a JavaScript function in your loaded static `.js` file:
 
-        
+    ```
     OB.OBHT.selectionChanged = function (grid, record, recordList) {
       if (window.console) {
         console.log('selection function!');
         console.log(grid, record, recordList);
       }
     };
+    ```
 
 If you want to change any value of the selected record, use the following instruction:
     
@@ -295,7 +287,5 @@ After the process is executed, a series of actions can be taken.
 
 !!!info
       For more information about several actions after execution, see [How to create a Standard Process Definition](../../how-to-guides/how-to-create-a-standard-process-definition.md).
-
-
 
 This work is a derivative of [How to create a Pick and Execute Process](http://wiki.openbravo.com/wiki/How_to_create_a_Pick_and_Execute_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
