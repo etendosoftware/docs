@@ -17,14 +17,9 @@ We're excited to guide you through the swift setup of Etendo Classic, enabling y
 Before you embark on this journey, it's important to ensure that you've met the necessary technical prerequisites for the Etendo installation process. <br> Additionally, take a moment to acquaint yourself with the intuitive navigation interface, which will prove invaluable as you navigate the software's features.
 To expedite and streamline your workflow, we've thoughtfully provided convenient shortcuts to make your work easier and faster.
 
-[:material-order-bool-ascending-variant: Requirements](https://docs.etendo.software/latest/getting-started/requirements){ .md-button .md-button--primary .md-button .md-button--primary--primary }
-[:material-tools: Install Etendo](https://docs.etendo.software/latest/getting-started/installation){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
-[:material-page-previous-outline: Navigating the Interface](https://docs.etendo.software/latest/getting-started/user-interface/workspace){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
-
-
-
-
-
+[:material-order-bool-ascending-variant: Requirements](https://docs.etendo.software/latest/getting-started/requirements.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
+[:material-tools: Install Etendo](https://docs.etendo.software/latest/getting-started/installation.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
+[:material-page-previous-outline: Navigating the Interface](https://docs.etendo.software/latest/getting-started/user-interface/workspace.md){ .md-button .md-button--primary .md-button .md-button--primary--primary } 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Requirements
@@ -97,7 +92,7 @@ This section explains how to install a new Etendo environment. It includes:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 #### Requirements 
-In this section, you can read the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements).
+In this section, you can read the [System Requirements](https://docs.etendo.software/latest/getting-started/requirements.md).
 
 #### PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
@@ -120,7 +115,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         cd /opt/EtendoERP
         ```
 
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
         ```groovy
         nexusUser=
@@ -205,7 +200,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
         
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
 
     10. Open your browser in `https://<Public server IP>/<Context Name>`
 
@@ -225,7 +220,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         ```groovy
         nexusUser=
         nexusPassword=
@@ -243,7 +238,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encod>
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "[<version>,<version>)"`. The following code is an example, you must modify your current file
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`. The following code is an example, you must modify your current file
         
         ``` groovy
         plugins {
@@ -312,7 +307,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
 
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 
@@ -359,6 +354,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
     7. After the installation is finished, the server will be ready for use.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Workspace
@@ -432,7 +428,7 @@ From the top navigation bar, the user can launch new documents via the Quick Men
 
 ##### Application
 
-Read more in the [Application areas](https://docs.etendo.software/latest/getting-started/user-interface/navigation/#application-areas) section.
+Read more in the [Application areas](navigation.md#application-areas) section.
 
 !!! info
     *The contents of the Application Menu depend on the user's role. For example, one user can have various roles and see different things with each one.*
@@ -786,7 +782,7 @@ In this section, we welcome you to a complete user guide to facilitate your expe
 
 ##### Are you ready to dive into the world of our software?
 
-Whether you're looking to master the basics or explore advanced features, our guides are designed to fit your needs. If you are a developer, we suggest you visit our section created especially for you: [Developer Guide](https://docs.etendo.software/latest/developer-guide/overview).
+Whether you're looking to master the basics or explore advanced features, our guides are designed to fit your needs. If you are a developer, we suggest you visit our section created especially for you: [Developer Guide](https://docs.etendo.software/latest/developer-guide/overview.md).
 
 ---
 
@@ -813,8 +809,6 @@ Whether you're looking to master the basics or explore advanced features, our gu
 <br>
 ##### In this section, you will find everything about our Copilot project. Currently you have information about Bastian, our artificial intelligence based chatbot that can answer you all about Etendo.
 </figure>
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨Getting Started
@@ -826,7 +820,7 @@ Whether you're looking to master the basics or explore advanced features, our gu
 #### Overview
 
 This section describes the steps that need to be performed first to configure Etendo.
-Etendo installations require at least a [Client](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client/) and an [Organization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization). Client and Organization are the two key concepts within the General Setup.
+Etendo installations require at least a [Client](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client.md) and an [Organization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#organization). Client and Organization are the two key concepts within the General Setup.
 
 In other words, it is not possible to issue an invoice or to post a journal entry to the ledger in Etendo if there is no Client and Organization properly created and configured.
 
@@ -835,26 +829,26 @@ The first steps to follow to configure Etendo are:
 ###### Installation of the Localization Bundle if available for the country
 
 !!!info
-    Read the [Install Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/) documentation to install the Localization bundle. 
+    Read the [Install Modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md) documentation to install the Localization bundle. 
 
 This can be considered the first basic step while setting Etendo instances as it is required to install first the localization bundle if any, in order to apply the accounting reference data or Chart of Accounts while creating either the Client or the Organization later on.
 
 A Localization Bundle can include at least:
 
 - the complete **translation** for the official language(s) in the country.
-The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at [profile](https://docs.etendo.software/latest/getting-started/user-interface/workspace#profile).
+The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at [profile](https://docs.etendo.software/latest/getting-started/user-interface/workspace.md#profile).
 
 - the **chart of accounts** that defines the accounting structure if any to comply with the approved local practice and laws.
 The Chart of Accounts is available for selection just while running either the Initial Client Setup or the Initial Organization Setup.
 
 - and the setup of the **taxes** which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup), and even in the Enterprise Module Management window.
+The setup of the taxes is also available for selection while running either the [Initial Client setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) or the [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup), and even in the Enterprise Module Management window.
 
 ###### Initial Client Setup
 
-A [Client](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client/) in Etendo is the top-most level of configuration and data within Etendo.
+A [Client](https://docs.etendo.software/latest/general-setup/client.md) in Etendo is the top-most level of configuration and data within Etendo.
 
-Above means that certain configurations such as users, customers, vendors and other [master data](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data) can be managed in a client and therefore be available across all the organizations within the client.
+Above means that certain configurations such as users, customers, vendors and other [master data](https://docs.etendo.software/latest/master-data-management/master-data.md) can be managed in a client and therefore be available across all the organizations within the client.
 
 !!! info
     Each client can host at least one or even more than one organization that can be used to model your enterprise.
@@ -877,7 +871,7 @@ Organizations can be structured in a hierarchical way within a Client providing 
 There are different types of Organizations which can either be independent legal entities or not.
 Legal entities can either require accounting or not and Not Legal Entities can either allow transactional data or not.
 
-The [Initial Organization setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) is the **process** which creates Organizations in Etendo.
+The [Initial Organization setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup) is the **process** which creates Organizations in Etendo.
 
 !!! info
     An Organization can be created once the Client it belongs to has been created.
@@ -894,7 +888,7 @@ This time the data, if applied to the Organization, will be available just for t
 ###### Users and Roles setup
 
 Etendo security can be split into Functional and Data security.
-**Functional** security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#user) and [roles](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#role):
+**Functional** security manage the access rights to Etendo entities such as Windows and Processes by properly setting up [users](https://docs.etendo.software/latest/general-setup/security.md#user) and [roles](https://docs.etendo.software/latest/general-setup/security.md#role):
 
 A **User** is an entity which can log into Etendo whenever it has a password and at least one role assigned.
 Each person accessing Etendo should have a different user assigned properly configured.
@@ -907,17 +901,17 @@ Etendo creates two users by default, the System user and the Admin user:
 - the **System** user is the owner of Etendo application data. It is not possible to log into Etendo as System user.
 - the **Admin** user is a **super** user which has access to any Etendo Client.
 
-The password assigned to this user is Etendo, however it can be changed if needed in the [user](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#user) window.
+The password assigned to this user is Etendo, however it can be changed if needed in the [user](https://docs.etendo.software/latest/general-setup/security.md#user) window.
 
 This user is assigned to the System Administrator Role, a role with no access restrictions.
-**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#role-access) at table level and the [role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#role):
+**Data security** is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the [Data Access Level](https://docs.etendo.software/latest/general-setup/security.md#role-access) at table level and the [role](https://docs.etendo.software/latest/general-setup/security.md#role):
 
 !!! info
     Data Access level defines the client and/or the organization each record is going to be visible from.
 
-Every [table](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#role-access) in Etendo has a Data Access Level column.
+Every [table](https://docs.etendo.software/latest/general-setup/security.md#role-access) in Etendo has a Data Access Level column.
 
-User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a [role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security#role), or even limit the access to a given entity.
+User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a [role](https://docs.etendo.software/latest/general-setup/security.md#role), or even limit the access to a given entity.
 
 ##### Basic Setup Diagram
 
@@ -931,9 +925,9 @@ This setup would fit in the case of a Client which has **one or more independent
 
 There is a close relationship between the general setup which allows the creation and configuration of an enterprise, and the accounting configuration area because to set a Legal with Accounting Organization as ready, it requires below accounting items to be properly created and configured first:
 
-1. a [Fiscal Calendar](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#fiscal-calendar)
+1. a [Fiscal Calendar](https://docs.etendo.software/latest/financial-management/accounting/setup.md#fiscal-calendar)
 
-2. and an organization's [General Ledger configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#general-ledger-configuration) which includes a dimension that is the [Account Tree](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree) or Chart of Accounts.
+2. and an organization's [General Ledger configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-ledger-configuration) which includes a dimension that is the [Account Tree](https://docs.etendo.software/latest/financial-management/accounting/setup.md#account-tree) or Chart of Accounts.
 
 !!! info
     The Fiscal Calendar, once manually created, can be available to all the organizations within the client if it is created for the (\* (asterisk)) organization.
@@ -958,7 +952,7 @@ By following this setup flow you should be able to have your own version of Eten
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache
 ## Article Content: 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ![](https://docs.etendo.software/latest/assets/drive/1QOK6qRnoFyXzZwsY4Cgwo22iBZ2CITgV.png)
 
@@ -966,7 +960,7 @@ In this window, the user, in general a developer, can delete the report cache da
 After clicking it, a success message will be shown indicating the completion of the process.
 
 !!! info
-    For more information, visit [Platform Extensions Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).
+    For more information, visit [Platform Extensions Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Attachments Configuration
@@ -974,13 +968,13 @@ After clicking it, a success message will be shown indicating the completion of 
 ## Article URL: 
  https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/attachments-configuration
 ## Article Content: 
-###### Introduction
+#### Overview
 
 Client configuration of the Attachment Method to be used. Each attachment method can include its own extra fields to complete the configuration of the attachment method. It is only possible to have one active configuration on each client.
 
 ###### Header
 
-Shows all configuration related to the attachment method used to save attachments. Each Attachment Method can include its own specific configuration fields like: server URL, user, password, language, etc.
+It shows all configuration related to the attachment method used to save attachments. Each Attachment Method can include its own specific configuration fields like: server URL, user, password, language, etc.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Application
@@ -1002,7 +996,7 @@ The main advantage of these new sequences is dynamic masking, which makes it pos
     The user can run this process only after a developer configures the sequence fields using transactional or non-transactional sequences.
 
 !!! info
-    For more information about this configuration, visit the technical documentation about [Sequences](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences).
+    For more information about this configuration, visit the technical documentation about [Sequences](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md).
 
 After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequence` window the user can see and edit the sequences generated.
 
@@ -1013,7 +1007,7 @@ After that, in the `Financial Management`>`Accounting`>`Setup`>`Document Sequenc
 #### Conversion Rate Download Rule
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This module automatically generates conversion ranks with a background process using Apilayer. It allows keeping currency conversions up to date.
 
@@ -1030,7 +1024,7 @@ Fields to note:
 #### Dynamic App
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target=_isblank}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 ##### Overview
 
@@ -1040,7 +1034,7 @@ In the Dynamic App window, located in General Setup/Application/Dynamic App, you
 When logging into Etendo Mobile, the subapplications are displayed according to these settings.
 
 !!! info
-    For more information visit the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started/) documentation.
+    For more information visit the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) documentation.
 
 ##### Header
 
@@ -1067,7 +1061,7 @@ Fields to note:
 - **Active**: To select if this application version is active or not.
 - **Is Development**: This check defines that this version is in development that can be deployed locally.
 
-Finally, configure this application in the [Role Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
+Finally, configure this application in the [Role Configuration](https://docs.etendo.software/latest/general-setup/security.md#dynamic-app).
 
 #### Currency
 
@@ -1418,7 +1412,7 @@ Finally, the **Save Preferences** button allows saving the changes.
 #### Number to Word Converter
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Platform Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 This module provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
@@ -2695,7 +2689,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 - Expiration Time (Autolock Password)
 
 !!! info
-    For more information, visit the [Etendo Advanced Security module User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).
+    For more information, visit the [Etendo Advanced Security module User Guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Process Scheduling
@@ -2830,7 +2824,7 @@ Process Request has been modified in order to be able to schedule a process grou
 
 The schedule of a process group will work exactly as the schedule of a single process. It is not possible to schedule a process group and a single process at the same time.
 
-More information in [Process Group](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](https://docs.etendo.software/latest/assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
@@ -2838,7 +2832,7 @@ More information in [Process Group](https://docs.etendo.software/latest/user-gui
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. 
 
-More information in [Process Monitor](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-monitor_1).
+More information in [Process Monitor](#process-monitor_1).
 
 ![](https://docs.etendo.software/latest/assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
@@ -2846,7 +2840,7 @@ More information in [Process Monitor](https://docs.etendo.software/latest/user-g
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. 
 
-More information in [Process Group](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](https://docs.etendo.software/latest/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
@@ -2886,7 +2880,7 @@ As shown in the image above, process monitor window provides the information bel
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
 
-More information in [Process Group](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
 ![](https://docs.etendo.software/latest/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
@@ -2958,10 +2952,8 @@ Prevent executions of single processes and group processes will co-exist. Which 
 
 ##### Process Group as Source Data
 
-!!! info
-    Only for developers
-
-Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
+!!! info "Only for developers"
+    Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
 
 ![](https://docs.etendo.software/latest/assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)
 ==ARTICLE_END==
@@ -2985,12 +2977,12 @@ Having a single repository of data avoids data duplication, provides a unique wa
 #### Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [Advanced Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/) in the Essentials Extensions Bundle Documentation.
+    For more information, visit [Advanced Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md) in the Essentials Extensions Bundle Documentation.
 
 #### Currency Converters
 
@@ -3056,7 +3048,7 @@ Finally, it is very important to remark that there could be other types of busin
 That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
 
 !!! info
-    To learn more about this workflow, visit [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+    To learn more about this workflow, visit [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account).
 
 ###### **Set New Currency**
 
@@ -3124,31 +3116,31 @@ As shown in the image above, there is a list of relevant data to be entered for 
 You could either select any data such as *Price List* from a previously created list of values, or create it *ad hoc* by navigating to the corresponding window, and then select it.
 
 - **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
-  To learn more, visit [Price List](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).  
+  To learn more, visit [Price List](https://docs.etendo.software/latest/master-data-management/pricing.md#price-list).  
   Price lists are defined in a given currency, which could be the same as customer currency or not.  
   In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process ***Set New Currency*** which can be run to change the currency of a business partner.
 - **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
   If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
-  To learn more, visit [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
-  To learn more, visit [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](https://docs.etendo.software/latest//master-data-management/business-partner-setup.md#payment-term).
 - **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
-  To learn more about *Financial Account*, visit [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more about *Financial Account*, visit [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
-  To learn more, visit [Generate Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices).
+  To learn more, visit [Generate Invoices](https://docs.etendo.software/latest/sales-management/transactions.md#generate-invoices).
   - **After Order Delivered** - the invoice could be automatically generated once all the goods of the sales order have been shipped
   - **After Delivery** - the goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
   - **Do not invoice** - no invoice will be generated automatically
   - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
   - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
     If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.  
-    To learn more, visit [Invoice Schedule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#invoice-schedule)
+    To learn more, visit [Invoice Schedule](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#invoice-schedule)
 - **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 - A customer can be defined as *Tax Exempt* whenever applicable, therefore only those Tax rates also defined as exempt apply.
 - **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
 - **SO BP Tax Category** - this field can be found under the *More Information* section.  
   You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Business Partner Tax Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category)
+  To learn more, visit [Business Partner Tax Category](https://docs.etendo.software/latest/financial-management/accounting/setup.md#business-partner-tax-category)
 - **On Hold** - this checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
   - **Sales Order:** Blocked
   - **Goods Shipment:** Blocked
@@ -3166,7 +3158,7 @@ Customer accounting tab allows the user to configure the ledger accounts to be u
 As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
 
 - the **Customer Receivables** transactions such as sales invoices posting.  
-To learn more, visit [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+To learn more, visit [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice).
 
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
@@ -3184,21 +3176,21 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 - **Purchase Price List** - the one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
   If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
-  To learn more, visit [Price List](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).
+  To learn more, visit [Price List](https://docs.etendo.software/latest/master-data-management/pricing.md#price-list).
 - **Payment method** - the one selected will be the one applied while creating and managing the payments made to that vendor.  
   If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
-  To learn more, visit [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing supplier invoices payment plans.  
-  To learn more, visit [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#payment-term).
 - **PO Maturity Date 1** - as indicated in the Payment Term the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
   - For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
 - **PO Maturity Date 2** - a second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
   - For example, the payment term is 30 days, the PO Maturity Date 1 the value is 10, the PO Maturity Date 2 is 20. The example given in PO Maturity Date 1 will remain the same. However, if the invoice date is the 11th of the month, the payment due date will be the 20th of next month: the 30 days of the payment terms are taken into account and since the 10th of the month is passed the second maturity date of the 20th is taken into account.
 - **PO Maturity Date 3** - a third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
 - **Financial account** - the one selected will be the one used while withdrawing and reconciling the payments made to a supplier.  
-  To learn more, visit [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more, visit [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Tax Category** - you can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Tax Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category).
+  To learn more, visit [Tax Category](https://docs.etendo.software/latest/financial-management/accounting/setup.md#tax-category).
 - **On Hold** - this checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can obviously be changed as required:
   - **Purchase Order:** Blocked
   - **Goods Receipt:** Not blocked
@@ -3282,7 +3274,7 @@ The *bank account* related data you can enter is:
 ###### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
@@ -3367,7 +3359,7 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ##### Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
@@ -3377,7 +3369,7 @@ With this functionality, the user can find the tab “Rappel Configurations” i
 To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
 
 !!! info
-    For more information, visit [Rappel Configurations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#rappel-configurations).
+    For more information, visit [Rappel Configurations](https://docs.etendo.software/latest/master-data-management/business-partner-setup.md#rappel-configurations).
 
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
@@ -3393,7 +3385,7 @@ When the rappel is created, a sales invoice is created automatically, as seen be
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
 
 !!! info
-    For more information, visit [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+    For more information, visit [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice).
 
 #### Business Partner Info
 
@@ -3477,7 +3469,7 @@ Additional key data to fill in are:
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
-  To learn more, visit [Process Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)
+  To learn more, visit [Process Plan](https://docs.etendo.software/latest/production-management/setup.md#process-plan)
 - **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
     To learn more, visit Attribute Set
@@ -3725,7 +3717,7 @@ Overall, this tab allows to:
 
 In the same way, either a *Standard* or an *Average* Costing Rule needs also to be defined for the Organization as the way to calculate the cost of the products' transactions within that organization.
 
-- **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an *Average* Costing Algorithm.
+- **review the average cost** calculated by the Costing Server when using an *Average* Costing Algorithm.
 
 Note that when using a *Standard* costing algorithm the cost of every product transaction is the *default standard cost* entered in this tab.  
 !!! info
@@ -3936,8 +3928,8 @@ Manufacturing tab is used for products that are planned by the manufacturing pla
 The information in this tab is mainly used by MRP to process the Manufacturing Plan and Purchasing Plan. The storage bin field is filled out for products in production to indicate the default storage bin the product will be stored in when coming out of production.
 
 - **Storage Bin**: default location in the warehouse of the product.
-- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planning-method) section.
-- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planner) section.
+- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](https://docs.etendo.software/latest/material-requirement-planning/setup.md#planning-method) section.
+- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](https://docs.etendo.software/latest/material-requirement-planning/setup.md#planner) section.
 - **Capacity**: production capacity per day for the product.
 - **Min. Quantity:** minimum quantity to be entered on a work requirement.
 - **Quantity Type**:
@@ -4100,8 +4092,6 @@ Fields to note:
 ###### **Modify Taxes Categories**
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Business Partner Setup
@@ -4484,7 +4474,7 @@ It creates a salary category.
 #### Rappel Configurations
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
@@ -4510,7 +4500,7 @@ Save the record and the document sequence for rappels is available.
 ![document_sequence_new.png](https://docs.etendo.software/latest/assets/legacy/document_sequence_new.png)
 
 !!! info
-    For more information, visit [Document Sequence](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-sequence)
+    For more information, visit [Document Sequence](https://docs.etendo.software/latest/financial-management/accounting/setup.md#document-sequence)
 
 ###### Document type
 
@@ -4538,7 +4528,7 @@ After saving it, it is necessary to select “rappel” in the field “Document
     For each organization, it is possible to configure only one "rappel" document type.
 
 !!! info
-    For more information, visit [Document Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type)
+    For more information, visit [Document Type](https://docs.etendo.software/latest/financial-management/accounting/setup.md#document-type)
 
 ##### Rappel Configurations
 
@@ -5474,7 +5464,7 @@ In this tab, different Ranges can be created based on the amount of the related 
 
 Procurement Management deals with all the activities related to the purchase of goods and services from external suppliers and the corresponding reporting.
 
-This application area of Etendo covers Requisition to Receipt and Invoicing parts of the [Procure To Pay business flow](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) and [Supplier Returns business flow](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#supplier-returns-business-flow).
+This application area of Etendo covers Requisition to Receipt and Invoicing parts of the [Procure To Pay business flow](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started.md#procure-to-pay-business-flow) and [Supplier Returns business flow](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started.md#supplier-returns-business-flow).
 
 For Payments Management of Procure To Pay, see Financial Management / Receivables & Payables application area.
 
@@ -5506,18 +5496,18 @@ Each product being purchased needs to have a price in the purchase price list in
 Same way, each product that is being purchased needs to be defined in a unit of measure (UOM), and in an alternative unit of measure (AUM) if required.
 
 !!!info
-    Please refer to [Product Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/product-setup/), [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) and [Pricing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing/) for more information.
+    Please refer to [Product Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) and [Pricing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing.md) for more information.
 
 The cost of an input transaction such as a "Goods Receipt" can be calculated by using the product's purchase price excluding taxes.
 
-Besides that, the cost of the products included in a Goods Receipt can be adjusted as a result of allocating different types of [Landed Costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type) in the receipt.
+Besides that, the cost of the products included in a Goods Receipt can be adjusted as a result of allocating different types of [Landed Costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type) in the receipt.
 
 The "Costing Server" process is the Etendo "Costing Engine" process that calculates and adjusts a product's transaction cost.
-This process requires that the legal entity/organization has a [costing rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#costing-rule) configured and applied to the products configured as "Stocked".
+This process requires that the legal entity/organization has a [costing rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#costing-rule) configured and applied to the products configured as "Stocked".
 Business Partners need to be configured prior to any purchase requisition can automatically turn into a purchase order.
 
 !!!info
-    For more information, visit [Business Partner Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/) and [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner).
+    For more information, visit [Business Partner Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
 
 Above configuration is part of the overall Business setup flow within the "Master Data Management" setup.
 
@@ -5531,59 +5521,59 @@ In Procurement Management, the Procure to Pay business process is executed as fo
 
 Any member of the organization allowed to do so can directly issue a Requisition as a result of an organization or business unit need.
 
-- The requestor creates a new document in the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) window, enters a "Need by date" and then looks for the product or service needed.
-If the product does not exist it can be entered at that time in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) window.
+- The requestor creates a new document in the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) window, enters a "Need by date" and then looks for the product or service needed.
+If the product does not exist it can be entered at that time in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) window.
 - The requestor continues by adding for each product needed a new line with the need by date, the product, the quantity, the price if known and if needed its attribute (size and/or color, etc).
 A preferred supplier can also be added if known.
 - Once done, the requisition is saved in "Draft" status allowing it could be changed later on by the user if needed.
 
 Requisitions notify the purchase staff of products to order, their quantity and the time frame for its delivery. Purchase staff is then in charge of managing already created purchase requisitions or even creating new ones, if required.
 
-- Purchase staff manages requisitions in the [Manage Requisitions](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#manage-requisitions) window.
-- Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) window.
+- Purchase staff manages requisitions in the [Manage Requisitions](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#manage-requisitions) window.
+- Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) window.
 - Purchase staff can also enter the purchase net unit price and discounts if any, once known.
 - Once the requisition is ready, it is completed. The Document Status of the requisition changes to Completed and can then turn into a purchase order.
 
 Purchase staff:
 
-- can massively create Purchase Order/s for the Completed Requisitions in the [Requisition to Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition-to-order) window by searching and then adding requisition lines not linked to an order yet.
+- can massively create Purchase Order/s for the Completed Requisitions in the [Requisition to Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition-to-order) window by searching and then adding requisition lines not linked to an order yet.
 The purchase order/s created that way are shown in the Purchase Order window in Booked status.
-- and can also directly create Purchase Orders in the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.
-- To review past and present purchases of the supplier, purchase staff uses the [Purchase Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#purchase-dimensional-report).
+- and can also directly create Purchase Orders in the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.
+- To review past and present purchases of the supplier, purchase staff uses the [Purchase Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report).
 
 Warehouse staff:
 
 - Receives the merchandise as well as the delivery notes attached in 2 ways:
-    - With the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
+    - With the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
     This window also allows creating a receipt in a manual way.
-    - With the [Pending Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#pending-goods-receipts) window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.
+    - With the [Pending Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts) window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.
 - Allocates landed cost, if any, to the products included in a receipt by:
     - selecting a landed cost type and entering an "estimated" landed cost amount which will be distributed among receipt lines
     - or by selecting a landed cost type and entering a landed cost amount already invoiced which will also be distributed among receipt lines.
 - Completes the receipts.
-    - Completed receipts updates stock information (product levels increase) and can be [posted](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) to the ledger therefore product assets accounting is being increased.
-    - A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the [Costing Background process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process) needs to be run.
-- [Matched Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#matched-invoices) window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.
-- [Goods Receipts Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#goods-receipts-dimensional-report) is used to review past receipts of the Business Partner.
+    - Completed receipts updates stock information (product levels increase) and can be [posted](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) to the ledger therefore product assets accounting is being increased.
+    - A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the [Costing Background process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#costing-background-process) needs to be run.
+- [Matched Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#matched-invoices) window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.
+- [Goods Receipts Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report) is used to review past receipts of the Business Partner.
 
 Finance staff:
 
 - Registers supplier invoices in different ways:
-    - With the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) window, Finance staff can generate an invoice from a Receipt in status Complete.
-    - With the [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice) window, Finance staff can enter supplier invoices:
+    - With the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) window, Finance staff can generate an invoice from a Receipt in status Complete.
+    - With the [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) window, Finance staff can enter supplier invoices:
         - in a manual way
         - or by retrieving purchase orders or receipts lines pending to be invoiced
         - or by copying invoice lines from existing purchase invoices.
-- Registers landed cost invoices and match those ["invoiced" landed costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4) with the landed costs:
-    - booked directly in a [receipt(s)](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#landed-cost).
-    - or booked through a [landed cost document](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#landed-cost_1).
-- [Processes](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#process-matching) and [Posts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#post-matching) landed cost matching.
+- Registers landed cost invoices and match those ["invoiced" landed costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_4) with the landed costs:
+    - booked directly in a [receipt(s)](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost).
+    - or booked through a [landed cost document](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#landed-cost_1).
+- [Processes](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#process-matching) and [Posts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#post-matching) landed cost matching.
 - Once a Purchase Invoice is Processed, a Payment Plan of the invoice is created based on the payment terms agreed with the supplier and the purchase invoice can be posted to create the accounting entries of the invoice. Afterwards, the payment plan can be modified.
 
 Additionally:
 
-- The [Matched Purchase Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#matched-purchase-orders) view helps Finance staff to have a look at the order or receipt lines which have not been invoiced yet by a supplier.
-- Finance staff is able to review past supplier invoicing information in the [Purchase Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#purchase-invoice-dimensional-report).
+- The [Matched Purchase Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#matched-purchase-orders) view helps Finance staff to have a look at the order or receipt lines which have not been invoiced yet by a supplier.
+- Finance staff is able to review past supplier invoicing information in the [Purchase Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report).
 
 Purchase expenses can be recognized in different ways:
 
@@ -5591,15 +5581,15 @@ Purchase expenses can be recognized in different ways:
 In Etendo, in this situation, the expense is generated as part of the accounting of the purchase invoice corresponding to the transaction.
 - Under some circumstances, however, it is required to defer the expense recognition. For instance, a company purchasing a business insurance for the duration of a year would want
 to distribute that expense over 12 months.
-In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4).
+In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the [purchase invoice lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_4).
 
 !!!info
-    For a full description of this functionality, please visit the [How to manage deferred revenue and expenses](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses) section.
+    For a full description of this functionality, please visit the [How to manage deferred revenue and expenses](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md) section.
 
 Finally, the finance staff is in charge of making and managing the supplier payments:
 
 - Supplier payments can be made in the Purchase Invoice window by using the Add Payment button. It is also possible to make a prepayment against a Purchase Order.
-Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the [How to manage prepaid invoices in payables](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables) section.
+Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the [How to manage prepaid invoices in payables](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables.md) section.
 
 #### Supplier Returns Business Flow
 
@@ -5612,7 +5602,7 @@ This workflow manages the return of purchased goods back to the supplier. Due to
 ![supplier-returns](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png)
 
 ##### Configuration
-The [Return reasons](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#return-reasons) window is the only one that requires configuration before performing this process.
+The [Return reasons](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) window is the only one that requires configuration before performing this process.
 
 ##### Execution
 
@@ -5620,37 +5610,37 @@ In Procurement Management, the *Return to Vendor business flow* is executed as f
 
 Procurement staff:
 
-- Creates a new document in the [Return to Vendor](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#return-to-vendor-rtv) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_5)
+- Creates a new document in the [Return to Vendor](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-rtv) window and looks for the vendor name in the Business Partner field.
+- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_5)
     - It is possible to pick goods receipt lines and edit the quantity you want to return and the price
 - Once the Return Material document is accepted by the Vendor, you can process it by clicking the Book button. The status of the document changes from Draft to Booked.
 - Only Booked documents can be shipped to the vendor
 
 Warehouse staff:
 
-- Creates a new document in the [Return to Vendor Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#return-to-vendor-shipment) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_6) button
+- Creates a new document in the [Return to Vendor Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#return-to-vendor-shipment) window and looks for the vendor name in the Business Partner field.
+- And continues by adding lines clicking the [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_6) button
     - Return to Vendor lines are picked
     - It is possible to edit the quantity to be shipped
 - Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed
 - Completed shipment updates stock information (product levels decrease)
 
-Finance staff: To invoice these documents, go to the [Purchase invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice) window. All scenarios are covered:
+Finance staff: To invoice these documents, go to the [Purchase invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) window. All scenarios are covered:
 
 - If the vendor sends an invoice just for that specific document, you need to select a Reverse purchase invoice document type and then select the lines through the *Create lines from* button
 - If the vendor sends an invoice with the original purchase order plus the return materials order, you need to select a Purchase invoice document type and then select the lines through the *Create lines from* button
 - If the vendor does not send an invoice for the return materials order but wants to keep it as credit so you can use it later, you have to:
     - Create a *Reverse purchase invoice* for these returned materials
-    - Leave it as credit to be used later through the [Payment out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) window
+    - Leave it as credit to be used later through the [Payment out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out) window
     - A new purchase invoice based on the original purchase order can consume that credit
 
 #### Relationship with other application areas
 
 Procurement Management has a relationship with other application areas: 
 
-- [Warehouse Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/) as Goods Receipts changes items quantity on hand and its value.
-- [Financial Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/) in terms of managing account payable payments.
-- [MRP Management]() as purchase planning allows the creation of purchase orders based on material needs.
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md) as Goods Receipts changes items quantity on hand and its value.
+- [Financial Management](https://docs.etendo.software/latest/financial-management/getting-started.md) in terms of managing account payable payments.
+- [MRP Management](https://docs.etendo.software/latest/material-requirement-planning/getting-started.md) as purchase planning allows the creation of purchase orders based on material needs.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -5830,7 +5820,7 @@ The **Purchase order header** allows you to enter the following information:
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
-    To learn how to enter purchase order lines, visit the next section [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_2).
+    To learn how to enter purchase order lines, visit the next section [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_2).
 
 It is possible to take up to **three possible actions regarding a purchase order**, by using the **header button "Book"**:
 
@@ -5846,7 +5836,7 @@ It is possible to take up to **three possible actions regarding a purchase order
 ###### Remittance
 
 !!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
  
 The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
 
@@ -5934,7 +5924,7 @@ Displays the details of the payments (pre-payments or regular payments) made for
 ##### How to Reactivate a Closed Purchase Order
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.
 
@@ -5950,7 +5940,7 @@ Once the process is finished, the purchase order status turns to booked.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to remove payments associated with a purchase order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Purchase Invoice window > Payment Plan tab).
 
@@ -5968,10 +5958,10 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 #### Goods Receipts
 
@@ -5996,7 +5986,7 @@ The fields to fill in the **Goods Receipt header** are:
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
 !!! info
-    To learn how to enter goods receipt lines, visit the next section [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_3)
+    To learn how to enter goods receipt lines, visit the next section [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_3)
 
 If a **Goods Receipt** is completed and therefore **booked**:
 
@@ -6016,7 +6006,7 @@ Supplier can send a "Purchase Invoice" together with the "Delivery Note" of the 
 This action implies a **link between the goods receipt and the purchase invoice**, the user can be aware of when inquiring about the corresponding purchase invoice.
 
 !!! info
-    To learn more, visit [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice).
+    To learn more, visit [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice).
 
 ##### **Lines**
 
@@ -6124,7 +6114,7 @@ Once all items above are filled in, including corresponding landed cost purchase
 ##### How to Reactivate Goods Receipts
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 From the Goods Receipt window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.
 
@@ -6133,19 +6123,19 @@ Once the receipt is successfully reactivated, the state of the document changes 
 ![](https://docs.etendo.software/latest/assets/drive/1-Z-wUYZfcGDizQ_Kkp8TUYXTs-KnM67H.png)
 
 !!! warning
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Pending Goods Receipts
 
@@ -6217,7 +6207,7 @@ Once completed, a purchase invoice can be:
 ###### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
 
@@ -6272,7 +6262,7 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 ##### How to Reactivate a Voided Purchase Invoice
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate voided purchase invoices by selecting the needed one/s and clicking the Unvoid button.
 
@@ -6294,7 +6284,7 @@ Once the process is finished, the sales invoice status turns to Complete.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to delete payments associated with a purchase invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Purchase Order window > Payment Plan tab).
 
@@ -6312,22 +6302,22 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Matched Invoices
 
@@ -6364,14 +6354,14 @@ Accounting information related to the matched invoices
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Return to Vendor (RTV)
 
@@ -6503,14 +6493,14 @@ The RTV shipment can be posted **if the table "MaterialMgmtShipmentInOut" is** a
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Landed Cost
 
@@ -6821,14 +6811,14 @@ This tab provides Landed Cost Matching accounting information.
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In this case, this functionality can be used in the "Landed Cost" window and in the "Cost" tab.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ---
 
@@ -6845,17 +6835,17 @@ This work is a derivative of ["Procurement Management"](http://wiki.openbravo.co
 
 This section describes the windows related to procurement reports in Etendo. These are:
 
-[:material-file-document-outline: Purchase Order Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-order-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Order Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-order-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Goods Receipt Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Goods Receipt Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matched Purchase Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#matched-purchase-orders){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matched Purchase Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#matched-purchase-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Vendor Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#vendor-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Vendor Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#vendor-invoice-report){ .md-button .md-button--primary } <br>
 
 
 #### Purchase Order Report
@@ -6990,7 +6980,7 @@ Field to note:
 
 <iframe width="720" height="480" src="https://www.youtube.com/embed/l7RMb0Oz7Wo?si=ngxYnwDkiDqwRkLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-In Etendo, most of the warehouse movements are created automatically based on the transactions of [Sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/) and [Procurement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/) processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the Warehouse Management application area and are gathered in the Inventory Accuracy business flow which is described below.
+In Etendo, most of the warehouse movements are created automatically based on the transactions of [Sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started.md) and [Procurement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started.md) processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the Warehouse Management application area and are gathered in the Inventory Accuracy business flow which is described below.
 
 #### Inventory Accuracy
 
@@ -7014,12 +7004,12 @@ Main sub-processes of the Inventory Accuracy business flow are:
 
 ##### Configuration
 
-[Warehouse and Storage Bins](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-and-storage-bins) need to be created and configured before performing the business flow.
-In addition to this, a [Costing Rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules) needs to be defined and validated for the legal entity. Each costing rule requires a starting date from when it is going to be valid as well as a [Costing Algorithm](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-algorithm) to be used by the [Costing Background Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process), which has to be scheduled.
+[Warehouse and Storage Bins](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins) need to be created and configured before performing the business flow.
+In addition to this, a [Costing Rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) needs to be defined and validated for the legal entity. Each costing rule requires a starting date from when it is going to be valid as well as a [Costing Algorithm](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm) to be used by the [Costing Background Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#costing-background-process), which has to be scheduled.
 
-Besides, [Landed Cost Types](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type) need to be configured here therefore can be selected while allocating this type of cost to [goods receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts).
+Besides, [Landed Cost Types](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type) need to be configured here therefore can be selected while allocating this type of cost to [goods receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts).
 
-Finally, [Warehouse Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-rules) can be configured to be applied while retrieving stock from the inventory automatically.
+Finally, [Warehouse Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-rules) can be configured to be applied while retrieving stock from the inventory automatically.
 
 !!!note
         It is not required to do any additional setup for the Warehouse Management application area if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, and products pre-configured.
@@ -7032,41 +7022,40 @@ In Warehouse Management, main Inventory Accuracy operations are executed as foll
 
 To get the *Physical Inventory*, Warehouse Staff:
 
-- Starts with the products classifications and runs [Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#pareto-product-report) which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
+- Starts with the products classifications and runs [Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report) which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
 Based on the classification, the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
-The ABC classification is then populated to the [Manufacturing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab of the Product window by clicking the Update ABC button.
-    - Note that the ABC classification is based on the cost of the product's transactions. That is why a [Costing Rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules) for the legal entity must be configured and validated and the [Costing Background Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process) process has to be scheduled.
-- After this procedure, the Warehouse Staff creates the physical inventory document in the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the [list](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#lines) of products with their current quantities that is brought to the warehouse and verified against physical inventory.
-- In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) that was previously created. Then in the [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#lines) tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).
+The ABC classification is then populated to the [Manufacturing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#manufacturing) tab of the Product window by clicking the Update ABC button.
+    - Note that the ABC classification is based on the cost of the product's transactions. That is why a [Costing Rule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules) for the legal entity must be configured and validated and the [Costing Background Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#costing-background-process) process has to be scheduled.
+- After this procedure, the Warehouse Staff creates the physical inventory document in the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the [list](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#lines) of products with their current quantities that is brought to the warehouse and verified against physical inventory.
+- In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) that was previously created. Then in the [Lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#lines) tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).
 
 To execute *Goods Movement* Warehouse Staff:
 
-- In the [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#goods-movement) window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).
+- In the [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#goods-movement) window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).
 
 For *Goods Tracking* Warehouse Staff uses:
 
-- [Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-report) that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.
-- [Goods Transaction](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#goods-transaction) window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.
-- [Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#product-movements-report) shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.
-- [Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#material-transaction-report) lists all documents (shipments or receipts) grouped by Business Partner.
+- [Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report) that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.
+- [Goods Transaction](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#goods-transaction) window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.
+- [Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report) shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.
+- [Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report) lists all documents (shipments or receipts) grouped by Business Partner.
 
-*Inventory Valuation* is done with the help of the [Valued Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#valued-stock-report).
+*Inventory Valuation* is done with the help of the [Valued Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report).
 This report shows the cost of the stock calculated by the Costing Server process.
 
-*Inventory Update* is done with the help of the [Inventory Amount Update](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#inventory-amount-update) window.
-This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory) window.
+*Inventory Update* is done with the help of the [Inventory Amount Update](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#inventory-amount-update) window.
+This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#physical-inventory) window.
 
-For *Cost Adjustments Review*, Warehouse Staff uses the [Cost Adjustment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#cost-adjustment) window.
+For *Cost Adjustments Review*, Warehouse Staff uses the [Cost Adjustment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#cost-adjustment) window.
 This window allows reviewing different types of cost adjustment sources together with the product's transactions whose costs are being adjusted, as well as adjustment amounts.
 
 #### Relationship with other application areas
 
 Warehouse Management has a connection with other application areas:
 
-- [Procurement Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/) as goods received change stock quantity and its value.
-- [Sales Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/) as shipment changes stock quantity and its value.
+- [Procurement Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started.md) as goods received change stock quantity and its value.
+- [Sales Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started.md) as shipment changes stock quantity and its value.
 - *Production Management* because raw materials are taken out of warehouse and produced goods are sent back to the stock during production process.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -7179,7 +7168,7 @@ Once the Inventory is successfully reactivated, the state of the document change
 ![](https://docs.etendo.software/latest/assets/drive/1WBA34PF6dwDGKc8HW0tC8iuzD_CR-9I2.png)
 
 !!! warning
-    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ##### Bulk Posting
 
@@ -7191,7 +7180,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Goods Movement
 
@@ -7273,7 +7262,7 @@ Once the movement is successfully reactivated, the state of the document changes
 ![](https://docs.etendo.software/latest/assets/drive/1tHX7U3NNVTlZ83m_Ql4RFEL52gsgy81B.png)
 
 !!! warning
-    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ##### Bulk Posting
 
@@ -7285,7 +7274,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Bill of Materials Production
 
@@ -7341,7 +7330,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Goods Transaction
 
@@ -7394,13 +7383,13 @@ A sales order can be reserved when the document is booked and pending to be deli
 
 - Automatic: The reservation is automatically created and processed, reserving the available stock
 
-For more information, visit [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#sales-order).
+For more information, visit [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
 ##### Procurement Flow
 
 Pre-reservations can also be made from the Purchase Order. Being in the purchase order line, there is the possibility of selecting any sales order line pending to be delivered that is waiting to receive the goods in the warehouse. Once the items are received the pre-reservation is converted to reservation and the goods are reserved for that sales order line.
 
-For more information, visit [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions#purchase-order).
+For more information, visit [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
 
 ##### Purchasing Plan (MRP)
 
@@ -7813,16 +7802,16 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 |                                                                                                 |                                                  |                                                |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Account                                                                                         | Debit                                            | Credit                                         |
-| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) | Adjustment amount of "Movement From" transaction |                                                |
-| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
+| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount of "Movement From" transaction |                                                |
+| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
 
 **"Movement To"** transaction adjustment:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Account                                                                                         | Debit                                          | Credit                                         |
-| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
-| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) |                                                | Adjustment amount of "Movement To" transaction |
+| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
+| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) |                                                | Adjustment amount of "Movement To" transaction |
 
 ##### **Negative Stock Correction**
 
@@ -7860,8 +7849,8 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 |                                                                                                 |                   |                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Account                                                                                         | Debit             | Credit            |
-| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) | Adjustment amount |                   |
-| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            |                   | Adjustment amount |
+| [_Warehouse Differences_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount |                   |
+| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                   | Adjustment amount |
 
 ##### **Price Difference Correction**
 
@@ -7914,16 +7903,16 @@ That adjustment can be posted to the ledger. Posting will look as shown below :
 |                                                                                 |                                 |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- | ------------------------------- |
 | Account                                                                         | Debit                           | Credit                          |
-| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)            | Goods Receipt Adjustment amount |                                 |
-| [_Invoice Price Difference_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting) |                                 | Goods Receipt Adjustment amount |
+| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)            | Goods Receipt Adjustment amount |                                 |
+| [_Invoice Price Difference_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) |                                 | Goods Receipt Adjustment amount |
 
 **Goods Shipment adjustment**
 
 |                                                                           |                                  |                                  |
 | ------------------------------------------------------------------------- | -------------------------------- | -------------------------------- |
 | Account                                                                   | Debit                            | Credit                           |
-| [_Cost of Goods Sold_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting) | Goods Shipment Adjustment amount |                                  |
-| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)      |                                  | Goods Shipment Adjustment amount |
+| [_Cost of Goods Sold_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) | Goods Shipment Adjustment amount |                                  |
+| [_Product Asset_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      |                                  | Goods Shipment Adjustment amount |
 
 ###### **Line**
 
@@ -8040,7 +8029,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Referenced Inventory
 
@@ -8123,7 +8112,6 @@ This kind of transactions are actually Goods Movements created on the fly when c
 Shows any unbox transaction executed in the past for this referenced inventory.
 
 This kind of transactions are actually Goods Movements created on the fly when confirming the unboxing, where the user can browse to at any time to see the details.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Analysis Tools
@@ -8135,17 +8123,17 @@ This kind of transactions are actually Goods Movements created on the fly when c
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
-[:material-file-document-outline: Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#pareto-product-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Pareto Product Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#material-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Material Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#stock-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock History](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-history){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock History](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Valued Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#valued-stock-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Valued Stock Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#product-movements-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Product Movements Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
 
 #### Pareto Product Report
@@ -8340,7 +8328,6 @@ Additionally, the user can include or exclude these documents:
 ##### Sample Report Output
 
 ![Product Movements Report](https://docs.etendo.software/latest/assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -8352,25 +8339,25 @@ Additionally, the user can include or exclude these documents:
 
 This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:
 
-[:material-file-document-outline:Process Price Difference Adjustment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Process Price Difference Adjustment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse and Storage Bins](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse and Storage Bins](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipping Company](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#shipping-company){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Shipping Company](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#shipping-company){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Freight Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#freight-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Freight Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#freight-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Algorithm](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Algorithm](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Landed Cost Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Landed Cost Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse Rules](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Referenced Inventory Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Referenced Inventory Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:EAN 128 Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#ean-128-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:EAN 128 Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#ean-128-type){ .md-button .md-button--primary } <br>
 
 #### Process Price Difference Adjustment
 
@@ -8414,7 +8401,7 @@ Other fields to note:
 -   **Default:** when selected, this storage bin appears by default in documents.
 -   **Barcode:** There is no logic behind this field. It has been created in order to be used/implemented by other modules such as **Etendo Mobile Application.**
 -   **Inventory Status:** It is the current Inventory Status of the selected Storage Bin. It can be changed by clicking on *Change Status* button. 
-For more information, visit [Inventory Status](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/inventory-status).
+For more information, visit [Inventory Status](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/inventory-status.md).
 
 ##### Product Transactions
 
@@ -8772,9 +8759,6 @@ For example we will see a record created here:
 These last 4 options show the Entity Field therefore by selecting one of these 4 options. 
 
 - **Entity Field**: In this selector you can choose the specific field to the entity field that it references.
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨Getting Started
@@ -8808,29 +8792,29 @@ For Production, there are different products that are set up:
 - Raw material used in production
   - the Production checkbox is selected to indicate that the product is used for production
   - the process plan is selected
-  - the default storage bin that is used for P- raw materials is defined in the [_Manufacturing_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab.
+  - the default storage bin that is used for P- raw materials is defined in the [_Manufacturing_](https://docs.etendo.software/latest/master-data-management/master-data.md#product) tab.
 - Finished products manufactured in production
   - the Production checkbox is selected to indicate the product is manufactured in production
   - the process plan is selected
-  - the default storage bin that is used for the product is defined in the [_Manufacturing_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab
-- based on [cost calculations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs), a "theoretical" standard cost can be determined for the finished product
+  - the default storage bin that is used for the product is defined in the [_Manufacturing_](https://docs.etendo.software/latest/master-data-management/master-data.md#product) tab
+- based on [cost calculations](transactions.md#calculate-standard-costs), a "theoretical" standard cost can be determined for the finished product
 - a safety stock level is determined and entered for the product
 
-Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the [_Manufacturing_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab.
+Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the [_Manufacturing_](https://docs.etendo.software/latest/master-data-management/master-data.md#product) tab.
 
 !!! info
-    For more information about the configuration of products, please refer to the [_Product_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) section.
+    For more information about the configuration of products, please refer to the [_Product_](https://docs.etendo.software/latest/master-data-management/master-data.md#product) section.
 
 Also, Business Partners are configured for production:
 
 In the Employee tab, any employees that are involved in the production process have the operator checkbox selected.
 
-Likewise, the [_Salary category_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#salary-category) configured for employees is very important since they are included in the final cost calculations.
+Likewise, the [_Salary category_](https://docs.etendo.software/latest/master-data-management/master-data.md#salary-category) configured for employees is very important since they are included in the final cost calculations.
 
 !!! info
-    For more information about the configuration of business partners, please refer to the [_Business Partner_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) section.
+    For more information about the configuration of business partners, please refer to the [_Business Partner_](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner) section.
 
-Work Efforts can be posted to the [_General Ledger Journal_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [_Active Tables_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig) tab of the General Ledger configuration.
+Work Efforts can be posted to the [_General Ledger Journal_](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal). In order to facilitate the posting, the **MaterialMgmtProductionTransaction** table is activated in the [_Active Tables_](https://docs.etendo.software/latest/financial-management/accounting/setup.md#glconfig) tab of the General Ledger configuration.
 
 ###### **Execution**
 
@@ -8855,26 +8839,25 @@ and compare it with the total supply:
 
 If the demand is higher than the supply, or the dates of scheduled Work Requirements are not matching the dates of the outstanding sales orders, the product needs to be produced and a production manager executes:
 
-- review of the stock of the raw material. If needed, the raw material will be requested and used in the [_procurement management_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/) process.
+- review of the stock of the raw material. If needed, the raw material will be requested and used in the [_procurement management_](https://docs.etendo.software/latest/procurement-management/transactions.md) process.
 - entry of the Work Requirement for the required quantity with the required quantity and the planned date
 - generate Work Efforts from the Work Requirement.
 
 The staff responsible for executing the production can see on the Production Run Status Report what production has to be executed.
 
-At the end of each shift, the production managers enter the information of what is produced in the [_Production Run_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run_1) screen.
+At the end of each shift, the production managers enter the information of what is produced in the [_Production Run_](transactions.md#production-run_1) screen.
 
 #### Relationship with other areas
 
 Production Management interacts with the following modules:
 
-- [_Procurement Management_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started): raw material required for use in production is bought using the Procure to Pay process
-- [_Sales Management_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started): demand for the products that are produced are generated through the Order to Cash process
-- [_Warehouse Management_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started):
+- [_Procurement Management_](https://docs.etendo.software/latest/procurement-management/getting-started.md): raw material required for use in production is bought using the Procure to Pay process
+- [_Sales Management_](https://docs.etendo.software/latest/sales-management/getting-started.md): demand for the products that are produced are generated through the Order to Cash process
+- [_Warehouse Management_](https://docs.etendo.software/latest/warehouse-management/getting-started.md):
     - raw material is taken from the warehouse to be used in production
     - end products that come out of production are put into stock
-- [_MRP_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/): Work Requirements can be a result of MRP
-- [_Financial Management_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started): Cost related to Production is calculated for finance.
-
+- [_MRP_](https://docs.etendo.software/latest/material-requirement-planning/getting-started.md): Work Requirements can be a result of MRP
+- [_Financial Management_](https://docs.etendo.software/latest/financial-management/getting-started.md): Cost related to Production is calculated for finance.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -8886,7 +8869,7 @@ Production Management interacts with the following modules:
 
 ##### **Introduction**
 
-In this window, the user is able to create and manage an order for a [_Process Plan_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan) to be executed a certain number of times to satisfy the production requirements.
+In this window, the user is able to create and manage an order for a [_Process Plan_](setup.md#process-plan) to be executed a certain number of times to satisfy the production requirements.
 
 !!! warning
     Important: Before creating a work requirement, it is necessary to have a Process Plan defined.
@@ -8937,7 +8920,7 @@ Here, it is possible to create production orders by choosing dates and the previ
 **Create Work Effort button**: to create work related to the work requirement once the work requirement is processed. Work efforts related to all operations are created at once, so depending on the amount of operations, one or more work efforts are created. If the create standards checkbox is selected in the operation, the create standards process is executed also, to insert the product information in the work effort. In all cases, the processing of the work effort is executed manually.
 
 !!! note
-    The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the \[Production Run\] tab is set to the full quantity on the operation.
+    The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the Production Run tab is set to the full quantity on the operation.
 
 ##### **Operation**
 
@@ -8947,7 +8930,7 @@ After processing the Work Requirement, the information in the operation tab is p
 
 ![](https://docs.etendo.software/latest/assets/drive/N6jCi7z3kPJFRjTaGh1Zwl2AIPqDhVFRjAP-AIcQGcJvpNoNSodF59YXkkaqItTPcDChIEY3UEtldpAeYepSxijP576q9RhfctGFSVZ10SqTiJ70mp4nN4cu919QNA2-s6HrrpEUDCScHiOfoObefwo.png)
 
-The fields in these two tabs are mostly taken from the Process Plan, but can be overwritten in the Work Requirement. For a description of these fields, please see the [_Process Plan_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan) section.
+The fields in these two tabs are mostly taken from the Process Plan, but can be overwritten in the Work Requirement. For a description of these fields, please see the [Process Plan](setup.md#process-plan) section.
 
 The **Starting Date** and **Ending Date** of the operations are defaulting from the main tab of the Work Requirement, but can be overwritten.
 
@@ -8968,7 +8951,7 @@ The information in the Product tab is populated from the information in the I/O 
 - **Movement Quantity**: value populated from the Quantity field in the I/O Products tab of the Process plan.
 
 !!! info
-    For a description of the rest of the fields, please refer to the [_Process Plan_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan).
+    For a description of the rest of the fields, please refer to the [Process Plan](setup.md#process-plan).
 
 #### Work Effort
 
@@ -8990,7 +8973,7 @@ Here, it is possible to create a report for the completed work requirement for a
 - The Movement Date, Starting Time and Ending Time indicate on which date and during which shift the production took place.
 - The Create Standards button (displayed in the "Production Run" tab) is used to execute the process that loads all the P- and P+ information as well as global used products, machines, salary categories, indirect cost, toolsets. When the standards are created, also stock of all P- products is checked and an error appears if any products do not have stock. For the Create Standards process to complete successfully, the Completed Quantity has to be greater than zero.
 - Once the standards are created and all the correct information concerning the production is entered, the work effort is validated by clicking the Validate Work Effort button. At this point, the stock information is updated. For P-, the stock decreases and, for P+, it increases.
-- Optionally, the Work Effort can be posted to the general ledger journal once the [_configuration_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#configuration) is added. If done, information related to the cost of the raw material and produced products is posted.
+- Optionally, the Work Effort can be posted to the general ledger journal once the [configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/getting-started.md#configuration) is added. If done, information related to the cost of the raw material and produced products is posted.
 
 ##### **Employee**
 
@@ -9050,7 +9033,7 @@ The information is populated automatically when the create standards process is 
 ![](https://docs.etendo.software/latest/assets/drive/lbrPJfhjehblSoh-nP0ekL0Ex2vdgpcdYfb5On2Yf_u-GJSI6xfO2Xc3LIjgQVDzcoz7M2IorKsq-RTOlxfAkVbl4kcmQFKP4nmWm2-KUizzQFui2_6NCIUBx9evz0nJEZaemkGoWfi4brQ4T0fszq0.png)
 
 !!! info
-    For details about the fields, please refer to the [_Process Plan_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan) section.
+    For details about the fields, please refer to the [_Process Plan_](setup.md#process-plan) section.
 
 ##### **Salary Category / Employee**
 
@@ -9098,7 +9081,7 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 ##### How to Reactivate Work Efforts
 
 !!! info
-    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/). 
+    To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Production Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Production Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes.md). 
 
 This functionality is useful when the user needs to reactivate a work effort.
 
@@ -9109,19 +9092,19 @@ Once the effort is successfully reactivated, the state of the document changes t
 ![](https://docs.etendo.software/latest/assets/drive/j7x8yhwYGogcMN0tOknI1k6U0hlr0QXVGKW8AWvJe98_IPTIz8_WVYfDMOSVV5S80kFMEcJn2lbsGR-rApAobtnK2_miTFCFQpmi_BAv2DtzH6w9EOaBVY_8Z_feQQbcThY5scJYoVxUO3dQlwdAQtEKbOhAfcqTwLnIhJqFTSE5mrIzBaJxL2sc5v1AKw.png)
 
 !!! info
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup/#storage-bin).
+    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/) in the Financial Extensions Bundle Documentation.
+    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting) in the Financial Extensions Bundle Documentation.
 
 #### Production Run
 
@@ -9140,7 +9123,7 @@ The screens are identical to the Work Effort, with the exception that the work e
 ![](https://docs.etendo.software/latest/assets/drive/uYe5s0l6N_2p3yNcZZ9CmoCm8hsv0r5shLWAk5i1KoNMrWrBiKRKPwN6mIpKQFQXV3NCKYFKawIlL8Q05zcR-ZXe6xfoS-XklUbGLlp6azvuHga8Horfg6qSCS-08Ifbp6YcFiEL0paI4h8HbFRIQr4.png)
 
 !!! info
-    For details on the fields, please refer to the [Work Effort Production Run](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run) section.
+    For details on the fields, please refer to the [Work Effort Production Run](#production-run) section.
 
 !!! warning
     Deleting a production run is done in the corresponding Work Effort, not in this screen.
@@ -9152,7 +9135,7 @@ In this tab, it is possible to add work incidences that might have occurred duri
 ![](https://docs.etendo.software/latest/assets/drive/9Vj5p-rT0DvWXljBKw7z6R3MMWhh8Lkp6sI851WEGEaaIQyt-mzLltdRl3JUrkmXY9yvOqK24T13IHxKfz5bbGDVcDH9whF61Qy0H5AyciX2dMe59W7If7CxHVXUpnTrNAR1QY5TDTJ9yg44JxlF7-4.png)
 
 !!! info
-    Please, refer to the [Work Effort Incidence](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#incidence) section for details.
+    Please, refer to the [Work Effort Incidence](#incidence) section for details.
 
 ##### **Toolset**
 
@@ -9161,7 +9144,7 @@ Here, it is possible to add or edit toolsets used to complete a specified part o
 ![](https://docs.etendo.software/latest/assets/drive/Q5p4iUveKtYise9CCTg7VmF0jvVXwKsxdEU3sMWQmljUxumVGVlIW8wGmQYYN28J77yvNUZ-Ny_tv0_rOn-9ZvYr6UhpuNytC47pr3_1Bj5bOQA0cX6vloW_hGFjMMykVAW4w8aiX0gwFt7wrY9r0RY.png)
 
 !!! info
-    Please, refer to the [Work Effort Toolset](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#toolset) section for details.
+    Please, refer to the [Work Effort Toolset](#toolset) section for details.
 
 ##### **Product**
 
@@ -9170,7 +9153,7 @@ Here, it is possible to add and edit I/O products related to a completed part of
 ![](https://docs.etendo.software/latest/assets/drive/Gc6Uzzq-t4k22Uz5oDXh7fjTl_tGK424VU_jcwMiiAoD8Vr7M6mNZm3juSgCK8jFlSU4GXsrKST3R97seVusNoQeu1zCIMQJwUxLpY5sXhkqy2-rVAfTYwGQtuqadeyHg-2kaeK78SsHcMb_T-zZeZw.png)
 
 !!! info
-    Please, refer to the [Work Effort Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#product_1) section for details.
+    Please, refer to the [Work Effort Product](#product_1) section for details.
 
 ##### **Salary Category / Employee**
 
@@ -9179,7 +9162,7 @@ Here, it is possible to add or edit salary category workers that took part in a 
 ![](https://docs.etendo.software/latest/assets/drive/k-se48cgS1yUpNHPL_i9PB0n3p4hQfdag3_cuAz4tWcA-KuIB6p8pqN_fgdU-B2JTYqT9sNBTdspSOCj-dcz9eYvJtYtB8smHudxN5aFssaeOVrk99WwJ0JlMxcJd8kysbVvSdsktJ4uaU2bWu3tmOg.png)
 
 !!! info
-    Please, refer to the [Work Effort Salary Category/Employee](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#salary-category-employee) section for details.
+    Please, refer to the [Work Effort Salary Category/Employee](#salary-category--employee) section for details.
 
 ##### **Indirect Cost**
 
@@ -9188,7 +9171,7 @@ Here, it is possible to add and edit indirect costs related to a specified compl
 ![](https://docs.etendo.software/latest/assets/drive/IcPzMtAZbsDiPx4Btb7ixAEzC5olQai3DJ2y_airaujavIcaVDlnQgFj0nAz96QAX2KPy7OfdWkuX_uI6KvBeilA2UqBGfb2g5IFyVKEZokS-xWcRYDkHtf5mEH0nMiCZNd798T7xCOeSZMR1VJzlJ4.png)
 
 !!! info
-    Please, refer to the [Work Effort Indirect Cost](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#indirect-cost) section for details.
+    Please, refer to the [Work Effort Indirect Cost](#indirect-cost) section for details.
 
 ##### **Machine**
 
@@ -9197,7 +9180,7 @@ Here, it is possible to add and edit resources used to complete a specified part
 ![](https://docs.etendo.software/latest/assets/drive/6iUU--CNzMyPMA1sgX1ICpnnlXuYIdUFTy6uEZbWis0reuAH73_FD8lijEgN-97XBXhviIve9PbfvMtS6d5Ec1UH5vo1E2fsAHMou4GG6hUw5JhP2rSCbhcKuMnRmi1UGobBO4xHLxALmpJqTY7pDqE.png)
 
 !!! info
-    Please, refer to the [Work Effort Machine](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#machine) section for details.
+    Please, refer to the [Work Effort Machine](#machine) section for details.
 
 ##### **Outsourced**
 
@@ -9206,7 +9189,7 @@ Here, it is possible to add invoices corresponding to the outsourced part of a c
 ![](https://docs.etendo.software/latest/assets/drive/IJs1mYGVcDg0ktrAk3FK7dFOn9f-vC7Sag9Vpj8NUkRF-29hh0Zub78jma19Hy9AHnzFxmlDncIQK9G-C9fNpR8evDlI306Zki5wBcRpMRATp7dD2iTf9kjGJaCjfby7qjQqyHdhV_yzQcRY6z4ysN0.png)
 
 !!! info
-    Please, refer to the [Work Effort Outsourced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#outsourced) section for details.
+    Please, refer to the [Work Effort Outsourced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#outsourced) section for details.
 
 #### Quality Control Report
 
@@ -9252,7 +9235,7 @@ The information is populated with any checks that take place during the shift.
 
 Here, it is possible to create and edit times for related checkpoints.
 
-The information is automatically populated when the CCP button is clicked: the time that appears is the shift start date that is configured in the [Quality Control Point Shift](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#shift) information. When populated automatically, the status is processed.
+The information is automatically populated when the CCP button is clicked: the time that appears is the shift start date that is configured in the [Quality Control Point Shift](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup.md#shift) information. When populated automatically, the status is processed.
 
 In the case that the information is entered manually, the information is processed by clicking the Input Time Measurement button.
 
@@ -9301,7 +9284,7 @@ In this tab, it is possible to create and edit quality tests for a specified che
 
 In this window, it is possible to define products which are only to be used inside the company.
 
-The Internal Consumption screen is used to administer any products that are used during the execution of maintenance tasks. When processed, the stock is reduced. The products are purchased through the [procurement process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/). The products are set up as a regular item, without the Production checkbox being selected, since they are not part of the production process.
+The Internal Consumption screen is used to administer any products that are used during the execution of maintenance tasks. When processed, the stock is reduced. The products are purchased through the [procurement process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started.md). The products are set up as a regular item, without the Production checkbox being selected, since they are not part of the production process.
 
 ##### **Header**
 
@@ -9309,7 +9292,7 @@ Here, it is possible to create products which are to be used inside the organiza
 
 ![](https://docs.etendo.software/latest/assets/drive/KIpOaB03M-1zAUmqLNzfu9ARrAWOZeHIQouUQYlDgkJb_inQARRCvSMFnCxiwEt-K_1XqOQUXFqiBA26Ca1dZWT6kirj7AbOvbDtThM1xH3Lj84yR1JdjPkhtelIaa4HGoIRr_1Karc9QwCzzeslEXE.png)
 
-The name is a selectable value in the task tab of the [Maintenance Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-order).
+The name is a selectable value in the task tab of the [Maintenance Order](#maintenance-order).
 
 !!! info
     Optionally, the Internal Consumption can be posted to the general ledger journal once the configuration is added. If done, information related to the cost of the product is posted.
@@ -9325,14 +9308,14 @@ The information of the product, its location in the warehouse and the quantity u
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/) in the Financial Extensions Bundle Documentation.
+    For more information, visit [Bulk Posting](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting) in the Financial Extensions Bundle Documentation.
 
 #### Maintenance Order
 
@@ -9340,7 +9323,7 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 In this window, it is possible to create and edit the results of a scheduled maintenance order.
 
-This document is used to register the execution and results of maintenance tasks. Any tasks that are confirmed in the [maintenance plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-plan) are selectable in this screen.
+This document is used to register the execution and results of maintenance tasks. Any tasks that are confirmed in the [maintenance plan](#maintenance-plan) are selectable in this screen.
 
 ##### **Order**
 
@@ -9371,7 +9354,7 @@ The employee that executed the maintenance task is entered in this tab. As per t
 In this tab, it is possible to edit maintenance tasks of a specified order.
 
 !!! info
-    Most of the information in this tab is automatically populated by clicking the Insert Maintenances button, apart from the **Internal Consumption** field. Only the **Internal Consumption** field and the **Comments** field are updatable. In this screen, any products that were used for the execution of the maintenance tasks are entered in the Internal Consumption field. For more information, please refer to the [Internal Consumption](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) section.
+    Most of the information in this tab is automatically populated by clicking the Insert Maintenances button, apart from the **Internal Consumption** field. Only the **Internal Consumption** field and the **Comments** field are updatable. In this screen, any products that were used for the execution of the maintenance tasks are entered in the Internal Consumption field. For more information, please refer to the [Internal Consumption](#internal-consumption) section.
 
 ![](https://docs.etendo.software/latest/assets/drive/TW1-CvgYU9cXZM8ywo45abWaFYebU1wQqjnpzyxRZIEFVp6Sk6rlkraqcuqiece_oSL_phqMNTpPQadoBswcjCT8eQe8rO8fx-8lU-rRHbd67thf74vGFgtht2bbw1_teYi2cLAneOydEiCFDg4Hmss.png)
 
@@ -9381,7 +9364,7 @@ In this tab, it is possible to edit maintenance tasks of a specified order.
 
 ##### **Introduction**
 
-The insert maintenances process executes population of the scheduled maintenance tasks to the [Maintenance Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-plan) based on the maintenance information in the machine category and/or machine screen.
+The insert maintenances process executes population of the scheduled maintenance tasks to the [Maintenance Plan](#maintenance-plan) based on the maintenance information in the machine category and/or machine screen.
 
 The creation of the maintenance plan is based on a date range that is entered upon launching the process.
 
@@ -9398,7 +9381,7 @@ The Maintenance Plan information is created in 2 possible ways:
 - populated automatically by the insert maintenances process
 - manually: for example, to enter data when a machine breaks down and needs corrective maintenance.
 
-Any maintenance tasks that have a [Maintenance Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-order) linked, are hidden by a default filter that is applied to the screen.
+Any maintenance tasks that have a [Maintenance Order](#maintenance-order) linked, are hidden by a default filter that is applied to the screen.
 
 ##### **Maintenance**
 
@@ -9418,11 +9401,11 @@ The Calculate Standard Costs process is run to generate the standard (= theoreti
 
 Cost information is set up in several screens:
 
-- in the [Process Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan), the use of the [Cost center](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#cost-center) is defined
+- in the [Process Plan](setup.md#process-plan), the use of the [Cost center](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#cost-center) is defined
 - in the cost center, the following cost is defined:
-  - **Employee information**: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the [Salary Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#salary-category) screen.
-  - **Machine information**: the machine and usage information is entered in the cost center screen. The machine cost is entered in the [Machine](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#machine_1) screen.
-  - **Indirect cost information**: all indirect cost items related to a cost center are list. The indirect cost is entered in the [Indirect Cost](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2) screen.
+  - **Employee information**: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the [Salary Category](#salary-category--employee) screen.
+  - **Machine information**: the machine and usage information is entered in the cost center screen. The machine cost is entered in the [Machine](setup.md#machine_1) screen.
+  - **Indirect cost information**: all indirect cost items related to a cost center are list. The indirect cost is entered in the [Indirect Cost](setup.md#indirect-cost_2) screen.
 - in the process plan, the quantities and cost of the materials used in the production process are defined.
 
 For raw material, the price list information is used for the cost of the P-. The purchase price list that is used for the raw material cost is marked as default.
@@ -9442,7 +9425,7 @@ When the costs of the cost center, machines, employees and indirect costs are ca
 For Indirect costs, the additional unit of measure percentage is available. This adds the defined percentage to the total cost calculated (cost center, employee, machine, indirect costs and P- products). For example, if defined as 1.15, an additional 15% is added to the cost.
 
 !!! info
-        For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2) screen:<br>
+        For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](setup.md#indirect-cost_2) screen:<br>
             -select Cost Type = Production,<br>
             -a date range that includes the date of the standard cost calculation in the Value tab.<br>
         This way, the standard cost for each operation is calculated.
@@ -9464,31 +9447,31 @@ In the Employee, Machine and Indirect Cost tabs, the result of the costs are aut
 
 This section describes the screens that are necessary to set up the components used in the production process in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Section](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#section){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Section](#section){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Center](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#work-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Center](#work-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Process Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Process Plan](#process-plan){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Activity](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#activity_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Activity](#activity_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Toolset](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#toolset_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Toolset](#toolset_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#machine-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine Category](#machine-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#machine_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine](#machine_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Manufacturing Cost Center](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#manufacturing-cost-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Manufacturing Cost Center](#manufacturing-cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Indirect Cost](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Indirect Cost](#indirect-cost_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Periodic Quality Control](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#periodic-quality-control){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Periodic Quality Control](#periodic-quality-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Quality Control Point](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#quality-control-point){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Quality Control Point](#quality-control-point){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Incidence](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#work-incidence){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Incidence](#work-incidence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Maintenance Task](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#maintenance-task){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Maintenance Task](#maintenance-task){ .md-button .md-button--primary } <br>
 
 
 #### Section
@@ -9676,7 +9659,7 @@ The Copy From Attribute tab is used for products of the production type P+. The 
 
 In this tab, the user can define the employees that can perform a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](https://docs.etendo.software/latest/assets/drive/_TM91ctLLzY-kvMDwkeAXnsjXaTTWLmu6O6lpbdvHkVppxgcJxxTgczX8WTkoREEEM2rtbilAmnP77WAuzezDQkrZw7V94pweP9L1TFnXsc3xP6ljzT-Z6UIAAKqvh_Ga6ZrcViJNhB2SD0HE5bk2Z5WKOFqgl_YQ1epU93daoZFpzUbQTtG3CO7NaqdYA.png)
 
@@ -9684,7 +9667,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define machines that are used for a specific process. In the example, there is no machine defined.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](https://docs.etendo.software/latest/assets/drive/5YE-jABPzRHKUP12eBMB7MbOIqTUNgzHxd2ME1FqiNLuUzfTA9vwH-4oVqSBWT-6HSlsrp-m8V0Dq8ZwlhnCbCYnXdhljrOy2h4JGGkjAD7gobebyea6R2BhH-dusTBknb5gdSKNkithzk5BETzXNA_1bKqO8TWDH-YgtLpZXaQA4ztz09WrHJlTn_xCwQ.png)
 
@@ -9692,7 +9675,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define indirect costs related to a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](https://docs.etendo.software/latest/assets/drive/DN4ZfyHumPHB6J5C5N3CtmU6prJP2FSSwd2ppRQnHjdlP-yDPHMS439-Uz75x9_2rfEYJPxBClFSzJi0Oe6kC9pdP-Vlx1Az0paKbEJ9OrAiY7RFVgpTO1cNACgoMsHMrn_GfNMEYmxkjrnuEqcn64owZmB1ePyOd1YZ0PYEkcENwtiALXsjAoEls1z6Mw.png)
 
@@ -10028,7 +10011,7 @@ In this window, it is possible to define types of work incidences that may occur
 Standard work incidences are set up for later reference in the work effort. A possible work incidence is that a machine component breaks and needs to be replaced or some other unplanned machine outage.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
  
 ##### **Work Incidence**
@@ -10048,7 +10031,7 @@ In this window, it is possible to define a scheduled maintenance task to be comp
 Maintenance tasks can be created to be executed to the machines in Production.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
 The maintenance process is as following:
 
@@ -10085,8 +10068,8 @@ In Material Requirement Planning the application is used to *automatically revie
 
 The Material Requirement Planning consists of two plans:
 
-- Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) and the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition).
-- Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order).
+- Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the [Work Requirement](https://docs.etendo.software/latest/production-management/transactions.md#work-requirement) and the [Requisition](https://docs.etendo.software/latest/procurement-management/transactions.md#requisition).
+- Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the [Purchase Order](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-order).
 
 **Planning Methods** are entered to define what supply components are taken into account with the calculations of these plans.
 
@@ -10100,25 +10083,25 @@ The Material Requirement Planning consists of two plans:
     Apart from the set up screens in the MRP module that are configured, additional set ups are required.
     For the products that are planned in the *Manufacturing Plan*, the following configurations are required:
 
-- the [Process plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)  is set up for the product.
-- the *production checkbox* and the Process Plan name are selected in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) screen.
-The [Manufacturing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
+- the [Process plan](https://docs.etendo.software/latest/production-management/setup.md#process-plan)  is set up for the product.
+- the *production checkbox* and the Process Plan name are selected in the [Product](https://docs.etendo.software/latest/master-data-management/master-data.md#product) screen.
+The [Manufacturing](https://docs.etendo.software/latest/master-data-management/master-data.md#manufacturing) tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.
 
 For the products that are planned in the *Purchasing Plan*, the following configurations are required:
 
-- the purchase checkbox is selected in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) screen.
-- the [price](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#price) of the product is defined for the price list of the vendor that is entered in the Purchasing tab.
-- the [Purchasing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#purchasing)  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.
+- the purchase checkbox is selected in the [Product](https://docs.etendo.software/latest/master-data-management/master-data.md#product) screen.
+- the [price](https://docs.etendo.software/latest/master-data-management/master-data.md#price) of the product is defined for the price list of the vendor that is entered in the Purchasing tab.
+- the [Purchasing](https://docs.etendo.software/latest/master-data-management/master-data.md#purchasing)  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.
 - the vendor that is reflected as the Business Partner in the above mentioned Purchasing tab is filled out in the Business Partner screen:
 
 
-    - [Vendor/Creditor](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendorcreditor) tab with at least the following fields filled out:
+    - [Vendor/Creditor](https://docs.etendo.software/latest/master-data-management/master-data.md#vendorcreditor) tab with at least the following fields filled out:
         - Purchase Price List
         - PO Payment Method
         - PO Payment Terms
-    - [Location/Address](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#locationaddress) tab
+    - [Location/Address](https://docs.etendo.software/latest/master-data-management/master-data.md#locationaddress) tab
 
-- The [Manufacturing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing) tab in the Product screen is filled out with the *Planning Method* and *Planner* information.
+- The [Manufacturing](https://docs.etendo.software/latest/master-data-management/master-data.md#manufacturing) tab in the Product screen is filled out with the *Planning Method* and *Planner* information.
 
 ##### **Execution** 
 
@@ -10144,22 +10127,16 @@ In the created overview the material planner reviews and analyzes the lines. Bas
 
 The MRP interacts with the following modules:
 
-- [Procurement Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/):
-    - [Requisitions](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) are created from the Manufacturing Plan
-    - [Purchase Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) are created from the Purchasing Plan
-- [Sales Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/):
-    - [Sales Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) are optionally taken into account in the calculations of both plans
-- [Warehouse Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/):
-    - [Stock levels](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-report) are automatically taken into account in the calculations of both plans
-- [Production Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/getting-started/):
-    - the [Process Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan) is used for the calculation of the Manufacturing Plan
-    - [Work Requirements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) are created from the Manufacturing Plan
-
-
-
-
-
-
+- [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md):
+    - [Requisitions](https://docs.etendo.software/latest/procurement-management/transactions.md#requisition) are created from the Manufacturing Plan
+    - [Purchase Orders](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-order) are created from the Purchasing Plan
+- [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md):
+    - [Sales Orders](https://docs.etendo.software/latest/sales-management/transactions.md#sales-order) are optionally taken into account in the calculations of both plans
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md):
+    - [Stock levels](https://docs.etendo.software/latest/warehouse-management/analysis-tools.md#stock-report) are automatically taken into account in the calculations of both plans
+- [Production Management](https://docs.etendo.software/latest/production-management/getting-started.md):
+    - the [Process Plan](https://docs.etendo.software/latest/production-management/setup.md#process-plan) is used for the calculation of the Manufacturing Plan
+    - [Work Requirements](https://docs.etendo.software/latest/production-management/transactions.md#work-requirement) are created from the Manufacturing Plan
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -10205,7 +10182,7 @@ Create and edit a manufacturing plan.
 -   Name: name of the manufacturing plan
 -   Time Horizon: the number of days that are being taken into account for the calculation of the manufacturing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested work requirements and requisitions. For example, the manufacturing lead time is used to indicate how long it will take for a product between being produced and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
 -   Business Partner: filter to only select products ordered by a certain customer
 -   Business Partner Category: filter to only select business partners of a certain business partner category.
 -   Product: filter to select only a certain product
@@ -10246,11 +10223,11 @@ Depending on the product, different transaction types may appear in the lines. A
 ![](https://docs.etendo.software/latest/assets/drive/CybK3PMQnVZL8ddGSu6_bdNgiobsrqsoAozZxR5FPMmOdjckNdwlealsSm6vcAuBS3IaeDbIcClhX5-Ij3iD9PWJXOrdj7od_ZCbX3E7TusOUjlwnE063XfjJyu4rtb3czv-XBFhu1uRLomlQFYxNlo.png)
 
 !!! info
-    By clicking the Generate Work Requirements button, the work requirements are created automatically. The documents need to be processed please see the [Work Requirement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) section in the Production Management section for details.
+    By clicking the Generate Work Requirements button, the work requirements are created automatically. The documents need to be processed please see the [Work Requirement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#work-requirement) section in the Production Management section for details.
 
 
 !!! info
-    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) section in the Procurement Management section for details.
+    By clicking the Generate Material Requisitions button, the requisitions are created in draft automatically. The documents need to be completed, please see the [Requisition](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section in the Procurement Management section for details.
 
 
 The requisitions can be selected as input in the planning method of the Purchasing Plan to be included in the calculations of that plan, in order to calculate if Purchase Orders need to be created.
@@ -10258,7 +10235,7 @@ The requisitions can be selected as input in the planning method of the Purchasi
 Once the documents are created automatically, the numbers of the documents appear in the Work Requirement and the Requisition Line columns of the lines. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information please check the [_Purchase Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more information please check the [_Purchase Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
 
 
 #### Purchasing Plan
@@ -10295,7 +10272,7 @@ Create and edit a purchase plan.
 -   Name: name of the purchasing plan
 -   Time Horizon: the number of days that are taking into account for the calculation of the purchasing plan
 -   Safety Lead Time: number of days that are added to the offset for the calculation of the planned order date of the suggested purchase order. For example, the purchasing lead time is used to indicate how long it will take for a product between being ordered and arriving in the warehouse, and the safety lead time is added on for any time that it takes to put the product into stock (due to quality check or other internal processes).
--   Planner: filter to select only products managed by a certain planner, as configured in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+-   Planner: filter to select only products managed by a certain planner, as configured in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) tab in the Master Data Management section.
 -   Vendor: filter to select only products for a certain vendor as configured in the Purchasing tab of the product.
 -   Product: filter to select only a certain product
 -   Product Category: filter to select only products related to a certain product category
@@ -10345,7 +10322,7 @@ By clicking the Create Purchase Orders button, the purchase order is created, pr
 Once the purchase order is created automatically, the number of the document appears in the Order Line column of the line. The created purchase order is in draft status and needs to be booked. 
 
 !!! info
-    For more information, please check the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more information, please check the [Purchase Order](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-order) section.
 
 
 #### MRP Forecast
@@ -10386,7 +10363,7 @@ Add products to be included in your MRP forecast. Each product is added by creat
 In order to initiate the Material Requirement Planning (MRP) process, the Planning Method and the Planner sections must be configured: 
 
 !!! info
-    For this, Aaditional setups are required. Check the information in the [Overview section of MRP module](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/). 
+    For this, Aaditional setups are required. Check the information in the [Overview section of MRP module](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md). 
 
 
 #### Planning Method
@@ -10401,23 +10378,23 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Material Requirement**: demand for the product on requisitions in completed status. 
 !!! info
-    For more details, see the [_Requisition_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) section.
+    For more details, see the [_Requisition_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section.
 
 - **Sales Forecast**: prevision of future demand for the product. 
 !!! info
-    For more details, see the [_Sales Forecast_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/#mrp-forecast) section.
+    For more details, see the [_Sales Forecast_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md#mrp-forecast) section.
 
 -   **Pending Sales Order**: demand for the product on sales orders in booked status that are not shipped yet. 
 !!! info
-    For more details, see the [_Sales Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) section.
+    For more details, see the [_Sales Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) section.
 
 -   **Pending Work Requirement**: supply for the product on a processed work requirement. 
 !!! info
-    For more details, see the [_Work Requirement_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) section.
+    For more details, see the [_Work Requirement_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#work-requirement) section.
 
 -   **Pending Purchase Order**: supply for the product on a booked purchase order that is not received yet. 
 !!! info
-    For more details, see the [_Purchase Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more details, see the [_Purchase Order_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
 
 
 ##### **Header**
@@ -10447,7 +10424,7 @@ Also, a percentage of the quantity to be considered by MRP is configured with th
 
 Define the entity in charge of managing the purchase or production of specific products.
 
-An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](https://docs.etendo.software/latest/master-data-management/master-data.md#product) tab in the Master Data Management section.
 
 ##### **Planner**
 
@@ -10469,10 +10446,10 @@ Define the planner in charge of managing the purchase or production of specific 
 
 Sales Management deals with all activities related to the customer sales process and corresponding reporting.
 
-This application area of Etendo covers Order to Shipment and Invoicing parts of [Order to Cash](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/#order-to-cash-business-flow) business flow and [Customer Returns](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/#customer-returns-business-flow) business process. 
+This application area of Etendo covers Order to Shipment and Invoicing parts of [Order to Cash](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started.md#order-to-cash-business-flow) business flow and [Customer Returns](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started.md#customer-returns-business-flow) business process. 
 
 !!! Info
-    For Payments Management of Order to Cash see the [Financial Management]() application area.
+    For Payments Management of Order to Cash see the [Financial Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started.md) application area.
 
 #### Order to Cash Business Flow
 
@@ -10502,16 +10479,16 @@ Each product that is being sold needs to have a *price* in the sales price list 
 Same way, each product that is being sold needs to be defined in a *unit of measure* ("UOM"), and in an *alternative unit of measure* (AUM) if required.
 
 !!! Info
-    For more information, visit [Product Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/product-setup/), [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) and [Pricing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing/). 
+    For more information, visit [Product Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/product-setup.md), [Product](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product) and [Pricing](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/pricing.md). 
 
 Business Partners (customers) need to be configured prior any sales can automatically turn into a sales quotation or sales order. 
 
 !!! Info
-    For more information, visit [Business Partner Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/) and [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner).
+    For more information, visit [Business Partner Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md) and [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner).
 
 Above configuration is one part of the overall business setup flow within the Master Data Management setup.
 
-Finally, the Quotation [document type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type) requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.
+Finally, the Quotation [document type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type) requires a sales order document type (i.e. Standard Order) to be defined as Document Type for Order to allow the conversion of a sales quotation into a sales order.
 
 !!!Note
     It is not required to perform any additional setup for the Sales Management application area if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
@@ -10522,37 +10499,37 @@ In Sales Management the Order to Cash business process is executed as follows.
 
 Customers can ask directly for a Sales Order or request a Quotation. If the Business Partner asks for a quotation, the sales staff:
 
-- Creates a new document in the [Sales Quotation](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/) window and looks up the customer name in the Business Partner field. If the Business Partner does not exist, it is entered in the application with the [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) window.
-- Then Sales staff fills the [Sales Quotation](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/) window. The transaction document is set to Quotation by default. And continues by adding for each product a line with the product, quantity and if needed its attribute (size and/or color and/or serial number, etc.).
+- Creates a new document in the [Sales Quotation](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md) window and looks up the customer name in the Business Partner field. If the Business Partner does not exist, it is entered in the application with the [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) window.
+- Then Sales staff fills the [Sales Quotation](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md) window. The transaction document is set to Quotation by default. And continues by adding for each product a line with the product, quantity and if needed its attribute (size and/or color and/or serial number, etc.).
 - Once the quotation is ready, it is booked. The Document Status of the quotation changes to Under Evaluation. The Quotation can be printed and sent to the Business Partner by email.
 - When the Quotation is accepted by the Business Partner a sales order can be created based on this quotation. When this is done the status of the quotation changes to *Closed - Order* created and the Sales Order can be printed and sent to the Business Partner by email as a confirmation.
 
 If the Business Partner places an order directly, the sales staff:
 
-- Creates it with the same [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) window setting the Transaction Document to the desired type of Order (*Standard Order, Warehouse Order*). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.
+- Creates it with the same [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) window setting the Transaction Document to the desired type of Order (*Standard Order, Warehouse Order*). Lines are filled as in the case of the Quotation. Once the Sales Order is ready, it is processed by pressing on the Book button.
 - When the Sales Order is processed, it reserves the material for its shipment.
-- To review past sales of the Business Partner Sales staff uses [Sales Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/#sales-dimensional-report).
+- To review past sales of the Business Partner Sales staff uses [Sales Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-dimensional-report).
 
 Warehouse staff:
 
-- Looks for orders pending for preparation in the [Create Shipments from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#create-shipments-from-orders) window or with the help of [Orders Awaiting Delivery Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/#orders-awaiting-delivery-report).
+- Looks for orders pending for preparation in the [Create Shipments from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-shipments-from-orders) window or with the help of [Orders Awaiting Delivery Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-delivery-report).
 - The Warehouse staff can create a Shipment in 2 ways:
 
-With the [Create Shipments from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#create-shipments-from-orders) window. It creates a shipment completed for the selected Sales Orders.
+With the [Create Shipments from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-shipments-from-orders) window. It creates a shipment completed for the selected Sales Orders.
 
-With the [Goods Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#goods-shipment) window in which the Warehouse staff creates the shipment in a manual way.
+With the [Goods Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#goods-shipment) window in which the Warehouse staff creates the shipment in a manual way.
 
 - Completed shipment updates stock information (product levels go down) and can be posted to create the accounting entries of the shipment.
-- [Shipments Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/#shipments-dimensional-report) is used to review past shipments to the Business Partner.
+- [Shipments Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#shipments-dimensional-report) is used to review past shipments to the Business Partner.
 
 Finance staff can generate invoices in different ways:
 
-- With the [Generate Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices) window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.
-- With the [Create Invoices from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#create-invoices-from-orders) window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.
-- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) window in which the Finance staff creates the invoice in a manual way.
-- Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the [payment plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment) can be modified.
-- [Orders Awaiting Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/#orders-awaiting-invoice-report) helps Finance staff to plan and verify invoicing of the Business Partners.
-- Finance staff is able to review past customer invoicing information in the [Sales Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools/#sales-invoice-dimensional-report).
+- With the [Generate Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#generate-invoices) window, in which it generates invoices in bulk for all pending to be invoiced (based on their invoicing rules) Sales Orders.
+- With the [Create Invoices from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-invoices-from-orders) window. It shows Orders pending to be invoiced and creates invoices for the selected Sales Orders.
+- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window in which the Finance staff creates the invoice in a manual way.
+- Processed Sales Invoice creates the Payment Plan of the invoice, the Tax of the invoice and can be posted to create the accounting entries of the invoice. Afterwards, the [payment plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment) can be modified.
+- [Orders Awaiting Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-invoice-report) helps Finance staff to plan and verify invoicing of the Business Partners.
+- Finance staff is able to review past customer invoicing information in the [Sales Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-invoice-dimensional-report).
 
 
 Sales revenues expenses can be recognized in different ways:
@@ -10561,21 +10538,21 @@ Sales revenues expenses can be recognized in different ways:
 In Etendo, in this situation, revenue is generated as part of the accounting of the sales invoice corresponding to the transaction.
 - Under some circumstances, however, it is required to defer the revenue recognition. For instance, a food and beverage distributor selling and invoicing a product that they will only be able to deliver to their customers in 3 months needs to defer revenue recognition till the delivery.
 
-In Etendo, in this situation, the revenue can be deferred until a given starting period and within a given number of periods by entering a revenue deferred plan in the [sales invoice lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5).
+In Etendo, in this situation, the revenue can be deferred until a given starting period and within a given number of periods by entering a revenue deferred plan in the [sales invoice lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines-5).
 
 !!!info
-    For a full description of this functionality visit [How to manage deferred revenue and expenses](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses) article.
+    For a full description of this functionality visit [How to manage deferred revenue and expenses](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses.md) article.
 
 
 Credit limit for business partner
 
-- Each [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) can be set up with a Credit Line Limit. When customer balance (amount that is outstanding for payment for the customer) is higher than the credit line limit a corresponding information message is shown when a business partner is selected during the creation of a sales order, sales invoice or goods shipment. This way Etendo assists in risk analysis while placing customer orders or executing other steps in the Order to Cash business flow.
+- Each [Business Partner](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#business-partner) can be set up with a Credit Line Limit. When customer balance (amount that is outstanding for payment for the customer) is higher than the credit line limit a corresponding information message is shown when a business partner is selected during the creation of a sales order, sales invoice or goods shipment. This way Etendo assists in risk analysis while placing customer orders or executing other steps in the Order to Cash business flow.
 
 
 Finally, the finance staff is in charge of recording and managing the customer payments:
 
 - When a payment is received against an invoice it can be recorded in the Sales Invoice window by using the Add Payment button. It is also possible to receive a prepayment for the Sales Order. 
-For more information about payment management documentation visit the [Financial Management//Receivables&Payables]() and in the [How to manage prepaid invoices in receivables](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables) .
+For more information about payment management documentation visit the [Financial Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started.md) and in the [How to manage prepaid invoices in receivables](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables.md).
 
 
 #### Customer Returns Business Flow
@@ -10592,25 +10569,25 @@ or for replacement.
 
 The following configuration options are available in this process:
 
-- [Return reasons](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#return-reasons)
-- [Condition of the goods](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#condition-of-the-goods)
-- Accounts for [Cost of Goods Sold](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting) (COGS) for returns and [Revenue for returns](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting)
+- [Return reasons](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons)
+- [Condition of the goods](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#condition-of-the-goods)
+- Accounts for [Cost of Goods Sold](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) (COGS) for returns and [Revenue for returns](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)
 
 ##### Execution
 
 In Sales Management the Customer Returns business process is executed as follows.
-Customers can request a [return material](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#return-reasons) for whatever reason.
+Customers can request a [return material](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#return-reasons) for whatever reason.
 Sales staff:
 
-- Creates a new document in the [Return from Customer](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#return-from-customer) window and looks for the customer name in the Business Partner field.
-- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_3).
+- Creates a new document in the [Return from Customer](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) window and looks for the customer name in the Business Partner field.
+- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines-3).
 Picks Goods shipment lines and edits the quantity the customer wants to return, price and return reasons.
 - Once the Return Material document is accepted, process it by clicking the button Book. The status of the document changes from Draft to Booked.
 
 Warehouse staff:
 
-- Creates a new document in the [Return Material Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#return-material-receipt) window and looks for the vendor name in the Business Partner field.
-- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_4).
+- Creates a new document in the [Return Material Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-material-receipt) window and looks for the vendor name in the Business Partner field.
+- And continues by adding lines clicking the button [Pick/Edit lines](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#lines-4).
 Picks lines created in the Return from Customer window.
 If needed, edit the quantity received and its location (storage bin).
 - Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed
@@ -10619,22 +10596,20 @@ If needed, edit the quantity received and its location (storage bin).
 Finance staff:
 To invoice these documents can do it from several windows / processes:
 
-- With [Return from Customer](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#return-from-customer) window where a new button Create Credit might appear or not based on the original sales order. If the order is already invoiced then it will be present, if not - it won't. Using this button it is possible to invoice the return order following the standard process, that is, depending on the invoice terms.
-- With the same [Create Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#return-from-customer) button it is also possible to create an invoice and leave it as credit to be used later.
-- Using [Generate Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices) process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a [Return Material Sales Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type)).
-- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) window by picking lines and either grouping them from standard sales orders and return orders or by creating individual [Return Material Sales Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type) only from return orders.
-- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) window creating a Return Material Sales Invoice making sure that the amount of the Invoice is negative.
+- With [Return from Customer](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) window where a new button Create Credit might appear or not based on the original sales order. If the order is already invoiced then it will be present, if not - it won't. Using this button it is possible to invoice the return order following the standard process, that is, depending on the invoice terms.
+- With the same [Create Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#return-from-customer) button it is also possible to create an invoice and leave it as credit to be used later.
+- Using [Generate Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#generate-invoices) process: if the invoice terms is Customer Schedule After Delivery and both sales orders and RMAs exist the process groups all of them in one standard Sales Invoice (not in a [Return Material Sales Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type)).
+- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window by picking lines and either grouping them from standard sales orders and return orders or by creating individual [Return Material Sales Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#document-type) only from return orders.
+- With the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window creating a Return Material Sales Invoice making sure that the amount of the Invoice is negative.
 
 
 #### Relationship with other application areas
 
 Sales Management has a connection with other application areas:
 
-- [Warehouse Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/) as shipment changes stock quantity and its value.
-- [Financial Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/) in terms of managing payments.
-- [Material Requirement]() (MRP) because pending sales orders are one of the inputs for the production process.
-
-
+- [Warehouse Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started.md) as shipment changes stock quantity and its value.
+- [Financial Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started.md) in terms of managing payments.
+- [Material Requirement Planning](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/material-requirement-planning/getting-started.md) (MRP) because pending sales orders are one of the inputs for the production process.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -10734,7 +10709,7 @@ It summarizes tax related information for the whole sales quotation. Contains as
 ##### **Advanced Sales Quotation**
 
 !!! info
-    To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Through this window, the user can generate sales quotations and create the corresponding orders from those quotations.
 
@@ -10896,7 +10871,7 @@ Some other fields to note are:
 **Reservation Status:** defines whether the sales order is fully reserved (all lines fully reserved) or partially reserved.
 
 !!! info
-    Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the [Stock Reservations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#stock-reservations) section.
+    Reservations are disabled by default. To be able to use them please insert a new Preference using property Enable Stock Reservations with value Y. For more information, see the [Stock Reservations](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#stock-reservations) section.
 
 **Payment Status:** indicates in % how much of the total of the order has been paid.
 
@@ -10995,7 +10970,7 @@ IsCanceled, this is the flag that indicates that this is as well, a canceled ord
 ###### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Remittance module provides the header of the Sales Order with a new field: “Bank account”.
 
@@ -11136,7 +11111,7 @@ Set of orders replacing a canceled order.
 ##### How to Reactivate a Closed Sales Order
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate closed sales orders by selecting the needed one/s and clicking the Undo Close button.
 
@@ -11152,7 +11127,7 @@ Once the process is finished, the sales order status turns to _booked_.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to remove payments associated with a sales order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Sales Invoice window > Payment Plan tab).
 
@@ -11170,10 +11145,10 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 #### Goods Shipment
 
@@ -11266,7 +11241,7 @@ Besides, the window shows a new button **Generate Invoice from Shipment** which 
 ##### How to Reactivate Goods Shipments
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 From the Goods Shipment window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.
 
@@ -11277,14 +11252,14 @@ Once the shipment is successfully reactivated, the state of the document changes
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Return from Customer
 
@@ -11469,14 +11444,14 @@ Accounting information related to the return material receipt.
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### Create Shipments from Orders
 
@@ -11552,7 +11527,7 @@ Once completed a sales invoice can be:
 ###### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Remittance module provides the header of the Sales Invoice with a new field: “Bank account”.
 
@@ -11842,7 +11817,7 @@ We strongly recommend the user to use the "Reversed Sales Invoice" document type
 ##### How to Reactivate a Voided Sales Invoice
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate voided sales invoices by selecting the needed one/s and clicking the **Unvoid** button.
 
@@ -11864,7 +11839,7 @@ Once the process is finished, the sales invoice status turns to Complete.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to delete payments associated with a sales invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Sales Order window > Payment Plan tab).
 
@@ -11882,27 +11857,27 @@ If the payment is reconciled through an automatic method, then in addition to th
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ##### Advanced Rappels
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 When using this functionality, in the Sales Invoice window, the user can find the sales invoices corresponding to the created rappels.
 
@@ -11911,7 +11886,7 @@ When using this functionality, in the Sales Invoice window, the user can find th
 These sales invoices have a negative amount that represents the discount of the rappel, can include a prefix in its code to distinguish them from the rest and their status is “draft”.
 
 !!! info
-    For more information, visit [Advanced Rappels](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data#advanced-rappels).
+    For more information, visit [Advanced Rappels](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#advanced-rappels).
 
 #### Create Invoices from Orders
 
@@ -12062,7 +12037,7 @@ Fields to note:
 
 ---
 
-This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -12076,19 +12051,19 @@ This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki
 
 This section describes the windows related to sales reports in Etendo. These are:
 
-[:material-file-document-outline: Sales Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#sales-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Sales Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipments Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#shipments-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Shipments Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#shipments-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Discount Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#discount-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Discount Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#discount-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock for Open Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#stock-for-open-orders){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock for Open Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#stock-for-open-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#orders-awaiting-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Orders Awaiting Invoice Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-invoice-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Orders Awaiting Delivery Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#orders-awaiting-delivery-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Orders Awaiting Delivery Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#orders-awaiting-delivery-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Sales Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Sales Invoice Dimensional Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/analysis-tools.md#sales-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
 
 #### Sales Dimensional Report
@@ -12324,7 +12299,6 @@ At the top of the report, the secondary filters are now shown.
 Also, this report now shows the total of cost, profit, margin-% and quantity.
 
 At the end of the report, there is a new table showing the number of documents per document type.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Setup
@@ -12336,17 +12310,17 @@ At the end of the report, there is a new table showing the number of documents p
 
 This section describes the different windows that are necessary to set up the sales process in Etendo. These are:
 
-[:material-file-document-outline:Condition of the Goods](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#condition-of-the-goods){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Condition of the Goods](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#condition-of-the-goods){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Sales Region](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#sales-region){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Sales Region](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#sales-region){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Commission](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#commission){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Commission](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#commission){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Channel](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#channel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Channel](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#channel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Sales Campaign](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#sales-campaign){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Sales Campaign](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#sales-campaign){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Reject Reason](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup/#reject-reason){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Reject Reason](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/setup.md#reject-reason){ .md-button .md-button--primary } <br>
 
 
 #### **Condition of the goods**
@@ -12446,7 +12420,7 @@ In this window, the user defines the reasons to reject quotations. These values 
 ![Reject reason window](https://docs.etendo.software/latest/assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
 
 ---
-This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: ✨Getting Started
@@ -12460,21 +12434,21 @@ This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki
 Etendo automatically generates an accounting representation of all the transactions within the enterprise that have an economic relevance.
 
 Accounting is the system of tracking the assets, the debts, the income and the expenses of a business.
-In Etendo, most of the accounting entries are automatically created while posting [documents](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type). 
+In Etendo, most of the accounting entries are automatically created while posting [documents](https://docs.etendo.software/latest/financial-management/accounting/setup.md#document-type). 
 
-- [Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) and [Purchase Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice) in the [Procurement Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/) business area
-- [Goods Shipments](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#goods-shipment) and [Sales Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) in the [Sales Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/) business area.
+- [Goods Receipts](https://docs.etendo.software/latest/procurement-management/transactions.md#goods-receipts) and [Purchase Invoices](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice) in the [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md) business area
+- [Goods Shipments](https://docs.etendo.software/latest/sales-management/transactions.md#goods-shipment) and [Sales Invoices](https://docs.etendo.software/latest/sales-management/transactions.md#sales-invoice) in the [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md) business area.
 
-Accounting entries not directly related to [documents](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type) managed within a given application area can be created and posted in a [G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal). For instance a provision for stock depreciation accounting entry.
+Accounting entries not directly related to [documents](https://docs.etendo.software/latest/financial-management/accounting/setup.md#document-type) managed within a given application area can be created and posted in a [G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal). For instance a provision for stock depreciation accounting entry.
 
 There are three ways of accounting in Etendo:
 
 - To manually post each document by using the process button *Post*.
-The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#preference).
+The process button *Post* can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the [Purchase Invoice window](https://docs.etendo.software/latest/procurement-management/transactions.md#purchase-invoice). This button is shown for accounting users if the Attribute *ShowAcct* is visible for them. This configuration is enabled through a [Preference](https://docs.etendo.software/latest/general-setup/application.md#preference).
 
-- To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables)
+- To manually post all the documents/transactions related to a given database table for instance the table *Invoices*, by using the process [GL posting by DB Tables](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-posting-by-db-tables)
 
-- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+- or to automatically post accounting transactions of any type by scheduling the *Accounting Server Process* in the [Process Request](https://docs.etendo.software/latest/general-setup/process-scheduling.md#process-request) window.
 
 Accounting activities such as:
 
@@ -12493,14 +12467,14 @@ Finally Etendo has an *integrated accounting system* that combines general accou
 
 In other words, Etendo allows to post transactions to the ledger which can include different dimensions:
 
-- Those dimensions can be centrally maintained in the [Client](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client/) therefore are available to all the organizations within that Client.
-Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig).
+- Those dimensions can be centrally maintained in the [Client](https://docs.etendo.software/latest/general-setup/client.md) therefore are available to all the organizations within that Client.
+Moreover Organizations of that Client can also have additional dimensions configured separately in its [General Ledger Configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md##glconfig).
 
 Those dimensions are then available just for that Organization.
 
-- On the other hand, those dimensions can not be centrally maintained in the [Client](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client/) but independently maintained in the [Organization's General Ledger Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#dimension).
+- On the other hand, those dimensions can not be centrally maintained in the [Client](https://docs.etendo.software/latest/general-setup/client.md) but independently maintained in the [Organization's General Ledger Configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#dimension).
 
-This application area covers the [Period End Close to Financial Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) business flow.
+This application area covers the [Period End Close to Financial Report](https://docs.etendo.software/latest/financial-management/getting-started.md#period-end-close-to-financial-report) business flow and the [Payables and Receivables Management](https://docs.etendo.software/latest/financial-management/getting-started.md#payables-and-receivables-management) business flow.
 
 #### Payables and Receivables Management
 
@@ -12514,10 +12488,10 @@ Payables and Receivables Management addresses customer collections and supplier 
 
 The following setup needs to be done before performing the process:
 
-- [Payables and Receivables Document Types](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type).
-- [Payment Methods](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
-- [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
-- [Business Partners](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner) to use above configured Payment Methods and Financial Accounts.
+- [Payables and Receivables Document Types](https://docs.etendo.software/latest/financial-management/accounting/setup.md#document-type).
+- [Payment Methods](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-method).
+- [Financial Accounts](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account).
+- [Business Partners](https://docs.etendo.software/latest/master-data-management/master-data.md#business-partner) to use above configured Payment Methods and Financial Accounts.
 
 !!!note
     It is not required to perform any additional setup for the Payables and Receivables Management business process if Food & Beverage (F&B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, business partners, products and prices pre-configured.
@@ -12536,7 +12510,7 @@ Overall the *Payables and Receivables Management* business process can be split 
 
 ###### Creation of the orders/invoices to be paid
 
-In the [Procure to Pay](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) and [Order to Cash](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow) business process we have seen how the orders and invoices have been generated.
+In the [Procure to Pay](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) and [Order to Cash](https://docs.etendo.software/latest/procurement-management/getting-started.md#procure-to-pay-business-flow) business process we have seen how the orders and invoices have been generated.
 
 Every time that a Purchase or Sales Order is booked or a Purchase or Sales Invoice is completed a Payment Plan is created for that Order / Invoice.
 
@@ -12547,23 +12521,23 @@ A payment plan contains the payment amount/s expected for the document and its f
 
 ###### Creation of payments do not related to orders/invoices
 
-In the [Period End Close to Financial Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) therefore it is not related to an order/invoice but to a G/L Item.
+In the [Period End Close to Financial Report](https://docs.etendo.software/latest/financial-management/getting-started.md#period-end-close-to-financial-report) business process we have seen how a payment can be made or received by using a [GL Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal) therefore it is not related to an order/invoice but to a G/L Item.
 
 A G/L Item payment created in a G/L Journals implies:
 
-- the creation of a [Payment Made](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) if the payment information is entered in the *Credit* line of the G/L Journal.
+- the creation of a [Payment Made](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-out) if the payment information is entered in the *Credit* line of the G/L Journal.
 
-The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
+The status of this payment would either be *Payment Made* or *Awaiting Execution* or *Withdrawn not Cleared* depending on the [configuration](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#payment-method-configuration) of the payment method used and linked to the financial account where the money is taken from.
 
-- Or the creation of a [Payment Received](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) if the payment information is entered in the *Debit* line of the G/L Journal.
+- Or the creation of a [Payment Received](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-in) if the payment information is entered in the *Debit* line of the G/L Journal.
 
-The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
+The status of this payment would either be *Payment Received* or *Awaiting Execution* or *Deposited not Cleared* depending on the [configuration](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#payment-in-configuration) of the payment method used and linked to the financial account where the money is going to be deposited in.
 
 ###### Review of the status of the pending payments
 
 On a periodic basis the Finance Staff reviews the status of the payments pending to be collected / to be paid by looking:
 
-- At the [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
+- At the [Payment Report](https://docs.etendo.software/latest/financial-management/receivables-and-payables/analysis-tools.md#payment-report) and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.
 
      Overdue check-box allows to narrow down the search and to show only overdue payments.
      Payment Type displays Receivables, Payables or both.
@@ -12574,18 +12548,18 @@ On a periodic basis the Finance Staff reviews the status of the payments pending
 
 When a Payment is Received the Finance staff can register it in different ways:
 
-- In the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window by selecting the Sales Invoices and/or Orders payment is received against.
+- In the [Payment In](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-in) window by selecting the Sales Invoices and/or Orders payment is received against.
 
 !!!note
     Many businesses do not wish to extend credit to specific customers and may therefore have a payment term that requires payment against an order. In effect this is a prepayment of an invoice. Later when an invoice is created from an order that already has a payment received against it the invoice automatically inherits the payment received against the order.
 
-- Using the [Add Payment button](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
+- Using the [Add Payment button](https://docs.etendo.software/latest/sales-management/transactions.md#lines_5) directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.
 
-- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+- It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the [Payment Method](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#payment-method).
 
 If collection does not happen on time:
 
-- The Expected Date of the [Payment Plan](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-plan_1) can be modified, preventing the debt from being overdue.
+- The Expected Date of the [Payment Plan](https://docs.etendo.software/latest/sales-management/transactions.md#payment-plan_1) can be modified, preventing the debt from being overdue.
 
 - The Amount due of the Payment Plan can be:
      split in two or more amounts due at a later expected date.
@@ -12613,8 +12587,8 @@ There are 3 ways to pay vendor bills:
 
 ###### Recording of the financial account transactions
 
-Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window by pressing the Add Transaction button and selecting either the received or made payments.
-This step in the process can also be completely automated through the configuration of the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
+Finance Staff records Withdrawals and Deposits as transactions in the [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account) window by pressing the Add Transaction button and selecting either the received or made payments.
+This step in the process can also be completely automated through the configuration of the [Payment Method](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#payment-method-configuration) so that the payments are automatically withdrawn or deposited when they are completed.
 
 ###### Reconciliation of the financial account transactions
 
@@ -12645,11 +12619,11 @@ This section details the basic and not that basic accounting configuration neede
 
 There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:
 
-- [Fiscal Calendar](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar)
+- [Fiscal Calendar](https://docs.etendo.software/latest/financial-management/accounting/setup.md#fiscal-calendar)
 
 A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.
 
-- [Account Tree](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree)
+- [Account Tree](https://docs.etendo.software/latest/financial-management/accounting/setup.md#account-tree)
 
 An account tree is the way Etendo captures the *Chart of Accounts* (CoA) of an Organization.
 
@@ -12660,7 +12634,7 @@ Accounts such as balance sheet accounts (assets, liabilities and owner's equity)
 !!!Note 
     It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.
 
-- [General Ledger configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig)
+- [General Ledger configuration](https://docs.etendo.software/latest/financial-management/accounting/setup.md#glconfig)
 
 The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the *Currency* and the *Chart of Accounts* among others.
 
@@ -12671,7 +12645,7 @@ Having said that, the accounting configuration detailed in this section is the o
 - and a Fiscal Calendar
 
 Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the [Initial Organization Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup) and in the [Organization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization) section.
+Rest of the Organization types behave as explained in the [Initial Organization Setup](https://docs.etendo.software/latest/general-setup/enterprise-model.md#initial-organization-setup) and in the [Organization](https://docs.etendo.software/latest/general-setup/enterprise-model.md#organization) section.
 
 Very briefly:
 
@@ -12711,9 +12685,9 @@ Overall the Period End Close to Financial Report business flow can be split into
 
 This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:
 
-- The ledger accounts balance can be initialized by using a [G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
+- The ledger accounts balance can be initialized by using a [G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal) set as *Opening*, therefore that ledger entry is set as the *Opening Ledger Entry*.
 A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.
-- The financial accounts balance can be initialized in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
+- The financial accounts balance can be initialized in the [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account) window, in the *Initial Balance* field, therefore the corresponding financial account/s or banks need to be previously created.
 
 
 ####### Review of the accounting transactions
@@ -12721,39 +12695,39 @@ A journal line can be created for each account and its opening balance, once don
 As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
 For instance the accounting of a purchase invoice will take:
 
-- the expense account setup for the product being purchased in the [Accounting](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting) tab of the *Product* window
-- the vendor liability account setup for the vendor in the [Vendor Accounting](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting) tab of the *Business Partner* window
-- and the tax credit account setup in the [Accounting](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting_1) tab of the *Tax Rate* window.
+- the expense account setup for the product being purchased in the [Accounting](https://docs.etendo.software/latest/master-data-management/master-data.md#accounting) tab of the *Product* window
+- the vendor liability account setup for the vendor in the [Vendor Accounting](https://docs.etendo.software/latest/master-data-management/master-data.md#vendor-accounting) tab of the *Business Partner* window
+- and the tax credit account setup in the [Accounting](https://docs.etendo.software/latest/financial-management/accounting/setup.md#accounting_1) tab of the *Tax Rate* window.
 
 Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.
 Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.
 
 
-Additionally, the [Accounting Transactions Details](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#accounting-transaction-details) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report shows the transactions which need to be accounted for but have not been accounted yet.
+Additionally, the [Accounting Transactions Details](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#accounting-transaction-details) report shows all the transactions posted in the ledger with all the details and the [Not Posted Transactions](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#not-posted-transaction-report) report shows the transactions which need to be accounted for but have not been accounted yet.
 
 Finally Etendo allows to massively fix accounting errors if any, for instance a vendor liability account wrongly assigned to a vendor or to a set of vendors.
 The way to do that is:
 
-- run the [Reset Accounting](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
+- run the [Reset Accounting](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#reset-accounting) process for the table being affected for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
 - correct the accounting configuration
-- get the transactions posted once again by using the [GL Posting by DB Tables](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables) feature.
+- get the transactions posted once again by using the [GL Posting by DB Tables](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-posting-by-db-tables) feature.
 This feature performs a massive posting of all the accounting or just the accounting of a table for instance the *C_Invoice* table (Purchase Invoice and Sales Invoice table).
 
 ####### Creation of accounting transactions and G/L item payments
 
-As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
+As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a [G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal).
 A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
-G/L items payments are also managed within the [Payables and Receivables management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management) area.
+G/L items payments are also managed within the [Payables and Receivables management](https://docs.etendo.software/latest/financial-management/getting-started.md#payables-and-receivables-management) area.
 
 ####### Printing of the Trial Balance to check that Debit=Credit
 
-The [Trial Balance](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
+The [Trial Balance](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#trial-balance) is a list indicating the balances of every single general ledger account at a given point in time.
 
 The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.
 
 Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. 
 
-In these situations the difference is posted in a specific suspense account. [Suspense](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) accounts are configured in the General Ledger configuration.
+In these situations the difference is posted in a specific suspense account. [Suspense](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-accounts) accounts are configured in the General Ledger configuration.
 
 ####### Adjustments required prior to the income calculation
 
@@ -12789,7 +12763,7 @@ This way allows the calculation of the *Operating Income* as the difference betw
 Other adjustments required can be:
 
 - Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
-This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal).
+This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a [GL Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal).
 - Taxes such as the VAT needs to be settled periodically.
 It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.
 - Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:
@@ -12805,26 +12779,26 @@ It is very useful to print these financial reports prior to the closing of the y
 
 During the accounting cycle there are other reports which can also be printed:
 
-- the [General Ledger Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
-- the [Journal Entries Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
+- the [General Ledger Report](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#general-ledger-report) list all the debits entries and all the credits entries of every T-Account within a given period of time
+- the [Journal Entries Report](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#journal-entries-report) lists in a chronological order every journal entry posted in the ledger.
 
 ####### The closing of the fiscal year
 
 Etendo allows to perform below detailed checks prior to the closing of the fiscal year:
 
-- Run the [Not Posted Transaction](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
-- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#active-tables).
-- Unscheduled the [Accounting Server Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) therefore an stable scene can be assured.
-- Check the [Financial Account/s](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/).
+- Run the [Not Posted Transaction](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#not-posted-transaction-report) report to verify that there are no transactions and/or documents in status *Complete* not posted yet.
+- Check that there are no documents still having a *Draft* status, specially those which require to be [accounted](https://docs.etendo.software/latest/financial-management/accounting/setup.md#active-tables).
+- Unscheduled the [Accounting Server Process](https://docs.etendo.software/latest/general-setup/process-scheduling.md#process-request) therefore an stable scene can be assured.
+- Check the [Financial Account/s](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#financial-account) current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or [how to transfer funds between financial accounts](https://docs.etendo.software/latest/how-to-guides/how-to-transfer-funds-between-financial-accounts.md).
 
-Before running the close year process the accounting periods can be [closed](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
-The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal) prior to closing the year.
+Before running the close year process the accounting periods can be [closed](https://docs.etendo.software/latest/financial-management/accounting/setup.md#openclose-period-control) not to allow any further posting within those periods, but the *13th period*.
+The *13th period* is an *adjustment period* which can be used to post the adjustments required to the ledger through [G/L Journals](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#gl-journal) prior to closing the year.
 
-The *Close Year* process can be executed from the [End Year Close](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
+The *Close Year* process can be executed from the [End Year Close](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#end-year-close) window.
 
 The end-year close process can be executed for *Legal with Accounting* organization types as that organization's type has a *Fiscal Calendar* and *General Ledger* configured.
 
-There is a check-box in the [General Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
+There is a check-box in the [General Accounts](https://docs.etendo.software/latest/financial-management/accounting/setup.md#general-accounts) tab of the *General Ledger Configuration* window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
 That check-box is named *Reverse Permanent Account Balances*. 
 
 - If it is checked the closing of the year process includes an entry to reverse the balance sheet accounts besides the P&L closing entry.
@@ -12833,7 +12807,7 @@ That check-box is named *Reverse Permanent Account Balances*.
 Etendo uses the adjustment period (i.e. December 31st) for accounting the closing transactions if any, and the next period's first date (i.e. January 1st) for accounting the opening transactions if any.
 
 !!!info
-    For more information, visit the [End Year Close](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close) window.
+    For more information, visit the [End Year Close](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#end-year-close) window.
 
 
 
@@ -12841,18 +12815,18 @@ Etendo uses the adjustment period (i.e. December 31st) for accounting the closin
 
 Once a year has been closed every financial report contains the corresponding closing and opening transactions:
 
-- the [Balance Sheet](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the financial situation of the organization as of the end of the closed accounting period.
+- the [Balance Sheet](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure) will show the financial situation of the organization as of the end of the closed accounting period.
 Etendo allows to get a two columns balance sheet:
           One column shows the balances as of the end of the most recent accounting period
           and the other column shows the balances as of the prior period end.
 
 This balance allows seeing how the financial position of the organization has changed over time.
 
-- the [Income Statement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure) will show the organization performance over the year closed
+- the [Income Statement](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure) will show the organization performance over the year closed
 
 And besides: 
 
-- the [General ledger Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report) allows to show for a given accounting period below entries posted by the Close Year process:
+- the [General ledger Journal](https://docs.etendo.software/latest/financial-management/accounting/analysis-tools.md#general-ledger-report) allows to show for a given accounting period below entries posted by the Close Year process:
     the opening balance entry
     the closing balance entry
     and the P&L closing entry
@@ -12873,13 +12847,10 @@ Manages global assets life cycle from acquisition to disposition, including depr
 
 Financial Management has a connection with other application areas, as there are documents or transactions in those areas which can be posted and therefore be part of a ledger journal to be finally managed within the Financial Management application area.
 
-- [Procurement Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/getting-started/) as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.
-- [Sales Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/getting-started/) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
-- [Warehouse Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/) as Physical Inventory is posted there.
+- [Procurement Management](https://docs.etendo.software/latest/procurement-management/getting-started.md) as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.
+- [Sales Management](https://docs.etendo.software/latest/sales-management/getting-started.md) as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.
+- [Warehouse Management](https://docs.etendo.software/latest/warehouse-management/getting-started.md) as Physical Inventory is posted there.
 - Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Transactions
@@ -12890,7 +12861,6 @@ Financial Management has a connection with other application areas, as there are
 #### **Overview**
 
 Financial Management functional documentation provides a detailed description of all windows of the Financial Management application area.
-
 
 #### **Purchase Invoice Payment Plan**
 
@@ -13113,7 +13083,7 @@ This read-only tab shows the credit payment used to pay a vendor document (order
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
 On the other hand, it is possible to reactivate payments from the same window with the "Advanced Reactivation" button. This functionality allows the user to reactivate the payment without deleting manually its associated transactions, which is necessary if using the core button "Reactivate". This will return the payment to “Awaiting Payment” status and new payment details can be added.
@@ -13132,19 +13102,19 @@ In both cases:
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ##### Advanced Business Partner Settlement
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
   
 From the **Payment Out** window, it is possible to create a settlement by clicking on the **Add Details** button.
@@ -13167,7 +13137,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](https://docs.etendo.software/latest/assets/drive/1LQMshrKSSifD2OpQ0Yjmfc3jPfxYQ2S3.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
 #### **Payment Proposal**
 
@@ -13335,7 +13305,7 @@ The **Add Details** button opens the **Add Payment** window, where the documents
 ![](https://docs.etendo.software/latest/assets/drive/1xlIbwx_2b4aA_LHx9ud0-vHDkCSc-a36.png)
 
 !!! info
-    The "Add Payment" window is already explained in the [Sales Invoice Payment article](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment).
+    The "Add Payment" window is already explained in the [Sales Invoice Payment article](https://docs.etendo.software/latest/sales-management/transactions.md#payment).
 
 ###### Payment of several document types from different customers
 
@@ -13509,7 +13479,7 @@ This read-only tab shows the credit payment used to pay a customer's document (o
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to delete payments by selecting the corresponding record and then clicking on the Remove Payment button.
 On the other hand, it is possible to reactivate payments from the same window with the "Advanced Reactivation" button. This functionality allows the user to reactivate the payment without deleting manually its associated transactions, which is necessary if using the core button "Reactivate". This will return the payment to “Awaiting Payment” status and new payment details can be added.
@@ -13528,19 +13498,19 @@ In both cases:
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ##### Advanced Business Partner Settlement
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}.For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From the **Payment In** window, it is possible to create a settlement by clicking on the **Add Details** button. In the pop-up window, Etendo shows a list of invoices to be settled each one with its corresponding invoice number, here the user is able to select the corresponding invoice or invoices to net. First, set the **Actual Payment amount** to be paid and then, select the invoice/s to create a settlement and define the corresponding amount to be paid from the/each invoice.
 
@@ -13561,7 +13531,7 @@ The settlement record is registered in the **Business Partner Settlement** windo
 ![](https://docs.etendo.software/latest/assets/drive/1hLhHQMEICTtf2nc-QF6lrolaOOnwIabv.png)
 
 !!! info
-    For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
 #### **Financial Account**
 
@@ -14077,7 +14047,7 @@ In this tab, there is the advanced feature (hidden by default) called **invoice 
 This combo can be set at payment method level (payment in and payment out) in each financial account. By default this combo is set as **payment received** or **payment made**, therefore we get the usual behavior of Etendo.
 
 !!! info
-    For additional information about payment method configuration, visit the [_Payment Method_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method) article.
+    For additional information about payment method configuration, visit the [_Payment Method_](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#payment-method) article.
 
 ###### **Imported Bank Statements**
 
@@ -14169,7 +14139,7 @@ c. if the Payment Received was posted in the **"Payment In"** window or not and 
 | Upon Deposit Use the "Deposit Account" (i.e)                |                | Payment amount |
 
 !!! info
-    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the [_Doubtful Debt Run Window_](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#doubtful-debt-run)
+    Each posting will be different when the amount comes partially or totally from a debt classified as doubtful. In that case, the posting will be as explained in the [_Doubtful Debt Run Window_](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#doubtful-debt-run)
 
 A "**Withdrawal Reconciliation**" posting looks like:
 
@@ -14228,7 +14198,7 @@ The accounting tab is a read-only tab which shows every financial account transa
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ###### Transactions
 
@@ -14267,19 +14237,19 @@ The following situations can be possible:
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In the case of the "Financial Account" window, this option can be used in three tabs: Transaction, Imported Bank Statements and Reconciliations.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ##### Advanced Business Partner Settlement
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows performing a settlement from a bank reconciliation.
 From the **Financial Account** window, once the bank statements are already imported and processed, the user is able to select the bank statement from the financial account and match it with the invoice to be paid by clicking on the **Match Statement** button.
@@ -14303,7 +14273,7 @@ The settlement record (payment in and payment out) is also registered in the **B
 ![](https://docs.etendo.software/latest/assets/drive/1v1dM1rAImvwdfJLXtQYzzwKNH6BBALbm.png)
 
 !!! info
-    For more information, visit the [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#business-partner-settlement).
+    For more information, visit the [the Business Partner Settlement module user guide](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#business-partner-settlement).
 
 #### **Payment Execution**
 
@@ -14531,7 +14501,7 @@ Some relevant fields to note are:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ##### Introduction
 
@@ -14550,17 +14520,17 @@ To be able to use this functionality, it is necessary to configure some aspects 
     ![emm.png](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/enterprise-module-management.png)
 
     !!! info
-        For more information, visit [Enterprise Module Management](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#enterprise-module-management).
+        For more information, visit [Enterprise Module Management](https://docs.etendo.software/latest/general-setup/enterprise-model.md#enterprise-module-management).
 
 - Remittance Type: It is necessary to define a remittance type with a certain payment method in the *Remittance Type* window.
 
     !!! info
-        For more information, visit [Remittance Type window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#remittance-type).
+        For more information, visit [Remittance Type window](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#remittance-type).
 
 - Business Partner default bank account: For each business partner, it is possible to   define a bank account that is selected by default each time creating a remittance is necessary.
 
     !!! info
-        To read more, visit [Bank Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#remittance) in the Business Partner section.
+        To read more, visit [Bank Account](https://docs.etendo.software/latest/master-data-management/master-data.md#remittance) in the Business Partner section.
 
 
 ##### Remittance window
@@ -14625,7 +14595,7 @@ There are two types of remittances:
         ![error.png](https://docs.etendo.software/latest/assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance_1) and [sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance_1) invoices as well as in [purchase](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance) and [sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](https://docs.etendo.software/latest/procurement-management/transactions.md#remittance_1) and [sales](https://docs.etendo.software/latest/sales-management/transactions.md#remittance_1) invoices as well as in [purchase](https://docs.etendo.software/latest/procurement-management/transactions.md#remittance) and [sales](https://docs.etendo.software/latest/sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:
@@ -14721,7 +14691,7 @@ There are two types of remittances:
         ![error.png](https://docs.etendo.software/latest/assets/legacy/error.png)
 
         !!! info
-            Bank accounts can be defined in the header of [purchase](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance_1) and [sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance_1) invoices as well as in [purchase](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#remittance) and [sales](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#remittance) orders.
+            Bank accounts can be defined in the header of [purchase](https://docs.etendo.software/latest/procurement-management/transactions.md#remittance_1) and [sales](https://docs.etendo.software/latest/sales-management/transactions.md#remittance_1) invoices as well as in [purchase](https://docs.etendo.software/latest/procurement-management/transactions.md#remittance) and [sales](https://docs.etendo.software/latest/sales-management/transactions.md#remittance) orders.
 
 
     4. When processing, the system shows the following options:
@@ -14850,14 +14820,14 @@ Accounting information related to the doubtful debt.
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 #### **Doubtful Debt Run**
 
@@ -14900,7 +14870,6 @@ In this tab, the previously selected records are shown. Afterwards, it will be n
 ---
 
 This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/wiki/Financial_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Analysis Tools
@@ -14912,17 +14881,15 @@ This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/
 
 This section describes the windows related to financial reports in Etendo. These are:
 
-[:material-file-document-outline: Cashflow Forecast Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#cashflow-forecast-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Cashflow Forecast Report](#cashflow-forecast-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Receivables Aging Schedule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#receivables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Receivables Aging Schedule](#receivables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payables Aging Schedule](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payables Aging Schedule](#payables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Report](#payment-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Run](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-run){ .md-button .md-button--primary } <br>
-
-
+[:material-file-document-outline: Payment Run](#payment-run){ .md-button .md-button--primary } <br>
 
 
 #### **Cashflow Forecast Report**
@@ -15241,19 +15208,19 @@ For instance, the "Print Check simple process" execution process delivered by Et
 
 This section describes the windows that are necessary to configure the financial management transactions as regards receivables and payables in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Tax Register Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#tax-register-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Register Type](#tax-register-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Method](#payment-method){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matching Algorithm](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#matching-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matching Algorithm](#matching-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Bank File Format](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#bank-file-format){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Bank File Format](#bank-file-format){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Execution Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#execution-process){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Execution Process](#execution-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Remittance Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#remittance-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Remittance Type](#remittance-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Doubtful Debt Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#doubtful-debt-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Doubtful Debt Method](#doubtful-debt-method){ .md-button .md-button--primary } <br>
 
 
 #### **Tax Register Type**
@@ -15468,7 +15435,7 @@ Payment Method configuration includes the features below:
 -   and finally, how the payment is going to be **accounted**.
 
 !!! info
-    To learn more, visit the section [Accounting Payment Workflow](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup#accounting-payment-workflow).
+    To learn more, visit the section [Accounting Payment Workflow](https://docs.etendo.software/latest/financial-management/receivables-and-payables/setup.md#accounting-payment-workflow).
 
 
 Payment Methods can be configured as explained below in detail:
@@ -15737,7 +15704,7 @@ To configure Non-Discount Remittances, define this payment method from the Payme
 ![](https://docs.etendo.software/latest/assets/drive/1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO.png)
 
 !!! info
-    To create a Non-Discount remittance go to the [Remittance window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance). 
+    To create a Non-Discount remittance go to the [Remittance window](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#remittance). 
 
 ##### Remit for Discount
 
@@ -15750,7 +15717,7 @@ To configure Remittances for Discount, define the type from the Remit for Discou
 ![](https://docs.etendo.software/latest/assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
-    To create a Remit for Discount remittance go to the [Remittance window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance).
+    To create a Remit for Discount remittance go to the [Remittance window](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#remittance).
 
 
 #### **Doubtful Debt Method**
@@ -15781,23 +15748,23 @@ This work is a derivative of ["Financial Management"](http://wiki.openbravo.com/
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Financial Type Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type Configuration](#financial-type-configuration){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Simple G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#simple-gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Simple G/L Journal](#simple-gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Journal](#gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: End Year Close](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: End Year Close](#end-year-close){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: GL Posting by DB Tables ](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: GL Posting by DB Tables ](#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Budget](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#budget){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Budget](#budget){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Budget Reports in Excel](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Budget Reports in Excel](#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Not Posted Transaction Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Reset Accounting](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 
 #### Financial Type Configuration
@@ -15823,7 +15790,7 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type).
+    For more information, visit [Financial Type](https://docs.etendo.software/latest/financial-management/accounting/setup.md#financial-type).
 
 
 ##### Header
@@ -16042,7 +16009,7 @@ The exchange rate tab allows the user to enter an exchange rate between the orga
 ##### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -16080,14 +16047,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
 
 #### **G/L Journal**
@@ -16198,7 +16165,7 @@ Accounting information related to the GL Journal
 ###### Duplicate Journal Entries
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -16242,7 +16209,7 @@ Once this preference is configured, the button will be enabled in “Simple GL J
 ##### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -16275,14 +16242,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 #### **End Year Close**
@@ -16400,7 +16367,7 @@ Etendo creates below "closing" entries if the "**Reverse Permanent Account Balan
  ![](https://docs.etendo.software/latest/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](https://docs.etendo.software/latest/assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png)
      
 
 The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the "Reverse Permanent Account Balances set to "Yes" scenario.
@@ -16472,15 +16439,15 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**.  
     This entry resets all "Revenue" and "Expense" accounts.
     
- ![](https://docs.etendo.software/latest/assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png)
      
 -   Dated on the latest day of the year (31-12-2019) below **Closing Entry**.  
     This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.
- ![](https://docs.etendo.software/latest/assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png)
      
 -   Dated on the day of the following year (01-01-2020) below **Opening Entry**.  
     This entry is the reversal entry of the above closing entry:
- ![](https://docs.etendo.software/latest/assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png)
      
 
 ####### **Reverse Permanent Account Balances set to "No"**
@@ -16488,10 +16455,10 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 Etendo creates below "closing" entries if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "No":
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](https://docs.etendo.software/latest/assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](https://docs.etendo.software/latest/assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png)
+ ![](https://docs.etendo.software/latest/assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png)
 
 #### **GL Posting by DB Tables**
 
@@ -16594,27 +16561,27 @@ The reset accounting process allows the user to totally or partially remove the 
 
 This section describes the windows related to accounting financial reports in Etendo. These are:
 
-[:material-file-document-outline: Accounting Transaction Details](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure](#balance-sheet-and-pl-structure){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Advanced](#balance-sheet-and-pl-structure-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Trial Balance](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Trial Balance](#trial-balance){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report](#general-ledger-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report](#journal-entries-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Journal Entries Report Advanced](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Journal Entries Report Advanced](#general-ledger-report-advanced){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Tax Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#create-tax-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Tax Report](#create-tax-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Customer Statement](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#customer-statement){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Customer Statement](#customer-statement){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Report Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#tax-report-setup_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Report Setup](#tax-report-setup_1){ .md-button .md-button--primary } <br>
 
 
 
@@ -16697,7 +16664,7 @@ Under the *"Primary Filters"* section, it is possible to specify:
 #### **Balance Sheet and P&L Structure Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The **Balance Sheet and P&L Structure Advanced report** is an enhanced version of the previous “Balance Sheet and P&L Structure”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -16865,7 +16832,7 @@ The General Ledger Report can also be viewed and saved in Excel format and PDF f
 #### **General Ledger Report Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **General Ledger Advanced** report is an enhanced version of the previous “General Ledger Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -16938,7 +16905,7 @@ Finally, and same way as for the rest of financial reports, the Journal Entries 
 #### **Journal Entries Report Advanced**
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This **Journal Entries Advanced** report is an enhanced version of the previous “Journal Entries Report”. Its purpose is to expand the filtering criteria, including all the existing accounting dimensions in the table Accounting Transaction Details.
 
@@ -17103,45 +17070,45 @@ Once these fields have been introduced, it will be possible to print the Report 
 
 This section describes the windows that are necessary to configure the accounting functionalities of Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Accounting Transaction Details](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Open/Close Period Control](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Open/Close Period Control](#openclose-period-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Financial Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type](#financial-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Period Control Log](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#period-control-log){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Period Control Log](#period-control-log){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Tree](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Account Tree](#account-tree){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Configuration](#glconfig){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Fiscal Calendar](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Fiscal Calendar](#fiscal-calendar){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Combination](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Account Combination](#account-combination){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Process](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting-process){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Process](#accounting-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Item](#gl-item){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Category](#gl-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Type](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Document Type](#document-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Sequence](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-sequence){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Document Sequence](#document-sequence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Category](#tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Business Partner Tax Category](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Business Partner Tax Category](#business-partner-tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Rate](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-rate){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Rate](#tax-rate){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Cost Center](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#cost-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Cost Center](#cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: ABC Activity](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#abc-activity){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: ABC Activity](#abc-activity){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Templates](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting-templates){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Templates](#accounting-templates){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Setup](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Setup](#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
 
 
 #### **Open/Close Period Control**
@@ -17304,7 +17271,7 @@ Notice that:
 #### Financial Type
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
 ##### Introduction
@@ -17312,7 +17279,7 @@ Notice that:
 In this window, the user can configure the different options to use in the Financial Type Configuration window.
 
 !!! info
-    For more information, visit [Financial Type Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration).
+    For more information, visit [Financial Type Configuration](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#financial-type-configuration).
 
 
 ###### How to install the Financial Type dataset
@@ -17415,7 +17382,7 @@ Besides, it is well-known that every account, subaccount in Etendo terms, needs 
 -   "Asset", "Liability" and "Owner's Equity" account types need to be included in the Balance Sheet
 -   while "Expense" and "Revenue" account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](https://docs.etendo.software/latest/assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png which can be found in the "Toolbar"..png)
+The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](https://docs.etendo.software/latest/assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar.
 
 Tree icon opens a new window which shows one tree branch per financial statement:
 
@@ -18292,7 +18259,7 @@ In this window, the user can configure necessary accounting processes.
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounting-process.png)
 
 !!!info
-    For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process).
+    For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md).
   
 #### **G/L Item**
 
@@ -18672,7 +18639,7 @@ There are other variables which can reduce up to just "one" the tax rate automat
 Those variables are related to the tax category as well as the way each tax rate is configured.
 
 !!! info
-    It is important to remark that all available tax rates are available for *manual* selection in an order/invoice line regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
+    It is important to notice that all available tax rates are available for *manual* selection in an order/invoice line regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
 
 The end-user could need to select a particular tax rate under a given business scenario that is not the common one.
 
@@ -18792,7 +18759,7 @@ The VAT amount can not be posted to the ledger in a Tax Credit account as it mea
 | Vendor Liability |     | Total Gross Amount | One per invoice |
 
 !!! info
-    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).   
+    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).   
 
 The same behavior can be applied for the non-deductible tax. 
 
@@ -19082,27 +19049,27 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management../../../../../assets/overview/#bulk-posting)
-- [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_1)
-- [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
-- [Matched Invoices](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_2)
-- [Cost Adjustment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_3)
-- [Bill of Materials Production](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_2)
-- [Internal Consumption](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting_1)
-- [Doubtful Debt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_3)
-- [Landed Cost](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_4)
-- [G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting_1)
-- [Simple G/L Journal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting)
-- [Work Effort](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting)
-- [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting)
-- [Goods Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting)
-- [Return Material Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_1)
-- [Return to Vendor Shipment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_3)
-- [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_2)
-- [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_1)
-- [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_1)
-- [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting)
-- [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting)
+- [Amortization](https://docs.etendo.software/latest/financial-management/assets/overview.md#bulk-posting)
+- [Goods Movements](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_1)
+- [Financial Account](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
+- [Matched Invoices](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_2)
+- [Cost Adjustment](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_3)
+- [Bill of Materials Production](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting_2)
+- [Internal Consumption](https://docs.etendo.software/latest/production-management/transactions.md#bulk-posting_1)
+- [Doubtful Debt](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
+- [Landed Cost](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_4)
+- [G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#bulk-posting_1)
+- [Simple G/L Journal](https://docs.etendo.software/latest/financial-management/accounting/transactions.md#bulk-posting)
+- [Work Effort](https://docs.etendo.software/latest/production-management/transactions.md#bulk-posting)
+- [Goods Receipt](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting)
+- [Goods Shipment](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting)
+- [Return Material Receipt](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting_1)
+- [Return to Vendor Shipment](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_3)
+- [Sales Invoice](https://docs.etendo.software/latest/sales-management/transactions.md#bulk-posting_2)
+- [Purchase Invoice](https://docs.etendo.software/latest/procurement-management/transactions.md#bulk-posting_1)
+- [Payment In](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
+- [Payment Out](https://docs.etendo.software/latest/financial-management/receivables-and-payables/transactions.md#bulk-posting)
+- [Physical Inventory](https://docs.etendo.software/latest/warehouse-management/transactions.md#bulk-posting)
 
 
 ###### Accounting Status
@@ -19129,13 +19096,13 @@ It is necessary to run the “Refresh Accounting Status” background process to
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
 
-[:material-file-document-outline: Assets](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#assets){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Assets](#assets){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Group](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#asset-group){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Group](#asset-group){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Amortization](#amortization){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Amortization Report (Excel)](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Amortization Report (Excel)](#amortization-report){ .md-button .md-button--primary } <br>
 
 
 #### **Assets**
@@ -19276,7 +19243,7 @@ Accounting information related to the amortization
 ##### How to Reactivate Amortizations
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
@@ -19285,20 +19252,20 @@ Etendo allows multiple amortizations to be processed and unprocessed. This proce
 ##### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 #### Asset Amortization Report (Excel)
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
@@ -19325,9 +19292,6 @@ For example: Period date filtered 01-01-2022 and 31-12-2022
 
 !!! info
     When the end date within the Assets window is filled in, that Asset will not appear in the report if the filtered date is after the end date of the Asset.
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -19353,7 +19317,7 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [the Advanced Business Partner module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner).
+    For more information, visit [the Advanced Business Partner module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Advanced Business Partner
@@ -19414,7 +19378,7 @@ To configure the Sequence Number, go to the “Document Sequence” window, crea
 ![image_2.png](https://docs.etendo.software/latest/assets/legacy/image_2.png)
 
 !!! info
-    For more information, visit [Sequences](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/).
+    For more information, visit [Sequences](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -19438,7 +19402,7 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 
 
@@ -19451,7 +19415,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-    For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
 
 ##### Javax XML SOAP API
@@ -19461,7 +19425,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
 
 
 ##### Report Cache Management
@@ -19471,7 +19435,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-    For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
+    For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
 ##### Etendo Advanced Security
 
@@ -19482,7 +19446,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
 
 ##### Dynamic App 
 
@@ -19491,7 +19455,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
         
 ##### EAN 128
 
@@ -19500,7 +19464,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 EAN 128 allows to use bar code in your application
 
 !!! info
-    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview#ean-128).
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
 
 ##### Etendo RX
 
@@ -19517,7 +19481,7 @@ EAN 128 allows to use bar code in your application
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 
 ##### Etendo Async Processes
@@ -19540,7 +19504,7 @@ This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.o
 This section describes the Etendo Advanced Security module included in the Platform Extensions bundle.
 
 !!! info
-    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/).
+    To be able to include this functionality, the Platform Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [_Platform Extensions Bundle_](https://marketplace.etendo.cloud/#/product-details?module=5AE4A287F2584210876230321FBEE614){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Platform Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes.md).
 
 The **Etendo Advanced Security** module allows the user to customize several security features such as the following:
 
@@ -19552,7 +19516,7 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 - Expiration Time (Autolock Password)
 
 !!! info
-    For more information about the module configuration visit the [Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    For more information about the module configuration visit the [Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
 
 ##### **Password Security**
 
@@ -19687,7 +19651,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 It provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#stock-history) and [the Stock History developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle#stock-history).
+    For more information, visit [the Stock History user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ##### Reactivate Warehouse Documents
 
@@ -19702,10 +19666,10 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 !!! info
     For more information, visit the user guide for:
 
-    - [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
-    - [Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
-    - [Goods Shipments](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
-    - [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+    - [Goods Movements](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
+    - [Goods Shipments](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
+    - [Physical Inventory](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
 #### Uninstall bundle
 
@@ -19718,8 +19682,6 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Production Extensions Bundle
@@ -19746,7 +19708,7 @@ This bundle includes enhancements for the Production Management functionalities 
 This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
-    For more information, visit the [Advanced Work Effort user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions/#how-to-reactivate-work-efforts).
+    For more information, visit the [Advanced Work Effort user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Sales Extensions Bundle
@@ -19777,7 +19739,7 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 Different functionalities are added to this window which allows the user to make changes and/or to adjust the information entered, to generate the sales quotations in order to create the corresponding orders from those quotations.
 
 !!! info
-	For more information, visit the [Sales Quotation user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#advanced-sales-quotation).
+	For more information, visit the [Sales Quotation user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#advanced-sales-quotation).
 
 
 ##### Advanced Rappels
@@ -19792,10 +19754,10 @@ Different functionalities are added to this window which allows the user to make
 This functionality allows the user to configure and grant rappels to business partners. Rappels are discounts based on the volume of consumption of the business partner in a given period of time.
 
 !!! info
-	For more information, visit the [Advanced Rappels user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#rappel-configuration). 
+	For more information, visit the [Advanced Rappels user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#rappel-configuration). 
 
 !!! info
-	For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+	For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Financial Extensions Bundle
@@ -19818,7 +19780,7 @@ This bundle includes enhancements for Financial Management functionalities in Et
 This module allows setting a non deductible tax's amount to a specified financial account
 
 !!! info
-    For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#purchase-invoice-which-includes-not-deductible-tax-amount).
+    For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
 ##### Conversion Rate Downloader
 
@@ -19827,7 +19789,7 @@ This module allows setting a non deductible tax's amount to a specified financia
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
 !!! info
-    For more information, visit the [Conversion Rate Downloader user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle#conversion-rate-downloader).
+    For more information, visit the [Conversion Rate Downloader user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#conversion-rate-download-rule) and the [Conversion Rate Downloader developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#conversion-rate-downloader).
 
 
 ##### Currency API Configuration
@@ -19843,7 +19805,7 @@ This process allows keeping currency conversions up to date by generating conver
 This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
 
 !!! info
-    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle#banking-pool).
+    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
 
 ##### Business Partner Settlement
 
@@ -19854,7 +19816,7 @@ This feature allows entering in the system all the financings the company has. I
 This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
 
 !!! info
-    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle#business-partner-settlement).
+    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
 
 ##### Deferred GL Journal
 
@@ -19865,7 +19827,7 @@ This module provides a new document where it is possible to settle debts or cred
 This functionality allows the user to duplicate a journal entry as many times as required, indicating the regularity and the period in which the first copy must be made. Follow the process to create a journal entry from the beginning and duplicate it later.
 
 !!! info
-    For more information, visit [the Deferred GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions#deferred-gl-journal).
+    For more information, visit [the Deferred GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#deferred-gl-journal).
 
 ##### Financial Advanced Reports
 
@@ -19876,7 +19838,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced reports are an enhanced version of the previous reports including new filters according to the reports accounting dimensions.
 
 !!! info
-    For more information, visit [the Balance Sheet and P&L Structure user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#advanced), [the General Ledger Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#advanced_1) and [the Journal Entries Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#advanced_2).
+    For more information, visit [the Balance Sheet and P&L Structure user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
 
 ##### Payment Removal
 
@@ -19896,13 +19858,13 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 !!! info
     For more information, visit:
 
-    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-removal)
-    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#payment-removal)
-    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-removal_1)
-    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#payment-removal_1)
-    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-removal_1)
-    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-removal)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-removal_2)  
+    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal)
+    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal)
+    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#payment-removal_1)
+    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#payment-removal_1)
+    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_1)
+    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal)
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-removal_2)  
 
 ##### Remittances
 
@@ -19916,7 +19878,7 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 This functionality allows creating a remittance which is a group of "payments" (in/out) or "orders/invoices" that can be remitted to the bank for its payment. The bank will then manage either the collection of the money from the customers or the payment to the vendors/suppliers.
 
 !!! info
-    For more information, visit [the Remittances Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance).
+    For more information, visit [the Remittances Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
 
 ##### Intercompany
 
@@ -19927,7 +19889,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#intercompany).
+    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
 
 ##### Reverse GL Journal
 
@@ -19940,7 +19902,7 @@ In case the user has to create orders or invoices among two or more organization
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
 !!! info
-    For more information, visit the [GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions#gl-journal) and the [Simple GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions#simple-gl-journal).
+    For more information, visit the [GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#gl-journal) and the [Simple GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#simple-gl-journal).
 
 ##### Asset Amortization Report
 
@@ -19949,7 +19911,7 @@ This functionality is specifically useful for companies that have a month close,
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
 !!! info
-    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#asset-amortization-report-excel).
+    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
 
 ##### Advanced Financial Docs. Processing
 
@@ -19964,12 +19926,12 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 !!! info
     For more information, visit:
 
-    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-a-closed-sales-order) 
-    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-a-voided-sales-invoice)
-    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-a-closed-purchase-order)
-    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-a-voided-purchase-invoice)
-    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview#how-to-reactivate-amortizations)
-    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle#advanced-financial-docs-processing)
+    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
+    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
+    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
+    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
+    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
+    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
 
 ##### Bulk Posting
 
@@ -19980,7 +19942,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 This functionality allows the user to post or unpost multiple records at the same time.
 
 !!! info
-    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#bulk-posting).
+    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
 
 ##### Advanced Business Partner Settlement
 
@@ -19993,9 +19955,9 @@ This functionality allows the user to create settlements for invoices, both sale
 !!! info
     For more information, visit:
 
-    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_1)
-    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#advanced-business-partner-settlement_2)
+    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -20008,16 +19970,16 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 #### Módulos
 
-- [Spain SII](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva)
-- [Tax Report: Modelo 303 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303)
-- [Withholding Report: Modelo 190 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190)
-- [Spain AEAT Modelo 347 for APR](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347)
-- [Modelo 349](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349)
-- [Impuestos para España](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa)
-- [Intrastat](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat)
-- [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390)
-- [Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas)
-- [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas)
+- [Spain SII](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/sii-para-iva.md)
+- [Tax Report: Modelo 303 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-303.md)
+- [Withholding Report: Modelo 190 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-190.md)
+- [Spain AEAT Modelo 347 for APR](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-347.md)
+- [Modelo 349](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-349.md)
+- [Impuestos para España](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md)
+- [Intrastat](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/intrastat.md)
+- [Tax Report: Modelo 390 (Spain)](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/modelo-390.md)
+- [Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/libro-de-facturas.md)
+- [Configuración de Impuestos para Libro de Facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md)
 - Incoterms
 - European Union Countries
 - Provincias de España
@@ -20417,7 +20379,6 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 #### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
 :octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: SII para IVA
@@ -20537,7 +20498,7 @@ Todos los terceros, ya sean del tipo "Cliente" o "Proveedor/Acreedor", deben con
 Es muy importante indicar para cada tercero:
 
 - sus datos de contacto (Nombre Comercial, Nombre Fiscal (Razón Social) o Nombre/Apellidos
-- su "Clave NIF País" Residencia:
+- su "Clave NIF País" Residencia):
   - 1 - NIF
   - 2 - NOI
   - 3 - Pasaporte
@@ -23932,7 +23893,7 @@ e introducir los datos relativos al abono y devolución de mercancía y, en la p
     -   el Año de la factura original que se rectifica
     -   el Periodo de la factura original y, por tanto, el periodo en el cual dicha factura original se incluyó en un 349
     -   La base imponible del 349 de productos o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de productos (Clave A en compras, Clave E en ventas)
-    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios Clave I en compras, Clave S en ventas)
+    -   y la base imponible del 349 servicios o, lo que es lo mismo, El importe total de compra/venta (que para operaciones intracomunitarias coincide con la Base Imponible total) que para dicho periodo y para dicho proveedor/cliente se informó en el 349 anterior con respecto a la compra/venta de servicios (Clave I en compras, Clave S en ventas)
 
 ![](https://docs.etendo.software/latest/assets/drive/vi_SXEIsX7fl_bwkI5sm1XIKSMs7Ts0Z2mbdjIKBZTPCCmetky4ch7u-EhHzPh2ZgHf5UNYO9M36vkH2CG_lLB6hYJ8KhiF1pNVahoUxgovjB1mVJbFKtbr01lqAvGkctdWmJ7skW2umwSjvRobDk0_lAQtQkW7-W-FwN8EBjlO5eK_m3H2iyZG1Qw.png)
 
@@ -23956,7 +23917,7 @@ En este último escenario, el sistema, para un mismo proveedor o cliente y perio
 
 La presentación telemática del modelo 349 en formato electrónico requiere que las empresas tenga un NIF español así como un Certificado electrónico emitido por la “Fábrica Nacional de Moneda y Timbre” (FNMT) u otro Certificado válido y reconocido por Hacienda.
 
-La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”\]
+La presentación telemática puede realizarse a través de la página web de la Hacienda Pública española, desde el enlace “Oficina virtual”-”Presentación de declaraciones” - “Todas las declaraciones” - “Modelo 349”
 
 !!! info
     Existe una “Guía de presentación telemática” en la página web de Hacienda que nos explica cómo debe realizarse la presentación telemática de las declaraciones y que se puede descargar [*aquí*](https://sede.agenciatributaria.gob.es/static_files/Sede/Procedimiento_ayuda/GI28/instr_mod_349.pdf).
@@ -24772,7 +24733,7 @@ Configuración General | Organización | Gestión del módulo de Empresa.
 ![](https://docs.etendo.software/latest/assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
 
 !!! info
-    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
 
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:
@@ -25130,7 +25091,7 @@ Es importante recalcar que el usuario puede crear los libros de facturas para un
 
 Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
+Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
 
 
 Campos a tener en cuenta:
@@ -25175,7 +25136,7 @@ La información contenida en las líneas del libro es la que se muestra a contin
 
 Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
+Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
 
 Campos a tener en cuenta:
 
@@ -25336,9 +25297,9 @@ The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEuwiUQbUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 This module allows users to customize and configure the information and filters in PowerBI reports. It allows the creation of different configurations that facilitate the selection and exclusion of specific entities within reports.
-> 
+
 !!! info
-    For more information, visit [Etendo BI Inclusion/Exclusion Configuration user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration).
+    For more information, visit [Etendo BI Inclusion/Exclusion Configuration user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md).
 
 ##### Etendo BI Connector Module
 
@@ -25351,7 +25312,7 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Etendo BI Connector Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector) and the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle#etendo-bi-connector).
+    For more information, visit the [Etendo BI Connector Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md) and the [Etendo BI Connector Module developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md#etendo-bi-connector).
 
 ##### Base Queries for Etendo BI 
 
@@ -25712,7 +25673,7 @@ In this example image, the information about the script execution can be seen.
 If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
 
 !!! info
-    To do that, visit the [Etendo BI Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle). 
+    To do that, visit the [Etendo BI Bundle developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/etendo-bi-bundle.md). 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -26511,7 +26472,7 @@ The accounts selected in the General Ledger Configuration window are defaulted t
 
 In order to defer revenue, you need to properly configure the products that will generate the deferral when sold. In Etendo, products are created and maintained in the Product window.
 
-Product window: in this window, the configuration related to revenue deferral is in the Header and in the Accounting tab of the [Product window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product).
+Product window: in this window, the configuration related to revenue deferral is in the Header and in the Accounting tab of the [Product window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
 
 Header tab:
 
@@ -26557,7 +26518,7 @@ Regardless of how the invoice is created - manually or automatically - when it i
 
 In order to defer expenses, you need to properly configure the products that will generate the deferral when purchased. In Etendo, products are created and maintained in the Product window.
 
-Product window: in this window, the configuration related to expense deferral is in the Header and in the Accounting tab of the [Product window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product).
+Product window: in this window, the configuration related to expense deferral is in the Header and in the Accounting tab of the [Product window](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
 
 Header tab:
 
@@ -26617,9 +26578,9 @@ In these situations, a particular payment term is agreed upon by the Company and
 
 #### Recommended articles
 
-Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) and a [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice) as well as how to register a [Vendor Payment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out).
+Managing prepaid invoices requires a clear understanding on how to create a [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) and a [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice) as well as how to register a [Vendor Payment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out).
 
-It is recommended as well to understand how to set up a [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term) and how to launch the [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report).
+It is recommended as well to understand how to set up a [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 #### Order prepayment: execution steps
 
@@ -26642,7 +26603,7 @@ Please note that, prepay payment term has a header and a line:
 
 ##### Purchase Order creation
 
-As already mentioned, the first step is to create a [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) which contains the goods that the company needs.
+As already mentioned, the first step is to create a [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) which contains the goods that the company needs.
 
 In this scenario, the parties have agreed a specific payment term which can be filled in the corresponding field of the purchase order header.
 
@@ -26655,7 +26616,7 @@ Once every required data is filled in as appropriate, the Purchase Order needs t
 
 ##### Payment creation and accounting
 
-Payments made to a vendor are registered in the [payment out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out) window. Etendo allows to register vendor payments created against purchase orders and/or invoices.
+Payments made to a vendor are registered in the [payment out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-out) window. Etendo allows to register vendor payments created against purchase orders and/or invoices.
 
 The main fields to fill in the header section of the payment in window are:
 
@@ -26675,20 +26636,20 @@ The company in this example needs to choose "Orders" and then the order which is
 
 Once everything is filled in, press the button Process.
 
-The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#transaction) window, in the "Transaction" tab.
+The payment is made and withdrawn from the bank at the same time, that means that a withdrawal transactions is created in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#transaction) window, in the "Transaction" tab.
 
 Just created payment can be posted in the Payment Out window by pressing the process button Post if:
 
-- the "Payment Method" used has the proper configuration in the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method) tab of the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) used to make the payment.
+- the "Payment Method" used has the proper configuration in the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-method) tab of the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) used to make the payment.
      - the company in this example needs to set the field "Upon Payment Use" as "In Transit Payment Account"
-- besides, there should be an "In Transit Payment Out Account" in the [Accounting Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) tab of the financial account used to make the payment.
+- besides, there should be an "In Transit Payment Out Account" in the [Accounting Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) tab of the financial account used to make the payment.
 
 The posting will look like:
 
 | Account                    | Debit | Credit |
 |----------------------------|-------|--------|
-| [Vendor Prepayment](user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)          | 50    |        |
-| [In Transit Payment Out Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) |       | 50     |
+| [Vendor Prepayment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)          | 50    |        |
+| [In Transit Payment Out Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) |       | 50     |
 
 
 It is possible to check once more the Payment Out Plan of the purchase order in this example.
@@ -26697,7 +26658,7 @@ The purchase order payment plan includes the payment registered in the Payment O
 
 ##### Payment check
 
-Back to the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
+Back to the [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order), it is possible to check the recently created Payment Plan with its Payment Details.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/paymentdetails.png)
 
@@ -26711,7 +26672,7 @@ To summarize:
 
 ##### Pre-Paid invoice management and accounting
 
-The company in this example can register the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts) before registering the vendor invoice by using the process [Pending Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#pending-goods-receipts).
+The company in this example can register the [Goods Receipt](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#goods-receipts) before registering the vendor invoice by using the process [Pending Goods Receipts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#pending-goods-receipts).
 
 This process allows introducing the exact amount of goods received from the vendor against each purchase order line.
 
@@ -26721,7 +26682,7 @@ Once processed, Etendo informs about the Goods Receipt number just registered.
 
 Next step is to enter the vendor invoice. There are several ways of entering a vendor invoice.
 
-The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
+The company in this example uses, for instance, the process "Create Lines From" which can be found in the [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines-4) window. This process can be used once the purchase invoice header information has been properly entered. It retrieves either order or goods receipt information to be copied to the entered invoice.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/createfrom.png)
 
@@ -26738,12 +26699,12 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account              | Debit | Credit |
 |----------------------|-------|--------|
-| [Product Expense](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting)      | 110   |        |
-| [Vendor Liability](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)     |       | 60     |
-| [Vendor Prepayment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting)    |       | 50     |
+| [Product Expense](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      | 110   |        |
+| [Vendor Liability](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)     |       | 60     |
+| [Vendor Prepayment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#vendor-accounting)    |       | 50     |
 
 
-There is a report named [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) which allows monitoring every payment received or made.
+There is a report named [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) which allows monitoring every payment received or made.
 
 In this example, this report shows in an intuitive way:
 
@@ -26797,7 +26758,7 @@ The payment can be posted from the "Payment Out" window.
 
 Payment posting looks like:
 
-![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport .png)
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables/journalentriesreport.png)
 
 Above posting reflects the moment in which the vendor liability is canceled by the prepayment, which is also canceled by the recognition of the payment withdrawn.
 
@@ -26838,9 +26799,9 @@ It is important to remark that a sales invoice created from a prepaid sales orde
 
 #### Recommended articles
 
-Managing prepaid invoices requires a clear understanding on how to create a [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) and a [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) as well as how to register a [Customer Payment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in).
+Managing prepaid invoices requires a clear understanding on how to create a [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) and a [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) as well as how to register a [Customer Payment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in).
 
-It is recommended as well to understand how to set up a [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term) and how to launch the [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report).
+It is recommended as well to understand how to set up a [Payment Term](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 #### Order prepayment: execution steps
 
@@ -26865,11 +26826,11 @@ Please note that, prepay payment term has a header and a line:
 
 As already mentioned, the first step is to create a Sales Order according to the customer needs.
 
-In this scenario, the parties have agreed on a specific payment term which can be filled in the corresponding field of the [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) header.
+In this scenario, the parties have agreed on a specific payment term which can be filled in the corresponding field of the [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) header.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/salesordersm.png)
 
-The main field that needs to be taken into account when managing prepayments is the field Invoice Terms which needs to be selected as “Immediate”, otherwise it would not be possible to prepay that order. In Etendo that means that the order will not be shown as a suitable order to be paid in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window where customer payments are registered.
+The main field that needs to be taken into account when managing prepayments is the field Invoice Terms which needs to be selected as “Immediate”, otherwise it would not be possible to prepay that order. In Etendo that means that the order will not be shown as a suitable order to be paid in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window where customer payments are registered.
 
 Once every required data is filled in, the Sales Order needs to be Booked as every time an order is completed a Payment Plan is created for that Order.
 
@@ -26877,7 +26838,7 @@ In other words, it is not possible to record payments against orders which are n
 
 ##### Payment creation and accounting
 
-Payments received from the customer are registered in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window. Etendo allows registering customer payments received against sales orders and/or invoices.
+Payments received from the customer are registered in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window. Etendo allows registering customer payments received against sales orders and/or invoices.
 
 The main fields to fill in the header section of the payment in window are:
 
@@ -26898,20 +26859,20 @@ The company in this example needs to choose "Orders" and then the order which is
 
 Once everything is filled in, press the button Done.
 
-The payment is received and deposited in the bank at the same time, that means that a deposit transaction is created in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#transaction) window, in the "Transaction" tab.
+The payment is received and deposited in the bank at the same time, that means that a deposit transaction is created in the [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#transaction) window, in the "Transaction" tab.
 
 Just created payment can be posted in the Payment In window by pressing the process button Post if:
 
-- the "Payment Method" used has the proper configuration in the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method) tab of the financial account used to make the payment.
+- the "Payment Method" used has the proper configuration in the [Payment Method](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-method) tab of the financial account used to make the payment.
 - the company in this example needs to set the field "Upon Receipt Use" as "In Transit Payment Account"
-- besides, there should be an "In Transit Payment IN Account" in the [Accounting Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) tab of the financial account used to make the payment.
+- besides, there should be an "In Transit Payment IN Account" in the [Accounting Configuration](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) tab of the financial account used to make the payment.
 
 The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [In Transit Payment In Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | 863.20 |        |
-| [Customer Prepayment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#customer-accounting)              |        | 863.20 |
+| [In Transit Payment In Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | 863.20 |        |
+| [Customer Prepayment](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)              |        | 863.20 |
 
 It is possible to check once more the Payment Plan of the sales order in this example.
 
@@ -26919,7 +26880,7 @@ The sales order payment plan includes the payment registered in the Payment Deta
 
 ##### Payment check
 
-Back in the [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order), it is possible to check the recently created Payment Plan with its Payment Details.
+Back in the [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order), it is possible to check the recently created Payment Plan with its Payment Details.
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/paymentplansm.png)
 
@@ -26935,7 +26896,7 @@ To summarize:
 
 ##### Pre-Paid invoice management and accounting
 
-There are several ways to create a sales invoice from an order, one of those is [Create Invoices from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#create-invoices-from-orders).
+There are several ways to create a sales invoice from an order, one of those is [Create Invoices from Orders](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-invoices-from-orders).
 
 This process allows to enter data such as the business partner and a given data range to narrow down the orders to be invoiced.
 
@@ -26956,10 +26917,10 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account                | Debit   | Credit  |
 |------------------------|---------|---------|
-| [Customer Receivable](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data/#customer-accounting)    | 630.80  |         |
+| [Customer Receivable](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)    | 630.80  |         |
 | Customer Prepayment    |         | 863.20  |
 
-There is a report named [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) which allows monitoring every payment received or made.
+There is a report named [Payment Report](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) which allows monitoring every payment received or made.
 
 In this example, this report shows in an intuitive way:
 
@@ -26970,8 +26931,8 @@ In this example, this report shows in an intuitive way:
 
 In this example, the last step is to register the customer payment of the invoice, 30 days after the invoice date. A payment received from a customer can be registered in the system two ways:
 
-- in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window, same way as described here but this time the payment must be related to a "Transaction Type" equal to "Invoices"
-- or in the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) window, by using the process button "Add Payment In/Out".
+- in the [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window, same way as described here but this time the payment must be related to a "Transaction Type" equal to "Invoices"
+- or in the [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window, by using the process button "Add Payment In/Out".
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/addpaymentsm.png)
 
@@ -27045,7 +27006,7 @@ There are many situations in which a company needs to transfer funds to modify o
 - a check deposited in the wrong bank account
 - a bank account out of funds...etc.
 
-In Etendo bank and cash accounts are represented as [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+In Etendo bank and cash accounts are represented as [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account).
 
 There are several kinds of funds transfers depending on the financial account type used and the organization for which the transfer of funds takes place:
 
@@ -27055,9 +27016,9 @@ There are several kinds of funds transfers depending on the financial account ty
 
 #### Recomended articles
 
-Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item).
+Transferring funds between financial accounts requires a clear understanding on how to create a [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item).
 
-It is highly recommended as well to understand how [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) and [Account Combination](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination) work in Etendo.
+It is highly recommended as well to understand how [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) and [Account Combination](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) work in Etendo.
 
 #### Execution Steps
 
@@ -27075,10 +27036,10 @@ Anyway, the steps to follow are:
 
 #### G/L Item creation
 
-A [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to to that is:
+A [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to do that is:
 
-- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item) window.
-- Create a new record for each organization's general ledger and assign the same [Account Combination](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination) for debit and credit.
+- Once the GL item has been created, click on the *Accounting tab* of the [G/L Item](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#gl-item) window.
+- Create a new record for each organization's general ledger and assign the same [Account Combination](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#account-combination) for debit and credit.
 
 For instance, the sample account combinations which could be used are:
 
@@ -27093,7 +27054,7 @@ A withdrawal transaction needs to be created in the Financial Account where the 
 
 The company in this example needs to:
 
-- navigate to the [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window
+- navigate to the [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) window
 - select the bank to take the money from, for instance Bank A
 - press the process button *Add Transaction*
 - once in that new window select the *Transaction Type* GL Item
@@ -27105,14 +27066,14 @@ This new transaction is then shown in the *Transaction tab* of the *Financial Ac
 The next step is to post the withdrawal transaction. 
 
 !!!note
-        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+        It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
 
 The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)   | Paid Out Amount |        |
-| [Bank A - Withdrawal account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [GL Item Debit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [Bank A - Withdrawal account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 
 ##### Creation of the bank fee
@@ -27135,8 +27096,8 @@ Fee transactions can also be posted the same way as the withdrawal transaction.
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank A -Bank Fee Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Paid Out Amount |        |
-| [Payment Out-Withdrawal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [Bank A -Bank Fee Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Paid Out Amount |        |
+| [Payment Out-Withdrawal](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 
 #### Creation of the deposit transaction
@@ -27144,7 +27105,7 @@ Fee transactions can also be posted the same way as the withdrawal transaction.
 The final step is to create a deposit transaction in the Financial Account where the funds must be deposited.
 The company in this example needs to:
 
-- navigate to the [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account) window
+- navigate to the [Financial Accounts](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#financial-account) window
 - select the bank to deposit the money, for instance Bank B
 - press the process button *Add Transaction*
 - once in that new window select the *Transaction Type* GL Item
@@ -27153,7 +27114,7 @@ The company in this example needs to:
 - and finally indicate the *Received In* amount, in this example 100,00 USD.
 
 This new transaction is then shown in the *Transaction* tab of the *Financial Account* window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button *Post* or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
 
 
 The posting will look like:
@@ -27161,8 +27122,8 @@ The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank B - Deposit Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)              |        | Received In Amount |
+| [Bank B - Deposit Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
+| [GL Item Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
 
 #### Transfer of funds between cash accounts
 
@@ -27182,16 +27143,16 @@ Withdrawal transaction posting in Organization A will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [GL Item Debit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)   | Paid Out Amount |        |
-| [Bank A - Withdrawal account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)              |        | Paid Out Amount |
+| [GL Item Debit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)   | Paid Out Amount |        |
+| [Bank A - Withdrawal account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)              |        | Paid Out Amount |
 
 Deposit transaction posting in Organization B will look like:
 
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [Bank B - Deposit Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | Received In Amount |        |
-| [GL Item Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting)              |        | Received In Amount |
+| [Bank B - Deposit Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | Received In Amount |        |
+| [GL Item Credit](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#accounting)              |        | Received In Amount |
 
 #### Result
 
@@ -27208,7 +27169,6 @@ In the case of transfer of funds between financial accounts of different organiz
 - Bank B balance of the organization B is increased in 100,00 USD
 
 Above scenario would somehow mean an expense in Organization A and a revenue in Organization B.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Getting Started
@@ -27327,7 +27287,7 @@ As regards the role, it can only be modified from the app, so each user will ent
 ## Article Content: 
 #### Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](https://docs.etendo.software/latest/docs/user-guide/etendo-mobile/getting-started/).
+This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md).
 
 #### Etendo Classic Sub App
 
@@ -27337,10 +27297,10 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
     - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
+    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app).
 
 
 To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
@@ -27463,10 +27423,7 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 :octicons-package-16: Javapackage: com.smf.mobile.scan
 
-Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/user-guide/etendo-mobile/getting-started/) App
-
-!!! info
-        For more information, visit the [Mobile Scan developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#mobile-scan).
+Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App
 
 ##### Usage Examples
 
@@ -27928,6 +27885,8 @@ So, roll up your sleeves and ignite your creativity.
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment
 ## Article Content: 
+### Install Etendo Development Environment
+
 #### Overview
 
 This section explains how to install and run a new local Etendo environment.
@@ -27935,7 +27894,7 @@ This section explains how to install and run a new local Etendo environment.
 
 #### Install Etendo in local Environment
 
-To install Etendo in a development environment, follow the same steps as described in the [Etendo Installation Guide](https://docs.etendo.software/latest/getting-started/installation), the only difference is that we open the project with intelliJ and run Tomcat locally.
+To install Etendo in a development environment, follow the same steps as described in the [Etendo Installation Guide](https://docs.etendo.software/latest/getting-started/installation.md), the only difference is that we open the project with intelliJ and run Tomcat locally.
 
 
 #### Run Etendo Development Environment
@@ -28153,7 +28112,7 @@ This page explains how to install modules either from the Etendo Marketplace or 
 
 #### 1. Dependency resolution
 
-It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](https://docs.etendo.software/latest/getting-started/installation/). Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.
+It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](https://docs.etendo.software/latest/getting-started/installation.md). Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.
 
 !!! success "Info"
     Along your license, you have access to all packages distributed by Etendo.
@@ -28338,7 +28297,7 @@ But if you want to update a translation module version, you can execute:
 ```
 
 ??? info
-    The *install.translation* task changes the status of the module and the translations is installed on the next run of *update.database*.
+    The `install.translation` task changes the status of the module and the translations is installed on the next run of `update.database`.
 
 Another option to force the installation of all the translation modules is to add the `forceRefData=true` property in the `gradle.properties` file and then running:
 
@@ -28359,7 +28318,7 @@ These bundles require the correct version of the ones they translate to be insta
 
 #### Installation steps
 
-To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/?h=install+mo#3-set-dependencies).
+To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md).
 
 !!! warning
     Remember to add both the translation bundle and the correct version of the bundle it translates as dependencies! Otherwise, the environment's compilation will fail. For example:
@@ -28388,12 +28347,12 @@ To install a bundle, follow the corresponding section of the documentation on ho
 
 #### Bundle Compatibility
 
-For information on what bundle version is compatible with which translation bundle, the documentation and [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for each bundle can be referred to.
+For information on what bundle version is compatible with which translation bundle, the documentation and [Release Notes](https://docs.etendo.software/latest/whats-new/overview.md){target="_blank"} for each bundle can be referred to.
 
 #### Troubleshooting
 
-- **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](https://docs.etendo.software/latest/getting-started/installation/) for more information.
-- **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for a list of the compatible bundle versions.
+- **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](https://docs.etendo.software/latest/getting-started/installation.md) for more information.
+- **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](https://docs.etendo.software/latest/whats-new/overview.md){target="_blank"} for a list of the compatible bundle versions.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: PostgreSQL Configuration
@@ -28476,11 +28435,11 @@ This guide provides the necessary information to migrate an existing Openbravo i
 Before the migration process begins, either if it is done on Linux or on Windows, make sure to have the following items:
 
 !!! info
-    - Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2))
+    - Current Openbravo instance updated to 21Q3.2 ([How to upgrade?](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/migration-from-openbravo/upgrading-to-openbravo-21q3-2.md))
     - If previous installation had custom patches applied, they must be ready to be applied in an 21Q3.2 updated environment.
     - Database should not have local changes.
     - Enough disk space for new installation.
-    - Environment license and GitHub name and token (Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo)).
+    - Environment license and GitHub name and token (Create the credentials by following this [guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md)).
 
 !!! warning
     - The server where the database is hosted needs to have enough free space to hold a copy of the current database.  
@@ -28519,7 +28478,7 @@ These are the steps to follow for the manual migration from OpenbravoERP to Eten
 3. The `gradle.properties` file has default params but if needed this can be changed.  
 
     ???+Note
-        Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+        Remember to set up the GitHub user and token since they are used to expand private modules. Create the credentials by following the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         
 
     ``` groovy title="gradle.properties"
@@ -29219,7 +29178,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     }
     ```
 
-3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
 
     ```groovy title="gradle.properties"
     nexusUser=
@@ -29447,9 +29406,7 @@ This affects the current environments, to fix this we have to:
 !!! failure
     Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful.
 
-If you encounter any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
-
-
+If you find any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Alerts
@@ -29486,7 +29443,7 @@ The flow for data driven alerts is as follows:
   * When a user logs in the application there is another process that constantly checks whether there are alert instances for this user and shows them. 
 
 !!!info
-    For more information, read [how to create an alert](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert/).
+    For more information, read [how to create an alert](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_an_Alert.md).
 
 #####  Definition
 
@@ -29573,6 +29530,8 @@ If they are not, they will slow down your system noticeably.
 The Alert Recipient tab handles the alert recipients management. You can
 define the Role whom will be notified, or an specific user. Also you can
 define if the user(s) should be notified by email.
+
+---
 
 This work is a derivative of [Alerts](https://wiki.openbravo.com/wiki/Alerts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 
@@ -29767,6 +29726,7 @@ Besides, this feature allows defining a [function based index](#function-based-i
 !!!info
     This kind of indexes are not supported in Oracle yet: if they are present in the XML model, they will be created as regular indexes in the database.
 
+---
 
 This work is a derivative of [Constraints_and_Triggers](http://wiki.openbravo.com/wiki/Constraints_and_Triggers){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
@@ -30821,7 +30781,7 @@ The code formatting template and his configuration can be found in the following
 ####  Tips & Tricks and Troubleshooting
 
 !!!info
-    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks/#data-access-layer.md) section.
+    For tips and tricks and common issues (and solutions) you may find, please visit the [troubleshooting](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md#data-access-layer) section.
 
 ---
 
@@ -30996,10 +30956,9 @@ Select the organization and the module from which to import the reference data i
 !!!note
     If a dataset is defined as Organization/Client level, then it can also be imported when using the [Initial Client Setup](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process.md) utility to create a new client.
 
+---
   
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Element and Synchronize Terminology
@@ -31007,6 +30966,8 @@ This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets)
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Element_and_Synchronize_Terminology
 ## Article Content: 
+### Element and Synchronize Terminology
+
 ####  Element
 
 Elements  define the text in the label to be displayed for each field in the
@@ -31120,7 +31081,7 @@ elements, the standard names and the purchase ones. Then, the windows are
 distinguished between sales and purchases using the *Sales Transaction* check
 in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  tab.
 
-
+---
   
 This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
@@ -31208,7 +31169,7 @@ This task creates the JAR and ZIP version of the module, and tries to publish it
     The module needs to be compiled before published. You have to be working in a compiled environment with all the autogenerated entities created.
 
 !!! info
-    For more information refer to the [How to Publish Modules to a GitHub Repository guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
+    For more information refer to the [How to Publish Modules to a GitHub Repository guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
 
 
 <br>
@@ -31260,9 +31221,6 @@ All the Etendo development tasks used with the core in sources should still be w
 
 !!! info
     Etendo Core, (**Sources** and **Jar**), allows the user to work with  modules in both formats.
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Inventory Status
@@ -31286,7 +31244,7 @@ By default, all the Bins will be in an undefined Inventory Status. There are two
 The initial status of the Bins will depend on the previous configuration of the Client. For those clients which were configured to Allow Negative Stock, the Undefined OverIssue Inventory Status will be set. For the rest, it will be the Undefined Inventory Status. 
 
 !!! info
-        For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client/).
+        For more information, visit the [Allow Negative Stock user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/client.md).
 
 #### Functionality
 
@@ -31343,7 +31301,6 @@ Examples of inventory status values:
 > 
 !!! info
     The inventory status does not have an effect on the inventory value.
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Naming Guideliness for Modules
@@ -31487,8 +31444,6 @@ org.openbravo.functionalcategory.modulename
 - Use a db_prefix beginning with CUST
 
 Usually customization modules are not intended to be published in Central Repository. In this case, DBPrefix should start with CUST. Modules with these kind of DBPrefixes cannot be registered in Central Repository but are collision safe because no other module in Central Repository can use this DBPrefix. This is an important decision to be taken before starting the module development: in case there is any chance of publishing the module at some moment, it should follow the standard rule, if it is absolutely sure that it will not be published you can use CUST and do not register it.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Processes
@@ -31804,7 +31759,7 @@ Now, we are able to kill the process from the Process Monitor.
 
 When a process is killed, the status in the process monitor will be *Killed by User*.
 
-
+---
 
 This work is a derivative of [Processes](http://wiki.openbravo.com/wiki/Processes){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
 ==ARTICLE_END==
@@ -31979,8 +31934,7 @@ date  |  timestamp
 number  |  numeric  
 clob  |  text  
   
-
-
+---
   
 This work is a derivative of [Tables](http://wiki.openbravo.com/wiki/Tables){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
@@ -32179,8 +32133,7 @@ user navigates through the system.
               }
           }
 ```
-The function enables/disables the button if the form or grid is new and if
-there are no records selected.
+The function enables/disables the button if the form or grid is new and if there are no records selected.
 
 Then this code registers the button for the tab with id '186':
 
@@ -32206,7 +32159,7 @@ The previous steps added static resources (javascript and css) to the system.
 Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
 
 !!!info
-    For more detailed information, visit [ComponentProvider](https://docs.etendo.software/latest/concepts/Etendo_Architecture/#component-provider.md).
+    For more detailed information, visit [ComponentProvider](https://docs.etendo.software/latest/concepts/Etendo_Architecture#component-provider.md).
 
 
 ```javascript
@@ -32249,7 +32202,7 @@ Now Etendo should know where to find these resources when initializing and gener
 ```
 A short explanation:
 
-  * The annotations in the top of the class are related to [Weld](https://docs.etendo.software/latest/concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md). 
+  * The annotations in the top of the class are related to [Weld](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md).
   
   The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
 
@@ -32400,6 +32353,8 @@ The result shows the sum of the 2 selected order headers:
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
 
+---
+
 This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -32463,8 +32418,8 @@ This How-to section explains how to add a rich text field and column to the Eten
 
 The steps to get a rich text field in your window consists of two steps: 
 
-- [Add a column to a table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/)
-- [Add a field to a tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/)
+- [Add a column to a table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md)
+- [Add a field to a tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md)
 
 You can also create a new table and a new window/tab ofcourse.
 This how-to will only focus on the specific part of a rich text field.
@@ -32498,9 +32453,7 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 #####  Create a field - set col and rowspan
 
-Then [create a field](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
-also set the col and rowspan (these are only shown when the corresponding
-column is defined as rich text):
+Then [create a field](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md) within the tab/window. For a rich text field you can also set the col and rowspan (these are only shown when the corresponding column is defined as rich text):
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
@@ -32514,15 +32467,12 @@ The result is visualized as a rich text editor in form view:
   
 
 !!!info
-    Rich text fields can not be edited in grid mode (a hoover shows the
-    content). They are always displayed as read-only fields.  
+    Rich text fields can not be edited in grid mode (a hoover shows the content). They are always displayed as read-only fields.  
 
   
-
+---
 
 This work is a derivative of [How to add a rich text field and column](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Add Columns to a Table
@@ -32720,30 +32670,23 @@ This work is a derivative of [How to Add Columns to a Table](http://wiki.openbra
   
 ####  Overview
 
-Application elements ([windows, tabs and fields](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
-Etendo is able to cope with these changes because its architecture is
-suited to iterative development. The definitions of all generated Windows,
-tabs and fields are stored as metadata in the Application Dictionary (AD).
+Application elements ([windows, tabs and fields](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/Modularity_Concepts.md#windows-tabs-and-fields.md)) are liable to change repeatedly during the development or maintenance phases of a project.
+Etendo is able to cope with these changes because its architecture is suited to iterative development. The definitions of all generated Windows, tabs and fields are stored as metadata in the Application Dictionary (AD).
 
-Changing the window of an existing application is a simple process of changing
-the AD definition.
+Changing the window of an existing application is a simple process of changing the AD definition.
 
 When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.
 
 When using classic Window a compile step is needed.  
 
-This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on
-[How to add a field to a window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
+This How-To explains how to modify existing elements of a window. If only new elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
+added using a normal module as explained in the other How-To on [How to add a field to a window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
  
 
 
 ####  Objective
 
-The objective of this how-to is to illustrate how to make changes to existing
-generated windows in terms of appearance and behavior. The window used in the
-example is the Physical Inventory window and the changes illustrated will be:
+The objective of this how-to is to illustrate how to make changes to existing generated windows in terms of appearance and behavior. The window used in the example is the Physical Inventory window and the changes illustrated will be:
 
   * Hide a field 
   * Re-sequence the layout 
@@ -32769,8 +32712,7 @@ Before any changes the header tab has the following appearance:
 
 ####  Changing the window
 
-Navigate to the `Application Dictionary` > `Windows, Tabs and Fields` window
-and select the record for _Physical Inventory_ .
+Navigate to the `Application Dictionary` > `Windows, Tabs and Fields` window and select the record for _Physical Inventory_ .
 
 In the _Fields_ tab we can now make the changes needed to adapt the layout as
 wanted:
@@ -32779,20 +32721,14 @@ wanted:
   * _Organization_ field, change sequence number to _200_ and mark the _Start in new line_ checkbox. This moves the field below all other normally displayed. 
 
   
-For testing the changed layout, switch away from the *System Administrator*
-role to e.g. the *F &B International Group Admin* role and open the *Physical
-Inventory* window again. As the instance contains our module marked as
-*InDevelopment* the window layout is reloaded each time the window is opened, so
+For testing the changed layout, switch away from the *System Administrator* role to e.g. the *F &B International Group Admin* role and open the *Physical Inventory* window again. As the instance contains our module marked as *InDevelopment* the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png)
 
 
   
-To apply the same layout changes to the window in *classic UI mode*, the
-windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile & deploy step can be done by using `./gradlew smartbuild`
-which will recompile all changed windows and deploy the changes.
+To apply the same layout changes to the window in *classic UI mode*, the windows need to be recompiled, the changes deployed to tomcat and tomcat restarted. The compile & deploy step can be done by using `./gradlew smartbuild` which will recompile all changed windows and deploy the changes.
 
   
 
@@ -32801,9 +32737,7 @@ which will recompile all changed windows and deploy the changes.
 The final step is to export the changes into the module so they are persisted.
 
 !!!note
-    When exporting changes into a template, it is important that only
-    the *template is in development* and the module which contains the changed
-    object (i.e. window) is not.
+    When exporting changes into a template, it is important that only the *template is in development* and the module which contains the changed object (i.e. window) is not.
 
 After ensuring that, the export of the changes consists of the following two
 steps:
@@ -32816,11 +32750,9 @@ steps:
   2. _./gradlew export.config.script_ , analyses the changes done and creates a special file _configScript.xml_ in the module to contain them. 
 ```
 
+---
 
 This work is a derivative of [How to change an existing window](http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.   
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Copy and Paste Images in Etendo
@@ -32959,25 +32891,13 @@ This work is a derivative of [How to Create a Background Process](http://wiki.op
 
 ####  Overview
 
-The objective of this article is to show you how to create a new  callout . A
-callout is a piece of Javascript code associated with a particular field on a
-tab. This code is executed whenever the field changes. It is a type of Ajax
-substitute, changing parts of a tab/window without the need of refreshing it.
+The objective of this article is to show you how to create a new  callout . A callout is a piece of Javascript code associated with a particular field on a tab. This code is executed whenever the field changes. It is a type of Ajax substitute, changing parts of a tab/window without the need of refreshing it.
 
-It works by calling the FIC when a field with an associated callout is
-changed. The FIC (Form Initialization Component) refreshes the needed fields
-based on the callout logic.
+It works by calling the FIC when a field with an associated callout is changed. The FIC (Form Initialization Component) refreshes the needed fields based on the callout logic.
 
-This section implements the following new functionality: When entering a
-new product, one has the option of entering the _Search Key_ for the product,
-the _Name_ and the _Category_ it belongs to. But what if our client wants the
-search key to be constructed automatically by taking the product's name,
-removing all spaces, appending the underscore (_) and the category name it
-belongs to?
+This section implements the following new functionality: When entering a new product, one has the option of entering the _Search Key_ for the product, the _Name_ and the _Category_ it belongs to. But what if our client wants the search key to be constructed automatically by taking the product's name, removing all spaces, appending the underscore (_) and the category name it belongs to?
 
-For example, the Search Key of a product that has the
-Name _Bon Fountain_ and belongs to the _Water_ Product Category would
-become _BonFountain_Water_. Let's see how this could be done using a callout.
+For example, the Search Key of a product that has the Name _Bon Fountain_ and belongs to the _Water_ Product Category would become _BonFountain_Water_. Let's see how this could be done using a callout.
 
 The steps involved in creating a new callout are:
 
@@ -32988,7 +32908,7 @@ The steps involved in creating a new callout are:
 
 !!!Important
     Developments related to points (1) and (2) must belong to
-    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    a module that is not the _core_ module. Please follow the [How to create a module](How_To_Create_a_Module.md)  section to create a new module. For the development related
     to point (3) about modifying a _core_ located column, a new template is
     needed. You can read the [How to Change an Existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
 
@@ -33164,8 +33084,7 @@ Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-6.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-6.png)
 
   
 Do the same for the _Product Category_ record since a change in any of them
@@ -34416,10 +34335,10 @@ modules
 ```
 
   
-Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/Development_Build_Tasks).
+Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md).
 
 !!!info
-    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/Development_Build_Tasks#database_tasks) and [module gradle task](https://docs.etendo.software/latest/concepts/Development_Build_Tasks#Modules) descriptions.
+    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#database_tasks) and [module gradle task](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#Modules) descriptions.
 
 
 ####  Creating a Source Directory
@@ -34464,7 +34383,7 @@ This work is a derivative of [How to Create and Package a Module](http://wiki.op
 
 This module is not to change the accounting entries generated by Etendo, but to run any additional process to be executed at posting time.
  
-From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig) in the general accounting configuration for Etendo.
+From the functional side, there is no special requirement for the development of this module. It is just recommended to understand the role of  [Accounting Schemas](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#glconfig) in the general accounting configuration for Etendo.
 
 Etendo allows running processes just after the posting logic for any document which has been successfully completed. These kinds of processes are called Accounting Post-Processes because they are executed after the normal accounting process.
 
@@ -34479,7 +34398,7 @@ Each time a new module is developed, the first step must always be to create the
 
 These are the special considerations for the module:
 
-- Try to follow the [Naming guidelines for modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules)
+- Try to follow the [Naming guidelines for modules](https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/naming-guidelines-for-modules.md)
 - The flag Has reference data must be set because the module [will contain a dataset](#dataset-definition) with the Accounting Post-Process configuration. Remember to write any useful information inside the Reference Data Description field.
 - Define the mandatory dependency to Core.
 - Include a DB Prefix for the module in case it is necessary. For example, the module will probably define new messages that will require a DB Prefix.
@@ -34770,7 +34689,7 @@ To override this configuration, the following must be done inside the .jrxml rep
 
 #####  Creating a Report Using Report and Process
 
-In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
+In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary.md), you can find an example about how to create a Report in this way.
 
 #####  Report Compilation
   
@@ -34790,6 +34709,7 @@ It is possible to generate barcodes from JasperReports, using barcode4j or barbe
 In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
 
 ---
+
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -35589,12 +35509,11 @@ The objective of this section is to show how you can create a new window from sc
 
 !!!info
     This section builds on top of two previous sections which explain
-    [How to Create a Module](How_To_Create_and_Package_a_Module.md)  and [How to Create a Table](How_to_create_a_Table.md).
+    [How to Create a Module](https://docs.etendo.software/latest/how-to-guides/How_To_Create_a_Module.md)  and [How to Create a Table](https://docs.etendo.software/latest/how-to-guides/How_to_create_a_Table.md).
 
 ####  Module & Table
 
-As mentioned above, this tutorial is based on two previous tutorials
-and assumes that the following objectives have been already completed:
+As mentioned above, this tutorial is based on two previous tutorials and assumes that the following objectives have been already completed:
 
   * Creation of a new module
   * Creation + Registration in the AD of a new table
@@ -35651,11 +35570,6 @@ The *Create Fields* button can be used to create fields for the new tab based on
 Move to *Field* tab to see the created fields.
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_3.png)  
-
-
-
-  
-  
   
 If required, changes to these fields could be made or new ones could be added manually. 
 
@@ -35664,14 +35578,11 @@ If required, changes to these fields could be made or new ones could be added ma
     that points to the ID field of its parent tab, as it would made not possible to create records in this tab using the grid view. 
 
 
-
 Now, go back to *Tab* tab and create a new record that will represent the
 child tab of the Employee tab where salaries will be managed:
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_4.png) 
 
-
-  
 Most importantly, make sure you select:
 
   * *Table* = `HT_Salary`
@@ -35706,8 +35617,6 @@ A menu item is required for the user to be able to call up the new window. Using
 
   
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_7.png)
-
-
   
 Main fields of this window are:
 
@@ -35727,8 +35636,6 @@ Save this record then click on _Tree_ icon ![](https://docs.etendo.software/late
 
 Here you can drag and drop the new menu item to any of the
 other menu groups.
-
-  
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Window_9.png)
 
@@ -35750,6 +35657,7 @@ Using the *F&B International Group Admin* role, select the link to the new windo
 !!!success
     You have now successfully created your own new window and seen how it came to life within Etendo. 
 
+---
 
 This work is a derivative of [How to create a window](http://wiki.openbravo.com/wiki/How_to_Create_a_Window){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
@@ -36038,7 +35946,9 @@ This work is a derivative of [How to create an alert](http://wiki.openbravo.com/
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules
 ## Article Content: 
-#### How to Create and Update Translation Modules
+### How to Create and Update Translation Modules
+
+#### Overview
 
 This section describes the process of creating and updating translation modules in Etendo, including the Core's module. 
 
@@ -36048,7 +35958,7 @@ This section describes the process of creating and updating translation modules 
 
 The first thing to do is to create the translation module definition into the Application Dictionary.
 
-Logged as System Administrator role, the user selects the Application Dictionary || Module window from the Application menu and creates a new record.
+Logged as System Administrator role, the user selects the `Application Dictionary` > `Module` window from the Application menu and creates a new record.
 
 Translation modules are a special kind of modules. They have to be marked as Is translation module in the Module window, and they must define the translation language in the Module Language field.
 
@@ -36060,7 +35970,7 @@ Apart from checking the Is translation module and setting the Module Language, w
 
 ###### Prepare strings to be translated
 
-Logged with the System Administrator role, select the General Setup || Application || Language window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
+Logged with the System Administrator role, select the `General Setup`> `Application` > `Language` window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
 
 ![](https://docs.etendo.software/latest/assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
 
@@ -36078,7 +35988,7 @@ Using the Verify Languages button, the application will display the number of re
 
 ##### Export the translation
 
-Exporting the translation is an automatic process available in the General Setup || Application || Import/Export Translations window.
+Exporting the translation is an automatic process available in the `General Setup` > `Application` > `Import/Export Translations` window.
 
 With the System Administrator role, select the language in which the user wants to export translation files. Export Reduced Version flag can be set to Yes to have a reduced translation version. This would exclude all translation candidates that are linked directly or indirectly to the Menu having translation strategy as "Exclude From Reduced Translation". The user could set this flag as No to have a full translation version by pressing the Export button. The process takes several seconds to export all the XML files.
 
@@ -36243,13 +36153,13 @@ The structure of the translation module's directory should be:
                └── AD_MODULE.xml
     ```
 
-4. Finally, remember to publish the module. For more information, see [Publish Modules to a GitHub Repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository).
+4. Finally, remember to publish the module. For more information, see [Publish Modules to a GitHub Repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
 #### Updating Translation Modules
 
 These are the first considerations for updating a translation module:
 
--   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [Install Modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo). 
+-   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [Install Modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md). 
 -   The already translated strings for this module are kept. Only the new or modified ones will be untranslated, so all the previous work done is not lost.
 -   Before publishing the translation module, remember to update the First Version dependency to the new version of the translated module, as we saw in the “Create module definition” chapter. Also, it is necessary to update the original module version in the build.gradle file. Apart from that, it is also a good practice to include a description of the changes of this new version inside the Update Information field of the Module window.
 -   To apply the updates, it is necessary to execute the command 
@@ -37213,7 +37123,7 @@ We assert that the userCount is more than 0.
 System.out.println("Total of users with password: " + (userCount));
 ```
 
-Finally we print a total of users with password just for the record.
+Finally, we print a total of users with password just for the record.
 
 #####  Transaction Handling
 
@@ -37235,7 +37145,7 @@ There are certainly cases whereby it makes sense to have more control over the d
 
 #####  Side-Effect Free
 
-A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
+A test case will often change the data in the underlying database. Most of the time, it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:
 
   * When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. 
   * This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used `@AfterClass` notation. This method runs automatically at the end of the class.
@@ -37504,9 +37414,9 @@ Because  DAL event observers  make use of CDI to work, they are not executed in 
 
 This limitation does not apply when using ` WeldBaseTest ` tests.
 
+---
+
 This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Develop a DAL Background Process
@@ -37739,14 +37649,14 @@ This helps productivity and quality as you can code, debug and test in an integr
       So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Business events make use of the event framework provided by the [Weld](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. Weld automa
+Business events make use of the event framework provided by the [Weld](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
 
 !!!note
     In order to maximize performance, certain part of the classpath are excluded, check out [this section](https://docs.etendo.software/latest/concepts/Etendo_Architecture.md#Analyzing_the_classpath) if your event handlers are not found.
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
 ####  Example Module
 
@@ -38283,7 +38193,7 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 !!!note
     In the Reference Data section, the existing datasets will depend on the localization installed, if any. 
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides How_to_run_an_initial_client_setup_process-1.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-1.png)
 
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 
@@ -38355,9 +38265,9 @@ This work is a derivative of [Initial Client Setup](https://wiki.openbravo.com/w
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences
 ## Article Content: 
-#### Sequences
+### Sequences
 
-##### Overview
+#### Overview
 
 This document covers how to use the implementation of sequences, explain all the features, and give some implementation example cases.
 
@@ -38370,13 +38280,13 @@ There are two base reference implementations defined that you can use or extend:
 	Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.
 
 
-##### Quick sequence setup
+#### Quick Sequence Setup
 
 1. First, log-in as “System administrator”. Open the `Application` > `Application Dictionary ` >`Tables and Columns` Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.
 	
 	!!! info
 		If you want to define a new sequence reference, you must add it in **Reference Search Key** field and the parent (Base Sequence) must be in the **Reference** field.
-		See how to create a new reference in [new sequence reference](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference).
+		See how to create a new reference in [new sequence reference](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md#new-sequence-reference).
 	
 	<figure markdown>
   ![Image title](https://docs.etendo.software/latest/assets/legacy/technicaldocumentation/platform/quicksequence.png){ width="700" }
@@ -38428,7 +38338,7 @@ There are two base reference implementations defined that you can use or extend:
 	- **Mask:** It is a string defining a parse format, with the possibility to define a dynamic date or literal substring, in addition to the formatted incremental number. 
 
 	!!! info
-		For more information about masking see [Sequences Masking user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking).
+		For more information about masking see [Sequences Masking user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#sequence-masking).
 
 	- **Table:** Defines the table in which the sequence type column is located.
 	- **Column:** The column where the sequence is defined.
@@ -38506,7 +38416,7 @@ CREATE SEQUENCE [ IF NOT EXISTS ] sequence_name
 
 &nbsp;
 
-###### Dimension List
+##### Dimension List
 
 A Dimension is a new filter clause used to select the sequence to be used when creating or saving a new record. The default dimensions are:
 
@@ -38523,12 +38433,12 @@ This way you can have two different sequences depending on, for example, the Org
 
 &nbsp;
 
-####### Adding custom dimensions
+###### Adding custom dimensions
 
 If you want to add a new dimension to filter sequences, this dimension should be a column in both tables `AD_Sequence` and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the `Dimension List` tab with this column (see how to create a new sequence reference above).
 
 
-####### When a dimension is a foreign key column
+###### When a dimension is a foreign key column
 
 1. To define a new dimension, you have to start adding a column in the `AD_Sequence` table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (`M_Product` in this example) unless you decide to use an existing column as dimension.
 
@@ -38562,7 +38472,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 ```
 
 
-####### When a dimension is a List
+###### When a dimension is a List
 
 1. First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.
 
@@ -38592,7 +38502,7 @@ If you want to add a new dimension to filter sequences, this dimension should be
 ```
 
 
-####### Change sequence when change dimension
+###### Change sequence when change dimension
 
 - If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
   The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.
@@ -38621,7 +38531,6 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
   }
 }
 ```
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Secure Webservices
@@ -38688,7 +38597,7 @@ You can use `-P<Parameter Name>` to pass parameters in a task. For example:
 #### Etendo plugin
 
 
-Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes) or use `lastest.release` to resolve the latest version.
+Add in the `build.gradle` file the plugin version available in [Gradle Plugin Release Notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/plugins/etendo-gradle-plugin/release-notes.md) or use `lastest.release` to resolve the latest version.
 
 ```groovy title="build.gradle"
 plugins {
@@ -39568,10 +39477,6 @@ A menu will be shown where you can choose multiple options to be performed.
 5. *Database properties*<br>
   In the end, a message will be shown with the properties which the database will use to be restored. These properties depend on the ones selected previously.
 
-
-
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -39842,7 +39747,7 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 **Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+    For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40729,7 +40634,7 @@ Now, you can edit both `gradle.properties` files updating the variables, or simp
 
 !!! note
     The GitHub credentials are required.
-    To configure GitHub credentials read the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/) in Etendo.
+    To configure GitHub credentials read the [Use of Repositories technical guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md) in Etendo.
 
 | Variable                | Description                                                      | Default Value      |
 | ----------------------- | ---------------------------------------------------------------- | ------------------ |
@@ -40796,7 +40701,7 @@ This task deploys the `webContent` folder into the `tomcat/webapps` directory. M
 Run Tomcat and navigate to [**http://localhost:8080/etendo**](http://localhost:8080/etendo) to access the Etendo Classic.
 
 !!!note
-    If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment).
+    If you want to set up Tomcat locally with IntelliJ, follow the [Install Etendo Development Environment developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md).
 
 ##### Compiling Etendo RX
 
@@ -40846,7 +40751,7 @@ By default, the following services should be up and running:
 - Async
 
 !!! success
-    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice).
+    You have successfully set up the Etendo Platform. Continue your learning journey by visiting our [Creating a New Microservice section in the developer guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/tutorials/creating-a-new-microservice.md).
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Config Server
@@ -40970,7 +40875,7 @@ To launch the Edge Service, execute `./gradlew rx:rx` (or `./gradlew :rx` for in
 
 ##### Configuration Guidelines
 
-Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](https://docs.etendo.software/latest/developer-guide/etendo-rx/concepts/config-server/) in the rxconfig directory.
+Configuration adjustments can be made in the `edge.yaml` file. For further information on configuration settings, please refer to the [Config Server Documentation](config-server.md) in the rxconfig directory.
 
 The following is a basic overview of the default edge configuration:
 
@@ -41171,12 +41076,12 @@ This section provides a step-by-step guide for working with Etendo RX, which inv
 #### Building a New Module for RX Capabilities
 
 !!!note
-    Make sure to complete the [Getting Started section in the developer guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started) to set up the Etendo Platform.
+    Make sure to complete the [Getting Started section in the developer guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md) to set up the Etendo Platform.
 
 
 ##### Accessing as Admin User
 
-After setting the local environment up, as described in the [**install etendo development environment**](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment), we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.
+After setting the local environment up, as described in the [**install etendo development environment**](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md), we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.
 
 Log in to your account as an administrator. The default login credentials for this administrative account are:
 
@@ -41652,7 +41557,7 @@ To simplify RX executions you have a simplified run task:
 ```
 
 !!!warning
-    Remember to configure the Auth service as described on the [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started/#configure-auth-project) page.
+    Remember to configure the Auth service as described on the [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md#configure-auth-project) page.
 
 #### Run tutorial project
 
@@ -41837,7 +41742,7 @@ In this example, the date format is set to `"yyyy-MM-dd"` and the time zone is s
 ## Article Content: 
 ##### Prerequisites
 
-- Read [Config Server Guide](developer-guide/etendo-rx/concepts/config-server/) and [Edge Guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/concepts/edge-server/)
+- Read [Config Server Guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/concepts/config-server.md) and [Edge Guide](https://docs.etendo.software/latest/developer-guide/etendo-rx/concepts/edge-server.md)
 - Etendo RX Edge Service set up and running.
 - Apache2 installed on the server.
 - A valid SSL configuration
@@ -41895,8 +41800,6 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 ##### Conclusion
 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Copilot Installation
@@ -41912,7 +41815,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
 ##### Requirements
-- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/){target="_blank"}.
+- *Etendo Classic*. If you do not have it, you can install it using the [Etendo Installation Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md){target="_blank"}.
 - *Python* version ^3.10, to install it follow [The Official Installation Guide](https://www.python.org/downloads/){target="_blank"}.
 - *Docker* to install it follow [The Official Installation Guide](https://docs.docker.com/engine/install/)
 
@@ -41996,8 +41899,6 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ```
 
     This command will stop the Docker container running Copilot.
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Optical Character Recognition (OCR) Tool
@@ -42425,6 +42326,8 @@ Copilot will infer from the prompt that it must use the DBQueryTool and will exe
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/how-to-create-copilot-tools
 ## Article Content: 
+### How to create Copilot tools
+
 #### Overview
 This article explains how to create a new tool for Copilot.
 
@@ -42436,7 +42339,7 @@ Etendo Copilot module allows the creation of tools that add functionality to it.
     The Langchain libraries are available by default in Copilot. You can use them in your tools. See [Langchain documentation](https://python.langchain.com/){target="_blank"} for more information.
 
 ##### Requirements
-- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation/){target="_blank"}.
+- Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API [Installation](https://docs.etendo.software/latest/developer-guide/etendo-copilot/installation.md){target="_blank"}.
 
 ##### Create a new tool
 For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called `Ping Tool` and will be located in the `com.etendoerp.copilot.pingtool` package.
@@ -42470,7 +42373,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     *.gitignore*: Contains the files that will be ignored by git.
    
     *build.gradle*: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
-    [How to publish modules to GitHub repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/)
+    [How to publish modules to GitHub repository](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md)
     
    
     *tools_deps.toml*: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.
@@ -42541,7 +42444,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
             return {"status_code": response.status_code}  # The run method must return a dictionary with the outputs of the tool.
     ```
     !!! note "Enviroment variables"
-        Automatically, Copilot reads the gradle.properties file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
+        Automatically, Copilot reads the `gradle.properties` file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property `COPILOT_PORT` in the gradle.properties file, Copilot will create the environment variable `COPILOT_PORT`. If we have the property `bbdd.sid` in the gradle.properties file, Copilot will create the environment variable `bbdd_sid`.
          This allows us to use the environment variables in the tools. 
         
 
@@ -42596,12 +42499,12 @@ For this example, we will create a tool that will allow us to make a ping to a h
     - *JSON Info*: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. 
  
 
-    The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is get from the tool class.
+    The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button `Sync Tool Structure` in the `Copilot Tool` window. This process will load the *Description* and the *JSON Info* fields of the tool. This data is obtained from the tool class.
 
     !!! Warning Before Sync Tool Structure
-        Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
+        It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.
 
-    ![how-to-create-copilot-tools.png](https://docs.etendo.software/latest//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
+    ![how-to-create-copilot-tools.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png)
 
     After creating the record, we have to export the module to persist the changes in the database:
     ```bash title="Terminal"
@@ -42609,7 +42512,7 @@ For this example, we will create a tool that will allow us to make a ping to a h
     ```
     Once the *Copilot Tool* is defined, this tool must be associated to the copilot app(s), to do so, a record must be created in the *tools* tab of the *Copilot App* window, this record will allow us to activate or deactivate the tool.
 
-    ![how-to-create-copilot-tools-2.png](https://docs.etendo.software/latest//assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
+    ![how-to-create-copilot-tools-2.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/how-to-create-copilot-tools-2.png)
 
     !!! note "OpenAI Assistants tools"
         Remember to excecute `Sync OpenAI Assistant` process after linking the tool, if not, the tool will not be available in the OpenAI Assistant.
@@ -42620,8 +42523,6 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
     ``` bash title="Terminal"
     ./gradlew copilot.do -Pprompt="What tools do you have available?"
     ```
-
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Getting Started
@@ -42642,8 +42543,8 @@ On this page we will explain what are the requirements to create a subapplicatio
 #### Environment Setup
 
 ##### Requirements
-- *Etendo*. If you don't have it, [install it here](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started/){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started/){target="_blank"}.
+- *Etendo*. If you don't have it, [install it here](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md){target="_blank"}.
+- *Etendo Mobile*. If you don't have it, [install it here](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md){target="_blank"}.
 - *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
 
@@ -42767,7 +42668,7 @@ On this page we will explain what are the requirements to create a subapplicatio
             ``` bash title="Terminal"
             nvm use 16.20
             ``` 
-Then continue with the [Create New Sub-appliction](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
+Then continue with the [Create New Sub-appliction](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Create New Subapplication
@@ -42780,7 +42681,7 @@ Then continue with the [Create New Sub-appliction](https://docs.etendo.software/
 This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this, you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.
 
 !!! info
-    Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the [Getting Started in the Etendo Mobile section](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"}.
+    Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the [Getting Started in the Etendo Mobile section](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started.md){target="_blank"}.
 
 #### Create a new Etendo Classic module
 
@@ -42824,7 +42725,7 @@ After saving all the configuration, you have to export it. Open a terminal in th
 #### Dynamic app window
 In the `Dynamic App` window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the subapplication is declared.
 
-After selecting this record in the `Dynamic App Version` tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the [Dynamic App](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app){target="_blank"}.
+After selecting this record in the `Dynamic App Version` tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the [Dynamic App](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app){target="_blank"}.
 
 | Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
@@ -42980,12 +42881,12 @@ _Storybook_ is a place where you can see all the components of the library. Also
 
 #### Development mode setup
 
-1. [Etendo RX](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started/) should be running
+1. [Etendo RX](https://docs.etendo.software/latest/developer-guide/etendo-rx/getting-started.md) should be running
       ``` bash title="Terminal"
       ./gradlew rx:rx
       ```
 2. Etendo classic should be running.
-3. Open the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started/) application on a mobile device. You can use either an emulator or a physical device.
+3. Open the [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
 
 ##### Rollup
 [Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.
@@ -43115,14 +43016,14 @@ In a terminal on path `modules/<javapackage>/subapp`, run the following commands
 This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
-    Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
+    Before starting this tutorial, visit the [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
 
 #### Setup
 
 ----------
 ##### Create new Module
 
-Following the documentation about [how to create a new etendo classic module](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
+Following the documentation about [how to create a new etendo classic module](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
 
 Below is a succinct representation of the required fields and expected values for the module configuration:
 
@@ -43149,7 +43050,7 @@ Below is a succinct representation of the required fields and expected values fo
 
 ##### Dynamic app and role configuration
 
-As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#dynamic-app-window){target="_blank"}.
+As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
 
 ###### Dynamic app
 
@@ -43190,7 +43091,7 @@ At this point you have _done_ with the etendo classic configuration.
 This tutorial is based in our example of a product subapplication, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
 
 !!! tip "Keep in mind"
-    All related to the main concepts of a subapplication are explained in the [concepts](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#concepts){target="_blank"} section in create new subapplication tutorial.
+    All related to the main concepts of a subapplication are explained in the [concepts](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new subapplication tutorial.
     The following sections are focused on the product subapplication example.
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
@@ -43210,7 +43111,7 @@ To begin with we must have to download the [ latest version of the project](http
   ```
   
 !!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
+    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}
 
 #### Customizing and Programming a Sub-Application
 
@@ -43218,12 +43119,12 @@ This section explains how to customize and program a subapplication. It uses as 
 
 ##### Product subapp example
 
-This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"}.
+This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}.
 
 !!! info "Consideration"
     This subapplication example was developed for both platforms (phone and tablet). 
     When you create a new subapplication, you have to do the same. 
-    The provided [base subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
+    The provided [base subapplication](https://docs.etendo.software/latest/developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}  is already configured for both platforms.
 
 ###### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
@@ -43954,7 +43855,7 @@ In essence, this integration is a significant stride in creating robust, scalabl
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](https://docs.etendo.software/latest/developer-guide/etendo-mobile/getting-started.md){target="_blank"} in the Etendo Mobile section.
 
 #### Setup
 
@@ -44203,7 +44104,6 @@ After save, the final result, you should see something like this:
   ![saving-file.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/saving-file.png){ width="200", align=left style="border: 1px solid grey; border-radius: 8px;"}
   ![pdf-show.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-mobile/use-pdf-utilities/pdf-show.png){ width="200", align=right style="border: 1px solid grey; border-radius: 8px;"}
 </figure>
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo UI Library
@@ -45000,13 +44900,12 @@ This page holds live testing instances. These live builds are updated and reset 
 [:simple-esbuild: Etendo 23.4.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
-    If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support).
+    If you need to test on Oracle, please feel free to [contact us](https://docs.etendo.software/latest/help-and-support/overview.md).
 
 ??? tip "Credentials"
     The default access credentials are: <br> 
       **Username:** admin <br>
       **Password:** admin <br>
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -45020,8 +44919,8 @@ We understand that your journey with Etendo might sometimes raise questions or r
 
 You also have a standard structure for you to report bugs if needed.
 
-[:material-headphones-settings: Support Service](https://docs.etendo.software/latest/help-and-support/support-service){ .md-button .md-button--primary .md-button .md-button--primary--primary }
-[:fontawesome-solid-bug: How to Report Bugs](https://docs.etendo.software/latest/help-and-support/how-to-report-bugs){ .md-button .md-button--primary .md-button .md-button--primary--primary }
+[:material-headphones-settings: Support Service](https://docs.etendo.software/latest/help-and-support/support-service.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
+[:fontawesome-solid-bug: How to Report Bugs](https://docs.etendo.software/latest/help-and-support/how-to-report-bugs.md){ .md-button .md-button--primary .md-button .md-button--primary--primary }
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -45036,7 +44935,7 @@ Etendo provides support to the users through our [Help Center](http://support.et
 
 Here, the user can ask questions or send information in these sections:
 
--   :material-lifebuoy: **Trainning**
+-   :material-lifebuoy: **Training**
 -   :material-tools:  **Technical Support** 
 -   :fontawesome-regular-money-bill-1:  **Licensing and Billing Questions** 
 -   :material-headphones-settings:  **Product Trial Questions**
@@ -45064,7 +44963,7 @@ Here, the user can ask questions or send information in these sections:
     *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*
 
 !!! sucess
-    Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic)
+    Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/release-notes.md)
 
 To report a bug, a standard structure is meant to be followed. This structure is represented in the following template:
 
