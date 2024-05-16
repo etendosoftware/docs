@@ -16,12 +16,12 @@ Having a single repository of data avoids data duplication, provides a unique wa
 ## Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [Advanced Business Partner](/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/) in the Essentials Extensions Bundle Documentation.
+    For more information, visit [Advanced Business Partner](../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md) in the Essentials Extensions Bundle Documentation.
 
 ## Currency Converters
 
@@ -87,7 +87,7 @@ Finally, it is very important to remark that there could be other types of busin
 That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
 
 !!! info
-    To learn more about this workflow, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+    To learn more about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 
 #### **Set New Currency**
 
@@ -155,31 +155,31 @@ As shown in the image above, there is a list of relevant data to be entered for 
 You could either select any data such as *Price List* from a previously created list of values, or create it *ad hoc* by navigating to the corresponding window, and then select it.
 
 - **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
-  To learn more, visit [Price List](/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).  
+  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).  
   Price lists are defined in a given currency, which could be the same as customer currency or not.  
   In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process ***Set New Currency*** which can be run to change the currency of a business partner.
 - **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
   If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
-  To learn more, visit [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
-  To learn more, visit [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](..//master-data-management/business-partner-setup.md#payment-term).
 - **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
-  To learn more about *Financial Account*, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more about *Financial Account*, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
-  To learn more, visit [Generate Invoices](/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices).
+  To learn more, visit [Generate Invoices](../sales-management/transactions.md#generate-invoices).
   - **After Order Delivered** - the invoice could be automatically generated once all the goods of the sales order have been shipped
   - **After Delivery** - the goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
   - **Do not invoice** - no invoice will be generated automatically
   - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
   - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
     If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.  
-    To learn more, visit [Invoice Schedule](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#invoice-schedule)
+    To learn more, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule)
 - **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 - A customer can be defined as *Tax Exempt* whenever applicable, therefore only those Tax rates also defined as exempt apply.
 - **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
 - **SO BP Tax Category** - this field can be found under the *More Information* section.  
   You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Business Partner Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category)
+  To learn more, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category)
 - **On Hold** - this checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
   - **Sales Order:** Blocked
   - **Goods Shipment:** Blocked
@@ -197,7 +197,7 @@ Customer accounting tab allows the user to configure the ledger accounts to be u
 As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
 
 - the **Customer Receivables** transactions such as sales invoices posting.  
-To learn more, visit [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+To learn more, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
@@ -215,21 +215,21 @@ As shown in the image above, there is a list of relevant data to be entered for 
 
 - **Purchase Price List** - the one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
   If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
-  To learn more, visit [Price List](/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).
+  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).
 - **Payment method** - the one selected will be the one applied while creating and managing the payments made to that vendor.  
   If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
-  To learn more, visit [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing supplier invoices payment plans.  
-  To learn more, visit [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](../master-data-management/business-partner-setup.md#payment-term).
 - **PO Maturity Date 1** - as indicated in the Payment Term the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
   - For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
 - **PO Maturity Date 2** - a second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
   - For example, the payment term is 30 days, the PO Maturity Date 1 the value is 10, the PO Maturity Date 2 is 20. The example given in PO Maturity Date 1 will remain the same. However, if the invoice date is the 11th of the month, the payment due date will be the 20th of next month: the 30 days of the payment terms are taken into account and since the 10th of the month is passed the second maturity date of the 20th is taken into account.
 - **PO Maturity Date 3** - a third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
 - **Financial account** - the one selected will be the one used while withdrawing and reconciling the payments made to a supplier.  
-  To learn more, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Tax Category** - you can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category).
+  To learn more, visit [Tax Category](../financial-management/accounting/setup.md#tax-category).
 - **On Hold** - this checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can obviously be changed as required:
   - **Purchase Order:** Blocked
   - **Goods Receipt:** Not blocked
@@ -313,7 +313,7 @@ The *bank account* related data you can enter is:
 #### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
@@ -398,7 +398,7 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ### Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
@@ -408,7 +408,7 @@ With this functionality, the user can find the tab “Rappel Configurations” i
 To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
 
 !!! info
-    For more information, visit [Rappel Configurations](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#rappel-configurations).
+    For more information, visit [Rappel Configurations](../master-data-management/business-partner-setup.md#rappel-configurations).
 
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
@@ -424,7 +424,7 @@ When the rappel is created, a sales invoice is created automatically, as seen be
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
 
 !!! info
-    For more information, visit [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+    For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 ## Business Partner Info
 
@@ -508,7 +508,7 @@ Additional key data to fill in are:
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
-  To learn more, visit [Process Plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)
+  To learn more, visit [Process Plan](../production-management/setup.md#process-plan)
 - **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
     To learn more, visit Attribute Set
@@ -756,7 +756,7 @@ Overall, this tab allows to:
 
 In the same way, either a *Standard* or an *Average* Costing Rule needs also to be defined for the Organization as the way to calculate the cost of the products' transactions within that organization.
 
-- **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an *Average* Costing Algorithm.
+- **review the average cost** calculated by the Costing Server when using an *Average* Costing Algorithm.
 
 Note that when using a *Standard* costing algorithm the cost of every product transaction is the *default standard cost* entered in this tab.  
 !!! info
@@ -967,8 +967,8 @@ Manufacturing tab is used for products that are planned by the manufacturing pla
 The information in this tab is mainly used by MRP to process the Manufacturing Plan and Purchasing Plan. The storage bin field is filled out for products in production to indicate the default storage bin the product will be stored in when coming out of production.
 
 - **Storage Bin**: default location in the warehouse of the product.
-- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planning-method) section.
-- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planner) section.
+- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](../material-requirement-planning/setup.md#planning-method) section.
+- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](../material-requirement-planning/setup.md#planner) section.
 - **Capacity**: production capacity per day for the product.
 - **Min. Quantity:** minimum quantity to be entered on a work requirement.
 - **Quantity Type**:
@@ -1131,4 +1131,3 @@ Fields to note:
 #### **Modify Taxes Categories**
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
-

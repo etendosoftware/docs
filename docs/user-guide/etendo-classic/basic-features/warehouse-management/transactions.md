@@ -107,7 +107,7 @@ Once the Inventory is successfully reactivated, the state of the document change
 ![](../../../../assets/drive/1WBA34PF6dwDGKc8HW0tC8iuzD_CR-9I2.png)
 
 !!! warning
-    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ### Bulk Posting
 
@@ -119,7 +119,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Goods Movement
 
@@ -201,7 +201,7 @@ Once the movement is successfully reactivated, the state of the document changes
 ![](../../../../assets/drive/1tHX7U3NNVTlZ83m_Ql4RFEL52gsgy81B.png)
 
 !!! warning
-    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ### Bulk Posting
 
@@ -213,7 +213,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Bill of Materials Production
 
@@ -269,7 +269,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Goods Transaction
 
@@ -322,13 +322,13 @@ A sales order can be reserved when the document is booked and pending to be deli
 
 - Automatic: The reservation is automatically created and processed, reserving the available stock
 
-For more information, visit [Sales Order](/user-guide/etendo-classic/basic-features/sales-management/transactions#sales-order).
+For more information, visit [Sales Order](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order).
 
 ### Procurement Flow
 
 Pre-reservations can also be made from the Purchase Order. Being in the purchase order line, there is the possibility of selecting any sales order line pending to be delivered that is waiting to receive the goods in the warehouse. Once the items are received the pre-reservation is converted to reservation and the goods are reserved for that sales order line.
 
-For more information, visit [Purchase Order](/user-guide/etendo-classic/basic-features/procurement-management/transactions#purchase-order).
+For more information, visit [Purchase Order](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order).
 
 ### Purchasing Plan (MRP)
 
@@ -741,16 +741,16 @@ That adjustment can be post to the ledger. Posting will look as shown below:
 |                                                                                                 |                                                  |                                                |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------- |
 | Account                                                                                         | Debit                                            | Credit                                         |
-| [_Warehouse Differences_](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) | Adjustment amount of "Movement From" transaction |                                                |
-| [_Product Asset_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount of "Movement From" transaction |                                                |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                                                  | Adjustment amount of "Movement To" transaction |
 
 **"Movement To"** transaction adjustment:
 
 |                                                                                                 |                                                |                                                |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
 | Account                                                                                         | Debit                                          | Credit                                         |
-| [_Product Asset_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
-| [_Warehouse Differences_](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) |                                                | Adjustment amount of "Movement To" transaction |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            | Adjustment amount of "Movement To" transaction |                                                |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) |                                                | Adjustment amount of "Movement To" transaction |
 
 ### **Negative Stock Correction**
 
@@ -788,8 +788,8 @@ That adjustment can be post to the ledger. Posting will look as shown below in t
 |                                                                                                 |                   |                   |
 | ----------------------------------------------------------------------------------------------- | ----------------- | ----------------- |
 | Account                                                                                         | Debit             | Credit            |
-| [_Warehouse Differences_](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#defaults) | Adjustment amount |                   |
-| [_Product Asset_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)                            |                   | Adjustment amount |
+| [_Warehouse Differences_](../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#defaults) | Adjustment amount |                   |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)                            |                   | Adjustment amount |
 
 ### **Price Difference Correction**
 
@@ -842,16 +842,16 @@ That adjustment can be posted to the ledger. Posting will look as shown below :
 |                                                                                 |                                 |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- | ------------------------------- |
 | Account                                                                         | Debit                           | Credit                          |
-| [_Product Asset_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)            | Goods Receipt Adjustment amount |                                 |
-| [_Invoice Price Difference_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting) |                                 | Goods Receipt Adjustment amount |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)            | Goods Receipt Adjustment amount |                                 |
+| [_Invoice Price Difference_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) |                                 | Goods Receipt Adjustment amount |
 
 **Goods Shipment adjustment**
 
 |                                                                           |                                  |                                  |
 | ------------------------------------------------------------------------- | -------------------------------- | -------------------------------- |
 | Account                                                                   | Debit                            | Credit                           |
-| [_Cost of Goods Sold_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting) | Goods Shipment Adjustment amount |                                  |
-| [_Product Asset_](/user-guide/etendo-classic/basic-features/master-data-management/master-data#accounting)      |                                  | Goods Shipment Adjustment amount |
+| [_Cost of Goods Sold_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting) | Goods Shipment Adjustment amount |                                  |
+| [_Product Asset_](../../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#accounting)      |                                  | Goods Shipment Adjustment amount |
 
 #### **Line**
 
@@ -968,7 +968,7 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Referenced Inventory
 

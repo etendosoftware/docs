@@ -499,4 +499,4 @@ The **Etendo Advanced Security** module allows the user to customize several sec
 - Expiration Time (Autolock Password)
 
 !!! info
-    For more information, visit the [Etendo Advanced Security module User Guide](/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security/).
+    For more information, visit the [Etendo Advanced Security module User Guide](../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md).

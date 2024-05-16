@@ -68,7 +68,7 @@ From the top navigation bar, the user can launch new documents via the Quick Men
 
 ### Application
 
-Read more in the [Application areas](/getting-started/user-interface/navigation/#application-areas) section.
+Read more in the [Application areas](navigation.md#application-areas) section.
 
 !!! info
     *The contents of the Application Menu depend on the user's role. For example, one user can have various roles and see different things with each one.*

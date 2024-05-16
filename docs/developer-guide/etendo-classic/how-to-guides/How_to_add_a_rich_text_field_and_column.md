@@ -16,8 +16,8 @@ This How-to section explains how to add a rich text field and column to the Eten
 
 The steps to get a rich text field in your window consists of two steps: 
 
-- [Add a column to a table](/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table/)
-- [Add a field to a tab](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/)
+- [Add a column to a table](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md)
+- [Add a field to a tab](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md)
 
 You can also create a new table and a new window/tab ofcourse.
 This how-to will only focus on the specific part of a rich text field.
@@ -51,9 +51,7 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 ###  Create a field - set col and rowspan
 
-Then [create a field](/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab/) within the tab/window. For a rich text field you can
-also set the col and rowspan (these are only shown when the corresponding
-column is defined as rich text):
+Then [create a field](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md) within the tab/window. For a rich text field you can also set the col and rowspan (these are only shown when the corresponding column is defined as rich text):
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
@@ -67,11 +65,9 @@ The result is visualized as a rich text editor in form view:
   
 
 !!!info
-    Rich text fields can not be edited in grid mode (a hoover shows the
-    content). They are always displayed as read-only fields.  
+    Rich text fields can not be edited in grid mode (a hoover shows the content). They are always displayed as read-only fields.  
 
   
-
+---
 
 This work is a derivative of [How to add a rich text field and column](http://wiki.openbravo.com/wiki/How_to_add_a_rich_text_field_and_column){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 
-

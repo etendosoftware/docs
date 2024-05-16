@@ -12,7 +12,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Essentials Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0CE701616F5A446C83FA26633F14AE00){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Essentials Extensions Bundle](/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/)
+:octicons-project-symlink-16: Original Bundle Release Notes: [Essentials Extensions Bundle](../../bundles/essentials-extensions/release-notes.md)
 
 ## Overview
 

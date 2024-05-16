@@ -5,19 +5,19 @@ title: Financial Management Setup
 
 This section describes the windows that are necessary to configure the financial management transactions as regards receivables and payables in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Tax Register Type](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#tax-register-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Register Type](#tax-register-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Method](#payment-method){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matching Algorithm](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#matching-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matching Algorithm](#matching-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Bank File Format](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#bank-file-format){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Bank File Format](#bank-file-format){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Execution Process](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#execution-process){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Execution Process](#execution-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Remittance Type](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#remittance-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Remittance Type](#remittance-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Doubtful Debt Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#doubtful-debt-method){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Doubtful Debt Method](#doubtful-debt-method){ .md-button .md-button--primary } <br>
 
 
 ## **Tax Register Type**
@@ -232,7 +232,7 @@ Payment Method configuration includes the features below:
 -   and finally, how the payment is going to be **accounted**.
 
 !!! info
-    To learn more, visit the section [Accounting Payment Workflow](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup#accounting-payment-workflow).
+    To learn more, visit the section [Accounting Payment Workflow](../../financial-management/receivables-and-payables/setup.md#accounting-payment-workflow).
 
 
 Payment Methods can be configured as explained below in detail:
@@ -501,7 +501,7 @@ To configure Non-Discount Remittances, define this payment method from the Payme
 ![](../../../../../assets/drive/1Y0pJr2nUKDJEYbp85_a75ifAKQ70IIqO.png)
 
 !!! info
-    To create a Non-Discount remittance go to the [Remittance window](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance). 
+    To create a Non-Discount remittance go to the [Remittance window](../../financial-management/receivables-and-payables/transactions.md#remittance). 
 
 ### Remit for Discount
 
@@ -514,7 +514,7 @@ To configure Remittances for Discount, define the type from the Remit for Discou
 ![](../../../../../assets/drive/12vjozrcXO3zaa1j9_e0P9xj3TD9kJ-FI.png)
 
 !!! info
-    To create a Remit for Discount remittance go to the [Remittance window](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions#remittance).
+    To create a Remit for Discount remittance go to the [Remittance window](../../financial-management/receivables-and-payables/transactions.md#remittance).
 
 
 ## **Doubtful Debt Method**

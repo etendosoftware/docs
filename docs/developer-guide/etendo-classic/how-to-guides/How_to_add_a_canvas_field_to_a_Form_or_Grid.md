@@ -29,9 +29,9 @@ The implementation of canvas fields requires javascript development experience.
 See the following concept pages for background information on javascript development:
 
   * [Client Side Development and API](../concepts/Client_Side_Development_and_API.md)
-  * [JavaScript Coding Conventions](../concepts/JavaScript_Coding_Conventions) 
+  * [JavaScript Coding Conventions](../concepts/JavaScript_Coding_Conventions.md) 
 
-It also makes sense to study the following page: [Etendo Architecture](../concepts/Etendo_Architecture).
+It also makes sense to study the following page: [Etendo Architecture](../concepts/Etendo_Architecture.md).
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid-0.png)
 
@@ -52,8 +52,8 @@ The development consists of 2 steps:
 
 The first step is to implement your canvas class in javascript. This is done in 2 steps:
 
-  * Create a  [javascript](../concepts/Client_Side_Development_and_API#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
-  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](../concepts/Etendo_Architecture/#component-provider) 
+  * Create a  [javascript](../concepts/Client_Side_Development_and_API.md#adding-javascript-to-etendo) file with your javascript class and place it in the correct directory, the convention is to place js files in the following directory in your module: web/[module.java.package]/js 
+  * Register the javascript file (and other static resources such as css files) in Etendo using a [ComponentProvider](../concepts/Etendo_Architecture.md#component-provider) 
 
 The example module implements a button and a calculated field in the `example-canvas-field.js` file.
 
@@ -192,7 +192,7 @@ In form-edit or grid-edit mode, the following applies:
 
 ##  Adding server side actions
 
-The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](../concepts/.Etendo_Architecture#actionhandler-server-side-calling-from-the-client)  for this purpose.
+The button implementation can easily be extended with a server side action. Etendo Classic supports the [action handler concept](../concepts/Etendo_Architecture.md#actionhandler-server-side-calling-from-the-client)  for this purpose.
 
 ---
 

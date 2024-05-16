@@ -42,7 +42,7 @@ To include this data, there is a checkbox named *Include Accounting* which oblig
 !!!note
     In the Reference Data section, the existing datasets will depend on the localization installed, if any. 
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides How_to_run_an_initial_client_setup_process-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process-1.png)
 
 If the checkbox *Include Accounting* is selected and an accounting file or reference data is selected, Etendo creates:
 

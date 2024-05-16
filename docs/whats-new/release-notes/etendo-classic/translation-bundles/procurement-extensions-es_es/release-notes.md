@@ -10,7 +10,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Procurement Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=F863020C58E94632A7134A8031A3AA9D){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Procurement Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=08BDBA6C314149DBA05CB1A1694F2959){target="_blank"}
+:octicons-project-symlink-16: Original Bundle Release Notes: [Procurement Extensions Bundle](../../bundles/procurement-extensions/release-notes.md)
 
 ## Overview
 

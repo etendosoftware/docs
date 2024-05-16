@@ -17,8 +17,8 @@ On this page we will explain what are the requirements to create a subapplicatio
 ## Environment Setup
 
 ### Requirements
-- *Etendo*. If you don't have it, [install it here](/developer-guide/etendo-rx/getting-started/){target="_blank"}.
-- *Etendo Mobile*. If you don't have it, [install it here](/user-guide/etendo-mobile/getting-started/){target="_blank"}.
+- *Etendo*. If you don't have it, [install it here](../../developer-guide/etendo-rx/getting-started.md){target="_blank"}.
+- *Etendo Mobile*. If you don't have it, [install it here](../../user-guide/etendo-mobile/getting-started.md){target="_blank"}.
 - *Yarn (recommended)*.  If you don't have it, you can install it via NPM:
 
 
@@ -142,4 +142,4 @@ On this page we will explain what are the requirements to create a subapplicatio
             ``` bash title="Terminal"
             nvm use 16.20
             ``` 
-Then continue with the [Create New Sub-appliction](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"} tutorial.
+Then continue with the [Create New Sub-appliction](../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
