@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7730,7 +7730,7 @@
 <li>a check deposited in the wrong bank account</li>
 <li>a bank account out of funds...etc.</li>
 </ul>
-<p>In Etendo bank and cash accounts are represented as <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</p>
+<p>In Etendo bank and cash accounts are represented as <a href="../../basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</p>
 <p>There are several kinds of funds transfers depending on the financial account type used and the organization for which the transfer of funds takes place:</p>
 <ul>
 <li>From a bank account to another bank account within the same organization.</li>
@@ -7738,8 +7738,8 @@
 <li>Same applies to cash accounts.</li>
 </ul>
 <h2 id="recomended-articles">Recomended articles</h2>
-<p>Transferring funds between financial accounts requires a clear understanding on how to create a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a>.</p>
-<p>It is highly recommended as well to understand how <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> and <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> work in Etendo.</p>
+<p>Transferring funds between financial accounts requires a clear understanding on how to create a <a href="../../basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a>.</p>
+<p>It is highly recommended as well to understand how <a href="../../basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> and <a href="../../basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> work in Etendo.</p>
 <h2 id="execution-steps">Execution Steps</h2>
 <p>In Etendo, the company in the example will have to withdraw money from one bank or cash account and get it deposited into another bank or cash account.
 In other words, the company needs to alter either bank or cash accounts balance whenever it is required. That action could or could not have fees.
@@ -7753,10 +7753,10 @@ Anyway, the steps to follow are:</p>
         in the bank account where funds are going to be deposited.</li>
 </ul>
 <h2 id="gl-item-creation">G/L Item creation</h2>
-<p>A <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to to that is:</p>
+<p>A <a href="../../basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> is the accounting item to use for accounting in-transit funds. It is key to configure the GL item with the right debit and credit accounts in the Accounting tab. The way to do that is:</p>
 <ul>
-<li>Once the GL item has been created, click on the <em>Accounting tab</em> of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> window.</li>
-<li>Create a new record for each organization's general ledger and assign the same <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> for debit and credit.</li>
+<li>Once the GL item has been created, click on the <em>Accounting tab</em> of the <a href="../../basic-features/financial-management/accounting/setup/#gl-item">G/L Item</a> window.</li>
+<li>Create a new record for each organization's general ledger and assign the same <a href="../../basic-features/financial-management/accounting/setup/#account-combination">Account Combination</a> for debit and credit.</li>
 </ul>
 <p>For instance, the sample account combinations which could be used are:</p>
 <ul>
@@ -7769,7 +7769,7 @@ Anyway, the steps to follow are:</p>
 <p>A withdrawal transaction needs to be created in the Financial Account where the funds are going to be taken from. This step in the process could or could not have fees.</p>
 <p>The company in this example needs to:</p>
 <ul>
-<li>navigate to the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
+<li>navigate to the <a href="../../basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
 <li>select the bank to take the money from, for instance Bank A</li>
 <li>press the process button <em>Add Transaction</em></li>
 <li>once in that new window select the <em>Transaction Type</em> GL Item</li>
@@ -7781,7 +7781,7 @@ Anyway, the steps to follow are:</p>
 The next step is to post the withdrawal transaction. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="language-text highlight"><pre><span></span><code>It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request) window.
+<div class="language-text highlight"><pre><span></span><code>It is possible to manually post it by using the process button Post or it could be automatically posted if the Accounting Server Process is enabled in the [Process Request](../../../user-guide/etendo-classic/basic-features/general-setup/process-scheduling.md#process-request) window.
 </code></pre></div>
 </div>
 <p>The posting will look like:</p>
@@ -7795,12 +7795,12 @@ The next step is to post the withdrawal transaction. </p>
 </thead>
 <tbody>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
+<td><a href="../../basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
 <td>Paid Out Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
 <td></td>
 <td>Paid Out Amount</td>
 </tr>
@@ -7831,12 +7831,12 @@ Fee transactions can also be posted the same way as the withdrawal transaction.<
 </thead>
 <tbody>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A -Bank Fee Account</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A -Bank Fee Account</a></td>
 <td>Paid Out Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Payment Out-Withdrawal</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Payment Out-Withdrawal</a></td>
 <td></td>
 <td>Paid Out Amount</td>
 </tr>
@@ -7846,7 +7846,7 @@ Fee transactions can also be posted the same way as the withdrawal transaction.<
 <p>The final step is to create a deposit transaction in the Financial Account where the funds must be deposited.
 The company in this example needs to:</p>
 <ul>
-<li>navigate to the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
+<li>navigate to the <a href="../../basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a> window</li>
 <li>select the bank to deposit the money, for instance Bank B</li>
 <li>press the process button <em>Add Transaction</em></li>
 <li>once in that new window select the <em>Transaction Type</em> GL Item</li>
@@ -7855,7 +7855,7 @@ The company in this example needs to:</p>
 <li>and finally indicate the <em>Received In</em> amount, in this example 100,00 USD.</li>
 </ul>
 <p>This new transaction is then shown in the <em>Transaction</em> tab of the <em>Financial Account</em> window. Etendo clearly shows the Deposit Amount recorded.
-The next step is to post the deposit transaction. It is possible to manually post it by using the process button <em>Post</em> or it could be automatically posted if the Accounting Server Process is enabled in the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
+The next step is to post the deposit transaction. It is possible to manually post it by using the process button <em>Post</em> or it could be automatically posted if the Accounting Server Process is enabled in the <a href="../../basic-features/general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
 <p>The posting will look like:</p>
 <table>
 <thead>
@@ -7867,12 +7867,12 @@ The next step is to post the deposit transaction. It is possible to manually pos
 </thead>
 <tbody>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
 <td>Received In Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
+<td><a href="../../basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
 <td></td>
 <td>Received In Amount</td>
 </tr>
@@ -7900,12 +7900,12 @@ Transfer of funds between different organizations</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
+<td><a href="../../basic-features/financial-management/accounting/setup/#accounting">GL Item Debit</a></td>
 <td>Paid Out Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank A - Withdrawal account</a></td>
 <td></td>
 <td>Paid Out Amount</td>
 </tr>
@@ -7922,12 +7922,12 @@ Transfer of funds between different organizations</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
+<td><a href="../../basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration">Bank B - Deposit Account</a></td>
 <td>Received In Amount</td>
 <td></td>
 </tr>
 <tr>
-<td><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
+<td><a href="../../basic-features/financial-management/accounting/setup/#accounting">GL Item Credit</a></td>
 <td></td>
 <td>Received In Amount</td>
 </tr>
@@ -8038,7 +8038,7 @@ Transfer of funds between different organizations</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

@@ -21,15 +21,15 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
-        <title>How to create Copilot tools - Etendo Documentation</title>
+        <title>How to Create Copilot Tools - Etendo Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#how-to-create-copilot-tools" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to create Copilot tools
+              How to Create Copilot Tools
             
           </span>
         </div>
@@ -5977,6 +5977,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -6006,6 +6008,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="In This Page">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -7548,6 +7552,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7638,8 +7644,7 @@
   
 
 
-  <h1>How to Create Copilot Tools</h1>
-
+<h1 id="how-to-create-copilot-tools">How to create Copilot tools</h1>
 <h2 id="overview">Overview</h2>
 <p>This article explains how to create a new tool for Copilot.</p>
 <h2 id="etendo-copilot">Etendo Copilot</h2>
@@ -7650,7 +7655,7 @@
 </div>
 <h3 id="requirements">Requirements</h3>
 <ul>
-<li>Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API <a href="/developer-guide/etendo-copilot/installation/" target="_blank">Installation</a>.</li>
+<li>Copilot module installed in Etendo Classic. If you do not have it, you can install it using the getting started guide for the Copilot API <a href="../installation/" target="_blank">Installation</a>.</li>
 </ul>
 <h3 id="create-a-new-tool">Create a new tool</h3>
 <p>For this example, we will create a tool that will allow us to make a ping to a host. The tool will be called <code>Ping Tool</code> and will be located in the <code>com.etendoerp.copilot.pingtool</code> package.</p>
@@ -7680,7 +7685,7 @@
 <p><em>tools</em>: Contains the tools of the module. Can contain one or more tools.</p>
 <p><em>.gitignore</em>: Contains the files that will be ignored by git.</p>
 <p><em>build.gradle</em>: Contains the configuration of the module. This file is created when the module is prepared to be published. See 
-<a href="/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/">How to publish modules to GitHub repository</a></p>
+<a href="../../etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/">How to publish modules to GitHub repository</a></p>
 <p><em>tools_deps.toml</em>: Contains the dependencies of the tools of the module. This file contains the dependencies of the tools of the module.</p>
 </li>
 <li>
@@ -7749,7 +7754,7 @@
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Enviroment variables</p>
-<p>Automatically, Copilot reads the gradle.properties file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property <code>COPILOT_PORT</code> in the gradle.properties file, Copilot will create the environment variable <code>COPILOT_PORT</code>. If we have the property <code>bbdd.sid</code> in the gradle.properties file, Copilot will create the environment variable <code>bbdd_sid</code>.
+<p>Automatically, Copilot reads the <code>gradle.properties</code> file of Etendo Classic and add configuration as environment variables. The name of the environment variable will be the same as the name of the property. The only difference is that the . is replaced by _. For example, if we have the property <code>COPILOT_PORT</code> in the gradle.properties file, Copilot will create the environment variable <code>COPILOT_PORT</code>. If we have the property <code>bbdd.sid</code> in the gradle.properties file, Copilot will create the environment variable <code>bbdd_sid</code>.
  This allows us to use the environment variables in the tools. </p>
 </div>
 </li>
@@ -7795,10 +7800,10 @@ The name of the tool must be the same as the name of the class that extends the 
 <li><em>Module</em>: The module where the tool is located. This field is a reference to the module that we have created in the first step, and where these configurations will be exported.</li>
 <li><em>JSON Info</em>: Contains a JSON descrition of the tool. This field is automatically filled when the tool is synchronized. </li>
 </ul>
-<p>The last step is get the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button <code>Sync Tool Structure</code> in the <code>Copilot Tool</code> window. This process will load the <em>Description</em> and the <em>JSON Info</em> fields of the tool. This data is get from the tool class.</p>
+<p>The last step is getting the Tool parameter information from the tool class. This information is used to create the parameters in the Copilot App. To do so, we have to execute the button <code>Sync Tool Structure</code> in the <code>Copilot Tool</code> window. This process will load the <em>Description</em> and the <em>JSON Info</em> fields of the tool. This data is obtained from the tool class.</p>
 <div class="admonition warning before sync tool structure">
 <p class="admonition-title">Warning</p>
-<p>Is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.</p>
+<p>It is mandatory to have copilot running and the tool loaded in the copilot container. If the tool is not loaded, the process will not retrieve the tool parameters.</p>
 </div>
 <p><a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="how-to-create-copilot-tools.png" src="../../../assets/developer-guide/etendo-copilot/how-to-create-copilot-tools.png" /></a></p>
 <p>After creating the record, we have to export the module to persist the changes in the database:
@@ -7913,7 +7918,7 @@ To test the developed Tool, you can ask Copilot to run it or, for example, to li
     
     
 
-      <script src="../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

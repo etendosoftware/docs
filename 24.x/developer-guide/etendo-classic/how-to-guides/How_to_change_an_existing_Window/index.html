@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7642,22 +7642,15 @@
 
 <h1 id="how-to-change-an-existing-window">How to Change an Existing Window</h1>
 <h2 id="overview">Overview</h2>
-<p>Application elements (<a href="../../../developer-guide/etendo-classic/concepts/Modularity_Concepts/?h=dataset#windows-tabs-and-fields.md">windows, tabs and fields</a>) are liable to change repeatedly during the development or maintenance phases of a project.
-Etendo is able to cope with these changes because its architecture is
-suited to iterative development. The definitions of all generated Windows,
-tabs and fields are stored as metadata in the Application Dictionary (AD).</p>
-<p>Changing the window of an existing application is a simple process of changing
-the AD definition.</p>
+<p>Application elements (<a href="../../../developer-guide/etendo-classic/concepts/Modularity_Concepts.md#windows-tabs-and-fields.md">windows, tabs and fields</a>) are liable to change repeatedly during the development or maintenance phases of a project.
+Etendo is able to cope with these changes because its architecture is suited to iterative development. The definitions of all generated Windows, tabs and fields are stored as metadata in the Application Dictionary (AD).</p>
+<p>Changing the window of an existing application is a simple process of changing the AD definition.</p>
 <p>When using the Etendo UI, the changes can be seem immediately when switching role and then by opening the changed window again.</p>
 <p>When using classic Window a compile step is needed.  </p>
-<p>This How-To explains how to modify existing elements of a window. If only new
-elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on
-<a href="../How_to_add_a_field_to_a_Window_Tab/">How to add a field to a window Tab</a>. </p>
+<p>This How-To explains how to modify existing elements of a window. If only new elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
+added using a normal module as explained in the other How-To on <a href="../How_to_add_a_field_to_a_Window_Tab/">How to add a field to a window Tab</a>. </p>
 <h2 id="objective">Objective</h2>
-<p>The objective of this how-to is to illustrate how to make changes to existing
-generated windows in terms of appearance and behavior. The window used in the
-example is the Physical Inventory window and the changes illustrated will be:</p>
+<p>The objective of this how-to is to illustrate how to make changes to existing generated windows in terms of appearance and behavior. The window used in the example is the Physical Inventory window and the changes illustrated will be:</p>
 <ul>
 <li>Hide a field </li>
 <li>Re-sequence the layout </li>
@@ -7677,31 +7670,22 @@ It comprises of:</p>
 <em>Template</em> is needed.</p>
 </div>
 <h2 id="changing-the-window">Changing the window</h2>
-<p>Navigate to the <code>Application Dictionary</code> &gt; <code>Windows, Tabs and Fields</code> window
-and select the record for <em>Physical Inventory</em> .</p>
+<p>Navigate to the <code>Application Dictionary</code> &gt; <code>Windows, Tabs and Fields</code> window and select the record for <em>Physical Inventory</em> .</p>
 <p>In the <em>Fields</em> tab we can now make the changes needed to adapt the layout as
 wanted:</p>
 <ul>
 <li><em>Description</em> field, unmark the <em>Displayed</em> checkbox to hide the field from the tab. </li>
 <li><em>Organization</em> field, change sequence number to <em>200</em> and mark the <em>Start in new line</em> checkbox. This moves the field below all other normally displayed. </li>
 </ul>
-<p>For testing the changed layout, switch away from the <em>System Administrator</em>
-role to e.g. the <em>F &amp;B International Group Admin</em> role and open the <em>Physical
-Inventory</em> window again. As the instance contains our module marked as
-<em>InDevelopment</em> the window layout is reloaded each time the window is opened, so
+<p>For testing the changed layout, switch away from the <em>System Administrator</em> role to e.g. the <em>F &amp;B International Group Admin</em> role and open the <em>Physical Inventory</em> window again. As the instance contains our module marked as <em>InDevelopment</em> the window layout is reloaded each time the window is opened, so
 we can see the changed layout immediate as seen below:</p>
 <p><a class="glightbox" href="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_change_an_existing_Window-2.png" /></a></p>
-<p>To apply the same layout changes to the window in <em>classic UI mode</em>, the
-windows need to be recompiled, the changes deployed to tomcat and tomcat
-restarted. The compile &amp; deploy step can be done by using <code>./gradlew smartbuild</code>
-which will recompile all changed windows and deploy the changes.</p>
+<p>To apply the same layout changes to the window in <em>classic UI mode</em>, the windows need to be recompiled, the changes deployed to tomcat and tomcat restarted. The compile &amp; deploy step can be done by using <code>./gradlew smartbuild</code> which will recompile all changed windows and deploy the changes.</p>
 <h2 id="exporting-the-changes">Exporting the changes</h2>
 <p>The final step is to export the changes into the module so they are persisted.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When exporting changes into a template, it is important that only
-the <em>template is in development</em> and the module which contains the changed
-object (i.e. window) is not.</p>
+<p>When exporting changes into a template, it is important that only the <em>template is in development</em> and the module which contains the changed object (i.e. window) is not.</p>
 </div>
 <p>After ensuring that, the export of the changes consists of the following two
 steps:</p>
@@ -7709,6 +7693,7 @@ steps:</p>
 </span></code></pre></div>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="m">2</span>.<span class="w"> </span>_./gradlew<span class="w"> </span>export.config.script_<span class="w"> </span>,<span class="w"> </span>analyses<span class="w"> </span>the<span class="w"> </span>changes<span class="w"> </span><span class="k">done</span><span class="w"> </span>and<span class="w"> </span>creates<span class="w"> </span>a<span class="w"> </span>special<span class="w"> </span>file<span class="w"> </span>_configScript.xml_<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>module<span class="w"> </span>to<span class="w"> </span>contain<span class="w"> </span>them.<span class="w"> </span>
 </span></code></pre></div>
+<hr />
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_change_an_existing_Window" target="_blank">How to change an existing window</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.   </p>
 
 
@@ -7805,7 +7790,7 @@ steps:</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

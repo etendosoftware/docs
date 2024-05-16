@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7756,22 +7756,10 @@
 
 <h1 id="how-to-create-a-callout">How to Create a Callout</h1>
 <h2 id="overview">Overview</h2>
-<p>The objective of this article is to show you how to create a new  callout . A
-callout is a piece of Javascript code associated with a particular field on a
-tab. This code is executed whenever the field changes. It is a type of Ajax
-substitute, changing parts of a tab/window without the need of refreshing it.</p>
-<p>It works by calling the FIC when a field with an associated callout is
-changed. The FIC (Form Initialization Component) refreshes the needed fields
-based on the callout logic.</p>
-<p>This section implements the following new functionality: When entering a
-new product, one has the option of entering the <em>Search Key</em> for the product,
-the <em>Name</em> and the <em>Category</em> it belongs to. But what if our client wants the
-search key to be constructed automatically by taking the product's name,
-removing all spaces, appending the underscore (_) and the category name it
-belongs to?</p>
-<p>For example, the Search Key of a product that has the
-Name <em>Bon Fountain</em> and belongs to the <em>Water</em> Product Category would
-become <em>BonFountain_Water</em>. Let's see how this could be done using a callout.</p>
+<p>The objective of this article is to show you how to create a new  callout . A callout is a piece of Javascript code associated with a particular field on a tab. This code is executed whenever the field changes. It is a type of Ajax substitute, changing parts of a tab/window without the need of refreshing it.</p>
+<p>It works by calling the FIC when a field with an associated callout is changed. The FIC (Form Initialization Component) refreshes the needed fields based on the callout logic.</p>
+<p>This section implements the following new functionality: When entering a new product, one has the option of entering the <em>Search Key</em> for the product, the <em>Name</em> and the <em>Category</em> it belongs to. But what if our client wants the search key to be constructed automatically by taking the product's name, removing all spaces, appending the underscore (_) and the category name it belongs to?</p>
+<p>For example, the Search Key of a product that has the Name <em>Bon Fountain</em> and belongs to the <em>Water</em> Product Category would become <em>BonFountain_Water</em>. Let's see how this could be done using a callout.</p>
 <p>The steps involved in creating a new callout are:</p>
 <ol>
 <li>Create the source file(s) of the callout (usually a java file). </li>
@@ -7782,7 +7770,7 @@ become <em>BonFountain_Water</em>. Let's see how this could be done using a call
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Developments related to points (1) and (2) must belong to
-a module that is not the <em>core</em> module. Please follow the <a href="How_To_Create_and_Package_a_Module.md">How to create and package a module</a>  section to create a new module. For the development related
+a module that is not the <em>core</em> module. Please follow the <a href="../How_To_Create_a_Module/">How to create a module</a>  section to create a new module. For the development related
 to point (3) about modifying a <em>core</em> located column, a new template is
 needed. You can read the <a href="../How_to_change_an_existing_Window/">How to Change an Existing Window</a> article to obtain more information.</p>
 </div>
@@ -8063,7 +8051,7 @@ else and see how the change is reflected inside the Search Key field.</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

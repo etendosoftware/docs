@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7684,8 +7684,8 @@
 <h2 id="material-requirement-planning">Material Requirement Planning</h2>
 <p>The Material Requirement Planning consists of two plans:</p>
 <ul>
-<li>Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement">Work Requirement</a> and the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition">Requisition</a>.</li>
-<li>Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a>.</li>
+<li>Manufacturing Plan: plan to display calculations related to products that go through Production. The suggested documents to be created in this plan are the <a href="../../production-management/transactions/#work-requirement">Work Requirement</a> and the <a href="../../procurement-management/transactions/#requisition">Requisition</a>.</li>
+<li>Purchasing Plan: plan to display calculations related to products that are procured. The suggested document to be created in this plan is the <a href="../../procurement-management/transactions/#purchase-order">Purchase Order</a>.</li>
 </ul>
 <p><strong>Planning Methods</strong> are entered to define what supply components are taken into account with the calculations of these plans.</p>
 <p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/material-requirement-planning/mrp0.png" /></a></p>
@@ -7696,29 +7696,29 @@
 For the products that are planned in the <em>Manufacturing Plan</em>, the following configurations are required:</p>
 </div>
 <ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan">Process plan</a>  is set up for the product.</li>
-<li>the <em>production checkbox</em> and the Process Plan name are selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> screen.
-The <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing">Manufacturing</a> tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.</li>
+<li>the <a href="../../production-management/setup/#process-plan">Process plan</a>  is set up for the product.</li>
+<li>the <em>production checkbox</em> and the Process Plan name are selected in the <a href="../../master-data-management/master-data/#product">Product</a> screen.
+The <a href="../../master-data-management/master-data/#manufacturing">Manufacturing</a> tab in the Product screen is filled out with the information required for MRP to make the calculations for the Manufacturing plan.</li>
 </ul>
 <p>For the products that are planned in the <em>Purchasing Plan</em>, the following configurations are required:</p>
 <ul>
-<li>the purchase checkbox is selected in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> screen.</li>
-<li>the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#price">price</a> of the product is defined for the price list of the vendor that is entered in the Purchasing tab.</li>
-<li>the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#purchasing">Purchasing</a>  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.</li>
+<li>the purchase checkbox is selected in the <a href="../../master-data-management/master-data/#product">Product</a> screen.</li>
+<li>the <a href="../../master-data-management/master-data/#price">price</a> of the product is defined for the price list of the vendor that is entered in the Purchasing tab.</li>
+<li>the <a href="../../master-data-management/master-data/#purchasing">Purchasing</a>  tab in the Product screen is filled out with the information required for MRP to make the calculations for the Purchasing Plan.</li>
 <li>
 <p>the vendor that is reflected as the Business Partner in the above mentioned Purchasing tab is filled out in the Business Partner screen:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendorcreditor">Vendor/Creditor</a> tab with at least the following fields filled out:<ul>
+<li><a href="../../master-data-management/master-data/#vendorcreditor">Vendor/Creditor</a> tab with at least the following fields filled out:<ul>
 <li>Purchase Price List</li>
 <li>PO Payment Method</li>
 <li>PO Payment Terms</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#locationaddress">Location/Address</a> tab</li>
+<li><a href="../../master-data-management/master-data/#locationaddress">Location/Address</a> tab</li>
 </ul>
 </li>
 <li>
-<p>The <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing">Manufacturing</a> tab in the Product screen is filled out with the <em>Planning Method</em> and <em>Planner</em> information.</p>
+<p>The <a href="../../master-data-management/master-data/#manufacturing">Manufacturing</a> tab in the Product screen is filled out with the <em>Planning Method</em> and <em>Planner</em> information.</p>
 </li>
 </ul>
 <h3 id="execution"><strong>Execution</strong></h3>
@@ -7741,22 +7741,22 @@ In the created overview the material planner reviews and analyzes the lines. Bas
 <h2 id="relationship-with-other-areas">Relationship with other areas</h2>
 <p>The MRP interacts with the following modules:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/">Procurement Management</a>:<ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition">Requisitions</a> are created from the Manufacturing Plan</li>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Orders</a> are created from the Purchasing Plan</li>
+<li><a href="../../procurement-management/getting-started/">Procurement Management</a>:<ul>
+<li><a href="../../procurement-management/transactions/#requisition">Requisitions</a> are created from the Manufacturing Plan</li>
+<li><a href="../../procurement-management/transactions/#purchase-order">Purchase Orders</a> are created from the Purchasing Plan</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started/">Sales Management</a>:<ul>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order">Sales Orders</a> are optionally taken into account in the calculations of both plans</li>
+<li><a href="../../sales-management/getting-started/">Sales Management</a>:<ul>
+<li><a href="../../sales-management/transactions/#sales-order">Sales Orders</a> are optionally taken into account in the calculations of both plans</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/">Warehouse Management</a>:<ul>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-report">Stock levels</a> are automatically taken into account in the calculations of both plans</li>
+<li><a href="../../warehouse-management/getting-started/">Warehouse Management</a>:<ul>
+<li><a href="../../warehouse-management/analysis-tools/#stock-report">Stock levels</a> are automatically taken into account in the calculations of both plans</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/production-management/getting-started/">Production Management</a>:<ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan">Process Plan</a> is used for the calculation of the Manufacturing Plan</li>
-<li><a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement">Work Requirements</a> are created from the Manufacturing Plan</li>
+<li><a href="../../production-management/getting-started/">Production Management</a>:<ul>
+<li>the <a href="../../production-management/setup/#process-plan">Process Plan</a> is used for the calculation of the Manufacturing Plan</li>
+<li><a href="../../production-management/transactions/#work-requirement">Work Requirements</a> are created from the Manufacturing Plan</li>
 </ul>
 </li>
 </ul>
@@ -7855,7 +7855,7 @@ In the created overview the material planner reviews and analyzes the lines. Bas
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

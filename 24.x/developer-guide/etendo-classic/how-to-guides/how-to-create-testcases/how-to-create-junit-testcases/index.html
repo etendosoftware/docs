@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -8179,7 +8179,7 @@ Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of 
 <p>We assert that the userCount is more than 0.</p>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total of users with password: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">userCount</span><span class="p">));</span>
 </span></code></pre></div>
-<p>Finally we print a total of users with password just for the record.</p>
+<p>Finally, we print a total of users with password just for the record.</p>
 <h3 id="transaction-handling">Transaction Handling</h3>
 <p>A question which might pop-up when looking at the above code: where is the database transaction handling done? The answer is that this is handled by the <code>WeldBaseTest</code> class and the Etendo data access layer:</p>
 <ul>
@@ -8198,7 +8198,7 @@ Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of 
 <p>DAL event observers  are not triggered within test cases extending <code>OBBaseTest</code> class. They to work require of test cases extending <code>WeldBaseTest</code>. </p>
 </div>
 <h3 id="side-effect-free">Side-Effect Free</h3>
-<p>A test case will often change the data in the underlying database. Most of the time it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:</p>
+<p>A test case will often change the data in the underlying database. Most of the time, it is not feasible to setup a completely new test database for each test run. Therefore test-cases should be developed such that they are side effect free. This means:</p>
 <ul>
 <li>When the test-case changes data then it should have a test method which is run as the last test method which cleans up/repairs the data. </li>
 <li>This clean-up method should also clean up data which is left from previous test runs. For this common issue should be used <code>@AfterClass</code> notation. This method runs automatically at the end of the class.</li>
@@ -8318,11 +8318,11 @@ Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of 
 <li>Right click on the <code>ExampleTest</code> class. </li>
 <li>Select Run <code>ExampleTest</code>. </li>
 </ul>
-<p><a class="glightbox" href="../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-6.png" /></a></p>
 <ul>
 <li>You can check the result of the test case on the JUnit view and the output of your tests in the Console view: </li>
 </ul>
-<p><a class="glightbox" href="../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/developer-guide/etendo-classic/how-to-guides/how-to-create-junit-testcases/how-to-create-junit-testcases-7.png" /></a></p>
 <p>Also, in the build folder you can find the report of the tests execution, and you can open it on your browser.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>build
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>└── reports
@@ -8414,6 +8414,7 @@ Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of 
 <h3 id="dal-event-observers">DAL event observers</h3>
 <p>Because  DAL event observers  make use of CDI to work, they are not executed in standard test cases extending <code>OBBaseTest</code> .</p>
 <p>This limitation does not apply when using <code>WeldBaseTest</code> tests.</p>
+<hr />
 <p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases" target="_blank">How to Create JUnit testcases</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
@@ -8510,7 +8511,7 @@ Make sure to use <code>WeldBaseTest</code> to leverage the full capabilities of 
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

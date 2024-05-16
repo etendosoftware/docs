@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7668,7 +7668,7 @@
 <h2 id="overview">Overview</h2>
 <iframe width="720" height="480" src="https://www.youtube.com/embed/l7RMb0Oz7Wo?si=ngxYnwDkiDqwRkLO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<p>In Etendo, most of the warehouse movements are created automatically based on the transactions of <a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started/">Sales</a> and <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/">Procurement</a> processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the Warehouse Management application area and are gathered in the Inventory Accuracy business flow which is described below.</p>
+<p>In Etendo, most of the warehouse movements are created automatically based on the transactions of <a href="../../sales-management/getting-started/">Sales</a> and <a href="../../procurement-management/getting-started/">Procurement</a> processes. However, operating a warehouse also involves several manual activities, such as physical inventory, goods movements and their tracking and inventory valuation. These activities are executed in the Warehouse Management application area and are gathered in the Inventory Accuracy business flow which is described below.</p>
 <h2 id="inventory-accuracy">Inventory Accuracy</h2>
 <p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/walltowallaccubusprocess.png" /></a></p>
 <p>Main sub-processes of the Inventory Accuracy business flow are:</p>
@@ -7692,10 +7692,10 @@
 <li><em>Cost Adjustments Review</em>: Allows a company to review product cost adjustments caused by changes in purchase prices, landed cost allocation or manual / negative cost corrections.</li>
 </ul>
 <h3 id="configuration">Configuration</h3>
-<p><a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-and-storage-bins">Warehouse and Storage Bins</a> need to be created and configured before performing the business flow.
-In addition to this, a <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules">Costing Rule</a> needs to be defined and validated for the legal entity. Each costing rule requires a starting date from when it is going to be valid as well as a <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-algorithm">Costing Algorithm</a> to be used by the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process">Costing Background Process</a>, which has to be scheduled.</p>
-<p>Besides, <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type">Landed Cost Types</a> need to be configured here therefore can be selected while allocating this type of cost to <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">goods receipts</a>.</p>
-<p>Finally, <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-rules">Warehouse Rules</a> can be configured to be applied while retrieving stock from the inventory automatically.</p>
+<p><a href="../setup/#warehouse-and-storage-bins">Warehouse and Storage Bins</a> need to be created and configured before performing the business flow.
+In addition to this, a <a href="../setup/#costing-rules">Costing Rule</a> needs to be defined and validated for the legal entity. Each costing rule requires a starting date from when it is going to be valid as well as a <a href="../setup/#costing-algorithm">Costing Algorithm</a> to be used by the <a href="../../general-setup/process-scheduling/#costing-background-process">Costing Background Process</a>, which has to be scheduled.</p>
+<p>Besides, <a href="../setup/#landed-cost-type">Landed Cost Types</a> need to be configured here therefore can be selected while allocating this type of cost to <a href="../../procurement-management/transactions/#goods-receipts">goods receipts</a>.</p>
+<p>Finally, <a href="../setup/#warehouse-rules">Warehouse Rules</a> can be configured to be applied while retrieving stock from the inventory automatically.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <div class="language-text highlight"><pre><span></span><code>It is not required to do any additional setup for the Warehouse Management application area if Food &amp; Beverage (F&amp;B) sample client shipped with Etendo by default is going to be used to explore it. The sample data set already contains the roles, warehouses, and products pre-configured.
@@ -7706,37 +7706,37 @@ In addition to this, a <a href="/user-guide/etendo-classic/basic-features/wareho
 <p>In Warehouse Management, main Inventory Accuracy operations are executed as follows.</p>
 <p>To get the <em>Physical Inventory</em>, Warehouse Staff:</p>
 <ul>
-<li>Starts with the products classifications and runs <a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#pareto-product-report">Pareto Product Report</a> which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
+<li>Starts with the products classifications and runs <a href="../analysis-tools/#pareto-product-report">Pareto Product Report</a> which distributes products into three classes (A, B or C) according to their cost percentage in the warehouse.
 Based on the classification, the frequency of counting cycle can be decided (e.g. A products are counted weekly, B products monthly and C products yearly).
-The ABC classification is then populated to the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#manufacturing">Manufacturing</a> tab of the Product window by clicking the Update ABC button.<ul>
-<li>Note that the ABC classification is based on the cost of the product's transactions. That is why a <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules">Costing Rule</a> for the legal entity must be configured and validated and the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process">Costing Background Process</a> process has to be scheduled.</li>
+The ABC classification is then populated to the <a href="../../master-data-management/master-data/#manufacturing">Manufacturing</a> tab of the Product window by clicking the Update ABC button.<ul>
+<li>Note that the ABC classification is based on the cost of the product's transactions. That is why a <a href="../setup/#costing-rules">Costing Rule</a> for the legal entity must be configured and validated and the <a href="../../general-setup/process-scheduling/#costing-background-process">Costing Background Process</a> process has to be scheduled.</li>
 </ul>
 </li>
-<li>After this procedure, the Warehouse Staff creates the physical inventory document in the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory">Physical Inventory</a> window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#lines">list</a> of products with their current quantities that is brought to the warehouse and verified against physical inventory.</li>
-<li>In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory">Physical Inventory</a> that was previously created. Then in the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#lines">Lines</a> tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).</li>
+<li>After this procedure, the Warehouse Staff creates the physical inventory document in the <a href="../transactions/#physical-inventory">Physical Inventory</a> window by selecting the Warehouse where to execute this activity and pressing the Create Inventory Count List button. They define the criteria for the products to be included in the count-list (for example ABC classification) and it results in the <a href="../transactions/#lines">list</a> of products with their current quantities that is brought to the warehouse and verified against physical inventory.</li>
+<li>In order to update Etendo stock, if differences are found, first the Warehouse Staff selects the <a href="../transactions/#physical-inventory">Physical Inventory</a> that was previously created. Then in the <a href="../transactions/#lines">Lines</a> tab, they find the required products and update the Quantity Count field with a new value. After that, they finish the inventory count by clicking the Process Inventory Count button which updates inventory and triggers document posting (if configured).</li>
 </ul>
 <p>To execute <em>Goods Movement</em> Warehouse Staff:</p>
 <ul>
-<li>In the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#goods-movement">Goods Movements</a> window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).</li>
+<li>In the <a href="../transactions/#goods-movement">Goods Movements</a> window, lists products to be moved with source and destination information and the respective quantity and then processes the document which updates all product quantities listed under Lines tab in the warehouse and triggers document posting (if configured).</li>
 </ul>
 <p>For <em>Goods Tracking</em> Warehouse Staff uses:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-report">Stock Report</a> that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#goods-transaction">Goods Transaction</a> window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#product-movements-report">Product Movements Report</a> shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#material-transaction-report">Material Transaction Report</a> lists all documents (shipments or receipts) grouped by Business Partner.</li>
+<li><a href="../analysis-tools/#stock-report">Stock Report</a> that gives a stock level of all products (that have inventory different from zero) and their location (warehouse and storage bin) grouped by product category.</li>
+<li><a href="../transactions/#goods-transaction">Goods Transaction</a> window that offers a read-only view with extensive filtering capabilities that shows all inventory transactions.</li>
+<li><a href="../analysis-tools/#product-movements-report">Product Movements Report</a> shows all receipts, shipments, moves and physical inventories grouped by Transaction Type and Business Partner.</li>
+<li><a href="../analysis-tools/#material-transaction-report">Material Transaction Report</a> lists all documents (shipments or receipts) grouped by Business Partner.</li>
 </ul>
-<p><em>Inventory Valuation</em> is done with the help of the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#valued-stock-report">Valued Stock Report</a>.
+<p><em>Inventory Valuation</em> is done with the help of the <a href="../analysis-tools/#valued-stock-report">Valued Stock Report</a>.
 This report shows the cost of the stock calculated by the Costing Server process.</p>
-<p><em>Inventory Update</em> is done with the help of the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#inventory-amount-update">Inventory Amount Update</a> window.
-This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#physical-inventory">Physical Inventory</a> window.</p>
-<p>For <em>Cost Adjustments Review</em>, Warehouse Staff uses the <a href="/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#cost-adjustment">Cost Adjustment</a> window.
+<p><em>Inventory Update</em> is done with the help of the <a href="../transactions/#inventory-amount-update">Inventory Amount Update</a> window.
+This window allows changing either the total inventory value or the unit cost of a product(s) at a given reference date, therefore a closing and an opening inventory are automatically created in the <a href="../transactions/#physical-inventory">Physical Inventory</a> window.</p>
+<p>For <em>Cost Adjustments Review</em>, Warehouse Staff uses the <a href="../transactions/#cost-adjustment">Cost Adjustment</a> window.
 This window allows reviewing different types of cost adjustment sources together with the product's transactions whose costs are being adjusted, as well as adjustment amounts.</p>
 <h2 id="relationship-with-other-application-areas">Relationship with other application areas</h2>
 <p>Warehouse Management has a connection with other application areas:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/">Procurement Management</a> as goods received change stock quantity and its value.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started/">Sales Management</a> as shipment changes stock quantity and its value.</li>
+<li><a href="../../procurement-management/getting-started/">Procurement Management</a> as goods received change stock quantity and its value.</li>
+<li><a href="../../sales-management/getting-started/">Sales Management</a> as shipment changes stock quantity and its value.</li>
 <li><em>Production Management</em> because raw materials are taken out of warehouse and produced goods are sent back to the stock during production process.</li>
 </ul>
 
@@ -7834,7 +7834,7 @@ This window allows reviewing different types of cost adjustment sources together
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

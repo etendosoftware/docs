@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7696,27 +7696,27 @@
 <li>Raw material used in production</li>
 <li>the Production checkbox is selected to indicate that the product is used for production</li>
 <li>the process plan is selected</li>
-<li>the default storage bin that is used for P- raw materials is defined in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</li>
+<li>the default storage bin that is used for P- raw materials is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</li>
 <li>Finished products manufactured in production</li>
 <li>the Production checkbox is selected to indicate the product is manufactured in production</li>
 <li>the process plan is selected</li>
-<li>the default storage bin that is used for the product is defined in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab</li>
-<li>based on <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs">cost calculations</a>, a "theoretical" standard cost can be determined for the finished product</li>
+<li>the default storage bin that is used for the product is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab</li>
+<li>based on <a href="../transactions/#calculate-standard-costs">cost calculations</a>, a "theoretical" standard cost can be determined for the finished product</li>
 <li>a safety stock level is determined and entered for the product</li>
 </ul>
-<p>Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</p>
+<p>Any semi finished products are created directly in the process plan by copying the information of a raw material product used in the operation. Once created, the default storage bin is defined in the <a href="../../master-data-management/master-data/#product"><em>Manufacturing</em></a> tab.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the configuration of products, please refer to the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product"><em>Product</em></a> section.</p>
+<p>For more information about the configuration of products, please refer to the <a href="../../master-data-management/master-data/#product"><em>Product</em></a> section.</p>
 </div>
 <p>Also, Business Partners are configured for production:</p>
 <p>In the Employee tab, any employees that are involved in the production process have the operator checkbox selected.</p>
-<p>Likewise, the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#salary-category"><em>Salary category</em></a> configured for employees is very important since they are included in the final cost calculations.</p>
+<p>Likewise, the <a href="../../master-data-management/master-data/#salary-category"><em>Salary category</em></a> configured for employees is very important since they are included in the final cost calculations.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the configuration of business partners, please refer to the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner"><em>Business Partner</em></a> section.</p>
+<p>For more information about the configuration of business partners, please refer to the <a href="../../master-data-management/master-data/#business-partner"><em>Business Partner</em></a> section.</p>
 </div>
-<p>Work Efforts can be posted to the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal"><em>General Ledger Journal</em></a>. In order to facilitate the posting, the <strong>MaterialMgmtProductionTransaction</strong> table is activated in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig"><em>Active Tables</em></a> tab of the General Ledger configuration.</p>
+<p>Work Efforts can be posted to the <a href="../../financial-management/accounting/transactions/#gl-journal"><em>General Ledger Journal</em></a>. In order to facilitate the posting, the <strong>MaterialMgmtProductionTransaction</strong> table is activated in the <a href="../../financial-management/accounting/setup/#glconfig"><em>Active Tables</em></a> tab of the General Ledger configuration.</p>
 <h4 id="execution"><strong>Execution</strong></h4>
 <p>Sales staff enters Sales Order for the product with the quantity required and the date by when it needs to be delivered. If the product is not in stock, it needs to be produced.</p>
 <p>Also, if the stock level is below the safety stock level, products have to be produced.</p>
@@ -7737,24 +7737,24 @@
 </ul>
 <p>If the demand is higher than the supply, or the dates of scheduled Work Requirements are not matching the dates of the outstanding sales orders, the product needs to be produced and a production manager executes:</p>
 <ul>
-<li>review of the stock of the raw material. If needed, the raw material will be requested and used in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/"><em>procurement management</em></a> process.</li>
+<li>review of the stock of the raw material. If needed, the raw material will be requested and used in the <a href="../../procurement-management/transactions/"><em>procurement management</em></a> process.</li>
 <li>entry of the Work Requirement for the required quantity with the required quantity and the planned date</li>
 <li>generate Work Efforts from the Work Requirement.</li>
 </ul>
 <p>The staff responsible for executing the production can see on the Production Run Status Report what production has to be executed.</p>
-<p>At the end of each shift, the production managers enter the information of what is produced in the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run_1"><em>Production Run</em></a> screen.</p>
+<p>At the end of each shift, the production managers enter the information of what is produced in the <a href="../transactions/#production-run_1"><em>Production Run</em></a> screen.</p>
 <h2 id="relationship-with-other-areas">Relationship with other areas</h2>
 <p>Production Management interacts with the following modules:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started"><em>Procurement Management</em></a>: raw material required for use in production is bought using the Procure to Pay process</li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started"><em>Sales Management</em></a>: demand for the products that are produced are generated through the Order to Cash process</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/getting-started"><em>Warehouse Management</em></a>:<ul>
+<li><a href="../../procurement-management/getting-started/"><em>Procurement Management</em></a>: raw material required for use in production is bought using the Procure to Pay process</li>
+<li><a href="../../sales-management/getting-started/"><em>Sales Management</em></a>: demand for the products that are produced are generated through the Order to Cash process</li>
+<li><a href="../../warehouse-management/getting-started/"><em>Warehouse Management</em></a>:<ul>
 <li>raw material is taken from the warehouse to be used in production</li>
 <li>end products that come out of production are put into stock</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/"><em>MRP</em></a>: Work Requirements can be a result of MRP</li>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started"><em>Financial Management</em></a>: Cost related to Production is calculated for finance.</li>
+<li><a href="../../material-requirement-planning/getting-started/"><em>MRP</em></a>: Work Requirements can be a result of MRP</li>
+<li><a href="../../financial-management/getting-started/"><em>Financial Management</em></a>: Cost related to Production is calculated for finance.</li>
 </ul>
 
 
@@ -7851,7 +7851,7 @@
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

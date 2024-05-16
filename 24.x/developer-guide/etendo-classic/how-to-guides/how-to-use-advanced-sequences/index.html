@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -5050,6 +5050,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -5080,6 +5082,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5088,16 +5092,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sequences
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sequences">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -5105,15 +5099,16 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#quick-sequence-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick sequence setup
+      Quick Sequence Setup
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Quick Sequence Setup">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#new-sequence-reference" class="md-nav__link">
@@ -5131,6 +5126,11 @@
       Sequence Config tab:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5177,11 +5177,6 @@
       Change sequence when change dimension
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7616,6 +7611,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7624,16 +7621,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sequences" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sequences
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sequences">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       Overview
@@ -7641,15 +7628,16 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#quick-sequence-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick sequence setup
+      Quick Sequence Setup
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Quick Sequence Setup">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#new-sequence-reference" class="md-nav__link">
@@ -7667,6 +7655,11 @@
       Sequence Config tab:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -7725,11 +7718,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -7749,10 +7737,8 @@
   
 
 
-  <h1>How to Use Advanced Sequences</h1>
-
-<h2 id="sequences">Sequences</h2>
-<h3 id="overview">Overview</h3>
+<h1 id="sequences">Sequences</h1>
+<h2 id="overview">Overview</h2>
 <p>This document covers how to use the implementation of sequences, explain all the features, and give some implementation example cases.</p>
 <p>There are two base reference implementations defined that you can use or extend:</p>
 <ul>
@@ -7763,14 +7749,14 @@
 <p class="admonition-title">Important</p>
 <p>Please be aware that both Transactional and Non-Transactional Sequences, as configured in our system, are not supported within Database Stored Procedures (PLs). This includes specific processes like POSOrder, which cannot utilize these sequences. Implementing these sequences in PLs, such as within the POSOrder process, may result in system malfunctions or errors. These sequences are tailored for the application layer and may not align with the procedural context of direct database operations.</p>
 </div>
-<h3 id="quick-sequence-setup">Quick sequence setup</h3>
+<h2 id="quick-sequence-setup">Quick Sequence Setup</h2>
 <ol>
 <li>
 <p>First, log-in as “System administrator”. Open the <code>Application</code> &gt; <code>Application Dictionary</code> &gt;<code>Tables and Columns</code> Select the Column that you want to set as a sequence and change the Reference field to Transactional Sequence or non-Transactional sequence.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>If you want to define a new sequence reference, you must add it in <strong>Reference Search Key</strong> field and the parent (Base Sequence) must be in the <strong>Reference</strong> field.
-See how to create a new reference in <a href="/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/#new-sequence-reference">new sequence reference</a>.</p>
+See how to create a new reference in <a href="./#new-sequence-reference">new sequence reference</a>.</p>
 </div>
 <p><figure markdown>
   <a class="glightbox" href="../../../../assets/legacy/technicaldocumentation/platform/quicksequence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../../../../assets/legacy/technicaldocumentation/platform/quicksequence.png" width="700" /></a>
@@ -7821,7 +7807,7 @@ You can also create the required sequences manually.</p>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about masking see <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking">Sequences Masking user guide</a>.</p>
+<p>For more information about masking see <a href="../../../../user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#sequence-masking">Sequences Masking user guide</a>.</p>
 </div>
 <ul>
 <li><strong>Table:</strong> Defines the table in which the sequence type column is located.</li>
@@ -7893,7 +7879,7 @@ You can also create the required sequences manually.</p>
 <p>In case the parent is Transactional Sequence only the Generator Java Class field will appear, but in case of the parent being a Non-Transactional Sequence you must define all the fiels.</p>
 </div>
 <p>&nbsp;</p>
-<h4 id="dimension-list">Dimension List</h4>
+<h3 id="dimension-list">Dimension List</h3>
 <p>A Dimension is a new filter clause used to select the sequence to be used when creating or saving a new record. The default dimensions are:</p>
 <ul>
 <li>Client</li>
@@ -7907,9 +7893,9 @@ You can also create the required sequences manually.</p>
 </div>
 <p><a class="glightbox" href="../../../../assets/legacy/technicaldocumentation/platform/dimension_graph1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dimension_graph1.png" src="../../../../assets/legacy/technicaldocumentation/platform/dimension_graph1.png" /></a></p>
 <p>&nbsp;</p>
-<h5 id="adding-custom-dimensions">Adding custom dimensions</h5>
+<h4 id="adding-custom-dimensions">Adding custom dimensions</h4>
 <p>If you want to add a new dimension to filter sequences, this dimension should be a column in both tables <code>AD_Sequence</code> and the table where the transactional sequence is used. You must also create a new reference, and create a new record in the <code>Dimension List</code> tab with this column (see how to create a new sequence reference above).</p>
-<h5 id="when-a-dimension-is-a-foreign-key-column">When a dimension is a foreign key column</h5>
+<h4 id="when-a-dimension-is-a-foreign-key-column">When a dimension is a foreign key column</h4>
 <ol>
 <li>
 <p>To define a new dimension, you have to start adding a column in the <code>AD_Sequence</code> table, and a Foreign Key to the referenced column in an specific table. The dimension column must be created in the corresponding table (<code>M_Product</code> in this example) unless you decide to use an existing column as dimension.</p>
@@ -7948,7 +7934,7 @@ You can also create the required sequences manually.</p>
 </ol>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span>./gradlew<span class="w"> </span>smartbuild
 </span></code></pre></div>
-<h5 id="when-a-dimension-is-a-list">When a dimension is a List</h5>
+<h4 id="when-a-dimension-is-a-list">When a dimension is a List</h4>
 <ol>
 <li>
 <p>First, you have to create a new column in AD_Sequence table to reference a list and do the same in the table which uses the sequence. The other option is to use an existing one.</p>
@@ -7978,7 +7964,7 @@ You can also create the required sequences manually.</p>
 </ol>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">  </span>./gradlew<span class="w"> </span>smartbuild.
 </span></code></pre></div>
-<h5 id="change-sequence-when-change-dimension">Change sequence when change dimension</h5>
+<h4 id="change-sequence-when-change-dimension">Change sequence when change dimension</h4>
 <ul>
 <li>If you want the sequence to change automatically when you change the dimension or the configured list, you must implement a callback or extend it if it already exists.
   The following example explains how to implement the callout, taking into account that the dimension used is the Product Category and that the order is automatically entered in the Search Key field.</li>
@@ -8101,7 +8087,7 @@ You can also create the required sequences manually.</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

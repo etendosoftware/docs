@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -8718,7 +8718,7 @@
 
 <h2 id="work-requirement">Work Requirement</h2>
 <h3 id="introduction"><strong>Introduction</strong></h3>
-<p>In this window, the user is able to create and manage an order for a <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process Plan</em></a> to be executed a certain number of times to satisfy the production requirements.</p>
+<p>In this window, the user is able to create and manage an order for a <a href="../setup/#process-plan"><em>Process Plan</em></a> to be executed a certain number of times to satisfy the production requirements.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Important: Before creating a work requirement, it is necessary to have a Process Plan defined.</p>
@@ -8750,13 +8750,13 @@
 <p><strong>Create Work Effort button</strong>: to create work related to the work requirement once the work requirement is processed. Work efforts related to all operations are created at once, so depending on the amount of operations, one or more work efforts are created. If the create standards checkbox is selected in the operation, the create standards process is executed also, to insert the product information in the work effort. In all cases, the processing of the work effort is executed manually.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the [Production Run] tab is set to the full quantity on the operation.</p>
+<p>The Create Standards process will only complete successfully if there is sufficient stock for the used products (P-) of the operation. If there is no sufficient stock, not only will the Create Standard process fail, but also no Work Effort is created.When there is sufficient stock, the Create Standards process is executed successfully and by default the Completed Quantity in the Production Run tab is set to the full quantity on the operation.</p>
 </div>
 <h3 id="operation"><strong>Operation</strong></h3>
 <p>In this tab, the user can add or edit operations and activities to be performed for the related work requirement.</p>
 <p>After processing the Work Requirement, the information in the operation tab is populated from the Process Plan. The main tab of the Work Requirement is showing that the Work Requirement is processed and the Estimated Time is showing the total of estimated times of all operations.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/N6jCi7z3kPJFRjTaGh1Zwl2AIPqDhVFRjAP-AIcQGcJvpNoNSodF59YXkkaqItTPcDChIEY3UEtldpAeYepSxijP576q9RhfctGFSVZ10SqTiJ70mp4nN4cu919QNA2-s6HrrpEUDCScHiOfoObefwo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/N6jCi7z3kPJFRjTaGh1Zwl2AIPqDhVFRjAP-AIcQGcJvpNoNSodF59YXkkaqItTPcDChIEY3UEtldpAeYepSxijP576q9RhfctGFSVZ10SqTiJ70mp4nN4cu919QNA2-s6HrrpEUDCScHiOfoObefwo.png" /></a></p>
-<p>The fields in these two tabs are mostly taken from the Process Plan, but can be overwritten in the Work Requirement. For a description of these fields, please see the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process Plan</em></a> section.</p>
+<p>The fields in these two tabs are mostly taken from the Process Plan, but can be overwritten in the Work Requirement. For a description of these fields, please see the <a href="../setup/#process-plan">Process Plan</a> section.</p>
 <p>The <strong>Starting Date</strong> and <strong>Ending Date</strong> of the operations are defaulting from the main tab of the Work Requirement, but can be overwritten.</p>
 <p>The <strong>Estimated Time</strong> on the operation is calculated using the formula: estimated time of the operation taken from the process plan x quantity on the operation.</p>
 <p>The <strong>Run Time information</strong> is populated based on total actual hours populated from the Work Effort for the operation.</p>
@@ -8770,7 +8770,7 @@
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For a description of the rest of the fields, please refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process Plan</em></a>.</p>
+<p>For a description of the rest of the fields, please refer to the <a href="../setup/#process-plan">Process Plan</a>.</p>
 </div>
 <h2 id="work-effort">Work Effort</h2>
 <h3 id="introduction_1"><strong>Introduction</strong></h3>
@@ -8787,7 +8787,7 @@
 <li>The Movement Date, Starting Time and Ending Time indicate on which date and during which shift the production took place.</li>
 <li>The Create Standards button (displayed in the "Production Run" tab) is used to execute the process that loads all the P- and P+ information as well as global used products, machines, salary categories, indirect cost, toolsets. When the standards are created, also stock of all P- products is checked and an error appears if any products do not have stock. For the Create Standards process to complete successfully, the Completed Quantity has to be greater than zero.</li>
 <li>Once the standards are created and all the correct information concerning the production is entered, the work effort is validated by clicking the Validate Work Effort button. At this point, the stock information is updated. For P-, the stock decreases and, for P+, it increases.</li>
-<li>Optionally, the Work Effort can be posted to the general ledger journal once the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#configuration"><em>configuration</em></a> is added. If done, information related to the cost of the raw material and produced products is posted.</li>
+<li>Optionally, the Work Effort can be posted to the general ledger journal once the <a href="../getting-started/#configuration">configuration</a> is added. If done, information related to the cost of the raw material and produced products is posted.</li>
 </ul>
 <h3 id="employee"><strong>Employee</strong></h3>
 <p>Here, it is possible to add employees that took part in the completion of a related work requirement.</p>
@@ -8825,7 +8825,7 @@
 <p><a class="glightbox" href="../../../../../assets/drive/lbrPJfhjehblSoh-nP0ekL0Ex2vdgpcdYfb5On2Yf_u-GJSI6xfO2Xc3LIjgQVDzcoz7M2IorKsq-RTOlxfAkVbl4kcmQFKP4nmWm2-KUizzQFui2_6NCIUBx9evz0nJEZaemkGoWfi4brQ4T0fszq0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/lbrPJfhjehblSoh-nP0ekL0Ex2vdgpcdYfb5On2Yf_u-GJSI6xfO2Xc3LIjgQVDzcoz7M2IorKsq-RTOlxfAkVbl4kcmQFKP4nmWm2-KUizzQFui2_6NCIUBx9evz0nJEZaemkGoWfi4brQ4T0fszq0.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For details about the fields, please refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan"><em>Process Plan</em></a> section.</p>
+<p>For details about the fields, please refer to the <a href="../setup/#process-plan"><em>Process Plan</em></a> section.</p>
 </div>
 <h3 id="salary-category-employee"><strong>Salary Category / Employee</strong></h3>
 <p>Here, the user can add or edit salary category workers that took part in a work requirement.</p>
@@ -8865,7 +8865,7 @@
 <h3 id="how-to-reactivate-work-efforts">How to Reactivate Work Efforts</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5" target="_blank">Production Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/">Production Extensions - Release notes</a>. </p>
+<p>To be able to include this functionality, the Production Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=7C68641225CE46A6BF8A39993CC8E1E5" target="_blank">Production Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/">Production Extensions - Release notes</a>. </p>
 </div>
 <p>This functionality is useful when the user needs to reactivate a work effort.</p>
 <p>From the Work Effort window, the user is able to reactivate a previously generated effort just by selecting the corresponding record and clicking the Reactivate button.</p>
@@ -8873,18 +8873,18 @@
 <p><a class="glightbox" href="../../../../../assets/drive/j7x8yhwYGogcMN0tOknI1k6U0hlr0QXVGKW8AWvJe98_IPTIz8_WVYfDMOSVV5S80kFMEcJn2lbsGR-rApAobtnK2_miTFCFQpmi_BAv2DtzH6w9EOaBVY_8Z_feQQbcThY5scJYoVxUO3dQlwdAQtEKbOhAfcqTwLnIhJqFTSE5mrIzBaJxL2sc5v1AKw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/j7x8yhwYGogcMN0tOknI1k6U0hlr0QXVGKW8AWvJe98_IPTIz8_WVYfDMOSVV5S80kFMEcJn2lbsGR-rApAobtnK2_miTFCFQpmi_BAv2DtzH6w9EOaBVY_8Z_feQQbcThY5scJYoVxUO3dQlwdAQtEKbOhAfcqTwLnIhJqFTSE5mrIzBaJxL2sc5v1AKw.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#storage-bin">Storage Bin</a>.</p>
+<p>Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit <a href="../../warehouse-management/setup/#storage-bin">Storage Bin</a>.</p>
 </div>
 <h3 id="bulk-posting">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
 <p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+<p>For more information, visit <a href="../../../optional-features/bundles/financial-extensions/overview/#bulk-posting">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
 </div>
 <h2 id="production-run_1">Production Run</h2>
 <h3 id="introduction_2"><strong>Introduction</strong></h3>
@@ -8896,7 +8896,7 @@
 <p><a class="glightbox" href="../../../../../assets/drive/uYe5s0l6N_2p3yNcZZ9CmoCm8hsv0r5shLWAk5i1KoNMrWrBiKRKPwN6mIpKQFQXV3NCKYFKawIlL8Q05zcR-ZXe6xfoS-XklUbGLlp6azvuHga8Horfg6qSCS-08Ifbp6YcFiEL0paI4h8HbFRIQr4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/uYe5s0l6N_2p3yNcZZ9CmoCm8hsv0r5shLWAk5i1KoNMrWrBiKRKPwN6mIpKQFQXV3NCKYFKawIlL8Q05zcR-ZXe6xfoS-XklUbGLlp6azvuHga8Horfg6qSCS-08Ifbp6YcFiEL0paI4h8HbFRIQr4.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For details on the fields, please refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#production-run">Work Effort Production Run</a> section.</p>
+<p>For details on the fields, please refer to the <a href="#production-run">Work Effort Production Run</a> section.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -8907,49 +8907,49 @@
 <p><a class="glightbox" href="../../../../../assets/drive/9Vj5p-rT0DvWXljBKw7z6R3MMWhh8Lkp6sI851WEGEaaIQyt-mzLltdRl3JUrkmXY9yvOqK24T13IHxKfz5bbGDVcDH9whF61Qy0H5AyciX2dMe59W7If7CxHVXUpnTrNAR1QY5TDTJ9yg44JxlF7-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/9Vj5p-rT0DvWXljBKw7z6R3MMWhh8Lkp6sI851WEGEaaIQyt-mzLltdRl3JUrkmXY9yvOqK24T13IHxKfz5bbGDVcDH9whF61Qy0H5AyciX2dMe59W7If7CxHVXUpnTrNAR1QY5TDTJ9yg44JxlF7-4.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#incidence">Work Effort Incidence</a> section for details.</p>
+<p>Please, refer to the <a href="#incidence">Work Effort Incidence</a> section for details.</p>
 </div>
 <h3 id="toolset_1"><strong>Toolset</strong></h3>
 <p>Here, it is possible to add or edit toolsets used to complete a specified part of a work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/Q5p4iUveKtYise9CCTg7VmF0jvVXwKsxdEU3sMWQmljUxumVGVlIW8wGmQYYN28J77yvNUZ-Ny_tv0_rOn-9ZvYr6UhpuNytC47pr3_1Bj5bOQA0cX6vloW_hGFjMMykVAW4w8aiX0gwFt7wrY9r0RY.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/Q5p4iUveKtYise9CCTg7VmF0jvVXwKsxdEU3sMWQmljUxumVGVlIW8wGmQYYN28J77yvNUZ-Ny_tv0_rOn-9ZvYr6UhpuNytC47pr3_1Bj5bOQA0cX6vloW_hGFjMMykVAW4w8aiX0gwFt7wrY9r0RY.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#toolset">Work Effort Toolset</a> section for details.</p>
+<p>Please, refer to the <a href="#toolset">Work Effort Toolset</a> section for details.</p>
 </div>
 <h3 id="product_2"><strong>Product</strong></h3>
 <p>Here, it is possible to add and edit I/O products related to a completed part of a work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/Gc6Uzzq-t4k22Uz5oDXh7fjTl_tGK424VU_jcwMiiAoD8Vr7M6mNZm3juSgCK8jFlSU4GXsrKST3R97seVusNoQeu1zCIMQJwUxLpY5sXhkqy2-rVAfTYwGQtuqadeyHg-2kaeK78SsHcMb_T-zZeZw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/Gc6Uzzq-t4k22Uz5oDXh7fjTl_tGK424VU_jcwMiiAoD8Vr7M6mNZm3juSgCK8jFlSU4GXsrKST3R97seVusNoQeu1zCIMQJwUxLpY5sXhkqy2-rVAfTYwGQtuqadeyHg-2kaeK78SsHcMb_T-zZeZw.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#product_1">Work Effort Product</a> section for details.</p>
+<p>Please, refer to the <a href="#product_1">Work Effort Product</a> section for details.</p>
 </div>
 <h3 id="salary-category-employee_1"><strong>Salary Category / Employee</strong></h3>
 <p>Here, it is possible to add or edit salary category workers that took part in a work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/k-se48cgS1yUpNHPL_i9PB0n3p4hQfdag3_cuAz4tWcA-KuIB6p8pqN_fgdU-B2JTYqT9sNBTdspSOCj-dcz9eYvJtYtB8smHudxN5aFssaeOVrk99WwJ0JlMxcJd8kysbVvSdsktJ4uaU2bWu3tmOg.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/k-se48cgS1yUpNHPL_i9PB0n3p4hQfdag3_cuAz4tWcA-KuIB6p8pqN_fgdU-B2JTYqT9sNBTdspSOCj-dcz9eYvJtYtB8smHudxN5aFssaeOVrk99WwJ0JlMxcJd8kysbVvSdsktJ4uaU2bWu3tmOg.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#salary-category-employee">Work Effort Salary Category/Employee</a> section for details.</p>
+<p>Please, refer to the <a href="#salary-category--employee">Work Effort Salary Category/Employee</a> section for details.</p>
 </div>
 <h3 id="indirect-cost_1"><strong>Indirect Cost</strong></h3>
 <p>Here, it is possible to add and edit indirect costs related to a specified completed part of a work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/IcPzMtAZbsDiPx4Btb7ixAEzC5olQai3DJ2y_airaujavIcaVDlnQgFj0nAz96QAX2KPy7OfdWkuX_uI6KvBeilA2UqBGfb2g5IFyVKEZokS-xWcRYDkHtf5mEH0nMiCZNd798T7xCOeSZMR1VJzlJ4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/IcPzMtAZbsDiPx4Btb7ixAEzC5olQai3DJ2y_airaujavIcaVDlnQgFj0nAz96QAX2KPy7OfdWkuX_uI6KvBeilA2UqBGfb2g5IFyVKEZokS-xWcRYDkHtf5mEH0nMiCZNd798T7xCOeSZMR1VJzlJ4.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#indirect-cost">Work Effort Indirect Cost</a> section for details.</p>
+<p>Please, refer to the <a href="#indirect-cost">Work Effort Indirect Cost</a> section for details.</p>
 </div>
 <h3 id="machine_1"><strong>Machine</strong></h3>
 <p>Here, it is possible to add and edit resources used to complete a specified part of a work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/6iUU--CNzMyPMA1sgX1ICpnnlXuYIdUFTy6uEZbWis0reuAH73_FD8lijEgN-97XBXhviIve9PbfvMtS6d5Ec1UH5vo1E2fsAHMou4GG6hUw5JhP2rSCbhcKuMnRmi1UGobBO4xHLxALmpJqTY7pDqE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/6iUU--CNzMyPMA1sgX1ICpnnlXuYIdUFTy6uEZbWis0reuAH73_FD8lijEgN-97XBXhviIve9PbfvMtS6d5Ec1UH5vo1E2fsAHMou4GG6hUw5JhP2rSCbhcKuMnRmi1UGobBO4xHLxALmpJqTY7pDqE.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#machine">Work Effort Machine</a> section for details.</p>
+<p>Please, refer to the <a href="#machine">Work Effort Machine</a> section for details.</p>
 </div>
 <h3 id="outsourced_1"><strong>Outsourced</strong></h3>
 <p>Here, it is possible to add invoices corresponding to the outsourced part of a completed work requirement.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/IJs1mYGVcDg0ktrAk3FK7dFOn9f-vC7Sag9Vpj8NUkRF-29hh0Zub78jma19Hy9AHnzFxmlDncIQK9G-C9fNpR8evDlI306Zki5wBcRpMRATp7dD2iTf9kjGJaCjfby7qjQqyHdhV_yzQcRY6z4ysN0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/IJs1mYGVcDg0ktrAk3FK7dFOn9f-vC7Sag9Vpj8NUkRF-29hh0Zub78jma19Hy9AHnzFxmlDncIQK9G-C9fNpR8evDlI306Zki5wBcRpMRATp7dD2iTf9kjGJaCjfby7qjQqyHdhV_yzQcRY6z4ysN0.png" /></a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please, refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#outsourced">Work Effort Outsourced</a> section for details.</p>
+<p>Please, refer to the <a href="./#outsourced">Work Effort Outsourced</a> section for details.</p>
 </div>
 <h2 id="quality-control-report">Quality Control Report</h2>
 <h3 id="introduction_3"><strong>Introduction</strong></h3>
@@ -8973,7 +8973,7 @@
 <p><a class="glightbox" href="../../../../../assets/drive/JL6RUh2Ew7-xaa-NsuOmFl0xyOE6u83pxeb62axr9rVadjxfmeJbvKCpxfFiDINvJItbszYw7QsNfdNN-aOqRGWz9yNoUcj9LD0jbG_NO27LrPrYCjtVkpz4R0Z4irN-oyfbYIfEn4b-8bmLyHy6WR4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/JL6RUh2Ew7-xaa-NsuOmFl0xyOE6u83pxeb62axr9rVadjxfmeJbvKCpxfFiDINvJItbszYw7QsNfdNN-aOqRGWz9yNoUcj9LD0jbG_NO27LrPrYCjtVkpz4R0Z4irN-oyfbYIfEn4b-8bmLyHy6WR4.png" /></a></p>
 <h4 id="time"><strong>Time</strong></h4>
 <p>Here, it is possible to create and edit times for related checkpoints.</p>
-<p>The information is automatically populated when the CCP button is clicked: the time that appears is the shift start date that is configured in the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#shift">Quality Control Point Shift</a> information. When populated automatically, the status is processed.</p>
+<p>The information is automatically populated when the CCP button is clicked: the time that appears is the shift start date that is configured in the <a href="../setup/#shift">Quality Control Point Shift</a> information. When populated automatically, the status is processed.</p>
 <p>In the case that the information is entered manually, the information is processed by clicking the Input Time Measurement button.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/3hziy8dLROOJxGjjQhkXtZaIyzJFS9XqcjzQaubPpXZeumnO9UGEllR1pRPqPCeyNgXDT5hLc_UfJGSExFBWwGH0LECB3IUbo4LZd26Hob071Eyow-o8pQyUYlR04QkVEX2pnjjwBcYYlX6FL5XxioI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/3hziy8dLROOJxGjjQhkXtZaIyzJFS9XqcjzQaubPpXZeumnO9UGEllR1pRPqPCeyNgXDT5hLc_UfJGSExFBWwGH0LECB3IUbo4LZd26Hob071Eyow-o8pQyUYlR04QkVEX2pnjjwBcYYlX6FL5XxioI.png" /></a></p>
 <h4 id="values"><strong>Values</strong></h4>
@@ -9005,11 +9005,11 @@
 <h2 id="internal-consumption">Internal Consumption</h2>
 <h3 id="introduction_5"><strong>Introduction</strong></h3>
 <p>In this window, it is possible to define products which are only to be used inside the company.</p>
-<p>The Internal Consumption screen is used to administer any products that are used during the execution of maintenance tasks. When processed, the stock is reduced. The products are purchased through the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/">procurement process</a>. The products are set up as a regular item, without the Production checkbox being selected, since they are not part of the production process.</p>
+<p>The Internal Consumption screen is used to administer any products that are used during the execution of maintenance tasks. When processed, the stock is reduced. The products are purchased through the <a href="../../procurement-management/getting-started/">procurement process</a>. The products are set up as a regular item, without the Production checkbox being selected, since they are not part of the production process.</p>
 <h3 id="header_1"><strong>Header</strong></h3>
 <p>Here, it is possible to create products which are to be used inside the organization, and not sold to customers.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/KIpOaB03M-1zAUmqLNzfu9ARrAWOZeHIQouUQYlDgkJb_inQARRCvSMFnCxiwEt-K_1XqOQUXFqiBA26Ca1dZWT6kirj7AbOvbDtThM1xH3Lj84yR1JdjPkhtelIaa4HGoIRr_1Karc9QwCzzeslEXE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/KIpOaB03M-1zAUmqLNzfu9ARrAWOZeHIQouUQYlDgkJb_inQARRCvSMFnCxiwEt-K_1XqOQUXFqiBA26Ca1dZWT6kirj7AbOvbDtThM1xH3Lj84yR1JdjPkhtelIaa4HGoIRr_1Karc9QwCzzeslEXE.png" /></a></p>
-<p>The name is a selectable value in the task tab of the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-order">Maintenance Order</a>.</p>
+<p>The name is a selectable value in the task tab of the <a href="#maintenance-order">Maintenance Order</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Optionally, the Internal Consumption can be posted to the general ledger journal once the configuration is added. If done, information related to the cost of the product is posted.</p>
@@ -9021,18 +9021,18 @@
 <h3 id="bulk-posting_1">Bulk Posting</h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
+<p>To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: <a href="https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558" target="_blank">Financial Extensions Bundle</a>. For more information about the available versions, core compatibility and new features, visit <a href="../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/">Financial Extensions - Release notes</a>.</p>
 </div>
 <p>The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.</p>
 <p>Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting/">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
+<p>For more information, visit <a href="../../../optional-features/bundles/financial-extensions/overview/#bulk-posting">Bulk Posting</a> in the Financial Extensions Bundle Documentation.</p>
 </div>
 <h2 id="maintenance-order">Maintenance Order</h2>
 <h3 id="introduction_6"><strong>Introduction</strong></h3>
 <p>In this window, it is possible to create and edit the results of a scheduled maintenance order.</p>
-<p>This document is used to register the execution and results of maintenance tasks. Any tasks that are confirmed in the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-plan">maintenance plan</a> are selectable in this screen.</p>
+<p>This document is used to register the execution and results of maintenance tasks. Any tasks that are confirmed in the <a href="#maintenance-plan">maintenance plan</a> are selectable in this screen.</p>
 <h3 id="order"><strong>Order</strong></h3>
 <p>Here, it is possible to add previously scheduled maintenance for a specific date and report observations.</p>
 <p>In the main section of the document, the date and shift during which the tasks were executed is selected.</p>
@@ -9054,7 +9054,7 @@
 <p>In this tab, it is possible to edit maintenance tasks of a specified order.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Most of the information in this tab is automatically populated by clicking the Insert Maintenances button, apart from the <strong>Internal Consumption</strong> field. Only the <strong>Internal Consumption</strong> field and the <strong>Comments</strong> field are updatable. In this screen, any products that were used for the execution of the maintenance tasks are entered in the Internal Consumption field. For more information, please refer to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption">Internal Consumption</a> section.</p>
+<p>Most of the information in this tab is automatically populated by clicking the Insert Maintenances button, apart from the <strong>Internal Consumption</strong> field. Only the <strong>Internal Consumption</strong> field and the <strong>Comments</strong> field are updatable. In this screen, any products that were used for the execution of the maintenance tasks are entered in the Internal Consumption field. For more information, please refer to the <a href="#internal-consumption">Internal Consumption</a> section.</p>
 </div>
 <p><a class="glightbox" href="../../../../../assets/drive/TW1-CvgYU9cXZM8ywo45abWaFYebU1wQqjnpzyxRZIEFVp6Sk6rlkraqcuqiece_oSL_phqMNTpPQadoBswcjCT8eQe8rO8fx-8lU-rRHbd67thf74vGFgtht2bbw1_teYi2cLAneOydEiCFDg4Hmss.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/TW1-CvgYU9cXZM8ywo45abWaFYebU1wQqjnpzyxRZIEFVp6Sk6rlkraqcuqiece_oSL_phqMNTpPQadoBswcjCT8eQe8rO8fx-8lU-rRHbd67thf74vGFgtht2bbw1_teYi2cLAneOydEiCFDg4Hmss.png" /></a></p>
 <ul>
@@ -9062,7 +9062,7 @@
 </ul>
 <h2 id="insert-maintenances">Insert Maintenances</h2>
 <h3 id="introduction_7"><strong>Introduction</strong></h3>
-<p>The insert maintenances process executes population of the scheduled maintenance tasks to the <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-plan">Maintenance Plan</a> based on the maintenance information in the machine category and/or machine screen.</p>
+<p>The insert maintenances process executes population of the scheduled maintenance tasks to the <a href="#maintenance-plan">Maintenance Plan</a> based on the maintenance information in the machine category and/or machine screen.</p>
 <p>The creation of the maintenance plan is based on a date range that is entered upon launching the process.</p>
 <p><a class="glightbox" href="../../../../../assets/drive/eysNqSiPXml7NzZWE6qc7Nxv5ndjJ23QY7wfGJOdQk15Bape9nMC2VzAgoXVsCqzgrNbjt88Y49Jt_l2-gTOfRJQWpne5dFblNZdTy271PHt3zMHSEUTMZ-CskKAhe9I8AFJnNrtOmh2lnJdsXyAo88.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/drive/eysNqSiPXml7NzZWE6qc7Nxv5ndjJ23QY7wfGJOdQk15Bape9nMC2VzAgoXVsCqzgrNbjt88Y49Jt_l2-gTOfRJQWpne5dFblNZdTy271PHt3zMHSEUTMZ-CskKAhe9I8AFJnNrtOmh2lnJdsXyAo88.png" /></a></p>
 <h2 id="maintenance-plan">Maintenance Plan</h2>
@@ -9073,7 +9073,7 @@
 <li>populated automatically by the insert maintenances process</li>
 <li>manually: for example, to enter data when a machine breaks down and needs corrective maintenance.</li>
 </ul>
-<p>Any maintenance tasks that have a <a href="/user-guide/etendo-classic/basic-features/production-management/transactions/#maintenance-order">Maintenance Order</a> linked, are hidden by a default filter that is applied to the screen.</p>
+<p>Any maintenance tasks that have a <a href="#maintenance-order">Maintenance Order</a> linked, are hidden by a default filter that is applied to the screen.</p>
 <h3 id="maintenance"><strong>Maintenance</strong></h3>
 <p>Here, it is possible to create and edit maintenance tasks for a specific date.</p>
 <p>The Maintenance Plan gives an overview of all the maintenance tasks for a certain time period that are entered by the insert maintenances process or manually. Regardless of how the records were created, the information can be updated to change dates or add comments.</p>
@@ -9084,11 +9084,11 @@
 <p>The Calculate Standard Costs process is run to generate the standard (= theoretical) cost of manufactured products.</p>
 <p>Cost information is set up in several screens:</p>
 <ul>
-<li>in the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan">Process Plan</a>, the use of the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#cost-center">Cost center</a> is defined</li>
+<li>in the <a href="../setup/#process-plan">Process Plan</a>, the use of the <a href="../../financial-management/accounting/setup/#cost-center">Cost center</a> is defined</li>
 <li>in the cost center, the following cost is defined:</li>
-<li><strong>Employee information</strong>: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#salary-category">Salary Category</a> screen.</li>
-<li><strong>Machine information</strong>: the machine and usage information is entered in the cost center screen. The machine cost is entered in the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#machine_1">Machine</a> screen.</li>
-<li><strong>Indirect cost information</strong>: all indirect cost items related to a cost center are list. The indirect cost is entered in the <a href="/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2">Indirect Cost</a> screen.</li>
+<li><strong>Employee information</strong>: salary category information as well as the quantity used per hour for the cost center. Based on these, the cost of the employee is calculated. The salary category cost is entered in the <a href="#salary-category--employee">Salary Category</a> screen.</li>
+<li><strong>Machine information</strong>: the machine and usage information is entered in the cost center screen. The machine cost is entered in the <a href="../setup/#machine_1">Machine</a> screen.</li>
+<li><strong>Indirect cost information</strong>: all indirect cost items related to a cost center are list. The indirect cost is entered in the <a href="../setup/#indirect-cost_2">Indirect Cost</a> screen.</li>
 <li>in the process plan, the quantities and cost of the materials used in the production process are defined.</li>
 </ul>
 <p>For raw material, the price list information is used for the cost of the P-. The purchase price list that is used for the raw material cost is marked as default.</p>
@@ -9104,7 +9104,7 @@
 <p>For Indirect costs, the additional unit of measure percentage is available. This adds the defined percentage to the total cost calculated (cost center, employee, machine, indirect costs and P- products). For example, if defined as 1.15, an additional 15% is added to the cost.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<div class="language-text highlight"><pre><span></span><code>For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2) screen:&lt;br&gt;
+<div class="language-text highlight"><pre><span></span><code>For the Indirect Cost to be included correctly, the following configuration is important in the [Indirect Cost](setup.md#indirect-cost_2) screen:&lt;br&gt;
     -select Cost Type = Production,&lt;br&gt;
     -a date range that includes the date of the standard cost calculation in the Value tab.&lt;br&gt;
 This way, the standard cost for each operation is calculated.
@@ -9208,7 +9208,7 @@ This way, the standard cost for each operation is calculated.
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

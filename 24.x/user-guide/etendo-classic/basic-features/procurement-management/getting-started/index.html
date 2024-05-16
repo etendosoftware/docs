@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7741,7 +7741,7 @@
 <iframe width="720" height="480"  src="https://www.youtube.com/embed/d33J6fTMEqM?si=NlHOoCq82bCJG3Rg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <p>Procurement Management deals with all the activities related to the purchase of goods and services from external suppliers and the corresponding reporting.</p>
-<p>This application area of Etendo covers Requisition to Receipt and Invoicing parts of the <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow">Procure To Pay business flow</a> and <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#supplier-returns-business-flow">Supplier Returns business flow</a>.</p>
+<p>This application area of Etendo covers Requisition to Receipt and Invoicing parts of the <a href="./#procure-to-pay-business-flow">Procure To Pay business flow</a> and <a href="./#supplier-returns-business-flow">Supplier Returns business flow</a>.</p>
 <p>For Payments Management of Procure To Pay, see Financial Management / Receivables &amp; Payables application area.</p>
 <h2 id="procure-to-pay-business-flow">Procure to Pay Business Flow</h2>
 <p><em>Procure to Pay</em> workflow manages the life-cycle of a procurement process.</p>
@@ -7765,16 +7765,16 @@
 <p>Same way, each product that is being purchased needs to be defined in a unit of measure (UOM), and in an alternative unit of measure (AUM) if required.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Please refer to <a href="/user-guide/etendo-classic/basic-features/master-data-management/product-setup/">Product Setup</a>, <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> and <a href="/user-guide/etendo-classic/basic-features/master-data-management/pricing/">Pricing</a> for more information.</p>
+<p>Please refer to <a href="../../master-data-management/product-setup/">Product Setup</a>, <a href="../../master-data-management/master-data/#product">Product</a> and <a href="../../master-data-management/pricing/">Pricing</a> for more information.</p>
 </div>
 <p>The cost of an input transaction such as a "Goods Receipt" can be calculated by using the product's purchase price excluding taxes.</p>
-<p>Besides that, the cost of the products included in a Goods Receipt can be adjusted as a result of allocating different types of <a href="/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type">Landed Costs</a> in the receipt.</p>
+<p>Besides that, the cost of the products included in a Goods Receipt can be adjusted as a result of allocating different types of <a href="../../warehouse-management/setup/#landed-cost-type">Landed Costs</a> in the receipt.</p>
 <p>The "Costing Server" process is the Etendo "Costing Engine" process that calculates and adjusts a product's transaction cost.
-This process requires that the legal entity/organization has a <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#costing-rule">costing rule</a> configured and applied to the products configured as "Stocked".
+This process requires that the legal entity/organization has a <a href="../../master-data-management/master-data/#costing-rule">costing rule</a> configured and applied to the products configured as "Stocked".
 Business Partners need to be configured prior to any purchase requisition can automatically turn into a purchase order.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit <a href="/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/">Business Partner Setup</a> and <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner">Business Partner</a>.</p>
+<p>For more information, visit <a href="../../master-data-management/business-partner-setup/">Business Partner Setup</a> and <a href="../../master-data-management/master-data/#business-partner">Business Partner</a>.</p>
 </div>
 <p>Above configuration is part of the overall Business setup flow within the "Master Data Management" setup.</p>
 <div class="admonition note">
@@ -7786,32 +7786,32 @@ The sample data set already contains the roles, business partners, products, war
 <p>In Procurement Management, the Procure to Pay business process is executed as follows:</p>
 <p>Any member of the organization allowed to do so can directly issue a Requisition as a result of an organization or business unit need.</p>
 <ul>
-<li>The requestor creates a new document in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition">Requisition</a> window, enters a "Need by date" and then looks for the product or service needed.
-If the product does not exist it can be entered at that time in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product">Product</a> window.</li>
+<li>The requestor creates a new document in the <a href="../transactions/#requisition">Requisition</a> window, enters a "Need by date" and then looks for the product or service needed.
+If the product does not exist it can be entered at that time in the <a href="../../master-data-management/master-data/#product">Product</a> window.</li>
 <li>The requestor continues by adding for each product needed a new line with the need by date, the product, the quantity, the price if known and if needed its attribute (size and/or color, etc).
 A preferred supplier can also be added if known.</li>
 <li>Once done, the requisition is saved in "Draft" status allowing it could be changed later on by the user if needed.</li>
 </ul>
 <p>Requisitions notify the purchase staff of products to order, their quantity and the time frame for its delivery. Purchase staff is then in charge of managing already created purchase requisitions or even creating new ones, if required.</p>
 <ul>
-<li>Purchase staff manages requisitions in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#manage-requisitions">Manage Requisitions</a> window.</li>
-<li>Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner">Business Partner</a> window.</li>
+<li>Purchase staff manages requisitions in the <a href="../transactions/#manage-requisitions">Manage Requisitions</a> window.</li>
+<li>Purchase staff can change any data of the requisitions created in draft status, and besides can look for the supplier to be used in the Business Partner field. if the Business Partner does not exist, it can be entered at that time in the <a href="../../master-data-management/master-data/#business-partner">Business Partner</a> window.</li>
 <li>Purchase staff can also enter the purchase net unit price and discounts if any, once known.</li>
 <li>Once the requisition is ready, it is completed. The Document Status of the requisition changes to Completed and can then turn into a purchase order.</li>
 </ul>
 <p>Purchase staff:</p>
 <ul>
-<li>can massively create Purchase Order/s for the Completed Requisitions in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition-to-order">Requisition to Order</a> window by searching and then adding requisition lines not linked to an order yet.
+<li>can massively create Purchase Order/s for the Completed Requisitions in the <a href="../transactions/#requisition-to-order">Requisition to Order</a> window by searching and then adding requisition lines not linked to an order yet.
 The purchase order/s created that way are shown in the Purchase Order window in Booked status.</li>
-<li>and can also directly create Purchase Orders in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order">Purchase Order</a> window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.</li>
-<li>To review past and present purchases of the supplier, purchase staff uses the <a href="/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#purchase-dimensional-report">Purchase Dimensional Report</a>.</li>
+<li>and can also directly create Purchase Orders in the <a href="../transactions/#purchase-order">Purchase Order</a> window. Purchase lines are filled as in the case of the Requisition. Once the Purchase Order is ready, it is processed clicking the Book button.</li>
+<li>To review past and present purchases of the supplier, purchase staff uses the <a href="../analysis-tools/#purchase-dimensional-report">Purchase Dimensional Report</a>.</li>
 </ul>
 <p>Warehouse staff:</p>
 <ul>
 <li>Receives the merchandise as well as the delivery notes attached in 2 ways:<ul>
-<li>With the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">Goods Receipt</a> window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
+<li>With the <a href="../transactions/#goods-receipts">Goods Receipt</a> window, Warehouse staff looks for the orders pending to be delivered one by one and then gets corresponding order lines quantity located in a warehouse and storage bin.
 This window also allows creating a receipt in a manual way.</li>
-<li>With the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#pending-goods-receipts">Pending Goods Receipt</a> window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.</li>
+<li>With the <a href="../transactions/#pending-goods-receipts">Pending Goods Receipt</a> window. Warehouse staff can massively select the purchase order lines being delivered and locate the quantity receipt in a warehouse and storage bin.</li>
 </ul>
 </li>
 <li>Allocates landed cost, if any, to the products included in a receipt by:<ul>
@@ -7820,18 +7820,18 @@ This window also allows creating a receipt in a manual way.</li>
 </ul>
 </li>
 <li>Completes the receipts.<ul>
-<li>Completed receipts updates stock information (product levels increase) and can be <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">posted</a> to the ledger therefore product assets accounting is being increased.</li>
-<li>A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#costing-background-process">Costing Background process</a> needs to be run.</li>
+<li>Completed receipts updates stock information (product levels increase) and can be <a href="../transactions/#goods-receipts">posted</a> to the ledger therefore product assets accounting is being increased.</li>
+<li>A Goods receipt can only be posted if the cost of the products being received has been calculated. To do so, the <a href="../../general-setup/process-scheduling/#costing-background-process">Costing Background process</a> needs to be run.</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#matched-invoices">Matched Invoices</a> window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#goods-receipts-dimensional-report">Goods Receipts Dimensional Report</a> is used to review past receipts of the Business Partner.</li>
+<li><a href="../transactions/#matched-invoices">Matched Invoices</a> window helps to manage and post the discrepancies, if any, between the accounting of the receipt and the accounting of the corresponding invoice later on, due to purchase price differences.</li>
+<li><a href="../analysis-tools/#goods-receipts-dimensional-report">Goods Receipts Dimensional Report</a> is used to review past receipts of the Business Partner.</li>
 </ul>
 <p>Finance staff:</p>
 <ul>
 <li>Registers supplier invoices in different ways:<ul>
-<li>With the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">Goods Receipt</a> window, Finance staff can generate an invoice from a Receipt in status Complete.</li>
-<li>With the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice">Purchase Invoice</a> window, Finance staff can enter supplier invoices:<ul>
+<li>With the <a href="../transactions/#goods-receipts">Goods Receipt</a> window, Finance staff can generate an invoice from a Receipt in status Complete.</li>
+<li>With the <a href="../transactions/#purchase-invoice">Purchase Invoice</a> window, Finance staff can enter supplier invoices:<ul>
 <li>in a manual way</li>
 <li>or by retrieving purchase orders or receipts lines pending to be invoiced</li>
 <li>or by copying invoice lines from existing purchase invoices.</li>
@@ -7839,18 +7839,18 @@ This window also allows creating a receipt in a manual way.</li>
 </li>
 </ul>
 </li>
-<li>Registers landed cost invoices and match those <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4">"invoiced" landed costs</a> with the landed costs:<ul>
-<li>booked directly in a <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#landed-cost">receipt(s)</a>.</li>
-<li>or booked through a <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#landed-cost_1">landed cost document</a>.</li>
+<li>Registers landed cost invoices and match those <a href="../transactions/#lines_4">"invoiced" landed costs</a> with the landed costs:<ul>
+<li>booked directly in a <a href="../transactions/#landed-cost">receipt(s)</a>.</li>
+<li>or booked through a <a href="../transactions/#landed-cost_1">landed cost document</a>.</li>
 </ul>
 </li>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#process-matching">Processes</a> and <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#post-matching">Posts</a> landed cost matching.</li>
+<li><a href="../transactions/#process-matching">Processes</a> and <a href="../transactions/#post-matching">Posts</a> landed cost matching.</li>
 <li>Once a Purchase Invoice is Processed, a Payment Plan of the invoice is created based on the payment terms agreed with the supplier and the purchase invoice can be posted to create the accounting entries of the invoice. Afterwards, the payment plan can be modified.</li>
 </ul>
 <p>Additionally:</p>
 <ul>
-<li>The <a href="/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#matched-purchase-orders">Matched Purchase Orders</a> view helps Finance staff to have a look at the order or receipt lines which have not been invoiced yet by a supplier.</li>
-<li>Finance staff is able to review past supplier invoicing information in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools/#purchase-invoice-dimensional-report">Purchase Invoice Dimensional Report</a>.</li>
+<li>The <a href="../analysis-tools/#matched-purchase-orders">Matched Purchase Orders</a> view helps Finance staff to have a look at the order or receipt lines which have not been invoiced yet by a supplier.</li>
+<li>Finance staff is able to review past supplier invoicing information in the <a href="../analysis-tools/#purchase-invoice-dimensional-report">Purchase Invoice Dimensional Report</a>.</li>
 </ul>
 <p>Purchase expenses can be recognized in different ways:</p>
 <ul>
@@ -7858,16 +7858,16 @@ This window also allows creating a receipt in a manual way.</li>
 In Etendo, in this situation, the expense is generated as part of the accounting of the purchase invoice corresponding to the transaction.</li>
 <li>Under some circumstances, however, it is required to defer the expense recognition. For instance, a company purchasing a business insurance for the duration of a year would want
 to distribute that expense over 12 months.
-In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_4">purchase invoice lines</a>.</li>
+In Etendo, in this situation, the expense can be deferred within a given number of periods by entering an expense deferred plan in the <a href="../transactions/#lines_4">purchase invoice lines</a>.</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For a full description of this functionality, please visit the <a href="/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses">How to manage deferred revenue and expenses</a> section.</p>
+<p>For a full description of this functionality, please visit the <a href="../../../how-to-guides/how-to-manage-deferred-revenue-and-expenses/">How to manage deferred revenue and expenses</a> section.</p>
 </div>
 <p>Finally, the finance staff is in charge of making and managing the supplier payments:</p>
 <ul>
 <li>Supplier payments can be made in the Purchase Invoice window by using the Add Payment button. It is also possible to make a prepayment against a Purchase Order.
-Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the <a href="/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-payables">How to manage prepaid invoices in payables</a> section.</li>
+Detailed payment management documentation is available in the Financial Management / Receivables and Payables application area and in the <a href="../../../how-to-guides/how-to-manage-prepaid-invoices-in-payables/">How to manage prepaid invoices in payables</a> section.</li>
 </ul>
 <h2 id="supplier-returns-business-flow">Supplier Returns Business Flow</h2>
 <p>This workflow manages the return of purchased goods back to the supplier. Due to the consequences of returning, it is convenient to split Supplier Returns down into two main sub-processes:</p>
@@ -7881,13 +7881,13 @@ Detailed payment management documentation is available in the Financial Manageme
 </ol>
 <p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="supplier-returns" src="../../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/getting-started/supplier-return-debit.png" /></a></p>
 <h3 id="configuration_1">Configuration</h3>
-<p>The <a href="/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#return-reasons">Return reasons</a> window is the only one that requires configuration before performing this process.</p>
+<p>The <a href="../../master-data-management/business-partner-setup/#return-reasons">Return reasons</a> window is the only one that requires configuration before performing this process.</p>
 <h3 id="execution_1">Execution</h3>
 <p>In Procurement Management, the <em>Return to Vendor business flow</em> is executed as follows.</p>
 <p>Procurement staff:</p>
 <ul>
-<li>Creates a new document in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#return-to-vendor-rtv">Return to Vendor</a> window and looks for the vendor name in the Business Partner field.</li>
-<li>And continues by adding lines clicking the button <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_5">Pick/Edit lines</a><ul>
+<li>Creates a new document in the <a href="../transactions/#return-to-vendor-rtv">Return to Vendor</a> window and looks for the vendor name in the Business Partner field.</li>
+<li>And continues by adding lines clicking the button <a href="../transactions/#lines_5">Pick/Edit lines</a><ul>
 <li>It is possible to pick goods receipt lines and edit the quantity you want to return and the price</li>
 </ul>
 </li>
@@ -7896,8 +7896,8 @@ Detailed payment management documentation is available in the Financial Manageme
 </ul>
 <p>Warehouse staff:</p>
 <ul>
-<li>Creates a new document in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#return-to-vendor-shipment">Return to Vendor Shipment</a> window and looks for the vendor name in the Business Partner field.</li>
-<li>And continues by adding lines clicking the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_6">Pick/Edit lines</a> button<ul>
+<li>Creates a new document in the <a href="../transactions/#return-to-vendor-shipment">Return to Vendor Shipment</a> window and looks for the vendor name in the Business Partner field.</li>
+<li>And continues by adding lines clicking the <a href="../transactions/#lines_6">Pick/Edit lines</a> button<ul>
 <li>Return to Vendor lines are picked</li>
 <li>It is possible to edit the quantity to be shipped</li>
 </ul>
@@ -7905,13 +7905,13 @@ Detailed payment management documentation is available in the Financial Manageme
 <li>Once the document is ready, process it by clicking the button Complete. The status of the document changes from Draft to Completed</li>
 <li>Completed shipment updates stock information (product levels decrease)</li>
 </ul>
-<p>Finance staff: To invoice these documents, go to the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice">Purchase invoice</a> window. All scenarios are covered:</p>
+<p>Finance staff: To invoice these documents, go to the <a href="../transactions/#purchase-invoice">Purchase invoice</a> window. All scenarios are covered:</p>
 <ul>
 <li>If the vendor sends an invoice just for that specific document, you need to select a Reverse purchase invoice document type and then select the lines through the <em>Create lines from</em> button</li>
 <li>If the vendor sends an invoice with the original purchase order plus the return materials order, you need to select a Purchase invoice document type and then select the lines through the <em>Create lines from</em> button</li>
 <li>If the vendor does not send an invoice for the return materials order but wants to keep it as credit so you can use it later, you have to:<ul>
 <li>Create a <em>Reverse purchase invoice</em> for these returned materials</li>
-<li>Leave it as credit to be used later through the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out">Payment out</a> window</li>
+<li>Leave it as credit to be used later through the <a href="../../financial-management/receivables-and-payables/transactions/#payment-out">Payment out</a> window</li>
 <li>A new purchase invoice based on the original purchase order can consume that credit</li>
 </ul>
 </li>
@@ -7919,9 +7919,9 @@ Detailed payment management documentation is available in the Financial Manageme
 <h2 id="relationship-with-other-application-areas">Relationship with other application areas</h2>
 <p>Procurement Management has a relationship with other application areas: </p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/">Warehouse Management</a> as Goods Receipts changes items quantity on hand and its value.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/">Financial Management</a> in terms of managing account payable payments.</li>
-<li><a href="">MRP Management</a> as purchase planning allows the creation of purchase orders based on material needs.</li>
+<li><a href="../../warehouse-management/getting-started/">Warehouse Management</a> as Goods Receipts changes items quantity on hand and its value.</li>
+<li><a href="../../financial-management/getting-started/">Financial Management</a> in terms of managing account payable payments.</li>
+<li><a href="../../material-requirement-planning/getting-started/">MRP Management</a> as purchase planning allows the creation of purchase orders based on material needs.</li>
 </ul>
 
 
@@ -8018,7 +8018,7 @@ Detailed payment management documentation is available in the Financial Manageme
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

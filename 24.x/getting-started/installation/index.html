@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -7706,7 +7706,7 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <h2 id="requirements">Requirements</h2>
-<p>In this section, you can read the <a href="/getting-started/requirements">System Requirements</a>.</p>
+<p>In this section, you can read the <a href="../requirements/">System Requirements</a>.</p>
 <h2 id="postgresql-configuration">PostgreSQL Configuration</h2>
 <p>Check this article to configure PostgreSQL correctly: <a href="../../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration/">PostgreSQL Configuration</a></p>
 <h2 id="install-etendo">Install Etendo</h2>
@@ -7728,7 +7728,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo">guide</a>.</p>
+<p>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">guide</a>.</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">nexusUser</span><span class="o">=</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">nexusPassword</span><span class="o">=</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">githubUser</span><span class="o">=</span><span class="w"> </span><span class="n">username</span>
@@ -7810,7 +7810,7 @@ The following code is an example, you must modify your current file</p>
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you want to run Etendo locally, go to <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment">Run Etendo Development Environment</a>.</p>
+<p>If you want to run Etendo locally, go to <a href="../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment">Run Etendo Development Environment</a>.</p>
 </div>
 </li>
 <li>
@@ -7834,7 +7834,7 @@ The following code is an example, you must modify your current file</p>
 </span></code></pre></div></p>
 </li>
 <li>
-<p>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo">guide</a>.
+<p>Modify the <code>gradle.properties</code> file with your GitHub Credentials. Create the credentials by following this <a href="../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/">guide</a>.
     <div class="language-groovy highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">nexusUser</span><span class="o">=</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">nexusPassword</span><span class="o">=</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">githubUser</span><span class="o">=</span><span class="w"> </span><span class="n">username</span>
@@ -7852,7 +7852,7 @@ The following code is an example, you must modify your current file</p>
 </span></code></pre></div></p>
 </li>
 <li>
-<p>By default, the latest core version available will be expanded but if there is a need to change it, edit the <code>build.gradle</code> file changing the <code>coreVersion = "[&lt;version&gt;,&lt;version&gt;)"</code>. The following code is an example, you must modify your current file</p>
+<p>By default, the latest core version available will be expanded but if there is a need to change it, edit the <code>build.gradle</code> file changing the <code>coreVersion = "(&lt;version&gt;,&lt;version&gt;)"</code>. The following code is an example, you must modify your current file</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">plugins</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;java&#39;</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="s1">&#39;war&#39;</span>
@@ -7920,7 +7920,7 @@ The following code is an example, you must modify your current file</p>
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you want to run Etendo locally, go to <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment">Run Etendo Development Environment</a>.</p>
+<p>If you want to run Etendo locally, go to <a href="../../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment">Run Etendo Development Environment</a>.</p>
 </div>
 </li>
 <li>
@@ -8088,7 +8088,7 @@ The following code is an example, you must modify your current file</p>
     
     
 
-      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

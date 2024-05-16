@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -8154,23 +8154,23 @@
 <h2 id="overview">Overview</h2>
 <p>Etendo automatically generates an accounting representation of all the transactions within the enterprise that have an economic relevance.</p>
 <p>Accounting is the system of tracking the assets, the debts, the income and the expenses of a business.
-In Etendo, most of the accounting entries are automatically created while posting <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type">documents</a>. </p>
+In Etendo, most of the accounting entries are automatically created while posting <a href="../accounting/setup/#document-type">documents</a>. </p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#goods-receipts">Goods Receipts</a> and <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice">Purchase Invoices</a> in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/">Procurement Management</a> business area</li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/#goods-shipment">Goods Shipments</a> and <a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice">Sales Invoices</a> in the <a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started/">Sales Management</a> business area.</li>
+<li><a href="../../procurement-management/transactions/#goods-receipts">Goods Receipts</a> and <a href="../../procurement-management/transactions/#purchase-invoice">Purchase Invoices</a> in the <a href="../../procurement-management/getting-started/">Procurement Management</a> business area</li>
+<li><a href="../../sales-management/transactions/#goods-shipment">Goods Shipments</a> and <a href="../../sales-management/transactions/#sales-invoice">Sales Invoices</a> in the <a href="../../sales-management/getting-started/">Sales Management</a> business area.</li>
 </ul>
-<p>Accounting entries not directly related to <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type">documents</a> managed within a given application area can be created and posted in a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journal</a>. For instance a provision for stock depreciation accounting entry.</p>
+<p>Accounting entries not directly related to <a href="../accounting/setup/#document-type">documents</a> managed within a given application area can be created and posted in a <a href="../accounting/transactions/#gl-journal">G/L Journal</a>. For instance a provision for stock depreciation accounting entry.</p>
 <p>There are three ways of accounting in Etendo:</p>
 <ul>
 <li>
 <p>To manually post each document by using the process button <em>Post</em>.
-The process button <em>Post</em> can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the <a href="/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice">Purchase Invoice window</a>. This button is shown for accounting users if the Attribute <em>ShowAcct</em> is visible for them. This configuration is enabled through a <a href="/user-guide/etendo-classic/basic-features/general-setup/application/#preference">Preference</a>.</p>
+The process button <em>Post</em> can be found in the window used to create a given document. For instance a purchase invoice is created and therefore could be posted in the <a href="../../procurement-management/transactions/#purchase-invoice">Purchase Invoice window</a>. This button is shown for accounting users if the Attribute <em>ShowAcct</em> is visible for them. This configuration is enabled through a <a href="../../general-setup/application/#preference">Preference</a>.</p>
 </li>
 <li>
-<p>To manually post all the documents/transactions related to a given database table for instance the table <em>Invoices</em>, by using the process <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables">GL posting by DB Tables</a></p>
+<p>To manually post all the documents/transactions related to a given database table for instance the table <em>Invoices</em>, by using the process <a href="../accounting/transactions/#gl-posting-by-db-tables">GL posting by DB Tables</a></p>
 </li>
 <li>
-<p>or to automatically post accounting transactions of any type by scheduling the <em>Accounting Server Process</em> in the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
+<p>or to automatically post accounting transactions of any type by scheduling the <em>Accounting Server Process</em> in the <a href="../../general-setup/process-scheduling/#process-request">Process Request</a> window.</p>
 </li>
 </ul>
 <p>Accounting activities such as:</p>
@@ -8189,14 +8189,14 @@ The process button <em>Post</em> can be found in the window used to create a giv
 </ul>
 <p>In other words, Etendo allows to post transactions to the ledger which can include different dimensions:</p>
 <ul>
-<li>Those dimensions can be centrally maintained in the <a href="/user-guide/etendo-classic/basic-features/general-setup/client/">Client</a> therefore are available to all the organizations within that Client.
-Moreover Organizations of that Client can also have additional dimensions configured separately in its <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig">General Ledger Configuration</a>.</li>
+<li>Those dimensions can be centrally maintained in the <a href="../../general-setup/client/">Client</a> therefore are available to all the organizations within that Client.
+Moreover Organizations of that Client can also have additional dimensions configured separately in its <a href="../accounting/setup/##glconfig">General Ledger Configuration</a>.</li>
 </ul>
 <p>Those dimensions are then available just for that Organization.</p>
 <ul>
-<li>On the other hand, those dimensions can not be centrally maintained in the <a href="/user-guide/etendo-classic/basic-features/general-setup/client/">Client</a> but independently maintained in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#dimension">Organization's General Ledger Configuration</a>.</li>
+<li>On the other hand, those dimensions can not be centrally maintained in the <a href="../../general-setup/client/">Client</a> but independently maintained in the <a href="../accounting/setup/#dimension">Organization's General Ledger Configuration</a>.</li>
 </ul>
-<p>This application area covers the <a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report">Period End Close to Financial Report</a> business flow and the <a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management">Payables and Receivables Management</a> business flow.</p>
+<p>This application area covers the <a href="./#period-end-close-to-financial-report">Period End Close to Financial Report</a> business flow and the <a href="./#payables-and-receivables-management">Payables and Receivables Management</a> business flow.</p>
 <h2 id="payables-and-receivables-management">Payables and Receivables Management</h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DmeLeQkg-cg?si=See53a-gprwcumPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -8205,10 +8205,10 @@ Moreover Organizations of that Client can also have additional dimensions config
 <h3 id="configuration">Configuration</h3>
 <p>The following setup needs to be done before performing the process:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type">Payables and Receivables Document Types</a>.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method">Payment Methods</a>.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#business-partner">Business Partners</a> to use above configured Payment Methods and Financial Accounts.</li>
+<li><a href="../accounting/setup/#document-type">Payables and Receivables Document Types</a>.</li>
+<li><a href="../receivables-and-payables/transactions/#payment-method">Payment Methods</a>.</li>
+<li><a href="../receivables-and-payables/transactions/#financial-account">Financial Accounts</a>.</li>
+<li><a href="../../master-data-management/master-data/#business-partner">Business Partners</a> to use above configured Payment Methods and Financial Accounts.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -8226,7 +8226,7 @@ Moreover Organizations of that Client can also have additional dimensions config
 <li>and the reconciliation of the financial account transactions</li>
 </ul>
 <h4 id="creation-of-the-ordersinvoices-to-be-paid">Creation of the orders/invoices to be paid</h4>
-<p>In the <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow">Procure to Pay</a> and <a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/#procure-to-pay-business-flow">Order to Cash</a> business process we have seen how the orders and invoices have been generated.</p>
+<p>In the <a href="../../procurement-management/getting-started/#procure-to-pay-business-flow">Procure to Pay</a> and <a href="../../procurement-management/getting-started/#procure-to-pay-business-flow">Order to Cash</a> business process we have seen how the orders and invoices have been generated.</p>
 <p>Every time that a Purchase or Sales Order is booked or a Purchase or Sales Invoice is completed a Payment Plan is created for that Order / Invoice.</p>
 <p>A payment plan contains the payment amount/s expected for the document and its fulfillment. At the same time the invoice  Payment Monitor section gets activated that allows tracking the invoice payment status directly from the invoice window.</p>
 <div class="admonition note">
@@ -8234,21 +8234,21 @@ Moreover Organizations of that Client can also have additional dimensions config
 <p>The Payment Monitor section allows to track the purchase &amp; sales invoice payment status directly from the invoice window. In this section it is possible to know whether an invoice is fully paid or not. If the invoice has not been fully paid then the Payment Monitor informs the user how much has been received, how much is pending, the due date of the next payment and the amount that is expected to be received on that date. The status is updated automatically when any payment action happens and by a background process. The date when the payment status was last time calculated is displayed in the form. Grid filtering allows to filter invoices based on fully paid or not criteria.</p>
 </div>
 <h4 id="creation-of-payments-do-not-related-to-ordersinvoices">Creation of payments do not related to orders/invoices</h4>
-<p>In the <a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/#period-end-close-to-financial-report">Period End Close to Financial Report</a> business process we have seen how a payment can be made or received by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">GL Journal</a> therefore it is not related to an order/invoice but to a G/L Item.</p>
+<p>In the <a href="./#period-end-close-to-financial-report">Period End Close to Financial Report</a> business process we have seen how a payment can be made or received by using a <a href="../accounting/transactions/#gl-journal">GL Journal</a> therefore it is not related to an order/invoice but to a G/L Item.</p>
 <p>A G/L Item payment created in a G/L Journals implies:</p>
 <ul>
-<li>the creation of a <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-out">Payment Made</a> if the payment information is entered in the <em>Credit</em> line of the G/L Journal.</li>
+<li>the creation of a <a href="../receivables-and-payables/transactions/#payment-out">Payment Made</a> if the payment information is entered in the <em>Credit</em> line of the G/L Journal.</li>
 </ul>
-<p>The status of this payment would either be <em>Payment Made</em> or <em>Awaiting Execution</em> or <em>Withdrawn not Cleared</em> depending on the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration">configuration</a> of the payment method used and linked to the financial account where the money is taken from.</p>
+<p>The status of this payment would either be <em>Payment Made</em> or <em>Awaiting Execution</em> or <em>Withdrawn not Cleared</em> depending on the <a href="../receivables-and-payables/setup/#payment-method-configuration">configuration</a> of the payment method used and linked to the financial account where the money is taken from.</p>
 <ul>
-<li>Or the creation of a <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in">Payment Received</a> if the payment information is entered in the <em>Debit</em> line of the G/L Journal.</li>
+<li>Or the creation of a <a href="../receivables-and-payables/transactions/#payment-in">Payment Received</a> if the payment information is entered in the <em>Debit</em> line of the G/L Journal.</li>
 </ul>
-<p>The status of this payment would either be <em>Payment Received</em> or <em>Awaiting Execution</em> or <em>Deposited not Cleared</em> depending on the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-in-configuration">configuration</a> of the payment method used and linked to the financial account where the money is going to be deposited in.</p>
+<p>The status of this payment would either be <em>Payment Received</em> or <em>Awaiting Execution</em> or <em>Deposited not Cleared</em> depending on the <a href="../receivables-and-payables/setup/#payment-in-configuration">configuration</a> of the payment method used and linked to the financial account where the money is going to be deposited in.</p>
 <h4 id="review-of-the-status-of-the-pending-payments">Review of the status of the pending payments</h4>
 <p>On a periodic basis the Finance Staff reviews the status of the payments pending to be collected / to be paid by looking:</p>
 <ul>
 <li>
-<p>At the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report">Payment Report</a> and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.</p>
+<p>At the <a href="../receivables-and-payables/analysis-tools/#payment-report">Payment Report</a> and filtering by the status Awaiting Payment which means that no payment has been either received or made against the order or invoice yet.</p>
 <p>Overdue check-box allows to narrow down the search and to show only overdue payments.
  Payment Type displays Receivables, Payables or both.</p>
 </li>
@@ -8259,7 +8259,7 @@ Moreover Organizations of that Client can also have additional dimensions config
 <h4 id="receipt-of-the-customers-payments">Receipt of the customer's payments</h4>
 <p>When a Payment is Received the Finance staff can register it in different ways:</p>
 <ul>
-<li>In the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in">Payment In</a> window by selecting the Sales Invoices and/or Orders payment is received against.</li>
+<li>In the <a href="../receivables-and-payables/transactions/#payment-in">Payment In</a> window by selecting the Sales Invoices and/or Orders payment is received against.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -8267,16 +8267,16 @@ Moreover Organizations of that Client can also have additional dimensions config
 </div>
 <ul>
 <li>
-<p>Using the <a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/#lines_5">Add Payment button</a> directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.</p>
+<p>Using the <a href="../../sales-management/transactions/#lines_5">Add Payment button</a> directly within the corresponding Sales Invoice. It can be when the user has received a single payment for a particular invoice and prefers to browse for that invoice in order to allocate the payment to it.</p>
 </li>
 <li>
-<p>It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method">Payment Method</a>.</p>
+<p>It is also possible to automate receiving of a payment on completion of a Sales Invoice through the configuration of the <a href="../receivables-and-payables/transactions/#payment-method">Payment Method</a>.</p>
 </li>
 </ul>
 <p>If collection does not happen on time:</p>
 <ul>
 <li>
-<p>The Expected Date of the <a href="/user-guide/etendo-classic/basic-features/sales-management/transactions/#payment-plan_1">Payment Plan</a> can be modified, preventing the debt from being overdue.</p>
+<p>The Expected Date of the <a href="../../sales-management/transactions/#payment-plan_1">Payment Plan</a> can be modified, preventing the debt from being overdue.</p>
 </li>
 <li>
 <p>The Amount due of the Payment Plan can be:
@@ -8310,8 +8310,8 @@ Moreover Organizations of that Client can also have additional dimensions config
 </li>
 </ul>
 <h4 id="recording-of-the-financial-account-transactions">Recording of the financial account transactions</h4>
-<p>Finance Staff records Withdrawals and Deposits as transactions in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account</a> window by pressing the Add Transaction button and selecting either the received or made payments.
-This step in the process can also be completely automated through the configuration of the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/setup/#payment-method-configuration">Payment Method</a> so that the payments are automatically withdrawn or deposited when they are completed.</p>
+<p>Finance Staff records Withdrawals and Deposits as transactions in the <a href="../receivables-and-payables/transactions/#financial-account">Financial Account</a> window by pressing the Add Transaction button and selecting either the received or made payments.
+This step in the process can also be completely automated through the configuration of the <a href="../receivables-and-payables/setup/#payment-method-configuration">Payment Method</a> so that the payments are automatically withdrawn or deposited when they are completed.</p>
 <h4 id="reconciliation-of-the-financial-account-transactions">Reconciliation of the financial account transactions</h4>
 <p>Finance Staff receives a bank statement (a paper or electronic bank statement) and reconciles the transactions in the Financial Account marked as Deposited / Withdrawn not Cleared with the actual transactions on the bank statement. This process can be done</p>
 <ul>
@@ -8335,11 +8335,11 @@ This step in the process can also be completely automated through the configurat
 <h4 id="basic-configuration">Basic Configuration</h4>
 <p>There are three Etendo accounting concepts which need to be explained before describing the basic accounting configuration:</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a></li>
+<li><a href="../accounting/setup/#fiscal-calendar">Fiscal Calendar</a></li>
 </ul>
 <p>A fiscal calendar in Etendo is the year and the periods, normally months, when financial transactions and journal entries are posted to the ledger.</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree">Account Tree</a></li>
+<li><a href="../accounting/setup/#account-tree">Account Tree</a></li>
 </ul>
 <p>An account tree is the way Etendo captures the <em>Chart of Accounts</em> (CoA) of an Organization.</p>
 <p>The Chart of Accounts is a list of all the accounts used in an organization's general ledger.</p>
@@ -8349,7 +8349,7 @@ This step in the process can also be completely automated through the configurat
 <p>It is important to remark that in Etendo , the financial reports such as the Balance Sheet and the Income Statement are produced based upon the Chart of Accounts structure.</p>
 </div>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig">General Ledger configuration</a></li>
+<li><a href="../accounting/setup/#glconfig">General Ledger configuration</a></li>
 </ul>
 <p>The general ledger configuration captures the accounting rules to use while posting the organization's financial transactions to the ledger. Accounting rules such as the <em>Currency</em> and the <em>Chart of Accounts</em> among others.</p>
 <p>Having said that, the accounting configuration detailed in this section is the one required for <em>legal entities with accounting</em>, including the business units, because these organization types are the only ones which can have assigned:</p>
@@ -8359,7 +8359,7 @@ This step in the process can also be completely automated through the configurat
 <li>and a Fiscal Calendar</li>
 </ul>
 <p>Obviously these organization types allow posting transactions to the ledger.
-Rest of the Organization types behave as explained in the <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup">Initial Organization Setup</a> and in the <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization">Organization</a> section.</p>
+Rest of the Organization types behave as explained in the <a href="../../general-setup/enterprise-model/#initial-organization-setup">Initial Organization Setup</a> and in the <a href="../../general-setup/enterprise-model/#organization">Organization</a> section.</p>
 <p>Very briefly:</p>
 <ul>
 <li><em>Legal without accounting</em> organizations do not require accounting therefore do not require any basic nor advanced accounting configuration.</li>
@@ -8391,38 +8391,38 @@ The Generic CoA module does not include any taxes setup.</p>
 <h5 id="opening-of-the-accounting">Opening of the accounting</h5>
 <p>This very first step implies to initialize the balance of the ledger accounts and the financial accounts or banks. The way to do that in Etendo is:</p>
 <ul>
-<li>The ledger accounts balance can be initialized by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journal</a> set as <em>Opening</em>, therefore that ledger entry is set as the <em>Opening Ledger Entry</em>.
+<li>The ledger accounts balance can be initialized by using a <a href="../accounting/transactions/#gl-journal">G/L Journal</a> set as <em>Opening</em>, therefore that ledger entry is set as the <em>Opening Ledger Entry</em>.
 A journal line can be created for each account and its opening balance, once done the G/L Journal will validate that the Total Debit of all the entries equals to the Total Credit.</li>
-<li>The financial accounts balance can be initialized in the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account</a> window, in the <em>Initial Balance</em> field, therefore the corresponding financial account/s or banks need to be previously created.</li>
+<li>The financial accounts balance can be initialized in the <a href="../receivables-and-payables/transactions/#financial-account">Financial Account</a> window, in the <em>Initial Balance</em> field, therefore the corresponding financial account/s or banks need to be previously created.</li>
 </ul>
 <h5 id="review-of-the-accounting-transactions">Review of the accounting transactions</h5>
 <p>As already mentioned in Etendo most of the accounting entries are automatically created while posting documents such as a purchase invoice or a sales invoice.
 For instance the accounting of a purchase invoice will take:</p>
 <ul>
-<li>the expense account setup for the product being purchased in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#accounting">Accounting</a> tab of the <em>Product</em> window</li>
-<li>the vendor liability account setup for the vendor in the <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data/#vendor-accounting">Vendor Accounting</a> tab of the <em>Business Partner</em> window</li>
-<li>and the tax credit account setup in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting_1">Accounting</a> tab of the <em>Tax Rate</em> window.</li>
+<li>the expense account setup for the product being purchased in the <a href="../../master-data-management/master-data/#accounting">Accounting</a> tab of the <em>Product</em> window</li>
+<li>the vendor liability account setup for the vendor in the <a href="../../master-data-management/master-data/#vendor-accounting">Vendor Accounting</a> tab of the <em>Business Partner</em> window</li>
+<li>and the tax credit account setup in the <a href="../accounting/setup/#accounting_1">Accounting</a> tab of the <em>Tax Rate</em> window.</li>
 </ul>
 <p>Etendo allows reviewing and correcting if needed the accounting entries of transactional documents such as the invoices.
 Same way Etendo allows unposting wrongly posted transactional documents one by one to get them corrected and properly posted once more.</p>
-<p>Additionally, the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#accounting-transaction-details">Accounting Transactions Details</a> report shows all the transactions posted in the ledger with all the details and the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report">Not Posted Transactions</a> report shows the transactions which need to be accounted for but have not been accounted yet.</p>
+<p>Additionally, the <a href="../accounting/analysis-tools/#accounting-transaction-details">Accounting Transactions Details</a> report shows all the transactions posted in the ledger with all the details and the <a href="../accounting/transactions/#not-posted-transaction-report">Not Posted Transactions</a> report shows the transactions which need to be accounted for but have not been accounted yet.</p>
 <p>Finally Etendo allows to massively fix accounting errors if any, for instance a vendor liability account wrongly assigned to a vendor or to a set of vendors.
 The way to do that is:</p>
 <ul>
-<li>run the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting">Reset Accounting</a> process for the table being affected for instance the <em>C_Invoice</em> table (Purchase Invoice and Sales Invoice table).</li>
+<li>run the <a href="../accounting/transactions/#reset-accounting">Reset Accounting</a> process for the table being affected for instance the <em>C_Invoice</em> table (Purchase Invoice and Sales Invoice table).</li>
 <li>correct the accounting configuration</li>
-<li>get the transactions posted once again by using the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables">GL Posting by DB Tables</a> feature.
+<li>get the transactions posted once again by using the <a href="../accounting/transactions/#gl-posting-by-db-tables">GL Posting by DB Tables</a> feature.
 This feature performs a massive posting of all the accounting or just the accounting of a table for instance the <em>C_Invoice</em> table (Purchase Invoice and Sales Invoice table).</li>
 </ul>
 <h5 id="creation-of-accounting-transactions-and-gl-item-payments">Creation of accounting transactions and G/L item payments</h5>
-<p>As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journal</a>.
+<p>As already mentioned, accounting entries not related to documents managed within a given application area can be created and posted to the ledger by using a <a href="../accounting/transactions/#gl-journal">G/L Journal</a>.
 A G/L Journal can also be used to make and/or receive payments do not related to orders/invoices but to G/L items.
-G/L items payments are also managed within the <a href="/user-guide/etendo-classic/basic-features/financial-management/getting-started/#payables-and-receivables-management">Payables and Receivables management</a> area.</p>
+G/L items payments are also managed within the <a href="./#payables-and-receivables-management">Payables and Receivables management</a> area.</p>
 <h5 id="printing-of-the-trial-balance-to-check-that-debitcredit">Printing of the Trial Balance to check that Debit=Credit</h5>
-<p>The <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#trial-balance">Trial Balance</a> is a list indicating the balances of every single general ledger account at a given point in time.</p>
+<p>The <a href="../accounting/analysis-tools/#trial-balance">Trial Balance</a> is a list indicating the balances of every single general ledger account at a given point in time.</p>
 <p>The purpose of the trial balance is to check that debits are equal to credits. If debits do not equal credits that means that an erroneous journal entry must have been posted.</p>
 <p>Etendo does not allow posting journal entries which do not balance. A G/L Journal can only be posted if Debit equals Credit, however there could be situations where while posting an invoice rounding differences drive that debit does not exactly equal credit. </p>
-<p>In these situations the difference is posted in a specific suspense account. <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts">Suspense</a> accounts are configured in the General Ledger configuration.</p>
+<p>In these situations the difference is posted in a specific suspense account. <a href="../accounting/setup/#general-accounts">Suspense</a> accounts are configured in the General Ledger configuration.</p>
 <h5 id="adjustments-required-prior-to-the-income-calculation">Adjustments required prior to the income calculation</h5>
 <p>An organization's income statement shows the organization's financial performance over a period of time (usually one year) as the difference between:</p>
 <ul>
@@ -8453,7 +8453,7 @@ Similarly, expenses are recognized as soon as the company receives goods or serv
 <p>Other adjustments required can be:</p>
 <ul>
 <li>Long term amounts must be reclassified to short term amounts. The long term amount reclassified to short term amount is the amount due in the next year.
-This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">GL Journal</a>.</li>
+This process is usually done for long term doubts for instance. In Etendo this kind of transaction can be manually created by using a <a href="../accounting/transactions/#gl-journal">GL Journal</a>.</li>
 <li>Taxes such as the VAT needs to be settled periodically.
 It is important to remark that VAT accounts balance has to be equal to 0 in the last period of the year, as either the organization has to pay to the tax authorities or the other way around.</li>
 <li>Assets depreciation needs to be properly accounted within the period being closed as this adjustment will affect:</li>
@@ -8465,22 +8465,22 @@ It is important to remark that VAT accounts balance has to be equal to 0 in the 
 <p>It is very useful to print these financial reports prior to the closing of the year as it allows getting a sense of whether there are some missing adjustments required to be done prior to the closing of the year or not.</p>
 <p>During the accounting cycle there are other reports which can also be printed:</p>
 <ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report">General Ledger Report</a> list all the debits entries and all the credits entries of every T-Account within a given period of time</li>
-<li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#journal-entries-report">Journal Entries Report</a> lists in a chronological order every journal entry posted in the ledger.</li>
+<li>the <a href="../accounting/analysis-tools/#general-ledger-report">General Ledger Report</a> list all the debits entries and all the credits entries of every T-Account within a given period of time</li>
+<li>the <a href="../accounting/analysis-tools/#journal-entries-report">Journal Entries Report</a> lists in a chronological order every journal entry posted in the ledger.</li>
 </ul>
 <h5 id="the-closing-of-the-fiscal-year">The closing of the fiscal year</h5>
 <p>Etendo allows to perform below detailed checks prior to the closing of the fiscal year:</p>
 <ul>
-<li>Run the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report">Not Posted Transaction</a> report to verify that there are no transactions and/or documents in status <em>Complete</em> not posted yet.</li>
-<li>Check that there are no documents still having a <em>Draft</em> status, specially those which require to be <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#active-tables">accounted</a>.</li>
-<li>Unscheduled the <a href="/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-request">Accounting Server Process</a> therefore an stable scene can be assured.</li>
-<li>Check the <a href="/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account">Financial Account/s</a> current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="/user-guide/etendo-classic/how-to-guides/how-to-transfer-funds-between-financial-accounts/">how to transfer funds between financial accounts</a>.</li>
+<li>Run the <a href="../accounting/transactions/#not-posted-transaction-report">Not Posted Transaction</a> report to verify that there are no transactions and/or documents in status <em>Complete</em> not posted yet.</li>
+<li>Check that there are no documents still having a <em>Draft</em> status, specially those which require to be <a href="../accounting/setup/#active-tables">accounted</a>.</li>
+<li>Unscheduled the <a href="../../general-setup/process-scheduling/#process-request">Accounting Server Process</a> therefore an stable scene can be assured.</li>
+<li>Check the <a href="../receivables-and-payables/transactions/#financial-account">Financial Account/s</a> current balance in Etendo and compare it with the information provided by the banks. It is possible to adjust financial account balance by using G/L Items or <a href="../../../how-to-guides/how-to-transfer-funds-between-financial-accounts/">how to transfer funds between financial accounts</a>.</li>
 </ul>
-<p>Before running the close year process the accounting periods can be <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control">closed</a> not to allow any further posting within those periods, but the <em>13th period</em>.
-The <em>13th period</em> is an <em>adjustment period</em> which can be used to post the adjustments required to the ledger through <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal">G/L Journals</a> prior to closing the year.</p>
-<p>The <em>Close Year</em> process can be executed from the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close">End Year Close</a> window.</p>
+<p>Before running the close year process the accounting periods can be <a href="../accounting/setup/#openclose-period-control">closed</a> not to allow any further posting within those periods, but the <em>13th period</em>.
+The <em>13th period</em> is an <em>adjustment period</em> which can be used to post the adjustments required to the ledger through <a href="../accounting/transactions/#gl-journal">G/L Journals</a> prior to closing the year.</p>
+<p>The <em>Close Year</em> process can be executed from the <a href="../accounting/transactions/#end-year-close">End Year Close</a> window.</p>
 <p>The end-year close process can be executed for <em>Legal with Accounting</em> organization types as that organization's type has a <em>Fiscal Calendar</em> and <em>General Ledger</em> configured.</p>
-<p>There is a check-box in the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#general-accounts">General Accounts</a> tab of the <em>General Ledger Configuration</em> window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
+<p>There is a check-box in the <a href="../accounting/setup/#general-accounts">General Accounts</a> tab of the <em>General Ledger Configuration</em> window which shows how the end-year closing outcome is going to be for the organizations' General Ledger.
 That check-box is named <em>Reverse Permanent Account Balances</em>. </p>
 <ul>
 <li>If it is checked the closing of the year process includes an entry to reverse the balance sheet accounts besides the P&amp;L closing entry.</li>
@@ -8489,23 +8489,23 @@ That check-box is named <em>Reverse Permanent Account Balances</em>. </p>
 <p>Etendo uses the adjustment period (i.e. December 31st) for accounting the closing transactions if any, and the next period's first date (i.e. January 1st) for accounting the opening transactions if any.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information, visit the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close">End Year Close</a> window.</p>
+<p>For more information, visit the <a href="../accounting/transactions/#end-year-close">End Year Close</a> window.</p>
 </div>
 <h5 id="the-printing-of-the-final-income-statement-and-balance-sheet">The printing of the final Income Statement and Balance Sheet</h5>
 <p>Once a year has been closed every financial report contains the corresponding closing and opening transactions:</p>
 <ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure">Balance Sheet</a> will show the financial situation of the organization as of the end of the closed accounting period.
+<li>the <a href="../accounting/analysis-tools/#balance-sheet-and-pl-structure">Balance Sheet</a> will show the financial situation of the organization as of the end of the closed accounting period.
 Etendo allows to get a two columns balance sheet:
           One column shows the balances as of the end of the most recent accounting period
           and the other column shows the balances as of the prior period end.</li>
 </ul>
 <p>This balance allows seeing how the financial position of the organization has changed over time.</p>
 <ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#balance-sheet-and-pl-structure">Income Statement</a> will show the organization performance over the year closed</li>
+<li>the <a href="../accounting/analysis-tools/#balance-sheet-and-pl-structure">Income Statement</a> will show the organization performance over the year closed</li>
 </ul>
 <p>And besides: </p>
 <ul>
-<li>the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools/#general-ledger-report">General ledger Journal</a> allows to show for a given accounting period below entries posted by the Close Year process:
+<li>the <a href="../accounting/analysis-tools/#general-ledger-report">General ledger Journal</a> allows to show for a given accounting period below entries posted by the Close Year process:
     the opening balance entry
     the closing balance entry
     and the P&amp;L closing entry</li>
@@ -8519,9 +8519,9 @@ Etendo allows to get a two columns balance sheet:
 <h2 id="relationship-with-other-areas">Relationship with other areas</h2>
 <p>Financial Management has a connection with other application areas, as there are documents or transactions in those areas which can be posted and therefore be part of a ledger journal to be finally managed within the Financial Management application area.</p>
 <ul>
-<li><a href="/user-guide/etendo-classic/basic-features/procurement-management/getting-started/">Procurement Management</a> as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/sales-management/getting-started/">Sales Management</a> as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.</li>
-<li><a href="/user-guide/etendo-classic/basic-features/warehouse-management/getting-started/">Warehouse Management</a> as Physical Inventory is posted there.</li>
+<li><a href="../../procurement-management/getting-started/">Procurement Management</a> as Purchase Invoices are posted there and Goods Shipments as well as Supplier's Payments or Payments Out can be posted there.</li>
+<li><a href="../../sales-management/getting-started/">Sales Management</a> as Sales Invoices are posted there and Goods Shipment as well as customers's Payments or Payments In can be posted there.</li>
+<li><a href="../../warehouse-management/getting-started/">Warehouse Management</a> as Physical Inventory is posted there.</li>
 <li>Production Management as for the processing of the Work Effort raw materials are consumed and posted there at cost price as well as Products manufactured.</li>
 </ul>
 
@@ -8619,7 +8619,7 @@ Etendo allows to get a two columns balance sheet:
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

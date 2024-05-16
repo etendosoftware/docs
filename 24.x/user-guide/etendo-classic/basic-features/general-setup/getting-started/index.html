@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -7715,20 +7715,20 @@
 <h1 id="_1"></h1>
 <h2 id="overview">Overview</h2>
 <p>This section describes the steps that need to be performed first to configure Etendo.
-Etendo installations require at least a <a href="/user-guide/etendo-classic/basic-features/general-setup/client/">Client</a> and an <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#organization">Organization</a>. Client and Organization are the two key concepts within the General Setup.</p>
+Etendo installations require at least a <a href="../client/">Client</a> and an <a href="../enterprise-model/#organization">Organization</a>. Client and Organization are the two key concepts within the General Setup.</p>
 <p>In other words, it is not possible to issue an invoice or to post a journal entry to the ledger in Etendo if there is no Client and Organization properly created and configured.</p>
 <p>The first steps to follow to configure Etendo are:</p>
 <h4 id="installation-of-the-localization-bundle-if-available-for-the-country">Installation of the Localization Bundle if available for the country</h4>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Read the <a href="/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/">Install Modules</a> documentation to install the Localization bundle. </p>
+<p>Read the <a href="../../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/">Install Modules</a> documentation to install the Localization bundle. </p>
 </div>
 <p>This can be considered the first basic step while setting Etendo instances as it is required to install first the localization bundle if any, in order to apply the accounting reference data or Chart of Accounts while creating either the Client or the Organization later on.</p>
 <p>A Localization Bundle can include at least:</p>
 <ul>
 <li>
 <p>the complete <strong>translation</strong> for the official language(s) in the country.
-The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at <a href="/getting-started/user-interface/workspace#profile">profile</a>.</p>
+The language is automatically available once the localization bundle has been successfully installed, therefore it can be selected as described at <a href="../../../../../getting-started/user-interface/workspace/#profile">profile</a>.</p>
 </li>
 <li>
 <p>the <strong>chart of accounts</strong> that defines the accounting structure if any to comply with the approved local practice and laws.
@@ -7736,12 +7736,12 @@ The Chart of Accounts is available for selection just while running either the I
 </li>
 <li>
 <p>and the setup of the <strong>taxes</strong> which comply with the in-country tax authorities requirements.
-The setup of the taxes is also available for selection while running either the <a href="../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process/">Initial Client setup</a> or the <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup">Initial Organization setup</a>, and even in the Enterprise Module Management window.</p>
+The setup of the taxes is also available for selection while running either the <a href="../../../../../developer-guide/etendo-classic/how-to-guides/How_to_run_an_initial_client_setup_process/">Initial Client setup</a> or the <a href="../enterprise-model/#initial-organization-setup">Initial Organization setup</a>, and even in the Enterprise Module Management window.</p>
 </li>
 </ul>
 <h4 id="initial-client-setup">Initial Client Setup</h4>
-<p>A <a href="/user-guide/etendo-classic/basic-features/general-setup/client/">Client</a> in Etendo is the top-most level of configuration and data within Etendo.</p>
-<p>Above means that certain configurations such as users, customers, vendors and other <a href="/user-guide/etendo-classic/basic-features/master-data-management/master-data">master data</a> can be managed in a client and therefore be available across all the organizations within the client.</p>
+<p>A <a href="../client/">Client</a> in Etendo is the top-most level of configuration and data within Etendo.</p>
+<p>Above means that certain configurations such as users, customers, vendors and other <a href="../../master-data-management/master-data/">master data</a> can be managed in a client and therefore be available across all the organizations within the client.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Each client can host at least one or even more than one organization that can be used to model your enterprise.</p>
@@ -7759,7 +7759,7 @@ This client handles application data such as tables, columns and fields and it a
 <p>Organizations can be structured in a hierarchical way within a Client providing multiple options while modeling your enterprise.</p>
 <p>There are different types of Organizations which can either be independent legal entities or not.
 Legal entities can either require accounting or not and Not Legal Entities can either allow transactional data or not.</p>
-<p>The <a href="/user-guide/etendo-classic/basic-features/general-setup/enterprise-model/#initial-organization-setup">Initial Organization setup</a> is the <strong>process</strong> which creates Organizations in Etendo.</p>
+<p>The <a href="../enterprise-model/#initial-organization-setup">Initial Organization setup</a> is the <strong>process</strong> which creates Organizations in Etendo.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>An Organization can be created once the Client it belongs to has been created.</p>
@@ -7773,7 +7773,7 @@ Legal entities can either require accounting or not and Not Legal Entities can e
 </div>
 <h4 id="users-and-roles-setup">Users and Roles setup</h4>
 <p>Etendo security can be split into Functional and Data security.
-<strong>Functional</strong> security manage the access rights to Etendo entities such as Windows and Processes by properly setting up <a href="/user-guide/etendo-classic/basic-features/general-setup/security#user">users</a> and <a href="/user-guide/etendo-classic/basic-features/general-setup/security#role">roles</a>:</p>
+<strong>Functional</strong> security manage the access rights to Etendo entities such as Windows and Processes by properly setting up <a href="../security/#user">users</a> and <a href="../security/#role">roles</a>:</p>
 <p>A <strong>User</strong> is an entity which can log into Etendo whenever it has a password and at least one role assigned.
 Each person accessing Etendo should have a different user assigned properly configured.</p>
 <p>A <strong>Role</strong> is the connection between users and access rights to Organizations, Windows, Processes and Forms in Etendo.
@@ -7783,15 +7783,15 @@ Access rights are first configured at role level, roles are then assigned to the
 <li>the <strong>System</strong> user is the owner of Etendo application data. It is not possible to log into Etendo as System user.</li>
 <li>the <strong>Admin</strong> user is a <strong>super</strong> user which has access to any Etendo Client.</li>
 </ul>
-<p>The password assigned to this user is Etendo, however it can be changed if needed in the <a href="/user-guide/etendo-classic/basic-features/general-setup/security#user">user</a> window.</p>
+<p>The password assigned to this user is Etendo, however it can be changed if needed in the <a href="../security/#user">user</a> window.</p>
 <p>This user is assigned to the System Administrator Role, a role with no access restrictions.
-<strong>Data security</strong> is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the <a href="/user-guide/etendo-classic/basic-features/general-setup/security#role-access">Data Access Level</a> at table level and the <a href="/user-guide/etendo-classic/basic-features/general-setup/security#role">role</a>:</p>
+<strong>Data security</strong> is an advance setting as it manages the access rights to subsets of data within Etendo entities such as Windows and Processes, by properly setting up the <a href="../security/#role-access">Data Access Level</a> at table level and the <a href="../security/#role">role</a>:</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Data Access level defines the client and/or the organization each record is going to be visible from.</p>
 </div>
-<p>Every <a href="/user-guide/etendo-classic/basic-features/general-setup/security#role-access">table</a> in Etendo has a Data Access Level column.</p>
-<p>User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a <a href="/user-guide/etendo-classic/basic-features/general-setup/security#role">role</a>, or even limit the access to a given entity.</p>
+<p>Every <a href="../security/#role-access">table</a> in Etendo has a Data Access Level column.</p>
+<p>User Access Level allows limiting the records which will be accessible in entities such as Windows, Processes, Forms, Widget Classes and Views for a <a href="../security/#role">role</a>, or even limit the access to a given entity.</p>
 <h3 id="basic-setup-diagram">Basic Setup Diagram</h3>
 <p>The diagram below shows the Etendo basic General Setup flow for a legal entity with accounting. This flow is one part of the overall Business setup flow.</p>
 <p><a class="glightbox" href="../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../assets/user-guide/etendo-classic/basic-features/general-setup/getting-started/basic-general-setup.png" /></a></p>
@@ -7800,10 +7800,10 @@ Access rights are first configured at role level, roles are then assigned to the
 <p>There is a close relationship between the general setup which allows the creation and configuration of an enterprise, and the accounting configuration area because to set a Legal with Accounting Organization as ready, it requires below accounting items to be properly created and configured first:</p>
 <ol>
 <li>
-<p>a <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#fiscal-calendar">Fiscal Calendar</a></p>
+<p>a <a href="../../financial-management/accounting/setup/#fiscal-calendar">Fiscal Calendar</a></p>
 </li>
 <li>
-<p>and an organization's <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup#general-ledger-configuration">General Ledger configuration</a> which includes a dimension that is the <a href="/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree">Account Tree</a> or Chart of Accounts.</p>
+<p>and an organization's <a href="../../financial-management/accounting/setup/#general-ledger-configuration">General Ledger configuration</a> which includes a dimension that is the <a href="../../financial-management/accounting/setup/#account-tree">Account Tree</a> or Chart of Accounts.</p>
 </li>
 </ol>
 <div class="admonition info">
@@ -7912,7 +7912,7 @@ This business setup flow goes from the Generic setup and Master Data areas to th
     
     
 
-      <script src="../../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->

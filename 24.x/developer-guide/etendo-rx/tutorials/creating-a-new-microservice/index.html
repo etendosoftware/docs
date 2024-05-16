@@ -21,7 +21,7 @@
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.23">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -8045,17 +8045,17 @@
 <h2 id="building-a-new-module-for-rx-capabilities">Building a New Module for RX Capabilities</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure to complete the <a href="/developer-guide/etendo-rx/getting-started">Getting Started section in the developer guide</a> to set up the Etendo Platform.</p>
+<p>Make sure to complete the <a href="../../getting-started/">Getting Started section in the developer guide</a> to set up the Etendo Platform.</p>
 </div>
 <h3 id="accessing-as-admin-user">Accessing as Admin User</h3>
-<p>After setting the local environment up, as described in the <a href="/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment"><strong>install etendo development environment</strong></a>, we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.</p>
+<p>After setting the local environment up, as described in the <a href="../../../etendo-classic/getting-started/installation/install-etendo-development-environment/"><strong>install etendo development environment</strong></a>, we will need to log in to the system with administration permissions to create the new module, projections, repository, etc.</p>
 <p>Log in to your account as an administrator. The default login credentials for this administrative account are:</p>
 <ul>
 <li>Username: <code>admin</code></li>
 <li>Password: <code>admin</code></li>
 </ul>
 <p>Once you are logged in, switch your role to <em>System Administrator</em>, as the image shows:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/switch-admin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="switch-admin.png" src="/assets/developer-guide/etendo-rx/tutorial/switch-admin.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/switch-admin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="switch-admin.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/switch-admin.png" /></a></p>
 <p>The <em>System Administrator</em> role allows us to access some windows and permission to create and manipulate the system to fulfill our needs.</p>
 <h3 id="creating-a-new-module">Creating a New Module</h3>
 <p>Now we will create a new module. It is a self-contained unit of code that performs a specific function and, in our case, it contains all the resources needed in this guide.
@@ -8095,7 +8095,7 @@ To create a new module, go to the Module window, and add a new record providing 
 </tbody>
 </table>
 <p>It should look like this:</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-module.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-module.png" src="/assets/developer-guide/etendo-rx/tutorial/new-module.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-module.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-module.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-module.png" /></a></p>
 <p>With our new module created, we will start working with <em>Projections</em>.</p>
 <hr />
 <h2 id="projection">Projection</h2>
@@ -8124,7 +8124,7 @@ To create a new module, go to the Module window, and add a new record providing 
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-projection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-projection.png" src="/assets/developer-guide/etendo-rx/tutorial/new-projection.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-projection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-projection.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-projection.png" /></a></p>
 <h3 id="adding-the-projection-to-a-table">Adding the projection to a table</h3>
 <p>As we create the projection, now we need to assign it to a table where we want to extract data.
 For this, open the <em>Tables and Columns</em> window and look for the <em>Order</em> table (as mentioned in the introduction, we want to consume orders).</p>
@@ -8144,7 +8144,7 @@ For this, open the <em>Tables and Columns</em> window and look for the <em>Order
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/assign-projection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="assign-projection.png" src="/assets/developer-guide/etendo-rx/tutorial/assign-projection.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="assign-projection.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png" /></a></p>
 <h3 id="adding-entity-fields">Adding Entity Fields</h3>
 <p>When a projection is created, we need to define which fields we want to retrieve.
 In our case, we will need the record ID, Business Partner name, Document No, Document Type name, and the Grand total.
@@ -8184,7 +8184,7 @@ Under the Projection tab navigate to the <em>Entity Field</em> tab and add the f
 <p>The <em>Property</em> field of this tab is handled with an Entity Mapping, this is like a Hibernate property.
 So, you can navigate the entities related from here. E.g. To get the Business Partner name, you can have it by accessing the entity <em>businessPartner</em> and then, adding the field that you want to filter, <em>name</em> in this case.</p>
 </div>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-entity-fields.png" src="/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-entity-fields.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png" /></a></p>
 <hr />
 <h2 id="repository">Repository</h2>
 <p>In Spring Data, a repository is an abstraction that provides the operations relative to a domain class to interact with a data store.
@@ -8205,7 +8205,7 @@ To create the repository for our purpose, and the same as we did for projections
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-repository.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-repository.png" src="/assets/developer-guide/etendo-rx/tutorial/new-repository.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-repository.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-repository.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-repository.png" /></a></p>
 <hr />
 <h2 id="search">Search</h2>
 <h3 id="creating-a-new-search">Creating a New Search</h3>
@@ -8229,7 +8229,7 @@ To create this new filter/search method, under Repository tab of the <code>C_Ord
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-search.png" src="/assets/developer-guide/etendo-rx/tutorial/new-search.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-search.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-search.png" /></a></p>
 <h3 id="creating-a-new-search-parameter">Creating a New Search Parameter</h3>
 <p>As you can see in the query above, we use a parameter called <code>:documentType</code>. 
 We can add this type of parameter to use it later by adding a corresponding value to it and filtering depending on the current needs.
@@ -8257,7 +8257,7 @@ To define the parameter, we need to create a new row on the <em>Search Parameter
 </tbody>
 </table>
 <p>In our case, we will filter depending on the Document Type of the orders.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-search-parameter.png" src="/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-search-parameter.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png" /></a></p>
 <hr />
 <h2 id="creating-a-new-spring-boot-project">Creating a New Spring Boot Project</h2>
 <p>Now that we have declared the projection, fields, repository, and searches on Etendo Classic, we will need to create a new spring project to make use of these JPA resources that we have created just before.
@@ -8334,7 +8334,7 @@ Next, you will find the steps to create the Spring Boot project and add it as a 
 </li>
 <li>
 <p>Click on the <em>Generate</em> button to download your project. The page will generate a file named <code>rxtutorial.zip</code>.</p>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="spring-initializr.png" src="/assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="spring-initializr.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/spring-initializr.png" /></a></p>
 </li>
 <li>
 <p>Uncompress the zip file to the platform project created in the first step, as: <code>modules_rx/com.tutorial.rxtutorial</code>.</p>
@@ -8440,7 +8440,7 @@ Execute <code>rx:generate.entities</code> task to do so.</p>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-rx-service.png" src="/assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-rx-service.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-rx-service.png" /></a></p>
 </li>
 <li>
 <p>Change to <em>F&amp;B International Group Admin</em> role.</p>
@@ -8482,7 +8482,7 @@ Also, check that the user is active.</p>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-rx-service-access.png" src="/assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="new-rx-service-access.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/new-rx-service-access.png" /></a></p>
 </li>
 <li>
 <p>Let's run RX so we can make the request to the Auth service:</p>
@@ -8505,7 +8505,7 @@ Also, check that the user is active.</p>
 <p class="admonition-title">Warning</p>
 <p>Remember the password changed before.</p>
 </div>
-<p><a class="glightbox" href="/assets/developer-guide/etendo-rx/tutorial/postman-request.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="postman-request.png" src="/assets/developer-guide/etendo-rx/tutorial/postman-request.png" /></a></p>
+<p><a class="glightbox" href="../../../../assets/developer-guide/etendo-rx/tutorial/postman-request.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="postman-request.png" src="../../../../assets/developer-guide/etendo-rx/tutorial/postman-request.png" /></a></p>
 </li>
 <li>
 <p>Take the token under the response and fill in the <em>token</em> property on the <code>application.properties</code> of the tutorial module.</p>
@@ -8626,7 +8626,7 @@ But first, we will take a look at the class that we just created.</p>
 </span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to configure the Auth service as described on the <a href="/developer-guide/etendo-rx/getting-started/#configure-auth-project">Getting Started</a> page.</p>
+<p>Remember to configure the Auth service as described on the <a href="../../getting-started/#configure-auth-project">Getting Started</a> page.</p>
 </div>
 <h2 id="run-tutorial-project">Run tutorial project</h2>
 <p>Now we are able to run our new microservice. For that, execute the following task:</p>
@@ -8729,7 +8729,7 @@ But first, we will take a look at the class that we just created.</p>
     
     
 
-      <script src="../../../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ebd0bdb7.min.js"></script>
       
     
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
