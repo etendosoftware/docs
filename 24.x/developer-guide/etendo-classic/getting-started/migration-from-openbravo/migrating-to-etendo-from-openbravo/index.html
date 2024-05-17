@@ -4101,6 +4101,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#apply-303-taxes-and-tax-report-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply 303 Taxes and Tax Report Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-390-taxes-and-tax-report-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply 390 Taxes and Tax Report Fixes
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7845,6 +7863,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#apply-303-taxes-and-tax-report-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply 303 Taxes and Tax Report Fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply-390-taxes-and-tax-report-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apply 390 Taxes and Tax Report Fixes
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8180,6 +8216,28 @@ Be careful when changing the attachment configuration, and make sure you have a 
 <p class="admonition-title">Warning</p>
 <p>Make sure above commands are pointing to the correct databases, user and host, and that you have done a backup before executing the command.</p>
 </div>
+<h3 id="apply-303-taxes-and-tax-report-fixes">Apply 303 Taxes and Tax Report Fixes</h3>
+<p>This step is only necessary if the following conditions happen in your environment:</p>
+<ul>
+<li>The <code>org.openbravo.module.aeat303.temporal.taxes.es</code>, <code>org.openbravo.module.aeat303.temporal.taxparameters.es</code>, <code>org.openbravo.localization.spain.referencedata.taxes.es</code> and <code>org.openbravo.module.aeat303.es</code> modules are installed and their datasets applied in the ERP</li>
+<li>You want to update the <code>Spain Localization Extensions</code> bundle to version <code>1.8.0</code> or higher, otherwise, you want to update the afforementioned modules to these versions:<ul>
+<li><code>org.openbravo.localization.spain.referencedata.taxes.es</code>: version <code>1.8.0</code> or higher</li>
+<li><code>org.openbravo.module.aeat303.es</code>: version <code>1.14.0</code> or higher</li>
+</ul>
+</li>
+</ul>
+<p>To solve issues with taxes arising from these modules being migrated from Openbravo to Etendo, refer to the related <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/#ee-808-problem-when-trying-to-import-the-taxes-configuration-for-spain-dataset-if-the-environment-already-has-imported-the-dataset-related-to-the-303-temporary-taxes-of-openbravo">Known Issue</a> </p>
+<h3 id="apply-390-taxes-and-tax-report-fixes">Apply 390 Taxes and Tax Report Fixes</h3>
+<p>This step is only necessary if the following conditions happen in your environment:</p>
+<ul>
+<li>The <code>org.openbravo.module.aeat303.temporal.taxes.es</code>, <code>org.openbravo.module.aeat303.temporal.taxparameters.es</code>, <code>org.openbravo.localization.spain.referencedata.taxes.es</code> and <code>org.openbravo.module.aeat390.es</code> modules are installed and their datasets applied in the ERP</li>
+<li>You want to update the <code>Spain Localization Extensions</code> bundle to version <code>1.8.0</code> or higher, otherwise, you want to update the afforementioned modules to these versions:<ul>
+<li><code>org.openbravo.localization.spain.referencedata.taxes.es</code>: version <code>1.8.0</code> or higher</li>
+<li><code>org.openbravo.module.aeat390.es</code>: version <code>3.9.0</code> or higher</li>
+</ul>
+</li>
+</ul>
+<p>To solve issues with taxes arising from these modules being migrated from Openbravo to Etendo, refer to the related <a href="../../../../../whats-new/release-notes/etendo-classic/known-issues/#ee-856-390-tax-report-dataset-duplicates-data-for-2022-when-applied-on-a-server-migrated-from-ob-to-etendo-after-01-2023">Known Issue</a> </p>
 <h2 id="conclusion">Conclusion</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
