@@ -12,17 +12,19 @@ tags:
 
 ## Overview
 
-The **DDLTool** can register a table on Etendo System through a Copilot chat. It can also create a table on the database by adding mandatory columns and specific columns that the user wants.
+The **DDLTool** is a Python file that can register a table on Etendo System through a Copilot chat. It can also create a table on the database by adding mandatory columns and specific columns that the user wants. After all of these functionalities the tool create and register a window and a menu on the system for the data can be showed.
 
 ## Functionality
 
-The **DDLTool** works with modes, each for a specific action. Users can choose modes using the chat:
+The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode is needed to do the task request by the user, the tool has a variable that contains a list with the availables modes, and with the prompt the assistant choose wich is better for the task.
 
-- **REGISTER_TABLE:** Registers a table on the Etendo System, creating a table header on the system. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. It uses a webhook to execute a Java file to check if a table name is already registered and then sets parameters with Etendo methods.
+Users can choose modes using the chat:
 
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. This query is executed in the database with an Etendo webhook that runs a Java file.
+- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fis the java class name with a camelcase style. The tool uses a webhook to execute a Java file to check if a table name is already registered and then sets parameters with Etendo methods.
 
-- **ADD_COLUMN:** Similar to CREATE_TABLE mode, but modifies the previously created table instead of creating a new one. It chooses a data type for each column and infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint.
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file.
+
+- **ADD_COLUMN:** Similar to CREATE_TABLE mode, but modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint.
 
 - **REGISTER_COLUMNS:** Acts like REGISTER_TABLE and executes automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database by calling a webhook that runs a Java file.
 
