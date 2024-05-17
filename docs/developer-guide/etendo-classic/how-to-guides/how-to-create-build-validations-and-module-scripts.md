@@ -286,7 +286,7 @@ It is possible to define a dependency with two versions of a particular module t
 
 This way, the module script can be executed only when it is really needed, avoiding extra time calculations when updating database.
 
-![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-1.png)
 
 The dependent module and its limit versions can be set by overriding the`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
 
