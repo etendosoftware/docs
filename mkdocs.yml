@@ -455,6 +455,8 @@ nav:
         - How to give public access to RX with Apache2: developer-guide/etendo-rx/how-to-guides/how-to-give-public-access-to-rx-apache.md
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
+      - Assistants:
+        - SQL Expert: developer-guide/etendo-copilot/assistants/sql-expert.md
       - Tools:
         - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
         - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
