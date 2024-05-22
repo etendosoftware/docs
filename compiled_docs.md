@@ -19344,9 +19344,9 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 
 ##### Advanced Business Partner
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19431,9 +19431,9 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 #### Modules
 ##### Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
@@ -19444,9 +19444,9 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 ##### Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
@@ -19456,7 +19456,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 
 ##### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
@@ -19466,7 +19466,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ##### Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
@@ -19475,9 +19475,9 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 ##### Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
@@ -19486,7 +19486,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 
 ##### Dynamic App 
 
-:octicons-package-16: Javapackage: com.etendoerp.dynamic.app
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
@@ -19495,7 +19495,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
         
 ##### EAN 128
 
-:octicons-package-16: Javapackage: com.smf.ean128
+:octicons-package-16: Javapackage: `com.smf.ean128`
 
 EAN 128 allows to use bar code in your application
 
@@ -19504,15 +19504,15 @@ EAN 128 allows to use bar code in your application
 
 ##### Etendo RX
 
-:octicons-package-16: Javapackage: com.etendoerp.etendorx
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
 ##### Etendo Reactor
 
-:octicons-package-16: Javapackage: com.etendoerp.reactor
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ##### Webhook Events
 
-:octicons-package-16: Javapackage: com.etendoerp.webhookevents
+:octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
 
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
@@ -19522,7 +19522,7 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
 
 ##### Etendo Async Processes
 
-:octicons-package-16: Javapackage: com.etendoerp.asyncprocess
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
 
 ---
 
@@ -19682,7 +19682,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ##### Stock History
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 It provides updated information about the daily history stock of the products. 
 
@@ -19691,9 +19691,9 @@ It provides updated information about the daily history stock of the products.
 
 ##### Reactivate Warehouse Documents
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19739,7 +19739,7 @@ This bundle includes enhancements for the Production Management functionalities 
 
 ##### Advanced Work Effort
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.work.effort
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.work.effort`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqq7-LAoK-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 
@@ -19768,9 +19768,9 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 
 ##### Sales Quotation
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation
+:octicons-package-16: Javapackage: `com.etendoerp.quotation`
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation.template
+:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -19782,9 +19782,9 @@ Different functionalities are added to this window which allows the user to make
 
 ##### Advanced Rappels
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced.template
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced.template`
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_iBwlVHvF4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -19813,7 +19813,7 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ##### Accounting Templates
 
-:octicons-package-16: Javapackage: com.etendoerp.accounting.templates
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
 This module allows setting a non deductible tax's amount to a specified financial account
 
@@ -19822,7 +19822,7 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 ##### Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
@@ -19832,11 +19832,11 @@ This process allows keeping currency conversions up to date by generating conver
 
 ##### Currency API Configuration
 
-:octicons-package-16: Javapackage: com.smf.currency.apiconfig
+:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 ##### Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19847,7 +19847,7 @@ This feature allows entering in the system all the financings the company has. I
 
 ##### Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19858,7 +19858,7 @@ This module provides a new document where it is possible to settle debts or cred
 
 ##### Deferred GL Journal
 
-:octicons-package-16: Javapackage: com.etendoerp.gljournal.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19869,7 +19869,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 ##### Financial Advanced Reports
 
-:octicons-package-16: Javapackage: com.etendoerp.financial.reports.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19880,9 +19880,9 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 ##### Payment Removal
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal`
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal.template
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TLbjMLjGYwo?si=uGtWnNHNa7gV4_l5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19907,9 +19907,9 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 ##### Remittances
 
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance`
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance.template
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19920,7 +19920,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 
 ##### Intercompany
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.intercompany
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19931,9 +19931,9 @@ In case the user has to create orders or invoices among two or more organization
 
 ##### Reverse GL Journal
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse`
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse.template
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pfqClq8HD6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19944,7 +19944,7 @@ This functionality is specifically useful for companies that have a month close,
 
 ##### Asset Amortization Report
 
-:octicons-package-16: Javapackage: com.smf.asset.amortization.report
+:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
 
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
@@ -19953,9 +19953,9 @@ The new Amortization report allows downloading excel reports about information o
 
 ##### Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19973,7 +19973,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 
 ##### Bulk Posting
 
-:octicons-package-16: Javapackage: com.etendoerp.bulk.posting
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19984,7 +19984,7 @@ This functionality allows the user to post or unpost multiple records at the sam
 
 ##### Advanced Business Partner Settlement
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.bpsettlement
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -20066,7 +20066,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 #### Incoterms
 
-:octicons-package-16: Javapackage: org.openbravo.module.incoterms
+:octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
 
 Este módulo añade el listado de Incoterms a Etendo Classic.
 
@@ -20074,19 +20074,19 @@ Los Incoterms or International Commercial Terms son una serie de términos de ve
 
 #### European Union Countries
 
-:octicons-package-16: Javapackage: org.openbravo.module.eucountries
+:octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
 
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
 #### Provincias de España
 
-:octicons-package-16: Javapackage: org.openbravo.spain.regions
+:octicons-package-16: Javapackage: `org.openbravo.spain.regions`
 
 Este módulo añade el listado de provincias españolas a Etendo Classic.
 
 #### Legal Representative of the Organization
 
-:octicons-package-16: Javapackage: org.openbravo.module.organization.representative.es
+:octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
 
 Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
 
@@ -20094,7 +20094,7 @@ La pestaña “Representante Legal” que se añade a la ventana de Organizació
 
 #### I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
-:octicons-package-16: Javapackage: org.openbravo.module.epigrafes.iae.es
+:octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
 
 Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
 
@@ -20104,9 +20104,9 @@ En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea
 
 #### CIF and NIF validator
 
-:octicons-package-16: Javapackage: org.openbravo.module.cifnifvalidator
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
 
-:octicons-package-16: Javapackage: org.openbravo.module.cifnifvalidator.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator.es_es`
 
 Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
 
@@ -20114,15 +20114,15 @@ El Número de Identificación Fiscal (NIF) permite identificar de forma inequív
 
 #### Validador de número de cuenta financiera
 
-:octicons-package-16: Javapackage: org.openbravo.module.finactvalidator.es
+:octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
 #### Check Printing
 
-:octicons-package-16: Javapackage: org.openbravo.finance.checkprinting
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
 
-:octicons-package-16: Javapackage: org.openbravo.finance.checkprinting.es_es
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting.es_es`
 
 Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.
 
@@ -20145,21 +20145,21 @@ Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón �
 
 #### Tipo de Número de Identificación de Tercero
 
-:octicons-package-16: Javapackage: org.openbravo.module.bptaxidkey
+:octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
 
 Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
 #### Professional Localization pack Spain (España) Datasets
 
-:octicons-package-16: Javapackage: org.openbravo.proflocalization.spain.dataset
+:octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
 
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
 #### Multidimensional Tax Report
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicetaxreportenhanced30
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicetaxreportenhanced30.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30.es_es`
 
 Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
 
@@ -20169,19 +20169,19 @@ La información obtenida mediante este módulo es útil para que las empresas pu
 
 #### Cuaderno 43
 
-:octicons-package-16: Javapackage: org.openbravo.module.cuaderno43.es
+:octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
 
 Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
 #### 3 digits ISO country codes
 
-:octicons-package-16: Javapackage: org.openbravo.module.countryisocode
+:octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
 
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
 #### Métodos de Pago
 
-:octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentmethods
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
 
 Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
 
@@ -20189,9 +20189,9 @@ El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las e
 
 #### Tax Report Launcher
 
-:octicons-package-16: Javapackage: org.openbravo.module.taxreportlauncher
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
 
-:octicons-package-16: Javapackage: org.openbravo.module.taxreportlauncher.es
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher.es`
 
 Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
 
@@ -20241,9 +20241,9 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 
 #### Spanish Tax Module Improvements
 
-:octicons-package-16: Javapackage: org.openbravo.module.taximprovements.es
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
 
-:octicons-package-16: Javapackage: org.openbravo.module.taximprovements.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es_es`
 
 Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
 
@@ -20258,13 +20258,13 @@ Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplic
 
 #### Condiciones de pago
 
-:octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentterms
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
 
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
 #### Chart of accounts: PGC 2007 General
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
 
 Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
 
@@ -20292,7 +20292,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 
 #### Chart of accounts: PGC 2007 PYMEs
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts.pymes
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
 
 Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
 
@@ -20314,101 +20314,101 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 #### Localization pack Spain (España)
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain30
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
 
 #### Traducción al español del módulo 'Default Jobs'
 
-:octicons-package-16: Javapackage: com.smf.jobs.defaults.es_es
+:octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
 
 #### JSON Datasource Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.service.datasource.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
 
 #### Workspace & Widgets Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.myob.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
 
 #### User Interface Selector Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.userinterface.selector.es_es
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
 
 #### Traducción al Español del módulo Payment Report
 
-:octicons-package-16: Javapackage: org.openbravo.financial.paymentreport.es_es
+:octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
 
 #### Number To Word
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_es
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_es`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword.es_es
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
 
 #### User Interface Client Kernel Translation Spanish Spain(esES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.kernel.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
 
 #### Translation: Spanish-Spain (es_ES) español-España
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.translation.esES
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
 
 #### Openbravo Multi Business Partner Selector
 
-:octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
 
-:octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector.es_es
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
 
 #### Orders Awaiting Delivery Spanish (Spain) Translation
 
-:octicons-package-16: Javapackage: org.openbravo.reports.ordersawaitingdelivery.es_es
+:octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
 
 #### Smartclient Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.userinterface.smartclient.es_es
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
 
 #### Query/List Widget Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.querylist.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
 
 #### Widgets Collection Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.widgets.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
 
 #### Advanced Payables and Receivables - Spanish Translation
 
-:octicons-package-16: Javapackage: org.openbravo.advpaymentmngt.es_es
+:octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
 
 #### User Interface Application Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.application.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
 
 #### Alerts: Accounting
 
-:octicons-package-16: Javapackage: org.openbravo.alerts.accounting30
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
 
-:octicons-package-16: Javapackage: org.openbravo.alerts.accounting30.es_es
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
 
 #### SOAP with Attachments API for Java Implementation
 
-:octicons-package-16: Javapackage: org.openbravo.util.saaj.impl
+:octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
 
 #### Payment Method Type
 
-:octicons-package-16: Javapackage: org.openbravo.module.paymentmethod.type
+:octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
 
 #### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 #### HTML Widget Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.htmlwidget.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
 
 #### OpenID Service Integration Translation Spanish Spain
 
-:octicons-package-16: Javapackage: org.openbravo.service.integration.openid.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
 
 #### Integration with Google APIs Translation Spanish Spain
 
