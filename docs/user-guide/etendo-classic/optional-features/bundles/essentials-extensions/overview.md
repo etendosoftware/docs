@@ -14,9 +14,9 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 
 ### Advanced Business Partner
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

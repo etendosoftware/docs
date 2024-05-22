@@ -19,9 +19,9 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 
 ### Sales Quotation
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation
+:octicons-package-16: Javapackage: `com.etendoerp.quotation`
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation.template
+:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -33,9 +33,9 @@ Different functionalities are added to this window which allows the user to make
 
 ### Advanced Rappels
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced.template
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced.template`
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_iBwlVHvF4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

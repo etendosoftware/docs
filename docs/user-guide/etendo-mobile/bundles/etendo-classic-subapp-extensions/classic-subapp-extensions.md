@@ -140,7 +140,7 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 ## Mobile App Scanning Helpers
 
-:octicons-package-16: Javapackage: com.smf.mobile.scan
+:octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
 Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/user-guide/etendo-mobile/getting-started/) App
 

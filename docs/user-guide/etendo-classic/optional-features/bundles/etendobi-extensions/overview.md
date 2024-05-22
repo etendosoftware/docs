@@ -15,7 +15,7 @@ The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 
 ### Etendo BI Inclusion / Exclusion Module
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.inclusion.exclusion
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEuwiUQbUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -26,7 +26,7 @@ This module allows users to customize and configure the information and filters 
 
 ### Etendo BI Connector Module
 
-:octicons-package-16: Javapackage: com.etendoerp.integration.powerbi
+:octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z9EBff_qBDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -39,4 +39,4 @@ A background process must be set which creates CSV files that will be uploaded t
 
 ### Base Queries for Etendo BI 
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.queries`

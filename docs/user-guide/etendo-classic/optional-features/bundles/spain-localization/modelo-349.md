@@ -3,7 +3,7 @@ title: Modelo 349
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat349.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
 
 ## **Introducción**
 

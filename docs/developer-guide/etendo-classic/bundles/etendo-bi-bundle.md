@@ -2,7 +2,7 @@
 title: Etendo BI Bundle | Technical Documentation
 ---
 
-:octicons-package-16: Javapackage: com.etendoerp.etendobi.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.etendobi.extensions`
 
 ## Overview
 

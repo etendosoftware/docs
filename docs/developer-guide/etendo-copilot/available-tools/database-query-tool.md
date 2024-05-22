@@ -9,7 +9,7 @@ tags:
 
 # Database Query Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 ## Overview
 

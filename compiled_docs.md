@@ -20412,11 +20412,11 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 #### Integration with Google APIs Translation Spanish Spain
 
-:octicons-package-16: Javapackage: org.openbravo.service.integration.google.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
 
 #### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
+:octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -20427,11 +20427,11 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii
+:octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.es_es`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.template
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.template`
 
 #### **Introducción**
 
@@ -22428,7 +22428,7 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat303.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es` <br>
 
 #### **Introducción**
 
@@ -23115,7 +23115,7 @@ Este anexo incluye el listado completo de los rangos de impuestos asociados a lo
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat190.es
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
 
 #### **Introducción**
 
@@ -23658,7 +23658,7 @@ Para ello, el usuario deberá realizar en la aplicación los cambios en los dato
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat349.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
 
 #### **Introducción**
 
@@ -23978,7 +23978,7 @@ Para ello el usuario deberá realizar en la aplicación los cambios en los datos
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.taxes
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
 #### **Introducción**
 
@@ -24370,9 +24370,9 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 ## Article Content: 
 #### Javapackages
 
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat <br>
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat.spain <br>
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat.es.es
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.spain` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.es.es`
 
 #### Introducción
 
@@ -24674,7 +24674,7 @@ El proceso comprobará que haya procesado todas las declaraciones del presente a
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
 
 #### **Introducción**
 
@@ -24985,9 +24985,9 @@ Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introdu
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook`
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.es_es`
 
 #### **Introducción**
 
@@ -25296,7 +25296,7 @@ Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.estaxes
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
 
 #### **Introducción**
 
@@ -25331,7 +25331,7 @@ The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 
 ##### Etendo BI Inclusion / Exclusion Module
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.inclusion.exclusion
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEuwiUQbUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -25342,7 +25342,7 @@ This module allows users to customize and configure the information and filters 
 
 ##### Etendo BI Connector Module
 
-:octicons-package-16: Javapackage: com.etendoerp.integration.powerbi
+:octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z9EBff_qBDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -25355,7 +25355,7 @@ A background process must be set which creates CSV files that will be uploaded t
 
 ##### Base Queries for Etendo BI 
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.queries`
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Inclusion/Exclusion Module Configuration
@@ -27461,7 +27461,7 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 #### Mobile App Scanning Helpers
 
-:octicons-package-16: Javapackage: com.smf.mobile.scan
+:octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
 Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/user-guide/etendo-mobile/getting-started/) App
 
@@ -27750,13 +27750,13 @@ The apps described below belong to preconfigured reference data included in the 
 
 - **Bastian**
 
-    :octicons-package-16: Javapackage: com.etendoerp.copilot
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
     This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
 
 - **Copilot Purchase Expert**
 
-    :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
     This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
 
@@ -27764,7 +27764,7 @@ The apps described below belong to preconfigured reference data included in the 
 
 ##### Etendo Copilot
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot
+:octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
 Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
 
@@ -27773,7 +27773,7 @@ Etendo Copilot is a platform that optimises development time with AI-enabled too
 
 ##### XML Translation Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -27784,7 +27784,7 @@ This tool allows the user to translate the content of an XML file from one langu
 
 ##### Database Query Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
 
@@ -27793,7 +27793,7 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 
 ##### Copilot OCR Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 This module implements the Optical Character Recognition (OCR) tool, capable of reading images and PDF and returning a JSON object with the extracted information.
  
@@ -27802,7 +27802,7 @@ This module implements the Optical Character Recognition (OCR) tool, capable of 
 
 ##### Copilot OpenAPI Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
 This Etendo Copilot tool allows interacting with APIs taking the platform to another level.
 
@@ -27811,7 +27811,7 @@ This Etendo Copilot tool allows interacting with APIs taking the platform to ano
 
 ##### Copilot Purchase Expert
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
 
@@ -27827,9 +27827,9 @@ This module includes an assistant capable of performing operations related to th
 ## Article Content: 
 ### Copilot Purchase Expert
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 
 #### Overview
@@ -39593,9 +39593,9 @@ The Platform Extensions bundle includes the following modules:
 
 #### Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 ##### Technical Aspects
 
@@ -39633,9 +39633,9 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 #### Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 ##### Technical Aspects
 
@@ -39747,7 +39747,7 @@ public class NumberToWord_es extends NumberToWord {
 
 #### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 ##### Technical Aspects
 
@@ -39755,7 +39755,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 #### Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 ##### Technical Aspects
 
@@ -39769,9 +39769,9 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 #### Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 ##### Technical Aspects
 
@@ -40069,7 +40069,7 @@ In this section, the user can find technical information about the Warehouse Ext
 
 #### Stock History 
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 This module is added to the Create Stock History process and has the following characteristics: 
 
@@ -40137,7 +40137,7 @@ In this section, the user can find technical information about the Financial Ext
 
 #### Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 ##### Technical Aspects
 
@@ -40154,7 +40154,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 
 #### Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 ##### **Introduction**
 
@@ -40434,7 +40434,7 @@ Sets to null the `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 #### Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 ##### Overview
 
@@ -40525,9 +40525,9 @@ There is no need to modify any of the 2 buttons, as they automatically execute t
 
 #### Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 ##### Undo Closed orders / Unvoid voided invoices hooks
 
@@ -42007,7 +42007,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 ## Article Content: 
 ### Optical Character Recognition (OCR) Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 #### Overview
 
@@ -42076,9 +42076,9 @@ Remember that the result of the tool can be used in other tools, for example, yo
 ## Article Content: 
 ### OpenAPI Interaction with Copilot
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 
 #### Overview
@@ -42224,7 +42224,7 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 ## Article Content: 
 ### Translation Tool: XMLTranslatorTool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
 #### Overview
 
@@ -42296,7 +42296,7 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 ## Article Content: 
 ### Database Query Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 #### Overview
 

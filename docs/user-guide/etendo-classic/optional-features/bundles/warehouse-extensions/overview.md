@@ -16,7 +16,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ### Stock History
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 It provides updated information about the daily history stock of the products. 
 
@@ -25,9 +25,9 @@ It provides updated information about the daily history stock of the products.
 
 ### Reactivate Warehouse Documents
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

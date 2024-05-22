@@ -17,7 +17,7 @@ This bundle includes enhancements for the Production Management functionalities 
 
 ### Advanced Work Effort
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.work.effort
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.work.effort`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqq7-LAoK-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 

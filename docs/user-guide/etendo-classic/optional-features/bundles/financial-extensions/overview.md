@@ -15,7 +15,7 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ### Accounting Templates
 
-:octicons-package-16: Javapackage: com.etendoerp.accounting.templates
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
 This module allows setting a non deductible tax's amount to a specified financial account
 
@@ -24,7 +24,7 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 ### Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
@@ -34,11 +34,11 @@ This process allows keeping currency conversions up to date by generating conver
 
 ### Currency API Configuration
 
-:octicons-package-16: Javapackage: com.smf.currency.apiconfig
+:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 ### Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -49,7 +49,7 @@ This feature allows entering in the system all the financings the company has. I
 
 ### Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -60,7 +60,7 @@ This module provides a new document where it is possible to settle debts or cred
 
 ### Deferred GL Journal
 
-:octicons-package-16: Javapackage: com.etendoerp.gljournal.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -71,7 +71,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 ### Financial Advanced Reports
 
-:octicons-package-16: Javapackage: com.etendoerp.financial.reports.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -82,9 +82,9 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 ### Payment Removal
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal`
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal.template
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TLbjMLjGYwo?si=uGtWnNHNa7gV4_l5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -109,9 +109,9 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 ### Remittances
 
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance`
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance.template
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -122,7 +122,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 
 ### Intercompany
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.intercompany
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -133,9 +133,9 @@ In case the user has to create orders or invoices among two or more organization
 
 ### Reverse GL Journal
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse`
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse.template
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pfqClq8HD6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -146,7 +146,7 @@ This functionality is specifically useful for companies that have a month close,
 
 ### Asset Amortization Report
 
-:octicons-package-16: Javapackage: com.smf.asset.amortization.report
+:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
 
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
@@ -155,9 +155,9 @@ The new Amortization report allows downloading excel reports about information o
 
 ### Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -175,7 +175,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 
 ### Bulk Posting
 
-:octicons-package-16: Javapackage: com.etendoerp.bulk.posting
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -186,7 +186,7 @@ This functionality allows the user to post or unpost multiple records at the sam
 
 ### Advanced Business Partner Settlement
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.bpsettlement
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
