@@ -3,8 +3,7 @@ title: Spain SII
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: com.smf.ticketbai
-
+:octicons-package-16: Javapackage: `com.smf.ticketbai`
 
 ## **Introducción**
 
@@ -151,11 +150,11 @@ Desde esta ventana, podremos observar todas las facturas que fueron enviadas des
 
 Antes de que se pueda realizar el primer envío, es fundamental configurar el **tipo de documento** de las facturas que se desean enviar a ticketbai.
 
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai/ticketbai-3.png)
 
 1. Ingresar a la ventana **Tipo de documento**, se encontrará un campo denominado **Secuencia de encadenamiento para TBAI**. Esta **Secuencia de encadenamiento para TBAI** nos permitirá llevar un control de las facturas que ya han sido enviadas o que se intentaron enviar a Ticketbai.
 
-
-
+![](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai/ticketbai-4.png)
 
 2. Crear una nueva **Secuencia de encadenamiento para TBAI**, 
 
