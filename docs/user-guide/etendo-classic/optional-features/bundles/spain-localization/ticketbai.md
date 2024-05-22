@@ -20,19 +20,19 @@ El módulo automatiza el proceso de envío de facturas, asegurando que se cumpla
 
 Desde Etendo vamos a poder:
 
-**Enviar automáticamente** los archivos XML a la **Hacienda Foral** con la información necesaria para el registro de facturas.
+- **Enviar automáticamente** los archivos XML a la **Hacienda Foral** con la información necesaria para el registro de facturas.
 
-**Recibir los XML de respuesta** de la Hacienda Foral.
+- **Recibir los XML de respuesta** de la Hacienda Foral.
 
 La obligatoriedad de TicketBAI se aplica a:
 
-**Empresas y profesionales** que realicen actividades económicas y estén sujetos al **Impuesto sobre el Valor Añadido (IVA)** o al **Impuesto sobre Actividades Económicas (IAE)**.
+- **Empresas y profesionales** que realicen actividades económicas y estén sujetos al **Impuesto sobre el Valor Añadido (IVA)** o al **Impuesto sobre Actividades Económicas (IAE)**.
 
-**Contribuyentes** que, independientemente de su tamaño, deban emitir facturas o documentos equivalentes.
+- **Contribuyentes** que, independientemente de su tamaño, deban emitir facturas o documentos equivalentes.
 
 Las ventajas de TicketBAI para el contribuyente incluyen:
 
-**Reducción de las obligaciones formales**, eliminando la necesidad de presentar ciertos modelos fiscales.
+- **Reducción de las obligaciones formales**, eliminando la necesidad de presentar ciertos modelos fiscales.
 
 
 ## **Contenido del Módulo**
@@ -41,7 +41,7 @@ Al instalar este módulo, el usuario podrá comprobar que:
 
 1.  Se crearan nuevas pantallas 
     1.  **Configuración TBAI**, en la que se podrán configurar todos los parámetros necesarios para el envío correcto de los registros de facturas a Ticketbai en el que se incluye el desinto (Bizkaia o Gipuzkoa).
-    2.  **Destinos TBAI**, en el que se podrán configurar todos los parametros necesarios  para la correcta contruccion del XML para el envio de `Bizkaia` o `Gipuzkoa`, tales como el certificado, la licencia, urls de pruebas o produccion, etc.
+    2.  **Destinos TBAI**, en el que se podrán configurar todos los parametros necesarios  para la correcta contruccion del XML para el envio de Bizkaia o Gipuzkoa, tales como el certificado, la licencia, urls de pruebas o produccion, etc.
     3.  **TBAI Facturas Enviadas**, en el que se podra revisar el historial completo de todas las facturas enviadas a Ticketbai.
 2.  Se crean nuevos **campos y pestañas relativos a Ticketbai** en la ventana de **Factura (Cliente)**, con el fin de añadir la información requerida por parte de Ticketbai, respecto del **Alta** del registro de las facturas.
 3.  Igualmente, se añade un boton en las ventana de **Factura (Cliente)**, con el fin de dar de alta (Registrar factura en TBAI).
@@ -54,13 +54,13 @@ A partir de aqui se va a explicar la forma correcta de configurar las ventanas *
 
 ### Destinos TBAI
 
-En esta ventana se podrá configurar todos los parametros necesarios  para la correcta contruccion del XML para el envio de `Bizkaia` o `Gipuzkoa`.
+En esta ventana se podrá configurar todos los parametros necesarios  para la correcta contruccion del XML para el envio de Bizkaia o Gipuzkoa.
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/spain-localization/ticketbai/ticketbai-0.png)
 
 - **Organización**: organización (entidad legal) para la que se configura el envío de registros a Ticketbai.Seleccionada una entidad legal (con o sin contabilidad), todas sus organizaciones **hijas** quedarán igualmente acogidas a Ticketbai.
 
-- **Nombre de destino**: nombre que tendra el destino preferentemente `Bizkaia` o `Gipuzkoa`, tambien algun nombre personalizado.
+- **Nombre de destino**: nombre que tendra el destino preferentemente Bizkaia o Gipuzkoa, tambien algun nombre personalizado.
 
 - **Paquete java**: es el valor que ingresaremos para enviar a Gipuzkoa o a Bizkaia.
 
@@ -163,4 +163,5 @@ Completamos el campo **name** con el nombre que consideremos apropiado.
 
 Activamos el campo **Auto Numbering** sin modificar los nuevos campos que se van a mostrar.
 
-Con eso ya contamos con todo lo necesario para enviar una factura a Ticketbai.
+!!!success
+    Con eso ya contamos con todo lo necesario para enviar una factura a Ticketbai.
