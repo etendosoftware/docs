@@ -7,27 +7,27 @@ tags:
 ---
 
 
-#  How to create client side callout onchange function
+#  How to Create Client Side Callout OnChange Function
 
   
 ##  Overview
 
-This how-to discusses how to implement client side (javascript) functions which
+This section discusses how to implement **client side (javascript) functions** which
 are executed when a field value in the user interface changes. The onChange
-concept corresponds to the traditional  callout  , the main difference is that
-the onChange functionality is implemented on the client. This gives the
+concept corresponds to the traditional [callout](How_to_create_a_Callout.md), the main difference is that
+the **onChange functionality is implemented on the client**. This gives the
 following advantages:
 
   * better performance as for many actions no server side call is needed 
   * direct access to user interface components such as field, the form and the grid 
 
 In addition the onChange function has all the benefits of the classic callout,
-you can still call the server to execute more performance intensive actions or
+you can still **call the server** to execute more performance intensive actions or
 do queries.
 
 ##  Example Module
 
-This how-to is supported by an example module which shows examples of the code
+This section is supported by an example module which shows examples of the code
 shown and discussed.
 
 The code of the example module can be downloaded from this mercurial
@@ -107,9 +107,8 @@ additional flexibility.
 ###  Setting an OnChange function through the AD
 
 The Application Dictionary allows you to set the OnChange for a specific
-field, see the OnChange function field in the Window, Tabs and Fields window:
+field, see the OnChange function field in the `Window, Tabs and Fields` window.  
 
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_client_side_callout_onchange_function-0.png){: .legacy-image-style}
@@ -119,7 +118,7 @@ The value should be the unique global ID mentioned above.
 
 ###  Programmatic registration of OnChange functions
 
-It is also possible register an OnChange function through javascript. This
+It is also possible register an **OnChange function through javascript**. This
 offers more flexibility than defining through the Application Dictionary:
 
   * you can add OnChange functions to existing Fields without changing the information in the table 
@@ -162,7 +161,7 @@ Some notes on sorting:
 An OnChange can be registered using an id. If there is already an OnChange
 with the same id then it is replaced by the new registration.
 
-The OnChange defined through the Application Dictionary has the id 'default'.
+The OnChange defined through the Application Dictionary has the id **default**.
 So by registering a new OnChange using that id you will overwrite the OnChange
 defined through the Application Dictionary.
 
@@ -204,10 +203,8 @@ following applies:
 ##  Example Module: example window
 
 The Example Module has an example window with several examples of a
-callout/onchange function. You can find the example window in Application
-Examples > Callout/OnChange Function.
+callout/onchange function. You can find the example window in `Application Examples` >`Callout/OnChange Function`. 
 
-  
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_create_client_side_callout_onchange_function-1.png){: .legacy-image-style}
@@ -222,7 +219,7 @@ fields. You should see automatic behavior.
 guides/How_to_create_client_side_callout_onchange_function-2.png){: .legacy-image-style}
 
   
-You can enable/disable different onchange functions by going into the
+You can **enable/disable** different onchange functions by going into the
 web/org.openbravo.client.application.examples/js/example-onchange.js  file and
 uncomment some of the commented lines.
 
