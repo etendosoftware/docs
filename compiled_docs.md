@@ -44321,7 +44321,8 @@ Article URL: https://etendo.software
 
 | Release notes | Publication date | Version | Status | ISO Image | GitHub |
 | ---           | ---              | ---     | ---    | ---       | :---:  |
-| [24Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.5){target="_blank"} | 10/05/2024 | 24.1.5 | QAA |  | :white_check_mark: |
+| [24Q1.6](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.6){target="_blank"} | 17/05/2024 | 24.1.6 | QAA |  | :white_check_mark: |
+| [24Q1.5](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.5){target="_blank"} | 10/05/2024 | 24.1.5 | C |  | :white_check_mark: |
 | [24Q1.4](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.4){target="_blank"} | 03/05/2024 | 24.1.4 | C | [24Q1.4.iso](https://etendo-appliances.s3.eu-west-1.amazonaws.com/etendo/iso/etendo-24Q1.4.iso){target="_blank"} | :white_check_mark: |
 | [24Q1.3](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.3){target="_blank"} | 19/04/2024 | 24.1.3 | C |  | :white_check_mark: |
 | [24Q1.2](https://github.com/etendosoftware/etendo_core/releases/tag/24.1.2){target="_blank"} | 12/04/2024 | 24.1.2 | C |  | :white_check_mark: |
@@ -44442,7 +44443,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.16.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.16.0){target="_blank"} | 20/05/2024 | 23.2.0 | 24.1.x | CS | :white_check_mark: |
+| [1.15.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.15.0){target="_blank"} | 08/05/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.14.0](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.14.0){target="_blank"} | 29/03/2024 | 23.2.0 | 24.1.x | C | :white_check_mark: |
 | [1.13.3](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.3){target="_blank"} | 22/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
 | [1.13.2](https://github.com/etendosoftware/com.etendoerp.platform.extensions/releases/tag/1.13.2){target="_blank"} | 15/03/2024 | 23.2.0 | 23.4.x | C | :white_check_mark: |
@@ -44475,7 +44477,8 @@ Article URL: https://etendo.software
 
 | Version | Publication Date | From Core | To Core | Status | GitHub |
 | --- | --- | --- | --- | --- | :---: |
-| [1.6.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 21.4.0 | 24.1.x | CS | :white_check_mark: |
+| [1.6.1](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.1){target="_blank"} | 17/05/2024 | 21.4.0 | 24.1.x | CS | :white_check_mark: |
+| [1.6.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.6.0){target="_blank"} | 29/03/2024 | 21.4.0 | 24.1.x | C | :white_check_mark: |
 | [1.5.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.5.0){target="_blank"} | 29/12/2023 | 21.4.0 | 23.4.x | C | :white_check_mark: |
 | [1.4.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.4.0){target="_blank"} | 29/09/2023 | 21.4.0 | 23.3.x | C | :white_check_mark: |
 | [1.3.0](https://github.com/etendosoftware/com.etendoerp.warehouse.extensions/releases/tag/1.3.0){target="_blank"} | 27/06/2023 | 21.4.0 | 23.2.8 | C | :white_check_mark: |
@@ -44590,7 +44593,8 @@ Article URL: https://etendo.software
 
 | Versión | Fecha de Publicación | Desde Core | Hasta Core | Estado | GitHub |
 | :--- | :--- | :--- | :--- | :---: | :---: |
-| [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.11.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.1){target="_blank"} | 17/05/2024 | 22.4.3 | 24.1.x | CS | :white_check_mark: |
+| [1.11.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.11.0){target="_blank"} | 03/05/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.1](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.1){target="_blank"} | 19/04/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.10.0](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.10.0){target="_blank"} | 28/03/2024 | 22.4.3 | 24.1.x | C | :white_check_mark: |
 | [1.9.4](https://github.com/etendosoftware/com.etendoerp.localization.spain.extensions/releases/tag/1.9.4){target="_blank"} | 15/03/2024 | 22.4.3 | 23.4.x | C | :white_check_mark: |
@@ -44990,7 +44994,9 @@ This page displays the known issues reported by the support team.
 
 | Version | Publication Date | From Core | To Core | Status | GitHub|
 | --- | --- | --- | --- | :---: | :---: |
-| [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | CS   | :white_check_mark:|
+| [1.1.1](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.1){target="_blank"} | 21/05/2024 | 23.4.0 | * | CS | :white_check_mark: |
+| [1.1.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.1.0){target="_blank"} | 20/05/2024 | 23.4.0 | * | C | :white_check_mark: |
+| [1.0.0](https://github.com/etendosoftware/com.etendoerp.copilot.extensions/releases/tag/1.0.0){target="_blank"} | 29/04/2024 | 23.4.0 | * | C   | :white_check_mark:|
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Copilot Extensions ES
