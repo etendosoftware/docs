@@ -374,10 +374,9 @@ nav:
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
 #        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
-#        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
+        - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function.md
 #        - How to create build validations and module scripts: developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts.md
 #        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/How_to_create_client_event_handler_actions.md
-        - How to Create Client Side Callout Onchange Function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
 #        - How to Create new attachment method: developer-guide/etendo-classic/how-to-guides/How_to_Create_new_attachment_method.md
         - How to Create Scan Process: developer-guide/etendo-classic/how-to-guides/how-to-create-scan-process.md
