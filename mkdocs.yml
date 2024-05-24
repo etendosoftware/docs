@@ -263,7 +263,7 @@ nav:
 #        - Categories: developer-guide/etendo-classic/concepts/Categories.md
 #        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
-#        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-aip.md
+#        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
 #        - Cluster Development Guidelines: developer-guide/etendo-classic/concepts/Cluster_Development_Guidelines.md
 #        - Code Review Process: developer-guide/etendo-classic/concepts/Code_Review_Process.md
 #        - Common Issues Tips and Tricks: developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md
@@ -342,7 +342,7 @@ nav:
         - How to Create a Dataset: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Dataset.md
 #        - How to create a Datasource Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Datasource_Widget.md
         - How to Create a Page in Etendo Documentation: developer-guide/etendo-classic/how-to-guides/how-to-create-a-page-in-etendo-documentation.md
-#        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/How_to_create_a_HQL_Based_Table.md
+#        - How to create a HQL Based Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-hql-based-table.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Java Based Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Java_Based_Process.md
 #        - How to create a Manual UI Process: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Manual_UI_Process.md
@@ -353,14 +353,14 @@ nav:
 #        - How to create a navigation rule: developer-guide/etendo-classic/how-to-guides/How_to_create_a_navigation_rule.md
 #        - How to create a new REST webservice: developer-guide/etendo-classic/how-to-guides/How_to_create_a_new_REST_webservice.md
 #        - How to create a New Skin: developer-guide/etendo-classic/how-to-guides/How_to_create_a_New_Skin.md
-#        - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
+        - How to Create a Pick and Execute Process: developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process.md
 #        - How to create a QueryList Widget: developer-guide/etendo-classic/how-to-guides/How_to_create_a_QueryList_Widget.md
         - How to create a Report: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report.md
 #        - How to create a Report using Process Definition: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_using_Process_Definition.md
 #        - How to create a Report with iReport: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report_with_iReport.md
         - How to Create a Standard Process Definition: developer-guide/etendo-classic/how-to-guides/how-to-create-a-standard-process-definition.md
 #        - How to create a Stored Procedure: developer-guide/etendo-classic/how-to-guides/How_to_create_a_Stored_Procedure.md
-#        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Table_Based_on_a_User_Defined_Datasource.md
+#        - How to Create a Table Based on a User Defined Datasource: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table-based-on-a-user-defined-datasource.md
         - How to Create a Table: developer-guide/etendo-classic/how-to-guides/how-to-create-a-table.md
 #        - How to Create a Tree Selector: developer-guide/etendo-classic/how-to-guides/How_to_Create_a_Tree_Selector.md
 #        - How To Create a Trigger: developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Trigger.md
@@ -373,7 +373,7 @@ nav:
 #        - How to Create And Update Business Entities Using Web Services: developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services.md
         - How to Create and Update Translation Modules: developer-guide/etendo-classic/how-to-guides/how-to-create-and-update-translation-modules.md
         - How to Create Build Validations and Module Scripts: developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts.md
-#        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/How_to_create_client_event_handler_actions.md
+#        - How to create client event handler actions: developer-guide/etendo-classic/how-to-guides/how-to-create-client-event-handler-actions.md
 #        - How to create client side callout onchange function: developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function.md
         - How to Create Jobs and Actions: developer-guide/etendo-classic/how-to-guides/how-to-create-jobs-and-actions.md
 #        - How to Create new attachment method: developer-guide/etendo-classic/how-to-guides/How_to_Create_new_attachment_method.md
