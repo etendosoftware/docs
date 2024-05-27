@@ -34,7 +34,7 @@ The structure for standard windows consists in **Windows**, **Tabs** and **Field
   * [**Fields**](#fields): Fields are contained within tabs. Each field is associated to a [Column](../concepts/data_model.md#columns_in_application_dictionary) in the same table than its tab. 
 
 
-![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-0.png)
 
   
 The following sections explain how **Windows**, **Tabs** and **Fields** are defined. They are managed from `Application Dictionary` > `Windows, Tabs, and Fields` window.
@@ -105,10 +105,9 @@ There are three possible ways of setting which is the master column in the paren
 
 All WAD generated tabs implement a simple [Optimistic locking mechanism](https://en.wikipedia.org/wiki/Optimistic_concurrency_control){target="\_blank"}.
 
-When a record is loaded in edition mode, its _updated_ timestamp is stored. If the record is modified and saved, this stored timestamp is compared with the current one in database for that record. In case they are different, that record has been modified by another user or process and the application does not allow to save the current modifications. Because otherwise, the
-modifications done from the record was loaded till the current time would be overwritten.
+When a record is loaded in edition mode, its _updated_ timestamp is stored. If the record is modified and saved, this stored timestamp is compared with the current one in database for that record. In case they are different, that record has been modified by another user or process and the application does not allow to save the current modifications. Because otherwise, the modifications done from the record was loaded till the current time would be overwritten.
 
-![](/assets/developer-guide/etendo-classic/concepts/Standard_Windows-1.png){:.legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-1.png)
 
 #####  Transactional Windows
 
@@ -116,8 +115,7 @@ Windows for documents can be set as **Transactional**. Documents have a status, 
 
 When a transactional window is accessed, it appears filtered by default. This is visualized using a message and a small funnel icon on the top right.
 
-![](/assets/developer-guide/etendo-classic/concepts/Standard_Windows-2.png){: .legacy-image-style}
-
+![](../../../assets/developer-guide/etendo-classic/concepts/Standard_Windows-2.png)
   
 The applied filter is all the documents with status Draft or which date is in the defined **Transaction Range**. To clear the filter, click the funnel icon.
 
@@ -134,7 +132,7 @@ When a table is set defined as High Volume (in `Application Dictionary` > `Table
 In `Application Dictionary` > `Windows, Tabs, and Fields` > `Window` > `tab` tab there is a **Filter Clause** field,  HQL Filter Clause. This field allows HQL where clauses to be used as default filter for the tab. When the tab is accessed this filter is applied, to remove it just click on the funnel filter icon.
 
 !!!note
-   This field is different than the _HQL Where Clause_ which also accepts where clauses, but this clause is permanent and cannot be removed by the user.
+    This field is different than the _HQL Where Clause_ which also accepts where clauses, but this clause is permanent and cannot be removed by the user.
 
 ##  Fields
 
