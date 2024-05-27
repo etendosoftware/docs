@@ -71,11 +71,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/concepts/client-side-development-and-aip/</loc>
-         <lastmod>2024-05-27</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/concepts/etendo-architecture/</loc>
          <lastmod>2024-05-27</lastmod>
          <changefreq>daily</changefreq>
@@ -302,6 +297,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-create-build-validations-and-module-scripts/</loc>
+         <lastmod>2024-05-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function/</loc>
          <lastmod>2024-05-27</lastmod>
          <changefreq>daily</changefreq>
     </url>

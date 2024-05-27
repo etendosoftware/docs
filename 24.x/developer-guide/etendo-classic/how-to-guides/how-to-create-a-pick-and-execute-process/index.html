@@ -4934,7 +4934,7 @@
         
   
   <span class="md-ellipsis">
-    How to create a Report
+    How to Create a Report
   </span>
   
 
@@ -5098,6 +5098,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-create-client-side-callout-onchange-function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Create Client Side Callout Onchange Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-create-jobs-and-actions/" class="md-nav__link">
         
   
@@ -5152,10 +5173,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_26" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3_27" >
         
           
-          <label class="md-nav__link" for="__nav_4_2_3_26" id="__nav_4_2_3_26_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_3_27" id="__nav_4_2_3_27_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5166,8 +5187,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_26_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2_3_26">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_2_3_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3_27">
             <span class="md-nav__icon md-icon"></span>
             How to Create Test Cases
           </label>
@@ -8101,13 +8122,13 @@ development:</p>
 <p>A new column is required to be associated to a button.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>For more information, visit <a href="how-to-add-a-field-to-a-window-tab">How to add a field to a Window Tab</a>.</p>
+</div>
 <ol>
 <li>
 <p>Create a new column in the <code>C_Order</code> table. <code>PostgreSQL</code> syntax:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>`ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1)`;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>`ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT &#39;N&#39;::bpchar`;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1);
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT &#39;N&#39;::bpchar;
 </span></code></pre></div>
 </li>
 <li>
@@ -8209,8 +8230,8 @@ development:</p>
 <code>M_RM_RECEIPT_PICK_EDIT.xml</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>When registering the column in the Application Dictionary the <strong>Yes/No</strong> reference must be used.</p>
+</div>
 <h3 id="validation-function">Validation Function</h3>
 <p>Define at Field level, a JavaScript validation function. In an editable field when the user enters a value, this function will get executed.</p>
 <ol>
@@ -8254,14 +8275,14 @@ development:</p>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">};</span>
 </span></code></pre></div>
 <p>If you want to change any value of the selected record, use the following instruction:</p>
-<div class="language-text highlight"><pre><span></span><code>grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
-</code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">grid</span><span class="p">.</span><span class="nx">setEditValue</span><span class="p">(</span><span class="nx">grid</span><span class="p">.</span><span class="nx">getRecordIndex</span><span class="p">(</span><span class="nx">record</span><span class="p">),</span><span class="w"> </span><span class="nx">columnName</span><span class="p">,</span><span class="w"> </span><span class="nx">newColumnValue</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="performing-several-actions-after-execution">Performing Several Actions after Execution</h3>
 <p>After the process is executed, a series of actions can be taken.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>For more information about several actions after execution, see <a href="../how-to-create-a-standard-process-definition/">How to create a Standard Process Definition</a>.</p>
+</div>
 <p>This work is a derivative of <a href="http://wiki.openbravo.com/wiki/How_to_create_a_Pick_and_Execute_Process" target="_blank">How to create a Pick and Execute Process</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
