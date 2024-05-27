@@ -134,6 +134,10 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 !!!info
     For more information, visit [Role](../../user-guide/etendo-classic/basic-features/general-setup/security.md#role).
 
+## Webhook Window
+  Some tools require to communicate with Etendo through WebHooks, so it is necessary to configure the access for each role in the WebHook window.
+  For example, for the Database Query Tool, the WebHook "DBQueryExec" is used, to the Role that will use this tool in an assistant, it is necessary to configure the access to this WebHook.
+  ![WebHook](../../assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
 ## Process Request Window
 
 Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
