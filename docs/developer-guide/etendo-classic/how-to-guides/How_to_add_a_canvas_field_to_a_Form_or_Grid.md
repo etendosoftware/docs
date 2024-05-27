@@ -39,7 +39,7 @@ It also makes sense to study the following page: [Etendo Architecture](../concep
 
 This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this repository: [org.openbravo.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip)
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
 ##  Main development steps for creating a new canvas field
 
