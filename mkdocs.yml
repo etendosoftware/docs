@@ -306,7 +306,7 @@ nav:
         - Tables: developer-guide/etendo-classic/concepts/Tables.md
 #        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/User_Interface_Design_Guidelines.md
 #        - Widgets: developer-guide/etendo-classic/concepts/Widgets.md
-#        - XML REST Web Services: developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md
+        - XML REST Web Services: developer-guide/etendo-classic/concepts/xml-rest-web-services.md
       - How to guides:
 #        - Categories: developer-guide/etendo-classic/how-to-guides/Categories.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/how-to-guides/Category_Developers_Guide.md
