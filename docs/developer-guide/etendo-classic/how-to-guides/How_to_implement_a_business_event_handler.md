@@ -40,7 +40,7 @@ In this section, we will implement an event handler on the Greeting entity. When
 
 This section is supported by an example module which shows an example of the code shown and discussed here.
 
-The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
   
 ##  The event handler - A first implementation
 
@@ -348,7 +348,7 @@ various locations, here are some examples:
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
 
-The complete source code of the example event handler is available [here](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The complete source code of the example event handler is available here [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
 ---
 

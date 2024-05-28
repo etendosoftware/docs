@@ -108,13 +108,13 @@ Window Reference is an implementation of a **rich parameter**.
 A new column is required to be associated to a button.
 
 !!!info
-For more information, visit [How to add a field to a Window Tab](how-to-add-a-field-to-a-window-tab).
+    For more information, visit [How to add a field to a Window Tab](how-to-add-a-field-to-a-window-tab).
 
 1. Create a new column in the `C_Order` table. `PostgreSQL` syntax:
 
     ```
-    `ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1)`;
-    `ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT 'N'::bpchar`;
+    ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1);
+    ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT 'N'::bpchar;
     ```
 
 2. Go to: Tables and Columns
@@ -224,7 +224,7 @@ The data-source (table or view) defined in the Tab, can set which rows will be s
 `M_RM_RECEIPT_PICK_EDIT.xml`.
 
 !!!note
-When registering the column in the Application Dictionary the **Yes/No** reference must be used.
+    When registering the column in the Application Dictionary the **Yes/No** reference must be used.
 
 ### Validation Function
 
@@ -280,13 +280,15 @@ OB.OBHT.selectionChanged = function (grid, record, recordList) {
 
 If you want to change any value of the selected record, use the following instruction:
 
-    grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
+```javascript
+grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
+```
 
 ### Performing Several Actions after Execution
 
 After the process is executed, a series of actions can be taken.
 
 !!!info
-For more information about several actions after execution, see [How to create a Standard Process Definition](how-to-create-a-standard-process-definition.md).
+    For more information about several actions after execution, see [How to create a Standard Process Definition](how-to-create-a-standard-process-definition.md).
 
 This work is a derivative of [How to create a Pick and Execute Process](http://wiki.openbravo.com/wiki/How_to_create_a_Pick_and_Execute_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
