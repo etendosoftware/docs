@@ -326,6 +326,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields/</loc>
+         <lastmod>2024-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-use-secure-webservices/</loc>
          <lastmod>2024-05-28</lastmod>
          <changefreq>daily</changefreq>
