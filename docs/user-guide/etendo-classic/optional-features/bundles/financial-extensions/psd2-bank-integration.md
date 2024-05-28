@@ -17,7 +17,7 @@ This section serves as a guide for users to understand the functionality and usa
 
 ## Connect to the Bank
 
-In the Financial Account window, Etendo shows every account’s imported bank statement with its corresponding bank statement details listed in the **Bank Statement Lines tab**. Through this module, it is possible to directly connect to the bank through the IBAN (International Bank Account Number) and link it with the bank’s internal ID to automatically create and generate the bank statements. 
+In the Financial Account window in `financial management`> `receivables and payables` >`transactions`>`financial account`, Etendo shows every account’s imported bank statement with its corresponding bank statement details listed in the **Bank Statement Lines tab**. Through this module, it is possible to directly connect to the bank through the IBAN (International Bank Account Number) and link it with the bank’s internal ID to automatically create and generate the bank statements. 
 
 
 ![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/financial-extensions/psd2-bank-integration-0.png)
