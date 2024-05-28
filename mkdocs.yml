@@ -456,6 +456,7 @@ nav:
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Assistants:
+        - Dev Assistant: developer-guide/etendo-copilot/available-assistants/dev-assistant.md
         - SQL Expert: developer-guide/etendo-copilot/available-assistants/sql-expert.md
       - Tools:
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md

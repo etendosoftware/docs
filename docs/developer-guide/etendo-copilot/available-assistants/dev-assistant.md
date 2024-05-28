@@ -17,7 +17,9 @@ This intelligent Assistant is designed to help users to automate the process of 
 
 ## Components
 The Dev Assistant is composed of the following components:
+
 - **DDL** tool: This tools allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+
 - Multiples Webhooks: These webhooks are used to run the java files that modify the fields on the Etendo ERP and execute the queries generated previously. These webhooks are: RegisterTable, CreateTable, RegisterFields, RegisterWindowAndTab, RegisterColumns, ElementsHandler, SyncTerms.
 
 
@@ -82,9 +84,11 @@ It's strongly recommended to compile and restart Etendo to apply all changes eff
 
 ![ddltool1.png](../../../assets/developer-guide/etendo-copilot/available-tools/DDLTool1.png)
 
-**With the task complete, it is necessary restart Etendo**
+**With the task complete, it is necessary recompile with a smartbuild and restart Tomcat**
 
 ![ddltool2.png](../../../assets/developer-guide/etendo-copilot/available-tools/DDLTool2.png)
+
+    ./gradlew smartbuild --info
 
 ![ddltool3.png](../../../assets/developer-guide/etendo-copilot/available-tools/DDLTool3.png)
 
