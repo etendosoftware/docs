@@ -9,17 +9,17 @@ tags:
 
 ##  Overview
 
-This section describes the Etendo JSON REST functionality as it is provided by the  Etendo JSON REST module. The JSON REST functionality consists of 2 main parts: 
+This section describes the [Etendo JSON REST](https://github.com/etendosoftware/etendo_core/blob/main/web/js/dojotoolkit/dojox/rpc/JsonRest.js) functionality as it is provided by the  Etendo JSON REST module. The JSON REST functionality consists of 2 main parts: 
 
 1. the JSON REST webservice, and 
 2. the underlying classes used to provide this service (mainly business object to JSON converters and back). 
 
 As a developer you can integrate directly with the JSON REST webservice or develop your own webservice making use of the core JSON REST classes.
 
-As a side note the JSON format expected and returned by this webservice follows the format as used by  Smartclient. For more information on what the Smartclient json syntax see these links:
+As a side note the JSON format expected and returned by this webservice follows the format as used by  [Smartclient](https://smartclient.com/){target="\_blank"}. For more information on what the Smartclient json syntax see these links:
 
-  - Smartclient Client Server Integration 
-  - Smartclient REST Datasource 
+  - [Smartclient Client Server Integration](https://smartclient.com/smartclient-release/isomorphic/system/reference/?id=class..clientDataIntegration){target="\_blank"}
+  - [Smartclient REST Datasource](https://smartclient.com/smartclient-release/isomorphic/system/reference/?id=class..RestDataSource){target="\_blank"}
 
 This functionality is not provided by Etendo core but by the Etendo JSON REST module which you have to install separately. The module is available through the central repository or can be downloaded from the forge here.
 
@@ -55,10 +55,10 @@ Formatted JSON(better readability):
 To convert a business object to JSON, the logic iterates over all properties (except list/one-to-many properties) of the object and applies the following logic:
 
   * the property name is used as the name of the JSON field/key name 
-  * a null value is set to JSONObject.NULL 
+  * a null value is set to `JSONObject.NULL`
   * a date or date time property is converted to a string using the xml schema format (e.g. yyyy-MM-dd'T'HH:mm:ss.S) 
   * other primitive typed properties (string, numeric) are converted using JSON itself. 
-  * a reference to another object is 'jsonified' by creating a JSON object with a limited set of properties: the id, _identifier, entityName $ref, active (see the description of special properties above). For example the following JSON-snippet shows a reference for a property called 'language': 
+  * a reference to another object is 'jsonified' by creating a JSON object with a limited set of properties: the id, _identifier, entityName $ref, active (see the description of special properties above). For example the following JSON-snippet shows a reference for a property called **language**: 
 
     
     
@@ -70,7 +70,7 @@ To convert a business object to JSON, the logic iterates over all properties (ex
        "active":true
     }
 
-Note that list/one-to-many properties are not converted. So for example, when an invoice is converted to JSON then its invoice lines won't be present in the JSON string. The invoice lines can be retrieved with a separate JSON request.
+Note that list/one-to-many properties are not converted. So for example, when an invoice is converted to JSON then its invoice lines are not present in the JSON string. The invoice lines can be retrieved with a separate JSON request.
 
 Here you can find an example of the Country object (with id 100) converted to JSON:
 
@@ -127,7 +127,7 @@ The conversion logic goes through the following steps:
   1. the logic checks if the JSON object contains an id and _entityName value. If so, it tries to read the object from the database. If not set or not found in the database, a new object is created. The object is stored in memory using the id found in the JSON object, this allows other JSON objects in the same conversion batch to use/refer to that id. 
   2. then for each property of the object (except list/one-to-many) it is checked if the JSON object contains a value for that property. 
 
-if there is a value then depending if it is a primitive or a reference property it is handled differently.
+if there is a value then, depending if it is a primitive or a reference property, it is handled differently.
 
   1. A primitive value is converted by JSON itself except for date values. These are converted using date formatters using the XML Schema format pattern. 
   2. A reference value is treated differently. It is assumed that the value of a reference property in JSON is also a JSON Object. If it has an id value, then this is used to search in the in-memory map (and found there if the object was already converted earlier). If not found in the in-memory map, then the refered JSON object is converted using this same logic as discussed in the steps here (so first search in the database then create a new one) and the returned BaseOBObject is considered the value set in the property. If found in the database or already converted earlier then that BaseOBObject is used. 
@@ -144,13 +144,13 @@ The conversion logic in general converts all properties. In addition, the logic 
 
 A get request can be used to retrieve information in different ways:
 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country  : this will return all countries 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100  : this will return one country (the one with id 100) 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100?_selectedProperties=id,name  : only the id and the name properties will be returned for the country with id 100 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_startRow=10&_endRow=50&_sortBy=name  : this will return 40 countries (rows 10 to 50) sorted by name 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_where=currency.iSOCode='USD'  : returns all countries which have a currency with the isocode USD. The _where parameter can contain a valid HQL where-clause. 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/FinancialMgmtPeriod?_where=_computedColumns.status='P'  : returns all the periods in _Permanently closed_ status (P). Note that when referencing to a property based on a computed column ( _status_ ), it must be referenced starting from the __computedColumns_ property. 
-  * https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_noActiveFilter=true  : The inactive records will be shown. The parameter "_noActiveFilter" can be set to false for avoiding to show the inactive records. 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country)  : this will return all countries 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100)  : this will return one country (the one with id 100) 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100?_selectedProperties=id,name](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country/100?_selectedProperties=id,name)  : only the id and the name properties will be returned for the country with id 100 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_startRow=10&_endRow=50&_sortBy=name](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_startRow=10&_endRow=50&_sortBy=name)  : this will return 40 countries (rows 10 to 50) sorted by name 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_where=currency.iSOCode='USD](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_where=currency.iSOCode='USD')'  : returns all countries which have a currency with the isocode USD. The _where parameter can contain a valid HQL where-clause. 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/FinancialMgmtPeriod?_where=_computedColumns.status='P'](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/FinancialMgmtPeriod?_where=_computedColumns.status='P')  : returns all the periods in _Permanently closed_ status (P). Note that when referencing to a property based on a computed column ( _status_ ), it must be referenced starting from the __computedColumns_ property. 
+  * [https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_noActiveFilter=true](https://livebuilds.openbravo.com/erp_pi_pgsql/org.openbravo.service.json.jsonrest/Country?_noActiveFilter=true)  : The inactive records will be shown. The parameter "_noActiveFilter" can be set to false for avoiding to show the inactive records. 
 
 Different types of requests will return a slightly different result. The request for a single object (the first one above) returns a single JSON object:
 
@@ -242,13 +242,13 @@ Get requests that fetch multiple results from webservice can have paging propert
   * startRow: The starting row from where results will be fetch. If startRow is bigger than the number of results in database, then no result will be provided. 
   * endRow: The ending row marks the final row to be retrieved and is exclusive. If it is not set, then all rows will be fetched. It can't be less than the startRow property. 
 
-For instance, requesting some object with properties startRow = 0 and endRow = 1 will retrieve only one row. If there are more rows that haven't been fetched totalRows will be 3 (endRow + 2).
+For instance, requesting some object with properties startRow = 0 and endRow = 1 will retrieve only one row. If there are more rows that have not been fetched totalRows will be 3 (endRow + 2).
 
 ##  POST and PUT
 
 The POST and PUT operations perform add and update actions. In case of Etendo, the PUT operation will perform an add also, if an object does not have an id set.
 
-To do an update operation the following JSON has to be PUT to the system:
+To do an update operation the following `JSON` has to be PUT to the system:
 
     
     
@@ -288,9 +288,9 @@ To do an update operation the following JSON has to be PUT to the system:
 The data is contained in the data field, the data maybe a single JSON object or a JSON array with JSON objects. If you update a single object then the id may be passed in as part of the URL. In general it is better to set the id in the object. For objects which are updated only the changed fields need to be
 passed in.
 
-To do an add operation the same data format as above should be used without values for the id.
+To do an add operation, the same data format as above should be used without values for the id.
 
-The response of an add or update action contains the updated/added object. In case of an add action the id is passed back together with the other properties.
+The response of an add or update action contains the updated/added object. In case of an add action, the id is passed back together with the other properties.
 
     
     
@@ -320,14 +320,15 @@ The response of an add or update action contains the updated/added object. In ca
 
 ##  DELETE
 
-For the DELETE action the DELETE HTTP method should be used. The system expects that the id and entityName are passed in the url itself. For example;
+For the DELETE action, the DELETE HTTP method should be used. The system expects that the id and entityName are passed in the url itself. For example;
 
-https://livebuilds.openbravo.com/erp_pi_pgsql/openbravo/org.openbravo.service.json.jsonrest/Country/FF808181249CF48C01249CF5140E0002
+`https://livebuilds.openbravo.com/erp_pi_pgsql/openbravo/org.openbravo.service.json.jsonrest/Country/FF808181249CF48C01249CF5140E0002`
 
-Note: in your specific case this country record will probably not exist with the same id.
+!!!Note
+    In your specific case this country record will probably not exist with the same id.
 
-if this url is used as the target of the DELETE action then the Country object
-with id 'FF808181249CF48C01249CF5140E0002' is removed. The response will
+If this url is used as the target of the DELETE action then the Country object
+with id `FF808181249CF48C01249CF5140E0002` is removed. The response will
 contain the status code (0 if success) and the complete removed object. For
 example:
 
