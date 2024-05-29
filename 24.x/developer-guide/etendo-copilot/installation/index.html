@@ -3494,6 +3494,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/etendo-copilot/bundles/sql-expert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Expert
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7734,6 +7755,7 @@
 <p>In <code>gradle.properties</code> file is necessary to add some environment variables as a mandatory requirement</p>
 <div class="language-groovy highlight"><span class="filename">gradle.properties</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">COPILOT_PORT</span><span class="o">=</span><span class="mi">5000</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">OPENAI_API_KEY</span><span class="o">=</span><span class="w"> </span><span class="o">****</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">ETENDO_HOST</span><span class="o">=</span><span class="nl">http:</span><span class="c1">//your.etendo.instance/etendo</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -7753,6 +7775,11 @@
 <td>OPENAI_API_KEY</td>
 <td><code>***********************</code></td>
 <td><strong>Required</strong> You can get it from <a href="https://platform.openai.com/account/api-keys" target="_blank">OpenAI API keys</a></td>
+</tr>
+<tr>
+<td>ETENDO_HOST</td>
+<td><code>http://your.etendo.instance/etendo</code></td>
+<td><strong>Required</strong> The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system.</td>
 </tr>
 </tbody>
 </table>
@@ -7809,29 +7836,15 @@
 </table>
 </li>
 <li>
+<p>Remember to add this configurations in <code>config/Openbravo.properties</code> file or do a <code>./gradlew setup</code> to copy the properties automatically.</p>
+</li>
+<li>
 <p>To download the latest copilot Docker image and run it:</p>
 <div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>./gradlew<span class="w"> </span>copilot.start
 </span></code></pre></div>
 </li>
 <li>
-<p>You can now send prompts to the copilot using the following command:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;prompt&quot;</span>
-</span></code></pre></div>
-<p>Where <code>prompt</code> is the prompt you want to send to the copilot.</p>
-<p>For example:</p>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>./gradlew<span class="w"> </span>copilot.do<span class="w"> </span>-Pprompt<span class="o">=</span><span class="s2">&quot;I want to say Hello World&quot;</span>
-</span></code></pre></div>
-<p>The copilot will detect the tool that best suits the prompt and will return the response of the tool.</p>
-<p>In the following example, we can see how the copilot detects that the tool that best suits the prompt is the <code>HelloWorldTool</code>(a default tool) and returns the response of the tool:
-<a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/getting-started/helloworld.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../../assets/developer-guide/etendo-copilot/getting-started/helloworld.png" /></a></p>
-<p>Another screenshot from the Copilot side, where we can see how the copilot detects that the tool that best suits the prompt is the <code>HelloWorldTool</code>:
-<a class="glightbox" href="../../../assets/developer-guide/etendo-copilot/getting-started/helloworld-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../../../assets/developer-guide/etendo-copilot/getting-started/helloworld-1.png" /></a></p>
-</li>
-<li>
-<p>When done using Etendo Copilot, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>copilot.stop
-</span></code></pre></div>
-<p>This command will stop the Docker container running Copilot.</p>
+<p>Try Copilot in your Etendo instance. To configure an assistant to use Copilot, follow the <a href="../../../user-guide/etendo-copilot/setup/" target="_blank">Assistant Configuration Guide</a>.</p>
 </li>
 </ol>
 
