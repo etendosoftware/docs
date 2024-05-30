@@ -15,7 +15,7 @@ title: How to Add a Field to a Window Tab
 
 The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
 
-It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
+It is closely related to the previous [How to add Columns to a Table](how-to-add-columns-to-a-table.md) section.
 
 The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
 
