@@ -25710,7 +25710,7 @@ This module allows users to prevent the duplication of purchase invoices within 
 ## Article Content: 
 #### Overview
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.
 
@@ -25720,13 +25720,11 @@ Etendo will consider a purchase invoice duplicated if another purchase invoice w
 
 - Business Partner
 - Supplier Reference
-- Invoice year, present in the Invoice date field
+- Invoice Date
 
 ![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png)
 
 Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.
-
-Also, it is only possible to have one purchase invoice with the same supplier reference every year. This means that, even when the invoice day and month are different from another invoice with the same supplier reference, if the year is the same, the invoice is considered duplicated.
 
 #### Preference
 
@@ -27662,6 +27660,10 @@ In the *Role* window, select a role and in the *Copilot App* tab add a new recor
 !!!info
     For more information, visit [Role](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/security.md#role).
 
+#### Webhook Window
+  Some tools require to communicate with Etendo through WebHooks, so it is necessary to configure the access for each role in the WebHook window.
+  For example, for the Database Query Tool, the WebHook "DBQueryExec" is used, to the Role that will use this tool in an assistant, it is necessary to configure the access to this WebHook.
+  ![WebHook](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
 #### Process Request Window
 
 Open `Application`>`General Setup`>`Process Scheduling`>`Process Request`. In this window, the user can schedule Etendo Copilot background processes by selecting the Copilot Apps Schedule option in the Process field and using all the provided options such as timing, start date, frequency, etc.
@@ -27707,15 +27709,27 @@ The apps described below belong to preconfigured reference data included in the 
 
 - **Bastian**
 
-    :octicons-package-16: Javapackage: com.etendoerp.copilot
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
     This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
 
-- **Copilot Purchase Expert**
+- **Purchase Expert**
 
-    :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
     This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+
+    !!! info
+        For more information, visit [Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+- **SQL Expert**
+
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
+
+    This copilot app is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
+
+    !!! info
+        For more information, visit [SQL Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md).
 
 #### Modules
 
@@ -27771,9 +27785,10 @@ This Etendo Copilot tool allows interacting with APIs taking the platform to ano
 :octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
 
 This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
-
 !!! info
     For more information, visit [Copilot Purchase Expert user guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -27829,6 +27844,112 @@ For this particular case, we have configured an assistant with the functional me
 
 !!! Info "Technical Details for Developers"
     More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: SQL Expert
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/SQL Expert
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert
+## Article Content: 
+### SQL Expert
+
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
+
+#### Overview
+
+This Assistant is designed to help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need. The tool uses the [DB Query Tool](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool.md) to infer the necessary information to generate the SQL query. The user can ask questions about the database, and the Assistant will determine whether to return a SQL query or execute the query and return the obtained result.
+
+#### Components
+
+The SQL Expert Assistant is composed of the following components:
+
+- **DBQueryGenerator Tool**: This tool allows querying Etendo for available tables in the database and the columns of each table. It also enables the Assistant to execute SQL queries in the database that are generated by the Assistant.
+
+- **DBQueryExec Webhook**: This Webhook allows the Assistant to execute SQL queries in the database. The DBQueryGenerator tool sends the SQL query to the Webhook, and the Webhook executes the query in the database and returns the result to the Assistant. This is a secure way to execute SQL queries in the database, as Etendo handles the security of the database connection and query execution.
+
+
+#### Installation
+
+This module is included in the Copilot Extensions Bundle
+
+!!! info
+    To be able to include this assistant, the Copilot Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Copilot Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=82C5DA1B57884611ABA8F025619D4C05){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Copilot Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-copilot/bundles/release-notes.md).
+
+
+In addition, you can install only the module containing the **SQL Expert** by following the guide on [How to install modules in Etendo](https://docs.etendo.software/latest/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md), looking for the GitHub Package `com.etendoerp.copilot.dbquerytool`.
+   
+After install the module: 
+
+1. It is necessary to add the ```gradle.properties``` file with the following configuration:
+    ``` properties
+    ETENDO_HOST=http://localhost:8080/etendo
+    ```
+
+    !!! warning
+        Replace http://localhost:8080/etendo with the real url of the Etendo system.
+
+2. Do a compilation with a database update, to register the tool and the assistant in the database.
+    ``` bash title="Terminal"   
+    ./gradlew update.database smartbuild --info
+    ```
+
+3. Restart Tomcat and check that a new assistant named **SQL Expert** has been created in the `Application` > `Service` > `Copilot` > `Copilot App` window.
+
+4. Run **Sync OpenAI Assistant** process.
+
+5. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks.
+
+    !!! note 
+        If you have problems with shutting down the container, you can use the `docker ps` command to see the container id and then use `docker stop <container_id>` to stop it manually.
+
+7. You can use the **SQL Expert** assistant as a **System Administrator**. In case of using this assistant with other roles, first, you need to configure the coplilot app access in the **Role** window as described in the [initial assistant configuration](https://docs.etendo.software/latest/etendo-copilot/setup.md#role-window) and also configure access to the role in the [WebHooks](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md#assign-allowed-roles) window for the WebHook **DBQueryExec**, this webhook is automatically added when the module is installed.
+
+#### Examples
+
+##### Examples of questions for information retrieval
+
+1. 
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant.png){align=right width=300}
+    <br><br>
+    **What is the amount of the last F&B España - Región Sur organization sales invoice?**
+    </figure>
+
+2.  
+
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-2.png){align=left width=300}
+    <br><br>
+    **Can you tell me which is the invoice  with the highest registered amount?**
+    </figure>
+ 
+3.
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-3.png){align=right width=300}
+    <br><br>
+    **Can you execute the sum of the orders in the last month of 2016?**
+    </figure>
+
+##### Examples of SQL query generation
+
+1. 
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-3.png){ align=right width=300 }
+    <br>
+    **Can you execute the sum of the orders in the last month?**
+    </figure>
+
+2.  <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-4.png){ align=right }
+    <br>
+    **Query to know the name of the best 5 customer of junuary 2011?**
+    </figure>
+    
+3.  <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/sql-expert/sql-assistant-5.png){ align=right }
+    <br>
+    **Query to obtain which is the invoice with the highest registered amount?**
+    </figure> 
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
@@ -32382,7 +32503,7 @@ This work is a derivative of [How to add a button to the toolbar](https://wiki.o
 # Article Title: How to Add a Field to a Window Tab
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Add a Field to a Window Tab
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab
 ## Article Content: 
 ### How to Add a Field to a Window Tab
 
@@ -32390,7 +32511,7 @@ This work is a derivative of [How to add a button to the toolbar](https://wiki.o
 
 The objective of this section is to show how you can add a new field to a tab in Etendo Classic.
 
-It is closely related to the previous [How to add Columns to a Table](How_to_add_Columns_to_a_Table.md) section.
+It is closely related to the previous [How to add Columns to a Table](how-to-add-columns-to-a-table.md) section.
 
 The task of adding columns to an existing window is now very simple since most of the work (like defining references, elements) has already been done when adding the columns to the table.
 
@@ -32439,8 +32560,8 @@ This How-to section explains how to add a rich text field and column to the Eten
 
 The steps to get a rich text field in your window consists of two steps: 
 
-- [Add a column to a table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md)
-- [Add a field to a tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md)
+- [Add a column to a table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md)
+- [Add a field to a tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md)
 
 You can also create a new table and a new window/tab ofcourse.
 This how-to will only focus on the specific part of a rich text field.
@@ -32454,7 +32575,7 @@ For this how-to, we will use the redefine the description field in the sales ord
   
 #####  Adding a column
 
-First, you have to [add a column to the existing table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_Columns_to_a_Table.md).
+First, you have to [add a column to the existing table](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md).
 
 
 !!!note
@@ -32474,7 +32595,7 @@ reference must be selected, i.e. the new _Rich Text_ reference:
 
 #####  Create a field - set col and rowspan
 
-Then [create a field](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md) within the tab/window. For a rich text field you can also set the col and rowspan (these are only shown when the corresponding column is defined as rich text):
+Then [create a field](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md) within the tab/window. For a rich text field you can also set the col and rowspan (these are only shown when the corresponding column is defined as rich text):
 
 ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column-2.png) 
 
@@ -32674,7 +32795,7 @@ Finally, to make the newly added columns available at runtime `./gradlew generat
 
 Once the columns are added to the table, the user can [export](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) the module.
 
-To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md).
+To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md).
 
 ---
 
@@ -32701,7 +32822,7 @@ When using the Etendo UI, the changes can be seem immediately when switching rol
 When using classic Window a compile step is needed.  
 
 This How-To explains how to modify existing elements of a window. If only new elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on [How to add a field to a window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
+added using a normal module as explained in the other How-To on [How to add a field to a window Tab](https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md). 
  
 
 
@@ -34462,8 +34583,301 @@ The dataset definition is ready, so the user just needs to export it to a file p
     In case the file is empty, the user should double check the dataset definition, specially the HQL/SQL Where clause used for each table. 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: How to create a Report
-## Article Path: /Developer Guide/Etendo Classic/How to guides/How to create a Report
+# Article Title: How to Create a Pick and Execute Process
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Pick and Execute Process
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-a-pick-and-execute-process
+## Article Content: 
+### How to Create a Pick and Execute Process
+
+#### Overview
+
+**Pick and Execute (P&E)** is a case of **Process Definition** with **Standard UI pattern**.
+
+This section will add a new Pick and Execute process and associate it with the **Sales Order window**.
+
+The implementation requires development experience.
+
+The following concept pages provide background information on action handlers and javascript
+development:
+
+- [Action Handler](how-to-create-client-event-handler-actions.md)
+- [Client Side Development and API](https://docs.etendo.software/latest/concepts/client-side-development-and-api.md)
+- [JavaScript Coding Conventions](https://docs.etendo.software/latest/concepts/javascript-coding-conventions.md)
+
+#### Steps to implement the Process
+
+##### Overview
+
+The P&E processes take advantage of the same foundation concepts in the Application Dictionary. The **Window, Tabs and Fields** will be used for defining the editable grid that will be shown, a new **Reference** for the parameter of the process; and then implementing an **action handler** that will get executed when the user hits the **Done** button.
+
+##### Implementation
+
+###### Defining the Window
+
+1. Create a new window
+2. Fill the required fields
+3. Select **Pick and Execute** as window type
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-1.png)
+
+4. Following the same concepts, a **Table** is required as data-source.
+
+    - In case it is needed to mix information from several tables, there are different options:
+
+      - A database view used to create a table in [Application Dictionary](how-to-create-a-table.md).
+      - A table based on an [HQL query](how-to-create-a-hql-based-table.md).
+      - A table based on a [manual datasource](how-to-create-a-table-based-on-a-user-defined-datasource.md).
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-2.png)
+
+5. Create the necessary fields that will turn into the columns of the grid. Pick a **Column** and pay attention to some important properties:
+
+    - **Displayed:** This must be checked in order to generate a field. If Displayed is unchecked no field will be generated.
+    - **Read Only:** Most of the times all the fields will be read-only. If you want a user to be able to modify some data, e.g. quantity, leave it unchecked.
+    - **Show in Grid View:** Defines if the field will be shown in the grid. A Field as displayed can be defined but not shown in grid, so a field will get generated but not shown. This is useful for retrieving data to the grid and send it to the process.
+    - **Grid Position:** Defines the sequence of the fields in the grid.
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-3.png)
+
+###### Defining the Reference
+
+After defining the window, a new Reference needs to be defined.
+
+1. Create a new Reference
+2. Select in the Base Reference drop down: Window Reference
+3. Save
+
+    ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-4.png)
+
+4. Move to Window tab
+5. Create a new record
+6. Select your newly created window
+7. Save
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-5.png)
+
+###### Defining the Process
+
+There is a new window for processes: **Process Definition**
+
+1. Open the Process Definition window
+2. Create a new record
+3. Define the UI pattern: Standard (Parameters defined in Dictionary)
+4. Set the Handler (Java class implementing the process)
+5. Save
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-6.png)
+
+####### Parameters
+
+Window Reference is an implementation of a **rich parameter**.
+
+1. Move to Parameters tab
+2. Create a new record
+3. Fill the required fields. The name of the parameter will be the name shown in the title of the running process.
+4. Select Window Reference
+5. Pick the Window you defined previously
+6. Save
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-7.png)
+
+###### Adding a button to Sales Order
+
+####### Create a Column
+
+A new column is required to be associated to a button.
+
+!!!info
+    For more information, visit [How to add a field to a Window Tab](how-to-add-a-field-to-a-window-tab).
+
+1. Create a new column in the `C_Order` table. `PostgreSQL` syntax:
+
+    ```
+    ALTER TABLE c_order ADD COLUMN em_obexapp_pick1 character(1);
+    ALTER TABLE c_order ALTER COLUMN em_obexapp_pick1 SET DEFAULT 'N'::bpchar;
+    ```
+
+2. Go to: Tables and Columns
+3. Open the `C_Order` record
+4. Execute: **Create Columns from DB** process
+5. Move to the Columns Tab
+6. Pick the newly created column
+7. Change the reference from: Yes/No to Button
+8. Pick your defined process
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-8.png)
+
+####### Create a Field
+
+1. Go to Windows, Tabs and Fields
+2. Search for Sales Order
+3. Create a new Field associated with the column
+
+  ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-9.png)
+
+###### Java Implementation
+
+In the case of a Pick and Execute action handler, extend from **BaseProcessActionHandler** and implement the **doExecute** method.
+
+```java title="PickExampleActionHandler.java"
+/*
+  *************************************************************************
+  * The contents of this file are subject to the Openbravo  Public  License
+  * Version  1.1  (the  "License"),  being   the  Mozilla   Public  License
+  * Version 1.1  with a permitted attribution clause; you may not  use this
+  * file except in compliance with the License. You  may  obtain  a copy of
+  * the License at http://www.openbravo.com/legal/license.html
+  * Software distributed under the License  is  distributed  on  an "AS IS"
+  * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+  * License for the specific  language  governing  rights  and  limitations
+  * under the License.
+  * The Original Code is Openbravo ERP.
+  * The Initial Developer of the Original Code is Openbravo SLU
+  * All portions are Copyright (C) 2011 Openbravo SLU
+  * All Rights Reserved.
+  * Contributor(s):  ______________________________________.
+  ************************************************************************
+  */
+package org.openbravo.client.application.examples;
+ 
+import java.util.Map;
+ 
+import org.apache.log4j.Logger;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+import org.openbravo.client.application.ApplicationConstants;
+import org.openbravo.client.application.process.BaseProcessActionHandler;
+ 
+/**
+  * @author iperdomo
+  *
+  */
+public class PickExampleActionHandler extends BaseProcessActionHandler {
+ 
+  private static final Logger log = Logger.getLogger(PickExampleActionHandler.class);
+ 
+  @Override
+  protected JSONObject doExecute(Map<String, Object> parameters, String content) {
+    try {
+      JSONObject request = new JSONObject(content);
+ 
+      log.info(">> parameters: " + parameters);
+      // log.info(">> content:" + content);
+ 
+      // _selection contains the rows that the user selected.
+      JSONArray selection = new JSONArray(
+          request.getString(ApplicationConstants.SELECTION_PROPERTY));
+ 
+      log.info(">> selected: " + selection);
+ 
+      // _allRows contains all the rows available in the grid
+      JSONArray allRows = new JSONArray(request.getString(ApplicationConstants.ALL_ROWS_PARAM));
+ 
+      log.info(">> allRows: " + allRows);
+ 
+      // A Pick and Execute process can have several buttons (buttonList)
+      // You can know which button was clicked getting the value of _buttonValue
+      log.info(">> clicked button: " + request.getString(ApplicationConstants.BUTTON_VALUE));
+ 
+      return request;
+    } catch (Exception e) {
+      log.error("Error processing request: " + e.getMessage(), e);
+    }
+    return new JSONObject();
+  }
+}
+```
+
+#### Testing the Process
+
+Since the structure of some Entity has been changed by adding a new column, it is needed to restart the tomcat server.
+
+- After restarting, it should be able to go to the Sales Order window and see a new button.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-10.png)
+
+#### Advanced Topics
+
+##### Selecting by default
+
+The data-source (table or view) defined in the Tab, can set which rows will be selected by default when the user launches the process. It is just needed to create a column `c_ob_selected`, this will turn into a `obSelected` property in the generated entity. When the value of this column is **Y** , the row will be selected by default. Here you have an working example:
+`M_RM_RECEIPT_PICK_EDIT.xml`.
+
+!!!note
+    When registering the column in the Application Dictionary the **Yes/No** reference must be used.
+
+##### Validation Function
+
+Define at Field level, a JavaScript validation function. In an editable field when the user enters a value, this function will get executed.
+
+1. Go to Window, Tabs and Fields
+2. Pick your window and the tab
+3. Go to the Quantity field
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-11.png)
+
+###### JavaScript Definition
+
+- The Component Provider needs to register a new global resource.
+- If the function returns false, the cell will be marked with an error.
+- In the JavaScript, define a validation function e.g.
+
+```javascript
+OB.OBHT = {};
+OB.OBHT.validate = function (item, validator, value, record) {
+  // item has access to grid: item.grid
+  // from the grid you can get all selected records and edited values, e.g.
+  //   * item.grid.getSelection()
+  //   * item.grid.getEditedRecord()
+  // grid has access to view: grid.view
+  // view has access to parentWindow: view.parentWindow (the window running the process)
+  // parentWindow has access to currentView
+  // currentView has getContextInfo
+  // debugger;
+  if (window.console) {
+    console.log("validation function!", value);
+  }
+  return true;
+};
+```
+
+##### Selection Function
+
+A selection function can be defined at Tab level. This function will get called when the user select/unselect a row.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Pick_and_Execute_Process-12.png)
+
+And define a JavaScript function in your loaded static `.js` file:
+
+```javascript
+OB.OBHT.selectionChanged = function (grid, record, recordList) {
+  if (window.console) {
+    console.log("selection function!");
+    console.log(grid, record, recordList);
+  }
+};
+```
+
+If you want to change any value of the selected record, use the following instruction:
+
+```javascript
+grid.setEditValue(grid.getRecordIndex(record), columnName, newColumnValue)
+```
+
+##### Performing Several Actions after Execution
+
+After the process is executed, a series of actions can be taken.
+
+!!!info
+    For more information about several actions after execution, see [How to create a Standard Process Definition](how-to-create-a-standard-process-definition.md).
+
+This work is a derivative of [How to create a Pick and Execute Process](http://wiki.openbravo.com/wiki/How_to_create_a_Pick_and_Execute_Process){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create a Report
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create a Report
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Report
 ## Article Content: 
@@ -36517,7 +36931,7 @@ It is possible to define a dependency with two versions of a particular module t
 
 This way, the module script can be executed only when it is really needed, avoiding extra time calculations when updating database.
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-7.png)
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_build_validations_and_module_scripts-0.png)
 
 The dependent module and its limit versions can be set by overriding the`getModuleScriptExecutionLimits()` method in our `ModuleScript` subclass:
 
@@ -36578,6 +36992,200 @@ protected ModuleScriptExecutionLimits getModuleScriptExecutionLimits() {
 ```
 
 This work is a derivative of [How to Create Build Validations and Module Scripts](http://wiki.openbravo.com/wiki/How_to_create_build_validations_and_module_scripts){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Create Client Side Callout Onchange Function
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Create Client Side Callout Onchange Function
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-create-client-side-callout-onchange-function
+## Article Content: 
+### How to Create Client Side Callout OnChange Function
+
+#### Overview
+
+This section discusses how to implement **client side (javascript) functions** which are executed when a field value in the user interface changes. The onChange concept corresponds to the traditional [callout](How_to_create_a_Callout.md), the main difference is that the **onChange functionality is implemented on the client**. This gives the following advantages:
+
+- better performance as for many actions no server side call is needed
+- direct access to user interface components such as field, the form and the grid
+
+In addition the onChange function has all the benefits of the classic callout, you can still **call the server** to execute more performance intensive actions or do queries.
+
+#### Example Module
+
+This section is supported by an example module which shows examples of the code shown and discussed.
+
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+
+The example module is available through the Central Repository (See 'Client Application Examples'), for more information see the Examples Client Application project page.
+
+#### Defining OnChange Functions
+
+An `OnChange` function is a function in javascript available through a global ID.
+
+!!!note
+    The global ID should be unique, it is strongly adviced to use the module's db prefix.
+
+The `OnChange` function has to be defined in a javascript file located in the module.
+
+!!!info
+    For more information read [how to add javascript code](https://docs.etendo.software/latest/concepts/client-side-development-and-api.md#adding-javascript-to-etendo) to Etendo.
+
+Here is an example of an `OnChange` function defined in the example module:
+
+```javascript
+OB.OBEXAPP = {};
+OB.OBEXAPP.OnChangeFunctions = {};
+ 
+OB.OBEXAPP.OnChangeFunctions.Note_Name = function(item, view, form, grid) {
+  // set a message
+  view.messageBar.setMessage(
+    isc.OBMessageBar.TYPE_INFO,
+    'Changed!',
+    'You changed the name to ' + item.getValue()
+  );
+
+  // set the value for the description and make sure that the
+  // onchange handlers are called
+  form.setItemValue('description', 'Description ' + item.getValue());
+};
+```
+
+As you can see the `OnChange` function is placed in a global object, in this case the module's dbprefix is used for that.
+
+!!!note
+    It is important to note that you should not use var before the global object definition, otherwise your var is not global.
+
+This is because the global javascript code included in Etendo is in fact executed within a function.
+
+An onchange function receives four arguments:
+
+- item: the FormItem that changes.
+- view: the standard view ( OBStandardView ) which provides access to the complete window and tab structure in a loaded window.
+- form: the OBViewForm which contains the fields, the form can also be the form used in inline grid editing.
+- grid: the OBViewGrid which contains the list of records loaded for the tab.
+
+This example onchange sets a message in the message bar and sets the value of another field.
+
+!!!note
+    Note that the form's setItemValue method is used to trigger other onchange functions. The form also has a setValue method but that one will not trigger an onchange event.
+
+!!!info
+    If your onchange function does not work or is not called or if your window does not load anymore after defining an onchange then check the console.
+
+#### Registering, setting an OnChange for a specific field
+
+There are two ways to link an `OnChange` function to a specific field:
+
+- Through the application dictionary
+- Programmatically using javascript code
+
+The first approach allows you to define the `OnChange` directly in the Field definition. For the second approach you need to use javascript, but it offers additional flexibility.
+
+##### Setting an OnChange function through the AD
+
+The Application Dictionary allows you to set the `OnChange` for a specific field, see the `OnChange` function field in the `Window, Tabs and Fields` window.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-0.png)
+
+The value should be the unique global ID mentioned above.
+
+##### Programmatic registration of OnChange functions
+
+It is also possible register an **OnChange function through javascript**. This offers more flexibility than defining through the Application Dictionary:
+
+- you can add `OnChange` functions to existing Fields without changing the information in the table
+- you can add more than one `OnChange` function to a field
+- you can override/overwrite the `OnChange` function defined in the Application Dictionary
+
+An `OnChange` function is registered through the `OB.OnChangeRegistry.register` method. It expects 4 parameters:
+
+- tab id
+- field: the name of the field for which the onchange is registered
+- callback function: the onchange function itself
+- id: can be used to overwrite an existing `OnChange` function registered using the same id
+
+An example of a registration:
+
+```javascript
+OB.OnChangeRegistry.register('FF8081813290114F0132901EB0A2001A', 'value', OB.OBEXAPP.OnChangeFunctions.Note_Value, 'OBEXAPP_Value');
+```
+
+###### Multiple OnChange Functions per Field, call order
+
+The `OnChange` function can have a sort property to control the call-order if there are multiple `OnChange` functions for one field.
+
+It is for example set like this:
+
+```javascript
+OB.OBEXAPP.OnChangeFunctions.Note_Value.sort = 20;
+```
+
+Some notes on sorting:
+
+- the `OnChange` defined in the Application Dictionary has sort 50 and id: default
+- if an `OnChange` does not have a sort defined it gets the sort 100
+
+###### Overriding/replacing an OnChange
+
+An `OnChange` can be registered using an id. If there is already an `OnChange` with the same id then it is replaced by the new registration.
+
+The `OnChange` defined through the Application Dictionary has the id **default**. So by registering a new `OnChange` using that id you will overwrite the `OnChange` defined through the Application Dictionary.
+
+#### Example: OnChange calling a server side action
+
+This section shows an example of an `OnChange` which calls a server side action:
+
+```javascript
+OB.OBEXAPP.OnChangeFunctions.Note_Value = function(item, view, form, grid) {
+  // the callback called after the server side call returns
+  var callback = function(response, data, request) {
+    form.setItemValue(item, data.upperCased);
+    view.messageBar.setMessage(
+      isc.OBMessageBar.TYPE_WARNING,
+      'Uppercased!',
+      'The value has been uppercased'
+    );
+  };
+
+  // do a server side call and on return call the callback
+  OB.RemoteCallManager.call(
+    'com.etendoerp.client.application.examples.OnchangeExampleActionHandler',
+    {
+      value: item.getValue()
+    },
+    {},
+    callback
+  );
+};
+OB.OBEXAPP.OnChangeFunctions.Note_Value.sort = 20;
+```
+
+The above example calls an ActionHandler class: OnchangeExampleActionHandler. The result is returned and set in a field and a message is shown in the message bar.
+
+!!!info
+    It is possible to disable the form during the server side action, call the setDisabled method on the form with the value true as a parameter.
+
+#### OnChange and the Classic Callout
+
+If a field has both an `OnChange` and a classic callout defined, then the following applies:
+
+- in the Openbravo 3 UI the `OnChange` function will be used and the callout will be disabled
+- in the classic UI the callout is used and the `OnChange` functions are ignored
+
+#### Example Module: example window
+
+The Example Module has an example window with several examples of a callout/onchange function. You can find the example window in `Application Examples` >`Callout/OnChange Function`.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-1.png)
+
+To test out the onchange, create a new record and set some values in the fields. You should see automatic behavior.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_client_side_callout_onchange_function-2.png)
+
+You can **enable/disable** different onchange functions by going into the web/com.etendoerp.client.application.examples/js/example-onchange.js file and uncomment some of the commented lines.
+
+This work is a derivative of [How to create client side callout onchange function](http://wiki.openbravo.com/wiki/How_to_create_client_side_callout_onchange_function){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Jobs and Actions
@@ -37683,7 +38291,7 @@ In this section, we will implement an event handler on the Greeting entity. When
 
 This section is supported by an example module which shows an example of the code shown and discussed here.
 
-The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
   
 ####  The event handler - A first implementation
 
@@ -37991,7 +38599,7 @@ various locations, here are some examples:
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
 
-The complete source code of the example event handler is available [here](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The complete source code of the example event handler is available here [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
 ---
 
@@ -38552,6 +39160,92 @@ public class ChangeSequenceAfterChangeProductCategory extends SimpleCallout {
   }
 }
 ```
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: How to Use Property Fields
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Use Property Fields
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-use-property-fields
+## Article Content: 
+###  How to Use Property Fields
+
+####  Overview
+
+A **property field** allows you to show derived information in a grid/form. A property field is very similar to a normal field in a tab. The only difference is that instead of the column, a property (path) is defined.
+
+Property fields make it possible to:
+
+  * show related information in a grid/form 
+  * filter and sort by this related information 
+  * show parent information in a child tab and filter/sort by this parent information 
+  * create Etendo windows which show a child table in the root of the window, making it for example possible to create a single grid showing all sales invoice lines accross multiple sales invoice and filter using parent as well as child information. 
+
+####  Example Module
+
+This section is supported by an example module which shows example of the code shown and discussed in this section.
+
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
+
+####  Defining property fields
+
+Property fields are defined in the same way as a normal field in an Etendo tab. The only difference is that instead of selecting a column a property is set.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-1.png)
+  
+The property can consist of multiple steps separated by a dot, the system will help you to set the correct property value. If you make a typo then the system will report an error.
+
+Property fields are not editable in the user interface, they are however automatically updated when inserting or updating a record in the system.
+
+!!!note
+      Property fields are meant to show derived information. They should not be used to show the contents of a column stored in the table associated with the tab where the property field is being defined.  
+
+  
+#####  Using in validation rules
+
+Property fields can be used in  Validations. In this case the validation code referencing the property field should look like `@_propertyField_ _fieldName_ _columnname_@` where `fieldname` is the name of the field property (lower case and removing blank spaces) and `columnname` is the name of the referenced column.
+
+As field properties are only computed when the record is saved, but they are not reevaluated on field changes, only in case they refer a path coming from the record header should be used in validations. Example in Order Line you could use any property field taking the data from its order header.
+
+####  Using in display logic
+
+You can set a display logic that references a property field. The way of setting the display logic which references a property field is the following one: `@inp_propertyField_NameOfThePropertyField_ColumnName@`. For example:
+
+  * Imagine that you have a property field called Document with column name **DocumentStatus**. 
+  * You have another field *Field A* which you want to display only when the property field **Document** has the status **DR**. 
+  * In the display logic of the *Field A* field, you should write: `@inp_propertyField_Document_DocumentStatus@ = 'DR'`
+
+####  Use case: show related information
+
+The first usage of a property field is to show related information in the user interface. The example in the previous section showed how to define a new business partner category field in the sales invoice header window/tab. This is visualized as follows in the user interface:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-2.png)
+
+And you can sort and filter on the related/derived field:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-3.png)
+
+And also display it in the form:
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-4.png)
+
+!!!note
+      Note that direct linking also works for derived fields, so in this example you can 'jump' directly to the business partner category window for the business partner category.
+
+####  Use case: show child table in top of the window
+
+A great usage of the property field concept is to show child records (for example: sales invoice lines) in the root of a window. This then makes it possible to filter and sort the child records accross multiple parents (for example: sales invoice headers).
+
+The screenshot below shows an example of a sales invoice line window which shows all sales invoice lines accross multiple sales invoice headers. It makes it really easy to filter and sort accross all sales invoice lines in the system.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_use_property_fields-5.png)
+  
+Some things to note when creating these type of windows:
+
+  * The main restriction for these types of grids is that insertion of records is not possible, editing and deletion are however no problem. So, for these types of windows/tabs set the UI pattern to **Edit Only**. 
+  * For editing it is possible that certain fields need parent or other context information. This context information needs to be added as fields to the tab. If you do not want these context info fields to show up in the grid or form set the following properties to no (unchecked): displayed and show in grid view. 
+  See the screenshot below which shows how the organization is added to the tab as a field, so that combos show the correct information when editing the sales invoice lines: 
+
+This work is a derivative of [How to add a canvas field to a form or grid](http://wiki.openbravo.com/wiki/How_to_use_property_fields){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Use Secure Webservices
@@ -41864,13 +42558,14 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ```groovy title="gradle.properties"
     COPILOT_PORT=5000
     OPENAI_API_KEY= ****
+    ETENDO_HOST=http://your.etendo.instance/etendo
     ```
 
     | **Environment Variable**   | **Options**  | **Info** |
     | -------------------------- | -------------| -------- |
     | COPILOT_PORT           | `5000`   | **Required** The copilot port can be defined by the user |
     | OPENAI_API_KEY         | `***********************` | **Required** You can get it from [OpenAI API keys](https://platform.openai.com/account/api-keys){target="_blank"} |
-  
+    | ETENDO_HOST            | `http://your.etendo.instance/etendo` | **Required** The URL of the Etendo system, this is where copilot will send the requests to communicate with the Etendo system. |
 
 4. In addition, there are other **optional** variables to configure certain aspects of the copilot. If not specified, default values are used.
     
@@ -41883,7 +42578,7 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     | COPILOT_PULL_IMAGE | `Boolean` | `true` | If true, the copilot docker image will be pulled from docker hub. If false, gradle will try to use the local image with the tag specified in COPILOT_IMAGE_TAG, but if it does not exist, it will be pulled from docker hub. |
     | COPILOT_DOCKER_CONTAINER_NAME | `String` | `etendo-default` | The name of the docker container that will be created to run the copilot docker image. |
 
-
+5. Remember to add this configurations in ```config/Openbravo.properties``` file or do a ```./gradlew setup``` to copy the properties automatically.
 
 5. To download the latest copilot Docker image and run it:
 
@@ -41891,35 +42586,9 @@ The getting started guide for the Copilot API is a tool that allows interaction 
     ./gradlew copilot.start
     ```
 
-6. You can now send prompts to the copilot using the following command:
+6. Try Copilot in your Etendo instance. To configure an assistant to use Copilot, follow the [Assistant Configuration Guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/setup.md){target="_blank"}.
 
-    ``` bash title="Terminal"
-    ./gradlew copilot.do -Pprompt="prompt"
-    ```
 
-    Where `prompt` is the prompt you want to send to the copilot.
-
-    For example:
-
-    ``` bash title="Terminal"
-    ./gradlew copilot.do -Pprompt="I want to say Hello World"
-    ```
-
-    The copilot will detect the tool that best suits the prompt and will return the response of the tool.
-
-    In the following example, we can see how the copilot detects that the tool that best suits the prompt is the `HelloWorldTool`(a default tool) and returns the response of the tool:
-    ![Alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/helloworld.png)
-    
-    Another screenshot from the Copilot side, where we can see how the copilot detects that the tool that best suits the prompt is the `HelloWorldTool`:
-    ![Alt text](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/helloworld-1.png)
-
-7. When done using Etendo Copilot, run:
-
-    ```bash
-    ./gradlew copilot.stop
-    ```
-
-    This command will stop the Docker container running Copilot.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Optical Character Recognition (OCR) Tool
@@ -42216,130 +42885,48 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
 ## Article Content: 
-### Database Query Tool
+### Database Query Generator tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 #### Overview
+ This tool allows to ask to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
 
-Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
+#### Installation
+The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
 
-#### Functionality
+#### Configuration
+This tool can be configured in a Copilot App:
 
+1. Add **Database Query Generator tool** into the Copilot App configuration, that you want to use the tool. Go to Copilot App window, pick the App and add the tool to the App in the **Tools** tab.
 
-1. Add Copilot DB Query Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
-    ```
+2. Re-Sync the Copilot App running **Sync OpenAI Assistant** process to get the tool available in the Copilot App.
 
-2. In `gradle.properties` file, you must add `OPENAI_MODEL` environment variables. 
+3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
+4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
+    Example for *F&B International Group Admin*:
+    ![DBQueryExec WebHook configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
 
-    ```groovy title="gradle.properties"
-    OPENAI_MODEL=gpt-4-1106-preview
-    ```
-  
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+5. Check that the `ETENDO_HOST` is configured in the `gradle.properties` file.
 
-4. The tool can be executed with:
-
-``` bash title="Terminal"
-./gradlew copilot.do -Pprompt="Query's description"
-``` 
-Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the Etendo Classic database, but you can select another database in the prompt.
-
-5. The tool will execute an agent that will ask the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
-
-#### Examples
-
-!!! info 
-    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide enough information in the prompt.
-    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where `copilot.start` is running. You will be able to see the tables involved, the query formed and its execution, if necessary. 
+6. Can you check if the tool is available for the Assistant, asking for it. 
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-2.png){align=right width=300}
+    </figure>
 
 
-##### SQL query generation
+#### Security
 
-1. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="query to know the name of the best 5 customer of junuary 2021?"  
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: query to know the name of the best 5 customer of junuary 2021?
-    🤖 The SQL query to retrieve the names of the top 5 customers based on purchase amount for January 2021 is:
+For security and data segmentation:
 
-    SELECT bp.name, SUM(inv.grandtotal) AS total_purchase_amount
-    FROM c_invoice inv
-    JOIN c_bpartner bp ON inv.c_bpartner_id = bp.c_bpartner_id
-    WHERE inv.issotrx = 'N' AND inv.isactive = 'Y'
-    AND inv.docstatus IN ('CO', 'CL')
-    AND inv.dateinvoiced BETWEEN '2021-01-01' AND '2021-01-31'
-    GROUP BY bp.name
-    ORDER BY total_purchase_amount DESC
-    LIMIT 5;
+- The tables instrospection is limited for the readable tables of the user.
 
-    This query will select the names of the business partners (`bp.name`) and the sum of their total purchase amounts (`total_purchase_amount`) from the invoices table (`c_invoice`) for the month of January 2021. It will group the results by the business partner's name and order them in descending order by the total purchase amount, limiting the results to the top 5 customers.
-    🤖 Glad to help you! 😃
-    ```
-    
-2. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Query to obtain which is the invoice with the highest registered amount?" 
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: Query to obtain which is the invoice with the highest registered amount?
-    🤖 The SQL query to find the invoice with the highest registered amount is:
-    
-    SELECT c_invoice_id, grandtotal FROM c_invoice WHERE isactive = 'Y' ORDER BY grandtotal DESC LIMIT 1;
+- The tool automatically parses the `doSecurityCheck(entity)` with the conditions for a correct access to the Readable **Client** and **Organization**, for example: `doSecurityCheck(inv)`  for Invoices, is converted to
 
-    This query selects the invoice ID and the grand total amount from the `c_invoice` table where the invoice is active (`isactive = 'Y'`), orders the results by the grand total in descending order, and limits the results to only the top record.
-    🤖 Glad to help you! 😃
-    ```
+``` sql
+inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
+```
 
-
-
-##### Natural Language Queries for Data Retrieval
-
-1. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="What is the amount of the last F&B España - Región Sur organization sales invoice?" 
-    ```
-    The tool will generate the following answer:
-
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: What is the amount of the last sales invoice?
-    🤖 The amount of the last sales invoice is $249.00.
-    🤖 Glad to help you! 😃
-    ```
-
-2.  
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Can you execute which is the invoice (c_invoice) with the highest registered amount?"
-  
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: Can you execute which is the invoice (c_invoice) with the highest registered amount?
-    🤖 The invoice with the highest registered amount in the `c_invoice`
-    table has the ID '2D6314F246FE4C21AAE57F12EFD341C5' and the amount is 17,440,824.40.
-    🤖 Glad to help you! 😃
-    ```
-3. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Can you execute the sum of the orders in the last month"
-    
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: can you execute the sum of the orders in the last month
-    🤖 The sum of the orders in the last month is $7,063.59.
-    🤖 Glad to help you! 😃
-    ```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
