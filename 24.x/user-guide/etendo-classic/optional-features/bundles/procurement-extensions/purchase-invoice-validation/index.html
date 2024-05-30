@@ -7693,7 +7693,7 @@
   <h1>Purchase Invoice Validation</h1>
 
 <h2 id="overview">Overview</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_B1U-D9jQBs?si=OXAd6NSGPQC8LDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V80-YymMjFg?si=lYvSX9UxojxZVzTG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <p>This module allows users to prevent the duplication of purchase invoices within the system, following some established rules. This prevention will be carried out through a validation that will prohibit the saving of a duplicated purchase invoice. The activation of this validation will be determined by a configurable preference.</p>
 <h2 id="invoice-duplication-criteria">Invoice duplication criteria</h2>
@@ -7701,11 +7701,10 @@
 <ul>
 <li>Business Partner</li>
 <li>Supplier Reference</li>
-<li>Invoice year, present in the Invoice date field</li>
+<li>Invoice Date</li>
 </ul>
 <p><a class="glightbox" href="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../../../../assets/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchaseinvoicevalidation1.png" /></a></p>
 <p>Purchase invoices in the system should have a unique supplier reference number for each business partner. This means that if two purchase invoices, for the same business partner, have the same reference number, they are considered duplicates.</p>
-<p>Also, it is only possible to have one purchase invoice with the same supplier reference every year. This means that, even when the invoice day and month are different from another invoice with the same supplier reference, if the year is the same, the invoice is considered duplicated.</p>
 <h2 id="preference">Preference</h2>
 <p>A configurable system preference will be used to enable or disable the validation that prevents the duplication of purchase invoices. This allows the client to decide whether to use this functionality or not. The versatility of preferences allows modifying their visibility, determining whether the validation will be active for all users, roles, organizations, etc.</p>
 <p>From the Preference window, the user is able to create a new preference, choosing the corresponding property, which for this functionality will be Validate duplicated purchase invoices. In the Value field, it is necessary to add Y to enable the preference or N to disable it.</p>
