@@ -12,7 +12,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Production Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=0FFED1B8A5AE471AA1A672F4D7E1B1C4){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Production Extensions Bundle](/whats-new/release-notes/etendo-classic/bundles/production-extensions/release-notes/)
+:octicons-project-symlink-16: Original Bundle Release Notes: [Production Extensions Bundle](../../bundles/production-extensions/release-notes.md)
 
 ## Overview
 

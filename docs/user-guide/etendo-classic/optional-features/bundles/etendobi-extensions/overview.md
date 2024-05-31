@@ -20,9 +20,9 @@ The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEuwiUQbUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 This module allows users to customize and configure the information and filters in PowerBI reports. It allows the creation of different configurations that facilitate the selection and exclusion of specific entities within reports.
-> 
+
 !!! info
-    For more information, visit [Etendo BI Inclusion/Exclusion Configuration user guide](/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration).
+    For more information, visit [Etendo BI Inclusion/Exclusion Configuration user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/inclusion-exclusion-configuration.md).
 
 ### Etendo BI Connector Module
 
@@ -35,7 +35,7 @@ This module allows the user to create base queries and customize them when neede
 A background process must be set which creates CSV files that will be uploaded to a server.  
 
 !!! info
-    For more information, visit the [Etendo BI Connector Module user guide](/user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector) and the [Etendo BI Connector Module developer guide](/developer-guide/etendo-classic/bundles/etendo-bi-bundle#etendo-bi-connector).
+    For more information, visit the [Etendo BI Connector Module user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/etendobi-extensions/etendo-bi-connector.md) and the [Etendo BI Connector Module developer guide](../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle.md#etendo-bi-connector).
 
 ### Base Queries for Etendo BI 
 

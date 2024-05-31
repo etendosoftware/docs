@@ -1,7 +1,10 @@
 ---
 title: How to Create and Update Translation Modules
 ---
-## How to Create and Update Translation Modules
+
+# How to Create and Update Translation Modules
+
+## Overview
 
 This section describes the process of creating and updating translation modules in Etendo, including the Core's module. 
 
@@ -11,7 +14,7 @@ This section describes the process of creating and updating translation modules 
 
 The first thing to do is to create the translation module definition into the Application Dictionary.
 
-Logged as System Administrator role, the user selects the Application Dictionary || Module window from the Application menu and creates a new record.
+Logged as System Administrator role, the user selects the `Application Dictionary` > `Module` window from the Application menu and creates a new record.
 
 Translation modules are a special kind of modules. They have to be marked as Is translation module in the Module window, and they must define the translation language in the Module Language field.
 
@@ -23,7 +26,7 @@ Apart from checking the Is translation module and setting the Module Language, w
 
 #### Prepare strings to be translated
 
-Logged with the System Administrator role, select the General Setup || Application || Language window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
+Logged with the System Administrator role, select the `General Setup`> `Application` > `Language` window from the Application menu. Find the language in which the user wants to create the translation module and check the System Language checkbox field. This checkbox allows this language to be selected in the user interface (Change role popup) in the next login.
 
 ![](../../../assets/drive/6WuHosAvU6L3iCuQ8tLMzV9c_gTxjhk7whON6b3eWd67uR9bJKlrynGI686XRxXjNXngvQcL_5u8kmI-RnBCxq7ofI1QlZB1MlyTFRU2yf6Ukdrqy6768L7Wo6osm7Spy7nCHAbguCxp81ulGHaThEN57W--AXtajOXOuPzdj8ikaOeV4ZEj5r7UhjtuCw.png)
 
@@ -41,7 +44,7 @@ Using the Verify Languages button, the application will display the number of re
 
 ### Export the translation
 
-Exporting the translation is an automatic process available in the General Setup || Application || Import/Export Translations window.
+Exporting the translation is an automatic process available in the `General Setup` > `Application` > `Import/Export Translations` window.
 
 With the System Administrator role, select the language in which the user wants to export translation files. Export Reduced Version flag can be set to Yes to have a reduced translation version. This would exclude all translation candidates that are linked directly or indirectly to the Menu having translation strategy as "Exclude From Reduced Translation". The user could set this flag as No to have a full translation version by pressing the Export button. The process takes several seconds to export all the XML files.
 
@@ -206,13 +209,13 @@ The structure of the translation module's directory should be:
                └── AD_MODULE.xml
     ```
 
-4. Finally, remember to publish the module. For more information, see [Publish Modules to a GitHub Repository](/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository).
+4. Finally, remember to publish the module. For more information, see [Publish Modules to a GitHub Repository](../../../developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository.md).
 
 ## Updating Translation Modules
 
 These are the first considerations for updating a translation module:
 
--   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [Install Modules in Etendo](/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo). 
+-   We need to install/update in our instance the last version of the original module and its translation modules. To do so, find more information in [Install Modules in Etendo](../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md). 
 -   The already translated strings for this module are kept. Only the new or modified ones will be untranslated, so all the previous work done is not lost.
 -   Before publishing the translation module, remember to update the First Version dependency to the new version of the translated module, as we saw in the “Create module definition” chapter. Also, it is necessary to update the original module version in the build.gradle file. Apart from that, it is also a good practice to include a description of the changes of this new version inside the Update Information field of the Module window.
 -   To apply the updates, it is necessary to execute the command 

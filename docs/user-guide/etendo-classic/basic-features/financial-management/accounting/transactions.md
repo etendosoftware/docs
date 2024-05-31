@@ -5,23 +5,23 @@ title: Accounting
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Financial Type Configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type Configuration](#financial-type-configuration){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Simple G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#simple-gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Simple G/L Journal](#simple-gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Journal](#gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: End Year Close](#end-year-close){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: GL Posting by DB Tables ](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: GL Posting by DB Tables ](#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Budget](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#budget){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Budget](#budget){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Budget Reports in Excel](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Budget Reports in Excel](#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Not Posted Transaction Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Reset Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 
 ## Financial Type Configuration
@@ -47,7 +47,7 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type).
+    For more information, visit [Financial Type](../../financial-management/accounting/setup.md#financial-type).
 
 
 ### Header
@@ -266,7 +266,7 @@ The exchange rate tab allows the user to enter an exchange rate between the orga
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -304,14 +304,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
 
 ## **G/L Journal**
@@ -422,7 +422,7 @@ Accounting information related to the GL Journal
 #### Duplicate Journal Entries
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -466,7 +466,7 @@ Once this preference is configured, the button will be enabled in “Simple GL J
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
@@ -499,14 +499,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 ## **End Year Close**
@@ -624,7 +624,7 @@ Etendo creates below "closing" entries if the "**Reverse Permanent Account Balan
  ![](../../../../../assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png)
+ ![](../../../../../assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png)
      
 
 The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the "Reverse Permanent Account Balances set to "Yes" scenario.
@@ -696,15 +696,15 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**.  
     This entry resets all "Revenue" and "Expense" accounts.
     
- ![](../../../../../assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png)
+ ![](../../../../../assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png)
      
 -   Dated on the latest day of the year (31-12-2019) below **Closing Entry**.  
     This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.
- ![](../../../../../assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png)
+ ![](../../../../../assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png)
      
 -   Dated on the day of the following year (01-01-2020) below **Opening Entry**.  
     This entry is the reversal entry of the above closing entry:
- ![](../../../../../assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png)
+ ![](../../../../../assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png)
      
 
 ##### **Reverse Permanent Account Balances set to "No"**
@@ -712,10 +712,10 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 Etendo creates below "closing" entries if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "No":
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](../../../../../assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png)
+ ![](../../../../../assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](../../../../../assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png)
+ ![](../../../../../assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png)
 
 ## **GL Posting by DB Tables**
 

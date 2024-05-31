@@ -5,17 +5,17 @@ title: Procurement Reports
 
 This section describes the windows related to procurement reports in Etendo. These are:
 
-[:material-file-document-outline: Purchase Order Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-order-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Order Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-order-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Goods Receipt Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Goods Receipt Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Invoice Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Invoice Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matched Purchase Orders](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#matched-purchase-orders){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matched Purchase Orders](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#matched-purchase-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Vendor Invoice Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#vendor-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Vendor Invoice Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#vendor-invoice-report){ .md-button .md-button--primary } <br>
 
 
 ## Purchase Order Report

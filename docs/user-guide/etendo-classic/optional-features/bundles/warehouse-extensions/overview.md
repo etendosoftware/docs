@@ -21,7 +21,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 It provides updated information about the daily history stock of the products. 
 
 !!! info
-    For more information, visit [the Stock History user guide](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#stock-history) and [the Stock History developer guide](/developer-guide/etendo-classic/bundles/warehouse-extensions-bundle#stock-history).
+    For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
 
 ### Reactivate Warehouse Documents
 
@@ -36,10 +36,10 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
 !!! info
     For more information, visit the user guide for:
 
-    - [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-goods-movements)
-    - [Goods Receipts](/user-guide/etendo-classic/basic-features/procurement-management/transactions#how-to-reactivate-goods-receipts)
-    - [Goods Shipments](/user-guide/etendo-classic/basic-features/sales-management/transactions#how-to-reactivate-goods-shipments)
-    - [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions#how-to-reactivate-physical-inventories)
+    - [Goods Movements](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-goods-movements)
+    - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
+    - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
+    - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
 
 ## Uninstall bundle
 
@@ -52,4 +52,3 @@ WHERE AD_TAB_ID = 'C3DB551F2BCA40A79AAF21DBD6D06309';
 ```
 
 2. After the query successfully finishes, delete the bundle by the way corresponding to the installation method (Sources/JARs)
-

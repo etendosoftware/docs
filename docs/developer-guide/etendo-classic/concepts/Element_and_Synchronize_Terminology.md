@@ -1,5 +1,4 @@
----
-title: Element and Synchronize Terminology  
+---  
 tags: 
   - application dictionary
   - element
@@ -8,7 +7,8 @@ tags:
   - purchase
   - sales
 ---
- 
+
+# Element and Synchronize Terminology
 
 ##  Element
 
@@ -123,7 +123,7 @@ elements, the standard names and the purchase ones. Then, the windows are
 distinguished between sales and purchases using the *Sales Transaction* check
 in the `Application Dictionary `  > `Windows, Tabs, and Fields` >  `Window` >  tab.
 
-
+---
   
 This work is a derivative of [Element and Synchronize Terminology](http://wiki.openbravo.com/wiki/Element_and_Synchronize_Terminology){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
