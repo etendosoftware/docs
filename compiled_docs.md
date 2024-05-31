@@ -27846,6 +27846,100 @@ For this particular case, we have configured an assistant with the functional me
     More information about how to integrate Copilot with other APIs can be found in the [OpenAPI interaction with Copilot](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/openapi-tool.md) page.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Dev Assistant
+## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/Dev Assistant
+## Article URL: 
+ https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/dev-assistant
+## Article Content: 
+### Dev Assistant
+
+
+#### Overview
+
+This assistant is designed to help developers and speed up the process of creating windows, tabs, fields, system elements, menu entries, etc.  As well as tables and columns in the database.
+It is possible to give an input with all the necessary information, or the assistant will go step by step, asking for more information. Also, depending on the context, the assistant can make suggestions that the developer must confirm.
+
+#### Components
+
+The Dev Assistant is composed of the following components:
+
+- [**DDL Tool**](https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+
+- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+
+
+#### Functionality
+
+To use this tool, it is necessary to log in as System Administrator role.
+
+1. Ask the **Dev Assistant** for a window to add in the system and  the module database prefix where the table will be exported. The assistant will then register in the system the table and create it in database, including the mandatory columns. At this stage the assistant checks if the module is in development. If is not, the assistant prompts the user for a correct prefix from a module in development. Additionaly, the assistant checks if the table name is already in use; if it is, asks the user to provide a new name.
+
+2. The assistant will ask to the user for information to add, like columns, data types, help and description, etc.
+
+3. The user must confirm the steps or set up a modification about the given information.
+
+4. Recompile and restart Tomcat to a successful application of changes.
+
+5. The window can be viewed with the user role.
+
+
+
+
+#### Usage Example 
+
+![dev-assistant.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant.png)
+
+**User**: "I want to create a window "Workers dates" that contains information about employees' work dates, use the prefix 'copdev'."
+
+**Copilot**: "Let's start by registering the table for "Workers Dates".
+Please provide the following for better definition:
+Table name in singular (e.g., WorkerDate, EmploymentDate, etc.).
+A valid prefix, which is 'copdev' in your case.
+Any specific data columns (except default columns) you want in the table initially.
+Optionally, if you have a specific class name in mind for this table, please provide it.
+Based on the provided prefix 'copdev' and the idea of the table, I'm suggesting the table name as WorkerDate. Let's proceed if the suggested name is acceptable to you?"
+
+**User**: "Proceed and add some useful columns."
+
+**Copilot**: "The table copdev_WorkerDate has been successfully created and registered in the system. Specific columns for Start Date, End Date, and Role have also been added to the table. Additionally, a window titled "Workers dates" has been created to manage this table's data. The necessary fields in the window's tab have been registered and synchronized as well.
+Summary of Steps Completed:
+Registered the copdev_WorkerDate table in the Application Dictionary.
+Created the copdev_WorkerDate table in the database.
+Added specific columns:
+Start Date (type: Date, not null, default: now())
+End Date (type: Date, can be null)
+Role (type: String, can be null)
+Registered the columns in the Application Dictionary.
+Synchronized the terminology.
+Created a window and tab to manage WorkerDate records.
+Registered fields in the window's tab.
+Synchronized the terminology again.
+Next Steps:
+Compile the project.
+Restart Etendo.
+This will ensure that all changes take effect, and you can start using the new table and window.
+Is there anything else you'd like to do or adjust?"
+
+
+#### Results
+
+With the task complete, it is necessary recompile with a smartbuild and restart Tomcat**
+
+![dev-assistant1.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant1.png)
+
+```title="Terminal"
+./gradlew smartbuild --info
+```
+
+![dev-assistant2.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
+
+**Window in the system**
+![dev-assistant3.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant3.png)
+
+![dev-assistant4.png](https://docs.etendo.software/latest/assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant4.png)
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: SQL Expert
 ## Article Path: /User Guide/Etendo Copilot/Bundles/Copilot Extensions/SQL Expert
 ## Article URL: 
@@ -42591,73 +42685,175 @@ The getting started guide for the Copilot API is a tool that allows interaction 
 
 ==ARTICLE_END==
 ==ARTICLE_START==
-# Article Title: Optical Character Recognition (OCR) Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Optical Character Recognition (OCR) Tool
+# Article Title: Database Query Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
 ## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
 ## Article Content: 
-### Optical Character Recognition (OCR) Tool
+### Database Query Generator tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 #### Overview
+ This tool allows to ask to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
 
-The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+#### Installation
+The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
+
+#### Configuration
+This tool can be configured in a Copilot App:
+
+1. Add **Database Query Generator tool** into the Copilot App configuration, that you want to use the tool. Go to Copilot App window, pick the App and add the tool to the App in the **Tools** tab.
+
+2. Re-Sync the Copilot App running **Sync OpenAI Assistant** process to get the tool available in the Copilot App.
+
+3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
+4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
+    Example for *F&B International Group Admin*:
+    ![DBQueryExec WebHook configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
+
+5. Check that the `ETENDO_HOST` is configured in the `gradle.properties` file.
+
+6. Can you check if the tool is available for the Assistant, asking for it. 
+    <figure markdown>
+    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-2.png){align=right width=300}
+    </figure>
+
+
+#### Security
+
+For security and data segmentation:
+
+- The tables instrospection is limited for the readable tables of the user.
+
+- The tool automatically parses the `doSecurityCheck(entity)` with the conditions for a correct access to the Readable **Client** and **Organization**, for example: `doSecurityCheck(inv)`  for Invoices, is converted to
+
+``` sql
+inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
+```
+
+==ARTICLE_END==
+==ARTICLE_START==
+# Article Title: DDL Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/DDL Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool
+## Article Content: 
+#### Overview
+
+The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is able to create and register tables, windows, items and menu options in the system so that data can be displayed.
 
 #### Functionality
 
+The **DDLTool** works with modes, each for a specific action. Through the prompt, the assistant can infer the mode is needed to do the task request by the user, the tool has a variable that contains a list with the availables modes, and with the prompt the assistant choose wich is better for the task.
 
-1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.ocrtool:1.0.0')
-    ```
+Users can choose modes using the chat:
 
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+- **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named RegisterTableWebHook to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
-4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
 
-    ``` bash title="Terminal"
-    ./gradlew update.database smartbuild --info
-    ``` 
+- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook CreateTableWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
 
-4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
+- **REGISTER_COLUMNS:** This mode is executed automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
 
-5. Update you application:
-    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
-    - If its a Langchain App, restart copilot with the following commands:
-    ``` bash title="Terminal"
-    ./gradlew copilot.stop
-    ./gradlew copilot.start
-    ```
+- **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named SyncTermsWebHook.
 
-5. Now your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the RegisterWindowAndTabWebHook java file.
 
-#### Examples
+- **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
 
-!!! info 
-    It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
-    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
-    
-##### Requesting text recognition from an image/pdf
+#### Usage Example 
 
-After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
-    
-1. Open Copilot button and open a chat with the OpenAI Assistant.
-2. Upload an image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
-3. The tool will recognize the text and return it in the chat.
+In the section of Copilot App, it is possible configure the assistants and the tool that it can use.
+
+![ddl-tool.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool.png)
+
+Also in Copilot App, it cans insert a prompt where is possible indicates the tool will use. Is useful provide a workflow example, the IA can use that to build its own workflow. 
+
+![ddl-tool1.png](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ddl-tool/ddl-tool1.png)
 
 
-We attach an image of an invoice
+Prompt Example:
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+*Your are a developer assistant that can create register tables for Etendo.*
 
-and Copilot will return the recognized(and interpreted) text in the chat.
+*The tables of the Etendo database must be registered in the system before they can be used, this is necessary because Etendo uses a ORM to manage the database, so after the table is registered, when the compiler is executed, the ORM will generate the necessary classes to manage the table records through Java code.*
 
-![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
+*The process of create and register a table has the following steps:*
 
-##### Result Chaining
+*1. Register the table in the system.*
 
-Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
+*2. Create the table in the database, with the basic and mandatory columns. *
+
+*3. Add the specific columns for the table. In other words, the columns that are specific to the table. *
+
+*4. Execute the process to register the columns of the table in the system.*
+
+*5. Execute the Synchronize Terminology process to save the labels and names for the columns. After register columns, is necessary to execute this process to save the labels and names for the columns.*
+
+*6. Create a Window to show the table, additionally add a Header Tab and register in the main menu.*
+
+*7. Execute the process to register all the fields necessary in the Tab.*
+
+*8. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
+
+*9. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
+
+*10. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
+
+*11. Sync the terminology again.*
+
+*Your work is automate the process of registering tables in the system, you will use the DDLTool to do this.*
+
+*The DDLTool is a tool that allows you to do operations based on "mode". The modes are:*
+
+*REGISTER_TABLE: This mode is used to ...*
+
+*CREATE_TABLE: This mode is used to ...*
+
+*ADD_COLUMN: This mode is used to ...*
+
+*REGISTER_COLUMNS: This mode is used to ...*
+
+*REGISTER_WINDOW_AND_TAB : This mode is used to ...*
+
+*SYNC_TERMINOLOGY: This mode is used to ...*
+
+*REGISTER_FIELDS: This mode is used to ...*
+
+*READ_ELEMENTS: This mode is used to ...*
+
+*WRITE_ELEMENTS: This mode is used to ...*
+
+*ADD_FOREIGN: This mode is used to ...*
+
+*If you do not detect any mode or don't understand the request, ask to the user what want to do. *
+
+*Example workflow:*
+
+*User: I want to register a table with name Dog and prefix MOD.*
+
+*Step 1: Register the table in the system. At this point you must execute the DDLTool with the REGISTER_TABLE mode.*
+
+*Step 2: Create the table in the database.*
+
+*Step 3: Add the specific columns for the table. At this point you must ask the user to add the specific columns for the table. *
+
+*Step 4: Execute the process to register the columns of the table in the system. At this point you must execute the DDLTool with the REGISTER_COLUMNS mode.*
+
+*Step 5: Execute the Synchronize Terminology process to save the labels and names for the columns. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
+
+*Step 6: Create a Window to show the table, additionally add a Header Tab and register in the main menu. 
+*
+*Step 7: Execute the process to register all the fields necessary in the Tab. At this point you must execute the DDLTool with the REGISTER_FIELDS mode.*
+
+*Step 8: Execute the Synchronize Terminology process to sync the labels and names for the fields. At this point you must execute the DDLTool with the SYNC_TERMINOLOGY mode.*
+
+*Step 9: Execute the process to check if the elements have the description and help comment complete.*
+
+*Finally, if you finalized all the steps, you must explain to the user what was done and recommend to do a compilation and restart Etendo.*
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: OpenAPI Interaction with Copilot
@@ -42808,6 +43004,75 @@ This is a simple example, but it can be expanded to filter the information, to p
 This way, we can create assistants for any API, as long as we have the OpenAPI Spec file. The assistant will be able to read the API and make the calls, without the need to know the implementation details of the API. 
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Optical Character Recognition (OCR) Tool
+## Article Path: /Developer Guide/Etendo Copilot/Tools/Optical Character Recognition (OCR) Tool
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ocr-tool
+## Article Content: 
+### Optical Character Recognition (OCR) Tool
+
+:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+
+#### Overview
+
+The Optical Character Recognition (OCR) Tool is a tool that recognizes text from images or pdfs. It can be used in Copilot Apps to extract information from images or pdfs that are uploaded to the chat.
+
+#### Functionality
+
+
+1. Add Copilot OCR Tool dependency in the Etendo Classic project, In `build.gradle`, add:
+    ```groovy
+    implementation('com.etendoerp:copilot.ocrtool:1.0.0')
+    ```
+
+3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
+
+4. Do an `update.database smartbuild` to compile the environment of Etendo Classic.
+
+    ``` bash title="Terminal"
+    ./gradlew update.database smartbuild --info
+    ``` 
+
+4. After that, configure the tool in a Copilot App, in order to do that, go to **Copilot App** and pick the **OCR Tool** option in the **Tool** tab.
+
+5. Update you application:
+    - If its an OpenAI Assistant, click in the **Sync OpenAI Assistant** button.
+    - If its a Langchain App, restart copilot with the following commands:
+    ``` bash title="Terminal"
+    ./gradlew copilot.stop
+    ./gradlew copilot.start
+    ```
+
+5. Now your Copilot App is ready to use the OCR Tool to recognize text from images or pdf that you upload in the chat.
+
+#### Examples
+
+!!! info 
+    It is important to clarify that this is a first version subject to improvements. Maybe the tool is not able to recognize all the images or pdfs that are presented to it.
+    In general, the Tool returns the information in JSON format, but the information in the JSON may not reach the user directly, since Copilot can reinterpret the information summarizing it. It is recommended to either specify the result you expect well or ask it to show you the complete JSON.
+    
+##### Requesting text recognition from an image/pdf
+
+After the configuration, you can upload an image or pdf to the chat and the tool will recognize the text:
+    
+1. Open Copilot button and open a chat with the OpenAI Assistant.
+2. Upload an image or pdf to the chat. If you specify the information you want to extract from the image, the tool will return the information in the chat.
+3. The tool will recognize the text and return it in the chat.
+
+
+We attach an image of an invoice
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.png)
+
+and Copilot will return the recognized(and interpreted) text in the chat.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/ocr-tool.gif)
+
+##### Result Chaining
+
+Remember that the result of the tool can be used in other tools, for example, you can use the result of the OCR Tool in a tool that writes the information in a database or sends it to a web service. 
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: XML Translation Tool
 ## Article Path: /Developer Guide/Etendo Copilot/Tools/XML Translation Tool
 ## Article URL: 
@@ -42878,55 +43143,6 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
     ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Database Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
-## Article Content: 
-### Database Query Generator tool
-
-:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
-
-#### Overview
- This tool allows to ask to Etendo for tables available in the database and the columns of each table. It also allows Copilot to execute SQL queries in the database that are generated by the Assistant.
-
-#### Installation
-The tool is included with the SQL Expert installation, see the [SQL Expert installation guide](https://docs.etendo.software/latest/user-guide/etendo-copilot/bundles/sql-expert.md) for more information.
-
-#### Configuration
-This tool can be configured in a Copilot App:
-
-1. Add **Database Query Generator tool** into the Copilot App configuration, that you want to use the tool. Go to Copilot App window, pick the App and add the tool to the App in the **Tools** tab.
-
-2. Re-Sync the Copilot App running **Sync OpenAI Assistant** process to get the tool available in the Copilot App.
-
-3. Check that the role of the user has permissions to use Secure Web Services in the **Role** Window. ![role configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-3.png)
-4. Check that the WebHook **DBQueryExec** is enabled and has the Role Access configured for the role.
-    Example for *F&B International Group Admin*:
-    ![DBQueryExec WebHook configuration](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool.png)
-
-5. Check that the `ETENDO_HOST` is configured in the `gradle.properties` file.
-
-6. Can you check if the tool is available for the Assistant, asking for it. 
-    <figure markdown>
-    ![DBQueryGenerator tool](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/available-tools/database-query-tool-2.png){align=right width=300}
-    </figure>
-
-
-#### Security
-
-For security and data segmentation:
-
-- The tables instrospection is limited for the readable tables of the user.
-
-- The tool automatically parses the `doSecurityCheck(entity)` with the conditions for a correct access to the Readable **Client** and **Organization**, for example: `doSecurityCheck(inv)`  for Invoices, is converted to
-
-``` sql
-inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id IN ('0','E443A31992CB4635AFCAEABE7183CE85','B843C30461EA4501935CB1D125C9C25A','BAE22373FEBE4CCCA24517E23F0C8A48','DC206C91AA6A4897B44DA897936E0EC3','2E60544D37534C0B89E765FE29BC0B43','19404EAD144C49A0AF37D54377CF452D','7BABA5FF80494CAFA54DEBD22EC46F01')
-```
-
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
