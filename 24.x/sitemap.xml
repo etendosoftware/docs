@@ -361,6 +361,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/ddl-tool/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-copilot/available-tools/ocr-tool/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
@@ -867,6 +872,11 @@
     </url>
     <url>
          <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/copilot-purchase-expert/</loc>
+         <lastmod>2024-05-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.etendo.software/24.x/user-guide/etendo-copilot/bundles/dev-assistant/</loc>
          <lastmod>2024-05-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
