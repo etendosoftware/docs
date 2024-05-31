@@ -19,7 +19,7 @@ It is possible to give an input with all the necessary information, or the assis
 
 The Dev Assistant is composed of the following components:
 
-- [**DDL Tool**](http://docs.etendo.software/developer-guide/etendo-copilot/available-tools/ddltool.md){target="_blank}: This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- [**DDL Tool**](../../../developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
 - Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
@@ -79,13 +79,13 @@ Is there anything else you'd like to do or adjust?"
 
 ## Results
 
-**With the task complete, it is necessary recompile with a smartbuild and restart Tomcat**
+With the task complete, it is necessary recompile with a smartbuild and restart Tomcat**
 
 ![dev-assistant1.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant1.png)
 
-    ```title="Terminal"
-    ./gradlew smartbuild --info
-    ```
+```title="Terminal"
+./gradlew smartbuild --info
+```
 
 ![dev-assistant2.png](../../../assets/user-guide/etendo-copilot/bundles/dev-assistant/dev-assistant2.png)
 

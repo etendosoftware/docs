@@ -54,15 +54,25 @@ Prompt Example:
 *The process of create and register a table has the following steps:*
 
 *1. Register the table in the system.*
+
 *2. Create the table in the database, with the basic and mandatory columns. *
+
 *3. Add the specific columns for the table. In other words, the columns that are specific to the table. *
+
 *4. Execute the process to register the columns of the table in the system.*
+
 *5. Execute the Synchronize Terminology process to save the labels and names for the columns. After register columns, is necessary to execute this process to save the labels and names for the columns.*
+
 *6. Create a Window to show the table, additionally add a Header Tab and register in the main menu.*
+
 *7. Execute the process to register all the fields necessary in the Tab.*
+
 *8. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
+
 *9. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
+
 *10. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
+
 *11. Sync the terminology again.*
 
 *Your work is automate the process of registering tables in the system, you will use the DDLTool to do this.*
