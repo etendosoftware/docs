@@ -15,26 +15,26 @@ tags:
 
 ## Overview
 
-With this development, the user can have all the available dependencies to add t ... , configure them and check information about versions, validations, etc. 
+With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
 
 ## Module Management
 
 In the `Application` > `Etendo Dependencies Management` > `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
 
-(Screenshot of the Module Management window)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
 
 !!!info
     The fields in this window are read-only.
 
 Fields to note:
 
-- **Active**: Checkbox to select if this module is active or not
-- **Group**: the identifier of the artifact
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
 - **Artifact**: the unit of deployment fetched and used.
 - **Installed Version**: the version of the used module.
-- **Is bundle**: Checkbox to select if this module is a bundle or not
+- **Is bundle**: Checkbox to select if this module is a bundle or not.
 
-This window presents to buttons that can be user: **Add dependency** and **Update Packages**
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
 
 ### Add Dependency 
 
@@ -43,7 +43,7 @@ This button is used to install all the dependecies part of a specific version of
 !!!note
     A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
 
-(Screenshot showing the pop up window shown after clicking "add dependency")
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
 
 Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
 
@@ -55,7 +55,7 @@ This button is used to execute the Update Packages process which updates the lis
 
 In the `Application` > `Etendo Dependencies Management` > `Dependency Management` window, the user can find all the dependencies installed in the previous step.
 
-(Screenshot of the window with one record open so we can show the fields)
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
 
 Fields to note:
 
@@ -64,9 +64,9 @@ Fields to note:
 - **Artifact**: The unit of deployment fetched and used.
 - **Version**: Version of the module
 - **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
-    - Source: In this case, the source code is available and compilation is required.
-    - Jar: In this case, a standard format for java packages distribution, these include the compiled java classes
-    - Local: The local format implies that the module is installed but it is not declared as a repository dependency. 
+    - `Source`: In this case, the source code is available and compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled java classes.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
 - **Installation Status**: It describes the dependency current status.
     - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
     - Installed: Used once the dependency is already installed.
@@ -74,7 +74,9 @@ Fields to note:
     - Untracked: Only for external dependencies.
     - Update Available: In case there are new available versions.
     - Updated: The latest available version is installed.
-- **External Dependency** (Only available for jar dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
 
 ### Change Version 
 
@@ -93,7 +95,7 @@ This button is used to change the format of the module.  This process needs to b
 
 - In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
 
-- In case the module is originally in jar format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
 
 ## Add Local Dependencies 
 
