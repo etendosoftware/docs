@@ -54,12 +54,11 @@ This is an example of the total line quantity column shown above:
 
 What you can see is that the from clause uses an aliased table, the c_order_id at the end is the non-aliased column of the main table.
 
-**Note:**
-
-  * a computed column can be used in the definition of a field for an Openbravo column, just like every other column. 
-  * a computed column that uses a String reference should have a length greater than zero. Because this is the number of characters which are going to be displayed in form view. 
-  * the field is always read-only, it is recomputed/set automatically when updating or inserting a record. 
-  * filtering and sorting on computed columns/fields is possible. Note: see the performance section at the end of this wiki document. 
+!!!Note
+    * a computed column can be used in the definition of a field for an Etendo column, just like every other column. 
+    * a computed column that uses a String reference should have a length greater than zero. Because this is the number of characters which are going to be displayed in form view. 
+    * the field is always read-only, it is recomputed/set automatically when updating or inserting a record. 
+    * filtering and sorting on computed columns/fields is possible. Note: see the performance section at the end of this wiki document. 
 
 ##  Use case: show totals on a header
 
@@ -79,9 +78,9 @@ or the form:
 
 ###  Filtering and Sorting
 
-When computed columns are used to filter or sort the grid, their value need to be computed for all existing rows before any pagination limit can be applied, this can have a very important impact in terms of performance.
+When computed columns are used to filter or sort the grid, their value needs to be computed for all existing rows before any pagination limit can be applied, this can have a very important impact in terms of performance.
 
-In general, when defining computed columns, they should be made not filterable nor sortable. The only exception to this rule would be when it is guaranteed the number of records in the table they are created for is going to be always reduced or it will always be displayed as a subtab where the number of rows per parent record cannot be big.
+In general, when defining computed columns, they should be made not filterable nor sortable. The only exception to this rule is when it is guaranteed the number of records in the table they are created for is going to be always reduced or it will always be displayed as a subtab, where the number of rows per parent record cannot be big.
 
 ###  Lazy Evaluation
   
@@ -105,7 +104,7 @@ If afterwards we have this code:
   System.out.println(order.getDeliveryStatus());
 ``` 
 
-is at this point when the computed column query is executed in database and _Delivery Status_ property takes value.
+is at this point when the computed column query is executed in database and **Delivery Status** property takes value.
 
 !!!note
     In case there are many computed columns in the same entity, they are evaluated all together when the first one is calculated.
