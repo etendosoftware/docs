@@ -1,64 +1,38 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags:
+  - selectors
+  - create new
+  - business partner
+  - Etendo Classic
+---
 
 #  How to implement Create New In Selectors
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This feature is available starting from ** 3.0PR14Q4  ** .  
----|---  
-  
-  
-In  this  this module there is an example of a selector with a selector with
-the 'create new' capability (among other things). All the implementation of
-this selector is in  this  changeset.
+In  this  this module there is an example of a selector with a selector with the **create new** capability (among other things). All the implementation of this selector is in  this changeset.
 
-This module implements a selector called "Business Partner (Add New)" in the
-"Sales Order" window.
+This module implements a selector called **Business Partner (Add New)** in the **Sales Order** window.
 
-Let's review step by step how this selector has been built, focusing in the
-steps that this project implements.
+Let us review step by step how this selector has been built, focusing in the steps that this project implements.
 
-  * Create a new "Business Partner" selector. This is the one where the process will be attached. Here it is an example: 
+  * Create a new **Business Partner** selector. This is the one where the process will be attached. Here it is an example: 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_implement_Create_New_In_Selectors-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors-1.png){: .legacy-image-style}
 
-  * Create a new "Business Partner Category Selector". This will be used inside the process. Here it is an example: 
+  * Create a new **Business Partner Category Selector**. This will be used inside the process. Here it is an example: 
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_implement_Create_New_In_Selectors-2.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_Create_New_In_Selectors-2.png){: .legacy-image-style}
 
-  * Create the "Business Partner Creation" process. This process will be in charge of: 
+  * Create the **Business Partner Creation** process. This process will be in charge of: 
     * Handle, in case that exists, the current written value in the selector input or in the selector filters in the popup. 
-    * Do the creation of the new "Business Partner" record 
-    * Add and select the created "Business Partner" in the selector form item 
+    * Do the creation of the new **Business Partner** record 
+    * Add and select the created **Business Partner** in the selector form item 
 
-  * After the creation of this process, in the previously created "Business Partner" selector, this process should be selected in the "Process for Adding Records" combo box. 
+  * After the creation of this process, in the previously created **Business Partner** selector, this process should be selected in the **Process for Adding Records** combo box. 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_implement_Create_New_In_Selectors-3.png){: .legacy-image-style}
 
-  * Inside the "Business Partner Creation" process, the "On Load Function" will be in charge of handling, in case that exists, the current written content in the selector input or in the selector filters in the popup. This content will be shown in the process form in each corresponding field. Here it is an example: 
+  * Inside the **Business Partner Creation** process, the **On Load Function** will be in charge of handling, in case that exists, the current written content in the selector input or in the selector filters in the popup. This content will be shown in the process form in each corresponding field. Here it is an example: 
 
     
     
@@ -78,11 +52,9 @@ guides/How_to_implement_Create_New_In_Selectors-3.png){: .legacy-image-style}
       }
     };
 
-Since in this case the name of the form items equals the name of the selector
-columns, there is an iterative logic to match each "enteredValue" with each
-form item of the process.
+Since in this case the name of the form items equals the name of the selector columns, there is an iterative logic to match each `enteredValue` with each form item of the process.
 
-  * Inside the "Business Partner Creation" process, the "Handler" will be in charge of the creation of the new Business Partner record. Also it should select this created record in the selector. 
+  * Inside the **Business Partner Creation** process, the **Handler** will be in charge of the creation of the new Business Partner record. Also it should select this created record in the selector. 
 
     
     
@@ -155,22 +127,8 @@ form item of the process.
       }
     }
 
-Here with the "params.getString" the entered values in the form are obtained
-and then set in the "bp" (Business Partner). After the instance be saved, the
-"record" is built and returned, with the "id" as "value" and the "identifier"
-as "map" There is also some logic to catch errors and show them as a message.
+Here with the `params.getString` the entered values in the form are obtained and then set in the **bp** (Business Partner). After the instance be saved, the **record** is built and returned, with the **ID** as **value** and the **identifier** as **map**. There is also some logic to catch errors and show them as a message.
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_implement_Create_New_In_Selectors  "
+---
 
-This page has been accessed 9,498 times. This page was last modified on 11
-November 2016, at 07:23. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How to Implement Create New in Selectors](http://wiki.openbravo.com/wiki/How_to_implement_Create_New_In_Selectors){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
