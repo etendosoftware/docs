@@ -46,7 +46,7 @@ There are a number of reasons why a **REST approach** makes sense for a data cen
 
   * favors identifying and addressing resources which fits to the data-centric nature of the provided apis (a resource corresponds to a business object) 
   * has actions (POST, PUT, DELETE, GET) which correspond to standard CRUD actions 
-  * allows linking to specific business objects or to sets of business objects. This is a very powerfull feature of a REST approach and it allows for easy navigation between business objects. 
+  * allows linking to specific business objects or to sets of business objects. This is a very powerfull feature of a REST approach and it allows for easy navigation between business objects 
   * is simple to develop and use, and very lightweight from an architectural point of view 
 
 ##  REST Webservice
@@ -72,7 +72,7 @@ A request (GET, POST, PUT) can consist of three parts:
 
 A GET request will not have content and is completely controlled by the url path and its parameters.
 
-A POST and PUT request will have content which is assumed to be a valid xml document.
+A POST and PUT request will have content which is assumed to be a valid `xml` document.
 
 !!!info
     The response of a REST call will be an XML document, containing the requested data, a result XML message or an error XML message.
@@ -97,14 +97,14 @@ It provides the following functionality:
 
 ##  Single Request and Response
 
-A single request is a request which points to one unique business object. For example the url
+A single request is a request which points to one unique business object. For example, the url
 
     
     
     http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/Country/106 (User Name: Openbravo / Password: openbravo)
     
 
-will return the `xml` for an instance of the Country business object with ID = 106 (Spain). The REST Webservice will retrieve this business object from the database, create XML for it and return the resulting XML. 
+will return the `xml` for an instance of the country business object with ID = 106 (Spain). The REST Webservice will retrieve this business object from the database, create XML for it and return the resulting XML. 
 
 ##  Query Request and Response
 
@@ -115,9 +115,7 @@ A query url is used to retrieve a list of business objects. It can handle filter
     http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/Country?where=currency.id='100'&orderBy=name&firstResult=5&maxResult=10 
     
 
-(User Name: Openbravo / Password: openbravo)
-
-This url will return all Country objects which have ID = 100 (USD) as currency, sorted by the country name, the page starting at object 5 and 10 objects should be returned.
+This url will return all country objects which have ID = 100 (USD) as currency, sorted by the country name, the page starting at object 5 and 10 objects should be returned.
 
 To query on date fields for a specific date, it is easier to use a larger/smaller than this because date fields are stored in the database with a time value (which can include milliseconds):
 
@@ -128,9 +126,9 @@ To query on date fields for a specific date, it is easier to use a larger/smalle
 
 The REST query functionality supports the following parameters in the url:
 
-  * where: a HQL whereclause 
-  * orderBy: an orderBy definition 
-  * firstResult and maxResult parameters for paging support 
+  * `where`: a HQL whereclause 
+  * `orderBy`: an orderBy definition 
+  * `firstResult` and `maxResult` parameters for paging support 
 
 The user has two types of possible operations which can be performed by the query:
 
@@ -147,7 +145,7 @@ If you only want to have the objects returned without children then you can pass
 When doing querying with the whereclause, any special characters should be url encoded, for example the % character when doing like has to be encoded with %25, like this:
 
 
-    http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/Country?where=name like '%25Fr%25' (User Name: Openbravo / Password: openbravo)
+    http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/Country?where=name like '%25Fr%25' 
     
 
 Notice that in this first example:
@@ -228,7 +226,7 @@ The system also supports updating of multiple business objects which are passed 
 A XML file containing different types can be posted to the generic DAL web service url:
 
     
-    http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal (User Name: Openbravo / Password: openbravo)
+    http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal 
     
 
 ##  Business Object to XML
@@ -236,14 +234,14 @@ A XML file containing different types can be posted to the generic DAL web servi
 The XML response to a retrieval request consists of the **data of the business object or business objects**. The business object is translated to xml in the following way:
 
   * The entity name is used for **the tag name of the business object element**. The entity tag/element also has attributes for the id and the identifier. 
-  * The property name is used for **the element name of each property**. It depends on the security settings of the user which properties or information is returned (see security section). 
+  * The property name is used for **the element name of each property**. It depends on the security settings of the user which properties or information is returned. 
 
 Property values are `xml-ised` as follows:
 
   * Date value is exported according to the XML Schema datetime format 
   * String value is exported as is (encoding is required) 
   * Numeric value is exported using decimal point and no grouping 
-  * Reference (to another business object) is converted to an `xml` tag which contains the id, the entity name and the identifier value. This makes it possible for consumers of the XML to easily create hyperlinks to retrieve the data of the reference business object. The identifier can be used to generate a display of the reference. 
+  * Reference (to another business object) is converted to an `xml` tag which contains the ID, the entity name and the identifier value. This makes it possible for consumers of the XML to easily create hyperlinks to retrieve the data of the reference business object. The identifier can be used to generate a display of the reference. 
   * Child objects (the list/one-to-many associations) are also exported and are embedded in the parent object (this is done recursively through the parent-child structure). You can disable/prevent the return of child objects by setting the (URL) parameter `includeChildren` to false. 
 
 !!!info
@@ -257,20 +255,20 @@ The design discusses different functionalities. To summarize this section, let's
   * a request (a query) for a list of business objects will return a XML document with the data of those business objects 
   * a request (a query) for a list of identifiers will return a XML document with the only the id, entity name and the identifier of each business object 
   * a query with a count parameter will only return a simple xml message with a count number (<count>5</count>) 
-  * an update/insert request will return a success XML message (<success/>) if it succeeded, the return message will contain the id of the inserted record. 
+  * an update/insert request will return a success XML message (<success/>) if it succeeded, the return message will contain the id of the inserted record
   * a query with a identifier parameter will return a list of identifier values (one for each business object) 
 
 !!!note
-    If the requests fails then an error XML message is returned.
+    If the requests fails, then an error XML message is returned.
 
 ##  HTTP Return Codes
 
 The REST Webservice uses the following error codes:
 
-  * **200 (OK)**: for successfull requests 
-  * **400 (Bad Request)**: in case the uri could not be parsed or in case of invalid xml 
-  * **401 (Unauthorized)**: is returned when a security exception occurs 
-  * **404 (Not found)**: if the entityname does not exist or the if an individual business object is addressed, if the business object does not exist. Note that a 410 (Gone) response could also be applicable here but it is less know therefore the 404 is used. 
+  * **200 (OK)**: for successfull requests. 
+  * **400 (Bad Request)**: in case the uri could not be parsed or in case of invalid `xml`. 
+  * **401 (Unauthorized)**: is returned when a security exception occurs.
+  * **404 (Not found)**: if the entityname does not exist or the if an individual business object is addressed, if the business object does not exist. A 410 (Gone) response could also be applicable here but it is less known therefore the 404 is used. 
   * **409 (Conflict)**: is returned for a POST or PUT action, specifies that the data which was posted is out-of-date or invalid. 
   * **500 (Internal Server Error)**: if an unrecoverable application error occured. 
 
@@ -288,10 +286,7 @@ The following aspects are of importance for security:
 
 Also, the default role for the user who is doing the log in should be enabled to do calls to web services. 
 
-!!!info
-    Search for [Is Web Service Enabled]() inside the Role document for more information.
-
-After a successfull login the REST web service action is run within the context of the user. The REST webservice uses the  DAL security control mechanism to control read and write access.
+After a successfull login, the REST web service action is run within the context of the user. The REST webservice uses the **DAL security control mechanism** to control read and write access.
 
 ##  Stateless Webservice Requests - HTTP Session
  
@@ -299,86 +294,57 @@ After a successfull login the REST web service action is run within the context 
     Important for high frequency webservice calls.  
 
   
-By default OB webservice requests are statefull. Meaning that each webservice
-call will create and use a http session in the OB server. Depending on how you
-setup the client to call the webservice this can even mean that each
-webservice request creates a new http session. This is not advisable for high-
-frequency webservice requests. In case of high volume calls it can make sense
-to move to a stateless implementation.
+By default Etendo webservice requests are **statefull**. Meaning that each webservice call will create and use a http session in the Etendo server. Depending on how the client is set up to call the webservice, this can even mean that each webservice request creates a new http session. This is not advisable for high-frequency webservice requests. In case of high volume calls it can make sense to move to a **stateless implementation**.
 
-There are 2 ways in which you can achieve a stateless handling of a webservice
-requests:
+There are 2 ways in which a stateless handling of a webservice requests can be achieved:
 
-  * passing the parameter stateless=true in the request url. For example: 
+Passing the parameter `stateless=true` in the request url. For example: 
 
-    
-    
     http://localhost:8080/openbravo/ws/org.openbravo.howtos.doIt?product=1000001&stateless=true
     
 
-  * annotating the webservice class with the AuthenticationManager.Stateless annotation: 
+Annotating the webservice class with the `AuthenticationManager.Stateless` annotation: 
+ 
+    @AuthenticationManager.Stateless public class POSTestStatelessWebservice implements WebService {...}
 
-    
-    
-    @AuthenticationManager.Stateless
-    public class POSTestStatelessWebservice implements WebService {
-    ...
-    }
-
-When doing stateless requests the implementation of the webservice should not
-expect a http session to be present or create a new http session. For example
-the VariablesBase object can not be used in stateless webservice requests.
-Other than that most base framework functionality (like the data-access-layer
-and the OBContext object) is available for the logic.
+When doing stateless requests, the implementation of the webservice should not expect a http session to be present or create a new http session. For example, the `VariablesBase` object can not be used in stateless webservice requests.
+Other than that, most base framework functionality (like the data-access-layer and the `OBContext` object) is available for the logic.
 
 ##  Database Transaction
 
-A REST web service request is basically the same as a normal HTTP request.
-This means that transaction handling is the same as for standard HTTP
-requests. If no exception occured then the transaction is committed at the end
-of the web service request (on the Openbravo server).
+A REST web service request is basically the same as a normal HTTP request. This means that transaction handling is the same as for standard HTTP requests. If no exception occured then, the transaction is committed at the end
+of the web service request (on the Etendo server).
 
 ##  Non-updatable fields: Client, Organisation etc.
 
-There are a number of properties for each business object which are not always
-changeable through the REST webservice:
+There are a number of properties for each business object which are not always changeable through the REST webservice:
 
-  * Client and Organisation: a webservice update of a business object may not change the Client and Organisation information. In creation mode the client may not be set, the organisation may be specified, if not specified then it is set from the user information. 
-  * Update and Created audit fields: the update and created audit fields are not updatable/changeable through the webservice api. 
+  * **Client and Organisation**: a webservice update of a business object may not change the Client and Organisation information. In creation mode the client may not be set, the organisation may be specified, if not specified then, it is set from the user information. 
+  * **Update and Created audit fields**: the update and created audit fields are not updatable/changeable through the webservice api. 
 
 ##  XSD Schema Generation for REST approach
 
-The DAL webservice generates a XSD schema on the basis of the runtime model.
-This XSD schema defines the xml which is generated by the REST web service.
-This definition is also used for the XML used to update Openbravo through REST
-web services.
+The DAL webservice generates a XSD schema on the basis of the runtime model. This XSD schema defines the `xml` which is generated by the REST web service.
+This definition is also used for the XML used to update Etendo through REST web services.
 
-For an Openbravo ERP instance running on
-http://livebuilds.openbravo.com/erp_pi_pgsql  the XSD can be retrieved through
+For an Etendo ERP instance, running on `http://livebuilds.openbravo.com/erp_pi_pgsql`  the XSD can be retrieved through
 this request:
-
-    
     
     http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/schema (User Name: Openbravo / Password: openbravo)
     
 
 ##  Error Handling
 
-When a request can not be processed and an error occurs then an error XML
-document and the relevant HTTP response code is returned. The error XML
-document contains the exception message.
+When a request can not be processed and an error occurs then an error XML document and the relevant `HTTP` response code is returned. The error XML document contains the exception message.
 
-The stacktrace and other more detailed information is not sent out on purpose
-(because of security reasons).
+!!!note
+    The stacktrace and other more detailed information is not sent out on purpose (because of security reasons).
 
 ##  Simple XSLT templates
 
-Openbravo ERP 2.50 has some simple XSLT templates to show how the XML can be
-processed and demonstrate that REST is a good approach for allowing navigation
-through data sets. The following URL shows the start URL for a DAL web service
+Etendo has some simple XSLT templates to show how the XML can be processed and demonstrate that REST is a good approach for allowing navigation through data sets. The following URL shows the start URL for a DAL web service
 call using the XSLT templates:
 
-    
     
     http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/?template=types.xslt (User Name: Openbravo / Password: openbravo)
     
@@ -390,22 +356,17 @@ call using the XSLT templates:
     
     http://livebuilds.openbravo.com/erp_pi_pgsql/ws/dal/Currency/100?template=bo.xslt (User Name: Openbravo / Password: openbravo)
     
-
-The XSLT templates can be found in the org.openbravo.service.rest package.
+!!!info
+    The XSLT templates can be found in the `org.openbravo.service.rest` package.
 
 ##  Test
 
-The REST Webservice functionality is tested using junit testcases. REST test
-cases can be found in the openbravo development project in the src-test folder
-and then in the org.openbravo.test.webservice package. The REST test cases
-give a first impression on how to do REST requests directly from Java incl.
-basic authentication.
+The REST Webservice functionality is tested using **junit testcases**. REST test cases can be found in the Etendo development project in the `src-test` folder and then in the `org.openbravo.test.webservice` package. The REST test cases give a first impression on how to do REST requests directly from `Java incl.` basic authentication.
 
 ##  Tips & tricks and trouble shooting
 
-For trouble shooting and tips and tricks please see this link  here  . The
-tips and tricks section for example discuss a firefox plugin to make it easy
-to test REST webservices.
+For trouble shooting and tips and tricks please visit the [Tips and Tricks section](developer-guide/etendo-classic/concepts/Common_Issues_Tips_and_Tricks.md). The Tips and Tricks section for example discuss a firefox plugin to make it easy to test REST webservices.
+
 
 This work is a derivative of [XML REST Web Services](http://wiki.openbravo.com/wiki/XML_REST_Web_Services){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 
