@@ -18,7 +18,7 @@ This section describes the OAuth Authentication module included in the Platform 
 
 OAuth Authentication process facilitates the **type provider configuration** which allows users to **securely authenticate and authorize access** to their bank information using their preferred provider.
 
-OAuth facilitates an authentication method through a security protocol for obtaining a token needed to give consent to the bank. This authentication will allow Etendo to get the necessary bank information to access the bank statements.
+OAuth facilitates an authentication method through a security protocol for obtaining a token needed to make **API calls** to access specific resorces on behalf of their owner. This authentication will allow Etendo to get the necessary bank information to access the bank statements.
 
 The functionality described in this section, is a complementary configuration section of the **PSD2 Bank Integration process**. So, before configuring the preferred bank type provider authentication from the OAuth Provider window, go to the [Financial Account window](../financial-extensions/psd2-bank-integration.md) to start the Functional process.
 
