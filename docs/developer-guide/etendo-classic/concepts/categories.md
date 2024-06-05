@@ -1,34 +1,7 @@
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/social-blogs-
-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main
-Page  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload
-file  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What
-links here  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent
-changes  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style}
-Communicate  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report
-a bug  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style}
-Contribute  
-![](http://wiki.openbravo.com/wiki/skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to
-us now!  
-
-  
+---
+tags: 
+  - categories
+---
 
 #  Categories
 
@@ -92,8 +65,6 @@ Categories  Display categories starting at:  (first |  last  ) View (previous
 (first |  last  ) View (previous 50 |  next 50  ) (  20  |  50  |  100  |  250
 |  500  )
 
-Retrieved from "  http://wiki.openbravo.com/wiki/Special:Categories  "
+---
 
-  
-****
-
+This work is a derivative of [Categories](http://wiki.openbravo.com/wiki/Special:Categories){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}. 

@@ -263,7 +263,7 @@ nav:
 #        - Application Menu: developer-guide/etendo-classic/concepts/Application_Menu.md
 #        - Attachments: developer-guide/etendo-classic/concepts/Attachments.md
 #        - Authentication: developer-guide/etendo-classic/concepts/Authentication.md
-#        - Categories: developer-guide/etendo-classic/concepts/Categories.md
+        - Categories: developer-guide/etendo-classic/concepts/categories.md
 #        - Category:Concepts: developer-guide/etendo-classic/concepts/Category_Concepts.md
 #        - Category:Developers Guide: developer-guide/etendo-classic/concepts/Category_Developers_Guide.md
 #        - Client Side Development and API: developer-guide/etendo-classic/concepts/client-side-development-and-api.md
