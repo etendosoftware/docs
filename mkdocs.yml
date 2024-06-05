@@ -399,7 +399,7 @@ nav:
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
-        - How to implement Create New In Selectors: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selectors.md
+        - How to Implement Create New in Selectors: developer-guide/etendo-classic/how-to-guides/how-to-implement-create-new-in-selectors.md
 #        - How To Implement FICExtension Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_FICExtension_Hook.md
 #        - How To Implement JsonDataServiceExtraActions Hook: developer-guide/etendo-classic/how-to-guides/How_To_Implement_JsonDataServiceExtraActions_Hook.md
 #        - How To Log: developer-guide/etendo-classic/how-to-guides/How_To_Log.md

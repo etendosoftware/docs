@@ -6,13 +6,13 @@ tags:
   - Etendo Classic
 ---
 
-#  How to implement Create New In Selectors
+#  How to Implement Create New in Selectors
 
-In  this  this module there is an example of a selector with a selector with the **create new** capability (among other things). All the implementation of this selector is in  this changeset.
+In [this]() module there is an example of a selector with a selector with the **create new** capability (among other things). All the implementation of this selector is in [this]() changeset.
 
 This module implements a selector called **Business Partner (Add New)** in the **Sales Order** window.
 
-Let us review step by step how this selector has been built, focusing in the steps that this project implements.
+Let us review step by step how this selector has been built, focusing on the steps that this project implements.
 
   * Create a new **Business Partner** selector. This is the one where the process will be attached. Here it is an example: 
 
@@ -24,17 +24,17 @@ Let us review step by step how this selector has been built, focusing in the ste
 
   * Create the **Business Partner Creation** process. This process will be in charge of: 
     * Handle, in case that exists, the current written value in the selector input or in the selector filters in the popup. 
-    * Do the creation of the new **Business Partner** record 
-    * Add and select the created **Business Partner** in the selector form item 
+    * Do the creation of the new **Business Partner** record.
+    * Add and select the created **Business Partner** in the selector form item.
 
   * After the creation of this process, in the previously created **Business Partner** selector, this process should be selected in the **Process for Adding Records** combo box. 
 
 ![](/assets/developer-guide/etendo-classic/how-to-
 guides/How_to_implement_Create_New_In_Selectors-3.png){: .legacy-image-style}
 
-  * Inside the **Business Partner Creation** process, the **On Load Function** will be in charge of handling, in case that exists, the current written content in the selector input or in the selector filters in the popup. This content will be shown in the process form in each corresponding field. Here it is an example: 
+  * Inside the **Business Partner Creation** process, the **On Load Function** will be in charge of handling, in case that it exists, the current written content in the selector input or in the selector filters in the popup. This content will be shown in the process form in each corresponding field. Here is an example: 
 
-    
+    ```
     
     OB.OBPF.BPCreation = function (processWindow) {
       var i, j, theFormItems;
@@ -51,12 +51,13 @@ guides/How_to_implement_Create_New_In_Selectors-3.png){: .legacy-image-style}
         }
       }
     };
+    ```
 
 Since in this case the name of the form items equals the name of the selector columns, there is an iterative logic to match each `enteredValue` with each form item of the process.
 
-  * Inside the **Business Partner Creation** process, the **Handler** will be in charge of the creation of the new Business Partner record. Also it should select this created record in the selector. 
-
-    
+  * Inside the **Business Partner Creation** process, the **Handler** will be in charge of the creation of the new Business Partner record. It also should select this created record in the selector. 
+  
+    ```  
     
     public class BPCreationActionHandler extends BaseProcessActionHandler {
       private static final Logger log = Logger.getLogger(BPCreationActionHandler.class);
@@ -126,8 +127,9 @@ Since in this case the name of the form items equals the name of the selector co
         return result;
       }
     }
+    ```
 
-Here with the `params.getString` the entered values in the form are obtained and then set in the **bp** (Business Partner). After the instance be saved, the **record** is built and returned, with the **ID** as **value** and the **identifier** as **map**. There is also some logic to catch errors and show them as a message.
+Here with the `params.getString` the entered values in the form are obtained and then set in the **bp** (Business Partner). After the instance is saved, the **record** is built and returned, with the **ID** as **value** and the **identifier** as **map**. There is also some logic to catch errors and show them as a message.
 
 ---
 
