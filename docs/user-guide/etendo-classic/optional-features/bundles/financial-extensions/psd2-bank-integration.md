@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-This section describes an enhancement of the **Financial Extensions Bundle** in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo, create transactions within specified date ranges and automatically download bank transactions. 
+This section describes an enhancement of the **Financial Extensions Bundle** in Etendo which uses the **PSD2 (Payment Services Directive 2) feature**. This functionality allows users to securely connect to their bank, synchronize their bank accounts with financial accounts in Etendo and automatically download bank transactions  within specified date ranges. 
 
 This section serves as a guide for users to understand the functionality and usage of the PSD2 module.
 
@@ -78,9 +78,9 @@ Once the process is finished, the synchronization can be checked in the **Bank I
 
 In the **PSD2 Bank Integration section of the header**, it is also possible to define the import date of the bank statements and the frequency run, e.i., how often the user wants a record to be created: 
 
-- **Import from Date**: Etendo brings bank statement information from the last date when a bank statement was created (when a bank statement was imported). 
+- **Import from Date**: The user is able to set the specific date from which the bank information will be taken. In case no date is set, Etendo brings bank statement information from the last date when a bank statement was created (when a bank statement was imported). 
 
-- **Import to Date**: if the field remains empty, Etendo brings the information to the current day's date.
+- **Import to Date**: The user is able to set the specific date up to which the bank information will be taken. In case this field remains empty, Etendo brings the information to the current day's date.
 
 !!!info
         In case any of the fields **Import from Date and Import to Date** remain empty, Etendo brings the bank statement information to the current day’s date. 
