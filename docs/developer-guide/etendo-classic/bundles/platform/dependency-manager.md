@@ -4,6 +4,8 @@ tags:
   - Etendo Classic
   - platform extensions
   - bundles
+  - installation
+  - modules instalation
   - dependency
   - dependency manager
   - dependencies management
@@ -31,14 +33,14 @@ Fields to note:
 - **Active**: Checkbox to select if this module is active or not.
 - **Group**: the identifier of the artifact.
 - **Artifact**: the unit of deployment fetched and used.
-- **Installed Version**: the version of the used module.
-- **Is bundle**: Checkbox to select if this module is a bundle or not.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
 
 This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
 
 ### Add Dependency 
 
-This button is used to install all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
+This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
 
 !!!note
     A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
@@ -46,6 +48,9 @@ This button is used to install all the dependecies part of a specific version of
 ![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
 
 Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+!!!info
+    In case of executing the process with a bundle, all its dependencies will be added but not itself.
 
 ### Update Packages
 
@@ -64,8 +69,8 @@ Fields to note:
 - **Artifact**: The unit of deployment fetched and used.
 - **Version**: Version of the module
 - **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
-    - `Source`: In this case, the source code is available and compilation is required.
-    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled java classes.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
     - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
 - **Installation Status**: It describes the dependency current status.
     - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
@@ -80,6 +85,8 @@ This window presents to buttons that can be used: **Change Version** and **Chang
 
 ### Change Version 
 
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
+
 This button is used to update or downgrade versions. 
 
 When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
@@ -89,6 +96,8 @@ When the version of a module is modified, its related dependencies could be modi
 
 ### Change Format 
 
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
+
 This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
 
 - In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
@@ -97,9 +106,19 @@ This button is used to change the format of the module.  This process needs to b
 
 - In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
 
+
+### Delete Packages
+
+In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
 ## Add Local Dependencies 
 
+![](../../../../assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
+
 This process, in `Application` > `Etendo Dependencies Management` > `Add Local dependencies`, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
 
 ## Update Packages Information
 
