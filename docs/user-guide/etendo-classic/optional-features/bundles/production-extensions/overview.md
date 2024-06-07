@@ -24,4 +24,4 @@ This bundle includes enhancements for the Production Management functionalities 
 This functionality is useful when the user needs to reactivate a work effort.
 
 !!! info
-    For more information, visit the [Advanced Work Effort user guide](/user-guide/etendo-classic/basic-features/production-management/transactions/#how-to-reactivate-work-efforts).
+    For more information, visit the [Advanced Work Effort user guide](../../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#how-to-reactivate-work-efforts).

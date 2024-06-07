@@ -267,4 +267,4 @@ Converts EAN-128 type to a JSON object and returns it as a response.
 **Purpose**: It allows you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+    For more information, visit the [Webhook Events Developer Guide](../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)

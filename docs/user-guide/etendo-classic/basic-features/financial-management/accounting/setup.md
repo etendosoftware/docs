@@ -5,45 +5,45 @@ title: Set Up - Accounting
 
 This section describes the windows that are necessary to configure the accounting functionalities of Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Accounting Transaction Details](/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools#accounting-transaction-details){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Transaction Details](#accounting-transaction-details){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Open/Close Period Control](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#openclose-period-control){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Open/Close Period Control](#openclose-period-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Financial Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type](#financial-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Period Control Log](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#period-control-log){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Period Control Log](#period-control-log){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Tree](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-tree){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Account Tree](#account-tree){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: General Ledger Configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#glconfig){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: General Ledger Configuration](#glconfig){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Fiscal Calendar](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#fiscal-calendar){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Fiscal Calendar](#fiscal-calendar){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Account Combination](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#account-combination){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Account Combination](#account-combination){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Process](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting-process){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Process](#accounting-process){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Item](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-item){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Item](#gl-item){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#gl-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Category](#gl-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Document Type](#document-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Document Sequence](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-sequence){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Document Sequence](#document-sequence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Category](#tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Business Partner Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Business Partner Tax Category](#business-partner-tax-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Tax Rate](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-rate){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Tax Rate](#tax-rate){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Cost Center](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#cost-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Cost Center](#cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: ABC Activity](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#abc-activity){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: ABC Activity](#abc-activity){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Accounting Templates](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#accounting-templates){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Accounting Templates](#accounting-templates){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Balance Sheet and P/L Structure Setup](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Balance Sheet and P/L Structure Setup](#balance-sheet-and-pl-structure-setup){ .md-button .md-button--primary } <br>
 
 
 ## **Open/Close Period Control**
@@ -206,7 +206,7 @@ Notice that:
 ## Financial Type
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 
 ### Introduction
@@ -214,7 +214,7 @@ Notice that:
 In this window, the user can configure the different options to use in the Financial Type Configuration window.
 
 !!! info
-    For more information, visit [Financial Type Configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration).
+    For more information, visit [Financial Type Configuration](../../financial-management/accounting/transactions.md#financial-type-configuration).
 
 
 #### How to install the Financial Type dataset
@@ -317,7 +317,7 @@ Besides, it is well-known that every account, subaccount in Etendo terms, needs 
 -   "Asset", "Liability" and "Owner's Equity" account types need to be included in the Balance Sheet
 -   while "Expense" and "Revenue" account types need to be included in the Profit & Loss.
 
-The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png which can be found in the "Toolbar"..png)
+The best way to understand how a chart of accounts is captured in Etendo is by pressing the "Tree" icon  ![](../../../../../assets/drive/12vK4RHPNQ9vkJb_G1nUIneDdx6pLh_CY.png) which can be found in the toolbar.
 
 Tree icon opens a new window which shows one tree branch per financial statement:
 
@@ -1194,7 +1194,7 @@ In this window, the user can configure necessary accounting processes.
 ![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/set-up/accounting-process.png)
 
 !!!info
-    For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](/developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process).
+    For more information, visit the developer guide on [How to Create a Module that Adds an Accounting Process](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-create-a-module-that-adds-an-accounting-process.md).
   
 ## **G/L Item**
 
@@ -1574,7 +1574,7 @@ There are other variables which can reduce up to just "one" the tax rate automat
 Those variables are related to the tax category as well as the way each tax rate is configured.
 
 !!! info
-    It is important to remark that all available tax rates are available for *manual* selection in an order/invoice line regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
+    It is important to notice that all available tax rates are available for *manual* selection in an order/invoice line regardless a tax rate is automatically populated by Etendo for that given order/invoice line.
 
 The end-user could need to select a particular tax rate under a given business scenario that is not the common one.
 
@@ -1694,7 +1694,7 @@ The VAT amount can not be posted to the ledger in a Tax Credit account as it mea
 | Vendor Liability |     | Total Gross Amount | One per invoice |
 
 !!! info
-    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).   
+    To be able to use the functionality described below, the Financial Extensions Bundle must be installed. To do so, follow the instructions in marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).   
 
 The same behavior can be applied for the non-deductible tax. 
 
@@ -1984,27 +1984,27 @@ The Bulk Posting functionality allows the user to post or unpost multiple record
 
 This functionality is available in the following windows:
 
-- [Amortization](/user-guide/etendo-classic/basic-features/financial-management../../../../../assets/overview/#bulk-posting)
-- [Goods Movements](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_1)
-- [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_2)
-- [Matched Invoices](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_2)
-- [Cost Adjustment](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_3)
-- [Bill of Materials Production](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting_2)
-- [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting_1)
-- [Doubtful Debt](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_3)
-- [Landed Cost](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_4)
-- [G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting_1)
-- [Simple G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#bulk-posting)
-- [Work Effort](/user-guide/etendo-classic/basic-features/production-management/transactions/#bulk-posting)
-- [Goods Receipt](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting)
-- [Goods Shipment](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting)
-- [Return Material Receipt](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_1)
-- [Return to Vendor Shipment](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_3)
-- [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#bulk-posting_2)
-- [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#bulk-posting_1)
-- [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting_1)
-- [Payment Out](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#bulk-posting)
-- [Physical Inventory](/user-guide/etendo-classic/basic-features/warehouse-management/transactions/#bulk-posting)
+- [Amortization](../../financial-management/assets/overview.md#bulk-posting)
+- [Goods Movements](../../warehouse-management/transactions.md#bulk-posting_1)
+- [Financial Account](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_2)
+- [Matched Invoices](../../procurement-management/transactions.md#bulk-posting_2)
+- [Cost Adjustment](../../warehouse-management/transactions.md#bulk-posting_3)
+- [Bill of Materials Production](../../warehouse-management/transactions.md#bulk-posting_2)
+- [Internal Consumption](../../production-management/transactions.md#bulk-posting_1)
+- [Doubtful Debt](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_3)
+- [Landed Cost](../../procurement-management/transactions.md#bulk-posting_4)
+- [G/L Journal](../../financial-management/accounting/transactions.md#bulk-posting_1)
+- [Simple G/L Journal](../../financial-management/accounting/transactions.md#bulk-posting)
+- [Work Effort](../../production-management/transactions.md#bulk-posting)
+- [Goods Receipt](../../procurement-management/transactions.md#bulk-posting)
+- [Goods Shipment](../../sales-management/transactions.md#bulk-posting)
+- [Return Material Receipt](../../sales-management/transactions.md#bulk-posting_1)
+- [Return to Vendor Shipment](../../procurement-management/transactions.md#bulk-posting_3)
+- [Sales Invoice](../../sales-management/transactions.md#bulk-posting_2)
+- [Purchase Invoice](../../procurement-management/transactions.md#bulk-posting_1)
+- [Payment In](../../financial-management/receivables-and-payables/transactions.md#bulk-posting_1)
+- [Payment Out](../../financial-management/receivables-and-payables/transactions.md#bulk-posting)
+- [Physical Inventory](../../warehouse-management/transactions.md#bulk-posting)
 
 
 #### Accounting Status

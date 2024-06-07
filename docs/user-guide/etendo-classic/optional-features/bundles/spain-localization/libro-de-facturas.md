@@ -148,7 +148,7 @@ Es importante recalcar que el usuario puede crear los libros de facturas para un
 
 Configuración del Libro de Facturas recibidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
+Una vez aplicado el dataset del módulo [Configuración de impuestos para el libro de facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas recibidas.
 
 
 Campos a tener en cuenta:
@@ -193,7 +193,7 @@ La información contenida en las líneas del libro es la que se muestra a contin
 
 Configuración del Libro de Facturas emitidas en la ruta de aplicación Gestión Financiera – Contabilidad – Configuración – Configuración de Libro de Facturas.
 
-Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](/user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas/), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
+Una vez aplicado dataset del módulo [Configuración de impuestos para el libro de facturas](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/configuracion-de-impuestos-para-libro-de-facturas.md), el usuario puede comprobar la configuración de los libros de facturas que se ha creado por defecto para el libro de facturas emitidas.
 
 Campos a tener en cuenta:
 

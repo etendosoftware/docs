@@ -13,9 +13,9 @@ It is important to remark that a sales invoice created from a prepaid sales orde
 
 ## Recommended articles
 
-Managing prepaid invoices requires a clear understanding on how to create a [Sales Order](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) and a [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) as well as how to register a [Customer Payment](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in).
+Managing prepaid invoices requires a clear understanding on how to create a [Sales Order](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) and a [Sales Invoice](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) as well as how to register a [Customer Payment](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in).
 
-It is recommended as well to understand how to set up a [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term) and how to launch the [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report).
+It is recommended as well to understand how to set up a [Payment Term](../../../user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup.md#payment-term) and how to launch the [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report).
 
 ## Order prepayment: execution steps
 
@@ -40,11 +40,11 @@ Please note that, prepay payment term has a header and a line:
 
 As already mentioned, the first step is to create a Sales Order according to the customer needs.
 
-In this scenario, the parties have agreed on a specific payment term which can be filled in the corresponding field of the [Sales Order](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) header.
+In this scenario, the parties have agreed on a specific payment term which can be filled in the corresponding field of the [Sales Order](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) header.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/salesordersm.png)
 
-The main field that needs to be taken into account when managing prepayments is the field Invoice Terms which needs to be selected as “Immediate”, otherwise it would not be possible to prepay that order. In Etendo that means that the order will not be shown as a suitable order to be paid in the [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window where customer payments are registered.
+The main field that needs to be taken into account when managing prepayments is the field Invoice Terms which needs to be selected as “Immediate”, otherwise it would not be possible to prepay that order. In Etendo that means that the order will not be shown as a suitable order to be paid in the [Payment In](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window where customer payments are registered.
 
 Once every required data is filled in, the Sales Order needs to be Booked as every time an order is completed a Payment Plan is created for that Order.
 
@@ -52,7 +52,7 @@ In other words, it is not possible to record payments against orders which are n
 
 ### Payment creation and accounting
 
-Payments received from the customer are registered in the [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window. Etendo allows registering customer payments received against sales orders and/or invoices.
+Payments received from the customer are registered in the [Payment In](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window. Etendo allows registering customer payments received against sales orders and/or invoices.
 
 The main fields to fill in the header section of the payment in window are:
 
@@ -73,20 +73,20 @@ The company in this example needs to choose "Orders" and then the order which is
 
 Once everything is filled in, press the button Done.
 
-The payment is received and deposited in the bank at the same time, that means that a deposit transaction is created in the [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#transaction) window, in the "Transaction" tab.
+The payment is received and deposited in the bank at the same time, that means that a deposit transaction is created in the [Financial Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#transaction) window, in the "Transaction" tab.
 
 Just created payment can be posted in the Payment In window by pressing the process button Post if:
 
-- the "Payment Method" used has the proper configuration in the [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method) tab of the financial account used to make the payment.
+- the "Payment Method" used has the proper configuration in the [Payment Method](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-method) tab of the financial account used to make the payment.
 - the company in this example needs to set the field "Upon Receipt Use" as "In Transit Payment Account"
-- besides, there should be an "In Transit Payment IN Account" in the [Accounting Configuration](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration) tab of the financial account used to make the payment.
+- besides, there should be an "In Transit Payment IN Account" in the [Accounting Configuration](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration) tab of the financial account used to make the payment.
 
 The posting will look like:
 
 | Account                          | Debit  | Credit |
 |----------------------------------|--------|--------|
-| [In Transit Payment In Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#accounting-configuration)   | 863.20 |        |
-| [Customer Prepayment](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#customer-accounting)              |        | 863.20 |
+| [In Transit Payment In Account](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#accounting-configuration)   | 863.20 |        |
+| [Customer Prepayment](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)              |        | 863.20 |
 
 It is possible to check once more the Payment Plan of the sales order in this example.
 
@@ -94,7 +94,7 @@ The sales order payment plan includes the payment registered in the Payment Deta
 
 ### Payment check
 
-Back in the [Sales Order](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order), it is possible to check the recently created Payment Plan with its Payment Details.
+Back in the [Sales Order](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order), it is possible to check the recently created Payment Plan with its Payment Details.
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/paymentplansm.png)
 
@@ -110,7 +110,7 @@ To summarize:
 
 ### Pre-Paid invoice management and accounting
 
-There are several ways to create a sales invoice from an order, one of those is [Create Invoices from Orders](/user-guide/etendo-classic/basic-features/sales-management/transactions/#create-invoices-from-orders).
+There are several ways to create a sales invoice from an order, one of those is [Create Invoices from Orders](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#create-invoices-from-orders).
 
 This process allows to enter data such as the business partner and a given data range to narrow down the orders to be invoiced.
 
@@ -131,10 +131,10 @@ Above situation it is also reflected in accounting, as purchase invoice posting 
 
 | Account                | Debit   | Credit  |
 |------------------------|---------|---------|
-| [Customer Receivable](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#customer-accounting)    | 630.80  |         |
+| [Customer Receivable](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#customer-accounting)    | 630.80  |         |
 | Customer Prepayment    |         | 863.20  |
 
-There is a report named [Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report) which allows monitoring every payment received or made.
+There is a report named [Payment Report](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools.md#payment-report) which allows monitoring every payment received or made.
 
 In this example, this report shows in an intuitive way:
 
@@ -145,8 +145,8 @@ In this example, this report shows in an intuitive way:
 
 In this example, the last step is to register the customer payment of the invoice, 30 days after the invoice date. A payment received from a customer can be registered in the system two ways:
 
-- in the [Payment In](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-in) window, same way as described here but this time the payment must be related to a "Transaction Type" equal to "Invoices"
-- or in the [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice) window, by using the process button "Add Payment In/Out".
+- in the [Payment In](../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#payment-in) window, same way as described here but this time the payment must be related to a "Transaction Type" equal to "Invoices"
+- or in the [Sales Invoice](../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-invoice) window, by using the process button "Add Payment In/Out".
 
 ![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-prepaid-invoices-in-receivables/addpaymentsm.png)
 

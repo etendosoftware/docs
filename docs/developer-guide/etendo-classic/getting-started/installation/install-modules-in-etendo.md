@@ -7,7 +7,7 @@ This page explains how to install modules either from the Etendo Marketplace or 
 
 ## 1. Dependency resolution
 
-It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](/getting-started/installation/). Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.
+It is important to mention that the dependencies are resolved from GitHub, so you must have the credentials properly configured as explained in the [Etendo installation guide](../../../../getting-started/installation.md). Depending on the level of access your GitHub user has, you have access to packages in public or private repositories.
 
 !!! success "Info"
     Along your license, you have access to all packages distributed by Etendo.
@@ -192,7 +192,7 @@ But if you want to update a translation module version, you can execute:
 ```
 
 ??? info
-    The *install.translation* task changes the status of the module and the translations is installed on the next run of *update.database*.
+    The `install.translation` task changes the status of the module and the translations is installed on the next run of `update.database`.
 
 Another option to force the installation of all the translation modules is to add the `forceRefData=true` property in the `gradle.properties` file and then running:
 

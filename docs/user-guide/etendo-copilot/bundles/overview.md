@@ -26,11 +26,23 @@ The apps described below belong to preconfigured reference data included in the 
 
     This **Copilot App** is able to answer questions with indexed information from the official Etendo documentation.
 
-- **Copilot Purchase Expert**
+- **Purchase Expert**
 
     :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
     This copilot app is capable of performing operations related to loading purchase orders by chat interaction or through images or `PDF` files.
+
+    !!! info
+        For more information, visit [Purchase Expert user guide](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+- **SQL Expert**
+
+    :octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
+
+    This copilot app is capable of help users read information from the database. It allows users to ask questions in natural language and get the SQL query that retrieves the information they need.
+
+    !!! info
+        For more information, visit [SQL Expert user guide](../../../user-guide/etendo-copilot/bundles/sql-expert.md).
 
 ## Modules
 
@@ -86,6 +98,7 @@ This Etendo Copilot tool allows interacting with APIs taking the platform to ano
 :octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
-
 !!! info
     For more information, visit [Copilot Purchase Expert user guide](../../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md).
+
+

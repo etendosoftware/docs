@@ -12,7 +12,7 @@ tags:
 
 :material-store: Etendo Marketplace:  [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/?#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
-:octicons-project-symlink-16: Original Bundle Release Notes: [Platform Extensions Bundle](/whats-new/release-notes/etendo-classic/bundles/platform-extensions/release-notes/)
+:octicons-project-symlink-16: Original Bundle Release Notes: [Platform Extensions Bundle](../../bundles/platform-extensions/release-notes.md)
 
 ## Overview
 

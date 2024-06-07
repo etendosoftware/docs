@@ -6,7 +6,7 @@ title: Etendo Classic Subapp Extensions
 
 ## Overview
 
-This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](/docs/user-guide/etendo-mobile/getting-started/).
+This bundle includes the Etendo Classic Mobile Sub-Application and his configurations in Etendo Classic. For more info read [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md).
 
 ## Etendo Classic Sub App
 
@@ -16,10 +16,10 @@ This bundle includes the Etendo Classic Mobile Sub-Application and his configura
 
     - Initially, you should add Etendo Classic Subapp bundle in Etendo Classic. <br>
     To be able to include this subapplication, the Classic Subapp Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Classic Subapp Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=55A7EF64F7FA43449B249DA7F8E14589). <br>
-    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](https://docs.etendo.software/whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes/) 
+    For more information about the versions available, core compatibility and new features visit [Etendo Classic Subapp Extensions - Release Notes](../../../../whats-new/release-notes/etendo-mobile/bundles/classic-subapp-extensions/release-notes.md) 
 
 
-    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](/user-guide/etendo-classic/basic-features/general-setup/security/#dynamic-app).
+    - Once the subapplication module is installed in Etendo Classic, the dynamic app will be configured within it, so that it can be seen, access must be given to each [Role](../../../../user-guide/etendo-classic/basic-features/general-setup/security.md#dynamic-app).
 
 
 To add the windows to be shown in the subapp must be configured entering the Etendo Classic under the “administrator” role in `Role`>`Window Access` tab and checking the box “show in mobile” in the required windows.
@@ -142,10 +142,7 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 :octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
-Allows to use the camera to scan codes in [Etendo Mobile](https://etendosoftware.github.io/docs/user-guide/etendo-mobile/getting-started/) App
-
-!!! info
-        For more information, visit the [Mobile Scan developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#mobile-scan).
+Allows to use the camera to scan codes in [Etendo Mobile](../../../../user-guide/etendo-mobile/getting-started.md) App
 
 ### Usage Examples
 

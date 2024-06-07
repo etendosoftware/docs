@@ -5,17 +5,15 @@ title: Financial Management - Analysis Tools
 
 This section describes the windows related to financial reports in Etendo. These are:
 
-[:material-file-document-outline: Cashflow Forecast Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#cashflow-forecast-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Cashflow Forecast Report](#cashflow-forecast-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Receivables Aging Schedule](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#receivables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Receivables Aging Schedule](#receivables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payables Aging Schedule](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payables-aging-schedule){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payables Aging Schedule](#payables-aging-schedule){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Report](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Payment Report](#payment-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Payment Run](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/analysis-tools/#payment-run){ .md-button .md-button--primary } <br>
-
-
+[:material-file-document-outline: Payment Run](#payment-run){ .md-button .md-button--primary } <br>
 
 
 ## **Cashflow Forecast Report**
