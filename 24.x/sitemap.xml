@@ -321,6 +321,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level/</loc>
+         <lastmod>2024-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/</loc>
          <lastmod>2024-06-07</lastmod>
          <changefreq>daily</changefreq>
