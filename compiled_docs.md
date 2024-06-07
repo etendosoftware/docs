@@ -34571,10 +34571,10 @@ modules
 ```
 
   
-Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md).
+Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/development-build-tasks.md).
 
 !!!info
-    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#database_tasks) and [module gradle task](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#Modules) descriptions.
+    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/development-build-tasks.md#database_tasks)
 
 
 ####  Creating a Source Directory
