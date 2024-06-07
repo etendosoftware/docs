@@ -83,13 +83,13 @@ In this window in the Default tab, you can find two relevant fields:
 - Product Deferred Expense: this field stores the default account to be used to record deferred expenses. This account is typically an asset account.
 - Product Deferred Revenue: this field stores the default account to be used to record deferred revenues. This account is typically a liability account.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/glconfiguration.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/glconfiguration.png)
 
 ### Product Category
 
 The accounts selected in the General Ledger Configuration window are defaulted to every Product Category. Users can override these defaults at product category level allowing deferred revenues and expenses for different product groups to be posted to different accounts and appear as separate entries in the company balance sheet.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/productcategory.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/productcategory.png)
 
 ## Execution Steps - Revenues
 
@@ -97,7 +97,7 @@ The accounts selected in the General Ledger Configuration window are defaulted t
 
 In order to defer revenue, you need to properly configure the products that will generate the deferral when sold. In Etendo, products are created and maintained in the Product window.
 
-Product window: in this window, the configuration related to revenue deferral is in the Header and in the Accounting tab of the [Product window](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product).
+Product window: in this window, the configuration related to revenue deferral is in the Header and in the Accounting tab of the [Product window](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
 
 Header tab:
 
@@ -111,7 +111,7 @@ Accounting tab:
 
 - Product Deferred Revenue: this is the account used to post deferred revenue for sales of this product. It is inherited from the product category and can be further defined at product level.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product.png)
 
 ### Manual Invoice Creation
 
@@ -124,7 +124,7 @@ The relevant fields are:
 - Period Number: this field specifies the duration of a revenue plan.
 - Starting Period: the first period in which revenue is going to be recognized.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/salesinvoice.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/salesinvoice.png)
 
 ### Automatic Generation of Invoices
 
@@ -143,7 +143,7 @@ Regardless of how the invoice is created - manually or automatically - when it i
 
 In order to defer expenses, you need to properly configure the products that will generate the deferral when purchased. In Etendo, products are created and maintained in the Product window.
 
-Product window: in this window, the configuration related to expense deferral is in the Header and in the Accounting tab of the [Product window](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product).
+Product window: in this window, the configuration related to expense deferral is in the Header and in the Accounting tab of the [Product window](../../../user-guide/etendo-classic/basic-features/master-data-management/master-data.md#product).
 
 Header tab:
 
@@ -157,7 +157,7 @@ Accounting tab:
 
 - Product Deferred Expense: this is the account used to post deferred or prepaid expenses for purchases of this product. It is inherited from the product category and can be further defined at product level.
 
-![](/assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product2.png)
+![](../../../assets/user-guide/etendo-classic/how-to-guides/how-to-manage-deferred-revenue-and-expenses/product2.png)
 
 ### Manual Invoice Creation
 

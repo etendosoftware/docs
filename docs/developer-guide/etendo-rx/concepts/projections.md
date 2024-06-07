@@ -13,7 +13,7 @@ Start by opening *Projections* windows and creating a new projection with the fo
 | Description |`Projections needed for the tutorial`  |
 
 
-  ![new-projection.png](/assets/developer-guide/etendo-rx/tutorial/new-projection.png)
+  ![new-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/new-projection.png)
 
 ### Adding the projection to a table
 
@@ -29,7 +29,7 @@ Next, navigate to the *Projections* tab and add a new projection with the follow
 | Projection |`rxtutorial - tutorial - 1.0.0 - English (USA)` |
 
 
-  ![assign-projection.png](/assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
+  ![assign-projection.png](../../../assets/developer-guide/etendo-rx/tutorial/assign-projection.png)
 
 ### Adding Entity Fields
 
@@ -50,7 +50,7 @@ Under the Projection tab navigate to the *Entity Field* tab and add the followin
     So, you can navigate the entities related from here. E.g. To get the Business Partner name, you can have it by accessing the entity *businessPartner* and then, adding the field that you want to filter, *name* in this case.
 
 
-  ![new-entity-fields.png](/assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
+  ![new-entity-fields.png](../../../assets/developer-guide/etendo-rx/tutorial/new-entity-fields.png)
 
 ------------------------------------------------------------------
 
@@ -68,7 +68,7 @@ After selecting a table, in this case `C_Order`, we need to go to *Repository* t
 | Module      |`tutorial - 1.0.0 - English (USA)`    |
 
 
- ![new-repository.png](/assets/developer-guide/etendo-rx/tutorial/new-repository.png)
+ ![new-repository.png](../../../assets/developer-guide/etendo-rx/tutorial/new-repository.png)
 
 ------------------------------------------------------------------
 
@@ -85,7 +85,7 @@ To create this new filter/search method, under Repository tab of the `C_Order` t
 |  Query      |`select o from Order o where o.documentType.id = :documentType order by o.documentNo`   |
 
 
-  ![new-search.png](/assets/developer-guide/etendo-rx/tutorial/new-search.png)
+  ![new-search.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search.png)
 
 ### Creating a New Search Parameter
 
@@ -101,6 +101,6 @@ To define the parameter, we need to create a new row on the *Search Parameter* t
 
 In our case, we will filter depending on the Document Type of the orders.
 
-  ![new-search-parameter.png](/assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
+  ![new-search-parameter.png](../../../assets/developer-guide/etendo-rx/tutorial/new-search-parameter.png)
 
 ------------------------------------------------------------------

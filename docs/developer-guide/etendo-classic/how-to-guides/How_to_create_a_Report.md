@@ -249,7 +249,7 @@ To override this configuration, the following must be done inside the .jrxml rep
 
 ###  Creating a Report Using Report and Process
 
-In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary), you can find an example about how to create a Report in this way.
+In [this section](How_to_create_a_Report_with_iReport.md#Registering_the_Report_in_Application_Dictionary.md), you can find an example about how to create a Report in this way.
 
 ###  Report Compilation
   
@@ -269,4 +269,5 @@ It is possible to generate barcodes from JasperReports, using barcode4j or barbe
 In Platform Features module, there is an example of a report making use of different barcode styles, see the [jrxml template](../../../assets/developer-guide/etendo-classic/how-to-guides/Barcodes.jrxml){target="\_blank"}.
 
 ---
+
 This work is a derivative of [How to create a Report](http://wiki.openbravo.com/wiki/How_to_create_a_Report){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

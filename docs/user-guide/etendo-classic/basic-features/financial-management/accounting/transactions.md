@@ -5,23 +5,23 @@ title: Accounting
 
 This section describes the windows related to the accounting transactions that are part of the Financial Management in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Financial Type Configuration](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#financial-type-configuration){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Financial Type Configuration](#financial-type-configuration){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Simple G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#simple-gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Simple G/L Journal](#simple-gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: G/L Journal](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-journal){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: G/L Journal](#gl-journal){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: End Year Close](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#end-year-close){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: End Year Close](#end-year-close){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: GL Posting by DB Tables ](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: GL Posting by DB Tables ](#gl-posting-by-db-tables){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Budget](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#budget){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Budget](#budget){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Create Budget Reports in Excel](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Create Budget Reports in Excel](#create-budget-reports-in-excel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Not Posted Transaction Report](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#not-posted-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Not Posted Transaction Report](#not-posted-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Reset Accounting](/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/#reset-accounting){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Reset Accounting](#reset-accounting){ .md-button .md-button--primary } <br>
 
 
 ## Financial Type Configuration
@@ -47,7 +47,7 @@ The usual financing products are:
 These financing methods are loaded into the system using a dataset.
 
 !!! info
-    For more information, visit [Financial Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#financial-type).
+    For more information, visit [Financial Type](../../financial-management/accounting/setup.md#financial-type).
 
 
 ### Header
@@ -83,7 +83,7 @@ The main header has the following fields:
 - **Project**: drop-down list of the “Multiphase Project“ window.   
 - **Cost Center**: drop-down list of the “Cost Center” window.
 
-![](/assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png)
+![](../../../../../assets/drive/1jmKFmy5LNZ9pjB7h1giXvNre6KYpI8BX.png)
 
 ### Lines
  
@@ -104,20 +104,20 @@ Lines contain the following fields:
 - **Project:** drop-down list of the “Multiphase Project“ window.
 - **Cost Center**: drop-down list of the “Cost Center” window.
  
-![](/assets/drive/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png)
+![](../../../../../assets/drive/10-YHo9nG7tBwph55ag0oNzkhqgbkfihr.png)
  
 ### Accounting 
  
  There are three sections: “Amortization/Renting”, “Interest” and “Commission”. There are six fields in total where three of them represent the product and the other three, the accounting concept. The 2 fields (product and accounting concept) cannot be filled in the same section. In each of these related fields, the product must be indicated from the "Products" window or "Accounting Concept" if the "Available in Financial Invoices" check box needed to assign to each column is activated. In the case of the type of financing "Loan", it is obligatory to fill in the part of accounting concepts.
  
- ![](/assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png)
+ ![](../../../../../assets/drive/1eQLGjpM9vAMRCbo4_gh2-J9Nc6yd36lU.png)
  
 
 ### Loan, Leasing or Renting calculation in the lines tab
 
 Fill the necessary fields of the header according to the description of each of them indicated at the top of the document. Such information allows the automatic creation of the finance plan, which is created by clicking the “Update Finance plan” button at the upper right margin of the window.
  
-![](/assets/drive/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png)
+![](../../../../../assets/drive/1-laz4Iz4Vr4bWWskpQvNTOjMnOU0RrVO.png)
  
 #### Loan: 
 - **Installment No**: It starts with the installment number 0 and the “pending amortization” field has the value indicated in the “granted amount” field, and the “date” field has the indicated date in the header field “date”. The rest of the installments are correlative, adding 1 by 1.
@@ -133,9 +133,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](/assets/drive/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png)
+ ![](../../../../../assets/drive/14Ih3VtN49OvT6_mFvoqD6aRl0-2Q6Zo6.png)
  
- ![](/assets/drive/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png)
+ ![](../../../../../assets/drive/1xWW0_nVq1kjh_cumMvK21HnEfDFr_bxu.png)
  
 #### Leasing:
 - **Installment No**: It starts with the installment number 0 and the “pending amortization” field has the value indicated in the “granted amount” field, and the “date” field has the indicated date in the … The rest of the installments are correlative, adding 1 by 1.
@@ -152,9 +152,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](/assets/drive/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png)
+ ![](../../../../../assets/drive/1VZWhH1uWsjLVMD3PcGRLL-PAsUATljDu.png)
  
- ![](/assets/drive/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png)
+ ![](../../../../../assets/drive/1qzAFpd3xnZ-HdM8QYZkeRiTPrFtCZ156.png)
  
 #### Renting
 - **Installment No**: It starts with the installment number 0 and the rest of the installments are correlative, adding 1 by 1.
@@ -168,9 +168,9 @@ Fill the necessary fields of the header according to the description of each of 
 - **Project**: If indicated in the header, the project information is shown in this field. If not, it can be manually indicated.
 - **Cost Center**: If indicated in the header, the cost center is shown in this field. If not, it can be manually indicated.
  
- ![](/assets/drive/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png)
+ ![](../../../../../assets/drive/1kTCqTfIYwvMIWkPpe1pYTg862Igm509S.png)
  
- ![](/assets/drive/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png)
+ ![](../../../../../assets/drive/1iog1B9hLNu48VixtuTNFBI7LILxLsGKT.png)
  
 ##### Generating payments or invoices
 
@@ -180,34 +180,34 @@ In order to do this, select the required line/s and click the “Create payment�
  
 **Loan**:
  
- ![](/assets/drive/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png)
+ ![](../../../../../assets/drive/1OCunghF0jWITNTUxMFgM6CEhrQpnvgjX.png)
  
 **Leasing**:
  
  
- ![](/assets/drive/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png)
+ ![](../../../../../assets/drive/1pediSQ58EVWkA619-VY80W9AyrzlTHtz.png)
 
  
 **Renting**:
 
- ![](/assets/drive/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png)
+ ![](../../../../../assets/drive/1bEcDIiMM9bYTVIFcNW4_No-Dbd19NaGE.png)
 
  
 ##### Credit account and credit cards reported in financial accounts.
  
 The Credit account and Credit card information is automatically entered. To do this, create a new header and indicate the finance method, “Credit account” or “Credit card”. Then, the button “Add Financial Account” is enabled in the upper right margin. 
  
-![](/assets/drive/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png)
+![](../../../../../assets/drive/1K6HHmJ723s2BMk5o-FKH34n6dEs6uo1E.png)
  
 When clicking the button, a pop up is shown and it is possible to select a financial account (only those with the “Add to bank pool” flag checked are shown).
  
-![](/assets/drive/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png)
+![](../../../../../assets/drive/1jG0EQ3FQ8NWJeo6oIXJfY8msx80tyMJU.png)
 
-![](/assets/drive/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png)
+![](../../../../../assets/drive/1W5brf7TNC5rUNhZmtIftjtGoBocJjX2N.png)
 
 Once this credit account/credit card is created in the financings and its information has to be updated, click the “Update Financial Account” button in the upper right margin.
  
-![](/assets/drive/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png)
+![](../../../../../assets/drive/15ivJAiL2y4phrUGAatnzasqFpzC384U_.png)
  
 The fields to be copied from the account or credit card are the equivalent ones in the “Financial Account” field, the amount of residual value to be indicated in the “Amount Available” field and the “Credit Limit” amount to be indicated in the “Amount Granted” field. All other fields in the header are editable to include the rest of the information.
 
@@ -266,13 +266,13 @@ The exchange rate tab allows the user to enter an exchange rate between the orga
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
 In order to use this functionality, in both “GL journal” and “Simple GL journal” windows, the user can click the button “Reverse Journal” in the toolbar when selecting an entry.
 
-![](/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
+![](../../../../../assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
 
 In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. 
 > 
@@ -281,37 +281,37 @@ In this way, Etendo automatically creates a reverse entry that compensates the a
 
 As seen below, Etendo shows a success notification in green with the new GL Journal number.
 
-![](/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
+![](../../../../../assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
 
 When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reversed.
 
 ##### Original GL journal
 
-![](/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
+![](../../../../../assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
 
 ##### Reverse GL Journal
 
-![](/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
+![](../../../../../assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
 
 #### Changing description option in the Simple GL Journal window
 
 If the GL Journal entry is created in the Simple GL Journal window, it is possible for the user to change the description of the GL journal, once it clicks on the “Reverse Journal” button, in the corresponding pop up window. 
  
-![](/assets/drive/1Uec9_qgFGGKWDLNsWvN7CZDwuQXAjp0J.png)
+![](../../../../../assets/drive/1Uec9_qgFGGKWDLNsWvN7CZDwuQXAjp0J.png)
 
 This is useful to distinguish between the original GL journal and the reverse one. 
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
 
 ## **G/L Journal**
@@ -340,7 +340,7 @@ This feature is also very useful while posting employee payroll, for instance.
 
 A G/L journal batch allows the user to group G/L journals of similar characteristics which can all be processed at the same time.
 
-![](/assets/drive/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png)
+![](../../../../../assets/drive/1dR_rouWq3IFHDFHv_CBfLdywl7lBkLQz.png)
 
 As shown in the image above, a *G/L Journal batch* can contain below data:
 
@@ -362,13 +362,13 @@ As already mentioned, a G/L Journal and therefore its content can be configured 
 
 **2.** Create a **new G/L journal** to account the employee payroll corresponding to the period of January 2022. Enter an **Accounting Date**" and a "**Period**":
 
-![](/assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png)
+![](../../../../../assets/drive/1FoRVJ89HIyQt4zO2WhyYkSm3riRyKGpx.png)
 
 **3.** Press the **Copy Details** process button.
 
 A new window is shown containing all the templates available:
 
-![](/assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png)
+![](../../../../../assets/drive/1xUX_ZaY1POd69AUGYWN2FCf6Bjx7_-F9.png)
 
 !!! info
     Note that it is possible to search for a template by using the G/L journal document number set as template and the description fields. 
@@ -383,7 +383,7 @@ The last step is to post the G/L Journal, therefore the corresponding journal en
 
 A G/L journal header can include journals, which can contain several journal lines.
 
-![](/assets/drive/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png)
+![](../../../../../assets/drive/137QIrGJeaxPlR9pTnhh0delXq_Xwqt0y.png)
 
 A G/L Journal header contains the following data:
 
@@ -422,7 +422,7 @@ Accounting information related to the GL Journal
 #### Duplicate Journal Entries
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 <iframe width="854" height="480" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -431,16 +431,16 @@ The process to create a journal entry from the beginning and duplicate it later 
 
 1- Enter the “G/L Journal” window and create a header:
 
-![](/assets/drive/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png)
+![](../../../../../assets/drive/1O9MpaLX0Ewh-OI8GW3z1h8E9ERRqoOQ4.png)
 
 2- Create a new record:
 
-![](/assets/drive/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png)
+![](../../../../../assets/drive/1mxbJexaQrgCCMkvjYdJILcAmCb8Y8ohF.png)
 
 3- Create the lines (to be recorded) and complete the entry. Once these three steps are done, the “Create Deferred Plan” button will be shown in the upper right margin. 
 
 
-![](/assets/drive/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png)
+![](../../../../../assets/drive/194RVxWW4vIWYQVLBrgYBi2P8ADNOH0bR.png)
 
 4 - Click the button and a pop-up with three fields will be shown:
 • Expense Plan Type: copies regularity.
@@ -448,31 +448,31 @@ The process to create a journal entry from the beginning and duplicate it later 
     • Period: period in which the first copy will be made.
 
 
-![](/assets/drive/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png)
+![](../../../../../assets/drive/1cwaYerXmbWqaJu5HXlH8-yoaxvrf5935.png)
 
 5 - Once this information is entered, click the “Done” button and as many records will be generated as the number of copies indicated.
 
-![](/assets/drive/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png)
+![](../../../../../assets/drive/1jJr_ZWLzgVbkF1mXz835JWRVBQhQcJ_l.png)
 
 
 By default, this functionality is only available for the “GL Journal” window, since the record copies are grouped under only one header. It is also possible to duplicate these entries in the “Simple GL Journal” only if there is a preference configured in the “Preference” window with the property “Display Create Deferred Plan Button” and the value “Y”.
 
-![](/assets/drive/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png)
+![](../../../../../assets/drive/1CMGcvXoHxCcfYwskpj4OOwC_XBaPWDG0.png)
 
 Once this preference is configured, the button will be enabled in “Simple GL Journal”. The flow is the same but the duplicated copies will not be created under a header. That is, this information will not be shown in the “GL Journal” window, except the information to be copied is already in it, in which case it will be shown.
 
-![](/assets/drive/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png)
+![](../../../../../assets/drive/1RflwaoqNOmVWf7b6_Bo5MFeO_KlJqg1-.png)
 
 ### GL Journal Reverse 
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 This functionality is specifically useful for companies that have a month close, instead of an end year close, but with pending payments (in or out). It allows the user to open or close the period without taking into account the payments until they are made.
 
 In order to use this functionality, in both “GL journal” and “Simple GL journal” windows, the user can click the button “Reverse Journal” in the toolbar when selecting an entry.
 
-![](/assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
+![](../../../../../assets/drive/185JazYlxodMfPSx-2B4RgVe9UVadeUks.png)
 
 In this way, Etendo automatically creates a reverse entry that compensates the amount in the credit and debit columns. 
 > 
@@ -481,17 +481,17 @@ In this way, Etendo automatically creates a reverse entry that compensates the a
 
 As seen below, Etendo shows a success notification in green with the new GL Journal number.
 
-![](/assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
+![](../../../../../assets/drive/1QAaLd-Rkiay5X6sKozqV80H7ykVoes53.png)
 
 When comparing the original GL Journal to the reverse GL Journal, the debit and credit columns show the compensation, since the amounts are reverse.
 
 ##### Original GL journal
 
-![](/assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
+![](../../../../../assets/drive/1l7-FyYg87NhJheS_L7GTATeJsvvoA41K.png)
 
 ##### Reverse GL Journal
 
-![](/assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
+![](../../../../../assets/drive/1tZDhsR7UlZUz7itZlxDBVouv9QHIj-_G.png)
 
 
 This is useful to distinguish between the original GL journal and the reverse one. 
@@ -499,14 +499,14 @@ This is useful to distinguish between the original GL journal and the reverse on
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 >
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 ## **End Year Close**
@@ -565,14 +565,14 @@ This article describes the end-year closing process intentionally keeping the or
 
 The company in this example started its activity prior to 2019, therefore a G/L Journal set as "Opening" can be created to record the 2019 opening entry and get it posted to the ledger.
 
-![](/assets/drive/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png)
+![](../../../../../assets/drive/1aYBdLPYhLuzH26wsAf2zzFeaEcWS5Eab.png)
 
 
 
 To make it simple, the company in this example executed detailed "regular" activities which created the corresponding "regular" journal entries in the general ledger:
 
 
-![](/assets/drive/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png)
+![](../../../../../assets/drive/1UE0WYDFJLdbDQkApYSinHkXYyM4p-1Hr.png)
 
 Let us imagine that "F&B España" closes the standard periods as soon as each period is over and that is done even for the last standard period which is "December 2019".
 
@@ -582,7 +582,7 @@ Once 2019 is over and ready to be closed, the company in this example can execut
 
 The process button "Year Close" runs the end-year close process for this sample organization.
 
-![](/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
+![](../../../../../assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
 
 ##### **Reverse Permanent Account Balances set to "Yes"**
 
@@ -593,23 +593,23 @@ Etendo creates "closing entries" detailed below if the "**Reverse Permanent Acco
 
 -   Dated on the latest day of the year below **P&L Closing Entry**.  
     This entry resets all "Revenue" and "Expense" account which is posted in the account defined as Income Summary.  
-    ![](/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
+    ![](../../../../../assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
  
 -   Dated on the latest day of the year below **Closing Entry**.
     This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.x Besides, an additional entry is created to move the Income Summary account balance to the Retained Earning account:
-    ![](/assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
+    ![](../../../../../assets/drive/1vXHeJ04vFjZUZdE3uTSmEoS1zbsI8lVY.png)
  
 -   Dated on the day of the following year (01-01-2022) below **Opening Entry**. This entry is the reversal entry of the above closing entry:
-    ![](/assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png)
+    ![](../../../../../assets/drive/1quKLjnhNs8KRB5GZXv0y3mvdQ3YU791c.png)
     The organization in this example can launch the 2020 Balance Sheet and the 2021 Profit and Loss reports from the Balance Sheet and P&L structure window:
 
 2020 Balance Sheet:
 
-![](/assets/drive/1ttBuhupxE9YYwts1jvL2qSmu9tGwleUx.png)
+![](../../../../../assets/drive/1ttBuhupxE9YYwts1jvL2qSmu9tGwleUx.png)
 
 2021 Profit and Loss:
 
-![](/assets/drive/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png)
+![](../../../../../assets/drive/1F6LMtj4tZdBSdt1yKsYhoO4Tv8nxyiGH.png)
 
 
 ##### **Reverse Permanent Account Balances set to "No"**
@@ -621,10 +621,10 @@ Etendo creates below "closing" entries if the "**Reverse Permanent Account Balan
 
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](/assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
+ ![](../../../../../assets/drive/1Cuof0WypYpnGFKPCNux-MNCDPUEvTKdB.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](/assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png .png)
+ ![](../../../../../assets/drive/1KRK07-Dtm1eikqZ7ERqOv1poDAvUfOzB.png)
      
 
 The organization in this example can launch the 2019 Balance Sheet and the 2019 Income Statement reports from the Balance Sheet and P&L structure window. It will get the same Balance Sheet and Income Statement as the ones shown for the "Reverse Permanent Account Balances set to "Yes" scenario.
@@ -649,7 +649,7 @@ Once done, Etendo informs that the process has been completed successfully.
 
 All the Periods for that Year and that Organization will be permanently Closed. The way to Undo the Close of the Year is the same, but clicking Undo Close Year.
 
-![](/assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
+![](../../../../../assets/drive/17enHOwaYF9EQ3HyoN2pkBbsEPYhMLpwF.png)
 
 As shown in the image above, the main fields in this window are:
 
@@ -677,7 +677,7 @@ In the **Accounting** Tab of the End Year Close Window, all the Accounting entri
 
 This way, it is easier to review the Accounting entries made in the Closing Year Process.
 
-![](/assets/drive/1SEPkTkQEu25sszL7ZUxhOnI9HK3-d6ON.png)
+![](../../../../../assets/drive/1SEPkTkQEu25sszL7ZUxhOnI9HK3-d6ON.png)
 
 As shown in the image above, the main fields in this window are:
 
@@ -696,15 +696,15 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**.  
     This entry resets all "Revenue" and "Expense" accounts.
     
- ![](/assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png .png)
+ ![](../../../../../assets/drive/113QOGZVS2BuV29KMcUvMYHVS1fRyHW4B.png)
      
 -   Dated on the latest day of the year (31-12-2019) below **Closing Entry**.  
     This entry resets all "Asset", "Liability" and "Owner's Equity" accounts.
- ![](/assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png .png)
+ ![](../../../../../assets/drive/1Y0yGWcULssKJaRjezhwZ8-ZgBlunEcjm.png)
      
 -   Dated on the day of the following year (01-01-2020) below **Opening Entry**.  
     This entry is the reversal entry of the above closing entry:
- ![](/assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png .png)
+ ![](../../../../../assets/drive/1lZ1pLSan1bButlXguyX9126egixcQAqu.png)
      
 
 ##### **Reverse Permanent Account Balances set to "No"**
@@ -712,10 +712,10 @@ Etendo creates below "closing entries" if the "**Reverse Permanent Account Balan
 Etendo creates below "closing" entries if the "**Reverse Permanent Account Balances**" checkbox of the Organization's general ledger is set to "No":
 
 -   Dated on the latest day of the year (31-12-2019) below **P&L Closing Entry**:
- ![](/assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png .png)
+ ![](../../../../../assets/drive/1LaHkcA8oefBywLCDFCJBBFN4x2cHYFHW.png)
      
 -   and dated on the latest day of the year (31-12-2019) below entry as a Retained Earnings account is defined for the organization's general ledger:
- ![](/assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png .png)
+ ![](../../../../../assets/drive/18CrpHbC5hgoLYFKInsO201y-MzQT2AG5.png)
 
 ## **GL Posting by DB Tables**
 
@@ -723,7 +723,7 @@ Etendo creates below "closing" entries if the "**Reverse Permanent Account Balan
 
 The G/L Posting by DB Table allows the user to massively post the transactions related to a given transactional table or to all of them.
 
-![](/assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png)
+![](../../../../../assets/drive/1tAh4RfUDcPvDgSG9PeBYX79MhpW-csWW.png)
 
 As shown in the image above, the "G/L Posting by DB Tables" feature allows the user to:
 
@@ -733,7 +733,7 @@ As shown in the image above, the "G/L Posting by DB Tables" feature allows the u
 
 After running the process, Etendo informs about the number of ledger entries posted to the ledger for each table in order to post once again the transactional table/s to the ledger.
 
-![](/assets/drive/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png)
+![](../../../../../assets/drive/1nfPHEpviK8sRPB5BEZbSM4xYx32HgHeX.png)
 
 This process can be launched whenever it is required:
 
@@ -754,7 +754,7 @@ These are the actions which can be executed from the header in order to create b
 **Copy Budget:** copy budget already created. 
 **Check Export Actual Data:** when checked, actual quantities will be exported to Excel in addition to the budgeted quantities. 
 
-![](/assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
+![](../../../../../assets/drive/1FStSn-NWyajDwRZQ6xki_owQLql2FOyy.png)
 
 
 
@@ -766,7 +766,7 @@ The user is able to add budget lines. Each line may refer to a specified period,
 
 By using the necessary filters such as business partner, product, partner group, product category, etc, the user is able to generate budget reports in Excel to be used for specific purposes.  
 
-![](/assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
+![](../../../../../assets/drive/1Svc4hFmQRQA1s1IeQx9-po1KhrxpEeZ7.png)
 
 
 
@@ -781,7 +781,7 @@ This report can be used to make sure that there are no documents pending to be p
 -   while closing an accounting period or a fiscal year as once a period is closed it is not possible to post within that period
 -   while running financial reports, as not posted transaction or document will not be taken into account in the financial reports
 
-![](/assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png)
+![](../../../../../assets/drive/1dFKDra_iDbmeMrzC8n3M94m8uPqhokNk.png)
 
 Not posted transactions and/or documents shown are split by type, for instance:
 

@@ -5,17 +5,17 @@ title: Procurement Reports
 
 This section describes the windows related to procurement reports in Etendo. These are:
 
-[:material-file-document-outline: Purchase Order Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-order-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Order Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-order-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Goods Receipt Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Goods Receipt Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#goods-receipts-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Purchase Invoice Dimensional Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Purchase Invoice Dimensional Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#purchase-invoice-dimensional-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Matched Purchase Orders](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#matched-purchase-orders){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Matched Purchase Orders](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#matched-purchase-orders){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Vendor Invoice Report](/user-guide/etendo-classic/basic-features/procurement-management/analysis-tools#vendor-invoice-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Vendor Invoice Report](../../../../user-guide/etendo-classic/basic-features/procurement-management/analysis-tools.md#vendor-invoice-report){ .md-button .md-button--primary } <br>
 
 
 ## Purchase Order Report
@@ -34,14 +34,14 @@ This report can display information about the most frequently used suppliers as 
 
 ### Parameters window
 
-![](/assets/drive/1tfjdJFeCwoMFq7Osb7iA4oCx8AQtsO5M.png)
+![](../../../../assets/drive/1tfjdJFeCwoMFq7Osb7iA4oCx8AQtsO5M.png)
 
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
 ### Sample Report Output
 
-![](/assets/drive/1HteUH5sPx3PmrHdRqlR8S6l0EzDizuUu.png)
+![](../../../../assets/drive/1HteUH5sPx3PmrHdRqlR8S6l0EzDizuUu.png)
 
 -   **Amount:** is the **net** amount from the Purchase Order converted to the report **Currency**.
 
@@ -59,14 +59,14 @@ This report can display information about the most frequently used suppliers as 
 
 There is no specific field to note but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
-![](/assets/drive/1ihcncYc8rQoONnKy5KzGqN2IaYw5r18f.png)
+![](../../../../assets/drive/1ihcncYc8rQoONnKy5KzGqN2IaYw5r18f.png)
 
 !!! tip
     The outcome of this report can be viewed in HTML format and PDF format.
 
 ### Sample Report Output
 
-![](/assets/drive/1lvq1Mtz7ed_qJW40ezxrQvqa5ssh5NgM.png)
+![](../../../../assets/drive/1lvq1Mtz7ed_qJW40ezxrQvqa5ssh5NgM.png)
 
 ## Purchase Invoice Dimensional Report
 
@@ -78,18 +78,18 @@ This report can display the total purchase amount of a given supplier, split by 
 
 ### Parameters Window
 
-![](/assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
+![](../../../../assets/drive/1clo6ovc9uHR_-6Qp0KbU9gWcOUbG3ocQ.png)
 
 There is no specific field to note, but just the dimensional primary and secondary filters which can be used to narrow down the information to be displayed.
 
 ### Sample Report Output
 
-![](/assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
+![](../../../../assets/drive/1ZQC2irKKXg1XSxOCL2IFC-hbfFPlbHYB.png)
 
 There is also the possibility to export this report to a PDF or a XLS file:
 
 
-![](/assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
+![](../../../../assets/drive/1SVvvkMUz-HUcjJKWdu7bSKuSpB5lY9Cz.png)
 
 PDF format shows the same fields explained before, but in XLS format, it shows information related to selected invoices columns:
 
@@ -115,7 +115,7 @@ This window informs about the matching between each purchase order, goods receip
 
 Matched purchase order view informs about which purchase order line is linked to which receipt line and invoice line, if any.
 
-![](/assets/drive/1HSNC0staVcayYFKAOz3rc8KZDYUxl8Ym.png)
+![](../../../../assets/drive/1HSNC0staVcayYFKAOz3rc8KZDYUxl8Ym.png)
 
 In other words, this window provides valuable information which helps to get a quick understanding of what order lines of a product have already been receipt and invoiced.
 
@@ -129,7 +129,7 @@ It displays supplier invoices information, which can be narrowed down in order t
 
 ### Parameters Window
 
-![](/assets/drive/1V8A7QEZI3fa7ecV6W-VK-ki_VXx_8Ii8.png)
+![](../../../../assets/drive/1V8A7QEZI3fa7ecV6W-VK-ki_VXx_8Ii8.png)
 
 Field to note:
 
@@ -137,4 +137,4 @@ Field to note:
 
 ### Sample Report Output
 
-![](/assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)
+![](../../../../assets/drive/1U3Fx3IPP0R9acd8XMPXhtBR5qQFoj2Am.png)

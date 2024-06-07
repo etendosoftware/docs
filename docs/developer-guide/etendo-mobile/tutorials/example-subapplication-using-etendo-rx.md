@@ -3,14 +3,14 @@
 This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
-    Before starting this tutorial, visit the [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
+    Before starting this tutorial, visit the [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
 
 ## Setup
 
 ----------
 ### Create new Module
 
-Following the documentation about [how to create a new etendo classic module](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
+Following the documentation about [how to create a new etendo classic module](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
 
 Below is a succinct representation of the required fields and expected values for the module configuration:
 
@@ -29,7 +29,7 @@ Below is a succinct representation of the required fields and expected values fo
 | License Type         | `Etendo Commercial License`     |
 | Commercial            | `true`                          |
 
-![modules-creation.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
+![modules-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/modules-creation.png)
 
 !!! tip
     - Notice that the name can be anything you want, but the type have to be setted as Module.
@@ -37,7 +37,7 @@ Below is a succinct representation of the required fields and expected values fo
 
 ### Dynamic app and role configuration
 
-As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#dynamic-app-window){target="_blank"}.
+As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
 
 #### Dynamic app
 
@@ -53,7 +53,7 @@ The dynamic app in Etendo must contain the following form fields and correspondi
 | Active              | `true`                            |
 | Is Development      | `true`                            |
 
-![dynamic-app-creation.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
+![dynamic-app-creation.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/dynamic-app-creation.png)
 
 #### Role configuration
 
@@ -66,7 +66,7 @@ The next table reflect the settings to be configured for the role in relation to
 | Version               | `1.0.0`                         |
 | Active                | `true`                          |
 
-![role-configuration.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/role-configuration.png)
+![role-configuration.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/role-configuration.png)
 
 !!! warning "Important"
     Keep this dynamic app as _active_.
@@ -78,7 +78,7 @@ At this point you have _done_ with the etendo classic configuration.
 This tutorial is based in our example of a product subapplication, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
 
 !!! tip "Keep in mind"
-    All related to the main concepts of a subapplication are explained in the [concepts](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#concepts){target="_blank"} section in create new subapplication tutorial.
+    All related to the main concepts of a subapplication are explained in the [concepts](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new subapplication tutorial.
     The following sections are focused on the product subapplication example.
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
@@ -98,7 +98,7 @@ To begin with we must have to download the [ latest version of the project](http
   ```
   
 !!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
+    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}
 
 ## Customizing and Programming a Sub-Application
 
@@ -106,12 +106,12 @@ This section explains how to customize and program a subapplication. It uses as 
 
 ### Product subapp example
 
-This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"}.
+This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}.
 
 !!! info "Consideration"
     This subapplication example was developed for both platforms (phone and tablet). 
     When you create a new subapplication, you have to do the same. 
-    The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
+    The provided [base subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}  is already configured for both platforms.
 
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.
@@ -133,22 +133,22 @@ This section covers an overview about the product subapplication example screens
 
 
     <figure markdown>
-      ![home-screen.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
-      ![remove-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
+      ![home-screen.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen.png){ width="300", align=left } 
+      ![remove-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/remove-product.png){ width="300", align=right}
     </figure>
     _Tablet version_
-    ![home-screen-tablet.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen-tablet.png)
+    ![home-screen-tablet.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-screen-tablet.png)
 
 #### ProductDetail
   - This screen will show the detail of a product. Also, it will allow us to edit the product.
   - It's the same screen used to create a new product. there is a flag to know if the product is new or not (productItem).
   - The route to this screen is `src/screens/productDetail/index.tsx` and it can be consulted on the [Github repository](https://github.com/etendosoftware/subapp-product/blob/develop/src/screens/productDetail/index.tsx){target="_blank"}.
     <figure markdown>
-      ![add-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
-      ![edit-product.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
+      ![add-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/add-product.png){ width="300", align=left } 
+      ![edit-product.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/edit-product.png){ width="300", align=right}
     </figure>
     _Tablet version_
-    ![add-product-tablet.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
+    ![add-product-tablet.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/add-product-tablet.png)
 
 # Projections, Repository and Search
 !!! info
@@ -167,7 +167,7 @@ To do this we will go to the `Projections` window and create a projection with t
   | Description |`-`                                                  |
 
 
-  ![projection.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
+  ![projection.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projection.png)
 
 
 ### Adding the projection and mapping
@@ -186,7 +186,7 @@ Next, we add a new record with the following values:
   | active       | `false`                                          |
 
 
-  ![projection-mapping.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
+  ![projection-mapping.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projection-&-mapping.png)
 
 
 
@@ -246,7 +246,7 @@ Now with the projection selected add in the Projected Entities tab the write and
     | External_Name       |`Product`                                |
     | Active              |`true`                                   |
 
-  ![projected-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
+  ![projected-entities.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entities.png)
 
 Now we define which fields we want to retrieve in the Entity Field tab by adding the following fields:
 
@@ -457,7 +457,7 @@ This is the M_Product_Category - Write fields.
 
 
 
-  ![entity-fields-read.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
+  ![entity-fields-read.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/projected-entity-field-read.png)
 
 
 ## Create a New Repository
@@ -469,7 +469,7 @@ Now to interact with a data warehouse we have to create a repository in the Tabl
 | Module      |`Subapp Product Module - 1.0.0 - English (USA)`    |
 
 
-  ![repository.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/repository.png)
+  ![repository.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/repository.png)
 
 ## Create a New Search
 
@@ -481,7 +481,7 @@ Next we will define a search method to be used later when we want to consume the
 |  Query      |`SELECT e FROM Product e WHERE (e.active = true) AND (lower(e.name) LIKE lower('%' || :name || '%') OR lower(e.uPCEAN) LIKE lower('%' || :name || '%')) order by e.updated desc`   |
 
 
-  ![search.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
+  ![search.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/search.png)
 
 ### Creating a New Search Parameter
 
@@ -494,7 +494,7 @@ Next we will define a search method to be used later when we want to consume the
 | Type  |`String`       |
 
 
-  ![search-parameters.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
+  ![search-parameters.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/search-parameters.png)
 
 
 ## Setting up the Development Environment
@@ -827,6 +827,6 @@ While the example focused on listing products using a table, it's important to n
 
 Attached below is an example of **F&B International Group's products**, obtained through Etendo RX, demonstrating the efficiency between backend and frontend operations in a practical sub-application context.
 
-![generate-entities.png](/assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
+![generate-entities.png](../../../assets/developer-guide/etendo-mobile/create-example-subapplication/home-subapp-product.png)
 
 In essence, this integration is a significant stride in creating robust, scalable, and intuitive mobile applications within the Etendo ecosystem.

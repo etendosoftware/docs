@@ -12,7 +12,7 @@ This section explains how to install a new Etendo environment. It includes:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ixNnRuL10xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Requirements 
-In this section, you can read the [System Requirements](/getting-started/requirements).
+In this section, you can read the [System Requirements](../getting-started/requirements.md).
 
 ## PostgreSQL Configuration
 Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration](../developer-guide/etendo-classic/getting-started/installation/postgresql-configuration.md)
@@ -20,7 +20,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
 ## Install Etendo 
 === ":material-language-java: JAR Format"
 
-    **Steps to Install Etendo in JAR Format**
+    ### Steps to Install Etendo in JAR Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -35,7 +35,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         cd /opt/EtendoERP
         ```
 
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
        
         ```groovy
         nexusUser=
@@ -120,13 +120,13 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
         
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
 
     10. Open your browser in `https://<Public server IP>/<Context Name>`
 
 === ":octicons-file-zip-24: Source Format"
 
-    **Steps to Install Etendo in Sources Format**
+    ### Steps to Install Etendo in Sources Format
 
     1.  Clone Etendo Base project in a temporal directory.
 
@@ -140,7 +140,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         mv EtendoERP/* /opt/EtendoERP/
         cd /opt/EtendoERP
         ```
-    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo).
+    3. Modify the `gradle.properties` file with your GitHub Credentials. Create the credentials by following this [guide](../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
         ```groovy
         nexusUser=
         nexusPassword=
@@ -158,7 +158,7 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encod>
         ```
 
-    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "[<version>,<version>)"`. The following code is an example, you must modify your current file
+    4. By default, the latest core version available will be expanded but if there is a need to change it, edit the `build.gradle` file changing the `coreVersion = "(<version>,<version>)"`. The following code is an example, you must modify your current file
         
         ``` groovy
         plugins {
@@ -227,16 +227,50 @@ Check this article to configure PostgreSQL correctly: [PostgreSQL Configuration]
         ```
 
         !!! note
-            If you want to run Etendo locally, go to [Run Etendo Development Environment](/developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment/#run-etendo-development-environment).
+            If you want to run Etendo locally, go to [Run Etendo Development Environment](../developer-guide/etendo-classic/getting-started/installation/install-etendo-development-environment.md#run-etendo-development-environment).
                 
     11. Open your browser in `https://<Public server IP>/<Context Name>`
 
+=== ":octicons-issue-opened-24: ISO"
 
+    ### Steps to Install the ISO with Internet Connection
 
+    1. Download the ISO from the [release notes](../whats-new/release-notes/etendo-classic/iso.md) page.
 
+    2. Burn the ISO image into a USB stick. It is recommended to use balenaEtcher on Linux and Rufus on Windows. Alternatively, you can begin with your preferred virtualizer.
 
+    3. Start the system using the ISO image. You will be prompted:
 
+        - **Network Connections**: Verify that you are on a network with an internet connection and that an IP address is correctly assigned to your server.
+        
+        - **Guide Storage Configuration**: Select the disk where you want to run the installation. If you only have one disk, proceed to the next step.
+        
+        - **Storage Configuration**: Same as the previous step.
+        
+        - **Profile Setup**: Enter your name, the server's name, and the user *etendo* with the password of your choice.
 
+    4. Wait for the **operating system** installation and server upgrade to take place. When prompted, select **reboot now**.
 
+    5. After the restart, the final server configuration will begin. Wait for it to finish, and the server will be ready.
 
+    ### Steps to Install the ISO without Internet Connection
 
+    If you do not have an internet connection during installation, follow these additional steps:
+
+    1. Follow the same procedure outlined in the previous section, *Steps to Install the ISO with Internet Connection* up to the network configuration stage.
+
+        - **Network Configuration**: In this section, if you do not have an internet connection, select **Continue without internet**.
+
+    2. After the operating system installation is complete, restart the server as prompted.
+
+    3. Log in to the server using the username and password you configured during installation.
+
+    4. Configure the network settings as desired to establish an internet connection.
+
+    5. Once connected to the internet, log in as the superuser: `sudo su`.
+
+    6. Begin the installation process by running the command: `etendo-install`.
+
+    7. After the installation is finished, the server will be ready for use.
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FqG4uM4PpbA?si=wKhH34wvQKY_7r4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -5,13 +5,13 @@ title: Financial Management - Assets
 
 This section describes the windows related to assets, part of the Financial Management in Etendo. These are:
 
-[:material-file-document-outline: Assets](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#assets){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Assets](#assets){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Group](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#asset-group){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Group](#asset-group){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Amortization](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Amortization](#amortization){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Asset Amortization Report (Excel)](/user-guide/etendo-classic/basic-features/financial-management/assets/overview/#amortization-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Asset Amortization Report (Excel)](#amortization-report){ .md-button .md-button--primary } <br>
 
 
 ## **Assets**
@@ -24,7 +24,7 @@ The user can define amortization characteristics for assets owned by the company
 
 The user can define assets owned by the company and create an amortization for them.
 
-![](/assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
+![](../../../../../assets/drive/1SggpQOnJ2aCqlJS7Ds8KulWXK1pCaoKR.png)
 
 Fields to note:
 
@@ -62,7 +62,7 @@ Fields to note:
 
 The user can add asset amortizations for a selected asset.
 
-![](/assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
+![](../../../../../assets/drive/167vATAwJuJhpPE2by-QgZN1_jyrDsyWZ.png)
 
 -   **Line No.** : A line stating the position of this request in the document.
 -   **Amortization** : The depreciation or reduction of a product value over time.
@@ -91,7 +91,7 @@ The process assumes that if the March depreciation line exists, then the Februar
 
 The user can create and edit G/L accounts to be used in transactions which include a selected asset.
 
-![](/assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
+![](../../../../../assets/drive/1huSwZWBa8W1gwPd3rvluydFF5jNOMU2k.png)
 
 ## **Asset Group**
 
@@ -103,7 +103,7 @@ Assets can be grouped into different categories with the aim of helping their de
 
 Asset category window allows the user to create and configure every asset category your organization may need.
 
-![](/assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
+![](../../../../../assets/drive/17CmG5FAA86HDWLrAmjuHIgpNsdwAn_ya.png)
 
 As shown in the image above, the creation of an asset category requires the user to enter below listed information for each category:
 
@@ -123,7 +123,7 @@ Depreciation configuration will be inherited from the asset category when creati
 
 Each asset category allows the user to configure a different set of accounts to use to post asset depreciation.
 
-![](/assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
+![](../../../../../assets/drive/1jZl_RGgZw2i1Ogq4d1D-fhNcd59AI6ev.png)
 
 ## **Amortization**
 
@@ -135,58 +135,58 @@ The user can create and edit amortization for a selected year.
 
 In the header, the user creates amortizations for particular periods.
 
-![](/assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
+![](../../../../../assets/drive/1w9ObbOLgqEa3WC4p5N5wW4C1HSl1gBPk.png)
 
 ### **Lines**
 
 In each line, the user adds amortized assets and details of amortization.
 
-![](/assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
+![](../../../../../assets/drive/1meY53s5Ivsbk_i6wd1TY7ZNPv9JIF258.png)
 
 #### **Accounting**
 
 Accounting information related to the amortization
 
-![](/assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
+![](../../../../../assets/drive/15yAiipNMuH7eorzPtiPFAQOpqpm78P-o.png)
 
 ### How to Reactivate Amortizations
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows multiple amortizations to be processed and unprocessed. This process is available for amortizations which share the same status. The status of the amortization can be seen in the status bar.  
 
-![](/assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
+![](../../../../../assets/drive/1je7Yl7FTqlDAhFlb8wTQKBDUF3pSn0Qu.png)
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 > 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 
 ## Asset Amortization Report (Excel)
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The new Amortization report allows downloading excel reports. The report can be found in Financial Management > Assets > Analysis Tools > Asset Amortization Report. 
 
-![](/assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
+![](../../../../../assets/drive/FCyjH9Cqjoxlpce_Q2Adrf0qcnEwMumykLuNZ5DvkPgw5L1GNfFz4EDeMvEQzQ4ud9ZTFjcAk-1Y0l45vCDs1ONk0KMn-TzkhKKAEL17m3fV85B2lbrmxRnIhAM4-R1zOqVfr8sU_3AoWConwvRkI4I.png)
 
 This report allows filtering by organization, date, asset or any particular description, category and general ledger configuration.  
 
-![](/assets/drive/v044uU7hYLEk9gHyJ_rQT4PafeiO44KV81IWajtztUpPd9hLqZiPs9ivfPP69HxfwwK-35rPk_nzpLHsSXeXpUUfVDnFw7k4jsQ4AvDJIwDMCPWrsiRDyLPKgLCb0WDOB4GPZVU2urwKJ3sq1BhSXnA.png)
+![](../../../../../assets/drive/v044uU7hYLEk9gHyJ_rQT4PafeiO44KV81IWajtztUpPd9hLqZiPs9ivfPP69HxfwwK-35rPk_nzpLHsSXeXpUUfVDnFw7k4jsQ4AvDJIwDMCPWrsiRDyLPKgLCb0WDOB4GPZVU2urwKJ3sq1BhSXnA.png)
 
 Once the information is filtered, an excel sheet is downloaded as shown in the following image:
 
-![](/assets/drive/X4RYGKFzkl-VVrKXiztozXKKOQIFqIwXJMgUUeLzdGESddbVChKWbf6L2XnMO1aQg2wCfXit-Tw-w3TXDP_FLWBluY08K6JG6kHf_w2Mz5fRWBfzbbfV6edBbPzULPPPWxAALvtVBmxhKLtC_DwAzgg.png)
+![](../../../../../assets/drive/X4RYGKFzkl-VVrKXiztozXKKOQIFqIwXJMgUUeLzdGESddbVChKWbf6L2XnMO1aQg2wCfXit-Tw-w3TXDP_FLWBluY08K6JG6kHf_w2Mz5fRWBfzbbfV6edBbPzULPPPWxAALvtVBmxhKLtC_DwAzgg.png)
 
 This report takes into account the amortization lines of each Asset. That is to say, the report will still be generated even if the amortization lines are not processed or posted. 
 
@@ -201,5 +201,3 @@ For example: Period date filtered 01-01-2022 and 31-12-2022
 
 !!! info
     When the end date within the Assets window is filled in, that Asset will not appear in the report if the filtered date is after the end date of the Asset.
-
-

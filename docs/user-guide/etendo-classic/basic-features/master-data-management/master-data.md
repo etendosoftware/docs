@@ -16,12 +16,12 @@ Having a single repository of data avoids data duplication, provides a unique wa
 ## Business Partner General View
 
 !!! info
-    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Business Partner module of the Essentials Bundle must be installed. To do that, follow the instructions from the marketplace: [Advanced Business Partner](https://marketplace.etendo.cloud/#/product-details?module=39AC2D9F72124AC7A1D0A3D005293C9E){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Essentials Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/essentials-extensions/release-notes.md).
 
 The “Advanced Business Partner” module allows the user to have a general view of business partners information and to assign sequence numbers to business partners.
 
 !!! info
-    For more information, visit [Advanced Business Partner](/user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner/) in the Essentials Extensions Bundle Documentation.
+    For more information, visit [Advanced Business Partner](../../../../user-guide/etendo-classic/optional-features/bundles/essentials-extensions/advanced-business-partner.md) in the Essentials Extensions Bundle Documentation.
 
 ## Currency Converters
 
@@ -33,7 +33,7 @@ In the Currency Converters window, the necessary Apilayer data has to be configu
 - User
 - Password
 
-![](/assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
+![](../../../../assets/drive/1L7bYs_0DYQCfU6cu-cbssJ1AwjTXtE1a.png)
 
 ## Business Partner
 
@@ -55,7 +55,7 @@ The user should select a category which the business partner is going to belong 
 
 To learn more about *Business Partner Category*, visit the Business Partner Category section.
 
-![](/assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
+![](../../../../assets/drive/esJo49kYMnRjEA-vGVWUkzbiHYlQDZdE80wtPZiv7opgty2fS8GNWLqzJNiudJzr-Y_iqCBI3CRcfQlY34v5stDNyGFxIHH9US5FY-W0KYxBTx127DgPUaYMluLuyTJZZVqP3mlroJ2XnZSSvw.png)
 
 The rest of fields at header level are common fields which require to enter basic business partner information such as:
 
@@ -87,7 +87,7 @@ Finally, it is very important to remark that there could be other types of busin
 That is the case of banks. Banks need to be created in the business partner window header by just entering basic header information and no data in any of the business partner window tabs, but Location and Contact. The reason for this is that *Bank* type business partners are needed in the *Remittance* financial workflow.
 
 !!! info
-    To learn more about this workflow, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+    To learn more about this workflow, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 
 #### **Set New Currency**
 
@@ -104,7 +104,7 @@ Set New Currency process allows defining:
 - a new currency for the business partner
 - as well as the currency conversion rate to be used to exchange customer balance to the new currency.
 
-![](/assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
+![](../../../../assets/drive/qMRCmdApUN-s9LYIxySdzxh9-vQezR1tP5kqzLUpO62BELBpiwE71zR3QJW9tn2RbSdVXCj5Po2IAXX5AzeBX4QkyQb6G6ns7jw4UTzPUMEeqUPYjfAjvO4jkMueDO_Ko1855ty312Mk3e2JPQ.png)
 
 At first, the currency shown in the *Set New Currency* window is business partner price list currency, in our example *USD*.
 
@@ -118,7 +118,7 @@ Additionally, a business partner might have available credit in a given currency
 
 If that is the case, Etendo informs the user because business partner available credit will have to be exchanged to the new currency, therefore it can be consumed in the new currency.
 
-![](/assets/drive/sYcrvJb1PKlU9FPBStEkFIPdTCVTXSXCUte3iY1-kwfVGSiu8Xwux1DvZRxu9tseG0neDLmagLfVpiec4qQaNTLiheq908gynQ9p8Dh7eUOU8MyZ_pGFHICKaAiZwl_5jE0aIHyOfbDb38EVSw.png)
+![](../../../../assets/drive/sYcrvJb1PKlU9FPBStEkFIPdTCVTXSXCUte3iY1-kwfVGSiu8Xwux1DvZRxu9tseG0neDLmagLfVpiec4qQaNTLiheq908gynQ9p8Dh7eUOU8MyZ_pGFHICKaAiZwl_5jE0aIHyOfbDb38EVSw.png)
 
 This process automatically creates three new payments, in case business partner has available credit:
 
@@ -141,45 +141,45 @@ Let us take as an example a business partner having a price list in EUR.
 - This new sales invoice, once booked, will change business partner balance to 279.68 USD, that is (sales invoice amount 41.50 EUR \* 1.13 EUR to USD) + 232.78 USD.
 - After that, a new sales invoice for an amount of 100.00 USD is booked for the business partner. While completing this new sales invoice, a new window appears showing business partner USD credit available, in our case 100 EUR \* 1.13 EUR to USD = 113.00 USD.
 
-![](/assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
+![](../../../../assets/drive/fAiMfanae3I2XAvLdbf3yFYkZhAbN8Me-A2kv3uSF62Q3HaBTz9wyfXBL-22RDXeKgdrNxTLeLDnECldDFwjhkEG-m4Uzgc-JNUrtasuWPvrKKGeTmlRg-Lrc9wqtQDG17R-trrmm8EbG70bgg.png)
 
 ### **Customer**
 
 !!! info
     Customer related data can be entered and configured once the *Customer* checkbox is enabled.
 
-![](/assets/drive/1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr.png)
+![](../../../../assets/drive/1gybs8XJw1B6pJZRr-mzWO9fEUm6ylwFr.png)
 
 As shown in the image above, there is a list of relevant data to be entered for customers together with current _customer balance_ information:
 
 You could either select any data such as *Price List* from a previously created list of values, or create it *ad hoc* by navigating to the corresponding window, and then select it.
 
 - **Price List** - the one selected will be the one applied while creating sales documents such as sales orders or sales invoices for that customer.  
-  To learn more, visit [Price List](/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).  
+  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).  
   Price lists are defined in a given currency, which could be the same as customer currency or not.  
   In case it is not, customer balance will be calculated by taking into account either the conversion rate defined in the Conversion Rates window or the one entered in the process ***Set New Currency*** which can be run to change the currency of a business partner.
 - **Payment method** - the one selected will be the one applied while creating and managing the payments received from that customer.  
   If a Financial Account is linked to the customer, the payment method to select here will be one of the payment methods linked to the financial account.  
-  To learn more, visit [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing sales invoices payment plan.  
-  To learn more, visit [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](..//master-data-management/business-partner-setup.md#payment-term).
 - **Financial account** - the one selected will be the one use while collecting and reconciling the payments made by that customer.  
-  To learn more about *Financial Account*, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more about *Financial Account*, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Invoice terms** - there are few invoice terms which can be used while generating sales invoices.  
-  To learn more, visit [Generate Invoices](/user-guide/etendo-classic/basic-features/sales-management/transactions/#generate-invoices).
+  To learn more, visit [Generate Invoices](../sales-management/transactions.md#generate-invoices).
   - **After Order Delivered** - the invoice could be automatically generated once all the goods of the sales order have been shipped
   - **After Delivery** - the goods of the sales order will be automatically invoiced as they are shipped, even if there are partial shipments
   - **Do not invoice** - no invoice will be generated automatically
   - **Immediate** - the invoice will be generated on the next run of the Generate Invoices process.
   - **Customer Schedule after Delivery** - the invoice will be generated according to the calendar agreed with the customer and once the goods ordered have been shipped.  
     If this is the option selected, a new field named *Invoice Schedule* is automatically displayed for you to select the corresponding *Invoice Schedule* or calendar.  
-    To learn more, visit [Invoice Schedule](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#invoice-schedule)
+    To learn more, visit [Invoice Schedule](../master-data-management/business-partner-setup.md#invoice-schedule)
 - **Credit Line limit** - If the sum of all pending payments is over the credit limit specified for a customer, the system will alert you by saying that this customer has reached the credit limit whenever this business partner is selected in a sales document (order, shipment or invoice).
 - A customer can be defined as *Tax Exempt* whenever applicable, therefore only those Tax rates also defined as exempt apply.
 - **Sales Representative** - you can select here a customer sales representative. A sales representative is an employee set as such.
 - **SO BP Tax Category** - this field can be found under the *More Information* section.  
   You can use a business partner tax category to get that the sales documents created for a customer can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Business Partner Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#business-partner-tax-category)
+  To learn more, visit [Business Partner Tax Category](../financial-management/accounting/setup.md#business-partner-tax-category)
 - **On Hold** - this checkbox allows blocking a customer, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup, which can obviously be changed as required:
   - **Sales Order:** Blocked
   - **Goods Shipment:** Blocked
@@ -192,12 +192,12 @@ Above defaulted configuration means that it is not possible to complete either a
 
 Customer accounting tab allows the user to configure the ledger accounts to be used while posting customer related transactions such as customer receivables and customer advances to the general ledger.
 
-![](/assets/drive/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ.png)
+![](../../../../assets/drive/609fyigYTKbQyThG3K-Cd8GKw2Z-Y_02gsIaYELEwALpv3XCRgCgWeEXZqKvgYrhJWv1xDKvQ9zOTYRiF_ozw9D3xjh6OQIUt2vl1V17dfi8bHY2GoKLs7aXuZXVv3FALP8lA3Mqh6LFdfskaQ.png)
 
 As shown in the screen above, you can configure for each customer and general ledger the accounts to be used in:
 
 - the **Customer Receivables** transactions such as sales invoices posting.  
-To learn more, visit [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+To learn more, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 - the **Customer Prepayment** transactions, such as those cases when the company shipping the goods requires the customer to advance part or full amount of the debt.  
 
@@ -209,27 +209,27 @@ Besides, it is important to remark that it is possible to configure the creation
 
 Vendor or Creditor related data can be entered and configured once the *Vendor* checkbox is enabled.
 
-![](/assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
+![](../../../../assets/drive/ZyKWCq0lO9Z1oggC86Qw1sYw6EACIoC7WNSXCgMczxoJFp9uppOasgk0YlwMWVjxCBSHouebT0uSxObUKBBd9A0TwRj-957-_D37S4p3-xrOMZlqI33LOXr18EDJBwBI0Z36Hxp0hmgQ4tcp-g.png)
 
 As shown in the image above, there is a list of relevant data to be entered for suppliers or creditors, also known as vendors:
 
 - **Purchase Price List** - the one selected will be the one applied while creating purchase documents such as purchase orders or invoices for that vendor.  
   If a Business Partner has already generated Credit, it will not be possible to select a Price List in a different Currency from the generated Credit. In that case, it is possible to convert Credit to a different Currency.  
-  To learn more, visit [Price List](/user-guide/etendo-classic/basic-features/master-data-management/pricing/#price-list).
+  To learn more, visit [Price List](../master-data-management/pricing.md#price-list).
 - **Payment method** - the one selected will be the one applied while creating and managing the payments made to that vendor.  
   If a financial account is linked to the vendor, the payment method to select will be a payment method linked to that financial account.  
-  To learn more, visit [Payment Method](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#payment-method).
+  To learn more, visit [Payment Method](../financial-management/receivables-and-payables/transactions.md#payment-method).
 - **Payment Terms** - the one selected will be the one used while managing supplier invoices payment plans.  
-  To learn more, visit [Payment Term](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#payment-term).
+  To learn more, visit [Payment Term](../master-data-management/business-partner-setup.md#payment-term).
 - **PO Maturity Date 1** - as indicated in the Payment Term the PO Maturity Date is used in combination with the Fixed Due Date in the payment term to be set to Y and the Next Business Day set to N. The due date of the payment is based on the payment term defined in combination with the PO Maturity Date.
   - For example, the defined payment term is 30 days and the PO Maturity Date 1 is set to 10. If the invoice date is the 1st of the month, based on the 30 days payment term, the payment due date is the 1st of the next month, but since the PO Maturity Date is set to 10, the payment due date as a result is the 10th of next month.
 - **PO Maturity Date 2** - a second PO Maturity Date can be set to be combined with the payment term and the first PO Maturity Date.
   - For example, the payment term is 30 days, the PO Maturity Date 1 the value is 10, the PO Maturity Date 2 is 20. The example given in PO Maturity Date 1 will remain the same. However, if the invoice date is the 11th of the month, the payment due date will be the 20th of next month: the 30 days of the payment terms are taken into account and since the 10th of the month is passed the second maturity date of the 20th is taken into account.
 - **PO Maturity Date 3** - a third PO Maturity Date can be set to be combined with the payment term and the first and second PO Maturity Date.
 - **Financial account** - the one selected will be the one used while withdrawing and reconciling the payments made to a supplier.  
-  To learn more, visit [Financial Account](/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions/#financial-account).
+  To learn more, visit [Financial Account](../financial-management/receivables-and-payables/transactions.md#financial-account).
 - **Tax Category** - you can use a business partner tax category to get that the purchase documents registered from a vendor can only have a specific set of tax rates linked to that tax category.  
-  To learn more, visit [Tax Category](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#tax-category).
+  To learn more, visit [Tax Category](../financial-management/accounting/setup.md#tax-category).
 - **On Hold** - this checkbox allows blocking a vendor, therefore some specific documents cannot be fulfilled for it. If checked, the On Hold section is shown with the following setup which can obviously be changed as required:
   - **Purchase Order:** Blocked
   - **Goods Receipt:** Not blocked
@@ -246,7 +246,7 @@ You will realize that Etendo shows an error message stating that it is not possi
 
 Vendor accounting tab allows the user  to configure the ledger accounts to be used while posting vendor related transactions such as vendor liabilities and vendor advance payments to the general ledger.
 
-![](/assets/drive/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw.png)
+![](../../../../assets/drive/9Z371emBdqUmHgSvKroREH9tZsP4bV-9Eh6T9I-DOkp9x8n4iCFvpI_wOp3copFLr0lNnuogVezfXzQuQV4U6cukoVQJ6oYp1GLt3oxL-iE1TU1LhXIC0rghK_ctPI89l3Lg0u9Shcbj4Q8Aiw.png)
 
 The user can configure for each supplier or creditor and available accounting schema, the ledger accounts to be used in:
 
@@ -263,7 +263,7 @@ Besides, it is important to remark that it is possible to configure the creation
 
 A business partner can be set up as employee once the checkbox *Employee* is enabled.
 
-![](/assets/drive/lK2uSNpu3BHtkn7SCCaLztxheUiyHyDOjL26IGC2vvpvkmfMuvGZ7mC6_L3smeTuyRm5utpzQTNkFhutczZfjAzkauQbxrw9h_6kWjS08dkDYHBP3qiHznt9ybDDoy5YB9dheypb-Gtt_O9y-Xgr-w.png)
+![](../../../../assets/drive/lK2uSNpu3BHtkn7SCCaLztxheUiyHyDOjL26IGC2vvpvkmfMuvGZ7mC6_L3smeTuyRm5utpzQTNkFhutczZfjAzkauQbxrw9h_6kWjS08dkDYHBP3qiHznt9ybDDoy5YB9dheypb-Gtt_O9y-Xgr-w.png)
 
 Employee tab allows the user to set which of your business partners are *Employees*.
 
@@ -281,7 +281,7 @@ An employee can be:
 
 The ledger accounts to be used while posting employee related transactions such as paryroll accounting could be added in this tab.
 
-![](/assets/drive/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw.png)
+![](../../../../assets/drive/7kuCcxhGxEGWIpNYq-d8j3hysWa9ru8o2SoKJnxq9Cvkf3G-j1W0M5KDMw4Wq7IiNtKftE3U8GFbFZYUHDBompw3guyv-yamRyKg6-gUoNb1wibWRp0AAj1KQg3S1FGeiPmyyIJnUJOBSE4WQw.png)
 
 As you can see in the image above, nowadays there is no ledger account required to be defined for employee accounting. This is due to the fact that there is no transaction susceptible of being posted for employees.
 
@@ -295,7 +295,7 @@ It is possible to configure and properly set up business partner bank accounts t
 
 Therefore, we strongly recommend the user to properly set up bank accounts as those will be used by Etendo as required within Etendo payment management processes.
 
-![](/assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
+![](../../../../assets/drive/XzJTDeFWNJTAq361dyKR7owq_NSU41d06F7NgoVmM6MLjHaSxUc-M2q19MuXNkz90__zk-C6KFFYTIWyuh_D8d5KzJ9R1rGraYBU_y1LJj3uczO0V5DLgUtLQbqitNkiC_E8_Iyp89-X8EnhoA.png)
 
 The *bank account* related data you can enter is:
 
@@ -313,11 +313,11 @@ The *bank account* related data you can enter is:
 #### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 If the Remittance module is installed, in this tab, the user can find a “default” checkbox that, if checked, indicates that the selected bank account is the default one, instead of the other options the business partner can have. This means that if the bank account field is not manually populated, Etendo automatically fills the field with the default bank account.
 
-![bank_account_default.png](/assets/legacy/bank_account_default.png)
+![bank_account_default.png](../../../../assets/legacy/bank_account_default.png)
 
 !!! note
     If no bank account is selected as default, the one created last is used when no bank account is selected in orders/invoices.
@@ -331,7 +331,7 @@ Business partner locations and full address details can be set up in this tab.
 
 Business partners might have different address details depending on location/address used for either *Goods Receipts/Shipments* purposes or location/address used for *Invoices* purposes.
 
-![](/assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
+![](../../../../assets/drive/ZC4Jc3vlmJB6aVN4fG94bMjafw4pv7IYzCE40ZEhZxA0JPkN2AwFK942M4o-fXhEliP9jHCKO_WSdNBNY8NWi6MyqLM00BmX2YsjHjUPs8B3SNg2UfGAAQETAczHpvwV-Ng93qjIvj3X2zVtyA.png)
 
 Etendo allows the user to define any type of business partner address, by filling in the information below:
 
@@ -354,7 +354,7 @@ Etendo allows the user to define any type of business partner address, by fillin
 
 Contact tab allows the user to add and configure the business partner contacts you deal with.
 
-![](/assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
+![](../../../../assets/drive/Hy8AxFtV7E5iAuum7OaH5J2uRp3T6WeI-AjoxfZQKr0R1VyPJ-Br_PvqEJZ3ps8HuwJDDlFJZW6s1P4_h-U36j583nFJR86R3Qu7DqqaPcOl_8AgjtZAR2iCq_FHNt_HMFc3cqhF2l2Y1YLBUg.png)
 
 As you can see in the image above, basic *Contact* data such as:
 
@@ -367,7 +367,7 @@ can be configured in this tab.
 
 Basic Discount tab allows the user to add and configure business partner Basic Discounts.
 
-![](/assets/drive/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ.png)
+![](../../../../assets/drive/2xUfGNVKL2MuKaMd8-0-MAdpaJiPFnOlExD6jrfVaicmThNDW7WV_C3Ve31HTwTENiUJ2TxGKnDRm9__SGlVoDralznQ9o0EfTxYl4xIKcTOhQpRU_pkeP1a-g_jrvcixL2FvJsM-MwK0_2EQQ.png)
 
 It is possible to enter as many **Discounts** as agreed with your business partners, by filling in the information below:
 
@@ -398,33 +398,33 @@ In total -100 -100 -81 = -281 USD for all three discounts (a total discount of 2
 ### Rappel Configuration
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 
 With this functionality, the user can find the tab “Rappel Configurations” in the business partners included in the Rappel configurations. Also, in the Business Partner window, the user is able to create rappels using the button “Create Rappel”.
 
-![bp_window.png](/assets/legacy/bp_window.png)
+![bp_window.png](../../../../assets/legacy/bp_window.png)
 
 To be able to do this, it is necessary to configure certain aspects in the “Rappel Configurations” window.
 
 !!! info
-    For more information, visit [Rappel Configurations](/user-guide/etendo-classic/basic-features/master-data-management/business-partner-setup/#rappel-configurations).
+    For more information, visit [Rappel Configurations](../master-data-management/business-partner-setup.md#rappel-configurations).
 
 The “Rappel configuration” tab can be found in the tabs section of the Business Partner window. In this tab, the user can find the configured rappels for each business partner.
 
 To create a new rappel, the user must select one of the available configurations in this tab and click the ***Create Rappel*** button. A pop-up window will appear in which the user can select a trading partner to which the Rappel will be assigned, and also configure a date period in which the consumptions will be taken into account to calculate the discounts, determined by the *date from* and the *date to* information.
 
-![bp_pop_up_new.png](/assets/legacy/bp_pop_up_new.png)
+![bp_pop_up_new.png](../../../../assets/legacy/bp_pop_up_new.png)
 
 When the rappel is created, a sales invoice is created automatically, as seen below.
 
-![created_rappel.png](/assets/legacy/created_rappel.png)
+![created_rappel.png](../../../../assets/legacy/created_rappel.png)
 
 
 Each time a rappel is granted to a business partner, a new sales invoice is automatically generated in order to show the amount of the discount. This invoice has a specific sequence to distinguish it from the rest, according to the options entered when configuring the sequence, and a negative amount since it is a discount. The status of this invoice is “draft”.
 
 !!! info
-    For more information, visit [Sales Invoice](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-invoice).
+    For more information, visit [Sales Invoice](../sales-management/transactions.md#sales-invoice).
 
 ## Business Partner Info
 
@@ -436,25 +436,25 @@ In this section, the user can view information related to business partner order
 
 The user can select a business partner to begin viewing related transactions.
 
-![](/assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
+![](../../../../assets/drive/4OnjuhWdUoTUGTSu8zWxiV2-AAuj2bKugSYsd0tnIK9CgAS12oX62u4KgxFW35THxZKqIH0Epr-E-q5w4w4y4kbkWR3wCKNTQFosue5bPRC3CMXbOgCNgkzsvXCtZ7OsB53ZD69KhpH-BmTZbQ.png)
 
 #### **Partner Orders**
 
 The user can view orders related to a specific business partner.
 
-![](/assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
+![](../../../../assets/drive/pwcD_Hw4nDDMhW7FDa69spb3uNGrBrfB8AwS8Ni77RyIi6_uPAsIWmWPzkvPoCBe5IIcW_GeFmxgvB4KPxoI6TmwiK2nAsFyOKd7GvbMXzpAyt2DwTPDnyKijbLgejiWZYCnj28D9-y9hZNuDw.png)
 
 ### **Partner Shipments**
 
 The user can view shipments related to a specific business partner.
 
-![](/assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
+![](../../../../assets/drive/DKEnqi6tY-_9PGf13-ntaqJCDwbfHlm8mJl2k4WwaIJ8dZibpai1E-LZhuf8DkUS4dSX2sm5eua0uzGLLdXreV-YW1KnyHvSI1zWRcJDHEjh0DJVslYgN3RBEuTiqjK0g5qpe02UP8ZUf24qyw.png)
 
 ### **Partner Invoices**
 
 The user can view invoices related to a specific business partner.
 
-![](/assets/drive/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw.png)
+![](../../../../assets/drive/GVk5WiJ9CXXVM8khajRov6_24IGCsm0l8nD6ARDMyUL6Os5gle_r3LDHUsq1i-2lAXyf5aZRlgxep-kCgSGkbjMCoGNKVMCDwp-R5Z2pK1-5VYxgk4bswYEc4tcJ_iZGuh5Toi2DcEQIWz9Lsw.png)
 
 
 ## Product
@@ -492,7 +492,7 @@ Product types do not confer different accounting treatments. In other words, all
 
 All of them use the ledger accounts defined in the Accounting tab of the Product window.
 
-![](/assets/drive/BP3_HION2Ye59yb2o2KNzsNK4o72pdd_v6DVNj5SsrL_3bZCZbH-OG4Snsia_DB_BItoQaJxuJf4vOe1jlrwPhZTswRuf1I8aUTCLlHP1s-NU-625ScthOFj8fgeIrknNz2MdE6kbDgecxTFSw.png)
+![](../../../../assets/drive/BP3_HION2Ye59yb2o2KNzsNK4o72pdd_v6DVNj5SsrL_3bZCZbH-OG4Snsia_DB_BItoQaJxuJf4vOe1jlrwPhZTswRuf1I8aUTCLlHP1s-NU-625ScthOFj8fgeIrknNz2MdE6kbDgecxTFSw.png)
 
 Additional key data to fill in are:
 
@@ -508,7 +508,7 @@ Additional key data to fill in are:
 - **Stocked** checkbox is selected if the product is part of the inventory, therefore proper inventory movement transactions are registered in Etendo.  
   This flag can not be changed anymore for a product, if that product is part of any sales, purchase, inventory or production document related, whatever document status is.
 - **Production** checkbox is selected if the product is part of a production process. Once selected, an additional field appears to select a *Process Plan*.  
-  To learn more, visit [Process Plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan)
+  To learn more, visit [Process Plan](../production-management/setup.md#process-plan)
 - **Attribute Set**, a product can have a group of features or an attribute set, such as ***Color and Size***, to take into account while ordering or storing the product.
   - If an Attribute Set is selected here, Etendo displays a new field named *Attribute Set Value*.  
     To learn more, visit Attribute Set
@@ -556,11 +556,11 @@ To learn more, visit the How to manage deferred revenue and expenses article.
 
 - **Returnable**:This flag is used to indicate if a product can be returned and, in the case that it is, a new field called. When trying to return a non-returnable product from the Return from Customer window, an error will be shown.
 
-![](/assets/drive/8P_B_7zs64s6GpnSTeK9UQ6lBzvVnqGD9qOV3QR0WnAk_vPEZtjWJclvPzCvLx2HhU2oJuV4AjbxdhmspKkr3cWr20QacqX-VnigfqEjCIv9_blgPk1mEIloiZOBk5oCT6y41jQh9JI7HKA5vQ.png)
+![](../../../../assets/drive/8P_B_7zs64s6GpnSTeK9UQ6lBzvVnqGD9qOV3QR0WnAk_vPEZtjWJclvPzCvLx2HhU2oJuV4AjbxdhmspKkr3cWr20QacqX-VnigfqEjCIv9_blgPk1mEIloiZOBk5oCT6y41jQh9JI7HKA5vQ.png)
 
 - **Overdue Return Days**:In this field, it is possible to configure the maximum amount of days before a product can not be returned. If the field is left blank, the product can be returned without time limitations. When trying to return a product whose period has expired, a warning message will appear.
 
-![](/assets/drive/QyvN8QXk9YDUur102n0wpiAY2QPyWux7iOpGMyvUkSVWGsoatyBdBBoMx5sxfWxo7dLX--2yo9cchrXV5yDH9nwpLqtOKLW9bsm4j0XFN9rCTCuusTntdbtxsRzu9Pu5pUinLOQ17lH_GAOymA.png)
+![](../../../../assets/drive/QyvN8QXk9YDUur102n0wpiAY2QPyWux7iOpGMyvUkSVWGsoatyBdBBoMx5sxfWxo7dLX--2yo9cchrXV5yDH9nwpLqtOKLW9bsm4j0XFN9rCTCuusTntdbtxsRzu9Pu5pUinLOQ17lH_GAOymA.png)
 
 !!! info
     **Note**: If stocked is not checked and BOM is checked, the product price should be 0. Because in that special case, the product price is the sum of the prices of the bill of materials components it consists of. If promotion wanted to create, 'Discounts and Promotions' should be used.
@@ -574,7 +574,7 @@ Product can be marked as **Is Generic**. This means that variants of this produc
 
 When this flag is marked, two buttons are shown:
 
-![](/assets/drive/XpdGDkmZecBZmb-qxyiA42-f6IdA9oTfYqig24hQZtSRsKLgItWO3U5jf-8kuTgHlMfKrUU9BQBSPfay8YoWSPKaYr74W9TXIgzumMG6T2sjq1g1w7zA9N2e2xZHPlGCykvLXWfU-wyAyH_5cw.png)
+![](../../../../assets/drive/XpdGDkmZecBZmb-qxyiA42-f6IdA9oTfYqig24hQZtSRsKLgItWO3U5jf-8kuTgHlMfKrUU9BQBSPfay8YoWSPKaYr74W9TXIgzumMG6T2sjq1g1w7zA9N2e2xZHPlGCykvLXWfU-wyAyH_5cw.png)
 
 - It shows all variants that have been created or not for that specific generic product. It is very useful when:
   - The user does not want to generate all variants but just some of them. The button allows the user to select the possible combinations
@@ -587,15 +587,15 @@ For example, imagine generic product T-Shirt Model A has the characteristics:
 
 But still variants have not been created. If you press the button, you can see all possible combinations:
 
-![](/assets/drive/YysrJ-lndKNj6qUEzE5IIaNziDxMduILgMa9XP3Vde2NskD-oIug-d3Ce12C4gZSJCDuqDqyXcTXL0IPRSEkRP3ezOIsF321Zy1pizzXHcUKuWlzNUPivH7sfIyDZhFxOcZUzCprjCYdNRs3Ag.png)
+![](../../../../assets/drive/YysrJ-lndKNj6qUEzE5IIaNziDxMduILgMa9XP3Vde2NskD-oIug-d3Ce12C4gZSJCDuqDqyXcTXL0IPRSEkRP3ezOIsF321Zy1pizzXHcUKuWlzNUPivH7sfIyDZhFxOcZUzCprjCYdNRs3Ag.png)
 
 Then all combinations can be selected or just pick some of them. Once the selection takes place pressing Done, combinations will be created as Products. These new products will have the Generic Product field filled with the product that was marked as generic. We can say it is their parent product
 
-![](/assets/drive/1aZDzwrJXxLjUZhwgGhhHarCA-AsNLDbdSpLvVj2LzAvReay3gMmfC33auIHYoELn1pSKNSYrBWIckgesfl75Lza6jjZVMfXeNw1236dsTpVUMp0Aqmm19kJjAzp0ZRElYQc4F9iujwJ1X-P0A.png)
+![](../../../../assets/drive/1aZDzwrJXxLjUZhwgGhhHarCA-AsNLDbdSpLvVj2LzAvReay3gMmfC33auIHYoELn1pSKNSYrBWIckgesfl75Lza6jjZVMfXeNw1236dsTpVUMp0Aqmm19kJjAzp0ZRElYQc4F9iujwJ1X-P0A.png)
 
 - It creates/explode all product variants, that is, all combinations based on the characteristics defined
 
-Another button that might appear is ![](/assets/drive/ZBo4NfiZAG6XK2iCAGS7jK--_4wffCzZHmp5z-8S0KrHU0Qs1U2_HkeL6MWD6KRZAFaYzjui8tmsOW9NKMbp3OkOLM27pUoQXBMC0YcHdCSLzQojA3Twi5IWuQwHEAcwlmjD4bnRYlMJ915Gpg.png). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
+Another button that might appear is ![](../../../../assets/drive/ZBo4NfiZAG6XK2iCAGS7jK--_4wffCzZHmp5z-8S0KrHU0Qs1U2_HkeL6MWD6KRZAFaYzjui8tmsOW9NKMbp3OkOLM27pUoQXBMC0YcHdCSLzQojA3Twi5IWuQwHEAcwlmjD4bnRYlMJ915Gpg.png). It only shows up when the generic product or the new product variant has a non-variant characteristic related. Two scenarios:
 
 1.  **Generic product**: This button allows entering the value of that characteristic.  
     Imagine the characteristic is Fashion Line that has three values: Sport, Vintage, Classic.  
@@ -606,11 +606,11 @@ Once a variant has been created, its characteristics and values can be viewed ei
 
 - Grid view: There is a new column **Characteristic Description**. This column is calculated and is not editable. It shows the characteristics with their values as a text. This column has a new search-selector in order to find product variants based on its characteristics
 
-![](/assets/drive/uxKcLraqzQTO5YQDc1QPoXzbekSyMuKoCGy0FpkRmreW9hbxKJOcZm-4R2kHVRAf7h-VaVYDoMlqncOk-iCWOZv5d7Nyo6OJIjsJXdlA1e276uJ2iD7YbUTpyY3R8BMUphQJGPqHG9z8Q3oCRw.png)
+![](../../../../assets/drive/uxKcLraqzQTO5YQDc1QPoXzbekSyMuKoCGy0FpkRmreW9hbxKJOcZm-4R2kHVRAf7h-VaVYDoMlqncOk-iCWOZv5d7Nyo6OJIjsJXdlA1e276uJ2iD7YbUTpyY3R8BMUphQJGPqHG9z8Q3oCRw.png)
 
-Press the button ![](/assets/drive/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfgcF2VLemqd37yK-hJshznCtz8tSACOFULk0CQo4f4CVrbR2W8-8CaBBUOtxsLXq2rnyATymb5aOTZaihm1mdEJEopKzbefJYQnNLrA.png) and it opens a pop-up to select values:
+Press the button ![](../../../../assets/drive/XY6pNhuZ1_Zz62KSiGF0yVwR7duvGEGLzXb-sj8RZ0wfgcF2VLemqd37yK-hJshznCtz8tSACOFULk0CQo4f4CVrbR2W8-8CaBBUOtxsLXq2rnyATymb5aOTZaihm1mdEJEopKzbefJYQnNLrA.png) and it opens a pop-up to select values:
 
-![](/assets/drive/Wtk1v4OXf3cYQZQRJVMZZu6bvKWAF94yM7GMeugxV3zLYTJez8HaVSdzgIFurmZ4Y_-kCpYQnv58HewpHMGgyqom8Xtn30PLliwlV8zGlfmMmqPg0yqLfFhLLvB7Mij9Ro9gs7SY4lz-zqhJXg.png)
+![](../../../../assets/drive/Wtk1v4OXf3cYQZQRJVMZZu6bvKWAF94yM7GMeugxV3zLYTJez8HaVSdzgIFurmZ4Y_-kCpYQnv58HewpHMGgyqom8Xtn30PLliwlV8zGlfmMmqPg0yqLfFhLLvB7Mij9Ro9gs7SY4lz-zqhJXg.png)
 
 - Form view: Product variants have a new section named _Characteristic Description_. This section contains as many fields as different characteristics the product has.
 
@@ -626,23 +626,23 @@ This tax modification is implemented through a service linked to the product. Th
 
 To configure it, go to the Product window and create a new service. A service is just a product with the field Product Type set to Service. It has to be activated also the field Linked To Product and the field Modify Tax. When this field is activated, a new tab named Modify taxes categories is visible. In this tab, it is defined the configuration of the tax categories of products this service will modify when linked and the new tax category to apply.
 
-![](/assets/drive/260ftQHLj7KxqXuouydWqLebx8YSli0i-k7OQh7rvpv1tfbcFB7zqhatrWcMd2F8tFMwLJEA-7xbc9LAtOdi1MNYioVlWheErN2eiFnhvq77HU-oyLHyiUTvrE_T1ruWbkDwOAPwpytv6_sM5w.png)
+![](../../../../assets/drive/260ftQHLj7KxqXuouydWqLebx8YSli0i-k7OQh7rvpv1tfbcFB7zqhatrWcMd2F8tFMwLJEA-7xbc9LAtOdi1MNYioVlWheErN2eiFnhvq77HU-oyLHyiUTvrE_T1ruWbkDwOAPwpytv6_sM5w.png)
 
 To ease the configuration process, two components have been added:
 
 1.- Modify Tax for Product Category (Button): Pick and Execute window to assign the product categories and tax categories in the same action.
 
-![](/assets/drive/8ToxP9o606fpE3T0LM-yFPrDkN_UcfbtRPVfoZvh6Oa_riBLBhSKHPfMvurIv4ijKgDJWyVFo4Bqjxe9tP0uzGw_GUbOBHq5j_s26JnOYPHDpzmwnQnxrdWC4yeQJfjs9glD0TVmOro6OA1wDg.png)
+![](../../../../assets/drive/8ToxP9o606fpE3T0LM-yFPrDkN_UcfbtRPVfoZvh6Oa_riBLBhSKHPfMvurIv4ijKgDJWyVFo4Bqjxe9tP0uzGw_GUbOBHq5j_s26JnOYPHDpzmwnQnxrdWC4yeQJfjs9glD0TVmOro6OA1wDg.png)
 
 2.- Copy Service Modify Tax Configuration (Button): Pick and Execute window where services which modify taxes are displayed. The user can select one or many services, and current configuration will be assigned to selected services. Once the process has been executed, the old configuration (if it exists) will be deleted and a new one will be added. This process helps in deploying the same configuration to multiple services.
 
-![](/assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
+![](../../../../assets/drive/kiBwqlQgDgPUsbPgVV_vcxX_KBYPiHR4IO7ESfJQQOz6oZqgYal_8hA6Umn-Ik7g_ZfacpN64S_51WsHE-uruqBmRsEHWDRw94xVzBKRwBUiC_WGyGV8E_H3-ZLIVpb1kYpIFggvv_VmQz8n2w.png)
 
 ### **Price**
 
 A product can be part of many Price List Versions which are valid for a given time period.
 
-![](/assets/drive/djRxxYVfhjv8e71EzysdOeoAUbQHqZSVuQbECB5EJ88BVtBo7FJ5weuwe6rrpxjxcXMKUX8pZKFgAE_lj5WdhmABdxh0Q09e9wdLPK8VBKNf6jBK8E56qbc6oQRtDcmHgxnxclqBQGsbm2B_rg.png)
+![](../../../../assets/drive/djRxxYVfhjv8e71EzysdOeoAUbQHqZSVuQbECB5EJ88BVtBo7FJ5weuwe6rrpxjxcXMKUX8pZKFgAE_lj5WdhmABdxh0Q09e9wdLPK8VBKNf6jBK8E56qbc6oQRtDcmHgxnxclqBQGsbm2B_rg.png)
 
 There are two ways in which the user can get a product to be part of a Price List:
 
@@ -656,7 +656,7 @@ There are two ways in which the user can get a product to be part of a Price Lis
 
 This tab will only be available when field Is Price Rule Based is selected. This tab gives the possibility of adding Service Price Rules to the Service starting from a certain date.
 
-![](/assets/drive/oKeZYS9ty3rxPOvfQd1nAc-VteGicSiOkI71kDF0mKBqomlsHjkbrtbMU3I36bDAbhM22cr0vlpMQ9FohG59E2YDtYddX5mFScwzgxcCvihP_y3C7SNdYqdnyIKewEei_gERVk0Nq-e4Gp_7Bg.png)
+![](../../../../assets/drive/oKeZYS9ty3rxPOvfQd1nAc-VteGicSiOkI71kDF0mKBqomlsHjkbrtbMU3I36bDAbhM22cr0vlpMQ9FohG59E2YDtYddX5mFScwzgxcCvihP_y3C7SNdYqdnyIKewEei_gERVk0Nq-e4Gp_7Bg.png)
 
 In this window it is also possible to define a maximum and minimum amounts that will be taken into account when showing services.
 
@@ -672,7 +672,7 @@ Also, if once a service (not yet delivered) has been added to the receipt, the p
 
 Accounting tab allows the user to configure the ledger accounts to be used while posting product related transactions such as product purchase or sales to the general ledger.
 
-![](/assets/drive/bLlVeOrdKF3rI3NdVa69a-CAwtO63JpdbyF0fzkMEG1pdmZU8u7bOlhffyM-HCwVnYA_y0kd51iPvCELamYYdp5RA9a7wVithXN1EWh_T73K304xQYB-gApjFi0-6vcof5HZBzUyIUrkpT82JQ.png)
+![](../../../../assets/drive/bLlVeOrdKF3rI3NdVa69a-CAwtO63JpdbyF0fzkMEG1pdmZU8u7bOlhffyM-HCwVnYA_y0kd51iPvCELamYYdp5RA9a7wVithXN1EWh_T73K304xQYB-gApjFi0-6vcof5HZBzUyIUrkpT82JQ.png)
 
 As shown in the screen above, you can configure for each product and general ledger some accounts to be used in the below listed transactions:
 
@@ -723,7 +723,7 @@ This tab provides information of the list of products contained and its quantity
 
 If the product Tax_Category is flagged as **As per BOM**, this tab also provides information for the price of each product in the Bill of Materials list. The price and quantity in this list is used to perform the division of the base amount to calculate the taxes based on the taxes configured for each product of the list.
 
-![](/assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
+![](../../../../assets/drive/s-cRF1Q5kJQ4sPgBi-R9mMhT6v5JerM6U2qcFr0KgUyU79r0KE3mbTxN5oifJP1_M7XiW8G4j-vLYv6CSF8kr0XnyfO4DVGmazBfVB0aTjpfKS5qgLbYc6ZcBGUki-fBkZNVWmn9pYbVOqlIzw.png)
 
 ### **Costing Rule**
 
@@ -737,7 +737,7 @@ Costing rules can be created and validated in the Costing Rules window related t
 
 Currency used by the costing rule is the currency set for the organization.
 
-![](/assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
+![](../../../../assets/drive/pUP_Yr9n3YIRGELLgfbQGwgdZ2Hbfpn79YXYVdLLoqnm0fsbUkFho_XUijntiFcDgbpRUNu323utJkWNYXS2b9KaazDnoEfi9kr-p_Mr3XD-gRh5udUjkbV1y6IBy3xPiUuQ-w0PW6Wk45oSVw.png)
 
 ### **Costing**
 
@@ -756,7 +756,7 @@ Overall, this tab allows to:
 
 In the same way, either a *Standard* or an *Average* Costing Rule needs also to be defined for the Organization as the way to calculate the cost of the products' transactions within that organization.
 
-- **review the average cost** calculated by the [](http://wiki.openbravo.com/wiki/Costing_Server)Costing Server when using an *Average* Costing Algorithm.
+- **review the average cost** calculated by the Costing Server when using an *Average* Costing Algorithm.
 
 Note that when using a *Standard* costing algorithm the cost of every product transaction is the *default standard cost* entered in this tab.  
 !!! info
@@ -778,7 +778,7 @@ It is possible to recognize them by their cost type:
 - **Legacy Average**
 - and **Legacy Standard**.
 
-![](/assets/drive/N1fWn0tV0yzS8dZULfJfiKeIOSvJzfYe-IBCo_TJSVqUavfD-zU4UlJlAhkg7CGNOV5uT__6-46NOHmWzyI3DBaYGwH_2TNdoblDMnC6VwDRzWILLf1k6YWZ8PRAPNWEjcMpSzqz81vqpObEBw.png)
+![](../../../../assets/drive/N1fWn0tV0yzS8dZULfJfiKeIOSvJzfYe-IBCo_TJSVqUavfD-zU4UlJlAhkg7CGNOV5uT__6-46NOHmWzyI3DBaYGwH_2TNdoblDMnC6VwDRzWILLf1k6YWZ8PRAPNWEjcMpSzqz81vqpObEBw.png)
 
 The way to define the **Cost** of a product implies to enter below detailed information:
 
@@ -808,7 +808,7 @@ There is not a way for the user to directly create new product transactions in t
 
 Product transactions of any type are automatically saved and listed in this tab as they are booked in Etendo.
 
-![](/assets/drive/20u-EUxoETZhWKS6geaudh3OZbjEc0CvxOFx_0njFvaHCzsro7CxBXExfQSPgKnKNX4eRyw4uvcYUIXZSBINAPMX-3nGhUoqA1K08zWlRefUU00gCNAQEvXbU-7RboBfWCxzGUK4OrStxUZ3kQ.png)
+![](../../../../assets/drive/20u-EUxoETZhWKS6geaudh3OZbjEc0CvxOFx_0njFvaHCzsro7CxBXExfQSPgKnKNX4eRyw4uvcYUIXZSBINAPMX-3nGhUoqA1K08zWlRefUU00gCNAQEvXbU-7RboBfWCxzGUK4OrStxUZ3kQ.png)
 
 As shown in the image above, Etendo saves and informs us about below relevant data for each product transaction type:
 
@@ -883,7 +883,7 @@ For instance the average cost of a product which transactions are listed below i
 
 Additionally, the cost of a transaction can be modified by clicking the Manual Cost Adjustment process button. After clicking this button, a new popup is opened:
 
-![](/assets/drive/qDJuH3rx2ZvsvrA9Tjl0WZZjwJors5Xu2P2UgEjiBK_jhHX9vbYN3ZKcvH1mLIMWqUTNtrP4iKcFtp3VTDiwTHyLRpzsk4TUvxWl4QXo-ErSsQ4LbqtWnkCi2TWf1ftOhyL97RTpP5BbSEjL-Q.png)
+![](../../../../assets/drive/qDJuH3rx2ZvsvrA9Tjl0WZZjwJors5Xu2P2UgEjiBK_jhHX9vbYN3ZKcvH1mLIMWqUTNtrP4iKcFtp3VTDiwTHyLRpzsk4TUvxWl4QXo-ErSsQ4LbqtWnkCi2TWf1ftOhyL97RTpP5BbSEjL-Q.png)
 
 This pop-up allows entering below detailed data:
 
@@ -912,7 +912,7 @@ As soon as a product transaction gets its cost calculated, a new record is creat
 
 As soon as a product transaction gets its cost adjusted, a new record is created in this tab referring to a *Cost Adjustment Line*.
 
-![](/assets/drive/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2Pp1HhXd6jUX03CePAe2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew.png)
+![](../../../../assets/drive/4lIc4FKc7VmCIoWFVPcV9fVkCqtBn2xTicXNsiin-P85rYySX2jwvUPGUAd3IdEaCUCSQo2hSgp_fuUP2Pp1HhXd6jUX03CePAe2AxypVuOVORVnJejwASLUrEmAGQyLBDCNm1GBXWaYr1N8ew.png)
 
 Some relevant fields to note are:
 
@@ -933,7 +933,7 @@ In this tab, the information that is required for the creation of the Purchasing
 
 Also, the Requisition process uses the Business Partner information for the automatic creation of Purchase Orders.
 
-![](/assets/drive/jUizYPPOFt4WfdpL71z7Pxe8z7aMWc7Qnzz0rYE488WWt0fvBY9jKgswYbddRYo1rOzmYGsAmV0zOCGvwuo2BfwWDr4gG94qfwrNTjpfcA3XYq1sNH2wNg495KlwPCY52uGyT_FhGRQWxDzbMw.png)
+![](../../../../assets/drive/jUizYPPOFt4WfdpL71z7Pxe8z7aMWc7Qnzz0rYE488WWt0fvBY9jKgswYbddRYo1rOzmYGsAmV0zOCGvwuo2BfwWDr4gG94qfwrNTjpfcA3XYq1sNH2wNg495KlwPCY52uGyT_FhGRQWxDzbMw.png)
 
 - **Business Partner**, the vendor that will appear on the Purchase Order when created automatically from the Requisition or from the Purchasing Plan.
 - **Quality Rating**: quality rating of the vendor. Information only field that is not used by the MRP process.
@@ -967,8 +967,8 @@ Manufacturing tab is used for products that are planned by the manufacturing pla
 The information in this tab is mainly used by MRP to process the Manufacturing Plan and Purchasing Plan. The storage bin field is filled out for products in production to indicate the default storage bin the product will be stored in when coming out of production.
 
 - **Storage Bin**: default location in the warehouse of the product.
-- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planning-method) section.
-- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](/user-guide/etendo-classic/basic-features/material-requirement-planning/setup/#planner) section.
+- **Planning Method**: definition of the elements of supply and demands that are taken into account and with which percentage for the creation of the Manufacturing Plan and Purchasing Plan. For more details, see the  [Planning Method](../material-requirement-planning/setup.md#planning-method) section.
+- **Planner**: the person responsible for the execution of the MRP plan of the product. For more details, see the [Planner](../material-requirement-planning/setup.md#planner) section.
 - **Capacity**: production capacity per day for the product.
 - **Min. Quantity:** minimum quantity to be entered on a work requirement.
 - **Quantity Type**:
@@ -1059,7 +1059,7 @@ In this Tab, there is going to be a record for:
 - each Organization that is a Legal Entity that has a Costing Rule defined
 - or each Organization and Warehouse, whenever Warehouse Dimension is defined as a costing dimension of the current Costing Rule defined for the *Legal Entity*.
 
-![](/assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
+![](../../../../assets/drive/KaTTAE01N7KuTheqE-4REVj2b6H1QQnWqxpNvt2oNR_y9sqdYUsBOhQw1RHg_KP10n4NoI5gVpUXfgb0KPHOYx5Ab-RCWIAWvUyboKczDdnTHaWWVfw-bhUDAE4pMsAvEyt3qNtfHeKj7DAQ5A.png)
 
 #### **Product Categories**
 
@@ -1067,7 +1067,7 @@ The user can define if a product of a certain product category can be related to
 
 This tab will only be available when the field ‘Included Product Categories’ of the Service has a value. It contains all the product categories related to the service.
 
-![](/assets/drive/PYJo6PQVwfGTLbk5f39Z5opQ3qM4D81lk9qWKX7k1Z-E9RzZC5ZnB9EK4fcWtb37L_ZP_fcJbcnAQdXMF1vLAzXuhseG993zL5eDG2xL-nt-jexrA3D-d4VupddMJEeKGixjbQZFXUBoayzGQQ.png)
+![](../../../../assets/drive/PYJo6PQVwfGTLbk5f39Z5opQ3qM4D81lk9qWKX7k1Z-E9RzZC5ZnB9EK4fcWtb37L_ZP_fcJbcnAQdXMF1vLAzXuhseG993zL5eDG2xL-nt-jexrA3D-d4VupddMJEeKGixjbQZFXUBoayzGQQ.png)
 
 The following information about related products is available in the tab:
 
@@ -1077,7 +1077,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the ‘Relate Prod Categories’ button (Visible only when the field ‘Included Product Categories’ has a value). This button will open a Pick & Edit displaying all product categories not related to the service.
 
-![](/assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
+![](../../../../assets/drive/n_0U2RkOiXABiP8XeiREnMyOPLHm9-Xsu9hNM-PE6c248gNtomNeOzXROYJJzMpkuRJvKH0GnNDpOp3FSaBOAVURspU8rHeGLY_dhWofqyWmnQ00gJ8yGwuTDxy_PZ_SyzDTmPk6vf2eBeXEDQ.png)
 
 #### **Category Price Rule Version**
 
@@ -1087,7 +1087,7 @@ The user can define if a product can be related to a product of 'Service' type b
 
 This tab will only be available when the field ‘Included Products’ of the Service has a value. It contains all the products related to the service.
 
-![](/assets/drive/QhyN8Mqa2ybLbU9ny5se3_Z-JsGEIYGIAma4LQhBS4U4TUdZWUQTe3-Y3NP7bwlaQSxr6Fea2aB0K2g-slUF8XLmuN6aDN-3LCgqCjfSl0cl4uyn1c8YgL-w_AuZi8t4jXcDyF-cr2CpqKm-xg.png)
+![](../../../../assets/drive/QhyN8Mqa2ybLbU9ny5se3_Z-JsGEIYGIAma4LQhBS4U4TUdZWUQTe3-Y3NP7bwlaQSxr6Fea2aB0K2g-slUF8XLmuN6aDN-3LCgqCjfSl0cl4uyn1c8YgL-w_AuZi8t4jXcDyF-cr2CpqKm-xg.png)
 
 The following information about related products is available in the tab:
 
@@ -1100,7 +1100,7 @@ The following information about related products is available in the tab:
 
 This tab is not editable, it is not possible to add records manually or edit them. It only allows to delete records. To add new records, it is necessary to click the  ‘Relate Products’ button (Visible only when the field ‘Included Products’ has a value). This button will open a Pick & Edit displaying all products not related to the service.
 
-![](/assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
+![](../../../../assets/drive/LB2xjm1Lcu3JfY4eab8BA9hFgvjRLJCvaIW52jrLlGSoox67pJL73fBfqhzWBAVBGBGnXAOiaIu7F4O8bYsnbRWsmbZj3ddYGqWZ0vFpcJZdbTdSWIMtGuLFMcFDTONgqvFSgqwm3eW0fNIFxw.png)
 
 #### **Product Price Rule Version**
 
@@ -1109,7 +1109,7 @@ This tab is not editable, it is not possible to add records manually or edit the
 !!! info
     The user must enable this preference by entering the Preference window, checking the Property list checkbox, choosing “Enable UOM Management” in the Property field with value Y.
 
-![](/assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
+![](../../../../assets/drive/zu1QFJc_LPSBeJOGOOGHLNMjKi-WsPgjKPEaD4-BnQJEKbvhU1jz0WXeW-RHyDOEXYAx67_-Z7F6SIGVxBkGdZT828fkrjzAeu35psYO4H_dSFcw8YosbJailPqSWhZyjhCsN01vu0kqIyTG1g.png)
 
 Fields to note:
 
@@ -1131,4 +1131,3 @@ Fields to note:
 #### **Modify Taxes Categories**
 
 It defines tax modification for products linked to service. Products linked to this service that belong to the configured category will change the tax category when linked to this service.
-

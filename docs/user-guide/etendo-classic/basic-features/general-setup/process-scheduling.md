@@ -33,7 +33,7 @@ Besides, there are other background processes which can also be scheduled and th
 
 Process Request window allows the user to review and add background processes, which can be scheduled or unscheduled as required.
 
-![](/assets/drive/Tjhctxd0gIiAgpntricdUhTGgTKf0FvXQjbYcsgOtJ-9XmH8AYJW2pYsyelS-1LnQv91vGZ2Vf_M_gxJjeQJ5lAZNx9iKTqzdi7QTlb-WbHXAEIcouqQ3Qo5BafXEmMPgIRbdS-J.png)
+![](../../../../assets/drive/Tjhctxd0gIiAgpntricdUhTGgTKf0FvXQjbYcsgOtJ-9XmH8AYJW2pYsyelS-1LnQv91vGZ2Vf_M_gxJjeQJ5lAZNx9iKTqzdi7QTlb-WbHXAEIcouqQ3Qo5BafXEmMPgIRbdS-J.png)
 
 The information to fill in to schedule a background process is:
 
@@ -131,25 +131,25 @@ Process Request has been modified in order to be able to schedule a process grou
 
 The schedule of a process group will work exactly as the schedule of a single process. It is not possible to schedule a process group and a single process at the same time.
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
-![](/assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
+![](../../../../assets/drive/Qq-ABfaxFfvLhrdl-xyZsj0jhuXMJWXDnEdt8B5iYUu7ij_TWKdTUoS29xOSGZNJfpMqB0s_7QVGYI-bBYuZp0G-Hr1yEJkanZEeIAQ7qY07TOXUpsuOGJirzkyfUko2w-mtEPyv.png)
 
 ### Process Monitor
 
 Process monitor is a read-only tab that allows reviewing the status of processes executed by this request. 
 
-More information in [Process Monitor](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-monitor_1).
+More information in [Process Monitor](#process-monitor_1).
 
-![](/assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
+![](../../../../assets/drive/v8HLIJJYI6RlI8-i5h00aJ5Ynz8NuDcCs6srpwZrZWIpsHKrCJ5NhEHcqwHu85BlXz3enXj9v-XJ00GWsPU0BJ6U4qfPVajQPVcpy6AwTUSjZkN_eY27v_q8kcMzk4u8wcWODAL9.png)
 
 ### Processes in Group
 
 In case that the process executed by the process request is a process group, you will find here the information about the executions of the processes in the group for each process group execution. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
-![](/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
+![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ## Process Monitor
 
@@ -170,7 +170,7 @@ Besides, and as already explained, _"Security based on role"_ definition at proc
 
 Process Monitor window shows read-only information about individual process execution.
 
-![](/assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png)
+![](../../../../assets/drive/1n5-1WsQVWLDXUzuynPBRi1mruhlS9uPb.png)
 
 As shown in the image above, process monitor window provides the information below per each process executed:
 
@@ -187,9 +187,9 @@ As shown in the image above, process monitor window provides the information bel
 
 In case the process executed is a process group, you will find here the information about the executions of the processes in the group. 
 
-More information in [Process Group](/user-guide/etendo-classic/basic-features/general-setup/process-scheduling/#process-group_1).
+More information in [Process Group](#process-group_1).
 
-![](/assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
+![](../../../../assets/drive/1-YKBRq-gs3FtBuSize6FhzqtgT17IZlE.png)
 
 ## Process Group
 
@@ -216,7 +216,7 @@ Process Group (Header): Contains information about the process group.
 
 There are two options that can be selected defining a Process Group
 
-![](/assets/drive/E2KNZetYy11WqMd1jRFYVQsjkQodMAYF63N2y2wYFfkZu8ooMYqJUfvnTdOh0iQu1Gp2NJtbEWCqQFBQGrqnHUTbyLTrdxCY-OUrnYhC997G7hOFYRvo-5ZOsjMWbhwg-PLQLJk5.png)
+![](../../../../assets/drive/E2KNZetYy11WqMd1jRFYVQsjkQodMAYF63N2y2wYFfkZu8ooMYqJUfvnTdOh0iQu1Gp2NJtbEWCqQFBQGrqnHUTbyLTrdxCY-OUrnYhC997G7hOFYRvo-5ZOsjMWbhwg-PLQLJk5.png)
 
 #### Prevent Concurrent Execution of a Process Group
 
@@ -237,7 +237,7 @@ It creates a Process inside a Process Group with a sequence number.
 
 Process Group List contains the list of processes that are part of the group, sorted in a certain order.
 
-![](/assets/drive/APyS4fin8Sb72dYf0TP1ZvLLpkZbsyrQ1Tv8_ABv1Byjurr0B1v8PanDaEytiR0NIhAS_TIbnsTe0aR5xQVNDybH_CicNv-TiGPgHq3deGKEyT8NuL3sPvf0J88asLgU9WWOtrMd.png)
+![](../../../../assets/drive/APyS4fin8Sb72dYf0TP1ZvLLpkZbsyrQ1Tv8_ABv1Byjurr0B1v8PanDaEytiR0NIhAS_TIbnsTe0aR5xQVNDybH_CicNv-TiGPgHq3deGKEyT8NuL3sPvf0J88asLgU9WWOtrMd.png)
 
 ### Other Considerations
 
@@ -259,9 +259,7 @@ Prevent executions of single processes and group processes will co-exist. Which 
 
 ### Process Group as Source Data
 
-!!! info
-    Only for developers
+!!! info "Only for developers"
+    Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
 
-Process Group can be considered as Source Data which means that, working as System Administrator, you can assign a "Group Process" and/or a "Group Process List" to your module in order to distribute them as part of your module.
-
-![](/assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)
+![](../../../../assets/drive/fSrbl6KIduQt_nL4aZ2wOWGWgcd8H03rnndIVD5YhTx0J1bkdD-m5K57TXKQOuPDm8QtsLi4V_egrxJvgdOWEsV7TPykZRBr_1McjEMny9HXf9kowbFRXFhqcZm9MRhJ0PvT4xoJ.png)

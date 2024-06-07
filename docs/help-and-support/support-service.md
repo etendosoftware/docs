@@ -8,7 +8,7 @@ Etendo provides support to the users through our [Help Center](http://support.et
 
 Here, the user can ask questions or send information in these sections:
 
--   :material-lifebuoy: **Trainning**
+-   :material-lifebuoy: **Training**
 -   :material-tools:  **Technical Support** 
 -   :fontawesome-regular-money-bill-1:  **Licensing and Billing Questions** 
 -   :material-headphones-settings:  **Product Trial Questions**

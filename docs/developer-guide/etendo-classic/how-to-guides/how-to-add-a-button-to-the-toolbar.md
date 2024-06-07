@@ -5,7 +5,6 @@ tags:
 - JavaScript
 - Data Access Layer
 - Implementation
-title: How to Add a Button to the Toolbar
 ---
 
 # How to Add a Button to the Toolbar
@@ -195,8 +194,7 @@ user navigates through the system.
               }
           }
 ```
-The function enables/disables the button if the form or grid is new and if
-there are no records selected.
+The function enables/disables the button if the form or grid is new and if there are no records selected.
 
 Then this code registers the button for the tab with id '186':
 
@@ -222,7 +220,7 @@ The previous steps added static resources (javascript and css) to the system.
 Now Etendo should know where to find these resources when initializing and generating the user interface. For this, the `css` and javascript and resources have to be registered. This is done through a ComponentProvider. 
 
 !!!info
-    For more detailed information, visit [ComponentProvider](../concepts/Etendo_Architecture/#component-provider.md).
+    For more detailed information, visit [ComponentProvider](../concepts/Etendo_Architecture#component-provider.md).
 
 
 ```javascript
@@ -265,7 +263,7 @@ Now Etendo should know where to find these resources when initializing and gener
 ```
 A short explanation:
 
-  * The annotations in the top of the class are related to [Weld](../concepts/.Etendo_Architecture/?h=component+provider#introducing-weld-dependency-injection-and-more.md). 
+  * The annotations in the top of the class are related to [Weld](../concepts/Etendo_Architecture.md#introducing-weld-dependency-injection-and-more.md).
   
   The annotations define that only one instance of this class is created (a singleton) and define an identifier for this instance. 
 
@@ -407,7 +405,7 @@ Then when the server returns, the callback is called which will display a prompt
 
   
 
-![](../../..//assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-6.png)
 
 ###  The result
 
@@ -415,5 +413,7 @@ The result shows the sum of the 2 selected order headers:
 
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_add_a_button_to_the_toolbar-7.png)
+
+---
 
 This work is a derivative of [How to add a button to the toolbar](https://wiki.openbravo.com/wiki/How_to_add_a_button_to_the_toolbar){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.

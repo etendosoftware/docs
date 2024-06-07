@@ -14,7 +14,7 @@ A Requisition is a document that specifies a request to order products.
 
 The user can create requisitions and monitor them in this window:
 
-![Requisition window](/assets/drive/1ihaEseE5RnNH7INNbaRLyvZC0P2q-hTl.png)
+![Requisition window](../../../../assets/drive/1ihaEseE5RnNH7INNbaRLyvZC0P2q-hTl.png)
 
 ### Header
 
@@ -31,7 +31,7 @@ Besides, the system populates the following data:
 - The document No., which is the Requisition number.
 - The requester, which is the user entering the requisition.
 
-![Requisition](/assets/drive/1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7.png)
+![Requisition](../../../../assets/drive/1G5HR3bMmJXW837o-6qzZ0CTe418q5JB7.png)
 
 The requester can then move to the "Lines" tab to enter additional data.
 
@@ -55,7 +55,7 @@ Requisition "Lines" tab collects the following demand data:
 - The *net unit price:* This one can be either equal to the net list price or not, based on the formula: \[net unit price = net list price - discount\]. It is an optional field that can be filled in automatically based on the price list entered at the header level or it could be overwritten by the user for a particular product line.
 - The *discount*, if any, is based on a used price list.
 
-![Requisition Lines](/assets/drive/1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC.png)
+![Requisition Lines](../../../../assets/drive/1CtrCvBCrvUuxYDlaFysmkKu0-0XhemfC.png)
 
 It is possible to enter as many requisition lines as products demand.
 
@@ -77,7 +77,7 @@ Manage Requisitions window is intended to be used to provide an overall picture 
 
 This window allows the user to manage requisitions regardless of their current status, therefore they can change or close a requisition and create purchase orders for those demands.
 
-![Requisition window Header](/assets/drive/1yuE4xa0usvVzSdmthjDWdi12OAqTuJTe.png)
+![Requisition window Header](../../../../assets/drive/1yuE4xa0usvVzSdmthjDWdi12OAqTuJTe.png)
 
 A **requisition** with status "Completed" **can always be changed**, if required. The user needs to reactivate it and then change it and book it.
 
@@ -96,7 +96,7 @@ In this case, a new window is shown for the user to fill in some data by taking 
 - If **all the requisition lines have the same supplier and price list**:
   - **there will not be any need for selected defaulted ones** in the window "Create Purchase Order", besides only one purchase order will be created.
 
-![Purchase order](/assets/drive/17OuNS8YpM0VC3MUkLO25DPPHCMwWjq8u.png)
+![Purchase order](../../../../assets/drive/17OuNS8YpM0VC3MUkLO25DPPHCMwWjq8u.png)
 
 Etendo provides information about the purchase order/s number/s created after pressing the OK button in the "Create Purchase Order" window.
 
@@ -131,7 +131,7 @@ This tab allows the user to either review the purchase order line automatically 
 
 Requisition to Order window shows all the "Completed" requisitions which match the criteria used in the "filter" section and it also shows the requisition lines selected as locked, therefore the same product demand can not be included more than once in a purchase order.
 
-![Requisition to order](/assets/drive/1Xl_R8oaUrOaO0SK4wB5BYNw3wJDEjHBX.png)
+![Requisition to order](../../../../assets/drive/1Xl_R8oaUrOaO0SK4wB5BYNw3wJDEjHBX.png)
 
 In other words, the upper section of this window shows the requisition lines found that are not linked to an order yet.  
 Those are the lines which can be added by the user to the "Lock" area in the bottom section of the window.
@@ -173,7 +173,7 @@ The **Purchase order header** allows you to enter the following information:
 **Once header information is properly filled-in, you can go to the "Lines" tab in order to enter purchase order line/s information**.
 
 !!! info
-    To learn how to enter purchase order lines, visit the next section [Lines](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_2).
+    To learn how to enter purchase order lines, visit the next section [Lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_2).
 
 It is possible to take up to **three possible actions regarding a purchase order**, by using the **header button "Book"**:
 
@@ -181,7 +181,7 @@ It is possible to take up to **three possible actions regarding a purchase order
 - **Void it**, in case that purchase order is not required anymore and therefore needs to be voided.
 - **Book it**, in case it is correct and final.
 
-![Purchase order window](/assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
+![Purchase order window](../../../../assets/drive/1_Jv8WvA53fVRV82tDordRVxJa6xmTEh2.png)
 
 !!! info
     If there are non-stockable BOM products and they have not been exploded, the Book button explodes them automatically.
@@ -189,11 +189,11 @@ It is possible to take up to **three possible actions regarding a purchase order
 #### Remittance
 
 !!! info
-    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
  
 The Remittance module provides the header of the Purchase Order with a new field: “Bank account”.
 
-![bank_account_3.png](/assets/legacy/bank_account_3.png)
+![bank_account_3.png](../../../../assets/legacy/bank_account_3.png)
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
@@ -253,7 +253,7 @@ Line tax tab informs about each purchase order line:
 
 Lists information about discounts automatically applied based on the supplier configuration and / or manually entered for the purchase order.
 
-![Basic discounts](/assets/drive/1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-.png)
+![Basic discounts](../../../../assets/drive/1AavUV8S8kQ2dp0P_W9lw06XfmAf5d_g-.png)
 
 #### **Payment Plan**
 
@@ -277,11 +277,11 @@ Displays the details of the payments (pre-payments or regular payments) made for
 ### How to Reactivate a Closed Purchase Order
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate closed purchase orders by selecting the needed one/s and clicking the Undo Close button.
 
-![](/assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png)
+![](../../../../assets/drive/1cyLa7pjnsNgXtnSEK2lZX9s35imhD2Kq.png)
 
 Once the process is finished, the purchase order status turns to booked.
 
@@ -293,7 +293,7 @@ Once the process is finished, the purchase order status turns to booked.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to remove payments associated with a purchase order by selecting the corresponding document and then clicking on the Remove Payment button. If there is an invoice associated with the order, the relationship of this invoice to the payment in question will also be removed (Purchase Invoice window > Payment Plan tab).
 
@@ -304,17 +304,17 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic2.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic2.png)
 
 ### Intercompany
 
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ## Goods Receipts
 
@@ -324,7 +324,7 @@ A Goods Receipt is a document issued to acknowledge the receipt of the items lis
 
 Goods Receipts can be issued and booked in the header section of the goods receipt window.
 
-![Good receipts header](/assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
+![Good receipts header](../../../../assets/drive/1cfAL8uTJ79GodTUOh9qoE66rQ2Me9yG9.png)
 
 The fields to fill in the **Goods Receipt header** are:
 
@@ -339,7 +339,7 @@ The fields to fill in the **Goods Receipt header** are:
 **Once header information is properly filled-in, you can then go to the "Lines" tab in order to enter "Goods Receipt Line/s"**.
 
 !!! info
-    To learn how to enter goods receipt lines, visit the next section [Lines](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#lines_3)
+    To learn how to enter goods receipt lines, visit the next section [Lines](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#lines_3)
 
 If a **Goods Receipt** is completed and therefore **booked**:
 
@@ -359,7 +359,7 @@ Supplier can send a "Purchase Invoice" together with the "Delivery Note" of the 
 This action implies a **link between the goods receipt and the purchase invoice**, the user can be aware of when inquiring about the corresponding purchase invoice.
 
 !!! info
-    To learn more, visit [Purchase Invoice](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-invoice).
+    To learn more, visit [Purchase Invoice](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-invoice).
 
 ### **Lines**
 
@@ -398,7 +398,7 @@ A **"Goods Receipts" can be posted** if the "**MaterialMgmtShipmentInOut**" tabl
 
 A "Goods Receipt" posting looks like:
 
-![Good receipts posting](/assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
+![Good receipts posting](../../../../assets/drive/1mZK5uBnpjcdWbDli0tdWrJc3fCvmR4bg.png)
 
 Posting a "Goods Receipt" requires the calculation of the cost of the contained product/s.
 
@@ -450,7 +450,7 @@ Void action implies that:
 
 Landed Cost tab allows to allocate additional costs to the goods receipt.
 
-![Landed cost window](/assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
+![Landed cost window](../../../../assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
 
 It is possible to enter as many landed cost types/lines as required.
 
@@ -467,28 +467,28 @@ Once all items above are filled in, including corresponding landed cost purchase
 ### How to Reactivate Goods Receipts
 
 !!! info
-    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes.md).
 
 From the Goods Receipt window, it is possible to reactivate a previously generated movement just by selecting the corresponding document and clicking the Reactivate button.
 
 Once the receipt is successfully reactivated, the state of the document changes to Draft as it can be observed in the status bar.
 
-![](/assets/drive/1-Z-wUYZfcGDizQ_Kkp8TUYXTs-KnM67H.png)
+![](../../../../assets/drive/1-Z-wUYZfcGDizQ_Kkp8TUYXTs-KnM67H.png)
 
 !!! warning
-    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](/user-guide/etendo-classic/basic-features/warehouse-management/setup#storage-bin).
+    Note: It is not possible to reactivate documents that include transactions with quantities exceeding the existing stock quantity for a certain product in a certain storage bin. The only exception is when the configuration of the storage bin allows Over Issue. For more information, visit [Storage Bin](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#storage-bin).
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Pending Goods Receipts
 
@@ -504,7 +504,7 @@ This window allows the user to:
 - **Enter** the "**Goods receipt location**" or storage bin within a warehouse.
 - **Process it** in order to create the corresponding goods receipts.
 
-![Pending goods receipts window](/assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png)
+![Pending goods receipts window](../../../../assets/drive/1hGrJ6YXXd1p20ZdLQefX1o6_8nVogOd8.png)
 
 ## Purchase Invoice
 
@@ -555,16 +555,16 @@ Once completed, a purchase invoice can be:
 - **voided** by using the button _Reactivate_
 - and **paid** by using the button _Add Payment_.
 
-![Purchase invoice window](/assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
+![Purchase invoice window](../../../../assets/drive/1JvS1mOjiiyATJENTs5SuQIyEAr-UHmE3.png)
 
 #### Remittance
 
 !!! info
-    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Remittance module of the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Remittance module provides the header of the Purchase Invoice with a new field: “Bank account”.
 
-![bank_account.png](/assets/legacy/bank_account.png)
+![bank_account.png](../../../../assets/legacy/bank_account.png)
 
 This field defines the corresponding bank account for transactions. Each business partner can have more than one bank account and, in this field, the user can select which of them to use.
 
@@ -615,11 +615,11 @@ Only processed Landed Cost documents will be shown in this Window. It allows you
 ### How to Reactivate a Voided Purchase Invoice
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the [marketplace](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 Etendo allows the user to reactivate voided purchase invoices by selecting the needed one/s and clicking the Unvoid button.
 
-![](/assets/drive/1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW.png)
+![](../../../../assets/drive/1UisxZzbpppLvN_rdL__TJg8tLeh5sMfW.png)
 
 Once the process is finished, the sales invoice status turns to Complete.
 
@@ -637,7 +637,7 @@ Once the process is finished, the sales invoice status turns to Complete.
 The aim of this functionality is to delete and reactivate payments in an agile and easy way. Also, it allows eliminating and reactivating bank transactions and reconciliations.
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 From this window, it is possible to delete payments associated with a purchase invoice by selecting the corresponding document and then clicking on the Remove Payment button. If there is an order associated with the invoice, the relationship of this order to the payment in question will also be deleted (Purchase Order window > Payment Plan tab).
 
@@ -648,29 +648,29 @@ If the payment is reconciled through an automatic method, then in addition to th
 !!! info
     If the payment is posted, the accounting entry is deleted too.
 
-![](/assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
+![](../../../../assets/user-guide/etendo-classic/basic-features/procurement-management/transactions/PRpic4.png)
 
 ### Intercompany
 
 In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
 
 !!! info
-    For more information, visit [the Intercompany module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/intercompany).
+    For more information, visit [the Intercompany module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#intercompany).
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Matched Invoices
 
@@ -683,7 +683,7 @@ Above mentioned discrepancies are mainly caused by differences between:
 
 In the window, there is a listing of all invoices that are matched to goods receipts. The matching of the documents is done when documents are created by using the information of the other document: for example by clicking the Generate Invoice from receipt on the goods receipt or by clicking the Create Lines from button when creating a goods receipt to select the invoice.
 
-![Matched invoices window](/assets/drive/1AUhlJDfTAknIjUueLpm4QCCmZSwz1vBg.png)
+![Matched invoices window](../../../../assets/drive/1AUhlJDfTAknIjUueLpm4QCCmZSwz1vBg.png)
 
 #### **Matched Invoice**
 
@@ -707,14 +707,14 @@ Accounting information related to the matched invoices
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Return to Vendor (RTV)
 
@@ -726,7 +726,7 @@ The user can create a purchase order and process it.
 
 Once the Return Material document is accepted by the Vendor, the user can process it by clicking the button **Book**. The document changes from _Draft_ to _Booked._
 
-![Return to vendor window](/assets/drive/1PKb2NIyq5HtvO_4abDPQjajObdcGFiPH.png)
+![Return to vendor window](../../../../assets/drive/1PKb2NIyq5HtvO_4abDPQjajObdcGFiPH.png)
 
 Only _Booked_ documents can be shipped to the vendor.
 
@@ -789,7 +789,7 @@ Once the document is ready, you can process it by clicking the button **Complete
 !!! warning
     Notice the button **Pick/Edit lines** disappears when the Return to vendor document is in status _Completed._
 
-![Return to vendor shipment](/assets/drive/1wuiYHH8xsIwjLRgp0VzWUqAtev43BzD8.png)
+![Return to vendor shipment](../../../../assets/drive/1wuiYHH8xsIwjLRgp0VzWUqAtev43BzD8.png)
 
 To invoice these documents you must use the **Purchase invoice** window. All scenarios are covered:
 
@@ -846,14 +846,14 @@ The RTV shipment can be posted **if the table "MaterialMgmtShipmentInOut" is** a
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ## Landed Cost
 
@@ -920,7 +920,7 @@ In Summary, landed cost feature follows below detailed steps:
 
 A Landed Cost document can be created, processed and posted in this window.
 
-![Landed cost header](/assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
+![Landed cost header](../../../../assets/drive/1YND6qqNXSCzLiiq_PICSVr3GymXZi6_o.png)
 
 Some fields to note are:
 
@@ -931,7 +931,7 @@ Some fields to note are:
 
 A Landed Cost Document can have as many cost (lines) as landed cost types to allocate to the Goods Receipt(s) selected.
 
-![Landed cost tabs](/assets/drive/1jbfoYTDqyRZiF3bTwPQkG8OmjpLr0zau.png)
+![Landed cost tabs](../../../../assets/drive/1jbfoYTDqyRZiF3bTwPQkG8OmjpLr0zau.png)
 
 Some fields to note are:
 
@@ -1164,14 +1164,14 @@ This tab provides Landed Cost Matching accounting information.
 ### Bulk Posting
 
 !!! info
-    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes/).
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="\_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
 
 The Bulk Posting functionality allows the user to post or unpost multiple records by selecting the corresponding records and clicking the “Bulk posting” button. In this case, this functionality can be used in the "Landed Cost" window and in the "Cost" tab.
 
 Also, the Accounting Status of the record/s is shown in the status bar, in form view, or in a column, in grid view.
 
 !!! info
-    For more information, visit [the Bulk Posting module user guide](/user-guide/etendo-classic/optional-features/bundles/financial-extensions/bulk-posting).
+    For more information, visit [the Bulk Posting module user guide](../../../../user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md#bulk-posting).
 
 ---
 

@@ -7,7 +7,7 @@ hide:
     - navigation
     - toc
 ---
-![cover-live-builds.png](/assets/live-builds/overview/cover-live-builds.png){align="right" }
+![cover-live-builds.png](../assets/live-builds/overview/cover-live-builds.png){align="right" }
 #
 ## Explore and Experiment with Live Builds in Etendo Classic
 
@@ -24,7 +24,7 @@ This page holds live testing instances. These live builds are updated and reset 
 [:simple-esbuild: Etendo 23.4.0 - Supported Bundles Installed - Oracle 19](https://demo-oracle.etendo.cloud/etendo/){target="\_blank"}
 
 ??? warning "Oracle"
-    If you need to test on Oracle, please feel free to [contact us](/help-and-support).
+    If you need to test on Oracle, please feel free to [contact us](../help-and-support/overview.md).
 
 ??? tip "Credentials"
     The default access credentials are: <br> 

@@ -30,13 +30,13 @@ In the Business Partner Set header the fields to complete are the organization a
 
 The lines tab allows the user to add the required business partners to the corresponding business partner set.
 
-![](/assets/drive/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78.png)
+![](../../../../assets/drive/8ZKuObE2Ho1XC21yS8iC2Y_OpEE2O90ARCMJbxiSHrqbvwIeoi03nkb_k4uo2xp5B7gbzB2cnINPV2kjKyK-8pkyMz4NNhduzwIAmCwe4ijlZ_wzZU5mefhkcGPg-4DmOdAdc0_fDmHBhC3Gl78.png)
 
 ## **Business Partner Category**
 
 Business partner category window allows the user to create and configure every business partner category your organization may need.
 
-![](/assets/drive/yiAWq21ZqaNFnysyzjUGdcU9RY9FIVQqQct184kzcnC2D6uQMWfucDd08L5YaVtSd1HtwvLRG2Vdqv9VJ1UrACm7AgCKwAXsZ6n4jWINbhoOqPVy5RpM4jnL_WheUZwDBroliExjc4cd8Z4NjQ.png)
+![](../../../../assets/drive/yiAWq21ZqaNFnysyzjUGdcU9RY9FIVQqQct184kzcnC2D6uQMWfucDd08L5YaVtSd1HtwvLRG2Vdqv9VJ1UrACm7AgCKwAXsZ6n4jWINbhoOqPVy5RpM4jnL_WheUZwDBroliExjc4cd8Z4NjQ.png)
 
 As shown in the image above, the creation of a business partner category requires entering below listed information for each category:
 
@@ -48,7 +48,7 @@ As shown in the image above, the creation of a business partner category require
 
 Each business partner category allows the user to configure a different set of ledger accounts.
 
-![](/assets/drive/sEas2U1BqTJtpng8QicgZUyvuochrM-jHjiTbEioeEE48ThFV3xNzGAjuMyqxy1SPVwtEqeG5z6lgwu9qZQ2pt162aFt9kfCvkp6rNE1NK_ecgSgqNIa12wrcfNKeuPwetZKmA8s3xiNPOjBEQ.png)
+![](../../../../assets/drive/sEas2U1BqTJtpng8QicgZUyvuochrM-jHjiTbEioeEE48ThFV3xNzGAjuMyqxy1SPVwtEqeG5z6lgwu9qZQ2pt162aFt9kfCvkp6rNE1NK_ecgSgqNIa12wrcfNKeuPwetZKmA8s3xiNPOjBEQ.png)
 
 There are several business partner related accounts which need to be properly set up for the organization's general ledger configuration.
 
@@ -96,7 +96,7 @@ Invoice schedule window allows the user to define and configure how often and by
 
 An organization can agree and therefore define specific schedules for issuing invoices, schedules which will then need to be linked to the corresponding customers.
 
-![](/assets/drive/0W4ihla_EA-tyKPr-LD48QtQ8tA-NXalUc6vNw45JFtUQQSqURKxkirYyxbrbtM9533FjdnfxdOMsOdjdBfLx7M20MSpnNzG3YW5qfZ_zyxxEI8_4X01V2G7Mu6yAJtgwGqXzGMtDO1J46IKgg.png)
+![](../../../../assets/drive/0W4ihla_EA-tyKPr-LD48QtQ8tA-NXalUc6vNw45JFtUQQSqURKxkirYyxbrbtM9533FjdnfxdOMsOdjdBfLx7M20MSpnNzG3YW5qfZ_zyxxEI8_4X01V2G7Mu6yAJtgwGqXzGMtDO1J46IKgg.png)
 
 As shown in the screen above, an invoice schedule can be easily created by entering below data:
 
@@ -135,7 +135,7 @@ This is an "Advanced Feature". To be reviewed, as I do not see where Titles can 
 
 There are many titles to use while contacting business partners of any type as well as contacts.
 
-![](/assets/drive/gZHYP7ZHyy6V6WbHltJU8h76GrjkhZX8GTD5xnejWTe8gkLjvlcS9hWiNn8l1NdakL9w5BX7btruUJB4krE5jnDGuSzJd4HTEChxeL7JKXNfUqttcv8_KlpV0sUs27nyb0BW2SjTMbBu4Dd7JQ.png)
+![](../../../../assets/drive/gZHYP7ZHyy6V6WbHltJU8h76GrjkhZX8GTD5xnejWTe8gkLjvlcS9hWiNn8l1NdakL9w5BX7btruUJB4krE5jnDGuSzJd4HTEChxeL7JKXNfUqttcv8_KlpV0sUs27nyb0BW2SjTMbBu4Dd7JQ.png)
 
 Once the required titles have been properly entered and configured, you can link them to the corresponding business Partner "Contact/s" in the Business Partner window.
 
@@ -171,7 +171,7 @@ The way it works is:
 
 Payment Term window allows the user to create and configure the payment terms to be linked to the business partners.
 
-![](/assets/drive/Hbh0E3N6Stf3wHCPcTc9GOj6Er8So-o0y49I-7c-G8MuPjkbnJphTN9worhzR1U9oMFyxPfXLMu7uwo4_EFRuJKOlNtM_199vb43qX9IasL8IqkalNo8C42CQddbjwQ8bZ3EqQAxGLFOiiLq2w.png)
+![](../../../../assets/drive/Hbh0E3N6Stf3wHCPcTc9GOj6Er8So-o0y49I-7c-G8MuPjkbnJphTN9worhzR1U9oMFyxPfXLMu7uwo4_EFRuJKOlNtM_199vb43qX9IasL8IqkalNo8C42CQddbjwQ8bZ3EqQAxGLFOiiLq2w.png)
 
 As shown in the screen above a payment term which only has a deferred period such as "100% in 120 days", can be created by entering below data in the payment term header window:
 
@@ -183,7 +183,7 @@ As shown in the screen above a payment term which only has a deferred period suc
 
 It is important to remark that in the case of defining a payment term split into more than one deferred period such as "50% in 30 days and 50% in 60 days", the second one (or the latest one in case of more than 2 deferred periods) must be setup in the header not in the lines as shown in the image below:
 
-![](/assets/drive/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw.png)
+![](../../../../assets/drive/WiK0QfJlcL1hhV_wm--ADnkVzNO8_O857PO7qGn1hV_3-1vz-WZCWM4DB2HPzQAaDhRNtHM8LE2ZgsVjUZW-A1udQ4Lq6BDpsbztFPRTv_S0t2mUPFLdaJsE_KB9TYOeGbo0xjlDuYBbDG1jiw.png)
 
 ### **Translation**
 
@@ -226,7 +226,7 @@ In this window you can configure different reasons because either you return goo
 
 This window is in Application||Master Data Management||Business Partner Setup||Return Reasons
 
-![](/assets/drive/EzeqfjlMA4oiTgUiCE4PQ55leA117l1-VAHRWpjrdBf9Xu78XqC37OMUN3o-VwsC3hzzOmm1zE-xHSJYs5z_7cplRZfNhWZs_zszBRwRfyLgaeaguly1pXDSeej1LpjJ8UIJbgmtpyqyldKCXw.png)
+![](../../../../assets/drive/EzeqfjlMA4oiTgUiCE4PQ55leA117l1-VAHRWpjrdBf9Xu78XqC37OMUN3o-VwsC3hzzOmm1zE-xHSJYs5z_7cplRZfNhWZs_zszBRwRfyLgaeaguly1pXDSeej1LpjJ8UIJbgmtpyqyldKCXw.png)
 
 Fields:
 
@@ -245,7 +245,7 @@ Volume discounts are incentives intended to encourage the purchase of goods in g
 
 Volume Discount window allows the user to create and properly configure volume discounts related to specific products and/or product groups, which are later on assigned to selected business partners.
 
-![](/assets/drive/g1bbTT-LAss3Ji167-5259AeMmavJ1HccPLrLUC5l5wjx-iHjnU027a0on1_mjXa4h9lQfVwD9iTKjgQpexYx80NLIrTsNYpbtFO5bzduuJAGE80BoVL2OO5LWRKPweoqPvDlAdg0uFcGnriPA.png)
+![](../../../../assets/drive/g1bbTT-LAss3Ji167-5259AeMmavJ1HccPLrLUC5l5wjx-iHjnU027a0on1_mjXa4h9lQfVwD9iTKjgQpexYx80NLIrTsNYpbtFO5bzduuJAGE80BoVL2OO5LWRKPweoqPvDlAdg0uFcGnriPA.png)
 
 As shown in the image above, a volume discount can be created by just entering below data in the "Volume Discount" header window:
 
@@ -304,7 +304,7 @@ Discounts of this type means a sum of the total order / invoice discount amounts
 
 Discounts tab can be found in the Purchase & Sales Order / Invoice windows and allows the user to add discounts manually or to review the ones automatically applied by Etendo based on the Business Partner Discount tab configuration.
 
-![](/assets/drive/G7GmkLbSq2r0kuQXVluq9Gle5khzHQbG0d1QvHtMBGM5WamIJWzmRqqUaFuQ5Or4N6IEPltXrTgJsaI4DhDEG6it6WKTfkin8tRip2JqNW2TKa2e7fip7OK9gwUNLlbfTCXPAv1UOfSu2wVX-A.png)
+![](../../../../assets/drive/G7GmkLbSq2r0kuQXVluq9Gle5khzHQbG0d1QvHtMBGM5WamIJWzmRqqUaFuQ5Or4N6IEPltXrTgJsaI4DhDEG6it6WKTfkin8tRip2JqNW2TKa2e7fip7OK9gwUNLlbfTCXPAv1UOfSu2wVX-A.png)
 
 Discounts
 
@@ -342,7 +342,7 @@ Discounts
 
 A total discount can be created and configured by entering a discount name, a discount product and a discount %.
 
-![](/assets/drive/DY-WYecWhUy0pS3Vt255iFAJmuQspg8xhaQ-_l6mt7aoBrp-igyJbmacjFzPbH6BSh7OEw6uLZgJPBDxOtcvd96_QLfGJmSTt1pSkUUxXcvxuvdDbb6hGps_1G6qR1JLiYVSTCrAtuw-tug3fA.png)
+![](../../../../assets/drive/DY-WYecWhUy0pS3Vt255iFAJmuQspg8xhaQ-_l6mt7aoBrp-igyJbmacjFzPbH6BSh7OEw6uLZgJPBDxOtcvd96_QLfGJmSTt1pSkUUxXcvxuvdDbb6hGps_1G6qR1JLiYVSTCrAtuw-tug3fA.png)
 
 Fields to note:
 
@@ -377,7 +377,7 @@ It creates a salary category.
 ## Rappel Configurations
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
@@ -400,10 +400,10 @@ In this window, create a new record and fill the corresponding fields:
 
 Save the record and the document sequence for rappels is available.
 
-![document_sequence_new.png](/assets/legacy/document_sequence_new.png)
+![document_sequence_new.png](../../../../assets/legacy/document_sequence_new.png)
 
 !!! info
-    For more information, visit [Document Sequence](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-sequence)
+    For more information, visit [Document Sequence](../financial-management/accounting/setup.md#document-sequence)
 
 #### Document type
 
@@ -424,20 +424,20 @@ In this window, create a new record and fill the corresponding fields:
 Save the record and the document type for rappels is available.
 After saving it, it is necessary to select “rappel” in the field “Document Cancelled” and save again.
 
-![document_type_new.png](/assets/legacy/document_type_new.png)
+![document_type_new.png](../../../../assets/legacy/document_type_new.png)
 
 
 !!! warning
     For each organization, it is possible to configure only one "rappel" document type.
 
 !!! info
-    For more information, visit [Document Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type)
+    For more information, visit [Document Type](../financial-management/accounting/setup.md#document-type)
 
 ### Rappel Configurations
 
 In this window, the user can configure all the necessary aspects to grant rappels to certain business partners.
 
-![rappel_configuration_window_new.png](/assets/legacy/rappel_configuration_window_new.png)
+![rappel_configuration_window_new.png](../../../../assets/legacy/rappel_configuration_window_new.png)
 
 #### Header
 

@@ -27,20 +27,20 @@ This helps productivity and quality as you can code, debug and test in an integr
       So you must change the value through the special `setCurrentState` method: `event.setCurrentState(greetingTitleProperty, title + ".");`
 
 
-Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. Weld automa
+Business events make use of the event framework provided by the [Weld](../concepts/Etendo_Architecture.md#Introducing_Weld:_dependency_injection_and_more) framework. To register an event handler, annotations are used. 
 
 !!!note
     In order to maximize performance, certain part of the classpath are excluded, check out [this section](../concepts/Etendo_Architecture.md#Analyzing_the_classpath) if your event handlers are not found.
 
 In this section, we will implement an event handler on the Greeting entity. Whenever a title is saved, a Spanish translation will be added. In addition, we will print some messages to the console for other business events.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/how_to_implement_a_business_event_handler-0.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler-0.png)
 
 ##  Example Module
 
 This section is supported by an example module which shows an example of the code shown and discussed here.
 
-The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The code of the example module can be downloaded from this repository: [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
   
 ##  The event handler - A first implementation
 
@@ -348,7 +348,7 @@ various locations, here are some examples:
   * [ModuleHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/ModuleHandler.java){target="\_blank"}
   * [SetDocumentNoHandler](https://github.com/etendosoftware/etendo_core/blob/main/modules_core/org.openbravo.client.application/src/org/openbravo/client/application/event/SetDocumentNoHandler.java){target="\_blank"}
 
-The complete source code of the example event handler is available [here](../../../assets/developer-guide/etendo-classic/how-to-guides/com.etendoerp.client.application.examples.zip){:download}
+The complete source code of the example event handler is available here [com.etendoerp.client.application.examples](https://github.com/etendosoftware/com.etendoerp.client.application.examples)
 
 ---
 
