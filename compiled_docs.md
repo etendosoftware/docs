@@ -20378,7 +20378,7 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 #### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
+:octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
 
 ==ARTICLE_END==
 ==ARTICLE_START==
@@ -40944,6 +40944,131 @@ public class AdAlertWebhookService extends BaseWebhookService {
     If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Dependency Manager
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dependency Manager
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager
+## Article Content: 
+### Dependency Manager
+
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
+
+#### Overview
+
+With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
+
+#### Module Management
+
+In the `Application` > `Etendo Dependencies Management` > `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
+
+!!!info
+    The fields in this window are read-only.
+
+Fields to note:
+
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
+- **Artifact**: the unit of deployment fetched and used.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
+
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
+
+##### Add Dependency 
+
+This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
+
+Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+!!!info
+    In case of executing the process with a bundle, all its dependencies will be added but not itself.
+
+##### Update Packages
+
+This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
+
+#### Dependency Management
+
+In the `Application` > `Etendo Dependencies Management` > `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
+
+Fields to note:
+
+- **Active**: Checkbox to select if this dependency is active or not
+- **Group**: The identifier of the artifact.
+- **Artifact**: The unit of deployment fetched and used.
+- **Version**: Version of the module
+- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
+- **Installation Status**: It describes the dependency current status.
+    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
+    - Installed: Used once the dependency is already installed.
+- **Version Status**: It describes the dependency version status.
+    - Untracked: Only for external dependencies.
+    - Update Available: In case there are new available versions.
+    - Updated: The latest available version is installed.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
+
+##### Change Version 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
+
+This button is used to update or downgrade versions. 
+
+When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before executing the process.
+
+##### Change Format 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
+
+This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
+
+- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
+
+- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
+
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+
+
+##### Delete Packages
+
+In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+#### Add Local Dependencies 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
+
+This process, in `Application` > `Etendo Dependencies Management` > `Add Local dependencies`, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
+
+#### Update Packages Information
+
+Since the information about packages is updated frequently, the user can execute this process, in `Application` > `Etendo Dependencies Management` > `Update Packages Information` to update the list of packages with the latest information.
+
+!!!info
+    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
+
+!!!note
+    Each time the server is restarted, the update process is executed automatically.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Warehouse Extensions Bundle
 ## Article URL: 
@@ -42911,10 +43036,6 @@ inv.ad_client_id IN ('23C59575B9CF467C9620760EB255B389','0')  AND inv.ad_org_id 
 ## Article URL: 
  https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/ddl-tool
 ## Article Content: 
-### Optical Character Recognition (OCR) Tool
-
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
-
 #### Overview
 
 The **DDLTool** is an Etendo Copilot tool, developed in Python, to create a table in the database by adding mandatory columns and specific columns that the user wants. In addition, it is able to create and register tables, windows, items and menu options in the system so that data can be displayed.
@@ -43187,7 +43308,7 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 ## Article Content: 
 ### Optical Character Recognition (OCR) Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 #### Overview
 
@@ -43319,137 +43440,6 @@ First of all, we start from the module `com.etendoerp.bankingpool` originally in
 
 5. Now we can see the *Financial Type Configuration* windows with their respective fields translated into Spanish.
     ![](https://docs.etendo.software/latest/assets/developer-guide/etendo-copilot/getting-started/banking-pool-es.png)
-==ARTICLE_END==
-==ARTICLE_START==
-# Article Title: Database Query Tool
-## Article Path: /Developer Guide/Etendo Copilot/Tools/Database Query Tool
-## Article URL: 
- https://docs.etendo.software/latest/developer-guide/etendo-copilot/available-tools/database-query-tool
-## Article Content: 
-### Database Query Tool
-
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
-
-#### Overview
-
-Generate SQL queries and retrieve data with Etendo's contextual knowledge from natural language.
-
-#### Functionality
-
-
-1. Add Copilot DB Query Tool dependency in the Etendo Classic project, In `build.gradle`, add:
-    ```groovy
-    implementation('com.etendoerp:copilot.dbquerytool:1.0.3')
-    ```
-
-2. In `gradle.properties` file, you must add `OPENAI_MODEL` environment variables. 
-
-    ```groovy title="gradle.properties"
-    OPENAI_MODEL=gpt-4-1106-preview
-    ```
-  
-3. Restart Docker image using `./gradlew copilot.stop` and `./gradlew copilot.start` tasks
-
-4. The tool can be executed with:
-
-``` bash title="Terminal"
-./gradlew copilot.do -Pprompt="Query's description"
-``` 
-Copilot will infer from the prompt that it must use the DBQueryTool and will execute it. By default, it will access the Etendo Classic database, but you can select another database in the prompt.
-
-5. The tool will execute an agent that will ask the database for the information necessary to generate a query that provides the necessary information to respond to the user's prompt.
-
-#### Examples
-
-!!! info 
-    It is important to clarify that this is a first version subject to improvements.  While it has database context, it should provide enough information in the prompt.
-    Note that it is possible to see the log of the call chain made by dbquerytool from the terminal where `copilot.start` is running. You will be able to see the tables involved, the query formed and its execution, if necessary. 
-
-
-##### SQL query generation
-
-1. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="query to know the name of the best 5 customer of junuary 2021?"  
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: query to know the name of the best 5 customer of junuary 2021?
-    🤖 The SQL query to retrieve the names of the top 5 customers based on purchase amount for January 2021 is:
-
-    SELECT bp.name, SUM(inv.grandtotal) AS total_purchase_amount
-    FROM c_invoice inv
-    JOIN c_bpartner bp ON inv.c_bpartner_id = bp.c_bpartner_id
-    WHERE inv.issotrx = 'N' AND inv.isactive = 'Y'
-    AND inv.docstatus IN ('CO', 'CL')
-    AND inv.dateinvoiced BETWEEN '2021-01-01' AND '2021-01-31'
-    GROUP BY bp.name
-    ORDER BY total_purchase_amount DESC
-    LIMIT 5;
-
-    This query will select the names of the business partners (`bp.name`) and the sum of their total purchase amounts (`total_purchase_amount`) from the invoices table (`c_invoice`) for the month of January 2021. It will group the results by the business partner's name and order them in descending order by the total purchase amount, limiting the results to the top 5 customers.
-    🤖 Glad to help you! 😃
-    ```
-    
-2. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Query to obtain which is the invoice with the highest registered amount?" 
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: Query to obtain which is the invoice with the highest registered amount?
-    🤖 The SQL query to find the invoice with the highest registered amount is:
-    
-    SELECT c_invoice_id, grandtotal FROM c_invoice WHERE isactive = 'Y' ORDER BY grandtotal DESC LIMIT 1;
-
-    This query selects the invoice ID and the grand total amount from the `c_invoice` table where the invoice is active (`isactive = 'Y'`), orders the results by the grand total in descending order, and limits the results to only the top record.
-    🤖 Glad to help you! 😃
-    ```
-
-
-
-##### Natural Language Queries for Data Retrieval
-
-1. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="What is the amount of the last F&B España - Región Sur organization sales invoice?" 
-    ```
-    The tool will generate the following answer:
-
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: What is the amount of the last sales invoice?
-    🤖 The amount of the last sales invoice is $249.00.
-    🤖 Glad to help you! 😃
-    ```
-
-2.  
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Can you execute which is the invoice (c_invoice) with the highest registered amount?"
-  
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: Can you execute which is the invoice (c_invoice) with the highest registered amount?
-    🤖 The invoice with the highest registered amount in the `c_invoice`
-    table has the ID '2D6314F246FE4C21AAE57F12EFD341C5' and the amount is 17,440,824.40.
-    🤖 Glad to help you! 😃
-    ```
-3. 
-    ``` bash title="Terminal"    
-    ./gradlew copilot.do -Pprompt="Can you execute the sum of the orders in the last month"
-    
-    ```
-    The tool will generate the following answer:
-    ```
-    🤖 👋 Hello Human!
-    🤖 I'm working on your request: can you execute the sum of the orders in the last month
-    🤖 The sum of the orders in the last month is $7,063.59.
-    🤖 Glad to help you! 😃
-    ```
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: How to Create Copilot Tools
