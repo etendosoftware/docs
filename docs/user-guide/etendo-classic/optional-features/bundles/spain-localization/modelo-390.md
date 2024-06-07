@@ -4,7 +4,7 @@ title: Modelo 390
 
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
 
 ## **Introducción**
 
