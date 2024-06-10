@@ -11,7 +11,7 @@ tags:
 
 Application  Menu  is shown in the window's left side. It is used to make all the application elements accessible to the user .
   
-![](/assets/developer-guide/etendo-classic/concepts/Application_Menu-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Application_Menu-0.png)
 
 
 ###  Managing the menu
@@ -25,11 +25,11 @@ To create a new menu entry:
   3. Depending on the selected action, a different drop down list will be shown to select one element of the selected type. Note that name and description will be overwritten when synchronize process is executed. 
   4. Place the new menu entry in the correct position, this is done by: 
     * Selecting a record in the grid 
-    * Opening the tree pop up clicking in tree menu icon ![](/assets/developer-guide/etendo-classic/concepts/Application_Menu-1.png)
-    * Select the entry to relocate and drag and drop it to the new position. 
+    * Opening the tree window clicking in tree menu icon ![](../../../assets/developer-guide/etendo-classic/concepts/Application_Menu-1.png)
+    * Select the entry to relocate and select the new position. 
 
 
-![](/assets/developer-guide/etendo-classic/concepts/Application_Menu-2.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/concepts/Application_Menu-2.png)
 
   
 Folders are created checking the **Summary Level** field.
