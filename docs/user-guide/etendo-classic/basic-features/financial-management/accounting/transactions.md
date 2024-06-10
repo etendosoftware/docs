@@ -313,6 +313,19 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](../../../optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
+### G/L Journal Clone
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](../../../../../whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+With this functionality, the user is able to seamlessly clone a selected entry. This feature not only duplicates the entry but also creates a detailed description that includes the original order number.
+
+In order to do this, select the record to clone and click the copy record button in the toolbar. In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+
+![]()
+
+This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
+
 
 ## **G/L Journal**
 

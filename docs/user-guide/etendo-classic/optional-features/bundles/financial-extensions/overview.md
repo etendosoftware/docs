@@ -198,3 +198,12 @@ This functionality allows the user to create settlements for invoices, both sale
     - [Payment In](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
     - [Payment Out](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
     - [Financial Account](../../../../../user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+
+### G/L Journal Clone
+
+:octicons-package-16: Javapackage:
+
+This functionality allows the user to clone a G/L journal in the Simple G/L Journal window, part of the accounting transactions of financial management.
+
+!!! info
+    For more information, visit the [G/L Journal Clone user guide](../../../basic-features/financial-management/accounting/transactions.md#gl-journal-clone)
