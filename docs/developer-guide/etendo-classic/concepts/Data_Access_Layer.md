@@ -703,7 +703,7 @@ tables defined in the application dictionary. This means that:
   * database views are considered as normal business objects 
   * entities are generated for database views 
   * database views can be queried using HQL and the DAL query apis 
-  * database views can be accessed through the  [XML](../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md)  and  [JSON](../../../developer-guide/etendo-classic/concepts/JSON_REST_Web_Services.md) REST web service apis 
+  * database views can be accessed through the  [XML](../../../developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md)  and  [JSON](../../../developer-guide/etendo-classic/concepts/json-rest-web-services.md) REST web service apis 
 
 There is one difference between a database view and a database table: the DAL
 does not support updates on views, view business objects can be read and
