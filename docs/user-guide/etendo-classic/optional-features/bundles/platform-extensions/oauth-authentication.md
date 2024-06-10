@@ -27,9 +27,11 @@ The functionality described in this section, is a complementary configuration se
 
 Once in the OAuth Provider window in `application`> `oauth-provider`, it is necessary to add the user authentication URL in the **API OAuth URL field**. This URL is taken from the user’s bank provider. 
 
+![alt text](../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-0.png)
 
-![alt text](<../../../../../assets/user-guide/etendo-classic/optional-features/bundles/platform-extensions/oauthprovider-0 .png>)
+The other fields will be completed with data referring to the corresponding provider.
+
 
 !!!info
-        Once the necessary fields are configured in the OAuth Provider window, go back to the [PSD2 Bank Integration](../financial-extensions/psd2-bank-integration.md) section to continue with the bank statement generation process. 
+        Once the necessary fields are configured in the OAuth Provider window, go back to the [PSD2 Bank Integration](../financial-extensions/psd2-bank-integration.md#get-token) section to continue with the bank statement generation process. 
 
