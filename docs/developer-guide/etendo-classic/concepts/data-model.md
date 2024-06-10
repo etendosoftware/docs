@@ -17,17 +17,15 @@ This document explains how tables and columns are defined in physical database a
 
 ##  Tables in Application Dictionary
 
-Once tables are physically defined in database (read DB fundamentals-tables) they must be mapped with Application Dictionary. This mapping is done through `Application Dictionary` > `Tables and Columns` > `Table` tab, which populates `AD_Table` table.
-
-For a detailed information about the fields in this tab and what are they used for, read the AD_Table document.
+Once [tables](../concepts/Tables.md) are physically defined in database, they must be mapped with Application Dictionary. This mapping is done through `Application Dictionary` > `Tables and Columns` > `Table` tab, which populates `AD_Table` table.
 
 ###  Table Naming
 
 A table defined in the application dictionary has several names which are used by Etendo in different ways:
 
-  * Logical name (  AD_Table.name  ): used by the  Data Access Layer  in  XML  and  JSON  REST web services. See  here  for more information. 
-  * Physical name (  AD_Table.tablename  ): is the name of the table in the database. 
-  * Class name (  AD_Table.classname  ): the name of the  generated entity java class  . 
+  * Logical name (AD_Table.name): used by the  [Data Access Layer](../concepts/Data_Access_Layer.md)  in [XML](../concepts/XML_REST_Web_Services.md) and [JSON](../concepts/JSON_REST_Web_Services.md) REST web services. See [here](../concepts/Data_Access_Layer.md#entity-naming) for more information. 
+  * Physical name (AD_Table.tablename): is the name of the table in the database. 
+  * Class name (AD_Table.classname): the name of the [generated entity java class](../concepts/Data_Access_Layer.md#generated-business-object-classes). 
 
 ##  Columns in Application Dictionary
 
@@ -41,22 +39,22 @@ The following sections explain some details to be taken into account when defini
 
 A column defined in the application dictionary has several names which are used by Etendo in different ways:
 
-  * the logical name (  AD_Column.name  ): this name is used by the Data Access Layer for  automatically detecting supported interfaces  and  XML and Java property naming. 
-  * the physical column name (  AD_Column.columnname  ): is the name of the column in the database table. 
+  * the logical name (AD_Column.name): this name is used by the Data Access Layer for [automatically detecting supported interfaces](../concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) and [XML and Java property naming](../concepts/Data_Access_Layer.md#property-naming). 
+  * the physical column name (AD_Column.columnname): is the name of the column in the database table. 
 
 !!!important
-    When naming columns related to audit info, client/organization and active it is very important to be precise in the name. If a wrongly spelled name is used then Etendo will not be able to detect that an entity supports a certain interface and specific automatic behavior is disabled. See here for a list of interfaces and their expected logical column names.
+    When naming columns related to audit info, client/organization and active it is very important to be precise in the name. If a wrongly spelled name is used then Etendo will not be able to detect that an entity [supports a certain interface](../concepts/Data_Access_Layer.md#important-interfaces) and specific automatic behavior is disabled. See [here](../concepts/Data_Access_Layer.md#important-interfaces) for a list of interfaces and their expected logical column names.
 
 ###  Defining Business Objects: the isParent
 
-The column definition in the application dictionary is also used to define business object structures in Etendo. If the isParent field of a foreign key column is set (checked/true) then this foreign key models an association from a child to a parent. With this information the Data Access Layer will automatically create an association (in-memory) from the parent to the child.
+The column definition in the application dictionary is also used to define business object structures in Etendo. If the isParent field of a foreign key column is set (checked/true) then this foreign key models an association from a child to a parent. With this information the [Data Access Layer](../concepts/Data_Access_Layer.md) will automatically create an association (in-memory) from the parent to the child.
 
 For example the C_OrderLine table has a column  c_order_id. In the application dictionary this column is flagged as isParent (so the c_order_id points to the parent of the order line: the order header). The data access layer will translate this foreign key column in two association in the entity model:
 
   * a many-to-one association from the order line entity to the order (its parent) 
   * a one-to-many association from the order to the order lines, in java this results in a member of type java.util.List. 
 
-For more information, see here.
+For more information, see [here](../concepts/Data_Access_Layer.md#business-object).
 
 ###  References
 
@@ -71,8 +69,6 @@ References are used in Etendo Application Dictionary for two purposes:
   A column's reference also indicates how the fields associated to that column will be represented within tabs, for example a drop down list, a text box with a button to show a selector, etc. 
 
 Thus each column in Application Dictionary has one and only one reference.
-
-For an example on using references and extending the base set of references please see here.
 
 ####  Types of References
 
@@ -190,8 +186,6 @@ The format for displaying time and dates is defined in `config/Openbravo.propert
   * When passing the time/datetime from the client to the server, the value is passed as it is read from the database, so there is no UTC conversion. There are some mechanisms in the client to display the value as it comes, so there are no convesions here. 
   * When receiving a value from the client, it is stored also as it comes from the client without any UTC conversion. 
 
-You can learn more about these absolute references in the following document.
-
 #####  Yes/No Reference
 
 **YesNo** reference is used for columns accepting boolean values (yes or no). In the UI a checkbox is shown, when it is checked the column will take 'Y' as value, when it is not it will take 'N'.
@@ -275,7 +269,7 @@ Another special button is the one issued in documents that support accounting to
 
 Physical columns for this reference must be **VARCHAR(60)**.
 
-The actual values the column will get are the ones defined as **Search Key** in the list, for more information see defining lists section.
+The actual values the column will get are the ones defined as **Search Key** in the list, for more information see [defining lists](#list) section.
 
 The UI for lists is a drop down list.
 
@@ -303,7 +297,7 @@ In this header, it is possible to select **Display value** field. In case this i
 The next step is to add values to the list. To do so, go to **List Reference** tab, and create the values you need. Here there are three important fields to take into account:
 
   * **Search Key** this is the value (not visible in UI) that the column using this reference will take when it is selected. 
-  * **Name** it is the name that will be displayed in the drop down list. All the fields in this tab are described  here  . 
+  * **Name** it is the name that will be displayed in the drop down list.
   * **Sequence Number** it is the position of the element when the drop down list is rendered. This field is nullable, depending on the values it has in the elements of the list, the sorting is done as follows: 
     * If the value of this field is null for all the elements in the list, the list will be sorted alphabetically. 
     * If all the elements have this value set, they will be ordered taking it into account. 
@@ -356,7 +350,7 @@ To create a new one:
 
 2. The next step is define the table to link to. To do so, go to **Table Reference** tab, and create a new record. 
 
-3. In **Table** field select the table the column is linked to in **Key column** field the value to be stored in the column (usually it its the primary key column), and in **Displayed column** the column that will be shown in the drop down list, note that here only one column can be selected and it is not possible to select the table's record identifier. **SQL where clause** and **Order by** are optional fields that can be used in case we want to restrict the records to be displayed or if we want to order them in some specific manner. A more exhaustive description for all fields in this tab can be found here.
+3. In **Table** field select the table the column is linked to in **Key column** field the value to be stored in the column (usually it its the primary key column), and in **Displayed column** the column that will be shown in the drop down list, note that here only one column can be selected and it is not possible to select the table's record identifier. **SQL where clause** and **Order by** are optional fields that can be used in case we want to restrict the records to be displayed or if we want to order them in some specific manner.
 
 !!!note
     It is highly recommendable to look in the already defined Table references for one that fits our requirements before creating a new one. 
@@ -400,10 +394,6 @@ Product Complete  |  M_Product
 Project  |  C_Project  
 Shipment/Receipt  |  M_InOut  
 Shipment/Receipt Line  |  M_InOutLine  
-  
-######  Defining a Search
-
-There is an example about how to define a search.
 
 #####  Password (not decryptable)
 
@@ -431,15 +421,15 @@ The value of the password is encrypted when being saved, however in a way that t
 
 ####  References in modules
 
-It is allowed for modules to define base references. The documentation on how to do that is  here  .
+It is allowed for modules to define base references.
 
-Prior to this release modules only could define subreferences for the base ones provided in core, this means that new **List**, **Table** and **Selector** references could be added to modules.
+Prior to this, release modules only could define subreferences for the base ones provided in core, this means that new **List**, **Table** and **Selector** references could be added to modules.
 
 ###  Validations
 
 Validations allow to filter the records that appear in generated drop down lists. Validations are applicable to the following data references **List**, **Table**, **TableDir** and **Button**.
 
-When a column has a validation, WAD generates a  callout  for it (**ComboReload**) to implement the validation.
+When a column has a validation, WAD generates a [callout](#callout) for it (**ComboReload**) to implement the validation.
 
 ####  Defining a validation
 
@@ -451,8 +441,7 @@ It is also possible to use session variables in the filter, session variables ar
 
 ###  Record identifier
 
-Etendo uses UUIDs to unequivocally identify each record internally within a table. These values are stored in a column in the table that is defined as the primary key in the database and a key column inside Application
-Dictionary. UUIDs are 32 character strings that are automatically generated by the system, thus these strings are of very little use to the end-user when it comes to identifying records. Consequently, these values are used only internally by the application and are not displayed in the UI. Instead, users always see a friendly representation of a record called **record identifier'**.
+Etendo uses UUIDs to unequivocally identify each record internally within a table. These values are stored in a column in the table that is defined as the primary key in the database and a key column inside Application Dictionary. UUIDs are 32 character strings that are automatically generated by the system, thus these strings are of very little use to the end-user when it comes to identifying records. Consequently, these values are used only internally by the application and are not displayed in the UI. Instead, users always see a friendly representation of a record called **record identifier**.
 
 A **record identifier** is a simple **concatenation** of the values of one or several columns of a record within a table. Each table defined within the Application Dictionary **MUST** have at least one column set as a record identifier.
 
@@ -468,7 +457,7 @@ As many columns in the same table can be part of the record identifier, the way 
 
 ###  Callout
 
-A Callout is a piece of code that is triggered when a field is modified. The callout is associated to the  column  which associated field will trigger the action.
+A Callout is a piece of code that is triggered when a field is modified. The callout is associated to the  column which associated field will trigger the action.
 
 #####  What Callouts can do
 
@@ -483,38 +472,32 @@ They are typically used to:
 
 ######  Callouts vs Triggers
 
-Both callouts and  triggers  are executed when there are changes in data. The main difference between callouts and database triggers is that callouts are executed in the front end whereas triggers are in the back end. This means that callouts should affect primary to data displayed in UI and triggers to data in database, additionally callouts are only executed when the user is modifying data manually through UI but they are not exectued in case the same data is modified by any other process.
+Both callouts and triggers are executed when there are changes in data. The main difference between callouts and database triggers is that callouts are executed in the front end whereas triggers are in the back end. This means that callouts should affect primary to data displayed in UI and triggers to data in database, additionally callouts are only executed when the user is modifying data manually through UI but they are not exectued in case the same data is modified by any other process.
 
 !!!important
-    Due to all these reasons, data integrity shouldn't be relied only in callouts. It should be also implemented
-    in database, through triggers or constraints.
+    Due to all these reasons, data integrity should not be relied only on callouts. It should be also implemented in database, through triggers or constraints.
   
 #####  Defining a Callout
 
-There is a  how to  related to callouts you can read to have an step by step example for a callout creation.
+There is a [guide](../how-to-guides/How_to_create_a_Callout.md) related to callouts you can read to have an step by step example for a callout creation.
 
 ######  Application Dictionary
 
-Callouts are defined in **Application Dictionary || Setup || Callout** window
-and then associated with the column that will invoke them when it is modified.
-There is a description for all the fields in a callout description  here  .
+Callouts are defined in `Application Dictionary` > `Setup` > `Callout` window and then associated with the column that will invoke them when it is modified.
 
 ######  Java Implementation
 
-Callouts are implemented by a  Java Servlet  .
+Callouts are implemented by a Java Servlet.
 
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  The
-simplest way to implement a callout is using the **SimpleCallout** class, that
-keeps you out from the 'plumbing' of building the response, check [
-Simplifying development of callouts  ]  
----|---  
+!!!Note
+    The simplest way to implement a callout is using the **SimpleCallout** class, that keeps you out from the 'plumbing' of building the response.
   
 The things to consider are:
 
-  * The _command_ callouts are invoked with is always _DEFAULT_ . 
-  * Callouts receive a parameter called _inpLastFieldChanged_ , this parameter has the name of the field that triggered the callout. Using this parameter it is possible to reuse the same callout for different columns, this makes sense in case the action for both columns is very related. 
-  * Callouts should use the  _org/openbravo/erpCommon/ad_callouts/CallOut_ xmlEngine template  . 
-  * This template must receive a parameter called _array_ with the following Javascript syntax: 
+  * The **command** callouts are invoked with is always **DEFAULT**. 
+  * Callouts receive a parameter called **inpLastFieldChanged**, this parameter has the name of the field that triggered the callout. Using this parameter, it is possible to reuse the same callout for different columns, this makes sense in case the action for both columns is related. 
+  * Callouts should use the `org/openbravo/erpCommon/ad_callouts/CallOut` xmlEngine template. 
+  * This template must receive a parameter called **array** with the following Javascript syntax: 
 
     
     
@@ -527,40 +510,28 @@ The things to consider are:
                               new Array("CURSOR_FIELD", "inpfieldName")
                               );
 
-After executing a callout with the previous output the result would be:
+After executing a callout with the previous output, the result would be:
 
-  * The field called _inpfieldName_ would take the vaule _value_ . 
+  * The field called **inpfieldName** would take the value **value**. 
   * A message would be displayed. 
-  * The _displayLogic()_ Javascript function would be executed. 
-  * The field _inpfieldName_ would take the focus. 
+  * The **displayLogic()** Javascript function would be executed. 
+  * The field **inpfieldName** would take the focus. 
 
   
-
-![](/assets/developer-guide/etendo-classic/concepts/Bulbgraph.png){: .legacy-image-style} |  The type
-of available messages: MESSAGE, INFO, ERROR, SUCCESS, WARNING. MESSAGE and
-INFO are equivalents  
----|---  
+!!!info
+    The type of available messages: MESSAGE, INFO, ERROR, SUCCESS, WARNING. MESSAGE and INFO are equivalents.
   
-######  Execute on new
+######  Execute on New
 
-By default, all callouts associated with drop down lists are exectued whenever
-a new record is created. This is done to guarantee all the logic implemented
-in callouts are executed for the default values that are presented in new
-record.
+By default, all callouts associated with drop down lists are exectued whenever a new record is created. This is done to guarantee all the logic implemented in callouts are executed for the default values that are presented in new record.
 
-In case there are a big number of dropdownlists with callouts or
-_ComboReloads_ this can cause performance issues.
+In case there is a big number of dropdown lists with callouts or **ComboReloads**, this can cause performance issues.
 
-In case it is known the validations and the callouts for a column will not do
-any change when creating a new record, the callout execution for that column
-can be disabled while new record creation. This can be done by unchecking the
-_Validate on New_ field in _Column_ tab.
+In case it is known the validations and the callouts for a column will not do any change when creating a new record, the callout execution for that column can be disabled while new record creation. This can be done by unchecking the **Validate on New** field in **Column** tab.
 
 ###  Dynamic expressions
 
-Default Value  ,  Read only logic  and  Transient condition  are values that
-allow a dynamic expression. There is a document explaining how  dynamic
-expressions  are defined.
+Default Value, Read only logic and Transient condition  are values that allow a dynamic expression. Visit [this document](../concepts/dynamic-expressions.md) explaining how dynamic expressions are defined.
 
 ---
 
