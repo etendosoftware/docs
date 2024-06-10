@@ -29,7 +29,7 @@ The user can have access to all the available dependencies to add, configure the
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
 !!! info
-    For more information, visit the [Dynamic App user guide](/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app)
+    For more information, visit the [Dynamic App user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
 
 ### EAN 128
 
@@ -38,7 +38,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
 EAN 128 allows to use bar code in your application
 
 !!! info
-    For more information, visit the [EAN 128 developer guide](/developer-guide/etendo-classic/bundles/platform/overview#ean-128).
+    For more information, visit the [EAN 128 developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
 
 ### Etendo Advanced Security
 
@@ -49,7 +49,7 @@ EAN 128 allows to use bar code in your application
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
 !!! info
-    For more information, visit the [Etendo Advanced Security user guide](/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security) and read the [Etendo Advanced Security developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#etendo-advanced-security).
+    For more information, visit the [Etendo Advanced Security user guide](../../../../../user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](../../../../..//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
 
 ### Etendo Async Processes
 
@@ -70,7 +70,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
 !!! info
-    For more information, visit the [Javax XML SOAP API developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#javax-xml-soap-api).
+    For more information, visit the [Javax XML SOAP API developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
 
 
 ### Number To Word (English)
@@ -82,7 +82,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
 !!! info
-    For more information, visit [Number To Word Converter user guide](/user-guide/etendo-classic/basic-features/general-setup/application/#number-to-word-converter) and the [Number To Word Converter developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#number-to-word-english).
+    For more information, visit [Number To Word Converter user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
 ### Print Document Web Service
 
@@ -93,7 +93,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-    For more information, visit the [Print Document Web Service developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#print-document-web-service). 
+    For more information, visit the [Print Document Web Service developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 ### Report Cache Management
 
@@ -102,7 +102,7 @@ It allows downloading a PDF from some transaction documents using a web service 
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
 !!! info
-    For more information, visit [Clear Report Cache user guide](/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache/) and the [Clear Report Cache developer guide](/developer-guide/etendo-classic/bundles/platform-extensions-bundle/#report-cache-management).  
+    For more information, visit [Clear Report Cache user guide](../../../../../user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](../../../../../developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
 
 ### Webhook Events
 
@@ -111,7 +111,7 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
 !!! info
-    For more information, visit the [Webhook Events Developer Guide](/developer-guide/etendo-classic/bundles/platform/etendo-webhooks)
+    For more information, visit the [Webhook Events Developer Guide](../../../../../developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 
 ---
