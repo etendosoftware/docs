@@ -395,7 +395,7 @@ nav:
 #        - How To Enable Customization Of The Login Page: developer-guide/etendo-classic/how-to-guides/How_To_Enable_Customization_Of_The_Login_Page.md
 #        - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_To_Exclude_Database_Physical_Objects_From_Model.md
 #        - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
-#        - How to export sample data: developer-guide/etendo-classic/how-to-guides/How_to_export_sample_data.md
+        - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
