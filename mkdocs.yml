@@ -275,7 +275,7 @@ nav:
 #        - Data Model: developer-guide/etendo-classic/concepts/Data_Model.md
         - Datasets: developer-guide/etendo-classic/concepts/Datasets.md
 #        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
-#        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
+        - DBSourceManager: developer-guide/etendo-classic/concepts/dbs-source-manager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
         - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
