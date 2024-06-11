@@ -1,5 +1,5 @@
 ---
-title: Lastest Etendo News
+title: Latest Etendo News
 
 tags:
   - Etendo News
