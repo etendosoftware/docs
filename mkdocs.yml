@@ -302,7 +302,7 @@ nav:
         - Processes: developer-guide/etendo-classic/concepts/Processes.md
 #        - Reports obsolete: developer-guide/etendo-classic/concepts/Reports_obsolete.md
 #        - Security Model: developer-guide/etendo-classic/concepts/Security_Model.md
-#        - Selectors: developer-guide/etendo-classic/concepts/Selectors.md
+        - Selectors: developer-guide/etendo-classic/concepts/selectors.md
 #        - Skins: developer-guide/etendo-classic/concepts/Skins.md
 #        - SQLC: developer-guide/etendo-classic/concepts/SQLC.md
 #        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
