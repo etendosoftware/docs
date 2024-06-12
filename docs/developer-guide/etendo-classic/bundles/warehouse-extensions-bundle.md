@@ -2,7 +2,7 @@
 title: Warehose Extensions Bundle | Technical Documentation
 ---
 
-:octicons-package-16: Javapackage: com.etendoerp.warehouse.extensions
+:octicons-package-16: Javapackage: `com.etendoerp.warehouse.extensions`
 
 ## Overview
 
@@ -10,7 +10,7 @@ In this section, the user can find technical information about the Warehouse Ext
 
 ## Stock History 
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 This module is added to the Create Stock History process and has the following characteristics: 
 

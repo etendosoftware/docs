@@ -22,7 +22,7 @@ When using the Etendo UI, the changes can be seem immediately when switching rol
 When using classic Window a compile step is needed.  
 
 This How-To explains how to modify existing elements of a window. If only new elements (like new fields) should be added to a window the use of a Template is not needed. Instead, those new elements can just be
-added using a normal module as explained in the other How-To on [How to add a field to a window Tab](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md). 
+added using a normal module as explained in the other How-To on [How to add a field to a window Tab](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md). 
  
 
 

@@ -236,7 +236,9 @@ nav:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
           - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
+          - Dev Assistant: user-guide/etendo-copilot/bundles/dev-assistant.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
+          
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -275,7 +277,7 @@ nav:
 #        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
-#        - Development Build Tasks: developer-guide/etendo-classic/concepts/Development_Build_Tasks.md
+        - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
 #        - Development Project Structure: developer-guide/etendo-classic/concepts/Development_Project_Structure.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
@@ -319,7 +321,7 @@ nav:
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
-        - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
+        - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md
 #        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
         - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column.md
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
@@ -385,7 +387,7 @@ nav:
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
 #        - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree.md
 #        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
-#        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level.md
+        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
 #        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
@@ -438,6 +440,7 @@ nav:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
+          - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
@@ -457,10 +460,11 @@ nav:
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Tools:
-        - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
-        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
-        - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
+        - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md
+        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
+        - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
+        - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md    
       - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
