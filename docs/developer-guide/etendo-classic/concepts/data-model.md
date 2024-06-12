@@ -42,7 +42,7 @@ A column defined in the application dictionary has several names which are used 
 - The logical name (AD_Column.name): this name is used by the Data Access Layer for [automatically detecting supported interfaces](../concepts/Data_Access_Layer.md#property-naming-and-supported-interfaces) and [XML and Java property naming](../concepts/Data_Access_Layer.md#property-naming).
 - The physical column name (AD_Column.columnname): is the name of the column in the database table.
 
-!!! important
+!!!important
     When naming columns related to audit info, client/organization and active it is very important to be precise in the name. If a wrongly spelled name is used then Etendo will not be able to detect that an entity [supports a certain interface](../concepts/Data_Access_Layer.md#important-interfaces) and specific automatic behavior is disabled. See [here](../concepts/Data_Access_Layer.md#important-interfaces) for a list of interfaces and their expected logical column names.
 
 ### Defining Business Objects: the isParent
@@ -82,7 +82,7 @@ These references can be directly associated to a column. Examples of data refere
 
 Some base references require another reference to completely define the data the column will contain. This is when sub references are used. The base references defined in core that require a sub reference are: **List** , **Search** and **Table**. Thus when one of these base references is associated to a column it is necessary to also associate to that column another subtype reference. For example, to set a column to a Business Partner search it is necessary to set the main reference for this column to **Search** and the secondary one to **Business Partner Search**.
 
-!!! info
+!!!info
     When columns in Application Dictionary are automatically created based on their database physical description using the `Application Dictionary` > `Tables and Columns` > `Table` > `Create Columns from DB` process, it sets the references that are prone to be the proper ones, but in some cases they need to be changed. It is a good practice to review all the automatically assigned references for new columns after executing this process.
 
 #### Core Base References
@@ -101,7 +101,7 @@ When there is a field in a tab associated to a column with one of these referenc
 
 The physical description of columns using this references must be **number**.
 
-!!! note
+!!!note
     The way decimal numbers are represented is defined in `_config/Format.xml_` file with these equivalences:  
     _ euroEdition: Amount
     _ qtyEdition: Quantity
@@ -191,7 +191,7 @@ UI for this reference is:
 
 **Image BLOB** reference is used to store images in the database. All images are physically stored in a binary field of the table **AD_IMAGE** , and the table column used must be a reference to this table. Image types supported are the raster types: **PNG**, **JPEG** and **BMP**, and the vector type **SVG**.
 
-!!! info
+!!!info
     **SVG** images are fully supported in the browsers Chrome, Firefox, Safari and Microsoft Edge. Not in Internet Explorer. In this browser, **SVG** images may be clipped and not properly displayed.
 
 ![](/assets/developer-guide/etendo-classic/concepts/Data_Model-11.png)
@@ -233,7 +233,7 @@ When displaying a tab with a button it looks like:
 
 ![](/assets/developer-guide/etendo-classic/concepts/Data_Model-15.png)
 
-!!! note
+!!!note
     When clicking on it a popup with the process interface is opened. By default, before opening this popup, the modifications for the current record are autosaved, after the execution of the process, current record is refreshed. This is the reason not to show the buttons while not all mandatory fields are not filled. These defaults are skipped in case the column is unmarked as **Triggers Autosave**.
 
 ###### DocAction buttons
@@ -326,7 +326,7 @@ Usually **Table** references are used when the column name does not match with t
 
 Other cases is when the default order in **TableDir** reference is not appropriate.
 
-!!! info
+!!!info
     It is not required to define a **Table** reference to limit the records that are displayed in a **TableDir** since it is possible to do it using a **Validation**.
 
 ###### Defining a Table reference
@@ -341,7 +341,7 @@ To create a new one:
 
 3. In **Table** field select the table the column is linked to in **Key column** field the value to be stored in the column (usually it its the primary key column), and in **Displayed column** the column that will be shown in the drop down list, note that here only one column can be selected and it is not possible to select the table's record identifier. **SQL where clause** and **Order by** are optional fields that can be used in case we want to restrict the records to be displayed or if we want to order them in some specific manner.
 
-!!! note
+!!!note
     It is highly recommendable to look in the already defined Table references for one that fits our requirements before creating a new one.
 
 ##### Search
@@ -454,7 +454,7 @@ They are typically used to:
 
 Both callouts and triggers are executed when there are changes in data. The main difference between callouts and database triggers is that callouts are executed in the front end whereas triggers are in the back end. This means that callouts should affect primary to data displayed in UI and triggers to data in database, additionally callouts are only executed when the user is modifying data manually through UI but they are not exectued in case the same data is modified by any other process.
 
-!!! important
+!!!important
     Due to all these reasons, data integrity should not be relied only on callouts. It should be also implemented in database, through triggers or constraints.
 
 ##### Defining a Callout
@@ -469,7 +469,7 @@ Callouts are defined in `Application Dictionary` > `Setup` > `Callout` window an
 
 Callouts are implemented by a Java Servlet.
 
-!!! note
+!!!note
     The simplest way to implement a callout is using the **SimpleCallout** class, that keeps you out from the 'plumbing' of building the response.
 
 The things to consider are:
@@ -493,7 +493,7 @@ After executing a callout with the previous output, the result would be:
 - The **displayLogic()** Javascript function would be executed.
 - The field **inpfieldName** would take the focus.
 
-!!! info
+!!!info
     The type of available messages: MESSAGE, INFO, ERROR, SUCCESS, WARNING. MESSAGE and INFO are equivalents.
 
 ###### Execute on New
