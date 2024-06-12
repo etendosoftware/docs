@@ -201,9 +201,9 @@ This functionality allows the user to create settlements for invoices, both sale
 
 ### G/L Journal Clone
 
-:octicons-package-16: Javapackage:
+:octicons-package-16: Javapackage: com.etendoerp.gljournal.clone
 
 This functionality allows the user to clone a G/L journal in the Simple G/L Journal window, part of the accounting transactions of financial management.
 
 !!! info
-    For more information, visit the [G/L Journal Clone user guide](../../../basic-features/financial-management/accounting/transactions.md#gl-journal-clone)
+    For more information, visit the [G/L Journal Clone user guide](../../../basic-features/financial-management/accounting/transactions.md#gl-journal-clone).

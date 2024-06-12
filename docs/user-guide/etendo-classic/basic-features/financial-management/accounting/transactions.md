@@ -320,12 +320,15 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 
 With this functionality, the user is able to seamlessly clone a selected entry. This feature not only duplicates the entry but also creates a detailed description that includes the original order number.
 
-In order to do this, select the record to clone and click the copy record button in the toolbar. In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+In order to do this, select the record to clone and click the copy record button in the toolbar.
 
-![]()
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone.png)
+
+In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+
+![](../../../../../assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone2.png)
 
 This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
-
 
 ## **G/L Journal**
 
