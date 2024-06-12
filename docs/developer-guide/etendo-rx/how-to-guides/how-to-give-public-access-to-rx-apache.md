@@ -2,7 +2,7 @@ This guide offers a comprehensive approach to making the Etendo RX Edge Service 
 
 ### Prerequisites
 
-- Read [Config Server Guide](developer-guide/etendo-rx/concepts/config-server/) and [Edge Guide](/developer-guide/etendo-rx/concepts/edge-server/)
+- Read [Config Server Guide](../../../developer-guide/etendo-rx/concepts/config-server.md) and [Edge Guide](../../../developer-guide/etendo-rx/concepts/edge-server.md)
 - Etendo RX Edge Service set up and running.
 - Apache2 installed on the server.
 - A valid SSL configuration
@@ -60,4 +60,3 @@ If your server is protected by a firewall, ensure that port 443 (HTTPS) is open 
 ### Conclusion
 
 Your Etendo RX Edge Service is now accessible publicly with SSL security provided by Apache2. This setup ensures that the traffic between the clients and your Edge Service is encrypted and secure. Remember to keep your SSL certificates and Apache2 up to date for security and performance.
-

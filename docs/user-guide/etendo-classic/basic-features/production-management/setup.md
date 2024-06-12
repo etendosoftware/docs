@@ -6,31 +6,31 @@ title: Production Management Setup
 
 This section describes the screens that are necessary to set up the components used in the production process in Etendo. The corresponding windows are:
 
-[:material-file-document-outline: Section](/user-guide/etendo-classic/basic-features/production-management/setup/#section){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Section](#section){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Center](/user-guide/etendo-classic/basic-features/production-management/setup/#work-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Center](#work-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Process Plan](/user-guide/etendo-classic/basic-features/production-management/setup/#process-plan){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Process Plan](#process-plan){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Activity](/user-guide/etendo-classic/basic-features/production-management/setup/#activity_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Activity](#activity_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Toolset](/user-guide/etendo-classic/basic-features/production-management/setup/#toolset_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Toolset](#toolset_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine Category](/user-guide/etendo-classic/basic-features/production-management/setup/#machine-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine Category](#machine-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Machine](/user-guide/etendo-classic/basic-features/production-management/setup/#machine_1){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Machine](#machine_1){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Manufacturing Cost Center](/user-guide/etendo-classic/basic-features/production-management/setup/#manufacturing-cost-center){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Manufacturing Cost Center](#manufacturing-cost-center){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Indirect Cost](/user-guide/etendo-classic/basic-features/production-management/setup/#indirect-cost_2){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Indirect Cost](#indirect-cost_2){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Periodic Quality Control](/user-guide/etendo-classic/basic-features/production-management/setup/#periodic-quality-control){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Periodic Quality Control](#periodic-quality-control){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Quality Control Point](/user-guide/etendo-classic/basic-features/production-management/setup/#quality-control-point){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Quality Control Point](#quality-control-point){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Work Incidence](/user-guide/etendo-classic/basic-features/production-management/setup/#work-incidence){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Work Incidence](#work-incidence){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Maintenance Task](/user-guide/etendo-classic/basic-features/production-management/setup/#maintenance-task){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Maintenance Task](#maintenance-task){ .md-button .md-button--primary } <br>
 
 
 ## Section
@@ -218,7 +218,7 @@ The Copy From Attribute tab is used for products of the production type P+. The 
 
 In this tab, the user can define the employees that can perform a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/_TM91ctLLzY-kvMDwkeAXnsjXaTTWLmu6O6lpbdvHkVppxgcJxxTgczX8WTkoREEEM2rtbilAmnP77WAuzezDQkrZw7V94pweP9L1TFnXsc3xP6ljzT-Z6UIAAKqvh_Ga6ZrcViJNhB2SD0HE5bk2Z5WKOFqgl_YQ1epU93daoZFpzUbQTtG3CO7NaqdYA.png)
 
@@ -226,7 +226,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define machines that are used for a specific process. In the example, there is no machine defined.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/5YE-jABPzRHKUP12eBMB7MbOIqTUNgzHxd2ME1FqiNLuUzfTA9vwH-4oVqSBWT-6HSlsrp-m8V0Dq8ZwlhnCbCYnXdhljrOy2h4JGGkjAD7gobebyea6R2BhH-dusTBknb5gdSKNkithzk5BETzXNA_1bKqO8TWDH-YgtLpZXaQA4ztz09WrHJlTn_xCwQ.png)
 
@@ -234,7 +234,7 @@ The process to generate standard cost (theoretical) populates the cost informati
 
 In this tab, the user can define indirect costs related to a specified process.
 
-The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](https://docs.etendo.software/user-guide/etendo-classic/basic-features/production-management/transactions/#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
+The process to generate standard cost (theoretical) populates the cost information in the Employee, Machine and Indirect Cost tabs. For details, please refer to the [Calculate Standard Costs](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#calculate-standard-costs) section. The information is needed for the theoretical cost calculation of the P+.
 
 ![](../../../../assets/drive/DN4ZfyHumPHB6J5C5N3CtmU6prJP2FSSwd2ppRQnHjdlP-yDPHMS439-Uz75x9_2rfEYJPxBClFSzJi0Oe6kC9pdP-Vlx1Az0paKbEJ9OrAiY7RFVgpTO1cNACgoMsHMrn_GfNMEYmxkjrnuEqcn64owZmB1ePyOd1YZ0PYEkcENwtiALXsjAoEls1z6Mw.png)
 
@@ -570,7 +570,7 @@ In this window, it is possible to define types of work incidences that may occur
 Standard work incidences are set up for later reference in the work effort. A possible work incidence is that a machine component breaks and needs to be replaced or some other unplanned machine outage.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
  
 ### **Work Incidence**
@@ -590,7 +590,7 @@ In this window, it is possible to define a scheduled maintenance task to be comp
 Maintenance tasks can be created to be executed to the machines in Production.
 
 !!! warning
-    If machine maintenance is managed in an external system, go to the [Internal Consumption](/user-guide/etendo-classic/basic-features/production-management/transactions/#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
+    If machine maintenance is managed in an external system, go to the [Internal Consumption](transactions.md#internal-consumption) window to keep the spare parts stock updated in Etendo, even when another software is used.  
 
 The maintenance process is as following:
 

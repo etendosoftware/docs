@@ -7,7 +7,7 @@ title: How to Report Bugs
     *This structure should always be respected to report a bug in [Etendo service desk](https://incidencias.atlassian.net/servicedesk/customer/portal/35/group/43/create/132){target="_blank"} .*
 
 !!! sucess
-    Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](/whats-new/release-notes/etendo-classic)
+    Remember to reproduce the error beforehand in a clean environment. Etendo version must be supported  [Etendo Versions](../whats-new/release-notes/etendo-classic/release-notes.md)
 
 To report a bug, a standard structure is meant to be followed. This structure is represented in the following template:
 

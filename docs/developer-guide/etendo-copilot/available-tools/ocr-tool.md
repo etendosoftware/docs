@@ -9,7 +9,7 @@ tags:
 
 # Optical Character Recognition (OCR) Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 ## Overview
 

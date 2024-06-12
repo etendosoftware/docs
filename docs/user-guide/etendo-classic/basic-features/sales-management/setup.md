@@ -5,17 +5,17 @@ title: Sales Management Setup
 
 This section describes the different windows that are necessary to set up the sales process in Etendo. These are:
 
-[:material-file-document-outline:Condition of the Goods](/user-guide/etendo-classic/basic-features/sales-management/setup/#condition-of-the-goods){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Condition of the Goods](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#condition-of-the-goods){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Sales Region](/user-guide/etendo-classic/basic-features/sales-management/setup/#sales-region){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Sales Region](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#sales-region){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Commission](/user-guide/etendo-classic/basic-features/sales-management/setup/#commission){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Commission](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#commission){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Channel](/user-guide/etendo-classic/basic-features/sales-management/setup/#channel){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Channel](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#channel){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Sales Campaign](/user-guide/etendo-classic/basic-features/sales-management/setup/#sales-campaign){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Sales Campaign](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#sales-campaign){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Reject Reason](/user-guide/etendo-classic/basic-features/sales-management/setup/#reject-reason){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Reject Reason](../../../../user-guide/etendo-classic/basic-features/sales-management/setup.md#reject-reason){ .md-button .md-button--primary } <br>
 
 
 ## **Condition of the goods**
@@ -115,4 +115,4 @@ In this window, the user defines the reasons to reject quotations. These values 
 ![Reject reason window](../../../../assets/drive/1zSNCUs2uojZGChPlX77p57T5i3J5vwaD.png)
 
 ---
-This work is a derivative of ["Sales Management"](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).
+This work is a derivative of [Sales Management](http://wiki.openbravo.com/wiki/Sales_Management) by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo), used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/). This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) by [Etendo](https://etendo.software).

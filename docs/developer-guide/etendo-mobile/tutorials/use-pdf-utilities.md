@@ -3,7 +3,7 @@
 In this section teaches you how to use the PDF utilities (download and preview) in a Etendo subapp.
 
 !!! info
-    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](/developer-guide/etendo-mobile/getting-started/){target="_blank"} in the Etendo Mobile section.
+    This tutorial requires an already functional subapp. If you don't have the environment, please follow the steps in [Getting Started](../../../developer-guide/etendo-mobile/getting-started.md){target="_blank"} in the Etendo Mobile section.
 
 ## Setup
 

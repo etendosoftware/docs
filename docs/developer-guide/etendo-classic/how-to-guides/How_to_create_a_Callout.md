@@ -6,32 +6,19 @@ tags:
   - Etendo Infrastructure
   - Etendo ERP
   - FIC
-title: How to Create a Callout
 ---
 
 # How to Create a Callout
 
 ##  Overview
 
-The objective of this article is to show you how to create a new  callout . A
-callout is a piece of Javascript code associated with a particular field on a
-tab. This code is executed whenever the field changes. It is a type of Ajax
-substitute, changing parts of a tab/window without the need of refreshing it.
+The objective of this article is to show you how to create a new  callout . A callout is a piece of Javascript code associated with a particular field on a tab. This code is executed whenever the field changes. It is a type of Ajax substitute, changing parts of a tab/window without the need of refreshing it.
 
-It works by calling the FIC when a field with an associated callout is
-changed. The FIC (Form Initialization Component) refreshes the needed fields
-based on the callout logic.
+It works by calling the FIC when a field with an associated callout is changed. The FIC (Form Initialization Component) refreshes the needed fields based on the callout logic.
 
-This section implements the following new functionality: When entering a
-new product, one has the option of entering the _Search Key_ for the product,
-the _Name_ and the _Category_ it belongs to. But what if our client wants the
-search key to be constructed automatically by taking the product's name,
-removing all spaces, appending the underscore (_) and the category name it
-belongs to?
+This section implements the following new functionality: When entering a new product, one has the option of entering the _Search Key_ for the product, the _Name_ and the _Category_ it belongs to. But what if our client wants the search key to be constructed automatically by taking the product's name, removing all spaces, appending the underscore (_) and the category name it belongs to?
 
-For example, the Search Key of a product that has the
-Name _Bon Fountain_ and belongs to the _Water_ Product Category would
-become _BonFountain_Water_. Let's see how this could be done using a callout.
+For example, the Search Key of a product that has the Name _Bon Fountain_ and belongs to the _Water_ Product Category would become _BonFountain_Water_. Let's see how this could be done using a callout.
 
 The steps involved in creating a new callout are:
 
@@ -42,7 +29,7 @@ The steps involved in creating a new callout are:
 
 !!!Important
     Developments related to points (1) and (2) must belong to
-    a module that is not the _core_ module. Please follow the [How to create and package a module](How_To_Create_and_Package_a_Module.md)  section to create a new module. For the development related
+    a module that is not the _core_ module. Please follow the [How to create a module](How_To_Create_a_Module.md)  section to create a new module. For the development related
     to point (3) about modifying a _core_ located column, a new template is
     needed. You can read the [How to Change an Existing Window](How_to_change_an_existing_Window.md) article to obtain more information.
 
@@ -218,8 +205,7 @@ Go to Column tab, find the _Name_ record and edit it. Find the  Callout
 dropdown  that should at this point be empty. Select our
 _Product_Construct_SearchKey_ callout and save the record:
 
-![](../../../assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Callout-6.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Callout-6.png)
 
   
 Do the same for the _Product Category_ record since a change in any of them

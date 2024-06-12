@@ -3,7 +3,7 @@
 This section provides a step-by-step guide on how to run a subapplication in development mode within the Etendo Mobile application. For this, you will need the Dummy project with predefined configurations like rollup, http server and settings with Etendo Classic to build a development subapplication and connect it to Etendo Mobile.
 
 !!! info
-    Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the [Getting Started in the Etendo Mobile section](/developer-guide/etendo-mobile/getting-started/){target="_blank"}.
+    Before starting, this tutorial requires Etendo, Etendo Mobile and Node.js in the local environment. For more information, check the [Getting Started in the Etendo Mobile section](../../../developer-guide/etendo-mobile/getting-started.md){target="_blank"}.
 
 ## Create a new Etendo Classic module
 
@@ -47,7 +47,7 @@ After saving all the configuration, you have to export it. Open a terminal in th
 ## Dynamic app window
 In the `Dynamic App` window the dynamic applications are configured to use them from the Etendo Mobile application. To do this, a record is created in which the module to which it belongs, the name of the application and the location of the build of the subapplication is declared.
 
-After selecting this record in the `Dynamic App Version` tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the [Dynamic App](/user-guide/etendo-classic/basic-features/general-setup/application/#dynamic-app){target="_blank"}.
+After selecting this record in the `Dynamic App Version` tab, we must add the version name, the name of the build file and check the box "is Development" to true, which will allow the developer to use a development URL and not a productive one inside Etendo Mobile. For more information, check the [Dynamic App](../../../user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app){target="_blank"}.
 
 | Variable                | Description                                                      | Example Value                          |
 | ----------------------- | ---------------------------------------------------------------- | ------------------                     |
@@ -203,12 +203,12 @@ _Storybook_ is a place where you can see all the components of the library. Also
 
 ## Development mode setup
 
-1. [Etendo RX](/developer-guide/etendo-rx/getting-started/) should be running
+1. [Etendo RX](../../../developer-guide/etendo-rx/getting-started.md) should be running
       ``` bash title="Terminal"
       ./gradlew rx:rx
       ```
 2. Etendo classic should be running.
-3. Open the [Etendo Mobile](/user-guide/etendo-mobile/getting-started/) application on a mobile device. You can use either an emulator or a physical device.
+3. Open the [Etendo Mobile](../../../user-guide/etendo-mobile/getting-started.md) application on a mobile device. You can use either an emulator or a physical device.
 
 ### Rollup
 [Rollup](https://rollupjs.org/){target="_blank"} is a module packer for JavaScript that compiles small pieces of code into something bigger and more complex, this is already installed in the module.

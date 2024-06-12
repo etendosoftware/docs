@@ -77,7 +77,7 @@ We recommend migrating to Etendo 23.2.0 or grather and the dependencies to the l
     }
     ```
 
-3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](/developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo/).
+3. **GitHub Setup**: You need to set up your GitHub username and token to have read access to Etendo packages. You can create the token by following the [Use of Repositories technical guide](../../../../developer-guide/etendo-classic/getting-started/installation/use-of-repositories-in-etendo.md).
 
     ```groovy title="gradle.properties"
     nexusUser=
@@ -305,5 +305,4 @@ This affects the current environments, to fix this we have to:
 !!! failure
     Remember, Nexus will still be available until March 2024, so you have time to make this transition 🕑. We hope you find this guide useful.
 
-If you encounter any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
-
+If you find any issues or need additional help, do not hesitate to reach out to our [support service](http://support.etendo.software){target="_blank"}🚑.
