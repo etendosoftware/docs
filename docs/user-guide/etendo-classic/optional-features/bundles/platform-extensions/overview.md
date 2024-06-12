@@ -14,9 +14,9 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 ## Modules
 ### Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
@@ -27,9 +27,9 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 ### Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
@@ -39,7 +39,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 
 ### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
@@ -49,7 +49,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ### Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
@@ -58,9 +58,9 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 ### Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
@@ -69,7 +69,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 
 ### Dynamic App 
 
-:octicons-package-16: Javapackage: com.etendoerp.dynamic.app
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
@@ -78,7 +78,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
         
 ### EAN 128
 
-:octicons-package-16: Javapackage: com.smf.ean128
+:octicons-package-16: Javapackage: `com.smf.ean128`
 
 EAN 128 allows to use bar code in your application
 
@@ -87,15 +87,15 @@ EAN 128 allows to use bar code in your application
 
 ### Etendo RX
 
-:octicons-package-16: Javapackage: com.etendoerp.etendorx
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
 ### Etendo Reactor
 
-:octicons-package-16: Javapackage: com.etendoerp.reactor
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ### Webhook Events
 
-:octicons-package-16: Javapackage: com.etendoerp.webhookevents
+:octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
 
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
@@ -105,7 +105,7 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
 
 ### Etendo Async Processes
 
-:octicons-package-16: Javapackage: com.etendoerp.asyncprocess
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
 
 ---
 

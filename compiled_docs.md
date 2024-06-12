@@ -19308,9 +19308,9 @@ This bundle includes fundamental modules that affect most areas in Etendo.
 
 ##### Advanced Business Partner
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.businesspartner.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.businesspartner.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sRvQCM8xZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19395,9 +19395,9 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 #### Modules
 ##### Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
@@ -19408,9 +19408,9 @@ It allows downloading a PDF from some transaction documents using a web service 
 
 ##### Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 It provides the infrastructure to convert a number into its equivalent in words. This functionality is especially useful while printing checks.
 
@@ -19420,7 +19420,7 @@ It provides the infrastructure to convert a number into its equivalent in words.
 
 ##### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
 
@@ -19430,7 +19430,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 ##### Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 This module allows changing or updating a Jasper Report in an Etendo environment without stopping the server.
 
@@ -19439,9 +19439,9 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 ##### Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 Etendo Advanced Security allows extending and enhancing some of the security features of the system.
 
@@ -19450,7 +19450,7 @@ Etendo Advanced Security allows extending and enhancing some of the security fea
 
 ##### Dynamic App 
 
-:octicons-package-16: Javapackage: com.etendoerp.dynamic.app
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
 
 Dynamic App allows you to create sub applications in Etendo Mobile.
 
@@ -19459,7 +19459,7 @@ Dynamic App allows you to create sub applications in Etendo Mobile.
         
 ##### EAN 128
 
-:octicons-package-16: Javapackage: com.smf.ean128
+:octicons-package-16: Javapackage: `com.smf.ean128`
 
 EAN 128 allows to use bar code in your application
 
@@ -19468,15 +19468,15 @@ EAN 128 allows to use bar code in your application
 
 ##### Etendo RX
 
-:octicons-package-16: Javapackage: com.etendoerp.etendorx
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
 
 ##### Etendo Reactor
 
-:octicons-package-16: Javapackage: com.etendoerp.reactor
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ##### Webhook Events
 
-:octicons-package-16: Javapackage: com.etendoerp.webhookevents
+:octicons-package-16: Javapackage: `com.etendoerp.webhookevents`
 
 Webhook events allow you to execute actions via a URL call, providing a powerful way to integrate with external services.
 
@@ -19486,7 +19486,7 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
 
 ##### Etendo Async Processes
 
-:octicons-package-16: Javapackage: com.etendoerp.asyncprocess
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
 
 ---
 
@@ -19646,7 +19646,7 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ##### Stock History
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 It provides updated information about the daily history stock of the products. 
 
@@ -19655,9 +19655,9 @@ It provides updated information about the daily history stock of the products.
 
 ##### Reactivate Warehouse Documents
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents`
 
-:octicons-package-16: Javapackage: com.etendoerp.reactivate.warehouse.documents.template
+:octicons-package-16: Javapackage: `com.etendoerp.reactivate.warehouse.documents.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ghH3tBjoN9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19701,7 +19701,7 @@ This bundle includes enhancements for the Production Management functionalities 
 
 ##### Advanced Work Effort
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.work.effort
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.work.effort`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqq7-LAoK-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
 
@@ -19730,9 +19730,9 @@ This bundle includes enhancements for the Sales Management functionalities in Et
 
 ##### Sales Quotation
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation
+:octicons-package-16: Javapackage: `com.etendoerp.quotation`
 
-:octicons-package-16: Javapackage: com.etendoerp.quotation.template
+:octicons-package-16: Javapackage: `com.etendoerp.quotation.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xkWfvKOXTUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -19744,9 +19744,9 @@ Different functionalities are added to this window which allows the user to make
 
 ##### Advanced Rappels
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced`
 
-:octicons-package-16: Javapackage: com.etendoerp.rappels.advanced.template
+:octicons-package-16: Javapackage: `com.etendoerp.rappels.advanced.template`
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_iBwlVHvF4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -19775,7 +19775,7 @@ This bundle includes enhancements for Financial Management functionalities in Et
 
 ##### Accounting Templates
 
-:octicons-package-16: Javapackage: com.etendoerp.accounting.templates
+:octicons-package-16: Javapackage: `com.etendoerp.accounting.templates`
 
 This module allows setting a non deductible tax's amount to a specified financial account
 
@@ -19784,7 +19784,7 @@ This module allows setting a non deductible tax's amount to a specified financia
 
 ##### Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 This process allows keeping currency conversions up to date by generating conversion ranks automatically with a background process using apilayer.
 
@@ -19794,11 +19794,11 @@ This process allows keeping currency conversions up to date by generating conver
 
 ##### Currency API Configuration
 
-:octicons-package-16: Javapackage: com.smf.currency.apiconfig
+:octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
 ##### Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19809,7 +19809,7 @@ This feature allows entering in the system all the financings the company has. I
 
 ##### Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19820,7 +19820,7 @@ This module provides a new document where it is possible to settle debts or cred
 
 ##### Deferred GL Journal
 
-:octicons-package-16: Javapackage: com.etendoerp.gljournal.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K7XOBkmRLAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19831,7 +19831,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 
 ##### Financial Advanced Reports
 
-:octicons-package-16: Javapackage: com.etendoerp.financial.reports.advanced
+:octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YG2m6eMhLJg" title="Financial Advance Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19842,9 +19842,9 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 ##### Payment Removal
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal`
 
-:octicons-package-16: Javapackage: com.etendoerp.payment.removal.template
+:octicons-package-16: Javapackage: `com.etendoerp.payment.removal.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TLbjMLjGYwo?si=uGtWnNHNa7gV4_l5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19869,9 +19869,9 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 ##### Remittances
 
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance`
 
-:octicons-package-16: Javapackage: org.openbravo.module.remittance.template
+:octicons-package-16: Javapackage: `org.openbravo.module.remittance.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3t-E_sV0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19882,7 +19882,7 @@ This functionality allows creating a remittance which is a group of "payments" (
 
 ##### Intercompany
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.intercompany
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19893,9 +19893,9 @@ In case the user has to create orders or invoices among two or more organization
 
 ##### Reverse GL Journal
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse`
 
-:octicons-package-16: Javapackage: com.smf.gljournal.reverse.template
+:octicons-package-16: Javapackage: `com.smf.gljournal.reverse.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pfqClq8HD6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19906,7 +19906,7 @@ This functionality is specifically useful for companies that have a month close,
 
 ##### Asset Amortization Report
 
-:octicons-package-16: Javapackage: com.smf.asset.amortization.report
+:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
 
 The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
 
@@ -19915,9 +19915,9 @@ The new Amortization report allows downloading excel reports about information o
 
 ##### Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19935,7 +19935,7 @@ This functionality is part of the Financial Extensions Bundle and it is useful w
 
 ##### Bulk Posting
 
-:octicons-package-16: Javapackage: com.etendoerp.bulk.posting
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19946,7 +19946,7 @@ This functionality allows the user to post or unpost multiple records at the sam
 
 ##### Advanced Business Partner Settlement
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.bpsettlement
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -20028,7 +20028,7 @@ El bundle de Localización Española contiene los módulos que añaden funcional
 
 #### Incoterms
 
-:octicons-package-16: Javapackage: org.openbravo.module.incoterms
+:octicons-package-16: Javapackage: `org.openbravo.module.incoterms`
 
 Este módulo añade el listado de Incoterms a Etendo Classic.
 
@@ -20036,19 +20036,19 @@ Los Incoterms or International Commercial Terms son una serie de términos de ve
 
 #### European Union Countries
 
-:octicons-package-16: Javapackage: org.openbravo.module.eucountries
+:octicons-package-16: Javapackage: `org.openbravo.module.eucountries`
 
 Este módulo identifica qué países pertenecen a la Unión Europea.
 
 #### Provincias de España
 
-:octicons-package-16: Javapackage: org.openbravo.spain.regions
+:octicons-package-16: Javapackage: `org.openbravo.spain.regions`
 
 Este módulo añade el listado de provincias españolas a Etendo Classic.
 
 #### Legal Representative of the Organization
 
-:octicons-package-16: Javapackage: org.openbravo.module.organization.representative.es
+:octicons-package-16: Javapackage: `org.openbravo.module.organization.representative.es`
 
 Este módulo añade a la ventana de la Organización una pestaña que permite configurar el Representante Legal de la Organización. Pueden declararse uno o varios Representantes.
 
@@ -20056,7 +20056,7 @@ La pestaña “Representante Legal” que se añade a la ventana de Organizació
 
 #### I.A.E. Epigraphs (Epígrafes del I.A.E.)
 
-:octicons-package-16: Javapackage: org.openbravo.module.epigrafes.iae.es
+:octicons-package-16: Javapackage: `org.openbravo.module.epigrafes.iae.es`
 
 Este módulo agrega en la ventana de Organización una pestaña titulada “Actividades del IAE”, donde se pueden indicar todas las actividades en las que la empresa ha estado trabajando. Es posible seleccionar los Epígrafes del Impuesto sobre Actividades Económicas (IAE) que estén asociados a la Organización.
 
@@ -20066,9 +20066,9 @@ En este módulo se incluye el conjunto correspondiente a la clave 1. Si se desea
 
 #### CIF and NIF validator
 
-:octicons-package-16: Javapackage: org.openbravo.module.cifnifvalidator
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator`
 
-:octicons-package-16: Javapackage: org.openbravo.module.cifnifvalidator.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.cifnifvalidator.es_es`
 
 Este módulo implementa un callout que comprueba si se ha introducido un Número de Identificación Fiscal (NIF) válido al configurar un tercero.
 
@@ -20076,15 +20076,15 @@ El Número de Identificación Fiscal (NIF) permite identificar de forma inequív
 
 #### Validador de número de cuenta financiera
 
-:octicons-package-16: Javapackage: org.openbravo.module.finactvalidator.es
+:octicons-package-16: Javapackage: `org.openbravo.module.finactvalidator.es`
 
 Este módulo permite validar el número de cuenta financiera de la organización y el número de cuenta de banco del tercero, de acuerdo con la normativa española. Verifica que se ajusten al formato definido para España, y que los dígitos de control sean correctos.
 
 #### Check Printing
 
-:octicons-package-16: Javapackage: org.openbravo.finance.checkprinting
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting`
 
-:octicons-package-16: Javapackage: org.openbravo.finance.checkprinting.es_es
+:octicons-package-16: Javapackage: `org.openbravo.finance.checkprinting.es_es`
 
 Este módulo permite la impresión de cheques desde Etendo. Además, provee un sistema para buscar datos históricos y poder volver a imprimir un cheque en caso de error.
 
@@ -20107,21 +20107,21 @@ Para imprimir uno o varios cheques, se deben seleccionar y presionar el botón �
 
 #### Tipo de Número de Identificación de Tercero
 
-:octicons-package-16: Javapackage: org.openbravo.module.bptaxidkey
+:octicons-package-16: Javapackage: `org.openbravo.module.bptaxidkey`
 
 Este módulo añade el campo “Número de identificación de tercero” a la ventana de Terceros. Este dato es utilizado por los Libros de Registro de Facturas.
 
 #### Professional Localization pack Spain (España) Datasets
 
-:octicons-package-16: Javapackage: org.openbravo.proflocalization.spain.dataset
+:octicons-package-16: Javapackage: `org.openbravo.proflocalization.spain.dataset`
 
 Este módulo contiene un dataset que añade permisos para ciertas ventanas y procesos incluidos en el pack de Localización Española para el rol de Finanzas.
 
 #### Multidimensional Tax Report
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicetaxreportenhanced30
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30`
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicetaxreportenhanced30.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicetaxreportenhanced30.es_es`
 
 Este módulo genera un informe que permite al usuario obtener un listado de aquellas transacciones registradas en el sistema que tienen implicaciones fiscales.
 
@@ -20131,19 +20131,19 @@ La información obtenida mediante este módulo es útil para que las empresas pu
 
 #### Cuaderno 43
 
-:octicons-package-16: Javapackage: org.openbravo.module.cuaderno43.es
+:octicons-package-16: Javapackage: `org.openbravo.module.cuaderno43.es`
 
 Este módulo implementa el formato de importación bancaria “Cuaderno 43” (Norma AEB 43). Los Cuadernos o Normas AEB (Asociación Española de la Banca) son una serie de normas o protocolos comunes a todas las entidades bancarias que operan en España y que fijan las características de los ficheros informáticos emitidos o recibidos por una entidad financiera.
 
 #### 3 digits ISO country codes
 
-:octicons-package-16: Javapackage: org.openbravo.module.countryisocode
+:octicons-package-16: Javapackage: `org.openbravo.module.countryisocode`
 
 Los códigos ISO de países son utilizados a nivel mundial para representar a cada país con dígitos. Este módulo provee el dataset que vincula los países con su código ISO.
 
 #### Métodos de Pago
 
-:octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentmethods
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentmethods`
 
 Este módulo contiene las formas de pago más utilizadas en España, las cuales pueden ser utilizadas en el módulo de gestión avanzada de cobros y pagos. Incluye Recibo domiciliado, Recibo, Letra Aceptada, Crédito Documentario, Contrato Adjudicación, etc.
 
@@ -20151,9 +20151,9 @@ El módulo de Métodos de Pago refiere a las formas de pago utilizadas por las e
 
 #### Tax Report Launcher
 
-:octicons-package-16: Javapackage: org.openbravo.module.taxreportlauncher
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher`
 
-:octicons-package-16: Javapackage: org.openbravo.module.taxreportlauncher.es
+:octicons-package-16: Javapackage: `org.openbravo.module.taxreportlauncher.es`
 
 Este módulo consiste en un launcher de impuestos que permite la definición de informes y de sus parámetros, e incluye la clase java asociada que contiene la lógica de negocios que será aplicada.
 
@@ -20203,9 +20203,9 @@ El sistema fiscal español designa un conjunto específico de letras para cada t
 
 #### Spanish Tax Module Improvements
 
-:octicons-package-16: Javapackage: org.openbravo.module.taximprovements.es
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es`
 
-:octicons-package-16: Javapackage: org.openbravo.module.taximprovements.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.taximprovements.es_es`
 
 Este módulo añade campos en la ventana de “Rango de impuestos” para mejorar la configuración y administración de los impuestos de España. Los campos añadidos son: Tipo de libro, Inversión de sujeto pasivo, Recargo de equivalencia e Impuesto intracomunitario.
 
@@ -20220,13 +20220,13 @@ Este módulo incluye en los impuestos españoles el IGIC Canario y el IPSI aplic
 
 #### Condiciones de pago
 
-:octicons-package-16: Javapackage: org.openbravo.spanishdefaultdata.paymentterms
+:octicons-package-16: Javapackage: `org.openbravo.spanishdefaultdata.paymentterms`
 
 Este módulo contiene las condiciones de pago más utilizadas en España. Entre ellas se incluyen el pago en "30 días", "60 días", "90 días", "120 días", "50% en el acto, resto 60 días", "20% a 10 días resto a 30 días" y "20% a 15 días, 40% a 30 días, resto a 60 días".
 
 #### Chart of accounts: PGC 2007 General
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts`
 
 Este módulo añade el Plan de Cuentas General (Modelo Normal) conforme a los requerimientos vigentes en España.
 
@@ -20254,7 +20254,7 @@ El Plan de Cuentas que añade este módulo es el que debe ser utilizado si una e
 
 #### Chart of accounts: PGC 2007 PYMEs
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.accounts.pymes
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.accounts.pymes`
 
 Este módulo añade el Plan de Cuentas PYMES conforme a los requerimientos vigentes en España.
 
@@ -20276,109 +20276,110 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 
 #### Localization pack Spain (España)
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain30
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain30`
 
 Este módulo ofrece a las empresas españolas un set de módulos que adaptan Etendo a los requerimientos comerciales de España, permitiendo realizar procesos de manera rápida y eficaz.
 
 #### Traducción al español del módulo 'Default Jobs'
 
-:octicons-package-16: Javapackage: com.smf.jobs.defaults.es_es
+:octicons-package-16: Javapackage: `com.smf.jobs.defaults.es_es`
 
 #### JSON Datasource Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.service.datasource.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.datasource.es_es`
 
 #### Workspace & Widgets Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.myob.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.myob.es_es`
 
 #### User Interface Selector Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.userinterface.selector.es_es
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.selector.es_es`
 
 #### Traducción al Español del módulo Payment Report
 
-:octicons-package-16: Javapackage: org.openbravo.financial.paymentreport.es_es
+:octicons-package-16: Javapackage: `org.openbravo.financial.paymentreport.es_es`
 
 #### Number To Word
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_es
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_es`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword.es_es
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword.es_es`
 
 #### User Interface Client Kernel Translation Spanish Spain(esES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.kernel.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.kernel.es_es`
 
 #### Translation: Spanish-Spain (es_ES) español-España
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.translation.esES
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.translation.esES`
 
 #### Openbravo Multi Business Partner Selector
 
-:octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector`
 
-:octicons-package-16: Javapackage: org.openbravo.utility.multiplebpselector.es_es
+:octicons-package-16: Javapackage: `org.openbravo.utility.multiplebpselector.es_es`
 
 #### Orders Awaiting Delivery Spanish (Spain) Translation
 
-:octicons-package-16: Javapackage: org.openbravo.reports.ordersawaitingdelivery.es_es
+:octicons-package-16: Javapackage: `org.openbravo.reports.ordersawaitingdelivery.es_es`
 
 #### Smartclient Translation: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.userinterface.smartclient.es_es
+:octicons-package-16: Javapackage: `org.openbravo.userinterface.smartclient.es_es`
 
 #### Query/List Widget Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.querylist.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.querylist.es_es`
 
 #### Widgets Collection Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.widgets.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.widgets.es_es`
 
 #### Advanced Payables and Receivables - Spanish Translation
 
-:octicons-package-16: Javapackage: org.openbravo.advpaymentmngt.es_es
+:octicons-package-16: Javapackage: `org.openbravo.advpaymentmngt.es_es`
 
 #### User Interface Application Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.application.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.application.es_es`
 
 #### Alerts: Accounting
 
-:octicons-package-16: Javapackage: org.openbravo.alerts.accounting30
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30`
 
-:octicons-package-16: Javapackage: org.openbravo.alerts.accounting30.es_es
+:octicons-package-16: Javapackage: `org.openbravo.alerts.accounting30.es_es`
 
 #### SOAP with Attachments API for Java Implementation
 
-:octicons-package-16: Javapackage: org.openbravo.util.saaj.impl
+:octicons-package-16: Javapackage: `org.openbravo.util.saaj.impl`
 
 #### Payment Method Type
 
-:octicons-package-16: Javapackage: org.openbravo.module.paymentmethod.type
+:octicons-package-16: Javapackage: `org.openbravo.module.paymentmethod.type`
 
 #### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 #### HTML Widget Translation Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.client.htmlwidget.es_es
+:octicons-package-16: Javapackage: `org.openbravo.client.htmlwidget.es_es`
 
 #### OpenID Service Integration Translation Spanish Spain
 
-:octicons-package-16: Javapackage: org.openbravo.service.integration.openid.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.openid.es_es`
 
 #### Integration with Google APIs Translation Spanish Spain
 
-:octicons-package-16: Javapackage: org.openbravo.service.integration.google.es_es
+:octicons-package-16: Javapackage: `org.openbravo.service.integration.google.es_es`
 
 #### Openbravo 3.0 Translation Pack: Spanish Spain (es_ES)
 
-:octicons-package-16: Javapackage: org.openbravo.v3.translation.pack.es_es
+:octicons-package-16: Javapackage: `org.openbravo.v3.translation.pack.es_es`
+
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: SII para IVA
@@ -20388,11 +20389,11 @@ Este módulo ofrece a las empresas españolas un set de módulos que adaptan Ete
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii
+:octicons-package-16: Javapackage: `org.openbravo.module.sii`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.es_es`
 
-:octicons-package-16: Javapackage: org.openbravo.module.sii.template
+:octicons-package-16: Javapackage: `org.openbravo.module.sii.template`
 
 #### **Introducción**
 
@@ -22389,7 +22390,7 @@ Tal y como se muestra en la siguiente imagen, obtenemos un listado actualizado s
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat303.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat303.es` <br>
 
 #### **Introducción**
 
@@ -23076,7 +23077,7 @@ Este anexo incluye el listado completo de los rangos de impuestos asociados a lo
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat190.es
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
 
 #### **Introducción**
 
@@ -23619,7 +23620,7 @@ Para ello, el usuario deberá realizar en la aplicación los cambios en los dato
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat349.es <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat349.es` <br>
 
 #### **Introducción**
 
@@ -23939,7 +23940,7 @@ Para ello el usuario deberá realizar en la aplicación los cambios en los datos
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.localization.spain.referencedata.taxes
+:octicons-package-16: Javapackage: `org.openbravo.localization.spain.referencedata.taxes`
 
 #### **Introducción**
 
@@ -24331,9 +24332,9 @@ A continuación, se encuentran los impuestos disponibles en el conjunto de datos
 ## Article Content: 
 #### Javapackages
 
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat <br>
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat.spain <br>
-:octicons-package-16: Javapackage: org.openbravo.module.intrastat.es.es
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.spain` <br>
+:octicons-package-16: Javapackage: `org.openbravo.module.intrastat.es.es`
 
 #### Introducción
 
@@ -24635,7 +24636,7 @@ El proceso comprobará que haya procesado todas las declaraciones del presente a
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
 
 #### **Introducción**
 
@@ -24946,9 +24947,9 @@ Los resultados de las liquidaciones periódicas del Modelo 303 se pueden introdu
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook`
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.es_es
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.es_es`
 
 #### **Introducción**
 
@@ -25257,7 +25258,7 @@ Si el usuario tiene que introducir una factura de fecha de marzo y ya ha cerrado
 ## Article Content: 
 #### Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.estaxes
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
 
 #### **Introducción**
 
@@ -25292,7 +25293,7 @@ The Etendo BI Bundle includes functionalities connecting Etendo to Power BI.
 
 ##### Etendo BI Inclusion / Exclusion Module
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.inclusion.exclusion
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.inclusion.exclusion`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cEuwiUQbUAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -25303,7 +25304,7 @@ This module allows users to customize and configure the information and filters 
 
 ##### Etendo BI Connector Module
 
-:octicons-package-16: Javapackage: com.etendoerp.integration.powerbi
+:octicons-package-16: Javapackage: `com.etendoerp.integration.powerbi`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z9EBff_qBDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -25316,7 +25317,7 @@ A background process must be set which creates CSV files that will be uploaded t
 
 ##### Base Queries for Etendo BI 
 
-:octicons-package-16: Javapackage: com.etendoerp.powerbi.queries
+:octicons-package-16: Javapackage: `com.etendoerp.powerbi.queries`
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo BI Inclusion/Exclusion Module Configuration
@@ -27419,7 +27420,7 @@ Continuing with the example of the Sales Invoice window, the available filters a
 
 #### Mobile App Scanning Helpers
 
-:octicons-package-16: Javapackage: com.smf.mobile.scan
+:octicons-package-16: Javapackage: `com.smf.mobile.scan`
 
 Allows to use the camera to scan codes in [Etendo Mobile](https://docs.etendo.software/latest/user-guide/etendo-mobile/getting-started.md) App
 
@@ -27735,7 +27736,7 @@ The apps described below belong to preconfigured reference data included in the 
 
 ##### Etendo Copilot
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot
+:octicons-package-16: Javapackage: `com.etendoerp.copilot`
 
 Etendo Copilot is a platform that optimises development time with AI-enabled tools to reduce development time and improve development quality.
 
@@ -27744,7 +27745,7 @@ Etendo Copilot is a platform that optimises development time with AI-enabled too
 
 ##### XML Translation Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vu-eQDqZpKY?si=mhon0plDzHaRwUxq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -27755,7 +27756,7 @@ This tool allows the user to translate the content of an XML file from one langu
 
 ##### Database Query Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.dbquerytool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.dbquerytool`
 
 This tool allows the user to connect to an SQL Database and generate and/or execute SQL Queries from a natural language input.
 
@@ -27764,7 +27765,7 @@ This tool allows the user to connect to an SQL Database and generate and/or exec
 
 ##### Copilot OCR Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 This module implements the Optical Character Recognition (OCR) tool, capable of reading images and PDF and returning a JSON object with the extracted information.
  
@@ -27773,7 +27774,7 @@ This module implements the Optical Character Recognition (OCR) tool, capable of 
 
 ##### Copilot OpenAPI Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
 This Etendo Copilot tool allows interacting with APIs taking the platform to another level.
 
@@ -27782,7 +27783,7 @@ This Etendo Copilot tool allows interacting with APIs taking the platform to ano
 
 ##### Copilot Purchase Expert
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 This module includes an assistant capable of performing operations related to the purchasing module, such as loading purchase orders. 
 !!! info
@@ -27799,9 +27800,9 @@ This module includes an assistant capable of performing operations related to th
 ## Article Content: 
 ### Copilot Purchase Expert
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 
 #### Overview
@@ -31197,6 +31198,141 @@ Select the organization and the module from which to import the reference data i
 This work is a derivative of [Datasets](http://wiki.openbravo.com/wiki/Datasets){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Development Build Tasks
+## Article Path: /Developer Guide/Etendo Classic/Concepts/Development Build Tasks
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/concepts/development-build-tasks
+## Article Content: 
+### Development Build Tasks
+
+#### Overview
+
+This document discusses the **gradle tasks** used during the build process of Etendo. It explains what the gradle tasks are used for and which properties can be used to control their behavior. 
+
+!!!note
+    Notice that Gradle is **case sensitive**.
+
+#### Main Build Tasks
+
+This section explains the main build tasks following the steps as illustrated in the image.
+
+In most of the cases, it is only necessary to use 3 tasks (`install` , `smartbuild` and `export.database`). There are a number of other tasks that can be used but they are not required for the standard process. 
+
+!!!info
+    For more information, see [Detailed Build Tasks](#detailed-build-tasks) section.
+
+The main task for the standard process is `smartbuild` which performs all the required processes as explained below. This task accepts an optional property:
+
+  * `local` for local or remote developments which by default is set to **yes** . 
+
+The difference between `local` and `remote` development is illustrated in the diagram. Local development are changes by the developer him/herself. Remote developments are changes done by other developers. Changes by remote developments are pulled from the source code revision system.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/concepts/Development_Build_Tasks-0.png)
+
+!!!info
+    `remote` means that the user is bringing changes to the workspace from an external location, e.g. with a `git pull`.
+    
+##### Initial installation
+
+After downloading the Etendo ERP source files. It is necessary to install and deploy it. Check our guide about [Etendo Install](https://docs.etendo.software/latest/getting-started/installation.md#install-etendo)
+
+##### Database export
+
+In most cases developments include modifications on the database. This modifications can be persisted in `xml` files using the **DBSourceManager** tool. **DBSourceManager** exports to `xml` files only the modules (including core) that are set as `In Development`. To export the database execute:
+
+``` bash title="Terminal"
+./gradlew export.database
+```
+
+After this step, the changed model `xml` files can be pushed/committed to the source code revision system, so that other developers can pick them up and continue working on top of it.
+
+When a module is exported using the `export.database` task, it is first validated to check for common errors. If the validation fails then the `export.database` task will also fail and export is not possible.
+
+The following checks are currently done:
+
+  * A table defined in the Application Dictionary should be present in the database and vice versa. 
+  * Column definitions in the database and the Application Dictionary are compared, any mismatch is reported. The column datatype, default value and length are checked. 
+  * Tables should have a primary key. 
+  * Foreign key fields should be part of a foreign key constraint. 
+  * Names of tables, columns and constraints are checked for their length (Oracle and PostgreSQL has a 30 character limit there). 
+
+##### Update database
+
+**Database model** changes are distributed by committing the database schema as `xml` to `SCM`. Other developers pull the changes from `SCM` and can apply them to update their own database. After updating the database the process is exactly the same as the local one, that is compile and deploy the elements that have been modified since last build.
+
+``` bash title="Terminal"
+./gradlew update.database
+./gradlew smartbuild
+```
+
+All the required actions (update database, compile last modifications and deploy them) can be done with only the `smartbuild` command:
+
+``` bash title="Terminal"
+./gradlew smartbuild -Dlocal=no -Dforce=yes
+```
+
+The only difference with the local development is in the `local` parameter which makes the process to update the database in case the `xml` files were changed.
+
+##### Module Consistency Check
+
+An instance is **consistent** in case the dependencies of all the modules it has installed are satisfied. Development instances can define inconsistencies (for example by creating a dependency on a module version which is not installed) whereas production instances where all the modules are installed through obx or Central Repository should not be inconsistent because it is guargradleeed by the installation process.
+
+**Inconsistent instances** can be in a situation where it is not possible to update any of the modules (including core) they have installed. This is due the fact that Central Repository only proposes updates to consistent sets of versions and it is possible the inconsistency cannot be resolved by any.
+
+#### Detailed Build Tasks
+
+This section contains a detailed listing of all available build tasks.
+
+##### Libraries build tasks
+
+|  Task      |  Description  |  Notes  |
+|------------|---------------|---------|
+|  `core.lib`  |  Compiles and generates a `.jar` file from the `src-core` project. Which is needed by `wad.lib` and the rest of build tasks.  |  **Required by**: wad.lib  |
+|  `wad.lib`   |  Compiles and generates a `.jar` file from the `src-wad` project. Which is needed by the build tasks. This project contains the WAD, the automatic window generator.  |  **Requires**: `core.lib`, database created **Required by**: compile.*  |
+|  `trl.lib`   |  Compiles and generates a `.jar` file from the `src-trl` project. Which is needed by the translate task. This project allows to translate to different languages manual windows.  | **Requires**: core.lib  |
+  
+##### Build tasks
+
+|  Task                 |  Description   |  Notes  |
+|-----------------------|----------------|---------|
+|  `install`            |  Installs the whole application: creates the database, compiles it and generates a war file to be deployed or copies the classes to Tomcat's directory (depending on the `deploy.mode` property set in Openbravo.properties).  |  **Calls**: `create.database`, `core.lib`, `wad.lib`, `trl.lib`, `compile.complete.deploy`, `applyModule`.
+|  `smartbuild`         |  Makes an incremental build of the application. Including: <br> `update.database` <br> compile <br> deploy <br> All these tasks are done only if needed.  |  **Requires**: Database must be created and populated with data **Properties**: <br> `local`: (`yes/no` default as `yes`) when this property is set to no `update.database` task is executed, otherwise it is not executed. <br> `tr`: (`yes/no` default as `yes`) if set to no, translation process is not executed. <br> `force`: (`yes/no` default as `no`) used with `local=no`. If set to yes it will overwrite the changes in the database with the XML information. Note: All un-exported changes will be lost.
+|  `compile.complete`  |  Compiles all modified classes (including the generated ones) but before removes all the generated and built files, so the whole application is built  |  **Requires**: `wad.lib`, `trl.lib`, database created and populated. **Calls**: translate <br> **Properties**: <br> **tab**: specifies the window name(s) to be generated, to specify more than one window add them as a list of comma separated values. Note that even window is specified by this property, its 2.50 code will not be generated unless it is required or forced. <br>  **tr**: if set to "no" it will not call the translation process. <br>  **module**: a list of comma separated javapackages of modules to generate just the windows containing objects for those modules. <br>
+|  `generate.entities`  |  Generates the Java files for `src-gen` directory, and compiles them. They are used by DAL to access to the database information.  |   **Requires**: Database must be created and populated with data.
+|  `translate`          |  Checks in the manual windows User Interface files the translateable elements that have not been yet registered and registers them, this is necessary to be able to translate those interfaces to different languages.  |  **Requires**: `trl.lib` **Called by:** This task is called by the compile.* tasks in case the tr property is not set to "no". 
+|  `antWar`                |  Generates a war file from the existing built code. In fact it only zips the application in a single war file.  |  **Requires:** compile.*: the application must be built before calling this task.
+|  `deploy.context`     |  Deploy the existing war file in the tomcat context using the tomcat manager.  |  **Requires:** <br> war file must be created <br> Tomcat manager must be running <br> These properties must be properly set in the `Openbravo.properties` file: <br> `tomcat.manager. url` <br> `tomcat.manager.username` <br> `tomcat.manager.password` 
+
+##### Database tasks
+
+|  Task               |  Description  |  Notes  |  Sub Tasks  |
+|---------------------|---------------|---------|-------------|
+|  `create.database`  |  Creates the database from the `xml` files, note that the database is first removed. If the `apply.on.create` property is set, masterdata and sampledata will be inserted in the database. If not, only sourcedata will be inserted.  |  **Properties:** <br> `apply.on.create`: If is set to **true** and there are modules they will be applied, otherwise they will be set as **In process** status.  |  `create.database.script`: The same as `create.database.structure` but does not affect the database it only generates the `sql script` file with all the statements that would be executed by the other tasks. 
+|  `update.database`  |  Synchronizes database with the current database xml files. By default it checks that no changes in application dictionary in database are done, if so the process stops.  |  **Properties:**  <br>  `force`: (`yes/no` default as `no`) Do not check for database modification and update directly. This can cause lose of database data.  |   `update.database.script`: It is the same as `update.database.structure` but does not modify the database. It only generates a `sql` script file with the statements that would be executed by the other tasks.
+|  `export.database`  |  Synchronizes xml files with the database current contents. By default they are only exported in case there are modifications in the database. In addition performs database validations for the modules which are exported.  |  **Properties:** <br> `force`: (`yes/no`default as `no`) Forces the export skipping the check of which files had been modified since last `update.database`. <br> `validate.model`: (`yes/no` default as `yes`) Checks the model that is being exported fulfills a series of rules related to modularity, `oracle-postgreSQL` compatibility, etc. In case any of these rules is not complied, export will not be done and an error message will be raisen.
+
+!!!info
+
+    ` update.database ` and ` export.database ` tasks support multi-thread parallel execution for some of their actions such as index creation or function standardization. By default, the number of threads used is calculatedas the half of the available number of cores in the machine where the task isexecuted. This value can be set by adding the `-Dmax.threads=numOfThreads` parameter. 
+
+##### Test Tasks
+
+|  Task     |  Description  |  
+|-----------|---------------|
+|  `test`  |  By default, all Etendo tests are run. You can use the `--tests "<package>"` to specify which tests you want to run.
+
+!!!info
+    For more information about execution test in Gradle visit [Test Filtering in Gradle](https://docs.gradle.org/current/userguide/java_testing.html#test_filtering)
+
+##### Other Tasks
+
+|  Task                   |  Description  |
+|-------------------------|---------------|
+|  `migrate.attachments`  |  Migrates the attachments to the new attachment model.
+
+This work is a derivative of [Development Build Tasks](http://wiki.openbravo.com/wiki/Development_Build_Tasks){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Element and Synchronize Terminology
 ## Article Path: /Developer Guide/Etendo Classic/Concepts/Element and Synchronize Terminology
 ## Article URL: 
@@ -34571,10 +34707,10 @@ modules
 ```
 
   
-Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md).
+Etendo Classic validates the database and module artifacts of a module when the module is exported and its build file is created. See more information on the [database validation step](https://docs.etendo.software/latest/concepts/development-build-tasks.md).
 
 !!!info
-    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#database_tasks) and [module gradle task](https://docs.etendo.software/latest/concepts/Development_Build_Tasks.md#Modules) descriptions.
+    For a detailed description of this `export.database` task and other relevant Module related gradle tasks, see the [database gradle tasks](https://docs.etendo.software/latest/concepts/development-build-tasks.md#database_tasks)
 
 
 ####  Creating a Source Directory
@@ -38142,6 +38278,42 @@ This limitation does not apply when using ` WeldBaseTest ` tests.
 This work is a derivative of [How to Create JUnit testcases](https://wiki.openbravo.com/wiki/How_to_create_JUnit_testcases){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: How to define Display Logic Evaluated at Server Level
+## Article Path: /Developer Guide/Etendo Classic/How to guides/How to define Display Logic Evaluated at Server Level
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level
+## Article Content: 
+### How to define Display Logic Evaluated at Server Level
+
+#### Overview
+
+With the introduction of this functionality, it is possible to define in Openbravo Display Logic that are going to be evaluated at Server Level.
+
+This means that the expression for this particular Display Logic is going to be evaluated while generating the code for the final Window instead of being evaluated when the Window is loaded.
+
+By doing so, it is possible to avoid blank fields when the field should not be shown. Instead, the fields are rearranged and the Window looks more clean.
+
+##### Usage
+
+In the Windows, Tabs & Fields Window, there is a new field named _Display Logic Evaluated in the Server_ .
+
+In this field, it is possible to define an expression that will be evaluated to decide whether that particular field must be shown or not.
+
+This expression must follow the same syntactic rules that are used in the normal Display Logic. The expression can evaluate Preferences, but only those defined at System Level.
+
+An example of an expression would be:
+`@uomManagement@ = 'Y' & @enableNegativeStockCorrections@ = 'Y'`
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level-1.png)
+
+##### Limitations
+
+Since this functionality is going to be evaluated at a System Level (the visibility of the fields is going to be the same for all the Clients, Organizations and Users), it is possible to use Preferences, but only those ones that have been defined at System Level.
+
+This work is a derivative of [How to define Display Logic Evaluated at Server Level](http://wiki.openbravo.com/wiki/How_to_define_Display_Logic_Evaluated_at_Server_Level){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
+
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: How to Develop a DAL Background Process
 ## Article Path: /Developer Guide/Etendo Classic/How to guides/How to Develop a DAL Background Process
 ## Article URL: 
@@ -40307,9 +40479,9 @@ The Platform Extensions bundle includes the following modules:
 
 #### Print Document Web Service
 
-:octicons-package-16: Javapackage: com.etendoerp.printdocumentws
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: com.smf.ws.printdocument
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
 ##### Technical Aspects
 
@@ -40347,9 +40519,9 @@ It is mandatory to insert the organization ID when you call the web service beca
 
 #### Number To Word (English)
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword_en
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword_en`
 
-:octicons-package-16: Javapackage: org.openbravo.numbertoword
+:octicons-package-16: Javapackage: `org.openbravo.numbertoword`
 
 ##### Technical Aspects
 
@@ -40461,7 +40633,7 @@ public class NumberToWord_es extends NumberToWord {
 
 #### Javax XML SOAP API
 
-:octicons-package-16: Javapackage: org.openbravo.util.javax.xml.soap
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
 
 ##### Technical Aspects
 
@@ -40469,7 +40641,7 @@ This module provides SOAP with Attachments API for Java (SAAJ), which was part o
 
 #### Report Cache Management
 
-:octicons-package-16: Javapackage: com.exos.erp.reportcachemanagement
+:octicons-package-16: Javapackage: `com.exos.erp.reportcachemanagement`
 
 ##### Technical Aspects
 
@@ -40483,9 +40655,9 @@ Then, in the "Clear report cache" window, click ’Done’:
 
 #### Etendo Advanced Security
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.security.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
 
 ##### Technical Aspects
 
@@ -40772,6 +40944,131 @@ public class AdAlertWebhookService extends BaseWebhookService {
     If a user calls a webhook with revoked access, the backend will respond with a **401** response and a message.
 ==ARTICLE_END==
 ==ARTICLE_START==
+# Article Title: Dependency Manager
+## Article Path: /Developer Guide/Etendo Classic/Bundles/Platform Extensions Bundle/Dependency Manager
+## Article URL: 
+ https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager
+## Article Content: 
+### Dependency Manager
+
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
+
+#### Overview
+
+With this development, the user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc. This is done through two windows: Module Management and Dependency Management.
+
+#### Module Management
+
+In the `Application` > `Etendo Dependencies Management` > `Module Management` window, the user can see all the modules to be added and select the corresponding version in the **versions** tab. Once one of the versions is selected, the dependencies of such version can be found in the **dependencies** subtab.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager1.png)
+
+!!!info
+    The fields in this window are read-only.
+
+Fields to note:
+
+- **Active**: Checkbox to select if this module is active or not.
+- **Group**: the identifier of the artifact.
+- **Artifact**: the unit of deployment fetched and used.
+- **Installed Version**: the version of the module if it is installed.
+- **Is bundle**: Field to filter if this module is a bundle or not.
+
+This window presents two buttons that can be used: **Add dependency** and **Update Packages**.
+
+##### Add Dependency 
+
+This button is used to add all the dependecies part of a specific version of the selected module. The popup window shows all the dependencies to be installed.
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before installing the dependencies shown.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager2.png)
+
+Once the process is done, the **Dependency Management** window is opened and all the installed dependencies are shown.
+
+!!!info
+    In case of executing the process with a bundle, all its dependencies will be added but not itself.
+
+##### Update Packages
+
+This button is used to execute the Update Packages process which updates the list of available packages with the latest information.
+
+#### Dependency Management
+
+In the `Application` > `Etendo Dependencies Management` > `Dependency Management` window, the user can find all the dependencies installed in the previous step.
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager3.png)
+
+Fields to note:
+
+- **Active**: Checkbox to select if this dependency is active or not
+- **Group**: The identifier of the artifact.
+- **Artifact**: The unit of deployment fetched and used.
+- **Version**: Version of the module
+- **Format**: Describes the dependency format. They can be `Source`, `JAR` or `local`.
+    - `Source`: In this case, the source code is available, to download the dependencies the user must excecute the `./gradlew expandModules` Gradle task and then compilation is required.
+    - `JAR`: In this case, a standard format for java packages distribution, these include the compiled Java classes, and the dependencies resolution is dynamic.
+    - `Local`: The local format implies that the module is installed but it is not declared as a repository dependency. 
+- **Installation Status**: It describes the dependency current status.
+    - Pending download: This is the status by default when a new dependency is added or updated.  To be installed, it is necessary to compile the environment and, in such case, the dependency is in `source` format. 
+    - Installed: Used once the dependency is already installed.
+- **Version Status**: It describes the dependency version status.
+    - Untracked: Only for external dependencies.
+    - Update Available: In case there are new available versions.
+    - Updated: The latest available version is installed.
+- **External Dependency** (Only available for `JAR` dependencies): Checkbox that identify an external library or module required by the project, managed by Gradle. These dependencies are retrieved from remote repositories during the build process.
+
+This window presents to buttons that can be used: **Change Version** and **Change Format**.
+
+##### Change Version 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager4.png)
+
+This button is used to update or downgrade versions. 
+
+When the version of a module is modified, its related dependencies could be modified as well. In this case, it is possible to add new, update or delete versions. 
+
+!!!note
+    A warning notification is shown to inform the user about versions compatibility before executing the process.
+
+##### Change Format 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager6.png)
+
+This button is used to change the format of the module.  This process needs to be executed when it is necessary to migrate from a local format to a gradle dependency, while keeping the modules updated.  The options are `source`, `JAR` or `local`.
+
+- In case the module is originally in `local` format, the options in the **Change format** popup window are `JAR` or `source`.
+
+- In case the module is originally in `source` format, the only option in the **Change format** popup window is `JAR`.
+
+- In case the module is originally in `JAR` format, the only option in the **Change format** popup window is source. In this case, the window shows a warning notification to remind the user that the original directory is deleted once the process is finished.
+
+
+##### Delete Packages
+
+In case you need to remove a dependency to actually complete the action, the environment must be compiled. Also, note that both `Source` and `Local` dependencies must be manually removed from the `/modules` folder prior to compilation.
+
+#### Add Local Dependencies 
+
+![](https://docs.etendo.software/latest/assets/developer-guide/etendo-classic/bundles/platform/dependency-manager/dependencymanager5.png)
+
+This process, in `Application` > `Etendo Dependencies Management` > `Add Local dependencies`, also part of the Etendo Dependencies Management, is in charge of identifying all the locally installed modules without related dependencies, add them to the Dependency Management window with the `local` format.
+
+!!! note
+    The main objective of this process is to add the dependencies in `local` format, so that in case of being distributed as an Etendo module it can be easily migrated to `Sources` or `Jar` format. 
+
+#### Update Packages Information
+
+Since the information about packages is updated frequently, the user can execute this process, in `Application` > `Etendo Dependencies Management` > `Update Packages Information` to update the list of packages with the latest information.
+
+!!!info
+    The same process can be executed from the **Module Management** window, selecting one record and clicking the **Update packages** button.
+
+!!!note
+    Each time the server is restarted, the update process is executed automatically.
+==ARTICLE_END==
+==ARTICLE_START==
 # Article Title: Warehouse Extensions Bundle
 ## Article Path: /Developer Guide/Etendo Classic/Bundles/Warehouse Extensions Bundle
 ## Article URL: 
@@ -40783,7 +41080,7 @@ In this section, the user can find technical information about the Warehouse Ext
 
 #### Stock History 
 
-:octicons-package-16: Javapackage: com.etendoerp.stock.history
+:octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
 This module is added to the Create Stock History process and has the following characteristics: 
 
@@ -40851,7 +41148,7 @@ In this section, the user can find technical information about the Financial Ext
 
 #### Conversion Rate Downloader
 
-:octicons-package-16: Javapackage: com.smf.currency.conversionrate
+:octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
 
 ##### Technical Aspects
 
@@ -40868,7 +41165,7 @@ The "Conversion Rate Downloader" process in the background also needs to be conf
 
 #### Business Partner Settlement
 
-:octicons-package-16: Javapackage: org.openbravo.financial.bpsettlement
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
 
 ##### **Introduction**
 
@@ -41148,7 +41445,7 @@ Sets to null the `FIN\_Payment\_In\_ID` and `FIN\_Payment\_Out\_ID` columns.
 
 #### Banking Pool
 
-:octicons-package-16: Javapackage: com.etendoerp.bankingpool
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
 
 ##### Overview
 
@@ -41239,9 +41536,9 @@ There is no need to modify any of the 2 buttons, as they automatically execute t
 
 #### Advanced Financial Docs. Processing
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
 
-:octicons-package-16: Javapackage: com.etendoerp.advanced.financial.docs.processing.template
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
 
 ##### Undo Closed orders / Unvoid voided invoices hooks
 
@@ -42863,9 +43160,9 @@ Prompt Example:
 ## Article Content: 
 ### OpenAPI Interaction with Copilot
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 
 #### Overview
@@ -43011,7 +43308,7 @@ This way, we can create assistants for any API, as long as we have the OpenAPI S
 ## Article Content: 
 ### Optical Character Recognition (OCR) Tool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.ocrtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.ocrtool`
 
 #### Overview
 
@@ -43080,7 +43377,7 @@ Remember that the result of the tool can be used in other tools, for example, yo
 ## Article Content: 
 ### Translation Tool: XMLTranslatorTool
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.xmltranslationtool
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.xmltranslationtool`
 
 #### Overview
 

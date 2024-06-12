@@ -10,9 +10,9 @@ tags:
 
 # OpenAPI Interaction with Copilot
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi`
 
-:octicons-package-16: Javapackage: com.etendoerp.copilot.openapi.purchase
+:octicons-package-16: Javapackage: `com.etendoerp.copilot.openapi.purchase`
 
 
 ## Overview
