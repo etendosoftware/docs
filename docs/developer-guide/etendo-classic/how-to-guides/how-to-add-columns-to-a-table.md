@@ -179,7 +179,7 @@ Finally, to make the newly added columns available at runtime `./gradlew generat
 
 Once the columns are added to the table, the user can [export](../../../developer-guide/etendo-classic/how-to-guides/How_To_Create_a_Module.md#exporting-a-module) the module.
 
-To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](../../../developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md).
+To add the new columns to the window defined on top of this table, visit [How to add a field to a Window Tab](../../../developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md).
 
 ---
 
