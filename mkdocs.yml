@@ -293,7 +293,7 @@ nav:
 #        - Main Development Concepts: developer-guide/etendo-classic/concepts/Main_Development_Concepts.md
 #        - Merging Modules: developer-guide/etendo-classic/concepts/Merging_Modules.md
 #        - Messages: developer-guide/etendo-classic/concepts/Messages.md
-#        - Model Object Mapping: developer-guide/etendo-classic/concepts/Model_Object_Mapping.md
+        - Model Object Mapping: developer-guide/etendo-classic/concepts/model-object-mapping.md
 #        - Modularity Concepts: developer-guide/etendo-classic/concepts/Modularity_Concepts.md
 #        - Multi-Client and Multi-Org: developer-guide/etendo-classic/concepts/Multi_Client_and_Multi_Org.md
         - Naming Guideliness for Modules: developer-guide/etendo-classic/concepts/naming-guidelines-for-modules.md
