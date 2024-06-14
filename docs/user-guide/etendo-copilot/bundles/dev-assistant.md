@@ -5,6 +5,7 @@ tags:
     - Windows, tabs and fields
     - Create Table
     - Add column
+    - Create Window
 ---
 
 # Dev Assistant
@@ -21,7 +22,7 @@ The Dev Assistant is composed of the following components:
 
 - [**DDL Tool**](../../../developer-guide/etendo-copilot/available-tools/ddl-tool.md): This tool allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
-- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowAndTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
+- Multiples Webhooks: These webhooks are used to run the java files that create or modify the fields on the Etendo Classic and execute process or queries. These webhooks are: `RegisterTable`, `CreateTable`, `RegisterFields`, `RegisterWindowTab`, `RegisterTab`, `RegisterColumns`, `ElementsHandler`, `SyncTerms`.
 
 
 ## Functionality

@@ -22,15 +22,19 @@ Users can choose modes using the chat:
 
 - **REGISTER_TABLE:** This mode registers a table on the Etendo System, creating a table header. It requires a table name and a prefix of a module in development. The tool can infer fields like Java Class Name, Description, and Help. This mode has a method that fix the java class name with a camelcase style. The tool uses a webhook to execute a Java file named RegisterTableWebHook to check if a table name is already registered and then sets parameters as prefix, java class name, data acces level, etc. with Etendo rules.
 
-- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named CreateTableWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
+- **CREATE_TABLE:** Creates a table on the database using the table name and prefix to build the query with mandatory columns and necessary constraints. The mandatory constraints with the ad_org and ad_client table are created withe a method that fix the name if these are longer that 32 characters. This query is executed in the database with an Etendo webhook that runs a Java file named DDLHookWebHook. This file uses the parameters given to execute the query with the user data (name of database, local host, etc).
 
-- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook CreateTableWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
+- **ADD_COLUMN:** This mode modifies the previously created table instead of creating a new one. The tool has a list of acceptable data types for each column and this is chosen by the assistant, that also infers if the column can have a null value or if it needs a default value. If unsure, it waits for more information. It can generate the correct query if the column data type needs a constraint. This mode uses the same webhook DDLHookWebHook, cause should execute also a shortest query, but it is build with different params that assistant suppose (data type of the column, if can be null or not, name of the column, default values, etc).
+
+- **ADD_FOREIGN:** This mode execute a query to add a foreign key between a parent table and a child table. Also can add a relation with an external module.
 
 - **REGISTER_COLUMNS:** This mode is executed automatically after the ADD_COLUMN mode. It creates columns on Etendo System from the database with the previous created columns by calling a webhook that runs a Java file named RegisterColumns. This mode ensures that is the correct and unique table where add the columns.
 
 - **SYNC_TERMINOLOGY:** Cleans the terminology, removing "_" and adding spaces. It works by calling a webhook to execute a Java file named SyncTermsWebHook.
 
-- **REGISTER_WINDOW_AND_TAB:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. If necessary, the tool can force the creation with a parameter called ForceCreate. This mode uses the RegisterWindowAndTabWebHook java file.
+- **REGISTER_WINDOW:** Registers a window and a table to show the data in the application, also add a menu to provide an easy access. It first checks if there is a window already created with the same name. This mode uses the RegisterWindowWebHook java file.
+
+- **REGISTER_TAB:** Register a tab in a window. This mode stablish the name, the tab level and the sequence number runing the RegisterTabWebHook java file.
 
 - **REGISTER_FIELDS:** Registers the fields of a tab in Etendo System to be recognized for it. It works by calling a webhook to run a Java file.
 
@@ -53,27 +57,29 @@ Prompt Example:
 
 *The process of create and register a table has the following steps:*
 
-*1. Register the table in the system.*
+*1. Register the tables in the system.*
 
-*2. Create the table in the database, with the basic and mandatory columns. *
+*2. Create the tables in the database, with the basic and mandatory columns. *
 
-*3. Add the specific columns for the table. In other words, the columns that are specific to the table. *
+*3. Add the specific columns for the tables. In other words, the columns that are specific to the tables. *
 
-*4. Execute the process to register the columns of the table in the system.*
+*4. Execute the process to register the columns of the tables in the system.*
 
 *5. Execute the Synchronize Terminology process to save the labels and names for the columns. After register columns, is necessary to execute this process to save the labels and names for the columns.*
 
-*6. Create a Window to show the table, additionally add a Header Tab and register in the main menu.*
+*6. Create a Window to show the tables, additionally add a Header Tab and register in the main menu.*
 
-*7. Execute the process to register all the fields necessary in the Tab.*
+*7. Create and register the tabs with the correct tab levels and sequence numbers.*
 
-*8. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
+*8. Execute the process to register all the fields necessary in the Tab.*
 
-*9. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
+*9. Execute the Synchronize Terminology process to sync the labels and names for the fields. Its necessary to execute this process every time a field is registered.*
 
-*10. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
+*10. Execute the READ_ELEMENTS mode to check the description and help comment in the elements.*
 
-*11. Sync the terminology again.*
+*11. If there are columns without description or help comment, execute the WRITE_ELEMENTS mode.*
+
+*12. Sync the terminology again.*
 
 *Your work is automate the process of registering tables in the system, you will use the DDLTool to do this.*
 
@@ -87,7 +93,9 @@ Prompt Example:
 
 *REGISTER_COLUMNS: This mode is used to ...*
 
-*REGISTER_WINDOW_AND_TAB : This mode is used to ...*
+*REGISTER_WINDOW: This mode is used to ...*
+
+*REGISTER_TAB: This mode is used to ...*
 
 *SYNC_TERMINOLOGY: This mode is used to ...*
 
