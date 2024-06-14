@@ -1,6 +1,4 @@
 ---
-title: Etendo News
-
 tags:
   - Etendo News
   - New Developments
@@ -9,11 +7,13 @@ tags:
   - Versions
 ---
 
-![alt text](../../assets/whats-new/etendo-news/latest-etendo-news-0.png)
+![](../../assets/whats-new/etendo-news/etendo-news-0.png)
+
+#
 
 ## May 2024
 
-### :rocket:Copilot Extensions
+### Copilot Extensions
 
 ---
 
