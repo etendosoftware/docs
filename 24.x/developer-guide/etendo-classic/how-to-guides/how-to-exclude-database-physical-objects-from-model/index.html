@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-publish-modules-to-github-repository/">
+        <link rel="canonical" href="https://docs.etendo.software/24.x/developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model/">
       
       
-        <link rel="prev" href="../How_to_implement_a_business_event_handler/">
+        <link rel="prev" href="../How_to_develop_a_DAL_background_process/">
       
       
-        <link rel="next" href="../How_to_run_an_initial_client_setup_process/">
+        <link rel="next" href="../how-to-export-sample-data/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
@@ -25,7 +25,7 @@
     
     
       
-        <title>How to Publish Modules to a GitHub Repository - Etendo Documentation</title>
+        <title>How To Exclude Database Physical Objects From Model - Etendo Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#how-to-exclude-database-physical-objects-from-model" class="md-skip">
           Skip to content
         </a>
       
@@ -135,7 +135,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Publish Modules to a GitHub Repository
+              How To Exclude Database Physical Objects From Model
             
           </span>
         </div>
@@ -5146,10 +5146,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../how-to-exclude-database-physical-objects-from-model/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    How To Exclude Database Physical Objects From Model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -5158,6 +5178,46 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="In This Page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      In This Page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excluding-objects-in-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excluding objects in modules
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5209,28 +5269,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    How to Publish Modules to a GitHub Repository
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-publish-modules-to-github-repository/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5239,86 +5281,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="In This Page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      In This Page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-buildgradle-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Create build.gradle file:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-in-case-of-adding-dependencies-of-a-new-repository-declare-it-in-buildgradle" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. In case of adding dependencies of a new repository, declare it in build.gradle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-if-your-module-makes-use-of-dependency-injection-you-need-to-specify-the-location-of-the-beansxml-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. If your module makes use of dependency injection, you need to specify the location of the 'beans.xml' file
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-deploy-the-new-module-running-the-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Deploy the new module, running the commands :
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -7841,6 +7803,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7858,53 +7822,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment" class="md-nav__link">
+  <a href="#excluding-objects-in-modules" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployment
+      Excluding objects in modules
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-create-buildgradle-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Create build.gradle file:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-in-case-of-adding-dependencies-of-a-new-repository-declare-it-in-buildgradle" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. In case of adding dependencies of a new repository, declare it in build.gradle
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-if-your-module-makes-use-of-dependency-injection-you-need-to-specify-the-location-of-the-beansxml-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. If your module makes use of dependency injection, you need to specify the location of the 'beans.xml' file
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-deploy-the-new-module-running-the-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Deploy the new module, running the commands :
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7921,154 +7843,66 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">Etendo Classic</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Model</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Database</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Exclude</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">Physical objects</span>
+    
+  
+</nav>
+
 
   
   
 
 
-  <h1>How to Publish Modules to a GitHub Repository</h1>
-
+<h1 id="how-to-exclude-database-physical-objects-from-model">How To Exclude Database Physical Objects From Model</h1>
 <h2 id="overview">Overview</h2>
-<p>This article explains how to publish a module to GitHub Repositories.</p>
-<p>Now, modules will be published in ZIP and JAR format.</p>
-<p>A published module can be declared as a Gradle dependency, which makes installing or updating modules easier.</p>
-<p>Using dependencies alongside with Gradle in an Etendo environment can remove the need to transfer the modules from a local machine to the server using FTP, SSH etc. The module is hosted as a package in the repository and  Gradle is in charge of downloading the correct version, and its dependencies.</p>
-<p>Partners will have access to Etendo’s public and commercial repositories to download standard modules, in addition to this, it is possible to use their own repositories where they can privately store their modules for internal or commercial usage.</p>
-<div class="admonition info">
-<p class="admonition-title">Requirements</p>
-<ul>
-<li>GitHub user and token, with access to read and write packages.</li>
-<li>A module to be distributed.</li>
-</ul>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>It is recommended to use <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_blank">GitFlow</a> to manage work flow, versions and tags.</p>
-</div>
-<h2 id="deployment">Deployment</h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The module version, group and artifact that will deploy are those declared in the file <code>src-db/database/sourcedata/AD_MODULE.xml</code> file</p>
-</div>
-<h4 id="1-create-buildgradle-file">1.  Create build.gradle file:</h4>
-<p>To generate the <code>build.gradle</code> with all the necessary information to publish, execute the following task:</p>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span><span class="sb">`</span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;<span class="w"> </span>-Prepo<span class="o">=</span>&lt;repositoryURL&gt;<span class="w"> </span>--info
+<p>Etendo Classic keeps track of the database physical objects (such as tables, views, functions, sequences or triggers) through an utility called <code>dbsourcemanager</code>. This utility is able to export all the database model object definitions to <code>XML</code> files, which are stored in the <code>src-db/database/model</code> folder (both in Core and in modules).</p>
+<p>This tool is designed to work in a multiplatform environment, both supporting Oracle and PostgreSQL. This means that sometimes if specific syntax or features of a particular Database Management System are used, the tool might not support them.</p>
+<p>In these cases, a possible approach is to create these specific objects using a Module Script (you can find more about them <a href="../how-to-create-build-validations-and-module-scripts/">here</a>), and then exclude them from the database physical model of Etendo Classic.</p>
+<h2 id="excluding-objects-in-modules">Excluding objects in modules</h2>
+<p>Objects are excluded through a file called <code>excludeFilter.xml</code>. This file should be located inside the <code>src-db/database/model/</code> folder of the module (if it doesn't exist, you will need to create it), and it follows a very simple XML format. Here is an example:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="nt">&lt;vector&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&lt;excludedTable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_TABLE&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&lt;excludedView</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_VIEW&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&lt;excludedFunction</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_FUNCTION&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&lt;excludedTrigger</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_TRIGGER&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&lt;excludedSequence</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST\_%&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">&lt;/vector&gt;</span>
 </span></code></pre></div>
-Example:
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>createModuleBuild<span class="w"> </span>-Ppkg<span class="o">=</span>com.myrepo.test<span class="w"> </span>-Prepo<span class="o">=</span>https://maven.pkg.github.com/myrepo/com.myrepo.test<span class="w"> </span>--info
-</span></code></pre></div></p>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<div class="language-text highlight"><pre><span></span><code>- If the module depends on other modules or libraries, they need to be specified in the build.gradle file using the implementation configuration.
-Before adding an Etendo module dependency, they have to be published in the repository.
-- You need to make sure those dependencies are also published.
-- Add the dependencies manually in `build.gradle` file.
-- Add Core dependency to define the range of versions the module is compatible with.
-</code></pre></div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>To make use of the dependencies resolution approach, you should declare in the modules dependencies which version of the core your module depends on.
-If the Etendo Core dependency is omitted, the module can be installed on any version of Etendo, even if there are inconsistencies in the compilation.</p>
-</div>
-<p>Modules Dependencies example:</p>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm">*   This file was generated automatically by the &#39;createModuleBuild&#39; task.</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm">*   Created at: 2022-12-16T15:41:21.426339Z.</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm">*</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cm">*   WARNING: Do not put your credentials directly in this file.</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cm">*</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="cm">*/</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">group</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;com.etendoerp&quot;</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">version</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">description</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Test module to publish&quot;</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">ext</span><span class="o">.</span><span class="na">artifact</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test&quot;</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">ext</span><span class="o">.</span><span class="na">repository</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo/com.myrepo.test&quot;</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">configurations</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="n">moduleDependencyContainer</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="o">}</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">publishing</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">publications</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="s2">&quot;com.myrepo.test&quot;</span><span class="o">(</span><span class="n">MavenPublication</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">            </span><span class="n">from</span><span class="w"> </span><span class="n">components</span><span class="o">.</span><span class="na">java</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="n">groupId</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">group</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">            </span><span class="n">artifactId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">artifact</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="n">version</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">version</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo/com.myrepo.test&quot;</span>
-</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="o">}</span>
-</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
-</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo/com.myrepo.test&quot;</span>
-</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="o">}</span>
-</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
-</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="cm">/**</span>
-</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="cm">* Declare Java dependencies using &#39;implementation&#39;</span>
-</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="cm">* Ex: implementation &quot;com.sun.mail:javax.mail:1.6.2&quot;</span>
-</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="cm">*/</span>
-</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">        </span><span class="n">implementation</span><span class="o">(</span><span class="n">com</span><span class="o">.</span><span class="na">myrepo</span><span class="o">:</span><span class="n">dependency</span><span class="o">.</span><span class="na">test</span><span class="o">:</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span><span class="o">)</span>
-</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
-</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="w">    </span><span class="n">implementation</span><span class="o">(</span><span class="s1">&#39;com.etendoerp.platform:etendo-core:[22.1.0, x.y.z)&#39;</span><span class="o">)</span>
-</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="o">}</span>
-</span></code></pre></div>
-<h4 id="2-in-case-of-adding-dependencies-of-a-new-repository-declare-it-in-buildgradle">2.  In case of adding dependencies of a new repository, declare it in <code>build.gradle</code></h4>
-<div class="language-groovy highlight"><span class="filename">build.gradle</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo/com.myrepo.test&quot;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">     </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="s2">&quot;https://maven.pkg.github.com/myrepo2/com.myrepo2.test&quot;</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="o">}</span>
-</span></code></pre></div>
-<h4 id="3-if-your-module-makes-use-of-dependency-injection-you-need-to-specify-the-location-of-the-beansxml-file">3. If your module makes use of dependency injection, you need to specify the location of the <strong>'beans.xml'</strong> file</h4>
-<p>Add to the build.gradle the location of the beans.xml
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">sourceSets</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">main</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">resources</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="n">srcDirs</span><span class="o">(</span><span class="s2">&quot;etendo-resources&quot;</span><span class="o">)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">}</span>
-</span></code></pre></div></p>
-<p>Create the following structure in the root of your module
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>com.test.yourmodule
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    |--- etendo-resources
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>            | --- META-INF
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>                    | --- beans.xml
-</span></code></pre></div></p>
-<p>Add to the <strong>beans.xml</strong></p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;beans</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">       </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">       </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd&quot;</span><span class="w"> </span><span class="na">bean-discovery-mode=</span><span class="s">&quot;all&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">&lt;/beans&gt;</span>
-</span></code></pre></div>
-<h4 id="4-deploy-the-new-module-running-the-commands">4.  Deploy the new module, running the commands :</h4>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Before publishing a module, it will be compiled and packaged to a JAR format.</p>
-</div>
-<p><div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./gradlew<span class="w"> </span>update.database<span class="w"> </span>smartbuild
-</span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">Terminal</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./gradlew<span class="w"> </span>publishVersion<span class="w"> </span>-Ppkg<span class="o">=</span>&lt;javapackage&gt;
-</span></code></pre></div></p>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>Once Gradle finishes the deployment, your module is ready to be used as a dependency.</p>
-</div>
+<p>This file will exclude the table <strong>TEST_TABLE</strong>, the view <strong>TEST_VIEW</strong>, the function <strong>TEST_FUNCTION</strong>, and the trigger <strong>TEST_TRIGGER</strong> from the model, and therefore they will be neither exported nor removed, nor modified in any way during the normal database management tasks (<code>update.database</code> and <code>export.database</code>).</p>
+<p>The use of <a href="https://www.w3schools.com/sql/sql_wildcards.asp" target="_blank">SQL Wildcards</a> is supported, so the same treatment will be done to all sequences whose name begins with <strong>TEST_</strong>. All exclusions whose name contain the <code>%</code> character will be treated as wildcards. When defining an exclusion using a wildcard, remember to escape with a backslash the <code>_</code> characters, unless it is meant to be used as a substitute for any single character.</p>
+<hr />
+<p>This work is a derivative of <a href="https://wiki.openbravo.com/wiki/How_to_exclude_Database_Physical_Objects_From_Model" target="_blank">How to Exclude Database Physical Objects from Model</a> by <a href="http://wiki.openbravo.com/wiki/Welcome_to_Openbravo" target="_blank">Openbravo Wiki</a>, used under <a href="https://creativecommons.org/licenses/by-sa/2.5/es/" target="_blank">CC BY-SA 2.5 ES</a>. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.5/" target="_blank">CC BY-SA 2.5</a> by <a href="https://etendo.software" target="_blank">Etendo</a>.</p>
 
 
 
