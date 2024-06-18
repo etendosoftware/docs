@@ -28,6 +28,7 @@ tags:
   </div>
 </div>
 
+---
 
 ## April 2024
 
@@ -39,7 +40,7 @@ Your purchase orders are made easier with the new Copilot assistant. Interact vi
 
 ## March 2024
 
-### :rocket:Copilot Extensions
+### Copilot Extensions
 
  [**OCR Tool**](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
 
