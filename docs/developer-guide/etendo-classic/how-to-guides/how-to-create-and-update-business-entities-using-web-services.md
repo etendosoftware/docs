@@ -12,21 +12,21 @@ tags:
 
 ## Overview
 
-The point of this section is to show you how to use some of Etendo's available web services to create business entities and/or to update them.
+The aim of this section is to show how to use some of **Etendo's available web services** to create business entities and/or to update them.
 
-Therefore, we will exemplary show it for these web services features:
+Therefore, these web services features will be explained in detail:
 
   * **JSON REST**
   * **Secure Web Services**
 
 ## Execution Steps
 
-To add or update entities, we use `HTTP` commands. To execute any HTTP commands, we could create a  [**Java class**](../how-to-guides/how-to-call-an-etendo-webservice-from-java.md) and use the available classes related to the HTTP protocol.
+To add or update entities, use `HTTP` commands. To execute any `HTTP commands`, a [**Java class**](../how-to-guides/how-to-call-an-etendo-webservice-from-java.md) could be created and use the available classes related to the HTTP protocol.
 
 !!!note
     We could do the same for any other protocol or scripting language like PHP.
 
-Alternatively, we could use any plugin or application like [**Postman**](https://www.postman.com/downloads/){target="\_blank"} which allows us to execute any HTTP command on an URL of your choice. In the examples we will show, we will make use of this plugin and we will assume that our Etendo environment is running on a local machine via `http://localhost:8080/etendo`
+Alternatively, use any plugin or application like [**Postman**](https://www.postman.com/downloads/){target="\_blank"} which allows executing any HTTP command on an URL of your choice. In the following examples we will make use of this plugin and we will assume that our Etendo environment is running on a local machine via `http://localhost:8080/etendo`.
 
 ### JSON REST
 
@@ -34,7 +34,12 @@ We are about to create a new **invoice header**, so that the URL for this case w
 
     http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/Invoice
 
-In `Authorization` we have to select the **Basic Auth** type and add the credentials which we use to get access to the **Web Service** (which are by the way the same that we use to get into the application). You have to take into account that the visibility of the data within the web service will be the same as if you logged into the application with the default role of this user. The `Content-Type` of the Request will be `application/json` and the **body** content of the request will be as follows, where the `ID`s will be replaced by those that we want to be present in the invoice. Note that we have set the attribute `salesTransaction` to `true`, indicating that this is a sales invoice:
+In `Authorization` we have to select the **Basic Auth** type and add the credentials which we use to get access to the **Web Service** (which are by the way the same that we use to get into the application). Take into account that the visibility of the data within the web service will be the same as if you logged into the application with the default role of this user. The `Content-Type` of the Request will be `application/json` and the **body** content of the request will be as follows, where the `ID`s will be replaced by those needed to be present in the invoice. 
+
+
+We have set the attribute `salesTransaction` to `true`, indicating that this is a sales invoice:
+
+
 
     {
       "data":
@@ -61,7 +66,7 @@ In `Authorization` we have to select the **Basic Auth** type and add the credent
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-1.png)
 
-We use the `HTTP POST` command with this data. We will get a `200 OK` response back, indicating that everything went well with the invoice data we have just created.
+We use the HTTP `POST` command with this data. We will get a `200 OK` response back, indicating that everything went well with the invoice data that was just created.
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-2.png)
 
@@ -83,7 +88,7 @@ with the following content:
 ### Secure Web Services
 
 !!!note
-    To know more about how Etendo introduces its own Secure Web Services with unique features, visit [**How to Use Secure Webservices**](../how-to-guides/how-to-use-secure-webservices.md)
+    To know more about how Etendo introduces its own Secure Web Services with unique features, visit [How to Use Secure Webservices](../how-to-guides/how-to-use-secure-webservices.md).
 
 ---
 
