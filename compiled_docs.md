@@ -19393,17 +19393,65 @@ This bundle includes enhancements for Platform functionalities in Etendo.
 -  :material-translate: Spanish: [Platform Extensions Bundle ES](https://marketplace.etendo.cloud/#/product-details?module=3789DBA46FC54FDF96CD7D298203A3E9){target="_blank"}
 
 #### Modules
-##### Print Document Web Service
 
-:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
+##### Dependency Manager
 
-:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
+:octicons-package-16: Javapackage: `com.etendoerp.dependencymanager`
 
-It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
+The user can have access to all the available dependencies to add, configure them and check information about versions, validations, etc.
 
 !!! info
-    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
+    For more information, visit the [Dependency Manager Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/dependency-manager.md)
 
+##### Dynamic App 
+
+:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
+
+Dynamic App allows you to create sub applications in Etendo Mobile.
+
+!!! info
+    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
+
+##### EAN 128
+
+:octicons-package-16: Javapackage: `com.smf.ean128`
+
+EAN 128 allows to use bar code in your application
+
+!!! info
+    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
+
+##### Etendo Advanced Security
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
+
+Etendo Advanced Security allows extending and enhancing some of the security features of the system.
+
+!!! info
+    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
+
+##### Etendo Async Processes
+
+:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
+
+##### Etendo Reactor
+
+:octicons-package-16: Javapackage: `com.etendoerp.reactor`
+
+##### Etendo RX
+
+:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
+
+##### Javax XML SOAP API
+
+:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+
+This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+
+!!! info
+    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
 
 
 ##### Number To Word (English)
@@ -19417,16 +19465,16 @@ It provides the infrastructure to convert a number into its equivalent in words.
 !!! info
     For more information, visit [Number To Word Converter user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#number-to-word-converter) and the [Number To Word Converter developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#number-to-word-english).
 
+##### Print Document Web Service
 
-##### Javax XML SOAP API
+:octicons-package-16: Javapackage: `com.etendoerp.printdocumentws`
 
-:octicons-package-16: Javapackage: `org.openbravo.util.javax.xml.soap`
+:octicons-package-16: Javapackage: `com.smf.ws.printdocument`
 
-This module provides SOAP with Attachments API for Java (SAAJ), which was part of JDK until 10. Starting from JDK 11, it was removed, which makes this module required as a dependency for those modules making use of it in order to be able to compile in JDK11+.
+It allows downloading a PDF from some transaction documents using a web service and returning a PDF with the order, invoice or delivery note. This is useful for companies that use third party applications and require to make printables accessible from those applications.
 
 !!! info
-    For more information, visit the [Javax XML SOAP API developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#javax-xml-soap-api).
-
+    For more information, visit the [Print Document Web Service developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#print-document-web-service). 
 
 ##### Report Cache Management
 
@@ -19436,43 +19484,6 @@ This module allows changing or updating a Jasper Report in an Etendo environment
 
 !!! info
     For more information, visit [Clear Report Cache user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/clear-report-cache.md) and the [Clear Report Cache developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#report-cache-management).  
-
-##### Etendo Advanced Security
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.security.template`
-
-Etendo Advanced Security allows extending and enhancing some of the security features of the system.
-
-!!! info
-    For more information, visit the [Etendo Advanced Security user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md) and read the [Etendo Advanced Security developer guide](https://docs.etendo.software/latest//developer-guide/etendo-classic/bundles/platform/overview.md#etendo-advanced-security).
-
-##### Dynamic App 
-
-:octicons-package-16: Javapackage: `com.etendoerp.dynamic.app`
-
-Dynamic App allows you to create sub applications in Etendo Mobile.
-
-!!! info
-    For more information, visit the [Dynamic App user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/application.md#dynamic-app)
-        
-##### EAN 128
-
-:octicons-package-16: Javapackage: `com.smf.ean128`
-
-EAN 128 allows to use bar code in your application
-
-!!! info
-    For more information, visit the [EAN 128 developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/overview.md#ean-128).
-
-##### Etendo RX
-
-:octicons-package-16: Javapackage: `com.etendoerp.etendorx`
-
-##### Etendo Reactor
-
-:octicons-package-16: Javapackage: `com.etendoerp.reactor`
 
 ##### Webhook Events
 
@@ -19484,14 +19495,9 @@ Webhook events allow you to execute actions via a URL call, providing a powerful
     For more information, visit the [Webhook Events Developer Guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md)
 
 
-##### Etendo Async Processes
-
-:octicons-package-16: Javapackage: `com.etendoerp.asyncprocess`
-
 ---
 
-This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"}
- by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
+This work is a derivative of ["Multibpselector/Programmers Guide"](http://wiki.openbravo.com/wiki/Projects:Multibpselector/Programmers_Guide){target="_blank"}, ["Number To Word"](http://wiki.openbravo.com/wiki/NumberToWord){target="_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="_blank"} by [Etendo](https://etendo.software){target="_blank"}.
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Etendo Advanced Security
