@@ -307,7 +307,7 @@ nav:
 #        - SQLC: developer-guide/etendo-classic/concepts/SQLC.md
 #        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
         - Tables: developer-guide/etendo-classic/concepts/Tables.md
-#        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/User_Interface_Design_Guidelines.md
+        - User Interface Design Guidelines: developer-guide/etendo-classic/concepts/user-interface-design-guidelines.md
 #        - Widgets: developer-guide/etendo-classic/concepts/Widgets.md
 #        - XML REST Web Services: developer-guide/etendo-classic/concepts/XML_REST_Web_Services.md
       - How to guides:
