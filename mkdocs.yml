@@ -236,7 +236,9 @@ nav:
         - Copilot Extensions: 
           - Overview: user-guide/etendo-copilot/bundles/overview.md
           - Copilot Purchase Expert : user-guide/etendo-copilot/bundles/copilot-purchase-expert.md
+          - Dev Assistant: user-guide/etendo-copilot/bundles/dev-assistant.md
           - SQL Expert: user-guide/etendo-copilot/bundles/sql-expert.md 
+          
 
   - Developer Guide:
     - Overview: developer-guide/overview.md
@@ -275,7 +277,7 @@ nav:
 #        - Datasources: developer-guide/etendo-classic/concepts/Datasources.md
 #        - DBSourceManager: developer-guide/etendo-classic/concepts/DBSourceManager.md
 #        - Deep Linking: developer-guide/etendo-classic/concepts/Deep_Linking.md
-#        - Development Build Tasks: developer-guide/etendo-classic/concepts/Development_Build_Tasks.md
+        - Development Build Tasks: developer-guide/etendo-classic/concepts/development-build-tasks.md
 #        - Development Model: developer-guide/etendo-classic/concepts/Development_Model.md
 #        - Development Project Structure: developer-guide/etendo-classic/concepts/Development_Project_Structure.md
 #        - Dynamic Expressions: developer-guide/etendo-classic/concepts/Dynamic_Expressions.md
@@ -283,7 +285,7 @@ nav:
 #        - Etendo Architecture: developer-guide/etendo-classic/concepts/etendo-architecture.md
         - Etendo Jars: developer-guide/etendo-classic/concepts/etendo-jars.md
 #        - ExtensionPoints: developer-guide/etendo-classic/concepts/ExtensionPoints.md
-#        - Format.xml: developer-guide/etendo-classic/concepts/Format_xml.md
+        - Format xml: developer-guide/etendo-classic/concepts/format-xml.md
         - Inventory Status: developer-guide/etendo-classic/concepts/inventory-status.md
 #        - Java Coding Conventions: developer-guide/etendo-classic/concepts/Java_Coding_Conventions.md
 #        - JavaScript Coding Conventions: developer-guide/etendo-classic/concepts/javascript-coding-conventions.md
@@ -300,7 +302,7 @@ nav:
         - Processes: developer-guide/etendo-classic/concepts/Processes.md
 #        - Reports obsolete: developer-guide/etendo-classic/concepts/Reports_obsolete.md
 #        - Security Model: developer-guide/etendo-classic/concepts/Security_Model.md
-#        - Selectors: developer-guide/etendo-classic/concepts/Selectors.md
+        - Selectors: developer-guide/etendo-classic/concepts/selectors.md
 #        - Skins: developer-guide/etendo-classic/concepts/Skins.md
 #        - SQLC: developer-guide/etendo-classic/concepts/SQLC.md
 #        - Standard Windows: developer-guide/etendo-classic/concepts/Standard_Windows.md
@@ -319,7 +321,7 @@ nav:
         - How to Add a Button to the Toolbar: developer-guide/etendo-classic/how-to-guides/how-to-add-a-button-to-the-toolbar.md
 #        - How to add a canvas field to a Form or Grid: developer-guide/etendo-classic/how-to-guides/How_to_add_a_canvas_field_to_a_Form_or_Grid.md
 #        - How to add a Constraint: developer-guide/etendo-classic/how-to-guides/How_to_add_a_Constraint.md
-        - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_add_a_field_to_a_Window_Tab.md
+        - How to Add a Field to a Window Tab: developer-guide/etendo-classic/how-to-guides/how-to-add-a-field-to-a-window-tab.md
 #        - How to add a masked text field: developer-guide/etendo-classic/how-to-guides/How_to_add_a_masked_text_field.md
         - How to Add a Rich Text Field and Column: developer-guide/etendo-classic/how-to-guides/How_to_add_a_rich_text_field_and_column.md
         - How to Add Columns to a Table: developer-guide/etendo-classic/how-to-guides/how-to-add-columns-to-a-table.md
@@ -385,7 +387,7 @@ nav:
 #        - How to Create Your Own Import Process with IDL: developer-guide/etendo-classic/how-to-guides/How_to_Create_Your_Own_Import_Process_with_IDL.md
 #        - How to Define a Table as a Tree: developer-guide/etendo-classic/how-to-guides/How_to_Define_a_Table_as_a_Tree.md
 #        - How to define an on Create Default: developer-guide/etendo-classic/how-to-guides/How_to_define_an_on_Create_Default.md
-#        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/How_to_define_Display_Logic_Evaluated_at_Server_Level.md
+        - How to define Display Logic Evaluated at Server Level: developer-guide/etendo-classic/how-to-guides/how-to-define-display-logic-evaluated-at-server-level.md
 #        - How To Define Display Logic For Tabs: developer-guide/etendo-classic/how-to-guides/How_To_Define_Display_Logic_For_Tabs.md
 #        - How to Define the Timeout of a Query: developer-guide/etendo-classic/how-to-guides/How_to_Define_the_Timeout_of_a_Query.md
         - How to Develop a DAL Background Process: developer-guide/etendo-classic/how-to-guides/How_to_develop_a_DAL_background_process.md
@@ -393,9 +395,8 @@ nav:
 #        - How to do a complex query using the DAL-2: developer-guide/etendo-classic/how-to-guides/How_to_do_a_complex_query_using_the_DAL_2.md
 #        - How to embed a Widget into a Window Tab: developer-guide/etendo-classic/how-to-guides/How_to_embed_a_Widget_into_a_Window_Tab.md
 #        - How To Enable Customization Of The Login Page: developer-guide/etendo-classic/how-to-guides/How_To_Enable_Customization_Of_The_Login_Page.md
-#        - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_To_Exclude_Database_Physical_Objects_From_Model.md
-#        - How to exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/How_to_exclude_Database_Physical_Objects_From_Model.md
-#        - How to export sample data: developer-guide/etendo-classic/how-to-guides/How_to_export_sample_data.md
+        - How To Exclude Database Physical Objects From Model: developer-guide/etendo-classic/how-to-guides/how-to-exclude-database-physical-objects-from-model.md
+        - How to Export Sample Data: developer-guide/etendo-classic/how-to-guides/how-to-export-sample-data.md
         - How to Implement a Business Event Handler: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_business_event_handler.md
 #        - How to implement a new Discount and Promotion Type: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_Discount_and_Promotion_Type.md
 #        - How to implement a new main view: developer-guide/etendo-classic/how-to-guides/How_to_implement_a_new_main_view.md
@@ -438,6 +439,7 @@ nav:
         - Platform Extensions Bundle:
           - Overview: developer-guide/etendo-classic/bundles/platform/overview.md
           - Etendo Webhooks: developer-guide/etendo-classic/bundles/platform/etendo-webhooks.md
+          - Dependency Manager: developer-guide/etendo-classic/bundles/platform/dependency-manager.md
         - Warehouse Extensions Bundle: developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md
         - Financial Extensions Bundle: developer-guide/etendo-classic/bundles/financial-extensions-bundle.md
         - Etendo BI Bundle: developer-guide/etendo-classic/bundles/etendo-bi-bundle.md
@@ -457,10 +459,11 @@ nav:
     - Etendo Copilot:
       - Copilot Installation: developer-guide/etendo-copilot/installation.md
       - Tools:
-        - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
-        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
-        - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md
         - Database Query Tool: developer-guide/etendo-copilot/available-tools/database-query-tool.md
+        - DDL Tool: developer-guide/etendo-copilot/available-tools/ddl-tool.md
+        - OpenAPI Interaction with Copilot: developer-guide/etendo-copilot/available-tools/openapi-tool.md
+        - Optical Character Recognition (OCR) Tool: developer-guide/etendo-copilot/available-tools/ocr-tool.md
+        - XML Translation Tool: developer-guide/etendo-copilot/available-tools/xml-translation-tool.md    
       - How to Create Copilot Tools: developer-guide/etendo-copilot/how-to-create-copilot-tools.md
     - Etendo Mobile:
       - Getting Started: developer-guide/etendo-mobile/getting-started.md 
