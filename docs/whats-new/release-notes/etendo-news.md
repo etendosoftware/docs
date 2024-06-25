@@ -19,32 +19,48 @@ tags:
 
 <div style="display: flex;">
   <div style="flex: 1; padding-right: 10px;">
-    <a href="../../user-guide/etendo-copilot/bundles/sql-expert.md"><strong>SQL Expert</strong></a><br>
+    <a href="/user-guide/etendo-copilot/bundles/sql-expert/"><strong>SQL Expert</strong></a><br>
     The SQL Expert allows you to <strong>formulate questions</strong> in natural language and automatically generates the necessary SQL query to return data in code or natural language.
   </div>
-  <div style="flex: 1; padding-left: 10px;">
-    <a href="../../user-guide/etendo-copilot/bundles/dev-assistant.md"><strong>Dev Assistant</strong></a><br>
-    Dev Assistant is a tool designed to automate the <strong>creation of tables and windows</strong> to manage data easily.
-  </div>
+
 </div>
 
 ---
 
 ## April 2024
 
-### Procurement Extensions
+### Copilot Extensions
 
-[**Purchase Expert Assistant**](../../user-guide/etendo-copilot/bundles/copilot-purchase-expert.md)
+---
 
-Your purchase orders are made easier with the new Copilot assistant. Interact via **text or by uploading images or PDFs** with the purchase order data, and the assistant will automatically generate a draft.
+<div style="display: flex;">
+  <div style="flex: 1; padding-right: 10px;">
+    <a href="/user-guide/etendo-copilot/bundles/copilot-purchase-expert/"><strong>Purchase Expert Assistant</strong></a><br>
+    Your purchase orders are made easier with the new Copilot assistant. Interact via <strong>text or by uploading images or PDFs</strong> with the purchase order data, and the assistant will automatically generate a draft.
+  </div>
+
+</div>
+
+---
+
 
 ## March 2024
 
 ### Copilot Extensions
 
- [**OCR Tool**](../../developer-guide/etendo-copilot/available-tools/ocr-tool.md)
+---
 
-OCR Tool is an Etendo Copilot tool designed for **optical character recognition**, allowing you to extract text from images or PDF files.
+<div style="display: flex;">
+  <div style="flex: 1; padding-right: 10px;">
+    <a href="/developer-guide/etendo-copilot/available-tools/ocr-tool/"><strong>OCR Tool</strong></a><br>
+    OCR Tool is an Etendo Copilot tool designed for <strong>optical character recognition</strong>, allowing you to extract text from images or PDF files.
+  </div>
+
+</div>
+
+---
+
+
 
 
 
