@@ -5,6 +5,7 @@ title: Warehouse Reports
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
+
 [:material-file-document-outline: Pareto Product Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
 [:material-file-document-outline: Material Transaction Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>

@@ -14,11 +14,21 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all operations associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../warehouse-extensions/product-operations.md).
+
+
 ### Stock History
 
 :octicons-package-16: Javapackage: `com.etendoerp.stock.history`
 
-It provides updated information about the daily history stock of the products. 
+This module provides updated information about the daily history stock of the products. 
 
 !!! info
     For more information, visit [the Stock History user guide](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history) and [the Stock History developer guide](../../../../../developer-guide/etendo-classic/bundles/warehouse-extensions-bundle.md#stock-history).
