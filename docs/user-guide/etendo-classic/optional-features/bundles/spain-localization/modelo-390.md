@@ -4,7 +4,7 @@ title: Modelo 390
 
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat390.es 
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat390.es`
 
 ## **Introducción**
 
@@ -102,7 +102,7 @@ Configuración General | Organización | Gestión del módulo de Empresa.
 ![](../../../../../assets/drive/KxO8csXtBkVFQ32QZFZVVG1SipP8sxYwagvvnkaCVpAP9q_1hN-lH3i_gv64w-cwl2j2Zg4x8tS5AxCCnlr72zxBECmJEUKcL3iYLlr1DrPjplAGmQ3yjKfDK2ZI5HBq3tWyck3CF-_7kMST8fGie_VUYt6hwj2lr2Q197NZ0q-pe-o2iQa5L5J1V6pF6A.png)
 
 !!! info
-    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](/user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa/) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
+    Es fundamental recalcar que antes de aplicar esta configuración, se debe haber aplicado previamente la configuración del módulo de [_impuestos para España_](../../../../../user-guide/etendo-classic/optional-features/bundles/spain-localization/impuestos-para-españa.md) y del módulo de impuestos para España de IVA de Caja ya que el Modelo 390 depende de estos módulos de impuestos para España.
 
 
 Al instalar y aplicar los datos de referencia del Modelo 390 el usuario podrá comprobar que:

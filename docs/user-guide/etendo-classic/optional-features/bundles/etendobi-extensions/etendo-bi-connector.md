@@ -240,4 +240,4 @@ In this example image, the information about the script execution can be seen.
 If no records in the **Logs window** were created after the execution of the script, it is possible that the error occurred on the **synchronization** of the files with the server. The user is able to check this by looking at the **rsync log files** created in the **filesystem**. 
 
 !!! info
-    To do that, visit the [Etendo BI Bundle developer guide](/developer-guide/etendo-classic/bundles/etendo-bi-bundle). 
+    To do that, visit the [Etendo BI Bundle developer guide](../../../../../developer-guide/etendo-classic/bundles/etendo-bi-bundle.md). 

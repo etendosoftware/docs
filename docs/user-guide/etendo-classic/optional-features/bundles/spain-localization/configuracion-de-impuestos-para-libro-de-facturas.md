@@ -3,7 +3,7 @@ title: Configuración de impuestos para libro de facturas
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.invoicesregisterbook.estaxes
+:octicons-package-16: Javapackage: `org.openbravo.module.invoicesregisterbook.estaxes`
 
 ## **Introducción**
 

@@ -5,17 +5,17 @@ title: Warehouse Reports
 
 This section describes the windows related to warehouse reports in Etendo. These are:
 
-[:material-file-document-outline: Pareto Product Report](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#pareto-product-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Pareto Product Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#pareto-product-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Material Transaction Report](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#material-transaction-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Material Transaction Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#material-transaction-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock Report](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#stock-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Stock History](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools/#stock-history){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Stock History](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#stock-history){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Valued Stock Report](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#valued-stock-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Valued Stock Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#valued-stock-report){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Product Movements Report](/user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools#product-movements-report){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Product Movements Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
 
 ## Pareto Product Report

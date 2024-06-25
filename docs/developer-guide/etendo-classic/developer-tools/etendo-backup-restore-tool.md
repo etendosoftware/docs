@@ -202,7 +202,3 @@ A menu will be shown where you can choose multiple options to be performed.
 
 5. *Database properties*<br>
   In the end, a message will be shown with the properties which the database will use to be restored. These properties depend on the ones selected previously.
-
-
-
-

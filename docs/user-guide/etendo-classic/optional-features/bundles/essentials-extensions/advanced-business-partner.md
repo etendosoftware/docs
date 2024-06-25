@@ -54,4 +54,4 @@ To configure the Sequence Number, go to the “Document Sequence” window, crea
 ![image_2.png](../../../../../assets/legacy/image_2.png)
 
 !!! info
-    For more information, visit [Sequences](/developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences/).
+    For more information, visit [Sequences](../../../../../developer-guide/etendo-classic/how-to-guides/how-to-use-advanced-sequences.md).

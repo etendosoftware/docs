@@ -3,14 +3,14 @@
 This tutorial provides an extensive, step-by-step guide to help you create a new sub-app from our base project, which can be found on Github as [Subapp Base](https://github.com/etendosoftware/com.etendoerp.subapp.base){target="_blank"}. By following these instructions, you will gain the capability to create a fully functional standalone subapplication, utilizing the power of RX and harnessing the potential of Etendo UI Library components, detailed in our comprehensive guide, installation and usage on the [Storybook](https://main--65785998e8389d9993e8ec4c.chromatic.com){target="_blank"}. This process not only enables you to develop a unique sub-app but also contributes to the expansion of your application ecosystem by integrating a classic module, thereby enhancing its overall functionality and versatility.
 
 !!! info
-    Before starting this tutorial, visit the [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"} tutorial.
+    Before starting this tutorial, visit the [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"} tutorial.
 
 ## Setup
 
 ----------
 ### Create new Module
 
-Following the documentation about [how to create a new etendo classic module](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
+Following the documentation about [how to create a new etendo classic module](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#create-a-new-etendo-classic-module){target="_blank"}, you have to create a new module in the Etendo Classic.
 
 Below is a succinct representation of the required fields and expected values for the module configuration:
 
@@ -37,7 +37,7 @@ Below is a succinct representation of the required fields and expected values fo
 
 ### Dynamic app and role configuration
 
-As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#dynamic-app-window){target="_blank"}.
+As the same as the previos section, the dynamic app and role have to be configured following the documentation about the [dynamic app window](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#dynamic-app-window){target="_blank"}.
 
 #### Dynamic app
 
@@ -78,7 +78,7 @@ At this point you have _done_ with the etendo classic configuration.
 This tutorial is based in our example of a product subapplication, which allows to manage products in a list of products (create, edit and delete) using Etendo RX.
 
 !!! tip "Keep in mind"
-    All related to the main concepts of a subapplication are explained in the [concepts](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/#concepts){target="_blank"} section in create new subapplication tutorial.
+    All related to the main concepts of a subapplication are explained in the [concepts](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md#concepts){target="_blank"} section in create new subapplication tutorial.
     The following sections are focused on the product subapplication example.
 
 To begin with we must have to download the [ latest version of the project](https://github.com/etendosoftware/subapp-product/releases){target="_blank"} inside the `modules/<javapackage>` folder in the Etendo environment. Then unzip the file and the folder must look like this:
@@ -98,7 +98,7 @@ To begin with we must have to download the [ latest version of the project](http
   ```
   
 !!! warning "Important"
-    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}
+    Whole process to run a subapp in _developer mode_ among with etendo classic and etendo mobile is detailed in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}
 
 ## Customizing and Programming a Sub-Application
 
@@ -106,12 +106,12 @@ This section explains how to customize and program a subapplication. It uses as 
 
 ### Product subapp example
 
-This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication/){target="_blank"}.
+This section covers an overview about the product subapplication example screens and principal parts of the subapplication where covered in [Create New Subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}.
 
 !!! info "Consideration"
     This subapplication example was developed for both platforms (phone and tablet). 
     When you create a new subapplication, you have to do the same. 
-    The provided [base subapplication](/developer-guide/etendo-mobile/tutorials/create-new-subapplication){target="_blank"}  is already configured for both platforms.
+    The provided [base subapplication](../../../developer-guide/etendo-mobile/tutorials/create-new-subapplication.md){target="_blank"}  is already configured for both platforms.
 
 #### Home
   - This is the main screen of the subapplication. It will show a list of products. Also, it will allow us to edit and remove a product, find a product by name and navigate to the detail of a product.

@@ -6,7 +6,7 @@ title: Material Requirement Planning Setup
 In order to initiate the Material Requirement Planning (MRP) process, the Planning Method and the Planner sections must be configured: 
 
 !!! info
-    For this, Aaditional setups are required. Check the information in the [Overview section of MRP module](/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/). 
+    For this, Aaditional setups are required. Check the information in the [Overview section of MRP module](../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md). 
 
 
 ## Planning Method
@@ -21,23 +21,23 @@ By **default**, MRP takes **stock** and **safety stock** into account when creat
 
 -   **Material Requirement**: demand for the product on requisitions in completed status. 
 !!! info
-    For more details, see the [_Requisition_](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#requisition) section.
+    For more details, see the [_Requisition_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#requisition) section.
 
 - **Sales Forecast**: prevision of future demand for the product. 
 !!! info
-    For more details, see the [_Sales Forecast_](/user-guide/etendo-classic/basic-features/material-requirement-planning/transactions/#mrp-forecast) section.
+    For more details, see the [_Sales Forecast_](../../../../user-guide/etendo-classic/basic-features/material-requirement-planning/transactions.md#mrp-forecast) section.
 
 -   **Pending Sales Order**: demand for the product on sales orders in booked status that are not shipped yet. 
 !!! info
-    For more details, see the [_Sales Order_](/user-guide/etendo-classic/basic-features/sales-management/transactions/#sales-order) section.
+    For more details, see the [_Sales Order_](../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#sales-order) section.
 
 -   **Pending Work Requirement**: supply for the product on a processed work requirement. 
 !!! info
-    For more details, see the [_Work Requirement_](/user-guide/etendo-classic/basic-features/production-management/transactions/#work-requirement) section.
+    For more details, see the [_Work Requirement_](../../../../user-guide/etendo-classic/basic-features/production-management/transactions.md#work-requirement) section.
 
 -   **Pending Purchase Order**: supply for the product on a booked purchase order that is not received yet. 
 !!! info
-    For more details, see the [_Purchase Order_](/user-guide/etendo-classic/basic-features/procurement-management/transactions/#purchase-order) section.
+    For more details, see the [_Purchase Order_](../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#purchase-order) section.
 
 
 ### **Header**
@@ -67,7 +67,7 @@ Also, a percentage of the quantity to be considered by MRP is configured with th
 
 Define the entity in charge of managing the purchase or production of specific products.
 
-An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](/user-guide/etendo-classic/basic-features/master-data-management/master-data/#product) tab in the Master Data Management section.
+An **optional filter on both the Manufacturing Plan and the Purchasing Plan** is the planner. The information that is entered in this screen has no relation with the Business Partner set up. After the planner is created, the planner information is entered in the [Product](../master-data-management/master-data.md#product) tab in the Master Data Management section.
 
 ### **Planner**
 

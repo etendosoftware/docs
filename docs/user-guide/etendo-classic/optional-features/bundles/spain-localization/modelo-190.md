@@ -3,7 +3,7 @@ title: Modelo 190
 ---
 ## Javapackages 
 
-:octicons-package-16: Javapackage: org.openbravo.module.aeat190.es
+:octicons-package-16: Javapackage: `org.openbravo.module.aeat190.es`
 
 ## **Introducción**
 

@@ -5,25 +5,25 @@ title: Warehouse Management Setup
 
 This section describes the steps that need to be performed to configure the warehouse management sections in Etendo. The corresponding windows are:
 
-[:material-file-document-outline:Process Price Difference Adjustment](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Process Price Difference Adjustment](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#process-price-difference-adjustment){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse and Storage Bins](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse and Storage Bins](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-and-storage-bins){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Shipping Company](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#shipping-company){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Shipping Company](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#shipping-company){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Freight Category](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#freight-category){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Freight Category](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#freight-category){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Rules](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Rules](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Costing Algorithm](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#costing-algorithm){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Costing Algorithm](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#costing-algorithm){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Landed Cost Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#landed-cost-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Landed Cost Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#landed-cost-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline: Warehouse Rules](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#warehouse-rules){ .md-button .md-button--primary } <br>
+[:material-file-document-outline: Warehouse Rules](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#warehouse-rules){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:Referenced Inventory Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#referenced-inventory-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:Referenced Inventory Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#referenced-inventory-type){ .md-button .md-button--primary } <br>
 
-[:material-file-document-outline:EAN 128 Type](/user-guide/etendo-classic/basic-features/warehouse-management/setup/#ean-128-type){ .md-button .md-button--primary } <br>
+[:material-file-document-outline:EAN 128 Type](../../../../user-guide/etendo-classic/basic-features/warehouse-management/setup.md#ean-128-type){ .md-button .md-button--primary } <br>
 
 ## Process Price Difference Adjustment
 
@@ -67,7 +67,7 @@ Other fields to note:
 -   **Default:** when selected, this storage bin appears by default in documents.
 -   **Barcode:** There is no logic behind this field. It has been created in order to be used/implemented by other modules such as **Etendo Mobile Application.**
 -   **Inventory Status:** It is the current Inventory Status of the selected Storage Bin. It can be changed by clicking on *Change Status* button. 
-For more information, visit [Inventory Status](/developer-guide/etendo-classic/concepts/inventory-status).
+For more information, visit [Inventory Status](../../../../developer-guide/etendo-classic/concepts/inventory-status.md).
 
 ### Product Transactions
 
@@ -425,5 +425,3 @@ For example we will see a record created here:
 These last 4 options show the Entity Field therefore by selecting one of these 4 options. 
 
 - **Entity Field**: In this selector you can choose the specific field to the entity field that it references.
-
-

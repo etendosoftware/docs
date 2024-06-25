@@ -8,7 +8,7 @@ These bundles require the correct version of the ones they translate to be insta
 
 ## Installation steps
 
-To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](https://docs.etendo.software/developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo/?h=install+mo#3-set-dependencies).
+To install a bundle, follow the corresponding section of the documentation on how to [Install Modules in Etendo](../../../../developer-guide/etendo-classic/getting-started/installation/install-modules-in-etendo.md).
 
 !!! warning
     Remember to add both the translation bundle and the correct version of the bundle it translates as dependencies! Otherwise, the environment's compilation will fail. For example:
@@ -37,9 +37,9 @@ To install a bundle, follow the corresponding section of the documentation on ho
 
 ## Bundle Compatibility
 
-For information on what bundle version is compatible with which translation bundle, the documentation and [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for each bundle can be referred to.
+For information on what bundle version is compatible with which translation bundle, the documentation and [Release Notes](../../../../whats-new/overview.md){target="_blank"} for each bundle can be referred to.
 
 ## Troubleshooting
 
-- **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](/getting-started/installation/) for more information.
-- **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](https://docs.etendo.software/whats-new/overview/){target="_blank"} for a list of the compatible bundle versions.
+- **Access to dependencies not allowed**: check you have your GitHub credentials and their access level correctly configured. Refer to the [Etendo installation guide](../../../../getting-started/installation.md) for more information.
+- **Fields, columns, etc. not found**: check you have set the translated bundle version compatible with the version of the translation bundle you want to install. Refer to the translation bundle's [Release Notes](../../../../whats-new/overview.md){target="_blank"} for a list of the compatible bundle versions.

@@ -377,7 +377,7 @@ It creates a salary category.
 ## Rappel Configurations
 
 !!! info
-    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes/).
+    To be able to include this functionality, the Advanced Rappels module of the Sales Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Sales Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=22CF01FC620140A6AA92CF550EB8DA36){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Sales Extensions - Release notes](../../../../whats-new/release-notes/etendo-classic/bundles/sales-extensions/release-notes.md).
 
 Rappels are discounts based on the volume of consumption of a business partner in a given period of time. This functionality allows the user to configure and grant rappels to business partners.
 
@@ -403,7 +403,7 @@ Save the record and the document sequence for rappels is available.
 ![document_sequence_new.png](../../../../assets/legacy/document_sequence_new.png)
 
 !!! info
-    For more information, visit [Document Sequence](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-sequence)
+    For more information, visit [Document Sequence](../financial-management/accounting/setup.md#document-sequence)
 
 #### Document type
 
@@ -431,7 +431,7 @@ After saving it, it is necessary to select “rappel” in the field “Document
     For each organization, it is possible to configure only one "rappel" document type.
 
 !!! info
-    For more information, visit [Document Type](/user-guide/etendo-classic/basic-features/financial-management/accounting/setup/#document-type)
+    For more information, visit [Document Type](../financial-management/accounting/setup.md#document-type)
 
 ### Rappel Configurations
 
