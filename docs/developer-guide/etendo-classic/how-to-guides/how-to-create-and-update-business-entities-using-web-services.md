@@ -40,7 +40,7 @@ In `Authorization` we have to select the **Basic Auth** type and add the credent
 We have set the attribute `salesTransaction` to `true`, indicating that this is a sales invoice:
 
 
-
+```json
     {
       "data":
       {
@@ -61,6 +61,7 @@ We have set the attribute `salesTransaction` to `true`, indicating that this is 
         "paymentMethod":       { "id": "A97CFD2AFC234B59BB0A72189BD8FC2A" }
       }
     }
+```
 
 ![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_Create_And_Update_Business_Entities_Using_Web_Services-0.png)
 
@@ -72,10 +73,11 @@ We use the HTTP `POST` command with this data. We will get a `200 OK` response b
 
 To make an update, we will use the `PUT` command. For instance, to update a Business Partner's name, we will execute that command on this URL:
 
-    http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/BusinessPartner
+  `http://localhost:8080/etendo/org.openbravo.service.json.jsonrest/BusinessPartner`
 
 with the following content:
 
+```json
     {
       "data":
       {
@@ -84,6 +86,7 @@ with the following content:
         "name":       "New Name"
       }
     }
+```
 
 ### Secure Web Services
 
