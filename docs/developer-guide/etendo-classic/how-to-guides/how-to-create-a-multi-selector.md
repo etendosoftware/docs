@@ -21,9 +21,9 @@ The code of the example module can be downloaded here.
 
 This section explains how to create a Multi Order selector.
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-1.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-1.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-2.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-2.png)
 
 ###  Defining the Selector
 
@@ -45,7 +45,7 @@ The last step is to define which are the fields that will be present in the popu
     * Property: actual property to retrieve information from (i.e. businessPartner) 
     * Sorting of columns in the grid: Position of this column in the grid (i.e. 20) 
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-3.png)
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Multi_Selector-3.png)
 
 ###  Using the Selector
 
