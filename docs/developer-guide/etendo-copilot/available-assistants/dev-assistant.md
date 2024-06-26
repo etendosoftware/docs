@@ -13,12 +13,19 @@ tags:
 
 ## Overview
 
-This intelligent Assistant is designed to help users to automate the process of create a window and a table in both the Etendo ERP and the database throw the Copilot chat. It is possible ask the complete task to the assistant or proceed step by step, also the assistant can suggest elements to complete the fields correctly. 
+This intelligent Assistant is designed to help users to automate the process of create windows and tables in both the Etendo ERP and the database throw the Copilot chat. It is possible ask the complete task to the assistant or proceed step by step, also the assistant can suggest elements to complete the fields correctly. 
+
+!!!warning
+    This intelligent Assistant is currently in its alpha testing phase. While it is designed to automate the process of creating windows and tables, there are instances where tasks may not be fully completed. Specifically, there may be issues with adding foreign keys, correctly naming elements, and checking the "link to a parent column" option in a column of a tab.
+
+    For optimal results, it is recommended to proceed step-by-step and be as specific as possible in your instructions to the Assistant. This will help mitigate potential errors and ensure more accurate task completion.
+
+    Thank you for your understanding as we continue to improve the functionality and reliability of this tool.
 
 ## Components
 The Dev Assistant is composed of the following components:
 
-- **DDL** tool: This tools allows to regsitering and creating tables on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
+- **DDL** tool: This tools allows to regsitering and creating tables and windows on Etendo and on the database using queries generated with the parameters given on the tool. The query is adjusted for the user needs, for example, if the user wants to add a column with a default value, the tool can receive a value or not if the element should not has a default value.
 
 - Multiples Webhooks: These webhooks are used to run the java files that modify the fields on the Etendo ERP and execute the queries generated previously. These webhooks are: RegisterTable, CreateTable, RegisterFields, RegisterWindowAndTab, RegisterColumns, ElementsHandler, SyncTerms.
 
