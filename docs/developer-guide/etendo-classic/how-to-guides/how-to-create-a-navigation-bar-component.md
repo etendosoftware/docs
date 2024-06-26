@@ -1,50 +1,15 @@
-![](skins/openbravo/images/social-blogs-sidebar-banner.png){: .legacy-image-style}
-
-######  Toolbox
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Main Page  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Upload file  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} What links here  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Recent changes  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Help  
-  
-  
-
-######  Search
-
-######  Participate
-
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Communicate  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Report a bug  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Contribute  
-![](skins/openbravo/images/flecha1.jpg){: .legacy-image-style} Talk to us now!  
-
-  
+---
+tags:
+  - navigation bar
+  - components
+  - Etendo Classic
+---
 
 #  How to create a Navigation Bar Component
-
-##  Contents
-
-  * 1  Introduction 
-  * 2  Example Module 
-  * 3  Main flow of the navigation bar generation 
-  * 4  Implementing a navigation bar component 
-    * 4.1  Creating a component 
-    * 4.2  Creating a template 
-      * 4.2.1  The template source 
-      * 4.2.2  Template Record 
-    * 4.3  Registering the component as a Navigation Bar Component 
-    * 4.4  The result 
-    * 4.5  Static Navigation Bar Components 
-
   
----  
-  
-##  Introduction
+##  Overview
 
-This howto discusses how a component can be added to the Openbravo main
-navigation bar. Navigation bar components are shown in the top of the
-Openbravo layout. They are positioned from left to right.
+This section discusses how a component can be added to the Openbravo main navigation bar. Navigation bar components are shown in the top of the Openbravo layout. They are positioned from left to right.
 
 Some main features of the Openbravo navigation bar components:
 
@@ -55,21 +20,16 @@ Some main features of the Openbravo navigation bar components:
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Navigation_Bar_Component-0.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-0.png){: .legacy-image-style}
 
 ##  Example Module
 
-This howto is supported by an example module which shows examples of the code
-shown and discussed.
+This howto is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this mercurial
-repository:
+The code of the example module can be downloaded from this mercurial repository:
 https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
 
-The example module is available through the Central Repository (See 'Client
-Application Examples'), for more information see the  Examples Client
-Application  project page.
+The example module is available through the Central Repository (See 'Client Application Examples'), for more information see the  Examples Client Application  project page.
 
 ##  Main flow of the navigation bar generation
 
@@ -82,13 +42,11 @@ The navigation bar generation goes through a number of steps:
   5. each navigation bar component is instantiated, its template is set and the generate method is called which generates the javascript of that component (using the template). 
   6. the javascript of each component is assumed to create a single canvas or an array of Smartclient canvasses. The javascript (i.e. navigation bar component) is placed as a member of the horizontal layout, which builds the navigation bar. 
 
-This main flow illustrates that each navigation bar component can implement
-its own visualization by providing/using a custom template and component.
+This main flow illustrates that each navigation bar component can implement its own visualization by providing/using a custom template and component.
 
 ##  Implementing a navigation bar component
 
-To create a component which is shown in the navigation bar the following parts
-need to be implemented:
+To create a component which is shown in the navigation bar the following parts need to be implemented:
 
   * create a java class (the component) which represents the navigation bar component on the server 
   * create a template which generates the javascript which creates the component on the client 
@@ -96,32 +54,21 @@ need to be implemented:
 
 Each of these steps is described in more detail below.
 
-The example module contains a Hello World component with a template. This
-example adds a button to the navigation bar which (when clicked) will say
-hello to the current user.
+The example module contains a Hello World component with a template. This example adds a button to the navigation bar which (when clicked) will say hello to the current user.
 
   
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Navigation_Bar_Component-1.png){: .legacy-image-style}
+![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-1.png){: .legacy-image-style}
 
   
 
 ###  Creating a component
 
-A component is useful when you want to add runtime information to the
-navigation bar component javascript when it gets generated. For example the
-user name or other role or user information.
+A component is useful when you want to add runtime information to the navigation bar component javascript when it gets generated. For example the user name or other role or user information.
 
-_If you don't have the requirement to use dynamic information in the generated
-javascript of your component then you don't need to implement a component
-(only a template). You can make use of the standard Openbravo template
-component: org.openbravo.client.kernel.BaseTemplateComponent, in the
-navigation bar component definition table._
+_If you don't have the requirement to use dynamic information in the generated javascript of your component then you don't need to implement a component (only a template). You can make use of the standard Openbravo template component: org.openbravo.client.kernel.BaseTemplateComponent, in the navigation bar component definition table._
 
-The example module has a hello world component which provides the current
-logged in user to the template. The component can be found in the module's
-src  directory. Here is the code:
+The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's src  directory. Here is the code:
 
     
     
@@ -149,17 +96,12 @@ The template contains the actual javascript. A template consists of two parts:
   1. a template file (the template source) ending on ftl (a  freemarker  extension) which is located in the source tree (in the classpath). 
   2. a record in the template table 
 
-The template is a powerful mechanism of the Openbravo system as it makes it
-possible to combine dynamic generated information and allows overriding of
-templates by other modules.
+The template is a powerful mechanism of the Openbravo system as it makes it possible to combine dynamic generated information and allows overriding of templates by other modules.
 
 ####  The template source
 
-To create the template for your navigation bar component, create a ftl file in
-the source tree of your module. The ftl file should contain plain javascript
-with possible freemarker constructs to read information from the component.
-The javascript should create one Smartclient canvas or a javascript array with
-Smartclient canvas instances.
+To create the template for your navigation bar component, create a ftl file in the source tree of your module. The ftl file should contain plain javascript with possible freemarker constructs to read information from the component.
+The javascript should create one Smartclient canvas or a javascript array with Smartclient canvas instances.
 
 As an example, the hello world template can be found in the
 org.openbravo.client.application.examples.templates  package, it creates a
