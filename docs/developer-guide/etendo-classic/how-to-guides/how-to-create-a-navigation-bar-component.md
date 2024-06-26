@@ -9,33 +9,30 @@ tags:
   
 ##  Overview
 
-This section discusses how a component can be added to the Openbravo main navigation bar. Navigation bar components are shown in the top of the Openbravo layout. They are positioned from left to right.
+This section explains how a component can be added to the Etendo main navigation bar. Navigation bar components are shown in the top of the Etendo Classic layout. They are positioned from left to right.
 
-Some main features of the Openbravo navigation bar components:
+Some main features of the Etendo Classic navigation bar components:
 
-  * a navigation bar component can be any  Smartclient  canvas. 
+  * a navigation bar component can be any [Smartclient]() canvas. 
   * modules can provide new navigation bar components. 
   * the position of a navigation bar component can be controlled. 
   * navigation bar components can be enabled by role. 
 
   
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-0.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-0.png)
 
 ##  Example Module
 
-This howto is supported by an example module which shows examples of the code shown and discussed.
+This section is supported by an example module which shows examples of the code shown and discussed.
 
-The code of the example module can be downloaded from this mercurial repository:
-https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
+The code of the example module can be downloaded from this mercurial repository: https://code.openbravo.com/erp/mods/org.openbravo.client.application.examples/
 
-The example module is available through the Central Repository (See 'Client Application Examples'), for more information see the  Examples Client Application  project page.
 
-##  Main flow of the navigation bar generation
+##  Main Flow of the Navigation Bar Generation
 
 The navigation bar generation goes through a number of steps:
 
-  1. the user logs in, and is navigated to the start page 
+  1. the user logs in, and navigates to the start page 
   2. the start page builds the main layout consisting of the navigation bar and the main content area (with tabs) 
   3. the navigation bar is generated on the server as javascript (which is send to the browser). 
   4. this is done by the main layout component. This component creates the overall javascript structure and then reads the navigation bar components from the navigation bar component table (using role information). 
@@ -44,9 +41,9 @@ The navigation bar generation goes through a number of steps:
 
 This main flow illustrates that each navigation bar component can implement its own visualization by providing/using a custom template and component.
 
-##  Implementing a navigation bar component
+##  Implementing a Navigation Bar Component
 
-To create a component which is shown in the navigation bar the following parts need to be implemented:
+To create a component which is shown in the navigation bar, the following parts need to be implemented:
 
   * create a java class (the component) which represents the navigation bar component on the server 
   * create a template which generates the javascript which creates the component on the client 
@@ -56,21 +53,18 @@ Each of these steps is described in more detail below.
 
 The example module contains a Hello World component with a template. This example adds a button to the navigation bar which (when clicked) will say hello to the current user.
 
-  
 
-![](/assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-1.png){: .legacy-image-style}
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-1.png)
 
-  
+###  Creating a Component
 
-###  Creating a component
+A component is useful when you want to add runtime information to the navigation bar component javascript when it gets generated. For example, the user name or other role or user information.
 
-A component is useful when you want to add runtime information to the navigation bar component javascript when it gets generated. For example the user name or other role or user information.
 
-_If you don't have the requirement to use dynamic information in the generated javascript of your component then you don't need to implement a component (only a template). You can make use of the standard Openbravo template component: org.openbravo.client.kernel.BaseTemplateComponent, in the navigation bar component definition table._
+!!!info
+    If you do not have the requirement to use dynamic information in the generated javascript of your component, then you do not need to implement a component (only a template). You can make use of the standard Etendo template component: org.openbravo.client.kernel.BaseTemplateComponent, in the navigation bar component definition table.
 
-The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's src  directory. Here is the code:
-
-    
+The example module has a hello world component which provides the current logged in user to the template. The component can be found in the module's [src]() directory. Here is the code:
     
     package org.openbravo.examples.client.application;
      
@@ -89,25 +83,20 @@ The example module has a hello world component which provides the current logged
       }
     }
 
-###  Creating a template
+###  Creating a Template
 
 The template contains the actual javascript. A template consists of two parts:
 
-  1. a template file (the template source) ending on ftl (a  freemarker  extension) which is located in the source tree (in the classpath). 
+  1. a template file (the template source) ending on `.FTL` (a [freemarker]() extension) which is located in the source tree (in the classpath). 
   2. a record in the template table 
 
-The template is a powerful mechanism of the Openbravo system as it makes it possible to combine dynamic generated information and allows overriding of templates by other modules.
+The template is a powerful mechanism of Etendo as it makes it possible to combine dynamic generated information and allows overriding of templates by other modules.
 
-####  The template source
+####  The Template Source
 
-To create the template for your navigation bar component, create a ftl file in the source tree of your module. The ftl file should contain plain javascript with possible freemarker constructs to read information from the component.
-The javascript should create one Smartclient canvas or a javascript array with Smartclient canvas instances.
+To create the template for your navigation bar component, create a `.FTL` file in the source tree of your module. The `.FTL` file should contain plain javascript with possible freemarker constructs to read information from the component. The javascript should create one Smartclient canvas or a javascript array with Smartclient canvas instances.
 
-As an example, the hello world template can be found in the
-org.openbravo.client.application.examples.templates  package, it creates a
-button which can be clicked to say hello. The content of the template is this:
-
-    
+As an example, the hello world template can be found in the `org.openbravo.client.application.examples.templates` package, it creates a button which can be clicked to say hello. The content of the template is this:
     
     /* jslint */
     isc.Button.create({
@@ -126,64 +115,34 @@ button which can be clicked to say hello. The content of the template is this:
 
 Some special things in this javascript source:
 
-  * The _/* jslint */_ tells Openbravo to do a check on the generated javascript. Errors are printed in the console or output log. 
-  * as you can see, the templates creates a canvas (the Button). It is also allowed to create an array of canvasses. 
-  * the title of the button is retrieved through the OB.I18N.getLabel method. This is to support translation, see a later section in this howto for more information. 
-  * See the _${data.name}_ part, this is a  freemarker  template construct whereby information is retrieved from a java object. In the Openbravo templating system the component instance is available as the _data_ object. The _${data.name}_ will call the accessor getName on the HelloWorldComponent. 
+  * The **/* jslint */** tells Etendo to do a check on the generated javascript. Errors are printed in the console or output log. 
+  * as you can see, the templates create a canvas (the Button). It is also allowed to create an array of canvasses. 
+  * the title of the button is retrieved through the `OB.I18N.getLabel` method. This is to support translation, see a section below in this article for more information. 
+  * See the `${data.name}` part, this is a [freemarker]()  template construct whereby information is retrieved from a java object. In the Etendo templating system, the component instance is available as the **data** object. The `${data.name}` will call the accessor `getName` on the HelloWorldComponent. 
 
 ####  Template Record
 
-The next step is to let Openbravo know that the template exists. This is done
-by registering the template in Openbravo in the Template table. The template
-maintenance function can be found here: Application Dictionary > User
-Interface > Template.
+The next step is to let Etendo know that the template exists. This is done by registering the template in Etendo in the Template table. The template maintenance function can be found here: `Application Dictionary` > `User Interface` > `Template`.
 
-  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-2.png)
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Navigation_Bar_Component-2.png){: .legacy-image-style}
+###  Registering the Component as a Navigation Bar Component
 
-###  Registering the component as a Navigation Bar Component
+The last step is to add the component to the navigation bar. This is done through the navigation bar components table/window. You can find it through quick launch or in the menu here: `Application Dictionary` > `User Interface` > `Navigation Bar Components`.
 
-The last step is to add the component to the navigation bar. This is done
-through the navigation bar components table/window. You can find it through
-quick launch or in the menu here: Application Dictionary > User Interface >
-Navigation Bar Components.
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-3.png)
 
-  
+###  The Result
 
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Navigation_Bar_Component-3.png){: .legacy-image-style}
+After executing the above steps, you should see a **Hello World** button in the navigation bar. Clicking it will popup a small hello message.
 
-###  The result
-
-After executing the above steps you should see a 'Hello World' button in the
-navigation bar. Clicking it will popup a small hello message.
-
-  
-
-![](/assets/developer-guide/etendo-classic/how-to-
-guides/How_to_create_a_Navigation_Bar_Component-4.png){: .legacy-image-style}
-
-  
+![](../../../assets/developer-guide/etendo-classic/how-to-guides/How_to_create_a_Navigation_Bar_Component-4.png)
 
 ###  Static Navigation Bar Components
-
-![](/assets/developer-guide/etendo-classic/how-to-guides/Bulbgraph.png){: .legacy-image-style} |
-This feature is available starting from ** 3.0PR17Q3  ** .  
----|---  
   
-By checking the **Static Component** flag of a a navigation bar component in
-_Application Dictionary > User Interface > Navigation Bar Components _ it is
-declared as **static** . This kind of components differ from their
-counterparts in the way they are created. _Static Navigation Bar Components_
-are loaded at the beginning of the _javascript_ content used within the
-application and they do not require an extra request to be loaded.
+By checking the **Static Component** flag of a a navigation bar component in `Application Dictionary` > `User Interface` > `Navigation Bar Components` it is declared as **static** . This kind of components differ from their counterparts in the way they are created. **Static Navigation Bar Components** are loaded at the beginning of the **javascript** content used within the application and they do not require an extra request to be loaded.
 
-Besides, the content of the template of a _Static Navigation Bar Components_
-is defined in a slightly different way:
-
-    
+Besides, the content of the template of a **Static Navigation Bar Components** is defined in a slightly different way:
     
     /* jslint */
     {
@@ -197,22 +156,12 @@ is defined in a slightly different way:
       }
     }
 
-Note that the template defines a JSON object with two properties:
+!!!note
+    The template defines a JSON object with two properties:
 
-  * **className** : the class name of the navigation bar component. 
-  * **properties** : contains the set of attributes and functions that will be used to configure the component. 
+      * **className** : the class name of the navigation bar component. 
+      * **properties** : contains the set of attributes and functions that will be used to configure the component. 
 
-Retrieved from "
-http://wiki.openbravo.com/wiki/How_to_create_a_Navigation_Bar_Component  "
+---
 
-This page has been accessed 16,330 times. This page was last modified on 18
-April 2017, at 06:36. Content is available under  Creative Commons
-Attribution-ShareAlike 2.5 Spain License  .
-
-  
-**
-
-Category  :  HowTo
-
-**
-
+This work is a derivative of [How to Create a Navigation Bar Component](http://wiki.openbravo.com/wiki/How_to_create_a_Navigation_Bar_Component){target="\_blank"} by [Openbravo Wiki](http://wiki.openbravo.com/wiki/Welcome_to_Openbravo){target="\_blank"}, used under [CC BY-SA 2.5 ES](https://creativecommons.org/licenses/by-sa/2.5/es/){target="\_blank"}. This work is licensed under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/){target="\_blank"} by [Etendo](https://etendo.software){target="\_blank"}.
