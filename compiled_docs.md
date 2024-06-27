@@ -39423,7 +39423,7 @@ Partners will have access to Etendo’s public and commercial repositories to do
 To generate the `build.gradle` with all the necessary information to publish, execute the following task:
 
 ``` bash title="Terminal"
-./gradlew createModuleBuild `-Ppkg=<javapackage> -Prepo=<repositoryURL> --info
+./gradlew createModuleBuild -Ppkg=<javapackage> -Prepo=<repositoryURL> --info
 ```
 Example:
 ``` bash title="Terminal"
