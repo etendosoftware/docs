@@ -14,15 +14,6 @@ This bundle includes enhancements for the Warehouse Management functionalities i
 
 ## Modules
 
-### Product Operations
-
-:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
-
-This module allows you to observe and analyze in detail all operations associated with the selected product. 
-
-!!! info
-    For more information, visit [Product Operations user guide](../warehouse-extensions/product-operations.md).
-
 
 ### Stock History
 
@@ -50,6 +41,15 @@ This functionality is part of the Warehouse Extensions Bundle and it is useful w
     - [Goods Receipts](../../../../../user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-goods-receipts)
     - [Goods Shipments](../../../../../user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-goods-shipments)
     - [Physical Inventory](../../../../../user-guide/etendo-classic/basic-features/warehouse-management/transactions.md#how-to-reactivate-physical-inventories)
+
+### Product Operations
+
+:octicons-package-16: Javapackage: `com.etendoerp.product.operations`
+
+This module allows you to observe and analyze in detail all operations associated with the selected product. 
+
+!!! info
+    For more information, visit [Product Operations user guide](../../../basic-features/warehouse-management/analysis-tools.md/#product-operations).
 
 ## Uninstall bundle
 

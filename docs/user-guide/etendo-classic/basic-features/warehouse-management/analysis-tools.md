@@ -18,6 +18,7 @@ This section describes the windows related to warehouse reports in Etendo. These
 
 [:material-file-document-outline: Product Movements Report](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-movements-report){ .md-button .md-button--primary } <br>
 
+[:material-file-document-outline: Product Operations](../../../../user-guide/etendo-classic/basic-features/warehouse-management/analysis-tools.md#product-operations){ .md-button .md-button--primary } <br>
 
 ## Pareto Product Report
 
@@ -211,3 +212,14 @@ Additionally, the user can include or exclude these documents:
 ### Sample Report Output
 
 ![Product Movements Report](../../../../assets/drive/1Vc4maTIIThjJpROn9ES_qlzWXXupl7DU.png)
+
+## Product Operations
+
+!!! info
+    To be able to include this functionality, the Warehouse Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Warehouse Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=EFDA39668E2E4DF2824FFF0A905E6A95){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Warehouse Extensions - Release notes](https://docs.etendo.software/whats-new/release-notes/etendo-classic/bundles/warehouse-extensions/release-notes/).
+
+
+  
+This functionality allows you to **observe and analyze** in detail all the operations associated with the product selected.
+
+It includes the visualization of every **transaction, movement** and related action to the **products**, facilitating analysis and a complete understanding of their performance.

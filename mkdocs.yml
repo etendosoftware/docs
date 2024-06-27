@@ -194,9 +194,7 @@ nav:
           - Platform Extensions Bundle:
             - Overview: user-guide/etendo-classic/optional-features/bundles/platform-extensions/overview.md
             - Etendo Advanced Security: user-guide/etendo-classic/optional-features/bundles/platform-extensions/etendo-advanced-security.md
-          - Warehouse Extensions Bundle: 
-            - Overview: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
-            - Product Operations: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/product-operations.md
+          - Warehouse Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/warehouse-extensions/overview.md
           - Production Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/production-extensions/overview.md
           - Sales Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/sales-extensions/overview.md
           - Financial Extensions Bundle: user-guide/etendo-classic/optional-features/bundles/financial-extensions/overview.md
