@@ -40,7 +40,7 @@ tags:
 <div style="display: flex;">
   <div style="flex: 1; padding-right: 10px;">
     <strong>Optimizations</strong></a><br>
-    As of Etendo version 1.9.4 of our bundle, we have simplified maintenance by replacing the <code>org.openbravo.util.saaj.impl</code> and <code>org.openbravo.util.javax.xml.soap</code> module dependencies with the new Maven dependencies <a href="https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3" target="\_blank"><strong>Jakarta SOAP Implementation</strong></a> and <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Jakarta SJOAP with Attachments API</strong></a>.
+    As of version 1.9.4 of this bundle, we have simplified maintenance by replacing the <code>org.openbravo.util.saaj.impl</code> and <code>org.openbravo.util.javax.xml.soap</code> module dependencies with the new Maven dependencies <a href="https://mvnrepository.com/artifact/com.sun.xml.messaging.saaj/saaj-impl/1.5.3" target="\_blank"><strong>Jakarta SOAP Implementation</strong></a> and <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Jakarta SJOAP with Attachments API</strong></a>.
     To take advantage of these enhancements, when upgrading to version 1.9.4 or higher, be sure to manually remove the old modules from the <strong>modules directory</strong></a> so that the new build will use the new dependencies.
   </div>
 </div>
@@ -55,7 +55,7 @@ tags:
 <div style="display: flex;">
   <div style="flex: 1; padding-right: 10px;">
     <strong>Optimizations</strong></a><br>
-    As of Etendo version 24.1.0, support for <a href="https://tomcat.apache.org/download-90.cgi/" target="\_blank"><strong>Tomcat 9</strong></a> has been updated.
+    As of version 24.1.0, the support for <a href="https://tomcat.apache.org/download-90.cgi/" target="\_blank"><strong>Tomcat 9</strong></a> has been updated.
   </div>
 </div>
 
@@ -74,7 +74,7 @@ tags:
 <div style="display: flex;">
   <div style="flex: 1; padding-right: 10px;">
     <a href="/user-guide/etendo-classic/optional-features/bundles/procurement-extensions/purchase-invoice-validation/"><strong>Purchase Invoice Validation </strong></a><br>
-    In the Etendo version 1.0.0, the following improvement has been included. Now, you will be able to <strong>avoid the duplication of purchase invoices</strong> through established rules and automatic validations.
+    In the version 1.0.0 of the Procurement Extensions bundle, the Purchase Invoice Validation functionality has been included. Now, you will be able to <strong>avoid the duplication of purchase invoices</strong> through established rules and automatic validations.
   </div>
 </div>
 
@@ -83,7 +83,7 @@ tags:
 <div style="display: flex;">
   <div style="flex: 1; padding-right: 10px;">
     <strong>Optimizations</strong></a><br>
-    As of Etendo version 1.13.2, the module dependency <code>org.openbravo.util.javax.xml.soap</code> has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Maven Jakarta SOAP with Attachments API dependency</strong></a>.
+    As of version 1.13.2 of this bundle, the module dependency <code>org.openbravo.util.javax.xml.soap</code> has been removed as it was not needed for any module in this bundle. In case this dependency is needed for development, we recommend using the <a href="https://mvnrepository.com/artifact/jakarta.xml.soap/jakarta.xml.soap-api/1.4.2" target="\_blank"><strong>Maven Jakarta SOAP with Attachments API dependency</strong></a>.
   </div>
 </div>
 
