@@ -222,4 +222,6 @@ Additionally, the user can include or exclude these documents:
   
 This functionality allows you to **observe and analyze** in detail all the operations associated with the product selected.
 
-It includes the visualization of every **transaction, movement** and related action to the **products**, facilitating analysis and a complete understanding of their performance.
+It includes the visualization of every **transaction, movement** and **actions** such as goods shipment/receip line, tax original cost, unit cost, storage bin and many other related actions to the products. This visualization facilitates the analysis and a complete understanding of the product operation performance.
+
+![alt text](../../../../assets/user-guide/etendo-classic/basic-features/warehouse-management/product-operations-0.png)
