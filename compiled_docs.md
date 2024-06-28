@@ -16056,6 +16056,22 @@ Also, the Accounting Status of the record/s is shown in the status bar, in form 
 !!! info
     For more information, visit [the Bulk Posting module user guide](https://docs.etendo.software/latest/optional-features/bundles/financial-extensions/overview.md#bulk-posting.md).
 
+##### G/L Journal Clone
+
+!!! info
+    To be able to include this functionality, the Financial Extensions Bundle must be installed. To do that, follow the instructions from the marketplace: [Financial Extensions Bundle](https://marketplace.etendo.cloud/#/product-details?module=9876ABEF90CC4ABABFC399544AC14558){target="_blank"}. For more information about the available versions, core compatibility and new features, visit [Financial Extensions - Release notes](https://docs.etendo.software/latest/whats-new/release-notes/etendo-classic/bundles/financial-extensions/release-notes.md).
+
+With this functionality, the user is able to seamlessly clone a selected entry. This feature not only duplicates the entry but also creates a detailed description that includes the original order number.
+
+In order to do this, select the record to clone and click the copy record button in the toolbar.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone.png)
+
+In this way, a copy of the original record is generated, including a description and a copy number, as seen below.
+
+![](https://docs.etendo.software/latest/assets/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions/gljournalclone2.png)
+
+This functionality enhances the efficiency of managing journal entries, making it easier to replicate and document transactions accurately.
 
 #### **G/L Journal**
 
@@ -19788,6 +19804,85 @@ This module allows setting a non deductible tax's amount to a specified financia
 !!! info
     For more information, visit the [Accounting Templates user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#purchase-invoice-which-includes-not-deductible-tax-amount).
 
+##### Advanced Financial Docs. Processing
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
+
+!!! info
+    For more information, visit:
+
+    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
+    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
+    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
+    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
+    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
+    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
+
+##### Advanced Business Partner Settlement
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
+
+!!! info
+    For more information, visit:
+
+    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
+    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
+    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
+
+##### Asset Amortization Report
+
+:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
+
+The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
+
+!!! info
+    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
+
+##### Banking Pool
+
+:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
+
+!!! info
+    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
+
+
+##### Bulk Posting
+
+:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This functionality allows the user to post or unpost multiple records at the same time.
+
+!!! info
+    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
+
+##### Business Partner Settlement
+
+:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
+
+!!! info
+    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
+
+
 ##### Conversion Rate Downloader
 
 :octicons-package-16: Javapackage: `com.smf.currency.conversionrate`
@@ -19802,28 +19897,6 @@ This process allows keeping currency conversions up to date by generating conver
 
 :octicons-package-16: Javapackage: `com.smf.currency.apiconfig`
 
-##### Banking Pool
-
-:octicons-package-16: Javapackage: `com.etendoerp.bankingpool`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sdPnyewiPbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This feature allows entering in the system all the financings the company has. It is possible to exploit the information through the bank pool report.
-
-!!! info
-    For more information, visit [the Banking Pool user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#financial-type-configuration) and the [Banking Pool developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#banking-pool).
-
-##### Business Partner Settlement
-
-:octicons-package-16: Javapackage: `org.openbravo.financial.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This module provides a new document where it is possible to settle debts or credit of business partners that are both customers and providers.
-
-!!! info
-    For more information, visit the [Business Partner Settlement user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#business-partner-settlement) and the [Business Partner Settlement developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#business-partner-settlement).
-
 ##### Deferred GL Journal
 
 :octicons-package-16: Javapackage: `com.etendoerp.gljournal.advanced`
@@ -19835,6 +19908,7 @@ This functionality allows the user to duplicate a journal entry as many times as
 !!! info
     For more information, visit [the Deferred GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#deferred-gl-journal).
 
+
 ##### Financial Advanced Reports
 
 :octicons-package-16: Javapackage: `com.etendoerp.financial.reports.advanced`
@@ -19845,6 +19919,26 @@ The Balance Sheet and P&L Structure, General Ledger and Journal Entries Advanced
 
 !!! info
     For more information, visit [the Balance Sheet and P&L Structure user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#balance-sheet-and-pl-structure-advanced), [the General Ledger Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#general-ledger-report-advanced) and [the Journal Entries Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/analysis-tools.md#journal-entries-report-advanced).
+
+##### G/L Journal Clone
+
+:octicons-package-16: Javapackage: `com.etendoerp.gljournal.clone`
+
+This functionality allows the user to clone a G/L journal in the Simple G/L Journal window, part of the accounting transactions of financial management.
+
+!!! info
+    For more information, visit the [G/L Journal Clone user guide](https://docs.etendo.software/latest/basic-features/financial-management/accounting/transactions.md#gl-journal-clone).
+
+##### Intercompany
+
+:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
+
+!!! info
+    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
 
 ##### Payment Removal
 
@@ -19874,7 +19968,6 @@ The button Remove Payment is available in the Sales Order, Purchase Order, Sales
 
 ##### Remittances
 
-
 :octicons-package-16: Javapackage: `org.openbravo.module.remittance`
 
 :octicons-package-16: Javapackage: `org.openbravo.module.remittance.template`
@@ -19886,16 +19979,6 @@ This functionality allows creating a remittance which is a group of "payments" (
 !!! info
     For more information, visit [the Remittances Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#remittance).
 
-##### Intercompany
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.intercompany`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bQjT7iPkYtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-In case the user has to create orders or invoices among two or more organizations that are different but belong to the same client, this functionality allows automatically generating the corresponding inverse document.
-
-!!! info
-    For more information, visit [the Intercompany Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/general-setup/enterprise-model.md#intercompany).
 
 ##### Reverse GL Journal
 
@@ -19909,61 +19992,6 @@ This functionality is specifically useful for companies that have a month close,
 
 !!! info
     For more information, visit the [GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#gl-journal) and the [Simple GL Journal user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/transactions.md#simple-gl-journal).
-
-##### Asset Amortization Report
-
-:octicons-package-16: Javapackage: `com.smf.asset.amortization.report`
-
-The new Amortization report allows downloading excel reports about information on amortization created for a selected year.
-
-!!! info
-    For more information, visit [the Asset Amortization Report user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#asset-amortization-report-excel).
-
-##### Advanced Financial Docs. Processing
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing`
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.financial.docs.processing.template`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pnE-nePaTEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality is part of the Financial Extensions Bundle and it is useful when the user needs to reactivate voided invoices (either Sales or Purchase) and closed orders (either Sales or Purchase) as well as amortizations.
-
-!!! info
-    For more information, visit:
-
-    - [Sales Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-closed-sales-order) 
-    - [Sales Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/sales-management/transactions.md#how-to-reactivate-a-voided-sales-invoice)
-    - [Purchase Order](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-closed-purchase-order)
-    - [Purchase Invoice](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/procurement-management/transactions.md#how-to-reactivate-a-voided-purchase-invoice)
-    - [Amortization](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/assets/overview.md#how-to-reactivate-amortizations)
-    - and the [Advanced Financial Docs. Processing developer guide](https://docs.etendo.software/latest/developer-guide/etendo-classic/bundles/financial-extensions-bundle.md#advanced-financial-docs-processing)
-
-##### Bulk Posting
-
-:octicons-package-16: Javapackage: `com.etendoerp.bulk.posting`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mgE-NnDLlA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to post or unpost multiple records at the same time.
-
-!!! info
-    For more information, visit [the Bulk Posting Module user guide](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/accounting/setup.md#bulk-posting).
-
-##### Advanced Business Partner Settlement
-
-:octicons-package-16: Javapackage: `com.etendoerp.advanced.bpsettlement`
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gh6G1i3Iyts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This functionality allows the user to create settlements for invoices, both sales and purchase, from the Payment In and Payment Out windows. Also a netting can be performed by creating a settlement from a bank reconciliation for credit in / out from the Financial Account window.
-
-!!! info
-    For more information, visit:
-
-    - [Payment In](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-1)
-    - [Payment Out](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement)
-    - [Financial Account](https://docs.etendo.software/latest/user-guide/etendo-classic/basic-features/financial-management/receivables-and-payables/transactions.md#advanced-business-partner-settlement-2)
 ==ARTICLE_END==
 ==ARTICLE_START==
 # Article Title: Overview
